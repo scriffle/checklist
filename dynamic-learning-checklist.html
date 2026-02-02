@@ -325,6 +325,31 @@ body {
     font-size: var(--text-base);
 }
 
+.student-name-input {
+    background: transparent;
+    border: 1px solid transparent;
+    color: white;
+    font-size: var(--text-sm);
+    font-family: inherit;
+    padding: var(--space-1) var(--space-2);
+    border-radius: var(--radius-sm);
+    width: 140px;
+    outline: none;
+    transition: all 0.2s ease;
+}
+.student-name-input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+    font-style: italic;
+}
+.student-name-input:hover {
+    border-color: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.1);
+}
+.student-name-input:focus {
+    border-color: rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.15);
+}
+
 /* ============================================
    TOPIC SELECTOR BAR
    ============================================ */
@@ -4562,7 +4587,7 @@ body {
                 
                 <div class="student-info" id="student-info">
                     <span class="student-avatar">👤</span>
-                    <span id="student-name-display">Student</span>
+                    <input type="text" id="student-name-display" class="student-name-input" placeholder="Your name" title="Click to edit your name" autocomplete="off">
                 </div>
                 
                 <div class="header-actions">
@@ -4624,6 +4649,10 @@ body {
                         <option value="12PhyEVA">12PhyEVA</option>
                         <option value="11PhyJIM">11PhyJIM</option>
                         <option value="11BioTSH">11BioTSH</option>
+                        <option value="11CheNGU">11CheNGU</option>
+                        <option value="11CheJMC">11CheJMC</option>
+                        <option value="11PsyPBU">11PsyPBU</option>
+                        <option value="12PsyPBU">12PsyPBU</option>
                         <option value="10SciJIM">10SciJIM</option>
                         <option value="10SciKLA">10SciKLA</option>
                         <option value="10SciDMH">10SciDMH</option>
@@ -5067,6 +5096,10 @@ body {
                                 <option value="12PhyEVA">12PhyEVA</option>
                                 <option value="11PhyJIM">11PhyJIM</option>
                                 <option value="11BioTSH">11BioTSH</option>
+                                <option value="11CheNGU">11CheNGU</option>
+                                <option value="11CheJMC">11CheJMC</option>
+                                <option value="11PsyPBU">11PsyPBU</option>
+                                <option value="12PsyPBU">12PsyPBU</option>
                                 <option value="10SciJIM">10SciJIM</option>
                                 <option value="10SciKLA">10SciKLA</option>
                                 <option value="10SciDMH">10SciDMH</option>
@@ -5509,95 +5542,71 @@ body {
             <div class="welcome-page active" id="welcome-page-1">
                 <div class="welcome-header">
                     <span class="welcome-icon">📚</span>
-                    <h2 class="welcome-title" id="welcome-title">Welcome to Your Learning Check List</h2>
+                    <h2 class="welcome-title" id="welcome-title">Welcome to Your Learning Checklist</h2>
                 </div>
                 <div class="welcome-body">
-                    <p class="welcome-intro">This app helps you track your understanding of each topic as you learn. It is designed to support your learning journey, not to test you.</p>
-                    
-                    <!-- User Info Section -->
-                    <div class="welcome-user-info">
-                        <div class="welcome-form-group">
-                            <label class="welcome-form-label" for="welcome-name-input">Your name</label>
-                            <input type="text" id="welcome-name-input" class="welcome-form-input" placeholder="Enter your name">
-                        </div>
-                        <div class="welcome-form-group">
-                            <label class="welcome-form-label" for="welcome-class-input">Your class</label>
-                            <select id="welcome-class-input" class="welcome-form-input">
-                                <option value="">-- Select your class --</option>
-                                <option value="12BioTSH">12BioTSH</option>
-                                <option value="12CheDMH">12CheDMH</option>
-                                <option value="12PhyJIM">12PhyJIM</option>
-                                <option value="12PhyEVA">12PhyEVA</option>
-                                <option value="11PhyJIM">11PhyJIM</option>
-                                <option value="11BioTSH">11BioTSH</option>
-                                <option value="10SciJIM">10SciJIM</option>
-                                <option value="10SciKLA">10SciKLA</option>
-                                <option value="10SciDMH">10SciDMH</option>
-                                <option value="08SciDMH">08SciDMH</option>
-                            </select>
-                        </div>
-                    </div>
+                    <p class="welcome-intro">This is your personal tool for tracking what you know and what you are still working on across each topic. It is not a test. It is a way for you to be honest about where you are, so you can learn more effectively.</p>
 
                     <div class="welcome-features">
+                        <div class="welcome-feature">
+                            <span class="welcome-feature-icon">👤</span>
+                            <div class="welcome-feature-text">
+                                <strong>Set your name and class</strong>
+                                <span>Type your name directly into the header bar at the top of the page. Your class code will be set automatically when you select a topic, or you can click the class badge next to the topic bar to change it manually.</span>
+                            </div>
+                        </div>
                         <div class="welcome-feature">
                             <span class="welcome-feature-icon">🎯</span>
                             <div class="welcome-feature-text">
                                 <strong>Rate your understanding</strong>
-                                <span>For each learning point, select the level that best describes where you are right now. Be honest with yourself - this is for your benefit.</span>
-                            </div>
-                        </div>
-                        <div class="welcome-feature">
-                            <span class="welcome-feature-icon">📋</span>
-                            <div class="welcome-feature-text">
-                                <strong>Regular check-ins</strong>
-                                <span>Use check-ins to review your progress over time. You can do a pre-topic check-in before starting, and weekly reviews as you learn.</span>
+                                <span>Each topic contains a list of specific learning points. For each one, select the level that honestly reflects where you are right now: Not Started, Beginning, Developing, Confident, or Secured.</span>
                             </div>
                         </div>
                         <div class="welcome-feature">
                             <span class="welcome-feature-icon">📖</span>
                             <div class="welcome-feature-text">
-                                <strong>What, Why, Example</strong>
-                                <span>Click these buttons on any learning point to see explanations that help you understand the content better.</span>
+                                <strong>Learn as you go</strong>
+                                <span>Every learning point has What, Why, and Example buttons that explain the concept, why it matters, and show a worked example. Use these to build understanding before rating yourself.</span>
                             </div>
                         </div>
                         <div class="welcome-feature">
-                            <span class="welcome-feature-icon">🎓</span>
+                            <span class="welcome-feature-icon">🧪</span>
                             <div class="welcome-feature-text">
-                                <strong>Quick checks</strong>
-                                <span>When you move to a higher level, you will be asked a quick question to confirm your understanding. This helps ensure your self-assessment is accurate.</span>
+                                <strong>Quick knowledge checks</strong>
+                                <span>When you move a learning point up to a higher level, the app asks a short question to confirm your understanding. If you get it right, the level sticks. If not, it stays where it was. This keeps your self-assessment accurate.</span>
                             </div>
                         </div>
                     </div>
-                    
-                    <p class="welcome-footer-text">Your progress is saved automatically and stays private on your device.</p>
+
+                    <p class="welcome-footer-text">Your progress saves automatically to this device. Your teacher also receives updates when you are connected to a class.</p>
                 </div>
                 <div class="welcome-footer">
                     <button class="btn btn-ghost" id="welcome-skip-btn">Skip</button>
-                    <button class="btn btn-primary" id="welcome-next-btn">Show Me How →</button>
+                    <button class="btn btn-primary" id="welcome-next-btn">How It Works →</button>
                 </div>
             </div>
-            
+
             <!-- Page 2: Tutorial -->
             <div class="welcome-page" id="welcome-page-2">
                 <div class="welcome-header">
                     <span class="welcome-icon">🎓</span>
-                    <h2 class="welcome-title">Quick Tour</h2>
+                    <h2 class="welcome-title">How to Use It</h2>
                 </div>
                 <div class="welcome-body">
                     <div class="tutorial-steps">
                         <div class="tutorial-step">
                             <div class="tutorial-step-number">1</div>
                             <div class="tutorial-step-content">
-                                <strong>Select your topic</strong>
-                                <p>Use the dropdowns at the top to choose your year level, subject, and topic. The content will load automatically.</p>
+                                <strong>Choose your topic</strong>
+                                <p>Use the three dropdowns in the topic bar to select your year level, subject, and specific topic. The learning points load automatically.</p>
                             </div>
                         </div>
-                        
+
                         <div class="tutorial-step">
                             <div class="tutorial-step-number">2</div>
                             <div class="tutorial-step-content">
-                                <strong>Rate each learning point</strong>
-                                <p>Click the level buttons to indicate your understanding. The levels go from "Not started" through to "Secured".</p>
+                                <strong>Set your levels</strong>
+                                <p>For each learning point, tap the level that matches your current understanding. Be honest — this is for your benefit, not a grade.</p>
                                 <div class="tutorial-demo">
                                     <span class="tutorial-demo-level">🌱</span>
                                     <span class="tutorial-demo-level">🌿</span>
@@ -5607,28 +5616,28 @@ body {
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div class="tutorial-step">
                             <div class="tutorial-step-number">3</div>
                             <div class="tutorial-step-content">
-                                <strong>Start a check-in</strong>
-                                <p>Click the "Check In" button to begin a timed review session. This helps you track progress over time.</p>
+                                <strong>Do regular check-ins</strong>
+                                <p>Use the Check In button to review all your levels at once. Check-ins take a few minutes and build a history your teacher can follow. Do one before starting a topic, and again each week as you learn.</p>
                             </div>
                         </div>
-                        
+
                         <div class="tutorial-step">
                             <div class="tutorial-step-number">4</div>
                             <div class="tutorial-step-content">
-                                <strong>Select text to get help</strong>
-                                <p>Highlight any text in the learning content to quickly search Google, ask AI, or note it for your teacher.</p>
+                                <strong>Highlight text for help</strong>
+                                <p>Select any text on the Learning Content tab to search Google, ask AI for an explanation, or flag it as something to raise with your teacher.</p>
                             </div>
                         </div>
-                        
+
                         <div class="tutorial-step">
                             <div class="tutorial-step-number">5</div>
                             <div class="tutorial-step-content">
-                                <strong>Explore the tabs</strong>
-                                <p>Use the tabs to view your overview, learning content, history, goals, and settings.</p>
+                                <strong>Explore each tab</strong>
+                                <p>Overview shows your dashboard and stats. Learning Content lists every learning point. History tracks your check-ins over time. Goals lets you set targets. Utility has settings, reports, and data tools.</p>
                             </div>
                         </div>
                     </div>
@@ -5643,7 +5652,7 @@ body {
             <div class="welcome-page" id="welcome-page-3">
                 <div class="welcome-header">
                     <span class="welcome-icon">📊</span>
-                    <h2 class="welcome-title">Tracking and Sharing</h2>
+                    <h2 class="welcome-title">Tracking, Reporting and Sharing</h2>
                 </div>
                 <div class="welcome-body">
                     <div class="welcome-features">
@@ -5651,40 +5660,40 @@ body {
                             <span class="welcome-feature-icon">📈</span>
                             <div class="welcome-feature-text">
                                 <strong>Learning Character</strong>
-                                <span>After each check-in, the app analyses your learning patterns and generates a Learning Character. This shows qualities like momentum, persistence, and study habits - not just what you know, but how you learn.</span>
+                                <span>After each check-in, the app analyses your patterns and generates a Learning Character profile. This captures qualities like momentum, persistence, consistency and engagement — not just what you know, but how you approach your learning.</span>
                             </div>
                         </div>
                         <div class="welcome-feature">
                             <span class="welcome-feature-icon">📊</span>
                             <div class="welcome-feature-text">
                                 <strong>Overview Dashboard</strong>
-                                <span>The Overview tab shows your overall progress, level distribution, current streak, and your latest Learning Character. Use it to get a quick picture of where you stand.</span>
+                                <span>The Overview tab shows your overall progress percentage, level distribution, activity streak, focus areas, and your latest Learning Character. It is the quickest way to see where you stand.</span>
+                            </div>
+                        </div>
+                        <div class="welcome-feature">
+                            <span class="welcome-feature-icon">🔄</span>
+                            <div class="welcome-feature-text">
+                                <strong>Live progress to your teacher</strong>
+                                <span>When you are connected to a class, every level change and quiz result is sent to your teacher automatically. There is nothing extra for you to do — just keep using the app as normal.</span>
                             </div>
                         </div>
                         <div class="welcome-feature">
                             <span class="welcome-feature-icon">📄</span>
                             <div class="welcome-feature-text">
                                 <strong>Print Report</strong>
-                                <span>Generate a printable progress report to share with parents or teachers. It includes your progress, Learning Character, and areas to focus on.</span>
-                            </div>
-                        </div>
-                        <div class="welcome-feature">
-                            <span class="welcome-feature-icon">✉️</span>
-                            <div class="welcome-feature-text">
-                                <strong>Email Summary</strong>
-                                <span>Send a structured summary to your teacher. The email includes data they can use to track your progress.</span>
+                                <span>Generate a printable progress report from the Utility tab. It includes your current levels, Learning Character, and focus areas — useful for parent-teacher conversations or your own records.</span>
                             </div>
                         </div>
                         <div class="welcome-feature">
                             <span class="welcome-feature-icon">💾</span>
                             <div class="welcome-feature-text">
                                 <strong>Backup and Restore</strong>
-                                <span>Your data stays on your device. Use the backup feature to save your progress to a file, and restore it if you change devices or clear your browser data.</span>
+                                <span>All data is stored locally on your device. Use the backup feature in the Utility tab to save your progress to a file. You can restore it later if you change devices or clear your browser.</span>
                             </div>
                         </div>
                     </div>
 
-                    <p class="welcome-footer-text">Find all these features in the Utility tab (the cog icon).</p>
+                    <p class="welcome-footer-text">Your teacher can see your progress through the class reporting system. You can find print, email, and backup tools in the Utility tab.</p>
                 </div>
                 <div class="welcome-footer">
                     <button class="btn btn-ghost" id="welcome-back-2-btn">← Back</button>
@@ -5926,11 +5935,14 @@ const CLASS_CODE_LOOKUP = {
     'year10/science':    ['10SciJIM', '10SciKLA', '10SciDMH'],
     'vce-unit1/physics': ['11PhyJIM'],
     'vce-unit1/biology': ['11BioTSH'],
+    'vce-unit1/chemistry': ['11CheNGU', '11CheJMC'],
+    'vce-unit1/psychology': ['11PsyPBU'],
     'vce-unit3/biology': ['12BioTSH'],
-    // Future topics — ready when content is added
-    'year8/science':     ['08SciDMH'],
     'vce-unit3/physics': ['12PhyJIM', '12PhyEVA'],
-    'vce-unit3/chemistry': ['12CheDMH']
+    'vce-unit3/chemistry': ['12CheDMH'],
+    'vce-unit3/psychology': ['12PsyPBU'],
+    // Future topics — ready when content is added
+    'year8/science':     ['08SciDMH']
 };
 
 function updateClassBadge() {
@@ -6025,6 +6037,10 @@ function showClassMismatchModal(message) {
         <option value="12PhyEVA">12PhyEVA</option>
         <option value="11PhyJIM">11PhyJIM</option>
         <option value="11BioTSH">11BioTSH</option>
+        <option value="11CheNGU">11CheNGU</option>
+        <option value="11CheJMC">11CheJMC</option>
+        <option value="11PsyPBU">11PsyPBU</option>
+        <option value="12PsyPBU">12PsyPBU</option>
         <option value="10SciJIM">10SciJIM</option>
         <option value="10SciKLA">10SciKLA</option>
         <option value="10SciDMH">10SciDMH</option>
@@ -8806,12 +8822,12 @@ function renderAll() {
 function renderStudentInfo() {
     const nameDisplay = document.getElementById('student-name-display');
     if (nameDisplay) {
-        nameDisplay.textContent = appState.student.name || 'Student';
+        nameDisplay.value = appState.student.name || '';
     }
-    
+
     const nameInput = document.getElementById('student-name-input');
     if (nameInput) nameInput.value = appState.student.name || '';
-    
+
     const classInput = document.getElementById('class-input');
     if (classInput) classInput.value = appState.student.class || '';
 }
@@ -10836,12 +10852,6 @@ function showWelcomeDialog() {
         document.getElementById('welcome-page-1')?.classList.add('active');
         document.getElementById('welcome-page-2')?.classList.remove('active');
         
-        // Populate fields with existing data if available
-        const welcomeNameInput = document.getElementById('welcome-name-input');
-        const welcomeClassInput = document.getElementById('welcome-class-input');
-        if (welcomeNameInput) welcomeNameInput.value = appState.student.name || '';
-        if (welcomeClassInput) welcomeClassInput.value = appState.student.class || '';
-        
         overlay.classList.add('active');
     }
 }
@@ -10850,23 +10860,6 @@ function showWelcomeDialog() {
  * Hide the welcome dialog and mark first run as complete
  */
 function hideWelcomeDialog() {
-    // Save user info from welcome form
-    const welcomeNameInput = document.getElementById('welcome-name-input');
-    const welcomeClassInput = document.getElementById('welcome-class-input');
-    
-    if (welcomeNameInput && welcomeNameInput.value.trim()) {
-        appState.student.name = welcomeNameInput.value.trim();
-    }
-    if (welcomeClassInput && welcomeClassInput.value) {
-        appState.student.class = welcomeClassInput.value;
-    }
-    
-    // Sync with settings inputs
-    const settingsNameInput = document.getElementById('student-name-input');
-    const settingsClassInput = document.getElementById('class-input');
-    if (settingsNameInput) settingsNameInput.value = appState.student.name || '';
-    if (settingsClassInput) settingsClassInput.value = appState.student.class || '';
-    
     // Save and update display
     saveData();
     renderStudentInfo();
@@ -13393,7 +13386,7 @@ function executeFullRestore(data) {
     // Restore student info
     if (data.student) {
         appState.student = data.student;
-        document.getElementById('student-name-display').textContent = data.student.name || 'Student';
+        document.getElementById('student-name-display').value = data.student.name || '';
         document.getElementById('student-name-input').value = data.student.name || '';
         document.getElementById('class-input').value = data.student.class || '';
     }
@@ -14094,6 +14087,17 @@ function setupEventListeners() {
         appState.student.name = e.target.value;
         saveData();
         renderStudentInfo();
+    });
+    // Banner name input — save on blur and Enter key
+    document.getElementById('student-name-display')?.addEventListener('change', (e) => {
+        appState.student.name = e.target.value.trim();
+        saveData();
+        // Sync settings input
+        const settingsInput = document.getElementById('student-name-input');
+        if (settingsInput) settingsInput.value = appState.student.name || '';
+    });
+    document.getElementById('student-name-display')?.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') e.target.blur();
     });
     document.getElementById('class-input')?.addEventListener('change', (e) => {
         appState.student.class = e.target.value;
