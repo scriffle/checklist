@@ -5869,6 +5869,7 @@ let checkinReviewedItems = new Set();
 let checkinTimer = null;
 let checkinStartTime = null;
 let checkinDurationMs = null;  // Dynamic duration based on LP count
+let activeCheckinId = null;    // ID of in-progress check-in record
 
 // Check-in duration constants
 const CHECKIN_MIN_MINUTES = 5;      // Minimum 5 minutes
@@ -6431,8 +6432,14 @@ function initSessionTracking() {
     // Track scrolling (throttled via passive listener)
     document.addEventListener('scroll', () => trackInteraction(), { passive: true });
 
-    // End session on page unload
-    window.addEventListener('beforeunload', endSession);
+    // End session on page unload, and auto-stop any active check-in
+    window.addEventListener('beforeunload', () => {
+        if (checkinModeActive) {
+            // Silently finalise the in-progress check-in before the page closes
+            stopCheckinSilent();
+        }
+        endSession();
+    });
 
     // Also end session on visibility change (tab hidden)
     document.addEventListener('visibilitychange', () => {
@@ -10280,6 +10287,23 @@ function normalizeQuestion(q) {
             q.distractors = [];
         }
 
+        // Normalize each distractor to { answer: string, explanation: string }
+        q.distractors = q.distractors.map(d => {
+            if (typeof d === 'string') {
+                return { answer: d, explanation: '' };
+            }
+            if (d && typeof d === 'object') {
+                // Support: d.option, d.answer, d.text, d.value (in priority order)
+                let text = d.option ?? d.answer ?? d.text ?? d.value ?? '';
+                // Handle boolean values (e.g. TF distractors with answer: false)
+                if (typeof text === 'boolean') {
+                    text = text ? 'True' : 'False';
+                }
+                return { answer: String(text), explanation: d.explanation || '' };
+            }
+            return { answer: String(d ?? ''), explanation: '' };
+        });
+
         // Ensure correct has a value
         if (q.correct === undefined || q.correct === null) {
             q.correct = '(no answer provided)';
@@ -10428,7 +10452,7 @@ function normalizeQuestion(q) {
  *   - distractors: accessed via Array.isArray() check, defaults to []
  *   - question.question: falls back to '(Question text missing)'
  *   - question.correct: falls back to '(no answer)'
- *   - distractor objects: checked for d.answer || d.text || d.value
+ *   - distractor objects: checked for d.option ?? d.answer ?? d.text ?? d.value (supports all schema variants)
  *
  * normalizeQuestion() (called upstream in showQuiz/startConsolidationPractice)
  * should handle most schema variants, but these guards act as a safety net
@@ -10454,7 +10478,12 @@ function renderMCQuestion(question) {
         if (typeof d === 'string') {
             options.push({ text: d, isCorrect: false, explanation: '' });
         } else if (d && typeof d === 'object') {
-            options.push({ text: d.answer || d.text || d.value || '', isCorrect: false, explanation: d.explanation || '' });
+            // Support all key variants: option, answer, text, value
+            // Use nullish coalescing (??) not || so that false/0 are preserved
+            let text = d.option ?? d.answer ?? d.text ?? d.value ?? '';
+            // Handle boolean values (e.g. TF: {answer: false})
+            if (typeof text === 'boolean') text = text ? 'True' : 'False';
+            options.push({ text: String(text), isCorrect: false, explanation: d.explanation || '' });
         }
     });
 
@@ -10577,7 +10606,10 @@ function renderClozeQuestion(question) {
                 if (typeof d === 'string') {
                     options.push({ value: d, isCorrect: false });
                 } else if (d && typeof d === 'object') {
-                    options.push({ value: d.answer || d.text || d.value || '', isCorrect: false });
+                    // Support all key variants: option, answer, text, value
+                    let text = d.option ?? d.answer ?? d.text ?? d.value ?? '';
+                    if (typeof text === 'boolean') text = text ? 'True' : 'False';
+                    options.push({ value: String(text), isCorrect: false });
                 }
             });
 
@@ -10685,9 +10717,11 @@ function submitClozeAnswer() {
             explanation = blankData.correctExplanation || 'Correct.';
         } else {
             // Find the distractor explanation
-            const distractor = blankData.distractors.find(d => 
-                (typeof d === 'string' ? d : d.answer) === userAnswer
-            );
+            const distractor = blankData.distractors.find(d => {
+                if (typeof d === 'string') return d === userAnswer;
+                const text = String(d.option ?? d.answer ?? d.text ?? d.value ?? '');
+                return text === userAnswer;
+            });
             if (distractor && typeof distractor === 'object') {
                 explanation = distractor.explanation || '';
             }
@@ -11847,10 +11881,24 @@ function startCheckinMode(type) {
         document.getElementById('checkin-floating-progress').textContent = `0/${Object.keys(checkinStartLevels).length}`;
     }
     
+    // Record check-in immediately so it's saved even if window closes
+    activeCheckinId = Date.now();
+    const checkin = {
+        id: activeCheckinId,
+        date: new Date().toISOString(),
+        type: currentCheckinType,
+        itemsReviewed: 0,
+        totalItems: Object.keys(checkinStartLevels).length,
+        duration: 0,
+        status: 'in-progress'
+    };
+    appState.checkins.push(checkin);
+    saveData();
+
     // Switch to learning tab and render
     switchTab('learning');
     renderLearningContent();
-    
+
     showToast(`${checkinTypeLabels[type]} check-in started`, 'success');
 }
 
@@ -11881,32 +11929,28 @@ function stopCheckinMode(autoStopped = false) {
         checkinTimer = null;
     }
 
-    // Record check-in
-    const checkin = {
-        id: Date.now(),
-        date: new Date().toISOString(),
-        type: currentCheckinType,
-        itemsReviewed: checkinReviewedItems.size,
-        totalItems: Object.keys(checkinStartLevels).length,
-        duration: Date.now() - checkinStartTime
-    };
-
-    appState.checkins.push(checkin);
+    // Update the in-progress check-in record (created in startCheckinMode)
+    const checkin = appState.checkins.find(c => c.id === activeCheckinId);
+    if (checkin) {
+        checkin.itemsReviewed = checkinReviewedItems.size;
+        checkin.duration = Date.now() - checkinStartTime;
+        checkin.status = 'completed';
+    }
 
     // Push check-in event to server
     pushProgressToServer('check-in', {
         quizResults: {
-            checkinId: checkin.id,
-            type: checkin.type,
-            itemsReviewed: checkin.itemsReviewed,
-            totalItems: checkin.totalItems,
-            durationMs: checkin.duration
+            checkinId: checkin?.id || activeCheckinId,
+            type: currentCheckinType,
+            itemsReviewed: checkinReviewedItems.size,
+            totalItems: Object.keys(checkinStartLevels).length,
+            durationMs: Date.now() - checkinStartTime
         },
         overallPercent: calculateStats()?.overallPercentage || 0
     });
 
     // Generate Growth Character
-    const growthCharacter = generateGrowthCharacter(checkin.id, currentCheckinType);
+    const growthCharacter = generateGrowthCharacter(checkin?.id || activeCheckinId, currentCheckinType);
 
     saveData();
 
@@ -11914,6 +11958,7 @@ function stopCheckinMode(autoStopped = false) {
     checkinModeActive = false;
     checkinReviewedItems.clear();
     checkinStartLevels = {};
+    activeCheckinId = null;
 
     // Hide floating bar
     const floatingBar = document.getElementById('checkin-floating-bar');
@@ -11926,6 +11971,36 @@ function stopCheckinMode(autoStopped = false) {
 
     // Show post-check-in modal with Growth Character option
     showPostCheckinModal(checkin, growthCharacter, autoStopped);
+}
+
+/**
+ * Silently finalise an active check-in (used on page close / beforeunload).
+ * Saves data to localStorage without UI updates or growth character generation
+ * since the page is about to unload.
+ */
+function stopCheckinSilent() {
+    if (!checkinModeActive || !activeCheckinId) return;
+
+    // Clear timer
+    if (checkinTimer) {
+        clearInterval(checkinTimer);
+        checkinTimer = null;
+    }
+
+    // Update the in-progress check-in record
+    const checkin = appState.checkins.find(c => c.id === activeCheckinId);
+    if (checkin) {
+        checkin.itemsReviewed = checkinReviewedItems.size;
+        checkin.duration = Date.now() - checkinStartTime;
+        checkin.status = 'abandoned';  // Mark as not cleanly stopped
+    }
+
+    // Reset state
+    checkinModeActive = false;
+    activeCheckinId = null;
+
+    // Save immediately — localStorage is synchronous so this works in beforeunload
+    saveData();
 }
 
 function showCheckinStartModal() {
