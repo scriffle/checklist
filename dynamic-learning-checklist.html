@@ -333,9 +333,17 @@ body {
     font-family: inherit;
     padding: var(--space-1) var(--space-2);
     border-radius: var(--radius-sm);
-    width: 140px;
+    width: 90px;
     outline: none;
     transition: all 0.2s ease;
+}
+.student-family-input {
+    margin-left: 2px;
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+.student-name-input:first-of-type {
+    border-radius: var(--radius-sm) 0 0 var(--radius-sm);
 }
 .student-name-input::placeholder {
     color: rgba(255, 255, 255, 0.5);
@@ -4591,7 +4599,8 @@ body {
                 
                 <div class="student-info" id="student-info">
                     <span class="student-avatar">👤</span>
-                    <input type="text" id="student-name-display" class="student-name-input" placeholder="Your name" title="Click to edit your name" autocomplete="off">
+                    <input type="text" id="student-preferred-display" class="student-name-input" placeholder="First name" title="Click to edit your preferred name" autocomplete="off">
+                    <input type="text" id="student-family-display" class="student-name-input student-family-input" placeholder="Surname" title="Click to edit your surname" autocomplete="off">
                 </div>
                 
                 <div class="header-actions">
@@ -5087,8 +5096,12 @@ body {
                     <div class="settings-section">
                         <div class="settings-section-title">Your Details</div>
                         <div class="form-group">
-                            <label class="form-label" for="student-name-input">Your Name</label>
-                            <input type="text" id="student-name-input" class="form-input" placeholder="Enter your name">
+                            <label class="form-label" for="student-preferred-input">Preferred Name</label>
+                            <input type="text" id="student-preferred-input" class="form-input" placeholder="First name">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="student-family-input">Family Name</label>
+                            <input type="text" id="student-family-input" class="form-input" placeholder="Surname">
                         </div>
                         <div class="form-group">
                             <label class="form-label" for="class-input">Your Class</label>
@@ -5767,7 +5780,8 @@ const checkinTypeLabels = {
 // ============================================
 let appState = {
     student: {
-        name: '',
+        preferredName: '',
+        familyName: '',
         class: ''
     },
     topic: null,
@@ -5849,6 +5863,16 @@ const ACTIVITY = {
 // ============================================
 // STORAGE FUNCTIONS
 // ============================================
+/**
+ * Get the student's full display name (preferredName + familyName)
+ */
+function getStudentDisplayName() {
+    const p = appState.student.preferredName || '';
+    const f = appState.student.familyName || '';
+    if (p && f) return p + ' ' + f;
+    return p || f || '';
+}
+
 function saveData() {
     appState.lastSaved = new Date().toISOString();
     try {
@@ -5916,30 +5940,41 @@ function promptForStudentName() {
         background: var(--color-warning, #f59e0b); color: #1a1a2e;
         padding: 12px 20px; border-radius: 12px; z-index: 10000;
         font-size: 14px; font-weight: 600; box-shadow: 0 4px 20px rgba(0,0,0,0.25);
-        display: flex; align-items: center; gap: 8px; max-width: 400px;
+        display: flex; align-items: center; gap: 8px; max-width: 440px;
         animation: slideUp 0.3s ease;
     `;
-    toast.innerHTML = '👤 Please enter your name above so your teacher can identify your progress.';
+    toast.innerHTML = '👤 Please enter your first name and surname above so your teacher can identify your progress.';
     document.body.appendChild(toast);
 
-    // Focus the banner name input
-    const nameInput = document.getElementById('student-name-display');
-    if (nameInput) {
-        nameInput.style.borderColor = 'rgba(255, 200, 50, 0.8)';
-        nameInput.style.background = 'rgba(255, 200, 50, 0.2)';
-        nameInput.focus();
+    // Highlight whichever field(s) are empty and focus the first empty one
+    const prefInput = document.getElementById('student-preferred-display');
+    const famInput = document.getElementById('student-family-display');
+    const highlight = (el) => {
+        if (el) { el.style.borderColor = 'rgba(255, 200, 50, 0.8)'; el.style.background = 'rgba(255, 200, 50, 0.2)'; }
+    };
+    const clearHighlight = (el) => {
+        if (el) { el.style.borderColor = ''; el.style.background = ''; }
+    };
 
-        // Clear highlight once they type a name
-        const clearPrompt = () => {
-            if (nameInput.value.trim()) {
-                nameInput.style.borderColor = '';
-                nameInput.style.background = '';
-                toast.remove();
-                nameInput.removeEventListener('change', clearPrompt);
-            }
-        };
-        nameInput.addEventListener('change', clearPrompt);
-    }
+    if (!appState.student.preferredName?.trim()) highlight(prefInput);
+    if (!appState.student.familyName?.trim()) highlight(famInput);
+
+    // Focus the first empty field
+    const focusTarget = !appState.student.preferredName?.trim() ? prefInput : famInput;
+    if (focusTarget) focusTarget.focus();
+
+    // Clear highlights once both fields have values
+    const checkDone = () => {
+        if (appState.student.preferredName?.trim() && appState.student.familyName?.trim()) {
+            clearHighlight(prefInput);
+            clearHighlight(famInput);
+            toast.remove();
+            prefInput?.removeEventListener('change', checkDone);
+            famInput?.removeEventListener('change', checkDone);
+        }
+    };
+    prefInput?.addEventListener('change', checkDone);
+    famInput?.addEventListener('change', checkDone);
 
     // Auto-dismiss after 8 seconds
     setTimeout(() => { toast.remove(); }, 8000);
@@ -5949,15 +5984,17 @@ function pushProgressToServer(eventType, detail) {
     const classCode = appState.student.class;
     if (!classCode) return; // Don't push if no class selected
 
-    // Prompt for a name if the student field is empty
-    if (!appState.student.name || !appState.student.name.trim()) {
+    // Prompt for a name if either field is empty
+    if (!appState.student.preferredName?.trim() || !appState.student.familyName?.trim()) {
         promptForStudentName();
         return; // Don't push anonymous data — wait for name
     }
 
     const payload = {
         classCode: classCode,
-        studentId: appState.student.name,
+        studentId: appState.student.preferredName + ' ' + appState.student.familyName,
+        preferredName: appState.student.preferredName,
+        familyName: appState.student.familyName,
         topicCode: appState.topic?.name || appState.currentTopicId || '',
         eventType: eventType,
         learningPointCode: detail.learningPointCode || '',
@@ -6132,6 +6169,13 @@ function loadData() {
         if (saved) {
             const parsed = JSON.parse(saved);
             appState.student = parsed.student || appState.student;
+            // Migration: old single-name format → split fields
+            if (appState.student.name !== undefined && !appState.student.preferredName) {
+                const parts = (appState.student.name || '').trim().split(/\s+/);
+                appState.student.preferredName = parts[0] || '';
+                appState.student.familyName = parts.slice(1).join(' ') || '';
+                delete appState.student.name;
+            }
             appState.currentTopicId = parsed.currentTopicId || null;
             appState.currentTopicPath = parsed.currentTopicPath || null;
             appState.topic = parsed.topic || null;
@@ -8902,13 +8946,14 @@ function renderAll() {
 }
 
 function renderStudentInfo() {
-    const nameDisplay = document.getElementById('student-name-display');
-    if (nameDisplay) {
-        nameDisplay.value = appState.student.name || '';
-    }
-
-    const nameInput = document.getElementById('student-name-input');
-    if (nameInput) nameInput.value = appState.student.name || '';
+    const pd = document.getElementById('student-preferred-display');
+    if (pd) pd.value = appState.student.preferredName || '';
+    const fd = document.getElementById('student-family-display');
+    if (fd) fd.value = appState.student.familyName || '';
+    const pi = document.getElementById('student-preferred-input');
+    if (pi) pi.value = appState.student.preferredName || '';
+    const fi = document.getElementById('student-family-input');
+    if (fi) fi.value = appState.student.familyName || '';
 
     const classInput = document.getElementById('class-input');
     if (classInput) classInput.value = appState.student.class || '';
@@ -12099,7 +12144,7 @@ function gatherExportMetrics() {
         reportVersion: '1.0',
 
         // Student info
-        student: appState.student?.name || 'Student',
+        student: getStudentDisplayName() || 'Student',
         studentClass: appState.student?.class || '',
 
         // Topic info
@@ -12932,7 +12977,7 @@ function exportAllData() {
     };
 
     // Create filename with student name
-    const studentSlug = (appState.student?.name || 'student').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+    const studentSlug = (getStudentDisplayName() || 'student').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
     const dateStr = new Date().toISOString().split('T')[0];
     const filename = `learning-backup-full-${studentSlug}-${dateStr}.json`;
 
@@ -13375,7 +13420,9 @@ function validateAndPreviewRestore(data) {
         // Full backup preview
         const topicCount = data.summary?.topicCount || Object.keys(data.topicProgressStore).length;
         const topicNames = data.summary?.topicNames || Object.keys(data.topicProgressStore);
-        const studentName = data.student?.name || 'Unknown';
+        const studentName = data.student?.preferredName
+            ? (data.student.preferredName + ' ' + (data.student.familyName || '')).trim()
+            : (data.student?.name || 'Unknown');
         const totalCheckins = data.summary?.totalCheckins || 0;
         const totalItems = data.summary?.totalItems || 0;
 
@@ -13480,9 +13527,18 @@ function executeFullRestore(data) {
     // Restore student info
     if (data.student) {
         appState.student = data.student;
-        document.getElementById('student-name-display').value = data.student.name || '';
-        document.getElementById('student-name-input').value = data.student.name || '';
-        document.getElementById('class-input').value = data.student.class || '';
+        // Migration: old single-name format → split fields
+        if (appState.student.name !== undefined && !appState.student.preferredName) {
+            const parts = (appState.student.name || '').trim().split(/\s+/);
+            appState.student.preferredName = parts[0] || '';
+            appState.student.familyName = parts.slice(1).join(' ') || '';
+            delete appState.student.name;
+        }
+        document.getElementById('student-preferred-display').value = appState.student.preferredName || '';
+        document.getElementById('student-family-display').value = appState.student.familyName || '';
+        document.getElementById('student-preferred-input').value = appState.student.preferredName || '';
+        document.getElementById('student-family-input').value = appState.student.familyName || '';
+        document.getElementById('class-input').value = appState.student.class || '';
     }
 
     // Restore all topic progress data
@@ -13659,7 +13715,7 @@ function executeClearAllData() {
     
     // Reset state
     appState = {
-        student: { name: '', class: '' },
+        student: { preferredName: '', familyName: '', class: '' },
         topic: null,
         currentTopicId: null,
         currentTopicPath: null,
@@ -14177,20 +14233,37 @@ function setupEventListeners() {
         appState.skipPreTopicQuestions = e.target.checked;
         saveData();
     });
-    document.getElementById('student-name-input')?.addEventListener('change', (e) => {
-        appState.student.name = e.target.value;
+    // Preferred name — settings input
+    document.getElementById('student-preferred-input')?.addEventListener('change', (e) => {
+        appState.student.preferredName = e.target.value.trim();
         saveData();
         renderStudentInfo();
     });
-    // Banner name input — save on blur and Enter key
-    document.getElementById('student-name-display')?.addEventListener('change', (e) => {
-        appState.student.name = e.target.value.trim();
+    // Family name — settings input
+    document.getElementById('student-family-input')?.addEventListener('change', (e) => {
+        appState.student.familyName = e.target.value.trim();
         saveData();
-        // Sync settings input
-        const settingsInput = document.getElementById('student-name-input');
-        if (settingsInput) settingsInput.value = appState.student.name || '';
+        renderStudentInfo();
     });
-    document.getElementById('student-name-display')?.addEventListener('keydown', (e) => {
+    // Preferred name — banner input
+    document.getElementById('student-preferred-display')?.addEventListener('change', (e) => {
+        appState.student.preferredName = e.target.value.trim();
+        saveData();
+        const si = document.getElementById('student-preferred-input');
+        if (si) si.value = appState.student.preferredName || '';
+    });
+    // Family name — banner input
+    document.getElementById('student-family-display')?.addEventListener('change', (e) => {
+        appState.student.familyName = e.target.value.trim();
+        saveData();
+        const si = document.getElementById('student-family-input');
+        if (si) si.value = appState.student.familyName || '';
+    });
+    // Enter key blurs both banner inputs
+    document.getElementById('student-preferred-display')?.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') e.target.blur();
+    });
+    document.getElementById('student-family-display')?.addEventListener('keydown', (e) => {
         if (e.key === 'Enter') e.target.blur();
     });
     document.getElementById('class-input')?.addEventListener('change', (e) => {

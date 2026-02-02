@@ -1869,12 +1869,13 @@ function parseEmails() {
             // Validate it has the expected structure
             if (data.student && data.metrics) {
                 // Get normalized student name for comparison
-                const newStudentName = typeof data.student === 'string' ? data.student : data.student?.name;
+                const newInfo = getStudentInfo(data);
+                const newStudentName = getFullName(newInfo);
 
                 // Check if student already exists (by name + topic)
                 const existingIndex = students.findIndex(s => {
-                    const existingName = typeof s.student === 'string' ? s.student : s.student?.name;
-                    return existingName === newStudentName && s.topic?.name === data.topic?.name;
+                    const existingInfo = getStudentInfo(s);
+                    return getFullName(existingInfo) === newStudentName && s.topic?.name === data.topic?.name;
                 });
 
                 if (existingIndex >= 0) {
@@ -1932,7 +1933,7 @@ function filterAndRenderStudents() {
     filteredStudents = students.filter(s => {
         const studentInfo = getStudentInfo(s);
         const matchesSearch = !searchTerm ||
-            studentInfo.name?.toLowerCase().includes(searchTerm) ||
+            getFullName(studentInfo).toLowerCase().includes(searchTerm) ||
             studentInfo.class?.toLowerCase().includes(searchTerm);
 
         const matchesTopic = !topicFilter || s.topic?.name === topicFilter;
@@ -1946,9 +1947,9 @@ function filterAndRenderStudents() {
         const bStudent = getStudentInfo(b);
         switch (sortOption) {
             case 'name-asc':
-                return (aStudent.name || '').localeCompare(bStudent.name || '');
+                return getFullName(aStudent).localeCompare(getFullName(bStudent));
             case 'name-desc':
-                return (bStudent.name || '').localeCompare(aStudent.name || '');
+                return getFullName(bStudent).localeCompare(getFullName(aStudent));
             case 'progress-desc':
                 return (b.metrics?.overallPercent || 0) - (a.metrics?.overallPercent || 0);
             case 'progress-asc':
@@ -2056,7 +2057,7 @@ function renderStudentCard(data) {
     const narrative = data.narrative || '';
 
     const progress = metrics.overallPercent || 0;
-    const initials = getInitials(student.name);
+    const initials = getInitials(getFullName(student));
 
     // Progress badge color
     let badgeColor = 'var(--color-error)';
@@ -2103,7 +2104,7 @@ function renderStudentCard(data) {
                 <div class="student-info">
                     <div class="student-avatar">${initials}</div>
                     <div>
-                        <div class="student-name">${escapeHtml(student.name || 'Unknown')}</div>
+                        <div class="student-name">${escapeHtml(student.preferredName || 'Unknown')}</div>
                         <div class="student-class">${escapeHtml(student.class || '')}</div>
                     </div>
                 </div>
@@ -2199,13 +2200,13 @@ ${'═'.repeat(60)}
     const sorted = [...students].sort((a, b) => {
         const aInfo = getStudentInfo(a);
         const bInfo = getStudentInfo(b);
-        return (aInfo.name || '').localeCompare(bInfo.name || '');
+        return getFullName(aInfo).localeCompare(getFullName(bInfo));
     });
 
     sorted.forEach(s => {
         const studentInfo = getStudentInfo(s);
         summary += `${'─'.repeat(40)}\n`;
-        summary += `${studentInfo.name || 'Unknown'} (${studentInfo.class || 'No class'})\n`;
+        summary += `${getFullName(studentInfo) || 'Unknown'} (${studentInfo.class || 'No class'})\n`;
         summary += `Topic: ${s.topic?.name || 'Unknown'}\n`;
         summary += `Progress: ${s.metrics?.overallPercent || 0}% (${s.metrics?.securedItems || 0}/${s.metrics?.totalItems || 0} secured)\n`;
         summary += `Streak: ${s.metrics?.currentStreak || 0} days | Check-ins: ${s.metrics?.checkinsCompleted || 0} | Quiz: ${s.metrics?.quizCorrectRate || 0}%\n`;
@@ -2291,12 +2292,22 @@ function getInitials(name) {
     return (parts[0].charAt(0) + parts[parts.length - 1].charAt(0)).toUpperCase();
 }
 
-// Normalize student field - can be string or object
+// Normalize student field - can be string or object, with migration
 function getStudentInfo(data) {
     if (typeof data.student === 'string') {
-        return { name: data.student, class: '' };
+        const parts = data.student.trim().split(/\s+/);
+        return { preferredName: parts[0] || '', familyName: parts.slice(1).join(' ') || '', class: '' };
     }
-    return data.student || { name: '', class: '' };
+    const s = data.student || {};
+    return {
+        preferredName: s.preferredName || s.name || '',
+        familyName: s.familyName || '',
+        class: s.class || ''
+    };
+}
+
+function getFullName(info) {
+    return ((info.preferredName || '') + ' ' + (info.familyName || '')).trim();
 }
 
 function formatQualityName(key) {
