@@ -2597,6 +2597,10 @@ body {
     from { opacity: 0; transform: translateY(-10px); }
     to { opacity: 1; transform: translateY(0); }
 }
+@keyframes slideUp {
+    from { opacity: 0; transform: translate(-50%, 20px); }
+    to { opacity: 1; transform: translate(-50%, 0); }
+}
 
 .checkin-mode-info {
     display: flex;
@@ -5897,13 +5901,63 @@ function saveData() {
 // ============================================
 const PROGRESS_API_URL = 'https://script.google.com/macros/s/AKfycbyscvAfbJUR_t6p5W-u6A5SE_QvjntWt6ihg03Oc-uODwcP9WGjEOA2obh6rZ6OQG9G4g/exec';
 
+/**
+ * Prompt the student for their name when the field is empty.
+ * Uses a non-blocking toast-style prompt that focuses the banner name input.
+ */
+function promptForStudentName() {
+    // Avoid showing multiple prompts
+    if (document.getElementById('name-prompt-toast')) return;
+
+    const toast = document.createElement('div');
+    toast.id = 'name-prompt-toast';
+    toast.style.cssText = `
+        position: fixed; bottom: 80px; left: 50%; transform: translateX(-50%);
+        background: var(--color-warning, #f59e0b); color: #1a1a2e;
+        padding: 12px 20px; border-radius: 12px; z-index: 10000;
+        font-size: 14px; font-weight: 600; box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+        display: flex; align-items: center; gap: 8px; max-width: 400px;
+        animation: slideUp 0.3s ease;
+    `;
+    toast.innerHTML = '👤 Please enter your name above so your teacher can identify your progress.';
+    document.body.appendChild(toast);
+
+    // Focus the banner name input
+    const nameInput = document.getElementById('student-name-display');
+    if (nameInput) {
+        nameInput.style.borderColor = 'rgba(255, 200, 50, 0.8)';
+        nameInput.style.background = 'rgba(255, 200, 50, 0.2)';
+        nameInput.focus();
+
+        // Clear highlight once they type a name
+        const clearPrompt = () => {
+            if (nameInput.value.trim()) {
+                nameInput.style.borderColor = '';
+                nameInput.style.background = '';
+                toast.remove();
+                nameInput.removeEventListener('change', clearPrompt);
+            }
+        };
+        nameInput.addEventListener('change', clearPrompt);
+    }
+
+    // Auto-dismiss after 8 seconds
+    setTimeout(() => { toast.remove(); }, 8000);
+}
+
 function pushProgressToServer(eventType, detail) {
     const classCode = appState.student.class;
     if (!classCode) return; // Don't push if no class selected
 
+    // Prompt for a name if the student field is empty
+    if (!appState.student.name || !appState.student.name.trim()) {
+        promptForStudentName();
+        return; // Don't push anonymous data — wait for name
+    }
+
     const payload = {
         classCode: classCode,
-        studentId: appState.student.name || 'anonymous',
+        studentId: appState.student.name,
         topicCode: appState.topic?.name || appState.currentTopicId || '',
         eventType: eventType,
         learningPointCode: detail.learningPointCode || '',
@@ -6231,6 +6285,17 @@ function endSession() {
     if (currentSession.activeMs >= 5000) {
         appState.sessions.push(currentSession);
         updatePracticeCalendar(currentSession);
+
+        // Push session-end event to server
+        pushProgressToServer('session-end', {
+            quizResults: {
+                activeMs: currentSession.activeMs,
+                activities: currentSession.activities,
+                durationMs: currentSession.end - currentSession.start
+            },
+            overallPercent: calculateStats()?.overallPercentage || 0
+        });
+
         saveData();
     }
 
@@ -7150,6 +7215,23 @@ function generateGrowthCharacter(checkinId, checkinType) {
     // Store it
     appState.growthCharacters.push(growthCharacter);
     saveData();
+
+    // Push character snapshot to server
+    pushProgressToServer('character-snapshot', {
+        quizResults: {
+            checkinType: checkinType,
+            level: growthCharacter.level,
+            growthMagnitude: growthCharacter.metrics.growthMagnitude,
+            securedCount: growthCharacter.metrics.securedCount,
+            consolidatedCount: growthCharacter.metrics.consolidatedCount,
+            totalItems: growthCharacter.metrics.totalItems,
+            activeDays: growthCharacter.metrics.activeDays,
+            totalDays: growthCharacter.metrics.totalDays,
+            consolidationRate: growthCharacter.metrics.consolidationRate
+        },
+        qualities: growthCharacter.qualities,
+        overallPercent: calculateStats()?.overallPercentage || 0
+    });
 
     return growthCharacter;
 }
@@ -11041,7 +11123,7 @@ function getUnreadMessages() {
  */
 async function loadMessages() {
     try {
-        const response = await fetch('message.json');
+        const response = await fetch('message.json?v=' + Date.now());
         if (!response.ok) {
             console.log('No message.json found or failed to load');
             messagesData = [];
@@ -11675,6 +11757,18 @@ function stopCheckinMode(autoStopped = false) {
     };
 
     appState.checkins.push(checkin);
+
+    // Push check-in event to server
+    pushProgressToServer('check-in', {
+        quizResults: {
+            checkinId: checkin.id,
+            type: checkin.type,
+            itemsReviewed: checkin.itemsReviewed,
+            totalItems: checkin.totalItems,
+            durationMs: checkin.duration
+        },
+        overallPercent: calculateStats()?.overallPercentage || 0
+    });
 
     // Generate Growth Character
     const growthCharacter = generateGrowthCharacter(checkin.id, currentCheckinType);
