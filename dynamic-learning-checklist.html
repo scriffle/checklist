@@ -5867,6 +5867,7 @@ let currentCheckinType = 'weekly';
 let checkinStartLevels = {};
 let checkinReviewedItems = new Set();
 let checkinTimer = null;
+let checkinAutoSaveTimer = null;  // Periodic save interval (every 60s)
 let checkinStartTime = null;
 let checkinDurationMs = null;  // Dynamic duration based on LP count
 let activeCheckinId = null;    // ID of in-progress check-in record
@@ -11895,6 +11896,9 @@ function startCheckinMode(type) {
     appState.checkins.push(checkin);
     saveData();
 
+    // Start periodic auto-save every 60 seconds to keep check-in data current
+    checkinAutoSaveTimer = setInterval(autoSaveCheckinProgress, 60000);
+
     // Switch to learning tab and render
     switchTab('learning');
     renderLearningContent();
@@ -11920,13 +11924,34 @@ function updateCheckinTimer() {
     }
 }
 
+/**
+ * Periodically saves check-in progress (called every 60 seconds).
+ * Keeps the stored itemsReviewed and duration current so that if
+ * the window closes unexpectedly, the data is reasonably up-to-date.
+ */
+function autoSaveCheckinProgress() {
+    if (!checkinModeActive || !activeCheckinId) return;
+
+    const checkin = appState.checkins.find(c => c.id === activeCheckinId);
+    if (checkin) {
+        checkin.itemsReviewed = checkinReviewedItems.size;
+        checkin.duration = Date.now() - checkinStartTime;
+        // Keep status as 'in-progress'
+    }
+    saveData();
+}
+
 function stopCheckinMode(autoStopped = false) {
     if (!checkinModeActive) return;
 
-    // Clear timer
+    // Clear timers
     if (checkinTimer) {
         clearInterval(checkinTimer);
         checkinTimer = null;
+    }
+    if (checkinAutoSaveTimer) {
+        clearInterval(checkinAutoSaveTimer);
+        checkinAutoSaveTimer = null;
     }
 
     // Update the in-progress check-in record (created in startCheckinMode)
@@ -11981,10 +12006,14 @@ function stopCheckinMode(autoStopped = false) {
 function stopCheckinSilent() {
     if (!checkinModeActive || !activeCheckinId) return;
 
-    // Clear timer
+    // Clear timers
     if (checkinTimer) {
         clearInterval(checkinTimer);
         checkinTimer = null;
+    }
+    if (checkinAutoSaveTimer) {
+        clearInterval(checkinAutoSaveTimer);
+        checkinAutoSaveTimer = null;
     }
 
     // Update the in-progress check-in record
