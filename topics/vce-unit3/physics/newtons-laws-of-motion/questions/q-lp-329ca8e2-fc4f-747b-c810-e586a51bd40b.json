@@ -1,0 +1,568 @@
+{
+  "_link": {
+    "uuid": "lp-329ca8e2-fc4f-747b-c810-e586a51bd40b",
+    "version": 1,
+    "contentHash": "hash-538bd2cd",
+    "title": "I can analyse forces on a vehicle moving over a bump or through a dip in the road",
+    "code": "1B.10",
+    "generatedAt": "2026-02-06T09:35:00Z"
+  },
+  "toLevel2": [
+    {
+      "type": "mc",
+      "question": "When a vehicle travels over the top of a convex hill, in which direction is the centripetal acceleration directed?",
+      "correct": "Downward, toward the centre of the circular arc",
+      "correctExplanation": "At the top of a hill the centre of the circular arc is below the vehicle, so centripetal acceleration points downward.",
+      "distractors": [
+        { "answer": "Upward, away from the centre of the circular arc", "explanation": "Centripetal acceleration always points toward the centre of curvature, which is below the vehicle on a hill." },
+        { "answer": "Forward, in the direction the vehicle is travelling", "explanation": "Centripetal acceleration is directed toward the centre of the circular path, not along the direction of travel." },
+        { "answer": "Backward, opposing the direction of the vehicle motion", "explanation": "Centripetal acceleration points toward the centre of the arc, not along or against the velocity direction." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "When a vehicle travels through the bottom of a concave dip, in which direction is the centripetal acceleration directed?",
+      "correct": "Upward, toward the centre of the circular arc",
+      "correctExplanation": "At the bottom of a dip the centre of curvature is above the vehicle, so centripetal acceleration is directed upward.",
+      "distractors": [
+        { "answer": "Downward, toward the road surface below the car", "explanation": "At the bottom of a dip the centre of the arc is above, so centripetal acceleration points upward, not downward." },
+        { "answer": "Forward, along the direction the vehicle is moving", "explanation": "Centripetal acceleration is radial, pointing toward the centre of curvature, not tangential to the path." },
+        { "answer": "Backward, opposing the vehicle's direction of travel", "explanation": "Centripetal acceleration points toward the arc centre above the vehicle, not along the path of motion." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What happens to the normal force on a vehicle as it passes over the top of a hill compared to driving on a flat road?",
+      "correct": "The normal force decreases below the vehicle's weight",
+      "correctExplanation": "At the top of a hill, part of the gravitational force provides centripetal force, so the normal force is reduced: N = mg - mv^2/r.",
+      "distractors": [
+        { "answer": "The normal force increases above the vehicle's weight", "explanation": "The normal force increases in a dip, not over a hill. Over a hill the normal force is reduced." },
+        { "answer": "The normal force remains equal to the vehicle's weight", "explanation": "The normal force equals weight only on a flat surface. Circular motion over a hill reduces the normal force." },
+        { "answer": "The normal force becomes zero at all hill speeds", "explanation": "The normal force becomes zero only at a specific critical speed, not at every speed on a hill." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What happens to the normal force on a vehicle at the bottom of a dip compared to driving on a flat road?",
+      "correct": "The normal force increases above the vehicle's weight",
+      "correctExplanation": "At the bottom of a dip, the normal force must exceed weight to provide the upward centripetal force: N = mg + mv^2/r.",
+      "distractors": [
+        { "answer": "The normal force decreases below the vehicle's weight", "explanation": "The normal force decreases over a hill top, not at the bottom of a dip. In a dip the normal force increases." },
+        { "answer": "The normal force remains equal to the vehicle's weight", "explanation": "The normal force equals weight only on flat ground. Circular motion in a dip increases the normal force." },
+        { "answer": "The normal force becomes zero at all dip speeds", "explanation": "At the bottom of a dip the normal force is always greater than the weight, never zero." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which equation correctly describes the net force on a vehicle at the top of a convex hill of radius r?",
+      "correct": "mg - N = mv^2/r",
+      "correctExplanation": "At the top of a hill, gravity (downward) minus normal force (upward) provides the net downward centripetal force mv^2/r.",
+      "distractors": [
+        { "answer": "N - mg = mv^2/r", "explanation": "This equation applies at the bottom of a dip where the normal force exceeds weight, not at the top of a hill." },
+        { "answer": "mg + N = mv^2/r", "explanation": "Adding weight and normal force is incorrect because they act in opposite directions at the top of a hill." },
+        { "answer": "N + mg = mv^2/r", "explanation": "Weight and normal force oppose each other at the hill top, so they should be subtracted, not added." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "A driver feels lighter when driving over the top of a hill because the normal force on the vehicle is reduced.",
+      "correct": "True",
+      "correctExplanation": "At the top of a hill, the normal force is less than the weight because part of the gravitational force provides centripetal acceleration downward.",
+      "distractors": [
+        { "answer": "False", "explanation": "Students may think the sensation is unrelated to normal force, but the reduced normal force is exactly why you feel lighter." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "At the bottom of a dip in the road, the apparent weight of a driver is less than their true weight.",
+      "correct": "False",
+      "correctExplanation": "At the bottom of a dip the normal force exceeds the weight, so the driver feels heavier, not lighter.",
+      "distractors": [
+        { "answer": "True", "explanation": "Students may confuse the dip with the hill. In a dip the normal force is greater than weight, increasing apparent weight." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about forces at the top of a hill.",
+      "sentence": "At the top of a convex hill, the centripetal acceleration is directed {{blank:1}}, so the normal force is {{blank:2}} than the weight of the vehicle.",
+      "blanks": {
+        "1": {
+          "correct": "downward",
+          "correctExplanation": "The centre of the circular arc is below the hilltop, so centripetal acceleration points downward toward that centre.",
+          "distractors": [
+            { "answer": "upward", "explanation": "Upward centripetal acceleration would apply at the bottom of a dip, not at the top of a hill." },
+            { "answer": "forward", "explanation": "Centripetal acceleration is radial, directed toward the centre of curvature, not along the direction of travel." }
+          ]
+        },
+        "2": {
+          "correct": "less",
+          "correctExplanation": "Since mg - N = mv^2/r, the normal force N must be less than the weight mg at the top of a hill.",
+          "distractors": [
+            { "answer": "greater", "explanation": "The normal force is greater than weight at the bottom of a dip, not at the top of a hill." },
+            { "answer": "equal to", "explanation": "The normal force equals weight only on a flat road. Circular motion at the hilltop reduces it." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about forces at the bottom of a dip.",
+      "sentence": "At the bottom of a concave dip, the equation for the net upward force is {{blank:1}} = mv^2/r, where N is the normal force.",
+      "blanks": {
+        "1": {
+          "correct": "N - mg",
+          "correctExplanation": "At the bottom of a dip, the normal force acts upward and weight acts downward. The net upward force is N - mg, which provides centripetal force.",
+          "distractors": [
+            { "answer": "mg - N", "explanation": "This expression gives the net downward force at the top of a hill, not the net upward force in a dip." },
+            { "answer": "N + mg", "explanation": "Adding both forces would be incorrect because they act in opposite directions at the bottom of a dip." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about sensations during circular motion on a road.",
+      "sentence": "A driver feels {{blank:1}} when going over the crest of a hill and feels {{blank:2}} when passing through a dip.",
+      "blanks": {
+        "1": {
+          "correct": "lighter",
+          "correctExplanation": "The normal force decreases at the top of a hill, reducing the sensation of weight and making the driver feel lighter.",
+          "distractors": [
+            { "answer": "heavier", "explanation": "Feeling heavier occurs in a dip where the normal force exceeds weight, not at the crest of a hill." },
+            { "answer": "weightless", "explanation": "Weightlessness occurs only at a specific critical speed. At most speeds the driver simply feels lighter, not weightless." }
+          ]
+        },
+        "2": {
+          "correct": "heavier",
+          "correctExplanation": "The normal force increases at the bottom of a dip, exceeding the driver's weight and creating a sensation of feeling heavier.",
+          "distractors": [
+            { "answer": "lighter", "explanation": "Feeling lighter occurs at the top of a hill where normal force is reduced, not in a dip." },
+            { "answer": "unchanged", "explanation": "The normal force changes significantly in a dip due to centripetal acceleration, altering the sensation of weight." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "mc",
+      "question": "Why does a driver feel lighter at the top of a hill but heavier at the bottom of a dip?",
+      "correct": "The normal force is reduced over a hill and increased in a dip due to the direction of centripetal acceleration",
+      "correctExplanation": "Over a hill, centripetal acceleration is downward so N < mg. In a dip, centripetal acceleration is upward so N > mg. The normal force determines the sensation of weight.",
+      "distractors": [
+        { "answer": "Gravity is weaker at higher altitudes on the hill and stronger at lower positions in the dip", "explanation": "The height difference on a road is far too small to change gravitational field strength measurably." },
+        { "answer": "The vehicle's speed increases over the hill and decreases in the dip causing force differences", "explanation": "The sensation depends on the direction of centripetal acceleration relative to gravity, not on speed changes alone." },
+        { "answer": "Air pressure decreases at the hill top and increases in the dip, pushing the driver differently", "explanation": "Air pressure differences over such small height changes are negligible and do not cause the weight sensation." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A 1200 kg car travels at 15 m/s over the top of a hill with radius of curvature 60 m. What is the normal force on the car?",
+      "correct": "N = 1200(9.8 - 15^2/60) = 1200(9.8 - 3.75) = 7260 N",
+      "correctExplanation": "Using N = m(g - v^2/r) = 1200(9.8 - 225/60) = 1200(9.8 - 3.75) = 1200 x 6.05 = 7260 N.",
+      "distractors": [
+        { "answer": "N = 1200(9.8 + 15^2/60) = 1200(9.8 + 3.75) = 16260 N", "explanation": "Adding v^2/r to g gives the normal force in a dip, not over a hill. At the hilltop, v^2/r is subtracted." },
+        { "answer": "N = 1200 x 9.8 = 11760 N, unchanged from a flat road", "explanation": "The normal force changes due to circular motion. On a hill, part of gravity provides centripetal force." },
+        { "answer": "N = 1200 x 15^2/60 = 4500 N, equal to the centripetal force", "explanation": "The normal force is not equal to the centripetal force. It equals m(g - v^2/r), not mv^2/r alone." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A 900 kg car passes through the bottom of a dip with radius 40 m at 20 m/s. What is the normal force?",
+      "correct": "N = 900(9.8 + 20^2/40) = 900(9.8 + 10) = 17820 N",
+      "correctExplanation": "Using N = m(g + v^2/r) = 900(9.8 + 400/40) = 900(9.8 + 10) = 900 x 19.8 = 17820 N.",
+      "distractors": [
+        { "answer": "N = 900(9.8 - 20^2/40) = 900(9.8 - 10) = -180 N", "explanation": "Subtracting v^2/r from g applies at the top of a hill. At the bottom of a dip, v^2/r is added to g." },
+        { "answer": "N = 900 x 20^2/40 = 9000 N, equal to the centripetal force", "explanation": "The normal force in a dip is not equal to the centripetal force alone. It equals m(g + v^2/r)." },
+        { "answer": "N = 900 x 9.8 = 8820 N, unchanged from a flat surface", "explanation": "The normal force changes in a dip due to centripetal acceleration. It is greater than the weight." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "At the top of a hill, what physical condition must be met for the car to just maintain contact with the road?",
+      "correct": "The normal force equals zero, meaning mg = mv^2/r",
+      "correctExplanation": "Contact is lost when the normal force drops to zero. Setting N = 0 in mg - N = mv^2/r gives mg = mv^2/r.",
+      "distractors": [
+        { "answer": "The normal force equals twice the weight of the vehicle", "explanation": "Doubling the normal force would require a dip, not a hill. Losing contact occurs when N reaches zero." },
+        { "answer": "The centripetal force equals zero at the critical point", "explanation": "At the critical speed, gravity alone provides the centripetal force. The centripetal force is mg, not zero." },
+        { "answer": "The vehicle's speed must equal the gravitational field strength", "explanation": "Speed and gravitational field strength have different units and cannot be directly equated." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which expression gives the maximum speed at which a car can travel over a hilltop of radius r without losing contact with the road?",
+      "correct": "v = sqrt(gr)",
+      "correctExplanation": "Setting N = 0 in mg - N = mv^2/r gives mg = mv^2/r, which simplifies to v^2 = gr, so v = sqrt(gr).",
+      "distractors": [
+        { "answer": "v = sqrt(g/r)", "explanation": "This inverts the relationship. The correct expression is v = sqrt(gr), not sqrt(g/r)." },
+        { "answer": "v = sqrt(2gr)", "explanation": "The factor of 2 is not present in this derivation. The correct result from mg = mv^2/r is v = sqrt(gr)." },
+        { "answer": "v = sqrt(mgr)", "explanation": "Mass cancels when deriving the maximum speed. The expression v = sqrt(gr) does not contain mass." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "How does the equation for net force differ between the top of a hill and the bottom of a dip?",
+      "correct": "At the hilltop mg - N = mv^2/r, while at the dip N - mg = mv^2/r",
+      "correctExplanation": "The centripetal direction reverses: downward at the hilltop (gravity minus normal) and upward at the dip (normal minus gravity).",
+      "distractors": [
+        { "answer": "Both use N - mg = mv^2/r because normal force always exceeds weight in circular motion", "explanation": "Normal force exceeds weight only in a dip. Over a hill the weight exceeds the normal force." },
+        { "answer": "At the hilltop N + mg = mv^2/r, and at the dip mg + N = mv^2/r simultaneously", "explanation": "Normal force and weight act in opposite directions at both locations, so they must be subtracted, not added." },
+        { "answer": "Both use mg - N = mv^2/r because gravity always exceeds normal force on curved roads", "explanation": "Gravity exceeds normal force only at the hilltop. In a dip, the normal force exceeds gravity." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "The maximum speed for maintaining road contact at the top of a hill depends on the mass of the vehicle.",
+      "correct": "False",
+      "correctExplanation": "Setting N = 0 gives mg = mv^2/r. Mass cancels, yielding v = sqrt(gr), which is independent of mass.",
+      "distractors": [
+        { "answer": "True", "explanation": "Students often expect heavier vehicles to behave differently, but mass cancels from the equation, leaving v = sqrt(gr)." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the calculation for the maximum speed over a hilltop.",
+      "sentence": "For a hill with radius of curvature 50 m, the maximum speed before losing contact is v = sqrt(9.8 x 50) = sqrt({{blank:1}}) = {{blank:2}} m/s.",
+      "blanks": {
+        "1": {
+          "correct": "490",
+          "correctExplanation": "Multiplying g by r gives 9.8 x 50 = 490. The square root of this value gives the critical speed.",
+          "distractors": [
+            { "answer": "980", "explanation": "This would result from using 2gr instead of gr. The correct formula has no factor of 2." },
+            { "answer": "245", "explanation": "This would result from using gr/2. The correct expression under the square root is simply gr = 490." }
+          ]
+        },
+        "2": {
+          "correct": "22.1",
+          "correctExplanation": "sqrt(490) = 22.1 m/s. This is the maximum speed at which the car maintains road contact.",
+          "distractors": [
+            { "answer": "31.3", "explanation": "This is sqrt(980), which would come from incorrectly using 2gr instead of gr in the formula." },
+            { "answer": "15.7", "explanation": "This is sqrt(245), which would come from incorrectly halving the product gr." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about forces in a dip.",
+      "sentence": "At the bottom of a dip with radius r, the normal force on a car of mass m travelling at speed v is N = m(g {{blank:1}} v^2/r).",
+      "blanks": {
+        "1": {
+          "correct": "+",
+          "correctExplanation": "In a dip the centripetal acceleration is upward, so N - mg = mv^2/r, giving N = m(g + v^2/r).",
+          "distractors": [
+            { "answer": "-", "explanation": "Subtracting v^2/r from g applies at the top of a hill where the normal force is reduced, not in a dip." },
+            { "answer": "x", "explanation": "The formula requires addition of g and v^2/r, not multiplication. The terms are additive inside the brackets." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about losing contact on a hill.",
+      "sentence": "A car loses contact with the road at the top of a hill when the {{blank:1}} force drops to zero, which occurs at the speed v = sqrt({{blank:2}}).",
+      "blanks": {
+        "1": {
+          "correct": "normal",
+          "correctExplanation": "Road contact is maintained by the normal force. When it drops to zero, the car lifts off the road surface.",
+          "distractors": [
+            { "answer": "gravitational", "explanation": "Gravity does not drop to zero. It is the normal force that reaches zero when contact is lost." },
+            { "answer": "centripetal", "explanation": "The centripetal force is not zero at the critical speed. At that point gravity alone provides the centripetal force." }
+          ]
+        },
+        "2": {
+          "correct": "gr",
+          "correctExplanation": "Setting N = 0 in mg - N = mv^2/r gives v^2 = gr, so the critical speed is v = sqrt(gr).",
+          "distractors": [
+            { "answer": "g/r", "explanation": "The correct expression is gr (product), not g/r (ratio). Dividing g by r gives incorrect units for v^2." },
+            { "answer": "2gr", "explanation": "The factor of 2 does not appear in this derivation. The result from mg = mv^2/r is simply v^2 = gr." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "mc",
+      "question": "A 1000 kg car travels at 20 m/s over the top of a hill with radius of curvature 50 m. Calculate the normal force on the car.",
+      "correct": "N = 1000(9.8 - 400/50) = 1000(9.8 - 8.0) = 1800 N",
+      "correctExplanation": "Using N = m(g - v^2/r) = 1000(9.8 - 20^2/50) = 1000(9.8 - 8.0) = 1000 x 1.8 = 1800 N.",
+      "distractors": [
+        { "answer": "N = 1000(9.8 + 400/50) = 1000(9.8 + 8.0) = 17800 N", "explanation": "Adding v^2/r to g gives the normal force in a dip. At the top of a hill, v^2/r is subtracted from g." },
+        { "answer": "N = 1000 x 400/50 = 8000 N, the centripetal force alone", "explanation": "The normal force is not the centripetal force. At the hilltop, N = m(g - v^2/r), not mv^2/r." },
+        { "answer": "N = 1000 x 9.8 = 9800 N, equal to the flat-road weight", "explanation": "The normal force differs from the weight due to circular motion. The v^2/r term must be included." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A 1500 kg car passes through a dip of radius 30 m at 18 m/s. What normal force acts on the car?",
+      "correct": "N = 1500(9.8 + 324/30) = 1500(9.8 + 10.8) = 30900 N",
+      "correctExplanation": "Using N = m(g + v^2/r) = 1500(9.8 + 18^2/30) = 1500(9.8 + 10.8) = 1500 x 20.6 = 30900 N.",
+      "distractors": [
+        { "answer": "N = 1500(9.8 - 324/30) = 1500(9.8 - 10.8) = -1500 N", "explanation": "Subtracting v^2/r applies at a hilltop. In a dip the correct equation adds v^2/r to g." },
+        { "answer": "N = 1500 x 18^2/30 = 16200 N, the centripetal force value", "explanation": "The normal force in a dip equals m(g + v^2/r), not the centripetal force mv^2/r alone." },
+        { "answer": "N = 1500 x 9.8 = 14700 N, unchanged from the flat surface", "explanation": "Circular motion in a dip increases the normal force above the weight. The v^2/r term must be added." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Calculate the maximum speed a car can travel over a hilltop of radius 80 m without losing contact with the road.",
+      "correct": "v = sqrt(9.8 x 80) = sqrt(784) = 28.0 m/s",
+      "correctExplanation": "Setting N = 0 gives v = sqrt(gr) = sqrt(9.8 x 80) = sqrt(784) = 28.0 m/s.",
+      "distractors": [
+        { "answer": "v = sqrt(9.8/80) = sqrt(0.1225) = 0.35 m/s", "explanation": "The formula is v = sqrt(gr), where g and r are multiplied, not divided. Division gives incorrect units." },
+        { "answer": "v = sqrt(2 x 9.8 x 80) = sqrt(1568) = 39.6 m/s", "explanation": "There is no factor of 2 in this derivation. The correct expression is v = sqrt(gr), not sqrt(2gr)." },
+        { "answer": "v = 9.8 x 80 = 784 m/s, from multiplying g by r", "explanation": "The speed is the square root of gr, not gr itself. v = sqrt(gr) = 28.0 m/s, not 784 m/s." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A 70 kg passenger sits in a car passing through a dip of radius 25 m at 16 m/s. What is the apparent weight felt by the passenger?",
+      "correct": "N = 70(9.8 + 256/25) = 70(9.8 + 10.24) = 1403 N",
+      "correctExplanation": "The apparent weight is the normal force: N = m(g + v^2/r) = 70(9.8 + 16^2/25) = 70(9.8 + 10.24) = 70 x 20.04 = 1403 N.",
+      "distractors": [
+        { "answer": "N = 70 x 9.8 = 686 N, equal to the true body weight", "explanation": "In a dip the apparent weight exceeds the true weight because the normal force includes the centripetal term." },
+        { "answer": "N = 70(9.8 - 256/25) = 70(9.8 - 10.24) = -30.8 N", "explanation": "Subtracting v^2/r applies at a hilltop. In a dip, v^2/r is added to g, not subtracted." },
+        { "answer": "N = 70 x 256/25 = 716.8 N, the centripetal force only", "explanation": "The apparent weight is the total normal force m(g + v^2/r), not just the centripetal force mv^2/r." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A car of mass 800 kg drives over a bump where the radius of curvature is 20 m. At what speed will the car just lose contact with the road?",
+      "correct": "v = sqrt(9.8 x 20) = sqrt(196) = 14.0 m/s",
+      "correctExplanation": "Setting N = 0 gives v = sqrt(gr) = sqrt(9.8 x 20) = sqrt(196) = 14.0 m/s. Note that mass cancels.",
+      "distractors": [
+        { "answer": "v = sqrt(9.8 x 20 x 800) = sqrt(156800) = 396 m/s", "explanation": "Mass cancels from the equation mg = mv^2/r. The critical speed does not depend on the car's mass." },
+        { "answer": "v = sqrt(9.8 / 20) = sqrt(0.49) = 0.70 m/s", "explanation": "The formula requires multiplying g by r, not dividing. v = sqrt(gr), not sqrt(g/r)." },
+        { "answer": "v = sqrt(2 x 9.8 x 20) = sqrt(392) = 19.8 m/s", "explanation": "There is no factor of 2 in the derivation. Setting N = 0 in mg = mv^2/r yields v = sqrt(gr)." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A car travels at 25 m/s over a hill of radius 45 m. By what factor does the normal force differ from the car's weight?",
+      "correct": "N/mg = 1 - v^2/(gr) = 1 - 625/441 = -0.417, meaning N is negative and contact is lost",
+      "correctExplanation": "N = m(g - v^2/r). Since v^2/r = 625/45 = 13.89 > 9.8, N would be negative, meaning the car has exceeded the critical speed and loses contact.",
+      "distractors": [
+        { "answer": "N/mg = 1 + v^2/(gr) = 1 + 625/441 = 2.417, so N is 2.4 times the weight", "explanation": "Adding v^2/(gr) applies in a dip. Over a hill, the ratio is 1 - v^2/(gr), which is negative here." },
+        { "answer": "N/mg = v^2/(gr) = 625/441 = 1.417, so N equals 1.4 times the weight", "explanation": "The ratio N/mg is 1 - v^2/(gr), not v^2/(gr) alone. The weight term must be included." },
+        { "answer": "N/mg = 1 - v/(gr) = 1 - 25/441 = 0.943, so N is 94% of the weight", "explanation": "The formula uses v^2, not v. Using v instead of v^2 dramatically underestimates the effect." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A roller coaster car of mass 500 kg passes through a circular valley with radius 15 m at 12 m/s. What is the net upward force on the car at the lowest point?",
+      "correct": "F_net = mv^2/r = 500 x 144/15 = 4800 N upward",
+      "correctExplanation": "The net force at the bottom of a dip is the centripetal force directed upward: F_net = mv^2/r = 500 x 12^2/15 = 4800 N.",
+      "distractors": [
+        { "answer": "F_net = mg = 500 x 9.8 = 4900 N downward, due to gravity", "explanation": "The net force is the centripetal force upward, not the gravitational force. Gravity is only one of the forces acting." },
+        { "answer": "F_net = 0 N because the car is at the lowest point of its path", "explanation": "The net force is not zero in circular motion. At the bottom of a dip, the net centripetal force acts upward." },
+        { "answer": "F_net = N - mg = 0 N because forces are balanced at the bottom", "explanation": "Forces are not balanced during circular motion. N exceeds mg to provide the upward centripetal force." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the calculation for the normal force over a hilltop.",
+      "sentence": "A 1000 kg car at the top of a hill (r = 50 m) at 20 m/s has N = 1000(9.8 - {{blank:1}}/50) = 1000(9.8 - {{blank:2}}) = 1800 N.",
+      "blanks": {
+        "1": {
+          "correct": "400",
+          "correctExplanation": "v^2 = 20^2 = 400. This value is divided by the radius to find the centripetal acceleration term.",
+          "distractors": [
+            { "answer": "20", "explanation": "The formula requires v^2, not v. Squaring 20 gives 400, not using 20 directly." },
+            { "answer": "200", "explanation": "v^2 = 20^2 = 400, not 200. Students may incorrectly calculate 20 x 10 instead of 20 x 20." }
+          ]
+        },
+        "2": {
+          "correct": "8.0",
+          "correctExplanation": "v^2/r = 400/50 = 8.0 m/s^2. This is the centripetal acceleration at the hilltop.",
+          "distractors": [
+            { "answer": "4.0", "explanation": "400/50 = 8.0, not 4.0. Students may incorrectly halve the result." },
+            { "answer": "0.4", "explanation": "400/50 = 8.0, not 0.4. Dividing incorrectly by 1000 instead of 50 would give this error." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the calculation for the normal force in a dip.",
+      "sentence": "A 900 kg car at the bottom of a dip (r = 40 m) at 20 m/s has N = 900(9.8 + {{blank:1}}) = 900 x {{blank:2}} = 17820 N.",
+      "blanks": {
+        "1": {
+          "correct": "10.0",
+          "correctExplanation": "v^2/r = 400/40 = 10.0 m/s^2. In a dip this is added to g to find the total effective acceleration.",
+          "distractors": [
+            { "answer": "0.5", "explanation": "v/r = 20/40 = 0.5, but the formula requires v^2/r = 400/40 = 10.0, not v/r." },
+            { "answer": "5.0", "explanation": "400/40 = 10.0, not 5.0. Students may incorrectly halve the centripetal acceleration." }
+          ]
+        },
+        "2": {
+          "correct": "19.8",
+          "correctExplanation": "g + v^2/r = 9.8 + 10.0 = 19.8. Multiplying by the mass gives the normal force of 17820 N.",
+          "distractors": [
+            { "answer": "9.8", "explanation": "9.8 is g alone without the centripetal term. The total effective acceleration in a dip is g + v^2/r." },
+            { "answer": "14.8", "explanation": "This would result from adding 5.0 instead of 10.0 to g. The correct centripetal acceleration is 10.0 m/s^2." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the critical speed on a hill.",
+      "sentence": "For a hill with radius 80 m, the maximum speed before losing contact is v = sqrt({{blank:1}} x {{blank:2}}) = 28.0 m/s.",
+      "blanks": {
+        "1": {
+          "correct": "9.8",
+          "correctExplanation": "The gravitational field strength g = 9.8 m/s^2 is one of the two values multiplied under the square root.",
+          "distractors": [
+            { "answer": "4.9", "explanation": "The factor (1/2)g = 4.9 appears in some kinematic equations but not in v = sqrt(gr). The full value of g is used." },
+            { "answer": "19.6", "explanation": "2g = 19.6 is not used in this formula. The correct expression is v = sqrt(gr) with g = 9.8." }
+          ]
+        },
+        "2": {
+          "correct": "80",
+          "correctExplanation": "The radius of curvature r = 80 m is multiplied by g under the square root to give the critical speed.",
+          "distractors": [
+            { "answer": "40", "explanation": "The full radius of 80 m is used, not half the radius. The formula is v = sqrt(gr), not v = sqrt(gr/2)." },
+            { "answer": "160", "explanation": "The radius is 80 m, not 160 m. Doubling the radius would give an incorrect critical speed." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "mc",
+      "question": "A car of mass m travels over a hill of radius r at speed v, and then through a dip of the same radius at the same speed. Compare the normal forces in the two cases.",
+      "correct": "The normal force in the dip exceeds that on the hill by 2mv^2/r",
+      "correctExplanation": "On the hill N_hill = m(g - v^2/r) and in the dip N_dip = m(g + v^2/r). The difference is N_dip - N_hill = 2mv^2/r.",
+      "distractors": [
+        { "answer": "The normal forces are equal because the radius and speed are the same in both cases", "explanation": "The direction of centripetal acceleration reverses between hill and dip, causing different normal forces despite the same speed and radius." },
+        { "answer": "The normal force in the dip exceeds that on the hill by mv^2/r only", "explanation": "The hill reduces N by mv^2/r and the dip increases it by mv^2/r, so the total difference is 2mv^2/r." },
+        { "answer": "The normal force on the hill exceeds that in the dip by 2mv^2/r", "explanation": "The normal force is larger in the dip where it must exceed weight, not on the hill where it is reduced." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student claims that a heavier car will lose contact with the road at a lower speed over a hilltop than a lighter car. Evaluate this claim.",
+      "correct": "The claim is incorrect because the critical speed v = sqrt(gr) is independent of mass",
+      "correctExplanation": "Mass cancels from mg = mv^2/r, giving v = sqrt(gr). Both heavy and light cars lose contact at the same speed for the same hill radius.",
+      "distractors": [
+        { "answer": "The claim is correct because a heavier car has more gravitational force pulling it down", "explanation": "While the heavier car has more weight, it also has more inertia. Both effects scale with mass and cancel out." },
+        { "answer": "The claim is correct because the heavier car requires more centripetal force to maintain the path", "explanation": "The required centripetal force scales with mass, as does gravity. Mass cancels and the critical speed is unchanged." },
+        { "answer": "The claim is partially correct because mass affects the result only when air resistance is included", "explanation": "In the standard analysis without air resistance, mass cancels completely. The claim is simply incorrect." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A road designer wants to ensure cars travelling at 30 m/s do not lose contact at a hilltop. What is the minimum radius of curvature required?",
+      "correct": "r = v^2/g = 900/9.8 = 91.8 m",
+      "correctExplanation": "From v = sqrt(gr), rearranging gives r = v^2/g = 30^2/9.8 = 900/9.8 = 91.8 m. The hill must have at least this radius.",
+      "distractors": [
+        { "answer": "r = v/g = 30/9.8 = 3.06 m, using speed instead of speed squared", "explanation": "The formula requires v^2 in the numerator. Using v instead of v^2 severely underestimates the required radius." },
+        { "answer": "r = g/v^2 = 9.8/900 = 0.0109 m, inverting the formula", "explanation": "The correct rearrangement is r = v^2/g, not r = g/v^2. Inverting gives a radius far too small." },
+        { "answer": "r = 2v^2/g = 1800/9.8 = 183.7 m, including a safety factor of 2", "explanation": "The physics gives r = v^2/g without any factor of 2. A safety factor would be an engineering choice, not a physics result." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A car travels through a dip at speed v. If the speed is doubled, by what factor does the increase in normal force above the weight change?",
+      "correct": "The increase above weight quadruples, because it is proportional to v^2",
+      "correctExplanation": "The excess normal force is mv^2/r. Doubling v gives m(2v)^2/r = 4mv^2/r. The increase is four times greater.",
+      "distractors": [
+        { "answer": "The increase above weight doubles, proportional to the speed", "explanation": "The centripetal term is proportional to v^2, not v. Doubling speed quadruples the effect, not doubles it." },
+        { "answer": "The increase above weight remains the same regardless of speed changes", "explanation": "The excess normal force depends on v^2/r. Changing the speed directly affects the magnitude of the increase." },
+        { "answer": "The increase above weight increases eightfold because force depends on v^3", "explanation": "Centripetal force depends on v^2, not v^3. Doubling speed gives a factor of 4, not 8." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A car passes over a hill at exactly the critical speed and then accelerates. Describe what happens physically and which force changes.",
+      "correct": "The car lifts off the road because gravity alone cannot provide enough centripetal force at speeds above sqrt(gr)",
+      "correctExplanation": "At the critical speed, gravity provides exactly the needed centripetal force with N = 0. Above this speed, more centripetal force is needed than gravity can provide, so the car leaves the surface.",
+      "distractors": [
+        { "answer": "The car pushes harder on the road because higher speed increases the contact force", "explanation": "Over a hill, higher speed reduces the normal force. Beyond the critical speed, the car loses contact entirely." },
+        { "answer": "The car stays on the road because friction prevents it from separating from the surface", "explanation": "Friction acts along the surface, not perpendicular to it. It cannot provide the downward force needed to maintain contact." },
+        { "answer": "The car continues at the same normal force because N = 0 is the minimum achievable value", "explanation": "N cannot be negative for a road surface. Once the required centripetal force exceeds mg, the car lifts off." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Compare the normal force on a 1000 kg car at the bottom of a dip (r = 40 m, v = 25 m/s) with its weight. Express the ratio N/mg.",
+      "correct": "N/mg = 1 + v^2/(gr) = 1 + 625/392 = 2.59",
+      "correctExplanation": "N = m(g + v^2/r), so N/mg = 1 + v^2/(gr) = 1 + 625/(9.8 x 40) = 1 + 625/392 = 1 + 1.595 = 2.59.",
+      "distractors": [
+        { "answer": "N/mg = v^2/(gr) = 625/392 = 1.59, ignoring the weight contribution entirely", "explanation": "The ratio includes both the weight term (1) and the centripetal term (v^2/gr). Omitting the 1 underestimates the ratio." },
+        { "answer": "N/mg = 1 - v^2/(gr) = 1 - 625/392 = -0.59, using the hill equation", "explanation": "Subtracting the centripetal term applies at a hilltop. In a dip, the centripetal term is added." },
+        { "answer": "N/mg = 1 + v/(gr) = 1 + 25/392 = 1.064, using v instead of v^2", "explanation": "The formula uses v^2, not v. Using v alone underestimates the centripetal effect dramatically." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student argues that the apparent weightlessness felt at the top of a hill is identical to the weightlessness experienced in orbit. Evaluate this claim.",
+      "correct": "The claim is correct in principle; both situations involve free fall where the normal force is zero and gravity provides all centripetal force",
+      "correctExplanation": "In both cases the object is in free fall: gravity alone provides centripetal force and the normal force (or contact force) is zero. The physics is fundamentally the same.",
+      "distractors": [
+        { "answer": "The claim is incorrect because orbital weightlessness requires zero gravity, not centripetal motion", "explanation": "Orbital weightlessness is not due to zero gravity. Gravity is present in orbit and provides the centripetal force, just as at the hilltop." },
+        { "answer": "The claim is incorrect because the hilltop scenario involves gravity but orbit does not involve gravity", "explanation": "Gravity acts in orbit. The ISS experiences about 89% of surface gravity. Weightlessness results from free fall, not absence of gravity." },
+        { "answer": "The claim is correct only if the car's speed equals orbital speed at the same altitude as the hill", "explanation": "The principle is the same regardless of speed. Both involve N = 0 with gravity providing centripetal force, though the speeds differ greatly." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A suspension bridge has a lowest point that forms a circular arc of radius 200 m. A 2000 kg car crosses at 30 m/s. Determine whether the bridge cables experience more or less tension than the static weight, and by how much.",
+      "correct": "More tension by 2000 x 30^2/200 = 9000 N, because the cables must also supply centripetal force upward",
+      "correctExplanation": "At the bottom of the arc, the cables carry the weight plus the centripetal term: extra tension = mv^2/r = 2000 x 900/200 = 9000 N above static weight.",
+      "distractors": [
+        { "answer": "Less tension by 9000 N because the circular motion reduces the effective load on the cables", "explanation": "Circular motion at the bottom of an arc increases the load on the cables. The centripetal force adds to the weight." },
+        { "answer": "The same tension as static weight because horizontal motion does not affect vertical cable tension", "explanation": "The curved path creates a centripetal acceleration requirement. Even horizontal motion on a curved path changes the vertical force." },
+        { "answer": "More tension by 2000 x 30/200 = 300 N, using speed instead of speed squared in the formula", "explanation": "The centripetal force uses v^2, not v. Using v alone underestimates the additional tension by a factor of 30." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the analysis comparing hill and dip normal forces.",
+      "sentence": "For the same speed v and radius r, the difference between the normal force in a dip and over a hill is N_dip - N_hill = {{blank:1}}, which equals twice the {{blank:2}} force.",
+      "blanks": {
+        "1": {
+          "correct": "2mv^2/r",
+          "correctExplanation": "N_dip = m(g + v^2/r) and N_hill = m(g - v^2/r). Subtracting: N_dip - N_hill = 2mv^2/r.",
+          "distractors": [
+            { "answer": "mv^2/r", "explanation": "The difference includes contributions from both the hill reduction and the dip increase, giving 2mv^2/r, not mv^2/r." },
+            { "answer": "2mg", "explanation": "The difference depends on v^2/r, not g. The weight terms cancel: m(g + v^2/r) - m(g - v^2/r) = 2mv^2/r." }
+          ]
+        },
+        "2": {
+          "correct": "centripetal",
+          "correctExplanation": "The difference 2mv^2/r equals twice the centripetal force mv^2/r, reflecting the reversal of the centripetal direction between hill and dip.",
+          "distractors": [
+            { "answer": "gravitational", "explanation": "The gravitational force mg cancels in the subtraction. The remaining difference is related to the centripetal force." },
+            { "answer": "friction", "explanation": "Friction is not involved in the vertical force balance at the hill top or dip bottom. The difference is due to centripetal force." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the road design calculation.",
+      "sentence": "To ensure cars at 30 m/s maintain contact over a hill, the minimum radius of curvature is r = v^2/g = {{blank:1}}/9.8 = {{blank:2}} m.",
+      "blanks": {
+        "1": {
+          "correct": "900",
+          "correctExplanation": "v^2 = 30^2 = 900. This is divided by g to find the minimum radius of curvature.",
+          "distractors": [
+            { "answer": "30", "explanation": "The formula requires v^2, not v. Using 30 instead of 900 would give a radius far too small." },
+            { "answer": "60", "explanation": "v^2 = 30^2 = 900, not 2 x 30 = 60. The speed must be squared, not doubled." }
+          ]
+        },
+        "2": {
+          "correct": "91.8",
+          "correctExplanation": "r = 900/9.8 = 91.8 m. The hill must have at least this radius of curvature for safe travel at 30 m/s.",
+          "distractors": [
+            { "answer": "3.06", "explanation": "This would result from using r = v/g = 30/9.8 instead of r = v^2/g. The speed must be squared." },
+            { "answer": "183.7", "explanation": "This would result from using 2v^2/g instead of v^2/g. The correct formula has no factor of 2." }
+          ]
+        }
+      }
+    }
+  ]
+}

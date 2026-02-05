@@ -1,0 +1,576 @@
+{
+  "_link": {
+    "uuid": "lp-20e9b437-45d3-afdb-f57b-27e3ca456799",
+    "version": 1,
+    "contentHash": "hash-4a03018d",
+    "title": "I can calculate the normal force and acceleration on an inclined plane",
+    "code": "1A.5",
+    "generatedAt": "2026-02-06T09:20:00Z"
+  },
+  "toLevel2": [
+    {
+      "type": "mc",
+      "question": "On an inclined plane, which formula gives the normal force acting on an object of mass m?",
+      "correct": "N = mg cos(theta)",
+      "correctExplanation": "The normal force is the component of gravity perpendicular to the slope surface, which equals mg cos(theta).",
+      "distractors": [
+        { "answer": "N = mg sin(theta)", "explanation": "mg sin(theta) gives the component of gravity parallel to the slope, not perpendicular. Students often swap the sin and cos components." },
+        { "answer": "N = mg tan(theta)", "explanation": "Tangent is the ratio of sin to cos and does not represent either component of gravity on a slope." },
+        { "answer": "N = mg / cos(theta)", "explanation": "Dividing by cos(theta) would give a force larger than mg. The normal force on an incline is always less than mg." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What is the formula for the gravitational component acting parallel to an inclined plane?",
+      "correct": "F = mg sin(theta)",
+      "correctExplanation": "The parallel component of gravity that pulls the object down the slope is mg sin(theta), where theta is the angle of the incline.",
+      "distractors": [
+        { "answer": "F = mg cos(theta)", "explanation": "mg cos(theta) gives the perpendicular component, which is the normal force, not the force along the slope." },
+        { "answer": "F = mg tan(theta)", "explanation": "Tangent does not directly resolve gravity into slope components. The parallel component uses the sine function." },
+        { "answer": "F = mg / sin(theta)", "explanation": "Dividing by sin(theta) inverts the relationship, giving a force larger than mg for angles less than 90 degrees." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "On a frictionless inclined plane, what determines the acceleration of a sliding object?",
+      "correct": "a = g sin(theta)",
+      "correctExplanation": "On a frictionless slope, the only force along the incline is mg sin(theta). Dividing by mass m gives a = g sin(theta).",
+      "distractors": [
+        { "answer": "a = g cos(theta)", "explanation": "g cos(theta) relates to the normal force direction, not the acceleration along the slope." },
+        { "answer": "a = g tan(theta)", "explanation": "The tangent function does not correctly resolve the acceleration component parallel to the slope." },
+        { "answer": "a = g / sin(theta)", "explanation": "Dividing g by sin(theta) gives an acceleration larger than g, which is not possible for a component of gravity." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "As the angle of an inclined plane increases from 0 to 90 degrees, what happens to the normal force on the object?",
+      "correct": "The normal force decreases from mg to zero",
+      "correctExplanation": "N = mg cos(theta). At 0 degrees, cos(0) = 1 so N = mg. At 90 degrees, cos(90) = 0 so N = 0.",
+      "distractors": [
+        { "answer": "The normal force increases from zero to mg", "explanation": "This describes the parallel component mg sin(theta), not the normal force. The normal force decreases as the angle increases." },
+        { "answer": "The normal force remains constant at mg", "explanation": "The normal force equals mg only on a flat surface. On an incline, it decreases with increasing angle." },
+        { "answer": "The normal force decreases from mg to mg/2", "explanation": "The normal force reaches zero at 90 degrees, not mg/2. N = mg cos(90) = 0." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What is the value of g used in inclined plane calculations in VCE Physics?",
+      "correct": "9.8 m/s squared",
+      "correctExplanation": "The standard acceleration due to gravity used in VCE Physics calculations is g = 9.8 m/s squared.",
+      "distractors": [
+        { "answer": "10.0 m/s squared", "explanation": "While 10.0 is sometimes used as a rough estimate, VCE Physics uses the more precise value of 9.8 m/s squared." },
+        { "answer": "9.81 m/s squared", "explanation": "9.81 is a more precise value, but VCE Physics standardises on 9.8 m/s squared for calculations." },
+        { "answer": "8.9 m/s squared", "explanation": "8.9 m/s squared is not a standard value for gravitational acceleration at Earth's surface." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "On an inclined plane, the normal force is always less than the weight of the object.",
+      "correct": "True",
+      "correctExplanation": "Since N = mg cos(theta) and cos(theta) is less than 1 for any angle greater than 0 degrees, the normal force is always less than mg on an incline.",
+      "distractors": [
+        { "answer": "False", "explanation": "Students may think the normal force always equals mg, but on a slope, only the perpendicular component of gravity is balanced by N." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "The acceleration of an object on a frictionless inclined plane depends on the mass of the object.",
+      "correct": "False",
+      "correctExplanation": "The acceleration a = g sin(theta) does not contain mass. All objects on the same frictionless slope accelerate at the same rate, regardless of mass.",
+      "distractors": [
+        { "answer": "True", "explanation": "Students often assume heavier objects accelerate faster. However, mass cancels when dividing the net force mg sin(theta) by m." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about forces on an inclined plane.",
+      "sentence": "On an inclined plane, gravity is resolved into two components: mg cos(theta) {{blank:1}} to the surface and mg sin(theta) {{blank:2}} to the surface.",
+      "blanks": {
+        "1": {
+          "correct": "perpendicular",
+          "correctExplanation": "The cosine component acts perpendicular to the slope surface and is balanced by the normal force.",
+          "distractors": [
+            { "answer": "parallel", "explanation": "The parallel component uses sin(theta), not cos(theta). Perpendicular and parallel components must not be swapped." },
+            { "answer": "tangential", "explanation": "While tangential can mean along the surface, the standard physics term for the cos(theta) component direction is perpendicular." }
+          ]
+        },
+        "2": {
+          "correct": "parallel",
+          "correctExplanation": "The sine component acts parallel to the slope surface and causes the object to accelerate down the incline.",
+          "distractors": [
+            { "answer": "perpendicular", "explanation": "The perpendicular component uses cos(theta), not sin(theta). The sin(theta) component acts along the slope." },
+            { "answer": "opposite", "explanation": "Opposite is not a standard direction for force components on an inclined plane. The correct term is parallel." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the normal force on an inclined plane.",
+      "sentence": "The normal force on an inclined plane equals mg multiplied by the {{blank:1}} of the angle of inclination.",
+      "blanks": {
+        "1": {
+          "correct": "cosine",
+          "correctExplanation": "N = mg cos(theta), so the normal force uses the cosine of the incline angle.",
+          "distractors": [
+            { "answer": "sine", "explanation": "The sine function gives the parallel component mg sin(theta), not the normal force." },
+            { "answer": "tangent", "explanation": "The tangent function is the ratio of sin to cos and does not directly give either gravity component on a slope." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about acceleration on a frictionless slope.",
+      "sentence": "On a frictionless inclined plane, the acceleration of a sliding object is a = g {{blank:1}}, which is independent of the object's {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "sin(theta)",
+          "correctExplanation": "The net force along the slope is mg sin(theta), and dividing by mass gives a = g sin(theta).",
+          "distractors": [
+            { "answer": "cos(theta)", "explanation": "g cos(theta) relates to the normal force direction, not the acceleration along the slope." },
+            { "answer": "tan(theta)", "explanation": "tan(theta) does not correctly describe the acceleration on a frictionless slope. The correct expression uses sin(theta)." }
+          ]
+        },
+        "2": {
+          "correct": "mass",
+          "correctExplanation": "Mass cancels when calculating a = mg sin(theta) / m = g sin(theta), so acceleration does not depend on mass.",
+          "distractors": [
+            { "answer": "angle", "explanation": "Acceleration does depend on the angle through sin(theta). It is independent of mass, not angle." },
+            { "answer": "speed", "explanation": "While acceleration on a frictionless slope is constant regardless of speed, the key independence here is from mass." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "mc",
+      "question": "A 10 kg block sits on a 30 degree frictionless slope. Why is the normal force 84.9 N rather than 98.0 N?",
+      "correct": "Because only the perpendicular component of gravity, mg cos(30), is balanced by the normal force",
+      "correctExplanation": "On a slope, the normal force balances just the component of weight perpendicular to the surface: N = 10(9.8)cos(30) = 84.9 N, not the full weight of 98.0 N.",
+      "distractors": [
+        { "answer": "Because friction reduces the normal force below the full weight of the object on the slope", "explanation": "The slope is frictionless. The reduced normal force is due to the angle of the slope, not friction." },
+        { "answer": "Because the slope exerts an upward force that partially cancels the weight of the block", "explanation": "The normal force is perpendicular to the slope, not vertically upward. It balances only the perpendicular component of gravity." },
+        { "answer": "Because the block is accelerating, so Newton's second law reduces the normal force below mg", "explanation": "Acceleration is parallel to the slope. The normal force is perpendicular to the slope and unrelated to the acceleration along it." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Why does sin(theta) appear in the formula for the force component along the slope rather than cos(theta)?",
+      "correct": "Because the angle theta is measured from the horizontal, making the side opposite to theta the parallel component",
+      "correctExplanation": "In the right triangle formed by resolving gravity, the component along the slope is opposite the incline angle, and the opposite side in a right triangle uses sin(theta).",
+      "distractors": [
+        { "answer": "Because cos(theta) always gives a larger value, and the parallel force must be the smaller component", "explanation": "For angles above 45 degrees, sin(theta) is actually larger than cos(theta). The choice depends on geometry, not relative size." },
+        { "answer": "Because the sine function accounts for the friction between the object and the surface of the slope", "explanation": "The sin(theta) component exists regardless of friction. It comes from resolving gravity into components, not from friction." },
+        { "answer": "Because sin(theta) is defined as the ratio of the hypotenuse to the adjacent side in the triangle", "explanation": "This is not the correct definition of sine. Sine is the ratio of the opposite side to the hypotenuse." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A 20 kg crate is placed on a 45 degree frictionless incline. Explain why the normal force and the parallel force component are equal in this case.",
+      "correct": "Because sin(45) and cos(45) are both equal to 0.707, making both force components equal",
+      "correctExplanation": "At 45 degrees, sin(45) = cos(45) = 0.707. So N = mg cos(45) = 138.6 N and the parallel force = mg sin(45) = 138.6 N.",
+      "distractors": [
+        { "answer": "Because at 45 degrees the slope creates a balanced system where all forces are in equilibrium", "explanation": "The object is not in equilibrium; it accelerates down the slope. The equality is a coincidence of sin and cos being equal at 45 degrees." },
+        { "answer": "Because the normal force always equals the parallel force on any inclined plane at any angle", "explanation": "The two components are equal only at 45 degrees. At other angles, one is larger than the other." },
+        { "answer": "Because the mass of 20 kg is large enough to make both components of gravity match each other", "explanation": "Mass affects the magnitude of both components equally and does not cause them to be equal. The equality comes from the 45 degree angle." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "How does the acceleration of a block on a 30 degree frictionless incline compare to the acceleration of a block on a 60 degree frictionless incline?",
+      "correct": "The 60 degree incline produces a larger acceleration because sin(60) is greater than sin(30)",
+      "correctExplanation": "a = g sin(theta). Since sin(60) = 0.866 and sin(30) = 0.500, the steeper slope gives a larger acceleration: 8.49 m/s squared versus 4.90 m/s squared.",
+      "distractors": [
+        { "answer": "The 30 degree incline produces a larger acceleration because a shallower angle has less normal force opposition", "explanation": "Normal force acts perpendicular to the slope and does not oppose motion along it. Steeper slopes always give greater acceleration." },
+        { "answer": "Both inclines produce the same acceleration because gravity is constant regardless of the angle", "explanation": "While g is constant, the component of gravity along the slope depends on sin(theta), which changes with angle." },
+        { "answer": "The 60 degree incline produces exactly double the acceleration because the angle is double that of 30 degrees", "explanation": "Acceleration is not linearly proportional to angle. sin(60)/sin(30) = 0.866/0.500 = 1.73, not 2.00." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "On an inclined plane, what happens to the normal force if the mass of the object is doubled while the angle remains the same?",
+      "correct": "The normal force doubles because it is directly proportional to mass",
+      "correctExplanation": "N = mg cos(theta). If m doubles, N doubles because cos(theta) and g are unchanged. Normal force is linear in mass.",
+      "distractors": [
+        { "answer": "The normal force stays the same because the angle determines the normal force, not mass", "explanation": "Both mass and angle affect the normal force. N = mg cos(theta) depends on m, g, and theta." },
+        { "answer": "The normal force quadruples because it depends on the square of the mass of the object", "explanation": "Normal force is proportional to m, not m squared. Doubling mass doubles the normal force." },
+        { "answer": "The normal force increases but by less than double because the extra weight is partly absorbed by friction", "explanation": "On a frictionless slope, friction plays no role. The normal force scales linearly with mass." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student says the acceleration on a frictionless slope is independent of mass. Why is this true?",
+      "correct": "Because the net force mg sin(theta) divided by mass m cancels the mass, leaving a = g sin(theta)",
+      "correctExplanation": "Using Newton's second law: a = F/m = mg sin(theta)/m = g sin(theta). Mass appears in both numerator and denominator and cancels.",
+      "distractors": [
+        { "answer": "Because heavier objects experience proportionally more friction, balancing out the extra gravitational pull", "explanation": "The slope is frictionless. Mass independence comes from the cancellation in Newton's second law, not from friction." },
+        { "answer": "Because gravitational acceleration g is a constant and does not depend on the mass of the object at all", "explanation": "While g is indeed constant, the reason the slope acceleration is mass-independent is the cancellation of m in F/m." },
+        { "answer": "Because inclined planes redirect gravity without changing its magnitude, so all objects slide identically", "explanation": "The incline does change the effective force component along the slope. The mass independence is due to mathematical cancellation." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "If the angle of an inclined plane is increased, the component of gravity parallel to the slope increases while the normal force decreases.",
+      "correct": "True",
+      "correctExplanation": "As theta increases, sin(theta) increases making the parallel component larger, while cos(theta) decreases making the normal force smaller.",
+      "distractors": [
+        { "answer": "False", "explanation": "Students may think both components increase or both decrease together. In fact, they change in opposite directions as the angle changes." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence explaining why the normal force is reduced on a slope.",
+      "sentence": "The normal force on a slope is less than mg because the surface only needs to support the {{blank:1}} of the object's weight that acts {{blank:2}} to the surface.",
+      "blanks": {
+        "1": {
+          "correct": "component",
+          "correctExplanation": "On a slope, gravity is resolved into components. The normal force balances only the component perpendicular to the surface.",
+          "distractors": [
+            { "answer": "fraction", "explanation": "While the normal force is a fraction of mg, the precise physics term is component, referring to the vector resolution of gravity." },
+            { "answer": "resultant", "explanation": "The resultant is the total of combined forces. Here we need the individual component of gravity perpendicular to the slope." }
+          ]
+        },
+        "2": {
+          "correct": "perpendicular",
+          "correctExplanation": "The normal force is always perpendicular to the surface and balances only the perpendicular component of gravity.",
+          "distractors": [
+            { "answer": "parallel", "explanation": "The parallel component causes acceleration along the slope. The normal force balances the perpendicular component." },
+            { "answer": "vertically", "explanation": "The normal force acts perpendicular to the slope surface, not vertically. Only on a flat surface are these the same direction." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the relationship between slope angle and acceleration.",
+      "sentence": "A steeper frictionless slope produces a {{blank:1}} acceleration because the value of sin(theta) {{blank:2}} as the angle increases.",
+      "blanks": {
+        "1": {
+          "correct": "larger",
+          "correctExplanation": "Since a = g sin(theta), a steeper angle means a larger sin(theta) and therefore a larger acceleration.",
+          "distractors": [
+            { "answer": "smaller", "explanation": "A steeper slope gives a larger parallel gravity component and therefore a larger, not smaller, acceleration." },
+            { "answer": "constant", "explanation": "Acceleration changes with angle. It is only constant for a given fixed angle, not across different angles." }
+          ]
+        },
+        "2": {
+          "correct": "increases",
+          "correctExplanation": "sin(theta) increases from 0 to 1 as theta goes from 0 to 90 degrees, directly increasing the acceleration.",
+          "distractors": [
+            { "answer": "decreases", "explanation": "sin(theta) increases as theta increases from 0 to 90 degrees. It is cos(theta) that decreases over this range." },
+            { "answer": "remains unchanged", "explanation": "sin(theta) is not constant. It changes with angle, which is why different slopes produce different accelerations." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the force diagram on an inclined plane.",
+      "sentence": "On an inclined plane, the angle between the weight vector and the {{blank:1}} to the slope equals the angle of {{blank:2}} of the plane.",
+      "blanks": {
+        "1": {
+          "correct": "normal",
+          "correctExplanation": "The angle between the vertical weight vector and the line perpendicular (normal) to the slope is equal to the incline angle theta.",
+          "distractors": [
+            { "answer": "surface", "explanation": "The angle between the weight vector and the slope surface is 90 minus theta, not theta. The correct reference is the normal." },
+            { "answer": "horizontal", "explanation": "The angle between the weight vector and the horizontal is 90 degrees, which is fixed and unrelated to the incline angle." }
+          ]
+        },
+        "2": {
+          "correct": "inclination",
+          "correctExplanation": "By geometry, the angle between the weight vector and the normal to the slope equals the angle of inclination of the plane.",
+          "distractors": [
+            { "answer": "elevation", "explanation": "While elevation refers to height, the standard physics term for the slope angle in this context is the angle of inclination." },
+            { "answer": "refraction", "explanation": "Refraction is an optics term. The angle of the inclined plane is called the angle of inclination." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "mc",
+      "question": "A 10 kg block is placed on a frictionless 30 degree incline. Calculate the normal force acting on the block.",
+      "correct": "N = 10(9.8)cos(30) = 84.9 N",
+      "correctExplanation": "N = mg cos(theta) = 10(9.8)(0.866) = 84.9 N. The normal force balances the perpendicular component of gravity.",
+      "distractors": [
+        { "answer": "N = 10(9.8)sin(30) = 49.0 N", "explanation": "This uses sin instead of cos. The sine function gives the parallel component, not the normal force." },
+        { "answer": "N = 10(9.8) = 98.0 N", "explanation": "This is the full weight, which equals the normal force only on a flat surface, not on an incline." },
+        { "answer": "N = 10(9.8)tan(30) = 56.6 N", "explanation": "The tangent function does not correctly resolve gravity into slope components. The normal force uses cosine." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Calculate the acceleration of a box sliding down a frictionless 25 degree incline.",
+      "correct": "a = 9.8 sin(25) = 4.14 m/s squared",
+      "correctExplanation": "On a frictionless incline, a = g sin(theta) = 9.8(0.4226) = 4.14 m/s squared, regardless of the mass of the box.",
+      "distractors": [
+        { "answer": "a = 9.8 cos(25) = 8.88 m/s squared", "explanation": "Using cos instead of sin gives the perpendicular component divided by mass. The parallel acceleration uses sin(theta)." },
+        { "answer": "a = 9.8 tan(25) = 4.57 m/s squared", "explanation": "The tangent function does not correctly give the acceleration along the slope. The correct formula uses sin(theta)." },
+        { "answer": "a = 9.8 / sin(25) = 23.2 m/s squared", "explanation": "Dividing by sin gives an acceleration greater than g, which is impossible for a component of gravitational acceleration." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A 15 kg box sits on a 34 degree slope. Calculate the gravitational force component acting down the slope.",
+      "correct": "F = 15(9.8)sin(34) = 82.2 N",
+      "correctExplanation": "The force down the slope is mg sin(theta) = 15(9.8)(0.5592) = 82.2 N.",
+      "distractors": [
+        { "answer": "F = 15(9.8)cos(34) = 121.9 N", "explanation": "This calculates the normal force, not the component along the slope. The parallel component uses sin, not cos." },
+        { "answer": "F = 15(9.8) = 147.0 N", "explanation": "This is the full weight acting vertically, not the component resolved along the slope surface." },
+        { "answer": "F = 15(9.8)sin(56) = 121.9 N", "explanation": "Using the complementary angle 56 degrees with sin gives the same result as cos(34), which is the normal force direction." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A 5 kg block slides down a frictionless 20 degree ramp starting from rest. What is its speed after travelling 3 metres along the ramp?",
+      "correct": "a = 9.8 sin(20) = 3.35 m/s squared, then v = sqrt(2 x 3.35 x 3) = 4.48 m/s",
+      "correctExplanation": "First find a = g sin(20) = 3.35 m/s squared. Then use v squared = u squared + 2as = 0 + 2(3.35)(3) = 20.1, so v = 4.48 m/s.",
+      "distractors": [
+        { "answer": "a = 9.8 cos(20) = 9.21 m/s squared, then v = sqrt(2 x 9.21 x 3) = 7.43 m/s", "explanation": "Using cos instead of sin gives the wrong acceleration component. The acceleration along the slope uses sin(theta)." },
+        { "answer": "v = sqrt(2 x 9.8 x 3) = 7.67 m/s, using g directly without resolving for the slope angle", "explanation": "Using the full g assumes the object is in free fall. On a slope, only g sin(theta) accelerates the object along the surface." },
+        { "answer": "a = 9.8 sin(20) = 3.35 m/s squared, then v = 2(3.35)(3) = 20.1 m/s, without taking the square root", "explanation": "The kinematic equation gives v squared, not v. The square root must be taken to find the actual speed." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A 25 kg crate is on a 60 degree frictionless slope. Calculate both the normal force and the acceleration of the crate.",
+      "correct": "N = 25(9.8)cos(60) = 122.5 N and a = 9.8 sin(60) = 8.49 m/s squared",
+      "correctExplanation": "N = mg cos(60) = 245(0.500) = 122.5 N. The acceleration a = g sin(60) = 9.8(0.866) = 8.49 m/s squared.",
+      "distractors": [
+        { "answer": "N = 25(9.8)sin(60) = 212.2 N and a = 9.8 cos(60) = 4.90 m/s squared", "explanation": "The sin and cos functions are swapped. Normal force uses cos(theta) and acceleration uses sin(theta)." },
+        { "answer": "N = 25(9.8)cos(60) = 122.5 N and a = 25(9.8)sin(60)/25 = 212.2 m/s squared", "explanation": "The acceleration calculation incorrectly retains the force value. a = g sin(theta) = 8.49, not mg sin(theta) = 212.2." },
+        { "answer": "N = 25(9.8) = 245.0 N and a = 9.8 sin(60) = 8.49 m/s squared", "explanation": "The normal force is not equal to the full weight on a slope. N = mg cos(theta), which is less than mg." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A 50 kg skier stands on a 15 degree slope. Calculate the normal force and the force component pulling the skier down the slope.",
+      "correct": "N = 50(9.8)cos(15) = 473.3 N and F = 50(9.8)sin(15) = 126.8 N",
+      "correctExplanation": "N = mg cos(15) = 490(0.9659) = 473.3 N. The parallel force F = mg sin(15) = 490(0.2588) = 126.8 N.",
+      "distractors": [
+        { "answer": "N = 50(9.8)sin(15) = 126.8 N and F = 50(9.8)cos(15) = 473.3 N", "explanation": "The sin and cos are swapped. On a gentle 15 degree slope, the normal force should be close to the full weight, not much less." },
+        { "answer": "N = 50(9.8)cos(15) = 473.3 N and F = 50(9.8)tan(15) = 131.4 N", "explanation": "The tangent function does not give the correct parallel component. The parallel force uses sin(theta), not tan(theta)." },
+        { "answer": "N = 50(9.8) = 490.0 N and F = 50(9.8)sin(15) = 126.8 N", "explanation": "The normal force is not mg on a slope. It must be reduced by cos(15) to account for the incline." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Two blocks are on frictionless inclines: a 3 kg block on a 40 degree slope and a 7 kg block on a 40 degree slope. Compare their accelerations.",
+      "correct": "Both have equal acceleration of a = 9.8 sin(40) = 6.30 m/s squared",
+      "correctExplanation": "Acceleration on a frictionless slope is a = g sin(theta), which does not depend on mass. Both blocks share the same angle and therefore the same acceleration.",
+      "distractors": [
+        { "answer": "The 7 kg block accelerates faster because it has a greater gravitational force pulling it down the slope", "explanation": "Greater force on the 7 kg block is offset by its greater mass. The acceleration a = g sin(theta) is mass-independent." },
+        { "answer": "The 3 kg block accelerates faster because lighter objects experience less normal force resistance", "explanation": "Normal force acts perpendicular to the slope and does not resist motion along it. Mass does not affect acceleration here." },
+        { "answer": "The 7 kg block has an acceleration of 6.30 m/s squared and the 3 kg block has 2.70 m/s squared", "explanation": "Both blocks have identical accelerations of 6.30 m/s squared because a = g sin(theta) is independent of mass." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the calculation for a 12 kg block on a 25 degree frictionless slope.",
+      "sentence": "The normal force is N = 12(9.8)cos(25) = {{blank:1}} N and the acceleration is a = 9.8 sin(25) = {{blank:2}} m/s squared.",
+      "blanks": {
+        "1": {
+          "correct": "106.6",
+          "correctExplanation": "N = 12(9.8)(cos 25) = 117.6(0.9063) = 106.6 N.",
+          "distractors": [
+            { "answer": "49.7", "explanation": "49.7 N is mg sin(25), the parallel force component. The normal force uses cos(25), giving the larger value of 106.6 N." },
+            { "answer": "117.6", "explanation": "117.6 N is the full weight mg. On a slope, the normal force is reduced by cos(theta) below the full weight." }
+          ]
+        },
+        "2": {
+          "correct": "4.14",
+          "correctExplanation": "a = g sin(25) = 9.8(0.4226) = 4.14 m/s squared.",
+          "distractors": [
+            { "answer": "8.88", "explanation": "8.88 is g cos(25), which relates to the normal force direction, not the acceleration along the slope." },
+            { "answer": "9.80", "explanation": "9.80 is the full gravitational acceleration, not the reduced component along the slope." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the calculation for a 15 kg box on a 34 degree slope.",
+      "sentence": "The normal force is N = 15(9.8)cos(34) = {{blank:1}} N and the force down the slope is F = 15(9.8)sin(34) = {{blank:2}} N.",
+      "blanks": {
+        "1": {
+          "correct": "121.9",
+          "correctExplanation": "N = 15(9.8)cos(34) = 147(0.8290) = 121.9 N.",
+          "distractors": [
+            { "answer": "82.2", "explanation": "82.2 N is the parallel component mg sin(34). The normal force uses cos(34), giving the larger value." },
+            { "answer": "147.0", "explanation": "147.0 N is the full weight mg. On a 34 degree slope, the normal force is reduced by cos(34)." }
+          ]
+        },
+        "2": {
+          "correct": "82.2",
+          "correctExplanation": "F = 15(9.8)sin(34) = 147(0.5592) = 82.2 N.",
+          "distractors": [
+            { "answer": "121.9", "explanation": "121.9 N is the normal force mg cos(34). The force down the slope uses sin(34), not cos(34)." },
+            { "answer": "147.0", "explanation": "147.0 N is the full weight mg, not the component resolved along the slope." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about finding the speed of a block after sliding on a frictionless slope.",
+      "sentence": "To find the speed of a block after sliding a distance d along a frictionless slope, first calculate the acceleration using a = g sin(theta), then apply the kinematic equation v squared = 2 times {{blank:1}} times {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "a",
+          "correctExplanation": "The kinematic equation v squared = u squared + 2as becomes v squared = 2as when starting from rest (u = 0), where a is the acceleration along the slope.",
+          "distractors": [
+            { "answer": "g", "explanation": "Using the full g instead of the slope acceleration a = g sin(theta) would overestimate the speed." },
+            { "answer": "m", "explanation": "Mass does not appear in the kinematic equation v squared = 2as. It is not needed to find speed from acceleration and distance." }
+          ]
+        },
+        "2": {
+          "correct": "d",
+          "correctExplanation": "The distance d along the slope is used in the kinematic equation because the acceleration acts along the slope direction.",
+          "distractors": [
+            { "answer": "h", "explanation": "The vertical height h could be used with energy methods, but the kinematic equation here uses distance d along the slope with slope acceleration." },
+            { "answer": "t", "explanation": "Time t is not part of v squared = 2as. This equation relates speed to acceleration and distance without time." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "mc",
+      "question": "A student calculates the normal force on a 10 kg block on a 30 degree slope as N = 10(9.8)sin(30) = 49.0 N. Identify and correct the error in this calculation.",
+      "correct": "The student used sin instead of cos; the correct calculation is N = 10(9.8)cos(30) = 84.9 N",
+      "correctExplanation": "The normal force uses the cosine of the incline angle: N = mg cos(theta). Using sin gives the parallel force component, not the normal force.",
+      "distractors": [
+        { "answer": "The student forgot to include friction; the correct normal force requires adding the friction force to 49.0 N", "explanation": "The error is the choice of trig function, not a missing friction term. On a frictionless slope, N = mg cos(theta)." },
+        { "answer": "The student used the wrong angle; the correct calculation should use the complementary angle of 60 degrees with sine", "explanation": "While sin(60) = cos(30), the standard method is to use cos(theta) with the given incline angle, not sin of the complement." },
+        { "answer": "The calculation is correct because sin(30) gives the component of gravity balanced by the normal force on a slope", "explanation": "Sin(30) gives the parallel component, not the perpendicular one. The normal force equals mg cos(theta), not mg sin(theta)." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Compare a 2 kg block on a frictionless 20 degree slope with a 2 kg block on a frictionless 40 degree slope. How do their normal forces and accelerations compare?",
+      "correct": "The 40 degree slope has a smaller normal force (60.1 N vs 46.0 N) and a larger acceleration (6.30 vs 3.35 m/s squared)",
+      "correctExplanation": "N = mg cos(theta) decreases with angle, while a = g sin(theta) increases. At 20 degrees: N = 18.4 N, a = 3.35. At 40 degrees: N = 15.0 N, a = 6.30.",
+      "distractors": [
+        { "answer": "The 40 degree slope has both a larger normal force and a larger acceleration than the 20 degree slope", "explanation": "Normal force decreases with increasing angle because cos(theta) decreases. Only acceleration increases with steeper angles." },
+        { "answer": "The 40 degree slope has a smaller normal force and a smaller acceleration than the 20 degree slope", "explanation": "While the normal force is indeed smaller, the acceleration is larger on a steeper slope because sin(theta) increases." },
+        { "answer": "Both slopes produce identical normal forces because the blocks have the same mass of 2 kg each", "explanation": "Same mass does not mean same normal force. N = mg cos(theta) depends on both mass and angle." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An engineer needs to design a ramp where objects accelerate at exactly 4.9 m/s squared. What angle should the ramp be set to, and what fraction of g is this acceleration?",
+      "correct": "theta = 30 degrees because sin(30) = 0.5, giving a = 0.5g = 4.9 m/s squared",
+      "correctExplanation": "Setting a = g sin(theta) = 4.9 gives sin(theta) = 4.9/9.8 = 0.5, so theta = 30 degrees. The acceleration is exactly half of g.",
+      "distractors": [
+        { "answer": "theta = 60 degrees because cos(60) = 0.5, giving a = 0.5g = 4.9 m/s squared", "explanation": "Acceleration uses sin(theta), not cos(theta). cos(60) = 0.5 relates to the normal force, not the slope acceleration." },
+        { "answer": "theta = 45 degrees because a 45 degree slope always gives half of gravitational acceleration", "explanation": "At 45 degrees, sin(45) = 0.707, giving a = 6.93 m/s squared, not 4.9. Half of g requires sin(theta) = 0.5." },
+        { "answer": "theta = 26.6 degrees because tan(26.6) = 0.5, giving a = 0.5g = 4.9 m/s squared", "explanation": "Acceleration uses sin(theta), not tan(theta). tan(26.6) = 0.5 does not mean sin(26.6) = 0.5." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A physics student claims that on a 45 degree frictionless slope, the normal force is exactly half the weight of the object. Evaluate this claim.",
+      "correct": "The claim is incorrect; N = mg cos(45) = 0.707mg, which is about 70.7 percent of the weight, not 50 percent",
+      "correctExplanation": "cos(45) = 0.707, not 0.5. The normal force at 45 degrees is approximately 70.7% of the object's weight.",
+      "distractors": [
+        { "answer": "The claim is correct because at 45 degrees the weight is evenly split between the parallel and perpendicular components", "explanation": "Equal components does not mean each is half of mg. Each equals mg/sqrt(2) = 0.707mg. Their squares sum to mg squared." },
+        { "answer": "The claim is correct because sin(45) = cos(45) = 0.5, making both components equal to half the weight", "explanation": "sin(45) = cos(45) = 0.707, not 0.5. The trig values at 45 degrees are 1/sqrt(2), not 1/2." },
+        { "answer": "The claim is incorrect; the normal force at 45 degrees is exactly one-third of the weight of the object", "explanation": "N = mg cos(45) = 0.707mg, which is approximately 70.7% of mg, not one-third." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A block starts from rest and slides 2 metres down a frictionless 35 degree incline, then transitions to a frictionless 55 degree incline for another 2 metres. Is the block's speed after the second section simply double what it was after the first section?",
+      "correct": "No, the speed is not doubled; v after the second section is found using v squared = 2g[sin(35)(2) + sin(55)(2)]",
+      "correctExplanation": "Kinematic equations give v squared = 2(g sin(35))(2) + 2(g sin(55))(2). Speed depends on the square root of the sum, not the simple sum of individual speeds.",
+      "distractors": [
+        { "answer": "Yes, because each section adds the same length of slope so the speed gain is identical in both sections", "explanation": "The second section has a steeper angle, producing a different acceleration. Also, speed does not add linearly from kinematic equations." },
+        { "answer": "Yes, because the block travels 4 metres total so its final speed must be double the speed at 2 metres", "explanation": "Speed from v squared = 2as is proportional to the square root of distance, not linearly proportional to distance." },
+        { "answer": "No, the speed after the second section is less than double because the steeper slope has a lower normal force", "explanation": "Normal force does not affect speed on a frictionless slope. The non-doubling is due to the square root relationship in kinematics." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Verify whether the following statement is correct: On a frictionless incline, the sum of the squares of the normal force and the parallel force component always equals the square of the weight.",
+      "correct": "The statement is correct because (mg cos(theta)) squared plus (mg sin(theta)) squared equals (mg) squared by the Pythagorean identity",
+      "correctExplanation": "N squared + F_parallel squared = (mg cos(theta))squared + (mg sin(theta))squared = (mg)squared [cos squared(theta) + sin squared(theta)] = (mg)squared.",
+      "distractors": [
+        { "answer": "The statement is incorrect because the forces are not at right angles to each other on an inclined plane", "explanation": "The normal force and parallel force component are at right angles because they are perpendicular and parallel to the slope surface." },
+        { "answer": "The statement is correct only for angles less than 45 degrees where cos(theta) exceeds sin(theta)", "explanation": "The Pythagorean identity sin squared + cos squared = 1 holds for all angles, not just angles below 45 degrees." },
+        { "answer": "The statement is incorrect because the normal force includes a contribution from the surface reaction force", "explanation": "On a frictionless slope with no acceleration perpendicular to the surface, the normal force exactly equals mg cos(theta)." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An object on a frictionless slope of angle theta takes time t to slide a distance d from rest. Derive an expression for the angle theta in terms of d, t, and g.",
+      "correct": "theta = arcsin(2d / (g t squared))",
+      "correctExplanation": "From d = (1/2)at squared with a = g sin(theta): d = (1/2)g sin(theta) t squared, so sin(theta) = 2d/(g t squared), and theta = arcsin(2d/(g t squared)).",
+      "distractors": [
+        { "answer": "theta = arccos(2d / (g t squared))", "explanation": "The parallel acceleration uses sin(theta), not cos(theta). Solving for theta requires arcsin, not arccos." },
+        { "answer": "theta = arctan(2d / (g t squared))", "explanation": "The kinematic equation involves sin(theta) directly, so inverting requires arcsin, not arctan." },
+        { "answer": "theta = arcsin(d / (g t squared))", "explanation": "The factor of 2 comes from the kinematic equation d = (1/2)at squared. Omitting it gives an incorrect expression." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Analyse why the energy approach (using mgh = (1/2)mv squared) gives the same final speed as the force approach (using a = g sin(theta) and kinematics) for an object sliding down a frictionless incline of height h.",
+      "correct": "Both methods are equivalent because the height h = d sin(theta), linking the energy equation to the kinematic result",
+      "correctExplanation": "Energy: v squared = 2gh = 2g(d sin(theta)). Kinematics: v squared = 2(g sin(theta))d. Both give v squared = 2gd sin(theta), confirming equivalence.",
+      "distractors": [
+        { "answer": "The methods give the same answer only when the slope angle is exactly 45 degrees, not at other angles", "explanation": "The equivalence holds for all angles. The relationship h = d sin(theta) is valid for any incline angle." },
+        { "answer": "The energy approach is more accurate because it accounts for the normal force, which the kinematic approach ignores", "explanation": "Neither method requires the normal force. It acts perpendicular to motion and does no work on the sliding object." },
+        { "answer": "They agree because energy is always conserved, but the force approach only works when friction is present", "explanation": "The force approach works with or without friction. Both methods handle frictionless slopes correctly." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the analysis of error in an inclined plane calculation.",
+      "sentence": "A student who uses mg sin(theta) for the normal force and mg cos(theta) for the parallel force has {{blank:1}} the two components, which means their normal force value is too {{blank:2}} for angles less than 45 degrees.",
+      "blanks": {
+        "1": {
+          "correct": "swapped",
+          "correctExplanation": "The student has swapped the sine and cosine functions. Normal force uses cos(theta) and the parallel component uses sin(theta).",
+          "distractors": [
+            { "answer": "doubled", "explanation": "The student has not doubled anything. The error is assigning sin to the normal force and cos to the parallel force." },
+            { "answer": "omitted", "explanation": "Both components are present but assigned to the wrong directions. The error is a swap, not an omission." }
+          ]
+        },
+        "2": {
+          "correct": "small",
+          "correctExplanation": "For angles less than 45 degrees, sin(theta) < cos(theta). Using sin instead of cos gives a normal force that is too small.",
+          "distractors": [
+            { "answer": "large", "explanation": "For angles under 45 degrees, sin(theta) is less than cos(theta), so using sin gives a value that is too small, not too large." },
+            { "answer": "negative", "explanation": "Both sin and cos are positive for angles between 0 and 90 degrees. The error produces a positive but incorrect value." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the comparison of two objects on inclined planes.",
+      "sentence": "Object A (mass 3 kg on a 50 degree slope) and Object B (mass 8 kg on a 50 degree slope) have {{blank:1}} acceleration because a = g sin(theta) is independent of {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "equal",
+          "correctExplanation": "Both objects have a = g sin(50) = 7.51 m/s squared. The acceleration on a frictionless slope depends only on the angle, not the mass.",
+          "distractors": [
+            { "answer": "different", "explanation": "On a frictionless slope of the same angle, all objects have the same acceleration regardless of mass." },
+            { "answer": "proportional", "explanation": "The accelerations are not merely proportional; they are exactly equal because mass cancels completely in the calculation." }
+          ]
+        },
+        "2": {
+          "correct": "mass",
+          "correctExplanation": "In a = mg sin(theta)/m = g sin(theta), mass cancels from the numerator and denominator, leaving acceleration independent of mass.",
+          "distractors": [
+            { "answer": "angle", "explanation": "Acceleration does depend on angle through sin(theta). It is mass, not angle, that cancels from the expression." },
+            { "answer": "gravity", "explanation": "Acceleration depends directly on g. It is mass, not gravity, that is absent from the final expression a = g sin(theta)." }
+          ]
+        }
+      }
+    }
+  ]
+}

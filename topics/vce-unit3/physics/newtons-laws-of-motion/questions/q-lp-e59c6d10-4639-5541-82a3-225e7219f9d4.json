@@ -1,0 +1,584 @@
+{
+  "_link": {
+    "uuid": "lp-e59c6d10-4639-5541-82a3-225e7219f9d4",
+    "version": 1,
+    "contentHash": "hash-b59c65f0",
+    "title": "I can separate a projectile's velocity into horizontal and vertical components and describe their behaviour",
+    "code": "1C.2",
+    "generatedAt": "2026-02-06T09:35:00Z"
+  },
+  "toLevel2": [
+    {
+      "type": "mc",
+      "question": "Which formula gives the horizontal component of a projectile's launch velocity?",
+      "correct": "vx = v cos \u03b8",
+      "correctExplanation": "The horizontal component is found by multiplying the launch speed by the cosine of the launch angle.",
+      "distractors": [
+        { "answer": "vx = v sin \u03b8", "explanation": "Sine gives the vertical component, not the horizontal component." },
+        { "answer": "vx = v tan \u03b8", "explanation": "Tangent is the ratio of vertical to horizontal components, not a component itself." },
+        { "answer": "vx = v / cos \u03b8", "explanation": "Dividing by cosine would give a value larger than the launch speed, which is incorrect." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which formula gives the initial vertical component of a projectile's launch velocity?",
+      "correct": "vy = v sin \u03b8",
+      "correctExplanation": "The vertical component is found by multiplying the launch speed by the sine of the launch angle.",
+      "distractors": [
+        { "answer": "vy = v cos \u03b8", "explanation": "Cosine gives the horizontal component, not the vertical component." },
+        { "answer": "vy = v tan \u03b8", "explanation": "Tangent is not used to resolve velocity into its vertical component." },
+        { "answer": "vy = v / sin \u03b8", "explanation": "Dividing by sine would give a value larger than the launch speed, which is incorrect." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What happens to the horizontal velocity of a projectile during its flight (ignoring air resistance)?",
+      "correct": "It remains constant",
+      "correctExplanation": "With no horizontal force acting, the horizontal velocity stays the same throughout the flight.",
+      "distractors": [
+        { "answer": "It decreases steadily", "explanation": "There is no horizontal force to slow the projectile, so horizontal velocity does not decrease." },
+        { "answer": "It increases steadily", "explanation": "No horizontal force acts to accelerate the projectile, so horizontal velocity does not increase." },
+        { "answer": "It drops to zero at peak", "explanation": "It is the vertical component that becomes zero at the peak, not the horizontal component." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What force causes the vertical velocity of a projectile to change during flight?",
+      "correct": "Gravity",
+      "correctExplanation": "Gravity acts downward and causes the vertical component of velocity to change at 9.8 m/s every second.",
+      "distractors": [
+        { "answer": "Air resistance only", "explanation": "In the standard projectile model, air resistance is ignored; gravity is the force changing vertical velocity." },
+        { "answer": "The initial launch force", "explanation": "The launch force only acts during the initial push; after launch, gravity alone changes the vertical velocity." },
+        { "answer": "Normal force from ground", "explanation": "The normal force acts only while the object is in contact with the ground, not during flight." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A ball is launched at 20 m/s at 30\u00b0 above horizontal. What is its horizontal velocity component?",
+      "correct": "17.3 m/s",
+      "correctExplanation": "vx = 20 cos 30\u00b0 = 20 \u00d7 0.866 = 17.3 m/s.",
+      "distractors": [
+        { "answer": "10.0 m/s", "explanation": "This is the vertical component (20 sin 30\u00b0), not the horizontal component." },
+        { "answer": "20.0 m/s", "explanation": "This is the total launch speed, not the horizontal component resolved using cosine." },
+        { "answer": "14.1 m/s", "explanation": "This would result from using cos 45\u00b0, not cos 30\u00b0." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "The horizontal and vertical motions of a projectile are independent of each other.",
+      "correct": "True",
+      "correctExplanation": "Gravity acts only vertically, so it does not affect horizontal motion, making the two components independent.",
+      "distractors": [
+        { "answer": "False", "explanation": "Students may think the components affect each other, but gravity only changes the vertical motion while horizontal motion is unaffected." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "The vertical velocity of a projectile remains constant throughout its flight.",
+      "correct": "False",
+      "correctExplanation": "Gravity accelerates the projectile downward at 9.8 m/s\u00b2, continuously changing the vertical velocity.",
+      "distractors": [
+        { "answer": "True", "explanation": "Students may confuse vertical and horizontal components; it is the horizontal velocity that remains constant, not the vertical." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the statement about projectile velocity components.",
+      "sentence": "The horizontal component of velocity is found using vx = v {{blank:1}} \u03b8, and the vertical component is found using vy = v {{blank:2}} \u03b8.",
+      "blanks": {
+        "1": {
+          "correct": "cos",
+          "correctExplanation": "Cosine is used to find the adjacent (horizontal) side of the velocity triangle.",
+          "distractors": [
+            { "answer": "sin", "explanation": "Sine gives the vertical component, not the horizontal component." },
+            { "answer": "tan", "explanation": "Tangent is not used to resolve velocity into horizontal or vertical components." }
+          ]
+        },
+        "2": {
+          "correct": "sin",
+          "correctExplanation": "Sine is used to find the opposite (vertical) side of the velocity triangle.",
+          "distractors": [
+            { "answer": "cos", "explanation": "Cosine gives the horizontal component, not the vertical component." },
+            { "answer": "tan", "explanation": "Tangent is not used to resolve velocity into components directly." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the statement about projectile motion behaviour.",
+      "sentence": "During projectile flight, the horizontal velocity remains {{blank:1}} while the vertical velocity changes due to {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "constant",
+          "correctExplanation": "No horizontal force acts on the projectile, so horizontal velocity does not change.",
+          "distractors": [
+            { "answer": "zero", "explanation": "The horizontal velocity is not zero; it maintains its initial value throughout the flight." },
+            { "answer": "increasing", "explanation": "Without a horizontal force, there is no horizontal acceleration to increase the speed." }
+          ]
+        },
+        "2": {
+          "correct": "gravity",
+          "correctExplanation": "Gravity provides a constant downward acceleration of 9.8 m/s\u00b2 that changes the vertical velocity.",
+          "distractors": [
+            { "answer": "friction", "explanation": "In the standard projectile model, air resistance is ignored; gravity is the acting force." },
+            { "answer": "momentum", "explanation": "Momentum is a property of motion, not a force; gravity is the force changing vertical velocity." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the description of velocity at the peak of a projectile's path.",
+      "sentence": "At the highest point, the vertical velocity equals {{blank:1}} but the projectile still has its full {{blank:2}} velocity.",
+      "blanks": {
+        "1": {
+          "correct": "zero",
+          "correctExplanation": "The vertical component is momentarily zero at the peak before the projectile begins descending.",
+          "distractors": [
+            { "answer": "maximum", "explanation": "The vertical velocity is at its maximum at launch and landing, not at the peak." },
+            { "answer": "9.8 m/s", "explanation": "The vertical velocity is zero at the peak, not equal to the acceleration due to gravity." }
+          ]
+        },
+        "2": {
+          "correct": "horizontal",
+          "correctExplanation": "The horizontal velocity is unaffected by gravity and remains at its initial value throughout the flight.",
+          "distractors": [
+            { "answer": "vertical", "explanation": "The vertical velocity is zero at the peak, so the projectile does not retain full vertical velocity." },
+            { "answer": "initial", "explanation": "The total speed at the peak is less than the initial speed because the vertical component is zero." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "mc",
+      "question": "Why does the horizontal velocity of a projectile remain constant during flight?",
+      "correct": "No horizontal force acts on the projectile",
+      "correctExplanation": "With gravity acting only vertically, there is no force in the horizontal direction to change horizontal velocity.",
+      "distractors": [
+        { "answer": "Gravity balances the horizontal motion", "explanation": "Gravity acts vertically and does not interact with horizontal motion at all." },
+        { "answer": "The launch force sustains horizontal speed", "explanation": "The launch force only acts at the moment of launch; no force is needed to maintain constant velocity." },
+        { "answer": "Air resistance keeps horizontal speed steady", "explanation": "Air resistance would actually decrease horizontal speed; in projectile analysis it is ignored." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Why does the vertical velocity of a projectile decrease on the way up and increase on the way down?",
+      "correct": "Gravity constantly accelerates the projectile downward",
+      "correctExplanation": "The downward acceleration opposes upward motion (reducing speed) and aids downward motion (increasing speed).",
+      "distractors": [
+        { "answer": "The projectile loses energy as it rises higher", "explanation": "While kinetic energy converts to potential energy, the velocity change is directly due to gravitational acceleration." },
+        { "answer": "Horizontal velocity transfers into vertical velocity", "explanation": "The two components are independent; horizontal velocity does not convert into vertical velocity." },
+        { "answer": "The projectile gains mass as it gains altitude", "explanation": "Mass does not change during flight; the velocity change is caused by gravitational acceleration." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What does it mean to say the horizontal and vertical motions of a projectile are independent?",
+      "correct": "Changes in one component do not affect the other",
+      "correctExplanation": "Gravity changes only the vertical component; horizontal motion continues unchanged regardless of what happens vertically.",
+      "distractors": [
+        { "answer": "The projectile moves in only one direction at a time", "explanation": "The projectile moves simultaneously in both directions; independence means the components don't influence each other." },
+        { "answer": "Both components change at the same constant rate", "explanation": "The horizontal component does not change at all, while the vertical changes at 9.8 m/s\u00b2." },
+        { "answer": "The two components always have equal magnitudes", "explanation": "The components have equal magnitude only at 45\u00b0 launch angle; independence refers to their lack of influence on each other." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A ball is launched at 25 m/s at 40\u00b0. Which statement correctly describes the behaviour of its velocity components?",
+      "correct": "vx stays at 19.2 m/s while vy starts at 16.1 m/s and decreases",
+      "correctExplanation": "vx = 25 cos 40\u00b0 = 19.2 m/s (constant); vy = 25 sin 40\u00b0 = 16.1 m/s (decreasing due to gravity on the way up).",
+      "distractors": [
+        { "answer": "vx starts at 16.1 m/s while vy stays at 19.2 m/s throughout", "explanation": "The components are reversed; cos 40\u00b0 gives horizontal and sin 40\u00b0 gives vertical, and vertical changes." },
+        { "answer": "Both vx and vy decrease at 9.8 m/s\u00b2 during the flight", "explanation": "Only the vertical component is affected by gravity; horizontal velocity remains constant." },
+        { "answer": "vx stays at 25 m/s while vy decreases from zero downward", "explanation": "25 m/s is the total speed, not the horizontal component; vy starts at 16.1 m/s, not zero." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "At the highest point of a projectile's path, which velocity component is zero?",
+      "correct": "The vertical component only",
+      "correctExplanation": "At the peak, the projectile has momentarily stopped rising and not yet started falling, so vy = 0, but vx remains unchanged.",
+      "distractors": [
+        { "answer": "The horizontal component only", "explanation": "The horizontal component remains constant throughout; it is the vertical component that becomes zero at the peak." },
+        { "answer": "Both components are zero at once", "explanation": "If both were zero the projectile would be stationary, but it still moves horizontally at the peak." },
+        { "answer": "Neither component is zero at peak", "explanation": "The vertical component is zero at the peak because the projectile changes from rising to falling." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Why is resolving velocity into components the key technique for solving projectile problems?",
+      "correct": "It allows separate use of constant velocity and constant acceleration equations",
+      "correctExplanation": "Horizontally, constant velocity equations apply; vertically, constant acceleration equations apply with g = 9.8 m/s\u00b2.",
+      "distractors": [
+        { "answer": "It eliminates the need to consider gravity in calculations", "explanation": "Gravity is still used in the vertical equations; resolving components separates where gravity applies." },
+        { "answer": "It converts two-dimensional motion into a single equation", "explanation": "Resolving creates two separate sets of equations, not a single combined one." },
+        { "answer": "It ensures both components have the same acceleration value", "explanation": "Horizontal acceleration is zero and vertical acceleration is 9.8 m/s\u00b2; they are not the same." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "At the peak of its trajectory, a projectile has zero total velocity because the vertical component is zero.",
+      "correct": "False",
+      "correctExplanation": "Only the vertical component is zero at the peak; the projectile still has its full horizontal velocity, so total velocity is not zero.",
+      "distractors": [
+        { "answer": "True", "explanation": "Students may forget that horizontal velocity persists at the peak; total velocity equals the horizontal component at this point." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Explain why the two components behave differently.",
+      "sentence": "The horizontal velocity remains constant because there is no {{blank:1}} force, while the vertical velocity changes because {{blank:2}} acts downward at 9.8 m/s\u00b2.",
+      "blanks": {
+        "1": {
+          "correct": "horizontal",
+          "correctExplanation": "No force acts in the horizontal direction, so by Newton's first law, horizontal velocity stays constant.",
+          "distractors": [
+            { "answer": "vertical", "explanation": "There is a vertical force (gravity); it is the absence of horizontal force that keeps vx constant." },
+            { "answer": "applied", "explanation": "While no applied force acts, the specific reason is the absence of any horizontal force component." }
+          ]
+        },
+        "2": {
+          "correct": "gravity",
+          "correctExplanation": "Gravity provides a constant downward acceleration that changes the vertical velocity.",
+          "distractors": [
+            { "answer": "friction", "explanation": "Friction is ignored in standard projectile analysis; gravity is the force changing vertical velocity." },
+            { "answer": "inertia", "explanation": "Inertia is a property of matter, not a force; gravity is the force that changes the vertical velocity." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the statement about equations used in projectile analysis.",
+      "sentence": "Horizontally, we apply {{blank:1}} velocity equations because ax = 0, and vertically we apply constant {{blank:2}} equations because ay = 9.8 m/s\u00b2.",
+      "blanks": {
+        "1": {
+          "correct": "constant",
+          "correctExplanation": "With no horizontal force, horizontal acceleration is zero, so velocity is constant.",
+          "distractors": [
+            { "answer": "increasing", "explanation": "Horizontal velocity does not increase; it is constant because no horizontal force acts." },
+            { "answer": "decreasing", "explanation": "Horizontal velocity does not decrease in the standard model; it remains constant." }
+          ]
+        },
+        "2": {
+          "correct": "acceleration",
+          "correctExplanation": "Gravity provides a constant vertical acceleration of 9.8 m/s\u00b2 throughout the flight.",
+          "distractors": [
+            { "answer": "velocity", "explanation": "Vertical velocity is not constant; it changes due to the constant acceleration from gravity." },
+            { "answer": "momentum", "explanation": "The relevant equations are constant acceleration (SUVAT) equations, not momentum equations." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the description of a projectile at the top of its arc.",
+      "sentence": "At the peak, the speed of the projectile equals its {{blank:1}} component because the {{blank:2}} component is momentarily zero.",
+      "blanks": {
+        "1": {
+          "correct": "horizontal",
+          "correctExplanation": "With vy = 0 at the peak, total speed reduces to just the horizontal component vx.",
+          "distractors": [
+            { "answer": "vertical", "explanation": "The vertical component is zero at the peak, so total speed cannot equal the vertical component." },
+            { "answer": "initial", "explanation": "The speed at the peak is less than the initial launch speed because the vertical component is zero." }
+          ]
+        },
+        "2": {
+          "correct": "vertical",
+          "correctExplanation": "The vertical component becomes zero at the peak as the projectile transitions from rising to falling.",
+          "distractors": [
+            { "answer": "horizontal", "explanation": "The horizontal component remains constant and is not zero at any point during the flight." },
+            { "answer": "tangential", "explanation": "The tangential velocity at the peak equals the horizontal velocity; it is the vertical component that is zero." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "mc",
+      "question": "A projectile is launched at 30 m/s at 60\u00b0 above horizontal. What is its initial vertical velocity component?",
+      "correct": "26.0 m/s",
+      "correctExplanation": "vy = 30 sin 60\u00b0 = 30 \u00d7 0.866 = 26.0 m/s.",
+      "distractors": [
+        { "answer": "15.0 m/s", "explanation": "This would be 30 cos 60\u00b0, which is the horizontal component, not the vertical." },
+        { "answer": "30.0 m/s", "explanation": "This is the total launch speed; the vertical component is found using sin 60\u00b0." },
+        { "answer": "21.2 m/s", "explanation": "This would result from using sin 45\u00b0 instead of sin 60\u00b0." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A ball is launched at 25 m/s at 40\u00b0. What is its vertical velocity after 1.0 s of flight?",
+      "correct": "6.3 m/s upward",
+      "correctExplanation": "vy = 25 sin 40\u00b0 \u2212 9.8(1.0) = 16.1 \u2212 9.8 = 6.3 m/s upward.",
+      "distractors": [
+        { "answer": "16.1 m/s upward", "explanation": "This is the initial vertical velocity; after 1.0 s, gravity has reduced it by 9.8 m/s." },
+        { "answer": "9.4 m/s upward", "explanation": "This incorrectly subtracts from the horizontal component (19.2 \u2212 9.8) instead of vertical." },
+        { "answer": "6.3 m/s downward", "explanation": "At 1.0 s the projectile is still rising; vy is positive (upward), not yet negative." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A stone is thrown at 18 m/s at 50\u00b0 above horizontal. How long does it take for the vertical velocity to reach zero?",
+      "correct": "1.41 s",
+      "correctExplanation": "vy = v sin \u03b8 \u2212 gt = 0, so t = (18 sin 50\u00b0)/9.8 = 13.79/9.8 = 1.41 s.",
+      "distractors": [
+        { "answer": "1.84 s", "explanation": "This uses the total speed (18/9.8) rather than the vertical component." },
+        { "answer": "1.18 s", "explanation": "This incorrectly uses the horizontal component (18 cos 50\u00b0)/9.8 instead of the vertical." },
+        { "answer": "0.71 s", "explanation": "This divides the vertical component by 2g instead of g." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A projectile is launched at 40 m/s at 35\u00b0. What is its horizontal displacement after 2.0 s?",
+      "correct": "65.5 m",
+      "correctExplanation": "vx = 40 cos 35\u00b0 = 32.8 m/s. Horizontal displacement = vx \u00d7 t = 32.8 \u00d7 2.0 = 65.5 m.",
+      "distractors": [
+        { "answer": "45.9 m", "explanation": "This uses the vertical component (40 sin 35\u00b0 \u00d7 2.0) instead of the horizontal." },
+        { "answer": "80.0 m", "explanation": "This uses the full launch speed (40 \u00d7 2.0) without resolving into the horizontal component." },
+        { "answer": "56.6 m", "explanation": "This uses cos 45\u00b0 instead of cos 35\u00b0 to find the horizontal component." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A ball launched at 20 m/s at 45\u00b0 has equal initial horizontal and vertical components. What is each component?",
+      "correct": "14.1 m/s",
+      "correctExplanation": "vx = vy = 20 cos 45\u00b0 = 20 \u00d7 0.707 = 14.1 m/s. At 45\u00b0, sin and cos are equal.",
+      "distractors": [
+        { "answer": "10.0 m/s", "explanation": "This incorrectly halves the speed; cos 45\u00b0 = 0.707, not 0.5." },
+        { "answer": "20.0 m/s", "explanation": "Each component is less than the total speed; 20 m/s is the resultant, not a component." },
+        { "answer": "17.3 m/s", "explanation": "This uses cos 30\u00b0 instead of cos 45\u00b0." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A projectile is launched at 15 m/s at 25\u00b0. What is its speed at the highest point of its trajectory?",
+      "correct": "13.6 m/s",
+      "correctExplanation": "At the peak, vy = 0, so speed = vx = 15 cos 25\u00b0 = 15 \u00d7 0.906 = 13.6 m/s.",
+      "distractors": [
+        { "answer": "0 m/s", "explanation": "Only the vertical component is zero at the peak; the projectile still moves horizontally." },
+        { "answer": "15.0 m/s", "explanation": "The speed at the peak is less than launch speed because the vertical component is now zero." },
+        { "answer": "6.3 m/s", "explanation": "This is 15 sin 25\u00b0, the initial vertical component, not the speed at the peak." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A football is kicked at 22 m/s at 55\u00b0. What is its vertical velocity 2.0 s after launch?",
+      "correct": "\u22121.6 m/s (downward)",
+      "correctExplanation": "vy = 22 sin 55\u00b0 \u2212 9.8(2.0) = 18.0 \u2212 19.6 = \u22121.6 m/s. The negative sign indicates downward motion.",
+      "distractors": [
+        { "answer": "+18.0 m/s (upward)", "explanation": "This is the initial vertical velocity; gravity has changed it over the 2.0 s of flight." },
+        { "answer": "+8.2 m/s (upward)", "explanation": "This incorrectly subtracts only 9.8 once instead of 9.8 \u00d7 2.0 = 19.6 m/s." },
+        { "answer": "\u22127.2 m/s (downward)", "explanation": "This incorrectly uses the horizontal component (12.6 \u2212 19.6) instead of the vertical." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Calculate the velocity components for this projectile.",
+      "sentence": "A projectile launched at 50 m/s at 37\u00b0 has vx = {{blank:1}} m/s and initial vy = {{blank:2}} m/s.",
+      "blanks": {
+        "1": {
+          "correct": "39.9",
+          "correctExplanation": "vx = 50 cos 37\u00b0 = 50 \u00d7 0.799 = 39.9 m/s.",
+          "distractors": [
+            { "answer": "30.1", "explanation": "This is 50 sin 37\u00b0, the vertical component, not the horizontal." },
+            { "answer": "50.0", "explanation": "This is the total speed; the horizontal component requires multiplying by cos 37\u00b0." }
+          ]
+        },
+        "2": {
+          "correct": "30.1",
+          "correctExplanation": "vy = 50 sin 37\u00b0 = 50 \u00d7 0.602 = 30.1 m/s.",
+          "distractors": [
+            { "answer": "39.9", "explanation": "This is 50 cos 37\u00b0, the horizontal component, not the vertical." },
+            { "answer": "25.0", "explanation": "This would be half of 50, not the correct trigonometric resolution." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Apply the vertical velocity equation to this projectile.",
+      "sentence": "A ball launched at 20 m/s at 30\u00b0 has initial vy = 10.0 m/s. After {{blank:1}} s, the vertical velocity reaches zero at the {{blank:2}} of the trajectory.",
+      "blanks": {
+        "1": {
+          "correct": "1.02",
+          "correctExplanation": "t = vy/g = 10.0/9.8 = 1.02 s to reach vy = 0.",
+          "distractors": [
+            { "answer": "2.04", "explanation": "This is the total flight time (up and down), not the time to reach the peak." },
+            { "answer": "1.77", "explanation": "This incorrectly uses the horizontal component (17.3/9.8) instead of the vertical." }
+          ]
+        },
+        "2": {
+          "correct": "peak",
+          "correctExplanation": "The vertical velocity is zero at the highest point (peak) of the trajectory.",
+          "distractors": [
+            { "answer": "launch", "explanation": "At launch, the vertical velocity is at its maximum value, not zero." },
+            { "answer": "landing", "explanation": "At landing, the vertical velocity has the same magnitude as at launch but directed downward, not zero." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Determine the horizontal distance for this projectile.",
+      "sentence": "A projectile with vx = 24 m/s and total flight time of 3.0 s travels a horizontal distance of {{blank:1}} m, because horizontal velocity is {{blank:2}} throughout.",
+      "blanks": {
+        "1": {
+          "correct": "72",
+          "correctExplanation": "Horizontal distance = vx \u00d7 t = 24 \u00d7 3.0 = 72 m.",
+          "distractors": [
+            { "answer": "36", "explanation": "This divides by 2 unnecessarily; constant velocity means distance = vx \u00d7 t directly." },
+            { "answer": "8.0", "explanation": "This divides vx by t instead of multiplying; distance = speed \u00d7 time." }
+          ]
+        },
+        "2": {
+          "correct": "constant",
+          "correctExplanation": "No horizontal force acts, so horizontal velocity does not change during flight.",
+          "distractors": [
+            { "answer": "accelerating", "explanation": "Horizontal velocity is constant, not accelerating, because no horizontal force acts." },
+            { "answer": "decelerating", "explanation": "With no horizontal force and ignoring air resistance, horizontal velocity does not decelerate." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "mc",
+      "question": "A student claims that a projectile launched at a steeper angle always has a larger vertical velocity component. Evaluate this claim for projectiles with the same launch speed.",
+      "correct": "Valid for angles from 0\u00b0 to 90\u00b0, since sin \u03b8 increases over this range",
+      "correctExplanation": "For a fixed speed, vy = v sin \u03b8 increases as \u03b8 increases from 0\u00b0 to 90\u00b0, so steeper angles do give larger vertical components.",
+      "distractors": [
+        { "answer": "Invalid because launch angle does not affect velocity components", "explanation": "The launch angle directly determines the ratio of horizontal to vertical components through trigonometry." },
+        { "answer": "Valid only if the projectile has greater total launch speed", "explanation": "The claim is specifically about angle at the same speed; sin \u03b8 increases with angle regardless of speed." },
+        { "answer": "Invalid because vertical velocity is always equal to total speed", "explanation": "The vertical component equals total speed only at 90\u00b0; at all other angles it is less." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Two projectiles are launched at the same speed but at 30\u00b0 and 60\u00b0. Compare their horizontal and vertical components.",
+      "correct": "The 30\u00b0 projectile's vx equals the 60\u00b0 projectile's vy, and vice versa",
+      "correctExplanation": "Since sin 30\u00b0 = cos 60\u00b0 and cos 30\u00b0 = sin 60\u00b0, the components swap between the two angles.",
+      "distractors": [
+        { "answer": "Both projectiles have identical horizontal and vertical components", "explanation": "Different angles produce different component ratios; the components are not equal for both." },
+        { "answer": "The 60\u00b0 projectile has larger values for both components", "explanation": "The 60\u00b0 projectile has larger vy but smaller vx; both components cannot be larger simultaneously." },
+        { "answer": "The 30\u00b0 projectile has larger values for both components", "explanation": "The 30\u00b0 projectile has larger vx but smaller vy; both components cannot be larger simultaneously." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A projectile launched at 25 m/s at 40\u00b0 passes over a wall 1.5 s after launch. Determine which velocity component is relevant for finding the height at the wall.",
+      "correct": "Only the vertical component and gravitational acceleration",
+      "correctExplanation": "Height depends on vertical motion: y = vy t \u2212 \u00bdgt\u00b2. The horizontal component determines horizontal position, not height.",
+      "distractors": [
+        { "answer": "Only the horizontal component and flight time elapsed", "explanation": "Horizontal motion determines horizontal distance, not the height above the ground." },
+        { "answer": "Both components must be combined using Pythagoras at that instant", "explanation": "Pythagoras gives resultant speed, not height; vertical displacement uses only the vertical equation." },
+        { "answer": "The total launch speed and the angle at that time instant", "explanation": "Height is found directly from the vertical kinematic equation, not by re-resolving the changing total velocity." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Analyse why a projectile launched horizontally from a cliff has the same time of flight as an object dropped from the same height.",
+      "correct": "Both have zero initial vertical velocity and the same vertical acceleration",
+      "correctExplanation": "The horizontal launch contributes only horizontal velocity; vertical motion starts from rest in both cases and is governed by gravity alone.",
+      "distractors": [
+        { "answer": "Both objects have the same total kinetic energy at launch", "explanation": "The horizontally launched projectile has more kinetic energy, but time of flight depends on vertical motion only." },
+        { "answer": "Gravity acts more strongly on the falling object than the projectile", "explanation": "Gravity acts identically on both objects; the acceleration is 9.8 m/s\u00b2 regardless of horizontal motion." },
+        { "answer": "The horizontal velocity of the projectile slows its vertical fall", "explanation": "Horizontal and vertical motions are independent; horizontal speed has no effect on the rate of vertical fall." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student solves a projectile problem and finds vy = \u221212.5 m/s at a certain time. What does the negative value indicate about the motion?",
+      "correct": "The projectile is moving downward at that instant",
+      "correctExplanation": "A negative vertical velocity means the projectile has passed the peak and is now descending.",
+      "distractors": [
+        { "answer": "The projectile has hit the ground and stopped moving", "explanation": "A negative velocity indicates downward motion, not that the projectile has stopped." },
+        { "answer": "An error has occurred because velocity cannot be negative", "explanation": "Velocity is a vector and can be negative, indicating direction opposite to the chosen positive axis." },
+        { "answer": "The projectile is decelerating in the horizontal direction", "explanation": "Negative vy refers to vertical direction only; horizontal velocity remains constant and unrelated." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Compare the speed of a projectile at launch and at the same height on the way down, ignoring air resistance.",
+      "correct": "The speeds are equal because the same kinetic-potential energy exchange occurs",
+      "correctExplanation": "At the same height, the potential energy is the same, so kinetic energy and therefore speed must also be the same.",
+      "distractors": [
+        { "answer": "The speed on the way down is greater due to gravitational acceleration", "explanation": "While gravity accelerates it downward, conservation of energy ensures the same speed at the same height." },
+        { "answer": "The speed on the way down is less because the projectile has lost energy", "explanation": "Without air resistance, mechanical energy is conserved, so speed is the same at equal heights." },
+        { "answer": "The speeds can only be compared if the launch angle is exactly 45\u00b0", "explanation": "Energy conservation applies regardless of launch angle; speed is the same at equal heights for any angle." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A physics teacher fires two projectiles from the same point at the same speed: one at 30\u00b0 and one at 60\u00b0. Both land at the same horizontal distance. Analyse why this occurs.",
+      "correct": "The complementary angles swap the horizontal and vertical components, balancing range and time",
+      "correctExplanation": "At 30\u00b0, vx is large and flight time short; at 60\u00b0, vx is small but flight time long. The products vx \u00d7 t are equal.",
+      "distractors": [
+        { "answer": "Both projectiles follow identical parabolic paths through the air", "explanation": "The trajectories are different shapes; the 60\u00b0 projectile reaches a much greater height." },
+        { "answer": "Gravity affects both projectiles equally so they must land together", "explanation": "Gravity affects all projectiles equally, but that alone does not explain why these specific angles give equal range." },
+        { "answer": "The total velocity is the same, so the range must be identical", "explanation": "Equal total speed is necessary but not sufficient; only complementary angles produce equal ranges." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Evaluate whether the independence of horizontal and vertical motion would still hold if air resistance were significant.",
+      "correct": "Independence breaks down because air resistance depends on the total velocity vector",
+      "correctExplanation": "Air drag force depends on the magnitude and direction of the total velocity, coupling the horizontal and vertical motions together.",
+      "distractors": [
+        { "answer": "Independence still holds because air resistance acts equally on both components", "explanation": "Air resistance depends on total speed, so a change in one component alters the drag on the other." },
+        { "answer": "Independence breaks down because air resistance eliminates gravity", "explanation": "Air resistance does not eliminate gravity; it introduces a coupling force between the components." },
+        { "answer": "Independence still holds because air resistance is a horizontal force only", "explanation": "Air resistance opposes the velocity vector and has both horizontal and vertical components." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Analyse the symmetry of complementary launch angles.",
+      "sentence": "Projectiles launched at complementary angles (such as 30\u00b0 and 60\u00b0) at the same speed have the same {{blank:1}} because the components of velocity are {{blank:2}} between the two cases.",
+      "blanks": {
+        "1": {
+          "correct": "range",
+          "correctExplanation": "Complementary angles produce equal horizontal range because the product of horizontal velocity and flight time is the same.",
+          "distractors": [
+            { "answer": "height", "explanation": "The maximum heights are different; the steeper angle reaches much higher." },
+            { "answer": "speed", "explanation": "The launch speeds are already stated to be the same; range is the shared outcome of complementary angles." }
+          ]
+        },
+        "2": {
+          "correct": "swapped",
+          "correctExplanation": "At complementary angles, the horizontal component of one equals the vertical component of the other, and vice versa.",
+          "distractors": [
+            { "answer": "identical", "explanation": "The components are not identical; they are exchanged between the two launch angles." },
+            { "answer": "doubled", "explanation": "The components are not doubled; they are exchanged so vx at 30\u00b0 equals vy at 60\u00b0." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Evaluate the effect of launch angle on velocity components.",
+      "sentence": "As the launch angle increases from 0\u00b0 to 90\u00b0, the vertical component {{blank:1}} while the horizontal component {{blank:2}}, assuming constant launch speed.",
+      "blanks": {
+        "1": {
+          "correct": "increases",
+          "correctExplanation": "vy = v sin \u03b8 increases as \u03b8 goes from 0\u00b0 to 90\u00b0 because sin \u03b8 increases over this range.",
+          "distractors": [
+            { "answer": "decreases", "explanation": "The vertical component increases with angle; it is the horizontal component that decreases." },
+            { "answer": "stays constant", "explanation": "The vertical component depends on sin \u03b8, which changes with angle." }
+          ]
+        },
+        "2": {
+          "correct": "decreases",
+          "correctExplanation": "vx = v cos \u03b8 decreases as \u03b8 goes from 0\u00b0 to 90\u00b0 because cos \u03b8 decreases over this range.",
+          "distractors": [
+            { "answer": "increases", "explanation": "The horizontal component decreases with angle; cos \u03b8 decreases from 1 to 0." },
+            { "answer": "stays constant", "explanation": "The horizontal component depends on cos \u03b8, which changes with angle." }
+          ]
+        }
+      }
+    }
+  ]
+}

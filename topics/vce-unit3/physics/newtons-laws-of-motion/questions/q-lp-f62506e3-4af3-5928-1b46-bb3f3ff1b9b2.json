@@ -1,0 +1,511 @@
+{
+  "_link": {
+    "uuid": "lp-f62506e3-4af3-5928-1b46-bb3f3ff1b9b2",
+    "version": 1,
+    "contentHash": "hash-18eff7db",
+    "title": "I can calculate the minimum speed for an object to maintain circular motion at the top of a vertical loop",
+    "generatedAt": "2026-02-06T09:35:00Z"
+  },
+  "toLevel2": [
+    {
+      "type": "mc",
+      "question": "At the top of a vertical loop, what provides the centripetal force when the object is travelling at the minimum speed?",
+      "correct": "Gravity alone provides all of the centripetal force",
+      "correctExplanation": "At the minimum speed the normal force (or tension) drops to zero, so the only force acting toward the centre is the weight of the object.",
+      "distractors": [
+        { "answer": "The normal force alone provides the centripetal force", "explanation": "At minimum speed the normal force is zero. Students confuse the minimum-speed case with the general case where normal force contributes." },
+        { "answer": "Friction between the object and the track provides the force", "explanation": "Friction acts along the track surface, not toward the centre. Centripetal force at the top comes from gravity and the normal force." },
+        { "answer": "The object's inertia provides the centripetal force needed", "explanation": "Inertia is not a force. It is the tendency of the object to continue in a straight line, not a source of centripetal force." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What is the formula for the minimum speed at the top of a vertical loop of radius r?",
+      "correct": "v_min = √(gr)",
+      "correctExplanation": "Setting the normal force to zero gives mg = mv²/r, which simplifies to v_min = √(gr).",
+      "distractors": [
+        { "answer": "v_min = √(2gr)", "explanation": "The factor of 2 does not appear in the minimum speed derivation. Students may confuse this with energy conservation expressions." },
+        { "answer": "v_min = √(g/r)", "explanation": "This inverts the radius term. The correct relationship is v² = gr, not v² = g/r." },
+        { "answer": "v_min = gr", "explanation": "The minimum speed is the square root of gr, not the product gr. Students may forget to take the square root." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What value does the normal force have when an object travels at the minimum speed at the top of a vertical loop?",
+      "correct": "The normal force is exactly zero",
+      "correctExplanation": "The minimum speed condition is defined as the point at which the normal force vanishes, leaving gravity as the sole centripetal force.",
+      "distractors": [
+        { "answer": "The normal force equals the weight of the object", "explanation": "When the normal force equals the weight, the net centripetal force is 2mg, which corresponds to a speed above the minimum." },
+        { "answer": "The normal force equals the centripetal force required", "explanation": "At the minimum speed, gravity provides all the centripetal force. A non-zero normal force would indicate a speed above the minimum." },
+        { "answer": "The normal force is at its maximum possible value", "explanation": "The normal force is at its minimum, not maximum, when the speed is at its lowest safe value at the top of the loop." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which quantity does NOT appear in the formula for minimum speed at the top of a vertical loop?",
+      "correct": "The mass of the object",
+      "correctExplanation": "Mass cancels from both sides of mg = mv²/r, so the minimum speed depends only on g and r, not on mass.",
+      "distractors": [
+        { "answer": "The radius of the loop", "explanation": "Radius appears in the formula v_min = √(gr). A larger loop requires a higher minimum speed at the top." },
+        { "answer": "The gravitational field strength", "explanation": "Gravitational field strength g appears in v_min = √(gr). Stronger gravity raises the minimum speed." },
+        { "answer": "Both mass and radius are absent from the formula", "explanation": "Radius is present in v_min = √(gr). Only mass cancels out during the derivation." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What happens to an object at the top of a vertical loop if its speed drops below the minimum value?",
+      "correct": "The object loses contact with the track and falls away from the circular path",
+      "correctExplanation": "Below the minimum speed, gravity provides more force than needed for circular motion at that radius, so the object follows a tighter path and leaves the track.",
+      "distractors": [
+        { "answer": "The object continues on the circular path but decelerates gradually", "explanation": "The object cannot maintain contact with the track when gravity exceeds the required centripetal force at the given speed." },
+        { "answer": "The object reverses direction and travels backward around the loop", "explanation": "The object does not reverse. It simply loses contact with the track and follows a projectile-like path." },
+        { "answer": "The object remains on the track but the normal force becomes negative", "explanation": "A negative normal force would mean the track pulls the object, which is not possible for a surface that only pushes." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "The minimum speed at the top of a vertical loop depends on the mass of the object.",
+      "correct": "False",
+      "correctExplanation": "Mass cancels from both sides of the equation mg = mv²/r, so the minimum speed v_min = √(gr) is independent of mass.",
+      "distractors": [
+        { "answer": "True", "explanation": "Students may expect heavier objects to need more speed, but both mass terms cancel, leaving v_min independent of mass." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "At the top of a vertical loop, both gravity and the normal force point toward the centre of the loop.",
+      "correct": "True",
+      "correctExplanation": "At the top of the loop the centre is directly below the object, so gravity (downward) and the normal force (inward, also downward) both point toward the centre.",
+      "distractors": [
+        { "answer": "False", "explanation": "Students may think the normal force always points upward, but at the top of a loop it points inward, which is downward toward the centre." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about forces at the top of a vertical loop.",
+      "sentence": "At the minimum speed, the {{blank:1}} force is zero and all centripetal force is provided by {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "normal",
+          "correctExplanation": "The normal force drops to zero at the minimum speed, which is the threshold for maintaining contact with the track.",
+          "distractors": [
+            { "answer": "centripetal", "explanation": "Centripetal force is not zero; it equals mg at the minimum speed. The normal force is the quantity that vanishes." },
+            { "answer": "friction", "explanation": "Friction acts along the track, not radially. The force that reaches zero at minimum speed is the normal force." }
+          ]
+        },
+        "2": {
+          "correct": "gravity",
+          "correctExplanation": "With the normal force at zero, the weight mg is the only remaining force directed toward the centre of the loop.",
+          "distractors": [
+            { "answer": "tension", "explanation": "Tension applies to objects on a string, not to objects on a track. For a track loop, the relevant forces are gravity and the normal force." },
+            { "answer": "friction", "explanation": "Friction acts tangentially along the track surface, not radially toward the centre. Gravity provides the centripetal force at minimum speed." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the minimum speed formula.",
+      "sentence": "The minimum speed at the top of a vertical loop is given by v_min = √({{blank:1}}).",
+      "blanks": {
+        "1": {
+          "correct": "gr",
+          "correctExplanation": "Setting the normal force to zero in mg = mv²/r and solving for v gives v_min = √(gr), where g is gravitational field strength and r is the loop radius.",
+          "distractors": [
+            { "answer": "2gr", "explanation": "The factor of 2 does not appear in the minimum speed derivation. This expression relates to other energy-based formulae." },
+            { "answer": "g/r", "explanation": "The correct expression has g multiplied by r, not divided. v² = gr comes directly from mg = mv²/r." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the derivation of minimum speed.",
+      "sentence": "The minimum speed is derived by setting mg = mv²/r, in which the {{blank:1}} cancels from both sides.",
+      "blanks": {
+        "1": {
+          "correct": "mass",
+          "correctExplanation": "The mass m appears on both sides of mg = mv²/r, so it cancels, leaving g = v²/r and therefore v_min = √(gr).",
+          "distractors": [
+            { "answer": "radius", "explanation": "Radius does not cancel; it remains in the final expression v_min = √(gr). Only mass cancels from both sides." },
+            { "answer": "velocity", "explanation": "Velocity is the unknown being solved for. It does not cancel; it appears only on the right side of the equation." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "mc",
+      "question": "For a vertical loop of radius 5 m, what is the minimum speed at the top of the loop? Use g = 9.8 m/s².",
+      "correct": "v_min = √(9.8 × 5) = 7.0 m/s",
+      "correctExplanation": "Substituting into v_min = √(gr) gives √(9.8 × 5) = √49 = 7.0 m/s.",
+      "distractors": [
+        { "answer": "v_min = √(9.8 / 5) = 1.4 m/s", "explanation": "This divides g by r instead of multiplying. The formula is v_min = √(gr), not √(g/r)." },
+        { "answer": "v_min = 9.8 × 5 = 49.0 m/s", "explanation": "This calculates gr without taking the square root. The minimum speed is √(gr), not gr." },
+        { "answer": "v_min = √(2 × 9.8 × 5) = 9.9 m/s", "explanation": "The factor of 2 does not belong in the minimum speed formula. Students may confuse this with v = √(2gh) from energy conservation." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Why does the mass of the object cancel out of the minimum speed equation at the top of a vertical loop?",
+      "correct": "Because both the gravitational force and the centripetal force expression contain mass as a factor",
+      "correctExplanation": "In mg = mv²/r, mass appears on both sides. Dividing by m eliminates it, showing that minimum speed depends only on g and r.",
+      "distractors": [
+        { "answer": "Because mass is not relevant to any circular motion problem under any conditions", "explanation": "Mass is relevant when calculating forces or energies. It cancels specifically in the minimum speed derivation but matters elsewhere." },
+        { "answer": "Because heavier objects experience less gravitational force at the top of a loop", "explanation": "Heavier objects experience more gravitational force (F = mg), not less. Mass cancels because both sides scale equally with mass." },
+        { "answer": "Because the normal force at the top depends on mass while gravity does not", "explanation": "Both gravity (mg) and the centripetal term (mv²/r) depend on mass. Mass cancels because it is a common factor." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "At the top of a vertical loop, if an object travels faster than the minimum speed, what can be said about the normal force?",
+      "correct": "The normal force is greater than zero and supplements gravity in providing centripetal force",
+      "correctExplanation": "Above minimum speed, more centripetal force is needed than gravity alone provides. The normal force makes up the difference: N + mg = mv²/r.",
+      "distractors": [
+        { "answer": "The normal force remains zero regardless of the speed at the top", "explanation": "The normal force is zero only at the exact minimum speed. At higher speeds, a non-zero normal force is needed." },
+        { "answer": "The normal force acts outward, opposing the centripetal direction", "explanation": "At the top of the loop, the track pushes inward (downward). The normal force always acts toward the centre, not outward." },
+        { "answer": "The normal force replaces gravity as the centripetal force provider", "explanation": "Gravity always contributes at the top. The normal force adds to gravity rather than replacing it." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "How does the minimum speed at the top of a vertical loop change if the loop radius is quadrupled?",
+      "correct": "The minimum speed doubles, since v_min is proportional to √r",
+      "correctExplanation": "v_min = √(gr), so quadrupling r gives √(4gr) = 2√(gr) = 2v_min. The minimum speed doubles.",
+      "distractors": [
+        { "answer": "The minimum speed quadruples because it is directly proportional to the radius", "explanation": "Speed depends on the square root of radius, not radius itself. Quadrupling r only doubles the minimum speed." },
+        { "answer": "The minimum speed halves because a larger loop requires less centripetal force", "explanation": "A larger loop requires a higher minimum speed. While centripetal acceleration decreases for a given speed, the minimum speed still increases." },
+        { "answer": "The minimum speed remains unchanged because it depends only on gravity", "explanation": "The minimum speed depends on both g and r. Changing the radius changes the required minimum speed." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A roller coaster car has a speed of 10 m/s at the top of a loop with radius 8 m. Is this speed above or below the minimum? Use g = 9.8 m/s².",
+      "correct": "Above the minimum, because v_min = √(9.8 × 8) = 8.9 m/s, and 10 > 8.9",
+      "correctExplanation": "The minimum speed is √(78.4) = 8.85 m/s. Since 10 m/s exceeds this value, the car safely maintains contact with the track.",
+      "distractors": [
+        { "answer": "Below the minimum, because 10 m/s is less than 9.8 × 8 = 78.4 m/s", "explanation": "The value 78.4 is gr, not the minimum speed. The minimum speed is √(gr) = 8.85 m/s, which is less than 10 m/s." },
+        { "answer": "Exactly at the minimum, because 10 m/s matches √(9.8 × 10) = 9.9 m/s", "explanation": "The radius is 8 m, not 10 m. Using the correct radius gives v_min = 8.85 m/s, which does not equal 10 m/s." },
+        { "answer": "Below the minimum, because v_min = √(2 × 9.8 × 8) = 12.5 m/s", "explanation": "The factor of 2 does not appear in the minimum speed formula. The correct expression is v_min = √(gr) = 8.85 m/s." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Why is the minimum speed at the top of a loop important in roller coaster design?",
+      "correct": "It determines the slowest safe speed to prevent passengers from losing contact with their seats at the top",
+      "correctExplanation": "If the coaster speed drops below √(gr), the normal force becomes zero and riders would separate from the track, creating a dangerous situation.",
+      "distractors": [
+        { "answer": "It determines the maximum allowed speed to prevent excessive g-forces on passengers at the top", "explanation": "Maximum speed relates to g-force limits, not minimum speed. The minimum speed prevents loss of contact, not excessive force." },
+        { "answer": "It determines the energy required to complete the entire loop from start to finish", "explanation": "Total energy depends on the full loop geometry. The minimum speed specifically addresses the critical condition at the top." },
+        { "answer": "It determines the friction coefficient needed between the wheels and the track surface", "explanation": "Friction is a separate design consideration. The minimum speed relates to the normal force and gravity at the top of the loop." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "Doubling the radius of a vertical loop doubles the minimum speed required at the top.",
+      "correct": "False",
+      "correctExplanation": "Since v_min = √(gr), doubling r gives v_min = √(2gr) = √2 × √(gr), which is √2 times the original, not double.",
+      "distractors": [
+        { "answer": "True", "explanation": "Students may assume a linear relationship, but the square root means doubling r increases the minimum speed by a factor of √2, not 2." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about calculating minimum speed.",
+      "sentence": "For a loop of radius 10 m, the minimum speed at the top is v_min = √(9.8 × 10) = {{blank:1}} m/s.",
+      "blanks": {
+        "1": {
+          "correct": "9.9",
+          "correctExplanation": "v_min = √(98) = 9.9 m/s. This is the speed at which the normal force just reaches zero at the top of the loop.",
+          "distractors": [
+            { "answer": "98.0", "explanation": "This is the value of gr before taking the square root. The minimum speed is √(98) = 9.9 m/s, not 98 m/s." },
+            { "answer": "14.0", "explanation": "This corresponds to √(2 × 9.8 × 10) = √196 = 14.0 m/s, which incorrectly includes a factor of 2." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the relationship between speed and radius.",
+      "sentence": "The minimum speed at the top of a vertical loop is proportional to the {{blank:1}} of the radius.",
+      "blanks": {
+        "1": {
+          "correct": "square root",
+          "correctExplanation": "From v_min = √(gr), the minimum speed scales with √r. Quadrupling the radius doubles the minimum speed.",
+          "distractors": [
+            { "answer": "square", "explanation": "The square root of radius appears in the formula, not the square. v_min ∝ √r, not v_min ∝ r²." },
+            { "answer": "reciprocal", "explanation": "The minimum speed increases with radius, not decreases. It is proportional to √r, not 1/r." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the force equation at the top of a loop.",
+      "sentence": "At the top of a vertical loop, the net centripetal force equation is N + {{blank:1}} = mv²/r, where N is the normal force.",
+      "blanks": {
+        "1": {
+          "correct": "mg",
+          "correctExplanation": "Both the normal force and the gravitational force point toward the centre at the top, so they add to give the total centripetal force.",
+          "distractors": [
+            { "answer": "mv²/r", "explanation": "Adding mv²/r to N would double the centripetal term. The right side already represents the total centripetal force required." },
+            { "answer": "ma", "explanation": "While mg is technically ma with a = g, the specific form mg should be used because a refers to centripetal acceleration v²/r in this context." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "mc",
+      "question": "A ball on a string is swung in a vertical circle of radius 0.8 m. Calculate the minimum speed at the top of the circle. Use g = 9.8 m/s².",
+      "correct": "v_min = √(9.8 × 0.8) = 2.8 m/s",
+      "correctExplanation": "v_min = √(gr) = √(9.8 × 0.8) = √(7.84) = 2.8 m/s. At this speed the tension in the string is zero.",
+      "distractors": [
+        { "answer": "v_min = √(9.8 / 0.8) = 3.5 m/s", "explanation": "This divides g by r instead of multiplying. The correct formula is v_min = √(gr), giving 2.8 m/s." },
+        { "answer": "v_min = √(2 × 9.8 × 0.8) = 4.0 m/s", "explanation": "The factor of 2 does not appear in the minimum speed formula. This expression would apply to a different energy calculation." },
+        { "answer": "v_min = 9.8 × 0.8 = 7.8 m/s", "explanation": "This calculates gr without taking the square root. The minimum speed is √(gr), not the product gr." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A roller coaster loop has a radius of 12 m. If the car travels at 15 m/s at the top, what is the normal force on a 60 kg passenger? Use g = 9.8 m/s².",
+      "correct": "N = m(v²/r − g) = 60(15²/12 − 9.8) = 537 N",
+      "correctExplanation": "From N + mg = mv²/r, rearranging gives N = m(v²/r − g) = 60(225/12 − 9.8) = 60(18.75 − 9.8) = 60 × 8.95 = 537 N.",
+      "distractors": [
+        { "answer": "N = m(g − v²/r) = 60(9.8 − 18.75) = −537 N", "explanation": "The signs are reversed. At the top of the loop, N = m(v²/r − g), not m(g − v²/r). A negative result would indicate the speed is above minimum." },
+        { "answer": "N = mv²/r = 60 × 15²/12 = 1125 N", "explanation": "This ignores gravity. The normal force is the centripetal force minus the gravitational contribution: N = mv²/r − mg." },
+        { "answer": "N = mg = 60 × 9.8 = 588 N", "explanation": "This gives the weight, not the normal force at the top of a loop. The normal force depends on both speed and gravity." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A bucket of water is swung in a vertical circle of radius 1.2 m. What is the minimum speed at the top to keep the water in the bucket? Use g = 9.8 m/s².",
+      "correct": "v_min = √(9.8 × 1.2) = 3.4 m/s",
+      "correctExplanation": "v_min = √(gr) = √(11.76) = 3.43 m/s. Below this speed the water would fall out because gravity exceeds the needed centripetal force.",
+      "distractors": [
+        { "answer": "v_min = √(9.8 × 2.4) = 4.8 m/s", "explanation": "This uses the diameter (2.4 m) instead of the radius (1.2 m). The formula requires the radius of the circular path." },
+        { "answer": "v_min = √(9.8 × 1.2²) = 3.8 m/s", "explanation": "The radius should not be squared inside the square root. The formula is v_min = √(gr), not √(gr²)." },
+        { "answer": "v_min = √(2 × 9.8 × 1.2) = 4.9 m/s", "explanation": "The factor of 2 is not part of the minimum speed formula. Students may confuse this with energy conservation expressions." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An engineer designs a loop-the-loop with radius 6 m and wants the car to have twice the minimum speed at the top. What speed is required? Use g = 9.8 m/s².",
+      "correct": "v = 2√(9.8 × 6) = 2 × 7.67 = 15.3 m/s",
+      "correctExplanation": "v_min = √(9.8 × 6) = 7.67 m/s. Twice this value is 2 × 7.67 = 15.3 m/s, ensuring a large safety margin.",
+      "distractors": [
+        { "answer": "v = √(2 × 9.8 × 6) = 10.8 m/s", "explanation": "This places the factor of 2 inside the square root, which gives √2 times v_min, not 2 times v_min." },
+        { "answer": "v = √(9.8 × 12) = 10.8 m/s", "explanation": "This doubles the radius instead of doubling the speed. Doubling the speed requires multiplying √(gr) by 2, not doubling r." },
+        { "answer": "v = 2 × 9.8 × 6 = 117.6 m/s", "explanation": "This calculates 2gr without the square root. The minimum speed involves a square root, and doubling it gives 2√(gr)." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A toy car completes a vertical loop of radius 0.3 m. At the top the track pushes on the car with a normal force of 0.5 N. If the car has a mass of 0.1 kg, what is its speed at the top? Use g = 9.8 m/s².",
+      "correct": "v = √[r(N/m + g)] = √[0.3(0.5/0.1 + 9.8)] = 2.1 m/s",
+      "correctExplanation": "From N + mg = mv²/r, v² = r(N/m + g) = 0.3(5 + 9.8) = 0.3 × 14.8 = 4.44, so v = 2.1 m/s.",
+      "distractors": [
+        { "answer": "v = √[r(N/m − g)] = √[0.3(5 − 9.8)] = undefined", "explanation": "Subtracting g from N/m gives a negative value under the square root. At the top, both N and mg contribute to centripetal force, so they add." },
+        { "answer": "v = √(Nr/m) = √(0.5 × 0.3/0.1) = 1.2 m/s", "explanation": "This accounts for the normal force but ignores gravity. Both N and mg contribute to the centripetal force at the top." },
+        { "answer": "v = √(gr) = √(9.8 × 0.3) = 1.7 m/s", "explanation": "This gives the minimum speed where N = 0. The actual speed is higher because the normal force is non-zero." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A pilot flies an airplane in a vertical loop of radius 500 m. What is the minimum speed at the top for the pilot to remain in the seat without a harness? Use g = 9.8 m/s².",
+      "correct": "v_min = √(9.8 × 500) = 70.0 m/s",
+      "correctExplanation": "v_min = √(gr) = √(4900) = 70.0 m/s. Below this speed the pilot would lift off the seat because gravity exceeds the needed centripetal force.",
+      "distractors": [
+        { "answer": "v_min = √(9.8 × 1000) = 98.9 m/s", "explanation": "This uses the diameter (1000 m) instead of the radius (500 m). The formula requires the radius of the circular path." },
+        { "answer": "v_min = √(9.8 / 500) = 0.14 m/s", "explanation": "This divides g by r instead of multiplying. The correct formula is v_min = √(gr), not √(g/r)." },
+        { "answer": "v_min = 9.8 × 500 = 4900 m/s", "explanation": "This calculates gr without taking the square root. The minimum speed is √(gr) = 70.0 m/s." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "At the top of a vertical loop of radius 4 m, a 2 kg object travels at 8 m/s. What is the ratio of the normal force to the weight of the object? Use g = 9.8 m/s².",
+      "correct": "N/mg = v²/(gr) − 1 = 64/(9.8 × 4) − 1 = 0.63",
+      "correctExplanation": "N = m(v²/r − g), so N/mg = v²/(gr) − 1 = 64/39.2 − 1 = 1.633 − 1 = 0.63.",
+      "distractors": [
+        { "answer": "N/mg = v²/(gr) = 64/39.2 = 1.63", "explanation": "This gives the ratio of centripetal force to weight, not the ratio of normal force to weight. The normal force is the centripetal force minus gravity." },
+        { "answer": "N/mg = 1 − v²/(gr) = 1 − 1.63 = −0.63", "explanation": "The subtraction is reversed. The correct expression is v²/(gr) − 1, not 1 − v²/(gr)." },
+        { "answer": "N/mg = v/(gr) = 8/39.2 = 0.20", "explanation": "Speed should be squared in the centripetal acceleration term. The correct formula uses v², not v." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the calculation for minimum speed at the top of a loop.",
+      "sentence": "For a vertical loop of radius 20 m, v_min = √(9.8 × 20) = √({{blank:1}}) = {{blank:2}} m/s.",
+      "blanks": {
+        "1": {
+          "correct": "196",
+          "correctExplanation": "9.8 × 20 = 196. This is the value inside the square root in the minimum speed formula.",
+          "distractors": [
+            { "answer": "392", "explanation": "This equals 2 × 9.8 × 20, which incorrectly includes a factor of 2 not present in the minimum speed formula." },
+            { "answer": "29.8", "explanation": "This adds 9.8 and 20 instead of multiplying. The formula requires the product gr, not the sum g + r." }
+          ]
+        },
+        "2": {
+          "correct": "14.0",
+          "correctExplanation": "√196 = 14.0 m/s. This is the minimum speed at the top of a 20 m radius vertical loop.",
+          "distractors": [
+            { "answer": "19.8", "explanation": "This equals √392, which would result from incorrectly including a factor of 2 in the formula." },
+            { "answer": "196", "explanation": "This is gr, the value before taking the square root. The minimum speed is √(gr), not gr." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the normal force at the top of a loop.",
+      "sentence": "At the top of a loop, the normal force on the object is N = mv²/r {{blank:1}} mg.",
+      "blanks": {
+        "1": {
+          "correct": "−",
+          "correctExplanation": "From N + mg = mv²/r, rearranging gives N = mv²/r − mg. Gravity already contributes to the centripetal force, so it is subtracted.",
+          "distractors": [
+            { "answer": "+", "explanation": "Adding mg would give the total centripetal force plus gravity, which does not represent the normal force." },
+            { "answer": "×", "explanation": "Multiplication has no physical basis here. The normal force is the difference between the required centripetal force and gravity." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the condition for maintaining contact.",
+      "sentence": "An object maintains contact with the track at the top of a loop as long as the speed satisfies v ≥ {{blank:1}}.",
+      "blanks": {
+        "1": {
+          "correct": "√(gr)",
+          "correctExplanation": "The minimum speed condition v ≥ √(gr) ensures the normal force remains zero or positive, meaning the track can still push on the object.",
+          "distractors": [
+            { "answer": "gr", "explanation": "The minimum speed is the square root of gr, not gr itself. Without the square root, the units do not match speed." },
+            { "answer": "√(g/r)", "explanation": "Dividing g by r is incorrect. The minimum speed formula multiplies g and r under the square root." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "mc",
+      "question": "A marble rolls along the inside of a vertical loop of radius 0.5 m. Using energy conservation, determine the minimum height above the bottom of the loop from which the marble must be released to complete the loop. Ignore rotational energy and friction.",
+      "correct": "h = 2.5r = 1.25 m above the bottom of the loop",
+      "correctExplanation": "At the top, KE = (1/2)mv² = (1/2)m(gr) = mgr/2. The top is at height 2r. Energy conservation: mgh = mg(2r) + mgr/2, giving h = 5r/2 = 2.5 × 0.5 = 1.25 m.",
+      "distractors": [
+        { "answer": "h = 2r = 1.0 m, equal to the diameter of the loop", "explanation": "This accounts for the potential energy at the top but ignores the kinetic energy needed. The marble must be released higher than the loop top." },
+        { "answer": "h = r = 0.5 m, equal to the radius of the loop", "explanation": "This vastly underestimates the required height. The marble needs both potential and kinetic energy at the top." },
+        { "answer": "h = 3r = 1.5 m above the bottom of the loop", "explanation": "This overestimates the release height. Energy conservation gives h = 2.5r, not 3r, for a point mass." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student claims that at the top of a vertical loop, the apparent weight of the rider is always less than their true weight. Evaluate this claim.",
+      "correct": "The claim is correct for all speeds at or above the minimum, because N = m(v²/r − g) is always less than mg",
+      "correctExplanation": "The apparent weight is the normal force N = m(v²/r − g). At minimum speed N = 0, and even at higher speeds N remains less than mg because v²/r − g < 2g requires v < √(3gr).",
+      "distractors": [
+        { "answer": "The claim is incorrect because at high speeds the normal force exceeds the true weight", "explanation": "At very high speeds N can exceed mg, but only when v² > 2gr. The claim holds for speeds near the minimum but not universally." },
+        { "answer": "The claim is incorrect because apparent weight equals true weight at the minimum speed", "explanation": "At minimum speed the normal force is zero, not equal to the weight. The apparent weight is zero, which is less than the true weight." },
+        { "answer": "The claim is correct only if the rider is not wearing a harness or seatbelt", "explanation": "A harness can provide additional inward force but does not change the physics of the normal force from the seat." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Two vertical loops are connected in sequence. Loop A has radius 4 m and Loop B has radius 9 m. Compare the minimum speeds at the tops of each loop.",
+      "correct": "v_A : v_B = √4 : √9 = 2 : 3, so Loop B needs 1.5 times the minimum speed of Loop A",
+      "correctExplanation": "v_min = √(gr), so the ratio is √(r_A)/√(r_B) = √4/√9 = 2/3. Loop B requires 1.5 times the speed of Loop A.",
+      "distractors": [
+        { "answer": "v_A : v_B = 4 : 9, so Loop B needs 2.25 times the minimum speed of Loop A", "explanation": "The ratio of minimum speeds depends on √r, not r. Taking the square root gives 2:3, not 4:9." },
+        { "answer": "v_A : v_B = 9 : 4, so Loop A needs a higher speed than Loop B at the top", "explanation": "The larger loop requires a higher minimum speed. The ratio is inverted; √(9) > √(4)." },
+        { "answer": "v_A = v_B because both loops are subject to the same gravitational field strength", "explanation": "While g is the same, the minimum speed also depends on radius. Different radii produce different minimum speeds." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A car enters a vertical loop at the bottom with speed v₀. Using energy conservation, derive the condition on v₀ for the car to complete a loop of radius r. Ignore friction.",
+      "correct": "v₀ ≥ √(5gr), obtained by combining energy conservation with the minimum speed condition at the top",
+      "correctExplanation": "At the top: v_top² = v₀² − 4gr (energy conservation over height 2r). Setting v_top ≥ √(gr) gives v₀² ≥ 5gr, so v₀ ≥ √(5gr).",
+      "distractors": [
+        { "answer": "v₀ ≥ √(4gr), because the car must have enough energy to reach the top of the loop", "explanation": "This ensures the car reaches the top with zero speed but does not ensure enough speed for circular motion. The car also needs v_top = √(gr)." },
+        { "answer": "v₀ ≥ √(gr), because the minimum speed condition is the same at the bottom and top", "explanation": "The speed at the bottom must be much higher than at the top because the car loses kinetic energy as it gains height." },
+        { "answer": "v₀ ≥ √(2gr), which is the speed needed to reach the height of the top of the loop", "explanation": "This gives the speed to reach height 2r with zero final speed, but the car needs additional kinetic energy at the top for circular motion." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Evaluate why many modern roller coasters use clothoid (teardrop-shaped) loops instead of perfectly circular loops.",
+      "correct": "Clothoid loops have a smaller radius at the top, reducing the required entry speed while limiting g-forces at the bottom",
+      "correctExplanation": "A smaller radius at the top lowers v_min = √(gr). The larger radius at the bottom reduces centripetal acceleration, keeping g-forces within safe limits for riders.",
+      "distractors": [
+        { "answer": "Clothoid loops eliminate the need for a minimum speed because the changing radius removes the gravity constraint", "explanation": "A minimum speed still exists at every point. The clothoid shape optimises the speed and force distribution, not eliminates the constraint." },
+        { "answer": "Clothoid loops increase the minimum speed at the top to give riders a more thrilling experience", "explanation": "Clothoid loops decrease the minimum speed at the top by reducing the radius there. The thrill comes from managing g-forces, not from higher top speed." },
+        { "answer": "Clothoid loops are used purely for aesthetic reasons and have no engineering advantage over circular loops", "explanation": "Clothoid loops provide significant engineering benefits by reducing required entry speed and limiting maximum g-forces on riders." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "At the top of a vertical loop of radius r, an object travels at exactly twice the minimum speed. What is the normal force expressed as a multiple of the object's weight?",
+      "correct": "N = 3mg, because N = m(v²/r − g) = m(4gr/r − g) = 3mg",
+      "correctExplanation": "At v = 2√(gr), v² = 4gr. Then N = m(v²/r − g) = m(4g − g) = 3mg. The normal force is three times the weight.",
+      "distractors": [
+        { "answer": "N = mg, because doubling the speed doubles the normal force from zero to mg", "explanation": "Normal force depends on v², not v. Doubling speed quadruples v², so N increases from 0 to 3mg, not mg." },
+        { "answer": "N = 2mg, because doubling the speed doubles the centripetal force contribution", "explanation": "Centripetal force depends on v², which quadruples. Subtracting mg from 4mg gives 3mg, not 2mg." },
+        { "answer": "N = 4mg, because the normal force is proportional to the square of the speed", "explanation": "While the centripetal force is 4mg when v = 2v_min, the normal force is the centripetal force minus gravity: 4mg − mg = 3mg." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A ball on a string of length 1.5 m is swung in a vertical circle. At the bottom of the circle, the tension in the string is 25 N and the ball has a mass of 0.5 kg. Determine whether the ball will complete the full loop. Use g = 9.8 m/s².",
+      "correct": "Find v_bottom from tension, use energy conservation to find v_top, then compare with v_min at the top",
+      "correctExplanation": "At the bottom: T − mg = mv²/r, so v² = r(T/m − g) = 1.5(50 − 9.8) = 60.3, v = 7.77 m/s. At the top: v_top² = v²_bottom − 4gr = 60.3 − 58.8 = 1.5, v_top = 1.22 m/s. v_min = √(9.8 × 1.5) = 3.83 m/s. Since 1.22 < 3.83, the ball does not complete the loop.",
+      "distractors": [
+        { "answer": "The ball completes the loop because the tension of 25 N exceeds the weight of 4.9 N by a large margin", "explanation": "High tension at the bottom does not guarantee completion. The ball must have enough speed at the top, which requires energy conservation analysis." },
+        { "answer": "The ball completes the loop because v_bottom = 7.77 m/s exceeds v_min = 3.83 m/s at the top", "explanation": "The speed at the bottom cannot be directly compared to v_min at the top. Energy is lost to height gain, so v_top must be calculated separately." },
+        { "answer": "Impossible to determine without knowing the exact angle at which the ball leaves the circular path", "explanation": "The analysis at the top is sufficient. If v_top < v_min, the ball cannot maintain circular motion at the top, regardless of angle." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "On the Moon, where g = 1.6 m/s², how does the minimum speed at the top of a 5 m radius vertical loop compare to the same loop on Earth?",
+      "correct": "v_Moon = √(1.6 × 5) = 2.8 m/s, which is 40% of v_Earth = 7.0 m/s",
+      "correctExplanation": "v_Moon/v_Earth = √(g_Moon/g_Earth) = √(1.6/9.8) = 0.404. The lower gravity on the Moon reduces the minimum speed by about 60%.",
+      "distractors": [
+        { "answer": "The minimum speed is the same because mass cancels from the equation on both planets", "explanation": "While mass cancels, gravitational field strength does not. The minimum speed depends on g, which differs between Earth and the Moon." },
+        { "answer": "v_Moon = 7.0 × (1.6/9.8) = 1.1 m/s, because speed is directly proportional to g", "explanation": "Speed is proportional to √g, not g. The correct ratio is √(1.6/9.8) = 0.404, not 1.6/9.8 = 0.163." },
+        { "answer": "v_Moon = 7.0 × (9.8/1.6) = 42.9 m/s, because weaker gravity requires more speed", "explanation": "Weaker gravity requires less speed, not more. Less gravitational force means less centripetal force is available, but less is also needed." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the energy conservation analysis for a vertical loop.",
+      "sentence": "The minimum entry speed at the bottom of a circular loop of radius r is v₀ = √({{blank:1}}), derived by combining energy conservation over height 2r with the condition v_top = √(gr).",
+      "blanks": {
+        "1": {
+          "correct": "5gr",
+          "correctExplanation": "Energy conservation gives v₀² = v_top² + 4gr = gr + 4gr = 5gr, so v₀ = √(5gr).",
+          "distractors": [
+            { "answer": "4gr", "explanation": "This accounts only for the height 2r but ignores the kinetic energy needed at the top. The total is 5gr, not 4gr." },
+            { "answer": "2gr", "explanation": "This significantly underestimates the requirement. The car needs energy for both height (4gr) and speed at the top (gr)." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the analysis of g-forces at the top of a vertical loop.",
+      "sentence": "At twice the minimum speed, the apparent weight (normal force) at the top of a loop equals {{blank:1}} times the true weight of the object.",
+      "blanks": {
+        "1": {
+          "correct": "3",
+          "correctExplanation": "At v = 2v_min, v² = 4gr. Then N = m(4g − g) = 3mg, so the normal force is 3 times the weight.",
+          "distractors": [
+            { "answer": "2", "explanation": "Doubling speed quadruples v², giving N = m(4g − g) = 3mg, not 2mg. The relationship is non-linear." },
+            { "answer": "4", "explanation": "While v² quadruples, gravity still contributes mg to the centripetal force. The normal force is 4mg − mg = 3mg, not 4mg." }
+          ]
+        }
+      }
+    }
+  ]
+}

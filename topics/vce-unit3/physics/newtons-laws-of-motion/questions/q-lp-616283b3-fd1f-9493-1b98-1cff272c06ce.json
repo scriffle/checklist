@@ -1,0 +1,527 @@
+{
+  "_link": {
+    "uuid": "lp-616283b3-fd1f-9493-1b98-1cff272c06ce",
+    "version": 1,
+    "contentHash": "hash-d202f832",
+    "title": "I can apply constant acceleration equations to solve projectile motion problems involving launch from a height at an angle",
+    "generatedAt": "2026-02-06T10:00:00Z"
+  },
+  "toLevel2": [
+    {
+      "type": "mc",
+      "question": "Which equation is used to find vertical displacement when initial velocity, time, and acceleration are known?",
+      "correct": "s = ut + (1/2)at\u00b2",
+      "correctExplanation": "This kinematic equation relates displacement to initial velocity, time, and constant acceleration, making it suitable for vertical motion under gravity.",
+      "distractors": [
+        { "answer": "v = u + at", "explanation": "This equation finds final velocity, not displacement. Students confuse velocity and displacement equations." },
+        { "answer": "v\u00b2 = u\u00b2 + 2as", "explanation": "This equation relates velocity to displacement without time. It does not directly use time as an input." },
+        { "answer": "s = vt - (1/2)at\u00b2", "explanation": "This uses final velocity rather than initial velocity. Students may confuse which velocity to substitute." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "When a projectile is launched upward at an angle from a cliff, what is the initial vertical velocity component?",
+      "correct": "u sin(\u03b8), directed upward",
+      "correctExplanation": "The vertical component of the launch velocity is found using the sine of the launch angle, and it is directed upward for an upward launch.",
+      "distractors": [
+        { "answer": "u cos(\u03b8), directed upward", "explanation": "Cosine gives the horizontal component, not the vertical component. Students commonly swap sine and cosine." },
+        { "answer": "u sin(\u03b8), directed downward", "explanation": "The direction is upward for a projectile launched above the horizontal. Students may confuse the sign convention." },
+        { "answer": "u tan(\u03b8), directed upward", "explanation": "Tangent is the ratio of components, not a component itself. Students may confuse trigonometric functions." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What value does the horizontal acceleration have for a projectile in free flight near Earth's surface?",
+      "correct": "Zero, because no horizontal force acts on it",
+      "correctExplanation": "With air resistance ignored, no force acts horizontally, so horizontal acceleration is zero and horizontal velocity remains constant.",
+      "distractors": [
+        { "answer": "9.8 m/s\u00b2, the same as the vertical acceleration", "explanation": "Gravity acts only vertically. Students may think gravity affects both components equally." },
+        { "answer": "It decreases gradually throughout the flight", "explanation": "Horizontal acceleration is constantly zero, not decreasing. Students may confuse velocity change with acceleration." },
+        { "answer": "It depends on the launch angle chosen", "explanation": "Horizontal acceleration is always zero regardless of angle. The angle affects velocity components, not acceleration." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "In projectile problems launched from a height, what distinguishes them from ground-level launches?",
+      "correct": "The vertical displacement at landing is not zero",
+      "correctExplanation": "When launched from a height, the projectile lands at a different elevation, so the net vertical displacement equals the launch height.",
+      "distractors": [
+        { "answer": "The horizontal velocity changes during flight", "explanation": "Horizontal velocity remains constant in both cases. The launch height does not affect horizontal motion." },
+        { "answer": "The acceleration due to gravity is different", "explanation": "Gravitational acceleration is 9.8 m/s\u00b2 regardless of launch height. Students may think height changes gravity." },
+        { "answer": "The trajectory is no longer a parabolic curve", "explanation": "The trajectory remains parabolic regardless of launch height. Only the landing point changes relative to launch." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which sign convention is commonly used when taking downward as positive for a projectile launched upward from a cliff?",
+      "correct": "Gravity is +9.8 m/s\u00b2 and initial vertical velocity is negative",
+      "correctExplanation": "With downward as positive, gravity is positive and an upward initial velocity is negative since it opposes the positive direction.",
+      "distractors": [
+        { "answer": "Gravity is -9.8 m/s\u00b2 and initial vertical velocity is positive", "explanation": "This is the opposite convention where upward is positive. Students may mix conventions within one problem." },
+        { "answer": "Gravity is +9.8 m/s\u00b2 and initial vertical velocity is positive", "explanation": "If downward is positive, an upward velocity must be negative. Both cannot be positive simultaneously." },
+        { "answer": "Gravity is -9.8 m/s\u00b2 and initial vertical velocity is negative", "explanation": "This assigns both quantities the same sign, but they act in opposite directions from a cliff launch." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "When a projectile is launched at an angle from a cliff, the horizontal velocity component remains constant throughout the flight.",
+      "correct": "True",
+      "correctExplanation": "With air resistance ignored, no horizontal force acts on the projectile, so the horizontal velocity remains equal to u cos(\u03b8) throughout.",
+      "distractors": [
+        { "answer": "False", "explanation": "Students may think that horizontal velocity decreases as the projectile slows near the top of its arc, confusing vertical deceleration with horizontal." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "The equation v\u00b2 = u\u00b2 + 2as can only be applied to horizontal motion in projectile problems.",
+      "correct": "False",
+      "correctExplanation": "This equation applies to any motion with constant acceleration, including the vertical component of projectile motion under gravity.",
+      "distractors": [
+        { "answer": "True", "explanation": "Students may think kinematic equations are restricted to specific directions, but they apply to any constant acceleration scenario." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about projectile motion from a height.",
+      "sentence": "When a projectile is launched from a cliff, the vertical {{blank:1}} at landing is equal to the height of the cliff.",
+      "blanks": {
+        "1": {
+          "correct": "displacement",
+          "correctExplanation": "The net vertical displacement equals the cliff height because the projectile lands at a lower elevation than it was launched.",
+          "distractors": [
+            { "answer": "acceleration", "explanation": "Acceleration due to gravity is constant at 9.8 m/s\u00b2 and is not equal to the cliff height." },
+            { "answer": "velocity", "explanation": "Final vertical velocity depends on the fall but is not equal to the cliff height in standard units." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about resolving velocity components.",
+      "sentence": "The initial vertical component of velocity for a projectile launched at speed u at angle \u03b8 is found using u {{blank:1}}.",
+      "blanks": {
+        "1": {
+          "correct": "sin(\u03b8)",
+          "correctExplanation": "The vertical component is the side opposite the angle in the velocity triangle, which is calculated using the sine function.",
+          "distractors": [
+            { "answer": "cos(\u03b8)", "explanation": "Cosine gives the horizontal component, not the vertical component. Students commonly swap these functions." },
+            { "answer": "tan(\u03b8)", "explanation": "Tangent gives the ratio of vertical to horizontal components, not the vertical component itself." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about constant acceleration equations.",
+      "sentence": "The three constant acceleration equations used in projectile motion are v = u + at, s = ut + (1/2)at\u00b2, and {{blank:1}}.",
+      "blanks": {
+        "1": {
+          "correct": "v\u00b2 = u\u00b2 + 2as",
+          "correctExplanation": "This is the third kinematic equation, which relates final velocity to initial velocity, acceleration, and displacement without requiring time.",
+          "distractors": [
+            { "answer": "s = (u + v)t / 2", "explanation": "While this is a valid kinematic relationship, the three standard equations used in VCE projectile motion are the ones listed." },
+            { "answer": "a = (v - u) / 2t", "explanation": "This is an incorrect rearrangement. The correct form for acceleration is a = (v - u) / t, not divided by 2t." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "mc",
+      "question": "A ball is thrown at 25 m/s at 40\u00b0 above horizontal from a 15 m tall building. Which expression gives the initial vertical velocity component?",
+      "correct": "25 sin(40\u00b0) = 16.1 m/s upward",
+      "correctExplanation": "The vertical component is u sin(\u03b8) = 25 sin(40\u00b0) = 16.1 m/s, directed upward since the ball is thrown above horizontal.",
+      "distractors": [
+        { "answer": "25 cos(40\u00b0) = 19.2 m/s upward", "explanation": "Cosine gives the horizontal component, not the vertical. Students frequently confuse which trig function to use." },
+        { "answer": "25 sin(40\u00b0) = 16.1 m/s downward", "explanation": "The direction is upward because the ball is launched above horizontal. The sign must match the launch direction." },
+        { "answer": "25 tan(40\u00b0) = 21.0 m/s upward", "explanation": "Tangent gives the ratio of components, not a velocity component. This produces an incorrect magnitude." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Why does the total flight time for a cliff launch differ from a ground-level launch at the same speed and angle?",
+      "correct": "The projectile must travel an additional vertical distance equal to the cliff height",
+      "correctExplanation": "The extra height adds vertical displacement, which increases the time the projectile spends in the air compared to landing at the same level.",
+      "distractors": [
+        { "answer": "The projectile has greater horizontal velocity when launched from a higher position",  "explanation": "Launch height does not affect horizontal velocity. The initial speed and angle determine all velocity components." },
+        { "answer": "Gravitational acceleration increases with the additional height above sea level", "explanation": "The change in g over a few metres is negligible. Gravity is treated as constant at 9.8 m/s\u00b2 near Earth's surface." },
+        { "answer": "The projectile follows a different shaped curve when launched from an elevated position", "explanation": "The trajectory remains parabolic regardless of launch height. Only the portion of the parabola traversed changes." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A projectile is launched from a 20 m cliff with an initial vertical velocity of 12 m/s upward. Taking upward as positive, which equation correctly represents the vertical displacement at landing?",
+      "correct": "-20 = 12t - (1/2)(9.8)t\u00b2",
+      "correctExplanation": "With upward as positive, the displacement is -20 m (below launch point), initial vertical velocity is +12 m/s, and acceleration is -9.8 m/s\u00b2.",
+      "distractors": [
+        { "answer": "+20 = 12t - (1/2)(9.8)t\u00b2", "explanation": "The displacement should be negative because the projectile lands below its launch point when upward is positive." },
+        { "answer": "-20 = -12t + (1/2)(9.8)t\u00b2", "explanation": "The initial vertical velocity is upward, so it should be positive in the upward-positive convention." },
+        { "answer": "+20 = -12t - (1/2)(9.8)t\u00b2", "explanation": "Both the displacement sign and velocity sign are incorrect in this expression for the upward-positive convention." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Why must a quadratic equation be solved to find the flight time when a projectile is launched at an angle from a height?",
+      "correct": "The displacement equation s = ut + (1/2)at\u00b2 contains t and t\u00b2 terms",
+      "correctExplanation": "The equation is quadratic in t because it contains both a linear term (ut) and a squared term ((1/2)at\u00b2), requiring the quadratic formula or factoring.",
+      "distractors": [
+        { "answer": "The horizontal and vertical equations must be combined into a single equation", "explanation": "The quadratic arises from the vertical equation alone. Horizontal and vertical motions are solved independently." },
+        { "answer": "Air resistance introduces a squared velocity term into the displacement equation", "explanation": "Air resistance is ignored in these problems. The quadratic nature comes from constant acceleration kinematics." },
+        { "answer": "The sine and cosine functions produce a second-degree polynomial when multiplied together", "explanation": "Trig functions resolve velocity components but do not create the quadratic. The t\u00b2 term in kinematics does." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A cannonball is fired at 30 m/s at 25\u00b0 from a 10 m cliff. What is the horizontal range if the total flight time is 2.85 s?",
+      "correct": "30 cos(25\u00b0) \u00d7 2.85 = 77.5 m",
+      "correctExplanation": "Horizontal range equals horizontal velocity times total flight time: u cos(\u03b8) \u00d7 t = 30 cos(25\u00b0) \u00d7 2.85 = 77.5 m.",
+      "distractors": [
+        { "answer": "30 sin(25\u00b0) \u00d7 2.85 = 36.1 m", "explanation": "Using sine gives the vertical component. Students confuse which trig function gives horizontal velocity." },
+        { "answer": "30 \u00d7 2.85 = 85.5 m", "explanation": "Using the full launch speed ignores the angle. Only the horizontal component contributes to range." },
+        { "answer": "30 cos(25\u00b0) \u00d7 2.85 / 2 = 38.8 m", "explanation": "Dividing by 2 would apply only if finding half the range. The full range uses the full flight time." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "When solving the quadratic equation for flight time, why is only the positive root physically meaningful?",
+      "correct": "Time cannot be negative in a physical trajectory from launch to landing",
+      "correctExplanation": "The negative root corresponds to a time before launch, which has no physical meaning. Only the positive root represents the actual flight duration.",
+      "distractors": [
+        { "answer": "The negative root always equals zero, making it trivial to discard", "explanation": "The negative root is not zero; it is a negative number representing a hypothetical past time. It is discarded for physical reasons." },
+        { "answer": "The quadratic formula always produces one positive and one imaginary root", "explanation": "Both roots are real when the discriminant is positive. The issue is that one root is negative, not imaginary." },
+        { "answer": "The negative root corresponds to a different projectile launched in the opposite direction", "explanation": "The negative root does not represent a different projectile. It corresponds to extrapolating the parabola backward in time." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "When a projectile is launched upward from a cliff, it reaches its maximum height at the same time as it would if launched from ground level at the same speed and angle.",
+      "correct": "True",
+      "correctExplanation": "Maximum height occurs when vertical velocity reaches zero, which depends only on the initial vertical velocity and gravity, not the launch height.",
+      "distractors": [
+        { "answer": "False", "explanation": "Students may think the cliff height affects the time to reach maximum height, but the vertical deceleration depends only on the initial vertical speed." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about solving cliff-launch problems.",
+      "sentence": "When taking downward as positive for a cliff launch, the vertical displacement s equals the {{blank:1}} of the cliff, and the initial upward velocity is assigned a {{blank:2}} value.",
+      "blanks": {
+        "1": {
+          "correct": "height",
+          "correctExplanation": "The vertical displacement equals the cliff height because the projectile falls that distance below the launch point.",
+          "distractors": [
+            { "answer": "range", "explanation": "Range refers to horizontal distance, not the vertical drop from the cliff to the ground." },
+            { "answer": "angle", "explanation": "The angle describes the launch direction, not the vertical distance the projectile falls." }
+          ]
+        },
+        "2": {
+          "correct": "negative",
+          "correctExplanation": "With downward as positive, an upward velocity opposes the positive direction and must be negative.",
+          "distractors": [
+            { "answer": "positive", "explanation": "If downward is positive, upward velocities are negative. Students must apply the sign convention consistently." },
+            { "answer": "zero", "explanation": "The initial vertical velocity is zero only for a horizontal launch, not for a launch at an angle above horizontal." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about horizontal range.",
+      "sentence": "The horizontal range of a projectile launched from a cliff is found by multiplying the {{blank:1}} velocity by the total flight time.",
+      "blanks": {
+        "1": {
+          "correct": "horizontal",
+          "correctExplanation": "Range is a horizontal distance, so it uses the horizontal velocity component u cos(\u03b8) multiplied by the total time of flight.",
+          "distractors": [
+            { "answer": "vertical", "explanation": "Vertical velocity determines height and flight time, not horizontal range. Students may confuse the two components." },
+            { "answer": "resultant", "explanation": "The resultant velocity includes both components. Only the horizontal component contributes to horizontal range." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the quadratic equation in projectile motion.",
+      "sentence": "Solving the vertical displacement equation for time produces a {{blank:1}} equation because the displacement formula contains a t\u00b2 term.",
+      "blanks": {
+        "1": {
+          "correct": "quadratic",
+          "correctExplanation": "The presence of t\u00b2 alongside t in s = ut + (1/2)at\u00b2 makes the equation second-degree, requiring the quadratic formula.",
+          "distractors": [
+            { "answer": "linear", "explanation": "A linear equation contains only t to the first power. The t\u00b2 term makes this equation quadratic, not linear." },
+            { "answer": "cubic", "explanation": "A cubic equation contains t\u00b3. The highest power of t in this equation is 2, making it quadratic." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "mc",
+      "question": "A rescue package is launched at 18 m/s at 35\u00b0 above horizontal from a helicopter hovering 50 m above the ground. Taking upward as positive, which equation gives the correct vertical displacement at landing?",
+      "correct": "-50 = 18 sin(35\u00b0)t - (1/2)(9.8)t\u00b2",
+      "correctExplanation": "Displacement is -50 m (below launch), initial vertical velocity is +18 sin(35\u00b0) upward, and acceleration is -9.8 m/s\u00b2 downward.",
+      "distractors": [
+        { "answer": "+50 = 18 sin(35\u00b0)t - (1/2)(9.8)t\u00b2", "explanation": "The package lands 50 m below its launch point, so displacement is negative when upward is positive." },
+        { "answer": "-50 = 18 cos(35\u00b0)t - (1/2)(9.8)t\u00b2", "explanation": "Cosine gives the horizontal component. The vertical displacement equation requires the sine component." },
+        { "answer": "-50 = -18 sin(35\u00b0)t - (1/2)(9.8)t\u00b2", "explanation": "The initial vertical velocity is upward, so it is positive in the upward-positive convention, not negative." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A stone is thrown at 22 m/s at 50\u00b0 from the top of a 30 m building. What is the vertical velocity component at the instant the stone reaches maximum height?",
+      "correct": "Zero, because vertical velocity is momentarily zero at maximum height",
+      "correctExplanation": "At maximum height the vertical component of velocity is zero. The projectile still has horizontal velocity but is momentarily not moving vertically.",
+      "distractors": [
+        { "answer": "22 sin(50\u00b0) = 16.9 m/s upward, unchanged from launch",  "explanation": "The vertical velocity decreases due to gravity. It equals the initial value only at launch, not at maximum height." },
+        { "answer": "9.8 m/s downward, equal to the gravitational acceleration", "explanation": "Acceleration is 9.8 m/s\u00b2 downward, but velocity is zero at the peak. Students confuse acceleration and velocity." },
+        { "answer": "22 cos(50\u00b0) = 14.1 m/s horizontally, redirected at the top", "explanation": "This is the horizontal velocity, which remains constant. The vertical velocity is a separate component." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A golfer hits a ball at 40 m/s at 30\u00b0 from a tee that is 8 m above the fairway. What is the maximum height above the fairway reached by the ball?",
+      "correct": "The maximum height above the tee plus 8 m, giving 28.4 m total",
+      "correctExplanation": "Maximum height above the tee is u\u00b2 sin\u00b2(\u03b8)/(2g) = (40 sin 30\u00b0)\u00b2/(2\u00d79.8) = 20.4 m. Adding the 8 m tee height gives 28.4 m above the fairway.",
+      "distractors": [
+        { "answer": "The maximum height above the tee only, giving 20.4 m total", "explanation": "This neglects the 8 m elevation of the tee. The question asks for height above the fairway, not above the tee." },
+        { "answer": "The 8 m tee height only, since the ball curves back down", "explanation": "The ball rises significantly above the tee before descending. The tee height is only part of the total elevation." },
+        { "answer": "The maximum height minus 8 m, giving 12.4 m above fairway", "explanation": "The tee height should be added, not subtracted. The ball starts 8 m above the fairway and rises further." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A projectile launched at 28 m/s at 45\u00b0 from a 25 m cliff produces a quadratic equation 4.9t\u00b2 - 19.8t - 25 = 0. What does the discriminant value tell us?",
+      "correct": "A positive discriminant confirms two real roots exist, one positive and one negative",
+      "correctExplanation": "The discriminant b\u00b2 - 4ac = (-19.8)\u00b2 - 4(4.9)(-25) = 392.04 + 490 = 882.04 > 0, giving two real solutions. The positive root is the flight time.",
+      "distractors": [
+        { "answer": "A negative discriminant means the projectile cannot reach the ground level", "explanation": "The discriminant is positive for any real cliff-launch problem. A negative discriminant would mean no real solution." },
+        { "answer": "A zero discriminant means the projectile lands exactly at the base of the cliff", "explanation": "A zero discriminant gives one repeated root, but this does not correspond to landing at the cliff base." },
+        { "answer": "The discriminant value directly equals the total flight time in seconds", "explanation": "The discriminant is used within the quadratic formula to find time; it is not the time itself." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A ball is thrown horizontally at 15 m/s from a 45 m cliff simultaneously with another ball thrown at 15 m/s at 30\u00b0 above horizontal from the same cliff. Which ball hits the ground first?",
+      "correct": "The horizontally thrown ball hits first because it has no initial upward velocity",
+      "correctExplanation": "The horizontal throw has zero initial vertical velocity, so it begins falling immediately. The angled throw first rises before descending, taking longer overall.",
+      "distractors": [
+        { "answer": "Both balls hit the ground at exactly the same time regardless of angle", "explanation": "This would be true only if launched from the same height to the same landing height with no vertical velocity. The upward component delays the angled ball." },
+        { "answer": "The angled ball hits first because it has a greater total launch speed", "explanation": "Both balls have the same launch speed. The angled ball takes longer because it travels upward before descending." },
+        { "answer": "The angled ball hits first because the upward velocity helps it fall faster", "explanation": "An initial upward velocity delays the descent, it does not speed it up. The ball must first decelerate to zero vertical velocity." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A firework is launched at 35 m/s at 70\u00b0 from a 5 m platform. If the firework explodes at its maximum height, what is its speed at the moment of explosion?",
+      "correct": "35 cos(70\u00b0) = 12.0 m/s, equal to the horizontal velocity component",
+      "correctExplanation": "At maximum height the vertical velocity is zero, so the total speed equals the horizontal component, which remains constant throughout flight.",
+      "distractors": [
+        { "answer": "Zero, because the firework is momentarily stationary at its peak", "explanation": "Only the vertical component is zero at the peak. The horizontal component persists, giving a non-zero speed." },
+        { "answer": "35 m/s, equal to the original launch speed at all points", "explanation": "Speed changes throughout flight as the vertical component varies. It only equals the launch speed at the initial moment." },
+        { "answer": "35 sin(70\u00b0) = 32.9 m/s, the vertical component at launch", "explanation": "The vertical component at launch is not the speed at the peak. At the peak, vertical velocity is zero." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "When solving a cliff-launch problem, a student obtains flight times of t = 4.2 s and t = -1.1 s. What should the student conclude?",
+      "correct": "The flight time is 4.2 s; the negative root has no physical meaning",
+      "correctExplanation": "The negative root corresponds to extrapolating the trajectory backward before launch, which is not physically meaningful. The positive root is the answer.",
+      "distractors": [
+        { "answer": "The average of 4.2 and 1.1 gives the correct flight time of 2.65 s", "explanation": "Averaging the roots has no physical basis. The positive root alone represents the actual flight duration." },
+        { "answer": "Both roots are valid, representing two possible flight paths for the same launch", "explanation": "There is only one trajectory. The negative root is a mathematical artifact of the quadratic equation." },
+        { "answer": "An error has been made because quadratic equations should not give negative roots", "explanation": "Negative roots are normal for quadratic equations. They are simply not physically meaningful in this context." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about finding maximum height.",
+      "sentence": "To find the maximum height above the launch point, use v\u00b2 = u\u00b2 + 2as with v = {{blank:1}} and solve for the displacement s.",
+      "blanks": {
+        "1": {
+          "correct": "0",
+          "correctExplanation": "At maximum height the vertical velocity is momentarily zero, so setting v = 0 allows solving for the vertical displacement.",
+          "distractors": [
+            { "answer": "u", "explanation": "Setting v = u would mean no change in velocity, which gives zero displacement. The velocity at maximum height is zero, not u." },
+            { "answer": "9.8", "explanation": "The value 9.8 is the acceleration due to gravity, not the velocity at maximum height. Velocity and acceleration are different quantities." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the final velocity of a cliff-launched projectile.",
+      "sentence": "The final speed at impact is found by combining the {{blank:1}} and vertical velocity components using the {{blank:2}} theorem.",
+      "blanks": {
+        "1": {
+          "correct": "horizontal",
+          "correctExplanation": "The final speed requires combining the constant horizontal velocity with the final vertical velocity as perpendicular components.",
+          "distractors": [
+            { "answer": "initial", "explanation": "The initial velocity is resolved into components at launch. At impact, the final velocity components must be recombined." },
+            { "answer": "average", "explanation": "Average velocity is not used to find the impact speed. The instantaneous components at impact are needed." }
+          ]
+        },
+        "2": {
+          "correct": "Pythagorean",
+          "correctExplanation": "Since horizontal and vertical velocity components are perpendicular, the resultant speed is found using v = \u221a(v_h\u00b2 + v_v\u00b2).",
+          "distractors": [
+            { "answer": "binomial", "explanation": "The binomial theorem expands algebraic expressions. Perpendicular vector components are combined using Pythagoras." },
+            { "answer": "trigonometric", "explanation": "Trigonometry resolves vectors into components. Recombining perpendicular components uses the Pythagorean theorem." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about impact angle.",
+      "sentence": "The angle of impact below the horizontal is found using \u03b8 = {{blank:1}} (v_v / v_h), where v_v is the final vertical speed and v_h is the horizontal speed.",
+      "blanks": {
+        "1": {
+          "correct": "arctan",
+          "correctExplanation": "The inverse tangent function gives the angle when the opposite (vertical) and adjacent (horizontal) sides of the velocity triangle are known.",
+          "distractors": [
+            { "answer": "arcsin", "explanation": "Arcsine requires the ratio of opposite to hypotenuse. With two perpendicular components, arctangent is the correct function." },
+            { "answer": "arccos", "explanation": "Arccosine requires the ratio of adjacent to hypotenuse. Arctangent uses the ratio of opposite to adjacent components." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "mc",
+      "question": "Two cannons on a 40 m cliff fire simultaneously. Cannon A fires at 30 m/s at 60\u00b0 above horizontal. Cannon B fires at 30 m/s at 30\u00b0 above horizontal. Compare the horizontal ranges of the two projectiles.",
+      "correct": "Cannon B achieves a greater range because its larger horizontal velocity component outweighs Cannon A's longer flight time",
+      "correctExplanation": "Although Cannon A stays airborne longer due to its larger vertical component, Cannon B's much larger horizontal velocity (30 cos 30\u00b0 > 30 cos 60\u00b0) produces a greater overall range.",
+      "distractors": [
+        { "answer": "Both projectiles achieve equal range because they have the same launch speed and the same launch height", "explanation": "Equal range occurs only at complementary angles from flat ground. The cliff height breaks this symmetry." },
+        { "answer": "Cannon A achieves a greater range because the steeper launch angle produces a longer flight time", "explanation": "While Cannon A has a longer flight time, its smaller horizontal velocity reduces the range below Cannon B's value." },
+        { "answer": "The ranges cannot be compared without knowing the mass of each projectile fired from the cannons", "explanation": "Mass does not affect projectile motion when air resistance is ignored. Range depends on speed, angle, and height." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student claims that increasing the launch height always increases the horizontal range of a projectile. Evaluate this claim for a projectile launched at a fixed speed and angle.",
+      "correct": "The claim is correct because increasing height increases the total flight time, and range equals horizontal velocity times time",
+      "correctExplanation": "A greater launch height means the projectile must fall further, increasing flight time. Since horizontal velocity is constant, more time means greater range.",
+      "distractors": [
+        { "answer": "The claim is incorrect because the extra height adds potential energy that reduces the horizontal kinetic energy", "explanation": "Launch speed and angle are fixed, so horizontal velocity is unchanged. Height adds flight time, not energy changes." },
+        { "answer": "The claim is correct only for launch angles below 45\u00b0 but fails for steeper launch angles", "explanation": "Additional height increases flight time for all launch angles. The relationship holds regardless of the angle chosen." },
+        { "answer": "The claim is incorrect because the parabolic path becomes narrower as the launch height increases", "explanation": "The shape of the parabola depends on launch speed and angle, not height. Height shifts the parabola vertically." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A projectile launched at 20 m/s at 45\u00b0 from a 60 m cliff lands with a speed of 40 m/s. A student uses energy conservation: (1/2)mv\u00b2 = (1/2)mu\u00b2 + mgh. Evaluate whether this approach is valid and explain why.",
+      "correct": "The approach is valid because energy conservation gives the final speed without needing the flight time or trajectory",
+      "correctExplanation": "Energy conservation relates launch speed, height, and landing speed directly. It avoids solving quadratics but gives speed only, not velocity direction.",
+      "distractors": [
+        { "answer": "The approach is invalid because energy conservation does not apply to projectile motion problems", "explanation": "Energy conservation applies whenever only conservative forces act. Gravity is conservative, so the method is valid." },
+        { "answer": "The approach is valid only if the projectile is launched horizontally, not at an angle", "explanation": "Energy conservation depends on height difference and speed, not direction. It works for any launch angle." },
+        { "answer": "The approach gives the vertical speed only, not the total speed at landing on the ground", "explanation": "Energy conservation gives the total speed because kinetic energy depends on total speed, not individual components." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student solving a cliff-launch problem with upward as positive writes: 25 = 15t - 4.9t\u00b2. The cliff is 25 m high. Identify and explain the error in the student's equation.",
+      "correct": "The displacement should be -25 m, not +25 m, because the projectile lands below the launch point",
+      "correctExplanation": "With upward as positive, landing below the launch point gives a negative displacement. Writing +25 incorrectly implies landing 25 m above the launch point.",
+      "distractors": [
+        { "answer": "The coefficient 4.9 should be 9.8 because gravity equals 9.8 m/s\u00b2 not 4.9 m/s\u00b2", "explanation": "The value 4.9 is correct because (1/2)(9.8) = 4.9 in the equation s = ut + (1/2)at\u00b2." },
+        { "answer": "The initial velocity 15 m/s should be negative because the projectile is launched from a cliff", "explanation": "If the projectile is launched upward, the initial vertical velocity is positive in the upward-positive convention." },
+        { "answer": "The equation is missing the horizontal velocity component, which must be included", "explanation": "Horizontal and vertical motions are independent. The vertical displacement equation does not include horizontal velocity." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Compare two methods for finding the final speed of a cliff-launched projectile: (A) combining final horizontal and vertical velocity components using Pythagoras, and (B) using energy conservation. Under what conditions do both methods give identical results?",
+      "correct": "Both methods always give identical results when air resistance is negligible",
+      "correctExplanation": "Both methods are equivalent formulations of Newtonian mechanics under conservative forces. They must produce the same answer for the same physical situation.",
+      "distractors": [
+        { "answer": "They give identical results only when the launch angle is exactly 45\u00b0 above horizontal", "explanation": "The equivalence holds for all angles. The physics is the same regardless of the launch direction chosen." },
+        { "answer": "Method A always gives a larger speed because it includes the direction of each component", "explanation": "Both methods find the same scalar speed. Direction information is additional and does not change the magnitude." },
+        { "answer": "Method B is only approximate because it ignores the horizontal motion of the projectile", "explanation": "Energy conservation accounts for all kinetic energy, including horizontal. It does not ignore any component." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A projectile is launched at speed u at angle \u03b8 from a cliff of height h. Derive an expression for the time the projectile spends above its launch height. How does this time compare to the total flight time?",
+      "correct": "Time above launch height is 2u sin(\u03b8)/g, which is always less than the total flight time",
+      "correctExplanation": "The time above launch height equals the time for a symmetric ground-level trajectory. The extra time falling from launch height to the ground adds to the total.",
+      "distractors": [
+        { "answer": "Time above launch height is u sin(\u03b8)/g, equal to exactly half the total flight time", "explanation": "This gives time to maximum height only, not total time above launch height. The full time above is twice this value." },
+        { "answer": "Time above launch height equals the total flight time because the cliff height is irrelevant", "explanation": "The cliff height adds extra falling time after the projectile returns to launch height, increasing total flight time." },
+        { "answer": "Time above launch height is 2u sin(\u03b8)/g, which can exceed the total flight time for steep angles", "explanation": "Time above launch height is always a subset of total flight time. The total must be greater because of the additional drop." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A physicist argues that the optimal launch angle for maximum range from a cliff is less than 45\u00b0. Evaluate this claim.",
+      "correct": "The claim is correct because the extra flight time from the cliff height benefits lower angles with larger horizontal velocity",
+      "correctExplanation": "From a height, the projectile has additional fall time. A flatter angle maximises horizontal velocity, and the extra height compensates for reduced flight time from the lower vertical component.",
+      "distractors": [
+        { "answer": "The claim is incorrect because 45\u00b0 always gives maximum range regardless of launch height", "explanation": "The 45\u00b0 optimum applies only to launches from flat ground. Elevation shifts the optimal angle below 45\u00b0." },
+        { "answer": "The claim is correct only for cliffs higher than 100 m but incorrect for shorter cliffs", "explanation": "Any non-zero launch height shifts the optimal angle below 45\u00b0. The effect size varies but the direction is consistent." },
+        { "answer": "The claim is incorrect because higher launch angles always produce longer flight times and therefore greater range", "explanation": "Longer flight time from a steeper angle is offset by reduced horizontal velocity. The product v_h \u00d7 t determines range." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A projectile is launched from a 100 m cliff at 50 m/s at 20\u00b0. Air resistance is now considered. How would air resistance change the landing point compared to the ideal case?",
+      "correct": "The projectile lands closer to the cliff and with a steeper descent angle",
+      "correctExplanation": "Air resistance reduces both horizontal and vertical velocities, decreasing range and maximum height. The descent becomes steeper as horizontal speed is lost.",
+      "distractors": [
+        { "answer": "The projectile lands at the same point but arrives with a lower final speed", "explanation": "Air resistance reduces range, not just speed. The landing point shifts closer to the base of the cliff." },
+        { "answer": "The projectile lands further from the cliff because drag creates lift during descent", "explanation": "Drag opposes motion and does not create lift. Air resistance always reduces range for unpowered projectiles." },
+        { "answer": "The projectile lands closer but with a shallower descent angle due to reduced speed", "explanation": "The descent angle is steeper, not shallower, because horizontal velocity is reduced proportionally more over the longer flight." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the analysis of optimal launch angle from a cliff.",
+      "sentence": "The optimal angle for maximum range from a height is {{blank:1}} than 45\u00b0 because the additional fall time benefits a larger {{blank:2}} velocity component.",
+      "blanks": {
+        "1": {
+          "correct": "less",
+          "correctExplanation": "A lower angle increases horizontal velocity. The extra height provides additional flight time that compensates for the reduced vertical component.",
+          "distractors": [
+            { "answer": "greater", "explanation": "A greater angle would reduce horizontal velocity. While flight time increases, the range decreases due to less horizontal speed." },
+            { "answer": "equal to", "explanation": "The 45\u00b0 optimum applies only to flat ground launches. Any launch height shifts the optimal angle below 45\u00b0." }
+          ]
+        },
+        "2": {
+          "correct": "horizontal",
+          "correctExplanation": "A lower launch angle directs more of the initial velocity into the horizontal component, increasing the distance covered per unit time.",
+          "distractors": [
+            { "answer": "vertical", "explanation": "A larger vertical component comes from steeper angles, which would favour angles above 45\u00b0, not below." },
+            { "answer": "resultant", "explanation": "The resultant velocity is fixed at the launch speed. The advantage comes specifically from redistributing speed to the horizontal component." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about energy methods in projectile problems.",
+      "sentence": "Energy conservation can find the final {{blank:1}} of a cliff-launched projectile without solving for the flight time, but it cannot determine the {{blank:2}} of the final velocity.",
+      "blanks": {
+        "1": {
+          "correct": "speed",
+          "correctExplanation": "Energy conservation gives the scalar speed (magnitude of velocity) directly from the height difference and initial speed.",
+          "distractors": [
+            { "answer": "displacement", "explanation": "Energy conservation relates speed and height, not displacement. Finding displacement requires the kinematic equations." },
+            { "answer": "acceleration", "explanation": "Acceleration is constant at 9.8 m/s\u00b2 downward throughout the flight. Energy conservation is not needed to find it." }
+          ]
+        },
+        "2": {
+          "correct": "direction",
+          "correctExplanation": "Energy conservation gives the magnitude of velocity but not its direction. The impact angle requires resolving into components using kinematics.",
+          "distractors": [
+            { "answer": "magnitude", "explanation": "Energy conservation does give the magnitude of the final velocity. It is the direction that requires additional calculation." },
+            { "answer": "components", "explanation": "While energy conservation does not directly give components, the limitation is more fundamentally about direction, not just components." }
+          ]
+        }
+      }
+    }
+  ]
+}

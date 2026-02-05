@@ -1,0 +1,528 @@
+{
+  "_link": {
+    "uuid": "lp-68d17598-28f1-8442-ee68-27ec7c4a9203",
+    "version": 1,
+    "contentHash": "hash-bf433851",
+    "title": "I can apply Fnet = mv\u00b2/r and a = v\u00b2/r to solve horizontal circular motion problems",
+    "code": "1B.2",
+    "generatedAt": "2026-02-06T09:25:00Z"
+  },
+  "toLevel2": [
+    {
+      "type": "mc",
+      "question": "What is the formula for centripetal acceleration when the speed and radius of circular motion are known?",
+      "correct": "a = v\u00b2/r",
+      "correctExplanation": "Centripetal acceleration equals the square of the speed divided by the radius of the circular path. This formula applies to uniform circular motion.",
+      "distractors": [
+        { "answer": "a = vr", "explanation": "Multiplying speed by radius does not yield acceleration. Students may confuse the formula with other relationships involving v and r." },
+        { "answer": "a = v/r", "explanation": "This divides speed by radius without squaring the speed. The correct formula requires v to be squared." },
+        { "answer": "a = r/v\u00b2", "explanation": "This inverts the relationship. Centripetal acceleration increases with speed squared, not decreases." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What is the formula for the net centripetal force acting on an object moving in a circle at constant speed?",
+      "correct": "Fnet = mv\u00b2/r",
+      "correctExplanation": "The net centripetal force equals mass times speed squared divided by the radius of the circular path, combining Newton's second law with centripetal acceleration.",
+      "distractors": [
+        { "answer": "Fnet = mv/r", "explanation": "This omits squaring the speed. The correct relationship requires v\u00b2, not v, in the numerator." },
+        { "answer": "Fnet = mv\u00b2r", "explanation": "This multiplies by radius rather than dividing. Students may confuse division and multiplication in the formula." },
+        { "answer": "Fnet = mr/v\u00b2", "explanation": "This inverts the roles of radius and speed squared. Greater speed requires more force, not less." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "In horizontal circular motion, in which direction does the net centripetal force always act?",
+      "correct": "Toward the centre of the circular path",
+      "correctExplanation": "Centripetal means 'centre-seeking.' The net force must be directed inward toward the centre to continuously change the direction of velocity.",
+      "distractors": [
+        { "answer": "Tangent to the circular path of motion", "explanation": "A tangential force would change the speed, not the direction. Centripetal force acts perpendicular to the velocity." },
+        { "answer": "Away from the centre of the circular path", "explanation": "An outward force would push the object away from the circle. This confuses centripetal force with the fictitious centrifugal force." },
+        { "answer": "In the direction of the object's velocity", "explanation": "A force along the velocity direction would accelerate the object forward. Centripetal force is perpendicular to velocity." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What are the SI units of centripetal acceleration?",
+      "correct": "m/s\u00b2",
+      "correctExplanation": "Centripetal acceleration is an acceleration and is measured in metres per second squared, the same unit as any other acceleration.",
+      "distractors": [
+        { "answer": "m/s", "explanation": "Metres per second is the unit of velocity, not acceleration. Acceleration has an additional per second factor." },
+        { "answer": "N/kg", "explanation": "While N/kg is dimensionally equivalent to m/s\u00b2, the standard SI unit for acceleration is expressed as m/s\u00b2." },
+        { "answer": "kg m/s\u00b2", "explanation": "This is the unit of force (newtons), not acceleration. Force equals mass times acceleration." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which combination of variables is needed to calculate the centripetal force using Fnet = mv\u00b2/r?",
+      "correct": "Mass, speed, and radius of the circular path",
+      "correctExplanation": "The formula Fnet = mv\u00b2/r requires the mass of the object, its speed along the circular path, and the radius of curvature.",
+      "distractors": [
+        { "answer": "Mass, acceleration, and radius of the circular path", "explanation": "If acceleration is already known, you would use Fnet = ma directly. The formula mv\u00b2/r requires speed, not acceleration." },
+        { "answer": "Speed, radius, and gravitational field strength", "explanation": "Gravitational field strength is not part of the centripetal force formula. It may be relevant in specific scenarios but is not a variable in the formula." },
+        { "answer": "Mass, speed, and period of the circular motion", "explanation": "The formula mv\u00b2/r uses radius, not period. Period can be used to find speed, but is not directly in this formula." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "The centripetal acceleration of an object in uniform circular motion is directed toward the centre of the circle.",
+      "correct": "True",
+      "correctExplanation": "Centripetal acceleration always points toward the centre of the circular path, causing the velocity direction to change continuously while maintaining constant speed.",
+      "distractors": [
+        { "answer": "False", "explanation": "Students may confuse centripetal (inward) acceleration with tangential acceleration or believe acceleration must be in the direction of motion." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "Doubling the speed of an object in circular motion doubles the centripetal acceleration, assuming the radius stays constant.",
+      "correct": "False",
+      "correctExplanation": "Since a = v\u00b2/r, doubling the speed quadruples the centripetal acceleration because acceleration depends on the square of the speed.",
+      "distractors": [
+        { "answer": "True", "explanation": "Students may assume a linear relationship between speed and acceleration, forgetting the v\u00b2 dependence in the centripetal acceleration formula." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about centripetal acceleration.",
+      "sentence": "Centripetal acceleration is calculated using a = v\u00b2/r, where v is the {{blank:1}} of the object and r is the {{blank:2}} of the circular path.",
+      "blanks": {
+        "1": {
+          "correct": "speed",
+          "correctExplanation": "The variable v in the centripetal acceleration formula represents the linear speed of the object along the circular path.",
+          "distractors": [
+            { "answer": "mass", "explanation": "Mass does not appear in the centripetal acceleration formula. It is needed for centripetal force but not acceleration." },
+            { "answer": "weight", "explanation": "Weight is a force, not a kinematic quantity. Speed, not weight, is used in the centripetal acceleration formula." }
+          ]
+        },
+        "2": {
+          "correct": "radius",
+          "correctExplanation": "The variable r represents the radius of the circular path. A larger radius results in a smaller centripetal acceleration for the same speed.",
+          "distractors": [
+            { "answer": "diameter", "explanation": "The formula uses radius, not diameter. Using the diameter would give half the correct acceleration." },
+            { "answer": "circumference", "explanation": "Circumference is the total distance around the circle. The formula uses radius, which is the distance from the centre." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about centripetal force direction.",
+      "sentence": "The net centripetal force always acts toward the {{blank:1}} of the circular path.",
+      "blanks": {
+        "1": {
+          "correct": "centre",
+          "correctExplanation": "Centripetal means centre-seeking. The net force is directed inward to change the direction of velocity and maintain circular motion.",
+          "distractors": [
+            { "answer": "edge", "explanation": "A force toward the edge would push the object outward, away from circular motion. Centripetal force is inward." },
+            { "answer": "tangent", "explanation": "A tangential direction is along the path. The centripetal force acts perpendicular to the velocity, toward the centre." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the relationship between force and acceleration in circular motion.",
+      "sentence": "The centripetal force formula Fnet = mv\u00b2/r is derived by substituting a = v\u00b2/r into Newton's {{blank:1}} law.",
+      "blanks": {
+        "1": {
+          "correct": "second",
+          "correctExplanation": "Newton's second law states Fnet = ma. Substituting the centripetal acceleration a = v\u00b2/r gives Fnet = mv\u00b2/r.",
+          "distractors": [
+            { "answer": "first", "explanation": "Newton's first law describes equilibrium (zero net force). Centripetal force involves a net force causing acceleration." },
+            { "answer": "third", "explanation": "Newton's third law describes action-reaction pairs. The derivation of centripetal force uses the second law, F = ma." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "mc",
+      "question": "A 1200 kg car rounds a flat curve of radius 45 m at 15 m/s. What is the net centripetal force acting on the car?",
+      "correct": "Fnet = (1200)(15\u00b2)/45 = 6000 N",
+      "correctExplanation": "Using Fnet = mv\u00b2/r = (1200)(225)/45 = 6000 N. This net inward force is provided by friction between the tyres and road.",
+      "distractors": [
+        { "answer": "Fnet = (1200)(15)/45 = 400 N", "explanation": "This uses v instead of v\u00b2. The centripetal force formula requires the speed to be squared before dividing by radius." },
+        { "answer": "Fnet = (1200)(15\u00b2)(45) = 1.22 \u00d7 10\u2077 N", "explanation": "This multiplies by radius instead of dividing. The formula divides mv\u00b2 by r, not multiplies." },
+        { "answer": "Fnet = (1200)(45)/(15\u00b2) = 240 N", "explanation": "This inverts the speed and radius in the formula. The correct formula has v\u00b2 in the numerator and r in the denominator." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Why does a car need friction to travel in a horizontal circular path on a flat road?",
+      "correct": "Friction provides the centripetal force that acts toward the centre of the curve",
+      "correctExplanation": "On a flat road, the only horizontal force available is friction. It acts sideways toward the centre to change the car's direction continuously.",
+      "distractors": [
+        { "answer": "Friction opposes the outward centrifugal force pulling the car off the road", "explanation": "Centrifugal force is fictitious and does not exist in an inertial frame. Friction provides the real inward centripetal force." },
+        { "answer": "Friction pushes the car forward to maintain its constant speed through the curve", "explanation": "Forward friction maintains speed, but the centripetal force is a sideways friction force directed toward the centre, not forward." },
+        { "answer": "Friction acts downward to keep the car pressed against the road surface", "explanation": "Downward force on the car is provided by gravity. The friction needed for circular motion is horizontal, toward the centre." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An object moves in a circle of radius 2.0 m at 4.0 m/s. What is its centripetal acceleration?",
+      "correct": "a = (4.0)\u00b2/2.0 = 8.0 m/s\u00b2",
+      "correctExplanation": "Using a = v\u00b2/r = 16/2.0 = 8.0 m/s\u00b2. The acceleration is directed toward the centre of the circle.",
+      "distractors": [
+        { "answer": "a = (4.0)/2.0 = 2.0 m/s\u00b2", "explanation": "This divides v by r without squaring speed. The formula requires v\u00b2 in the numerator." },
+        { "answer": "a = (2.0)\u00b2/4.0 = 1.0 m/s\u00b2", "explanation": "This swaps the values of speed and radius in the formula. Speed is squared, not radius." },
+        { "answer": "a = (4.0)\u00b2(2.0) = 32 m/s\u00b2", "explanation": "This multiplies by radius instead of dividing. Centripetal acceleration decreases with larger radius for the same speed." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "If the speed of an object in circular motion is tripled while the radius stays the same, what happens to the centripetal force?",
+      "correct": "The centripetal force increases by a factor of nine",
+      "correctExplanation": "Since Fnet = mv\u00b2/r, tripling v gives Fnet = m(3v)\u00b2/r = 9mv\u00b2/r. The force increases by a factor of 3\u00b2 = 9.",
+      "distractors": [
+        { "answer": "The centripetal force increases by a factor of three", "explanation": "A factor of three would apply if force were proportional to v. Since it depends on v\u00b2, tripling speed gives a ninefold increase." },
+        { "answer": "The centripetal force increases by a factor of six", "explanation": "There is no factor of six in this relationship. The v\u00b2 dependence means tripling speed gives 3\u00b2 = 9 times the force." },
+        { "answer": "The centripetal force remains unchanged at all speeds", "explanation": "Centripetal force depends on v\u00b2. Changing speed while keeping mass and radius constant changes the required force." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A coin sits on a rotating turntable. What provides the centripetal force that keeps the coin moving in a circle?",
+      "correct": "Static friction between the coin and the turntable surface",
+      "correctExplanation": "The coin is not sliding, so static friction acts horizontally toward the centre to provide the centripetal force needed for circular motion.",
+      "distractors": [
+        { "answer": "Kinetic friction between the coin and the turntable surface", "explanation": "Kinetic friction applies when surfaces slide relative to each other. The coin moves with the turntable, so static friction acts." },
+        { "answer": "The normal force from the turntable pushing the coin upward", "explanation": "The normal force is vertical and balances gravity. It does not act horizontally toward the centre of the turntable." },
+        { "answer": "The gravitational force pulling the coin toward the Earth below", "explanation": "Gravity acts vertically downward. Horizontal circular motion requires a horizontal centripetal force, which gravity cannot provide." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A 0.50 kg ball on a string moves in a horizontal circle of radius 0.80 m at 3.0 m/s. What is the tension in the string?",
+      "correct": "T = (0.50)(3.0)\u00b2/0.80 = 5.6 N",
+      "correctExplanation": "The string tension provides the centripetal force: T = mv\u00b2/r = (0.50)(9.0)/0.80 = 5.625 N, approximately 5.6 N.",
+      "distractors": [
+        { "answer": "T = (0.50)(3.0)/0.80 = 1.9 N", "explanation": "This uses v instead of v\u00b2. The centripetal force formula requires the speed to be squared." },
+        { "answer": "T = (0.50)(3.0)\u00b2(0.80) = 3.6 N", "explanation": "This multiplies by radius instead of dividing. The formula requires division by radius." },
+        { "answer": "T = (0.50)(0.80)/(3.0)\u00b2 = 0.044 N", "explanation": "This places mass and radius in the numerator and v\u00b2 in the denominator, inverting the correct formula." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "For an object in horizontal circular motion, doubling the radius while keeping speed constant halves the centripetal acceleration.",
+      "correct": "True",
+      "correctExplanation": "Since a = v\u00b2/r, doubling r gives a = v\u00b2/(2r), which is half the original acceleration. Acceleration is inversely proportional to radius.",
+      "distractors": [
+        { "answer": "False", "explanation": "Students may think acceleration depends on radius in a more complex way, but the inverse proportionality in a = v\u00b2/r means doubling r halves a." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the source of centripetal force for a car on a flat curve.",
+      "sentence": "For a car travelling around a flat horizontal curve, the centripetal force is provided by {{blank:1}} between the tyres and the road.",
+      "blanks": {
+        "1": {
+          "correct": "friction",
+          "correctExplanation": "On a flat road, sideways friction between the tyres and the road surface provides the horizontal inward force needed for circular motion.",
+          "distractors": [
+            { "answer": "gravity", "explanation": "Gravity acts vertically downward and cannot provide horizontal centripetal force on a flat surface." },
+            { "answer": "tension", "explanation": "Tension applies to strings and ropes. A car on a road experiences friction, not tension, as the centripetal force." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the effect of speed on centripetal force.",
+      "sentence": "Centripetal force is proportional to the {{blank:1}} of the speed, so doubling speed increases the required force by a factor of {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "square",
+          "correctExplanation": "In Fnet = mv\u00b2/r, the force depends on v\u00b2. This means force is proportional to the square of the speed.",
+          "distractors": [
+            { "answer": "cube", "explanation": "The formula has v\u00b2, not v\u00b3. Force depends on speed squared, not speed cubed." },
+            { "answer": "half", "explanation": "Force increases with speed, not decreases. The v\u00b2 dependence means force grows rapidly with speed." }
+          ]
+        },
+        "2": {
+          "correct": "four",
+          "correctExplanation": "Doubling speed gives (2v)\u00b2 = 4v\u00b2, so the force increases by a factor of four.",
+          "distractors": [
+            { "answer": "two", "explanation": "A factor of two would apply if force were proportional to v. The v\u00b2 dependence gives 2\u00b2 = 4." },
+            { "answer": "eight", "explanation": "A factor of eight would apply to a v\u00b3 relationship. The correct factor is 2\u00b2 = 4 from the v\u00b2 dependence." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the formula relationship.",
+      "sentence": "The centripetal force formula Fnet = mv\u00b2/r shows that for a given speed, increasing the radius {{blank:1}} the required centripetal force.",
+      "blanks": {
+        "1": {
+          "correct": "decreases",
+          "correctExplanation": "Since radius is in the denominator of Fnet = mv\u00b2/r, a larger radius means a smaller centripetal force is needed at the same speed.",
+          "distractors": [
+            { "answer": "increases", "explanation": "Radius is in the denominator, so increasing it reduces the force. A wider curve requires less centripetal force at the same speed." },
+            { "answer": "does not change", "explanation": "The force depends on radius through the 1/r relationship. Changing radius changes the required centripetal force." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "mc",
+      "question": "A 900 kg car travels at 20 m/s around a flat curve of radius 50 m. What is the minimum coefficient of static friction needed to prevent the car from sliding?",
+      "correct": "\u03bc = v\u00b2/(rg) = (20)\u00b2/(50 \u00d7 9.8) = 0.82",
+      "correctExplanation": "Setting friction equal to centripetal force: \u03bcmg = mv\u00b2/r. Mass cancels, giving \u03bc = v\u00b2/(rg) = 400/490 = 0.82.",
+      "distractors": [
+        { "answer": "\u03bc = v/(rg) = 20/(50 \u00d7 9.8) = 0.041", "explanation": "This uses v instead of v\u00b2. The centripetal force depends on speed squared, so the friction coefficient also requires v\u00b2." },
+        { "answer": "\u03bc = v\u00b2r/g = (20)\u00b2(50)/9.8 = 2041", "explanation": "This multiplies by radius instead of dividing. A friction coefficient greater than 1 is physically unreasonable for this scenario." },
+        { "answer": "\u03bc = rg/v\u00b2 = (50)(9.8)/(20)\u00b2 = 1.23", "explanation": "This inverts the correct expression. The formula requires v\u00b2 in the numerator and rg in the denominator." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A 0.30 kg puck moves in a circle of radius 0.60 m on a frictionless table, held by a string. If the string can withstand a maximum tension of 8.0 N, what is the maximum speed of the puck?",
+      "correct": "v = \u221a(Tr/m) = \u221a(8.0 \u00d7 0.60/0.30) = 4.0 m/s",
+      "correctExplanation": "Rearranging T = mv\u00b2/r gives v = \u221a(Tr/m) = \u221a(4.8/0.30) = \u221a16 = 4.0 m/s.",
+      "distractors": [
+        { "answer": "v = \u221a(Tm/r) = \u221a(8.0 \u00d7 0.30/0.60) = 2.0 m/s", "explanation": "This places mass in the numerator instead of the denominator. Heavier objects need more force, so mass belongs in the denominator." },
+        { "answer": "v = Tr/m = (8.0)(0.60)/0.30 = 16 m/s", "explanation": "This omits the square root. The rearranged formula requires taking the square root because v appears as v\u00b2 in the original." },
+        { "answer": "v = \u221a(T/(mr)) = \u221a(8.0/(0.30 \u00d7 0.60)) = 6.7 m/s", "explanation": "This divides by r instead of multiplying. Rearranging mv\u00b2/r = T gives v\u00b2 = Tr/m, not T/(mr)." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A 2.0 kg mass on a string moves in a horizontal circle of radius 1.5 m. If the centripetal acceleration is 12 m/s\u00b2, what is the speed of the mass?",
+      "correct": "v = \u221a(ar) = \u221a(12 \u00d7 1.5) = 4.2 m/s",
+      "correctExplanation": "Rearranging a = v\u00b2/r gives v\u00b2 = ar, so v = \u221a(12 \u00d7 1.5) = \u221a18 = 4.24 m/s, approximately 4.2 m/s.",
+      "distractors": [
+        { "answer": "v = ar = 12 \u00d7 1.5 = 18 m/s", "explanation": "This omits the square root. Since v\u00b2 = ar, the speed is the square root of this product, not the product itself." },
+        { "answer": "v = \u221a(a/r) = \u221a(12/1.5) = 2.8 m/s", "explanation": "This divides acceleration by radius instead of multiplying. The correct rearrangement gives v\u00b2 = ar, not v\u00b2 = a/r." },
+        { "answer": "v = a/r = 12/1.5 = 8.0 m/s", "explanation": "This divides without taking the square root. The formula a = v\u00b2/r rearranges to v = \u221a(ar), not v = a/r." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A coin sits 0.15 m from the centre of a turntable. The coefficient of static friction between the coin and surface is 0.40. What is the maximum speed at which the coin can travel without sliding off?",
+      "correct": "v = \u221a(\u03bcgr) = \u221a(0.40 \u00d7 9.8 \u00d7 0.15) = 0.77 m/s",
+      "correctExplanation": "Setting \u03bcmg = mv\u00b2/r and cancelling mass gives v = \u221a(\u03bcgr) = \u221a(0.588) = 0.767 m/s, approximately 0.77 m/s.",
+      "distractors": [
+        { "answer": "v = \u221a(\u03bcg/r) = \u221a(0.40 \u00d7 9.8/0.15) = 5.1 m/s", "explanation": "This divides by radius instead of multiplying. The correct formula has r in the numerator under the square root." },
+        { "answer": "v = \u03bcgr = 0.40 \u00d7 9.8 \u00d7 0.15 = 0.59 m/s", "explanation": "This omits the square root. The rearranged formula requires v = \u221a(\u03bcgr), not v = \u03bcgr." },
+        { "answer": "v = \u221a(gr/\u03bc) = \u221a(9.8 \u00d7 0.15/0.40) = 1.9 m/s", "explanation": "This places \u03bc in the denominator instead of the numerator. Greater friction allows higher speed, so \u03bc belongs in the numerator." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Two cars travel around the same flat curve. Car A has mass 800 kg and Car B has mass 1600 kg. Both travel at the same speed. Compare the centripetal acceleration of the two cars.",
+      "correct": "Both cars have the same centripetal acceleration",
+      "correctExplanation": "Centripetal acceleration a = v\u00b2/r depends only on speed and radius, not mass. Since both cars share the same speed and radius, their accelerations are equal.",
+      "distractors": [
+        { "answer": "Car B has twice the centripetal acceleration of Car A", "explanation": "Mass does not appear in a = v\u00b2/r. Students may confuse force (which depends on mass) with acceleration." },
+        { "answer": "Car A has twice the centripetal acceleration of Car B", "explanation": "Acceleration does not depend on mass for circular motion. Both cars have identical centripetal acceleration." },
+        { "answer": "The comparison depends on the coefficient of friction", "explanation": "Centripetal acceleration is determined by speed and radius alone. Friction determines whether the motion is possible, not the acceleration value." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A car approaches a flat curve of radius 80 m. The speed limit sign indicates 60 km/h. Convert this to m/s and calculate the required centripetal acceleration.",
+      "correct": "16.7 m/s; a = (16.7)\u00b2/80 = 3.5 m/s\u00b2",
+      "correctExplanation": "Converting: 60 km/h \u00f7 3.6 = 16.67 m/s. Then a = v\u00b2/r = (16.67)\u00b2/80 = 277.9/80 = 3.47 m/s\u00b2, approximately 3.5 m/s\u00b2.",
+      "distractors": [
+        { "answer": "60 m/s; a = (60)\u00b2/80 = 45 m/s\u00b2", "explanation": "This fails to convert km/h to m/s. The value 60 km/h must be divided by 3.6 to get m/s." },
+        { "answer": "16.7 m/s; a = 16.7/80 = 0.21 m/s\u00b2", "explanation": "This uses v instead of v\u00b2 in the acceleration formula. The speed must be squared before dividing by radius." },
+        { "answer": "16.7 m/s; a = 80/(16.7)\u00b2 = 0.29 m/s\u00b2", "explanation": "This inverts the formula, placing radius in the numerator. The correct formula has v\u00b2 in the numerator." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A 0.20 kg ball on a 0.50 m string moves in a horizontal circle. If the tension in the string is 6.0 N, what is the speed of the ball?",
+      "correct": "v = \u221a(Tr/m) = \u221a(6.0 \u00d7 0.50/0.20) = 3.9 m/s",
+      "correctExplanation": "Rearranging T = mv\u00b2/r gives v = \u221a(Tr/m) = \u221a(3.0/0.20) = \u221a15 = 3.87 m/s, approximately 3.9 m/s.",
+      "distractors": [
+        { "answer": "v = Tr/m = 6.0 \u00d7 0.50/0.20 = 15 m/s", "explanation": "This omits the square root. Since v\u00b2 = Tr/m, the speed is \u221a15, not 15." },
+        { "answer": "v = \u221a(T/(mr)) = \u221a(6.0/(0.20 \u00d7 0.50)) = 7.7 m/s", "explanation": "This divides by r instead of multiplying. The correct rearrangement gives v\u00b2 = Tr/m." },
+        { "answer": "v = \u221a(Tm/r) = \u221a(6.0 \u00d7 0.20/0.50) = 1.5 m/s", "explanation": "This places mass in the numerator. Heavier objects move slower for the same force, so mass is in the denominator." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about finding the friction coefficient for a car on a curve.",
+      "sentence": "To find the minimum coefficient of static friction for a car on a flat curve, set \u03bcmg = mv\u00b2/r and cancel {{blank:1}} to get \u03bc = v\u00b2/(rg).",
+      "blanks": {
+        "1": {
+          "correct": "mass",
+          "correctExplanation": "Mass appears on both sides of the equation \u03bcmg = mv\u00b2/r and cancels, showing that the required friction coefficient is independent of the car's mass.",
+          "distractors": [
+            { "answer": "radius", "explanation": "Radius does not cancel because it appears only on the right side of the equation. It remains in the final expression." },
+            { "answer": "speed", "explanation": "Speed appears only in v\u00b2 on the right side and does not cancel. It remains as v\u00b2 in the final expression." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the calculation for centripetal force.",
+      "sentence": "A 1500 kg car rounds a curve of radius 60 m at 18 m/s. The centripetal force is Fnet = (1500)(18)\u00b2/60 = {{blank:1}} N.",
+      "blanks": {
+        "1": {
+          "correct": "8100",
+          "correctExplanation": "Fnet = mv\u00b2/r = (1500)(324)/60 = 486000/60 = 8100 N directed toward the centre of the curve.",
+          "distractors": [
+            { "answer": "450", "explanation": "This results from using v instead of v\u00b2: (1500)(18)/60 = 450. The speed must be squared in the formula." },
+            { "answer": "16200", "explanation": "This results from an arithmetic error, possibly doubling the correct answer. Careful substitution gives 8100 N." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the maximum speed on a turntable.",
+      "sentence": "For a coin on a turntable, the maximum speed before sliding is v = \u221a(\u03bcgr), which shows that coins placed {{blank:1}} from the centre slide off first.",
+      "blanks": {
+        "1": {
+          "correct": "farther",
+          "correctExplanation": "Although v_max increases with r, the actual speed of a point on the turntable also increases with r (v = 2\u03c0r/T). The required centripetal force grows faster than the available friction for points farther from the centre.",
+          "distractors": [
+            { "answer": "closer", "explanation": "Coins closer to the centre have lower speed and need less centripetal force. They are the last to slide off, not the first." },
+            { "answer": "heavier", "explanation": "Mass cancels in the friction analysis. Whether a coin slides depends on its distance from the centre, not its mass." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "mc",
+      "question": "A 1000 kg car rounds a flat curve of radius 40 m. The maximum static friction force is 8000 N. A student calculates the maximum safe speed as v = \u221a(Fr/m) = \u221a(8000 \u00d7 40/1000) = 17.9 m/s. A second student argues the answer should be lower because the car's weight reduces the available friction. Evaluate both claims.",
+      "correct": "The first student is correct; on a flat road the normal force equals weight, which is already accounted for in the given friction force",
+      "correctExplanation": "On a flat road, the normal force equals mg, and the friction force is \u03bcN = \u03bcmg. If the maximum friction force is given as 8000 N, it already includes the weight dependence, so the calculation is valid.",
+      "distractors": [
+        { "answer": "The second student is correct; the weight must be subtracted from the friction to find the net horizontal force", "explanation": "Weight acts vertically and friction acts horizontally. They are perpendicular and cannot be subtracted from each other." },
+        { "answer": "Both students are wrong; the mass should not appear in the calculation of maximum speed", "explanation": "Mass appears correctly in the rearranged formula v = \u221a(Fr/m). It is needed to convert from force to acceleration." },
+        { "answer": "The first student is correct only if the coefficient of friction is greater than 1.0", "explanation": "The calculation is valid regardless of the friction coefficient. The given maximum friction force already determines the speed limit." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Two identical coins sit on a spinning turntable, one at 10 cm and the other at 20 cm from the centre. The turntable gradually increases its rotation rate. Which coin slides off first and why?",
+      "correct": "The outer coin slides off first because it requires more centripetal force at the same angular speed",
+      "correctExplanation": "Both coins have the same angular speed. The required centripetal force is F = m\u03c9\u00b2r, which is greater for the coin at larger radius. Since friction is the same for both, the outer coin exceeds the friction limit first.",
+      "distractors": [
+        { "answer": "The inner coin slides off first because it is closer to the axis and spins faster", "explanation": "Both coins have the same angular speed. The inner coin has lower linear speed and needs less centripetal force." },
+        { "answer": "Both coins slide off at the same time because they have the same mass and friction", "explanation": "Although friction limits are the same, the required centripetal force differs because it depends on radius." },
+        { "answer": "The outer coin slides off first because it has a greater coefficient of static friction", "explanation": "The coefficient of friction is a surface property and is the same for both coins. The outer coin slides first due to greater required force." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A car travels at speed v around a flat circular track of radius r. The driver then moves to an inner lane with radius r/2, maintaining the same speed. By what factor does the required friction force change?",
+      "correct": "The required friction force doubles",
+      "correctExplanation": "Fnet = mv\u00b2/r. Halving the radius gives Fnet = mv\u00b2/(r/2) = 2mv\u00b2/r, which is double the original force. A tighter curve at the same speed needs more centripetal force.",
+      "distractors": [
+        { "answer": "The required friction force is halved", "explanation": "A smaller radius increases the required force, not decreases it. Force is inversely proportional to radius at constant speed." },
+        { "answer": "The required friction force quadruples", "explanation": "Halving the radius doubles the force, not quadruples it. A factor of four would require both halving radius and doubling speed." },
+        { "answer": "The required friction force stays the same", "explanation": "Centripetal force depends on radius. Changing the radius while maintaining speed changes the required force." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student is asked to find the speed of a car rounding a curve and writes: v = \u221a(Fnet \u00d7 r / m). The student then substitutes the weight of the car for Fnet. Identify and explain the error.",
+      "correct": "Weight acts vertically, not horizontally; the net centripetal force is the horizontal friction, not the weight",
+      "correctExplanation": "The centripetal force for horizontal circular motion must be a horizontal force. On a flat road, friction provides this force. Weight is vertical and is balanced by the normal force.",
+      "distractors": [
+        { "answer": "The formula v = \u221a(Fr/m) is incorrect; the student should use v = Fr/m without the square root", "explanation": "The formula v = \u221a(Fr/m) is the correct rearrangement of F = mv\u00b2/r. The error is in the force value substituted, not the formula." },
+        { "answer": "The student should add weight and friction together to get the total centripetal force on the car", "explanation": "Weight and friction are perpendicular. They cannot be added as scalars. Only horizontal friction provides centripetal force on a flat road." },
+        { "answer": "The student should use the mass instead of the weight because centripetal force does not involve gravity", "explanation": "The error is not about using mass vs weight in general. The specific error is substituting a vertical force where a horizontal force is needed." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A 60 kg cyclist rides at 8.0 m/s around a flat circular track. The centripetal force is 320 N. The cyclist then rides at 12 m/s around the same track. Calculate the new centripetal force and explain the relationship.",
+      "correct": "720 N; the force scales as the square of the speed ratio: 320 \u00d7 (12/8)\u00b2 = 720 N",
+      "correctExplanation": "Since F is proportional to v\u00b2, the ratio of forces equals (v\u2082/v\u2081)\u00b2 = (12/8)\u00b2 = (1.5)\u00b2 = 2.25. So F\u2082 = 320 \u00d7 2.25 = 720 N.",
+      "distractors": [
+        { "answer": "480 N; the force scales linearly with the speed ratio: 320 \u00d7 (12/8) = 480 N", "explanation": "This assumes force is proportional to v. The v\u00b2 dependence means the speed ratio must be squared." },
+        { "answer": "640 N; the force doubles because the speed increases by 50 percent", "explanation": "A 50% speed increase gives a factor of (1.5)\u00b2 = 2.25, not 2. The force increases by 125%, not 100%." },
+        { "answer": "960 N; the force triples because the speed ratio is 12/8 = 1.5 and force triples", "explanation": "A speed ratio of 1.5 gives a force ratio of 1.5\u00b2 = 2.25, not 3. Students may incorrectly apply the ratio." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A satellite in low Earth orbit experiences centripetal acceleration of approximately 9.8 m/s\u00b2. A student claims this is a coincidence. Evaluate this claim by explaining why the centripetal acceleration equals g.",
+      "correct": "It is not a coincidence; gravity provides the centripetal force, so the centripetal acceleration equals the gravitational field strength at that altitude",
+      "correctExplanation": "For an orbiting satellite, gravity is the only force acting. By Newton's second law, mg = mv\u00b2/r, so a = v\u00b2/r = g. The centripetal acceleration must equal the local gravitational field strength.",
+      "distractors": [
+        { "answer": "It is a coincidence; centripetal acceleration and gravitational acceleration are independent physical quantities", "explanation": "They are not independent for an orbit. Gravity provides the centripetal force, making them necessarily equal for orbital motion." },
+        { "answer": "It is not a coincidence but only works for satellites at exactly the Earth's surface radius", "explanation": "The principle applies at any orbital altitude. At higher altitudes, both g and the centripetal acceleration decrease together." },
+        { "answer": "It is a coincidence that only holds for objects with a specific mass orbiting the Earth", "explanation": "Mass cancels in mg = mv\u00b2/r. The equality a = g holds for any mass in orbit at a given altitude." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A highway engineer designs a flat curve with radius 120 m. The maximum safe speed in dry conditions (\u03bc = 0.70) is different from wet conditions (\u03bc = 0.30). Calculate the ratio of maximum safe speeds (dry to wet).",
+      "correct": "v_dry/v_wet = \u221a(0.70/0.30) = 1.53",
+      "correctExplanation": "Since v_max = \u221a(\u03bcgr) and g and r are the same, the ratio is v_dry/v_wet = \u221a(\u03bc_dry/\u03bc_wet) = \u221a(0.70/0.30) = \u221a2.333 = 1.53.",
+      "distractors": [
+        { "answer": "v_dry/v_wet = 0.70/0.30 = 2.33", "explanation": "This gives the ratio of friction coefficients, not speeds. Since v depends on \u221a\u03bc, the speed ratio is the square root of 2.33." },
+        { "answer": "v_dry/v_wet = \u221a(0.30/0.70) = 0.65", "explanation": "This inverts the ratio. Dry conditions allow higher speed, so the ratio should be greater than 1, not less." },
+        { "answer": "v_dry/v_wet = (0.70/0.30)\u00b2 = 5.44", "explanation": "This squares the friction ratio instead of taking the square root. The v\u00b2 dependence means speed ratios involve square roots of force ratios." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An engineer must design a flat curve so that cars travelling at 25 m/s require no more than 0.50g centripetal acceleration. What is the minimum radius of the curve?",
+      "correct": "r = v\u00b2/(0.50g) = (25)\u00b2/(0.50 \u00d7 9.8) = 128 m",
+      "correctExplanation": "Setting a = v\u00b2/r = 0.50g gives r = v\u00b2/(0.50g) = 625/4.9 = 127.6 m, approximately 128 m.",
+      "distractors": [
+        { "answer": "r = v\u00b2/(0.50) = (25)\u00b2/0.50 = 1250 m", "explanation": "This uses 0.50 alone instead of 0.50g. The acceleration limit is 0.50 times g, not 0.50 m/s\u00b2." },
+        { "answer": "r = (0.50g)/v\u00b2 = (4.9)/(25)\u00b2 = 0.0078 m", "explanation": "This inverts the formula. Radius should increase with speed squared, not decrease." },
+        { "answer": "r = v/(0.50g) = 25/(0.50 \u00d7 9.8) = 5.1 m", "explanation": "This uses v instead of v\u00b2. The centripetal acceleration formula requires speed to be squared." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the analysis comparing two cars on the same curve.",
+      "sentence": "Two cars with different masses travel at the same speed around the same curve. The heavier car needs a {{blank:1}} centripetal force, but both cars have the {{blank:2}} centripetal acceleration.",
+      "blanks": {
+        "1": {
+          "correct": "greater",
+          "correctExplanation": "Centripetal force F = mv\u00b2/r is proportional to mass. A heavier car needs more force to maintain the same circular path at the same speed.",
+          "distractors": [
+            { "answer": "smaller", "explanation": "More mass requires more force for the same acceleration. A heavier car needs greater centripetal force, not smaller." },
+            { "answer": "identical", "explanation": "Force depends on mass. Although acceleration is the same, force differs because F = ma." }
+          ]
+        },
+        "2": {
+          "correct": "same",
+          "correctExplanation": "Centripetal acceleration a = v\u00b2/r depends only on speed and radius, not mass. Both cars share the same acceleration.",
+          "distractors": [
+            { "answer": "different", "explanation": "Acceleration a = v\u00b2/r has no mass term. Both cars at the same speed and radius have identical centripetal acceleration." },
+            { "answer": "proportional", "explanation": "The accelerations are not just proportional; they are exactly equal because a = v\u00b2/r is independent of mass." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the effect of halving the radius.",
+      "sentence": "If a car maintains the same speed but moves to a curve with half the radius, the centripetal acceleration {{blank:1}} because acceleration is {{blank:2}} proportional to radius.",
+      "blanks": {
+        "1": {
+          "correct": "doubles",
+          "correctExplanation": "Since a = v\u00b2/r, halving r gives a = v\u00b2/(r/2) = 2v\u00b2/r, which is double the original acceleration.",
+          "distractors": [
+            { "answer": "halves", "explanation": "Acceleration is inversely proportional to radius. Halving the radius increases the acceleration, it does not halve it." },
+            { "answer": "quadruples", "explanation": "Halving the radius doubles the acceleration, not quadruples it. A fourfold increase would require quartering the radius." }
+          ]
+        },
+        "2": {
+          "correct": "inversely",
+          "correctExplanation": "In a = v\u00b2/r, radius is in the denominator. This means acceleration and radius are inversely proportional at constant speed.",
+          "distractors": [
+            { "answer": "directly", "explanation": "Direct proportionality would mean larger radius gives larger acceleration. The formula shows the opposite relationship." },
+            { "answer": "exponentially", "explanation": "The relationship is a simple inverse proportion (1/r), not an exponential one. There is no exponent on r in the formula." }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,584 @@
+{
+  "_link": {
+    "uuid": "lp-ff69879b-b1a0-4a57-6d22-91428fa33318",
+    "version": 1,
+    "contentHash": "hash-bedd6331",
+    "title": "I can solve problems involving an object on the end of a string swung in a horizontal circle",
+    "code": "1B.6",
+    "generatedAt": "2026-02-06T09:30:00Z"
+  },
+  "toLevel2": [
+    {
+      "type": "mc",
+      "question": "When an object on a string moves in a horizontal circle, which force provides the centripetal force?",
+      "correct": "The tension in the string",
+      "correctExplanation": "The horizontal component of the string tension acts toward the centre of the circle, providing the centripetal force.",
+      "distractors": [
+        { "answer": "The weight of the object", "explanation": "Weight acts vertically downward and does not act toward the centre of the horizontal circle." },
+        { "answer": "The normal force on object", "explanation": "There is no contact surface to provide a normal force in this scenario." },
+        { "answer": "The centrifugal force only", "explanation": "Centrifugal force is a fictitious force in a rotating frame and does not provide centripetal force." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "In a conical pendulum, the string makes an angle with which direction?",
+      "correct": "The vertical direction",
+      "correctExplanation": "The angle in a conical pendulum is defined as the angle between the string and the vertical.",
+      "distractors": [
+        { "answer": "The horizontal direction", "explanation": "The angle is measured from the vertical, not the horizontal. The complement would be from horizontal." },
+        { "answer": "The radius of the circle", "explanation": "The angle is measured from the vertical, not from the radius of the circular path." },
+        { "answer": "The direction of velocity", "explanation": "The velocity is tangent to the circle and is not the reference line for the string angle." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which equation correctly gives the vertical equilibrium condition for a conical pendulum?",
+      "correct": "T cos theta equals mg",
+      "correctExplanation": "The vertical component of tension (T cos theta) must balance the weight (mg) since there is no vertical acceleration.",
+      "distractors": [
+        { "answer": "T sin theta equals mg", "explanation": "T sin theta is the horizontal component providing centripetal force, not the vertical balance." },
+        { "answer": "T equals mg cos theta", "explanation": "This rearranges incorrectly. The correct form is T cos theta = mg, giving T = mg / cos theta." },
+        { "answer": "T tan theta equals mg", "explanation": "Tangent mixes horizontal and vertical components incorrectly for the vertical balance." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What is the horizontal component of tension in a conical pendulum with string tension T at angle theta to the vertical?",
+      "correct": "T sin theta",
+      "correctExplanation": "The horizontal component of tension is T sin theta, which acts toward the centre of the circular path.",
+      "distractors": [
+        { "answer": "T cos theta", "explanation": "T cos theta is the vertical component of tension, not the horizontal component." },
+        { "answer": "T tan theta", "explanation": "Tangent is the ratio sin/cos and does not represent a resolved component of tension." },
+        { "answer": "T divided by sin theta", "explanation": "Dividing by sin theta does not give a component; multiplying by sin theta does." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "For a conical pendulum with string length L and angle theta, what is the radius of the circular path?",
+      "correct": "L sin theta",
+      "correctExplanation": "Using trigonometry, the radius is the horizontal distance from the pivot to the mass, which is L sin theta.",
+      "distractors": [
+        { "answer": "L cos theta", "explanation": "L cos theta gives the vertical distance below the pivot point, not the radius." },
+        { "answer": "L tan theta", "explanation": "L tan theta does not represent the radius; it mixes the triangle sides incorrectly." },
+        { "answer": "L divided by sin theta", "explanation": "Dividing by sin theta gives a larger value than L, which cannot be the radius." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "In a conical pendulum, the net force on the mass is directed toward the centre of the horizontal circle.",
+      "correct": "True",
+      "correctExplanation": "The vertical forces cancel (T cos theta = mg), leaving the horizontal component of tension as the net force directed toward the centre.",
+      "distractors": [
+        { "answer": "False", "explanation": "Students may think the net force is along the string, but the weight cancels the vertical tension component, leaving only the horizontal centripetal force." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "The tension in the string of a conical pendulum is equal to the weight of the object.",
+      "correct": "False",
+      "correctExplanation": "The tension is greater than the weight because T = mg / cos theta, and cos theta is less than 1 for any angle greater than zero.",
+      "distractors": [
+        { "answer": "True", "explanation": "Students may assume tension equals weight, but the string is angled so only the vertical component of tension equals the weight." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the statement about forces in a conical pendulum.",
+      "sentence": "The vertical component of tension balances the {{blank:1}}, while the horizontal component provides the {{blank:2}} force.",
+      "blanks": {
+        "1": {
+          "correct": "weight",
+          "correctExplanation": "The vertical component T cos theta balances the gravitational weight mg of the object.",
+          "distractors": [
+            { "answer": "friction", "explanation": "There is no friction acting on the mass in this scenario; it is the weight that acts vertically." },
+            { "answer": "momentum", "explanation": "Momentum is not a force. The vertical balance involves weight, not momentum." }
+          ]
+        },
+        "2": {
+          "correct": "centripetal",
+          "correctExplanation": "The horizontal component T sin theta is directed toward the centre and acts as the centripetal force.",
+          "distractors": [
+            { "answer": "centrifugal", "explanation": "Centrifugal force is fictitious in an inertial frame. The real inward force is centripetal." },
+            { "answer": "tangential", "explanation": "Tangential force would change the speed. The horizontal tension component is centripetal, not tangential." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the statement about the geometry of a conical pendulum.",
+      "sentence": "If the string length is L and the angle to the vertical is theta, the radius of the circle is L {{blank:1}} theta and the height below the pivot is L {{blank:2}} theta.",
+      "blanks": {
+        "1": {
+          "correct": "sin",
+          "correctExplanation": "The radius is the side opposite the angle, so r = L sin theta.",
+          "distractors": [
+            { "answer": "cos", "explanation": "Cosine gives the adjacent side (vertical height), not the radius." },
+            { "answer": "tan", "explanation": "Tangent is not used to find a side directly from the hypotenuse." }
+          ]
+        },
+        "2": {
+          "correct": "cos",
+          "correctExplanation": "The vertical height below the pivot is the side adjacent to the angle, so h = L cos theta.",
+          "distractors": [
+            { "answer": "sin", "explanation": "Sine gives the opposite side (radius), not the vertical height." },
+            { "answer": "tan", "explanation": "Tangent is not used to find a side directly from the hypotenuse." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the description of forces on a conical pendulum mass.",
+      "sentence": "Two forces act on the mass: {{blank:1}} directed downward and {{blank:2}} directed along the string toward the pivot.",
+      "blanks": {
+        "1": {
+          "correct": "gravity",
+          "correctExplanation": "Gravity (weight mg) acts vertically downward on the mass at all times.",
+          "distractors": [
+            { "answer": "tension", "explanation": "Tension acts along the string toward the pivot, not vertically downward." },
+            { "answer": "drag", "explanation": "Air resistance is typically neglected in conical pendulum problems." }
+          ]
+        },
+        "2": {
+          "correct": "tension",
+          "correctExplanation": "The string tension acts along the string, directed from the mass toward the pivot point.",
+          "distractors": [
+            { "answer": "gravity", "explanation": "Gravity acts vertically downward, not along the string toward the pivot." },
+            { "answer": "centripetal force", "explanation": "Centripetal force is not a separate force; it is the net horizontal result of tension and gravity." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "mc",
+      "question": "Why must the string make an angle with the vertical rather than being perfectly horizontal when an object is swung in a horizontal circle?",
+      "correct": "The vertical component of tension must support the weight of the object",
+      "correctExplanation": "If the string were horizontal, there would be no vertical component of tension to balance gravity, and the object would fall.",
+      "distractors": [
+        { "answer": "The horizontal speed is always too low for a flat string position", "explanation": "A horizontal string would require infinite tension, not merely higher speed." },
+        { "answer": "The centripetal force must have a downward vertical component", "explanation": "Centripetal force is horizontal. The vertical component of tension balances weight." },
+        { "answer": "Air resistance forces the string to tilt at an angle always", "explanation": "The angle results from balancing gravity, not from air resistance." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What happens to the angle theta of a conical pendulum string as the speed of the mass increases?",
+      "correct": "The angle theta increases toward the horizontal",
+      "correctExplanation": "Higher speed requires greater centripetal force, increasing T sin theta relative to T cos theta, which increases the angle.",
+      "distractors": [
+        { "answer": "The angle theta decreases toward the vertical", "explanation": "Greater speed needs more centripetal force, which increases the angle, not decreases it." },
+        { "answer": "The angle theta remains constant at all speeds", "explanation": "The angle depends on speed. Faster motion produces a larger angle." },
+        { "answer": "The angle theta oscillates back and forth rapidly", "explanation": "In steady circular motion, the angle is constant. It does not oscillate." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Why is the tension in a conical pendulum always greater than the weight of the object?",
+      "correct": "Because only the vertical component of tension equals the weight",
+      "correctExplanation": "Since T cos theta = mg and cos theta < 1, the total tension T must be greater than mg.",
+      "distractors": [
+        { "answer": "Because the centripetal force adds directly to the weight", "explanation": "Centripetal force is horizontal and weight is vertical; they do not add directly." },
+        { "answer": "Because the string stretches and increases the force", "explanation": "String elasticity is not the reason. The geometry of force resolution requires T > mg." },
+        { "answer": "Because the object accelerates vertically during motion", "explanation": "The object has no vertical acceleration in a conical pendulum." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "How does the relationship T sin theta = mv squared over r connect to circular motion?",
+      "correct": "It shows that the horizontal tension component provides centripetal force",
+      "correctExplanation": "The horizontal component of tension (T sin theta) equals the centripetal force required for circular motion at speed v and radius r.",
+      "distractors": [
+        { "answer": "It shows that tension is always equal to the centripetal force", "explanation": "Only the horizontal component of tension provides centripetal force, not the full tension." },
+        { "answer": "It shows the vertical balance between tension and the weight", "explanation": "The vertical balance is T cos theta = mg, not T sin theta = mv squared over r." },
+        { "answer": "It demonstrates that the string length determines the speed", "explanation": "The equation relates force to speed and radius, not string length directly." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "In a conical pendulum, why does the object maintain a constant height below the pivot?",
+      "correct": "The vertical component of tension exactly balances the weight",
+      "correctExplanation": "With T cos theta = mg, the net vertical force is zero, so there is no vertical acceleration and the height stays constant.",
+      "distractors": [
+        { "answer": "The centripetal force prevents the object from moving down", "explanation": "Centripetal force is horizontal and cannot prevent vertical motion." },
+        { "answer": "The kinetic energy of the object keeps it at the same level", "explanation": "Kinetic energy does not directly prevent vertical displacement; force balance does." },
+        { "answer": "The angular momentum pushes the object upward constantly", "explanation": "Angular momentum is conserved but does not exert an upward push on the mass." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What physical principle explains why both T cos theta = mg and T sin theta = mv squared over r must hold simultaneously?",
+      "correct": "Newton's second law is applied independently in the vertical and horizontal directions",
+      "correctExplanation": "Forces are resolved into perpendicular components, and Newton's second law is applied in each direction independently.",
+      "distractors": [
+        { "answer": "Conservation of energy requires both equations to hold true", "explanation": "These are force equations from Newton's second law, not energy conservation." },
+        { "answer": "The principle of moments requires both torque conditions", "explanation": "These are translational force equations, not torque or moment conditions." },
+        { "answer": "The work-energy theorem connects the two force equations", "explanation": "The two equations come from resolving forces, not from the work-energy theorem." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "Dividing the horizontal equation by the vertical equation for a conical pendulum gives tan theta = v squared over rg.",
+      "correct": "True",
+      "correctExplanation": "Dividing T sin theta = mv squared over r by T cos theta = mg gives sin theta over cos theta = v squared over rg, which is tan theta = v squared over rg.",
+      "distractors": [
+        { "answer": "False", "explanation": "Students may forget that T and m cancel in the division. The algebra correctly yields tan theta = v squared over rg." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Explain the force resolution in a conical pendulum.",
+      "sentence": "Resolving tension into components, T cos theta balances {{blank:1}} vertically, while T sin theta provides the {{blank:2}} acceleration horizontally.",
+      "blanks": {
+        "1": {
+          "correct": "gravity",
+          "correctExplanation": "The vertical component of tension must equal the gravitational force mg for the object to stay at a constant height.",
+          "distractors": [
+            { "answer": "friction", "explanation": "There is no friction on the mass in a conical pendulum. Gravity is the vertical force." },
+            { "answer": "drag", "explanation": "Air drag is typically neglected. The vertical balance is between tension and gravity." }
+          ]
+        },
+        "2": {
+          "correct": "centripetal",
+          "correctExplanation": "The horizontal component of tension provides the centripetal acceleration directed toward the centre of the circle.",
+          "distractors": [
+            { "answer": "tangential", "explanation": "Tangential acceleration would change the speed. The inward component provides centripetal acceleration." },
+            { "answer": "gravitational", "explanation": "Gravitational acceleration is vertical. The horizontal component provides centripetal acceleration." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the reasoning about why the string cannot be horizontal.",
+      "sentence": "If the string were horizontal, the angle theta would be {{blank:1}} degrees, and cos of that angle is {{blank:2}}, meaning the tension equation T cos theta = mg cannot be satisfied.",
+      "blanks": {
+        "1": {
+          "correct": "90",
+          "correctExplanation": "A horizontal string makes an angle of 90 degrees with the vertical.",
+          "distractors": [
+            { "answer": "0", "explanation": "Zero degrees would mean the string hangs straight down, which is vertical, not horizontal." },
+            { "answer": "45", "explanation": "45 degrees is an intermediate angle. A horizontal string is at 90 degrees to the vertical." }
+          ]
+        },
+        "2": {
+          "correct": "zero",
+          "correctExplanation": "Cos 90 degrees equals zero, so T times zero can never equal mg, making a horizontal string physically impossible.",
+          "distractors": [
+            { "answer": "one", "explanation": "Cos 0 degrees is one, not cos 90 degrees. Cos 90 degrees is zero." },
+            { "answer": "infinity", "explanation": "Cosine values range from negative one to one. Cos 90 degrees is zero, not infinity." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the statement about angle and speed.",
+      "sentence": "As the speed of the mass increases, the angle theta {{blank:1}} because a larger {{blank:2}} component of tension is needed for circular motion.",
+      "blanks": {
+        "1": {
+          "correct": "increases",
+          "correctExplanation": "Greater speed requires more centripetal force, which means T sin theta must increase, so the angle increases.",
+          "distractors": [
+            { "answer": "decreases", "explanation": "The angle increases with speed because more horizontal force is needed." },
+            { "answer": "stays constant", "explanation": "The angle depends on speed and changes as speed changes." }
+          ]
+        },
+        "2": {
+          "correct": "horizontal",
+          "correctExplanation": "The horizontal component of tension (T sin theta) provides the centripetal force for circular motion.",
+          "distractors": [
+            { "answer": "vertical", "explanation": "The vertical component balances weight. It is the horizontal component that increases with speed." },
+            { "answer": "tangential", "explanation": "There is no tangential component of tension in steady circular motion. The relevant component is horizontal." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "mc",
+      "question": "A 0.5 kg ball on a 1.2 m string is swung so the string makes 30 degrees with the vertical. What is the radius of the circular path?",
+      "correct": "0.60 m",
+      "correctExplanation": "The radius is r = L sin theta = 1.2 times sin 30 degrees = 1.2 times 0.5 = 0.60 m.",
+      "distractors": [
+        { "answer": "1.04 m", "explanation": "This is L cos 30 degrees = 1.04 m, which gives the vertical height below the pivot, not the radius." },
+        { "answer": "1.20 m", "explanation": "This is the string length itself. The radius is shorter than the string when the angle is less than 90 degrees." },
+        { "answer": "0.69 m", "explanation": "This would result from using L tan 30 degrees, which is not the correct trigonometric relationship for radius." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A 0.5 kg ball on a 1.2 m string makes 30 degrees with the vertical. What is the tension in the string?",
+      "correct": "5.66 N",
+      "correctExplanation": "From T cos theta = mg, T = mg / cos 30 degrees = (0.5 times 9.8) / 0.866 = 4.9 / 0.866 = 5.66 N.",
+      "distractors": [
+        { "answer": "4.90 N", "explanation": "This is simply mg. Tension must be greater than weight because only its vertical component balances weight." },
+        { "answer": "9.80 N", "explanation": "This equals mg / sin 30 degrees, which incorrectly uses sine instead of cosine for the vertical balance." },
+        { "answer": "5.00 N", "explanation": "This does not result from any correct calculation with the given values." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A 0.3 kg mass on a 0.8 m string swings at an angle of 45 degrees to the vertical. What is the centripetal force acting on the mass?",
+      "correct": "2.94 N",
+      "correctExplanation": "Centripetal force = T sin theta. First, T = mg / cos 45 = (0.3 times 9.8) / 0.707 = 4.16 N. Then T sin 45 = 4.16 times 0.707 = 2.94 N. Equivalently, mg tan 45 = 2.94 N.",
+      "distractors": [
+        { "answer": "2.08 N", "explanation": "This is T cos 45, the vertical component that balances weight, not the centripetal force." },
+        { "answer": "4.16 N", "explanation": "This is the total tension in the string, not the horizontal centripetal component alone." },
+        { "answer": "1.47 N", "explanation": "This is mg times sin 45, which incorrectly uses weight times sine instead of resolving tension." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A conical pendulum has a string length of 2.0 m and makes a 60 degree angle with the vertical. What is the speed of the mass?",
+      "correct": "5.42 m/s",
+      "correctExplanation": "r = L sin 60 = 2.0 times 0.866 = 1.73 m. Using v squared = gL sin theta tan theta = 9.8 times 2.0 times 0.866 times 1.732 = 29.4, so v = sqrt(29.4) = 5.42 m/s.",
+      "distractors": [
+        { "answer": "3.28 m/s", "explanation": "This results from omitting tan theta and using v squared = rg only, giving sqrt(1.73 times 9.8) = 4.12, or a similar error." },
+        { "answer": "9.80 m/s", "explanation": "This confuses the gravitational acceleration value with the calculated orbital speed." },
+        { "answer": "4.43 m/s", "explanation": "This results from using cos 60 instead of sin 60 for the radius, giving a smaller radius and lower speed." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "For a conical pendulum, a student derives tan theta = v squared over rg. If the angle doubles from 20 degrees to 40 degrees, which statement about the speed is correct?",
+      "correct": "The speed more than doubles because tan is nonlinear",
+      "correctExplanation": "tan 40 degrees is 0.839 while tan 20 degrees is 0.364. Since v squared is proportional to r times tan theta and r also increases, the speed more than doubles.",
+      "distractors": [
+        { "answer": "The speed exactly doubles with double the angle", "explanation": "The tangent function is nonlinear, so doubling the angle does not double the speed." },
+        { "answer": "The speed remains constant as angle increases", "explanation": "Speed depends on angle through the tangent function and changes with angle." },
+        { "answer": "The speed halves when the angle is doubled", "explanation": "Speed increases with angle; it does not decrease when the angle increases." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A 0.25 kg mass on a 1.0 m string moves in a horizontal circle at an angle of 37 degrees to the vertical. What is the speed of the mass?",
+      "correct": "2.11 m/s",
+      "correctExplanation": "r = L sin 37 = 1.0 times 0.602 = 0.602 m. v squared = gL sin theta tan theta = 9.8 times 1.0 times 0.602 times 0.754 = 4.44. v = sqrt(4.44) = 2.11 m/s.",
+      "distractors": [
+        { "answer": "1.47 m/s", "explanation": "This results from using only v squared = rg without the tan theta factor, giving a lower speed." },
+        { "answer": "3.05 m/s", "explanation": "This results from using the full string length as the radius instead of L sin theta." },
+        { "answer": "2.87 m/s", "explanation": "This results from using sin squared theta instead of sin theta times tan theta in the formula." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A conical pendulum has a period of 1.5 s and a string length of 1.0 m. What is the angle the string makes with the vertical?",
+      "correct": "56 degrees",
+      "correctExplanation": "The period T = 2 pi sqrt(L cos theta / g). Rearranging: cos theta = gT squared / (4 pi squared L) = 9.8 times 2.25 / (4 times 9.87 times 1.0) = 22.05 / 39.48 = 0.558. theta = arccos(0.558) = 56 degrees.",
+      "distractors": [
+        { "answer": "34 degrees", "explanation": "This is the complement of 56 degrees. Students may subtract the angle from 90 degrees by mistake." },
+        { "answer": "72 degrees", "explanation": "This results from using sin instead of cos in the period formula rearrangement." },
+        { "answer": "45 degrees", "explanation": "This is a common estimate but does not match the correct calculation for the given period." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Solve this conical pendulum problem step by step.",
+      "sentence": "A 0.5 kg ball on a 1.2 m string at 30 degrees to the vertical has a radius of {{blank:1}} m and a tension of {{blank:2}} N.",
+      "blanks": {
+        "1": {
+          "correct": "0.60",
+          "correctExplanation": "r = L sin theta = 1.2 times sin 30 = 1.2 times 0.5 = 0.60 m.",
+          "distractors": [
+            { "answer": "1.04", "explanation": "This is L cos 30 = 1.04 m, which is the vertical height, not the radius." },
+            { "answer": "0.69", "explanation": "This uses L tan 30 = 0.69, which is not the correct formula for radius." }
+          ]
+        },
+        "2": {
+          "correct": "5.66",
+          "correctExplanation": "T = mg / cos 30 = (0.5 times 9.8) / 0.866 = 4.9 / 0.866 = 5.66 N.",
+          "distractors": [
+            { "answer": "4.90", "explanation": "This is just mg. The tension exceeds the weight because cos 30 is less than one." },
+            { "answer": "9.80", "explanation": "This uses mg / sin 30 instead of mg / cos 30, confusing the components." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Calculate the centripetal force for a conical pendulum.",
+      "sentence": "For a 0.4 kg mass on a string at 50 degrees to the vertical, the tension is {{blank:1}} N and the centripetal force is {{blank:2}} N.",
+      "blanks": {
+        "1": {
+          "correct": "6.10",
+          "correctExplanation": "T = mg / cos 50 = (0.4 times 9.8) / 0.643 = 3.92 / 0.643 = 6.10 N.",
+          "distractors": [
+            { "answer": "3.92", "explanation": "This is just mg. Tension is greater because only T cos theta equals mg." },
+            { "answer": "5.12", "explanation": "This results from dividing by sin 50 instead of cos 50." }
+          ]
+        },
+        "2": {
+          "correct": "4.67",
+          "correctExplanation": "Centripetal force = T sin 50 = 6.10 times 0.766 = 4.67 N. Equivalently mg tan 50 = 3.92 times 1.19 = 4.67 N.",
+          "distractors": [
+            { "answer": "3.92", "explanation": "This is T cos 50, which is the vertical component, not the centripetal force." },
+            { "answer": "6.10", "explanation": "This is the full tension, not just the horizontal centripetal component." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Apply the period formula for a conical pendulum.",
+      "sentence": "A conical pendulum with L = 2.0 m at angle 30 degrees has a period of T = 2 pi times the square root of L cos theta over g, which gives T = {{blank:1}} s and a speed of {{blank:2}} m/s.",
+      "blanks": {
+        "1": {
+          "correct": "2.64",
+          "correctExplanation": "T = 2 pi sqrt(L cos 30 / g) = 2 pi sqrt(2.0 times 0.866 / 9.8) = 2 pi sqrt(0.1767) = 2 pi times 0.4204 = 2.64 s.",
+          "distractors": [
+            { "answer": "2.84", "explanation": "This uses the full string length without multiplying by cos theta." },
+            { "answer": "2.01", "explanation": "This uses sin 30 instead of cos 30 in the period formula." }
+          ]
+        },
+        "2": {
+          "correct": "2.38",
+          "correctExplanation": "r = L sin 30 = 1.0 m. Speed = 2 pi r / T = 2 pi times 1.0 / 2.64 = 6.283 / 2.64 = 2.38 m/s.",
+          "distractors": [
+            { "answer": "4.78", "explanation": "This doubles the speed, possibly by using 2r instead of r in the circumference calculation." },
+            { "answer": "1.19", "explanation": "This halves the speed, possibly by dividing by 2 pi instead of multiplying." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "mc",
+      "question": "A student claims that increasing the mass of a conical pendulum bob while maintaining the same speed and radius will require a stronger string. Evaluate this claim.",
+      "correct": "Valid: tension is proportional to mass for a given angle",
+      "correctExplanation": "Since T = mg / cos theta and the angle depends on v squared / (rg), if v and r are fixed then theta is fixed, and T is directly proportional to m.",
+      "distractors": [
+        { "answer": "Invalid: mass cancels out of all the equations", "explanation": "Mass cancels when finding the angle, but tension still depends on mass via T = mg / cos theta." },
+        { "answer": "Valid: but only because heavier objects move slower", "explanation": "The problem states the same speed. The claim is valid because T is proportional to m, not due to speed change." },
+        { "answer": "Invalid: tension depends only on string length", "explanation": "Tension depends on mass, gravity, and angle, not only on string length." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Compare two conical pendulums with identical string lengths but different angles: one at 20 degrees and one at 60 degrees. Which has the greater period?",
+      "correct": "The one at 20 degrees has the greater period",
+      "correctExplanation": "Period = 2 pi sqrt(L cos theta / g). Since cos 20 > cos 60, the pendulum at 20 degrees has a longer period.",
+      "distractors": [
+        { "answer": "The one at 60 degrees has the greater period", "explanation": "cos 60 < cos 20, so the 60 degree pendulum has a shorter period, not longer." },
+        { "answer": "Both have exactly the same period as each other", "explanation": "The period depends on cos theta, which differs for different angles." },
+        { "answer": "The period cannot be compared without knowing mass", "explanation": "Mass does not appear in the period formula, so comparison is possible without it." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Analyse what happens if the string of a conical pendulum suddenly breaks while the mass is in motion.",
+      "correct": "The mass moves in a straight line tangent to the circle and falls under gravity",
+      "correctExplanation": "Without tension, the only force is gravity. The mass has a tangential velocity at the instant of breaking and follows projectile motion.",
+      "distractors": [
+        { "answer": "The mass flies radially outward from the centre of its circle", "explanation": "The mass has tangential velocity, not radial. It moves tangent to the circle at the break point." },
+        { "answer": "The mass falls straight down directly below the break point", "explanation": "The mass retains its tangential velocity and does not fall straight down." },
+        { "answer": "The mass spirals outward gradually from the circular path", "explanation": "Without a force, the mass travels in a straight line plus gravitational fall, not a spiral." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student derives tan theta = v squared / (rg) and then substitutes r = L sin theta to get tan theta = v squared / (Lg sin theta times g). They simplify to sin theta tan theta = v squared / (Lg). Evaluate whether this derivation eliminates the need for knowing tension.",
+      "correct": "Correct: the tension cancels, allowing angle to be found from speed and length alone",
+      "correctExplanation": "Dividing the horizontal equation by the vertical equation eliminates T, giving a relationship between angle, speed, length, and g only.",
+      "distractors": [
+        { "answer": "Incorrect: tension is required to solve for the angle", "explanation": "Tension cancels when dividing the two component equations, so it is not needed." },
+        { "answer": "Correct: but only if the mass is also known precisely", "explanation": "Mass also cancels in the division, so the mass does not need to be known." },
+        { "answer": "Incorrect: the substitution of r is not valid here", "explanation": "The substitution r = L sin theta is geometrically exact and is valid." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Two conical pendulums have the same period but different string lengths. Compare the angles they make with the vertical.",
+      "correct": "The longer string makes a larger angle with the vertical",
+      "correctExplanation": "From T period = 2 pi sqrt(L cos theta / g), if T is fixed then L cos theta is constant. A longer L requires a smaller cos theta, meaning a larger angle.",
+      "distractors": [
+        { "answer": "The shorter string makes a larger angle with vertical", "explanation": "A shorter L needs larger cos theta (smaller angle) to keep L cos theta constant." },
+        { "answer": "Both strings must make the same angle with vertical", "explanation": "Different string lengths require different angles to maintain the same period." },
+        { "answer": "The angle depends only on mass not on string length", "explanation": "Mass does not appear in the period equation. The angle depends on L and the period." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A conical pendulum is set up on the Moon where g = 1.6 m/s squared. Compared to the same setup on Earth, what changes?",
+      "correct": "The same angle requires a lower speed on the Moon",
+      "correctExplanation": "From tan theta = v squared / (rg), a smaller g means a smaller v squared is needed for the same angle and radius.",
+      "distractors": [
+        { "answer": "The same angle requires a higher speed on the Moon", "explanation": "Lower gravity means less centripetal force is needed, so less speed is required." },
+        { "answer": "The angle is independent of the gravitational field", "explanation": "The angle depends on g through the relationship tan theta = v squared / (rg)." },
+        { "answer": "The tension is the same as on Earth for the same angle", "explanation": "Tension equals mg / cos theta, so with smaller g, tension is smaller on the Moon." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Evaluate this claim: For a conical pendulum at very small angles, the period approximates that of a simple pendulum with the same string length.",
+      "correct": "Valid: at small angles cos theta approaches one, giving T = 2 pi sqrt(L/g)",
+      "correctExplanation": "The conical pendulum period is 2 pi sqrt(L cos theta / g). As theta approaches zero, cos theta approaches one, recovering the simple pendulum formula.",
+      "distractors": [
+        { "answer": "Invalid: conical and simple pendulums are fundamentally different", "explanation": "At small angles the motion becomes similar and the period formulas converge." },
+        { "answer": "Valid: but only if the mass is the same in both cases", "explanation": "Mass does not appear in either period formula, so it is irrelevant to the comparison." },
+        { "answer": "Invalid: the simple pendulum formula uses sin not cos", "explanation": "The small angle simple pendulum formula is T = 2 pi sqrt(L/g), matching the conical case when cos theta equals one." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student measures the period and angle of a conical pendulum to determine g. They use g = 4 pi squared L cos theta / T squared. Analyse the main source of uncertainty in this experiment.",
+      "correct": "Measuring the angle theta accurately is the greatest challenge",
+      "correctExplanation": "The angle is difficult to measure precisely during circular motion, and cos theta is sensitive to angle changes, making this the dominant uncertainty.",
+      "distractors": [
+        { "answer": "Measuring the string length is the greatest challenge", "explanation": "String length can be measured precisely with a ruler. Angle measurement is more difficult." },
+        { "answer": "Timing the period is the greatest source of error", "explanation": "Period can be improved by timing many revolutions. Angle measurement is harder to improve." },
+        { "answer": "The mass of the bob is the main source of uncertainty", "explanation": "Mass does not appear in the equation for g, so its uncertainty is irrelevant." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Analyse the limiting behaviour of a conical pendulum.",
+      "sentence": "As the angle theta approaches 90 degrees, the tension approaches {{blank:1}} and the period approaches {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "infinity",
+          "correctExplanation": "T = mg / cos theta, and as theta approaches 90 degrees, cos theta approaches zero, so tension approaches infinity.",
+          "distractors": [
+            { "answer": "zero", "explanation": "Tension increases without bound as theta approaches 90 degrees, it does not approach zero." },
+            { "answer": "mg", "explanation": "Tension equals mg only when theta is zero. At large angles, tension far exceeds mg." }
+          ]
+        },
+        "2": {
+          "correct": "zero",
+          "correctExplanation": "Period = 2 pi sqrt(L cos theta / g). As cos theta approaches zero, the period approaches zero.",
+          "distractors": [
+            { "answer": "infinity", "explanation": "The period decreases as the angle increases. It approaches zero, not infinity." },
+            { "answer": "2 pi sqrt(L/g)", "explanation": "This is the period at theta = 0 degrees. At theta approaching 90 degrees, the period approaches zero." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Compare a conical pendulum on Earth and on the Moon.",
+      "sentence": "For the same angle and string length, the speed on the Moon is {{blank:1}} than on Earth because g is {{blank:2}} on the Moon.",
+      "blanks": {
+        "1": {
+          "correct": "lower",
+          "correctExplanation": "From v squared = rg tan theta, a smaller g gives a smaller v squared and therefore a lower speed.",
+          "distractors": [
+            { "answer": "higher", "explanation": "Lower gravity requires less centripetal force and thus lower speed for the same angle." },
+            { "answer": "the same", "explanation": "Speed depends on g through the equation v squared = rg tan theta. Different g means different speed." }
+          ]
+        },
+        "2": {
+          "correct": "smaller",
+          "correctExplanation": "The Moon's gravitational acceleration is approximately 1.6 m/s squared, which is smaller than Earth's 9.8 m/s squared.",
+          "distractors": [
+            { "answer": "larger", "explanation": "The Moon's gravity is about one sixth of Earth's, making it smaller, not larger." },
+            { "answer": "identical", "explanation": "The Moon and Earth have very different gravitational field strengths." }
+          ]
+        }
+      }
+    }
+  ]
+}

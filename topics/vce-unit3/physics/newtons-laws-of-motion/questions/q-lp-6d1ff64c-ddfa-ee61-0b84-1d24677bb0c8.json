@@ -1,0 +1,575 @@
+{
+  "_link": {
+    "uuid": "lp-6d1ff64c-ddfa-ee61-0b84-1d24677bb0c8",
+    "version": 1,
+    "contentHash": "hash-5358930d",
+    "title": "I can apply Fnet = mg tan(theta) to solve banked track problems",
+    "generatedAt": "2026-02-06T09:30:00Z"
+  },
+  "toLevel2": [
+    {
+      "type": "mc",
+      "question": "In the banked track formula Fnet = mg tan(\u03b8), what does \u03b8 represent?",
+      "correct": "The angle of the banked surface measured from the horizontal",
+      "correctExplanation": "\u03b8 is the banking angle, defined as the angle between the banked road surface and the horizontal ground.",
+      "distractors": [
+        { "answer": "The angle between the velocity vector and the vertical direction", "explanation": "The velocity is tangent to the circular path and horizontal, not measured from the vertical. Students may confuse the banking angle with the direction of motion." },
+        { "answer": "The angle of the normal force measured from the horizontal plane", "explanation": "The normal force is perpendicular to the surface, not to the horizontal. Its angle from the vertical equals \u03b8, but \u03b8 is defined relative to the horizontal surface." },
+        { "answer": "The angle of the centripetal acceleration from the vertical axis", "explanation": "Centripetal acceleration points horizontally toward the centre. The banking angle \u03b8 describes the tilt of the road surface, not the direction of acceleration." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which two force equations are divided to derive tan(\u03b8) = v\u00b2/(rg) for a frictionless banked track?",
+      "correct": "N sin(\u03b8) = mv\u00b2/r divided by N cos(\u03b8) = mg",
+      "correctExplanation": "Dividing the horizontal equation N sin(\u03b8) = mv\u00b2/r by the vertical equation N cos(\u03b8) = mg cancels N and m, leaving tan(\u03b8) = v\u00b2/(rg).",
+      "distractors": [
+        { "answer": "mg sin(\u03b8) = mv\u00b2/r divided by mg cos(\u03b8) = N", "explanation": "The weight mg does not have components providing centripetal force. It is the normal force N that resolves into horizontal and vertical components on a banked track." },
+        { "answer": "N cos(\u03b8) = mv\u00b2/r divided by N sin(\u03b8) = mg", "explanation": "The sine and cosine components are swapped here. The horizontal component N sin(\u03b8) provides centripetal force, while N cos(\u03b8) balances weight." },
+        { "answer": "mg tan(\u03b8) = mv\u00b2/r divided by mg = N cos(\u03b8)", "explanation": "This starts with the derived result rather than the two independent equilibrium equations. The derivation begins with the components of the normal force." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "On a frictionless banked track, which force provides the centripetal force needed for circular motion?",
+      "correct": "The horizontal component of the normal force from the road surface",
+      "correctExplanation": "On a frictionless banked track, only the normal force and gravity act on the vehicle. The horizontal component of the normal force, N sin(\u03b8), acts as the centripetal force.",
+      "distractors": [
+        { "answer": "The horizontal component of the gravitational force on the vehicle", "explanation": "Gravity acts only vertically downward and has no horizontal component. Students may confuse gravity with the normal force on an incline." },
+        { "answer": "The static friction force acting along the surface of the banked road", "explanation": "On a frictionless banked track, there is no friction. The derivation of Fnet = mg tan(\u03b8) assumes the surface is smooth." },
+        { "answer": "The vertical component of the normal force acting on the vehicle", "explanation": "The vertical component N cos(\u03b8) balances gravity. It is the horizontal component N sin(\u03b8) that provides centripetal force." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What condition must be true for the formula Fnet = mg tan(\u03b8) to apply on a banked track?",
+      "correct": "The track surface must be frictionless and the vehicle moves at design speed",
+      "correctExplanation": "This formula is derived assuming no friction acts on the vehicle. It applies only when the vehicle travels at the specific design speed for that banking angle.",
+      "distractors": [
+        { "answer": "The vehicle must be accelerating tangentially as well as moving in a circle", "explanation": "The formula applies to uniform circular motion with constant speed. Tangential acceleration would require additional forces not included." },
+        { "answer": "The track surface must have maximum static friction acting on the vehicle", "explanation": "The formula assumes zero friction. Including friction would change the force balance and require a different equation." },
+        { "answer": "The vehicle must be travelling slower than the design speed for the banking angle", "explanation": "At speeds below or above the design speed, friction is needed. The formula applies only at the exact design speed." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What is the relationship between banking angle and ideal speed given by the banked track formula?",
+      "correct": "tan(\u03b8) = v\u00b2/(rg)",
+      "correctExplanation": "This equation links the banking angle \u03b8, speed v, radius r, and gravitational acceleration g for a frictionless banked track.",
+      "distractors": [
+        { "answer": "sin(\u03b8) = v\u00b2/(rg)", "explanation": "The derivation produces tan(\u03b8), not sin(\u03b8). Using sin alone ignores the vertical equilibrium equation involving cos(\u03b8)." },
+        { "answer": "cos(\u03b8) = v\u00b2/(rg)", "explanation": "Cosine relates to the vertical component of the normal force. Dividing the two equilibrium equations yields tan(\u03b8), not cos(\u03b8)." },
+        { "answer": "tan(\u03b8) = rg/v\u00b2", "explanation": "This inverts the correct relationship. The correct form has v\u00b2 in the numerator and rg in the denominator." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "On a frictionless banked track, the centripetal force depends on the mass of the vehicle.",
+      "correct": "True",
+      "correctExplanation": "From Fnet = mg tan(\u03b8), the centripetal force is directly proportional to mass. A heavier vehicle requires a larger centripetal force at the same angle.",
+      "distractors": [
+        { "answer": "False", "explanation": "Students may recall that the ideal speed v = \u221a(rg tan \u03b8) is independent of mass and mistakenly conclude that the centripetal force is also independent of mass. The force depends on mass even though the speed does not." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "The ideal speed for a frictionless banked track depends on the mass of the vehicle travelling on it.",
+      "correct": "False",
+      "correctExplanation": "From tan(\u03b8) = v\u00b2/(rg), solving for v gives v = \u221a(rg tan \u03b8). Mass does not appear in this equation, so the ideal speed is the same for all vehicles.",
+      "distractors": [
+        { "answer": "True", "explanation": "Students may think heavier vehicles need different speeds. While heavier vehicles need more centripetal force, the mass cancels when deriving the ideal speed." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the forces on a frictionless banked track.",
+      "sentence": "On a frictionless banked track, the horizontal component of the {{blank:1}} provides the centripetal force for circular motion.",
+      "blanks": {
+        "1": {
+          "correct": "normal force",
+          "correctExplanation": "The normal force acts perpendicular to the banked surface. Its horizontal component N sin(\u03b8) provides the centripetal force.",
+          "distractors": [
+            { "answer": "weight force", "explanation": "Weight acts vertically downward and has no horizontal component. It cannot provide centripetal force on a banked track." },
+            { "answer": "friction force", "explanation": "On a frictionless banked track, friction is zero by assumption. The centripetal force comes entirely from the normal force." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about deriving the banked track formula.",
+      "sentence": "Dividing N sin(\u03b8) = mv\u00b2/r by N cos(\u03b8) = mg cancels the {{blank:1}} and the {{blank:2}}, leaving tan(\u03b8) = v\u00b2/(rg).",
+      "blanks": {
+        "1": {
+          "correct": "normal force",
+          "correctExplanation": "N appears in both the numerator and denominator of the division, so it cancels out completely.",
+          "distractors": [
+            { "answer": "weight force", "explanation": "Weight (mg) appears only in the denominator equation. It is the normal force N that appears in both equations and cancels." },
+            { "answer": "friction force", "explanation": "There is no friction force in these equations. The derivation assumes a frictionless surface, so friction does not appear." }
+          ]
+        },
+        "2": {
+          "correct": "mass",
+          "correctExplanation": "Mass m appears in both equations (as mv\u00b2/r and mg), so it cancels when the equations are divided.",
+          "distractors": [
+            { "answer": "radius", "explanation": "Radius r appears only in the centripetal force equation, not in the vertical equilibrium. It does not cancel in the division." },
+            { "answer": "velocity", "explanation": "Velocity v appears only in the centripetal force equation, not in the vertical equilibrium. It remains in the final expression." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the ideal speed on a banked track.",
+      "sentence": "The ideal speed on a frictionless banked track is given by v = \u221a(rg {{blank:1}}), and this speed is independent of the vehicle's {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "tan \u03b8",
+          "correctExplanation": "Rearranging tan(\u03b8) = v\u00b2/(rg) gives v\u00b2 = rg tan(\u03b8), so v = \u221a(rg tan \u03b8).",
+          "distractors": [
+            { "answer": "sin \u03b8", "explanation": "Using sin(\u03b8) instead of tan(\u03b8) would give an incorrect speed. The derivation produces tan(\u03b8) from dividing sine by cosine components." },
+            { "answer": "cos \u03b8", "explanation": "Using cos(\u03b8) instead of tan(\u03b8) would give an incorrect speed. The correct trigonometric function is tangent, not cosine." }
+          ]
+        },
+        "2": {
+          "correct": "mass",
+          "correctExplanation": "Mass cancels during the derivation, so the ideal speed depends only on r, g, and \u03b8, not on how heavy the vehicle is.",
+          "distractors": [
+            { "answer": "speed", "explanation": "Speed is the quantity being calculated, not something it is independent of. The ideal speed depends on r, g, and \u03b8." },
+            { "answer": "radius", "explanation": "The ideal speed does depend on the track radius. A larger radius allows a higher ideal speed for the same banking angle." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "mc",
+      "question": "Why does the ideal speed on a frictionless banked track not depend on the mass of the vehicle?",
+      "correct": "Because mass cancels when the centripetal and vertical equilibrium equations are divided",
+      "correctExplanation": "Dividing N sin(\u03b8) = mv\u00b2/r by N cos(\u03b8) = mg causes both N and m to cancel, leaving tan(\u03b8) = v\u00b2/(rg) with no mass term.",
+      "distractors": [
+        { "answer": "Because a heavier vehicle has more friction that compensates for the extra gravitational force", "explanation": "The derivation assumes zero friction. Mass independence comes from the cancellation in the force equations, not from friction compensation." },
+        { "answer": "Because the normal force is always equal to the weight regardless of the banking angle value", "explanation": "On a banked track, N cos(\u03b8) = mg, so N = mg/cos(\u03b8), which is greater than mg. The normal force is not simply equal to weight." },
+        { "answer": "Because gravitational acceleration is the same for all objects regardless of their individual masses", "explanation": "While g is indeed constant, this alone does not explain why mass cancels. The cancellation occurs through the algebraic division of the two force equations." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What does the formula Fnet = mg tan(\u03b8) represent physically on a frictionless banked track?",
+      "correct": "The net horizontal force acting as the centripetal force toward the centre of the circular path",
+      "correctExplanation": "mg tan(\u03b8) equals the horizontal component of the normal force, which is the only horizontal force on the frictionless track and provides the centripetal force.",
+      "distractors": [
+        { "answer": "The component of gravitational force acting parallel to the surface of the banked track", "explanation": "mg sin(\u03b8) is the gravitational component along the slope, not mg tan(\u03b8). The net centripetal force comes from the normal force, not gravity." },
+        { "answer": "The total force experienced by the vehicle including both the normal force and gravitational force", "explanation": "mg tan(\u03b8) is only the horizontal net force, not the total of all forces. The vertical forces (N cos \u03b8 and mg) balance each other." },
+        { "answer": "The friction force required to keep the vehicle from sliding sideways down the banked surface", "explanation": "The formula assumes zero friction. On a frictionless track, the centripetal force comes from the normal force component, not from friction." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which statement best explains why N sin(\u03b8) provides the centripetal force on a banked track?",
+      "correct": "The surface tilts inward so the normal force gains a horizontal component directed toward the centre",
+      "correctExplanation": "Banking the track tilts the normal force away from vertical. The horizontal component N sin(\u03b8) points toward the centre of the circular path.",
+      "distractors": [
+        { "answer": "The gravitational force rotates when the surface is banked creating a new horizontal force component", "explanation": "Gravity always acts vertically downward regardless of the surface angle. Only the normal force direction changes with banking." },
+        { "answer": "The friction between tyres and the road surface redirects the normal force toward the circle centre", "explanation": "On a frictionless track, friction plays no role. The horizontal component arises purely from the geometry of the tilted surface." },
+        { "answer": "The vehicle's weight pushes it downhill along the surface and that component acts as centripetal force", "explanation": "The weight component along the slope (mg sin \u03b8) acts along the surface, not horizontally toward the centre. Centripetal force must be horizontal." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "If a banked track has a very small banking angle close to zero degrees, what does tan(\u03b8) = v\u00b2/(rg) predict about the ideal speed?",
+      "correct": "The ideal speed approaches zero because tan(\u03b8) approaches zero for small angles",
+      "correctExplanation": "As \u03b8 approaches 0\u00b0, tan(\u03b8) approaches 0, so v\u00b2 = rg tan(\u03b8) approaches 0. A nearly flat track provides almost no centripetal force without friction.",
+      "distractors": [
+        { "answer": "The ideal speed becomes very large because a flat track has minimal centripetal restriction", "explanation": "A flat frictionless track cannot provide centripetal force. Without banking, no speed can be sustained without friction." },
+        { "answer": "The ideal speed equals \u221a(rg) because tan(\u03b8) equals one for very small banking angles", "explanation": "tan(\u03b8) = 1 only at \u03b8 = 45\u00b0. For small angles, tan(\u03b8) is close to zero, not one." },
+        { "answer": "The ideal speed is undefined because the formula breaks down for small banking angles", "explanation": "The formula remains valid for all angles between 0\u00b0 and 90\u00b0. At very small angles, it correctly predicts a very low ideal speed." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "How does the formula tan(\u03b8) = v\u00b2/(rg) explain why steeper banking allows higher speeds?",
+      "correct": "A larger \u03b8 gives a larger tan(\u03b8), which allows a larger v\u00b2 for the same radius and gravity",
+      "correctExplanation": "Since v\u00b2 = rg tan(\u03b8), increasing \u03b8 increases tan(\u03b8), which directly increases the ideal speed squared.",
+      "distractors": [
+        { "answer": "A larger \u03b8 reduces the radius needed for turning which allows the vehicle to travel faster", "explanation": "Banking angle and radius are independent variables in the formula. Increasing \u03b8 does not change r." },
+        { "answer": "A larger \u03b8 increases the gravitational pull on the vehicle which pushes it faster around the turn", "explanation": "Gravity does not change with banking angle. The increased speed comes from a larger horizontal normal force component." },
+        { "answer": "A larger \u03b8 reduces the normal force so less force opposes the forward motion of the vehicle", "explanation": "The normal force actually increases with banking angle (N = mg/cos \u03b8). Speed increases because the horizontal component of N grows." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student says that on a frictionless banked track, the normal force equals mg. Is this correct?",
+      "correct": "No, the normal force equals mg/cos(\u03b8), which is larger than mg on a banked surface",
+      "correctExplanation": "From N cos(\u03b8) = mg, solving gives N = mg/cos(\u03b8). Since cos(\u03b8) < 1 for any nonzero banking angle, N exceeds mg.",
+      "distractors": [
+        { "answer": "Yes, the normal force always equals mg on any surface whether it is flat or banked at an angle", "explanation": "N = mg only on a flat horizontal surface. On an incline, the vertical balance N cos(\u03b8) = mg gives N = mg/cos(\u03b8) > mg." },
+        { "answer": "No, the normal force equals mg cos(\u03b8), which is smaller than mg on a banked track surface", "explanation": "mg cos(\u03b8) is the normal force on an incline with no centripetal motion. On a banked track, vertical equilibrium gives N = mg/cos(\u03b8)." },
+        { "answer": "No, the normal force equals mg sin(\u03b8), which provides the full centripetal force for the vehicle", "explanation": "mg sin(\u03b8) is a component of weight, not the normal force. The normal force is N = mg/cos(\u03b8) and its sine component provides centripetal force." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "Increasing the radius of a frictionless banked track while keeping the banking angle the same increases the ideal speed.",
+      "correct": "True",
+      "correctExplanation": "From v = \u221a(rg tan \u03b8), if \u03b8 is constant and r increases, the ideal speed v increases. A wider curve permits a higher design speed.",
+      "distractors": [
+        { "answer": "False", "explanation": "Students may think a larger radius means the car must go slower because the path is longer. However, the formula shows speed increases with the square root of radius." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about what happens when a vehicle exceeds the design speed.",
+      "sentence": "If a vehicle travels faster than the ideal speed on a frictionless banked track, it would tend to slide {{blank:1}} the bank because the required centripetal force exceeds the available {{blank:2}} component of the normal force.",
+      "blanks": {
+        "1": {
+          "correct": "up",
+          "correctExplanation": "At speeds above the design speed, the needed centripetal force exceeds N sin(\u03b8). The vehicle tends to slide outward and up the bank.",
+          "distractors": [
+            { "answer": "down", "explanation": "Sliding down would occur if the vehicle is too slow. At excessive speed, the vehicle pushes outward and climbs up the banking." },
+            { "answer": "along", "explanation": "The vehicle does not slide along the bank tangentially. The mismatch in centripetal force causes radial sliding up or down the slope." }
+          ]
+        },
+        "2": {
+          "correct": "horizontal",
+          "correctExplanation": "The horizontal component N sin(\u03b8) provides the centripetal force. When the required force exceeds this component, the vehicle cannot maintain the circular path.",
+          "distractors": [
+            { "answer": "vertical", "explanation": "The vertical component N cos(\u03b8) balances gravity. It is the horizontal component that provides centripetal force and becomes insufficient." },
+            { "answer": "parallel", "explanation": "There is no parallel component of the normal force along the track surface. The normal force acts perpendicular to the surface." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the normal force on a banked track.",
+      "sentence": "On a banked track, the normal force is {{blank:1}} than on a flat road because it must simultaneously balance gravity and provide {{blank:2}} force.",
+      "blanks": {
+        "1": {
+          "correct": "larger",
+          "correctExplanation": "N = mg/cos(\u03b8), and since cos(\u03b8) < 1 for any banking angle, the normal force exceeds the vehicle's weight.",
+          "distractors": [
+            { "answer": "smaller", "explanation": "On an incline without circular motion, N = mg cos(\u03b8) is smaller than mg. But on a banked circular track, the normal force is larger to provide centripetal force." },
+            { "answer": "equal", "explanation": "N equals mg only on a flat surface. On a banked track with circular motion, the force balance requires N > mg." }
+          ]
+        },
+        "2": {
+          "correct": "centripetal",
+          "correctExplanation": "The normal force must have a vertical component to balance mg and a horizontal component to supply the centripetal force for circular motion.",
+          "distractors": [
+            { "answer": "frictional", "explanation": "On a frictionless banked track, friction is absent. The normal force provides the centripetal force, not friction." },
+            { "answer": "tangential", "explanation": "Tangential force would change the vehicle's speed. The horizontal component of the normal force provides centripetal force directed toward the centre." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the trigonometric relationship.",
+      "sentence": "The tangent function appears in the banked track formula because {{blank:1}} divided by {{blank:2}} equals tan(\u03b8).",
+      "blanks": {
+        "1": {
+          "correct": "sin(\u03b8)",
+          "correctExplanation": "When dividing N sin(\u03b8) = mv\u00b2/r by N cos(\u03b8) = mg, the left side becomes sin(\u03b8)/cos(\u03b8) = tan(\u03b8).",
+          "distractors": [
+            { "answer": "cos(\u03b8)", "explanation": "cos(\u03b8)/sin(\u03b8) gives cot(\u03b8), not tan(\u03b8). The sine component must be in the numerator." },
+            { "answer": "tan(\u03b8)", "explanation": "tan(\u03b8)/cos(\u03b8) gives sec(\u03b8) tan(\u03b8), not tan(\u03b8). The identity is sin/cos = tan." }
+          ]
+        },
+        "2": {
+          "correct": "cos(\u03b8)",
+          "correctExplanation": "sin(\u03b8)/cos(\u03b8) = tan(\u03b8) is the fundamental trigonometric identity used in the derivation.",
+          "distractors": [
+            { "answer": "sin(\u03b8)", "explanation": "sin(\u03b8)/sin(\u03b8) = 1, not tan(\u03b8). The cosine function must be in the denominator." },
+            { "answer": "tan(\u03b8)", "explanation": "sin(\u03b8)/tan(\u03b8) = cos(\u03b8), not tan(\u03b8). The correct identity has cos(\u03b8) in the denominator." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "mc",
+      "question": "A car travels around a banked curve of radius 120 m at the ideal speed for a 25\u00b0 bank. What is the ideal speed?",
+      "correct": "v = \u221a(120 \u00d7 9.8 \u00d7 tan 25\u00b0) = 23.4 m/s",
+      "correctExplanation": "Using v = \u221a(rg tan \u03b8) = \u221a(120 \u00d7 9.8 \u00d7 0.4663) = \u221a(548.3) = 23.4 m/s.",
+      "distractors": [
+        { "answer": "v = \u221a(120 \u00d7 9.8 \u00d7 sin 25\u00b0) = 22.4 m/s", "explanation": "Using sin instead of tan is a common error. The derivation produces tan(\u03b8), not sin(\u03b8), from dividing the two equilibrium equations." },
+        { "answer": "v = \u221a(120 \u00d7 9.8 \u00d7 cos 25\u00b0) = 32.7 m/s", "explanation": "Using cos instead of tan gives an incorrect result. The correct trigonometric function is tangent, obtained from the force equation division." },
+        { "answer": "v = \u221a(120 \u00d7 9.8 / tan 25\u00b0) = 50.3 m/s", "explanation": "Dividing by tan instead of multiplying gives an inverted relationship. The correct formula is v\u00b2 = rg tan(\u03b8), not rg/tan(\u03b8)." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A 1200 kg car travels on a frictionless banked track at 20\u00b0 with radius 90 m. What is the centripetal force on the car?",
+      "correct": "Fnet = 1200 \u00d7 9.8 \u00d7 tan 20\u00b0 = 4280 N",
+      "correctExplanation": "Using Fnet = mg tan(\u03b8) = 1200 \u00d7 9.8 \u00d7 0.3640 = 4280 N.",
+      "distractors": [
+        { "answer": "Fnet = 1200 \u00d7 9.8 \u00d7 sin 20\u00b0 = 4021 N", "explanation": "Using sin(\u03b8) instead of tan(\u03b8) gives a slightly different answer. The centripetal force formula for banked tracks uses tangent." },
+        { "answer": "Fnet = 1200 \u00d7 9.8 \u00d7 cos 20\u00b0 = 11050 N", "explanation": "Using cos(\u03b8) instead of tan(\u03b8) is incorrect. cos(\u03b8) relates to the vertical balance, not the centripetal force equation." },
+        { "answer": "Fnet = 1200 \u00d7 9.8 / tan 20\u00b0 = 32330 N", "explanation": "Dividing by tan(\u03b8) inverts the formula. The correct relationship is Fnet = mg tan(\u03b8), with tangent in the numerator." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A highway designer wants an ideal speed of 30 m/s for a banked curve of radius 100 m. What banking angle is required?",
+      "correct": "\u03b8 = arctan(30\u00b2/(100 \u00d7 9.8)) = arctan(0.918) = 42.5\u00b0",
+      "correctExplanation": "Using tan(\u03b8) = v\u00b2/(rg) = 900/980 = 0.918, so \u03b8 = arctan(0.918) = 42.5\u00b0.",
+      "distractors": [
+        { "answer": "\u03b8 = arctan(30/(100 \u00d7 9.8)) = arctan(0.0306) = 1.75\u00b0", "explanation": "The formula uses v\u00b2, not v. Forgetting to square the speed gives a banking angle that is far too small." },
+        { "answer": "\u03b8 = arcsin(30\u00b2/(100 \u00d7 9.8)) = arcsin(0.918) = 66.6\u00b0", "explanation": "The formula gives tan(\u03b8), not sin(\u03b8). Using arcsin instead of arctan produces the wrong angle." },
+        { "answer": "\u03b8 = arctan(100 \u00d7 9.8/30\u00b2) = arctan(1.089) = 47.4\u00b0", "explanation": "This inverts the formula, using rg/v\u00b2 instead of v\u00b2/(rg). The speed squared must be in the numerator." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A 4500 kg truck travels on a 30\u00b0 banked track with radius 75 m. What is the ideal speed for this track?",
+      "correct": "v = \u221a(75 \u00d7 9.8 \u00d7 tan 30\u00b0) = 20.6 m/s",
+      "correctExplanation": "v = \u221a(rg tan \u03b8) = \u221a(75 \u00d7 9.8 \u00d7 0.5774) = \u221a(424.3) = 20.6 m/s. The mass is not needed.",
+      "distractors": [
+        { "answer": "v = \u221a(4500 \u00d7 9.8 \u00d7 tan 30\u00b0) = 159 m/s", "explanation": "This substitutes mass for radius. The formula v\u00b2 = rg tan(\u03b8) uses the track radius, not the mass of the vehicle." },
+        { "answer": "v = \u221a(75 \u00d7 9.8 \u00d7 sin 30\u00b0) = 19.2 m/s", "explanation": "Using sin(30\u00b0) = 0.5 instead of tan(30\u00b0) = 0.577 gives a slightly low answer. The correct function is tangent." },
+        { "answer": "v = \u221a(75 \u00d7 9.8 / tan 30\u00b0) = 35.7 m/s", "explanation": "Dividing by tan(\u03b8) instead of multiplying inverts the relationship. The correct formula has tan(\u03b8) in the numerator." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Two banked curves have the same radius of 80 m but different banking angles: Track A at 15\u00b0 and Track B at 35\u00b0. What is the ratio of their ideal speeds, v_B/v_A?",
+      "correct": "v_B/v_A = \u221a(tan 35\u00b0/tan 15\u00b0) = \u221a(0.700/0.268) = 1.62",
+      "correctExplanation": "Since v = \u221a(rg tan \u03b8) and r is the same, v_B/v_A = \u221a(tan 35\u00b0/tan 15\u00b0) = \u221a(2.613) = 1.62.",
+      "distractors": [
+        { "answer": "v_B/v_A = tan 35\u00b0/tan 15\u00b0 = 0.700/0.268 = 2.61", "explanation": "This forgets the square root. Since v\u00b2 is proportional to tan(\u03b8), v is proportional to the square root of tan(\u03b8)." },
+        { "answer": "v_B/v_A = \u221a(sin 35\u00b0/sin 15\u00b0) = \u221a(2.217) = 1.49", "explanation": "Using sin instead of tan gives an incorrect ratio. The banked track formula involves tangent, not sine." },
+        { "answer": "v_B/v_A = 35/15 = 2.33, the direct ratio of the banking angles", "explanation": "Speed is not proportional to the angle directly. It depends on the square root of the tangent of the angle." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A motorcyclist rides around a frictionless banked curve at 15 m/s on a track banked at 18\u00b0. What is the radius of the curve?",
+      "correct": "r = v\u00b2/(g tan \u03b8) = 225/(9.8 \u00d7 0.3249) = 70.7 m",
+      "correctExplanation": "Rearranging tan(\u03b8) = v\u00b2/(rg) gives r = v\u00b2/(g tan \u03b8) = 15\u00b2/(9.8 \u00d7 tan 18\u00b0) = 225/3.184 = 70.7 m.",
+      "distractors": [
+        { "answer": "r = v\u00b2 \u00d7 g \u00d7 tan \u03b8 = 225 \u00d7 9.8 \u00d7 0.325 = 716 m", "explanation": "This multiplies instead of dividing. Rearranging correctly puts g tan(\u03b8) in the denominator, not the numerator." },
+        { "answer": "r = v/(g tan \u03b8) = 15/(9.8 \u00d7 0.3249) = 4.71 m", "explanation": "This uses v instead of v\u00b2. The formula has velocity squared in the numerator, not velocity to the first power." },
+        { "answer": "r = v\u00b2/(g sin \u03b8) = 225/(9.8 \u00d7 0.309) = 74.3 m", "explanation": "Using sin(\u03b8) instead of tan(\u03b8) gives a slightly different result. The correct formula involves tangent." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A 900 kg car and a 2500 kg truck both travel at the design speed on the same frictionless banked track. Compare their centripetal forces.",
+      "correct": "The truck's centripetal force is 2500/900 = 2.78 times that of the car",
+      "correctExplanation": "From Fnet = mg tan(\u03b8), the centripetal force is proportional to mass. The truck's force is (2500/900) times the car's force.",
+      "distractors": [
+        { "answer": "Both vehicles experience the same centripetal force at design speed", "explanation": "While both travel at the same ideal speed, centripetal force equals mg tan(\u03b8), which depends on mass. Heavier vehicles need more force." },
+        { "answer": "The truck's centripetal force is (2500/900)\u00b2 = 7.72 times that of the car", "explanation": "Centripetal force is linearly proportional to mass, not proportional to mass squared. F = mg tan(\u03b8) is first order in m." },
+        { "answer": "The car has greater centripetal force because lighter vehicles accelerate faster", "explanation": "Centripetal force is proportional to mass. A lighter car has less centripetal force, not more, at the same speed." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the calculation for a banked track problem.",
+      "sentence": "For a curve banked at 20\u00b0 with radius 150 m, the ideal speed is v = \u221a(150 \u00d7 9.8 \u00d7 {{blank:1}}) = {{blank:2}} m/s.",
+      "blanks": {
+        "1": {
+          "correct": "tan 20\u00b0",
+          "correctExplanation": "The formula v = \u221a(rg tan \u03b8) requires the tangent of the banking angle inside the square root.",
+          "distractors": [
+            { "answer": "sin 20\u00b0", "explanation": "Using sin instead of tan is a common error. The derivation from dividing the force equations produces tangent, not sine." },
+            { "answer": "cos 20\u00b0", "explanation": "Using cos instead of tan gives an incorrect speed. Cosine relates to the vertical equilibrium, not the centripetal equation." }
+          ]
+        },
+        "2": {
+          "correct": "23.1",
+          "correctExplanation": "v = \u221a(150 \u00d7 9.8 \u00d7 0.3640) = \u221a(534.9) = 23.1 m/s.",
+          "distractors": [
+            { "answer": "17.8", "explanation": "This value results from using sin(20\u00b0) = 0.342 instead of tan(20\u00b0) = 0.364. The correct trigonometric function is tangent." },
+            { "answer": "37.2", "explanation": "This value results from using cos(20\u00b0) = 0.940 instead of tan(20\u00b0) = 0.364, giving a speed that is too high." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the calculation to find the required banking angle.",
+      "sentence": "A curve of radius 200 m must have a design speed of 25 m/s. The banking angle is \u03b8 = arctan({{blank:1}}) = {{blank:2}}\u00b0.",
+      "blanks": {
+        "1": {
+          "correct": "25\u00b2/(200 \u00d7 9.8)",
+          "correctExplanation": "From tan(\u03b8) = v\u00b2/(rg), the argument of arctan is 625/1960 = 0.319.",
+          "distractors": [
+            { "answer": "200 \u00d7 9.8/25\u00b2", "explanation": "This inverts the formula, placing rg in the numerator instead of the denominator. The correct form is v\u00b2/(rg)." },
+            { "answer": "25/(200 \u00d7 9.8)", "explanation": "This forgets to square the velocity. The formula requires v\u00b2, not v, in the numerator." }
+          ]
+        },
+        "2": {
+          "correct": "17.7",
+          "correctExplanation": "\u03b8 = arctan(625/1960) = arctan(0.3189) = 17.7\u00b0.",
+          "distractors": [
+            { "answer": "72.3", "explanation": "This results from inverting the fraction: arctan(1960/625) = arctan(3.136) = 72.3\u00b0. The speed must be in the numerator." },
+            { "answer": "0.73", "explanation": "This is the angle in radians (0.309 rad \u2248 17.7\u00b0) or results from using v instead of v\u00b2. The answer should be in degrees." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the centripetal force on a banked track.",
+      "sentence": "A 1500 kg vehicle on a frictionless banked track at 25\u00b0 experiences a centripetal force of Fnet = 1500 \u00d7 {{blank:1}} \u00d7 tan 25\u00b0 = {{blank:2}} N.",
+      "blanks": {
+        "1": {
+          "correct": "9.8",
+          "correctExplanation": "The formula Fnet = mg tan(\u03b8) requires g = 9.8 m/s\u00b2, the gravitational field strength near Earth's surface.",
+          "distractors": [
+            { "answer": "9.8\u00b2", "explanation": "g is not squared in this formula. The centripetal force is mg tan(\u03b8), with g to the first power only." },
+            { "answer": "10.0", "explanation": "While 10 m/s\u00b2 is sometimes used as an approximation, the specified value of g = 9.8 m/s\u00b2 should be used for accuracy." }
+          ]
+        },
+        "2": {
+          "correct": "6853",
+          "correctExplanation": "Fnet = 1500 \u00d7 9.8 \u00d7 tan(25\u00b0) = 1500 \u00d7 9.8 \u00d7 0.4663 = 6853 N.",
+          "distractors": [
+            { "answer": "6213", "explanation": "This results from using sin(25\u00b0) = 0.4226 instead of tan(25\u00b0) = 0.4663. The correct function is tangent." },
+            { "answer": "13320", "explanation": "This results from using cos(25\u00b0) = 0.9063 instead of tan(25\u00b0), giving a force that is too large." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "mc",
+      "question": "A student claims that doubling the banking angle of a frictionless track will double the ideal speed. Evaluate this claim using the formula v = \u221a(rg tan \u03b8).",
+      "correct": "The claim is incorrect because speed depends on \u221a(tan \u03b8), and tan is not a linear function of angle",
+      "correctExplanation": "Doubling \u03b8 does not double tan(\u03b8). For example, tan(20\u00b0) = 0.364 but tan(40\u00b0) = 0.839, and \u221a(0.839/0.364) = 1.52, not 2.",
+      "distractors": [
+        { "answer": "The claim is correct because the tangent function is directly proportional to the banking angle", "explanation": "Tangent is not a linear function. tan(2\u03b8) \u2260 2 tan(\u03b8). The nonlinear relationship means doubling \u03b8 does not double the speed." },
+        { "answer": "The claim is incorrect because doubling the angle quadruples the speed due to the squared term", "explanation": "v depends on \u221a(tan \u03b8), not (tan \u03b8)\u00b2. There is no squaring that would produce a factor of four." },
+        { "answer": "The claim is correct only when the banking angle is less than 30 degrees where tangent is linear", "explanation": "Tangent is approximately linear only for very small angles. Even below 30\u00b0, tan is not perfectly linear, so the claim remains incorrect." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Compare two banked tracks: Track A has radius 50 m and angle 40\u00b0, while Track B has radius 100 m and angle 20\u00b0. Which has the higher ideal speed?",
+      "correct": "Track A at 20.3 m/s, because 50 \u00d7 9.8 \u00d7 tan(40\u00b0) exceeds 100 \u00d7 9.8 \u00d7 tan(20\u00b0)",
+      "correctExplanation": "Track A: v = \u221a(50 \u00d7 9.8 \u00d7 0.839) = 20.3 m/s. Track B: v = \u221a(100 \u00d7 9.8 \u00d7 0.364) = 18.9 m/s. The steeper angle dominates despite the smaller radius.",
+      "distractors": [
+        { "answer": "Track B at 31.3 m/s, because larger radius always produces a higher design speed", "explanation": "While larger radius increases speed, the angle also matters. tan(40\u00b0) = 0.839 is much larger than tan(20\u00b0) = 0.364, compensating for the smaller radius." },
+        { "answer": "Both tracks have the same ideal speed because the products of radius and angle are equal", "explanation": "The formula uses tan(\u03b8), not \u03b8 directly. Since tangent is nonlinear, equal products of r and \u03b8 do not give equal speeds." },
+        { "answer": "Track B at 18.9 m/s, because Track A's steeper angle reduces the available centripetal force", "explanation": "A steeper angle increases, not decreases, the centripetal force. tan(40\u00b0) > tan(20\u00b0), giving Track A a higher speed." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A physics student solves a banked track problem and gets v = \u221a(rg sin \u03b8) instead of v = \u221a(rg tan \u03b8). For a 15\u00b0 bank with r = 200 m, what percentage error does this introduce?",
+      "correct": "About 1.7% too low, since \u221a(sin 15\u00b0/tan 15\u00b0) = \u221a(cos 15\u00b0) = \u221a(0.966) = 0.983",
+      "correctExplanation": "The ratio of incorrect to correct speed is \u221a(sin \u03b8/tan \u03b8) = \u221a(cos \u03b8) = \u221a(0.966) = 0.983, giving a 1.7% error in speed.",
+      "distractors": [
+        { "answer": "About 25% too low, because sin(15\u00b0) is much smaller than tan(15\u00b0) at this angle", "explanation": "At 15\u00b0, sin(15\u00b0) = 0.259 and tan(15\u00b0) = 0.268 are quite close. The ratio is cos(15\u00b0) = 0.966, so the error is small." },
+        { "answer": "Zero error, because sin(\u03b8) and tan(\u03b8) are equal for all banking angles on circular tracks", "explanation": "sin(\u03b8) and tan(\u03b8) are only approximately equal for very small angles. They differ by a factor of cos(\u03b8)." },
+        { "answer": "About 50% too high, because using sine instead of tangent overestimates the ideal speed value", "explanation": "Since sin(\u03b8) < tan(\u03b8) for acute angles, using sin gives a lower speed, not a higher one. The error is also much smaller than 50%." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "As the banking angle \u03b8 approaches 90\u00b0, what does the formula v = \u221a(rg tan \u03b8) predict, and is this physically reasonable?",
+      "correct": "It predicts v \u2192 \u221e, which is unphysical because the normal force would need to be infinite",
+      "correctExplanation": "As \u03b8 \u2192 90\u00b0, tan(\u03b8) \u2192 \u221e, so v \u2192 \u221e. This is unphysical because a vertical wall cannot support a vehicle with a finite normal force balancing gravity.",
+      "distractors": [
+        { "answer": "It predicts v = 0 because a vertical wall provides no horizontal centripetal force to the vehicle", "explanation": "tan(90\u00b0) is undefined (approaches infinity), not zero. The formula predicts infinite speed, not zero." },
+        { "answer": "It predicts v = \u221a(rg) because tan(90\u00b0) equals unity in the limit of large banking angles", "explanation": "tan(90\u00b0) is not equal to 1. tan(45\u00b0) = 1, but tan(90\u00b0) is undefined and approaches infinity." },
+        { "answer": "It predicts a finite maximum speed that represents the fastest any vehicle can safely travel", "explanation": "The formula predicts infinite speed as \u03b8 \u2192 90\u00b0. This signals a breakdown of the model, not a real maximum speed." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A banked track is designed for 25 m/s with radius 80 m. A vehicle travels at 35 m/s instead. Analyse what additional force is needed to keep the vehicle on the circular path.",
+      "correct": "Friction must act down the slope, providing extra centripetal force of mv\u00b2/r \u2212 mg tan(\u03b8) per unit mass",
+      "correctExplanation": "At 35 m/s, the required centripetal force mv\u00b2/r exceeds mg tan(\u03b8). Friction must act down the slope (toward the centre) to supply the deficit.",
+      "distractors": [
+        { "answer": "Friction must act up the slope, reducing the centripetal force to match the available normal force", "explanation": "At speeds above design speed, more centripetal force is needed, not less. Friction acts down the slope to add centripetal force." },
+        { "answer": "No additional force is needed because the normal force automatically adjusts to match any vehicle speed", "explanation": "On a fixed-geometry track, the normal force is determined by equilibrium. It cannot simply increase to match arbitrary speeds without friction." },
+        { "answer": "The vehicle must slow down because no force can compensate for exceeding the ideal design speed", "explanation": "Friction can provide the additional centripetal force needed at higher speeds. Many real banked tracks accommodate a range of speeds via friction." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Two students debate whether Fnet = mg tan(\u03b8) can be used for a banked track with friction. Student A says yes, Student B says no. Who is correct?",
+      "correct": "Student B is correct; the formula only applies to frictionless tracks at the design speed",
+      "correctExplanation": "The derivation assumes no friction. With friction, additional horizontal force components change the net centripetal force, and Fnet \u2260 mg tan(\u03b8).",
+      "distractors": [
+        { "answer": "Student A is correct; friction simply adds to the centripetal force without changing the formula", "explanation": "Friction changes the force balance. The net centripetal force becomes mg tan(\u03b8) plus or minus the friction component, not just mg tan(\u03b8)." },
+        { "answer": "Both are correct; the formula works with friction if you replace g with the effective gravitational value", "explanation": "There is no simple replacement for g that accounts for friction. The full friction force must be resolved into components and added to the equations." },
+        { "answer": "Neither is correct; banked track problems cannot be solved using force equations with friction", "explanation": "Banked track problems with friction can be solved, but require the full set of equations including friction components. The simplified formula does not apply." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A banked curve is designed for cars at 20 m/s with r = 60 m. An engineer proposes doubling the radius to 120 m and asks what new banking angle achieves the same design speed. Evaluate the change.",
+      "correct": "The new angle satisfies tan(\u03b8) = 20\u00b2/(120 \u00d7 9.8) = 0.340, giving \u03b8 = 18.8\u00b0, roughly half the original",
+      "correctExplanation": "Original: tan(\u03b8) = 400/588 = 0.680, \u03b8 = 34.2\u00b0. New: tan(\u03b8) = 400/1176 = 0.340, \u03b8 = 18.8\u00b0. Doubling r roughly halves the angle because tan is approximately linear for moderate angles.",
+      "distractors": [
+        { "answer": "The new angle is exactly half the original because banking angle is inversely proportional to the radius", "explanation": "Angle is not inversely proportional to radius. tan(\u03b8) is inversely proportional to r, but arctan is nonlinear, so \u03b8 does not halve exactly." },
+        { "answer": "The new angle is the same as the original because the design speed has not changed from 20 m/s", "explanation": "The angle depends on both speed and radius. Changing the radius while keeping speed constant requires a different banking angle." },
+        { "answer": "The new angle is one quarter of the original because angle depends on the square root of the radius", "explanation": "\u03b8 does not scale as 1/\u221ar. The relationship is tan(\u03b8) = v\u00b2/(rg), and arctan is nonlinear, giving roughly half the angle." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "On a frictionless banked track at angle \u03b8, the normal force magnitude is N = mg/cos(\u03b8). A student argues this means the apparent weight of the driver increases with banking angle. Assess this reasoning.",
+      "correct": "The reasoning is valid; the driver experiences a greater contact force as the banking angle increases",
+      "correctExplanation": "Since N = mg/cos(\u03b8) and cos(\u03b8) decreases as \u03b8 increases, N increases. The driver feels heavier because the seat pushes harder.",
+      "distractors": [
+        { "answer": "The reasoning is invalid; apparent weight decreases because gravity is partially supported by the slope", "explanation": "On a non-circular incline, N = mg cos(\u03b8) < mg. But on a banked circular track, the centripetal requirement increases N above mg." },
+        { "answer": "The reasoning is invalid; apparent weight is unchanged because mass and gravity remain constant values", "explanation": "Apparent weight is the contact force felt, not just mg. The normal force N = mg/cos(\u03b8) exceeds mg on a banked circular track." },
+        { "answer": "The reasoning is valid only at angles below 45\u00b0 where cosine is greater than the sine value", "explanation": "N = mg/cos(\u03b8) increases for all angles from 0\u00b0 to 90\u00b0. The relationship holds regardless of whether \u03b8 is below or above 45\u00b0." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the analysis of how banking angle and radius jointly determine ideal speed.",
+      "sentence": "If both the banking angle and radius are doubled, the ideal speed changes by a factor of \u221a(2 \u00d7 tan(2\u03b8)/tan(\u03b8)), which is {{blank:1}} than simply doubling because the tangent function is {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "greater",
+          "correctExplanation": "Since tan(2\u03b8) > 2 tan(\u03b8) for most acute angles, the factor exceeds \u221a(2 \u00d7 2) = 2. The speed more than doubles.",
+          "distractors": [
+            { "answer": "less", "explanation": "tan(2\u03b8) > 2 tan(\u03b8) for acute angles (due to the identity tan(2\u03b8) = 2tan\u03b8/(1\u2212tan\u00b2\u03b8)), so the factor exceeds 2, not falls below it." },
+            { "answer": "equal", "explanation": "The factor equals 2 only if tan(2\u03b8) = 2 tan(\u03b8), which is not generally true. The nonlinear tangent makes the factor larger." }
+          ]
+        },
+        "2": {
+          "correct": "nonlinear",
+          "correctExplanation": "The tangent function is not proportional to its argument. tan(2\u03b8) \u2260 2 tan(\u03b8), which causes the speed to scale nonlinearly with angle.",
+          "distractors": [
+            { "answer": "decreasing", "explanation": "Tangent is increasing for acute angles, not decreasing. The nonlinearity, not the direction, is what causes the factor to differ from 2." },
+            { "answer": "periodic", "explanation": "While tangent is periodic with period 180\u00b0, periodicity is not the relevant property here. The nonlinear growth of tangent causes the deviation from a factor of 2." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the comparison of forces on flat versus banked frictionless tracks.",
+      "sentence": "On a flat frictionless track, a vehicle cannot maintain circular motion because there is no {{blank:1}} force, whereas on a banked track, tilting the surface creates a horizontal component of the {{blank:2}} that serves this purpose.",
+      "blanks": {
+        "1": {
+          "correct": "centripetal",
+          "correctExplanation": "A flat frictionless surface provides a normal force that is purely vertical. With no horizontal force, there is no centripetal force for circular motion.",
+          "distractors": [
+            { "answer": "tangential", "explanation": "Tangential force changes speed, not direction. The missing force on a flat frictionless track is the centripetal force directed toward the centre." },
+            { "answer": "gravitational", "explanation": "Gravity still acts on a flat track. The problem is the absence of a horizontal centripetal force, not the absence of gravity." }
+          ]
+        },
+        "2": {
+          "correct": "normal force",
+          "correctExplanation": "Banking tilts the surface so the normal force is no longer vertical. Its horizontal component N sin(\u03b8) provides the centripetal force.",
+          "distractors": [
+            { "answer": "weight force", "explanation": "Weight always acts vertically downward regardless of the surface angle. It is the normal force that gains a horizontal component when the track is banked." },
+            { "answer": "reaction force", "explanation": "While the normal force is a reaction force, the specific term here is normal force. The reaction to gravity in Newton's third law acts on the Earth, not on the vehicle." }
+          ]
+        }
+      }
+    }
+  ]
+}

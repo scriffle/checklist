@@ -1,0 +1,528 @@
+{
+  "_link": {
+    "uuid": "lp-467ef78c-d9f1-a9b2-0279-daecaf03ce15",
+    "version": 1,
+    "contentHash": "hash-f4df71ee",
+    "title": "I can calculate the normal force on a person in a lift accelerating vertically",
+    "code": "1A.7",
+    "generatedAt": "2026-02-06T09:20:00Z"
+  },
+  "toLevel2": [
+    {
+      "type": "mc",
+      "question": "What is the formula for the normal force on a person in a lift accelerating vertically?",
+      "correct": "N = m(a + g)",
+      "correctExplanation": "The normal force on a person in a lift is given by N = m(a + g), where a is the vertical acceleration (positive upward) and g is 9.8 m/s².",
+      "distractors": [
+        { "answer": "N = m(a - g)", "explanation": "Subtracting g would give a negative result for small accelerations. Students confuse the sign convention in the formula." },
+        { "answer": "N = m(g - a)", "explanation": "This reverses the roles of a and g. While it applies when downward is positive, the standard formula uses N = m(a + g) with upward acceleration positive." },
+        { "answer": "N = m × g × a", "explanation": "Multiplying g and a has no physical basis. The normal force involves a sum of acceleration terms, not a product." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What is the value of gravitational acceleration used in normal force calculations near Earth's surface?",
+      "correct": "9.8 m/s² directed downward",
+      "correctExplanation": "Gravitational acceleration near Earth's surface is approximately 9.8 m/s² directed toward the centre of the Earth, which is downward.",
+      "distractors": [
+        { "answer": "9.8 m/s² directed upward", "explanation": "Gravity always acts downward toward the Earth's centre. Students may confuse the direction of gravity with the normal force." },
+        { "answer": "10.0 m/s² directed downward", "explanation": "While 10 m/s² is a common approximation, the standard value used in VCE Physics is 9.8 m/s²." },
+        { "answer": "9.8 m/s directed downward", "explanation": "The unit is m/s², not m/s. Acceleration has dimensions of length per time squared, not length per time." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "When a lift is stationary, what is the normal force on a person standing inside it?",
+      "correct": "N = mg, equal to the person's weight",
+      "correctExplanation": "When the lift is stationary, the acceleration is zero, so N = m(0 + g) = mg. The normal force equals the gravitational force.",
+      "distractors": [
+        { "answer": "N = 0, because the lift is not moving", "explanation": "The normal force supports the person against gravity even when stationary. Zero normal force would mean the person is in free fall." },
+        { "answer": "N = 2mg, because both gravity and the floor push on the person", "explanation": "The floor provides exactly mg upward to balance gravity. Doubling the weight has no physical justification when stationary." },
+        { "answer": "N = m, equal to the person's mass only", "explanation": "Normal force is measured in newtons, not kilograms. The force requires multiplying mass by gravitational acceleration." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What happens to the normal force on a person when a lift accelerates upward?",
+      "correct": "The normal force increases above mg",
+      "correctExplanation": "When a lift accelerates upward, the floor must push harder to both support the person's weight and accelerate them upward, giving N = m(a + g) > mg.",
+      "distractors": [
+        { "answer": "The normal force decreases below mg", "explanation": "A decrease occurs during downward acceleration. Upward acceleration requires a greater normal force than weight." },
+        { "answer": "The normal force stays equal to mg", "explanation": "The normal force equals mg only when acceleration is zero. Upward acceleration increases the normal force above mg." },
+        { "answer": "The normal force becomes zero instantly", "explanation": "Zero normal force occurs only in free fall. Upward acceleration produces the largest normal force, not zero." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What happens to the normal force on a person when a lift accelerates downward?",
+      "correct": "The normal force decreases below mg",
+      "correctExplanation": "When a lift accelerates downward, the floor does not need to fully support the person's weight, so N = m(g - a_down) < mg.",
+      "distractors": [
+        { "answer": "The normal force increases above mg", "explanation": "An increase occurs during upward acceleration. Downward acceleration reduces the support needed from the floor." },
+        { "answer": "The normal force stays equal to mg", "explanation": "The normal force equals mg only at zero acceleration. Downward acceleration reduces the normal force below mg." },
+        { "answer": "The normal force reverses direction", "explanation": "The normal force always pushes upward from the floor. It decreases in magnitude but does not reverse direction." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "The normal force on a person in a lift is always equal to the person's weight.",
+      "correct": "False",
+      "correctExplanation": "The normal force equals weight only when the lift has zero acceleration. During upward or downward acceleration, the normal force differs from mg.",
+      "distractors": [
+        { "answer": "True", "explanation": "Students often assume the normal force always equals weight. This is only true when there is no vertical acceleration." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "A person in a lift accelerating upward feels heavier than when the lift is stationary.",
+      "correct": "True",
+      "correctExplanation": "The increased normal force during upward acceleration is what a person perceives as feeling heavier. The sensation of weight comes from the normal force, not gravity alone.",
+      "distractors": [
+        { "answer": "False", "explanation": "Students may think perceived weight depends only on gravity. The normal force increases during upward acceleration, making the person feel heavier." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the normal force in a lift.",
+      "sentence": "When a lift accelerates upward, the normal force on the person is {{blank:1}} than the person's weight.",
+      "blanks": {
+        "1": {
+          "correct": "greater",
+          "correctExplanation": "Upward acceleration requires the floor to exert a force greater than mg to both support the person and accelerate them upward.",
+          "distractors": [
+            { "answer": "less", "explanation": "A normal force less than weight occurs during downward acceleration, not upward acceleration." },
+            { "answer": "independent", "explanation": "The normal force is directly related to the person's weight and the lift's acceleration. It is not independent of weight." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about what determines apparent weight.",
+      "sentence": "The sensation of weight that a person feels in a lift is determined by the {{blank:1}} force, not by gravity alone.",
+      "blanks": {
+        "1": {
+          "correct": "normal",
+          "correctExplanation": "The normal force from the floor is what a person physically feels pushing up on their feet. This contact force determines the sensation of weight.",
+          "distractors": [
+            { "answer": "gravitational", "explanation": "Gravity acts on the person regardless of the lift's motion. The perceived change in weight comes from the changing normal force." },
+            { "answer": "centripetal", "explanation": "Centripetal force applies to circular motion. In a vertical lift, the relevant contact force is the normal force." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about free fall in a lift.",
+      "sentence": "If a lift cable snaps and the lift falls freely, the normal force on the person inside becomes {{blank:1}}.",
+      "blanks": {
+        "1": {
+          "correct": "zero",
+          "correctExplanation": "In free fall, both the person and the lift accelerate at g downward. The floor no longer needs to support the person, so the normal force drops to zero.",
+          "distractors": [
+            { "answer": "mg", "explanation": "A normal force of mg applies only when the lift is stationary or moving at constant velocity, not during free fall." },
+            { "answer": "2mg", "explanation": "Doubling the weight has no basis in free-fall conditions. The normal force decreases to zero, not increases." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "mc",
+      "question": "A 72 kg person stands in a lift accelerating upward at 0.15 m/s². Why is the normal force greater than 706 N?",
+      "correct": "The floor must provide extra force to accelerate the person upward in addition to supporting their weight",
+      "correctExplanation": "Newton's second law requires a net upward force for upward acceleration. The normal force must exceed weight (706 N) to produce this net force.",
+      "distractors": [
+        { "answer": "Gravity increases when the lift accelerates upward, making the person heavier overall",  "explanation": "Gravity does not change with lift acceleration. The increased normal force is due to Newton's second law, not a change in g." },
+        { "answer": "The person's mass increases during upward acceleration, increasing the required support force", "explanation": "Mass is constant regardless of motion. The normal force changes because the acceleration changes, not the mass." },
+        { "answer": "The lift cable tension pulls upward on the person, adding to the normal force directly", "explanation": "The cable acts on the lift, not on the person. The person only contacts the floor, which exerts the normal force." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A 60 kg person stands in a lift accelerating downward at 2.0 m/s². What is the normal force on the person?",
+      "correct": "N = 60(9.8 - 2.0) = 468 N",
+      "correctExplanation": "During downward acceleration, N = m(g - a_down) = 60(9.8 - 2.0) = 468 N. The normal force is less than the stationary weight of 588 N.",
+      "distractors": [
+        { "answer": "N = 60(9.8 + 2.0) = 708 N", "explanation": "Adding the downward acceleration would apply for upward acceleration. Downward acceleration reduces the normal force." },
+        { "answer": "N = 60 × 2.0 = 120 N", "explanation": "This calculates only the net force ma, not the normal force. The normal force also includes the support against gravity." },
+        { "answer": "N = 60 × 9.8 = 588 N", "explanation": "This is the weight when stationary. The downward acceleration reduces the normal force below the stationary weight." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Why does a person feel lighter when a lift begins to descend?",
+      "correct": "The downward acceleration reduces the normal force, and the person perceives less push from the floor",
+      "correctExplanation": "When the lift accelerates downward, the floor exerts less upward force. Since perceived weight comes from the normal force, the person feels lighter.",
+      "distractors": [
+        { "answer": "Gravity temporarily weakens when the lift moves downward, reducing the pull on the person", "explanation": "Gravity is constant at 9.8 m/s² regardless of the lift's motion. The lighter feeling comes from reduced normal force." },
+        { "answer": "The person's inertia carries them upward while the lift falls, reducing their contact with the floor", "explanation": "While inertia is relevant, the precise explanation is that the floor's reduced support force (normal force) causes the lighter sensation." },
+        { "answer": "Air pressure inside the lift decreases during descent, making the person feel less compressed", "explanation": "Air pressure changes in a lift are negligible. The lighter feeling is due to the reduced normal force on the feet." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A lift moves upward at a constant velocity of 3 m/s. What is the normal force on a 75 kg person inside?",
+      "correct": "N = 75 × 9.8 = 735 N, the same as when stationary",
+      "correctExplanation": "At constant velocity the acceleration is zero. Newton's first law states that the normal force equals weight when there is no net force.",
+      "distractors": [
+        { "answer": "N = 75(9.8 + 3.0) = 960 N, because the upward velocity adds to the force", "explanation": "Velocity does not affect the normal force. Only acceleration changes the normal force. Constant velocity means zero acceleration." },
+        { "answer": "N = 75(9.8 - 3.0) = 510 N, because the upward motion partially offsets gravity", "explanation": "Constant velocity means zero acceleration, not a reduction in normal force. The lift's speed is irrelevant." },
+        { "answer": "N = 75 × 3.0 = 225 N, because only the velocity determines the force during motion", "explanation": "Normal force depends on acceleration and gravity, not velocity. At constant velocity, N = mg regardless of speed." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "How does Newton's second law explain the change in normal force when a lift accelerates?",
+      "correct": "The net force N - mg must equal ma, so N = m(a + g) adjusts with acceleration",
+      "correctExplanation": "Applying F_net = ma vertically gives N - mg = ma, which rearranges to N = m(a + g). The normal force adjusts to produce the required net force.",
+      "distractors": [
+        { "answer": "Newton's second law only applies to the lift, not to the person standing inside it", "explanation": "Newton's second law applies to every object, including the person. The person is the system being analysed." },
+        { "answer": "The gravitational force changes according to F = ma, so weight itself increases during acceleration", "explanation": "Weight is mg and does not change with the lift's acceleration. The normal force changes, not the gravitational force." },
+        { "answer": "Newton's second law requires the normal force to always equal the weight regardless of motion", "explanation": "Newton's second law shows that N equals mg only when a = 0. When a is nonzero, N differs from mg." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A 50 kg person in a lift experiences a normal force of 540 N. What is the lift's acceleration and direction?",
+      "correct": "Accelerating upward at 0.98 m/s², found from a = N/m - g",
+      "correctExplanation": "From N = m(a + g): a = N/m - g = 540/50 - 9.8 = 10.8 - 9.8 = 1.0 m/s² upward. The normal force exceeds mg, confirming upward acceleration.",
+      "distractors": [
+        { "answer": "Accelerating downward at 0.98 m/s², since the normal force exceeds weight", "explanation": "A normal force exceeding weight indicates upward acceleration, not downward. Downward acceleration would reduce normal force below mg." },
+        { "answer": "Moving at constant velocity, because 540 N is approximately equal to the weight", "explanation": "The weight is 50 × 9.8 = 490 N. Since 540 N exceeds 490 N significantly, there must be an upward acceleration." },
+        { "answer": "Accelerating upward at 10.8 m/s², found from a = N/m directly", "explanation": "Dividing N by m gives a + g, not a alone. The gravitational acceleration must be subtracted to find the lift's acceleration." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "When a lift moves at constant velocity, the normal force on a person inside is different from their stationary weight.",
+      "correct": "False",
+      "correctExplanation": "Constant velocity means zero acceleration. With a = 0, N = m(0 + g) = mg, which is identical to the person's stationary weight.",
+      "distractors": [
+        { "answer": "True", "explanation": "Students often confuse velocity with acceleration. A constant velocity (even a high one) produces zero acceleration and therefore N = mg." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about applying Newton's second law in a lift.",
+      "sentence": "Applying Newton's second law to a person in an accelerating lift gives the equation N - {{blank:1}} = ma, which rearranges to N = m(a + g).",
+      "blanks": {
+        "1": {
+          "correct": "mg",
+          "correctExplanation": "The two vertical forces on the person are the upward normal force N and the downward weight mg. Their difference equals the net force ma.",
+          "distractors": [
+            { "answer": "ma", "explanation": "The term ma is the net force, which appears on the right side of Newton's second law. The weight mg is subtracted on the left side." },
+            { "answer": "N", "explanation": "N is the normal force itself, which is on the left side. Subtracting N from N would give zero, which is incorrect." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the lift scenario.",
+      "sentence": "A person in a lift accelerating downward at 9.8 m/s² would experience a normal force of {{blank:1}}, which is the condition of free fall.",
+      "blanks": {
+        "1": {
+          "correct": "zero",
+          "correctExplanation": "When the lift accelerates downward at g = 9.8 m/s², N = m(g - g) = 0. Both the person and the lift are in free fall.",
+          "distractors": [
+            { "answer": "mg", "explanation": "A normal force of mg occurs when acceleration is zero. In free fall the acceleration equals g downward, making the normal force zero." },
+            { "answer": "2mg", "explanation": "A normal force of 2mg would require upward acceleration equal to g. In free fall the normal force is zero, not doubled." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about constant velocity in a lift.",
+      "sentence": "When a lift travels at constant velocity, the acceleration is {{blank:1}}, so the normal force equals the person's {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "zero",
+          "correctExplanation": "Constant velocity means no change in speed or direction, so the acceleration is zero by definition.",
+          "distractors": [
+            { "answer": "9.8 m/s²", "explanation": "The value 9.8 m/s² is the acceleration due to gravity, not the lift's acceleration. At constant velocity the lift's acceleration is zero." },
+            { "answer": "increasing", "explanation": "Increasing acceleration would mean the velocity is changing, which contradicts the condition of constant velocity." }
+          ]
+        },
+        "2": {
+          "correct": "weight",
+          "correctExplanation": "With zero acceleration, N = m(0 + g) = mg, which is the person's weight. The normal force exactly balances gravity.",
+          "distractors": [
+            { "answer": "mass", "explanation": "Mass is measured in kilograms, while the normal force is measured in newtons. The normal force equals weight (mg), not mass (m)." },
+            { "answer": "momentum", "explanation": "Momentum is mass times velocity and has different units. The normal force equals weight, not momentum." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "mc",
+      "question": "A 72 kg person stands in a lift accelerating upward at 0.15 m/s². What is the normal force on the person?",
+      "correct": "N = 72(0.15 + 9.8) = 716.8 N",
+      "correctExplanation": "Using N = m(a + g) = 72(0.15 + 9.8) = 72 × 9.95 = 716.4 N. The normal force is approximately 716 N, greater than the stationary weight of 705.6 N.",
+      "distractors": [
+        { "answer": "N = 72(9.8 - 0.15) = 694.8 N", "explanation": "Subtracting the acceleration applies for downward acceleration. Upward acceleration is added to g in the formula." },
+        { "answer": "N = 72 × 0.15 = 10.8 N", "explanation": "This calculates only the net force due to acceleration, ignoring the support against gravity. The full formula is N = m(a + g)." },
+        { "answer": "N = 72 × 9.8 = 705.6 N", "explanation": "This is the weight when stationary. The upward acceleration increases the normal force above 705.6 N." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An 80 kg person in a lift accelerating downward at 1.5 m/s² reads a scale beneath their feet. What does the scale display?",
+      "correct": "The scale reads 664 N, which is less than the person's actual weight",
+      "correctExplanation": "The scale measures normal force: N = 80(9.8 - 1.5) = 80 × 8.3 = 664 N. This is less than the stationary weight of 784 N.",
+      "distractors": [
+        { "answer": "The scale reads 784 N, the same as the person's actual weight", "explanation": "The scale reads the normal force, which decreases during downward acceleration. It only reads 784 N at zero acceleration." },
+        { "answer": "The scale reads 904 N, which is more than the person's actual weight", "explanation": "A reading above 784 N would indicate upward acceleration. Downward acceleration produces a reading below weight." },
+        { "answer": "The scale reads 120 N, equal to the net force on the person", "explanation": "The scale reads the full normal force, not just the net force. N = m(g - a) = 664 N, not ma = 120 N." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A 65 kg person stands on a scale in a lift. The scale reads 715 N. Calculate the magnitude and direction of the lift's acceleration.",
+      "correct": "The lift accelerates upward at 1.2 m/s²",
+      "correctExplanation": "From N = m(a + g): a = N/m - g = 715/65 - 9.8 = 11.0 - 9.8 = 1.2 m/s². Since N > mg, the acceleration is upward.",
+      "distractors": [
+        { "answer": "The lift accelerates downward at 1.2 m/s²", "explanation": "The scale reads more than mg = 637 N, which indicates upward acceleration. Downward acceleration would produce a reading below 637 N." },
+        { "answer": "The lift accelerates upward at 11.0 m/s²", "explanation": "The value 11.0 m/s² is N/m, which equals a + g, not a alone. The acceleration is a = 11.0 - 9.8 = 1.2 m/s²." },
+        { "answer": "The lift accelerates upward at 0.8 m/s²", "explanation": "This results from an arithmetic error. The correct calculation is a = 715/65 - 9.8 = 11.0 - 9.8 = 1.2 m/s²." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A 55 kg person in a lift experiences a normal force of 429 N. What is the lift's acceleration?",
+      "correct": "The lift accelerates downward at 2.0 m/s²",
+      "correctExplanation": "From N = m(g - a_down): a_down = g - N/m = 9.8 - 429/55 = 9.8 - 7.8 = 2.0 m/s² downward. The normal force is less than mg = 539 N.",
+      "distractors": [
+        { "answer": "The lift accelerates upward at 2.0 m/s²", "explanation": "The normal force is below mg, indicating downward acceleration. Upward acceleration would produce N greater than 539 N." },
+        { "answer": "The lift accelerates downward at 7.8 m/s²", "explanation": "The value 7.8 m/s² is N/m = g - a, not a itself. The acceleration is g - 7.8 = 2.0 m/s² downward." },
+        { "answer": "The lift accelerates downward at 9.8 m/s²", "explanation": "An acceleration of 9.8 m/s² downward would give N = 0 (free fall). The normal force of 429 N shows the person is not in free fall." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Two people, one with mass 60 kg and another with mass 90 kg, stand in the same lift accelerating upward at 1.0 m/s². What is the ratio of their normal forces?",
+      "correct": "The ratio is 60:90 or 2:3, the same as the ratio of their masses",
+      "correctExplanation": "Since both experience the same acceleration, N = m(a + g). The ratio N₁/N₂ = m₁/m₂ = 60/90 = 2/3. The normal forces are proportional to mass.",
+      "distractors": [
+        { "answer": "The ratio is 1:1, because both are in the same lift with the same acceleration", "explanation": "Equal acceleration does not mean equal force. Force depends on mass, so different masses produce different normal forces." },
+        { "answer": "The ratio is 4:9, because force is proportional to mass squared", "explanation": "Normal force is directly proportional to mass (N = m(a + g)), not to mass squared. The ratio equals the mass ratio." },
+        { "answer": "The ratio cannot be determined without knowing the lift's velocity", "explanation": "The normal force depends on acceleration, not velocity. The mass ratio and shared acceleration fully determine the force ratio." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A person stands on a scale in a lift. The lift starts from rest, accelerates upward, then moves at constant speed, then decelerates before stopping at a higher floor. At which stage does the scale show the lowest reading?",
+      "correct": "During deceleration, when the lift slows before stopping at the higher floor",
+      "correctExplanation": "When the lift decelerates while moving upward, the acceleration is directed downward. This reduces the normal force below mg, giving the lowest scale reading.",
+      "distractors": [
+        { "answer": "During the constant speed phase, when no net force acts on the person in the lift", "explanation": "At constant speed the normal force equals mg. During upward deceleration, the normal force drops below mg." },
+        { "answer": "During the initial upward acceleration phase, when the lift is just starting to move", "explanation": "Upward acceleration increases the normal force above mg. The lowest reading occurs during the deceleration phase." },
+        { "answer": "At the moment the lift stops, when the velocity and acceleration are both zero", "explanation": "When stopped, the normal force equals mg. The lowest reading occurs during deceleration, before the lift fully stops." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A 70 kg person stands in a lift that accelerates upward at 2.5 m/s² for 3 seconds and then moves at constant velocity. What is the normal force during the acceleration phase?",
+      "correct": "N = 70(2.5 + 9.8) = 861 N",
+      "correctExplanation": "Using N = m(a + g) = 70(2.5 + 9.8) = 70 × 12.3 = 861 N. This is the normal force throughout the 3-second acceleration phase.",
+      "distractors": [
+        { "answer": "N = 70(9.8 - 2.5) = 511 N", "explanation": "Subtracting the acceleration applies for downward acceleration. Upward acceleration requires adding a to g." },
+        { "answer": "N = 70 × 2.5 × 3 = 525 N", "explanation": "Multiplying by time gives impulse, not normal force. The duration does not appear in the normal force formula." },
+        { "answer": "N = 70 × 9.8 = 686 N", "explanation": "This is the weight at zero acceleration. During upward acceleration the normal force is 861 N, not 686 N." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the calculation of normal force in a lift.",
+      "sentence": "A 72 kg person in a lift accelerating upward at 0.15 m/s² experiences a normal force of N = 72 × {{blank:1}} = {{blank:2}} N.",
+      "blanks": {
+        "1": {
+          "correct": "9.95",
+          "correctExplanation": "The combined acceleration is a + g = 0.15 + 9.8 = 9.95 m/s², which is the effective acceleration used to calculate the normal force.",
+          "distractors": [
+            { "answer": "9.65", "explanation": "The value 9.65 comes from subtracting 0.15 from 9.8, which applies for downward acceleration, not upward." },
+            { "answer": "0.15", "explanation": "Using only the lift's acceleration ignores gravity. The full formula requires adding g to the lift's acceleration." }
+          ]
+        },
+        "2": {
+          "correct": "716.4",
+          "correctExplanation": "Multiplying 72 × 9.95 = 716.4 N. This is slightly greater than the stationary weight of 705.6 N due to the upward acceleration.",
+          "distractors": [
+            { "answer": "705.6", "explanation": "The value 705.6 N is the stationary weight (72 × 9.8). The upward acceleration increases the normal force to 716.4 N." },
+            { "answer": "694.8", "explanation": "The value 694.8 N results from subtracting the acceleration instead of adding it, which would apply only for downward acceleration." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about determining acceleration direction from a scale reading.",
+      "sentence": "If the scale reading in a lift is greater than mg, the lift must be accelerating {{blank:1}}.",
+      "blanks": {
+        "1": {
+          "correct": "upward",
+          "correctExplanation": "A scale reading greater than mg means N > mg, so the net force is upward. By Newton's second law, the acceleration must be directed upward.",
+          "distractors": [
+            { "answer": "downward", "explanation": "Downward acceleration produces N < mg, not N > mg. A reading above weight confirms upward acceleration." },
+            { "answer": "horizontally", "explanation": "Horizontal acceleration does not affect the vertical normal force. Only vertical acceleration changes the scale reading." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the calculation for a person decelerating in a lift.",
+      "sentence": "A 60 kg person in a lift decelerating while moving upward has an acceleration of 1.5 m/s² {{blank:1}}, giving a normal force of {{blank:2}} N.",
+      "blanks": {
+        "1": {
+          "correct": "downward",
+          "correctExplanation": "Decelerating while moving upward means the acceleration opposes the motion, so it is directed downward.",
+          "distractors": [
+            { "answer": "upward", "explanation": "Upward acceleration would speed up the lift, not slow it down. Deceleration while moving upward requires downward acceleration." },
+            { "answer": "forward", "explanation": "Forward is not a meaningful direction for vertical lift motion. The deceleration is directed downward." }
+          ]
+        },
+        "2": {
+          "correct": "498",
+          "correctExplanation": "With downward acceleration: N = m(g - a) = 60(9.8 - 1.5) = 60 × 8.3 = 498 N, which is less than the stationary weight of 588 N.",
+          "distractors": [
+            { "answer": "678", "explanation": "The value 678 N would result from adding 1.5 to g, which applies for upward acceleration. Downward acceleration gives 498 N." },
+            { "answer": "588", "explanation": "The value 588 N is the stationary weight. During deceleration the normal force decreases below 588 N to 498 N." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "mc",
+      "question": "A person stands on a scale in a lift that accelerates upward at a m/s² and then later decelerates at the same rate while still moving upward. Compare the scale readings during the two phases.",
+      "correct": "The reading during acceleration exceeds mg by ma, and the reading during deceleration is below mg by ma, making them symmetric about mg",
+      "correctExplanation": "During upward acceleration N = m(g + a), and during upward deceleration N = m(g - a). The deviations from mg are equal and opposite, creating symmetry.",
+      "distractors": [
+        { "answer": "Both readings are above mg because the lift is moving upward during both phases of its journey", "explanation": "Direction of motion does not determine normal force. Only the direction of acceleration matters. Deceleration produces N < mg." },
+        { "answer": "The readings are equal because the magnitude of acceleration is the same during both phases", "explanation": "The magnitudes of acceleration are equal, but the directions differ. This produces different normal forces, not identical ones." },
+        { "answer": "The reading during deceleration is higher because the person's inertia resists the slowing down", "explanation": "Inertia during upward deceleration means the person tends to keep moving up, reducing floor contact force. The reading is lower, not higher." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student measures the normal force on a 70 kg person as 630 N and calculates the acceleration as 0.8 m/s² downward. Verify whether this calculation is correct.",
+      "correct": "The calculation is incorrect; the correct acceleration is 0.8 m/s² downward, but N/m = 9.0, so a = 9.8 - 9.0 = 0.8 m/s² confirms it is actually correct",
+      "correctExplanation": "Checking: a = g - N/m = 9.8 - 630/70 = 9.8 - 9.0 = 0.8 m/s² downward. The student's answer is verified as correct.",
+      "distractors": [
+        { "answer": "The calculation is incorrect because the acceleration should be 9.0 m/s² downward, not 0.8 m/s² downward", "explanation": "The value 9.0 is N/m = g - a, not a itself. The student correctly subtracted to find a = 0.8 m/s²." },
+        { "answer": "The calculation is incorrect because 630 N is above mg, indicating upward acceleration instead of downward", "explanation": "The weight is mg = 70 × 9.8 = 686 N. Since 630 < 686, the normal force is below weight, confirming downward acceleration." },
+        { "answer": "The calculation is incorrect because the formula N = m(a + g) gives a = N/m - g = -0.8, meaning upward", "explanation": "With sign conventions, a negative result from N/m - g means the acceleration is downward, which agrees with 0.8 m/s² downward." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A lift designer must ensure the cable can support a maximum tension. If the lift has a mass of 500 kg and carries a 100 kg person, and the maximum upward acceleration is 3.0 m/s², what is the minimum cable tension required?",
+      "correct": "T = (500 + 100)(9.8 + 3.0) = 7680 N",
+      "correctExplanation": "The cable must support and accelerate the entire system (lift + person). T = M_total(g + a) = 600 × 12.8 = 7680 N.",
+      "distractors": [
+        { "answer": "T = 100(9.8 + 3.0) = 1280 N", "explanation": "This accounts for the person only, ignoring the lift's mass. The cable must support and accelerate the entire system." },
+        { "answer": "T = 600 × 9.8 = 5880 N", "explanation": "This is the weight of the system at rest. The cable must provide additional force for the upward acceleration." },
+        { "answer": "T = 600 × 3.0 = 1800 N", "explanation": "This calculates only the net force for acceleration, ignoring the weight. The cable tension must also support the system against gravity." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A person in a lift holds a 2 kg mass on a spring scale. The lift accelerates upward at 1.5 m/s². What does the spring scale read, and why does it differ from the reading when stationary?",
+      "correct": "The scale reads 22.6 N, which is 3.0 N more than the stationary reading of 19.6 N",
+      "correctExplanation": "The spring scale reads the apparent weight: N = 2(1.5 + 9.8) = 22.6 N. The extra 3.0 N (= ma = 2 × 1.5) provides the upward acceleration.",
+      "distractors": [
+        { "answer": "The scale reads 19.6 N, unchanged because the spring scale measures true weight only", "explanation": "Spring scales measure the force applied to the spring, which is the apparent weight. This changes with acceleration." },
+        { "answer": "The scale reads 16.6 N, because upward acceleration reduces the pull on the spring", "explanation": "Upward acceleration increases the apparent weight. The spring must pull harder to accelerate the mass upward." },
+        { "answer": "The scale reads 3.0 N, showing only the additional force from acceleration", "explanation": "The spring scale reads the total apparent weight of 22.6 N, not just the extra force component of 3.0 N." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Evaluate the following claim: 'The maximum normal force a person can experience in a lift is 2mg, which occurs when the lift accelerates upward at g.' Is this claim accurate?",
+      "correct": "The claim that N = 2mg when a = g is mathematically correct, but the maximum possible normal force is not limited to 2mg",
+      "correctExplanation": "N = m(g + g) = 2mg is correct for a = g. However, if the acceleration exceeds g, the normal force exceeds 2mg. There is no fundamental limit at 2mg.",
+      "distractors": [
+        { "answer": "The claim is fully correct because no lift can accelerate faster than g upward due to gravitational limits", "explanation": "There is no physical law limiting lift acceleration to g. Engineering constraints may limit it, but the formula allows any acceleration." },
+        { "answer": "The claim is incorrect because the normal force can never exceed mg regardless of the lift's acceleration", "explanation": "Upward acceleration increases normal force above mg. At a = g, N = 2mg, and higher accelerations give even larger values." },
+        { "answer": "The claim is incorrect because the formula N = m(a + g) does not apply at accelerations approaching g", "explanation": "The formula N = m(a + g) is valid for all accelerations as long as Newtonian mechanics applies. It does not break down near a = g." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A lift accelerates downward at exactly 9.8 m/s². Explain what a person inside would experience and relate this to the concept of weightlessness.",
+      "correct": "The person experiences weightlessness because the normal force is zero, identical to free fall conditions",
+      "correctExplanation": "N = m(9.8 - 9.8) = 0. With no contact force from the floor, the person floats inside the lift. This is the same condition astronauts experience in orbit.",
+      "distractors": [
+        { "answer": "The person experiences double gravity because the downward acceleration adds to gravitational acceleration", "explanation": "Downward acceleration reduces the normal force, not increases it. At a = g, the normal force is zero, not doubled." },
+        { "answer": "The person is pressed to the ceiling because the lift falls away faster than the person does", "explanation": "Both the person and the lift accelerate at g. There is no relative motion, so the person floats rather than hitting the ceiling." },
+        { "answer": "The person's weight remains mg but they cannot feel it because the floor is accelerating away", "explanation": "The gravitational force is still mg, but weight as felt (apparent weight) is zero. The person truly experiences weightlessness." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A lift decelerates at 2.0 m/s² while descending. A 75 kg person is inside. A student writes N = 75(9.8 - 2.0) = 585 N. Evaluate the student's work.",
+      "correct": "The student is incorrect; decelerating while descending means the acceleration is upward, giving N = 75(9.8 + 2.0) = 885 N",
+      "correctExplanation": "Decelerating during descent means the acceleration opposes the downward motion, so it is directed upward. N = m(g + a) = 75 × 11.8 = 885 N.",
+      "distractors": [
+        { "answer": "The student is correct because deceleration always means a smaller normal force than the stationary weight", "explanation": "Deceleration during descent is an upward acceleration, which increases normal force. The direction of motion matters." },
+        { "answer": "The student is incorrect; the answer should be N = 75 × 2.0 = 150 N because only deceleration affects the normal force", "explanation": "The normal force depends on both gravity and acceleration, not deceleration alone. The correct answer is 885 N." },
+        { "answer": "The student is correct because the magnitude of deceleration is subtracted from g regardless of the direction of travel", "explanation": "The sign of acceleration depends on its direction, not whether the lift is speeding up or slowing down. Upward acceleration adds to g." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An engineer designs a lift with a maximum acceleration of 2.5 m/s² in either direction. For a 90 kg passenger, calculate the range of normal forces the passenger could experience.",
+      "correct": "The range is from 657 N to 1107 N, calculated using N = m(g ± a)",
+      "correctExplanation": "Minimum: N = 90(9.8 - 2.5) = 90 × 7.3 = 657 N. Maximum: N = 90(9.8 + 2.5) = 90 × 12.3 = 1107 N. The range spans from 657 N to 1107 N.",
+      "distractors": [
+        { "answer": "The range is from 0 N to 882 N, calculated using N = mg and N = 0 as the two limits", "explanation": "Zero normal force occurs only in free fall at a = 9.8 m/s². With a maximum of 2.5 m/s², the minimum is 657 N, not 0 N." },
+        { "answer": "The range is from 882 N to 1107 N, since the normal force can only increase above weight", "explanation": "Downward acceleration reduces the normal force below mg = 882 N. The range extends in both directions from weight." },
+        { "answer": "The range is from 225 N to 225 N, since the deviation from weight is always ma = 225 N", "explanation": "The value 225 N is the deviation ma = 90 × 2.5. The actual normal forces are mg ± 225, giving 657 N to 1107 N." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the analysis of a decelerating lift.",
+      "sentence": "A lift moving downward and decelerating has an acceleration directed {{blank:1}}, which causes the normal force to be {{blank:2}} than mg.",
+      "blanks": {
+        "1": {
+          "correct": "upward",
+          "correctExplanation": "Deceleration means the acceleration opposes the direction of motion. Since the lift moves downward, the deceleration is directed upward.",
+          "distractors": [
+            { "answer": "downward", "explanation": "Downward acceleration would speed up a descending lift, not slow it down. Deceleration during descent is upward." },
+            { "answer": "zero", "explanation": "Zero acceleration means constant velocity, not deceleration. A decelerating lift has nonzero acceleration." }
+          ]
+        },
+        "2": {
+          "correct": "greater",
+          "correctExplanation": "Upward acceleration gives N = m(g + a) > mg. The person feels heavier when the descending lift decelerates.",
+          "distractors": [
+            { "answer": "less", "explanation": "A normal force less than mg would occur during downward acceleration. Upward acceleration during deceleration increases the normal force." },
+            { "answer": "equal", "explanation": "Equal to mg occurs only at zero acceleration. The deceleration produces a net upward acceleration, increasing normal force." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the relationship between apparent weight and true weight.",
+      "sentence": "The apparent weight of a person in an accelerating lift differs from their true weight by an amount equal to {{blank:1}}, where m is their mass and a is the lift's acceleration.",
+      "blanks": {
+        "1": {
+          "correct": "ma",
+          "correctExplanation": "The difference between apparent weight (normal force) and true weight (mg) is the net force ma required to accelerate the person.",
+          "distractors": [
+            { "answer": "mg", "explanation": "The value mg is the true weight itself, not the difference between apparent and true weight. The difference is ma." },
+            { "answer": "m(a + g)", "explanation": "The expression m(a + g) is the total apparent weight during upward acceleration, not the difference from true weight." }
+          ]
+        }
+      }
+    }
+  ]
+}

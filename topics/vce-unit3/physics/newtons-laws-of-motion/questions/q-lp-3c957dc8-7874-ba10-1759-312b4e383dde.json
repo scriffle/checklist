@@ -1,0 +1,583 @@
+{
+  "_link": {
+    "uuid": "lp-3c957dc8-7874-ba10-1759-312b4e383dde",
+    "version": 1,
+    "contentHash": "hash-bdf97993",
+    "title": "I can apply Newton's laws to connected systems including blocks, pulleys, and carriages",
+    "generatedAt": "2026-02-06T09:20:00Z"
+  },
+  "toLevel2": [
+    {
+      "type": "mc",
+      "question": "When two objects are connected by a string and move together, what quantity do they share?",
+      "correct": "They share the same acceleration",
+      "correctExplanation": "Connected objects moving together as a system must have the same acceleration, since the string keeps them moving in unison.",
+      "distractors": [
+        { "answer": "They share the same net force", "explanation": "Each object may have a different net force acting on it. Only their accelerations are equal when they move as one system." },
+        { "answer": "They share the same mass value", "explanation": "Connected objects do not need to have the same mass. They share the same acceleration regardless of their individual masses." },
+        { "answer": "They share the same tension force", "explanation": "Tension is an internal force that acts equally and oppositely on each object. The objects share acceleration, not identical applied forces." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "In a connected system of blocks on a frictionless surface, what is the first step to finding the system's acceleration?",
+      "correct": "Add up all the masses in the system",
+      "correctExplanation": "To find the system acceleration, treat all connected objects as one body. Add the masses together, then use F_net = m_total × a.",
+      "distractors": [
+        { "answer": "Find the tension in each string", "explanation": "Tension is an internal force found after the system acceleration is determined. The first step is to find the total mass." },
+        { "answer": "Draw free-body diagrams for each block", "explanation": "While free-body diagrams are useful for finding internal forces, the first step for system acceleration is to sum all the masses." },
+        { "answer": "Calculate the weight of each block", "explanation": "Individual weights are needed later for internal force analysis. The first step is combining the masses into a single system." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What is the role of tension in a string connecting two blocks that accelerate together?",
+      "correct": "It is an internal force within the connected system",
+      "correctExplanation": "When treating connected objects as a single system, tension is an internal force that cancels out. It does not affect the system's overall acceleration.",
+      "distractors": [
+        { "answer": "It is an external force that accelerates the system", "explanation": "Tension acts internally between objects. The external force is an applied pull or gravity on a hanging mass, not the string tension." },
+        { "answer": "It equals the total weight of the whole system", "explanation": "Tension does not equal the system weight. It depends on the mass of the object being pulled and the system's acceleration." },
+        { "answer": "It is the force that opposes the system's motion", "explanation": "Tension transmits force between objects; it does not oppose motion. Friction or drag are forces that oppose motion." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "In the Atwood machine, two masses are connected by a string over a pulley. What provides the net force on the system?",
+      "correct": "The difference in weight between the two masses",
+      "correctExplanation": "The heavier mass pulls down more than the lighter mass. The net external force is the difference in their weights: (m₁ − m₂)g.",
+      "distractors": [
+        { "answer": "The sum of the weights of both hanging masses", "explanation": "The weights act in opposite directions on the string. The net force is their difference, not their sum." },
+        { "answer": "The tension in the string connecting both masses", "explanation": "Tension is an internal force in the system. The net external force comes from the unequal gravitational pulls on the masses." },
+        { "answer": "The normal force the pulley exerts on the string", "explanation": "The pulley's normal force redirects the string but does not contribute to the net force that accelerates the system." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A 10 kg block on a frictionless table is connected to a 4.5 kg hanging mass by a string over a pulley. What is the total mass of the system?",
+      "correct": "14.5 kg, adding both masses together",
+      "correctExplanation": "The system includes both the block on the table (10 kg) and the hanging mass (4.5 kg), giving a total of 10 + 4.5 = 14.5 kg.",
+      "distractors": [
+        { "answer": "10.0 kg, using only the table block mass", "explanation": "This only counts the block on the table. The hanging mass is also part of the connected system and must be included." },
+        { "answer": "4.5 kg, using only the hanging block mass", "explanation": "This only counts the hanging mass. The block on the table is also part of the system and must be included in the total." },
+        { "answer": "5.5 kg, subtracting the smaller from larger", "explanation": "This is the difference between the two masses. The total system mass is found by adding, not subtracting, the individual masses." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "In a system of connected objects, internal forces like tension cancel out when calculating the system's acceleration.",
+      "correct": "True",
+      "correctExplanation": "By Newton's third law, tension pulls equally and oppositely on each connected object. These internal forces cancel when the system is treated as a whole, so only external forces determine the system acceleration.",
+      "distractors": [
+        { "answer": "False", "explanation": "Students may think tension contributes to the net force on the system. However, internal forces always cancel in pairs by Newton's third law." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "In a pulley system with unequal masses, the heavier mass accelerates at g (9.8 m/s²) downward.",
+      "correct": "False",
+      "correctExplanation": "The heavier mass accelerates at less than g because it is connected to the lighter mass. The system acceleration is a = (m₁ − m₂)g/(m₁ + m₂), which is always less than g.",
+      "distractors": [
+        { "answer": "True", "explanation": "Students may assume the heavier mass falls freely. The lighter mass on the other end of the string provides an upward tension that reduces the acceleration below g." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about connected systems.",
+      "sentence": "To find the acceleration of a connected system, divide the net {{blank:1}} force by the {{blank:2}} mass of all objects.",
+      "blanks": {
+        "1": {
+          "correct": "external",
+          "correctExplanation": "Only external forces drive the system's acceleration. Internal forces such as tension cancel out within the system.",
+          "distractors": [
+            { "answer": "internal", "explanation": "Internal forces like tension cancel within the system. Only external forces such as gravity or applied pulls determine the system acceleration." },
+            { "answer": "frictional", "explanation": "Friction is one type of external force, but the net force includes all external forces, not just friction." }
+          ]
+        },
+        "2": {
+          "correct": "total",
+          "correctExplanation": "The total mass includes every object in the connected system. Using F_net = m_total × a gives the shared acceleration.",
+          "distractors": [
+            { "answer": "average", "explanation": "The total mass is the sum of all masses, not the average. Dividing by the average mass would give an incorrect acceleration." },
+            { "answer": "largest", "explanation": "Only using the largest mass ignores the other objects. All connected masses must be summed to find the system acceleration." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about an Atwood machine.",
+      "sentence": "In an Atwood machine, the net force on the system equals the {{blank:1}} of the two weights, and the system acceleration is always less than {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "difference",
+          "correctExplanation": "The two weights pull in opposite directions. The net force is (m₁ − m₂)g, which is the difference in their weights.",
+          "distractors": [
+            { "answer": "sum", "explanation": "The weights oppose each other across the pulley. Adding them would overcount the force since they act in opposite directions." },
+            { "answer": "product", "explanation": "Multiplying the weights has no physical meaning here. The net force is the difference between the two opposing gravitational forces." }
+          ]
+        },
+        "2": {
+          "correct": "g",
+          "correctExplanation": "Since the total mass (m₁ + m₂) is always greater than the mass difference (m₁ − m₂), the acceleration a = (m₁ − m₂)g/(m₁ + m₂) is always less than g.",
+          "distractors": [
+            { "answer": "zero", "explanation": "The acceleration is always greater than zero when the masses are unequal, not less than zero. It is less than g." },
+            { "answer": "2g", "explanation": "The system acceleration cannot exceed g for any combination of masses. It is bounded above by g, not by 2g." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about finding internal forces.",
+      "sentence": "After finding the system acceleration, you isolate a {{blank:1}} object and apply Newton's second law to find the {{blank:2}} in the connecting string.",
+      "blanks": {
+        "1": {
+          "correct": "single",
+          "correctExplanation": "To find internal forces like tension, you draw a free-body diagram for one individual object within the system and apply F = ma to that object alone.",
+          "distractors": [
+            { "answer": "combined", "explanation": "Using the combined system again would not reveal internal forces. You must isolate one object to expose the tension as an external force on that object." },
+            { "answer": "heaviest", "explanation": "You can isolate any single object, not necessarily the heaviest. The choice depends on which makes the calculation simplest." }
+          ]
+        },
+        "2": {
+          "correct": "tension",
+          "correctExplanation": "Tension is the internal force transmitted through the string between connected objects. Isolating one object lets you solve for this tension using F = ma.",
+          "distractors": [
+            { "answer": "weight", "explanation": "Weight is calculated from mg and does not require isolating an object. Tension is the unknown internal force found by this method." },
+            { "answer": "friction", "explanation": "Friction is an external force, not an internal connecting force. The string transmits tension, which is what this method reveals." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "mc",
+      "question": "A 10 kg block on a frictionless table is connected by a string over a pulley to a 4.5 kg hanging mass. What is the acceleration of the system?",
+      "correct": "a = (4.5)(9.8)/(10 + 4.5) = 3.04 m/s²",
+      "correctExplanation": "The net external force is the weight of the hanging mass: (4.5)(9.8) = 44.1 N. Dividing by the total mass: 44.1/14.5 = 3.04 m/s².",
+      "distractors": [
+        { "answer": "a = (4.5)(9.8)/10 = 4.41 m/s² only", "explanation": "This divides by only the table block's mass. The total system mass includes both the 10 kg block and the 4.5 kg hanging mass." },
+        { "answer": "a = (10)(9.8)/(10 + 4.5) = 6.76 m/s²", "explanation": "This uses the table block's weight as the driving force. On a frictionless table the block's weight is balanced by the normal force; only the hanging mass provides the net force." },
+        { "answer": "a = (10 − 4.5)(9.8)/(10 + 4.5) = 3.72 m/s²", "explanation": "This uses the mass difference as though both masses hang vertically. The table block's weight does not contribute to the net horizontal force." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Why is the tension in the string less than the weight of the hanging mass in a table-and-pulley system?",
+      "correct": "Because the hanging mass is accelerating downward, so its weight exceeds the tension",
+      "correctExplanation": "If the hanging mass accelerates downward, the net downward force on it is mg − T > 0, meaning T < mg. The tension is reduced because part of the weight drives the acceleration.",
+      "distractors": [
+        { "answer": "Because friction in the pulley absorbs some of the gravitational force on the hanging mass", "explanation": "In an ideal frictionless pulley system, friction is not the reason. Tension is less than weight because the mass accelerates." },
+        { "answer": "Because the string stretches under the load, reducing the transmitted force to the block", "explanation": "An ideal inextensible string does not stretch. The reduced tension arises from the acceleration of the hanging mass." },
+        { "answer": "Because the normal force on the table block partially cancels the tension in the string", "explanation": "The normal force is vertical and balances the table block's weight. It does not act along the string or reduce tension." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "In a system where a 10 kg block is on a frictionless table and a 4.5 kg mass hangs from a pulley, the system acceleration is 3.04 m/s². What is the tension in the string?",
+      "correct": "T = (10)(3.04) = 30.4 N",
+      "correctExplanation": "Isolating the 10 kg block on the table: the only horizontal force is tension, so T = ma = (10)(3.04) = 30.4 N.",
+      "distractors": [
+        { "answer": "T = (4.5)(9.8) = 44.1 N", "explanation": "This is the full weight of the hanging mass. Tension is less than this weight because the hanging mass is accelerating downward." },
+        { "answer": "T = (14.5)(3.04) = 44.1 N", "explanation": "This uses the total system mass, which gives the net external force, not the tension. Tension is found by isolating one object." },
+        { "answer": "T = (4.5)(3.04) = 13.7 N", "explanation": "This applies F = ma to the hanging mass alone but forgets that gravity also acts on it. For the table block, T = (10)(3.04) = 30.4 N." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Three identical 5 kg blocks are connected in a line on a frictionless surface. A 60 N force pulls the front block. What is the tension in the string between the second and third blocks?",
+      "correct": "T = (5)(4.0) = 20 N",
+      "correctExplanation": "System acceleration: a = 60/(5+5+5) = 4.0 m/s². The string between blocks 2 and 3 only pulls block 3, so T = (5)(4.0) = 20 N.",
+      "distractors": [
+        { "answer": "T = (10)(4.0) = 40 N", "explanation": "This is the tension in the string between blocks 1 and 2, which must accelerate both blocks 2 and 3 (total 10 kg)." },
+        { "answer": "T = 60 N for all strings", "explanation": "Tension decreases along the chain. Each string only needs to accelerate the blocks behind it, not the entire system." },
+        { "answer": "T = (15)(4.0) = 60 N", "explanation": "This uses the total system mass, giving the applied force, not an internal tension. Internal tensions are always less than the applied force." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A 6 kg mass and a 4 kg mass hang on opposite sides of an Atwood machine. What is the system acceleration?",
+      "correct": "a = (6 − 4)(9.8)/(6 + 4) = 1.96 m/s²",
+      "correctExplanation": "The net force is the weight difference: (6 − 4)(9.8) = 19.6 N. The total mass is 10 kg. So a = 19.6/10 = 1.96 m/s².",
+      "distractors": [
+        { "answer": "a = (6)(9.8)/(6 + 4) = 5.88 m/s²", "explanation": "This uses only the heavier mass's weight. Both weights act on the system in opposite directions, so the net force is their difference." },
+        { "answer": "a = (6 − 4)(9.8)/(6 − 4) = 9.8 m/s²", "explanation": "This divides by the mass difference instead of the total mass. The total mass of the system is m₁ + m₂, not m₁ − m₂." },
+        { "answer": "a = (6 + 4)(9.8)/(6 − 4) = 49.0 m/s²", "explanation": "This swaps the numerator and denominator. The net force uses the mass difference and the total mass goes in the denominator." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Explain why treating connected objects as a single system simplifies the calculation of acceleration.",
+      "correct": "Internal forces cancel out, leaving only external forces and the total mass in F = ma",
+      "correctExplanation": "When treated as one system, Newton's third law pairs (like tension) cancel. Only external forces remain, making the calculation straightforward with F_net = m_total × a.",
+      "distractors": [
+        { "answer": "It eliminates the need to know the individual masses of the objects in the system", "explanation": "You still need individual masses to sum them. The simplification is that internal forces cancel, not that masses become irrelevant." },
+        { "answer": "It allows you to ignore gravity acting on the objects within the connected system", "explanation": "Gravity is an external force and cannot be ignored. The simplification removes internal forces like tension, not external forces." },
+        { "answer": "It means only one free-body diagram is needed and no further analysis is ever required", "explanation": "A system diagram finds acceleration, but individual free-body diagrams are still needed to find internal forces like tension." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "In a frictionless table-and-pulley system, the tension in the string equals the weight of the hanging mass.",
+      "correct": "False",
+      "correctExplanation": "If the system accelerates, the hanging mass has a net downward force, meaning mg − T = ma. Therefore T = m(g − a), which is less than mg.",
+      "distractors": [
+        { "answer": "True", "explanation": "This would only be true if the system were in equilibrium with zero acceleration. When the system accelerates, tension is less than the hanging weight." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the Atwood machine formula.",
+      "sentence": "For an Atwood machine with masses m₁ and m₂ where m₁ > m₂, the acceleration is a = (m₁ − m₂) × {{blank:1}} divided by (m₁ {{blank:2}} m₂).",
+      "blanks": {
+        "1": {
+          "correct": "g",
+          "correctExplanation": "The net force is the difference in weights: (m₁ − m₂)g. Gravitational acceleration g converts the mass difference into a force difference.",
+          "distractors": [
+            { "answer": "a", "explanation": "Using a in the numerator would create a circular equation. The gravitational field strength g is needed to convert mass difference into force." },
+            { "answer": "T", "explanation": "Tension is an internal force that cancels when treating the system as a whole. The driving force comes from the weight difference, involving g." }
+          ]
+        },
+        "2": {
+          "correct": "+",
+          "correctExplanation": "The total mass of the system is m₁ + m₂ because both masses must be accelerated. The denominator sums the masses.",
+          "distractors": [
+            { "answer": "−", "explanation": "The mass difference appears in the numerator for the net force. The denominator requires the total mass, which is a sum." },
+            { "answer": "×", "explanation": "Multiplying the masses has no physical meaning in this context. The total system mass is the sum m₁ + m₂." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about tension in a table-and-pulley system.",
+      "sentence": "To find the tension in the string, isolate the block on the table and note that the only horizontal force is {{blank:1}}, so T equals the block's mass multiplied by the system {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "tension",
+          "correctExplanation": "On a frictionless table, the only horizontal force on the block is the tension in the string pulling it toward the pulley.",
+          "distractors": [
+            { "answer": "gravity", "explanation": "Gravity acts vertically on the table block and is balanced by the normal force. It does not act horizontally." },
+            { "answer": "friction", "explanation": "On a frictionless surface, there is no friction force. The only horizontal force on the block is the string tension." }
+          ]
+        },
+        "2": {
+          "correct": "acceleration",
+          "correctExplanation": "Applying Newton's second law to the table block: T = m_block × a, where a is the system acceleration found from the whole-system analysis.",
+          "distractors": [
+            { "answer": "velocity", "explanation": "Force equals mass times acceleration, not mass times velocity. Tension is found using F = ma." },
+            { "answer": "weight", "explanation": "Weight is mg and acts vertically. The horizontal tension is found using mass times the horizontal acceleration." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about connected blocks in a line.",
+      "sentence": "In a chain of connected blocks, the tension in each string decreases from {{blank:1}} to back because each successive string accelerates {{blank:2}} mass.",
+      "blanks": {
+        "1": {
+          "correct": "front",
+          "correctExplanation": "The front string must accelerate all blocks behind it, producing the highest tension. Each subsequent string accelerates fewer blocks, so tension decreases toward the back.",
+          "distractors": [
+            { "answer": "back", "explanation": "Tension is highest at the front where the pulling force is applied. It decreases toward the back, not the other way around." },
+            { "answer": "middle", "explanation": "Tension is highest at the front, not the middle. It decreases progressively from the pulling end to the trailing end." }
+          ]
+        },
+        "2": {
+          "correct": "less",
+          "correctExplanation": "Each string further from the applied force has fewer trailing blocks to accelerate, so it requires less tension.",
+          "distractors": [
+            { "answer": "more", "explanation": "Strings closer to the back accelerate fewer blocks, not more. Less mass to pull means less tension is required." },
+            { "answer": "equal", "explanation": "Each string accelerates a different number of trailing blocks. The mass accelerated decreases along the chain." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "mc",
+      "question": "A 12 kg block on a frictionless table is connected over a pulley to a 3 kg hanging mass. What is the tension in the string?",
+      "correct": "T = (12)(1.96) = 23.5 N",
+      "correctExplanation": "System acceleration: a = (3)(9.8)/(12 + 3) = 29.4/15 = 1.96 m/s². Isolating the 12 kg block: T = (12)(1.96) = 23.5 N.",
+      "distractors": [
+        { "answer": "T = (3)(9.8) = 29.4 N", "explanation": "This is the weight of the hanging mass. Since the system accelerates, tension is less than the hanging weight: T = mg − ma." },
+        { "answer": "T = (3)(1.96) = 5.88 N", "explanation": "This applies F = ma to the hanging mass but gives ma, not the tension. For the hanging mass: T = m(g − a) = 3(9.8 − 1.96) = 23.5 N." },
+        { "answer": "T = (15)(1.96) = 29.4 N", "explanation": "This uses the total system mass, giving the net external force. Tension is found by isolating one object, not using the full system." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A 8 kg mass and a 2 kg mass are connected by a string over a frictionless pulley in an Atwood machine. What is the tension in the string?",
+      "correct": "T = 31.4 N",
+      "correctExplanation": "First, a = (8 − 2)(9.8)/(8 + 2) = 5.88 m/s². Isolating the 2 kg mass: T − 2(9.8) = 2(5.88), so T = 19.6 + 11.76 = 31.4 N.",
+      "distractors": [
+        { "answer": "T = 78.4 N", "explanation": "This equals the weight of the 8 kg mass. Tension is less than the heavier weight because the heavier mass accelerates downward." },
+        { "answer": "T = 19.6 N", "explanation": "This equals the weight of the 2 kg mass. Tension must exceed this weight since the 2 kg mass accelerates upward." },
+        { "answer": "T = 49.0 N", "explanation": "This is the average of the two weights. Tension is not simply the average; it depends on the system acceleration and individual masses." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A 5 kg block on a surface with friction coefficient μ = 0.3 is connected by a string over a pulley to a 7 kg hanging mass. What is the system acceleration?",
+      "correct": "a = [68.6 − 14.7]/12 = 53.9/12 = 4.49 m/s²",
+      "correctExplanation": "Net force = hanging weight − friction = (7)(9.8) − (0.3)(5)(9.8) = 68.6 − 14.7 = 53.9 N. Total mass = 12 kg. So a = 53.9/12 = 4.49 m/s².",
+      "distractors": [
+        { "answer": "a = (7)(9.8)/(7 + 5) = 68.6/12 = 5.72 m/s²", "explanation": "This ignores friction on the table block. The friction force opposes the motion and must be subtracted from the driving force." },
+        { "answer": "a = [68.6 − 14.7]/7 = 53.9/7 = 7.70 m/s²", "explanation": "This divides by only the hanging mass instead of the total system mass of 12 kg." },
+        { "answer": "a = [19.6 − 14.7]/12 = 4.9/12 = 0.41 m/s²", "explanation": "This incorrectly uses a mass difference in the driving force. Only the hanging mass provides the gravitational driving force." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Four 3 kg blocks are connected in a line on a frictionless surface. A force of 48 N pulls the front block. What is the tension in the string between the first and second blocks?",
+      "correct": "T = (9)(4.0) = 36 N",
+      "correctExplanation": "System acceleration: a = 48/(4 × 3) = 4.0 m/s². The string between blocks 1 and 2 must accelerate blocks 2, 3, and 4 (total 9 kg): T = (9)(4.0) = 36 N.",
+      "distractors": [
+        { "answer": "T = (3)(4.0) = 12 N", "explanation": "This only accounts for one block behind the string. The string between blocks 1 and 2 must pull all three remaining blocks (9 kg)." },
+        { "answer": "T = 48 N for all strings", "explanation": "Tension decreases along the chain. Only the applied force equals 48 N; internal tensions are less." },
+        { "answer": "T = (6)(4.0) = 24 N", "explanation": "This accounts for only two blocks. The string between blocks 1 and 2 must accelerate the three blocks behind it (9 kg total)." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A 15 kg block on a frictionless ramp inclined at 30° is connected by a string over a pulley at the top to a 10 kg hanging mass. What is the system acceleration?",
+      "correct": "a = [98 − 73.5]/25 = 24.5/25 = 0.98 m/s²",
+      "correctExplanation": "Hanging weight = 98 N. Component of ramp block's weight along the incline = (15)(9.8)(sin 30°) = 73.5 N. Net force = 98 − 73.5 = 24.5 N. a = 24.5/25 = 0.98 m/s².",
+      "distractors": [
+        { "answer": "a = (10)(9.8)/(10 + 15) = 98/25 = 3.92 m/s²", "explanation": "This ignores the gravitational component pulling the ramp block down the incline. That component opposes or assists motion depending on direction." },
+        { "answer": "a = [(10 − 15)(9.8)]/(10 + 15) = −1.96 m/s²", "explanation": "This uses the full weight of the ramp block rather than the component along the incline. Only the sin 30° component acts along the ramp." },
+        { "answer": "a = [98 − 127.3]/25 = −29.3/25 = −1.17 m/s²", "explanation": "This uses cos 30° instead of sin 30° for the ramp component. The component along the incline uses sin of the angle, not cosine." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Two blocks of mass 6 kg and 4 kg are stacked on a frictionless surface. A horizontal force of 30 N pushes the bottom 6 kg block. What is the contact force between the blocks if they move together?",
+      "correct": "F_contact = (4)(3.0) = 12.0 N",
+      "correctExplanation": "System acceleration: a = 30/(6 + 4) = 3.0 m/s². Isolating the top 4 kg block, the only horizontal force on it is the contact force: F = (4)(3.0) = 12 N.",
+      "distractors": [
+        { "answer": "F_contact = 30.0 N exactly", "explanation": "The applied force acts on the bottom block. The contact force between the blocks is less because it only accelerates the top block." },
+        { "answer": "F_contact = (6)(3.0) = 18.0 N", "explanation": "This uses the bottom block's mass. The contact force accelerates only the top block, so use the top block's mass." },
+        { "answer": "F_contact = (4)(9.8) = 39.2 N", "explanation": "This is the weight of the top block, which is a vertical force. The horizontal contact force depends on mass and horizontal acceleration." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A 20 kg block on a table with friction (μ = 0.25) is connected by a string over a pulley to a 5 kg hanging mass. Determine whether the system accelerates.",
+      "correct": "Driving force (49.0 N) equals friction (49.0 N), so the system sits at the boundary of motion",
+      "correctExplanation": "Hanging weight = (5)(9.8) = 49.0 N. Maximum friction = (0.25)(20)(9.8) = 49.0 N. The driving force equals friction exactly, placing the system at the threshold of motion.",
+      "distractors": [
+        { "answer": "The system accelerates at 3.92 m/s² because friction on the table block can be safely ignored", "explanation": "Friction must be considered. The friction force nearly equals the driving force, resulting in little or no acceleration." },
+        { "answer": "The system cannot accelerate because the friction force will always be larger than the weight", "explanation": "Friction does not always exceed the driving force. Here they are nearly equal, and with any additional force the system would move." },
+        { "answer": "The system accelerates at 9.8 m/s² because the 5 kg hanging mass is effectively in free fall", "explanation": "The hanging mass is not in free fall; it is connected to the table block. The string tension and friction limit the acceleration." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the calculation for tension in an Atwood machine.",
+      "sentence": "For masses 6 kg and 4 kg on an Atwood machine, tension T = 2(m₁)(m₂)(g)/(m₁ + m₂) = 2(6)(4)(9.8)/(6 + 4) = {{blank:1}} N, which lies between the two {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "47.0",
+          "correctExplanation": "T = 2(6)(4)(9.8)/10 = 470.4/10 = 47.0 N. This general formula applies to any Atwood machine with a frictionless, massless pulley.",
+          "distractors": [
+            { "answer": "58.8", "explanation": "This is the weight of the 6 kg mass (6 × 9.8). Tension must be less than the heavier weight and greater than the lighter weight." },
+            { "answer": "39.2", "explanation": "This is the weight of the 4 kg mass (4 × 9.8). Tension must be greater than the lighter weight in an Atwood machine." }
+          ]
+        },
+        "2": {
+          "correct": "weights",
+          "correctExplanation": "In an Atwood machine, the tension always lies between the weight of the lighter mass and the weight of the heavier mass.",
+          "distractors": [
+            { "answer": "masses", "explanation": "Tension is a force measured in newtons. It lies between the two weights (forces), not between the two mass values." },
+            { "answer": "accelerations", "explanation": "Both objects share the same acceleration. Tension lies between the two gravitational forces (weights), not between accelerations." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about a block-and-pulley system with friction.",
+      "sentence": "When friction is present on the table surface, the net force driving the system equals the hanging weight {{blank:1}} the friction force, and the acceleration is {{blank:2}} than the frictionless case.",
+      "blanks": {
+        "1": {
+          "correct": "minus",
+          "correctExplanation": "Friction opposes the motion of the table block, so it must be subtracted from the hanging weight to find the net driving force.",
+          "distractors": [
+            { "answer": "plus", "explanation": "Friction opposes motion and reduces the net force. Adding friction would incorrectly increase the driving force." },
+            { "answer": "divided by", "explanation": "Friction is subtracted from the driving force, not used as a divisor. Forces combine by addition and subtraction." }
+          ]
+        },
+        "2": {
+          "correct": "less",
+          "correctExplanation": "Friction reduces the net force while the total mass stays the same, producing a smaller acceleration than the frictionless case.",
+          "distractors": [
+            { "answer": "greater", "explanation": "Friction always opposes motion and reduces the net force, resulting in less acceleration, not more." },
+            { "answer": "the same as", "explanation": "Friction reduces the net force, so the acceleration must be smaller than in the absence of friction." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the calculation for a connected system on a ramp.",
+      "sentence": "For a block on a 30° frictionless ramp connected to a hanging mass, the gravitational component along the ramp is mg {{blank:1}}, which acts as a force {{blank:2}} the direction of the hanging mass's pull.",
+      "blanks": {
+        "1": {
+          "correct": "sin 30°",
+          "correctExplanation": "The component of gravitational force parallel to an incline is mg sin θ, where θ is the angle of the ramp from the horizontal.",
+          "distractors": [
+            { "answer": "cos 30°", "explanation": "The cos θ component acts perpendicular to the ramp surface (normal direction), not along it. The parallel component uses sin θ." },
+            { "answer": "tan 30°", "explanation": "The tangent function does not appear in the decomposition of weight on a ramp. The parallel component is mg sin θ." }
+          ]
+        },
+        "2": {
+          "correct": "opposing",
+          "correctExplanation": "If the hanging mass pulls the ramp block up the incline, the ramp block's weight component acts down the incline, opposing the motion.",
+          "distractors": [
+            { "answer": "assisting", "explanation": "The ramp block's weight component acts down the slope. If the hanging mass pulls the block upward along the ramp, this component opposes the pull." },
+            { "answer": "perpendicular to", "explanation": "The weight component along the ramp is parallel to the motion direction, either assisting or opposing, not perpendicular." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "mc",
+      "question": "A student claims that in any Atwood machine, making the two masses closer in value will increase the tension in the string. Evaluate this claim.",
+      "correct": "Incorrect; as masses become equal, tension approaches mg and acceleration goes to zero",
+      "correctExplanation": "When m₁ ≈ m₂, a ≈ 0 and T ≈ mg. When the masses are very different, T is closer to 2m_small × g. The maximum tension occurs when the masses are equal (T = mg), not when they differ.",
+      "distractors": [
+        { "answer": "Correct; closer masses produce more tension since each side pulls harder on the string", "explanation": "Closer masses reduce the acceleration but do not make each side pull harder. Tension approaches the common weight, which may be less than in unequal-mass cases." },
+        { "answer": "Incorrect; tension always equals exactly half the total weight regardless of the mass ratio", "explanation": "T = 2m₁m₂g/(m₁ + m₂), which equals half the total weight only when the masses are equal. It varies with the mass ratio." },
+        { "answer": "Correct; when masses are equal and acceleration is zero, the string tension becomes infinite", "explanation": "Zero acceleration means T = mg for each mass, which is finite. The tension does not become infinite when acceleration is zero." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A 10 kg block on a frictionless table is connected to a 4.5 kg hanging mass. A student calculates the tension as 44.1 N. Identify and explain the student's error.",
+      "correct": "The student assumed the hanging mass is in equilibrium, setting T equal to weight mg",
+      "correctExplanation": "T = 44.1 N is the full weight of the 4.5 kg mass. Since the mass accelerates downward, mg − T = ma, so T < mg. The correct tension is 30.4 N.",
+      "distractors": [
+        { "answer": "The student forgot to include the string mass when they calculated the total system mass", "explanation": "In an ideal system the string is massless. The error is using T = mg instead of accounting for the acceleration of the hanging mass." },
+        { "answer": "The student used an incorrect value of g, which produced an incorrect tension result", "explanation": "The value g = 9.8 m/s² is correct. The error is conceptual: assuming the hanging mass is in equilibrium when it is actually accelerating." },
+        { "answer": "The student used the hanging mass weight when instead the table block weight applies", "explanation": "The table block's weight is balanced by the normal force and is irrelevant to tension. The error is not accounting for the hanging mass's acceleration." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Compare the accelerations of two systems: System A has a 10 kg table block and 5 kg hanger on a frictionless surface. System B has a 20 kg table block and 10 kg hanger on a frictionless surface. Which system has greater acceleration?",
+      "correct": "Both systems share the same acceleration of 3.27 m/s² because the mass ratios are identical",
+      "correctExplanation": "System A: a = (5)(9.8)/15 = 3.27 m/s². System B: a = (10)(9.8)/30 = 3.27 m/s². The ratio of hanging mass to total mass is the same (1/3), so the accelerations are equal.",
+      "distractors": [
+        { "answer": "System B has greater acceleration because it has a heavier hanging mass that provides more force", "explanation": "Although System B has more driving force, it also has more total mass. The acceleration depends on the ratio of hanging mass to total mass, which is equal." },
+        { "answer": "System A has greater acceleration because it has less total mass that needs to be accelerated", "explanation": "System A has less total mass but also less driving force. The mass ratio is identical, so both accelerations are equal." },
+        { "answer": "System B has half the acceleration because doubling all masses always halves the acceleration", "explanation": "Doubling all masses doubles both the force and the total mass, leaving the acceleration unchanged. The ratio determines acceleration." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "In a modified Atwood machine, a 3 kg mass on a frictionless table is connected to a 2 kg hanging mass. A student pulls the 3 kg mass away from the pulley with a horizontal force of 10 N. Determine the system's motion.",
+      "correct": "F_net = 19.6 − 10 = 9.6 N toward the pulley, giving a = 9.6/5 = 1.92 m/s²",
+      "correctExplanation": "Hanging weight = (2)(9.8) = 19.6 N toward the pulley. The 10 N pull opposes this. Net force = 19.6 − 10 = 9.6 N. Total mass = 5 kg. a = 1.92 m/s² toward the pulley.",
+      "distractors": [
+        { "answer": "F_net = 19.6 + 10 = 29.6 N toward the pulley, giving a = 29.6/5 = 5.92 m/s²", "explanation": "The 10 N force opposes the hanging weight, so it must be subtracted, not added. The forces act in opposite directions." },
+        { "answer": "F_net = 10 − 19.6 = −9.6 N away from the pulley, giving a = 9.6/3 = 3.20 m/s²", "explanation": "The hanging weight (19.6 N) exceeds the applied force (10 N), so the system moves toward the pulley. Also, total system mass is 5 kg, not 3 kg." },
+        { "answer": "The system is in equilibrium because the applied 10 N force balances the hanging weight", "explanation": "The 10 N applied force does not equal the 19.6 N hanging weight. The system accelerates toward the pulley with the net unbalanced force." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A train has a locomotive (mass M) pulling three identical carriages (each mass m) with a driving force F. Derive an expression for the tension in the coupling between the second and third carriages.",
+      "correct": "T₂₃ = mF/(M + 3m)",
+      "correctExplanation": "System acceleration: a = F/(M + 3m). The coupling between carriages 2 and 3 only pulls the third carriage: T₂₃ = ma = mF/(M + 3m).",
+      "distractors": [
+        { "answer": "T₂₃ = 2mF/(M + 3m)", "explanation": "This would be the tension between carriages 1 and 2, which must pull both carriages 2 and 3 (total mass 2m)." },
+        { "answer": "T₂₃ = 3mF/(M + 3m)", "explanation": "This would be the tension in the coupling between the locomotive and the first carriage, which pulls all three carriages." },
+        { "answer": "T₂₃ = F/3 exactly", "explanation": "This assumes tension is simply divided equally among couplings. Tension depends on how many carriages each coupling must accelerate." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Analyse how adding mass to the hanging side of a table-and-pulley system affects both the acceleration and the tension. As the hanging mass increases without limit, what values do a and T approach?",
+      "correct": "Acceleration approaches g and tension approaches Mg, where M is the table block mass",
+      "correctExplanation": "As hanging mass m → ∞: a = mg/(M + m) → g, and T = Ma = Mg/(1 + M/m) → Mg. The table block approaches free-fall-like acceleration limited by its own inertia.",
+      "distractors": [
+        { "answer": "Acceleration approaches g and tension approaches infinity as the hanging mass increases", "explanation": "Tension equals Ma, which approaches Mg as a approaches g. It does not grow without bound." },
+        { "answer": "Both acceleration and tension approach zero as the heavy hanging mass overwhelms the system", "explanation": "A larger hanging mass increases the driving force. Acceleration approaches g and tension approaches Mg, not zero." },
+        { "answer": "Acceleration approaches g and tension approaches zero because the string becomes slack", "explanation": "The string does not become slack. As acceleration approaches g, tension approaches Mg, the force needed to give the table block that acceleration." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Two blocks (8 kg and 5 kg) are stacked on a frictionless surface with static friction μₛ = 0.4 between them. What is the maximum horizontal force that can be applied to the bottom 8 kg block before the top block slides?",
+      "correct": "F_max = (13)(3.92) = 51.0 N, from maximum shared acceleration a = μₛg times total mass",
+      "correctExplanation": "Maximum friction on the 5 kg block = μₛmg = (0.4)(5)(9.8) = 19.6 N. Maximum acceleration before sliding: a_max = 19.6/5 = 3.92 m/s². Applied force: F = (8 + 5)(3.92) = 51.0 N.",
+      "distractors": [
+        { "answer": "F_max = μₛ(8)(9.8) = 31.4 N, using friction calculated from only the bottom block weight", "explanation": "The friction that holds the top block depends on the top block's weight, not the bottom block's. The normal force between blocks equals the top block's weight." },
+        { "answer": "F_max = μₛ(5)(9.8) = 19.6 N, equating the applied force directly to the friction limit", "explanation": "19.6 N is the maximum friction, but the question asks for the applied force on the bottom block. The applied force must accelerate the entire 13 kg system." },
+        { "answer": "F_max = μₛ(13)(9.8) = 51.0 N, using total weight in the friction formula which coincides", "explanation": "While numerically similar, the correct reasoning uses the top block's friction limit to find maximum acceleration, then multiplies by total mass. Using total weight in friction is incorrect." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A double Atwood machine has mass m₁ on one side and a second pulley on the other side carrying m₂ and m₃. Explain why the simple formula a = (m₁ − m₂ − m₃)g/(m₁ + m₂ + m₃) is incorrect for this system.",
+      "correct": "m₂ and m₃ accelerate relative to the second pulley independently, so they cannot be lumped into one combined mass",
+      "correctExplanation": "In a double Atwood machine, the second pulley introduces a separate constraint. The masses m₂ and m₃ accelerate differently from m₁, requiring separate equations for each sub-system.",
+      "distractors": [
+        { "answer": "The mass of the second pulley must be included in the total system mass for the formula to give a correct result", "explanation": "Even with a massless pulley, the formula fails. The issue is the independent motion of m₂ and m₃ relative to their pulley, not pulley mass." },
+        { "answer": "The tension in the second string is exactly double the first string tension, which the simple formula ignores", "explanation": "The relationship between tensions depends on the pulley configuration, not a simple doubling. The key issue is the separate constraint equation." },
+        { "answer": "The formula is actually correct provided that all pulleys are frictionless and all connecting strings are massless", "explanation": "Even with ideal components, the formula is incorrect. The second pulley creates a separate constraint that requires additional equations to solve." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the analysis of limiting behaviour in a table-and-pulley system.",
+      "sentence": "As the hanging mass m becomes very large compared to the table mass M, the system acceleration approaches {{blank:1}} and the tension in the string approaches {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "g",
+          "correctExplanation": "a = mg/(M + m). As m → ∞, the M in the denominator becomes negligible, so a → mg/m = g.",
+          "distractors": [
+            { "answer": "zero", "explanation": "A larger hanging mass increases the driving force relative to total mass. Acceleration increases toward g, not zero." },
+            { "answer": "2g", "explanation": "The maximum possible acceleration is g, achieved when the table mass is negligible. It cannot exceed g in this configuration." }
+          ]
+        },
+        "2": {
+          "correct": "Mg",
+          "correctExplanation": "T = Ma = Mmg/(M + m). As m → ∞, this approaches Mg. The tension is limited by the force needed to accelerate the table block at nearly g.",
+          "distractors": [
+            { "answer": "mg", "explanation": "Tension approaches Mg, not mg. As a → g, the table block requires a force of Mg to accelerate, which the string provides." },
+            { "answer": "infinity", "explanation": "Tension is bounded by Mg because the table block has fixed mass M. Even with an infinitely heavy hanger, the string only needs Mg to accelerate the table block at g." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about why acceleration in a connected system depends on mass ratio.",
+      "sentence": "The acceleration a = mg/(M + m) can be rewritten as a = g/(1 + M/m), showing that acceleration depends only on the {{blank:1}} of the table mass to the hanging mass, not on their {{blank:2}} values.",
+      "blanks": {
+        "1": {
+          "correct": "ratio",
+          "correctExplanation": "Dividing numerator and denominator by m gives g/(1 + M/m), which depends solely on the ratio M/m, not the individual magnitudes.",
+          "distractors": [
+            { "answer": "difference", "explanation": "The acceleration formula involves a ratio M/m, not a difference. Doubling both masses leaves the acceleration unchanged." },
+            { "answer": "sum", "explanation": "While the sum appears in the original denominator, the rewritten form shows that the ratio M/m is the determining factor." }
+          ]
+        },
+        "2": {
+          "correct": "individual",
+          "correctExplanation": "Systems with the same mass ratio (e.g., 10 kg and 5 kg versus 20 kg and 10 kg) have the same acceleration, regardless of the individual mass values.",
+          "distractors": [
+            { "answer": "combined", "explanation": "The combined mass matters in the original form, but the key insight is that only the ratio determines acceleration, not individual values." },
+            { "answer": "average", "explanation": "The average mass does not appear in the formula. The acceleration depends on the ratio of the two masses." }
+          ]
+        }
+      }
+    }
+  ]
+}

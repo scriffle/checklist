@@ -1,0 +1,583 @@
+{
+  "_link": {
+    "uuid": "lp-ffd84032-0660-36cb-5bf6-d75cd85a6414",
+    "version": 1,
+    "contentHash": "hash-5832770b",
+    "title": "I can solve projectile problems for objects launched at an angle from ground level",
+    "generatedAt": "2026-02-06T09:35:00Z"
+  },
+  "toLevel2": [
+    {
+      "type": "mc",
+      "question": "What formula gives the horizontal component of the initial velocity for an angled projectile launch?",
+      "correct": "vx = v cos \u03b8",
+      "correctExplanation": "The horizontal component is found by multiplying the launch speed by the cosine of the launch angle.",
+      "distractors": [
+        { "answer": "vx = v sin \u03b8", "explanation": "Sine gives the vertical component, not the horizontal component." },
+        { "answer": "vx = v tan \u03b8", "explanation": "Tangent is the ratio of vertical to horizontal components, not a component itself." },
+        { "answer": "vx = v / cos \u03b8", "explanation": "Dividing by cosine does not resolve the velocity into a horizontal component." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What formula gives the vertical component of the initial velocity for an angled projectile launch?",
+      "correct": "vy = v sin \u03b8",
+      "correctExplanation": "The vertical component is found by multiplying the launch speed by the sine of the launch angle.",
+      "distractors": [
+        { "answer": "vy = v cos \u03b8", "explanation": "Cosine gives the horizontal component, not the vertical component." },
+        { "answer": "vy = v tan \u03b8", "explanation": "Tangent is not used to resolve the vertical component of velocity." },
+        { "answer": "vy = v / sin \u03b8", "explanation": "Dividing by sine does not resolve the velocity into a vertical component." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What is the formula for the time of flight of a projectile launched at angle \u03b8 from ground level?",
+      "correct": "T = 2v sin \u03b8 / g",
+      "correctExplanation": "The time of flight equals twice the initial vertical component divided by gravitational acceleration.",
+      "distractors": [
+        { "answer": "T = 2v cos \u03b8 / g", "explanation": "This incorrectly uses the horizontal component; time of flight depends on the vertical component." },
+        { "answer": "T = v sin \u03b8 / g", "explanation": "This gives the time to reach maximum height, not the total time of flight." },
+        { "answer": "T = v\u00b2 sin \u03b8 / g", "explanation": "This formula has incorrect dimensions and does not give the time of flight." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which formula gives the maximum height of a projectile launched at angle \u03b8 from ground level?",
+      "correct": "H = (v sin \u03b8)\u00b2 / (2g)",
+      "correctExplanation": "Maximum height is found using the vertical component squared divided by twice the gravitational acceleration.",
+      "distractors": [
+        { "answer": "H = (v cos \u03b8)\u00b2 / (2g)", "explanation": "This incorrectly uses the horizontal component; maximum height depends on the vertical component." },
+        { "answer": "H = v\u00b2 / (2g sin \u03b8)", "explanation": "This places sin \u03b8 in the denominator incorrectly instead of squaring v sin \u03b8 in the numerator." },
+        { "answer": "H = 2v sin \u03b8 / g", "explanation": "This is the formula for time of flight, not maximum height." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which formula gives the range of a projectile launched at angle \u03b8 from ground level?",
+      "correct": "R = v\u00b2 sin(2\u03b8) / g",
+      "correctExplanation": "The range uses the initial speed squared multiplied by sin of twice the angle, divided by g.",
+      "distractors": [
+        { "answer": "R = v\u00b2 sin(\u03b8) / g", "explanation": "This uses sin \u03b8 instead of sin 2\u03b8, which would give an incorrect range." },
+        { "answer": "R = v\u00b2 cos(2\u03b8) / g", "explanation": "This uses cos 2\u03b8 instead of sin 2\u03b8, giving the wrong trigonometric function." },
+        { "answer": "R = 2v\u00b2 sin(\u03b8) / g", "explanation": "This formula is not equivalent to the correct range expression using sin 2\u03b8." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "For an angled projectile launched from ground level, the time of flight depends on the vertical component of the initial velocity.",
+      "correct": "True",
+      "correctExplanation": "The time of flight T = 2v sin \u03b8 / g depends only on the vertical component v sin \u03b8 and gravity.",
+      "distractors": [
+        { "answer": "False", "explanation": "Students may think the horizontal component affects flight time, but horizontal motion does not influence how long the projectile stays in the air." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "The horizontal component of velocity changes throughout the flight of an angled projectile (ignoring air resistance).",
+      "correct": "False",
+      "correctExplanation": "With no air resistance, there is no horizontal force, so the horizontal component of velocity remains constant throughout the flight.",
+      "distractors": [
+        { "answer": "True", "explanation": "Students may think gravity affects horizontal motion, but gravity acts only vertically, leaving horizontal velocity unchanged." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the statement about resolving velocity for an angled projectile.",
+      "sentence": "For a projectile launched at speed v at angle \u03b8, the horizontal component is v {{blank:1}} \u03b8 and the vertical component is v {{blank:2}} \u03b8.",
+      "blanks": {
+        "1": {
+          "correct": "cos",
+          "correctExplanation": "The horizontal component uses cosine because it is adjacent to the angle in the velocity triangle.",
+          "distractors": [
+            { "answer": "sin", "explanation": "Sine gives the vertical component, not the horizontal component." },
+            { "answer": "tan", "explanation": "Tangent is the ratio of opposite to adjacent, not used for resolving components." }
+          ]
+        },
+        "2": {
+          "correct": "sin",
+          "correctExplanation": "The vertical component uses sine because it is opposite to the angle in the velocity triangle.",
+          "distractors": [
+            { "answer": "cos", "explanation": "Cosine gives the horizontal component, not the vertical component." },
+            { "answer": "tan", "explanation": "Tangent is the ratio of components, not used for resolving individual components." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the statement about projectile flight time.",
+      "sentence": "The time of flight for a ground-level launch is T = 2v sin \u03b8 / {{blank:1}}, which equals twice the time to reach {{blank:2}} height.",
+      "blanks": {
+        "1": {
+          "correct": "g",
+          "correctExplanation": "Gravitational acceleration g = 9.8 m/s\u00b2 is the denominator in the time of flight formula.",
+          "distractors": [
+            { "answer": "v", "explanation": "The initial speed v appears in the numerator, not the denominator." },
+            { "answer": "2g", "explanation": "The denominator is g, not 2g; the factor of 2 is in the numerator." }
+          ]
+        },
+        "2": {
+          "correct": "maximum",
+          "correctExplanation": "The projectile takes half the total flight time to reach its maximum height, so the full flight is twice that.",
+          "distractors": [
+            { "answer": "minimum", "explanation": "The minimum height is at the ground; the time to reach maximum height is the relevant half-time." },
+            { "answer": "average", "explanation": "The total flight time is twice the time to reach the peak, not twice the time to reach average height." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the statement about maximum height.",
+      "sentence": "At maximum height, the {{blank:1}} component of velocity is zero, while the {{blank:2}} component remains unchanged.",
+      "blanks": {
+        "1": {
+          "correct": "vertical",
+          "correctExplanation": "At the peak, the vertical velocity has been reduced to zero by gravity before reversing direction.",
+          "distractors": [
+            { "answer": "horizontal", "explanation": "The horizontal component stays constant throughout the flight; it is the vertical that reaches zero." },
+            { "answer": "resultant", "explanation": "The resultant velocity is not zero at the peak because the horizontal component persists." }
+          ]
+        },
+        "2": {
+          "correct": "horizontal",
+          "correctExplanation": "With no air resistance, there is no horizontal force, so the horizontal velocity stays constant.",
+          "distractors": [
+            { "answer": "vertical", "explanation": "The vertical component is zero at maximum height, not unchanged." },
+            { "answer": "resultant", "explanation": "The resultant velocity changes because the vertical component changes; only the horizontal remains constant." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "mc",
+      "question": "Why does increasing the launch angle beyond 45\u00b0 decrease the range of a ground-level projectile?",
+      "correct": "The horizontal velocity component decreases more than the flight time increases",
+      "correctExplanation": "Above 45\u00b0, the gain in flight time from a larger vertical component does not compensate for the reduced horizontal velocity.",
+      "distractors": [
+        { "answer": "Gravity becomes stronger at steeper angles of projection", "explanation": "Gravitational acceleration is constant regardless of launch angle." },
+        { "answer": "The projectile always reaches the same maximum height above 45\u00b0", "explanation": "Maximum height continues to increase above 45\u00b0; it is the range that decreases." },
+        { "answer": "Air resistance increases significantly at higher launch angles", "explanation": "This analysis ignores air resistance; the effect is purely due to component resolution." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Why is 45\u00b0 the launch angle that produces the maximum range for a ground-level projectile?",
+      "correct": "Because sin(2\u03b8) reaches its maximum value of 1 when \u03b8 = 45\u00b0",
+      "correctExplanation": "Since R = v\u00b2 sin(2\u03b8)/g, the range is maximised when sin(2\u03b8) = sin(90\u00b0) = 1, which occurs at \u03b8 = 45\u00b0.",
+      "distractors": [
+        { "answer": "Because the vertical and horizontal forces are equal at 45\u00b0", "explanation": "Forces do not change with launch angle; only the velocity components are equal at 45\u00b0." },
+        { "answer": "Because air resistance is minimised at a 45\u00b0 launch angle", "explanation": "This analysis ignores air resistance; the maximum range at 45\u00b0 is a geometric result." },
+        { "answer": "Because gravity has no effect on the projectile at 45\u00b0", "explanation": "Gravity acts equally on the projectile regardless of the launch angle." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Why does the horizontal velocity remain constant throughout an angled projectile's flight (ignoring air resistance)?",
+      "correct": "Because no horizontal force acts on the projectile after launch",
+      "correctExplanation": "With no air resistance, gravity is the only force and it acts vertically, so horizontal velocity is unchanged.",
+      "distractors": [
+        { "answer": "Because the initial kinetic energy is conserved horizontally", "explanation": "Energy conservation is valid but does not directly explain constant horizontal velocity; the absence of force does." },
+        { "answer": "Because the horizontal and vertical motions cancel out", "explanation": "The two components are independent; they do not cancel each other." },
+        { "answer": "Because the projectile accelerates equally in all directions", "explanation": "Acceleration due to gravity acts only downward, not in all directions." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A ball launched at 30\u00b0 and another at 60\u00b0 with the same speed will have the same range. Why?",
+      "correct": "Because sin(2 \u00d7 30\u00b0) = sin(2 \u00d7 60\u00b0) = sin 60\u00b0 = sin 120\u00b0",
+      "correctExplanation": "Complementary angles produce the same value of sin(2\u03b8), so the range formula gives the same result.",
+      "distractors": [
+        { "answer": "Because both projectiles reach the same maximum height", "explanation": "Complementary angles give different heights; the 60\u00b0 launch reaches a greater height." },
+        { "answer": "Because both projectiles have the same time of flight", "explanation": "The 60\u00b0 launch has a longer flight time; the ranges match due to sin(2\u03b8) symmetry." },
+        { "answer": "Because gravity affects both projectiles in the same way", "explanation": "While gravity is the same, the equal range is specifically due to the sin(2\u03b8) relationship." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What does the trajectory of an angled projectile look like, and why?",
+      "correct": "A parabola, because constant horizontal velocity combines with accelerating vertical motion",
+      "correctExplanation": "The combination of uniform horizontal motion and uniformly accelerated vertical motion produces a parabolic path.",
+      "distractors": [
+        { "answer": "A straight line, because velocity is constant throughout the flight", "explanation": "Velocity changes direction due to gravity, so the path curves into a parabola." },
+        { "answer": "A circular arc, because gravity curves the path at a constant radius", "explanation": "Gravity produces a constant acceleration, not constant curvature, so the path is parabolic." },
+        { "answer": "An ellipse, because the projectile follows an orbital path around Earth", "explanation": "For typical projectile speeds, the path is parabolic, not elliptical." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Why is the time to reach maximum height exactly half the total time of flight for a ground-level launch?",
+      "correct": "Because the upward and downward journeys are symmetrical under constant gravity",
+      "correctExplanation": "With no air resistance and a ground-level launch, the parabolic trajectory is symmetric, so ascent time equals descent time.",
+      "distractors": [
+        { "answer": "Because the projectile decelerates on the way up and stops completely", "explanation": "The vertical velocity reaches zero at the peak but the horizontal component persists; symmetry is the key reason." },
+        { "answer": "Because gravity only acts during the first half of the flight", "explanation": "Gravity acts throughout the entire flight, not just during the ascent." },
+        { "answer": "Because the horizontal velocity doubles during the descent phase", "explanation": "Horizontal velocity remains constant throughout; symmetry explains the equal times." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "Complementary launch angles (such as 30\u00b0 and 60\u00b0) produce the same range when launched at the same speed from ground level.",
+      "correct": "True",
+      "correctExplanation": "Complementary angles satisfy sin(2\u03b8) = sin(2(90\u00b0 - \u03b8)), so R = v\u00b2 sin(2\u03b8)/g is the same for both.",
+      "distractors": [
+        { "answer": "False", "explanation": "Students may think different angles always produce different ranges, but the sin(2\u03b8) symmetry means complementary angles yield equal ranges." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Explain the symmetry of complementary angles in projectile motion.",
+      "sentence": "Angles of 25\u00b0 and {{blank:1}}\u00b0 are complementary and produce the same range because sin(2 \u00d7 25\u00b0) equals sin({{blank:2}}\u00b0).",
+      "blanks": {
+        "1": {
+          "correct": "65",
+          "correctExplanation": "The complementary angle to 25\u00b0 is 90\u00b0 - 25\u00b0 = 65\u00b0.",
+          "distractors": [
+            { "answer": "75", "explanation": "75\u00b0 is not the complement of 25\u00b0; the complement is 90\u00b0 - 25\u00b0 = 65\u00b0." },
+            { "answer": "55", "explanation": "55\u00b0 is not the complement of 25\u00b0; the complement is 90\u00b0 - 25\u00b0 = 65\u00b0." }
+          ]
+        },
+        "2": {
+          "correct": "130",
+          "correctExplanation": "sin(50\u00b0) = sin(180\u00b0 - 50\u00b0) = sin(130\u00b0), and 2 \u00d7 65\u00b0 = 130\u00b0.",
+          "distractors": [
+            { "answer": "50", "explanation": "50\u00b0 is 2 \u00d7 25\u00b0, which is the same value; the paired angle is 130\u00b0 = 2 \u00d7 65\u00b0." },
+            { "answer": "150", "explanation": "150\u00b0 would correspond to a 75\u00b0 launch, not the complement of 25\u00b0." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Explain why the projectile path is a parabola.",
+      "sentence": "The trajectory is parabolic because horizontal displacement increases {{blank:1}} with time while vertical displacement changes {{blank:2}} due to gravity.",
+      "blanks": {
+        "1": {
+          "correct": "linearly",
+          "correctExplanation": "With constant horizontal velocity, horizontal displacement is proportional to time (x = vx \u00d7 t).",
+          "distractors": [
+            { "answer": "exponentially", "explanation": "Horizontal displacement grows linearly, not exponentially, since horizontal velocity is constant." },
+            { "answer": "quadratically", "explanation": "Horizontal displacement grows linearly; it is the vertical displacement that has a quadratic component." }
+          ]
+        },
+        "2": {
+          "correct": "quadratically",
+          "correctExplanation": "Vertical displacement follows y = vy t - \u00bdgt\u00b2, which is a quadratic function of time.",
+          "distractors": [
+            { "answer": "linearly", "explanation": "Vertical displacement has a quadratic term due to gravitational acceleration, not just a linear term." },
+            { "answer": "cubically", "explanation": "The vertical displacement is quadratic in time, not cubic; constant acceleration gives a t\u00b2 dependence." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the statement about maximum range.",
+      "sentence": "The maximum range for a ground-level projectile occurs at {{blank:1}}\u00b0 because this angle maximises the product of horizontal velocity and {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "45",
+          "correctExplanation": "At 45\u00b0, sin(2\u03b8) = sin(90\u00b0) = 1, which is its maximum possible value.",
+          "distractors": [
+            { "answer": "30", "explanation": "At 30\u00b0, sin(60\u00b0) = 0.87, which is less than the maximum of 1 at 45\u00b0." },
+            { "answer": "60", "explanation": "At 60\u00b0, sin(120\u00b0) = 0.87, which is less than the maximum of 1 at 45\u00b0." }
+          ]
+        },
+        "2": {
+          "correct": "flight time",
+          "correctExplanation": "Range equals horizontal velocity multiplied by time of flight (R = vx \u00d7 T), and 45\u00b0 optimises this product.",
+          "distractors": [
+            { "answer": "maximum height", "explanation": "Range depends on the product of horizontal velocity and flight time, not maximum height directly." },
+            { "answer": "acceleration", "explanation": "Acceleration due to gravity is constant and does not change with angle; the product that is optimised involves flight time." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "mc",
+      "question": "A ball is kicked at 20 m/s at 35\u00b0 to the horizontal. What is the horizontal component of its initial velocity?",
+      "correct": "16.4 m/s",
+      "correctExplanation": "vx = 20 cos 35\u00b0 = 20 \u00d7 0.819 = 16.4 m/s.",
+      "distractors": [
+        { "answer": "11.5 m/s", "explanation": "This is the vertical component (v sin 35\u00b0), not the horizontal component." },
+        { "answer": "20.0 m/s", "explanation": "This is the total launch speed, not the resolved horizontal component." },
+        { "answer": "14.1 m/s", "explanation": "This would be v cos 45\u00b0, using the wrong angle of 45\u00b0 instead of 35\u00b0." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A projectile is launched at 30 m/s at 45\u00b0 from ground level. What is its time of flight? (g = 9.8 m/s\u00b2)",
+      "correct": "4.33 s",
+      "correctExplanation": "T = 2v sin \u03b8 / g = 2 \u00d7 30 \u00d7 sin 45\u00b0 / 9.8 = 2 \u00d7 30 \u00d7 0.707 / 9.8 = 4.33 s.",
+      "distractors": [
+        { "answer": "2.16 s", "explanation": "This is the time to reach maximum height (half the total flight time), not the full flight time." },
+        { "answer": "6.12 s", "explanation": "This would result from using the full speed instead of the vertical component in the formula." },
+        { "answer": "3.06 s", "explanation": "This would result from dividing by 2g instead of g in the time of flight formula." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A projectile is launched at 25 m/s at 60\u00b0 from ground level. What is its maximum height? (g = 9.8 m/s\u00b2)",
+      "correct": "23.9 m",
+      "correctExplanation": "H = (v sin \u03b8)\u00b2 / (2g) = (25 \u00d7 sin 60\u00b0)\u00b2 / (2 \u00d7 9.8) = (21.65)\u00b2 / 19.6 = 23.9 m.",
+      "distractors": [
+        { "answer": "31.9 m", "explanation": "This results from using v\u00b2/(2g) without resolving the vertical component, ignoring the angle." },
+        { "answer": "47.8 m", "explanation": "This results from forgetting to divide by 2 in the maximum height formula." },
+        { "answer": "7.97 m", "explanation": "This results from using (v cos \u03b8)\u00b2 / (2g), which incorrectly uses the horizontal component." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A football is kicked at 15 m/s at 30\u00b0 from ground level. What is the range of the kick? (g = 9.8 m/s\u00b2)",
+      "correct": "19.9 m",
+      "correctExplanation": "R = v\u00b2 sin(2\u03b8) / g = 15\u00b2 \u00d7 sin 60\u00b0 / 9.8 = 225 \u00d7 0.866 / 9.8 = 19.9 m.",
+      "distractors": [
+        { "answer": "11.5 m", "explanation": "This results from using sin 30\u00b0 instead of sin 60\u00b0 in the range formula." },
+        { "answer": "23.0 m", "explanation": "This results from using v\u00b2/g without the sin(2\u03b8) factor." },
+        { "answer": "39.8 m", "explanation": "This results from doubling the correct range, perhaps confusing range with twice the range." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A projectile is launched at 10 m/s at 40\u00b0. What is its vertical component of initial velocity?",
+      "correct": "6.43 m/s",
+      "correctExplanation": "vy = v sin \u03b8 = 10 \u00d7 sin 40\u00b0 = 10 \u00d7 0.643 = 6.43 m/s.",
+      "distractors": [
+        { "answer": "7.66 m/s", "explanation": "This is the horizontal component (v cos 40\u00b0), not the vertical component." },
+        { "answer": "5.00 m/s", "explanation": "This would be v sin 30\u00b0, using the wrong angle of 30\u00b0 instead of 40\u00b0." },
+        { "answer": "8.39 m/s", "explanation": "This would be v sin 57\u00b0, using an incorrect angle value." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A ball is launched at 24 m/s at 45\u00b0 from ground level. What is the range? (g = 9.8 m/s\u00b2)",
+      "correct": "58.8 m",
+      "correctExplanation": "R = v\u00b2 sin(2\u03b8) / g = 24\u00b2 \u00d7 sin 90\u00b0 / 9.8 = 576 \u00d7 1 / 9.8 = 58.8 m.",
+      "distractors": [
+        { "answer": "29.4 m", "explanation": "This results from using v\u00b2 sin \u03b8 / g instead of v\u00b2 sin(2\u03b8) / g." },
+        { "answer": "41.6 m", "explanation": "This results from using v\u00b2 sin(2\u03b8) / (2g), incorrectly adding a factor of 2 in the denominator." },
+        { "answer": "50.9 m", "explanation": "This results from using v\u00b2 sin 60\u00b0 / g, applying the wrong double angle." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A javelin is thrown at 18 m/s at 55\u00b0. What is its time of flight? (g = 9.8 m/s\u00b2)",
+      "correct": "3.01 s",
+      "correctExplanation": "T = 2v sin \u03b8 / g = 2 \u00d7 18 \u00d7 sin 55\u00b0 / 9.8 = 2 \u00d7 18 \u00d7 0.819 / 9.8 = 3.01 s.",
+      "distractors": [
+        { "answer": "1.50 s", "explanation": "This is the time to reach maximum height (half the total flight time), not the full flight time." },
+        { "answer": "3.67 s", "explanation": "This results from using the full speed (18 m/s) instead of v sin \u03b8 in the formula." },
+        { "answer": "2.11 s", "explanation": "This results from using v cos 55\u00b0 instead of v sin 55\u00b0 in the time of flight formula." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Calculate the velocity components for a projectile launched at 20 m/s at 35\u00b0.",
+      "sentence": "The horizontal component is 20 cos 35\u00b0 = {{blank:1}} m/s and the vertical component is 20 sin 35\u00b0 = {{blank:2}} m/s.",
+      "blanks": {
+        "1": {
+          "correct": "16.4",
+          "correctExplanation": "vx = 20 \u00d7 cos 35\u00b0 = 20 \u00d7 0.819 = 16.4 m/s.",
+          "distractors": [
+            { "answer": "11.5", "explanation": "11.5 m/s is v sin 35\u00b0, the vertical component, not the horizontal component." },
+            { "answer": "14.1", "explanation": "14.1 m/s would be 20 cos 45\u00b0, using the wrong angle." }
+          ]
+        },
+        "2": {
+          "correct": "11.5",
+          "correctExplanation": "vy = 20 \u00d7 sin 35\u00b0 = 20 \u00d7 0.574 = 11.5 m/s.",
+          "distractors": [
+            { "answer": "16.4", "explanation": "16.4 m/s is v cos 35\u00b0, the horizontal component, not the vertical component." },
+            { "answer": "14.1", "explanation": "14.1 m/s would be 20 sin 45\u00b0, using the wrong angle." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Calculate the time of flight and range for a ball launched at 20 m/s at 35\u00b0. (g = 9.8 m/s\u00b2)",
+      "sentence": "The time of flight is 2 \u00d7 11.5 / 9.8 = {{blank:1}} s, and the range is 16.4 \u00d7 2.34 = {{blank:2}} m.",
+      "blanks": {
+        "1": {
+          "correct": "2.34",
+          "correctExplanation": "T = 2 \u00d7 11.5 / 9.8 = 23.0 / 9.8 = 2.34 s.",
+          "distractors": [
+            { "answer": "1.17", "explanation": "1.17 s is half the flight time (time to reach maximum height), not the total." },
+            { "answer": "3.35", "explanation": "3.35 s would result from using the full speed (20 m/s) instead of the vertical component." }
+          ]
+        },
+        "2": {
+          "correct": "38.4",
+          "correctExplanation": "R = vx \u00d7 T = 16.4 \u00d7 2.34 = 38.4 m.",
+          "distractors": [
+            { "answer": "26.9", "explanation": "This would result from using the vertical component instead of the horizontal component for range." },
+            { "answer": "46.8", "explanation": "This would result from using the full speed 20 m/s instead of the horizontal component." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Calculate the maximum height for a projectile launched at 30 m/s at 45\u00b0. (g = 9.8 m/s\u00b2)",
+      "sentence": "vy = 30 sin 45\u00b0 = {{blank:1}} m/s, so the maximum height is (21.2)\u00b2 / (2 \u00d7 9.8) = {{blank:2}} m.",
+      "blanks": {
+        "1": {
+          "correct": "21.2",
+          "correctExplanation": "vy = 30 \u00d7 sin 45\u00b0 = 30 \u00d7 0.707 = 21.2 m/s.",
+          "distractors": [
+            { "answer": "15.0", "explanation": "15.0 m/s would be 30 \u00d7 sin 30\u00b0, using the wrong angle." },
+            { "answer": "26.0", "explanation": "26.0 m/s would be 30 \u00d7 sin 60\u00b0, using the wrong angle." }
+          ]
+        },
+        "2": {
+          "correct": "23.0",
+          "correctExplanation": "H = (21.2)\u00b2 / 19.6 = 449.4 / 19.6 = 22.9 m, which rounds to 23.0 m.",
+          "distractors": [
+            { "answer": "45.9", "explanation": "This results from using v\u00b2 / (2g) = 900 / 19.6, forgetting to resolve the vertical component." },
+            { "answer": "11.5", "explanation": "This results from using (v sin \u03b8)\u00b2 / (4g), incorrectly doubling the denominator." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "mc",
+      "question": "A golfer hits a ball at 40 m/s at 50\u00b0 from ground level. A tree 150 m away is 20 m tall. Does the ball clear the tree? (g = 9.8 m/s\u00b2)",
+      "correct": "No, the ball is at about 12.0 m height at 150 m, which is below the 20 m tree",
+      "correctExplanation": "vx = 25.7 m/s, so the time to reach 150 m is t = 150/25.7 = 5.83 s. Height: y = 30.6(5.83) - 4.9(5.83)\u00b2 = 178.4 - 166.5 = 12.0 m, which is below the 20 m tree.",
+      "distractors": [
+        { "answer": "Yes, because the maximum height of 47.9 m far exceeds the 20 m tree", "explanation": "Maximum height occurs at the midpoint of the range, not at 150 m; you must calculate the height at the tree's position." },
+        { "answer": "No, because the ball lands before it reaches the 150 m mark", "explanation": "The range is about 160.8 m, so the ball is still airborne at 150 m; it just isn't high enough." },
+        { "answer": "Yes, because the ball is at about 30 m height when it reaches the tree", "explanation": "This overestimates the height; the correct calculation gives approximately 12.0 m at 150 m." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Two projectiles are launched from ground level at the same speed of 35 m/s but at 40\u00b0 and 50\u00b0 respectively. Compare their ranges and maximum heights.",
+      "correct": "They have the same range, but the 50\u00b0 projectile reaches a greater maximum height",
+      "correctExplanation": "40\u00b0 and 50\u00b0 are complementary, so sin(80\u00b0) = sin(100\u00b0) and ranges are equal. The 50\u00b0 launch has a larger vertical component, so it reaches a greater height.",
+      "distractors": [
+        { "answer": "They have the same range and the same maximum height throughout their flight", "explanation": "While ranges are equal, the steeper angle produces a greater maximum height." },
+        { "answer": "The 40\u00b0 projectile has both a greater range and a greater maximum height", "explanation": "Complementary angles give equal ranges; the steeper angle gives greater height." },
+        { "answer": "The 50\u00b0 projectile has a greater range and a greater maximum height", "explanation": "Complementary angles give equal ranges; only the height differs." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student calculates the range of a projectile launched at 50 m/s at 30\u00b0 using R = v\u00b2 sin \u03b8 / g and gets 127.6 m. Identify and correct the error.",
+      "correct": "The student used sin \u03b8 instead of sin(2\u03b8); the correct range is 220.9 m",
+      "correctExplanation": "R = v\u00b2 sin(2\u03b8)/g = 2500 \u00d7 sin 60\u00b0 / 9.8 = 2500 \u00d7 0.866 / 9.8 = 220.9 m. Using sin 30\u00b0 = 0.5 gives the wrong answer of 127.6 m.",
+      "distractors": [
+        { "answer": "The student forgot to square the velocity; correct range is 441.8 m", "explanation": "The student did square v (50\u00b2 = 2500); the error is using sin \u03b8 instead of sin(2\u03b8)." },
+        { "answer": "The student used radians instead of degrees for the angle calculation", "explanation": "Using radians for 30 gives sin(30 rad), which is not 0.5; the actual error is sin \u03b8 vs sin(2\u03b8)." },
+        { "answer": "The student should have divided by 2g instead of g in the formula", "explanation": "The range formula uses g in the denominator, not 2g; the error is in the angle term." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A projectile is launched at 22 m/s at 50\u00b0. At what time after launch does the projectile first reach a height of 10 m? (g = 9.8 m/s\u00b2)",
+      "correct": "0.76 s",
+      "correctExplanation": "Using y = vy t - \u00bdgt\u00b2: 10 = 16.85t - 4.9t\u00b2. Rearranging: 4.9t\u00b2 - 16.85t + 10 = 0. Using the quadratic formula: t = (16.85 - \u221a(283.9 - 196))/9.8 = (16.85 - 9.38)/9.8 = 0.76 s.",
+      "distractors": [
+        { "answer": "1.72 s", "explanation": "This is the time to reach maximum height (half the flight time), not the time to first reach 10 m." },
+        { "answer": "2.68 s", "explanation": "This is the second time the projectile is at 10 m (on the way down), not the first time on the way up." },
+        { "answer": "0.59 s", "explanation": "This results from incorrectly using the horizontal component instead of the vertical component in the height equation." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A projectile launched at 45\u00b0 has a range of 91.8 m. What is its launch speed? (g = 9.8 m/s\u00b2)",
+      "correct": "30 m/s",
+      "correctExplanation": "R = v\u00b2 sin(2\u03b8)/g. At 45\u00b0, sin 90\u00b0 = 1, so v\u00b2 = Rg = 91.8 \u00d7 9.8 = 899.6, v = 30.0 m/s.",
+      "distractors": [
+        { "answer": "21.2 m/s", "explanation": "This confuses the launch speed with the horizontal component; 21.2 m/s is v cos 45\u00b0 when v = 30 m/s." },
+        { "answer": "42.4 m/s", "explanation": "This results from doubling the correct speed, perhaps from an error in rearranging the formula." },
+        { "answer": "15.0 m/s", "explanation": "This results from taking the square root incorrectly or using half the correct value." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Analyse how doubling the launch speed affects the range and maximum height of a ground-level projectile at the same angle.",
+      "correct": "Range quadruples and maximum height quadruples",
+      "correctExplanation": "R = v\u00b2 sin(2\u03b8)/g and H = (v sin \u03b8)\u00b2/(2g) both depend on v\u00b2, so doubling v multiplies both by 4.",
+      "distractors": [
+        { "answer": "Range doubles and maximum height doubles as well", "explanation": "Both formulas contain v\u00b2, so doubling v gives a factor of 4, not 2." },
+        { "answer": "Range quadruples but maximum height only doubles", "explanation": "Both range and height contain v\u00b2, so both quadruple when speed doubles." },
+        { "answer": "Range doubles and maximum height quadruples instead", "explanation": "Both quantities depend on v\u00b2, so both quadruple by the same factor." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A ball launched at 12 m/s at 25\u00b0 has a maximum height of 1.31 m but a ball launched at 12 m/s at 65\u00b0 has a maximum height of 6.03 m. Evaluate why the heights differ despite identical ranges.",
+      "correct": "The steeper angle directs more velocity vertically, increasing height but keeping range equal via sin(2\u03b8) symmetry",
+      "correctExplanation": "At 65\u00b0, vy = 12 sin 65\u00b0 = 10.88 m/s vs vy = 12 sin 25\u00b0 = 5.07 m/s at 25\u00b0. Greater vy gives greater H, but sin(50\u00b0) = sin(130\u00b0) keeps ranges equal.",
+      "distractors": [
+        { "answer": "The 65\u00b0 launch has more total energy, which increases the maximum height", "explanation": "Both launches have the same speed, so kinetic energy is identical; the distribution between components differs." },
+        { "answer": "Gravity acts differently on steeper launches, allowing greater height", "explanation": "Gravity is constant; the different heights result from different vertical velocity components." },
+        { "answer": "The heights should be equal because the ranges are equal for complementary angles", "explanation": "Only range is equal for complementary angles; maximum height depends on (v sin \u03b8)\u00b2 which differs." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student claims that a projectile launched at 60\u00b0 spends more time in the air than one launched at 30\u00b0 at the same speed, so it must travel further. Evaluate this reasoning.",
+      "correct": "The reasoning is flawed: longer flight time is offset by a smaller horizontal velocity, giving equal range",
+      "correctExplanation": "At 60\u00b0, flight time is longer but vx is smaller. At 30\u00b0, flight time is shorter but vx is larger. These effects exactly compensate, giving equal range.",
+      "distractors": [
+        { "answer": "The reasoning is correct: more time in the air always means greater range", "explanation": "Range depends on both flight time and horizontal velocity; they trade off for complementary angles." },
+        { "answer": "The reasoning is flawed: both launches have equal flight time", "explanation": "The flight times are not equal; the 60\u00b0 launch does have a longer flight time." },
+        { "answer": "The reasoning is correct: the 60\u00b0 launch also has a larger horizontal velocity", "explanation": "The 60\u00b0 launch has a smaller horizontal velocity (v cos 60\u00b0 < v cos 30\u00b0)." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Analyse the effect of changing angle on range for a fixed speed.",
+      "sentence": "For a 35 m/s launch, changing the angle from 40\u00b0 to 50\u00b0 keeps the range at {{blank:1}} m because both angles produce sin(2\u03b8) = {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "123.1",
+          "correctExplanation": "R = 35\u00b2 \u00d7 sin(80\u00b0)/9.8 = 1225 \u00d7 0.985 / 9.8 = 123.1 m for both angles.",
+          "distractors": [
+            { "answer": "91.8", "explanation": "91.8 m would be the range at 45\u00b0 for a 30 m/s launch, not a 35 m/s launch at 40\u00b0 or 50\u00b0." },
+            { "answer": "125.0", "explanation": "This rounds up to an incorrect value; the precise calculation gives 123.1 m." }
+          ]
+        },
+        "2": {
+          "correct": "0.985",
+          "correctExplanation": "sin(80\u00b0) = sin(100\u00b0) = 0.985, confirming both angles yield the same range factor.",
+          "distractors": [
+            { "answer": "0.866", "explanation": "0.866 is sin 60\u00b0, which corresponds to 30\u00b0 or 60\u00b0 launches, not 40\u00b0 or 50\u00b0." },
+            { "answer": "1.000", "explanation": "sin(2\u03b8) = 1 only when \u03b8 = 45\u00b0; at 40\u00b0 and 50\u00b0, sin(2\u03b8) = 0.985." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Compare two complementary angle launches at 25 m/s.",
+      "sentence": "At 60\u00b0, the maximum height is {{blank:1}} m, while at 30\u00b0 it is only {{blank:2}} m, even though both have the same range of 55.2 m.",
+      "blanks": {
+        "1": {
+          "correct": "23.9",
+          "correctExplanation": "H = (25 sin 60\u00b0)\u00b2 / (2 \u00d7 9.8) = (21.65)\u00b2 / 19.6 = 468.7 / 19.6 = 23.9 m.",
+          "distractors": [
+            { "answer": "31.9", "explanation": "This results from using v\u00b2/(2g) without resolving the vertical component." },
+            { "answer": "7.97", "explanation": "This is the maximum height for the 30\u00b0 launch, not the 60\u00b0 launch." }
+          ]
+        },
+        "2": {
+          "correct": "7.97",
+          "correctExplanation": "H = (25 sin 30\u00b0)\u00b2 / (2 \u00d7 9.8) = (12.5)\u00b2 / 19.6 = 156.25 / 19.6 = 7.97 m.",
+          "distractors": [
+            { "answer": "23.9", "explanation": "23.9 m is the maximum height for the 60\u00b0 launch, not the 30\u00b0 launch." },
+            { "answer": "15.9", "explanation": "This is not the correct value; (25 sin 30\u00b0)\u00b2/(2g) = 7.97 m." }
+          ]
+        }
+      }
+    }
+  ]
+}
