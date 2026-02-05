@@ -1,0 +1,49 @@
+{
+  "id": "projectile-motion",
+  "name": "Projectile Motion",
+  "icon": "🎯",
+  "what": "This subtopic covers the motion of projectiles near Earth's surface, including objects launched horizontally, at an angle, and from a height. It involves treating horizontal and vertical components separately and applying constant acceleration equations.",
+  "why": "Projectile motion applies to any object moving freely under gravity, from thrown balls and golf shots to supply drops from aircraft. Understanding how to break the problem into independent horizontal and vertical components is a powerful technique used throughout physics.",
+  "items": [
+    {
+      "id": 1,
+      "title": "I can describe the flight path of a projectile and explain the effect of air resistance on its trajectory",
+      "code": "1C.1",
+      "what": "A projectile near Earth's surface follows a parabolic path when air resistance is negligible. The only force acting is gravity, which causes a constant downward acceleration of 9.8 m/s². Air resistance opposes the motion, reducing both the maximum height and horizontal range of the projectile.",
+      "why": "Understanding the idealised parabolic path provides a baseline for analysis, while knowing the qualitative effects of air resistance helps you predict how real projectiles behave differently from the simplified model.",
+      "example": "A cannonball launched at an angle follows a symmetric parabolic arc when air resistance is ignored. With air resistance, the trajectory becomes asymmetric: the ball does not travel as far horizontally and does not reach as high, and the descent is steeper than the ascent."
+    },
+    {
+      "id": 2,
+      "title": "I can separate a projectile's velocity into horizontal and vertical components and analyse each independently",
+      "code": "1C.2",
+      "what": "The key technique in projectile motion is treating horizontal and vertical motions separately. The horizontal velocity remains constant (no horizontal force when air resistance is ignored), while the vertical velocity changes at a constant rate of 9.8 m/s² downward due to gravity.",
+      "why": "Separating the two components simplifies a complex two-dimensional problem into two independent one-dimensional problems. The total flight time links the two components, allowing you to find the range or final velocity.",
+      "example": "A projectile launched at 37 m/s at 33 degrees has a horizontal component of 37 cos(33) = 31.0 m/s (constant throughout flight) and an initial vertical component of 37 sin(33) = 20.2 m/s (decreasing on the way up, increasing on the way down)."
+    },
+    {
+      "id": 3,
+      "title": "I can solve projectile problems for objects launched horizontally from a height",
+      "code": "1C.3",
+      "what": "When a projectile is launched horizontally, the initial vertical velocity is zero. The time to fall is found from the vertical drop using s = (1/2)gt², and the horizontal distance is found using d = v_h x t. The final velocity is the vector sum of the horizontal and vertical velocities at impact.",
+      "why": "Horizontal launch problems are the simplest form of projectile motion and build the skills needed for more complex scenarios. They appear in contexts such as objects rolling off tables, supply drops, and cliff-edge launches.",
+      "example": "A cannonball is launched horizontally at 40 m/s from 25 m above the sea. The fall time is t = sqrt(2 x 25/9.8) = 2.26 s. The vertical velocity at impact is v_v = (9.8)(2.26) = 22.1 m/s. The final speed is sqrt(40² + 22.1²) = 45.7 m/s at 29 degrees below horizontal."
+    },
+    {
+      "id": 4,
+      "title": "I can solve projectile problems for objects launched at an angle from ground level",
+      "code": "1C.4",
+      "what": "For an angled launch from ground level, the time to maximum height is found using v_v = u_v + at (where v_v = 0 at the top). The total flight time is twice this value for a symmetric trajectory. The range is d = v_h x total time. Maximum height is found using v² = u² + 2as.",
+      "why": "Angled launches are the most general and common type of projectile problem. Mastering this case gives you the skills to solve problems involving sports, ballistics, and any situation where an object is launched at an angle.",
+      "example": "A projectile launched at 37 m/s at 33 degrees from ground level reaches maximum height when the vertical velocity is zero. Time up: t = (37 sin 33)/9.8 = 2.06 s. Total flight time: 4.12 s. Horizontal range: (37 cos 33)(4.12) = 128 m."
+    },
+    {
+      "id": 5,
+      "title": "I can apply constant acceleration equations to solve projectile motion problems involving launch from a height at an angle",
+      "code": "1C.5",
+      "what": "When a projectile is launched at an angle from a height above ground, the vertical displacement is not zero at landing. The equations v = u + at, v² = u² + 2as, and s = ut + (1/2)at² are applied to the vertical component, with careful attention to the sign convention for direction.",
+      "why": "These are the most challenging projectile problems and require confident use of all the kinematic equations. They appear in contexts such as cannons on cliffs, balls thrown from elevated positions, and fire hoses aimed at buildings.",
+      "example": "A cannon fires a ball at 32.5 m/s at 20 degrees from a 12.7 m cliff. The vertical component is u_v = 32.5 sin(20) = 11.1 m/s upward. Using s = u_v t + (1/2)g t² with s = 12.7 m (taking down as positive), the total flight time is 3.10 s. The horizontal range is (32.5 cos 20)(3.10) = 94.6 m."
+    }
+  ]
+}
