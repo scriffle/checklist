@@ -1,0 +1,97 @@
+{
+  "id": "electrochemical-series",
+  "name": "Electrochemical Series",
+  "icon": "📊",
+  "what": "This subtopic covers the electrochemical series as a tool for predicting redox reactions, identifying oxidising and reducing agent strengths, and calculating cell potentials. It includes understanding standard electrode potentials, the standard hydrogen electrode reference, and limitations of the series.",
+  "why": "The electrochemical series is the primary tool for designing galvanic cells, predicting spontaneous reactions, and calculating maximum cell voltage. It enables selection of appropriate electrode materials and prediction of cell behavior under standard conditions.",
+  "items": [
+    {
+      "id": 1,
+      "uuid": "lp-b7f701cc-a896-2cd6-8c1d-a4bd5ca31208",
+      "version": 1,
+      "title": "I can explain what standard electrode potential means and how it is measured",
+      "code": "3D.1",
+      "what": "Standard electrode potential (E0) is the voltage a half-cell produces at standard conditions (25°C, 100 kPa, 1 M solutions) measured against the standard hydrogen electrode, which is assigned 0.00 volts as the reference point.",
+      "why": "Standard electrode potentials allow comparison of different half-cells and prediction of cell voltages, forming the basis for all electrochemical calculations and cell design.",
+      "example": "The Cu2+/Cu half-cell has E0 = +0.34 V, meaning it produces 0.34 volts more than the hydrogen electrode under standard conditions when connected as a complete cell.",
+      "contentHash": "hash-0eb3827d"
+    },
+    {
+      "id": 2,
+      "uuid": "lp-3bdcbac4-188e-4d89-8d46-0e75e29d94b1",
+      "version": 1,
+      "title": "I can use the electrochemical series to compare strengths of oxidising and reducing agents",
+      "code": "3D.2",
+      "what": "Strong oxidising agents appear at the top left of the series (high positive E0), readily accepting electrons. Strong reducing agents appear at the bottom right (large negative E0), readily donating electrons. Conjugate pairs have inverse strength relationships.",
+      "why": "Identifying relative strengths predicts which species will undergo reduction versus oxidation when mixed, essential for cell design and reaction prediction.",
+      "example": "F2 (E0 = +2.87 V, top left) is the strongest oxidising agent. Li(s) (E0 = -3.04 V, bottom right) is the strongest reducing agent. F- is a weak reducing agent, Li+ is a weak oxidising agent.",
+      "contentHash": "hash-99d4ae0c"
+    },
+    {
+      "id": 3,
+      "uuid": "lp-ed76cb59-e48b-52ad-afa9-d4887b0ee6e8",
+      "version": 1,
+      "title": "I can predict whether a spontaneous redox reaction will occur between given species",
+      "code": "3D.3",
+      "what": "A spontaneous reaction occurs when the oxidising agent is higher on the left side of the series than the reducing agent is on the right side. If positions are reversed or both species are on the same side, no reaction occurs.",
+      "why": "This prediction saves experimental time and resources by determining feasibility before attempting reactions, and guides selection of reactants for galvanic cells.",
+      "example": "Pb2+(aq) (higher left) will react with Cd(s) (lower right) spontaneously. Ni2+(aq) will not react with Pb(s) because Ni2+ is lower than Pb2+ (wrong order). Pb2+ and Cd2+ won't react (both left side).",
+      "contentHash": "hash-cdd65542"
+    },
+    {
+      "id": 4,
+      "uuid": "lp-8b34dec5-bf14-e374-1365-af442cffa585",
+      "version": 1,
+      "title": "I can identify which half-reactions will occur in a galvanic cell from given species",
+      "code": "3D.4",
+      "what": "When multiple species are present, the species highest on the left undergoes reduction (cathode), and the species lowest on the right undergoes oxidation (anode). Other species present act as spectator ions.",
+      "why": "This identifies actual electrode reactions in complex mixtures, predicts products, and determines which of several possible reactions will dominate in a galvanic cell.",
+      "example": "In a solution with Cu2+, Zn2+, and Ni2+ ions with an Fe electrode, Cu2+ (highest left, +0.34 V) reduces at cathode while Fe(s) (lowest right, -0.44 V) oxidises at anode.",
+      "contentHash": "hash-b3ccd8b9"
+    },
+    {
+      "id": 5,
+      "uuid": "lp-43161432-de63-f764-1c59-99825aa762aa",
+      "version": 1,
+      "title": "I can calculate standard cell potential using the electrochemical series",
+      "code": "3D.5",
+      "what": "Standard cell potential is calculated as E0cell = E0reduction - E0oxidation, using the value from the half-reaction higher in the series minus the value from the lower half-reaction. A positive result confirms spontaneous reaction in a galvanic cell.",
+      "why": "Cell potential determines the maximum voltage a galvanic cell can produce, enabling comparison of battery options and verification that reactions are spontaneous.",
+      "example": "For Ag+/Ag (+0.80 V) and Pb2+/Pb (-0.13 V) cell: E0cell = +0.80 - (-0.13) = +0.93 volts. Positive value confirms spontaneous reaction with silver as cathode.",
+      "contentHash": "hash-d5c4fa9c"
+    },
+    {
+      "id": 6,
+      "uuid": "lp-23d51a4d-953b-d96f-f5b0-854f2b529b33",
+      "version": 1,
+      "title": "I can write complete cell equations with calculated voltages for galvanic cells",
+      "code": "3D.6",
+      "what": "Identify reduction and oxidation half-equations from the series, balance electrons by multiplying, combine and cancel electrons, write the overall ionic equation, and add the calculated E0cell value with units.",
+      "why": "Complete equations with voltages provide all information needed to understand cell operation, predict performance, and compare different cell configurations.",
+      "example": "For Al3+/Al and Co2+/Co cell: 2Al(s) → 2Al3+(aq) + 6e- (E0 = +1.66 V reversed), 3Co2+(aq) + 6e- → 3Co(s) (E0 = -0.28 V), overall: 2Al(s) + 3Co2+(aq) → 2Al3+(aq) + 3Co(s), E0 = +1.38 V.",
+      "contentHash": "hash-994803c3"
+    },
+    {
+      "id": 7,
+      "uuid": "lp-c26217ac-3cfd-a7a4-5e27-bef5edf4f7ee",
+      "version": 1,
+      "title": "I can explain the limitations of the electrochemical series for predicting reactions",
+      "code": "3D.7",
+      "what": "The series applies only at standard conditions (25°C, 1 M, 100 kPa). At different conditions, different reactions may occur. It does not indicate reaction rate, and some predicted reactions may be too slow to observe. Close E0 values may show unexpected behavior.",
+      "why": "Understanding limitations prevents incorrect predictions, explains experimental discrepancies, and indicates when alternative methods or modified conditions are needed.",
+      "example": "The series predicts H2O2 in acid should oxidise many metals, but reactions may be too slow to observe in 20 minutes. Changing concentration from 1 M to 0.1 M may cause different ions to react.",
+      "contentHash": "hash-693cf894"
+    },
+    {
+      "id": 8,
+      "uuid": "lp-3d3c4047-28d0-7d17-c274-fcdcbdaf00b3",
+      "version": 1,
+      "title": "I can predict sequential reactions when one reactant is completely consumed",
+      "code": "3D.8",
+      "what": "When the strongest oxidising or reducing agent is depleted, the next strongest species in that half-cell will begin reacting with the species in the other half-cell. Cell voltage decreases to the new value calculated from the new half-reactions.",
+      "why": "This explains how cell voltage drops over time during discharge and predicts the complete sequence of reactions in complex mixtures with multiple reactive species.",
+      "example": "In a half-cell with Cu2+, Ni2+, and Zn2+ with Fe anode, Cu2+ reduces first (E0 = +0.78 V). When Cu2+ is consumed, Ni2+ reduces next (E0 = +0.19 V). Reaction stops when only Zn2+ remains (below Fe in series).",
+      "contentHash": "hash-f321dfd5"
+    }
+  ]
+}
