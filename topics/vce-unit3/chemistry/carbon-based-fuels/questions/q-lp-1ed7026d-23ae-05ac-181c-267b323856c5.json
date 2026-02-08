@@ -1,0 +1,495 @@
+{
+  "_link": {
+    "uuid": "lp-1ed7026d-23ae-05ac-181c-267b323856c5",
+    "version": 1,
+    "contentHash": "hash-7cb33c31",
+    "title": "I can calculate mass, concentration, or volume of reactants or products with a limiting reagent present",
+    "generatedAt": "2026-02-08T00:00:00Z"
+  },
+  "toLevel2": [
+    {
+      "type": "mc",
+      "question": "What is the limiting reagent in a chemical reaction?",
+      "correct": "The reactant that is completely consumed first",
+      "correctExplanation": "The limiting reagent is used up first and determines the maximum amount of product that can form.",
+      "distractors": [
+        { "answer": "The reactant present in the largest mole amount", "explanation": "Students confuse largest quantity with limiting; the excess reagent is present in greater amount." },
+        { "answer": "The product that forms in the smallest quantity", "explanation": "Students confuse products with reactants; limiting reagent refers to a reactant, not a product." },
+        { "answer": "The reactant with the highest molar mass value", "explanation": "Students confuse molar mass with moles available; molar mass alone does not determine limiting reagent." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "How many moles are in 8.0 g of methane (CH4, M = 16.0 g mol^-1)?",
+      "correct": "0.50 mol",
+      "correctExplanation": "n = m/M = 8.0/16.0 = 0.50 mol.",
+      "distractors": [
+        { "answer": "2.00 mol", "explanation": "Students may multiply mass by molar mass instead of dividing." },
+        { "answer": "0.25 mol", "explanation": "Students may incorrectly halve the answer or use the wrong molar mass." },
+        { "answer": "8.00 mol", "explanation": "Students may forget to divide by molar mass and use the mass value directly." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "How many moles are in 16.0 g of oxygen gas (O2, M = 32.0 g mol^-1)?",
+      "correct": "0.50 mol",
+      "correctExplanation": "n = m/M = 16.0/32.0 = 0.50 mol.",
+      "distractors": [
+        { "answer": "1.00 mol", "explanation": "Students may use M = 16.0 for atomic oxygen instead of molecular O2." },
+        { "answer": "0.25 mol", "explanation": "Students may accidentally double the molar mass to 64.0 g mol^-1." },
+        { "answer": "8.00 mol", "explanation": "Students may multiply mass by molar mass instead of dividing." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What formula is used to calculate the number of moles from a known mass?",
+      "correct": "n = m / M",
+      "correctExplanation": "Moles equals mass divided by molar mass.",
+      "distractors": [
+        { "answer": "n = M / m", "explanation": "Students may invert the formula and divide molar mass by mass." },
+        { "answer": "n = m x M", "explanation": "Students may multiply mass by molar mass instead of dividing." },
+        { "answer": "n = M x V", "explanation": "Students may confuse the moles-from-mass formula with the concentration formula." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "In the reaction CH4 + 2O2 -> CO2 + 2H2O, what is the mole ratio of CH4 to O2?",
+      "correct": "1 : 2",
+      "correctExplanation": "The balanced equation shows 1 mole of CH4 reacts with 2 moles of O2.",
+      "distractors": [
+        { "answer": "2 : 1", "explanation": "Students may read the ratio in reverse order from the equation." },
+        { "answer": "1 : 1", "explanation": "Students may assume reactants always react in equal mole amounts." },
+        { "answer": "1 : 4", "explanation": "Students may count total oxygen atoms instead of O2 molecules." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Fill in the blank to complete the statement about limiting reagents.",
+      "sentence": "The limiting reagent determines the maximum amount of {{blank:1}} that can be formed in a reaction.",
+      "blanks": {
+        "1": {
+          "correct": "product",
+          "correctExplanation": "The limiting reagent is fully consumed and limits how much product can form.",
+          "distractors": [
+            { "answer": "reagent", "explanation": "Students confuse limiting reagent with reactant consumption, but it limits product formation." },
+            { "answer": "solvent", "explanation": "Students may confuse reaction components; solvent is not formed in a combustion reaction." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Fill in the blank to complete the moles calculation.",
+      "sentence": "To find the number of moles from a given mass, divide the mass by the {{blank:1}}.",
+      "blanks": {
+        "1": {
+          "correct": "molar mass",
+          "correctExplanation": "The formula n = m/M requires dividing mass by molar mass.",
+          "distractors": [
+            { "answer": "atom count", "explanation": "Students confuse molar mass with the number of atoms in a formula." },
+            { "answer": "mass total", "explanation": "Students may think you divide mass by total mass of all reactants." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Fill in the blank about the excess reagent.",
+      "sentence": "The reagent that is not completely consumed in a reaction is called the {{blank:1}} reagent.",
+      "blanks": {
+        "1": {
+          "correct": "excess",
+          "correctExplanation": "The excess reagent is left over after the limiting reagent is fully consumed.",
+          "distractors": [
+            { "answer": "limiting", "explanation": "Students may confuse excess with limiting; the limiting reagent is the one fully consumed." },
+            { "answer": "catalyst", "explanation": "Students may confuse the role of a catalyst with that of an excess reagent." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "tf",
+      "question": "The limiting reagent is always the reactant with the smallest mass.",
+      "correct": "False",
+      "correctExplanation": "The limiting reagent depends on moles available relative to the stoichiometric ratio, not simply on mass.",
+      "distractors": [
+        { "answer": "True", "explanation": "Students often assume that the smallest mass must be limiting, ignoring molar mass and mole ratios." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "Mole ratios from a balanced equation are used to identify the limiting reagent.",
+      "correct": "True",
+      "correctExplanation": "Comparing available moles to the required stoichiometric ratio identifies which reactant runs out first.",
+      "distractors": [
+        { "answer": "False", "explanation": "Students may think mass or volume alone determines the limiting reagent without considering mole ratios." }
+      ]
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "mc",
+      "question": "If 0.50 mol CH4 reacts with 0.50 mol O2 via CH4 + 2O2 -> CO2 + 2H2O, which reactant is limiting and why?",
+      "correct": "O2 is limiting because 0.50 mol CH4 needs 1.00 mol O2 but only 0.50 mol is available",
+      "correctExplanation": "Using the 1:2 mole ratio, 0.50 mol CH4 needs 1.00 mol O2. Only 0.50 mol O2 is present, so O2 is limiting.",
+      "distractors": [
+        { "answer": "CH4 is limiting because it requires 1.00 mol O2 and only 0.50 mol O2 is present here", "explanation": "Students may correctly calculate the O2 shortage but incorrectly name CH4 as limiting." },
+        { "answer": "O2 is limiting because it has a larger molar mass than CH4 meaning fewer particles", "explanation": "Students may think molar mass determines the limiting reagent rather than the mole ratio." },
+        { "answer": "Neither is limiting because both reactants have exactly equal moles of 0.50 mol", "explanation": "Students may assume equal moles means neither is limiting, ignoring the 1:2 stoichiometry." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Why does the excess reagent remain after a reaction is complete?",
+      "correct": "There are more moles of it than required by the stoichiometric ratio",
+      "correctExplanation": "The excess reagent has more moles than required to react with the limiting reagent, so some remains unreacted.",
+      "distractors": [
+        { "answer": "It has a higher molar mass and so cannot react as quickly as needed", "explanation": "Students may confuse molar mass with reaction rate; molar mass does not determine excess." },
+        { "answer": "It does not participate in the reaction and acts as an inert gas", "explanation": "Students may think the excess reagent is unreactive; it does react but is not fully consumed." },
+        { "answer": "It acts as a catalyst and is regenerated at the end of the process", "explanation": "Students may confuse excess reagent with a catalyst; catalysts are unchanged but excess is leftover." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "When 0.50 mol O2 is the limiting reagent in CH4 + 2O2 -> CO2 + 2H2O, how many moles of CO2 are produced?",
+      "correct": "0.25 mol CO2",
+      "correctExplanation": "From the 2:1 ratio of O2 to CO2, 0.50 mol O2 produces 0.50/2 = 0.25 mol CO2.",
+      "distractors": [
+        { "answer": "0.50 mol CO2", "explanation": "Students may use a 1:1 ratio of O2 to CO2 instead of the correct 2:1 ratio." },
+        { "answer": "1.00 mol CO2", "explanation": "Students may use the CH4 to O2 ratio incorrectly and double the answer." },
+        { "answer": "0.10 mol CO2", "explanation": "Students may make arithmetic errors when dividing moles by the stoichiometric coefficient." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student has 0.30 mol of propane and 1.20 mol of O2. For C3H8 + 5O2 -> 3CO2 + 4H2O, which reagent is limiting?",
+      "correct": "O2 is limiting because 0.30 mol C3H8 needs 1.50 mol O2 but only 1.20 mol is present",
+      "correctExplanation": "0.30 mol C3H8 requires 0.30 x 5 = 1.50 mol O2. Only 1.20 mol O2 is present, so O2 is limiting.",
+      "distractors": [
+        { "answer": "C3H8 is limiting because it has fewer total moles than O2 in this experiment", "explanation": "Students may assume the reactant with fewer moles is limiting without checking the ratio." },
+        { "answer": "O2 is limiting because oxygen always acts as the limiting reagent in combustion", "explanation": "Students may incorrectly generalise that O2 is always limiting in combustion." },
+        { "answer": "Neither is limiting because both have enough moles to react with each other", "explanation": "Students may not calculate the required moles and assume both are sufficient." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Why must you convert mass to moles before identifying the limiting reagent in a reaction?",
+      "correct": "Because stoichiometric ratios compare moles of reactants, not their masses",
+      "correctExplanation": "Balanced equations give mole ratios, so masses must be converted to moles for valid comparison.",
+      "distractors": [
+        { "answer": "Because mass is always larger than moles and would produce an incorrect yield", "explanation": "Students may think mass values are inherently misleading rather than understanding the role of mole ratios." },
+        { "answer": "Because the limiting reagent is defined as the one with the smallest molar mass", "explanation": "Students may confuse molar mass with number of moles; molar mass is a conversion factor." },
+        { "answer": "Because concentration calculations require using both volume and moles together", "explanation": "Students may conflate the purpose of mole conversion with concentration calculations." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "If 0.25 mol of CO2 is produced, what mass of CO2 is formed (M of CO2 = 44.0 g mol^-1)?",
+      "correct": "11.0 g",
+      "correctExplanation": "m = n x M = 0.25 x 44.0 = 11.0 g.",
+      "distractors": [
+        { "answer": "44.0 g", "explanation": "Students may forget to multiply by the number of moles and report molar mass as mass." },
+        { "answer": "22.0 g", "explanation": "Students may incorrectly use 0.50 mol instead of 0.25 mol in the calculation." },
+        { "answer": "5.50 g", "explanation": "Students may divide moles by molar mass instead of multiplying." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Fill in the blank to explain why O2 is limiting.",
+      "sentence": "With 0.50 mol CH4 and 0.50 mol O2, the 1:2 mole ratio means CH4 requires {{blank:1}} mol O2, so O2 is the limiting reagent.",
+      "blanks": {
+        "1": {
+          "correct": "1.00",
+          "correctExplanation": "0.50 mol CH4 x (2 mol O2 / 1 mol CH4) = 1.00 mol O2 required.",
+          "distractors": [
+            { "answer": "0.50", "explanation": "Students may assume a 1:1 ratio between CH4 and O2 instead of 1:2." },
+            { "answer": "0.25", "explanation": "Students may incorrectly halve the CH4 moles instead of doubling them." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Fill in the blank about calculating product mass.",
+      "sentence": "To convert moles of product to mass, use the formula m = n x {{blank:1}}.",
+      "blanks": {
+        "1": {
+          "correct": "M (molar mass)",
+          "correctExplanation": "Mass equals moles multiplied by molar mass (m = n x M).",
+          "distractors": [
+            { "answer": "V (total volume)", "explanation": "Students may confuse volume with molar mass when converting moles to mass." },
+            { "answer": "c (concentration)", "explanation": "Students may confuse the n = cV formula with the m = nM formula." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Fill in the blank about excess reagent calculations.",
+      "sentence": "After identifying the limiting reagent, the moles of excess reagent remaining equal the initial moles minus the moles {{blank:1}}.",
+      "blanks": {
+        "1": {
+          "correct": "consumed",
+          "correctExplanation": "The remaining excess equals initial moles minus the moles that reacted with the limiting reagent.",
+          "distractors": [
+            { "answer": "produced", "explanation": "Students confuse moles consumed (reactant used) with moles produced (product formed)." },
+            { "answer": "catalysed", "explanation": "Students may confuse catalytic activity with stoichiometric consumption of reagents." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "tf",
+      "question": "When two reactants are present in equal moles, neither can be the limiting reagent.",
+      "correct": "False",
+      "correctExplanation": "Equal moles does not mean equal stoichiometric amounts; the mole ratio from the balanced equation determines the limiting reagent.",
+      "distractors": [
+        { "answer": "True", "explanation": "Students assume equal moles means both are used up equally, ignoring the stoichiometric ratio." }
+      ]
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "mc",
+      "question": "If 6.40 g of methane (M = 16.0) reacts with 48.0 g of oxygen (M = 32.0) via CH4 + 2O2 -> CO2 + 2H2O, what mass of water is produced?",
+      "correct": "14.4 g of H2O",
+      "correctExplanation": "n(CH4) = 0.400 mol, n(O2) = 1.50 mol. CH4 needs 0.800 mol O2; O2 is in excess. 0.400 mol CH4 produces 0.800 mol H2O. m = 0.800 x 18.0 = 14.4 g.",
+      "distractors": [
+        { "answer": "18.0 g of H2O", "explanation": "Students may use 1 mol H2O instead of calculating from the limiting reagent and stoichiometry." },
+        { "answer": "27.0 g of H2O", "explanation": "Students may use O2 as limiting by mistake and calculate a larger amount of water." },
+        { "answer": "7.20 g of H2O", "explanation": "Students may halve the correct answer by using a 1:1 ratio of CH4 to H2O instead of 1:2." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A 250.0 mL solution of 0.200 mol L^-1 NaOH reacts with excess HCl. How many moles of NaOH are present?",
+      "correct": "0.0500 mol",
+      "correctExplanation": "n = c x V = 0.200 x 0.2500 = 0.0500 mol.",
+      "distractors": [
+        { "answer": "0.500 mol", "explanation": "Students may forget to convert mL to L and use 250.0 instead of 0.2500." },
+        { "answer": "50.00 mol", "explanation": "Students may multiply concentration by volume in mL without any unit conversion." },
+        { "answer": "0.800 mol", "explanation": "Students may divide concentration by volume instead of multiplying the two values." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "In an experiment, 3.20 g of methane reacts with 6.40 g of oxygen. Using CH4 + 2O2 -> CO2 + 2H2O, what mass of CO2 forms?",
+      "correct": "4.40 g of CO2",
+      "correctExplanation": "n(CH4) = 0.200 mol, n(O2) = 0.200 mol. CH4 needs 0.400 mol O2 but only 0.200 is available, so O2 is limiting. 0.200 mol O2 gives 0.100 mol CO2. m = 0.100 x 44.0 = 4.40 g.",
+      "distractors": [
+        { "answer": "8.80 g of CO2", "explanation": "Students may use CH4 as limiting and calculate 0.200 mol CO2 x 44.0 = 8.80 g." },
+        { "answer": "2.20 g of CO2", "explanation": "Students may halve the correct answer due to an error in the stoichiometric ratio." },
+        { "answer": "44.0 g of CO2", "explanation": "Students may confuse molar mass with the mass produced and report 1 mol of CO2." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "If 0.30 mol of propane reacts with 1.20 mol O2 via C3H8 + 5O2 -> 3CO2 + 4H2O, how many moles of H2O are produced?",
+      "correct": "0.96 mol H2O",
+      "correctExplanation": "O2 is limiting (needs 1.50 mol but only 1.20 available). 1.20 mol O2 x (4/5) = 0.96 mol H2O.",
+      "distractors": [
+        { "answer": "1.20 mol H2O", "explanation": "Students may assume a 1:1 ratio between O2 and H2O in this reaction." },
+        { "answer": "0.24 mol H2O", "explanation": "Students may divide O2 moles by 5 instead of multiplying by 4/5." },
+        { "answer": "1.60 mol H2O", "explanation": "Students may incorrectly use propane as limiting and calculate 0.40 x 4." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What volume of 0.100 mol L^-1 solution contains 0.0250 mol of solute?",
+      "correct": "250 mL",
+      "correctExplanation": "V = n/c = 0.0250/0.100 = 0.250 L = 250 mL.",
+      "distractors": [
+        { "answer": "25.0 mL", "explanation": "Students may make a place-value error and report the volume as ten times too small." },
+        { "answer": "400 mL", "explanation": "Students may invert the formula and calculate c/n = 0.100/0.0250 then convert." },
+        { "answer": "2500 mL", "explanation": "Students may multiply n by c instead of dividing, then convert to mL incorrectly." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "In a reaction where O2 is limiting, a student mistakenly uses CH4 moles to calculate product. How does this affect the calculated mass of CO2?",
+      "correct": "The calculated mass of CO2 will be larger than the actual yield",
+      "correctExplanation": "Using the excess reagent gives more moles of product than actually form, overestimating the yield.",
+      "distractors": [
+        { "answer": "The calculated mass of CO2 will be smaller than actual yield", "explanation": "Students may think using excess reagent underestimates the product formed." },
+        { "answer": "The calculated mass of CO2 will be equal to the actual yield", "explanation": "Students may not realise that using the wrong reagent changes the calculated answer." },
+        { "answer": "The error cannot be determined from the information given", "explanation": "Students may think the error makes the problem unsolvable rather than overestimating." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "If 0.50 mol O2 is limiting and the O2:H2O ratio is 2:2 in CH4 + 2O2 -> CO2 + 2H2O, what mass of H2O forms (M = 18.0)?",
+      "correct": "9.00 g of H2O",
+      "correctExplanation": "0.50 mol O2 x (2/2) = 0.50 mol H2O. m = 0.50 x 18.0 = 9.00 g.",
+      "distractors": [
+        { "answer": "18.0 g of H2O", "explanation": "Students may use 1.00 mol H2O by doubling the moles or misreading the ratio." },
+        { "answer": "4.50 g of H2O", "explanation": "Students may halve the moles of H2O by incorrectly using a 2:1 ratio." },
+        { "answer": "36.0 g of H2O", "explanation": "Students may multiply molar mass by 2 and then multiply by 0.50 mol." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Fill in the blank to complete the calculation.",
+      "sentence": "To find moles of solute from a solution, use the formula n = c x {{blank:1}}.",
+      "blanks": {
+        "1": {
+          "correct": "V (volume in L)",
+          "correctExplanation": "Moles = concentration x volume, where volume must be in litres.",
+          "distractors": [
+            { "answer": "M (molar mass)", "explanation": "Students may confuse the solution formula n = cV with the mass formula n = m/M." },
+            { "answer": "m (mass in g)", "explanation": "Students may mix up volume and mass when applying the concentration formula." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Fill in the blank to complete the limiting reagent identification step.",
+      "sentence": "To identify the limiting reagent, divide the available moles of each reactant by its {{blank:1}} from the balanced equation.",
+      "blanks": {
+        "1": {
+          "correct": "coefficient",
+          "correctExplanation": "Dividing moles by the stoichiometric coefficient shows which reactant runs out first.",
+          "distractors": [
+            { "answer": "molar mass", "explanation": "Students may confuse molar mass with stoichiometric coefficient in the analysis." },
+            { "answer": "atom count", "explanation": "Students may confuse the number of atoms in a formula with the equation coefficient." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Fill in the blank about unit conversion.",
+      "sentence": "When using n = c x V, the volume must be converted from millilitres to {{blank:1}} by dividing by 1000.",
+      "blanks": {
+        "1": {
+          "correct": "litres",
+          "correctExplanation": "Concentration is in mol L^-1, so volume must be in litres for the formula to work.",
+          "distractors": [
+            { "answer": "grams", "explanation": "Students may confuse volume units with mass units when converting." },
+            { "answer": "moles", "explanation": "Students may confuse the unit of the answer (moles) with the unit of volume." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "mc",
+      "question": "A student reacts 4.00 g CH4 with 32.0 g O2 and obtains 8.80 g CO2. Given CH4 + 2O2 -> CO2 + 2H2O, evaluate whether the student correctly identified the limiting reagent.",
+      "correct": "CH4 is correctly limiting; 0.250 mol CH4 needs 0.500 mol O2 and 1.00 mol O2 is available",
+      "correctExplanation": "n(CH4) = 0.250 mol needs 0.500 mol O2. n(O2) = 1.00 mol, so O2 is in excess. Theoretical: 0.250 mol CO2 = 11.0 g. The 8.80 g yield indicates experimental loss.",
+      "distractors": [
+        { "answer": "O2 is limiting; the low yield proves that oxygen was consumed before methane was", "explanation": "Students may think the low yield means O2 was limiting, but the yield is below theoretical for CH4 limiting too." },
+        { "answer": "Neither reagent is limiting because the yield is below the theoretical prediction", "explanation": "Students may think a low yield means no limiting reagent, but one reactant must still be limiting." },
+        { "answer": "Equal masses of reactants means neither reactant can be the limiting reagent here", "explanation": "Students may assume equal masses means neither is limiting, ignoring molar mass differences." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Experiment A uses 0.50 mol CH4 with 1.50 mol O2; Experiment B uses 0.50 mol CH4 with 0.50 mol O2. Compare the CO2 produced in each.",
+      "correct": "A produces 0.50 mol CO2 and B produces 0.25 mol CO2 because different reagents limit",
+      "correctExplanation": "In A, CH4 is limiting (needs 1.00 mol O2, has 1.50). In B, O2 is limiting (needs 1.00, has 0.50). A: 0.50 mol CO2. B: 0.25 mol CO2.",
+      "distractors": [
+        { "answer": "Both produce 0.50 mol CO2 because they start with the same amount of CH4 fuel", "explanation": "Students may assume product depends only on CH4 without considering which reagent is limiting." },
+        { "answer": "A produces 0.75 mol CO2 and B produces 0.25 mol CO2 due to excess O2 reacting", "explanation": "Students may think excess O2 contributes to additional CO2 beyond what CH4 allows." },
+        { "answer": "Both produce 0.25 mol CO2 because the minimum moles of any reactant always limits", "explanation": "Students may take the minimum moles of any single reactant without applying stoichiometric ratios." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A chemist claims that doubling the mass of the limiting reagent always doubles the product mass. Under what condition is this valid?",
+      "correct": "Only when the other reactant remains in excess after the limiting reagent is doubled",
+      "correctExplanation": "Doubling the limiting reagent doubles product only if sufficient excess reagent remains to react with it.",
+      "distractors": [
+        { "answer": "The claim is always valid regardless of how much excess reagent is currently present", "explanation": "Students may not consider that the excess reagent could become limiting after doubling." },
+        { "answer": "The claim is never valid because product yield does not depend on limiting reagent", "explanation": "Students may disconnect product yield from limiting reagent quantity." },
+        { "answer": "Only when the molar masses of both reactants are exactly equal to each other", "explanation": "Students may think molar mass equality is required, confusing mass with moles." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A reaction yields 70% of the theoretical mass of CO2. If theoretical yield was 11.0 g, which factor best explains the reduced yield?",
+      "correct": "Side reactions or incomplete reaction consumed some reactant without forming CO2",
+      "correctExplanation": "Practical yields are often lower due to side reactions, incomplete combustion, or losses during collection.",
+      "distractors": [
+        { "answer": "The balanced equation was incorrect so the stoichiometric ratios were wrong initially", "explanation": "Students may blame the equation, but a verified balanced equation gives correct theoretical yield." },
+        { "answer": "The molar mass of CO2 decreases at higher temperatures causing a lower mass result", "explanation": "Students may think molar mass changes with temperature; molar mass is constant." },
+        { "answer": "The wrong limiting reagent was chosen so a completely different product was formed", "explanation": "Students may think wrong limiting reagent changes the product identity rather than just the yield." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Analyse why using mass ratios instead of mole ratios to identify the limiting reagent gives incorrect results when molar masses differ.",
+      "correct": "Mass ratios do not account for the different number of particles per gram for each reactant",
+      "correctExplanation": "Different molar masses mean the same mass contains different numbers of moles, making mass comparison unreliable.",
+      "distractors": [
+        { "answer": "Mass ratios give incorrect results only when the reaction involves gases at high pressure", "explanation": "Students may think mass ratios fail only for gases; the issue applies to all states." },
+        { "answer": "Mass ratios work correctly when the total mass of reactants is conserved in the reaction", "explanation": "Students may confuse conservation of mass with the validity of using mass ratios for stoichiometry." },
+        { "answer": "Mass ratios always work when the balanced equation has simple whole number coefficients", "explanation": "Students may think simple coefficients make mass ratios valid, but molar mass differences still matter." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "If 100.0 mL of 0.200 mol L^-1 HCl reacts with 150.0 mL of 0.100 mol L^-1 NaOH, what is the concentration of excess HCl after reaction?",
+      "correct": "0.0200 mol L^-1",
+      "correctExplanation": "n(HCl) = 0.0200 mol, n(NaOH) = 0.0150 mol. NaOH is limiting. Excess HCl = 0.0050 mol in 250.0 mL total. c = 0.0050/0.2500 = 0.0200 mol L^-1.",
+      "distractors": [
+        { "answer": "0.0500 mol L^-1", "explanation": "Students may forget to account for the total combined volume and use only 100.0 mL." },
+        { "answer": "0.100 mol L^-1", "explanation": "Students may subtract concentrations directly instead of calculating moles and total volume." },
+        { "answer": "0.0100 mol L^-1", "explanation": "Students may halve the excess moles or accidentally double the volume in the calculation." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student argues that in 2H2 + O2 -> 2H2O, having 2.0 mol H2 and 2.0 mol O2 means H2 is limiting. Evaluate this reasoning.",
+      "correct": "Correct; 2.0 mol H2 needs only 1.0 mol O2 so H2 is fully consumed with O2 in excess",
+      "correctExplanation": "2.0 mol H2 requires 1.0 mol O2 (2:1 ratio). With 2.0 mol O2 available, H2 is used up first.",
+      "distractors": [
+        { "answer": "Incorrect; O2 is limiting because it has a larger molar mass per molecule than H2", "explanation": "Students may think molar mass determines which reactant is limiting rather than stoichiometry." },
+        { "answer": "Incorrect; neither is limiting because both have the same number of moles initially", "explanation": "Students may assume equal moles means neither is limiting, ignoring the 2:1 ratio." },
+        { "answer": "Incorrect; H2 cannot be limiting since it has more molecules than O2 per mole", "explanation": "Students may confuse molecule count per mole with the number of moles; both are equal here." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "If a student calculates product using the excess reagent instead of the limiting reagent, how does this affect percentage yield?",
+      "correct": "Theoretical yield is overestimated so the percentage yield appears lower than actual",
+      "correctExplanation": "Using excess reagent inflates theoretical yield, making the ratio of actual to theoretical smaller than reality.",
+      "distractors": [
+        { "answer": "Theoretical yield is underestimated so the percentage yield appears higher than actual", "explanation": "Students may think using excess reagent gives a smaller theoretical yield." },
+        { "answer": "Percentage yield is unaffected because it depends only on the actual yield obtained", "explanation": "Students may forget that percentage yield is a ratio involving theoretical yield." },
+        { "answer": "Percentage yield exceeds one hundred percent indicating a measurement error only", "explanation": "Students may think overestimation always gives over 100%, but it actually gives an artificially low value." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Fill in the blank to complete the analysis of percentage yield.",
+      "sentence": "Percentage yield equals the actual yield divided by the {{blank:1}} yield, multiplied by 100.",
+      "blanks": {
+        "1": {
+          "correct": "theoretical",
+          "correctExplanation": "Percentage yield compares actual yield to the maximum theoretical yield from stoichiometry.",
+          "distractors": [
+            { "answer": "percentage", "explanation": "Students may confuse the term being calculated with a component of the formula." },
+            { "answer": "practical", "explanation": "Students may confuse practical yield (which is the actual yield) with theoretical yield." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Fill in the blank about comparing experiments.",
+      "sentence": "When the same fuel is combusted with different amounts of oxygen, the experiment with less oxygen produces {{blank:1}} product because oxygen becomes limiting.",
+      "blanks": {
+        "1": {
+          "correct": "less",
+          "correctExplanation": "Less oxygen means the limiting reagent provides fewer moles, producing less product.",
+          "distractors": [
+            { "answer": "more", "explanation": "Students may think less oxygen forces more product by concentrating the reaction." },
+            { "answer": "equal", "explanation": "Students may think changing oxygen does not affect product if the fuel amount is the same." }
+          ]
+        }
+      }
+    }
+  ]
+}
