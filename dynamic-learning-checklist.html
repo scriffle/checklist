@@ -8103,7 +8103,7 @@ async function loadManifest() {
     try {
         showTopicLoading(true, 'Loading curriculum...');
         
-        const response = await fetch('manifest.json');
+        const response = await fetch('manifest.json?v=' + Date.now());
         if (!response.ok) {
             throw new Error(`HTTP ${response.status}`);
         }
