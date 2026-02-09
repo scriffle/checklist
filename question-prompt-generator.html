@@ -7,6 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Nunito:wght@600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
   <style>
     :root {
       /* Primary palette */
@@ -1758,19 +1759,19 @@ Total Prompts: ${lps.length * 4}
       showToast('Exported single text file', 'success');
     }
     
-    function exportSeparateLpFiles() {
+    async function exportSeparateLpFiles() {
       const lps = getSelectedLps();
-      
-      // Create a zip-like structure using multiple downloads
-      // For simplicity, we'll create a combined file with clear separators
-      // In production, you'd use JSZip library
-      
+      const topicId = state.topic?.id || 'unknown';
+      const date = new Date().toISOString().split('T')[0];
+
+      const zip = new JSZip();
+
       lps.forEach(lp => {
         let content = `PROMPTS FOR: ${lp.title}\n`;
         content += `UUID: ${lp.uuid}\n`;
         content += `Subtopic: ${lp.subtopic.name}\n`;
         content += `Generated: ${new Date().toLocaleString()}\n\n`;
-        
+
         ['toLevel2', 'toLevel3', 'toLevel4', 'toLevel5'].forEach(level => {
           content += `\n${'─'.repeat(80)}\n`;
           content += `${level} (${COGNITIVE_LEVELS[level].name})\n`;
@@ -1778,11 +1779,13 @@ Total Prompts: ${lps.length * 4}
           content += generatePrompt(lp, level);
           content += '\n';
         });
-        
-        downloadFile(`prompt-${lp.uuid}.txt`, content, 'text/plain');
+
+        zip.file(`prompt-${lp.uuid}.txt`, content);
       });
-      
-      showToast(`Exported ${lps.length} separate files`, 'success');
+
+      const blob = await zip.generateAsync({ type: 'blob' });
+      downloadFile(`question-prompts-${topicId}-${date}.zip`, blob);
+      showToast(`Exported ${lps.length} files as .zip`, 'success');
     }
     
     function exportJsonBundle() {
@@ -1836,7 +1839,9 @@ Total Prompts: ${lps.length * 4}
     }
     
     function downloadFile(filename, content, mimeType) {
-      const blob = new Blob([content], { type: mimeType });
+      const blob = content instanceof Blob
+        ? content
+        : new Blob([content], { type: mimeType });
       const url = URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;
