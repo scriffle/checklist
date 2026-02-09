@@ -1,0 +1,933 @@
+{
+  "_link": {
+    "uuid": "lp-a20e35e8-2de4-8501-b2c1-57b97c331329",
+    "version": 1,
+    "contentHash": "hash-77bd36b2",
+    "title": "I can calculate the current in a cell when a known mass is produced in a given time",
+    "generatedAt": "2026-02-08T00:00:00.000Z"
+  },
+  "toLevel2": [
+    {
+      "type": "MC",
+      "question": "Which formula is used to calculate current from charge and time?",
+      "correct": "I = Q / t",
+      "correctExplanation": "Current (I) equals charge (Q) divided by time (t). This is the rearranged form of Q = It, solving for current.",
+      "distractors": [
+        {
+          "answer": "I = Q × t",
+          "explanation": "Multiplying charge by time is incorrect. Current is charge per unit time: I = Q/t."
+        },
+        {
+          "answer": "I = t / Q",
+          "explanation": "Dividing time by charge is inverted. Current equals charge divided by time, not time divided by charge."
+        },
+        {
+          "answer": "I = Q + t",
+          "explanation": "Adding charge and time has no physical meaning. Current is the rate of charge flow: I = Q/t."
+        }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "What is the first step when calculating current from a known mass of product?",
+      "correct": "Convert mass to moles using n = m/M",
+      "correctExplanation": "The calculation begins by converting the measured mass to moles of substance using the molar mass, which then allows further conversions.",
+      "distractors": [
+        {
+          "answer": "Calculate the cell voltage",
+          "explanation": "Cell voltage is not needed for current calculations from mass. The first step is converting mass to moles."
+        },
+        {
+          "answer": "Measure the temperature",
+          "explanation": "Temperature measurement is not required. The calculation begins with converting mass to moles."
+        },
+        {
+          "answer": "Find the electron configuration",
+          "explanation": "Electron configuration is not needed. The first step is converting mass to moles using n = m/M."
+        }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "What unit must time be in when calculating current using I = Q/t?",
+      "correct": "Seconds",
+      "correctExplanation": "Time must be in seconds so that charge in coulombs divided by time in seconds gives current in amperes.",
+      "distractors": [
+        {
+          "answer": "Minutes",
+          "explanation": "Minutes must be converted to seconds before use. Using minutes gives an answer 60 times too large."
+        },
+        {
+          "answer": "Hours",
+          "explanation": "Hours must be converted to seconds (multiply by 3600) before use in I = Q/t."
+        },
+        {
+          "answer": "Milliseconds",
+          "explanation": "Milliseconds must be converted to seconds (divide by 1000). The standard unit for I = Q/t is seconds."
+        }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "What does the calculated current from I = Q/t represent?",
+      "correct": "The rate of charge flow through the cell",
+      "correctExplanation": "Current is defined as the rate at which charge flows. Dividing total charge by total time gives the average current.",
+      "distractors": [
+        {
+          "answer": "The total energy produced",
+          "explanation": "Energy is calculated using voltage and charge. I = Q/t gives the rate of charge flow, which is current."
+        },
+        {
+          "answer": "The voltage of the cell",
+          "explanation": "Voltage is a separate quantity related to energy per charge. I = Q/t calculates current, not voltage."
+        },
+        {
+          "answer": "The resistance of the cell",
+          "explanation": "Resistance requires voltage and current (R = V/I). I = Q/t calculates current from charge and time."
+        }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "In the calculation sequence for finding current, which step comes after finding moles of electrons?",
+      "correct": "Calculate charge using Q = n(e⁻) × F",
+      "correctExplanation": "After determining moles of electrons from stoichiometry, charge is calculated by multiplying by Faraday's constant (96,485 C mol⁻¹).",
+      "distractors": [
+        {
+          "answer": "Convert mass to moles",
+          "explanation": "Converting mass to moles occurs before finding moles of electrons, not after. The next step is calculating charge."
+        },
+        {
+          "answer": "Calculate the cell voltage",
+          "explanation": "Cell voltage is not part of this calculation sequence. After moles of electrons, charge is calculated using Q = n(e⁻) × F."
+        },
+        {
+          "answer": "Determine the molar mass",
+          "explanation": "Molar mass is used in the first step. After moles of electrons, the next step is calculating charge."
+        }
+      ]
+    },
+    {
+      "type": "TF",
+      "question": "To calculate current from a known mass, you must first convert the mass to moles of substance.",
+      "correct": "True",
+      "correctExplanation": "The calculation sequence requires converting mass to moles (n = m/M) before using stoichiometry to find moles of electrons.",
+      "distractors": [
+        {
+          "answer": "False",
+          "explanation": "Mass must be converted to moles using the molar mass. This is the essential first step in determining the current."
+        }
+      ]
+    },
+    {
+      "type": "TF",
+      "question": "The formula I = Q × t is used to calculate current from charge and time.",
+      "correct": "False",
+      "correctExplanation": "The correct formula is I = Q/t (current equals charge divided by time). Multiplying charge by time gives an incorrect result.",
+      "distractors": [
+        {
+          "answer": "True",
+          "explanation": "The correct formula is I = Q/t, not I = Q × t. Current is charge per unit time, requiring division."
+        }
+      ]
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the sentence about the calculation steps.",
+      "sentence": "To find current from mass: first convert mass to {{blank:1}} using n = m/M, then find moles of electrons using the half-equation, then calculate {{blank:2}} using Q = n(e⁻) × F.",
+      "blanks": {
+        "1": {
+          "correct": "moles",
+          "correctExplanation": "The first step converts mass to moles using the molar mass, enabling subsequent stoichiometric calculations.",
+          "distractors": [
+            {
+              "answer": "volume",
+              "explanation": "Volume is not needed in this calculation. Mass is converted to moles, not volume."
+            },
+            {
+              "answer": "energy",
+              "explanation": "Energy conversion is not part of this sequence. Mass is converted to moles as the first step."
+            }
+          ]
+        },
+        "2": {
+          "correct": "charge",
+          "correctExplanation": "Charge (Q) is calculated by multiplying moles of electrons by Faraday's constant. This charge is then used to find current.",
+          "distractors": [
+            {
+              "answer": "voltage",
+              "explanation": "Voltage is not calculated in this sequence. Charge is found from Q = n(e⁻) × F, then used to calculate current."
+            },
+            {
+              "answer": "resistance",
+              "explanation": "Resistance is not part of this calculation. Charge is calculated from moles of electrons and Faraday's constant."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the sentence about current calculation.",
+      "sentence": "Current is calculated using the formula I = {{blank:1}} / {{blank:2}}, where Q is in coulombs and t is in seconds.",
+      "blanks": {
+        "1": {
+          "correct": "Q",
+          "correctExplanation": "Q represents charge in coulombs. Current equals charge divided by time.",
+          "distractors": [
+            {
+              "answer": "t",
+              "explanation": "Time (t) is in the denominator, not the numerator. Current is charge (Q) divided by time (t)."
+            },
+            {
+              "answer": "F",
+              "explanation": "Faraday's constant (F) is used in a different step. The current formula uses charge (Q) divided by time."
+            }
+          ]
+        },
+        "2": {
+          "correct": "t",
+          "correctExplanation": "Time (t) in seconds is the denominator. Current is the rate of charge flow per unit time.",
+          "distractors": [
+            {
+              "answer": "Q",
+              "explanation": "Charge (Q) is in the numerator, not the denominator. I = Q/t, not I = t/Q."
+            },
+            {
+              "answer": "M",
+              "explanation": "Molar mass (M) is used in a different step. Current is calculated from I = Q/t."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the sentence about time conversion.",
+      "sentence": "A time of 15 minutes must be converted to {{blank:1}} seconds by multiplying 15 by {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "900",
+          "correctExplanation": "15 minutes × 60 seconds/minute = 900 seconds.",
+          "distractors": [
+            {
+              "answer": "15",
+              "explanation": "15 is the time in minutes. It must be multiplied by 60 to convert to 900 seconds."
+            },
+            {
+              "answer": "150",
+              "explanation": "150 results from multiplying by 10 instead of 60. 15 × 60 = 900 seconds."
+            }
+          ]
+        },
+        "2": {
+          "correct": "60",
+          "correctExplanation": "There are 60 seconds in one minute, so multiplying minutes by 60 converts to seconds.",
+          "distractors": [
+            {
+              "answer": "100",
+              "explanation": "There are 60 seconds in a minute, not 100. 15 × 60 = 900 seconds."
+            },
+            {
+              "answer": "3600",
+              "explanation": "3600 converts hours to seconds. For minutes to seconds, multiply by 60."
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "MC",
+      "question": "Why is calculating current from mass and time useful in practical electrochemistry?",
+      "correct": "It verifies whether a cell is operating at the expected current",
+      "correctExplanation": "By measuring the mass deposited and the time taken, the actual current can be calculated and compared with the expected value to check cell performance.",
+      "distractors": [
+        {
+          "answer": "It determines the cell voltage",
+          "explanation": "This calculation determines current, not voltage. Voltage requires different measurements."
+        },
+        {
+          "answer": "It measures the temperature of the cell",
+          "explanation": "Temperature is a separate measurement. Calculating current from mass verifies electrical performance."
+        },
+        {
+          "answer": "It predicts the colour of the deposit",
+          "explanation": "Colour depends on the substance, not the current calculation. This method checks current flow."
+        }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Explain why the stoichiometry step is essential when calculating current from mass deposited.",
+      "correct": "It converts moles of substance to moles of electrons",
+      "correctExplanation": "The half-equation stoichiometry provides the ratio between moles of substance and moles of electrons, which is needed to calculate the charge that flowed.",
+      "distractors": [
+        {
+          "answer": "It determines the molar mass",
+          "explanation": "Molar mass is a known constant from the periodic table. Stoichiometry provides the electron-to-substance mole ratio."
+        },
+        {
+          "answer": "It cancels out Faraday's constant",
+          "explanation": "Stoichiometry does not cancel Faraday's constant. It provides the ratio needed to convert between moles of substance and electrons."
+        },
+        {
+          "answer": "It converts seconds to minutes",
+          "explanation": "Time conversion is a unit operation, not stoichiometry. Stoichiometry connects substance amounts to electron amounts."
+        }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "What does it mean if the calculated current is lower than the expected current for a cell?",
+      "correct": "The cell may not be operating at full efficiency",
+      "correctExplanation": "A lower-than-expected current suggests some charge is being lost, possibly through side reactions, resistance losses, or poor electrode contact.",
+      "distractors": [
+        {
+          "answer": "The half-equation must be wrong",
+          "explanation": "The half-equation is determined by the chemistry, not by current. Low current indicates a performance issue, not an equation error."
+        },
+        {
+          "answer": "Faraday's constant has changed",
+          "explanation": "Faraday's constant is a physical constant and does not change. Low current indicates cell performance issues."
+        },
+        {
+          "answer": "The molar mass was measured incorrectly",
+          "explanation": "Molar masses are known constants. Low calculated current suggests the cell is underperforming, not a molar mass error."
+        }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A student calculated I = 3600/15 = 240 A for a small lab cell. Why is this result clearly an error?",
+      "correct": "They used time in minutes instead of seconds",
+      "correctExplanation": "Using 15 minutes instead of 900 seconds makes the denominator 60 times too small, giving a current 60 times too large. 3600/900 = 4.0 A is more reasonable.",
+      "distractors": [
+        {
+          "answer": "They forgot to use Faraday's constant",
+          "explanation": "The charge value of 3600 C suggests Faraday's constant was already used. The error is in the time unit (minutes vs seconds)."
+        },
+        {
+          "answer": "They used the wrong molar mass",
+          "explanation": "The charge value appears correct. The unreasonably high current is due to dividing by 15 (minutes) instead of 900 (seconds)."
+        },
+        {
+          "answer": "Lab cells always produce low current",
+          "explanation": "Lab cells can vary in current, but 240 A from a small cell is unreasonable. The error is using minutes instead of seconds."
+        }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "How does the calculation I = Q/t relate to the definition of an ampere?",
+      "correct": "One ampere equals one coulomb per second",
+      "correctExplanation": "The ampere is defined as one coulomb of charge flowing per second. I = Q/t directly applies this definition by dividing charge by time.",
+      "distractors": [
+        {
+          "answer": "One ampere equals one volt per ohm",
+          "explanation": "While V = IR gives this relationship, the direct definition linking to I = Q/t is one ampere = one coulomb per second."
+        },
+        {
+          "answer": "One ampere equals one joule per second",
+          "explanation": "One joule per second is a watt, not an ampere. One ampere equals one coulomb per second."
+        },
+        {
+          "answer": "One ampere equals one mole per second",
+          "explanation": "Moles per second describes a rate of substance production. One ampere equals one coulomb per second."
+        }
+      ]
+    },
+    {
+      "type": "TF",
+      "question": "If the calculated current from mass and time data is significantly different from the ammeter reading, it could indicate a measurement error or side reactions.",
+      "correct": "True",
+      "correctExplanation": "Discrepancies between calculated and measured current can arise from weighing errors, timing errors, side reactions consuming charge, or faulty equipment.",
+      "distractors": [
+        {
+          "answer": "False",
+          "explanation": "Discrepancies are diagnostically meaningful and can indicate real issues with the experiment or cell performance."
+        }
+      ]
+    },
+    {
+      "type": "TF",
+      "question": "The calculation sequence for finding current from mass is the reverse of finding mass from current.",
+      "correct": "True",
+      "correctExplanation": "Finding mass starts from I and t; finding current starts from mass. Both use the same relationships (Q = It, Q = nF, stoichiometry, n = m/M) but in opposite directions.",
+      "distractors": [
+        {
+          "answer": "False",
+          "explanation": "The sequences are indeed reverses. Mass→moles→electrons→charge→current is the reverse of current→charge→electrons→moles→mass."
+        }
+      ]
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the explanation of the reverse calculation.",
+      "sentence": "To find current from mass, work {{blank:1}}: mass → moles → moles of electrons → charge → {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "backwards",
+          "correctExplanation": "The calculation starts from mass (the measured quantity) and works backwards through the Faraday's law relationships to find current.",
+          "distractors": [
+            {
+              "answer": "forwards",
+              "explanation": "The forward direction starts from current. Starting from mass to find current means working backwards through the sequence."
+            },
+            {
+              "answer": "randomly",
+              "explanation": "The steps must follow a logical sequence, not random order. Starting from mass and ending at current is the reverse direction."
+            }
+          ]
+        },
+        "2": {
+          "correct": "current",
+          "correctExplanation": "The final step divides charge by time to obtain current: I = Q/t.",
+          "distractors": [
+            {
+              "answer": "mass",
+              "explanation": "Mass is the starting point, not the end. The calculation aims to find current from the known mass."
+            },
+            {
+              "answer": "voltage",
+              "explanation": "Voltage is not determined in this calculation. The endpoint is current, calculated from I = Q/t."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the sentence about error detection.",
+      "sentence": "A calculated current of 240 A for a small lab cell is clearly wrong because the student probably forgot to convert {{blank:1}} to {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "minutes",
+          "correctExplanation": "Using time in minutes instead of seconds makes the denominator too small, giving an unreasonably large current value.",
+          "distractors": [
+            {
+              "answer": "grams",
+              "explanation": "Grams to kilograms conversion would not cause a 60-fold error. The issue is minutes to seconds conversion."
+            },
+            {
+              "answer": "amperes",
+              "explanation": "Amperes are the final answer, not something to convert. The error is in time units: minutes instead of seconds."
+            }
+          ]
+        },
+        "2": {
+          "correct": "seconds",
+          "correctExplanation": "Time must be in seconds for I = Q/t. Using minutes gives a current 60 times too large.",
+          "distractors": [
+            {
+              "answer": "hours",
+              "explanation": "Converting to hours would make the current even larger (3600× too large). The correct conversion is minutes to seconds."
+            },
+            {
+              "answer": "coulombs",
+              "explanation": "Coulombs are a unit of charge, not time. Time must be converted from minutes to seconds."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the sentence about practical applications.",
+      "sentence": "Calculating current from experimental mass data is useful for {{blank:1}} whether a cell is performing as expected or if there are {{blank:2}} affecting its operation.",
+      "blanks": {
+        "1": {
+          "correct": "verifying",
+          "correctExplanation": "Comparing the calculated current to the expected or measured current verifies cell performance and identifies any discrepancies.",
+          "distractors": [
+            {
+              "answer": "preventing",
+              "explanation": "The calculation diagnoses issues after they occur. It verifies performance rather than preventing problems."
+            },
+            {
+              "answer": "ignoring",
+              "explanation": "The purpose is to check performance, not ignore it. The calculation verifies whether the cell is working correctly."
+            }
+          ]
+        },
+        "2": {
+          "correct": "issues",
+          "correctExplanation": "Differences between expected and calculated current can reveal issues such as side reactions, poor connections, or equipment problems.",
+          "distractors": [
+            {
+              "answer": "benefits",
+              "explanation": "The calculation checks for problems, not benefits. Discrepancies typically indicate issues with cell performance."
+            },
+            {
+              "answer": "colours",
+              "explanation": "Colours are visual properties. The calculation reveals operational issues affecting current flow."
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "MC",
+      "question": "In an experiment, 0.95 g of nickel is deposited in 15 minutes using Ni²⁺ + 2e⁻ → Ni. What is the current? (M(Ni) = 58.69 g mol⁻¹)",
+      "correct": "3.4 A",
+      "correctExplanation": "n(Ni) = 0.95/58.69 = 0.01619 mol. n(e⁻) = 0.03237 mol. Q = 0.03237 × 96,485 = 3123 C. t = 900 s. I = 3123/900 = 3.47 ≈ 3.4 A.",
+      "distractors": [
+        {
+          "answer": "6.9 A",
+          "explanation": "This doubles the answer by using a 1:1 ratio instead of the correct 2:1 electron-to-nickel ratio from the half-equation."
+        },
+        {
+          "answer": "1.7 A",
+          "explanation": "This halves the answer, possibly by using a 4:1 ratio or another arithmetic error."
+        },
+        {
+          "answer": "208 A",
+          "explanation": "This uses time in minutes (15) instead of seconds (900). I = 3123/15 = 208. Always convert to seconds."
+        }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A cell deposits 1.08 g of silver in 30 minutes using Ag⁺ + e⁻ → Ag. What is the current? (M(Ag) = 107.9 g mol⁻¹)",
+      "correct": "0.54 A",
+      "correctExplanation": "n(Ag) = 1.08/107.9 = 0.01001 mol. n(e⁻) = 0.01001 mol (1:1). Q = 0.01001 × 96,485 = 965.8 C. t = 1800 s. I = 965.8/1800 = 0.537 ≈ 0.54 A.",
+      "distractors": [
+        {
+          "answer": "1.07 A",
+          "explanation": "This uses a 2:1 ratio instead of the correct 1:1 ratio. Ag⁺ requires only 1 electron per atom."
+        },
+        {
+          "answer": "0.27 A",
+          "explanation": "This halves the answer, possibly by doubling the time or halving the moles incorrectly."
+        },
+        {
+          "answer": "32.2 A",
+          "explanation": "This divides charge by 30 (minutes) instead of 1800 (seconds). Always convert time to seconds."
+        }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A fuel cell consumes 0.10 g of hydrogen in 5.0 minutes via H₂ → 2H⁺ + 2e⁻. What current does it produce? (M(H₂) = 2.016 g mol⁻¹)",
+      "correct": "31.8 A",
+      "correctExplanation": "n(H₂) = 0.10/2.016 = 0.04960 mol. n(e⁻) = 0.09921 mol. Q = 0.09921 × 96,485 = 9573 C. t = 300 s. I = 9573/300 = 31.9 ≈ 31.8 A.",
+      "distractors": [
+        {
+          "answer": "15.9 A",
+          "explanation": "This halves the answer by using a 1:1 H₂ to electron ratio. Each H₂ produces 2 electrons, not 1."
+        },
+        {
+          "answer": "63.6 A",
+          "explanation": "This doubles the answer, possibly by using a 4:1 electron ratio or dividing by 150 seconds."
+        },
+        {
+          "answer": "1.91 A",
+          "explanation": "This uses time of 5000 seconds instead of 300, or makes another major conversion error."
+        }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "An electrolysis cell deposits 3.27 g of zinc in 45 minutes using Zn²⁺ + 2e⁻ → Zn. Calculate the current. (M(Zn) = 65.38 g mol⁻¹)",
+      "correct": "3.56 A",
+      "correctExplanation": "n(Zn) = 3.27/65.38 = 0.05002 mol. n(e⁻) = 0.1000 mol. Q = 0.1000 × 96,485 = 9649 C. t = 2700 s. I = 9649/2700 = 3.57 ≈ 3.56 A.",
+      "distractors": [
+        {
+          "answer": "7.12 A",
+          "explanation": "This uses a 1:1 ratio instead of dividing by 2. Zn²⁺ requires 2 electrons, so n(e⁻) = 2 × n(Zn)."
+        },
+        {
+          "answer": "1.78 A",
+          "explanation": "This halves the correct answer, possibly by using a 4:1 electron ratio instead of the correct 2:1."
+        },
+        {
+          "answer": "214 A",
+          "explanation": "This uses 45 seconds instead of 2700 seconds (45 minutes × 60). Always convert minutes to seconds."
+        }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A cell produces 0.270 g of aluminium in 1.0 hour using Al³⁺ + 3e⁻ → Al. What is the current? (M(Al) = 26.98 g mol⁻¹)",
+      "correct": "0.805 A",
+      "correctExplanation": "n(Al) = 0.270/26.98 = 0.01001 mol. n(e⁻) = 3 × 0.01001 = 0.03003 mol. Q = 0.03003 × 96,485 = 2897 C. t = 3600 s. I = 2897/3600 = 0.805 A.",
+      "distractors": [
+        {
+          "answer": "0.268 A",
+          "explanation": "This divides by 3 twice or uses the wrong stoichiometric ratio. The correct ratio is 3 electrons per Al atom, giving I = 0.805 A."
+        },
+        {
+          "answer": "0.536 A",
+          "explanation": "This uses a 2:1 ratio instead of 3:1. Al³⁺ requires 3 electrons per atom, not 2."
+        },
+        {
+          "answer": "2.41 A",
+          "explanation": "This may result from using 1200 seconds (20 minutes) instead of 3600 seconds (1 hour)."
+        }
+      ]
+    },
+    {
+      "type": "TF",
+      "question": "If 0.635 g of copper is deposited in 20 minutes at the cathode using Cu²⁺ + 2e⁻ → Cu, the current is approximately 1.6 A. (M(Cu) = 63.55 g mol⁻¹)",
+      "correct": "True",
+      "correctExplanation": "n(Cu) = 0.635/63.55 = 0.009992 mol. n(e⁻) = 0.01998 mol. Q = 1928 C. t = 1200 s. I = 1928/1200 = 1.61 ≈ 1.6 A.",
+      "distractors": [
+        {
+          "answer": "False",
+          "explanation": "The calculation gives I = 1928/1200 = 1.61 A, which rounds to 1.6 A. The statement is correct."
+        }
+      ]
+    },
+    {
+      "type": "TF",
+      "question": "When calculating current from mass and time, converting time from hours to seconds requires multiplying by 60.",
+      "correct": "False",
+      "correctExplanation": "Converting hours to seconds requires multiplying by 3600 (60 minutes × 60 seconds). Multiplying by 60 only converts hours to minutes.",
+      "distractors": [
+        {
+          "answer": "True",
+          "explanation": "Multiplying hours by 60 gives minutes, not seconds. To convert hours to seconds, multiply by 3600."
+        }
+      ]
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the current calculation.",
+      "sentence": "If 0.95 g of Ni is deposited in 15 min: n(Ni) = 0.95/58.69 = 0.0162 mol, n(e⁻) = {{blank:1}} mol, and the time is {{blank:2}} seconds.",
+      "blanks": {
+        "1": {
+          "correct": "0.0324",
+          "correctExplanation": "From Ni²⁺ + 2e⁻ → Ni, n(e⁻) = 2 × 0.0162 = 0.0324 mol of electrons.",
+          "distractors": [
+            {
+              "answer": "0.0162",
+              "explanation": "This is the moles of Ni, not electrons. With a 2:1 ratio, n(e⁻) = 2 × 0.0162 = 0.0324 mol."
+            },
+            {
+              "answer": "0.0486",
+              "explanation": "This multiplies by 3 instead of 2. Ni²⁺ requires 2 electrons, giving n(e⁻) = 0.0324 mol."
+            }
+          ]
+        },
+        "2": {
+          "correct": "900",
+          "correctExplanation": "15 minutes × 60 = 900 seconds. Time must be in seconds for the current calculation.",
+          "distractors": [
+            {
+              "answer": "15",
+              "explanation": "15 is in minutes. It must be converted to seconds: 15 × 60 = 900 s."
+            },
+            {
+              "answer": "1500",
+              "explanation": "This multiplies by 100 instead of 60. 15 minutes = 15 × 60 = 900 seconds."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the final step of the current calculation.",
+      "sentence": "With Q = 3123 C and t = 900 s, the current is I = {{blank:1}} / {{blank:2}} = 3.47 A.",
+      "blanks": {
+        "1": {
+          "correct": "3123",
+          "correctExplanation": "The charge of 3123 C is the numerator in I = Q/t.",
+          "distractors": [
+            {
+              "answer": "900",
+              "explanation": "900 is the time in seconds (denominator). The charge of 3123 C goes in the numerator."
+            },
+            {
+              "answer": "96,485",
+              "explanation": "Faraday's constant was used in a previous step. The current calculation uses Q = 3123 C."
+            }
+          ]
+        },
+        "2": {
+          "correct": "900",
+          "correctExplanation": "The time of 900 seconds (15 minutes converted) is the denominator in I = Q/t.",
+          "distractors": [
+            {
+              "answer": "15",
+              "explanation": "15 is the time in minutes. It must be 900 seconds for the correct current calculation."
+            },
+            {
+              "answer": "3123",
+              "explanation": "3123 is the charge (numerator). Time of 900 s goes in the denominator."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the fuel cell current calculation.",
+      "sentence": "A fuel cell consuming 0.10 g H₂ in 5.0 min: n(H₂) = 0.050 mol, n(e⁻) = {{blank:1}} mol (from H₂ → 2H⁺ + 2e⁻), giving a current of approximately {{blank:2}} A.",
+      "blanks": {
+        "1": {
+          "correct": "0.10",
+          "correctExplanation": "From H₂ → 2H⁺ + 2e⁻, n(e⁻) = 2 × 0.050 = 0.10 mol of electrons.",
+          "distractors": [
+            {
+              "answer": "0.050",
+              "explanation": "This is the moles of H₂, not electrons. Each H₂ produces 2 electrons, so n(e⁻) = 0.10 mol."
+            },
+            {
+              "answer": "0.025",
+              "explanation": "This halves the moles of H₂ instead of doubling. n(e⁻) = 2 × n(H₂) = 0.10 mol."
+            }
+          ]
+        },
+        "2": {
+          "correct": "32",
+          "correctExplanation": "Q = 0.10 × 96,485 = 9649 C. t = 300 s. I = 9649/300 = 32.2 ≈ 32 A.",
+          "distractors": [
+            {
+              "answer": "16",
+              "explanation": "This halves the answer, using a 1:1 electron ratio. With 2 electrons per H₂, the current is about 32 A."
+            },
+            {
+              "answer": "1.9",
+              "explanation": "This may result from using 5000 seconds instead of 300. The current is approximately 32 A."
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "MC",
+      "question": "An experiment deposits 2.16 g of silver in 20 minutes, but the ammeter reads 2.0 A. Using Ag⁺ + e⁻ → Ag and M(Ag) = 107.9, evaluate whether the ammeter reading is consistent with the mass data.",
+      "correct": "The mass data gives about 1.6 A, suggesting the ammeter may be inaccurate",
+      "correctExplanation": "n(Ag) = 0.02002 mol, Q = 1932 C, t = 1200 s, I = 1.61 A. The ammeter reads 2.0 A, a significant discrepancy suggesting calibration issues or side reactions.",
+      "distractors": [
+        {
+          "answer": "The readings are perfectly consistent",
+          "explanation": "1.61 A and 2.0 A differ by about 24%, which is a significant discrepancy requiring investigation."
+        },
+        {
+          "answer": "The mass data is always unreliable",
+          "explanation": "Mass measurements can be very accurate. The discrepancy warrants investigation of both instruments, not dismissal of the mass data."
+        },
+        {
+          "answer": "Ammeters are always more accurate than mass data",
+          "explanation": "Neither measurement is inherently more accurate. The discrepancy requires investigation of possible errors in either measurement."
+        }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Two students each calculate the current for the same copper deposition experiment but get different answers. Student A converts 30 min to 1800 s; Student B uses 30 directly. How do their answers compare?",
+      "correct": "Student B's answer is 60 times larger than Student A's",
+      "correctExplanation": "Using 30 instead of 1800 in the denominator makes the answer 1800/30 = 60 times too large. This is a common unit conversion error.",
+      "distractors": [
+        {
+          "answer": "Their answers are the same",
+          "explanation": "Using different denominators (30 vs 1800) gives very different answers. Student B's is 60 times larger."
+        },
+        {
+          "answer": "Student A's answer is 60 times larger",
+          "explanation": "Student A uses 1800 (larger denominator), giving a smaller, correct answer. Student B's answer is 60× too large."
+        },
+        {
+          "answer": "Student B's answer is 2 times larger",
+          "explanation": "The factor is 60 (seconds per minute), not 2. Student B divided by 30 minutes instead of 1800 seconds."
+        }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A fuel cell engineer observes that 0.50 g of hydrogen is consumed in 10 minutes. They calculate the current and compare it to the design specification of 80 A. Is the cell performing correctly?",
+      "correct": "The cell produces about 80 A, consistent with the specification",
+      "correctExplanation": "n(H₂) = 0.248 mol, n(e⁻) = 0.496 mol, Q = 47,856 C, t = 600 s, I = 79.8 ≈ 80 A. The calculated current matches the specification.",
+      "distractors": [
+        {
+          "answer": "The cell is producing twice the specified current",
+          "explanation": "The calculation gives about 80 A, matching the 80 A specification, not double it."
+        },
+        {
+          "answer": "The cell is producing half the specified current",
+          "explanation": "The calculated current of about 80 A matches the specification. The cell is operating correctly."
+        },
+        {
+          "answer": "The data is insufficient to determine performance",
+          "explanation": "The mass, time, half-equation, and molar mass provide all information needed. The calculation confirms 80 A."
+        }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Analyse why a cell depositing Fe from Fe³⁺ + 3e⁻ → Fe would give a lower calculated current than one depositing Cu from Cu²⁺ + 2e⁻ → Cu if both deposit the same mass in the same time.",
+      "correct": "Fe has a lower molar mass and higher electron requirement, affecting the calculation differently",
+      "correctExplanation": "For the same mass: Fe (M = 55.85, 3e⁻) gives n(Fe) = m/55.85, n(e⁻) = 3m/55.85. Cu (M = 63.55, 2e⁻) gives n(e⁻) = 2m/63.55. Comparing: 3/55.85 = 0.0537 vs 2/63.55 = 0.0315. Fe actually gives MORE electrons, hence higher current.",
+      "distractors": [
+        {
+          "answer": "Both give identical currents from the same mass",
+          "explanation": "Different molar masses and electron requirements mean different moles of electrons, and therefore different currents."
+        },
+        {
+          "answer": "Current only depends on mass, not stoichiometry",
+          "explanation": "Current depends on both moles of substance (from mass) and the stoichiometric ratio of electrons to substance."
+        },
+        {
+          "answer": "The half-equation does not affect current calculations",
+          "explanation": "The half-equation determines the electron stoichiometry, which directly affects the calculated charge and therefore current."
+        }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A quality control engineer measures 5.00 g of chromium deposited in 2.0 hours from a cell specified at 7.5 A. Using Cr³⁺ + 3e⁻ → Cr and M(Cr) = 52.00, is the cell within specification?",
+      "correct": "The calculated current is about 3.9 A, significantly below the 7.5 A specification",
+      "correctExplanation": "n(Cr) = 0.0962 mol, n(e⁻) = 0.2885 mol, Q = 27,834 C, t = 7200 s, I = 3.87 A. This is about half the specified 7.5 A, indicating a problem.",
+      "distractors": [
+        {
+          "answer": "The cell is operating correctly at 7.5 A",
+          "explanation": "The calculated current of 3.87 A is about half the specified 7.5 A, indicating the cell is underperforming."
+        },
+        {
+          "answer": "The cell is exceeding its specification",
+          "explanation": "At 3.87 A calculated vs 7.5 A specified, the cell is well below specification, not exceeding it."
+        },
+        {
+          "answer": "More data is needed to assess performance",
+          "explanation": "The mass, time, and half-equation provide sufficient data. The cell is producing only about half the specified current."
+        }
+      ]
+    },
+    {
+      "type": "TF",
+      "question": "If two cells in series deposit different masses of different metals in the same time, they must have different currents flowing through them.",
+      "correct": "False",
+      "correctExplanation": "Cells in series carry the same current. Different masses are deposited because the metals have different molar masses and electron requirements, not different currents.",
+      "distractors": [
+        {
+          "answer": "True",
+          "explanation": "Series cells share the same current. Different deposited masses result from different stoichiometry and molar masses, not different currents."
+        }
+      ]
+    },
+    {
+      "type": "TF",
+      "question": "Calculating current from mass data can reveal whether a cell has side reactions consuming charge without producing the desired product.",
+      "correct": "True",
+      "correctExplanation": "If the calculated current is lower than the measured current, some charge is being consumed by side reactions rather than depositing the target product.",
+      "distractors": [
+        {
+          "answer": "False",
+          "explanation": "This is a key diagnostic application. Discrepancies between calculated and measured current can indicate parasitic side reactions."
+        }
+      ]
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the diagnostic analysis.",
+      "sentence": "If the ammeter reads 5.0 A but the mass-based calculation gives 3.8 A, the difference of {{blank:1}} A suggests that some charge is being consumed by {{blank:2}} reactions.",
+      "blanks": {
+        "1": {
+          "correct": "1.2",
+          "correctExplanation": "The difference is 5.0 - 3.8 = 1.2 A. This discrepancy indicates charge is going to processes other than the desired deposition.",
+          "distractors": [
+            {
+              "answer": "8.8",
+              "explanation": "8.8 is the sum, not the difference. The discrepancy is 5.0 - 3.8 = 1.2 A."
+            },
+            {
+              "answer": "0.76",
+              "explanation": "0.76 is the ratio, not the difference. The discrepancy between the two current values is 1.2 A."
+            }
+          ]
+        },
+        "2": {
+          "correct": "side",
+          "correctExplanation": "Side reactions consume charge without producing the target product, explaining why less product forms than expected from the total current.",
+          "distractors": [
+            {
+              "answer": "main",
+              "explanation": "The main reaction produces the desired product. Side reactions consume charge without contributing to the target product."
+            },
+            {
+              "answer": "nuclear",
+              "explanation": "Nuclear reactions do not occur in electrochemical cells. Side reactions are unwanted chemical processes that consume charge."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the evaluation of cell performance.",
+      "sentence": "A quality control check shows that the calculated current from mass data is {{blank:1}} the specified current, indicating the cell may have {{blank:2}} problems.",
+      "blanks": {
+        "1": {
+          "correct": "below",
+          "correctExplanation": "When calculated current is below the specification, it indicates the cell is not converting charge to product as efficiently as designed.",
+          "distractors": [
+            {
+              "answer": "above",
+              "explanation": "A current calculated from mass data being above specification would be unusual. Below specification indicates efficiency or performance problems."
+            },
+            {
+              "answer": "equal to",
+              "explanation": "If equal, the cell is performing correctly. Below specification indicates a problem requiring investigation."
+            }
+          ]
+        },
+        "2": {
+          "correct": "performance",
+          "correctExplanation": "Below-specification current suggests performance problems such as poor electrode contact, side reactions, or degradation.",
+          "distractors": [
+            {
+              "answer": "cosmetic",
+              "explanation": "Cell appearance is not relevant. Below-specification current indicates operational performance problems."
+            },
+            {
+              "answer": "labelling",
+              "explanation": "Labelling issues do not affect current. Performance problems cause the discrepancy between calculated and specified current."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the analysis of series cells.",
+      "sentence": "Two cells in series carry the {{blank:1}} current, so different deposited masses result from different {{blank:2}} and molar masses, not different currents.",
+      "blanks": {
+        "1": {
+          "correct": "same",
+          "correctExplanation": "In a series circuit, the same current flows through every component. Both cells receive identical charge in the same time.",
+          "distractors": [
+            {
+              "answer": "different",
+              "explanation": "Series cells carry the same current by definition. Different masses result from different chemistry, not different currents."
+            },
+            {
+              "answer": "doubled",
+              "explanation": "Current is not doubled in series. The same current flows through both cells, depositing different masses based on stoichiometry."
+            }
+          ]
+        },
+        "2": {
+          "correct": "stoichiometries",
+          "correctExplanation": "Different metals have different electron requirements (stoichiometry) and molar masses, causing different mass deposits from the same current.",
+          "distractors": [
+            {
+              "answer": "voltages",
+              "explanation": "While voltages may differ across cells, the different deposited masses are due to stoichiometric ratios and molar masses."
+            },
+            {
+              "answer": "temperatures",
+              "explanation": "Temperature variations do not explain the mass differences. The key factors are stoichiometry and molar mass."
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

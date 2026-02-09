@@ -1,0 +1,495 @@
+{
+  "_link": {
+    "uuid": "lp-2ef5b31c-6997-890c-1054-d19f456ce73c",
+    "version": 1,
+    "contentHash": "hash-743182ad",
+    "title": "I can explain why progressively more energy is needed to extend a spring further",
+    "generatedAt": "2026-02-08T16:15:00Z"
+  },
+  "toLevel2": [
+    {
+      "type": "mc",
+      "question": "As you stretch a spring further from its natural length, what happens to the force required?",
+      "correct": "The force increases linearly with extension",
+      "correctExplanation": "By Hooke's law (F = kx), the force increases in direct proportion to the extension.",
+      "distractors": [
+        { "answer": "The force stays constant", "explanation": "The force increases with extension, not stays constant. F = kx is linear." },
+        { "answer": "The force decreases with extension", "explanation": "The restoring force increases as you extend further, requiring more applied force." },
+        { "answer": "The force increases exponentially", "explanation": "For an ideal spring, force increases linearly (F = kx), not exponentially." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Why does extending a spring by the same amount require more energy when it is already stretched?",
+      "correct": "Because the force is greater at larger extensions, so more work is done",
+      "correctExplanation": "Since F = kx, the force at larger extensions is higher. Work = force × distance, so more energy is needed.",
+      "distractors": [
+        { "answer": "Because the spring constant increases", "explanation": "The spring constant k stays the same for an ideal spring. The force increases because x is larger." },
+        { "answer": "Because the spring gets heavier", "explanation": "The spring mass does not change; the increasing force makes it harder to extend." },
+        { "answer": "Because energy is lost to friction", "explanation": "This applies to an ideal spring where friction is negligible. The quadratic energy relationship is the reason." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "How does the elastic potential energy depend on extension for an ideal spring?",
+      "correct": "Energy increases with the square of extension",
+      "correctExplanation": "Es = ½kx², so energy depends on x squared — a quadratic relationship.",
+      "distractors": [
+        { "answer": "Energy increases linearly with extension", "explanation": "Force increases linearly, but energy depends on x², which is quadratic." },
+        { "answer": "Energy is constant regardless of extension", "explanation": "Energy increases as the spring is extended further." },
+        { "answer": "Energy increases with the cube of extension", "explanation": "The formula is Es = ½kx², giving a squared (not cubed) relationship." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "On a force-extension graph, the energy needed to extend from one point to another is shown by what feature?",
+      "correct": "The area under the graph between those two points",
+      "correctExplanation": "The area under the F-x graph between two extensions represents the work done (energy added) in that interval.",
+      "distractors": [
+        { "answer": "The gradient between those two points", "explanation": "The gradient gives the spring constant, not the energy." },
+        { "answer": "The height of the graph at the second point", "explanation": "The height gives the force at that point, not the energy." },
+        { "answer": "The length of the line between those points", "explanation": "The line length is not physically meaningful for energy." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What shape describes the relationship between elastic PE and extension for an ideal spring?",
+      "correct": "A parabola (quadratic curve)",
+      "correctExplanation": "Es = ½kx² produces a parabolic curve when plotted against x.",
+      "distractors": [
+        { "answer": "A straight line", "explanation": "A straight line would mean Es ∝ x. Since Es ∝ x², the curve is parabolic." },
+        { "answer": "A horizontal line", "explanation": "Energy increases with extension; it is not constant." },
+        { "answer": "A hyperbola", "explanation": "A hyperbola describes an inverse relationship. Es ∝ x² is a parabola." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "Extending a spring from 0 to 0.1 m requires the same energy as extending it from 0.1 m to 0.2 m.",
+      "correct": "False",
+      "correctExplanation": "Since Es ∝ x², extending from 0.1 to 0.2 m requires more energy than from 0 to 0.1 m. The area under the graph is larger at greater extensions.",
+      "distractors": [
+        { "answer": "True", "explanation": "Students may think equal distance means equal energy, but energy depends on x², not x." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "The force-extension graph for an ideal spring shows why each additional unit of extension costs more energy.",
+      "correct": "True",
+      "correctExplanation": "The graph shows force increasing linearly. Each additional strip of area (representing energy) is taller than the last, so more energy is needed.",
+      "distractors": [
+        { "answer": "False", "explanation": "Students may not connect the increasing area strips to increasing energy cost per unit extension." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the statement about energy and extension.",
+      "sentence": "Elastic PE depends on extension {{blank:1}}, so doubling the extension quadruples the energy.",
+      "blanks": {
+        "1": {
+          "correct": "squared",
+          "correctExplanation": "Es = ½kx². The x² means energy scales with the square of extension.",
+          "distractors": [
+            { "answer": "directly", "explanation": "If energy depended on x directly, doubling x would only double Es." },
+            { "answer": "cubed", "explanation": "The formula has x², not x³. Doubling x gives 2² = 4 times the energy." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the explanation for progressively more energy.",
+      "sentence": "As a spring extends further, the restoring {{blank:1}} increases, so more work must be done per unit of additional extension.",
+      "blanks": {
+        "1": {
+          "correct": "force",
+          "correctExplanation": "F = kx: the force increases with extension, requiring more work for each additional metre.",
+          "distractors": [
+            { "answer": "mass", "explanation": "The spring's mass does not change; the force increases with extension." },
+            { "answer": "constant", "explanation": "The spring constant k stays the same; it is the force that increases." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the comparison of energy in equal intervals.",
+      "sentence": "Extending a spring from 0 to 0.1 m requires less energy than extending from 0.1 m to 0.2 m because the {{blank:1}} is higher in the second interval.",
+      "blanks": {
+        "1": {
+          "correct": "force",
+          "correctExplanation": "At larger extensions, the force (F = kx) is greater, so the work done (area under the graph) is larger.",
+          "distractors": [
+            { "answer": "spring constant", "explanation": "The spring constant stays the same; it is the force at that extension that is larger." },
+            { "answer": "extension", "explanation": "Both intervals have the same width (0.1 m); the force is what differs." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "mc",
+      "question": "A spring (k = 100 N/m) is extended from 0 to 0.1 m, then from 0.1 m to 0.2 m. How do the energy requirements compare?",
+      "correct": "The second interval requires three times the energy of the first",
+      "correctExplanation": "0→0.1: Es = ½ × 100 × 0.01 = 0.5 J. 0→0.2: Es = ½ × 100 × 0.04 = 2 J. Second interval: 2 − 0.5 = 1.5 J. Ratio: 1.5/0.5 = 3 times.",
+      "distractors": [
+        { "answer": "Both intervals require the same energy", "explanation": "Equal extension does not mean equal energy. The second interval requires more because Es ∝ x²." },
+        { "answer": "The second interval requires twice the energy", "explanation": "The ratio is 3:1, not 2:1. First: 0.5 J, second: 1.5 J." },
+        { "answer": "The first interval requires more energy", "explanation": "The first interval requires less energy (0.5 J vs 1.5 J) because the force is lower." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "On a force-extension graph, strips of equal width are drawn. What happens to the area of each strip as extension increases?",
+      "correct": "Each strip has a larger area than the previous one",
+      "correctExplanation": "Since force increases linearly, each successive strip is taller. Area = force × width, so each strip's area increases.",
+      "distractors": [
+        { "answer": "Each strip has the same area", "explanation": "The strips are the same width but taller, so their areas increase." },
+        { "answer": "Each strip has a smaller area", "explanation": "The force increases with extension, making each strip taller with more area." },
+        { "answer": "The strips alternate in size", "explanation": "The areas increase monotonically; they do not alternate." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Why does the energy-extension graph for an ideal spring curve upward?",
+      "correct": "Because Es = ½kx² is a quadratic function that increases faster as x gets larger",
+      "correctExplanation": "A quadratic function curves upward. The rate of energy increase grows with extension.",
+      "distractors": [
+        { "answer": "Because the spring constant increases", "explanation": "For an ideal spring, k is constant. The curve comes from the x² relationship." },
+        { "answer": "Because the spring loses energy at small extensions", "explanation": "No energy is lost in an ideal spring. The curve reflects the quadratic formula." },
+        { "answer": "Because the graph is plotted on a log scale", "explanation": "On a linear scale, Es vs x is still a parabola due to the x² relationship." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "If a spring stores 2 J at 0.1 m extension, how much energy is stored at 0.3 m?",
+      "correct": "18 J",
+      "correctExplanation": "Es ∝ x². Ratio = (0.3/0.1)² = 9. Energy = 2 × 9 = 18 J.",
+      "distractors": [
+        { "answer": "6 J", "explanation": "6 = 2 × 3 (linear scaling). Energy scales as x², so 2 × 9 = 18 J." },
+        { "answer": "8 J", "explanation": "8 = 2 × 4. The factor is 3² = 9, not 4." },
+        { "answer": "54 J", "explanation": "54 = 2 × 27 (cubic scaling). The formula gives x², not x³." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "The energy to extend a spring the first 0.05 m is 1 J. The energy to extend from 0.05 m to 0.10 m is:",
+      "correct": "3 J",
+      "correctExplanation": "Es(0.05) = 1 J. Es(0.10) = 1 × (0.10/0.05)² = 1 × 4 = 4 J. Energy for second interval = 4 − 1 = 3 J.",
+      "distractors": [
+        { "answer": "1 J", "explanation": "Equal distance does not mean equal energy. The second interval requires more work." },
+        { "answer": "2 J", "explanation": "2 would come from linear scaling. The correct value is 4 − 1 = 3 J." },
+        { "answer": "4 J", "explanation": "4 J is the total energy at 0.10 m, not the energy for the second interval alone." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "For an ideal spring, the force at 0.2 m extension is twice the force at 0.1 m. How does the energy at 0.2 m compare to the energy at 0.1 m?",
+      "correct": "The energy is four times greater",
+      "correctExplanation": "Extension doubles (0.1 to 0.2), so energy scales by 2² = 4. The force doubling confirms the extension doubled (F = kx).",
+      "distractors": [
+        { "answer": "The energy is twice as great", "explanation": "The force doubles, but energy depends on x², so it quadruples." },
+        { "answer": "The energy is eight times greater", "explanation": "The factor is 2² = 4, not 2³ = 8." },
+        { "answer": "The energy is the same", "explanation": "Greater extension means more stored energy." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "For a spring, the last centimetre of extension always requires more energy than the first centimetre.",
+      "correct": "True",
+      "correctExplanation": "Since Es ∝ x², the energy increment for each additional unit of extension increases as extension grows.",
+      "distractors": [
+        { "answer": "False", "explanation": "Students may think all centimetres cost the same energy, but the quadratic relationship means later extensions cost more." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the explanation about energy intervals.",
+      "sentence": "The energy to extend from x₁ to x₂ equals ½k(x₂² − x₁²). This increases with extension because x₂² − x₁² is {{blank:1}} at larger values of x.",
+      "blanks": {
+        "1": {
+          "correct": "larger",
+          "correctExplanation": "For equal-width intervals (same Δx), the difference x₂² − x₁² grows as x increases.",
+          "distractors": [
+            { "answer": "smaller", "explanation": "The difference x₂² − x₁² increases at larger x, not decreases." },
+            { "answer": "constant", "explanation": "x₂² − x₁² is not constant for equal-width intervals. It grows with x." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the numerical example.",
+      "sentence": "A spring with k = 200 N/m stores 1 J at 0.1 m. At 0.2 m it stores {{blank:1}} J, confirming energy grows faster than extension.",
+      "blanks": {
+        "1": {
+          "correct": "4",
+          "correctExplanation": "Es = ½ × 200 × 0.2² = 100 × 0.04 = 4 J. Alternatively, (0.2/0.1)² × 1 = 4 J.",
+          "distractors": [
+            { "answer": "2", "explanation": "2 would be linear scaling. Energy scales as x², giving 4 J." },
+            { "answer": "8", "explanation": "8 = 4 × 2. The correct factor is (0.2/0.1)² = 4." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the key reason for increasing energy cost.",
+      "sentence": "Each additional metre of extension requires more energy because the {{blank:1}} the spring exerts (and must be overcome) is larger.",
+      "blanks": {
+        "1": {
+          "correct": "force",
+          "correctExplanation": "By Hooke's law (F = kx), the restoring force is proportional to extension. Greater force means more work per unit distance.",
+          "distractors": [
+            { "answer": "mass", "explanation": "The spring mass does not change. It is the force that increases with extension." },
+            { "answer": "acceleration", "explanation": "Acceleration depends on mass and net force, not directly relevant here." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "mc",
+      "question": "A spring (k = 200 N/m) is extended from 0.2 m to 0.3 m. How much energy is needed for this interval?",
+      "correct": "5 J",
+      "correctExplanation": "ΔEs = ½ × 200 × (0.3² − 0.2²) = 100 × (0.09 − 0.04) = 100 × 0.05 = 5 J.",
+      "distractors": [
+        { "answer": "1 J", "explanation": "1 = ½ × 200 × 0.1² = energy from 0→0.1 m. The energy from 0.2→0.3 is much more." },
+        { "answer": "4.5 J", "explanation": "4.5 = ½ × 200 × 0.3² = total at 0.3 m... Actually ½ × 200 × 0.09 = 9 J. 4.5 results from an incorrect calculation." },
+        { "answer": "9 J", "explanation": "9 = ½ × 200 × 0.09 = total energy at 0.3 m, not the change from 0.2 m." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A spring stores 4 J when extended 0.2 m. How much additional energy is needed to extend it to 0.4 m?",
+      "correct": "12 J",
+      "correctExplanation": "Es(0.2) = 4 J. Es(0.4) = 4 × (0.4/0.2)² = 4 × 4 = 16 J. Additional = 16 − 4 = 12 J.",
+      "distractors": [
+        { "answer": "4 J", "explanation": "4 J assumes equal energy for equal distance. Energy scales as x², so the total at 0.4 m is 16 J." },
+        { "answer": "8 J", "explanation": "8 = 4 × 2, assuming linear scaling. The quadratic scaling gives 16 − 4 = 12 J." },
+        { "answer": "16 J", "explanation": "16 J is the total energy at 0.4 m, not the additional energy beyond the first 4 J." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "The energy for the first 0.1 m of extension is E. What is the energy required for the interval from 0.3 m to 0.4 m, in terms of E?",
+      "correct": "7E",
+      "correctExplanation": "Es(0.1) = ½k × 0.01 = E, so ½k = 100E. Es(0.3) = 100E × 0.09 = 9E. Es(0.4) = 100E × 0.16 = 16E. Interval = 16E − 9E = 7E.",
+      "distractors": [
+        { "answer": "E", "explanation": "Equal extension does not mean equal energy. Each interval costs more than the last." },
+        { "answer": "4E", "explanation": "4E is the total energy at 0.2 m. The interval from 0.3 to 0.4 m costs 7E." },
+        { "answer": "3E", "explanation": "3E is the energy for the 0.1→0.2 m interval. The 0.3→0.4 m interval costs 7E." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A spring (k = 400 N/m) is compressed. The energy for the first 0.05 m is 0.5 J. How much energy is needed from 0.10 m to 0.15 m of compression?",
+      "correct": "2.5 J",
+      "correctExplanation": "Es(0.10) = ½ × 400 × 0.01 = 2 J. Es(0.15) = ½ × 400 × 0.0225 = 4.5 J. Interval = 4.5 − 2 = 2.5 J.",
+      "distractors": [
+        { "answer": "0.5 J", "explanation": "0.5 J is the energy for the first 0.05 m. The 0.10→0.15 interval costs more (2.5 J)." },
+        { "answer": "1.5 J", "explanation": "1.5 = 2 − 0.5 = energy for the 0.05→0.10 interval, not 0.10→0.15." },
+        { "answer": "4.5 J", "explanation": "4.5 J is the total energy at 0.15 m, not the energy for the 0.10→0.15 interval." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A spring is extended in five equal steps of 0.1 m. If the energy for the first step (0→0.1) is 2 J, what is the energy for the fifth step (0.4→0.5)?",
+      "correct": "18 J",
+      "correctExplanation": "½k × 0.01 = 2, so ½k = 200. Es(0.4) = 200 × 0.16 = 32 J. Es(0.5) = 200 × 0.25 = 50 J. Fifth step = 50 − 32 = 18 J.",
+      "distractors": [
+        { "answer": "2 J", "explanation": "2 J is only the first step's energy. Each subsequent step costs more." },
+        { "answer": "10 J", "explanation": "10 = 2 × 5. Linear scaling gives 10, but energy scales as x², giving 18 J." },
+        { "answer": "50 J", "explanation": "50 J is the total energy at 0.5 m, not the energy for the fifth step alone." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student claims that extending a spring an extra 0.1 m always requires the same amount of energy. What evidence disproves this claim?",
+      "correct": "The area under the F-x graph for each 0.1 m strip increases as extension grows",
+      "correctExplanation": "Since force increases linearly, each 0.1 m strip on the F-x graph is taller and has a larger area than the previous one.",
+      "distractors": [
+        { "answer": "The spring constant changes at different extensions", "explanation": "For an ideal spring, k is constant. The increasing energy comes from the x² relationship." },
+        { "answer": "The gradient of the F-x graph changes", "explanation": "The gradient (k) is constant for an ideal spring. The increasing strip areas disprove the claim." },
+        { "answer": "The spring gets longer and heavier", "explanation": "The spring mass is negligible. The increasing force at greater extensions is the key factor." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A spring stores 8 J at 0.2 m extension. What is the energy for the interval from 0.2 m to 0.3 m?",
+      "correct": "10 J",
+      "correctExplanation": "½k × 0.04 = 8, so ½k = 200. Es(0.3) = 200 × 0.09 = 18 J. Interval = 18 − 8 = 10 J.",
+      "distractors": [
+        { "answer": "8 J", "explanation": "Equal extension distance does not mean equal energy. The 0.2→0.3 interval costs 10 J." },
+        { "answer": "18 J", "explanation": "18 J is the total energy at 0.3 m, not the energy for the 0.2→0.3 interval." },
+        { "answer": "5 J", "explanation": "5 might come from the interval 0.1→0.2 m. The 0.2→0.3 interval costs more (10 J)." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Calculate the energy for an interval.",
+      "sentence": "A spring (k = 300 N/m) extended from 0.1 m to 0.2 m gains ΔEs = ½ × 300 × (0.04 − 0.01) = 150 × 0.03 = {{blank:1}} J.",
+      "blanks": {
+        "1": {
+          "correct": "4.5",
+          "correctExplanation": "ΔEs = 150 × 0.03 = 4.5 J.",
+          "distractors": [
+            { "answer": "1.5", "explanation": "1.5 = ½ × 300 × 0.01 = energy at 0.1 m, not the change." },
+            { "answer": "6", "explanation": "6 = ½ × 300 × 0.04 = total at 0.2 m, not the change." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the comparison of energy intervals.",
+      "sentence": "If E₁ is the energy from 0 to 0.1 m and E₂ is the energy from 0.1 m to 0.2 m, then E₂ = {{blank:1}} × E₁.",
+      "blanks": {
+        "1": {
+          "correct": "3",
+          "correctExplanation": "E₁ = ½k × 0.01. Total at 0.2 = ½k × 0.04 = 4E₁. E₂ = 4E₁ − E₁ = 3E₁.",
+          "distractors": [
+            { "answer": "2", "explanation": "2 would be for linear scaling. The quadratic relationship gives E₂ = 3E₁." },
+            { "answer": "4", "explanation": "4 is the ratio of total energies (at 0.2 vs 0.1), not the ratio of intervals." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the reasoning about progressively more energy.",
+      "sentence": "On the F-x graph, the area of each equal-width strip increases because the {{blank:1}} of each strip grows with extension.",
+      "blanks": {
+        "1": {
+          "correct": "height",
+          "correctExplanation": "The height of each strip is the force at that extension (F = kx), which increases linearly.",
+          "distractors": [
+            { "answer": "width", "explanation": "The strips have equal width; it is the height (force) that increases." },
+            { "answer": "colour", "explanation": "The colour is not relevant. The height (force value) determines the area." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "mc",
+      "question": "A spring (k = 100 N/m) is extended in equal 0.1 m steps. What are the energies for steps 1 (0→0.1), 2 (0.1→0.2), and 3 (0.2→0.3)?",
+      "correct": "0.5 J, 1.5 J, 2.5 J",
+      "correctExplanation": "Es(0.1) = 0.5 J. Es(0.2) = 2 J, step 2 = 1.5 J. Es(0.3) = 4.5 J, step 3 = 2.5 J. Each step costs 1 J more than the previous.",
+      "distractors": [
+        { "answer": "0.5 J, 0.5 J, 0.5 J", "explanation": "Equal distances do not cost equal energy. Energy increases with x²." },
+        { "answer": "0.5 J, 1.0 J, 1.5 J", "explanation": "The increments are 0.5, 1.5, 2.5 — increasing by 1 J each time, not by 0.5 J." },
+        { "answer": "0.5 J, 2.0 J, 4.5 J", "explanation": "These are the total energies at each point, not the energy for each step." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "For a spring with k = 200 N/m, the ratio of energy required for the interval (0.4→0.5 m) to the interval (0→0.1 m) is:",
+      "correct": "9 : 1",
+      "correctExplanation": "Step 1: ½ × 200 × 0.01 = 1 J. Es(0.4) = 100 × 0.16 = 16 J. Es(0.5) = 100 × 0.25 = 25 J. Step 5: 25 − 16 = 9 J. Ratio = 9:1.",
+      "distractors": [
+        { "answer": "5 : 1", "explanation": "5:1 would apply for linear scaling (5th step = 5×). The quadratic gives 9:1." },
+        { "answer": "25 : 1", "explanation": "25:1 is the ratio of total energies at 0.5 m to 0.1 m, not the interval ratios." },
+        { "answer": "4 : 1", "explanation": "4:1 would be the ratio for the 0.1→0.2 interval vs 0→0.1. The 0.4→0.5 interval gives 9:1." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A car suspension spring (k = 20 000 N/m) compresses 0.02 m over a small bump and 0.06 m over a large bump. How many times more energy does the large bump transfer to the spring?",
+      "correct": "9 times",
+      "correctExplanation": "Es_small = ½ × 20000 × 0.02² = 4 J. Es_large = ½ × 20000 × 0.06² = 36 J. Ratio = 36/4 = 9 times.",
+      "distractors": [
+        { "answer": "3 times", "explanation": "3 = 0.06/0.02. Energy scales as x², so the ratio is 3² = 9." },
+        { "answer": "6 times", "explanation": "6 does not correspond to any correct calculation. (0.06/0.02)² = 9." },
+        { "answer": "27 times", "explanation": "27 = 3³. Energy scales as x², not x³, so the factor is 9." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A spring (k = 500 N/m) is extended from 0.1 m to 0.2 m, requiring ΔE₁. It is then extended from 0.2 m to 0.3 m, requiring ΔE₂. What is ΔE₂/ΔE₁?",
+      "correct": "5/3",
+      "correctExplanation": "ΔE₁ = ½ × 500 × (0.04 − 0.01) = 250 × 0.03 = 7.5 J. ΔE₂ = 250 × (0.09 − 0.04) = 250 × 0.05 = 12.5 J. Ratio = 12.5/7.5 = 5/3.",
+      "distractors": [
+        { "answer": "2", "explanation": "Ratio is 12.5/7.5 = 5/3 ≈ 1.67, not 2." },
+        { "answer": "3", "explanation": "3 is the ratio of step 2 to step 1 (0→0.1 vs 0.1→0.2). The ratio here involves different intervals." },
+        { "answer": "9/4", "explanation": "9/4 = 2.25. The correct calculation gives 0.05/0.03 = 5/3." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A spring is extended from 0 to x, requiring energy E. What extension is needed to require a total energy of 4E?",
+      "correct": "2x",
+      "correctExplanation": "Es ∝ x². If Es = 4E, then x' = x × √4 = 2x.",
+      "distractors": [
+        { "answer": "4x", "explanation": "4x would give (4x)² = 16x², meaning 16E, not 4E." },
+        { "answer": "√2 × x", "explanation": "√2 × x gives 2x², meaning 2E, not 4E." },
+        { "answer": "x + 3", "explanation": "Energy scaling does not use addition. Es ∝ x² means x' = x√4 = 2x." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Two springs A (k = 100 N/m) and B (k = 400 N/m) are both extended from 0.1 m to 0.2 m. What is the ratio of energy required ΔEs_A : ΔEs_B?",
+      "correct": "1 : 4",
+      "correctExplanation": "ΔEs = ½k(x₂² − x₁²). Same Δ(x²), so ratio = k_A/k_B = 100/400 = 1:4.",
+      "distractors": [
+        { "answer": "1 : 2", "explanation": "The ratio of spring constants is 1:4, not 1:2." },
+        { "answer": "4 : 1", "explanation": "Spring B has a larger k and requires more energy, so B's energy is 4× A's." },
+        { "answer": "1 : 1", "explanation": "Different spring constants give different energies for the same extension interval." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A bungee cord (k = 50 N/m) stretches 10 m. What percentage of the total elastic PE is stored in the last 2 m of extension (from 8 m to 10 m)?",
+      "correct": "36%",
+      "correctExplanation": "Es(10) = ½ × 50 × 100 = 2500 J. Es(8) = ½ × 50 × 64 = 1600 J. Last 2 m: 2500 − 1600 = 900 J. Percentage = 900/2500 = 36%.",
+      "distractors": [
+        { "answer": "20%", "explanation": "20% = 2/10, assuming linear energy distribution. Energy scales as x², giving 36%." },
+        { "answer": "64%", "explanation": "64% = 1600/2500, which is the fraction stored in the first 8 m." },
+        { "answer": "4%", "explanation": "4% = (2/10)² = fraction at 2 m. The last 2 m stores (100 − 64)/100 = 36%." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "For a spring, the energy for the nth equal step of extension Δx starting from 0 follows the pattern: step 1 = E, step 2 = 3E, step 3 = 5E. What is the energy for step 4?",
+      "correct": "7E",
+      "correctExplanation": "The pattern is (2n − 1)E: step 1 = E, step 2 = 3E, step 3 = 5E, step 4 = 7E. This arises from x₂² − x₁² for consecutive integer steps.",
+      "distractors": [
+        { "answer": "6E", "explanation": "The pattern increases by 2E each step (1, 3, 5, 7...), not by adding the previous increment." },
+        { "answer": "8E", "explanation": "The pattern is odd numbers: 1, 3, 5, 7. Not 2, 4, 6, 8." },
+        { "answer": "9E", "explanation": "9E is the total energy at step 3 (1 + 3 + 5 = 9). Step 4 costs 7E." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Calculate what fraction of total energy is in the last interval.",
+      "sentence": "A spring extended to 0.5 m stores 25 J total. From 0 to 0.4 m it stores ½k × 0.16 = 16 J. The last 0.1 m requires 25 − 16 = {{blank:1}} J.",
+      "blanks": {
+        "1": {
+          "correct": "9",
+          "correctExplanation": "Energy in last interval = total − energy at 0.4 m = 25 − 16 = 9 J.",
+          "distractors": [
+            { "answer": "5", "explanation": "5 = 25/5, dividing by number of steps. Energy distribution is not uniform." },
+            { "answer": "25", "explanation": "25 is the total energy, not the energy for the last interval alone." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the odd-number pattern for energy steps.",
+      "sentence": "For equal 0.1 m steps from a spring (k = 200 N/m): step 1 costs 1 J, step 2 costs 3 J, step 3 costs {{blank:1}} J.",
+      "blanks": {
+        "1": {
+          "correct": "5",
+          "correctExplanation": "Es(0.3) = ½ × 200 × 0.09 = 9 J. Es(0.2) = ½ × 200 × 0.04 = 4 J. Step 3 = 9 − 4 = 5 J. Pattern: 1, 3, 5 (odd numbers).",
+          "distractors": [
+            { "answer": "4", "explanation": "4 is the total energy at 0.2 m. Step 3 is the interval 0.2→0.3, costing 9 − 4 = 5 J." },
+            { "answer": "9", "explanation": "9 is the total energy at 0.3 m, not the energy for step 3 alone." }
+          ]
+        }
+      }
+    }
+  ]
+}

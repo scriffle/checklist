@@ -1,0 +1,583 @@
+{
+  "_link": {
+    "uuid": "lp-43161432-de63-f764-1c59-99825aa762aa",
+    "version": 1,
+    "contentHash": "hash-d5c4fa9c",
+    "title": "I can calculate standard cell potential using the electrochemical series",
+    "generatedAt": "2026-02-08T12:00:00Z"
+  },
+  "toLevel2": [
+    {
+      "type": "mc",
+      "question": "What is the formula used to calculate the standard cell potential of a galvanic cell?",
+      "correct": "E°cell = E°reduction − E°oxidation",
+      "correctExplanation": "The standard cell potential is found by subtracting the standard electrode potential of the oxidation half-reaction from that of the reduction half-reaction.",
+      "distractors": [
+        { "answer": "E°cell = E°oxidation − E°reduction", "explanation": "This reverses the correct formula and would give the wrong sign for the cell potential." },
+        { "answer": "E°cell = E°reduction + E°oxidation", "explanation": "Adding the two standard electrode potentials directly does not account for the reversal of the oxidation half-reaction." },
+        { "answer": "E°cell = E°reduction × E°oxidation", "explanation": "Electrode potentials are subtracted, not multiplied, when calculating cell potential." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What does a positive value for E°cell indicate about a galvanic cell reaction?",
+      "correct": "The reaction is spontaneous",
+      "correctExplanation": "A positive E°cell confirms that the overall redox reaction proceeds spontaneously, which is expected for a galvanic cell.",
+      "distractors": [
+        { "answer": "The reaction is non-spontaneous", "explanation": "A non-spontaneous reaction has a negative E°cell and would require an electrolytic cell, not a galvanic cell." },
+        { "answer": "The reaction is at equilibrium", "explanation": "At equilibrium the cell potential is zero, not positive." },
+        { "answer": "The reaction is endothermic", "explanation": "The sign of E°cell relates to spontaneity, not whether the reaction absorbs or releases heat." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "In the formula E°cell = E°reduction − E°oxidation, which value is subtracted?",
+      "correct": "The standard electrode potential of the half-reaction undergoing oxidation",
+      "correctExplanation": "The oxidation half-reaction's standard electrode potential is subtracted from that of the reduction half-reaction.",
+      "distractors": [
+        { "answer": "The standard electrode potential of the half-reaction undergoing reduction", "explanation": "The reduction value is the minuend (the value being subtracted from), not the subtrahend." },
+        { "answer": "The standard electrode potential of the half-reaction with lower voltage", "explanation": "The subtraction is based on which reaction undergoes oxidation, not simply which has a lower value." },
+        { "answer": "The standard electrode potential of the half-reaction listed first in the table", "explanation": "Position in a table does not determine which value to subtract; the reaction roles do." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What are the units used to express standard cell potential?",
+      "correct": "Volts",
+      "correctExplanation": "Standard cell potential is a measure of electrical potential difference and is expressed in volts (V).",
+      "distractors": [
+        { "answer": "Amperes", "explanation": "Amperes measure electric current, not potential difference." },
+        { "answer": "Joules", "explanation": "Joules measure energy, not electrical potential difference." },
+        { "answer": "Coulombs", "explanation": "Coulombs measure electric charge, not potential difference." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A negative value for E°cell indicates that the electrochemical cell is which type?",
+      "correct": "An electrolytic cell",
+      "correctExplanation": "A negative E°cell means the reaction is non-spontaneous and requires external energy, which is the characteristic of an electrolytic cell.",
+      "distractors": [
+        { "answer": "A galvanic cell", "explanation": "Galvanic cells have positive E°cell values because their reactions are spontaneous." },
+        { "answer": "A fuel cell", "explanation": "Fuel cells are a type of galvanic cell and also require a positive E°cell for spontaneous operation." },
+        { "answer": "A concentration cell", "explanation": "A concentration cell is a type of galvanic cell and still produces a positive E°cell under its operating conditions." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "The standard cell potential is calculated by subtracting the standard electrode potential of the oxidation half-reaction from that of the reduction half-reaction.",
+      "correct": "True",
+      "correctExplanation": "The formula E°cell = E°reduction − E°oxidation correctly describes how standard cell potential is calculated.",
+      "distractors": [
+        { "answer": "False", "explanation": "Students may confuse the order and think the reduction value is subtracted from the oxidation value, but the correct formula subtracts oxidation from reduction." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "Standard electrode potentials must be multiplied by their stoichiometric coefficients before calculating cell potential.",
+      "correct": "False",
+      "correctExplanation": "Standard electrode potentials are intensive properties and do not change with the amount of substance. They are never multiplied by coefficients when calculating E°cell.",
+      "distractors": [
+        { "answer": "True", "explanation": "Students often assume that because half-equations are multiplied to balance electrons, the E° values must also be multiplied. However, E° is an intensive property independent of the amount of substance." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the statement about calculating cell potential.",
+      "sentence": "The standard cell potential is calculated using the formula E°cell = E°{{blank:1}} − E°{{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "reduction",
+          "correctExplanation": "The reduction half-reaction's electrode potential is the value from which the oxidation value is subtracted.",
+          "distractors": [
+            { "answer": "oxidation", "explanation": "The oxidation value is subtracted, not used as the starting value in the formula." },
+            { "answer": "cathode product", "explanation": "While reduction occurs at the cathode, the formula uses the term reduction, not cathode product." }
+          ]
+        },
+        "2": {
+          "correct": "oxidation",
+          "correctExplanation": "The oxidation half-reaction's electrode potential is the value being subtracted in the formula.",
+          "distractors": [
+            { "answer": "reduction", "explanation": "The reduction value is the starting point of the subtraction, not the value being subtracted." },
+            { "answer": "anode product", "explanation": "While oxidation occurs at the anode, the formula uses the term oxidation, not anode product." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the statement about cell potential and spontaneity.",
+      "sentence": "A {{blank:1}} value for E°cell indicates a spontaneous reaction, which is characteristic of a {{blank:2}} cell.",
+      "blanks": {
+        "1": {
+          "correct": "positive",
+          "correctExplanation": "A positive E°cell confirms that the redox reaction proceeds spontaneously without external energy.",
+          "distractors": [
+            { "answer": "negative", "explanation": "A negative E°cell indicates a non-spontaneous reaction requiring external energy input." },
+            { "answer": "zero", "explanation": "A zero E°cell indicates the system is at equilibrium, with no net reaction occurring." }
+          ]
+        },
+        "2": {
+          "correct": "galvanic",
+          "correctExplanation": "Galvanic cells convert chemical energy to electrical energy through spontaneous redox reactions.",
+          "distractors": [
+            { "answer": "electrolytic", "explanation": "Electrolytic cells use external energy to drive non-spontaneous reactions and have negative E°cell values." },
+            { "answer": "voltaic primary", "explanation": "While voltaic is a synonym for galvanic, the standard term used in VCE Chemistry is galvanic." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the statement about standard electrode potentials.",
+      "sentence": "Standard electrode potentials are {{blank:1}} properties, meaning they are not multiplied by stoichiometric {{blank:2}} when calculating cell potential.",
+      "blanks": {
+        "1": {
+          "correct": "intensive",
+          "correctExplanation": "Intensive properties do not depend on the amount of substance, so E° values remain the same regardless of coefficients.",
+          "distractors": [
+            { "answer": "extensive", "explanation": "Extensive properties depend on the amount of substance, but E° does not change when half-equations are multiplied." },
+            { "answer": "extrinsic", "explanation": "Extrinsic is not the correct thermodynamic term used to describe properties independent of amount." }
+          ]
+        },
+        "2": {
+          "correct": "coefficients",
+          "correctExplanation": "Even when half-equations are multiplied by coefficients to balance electrons, the E° values remain unchanged.",
+          "distractors": [
+            { "answer": "concentrations", "explanation": "Concentrations affect actual cell potential but are not what is multiplied in the half-equation balancing process." },
+            { "answer": "temperatures", "explanation": "Temperature affects cell potential through the Nernst equation but is not related to balancing coefficients." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "mc",
+      "question": "For a galvanic cell with half-reactions Ag⁺(aq)/Ag(s) at +0.80 V and Pb²⁺(aq)/Pb(s) at −0.13 V, which half-reaction undergoes reduction?",
+      "correct": "Ag⁺(aq) + e⁻ → Ag(s), because it is higher in the electrochemical series",
+      "correctExplanation": "The half-reaction higher in the electrochemical series (more positive E°) undergoes reduction in a galvanic cell.",
+      "distractors": [
+        { "answer": "Pb²⁺(aq) + 2e⁻ → Pb(s), because it is higher in the electrochemical series", "explanation": "Pb²⁺/Pb is lower in the series than Ag⁺/Ag, so it undergoes oxidation, not reduction." },
+        { "answer": "Ag⁺(aq) + e⁻ → Ag(s), because it is lower in the electrochemical series", "explanation": "Ag⁺/Ag is actually higher, not lower, in the series. The reasoning must match the position." },
+        { "answer": "Pb²⁺(aq) + 2e⁻ → Pb(s), because it has a negative electrode potential", "explanation": "Having a negative E° makes it the oxidation half-reaction, not the reduction half-reaction." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Why is the standard electrode potential of the oxidation half-reaction subtracted in the cell potential formula?",
+      "correct": "Because the oxidation half-reaction is reversed from its listed reduction form in the series",
+      "correctExplanation": "The electrochemical series lists all reactions as reductions. When a half-reaction is reversed to represent oxidation, its E° sign changes, which is equivalent to subtraction.",
+      "distractors": [
+        { "answer": "Because the oxidation half-reaction always has a larger electrode potential value", "explanation": "The oxidation half-reaction has the lower (more negative) E° value in a galvanic cell, not a larger one." },
+        { "answer": "Because subtracting removes the contribution of the salt bridge from the voltage", "explanation": "The salt bridge does not contribute to the standard cell potential; it maintains electrical neutrality." },
+        { "answer": "Because the oxidation reaction consumes energy that must be deducted from the total", "explanation": "The subtraction arises from reversing the direction of the half-reaction, not from energy consumption." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student calculates E°cell for a Zn/Cu galvanic cell as −1.10 V. What error did the student most likely make?",
+      "correct": "The student subtracted the reduction value from the oxidation value instead of the reverse",
+      "correctExplanation": "The correct calculation is E°cell = +0.34 − (−0.76) = +1.10 V. A result of −1.10 V means the student reversed the subtraction order.",
+      "distractors": [
+        { "answer": "The student multiplied the zinc electrode potential by a stoichiometric coefficient", "explanation": "Multiplying by coefficients does not reverse the sign; it would change the magnitude, which did not happen here." },
+        { "answer": "The student used the wrong electrode potential values from the electrochemical series", "explanation": "The magnitude of 1.10 V is correct, indicating the values used were right but the subtraction was reversed." },
+        { "answer": "The student forgot to include units when recording the standard electrode potentials", "explanation": "Omitting units would not change the numerical result of the calculation." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which statement best explains why E° values are not multiplied by coefficients when balancing half-equations?",
+      "correct": "E° is an intensive property that does not depend on the amount of substance reacting",
+      "correctExplanation": "Unlike extensive properties such as enthalpy, electrode potential is independent of the quantity of reactants and products.",
+      "distractors": [
+        { "answer": "E° is an extensive property that must be divided by the number of moles of electrons", "explanation": "E° is intensive, not extensive, and requires no division or multiplication by moles of electrons." },
+        { "answer": "E° values are already adjusted for coefficient differences in the electrochemical series", "explanation": "E° values are measured per electron transfer event and are inherently independent of coefficients." },
+        { "answer": "E° is an intensive property that increases proportionally with the amount of substance", "explanation": "Intensive properties do not change with amount; they remain constant regardless of how much substance is present." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "In a galvanic cell, the half-reaction higher in the electrochemical series undergoes which process?",
+      "correct": "Reduction, proceeding in the forward direction as written",
+      "correctExplanation": "The half-reaction with the more positive E° (higher in the series) proceeds as reduction in a galvanic cell.",
+      "distractors": [
+        { "answer": "Oxidation, proceeding in the forward direction as written", "explanation": "Oxidation occurs at the lower half-reaction, not the higher one in the electrochemical series." },
+        { "answer": "Reduction, proceeding in the reverse direction as written", "explanation": "Reduction half-reactions proceed in the forward direction as listed in the series, not in reverse." },
+        { "answer": "Oxidation, proceeding in the reverse direction as written", "explanation": "The higher half-reaction undergoes reduction in the forward direction, not oxidation in reverse." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What does the E°cell value of a galvanic cell represent physically?",
+      "correct": "The maximum voltage the cell can produce under standard conditions",
+      "correctExplanation": "E°cell represents the maximum potential difference between the two electrodes when all species are at standard conditions (25°C, 1 M, 1 atm).",
+      "distractors": [
+        { "answer": "The maximum current the cell can deliver under standard conditions", "explanation": "Current depends on resistance in the circuit; E°cell measures potential difference, not current." },
+        { "answer": "The total energy stored within the chemicals of the galvanic cell", "explanation": "Total energy depends on the amount of reactant; E°cell measures the driving force per unit charge." },
+        { "answer": "The rate at which electrons transfer between the two half-cells", "explanation": "Electron transfer rate depends on kinetics and resistance; E°cell is a thermodynamic quantity." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "When calculating E°cell, the half-reaction listed lower in the electrochemical series is always the one that undergoes oxidation in a galvanic cell.",
+      "correct": "True",
+      "correctExplanation": "In a galvanic cell, the half-reaction with the less positive (or more negative) E° value is reversed to become the oxidation half-reaction.",
+      "distractors": [
+        { "answer": "False", "explanation": "Students may think either half-reaction can undergo oxidation, but in a spontaneous galvanic cell, the lower half-reaction is always oxidised to produce a positive E°cell." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the explanation of cell potential calculation.",
+      "sentence": "In the electrochemical series, the half-reaction with the more {{blank:1}} E° value undergoes reduction, and its electrode potential is the value from which the {{blank:2}} half-reaction's E° is subtracted.",
+      "blanks": {
+        "1": {
+          "correct": "positive",
+          "correctExplanation": "The more positive E° indicates a greater tendency to undergo reduction, placing it higher in the electrochemical series.",
+          "distractors": [
+            { "answer": "negative", "explanation": "A more negative E° indicates a greater tendency to undergo oxidation, not reduction." },
+            { "answer": "variable", "explanation": "E° values are fixed under standard conditions; they are not variable in this context." }
+          ]
+        },
+        "2": {
+          "correct": "oxidation",
+          "correctExplanation": "The half-reaction with the less positive E° undergoes oxidation, and its E° is subtracted in the formula.",
+          "distractors": [
+            { "answer": "reduction", "explanation": "The reduction E° is the starting point of the subtraction, not the value being subtracted." },
+            { "answer": "neutralisation", "explanation": "Neutralisation is an acid-base process unrelated to electrochemical cell potential calculations." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the explanation about the Sn/Fe galvanic cell.",
+      "sentence": "For a Sn²⁺/Sn (−0.14 V) and Fe²⁺/Fe (−0.44 V) galvanic cell, the {{blank:1}} half-reaction undergoes reduction because it is higher in the series, giving E°cell = −0.14 − (−0.44) = {{blank:2}} V.",
+      "blanks": {
+        "1": {
+          "correct": "Sn²⁺/Sn",
+          "correctExplanation": "Sn²⁺/Sn has the higher (less negative) E° value of −0.14 V, so it undergoes reduction.",
+          "distractors": [
+            { "answer": "Fe²⁺/Fe", "explanation": "Fe²⁺/Fe has the lower E° value of −0.44 V, so it undergoes oxidation, not reduction." },
+            { "answer": "Sn⁴⁺/Sn²⁺", "explanation": "Sn⁴⁺/Sn²⁺ is a different redox couple (+0.15 V) not involved in this cell." }
+          ]
+        },
+        "2": {
+          "correct": "+0.30",
+          "correctExplanation": "E°cell = −0.14 − (−0.44) = −0.14 + 0.44 = +0.30 V, confirming a spontaneous reaction.",
+          "distractors": [
+            { "answer": "−0.30", "explanation": "A negative result would occur if the subtraction order were reversed, but the correct order gives a positive value." },
+            { "answer": "+0.58", "explanation": "This would result from adding the two E° values instead of subtracting them as the formula requires." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the statement about the meaning of cell potential.",
+      "sentence": "The standard cell potential represents the maximum {{blank:1}} a galvanic cell can produce, measured under standard conditions of 25°C and {{blank:2}} mol/L concentrations.",
+      "blanks": {
+        "1": {
+          "correct": "voltage",
+          "correctExplanation": "E°cell measures the maximum potential difference (voltage) the cell can generate.",
+          "distractors": [
+            { "answer": "current", "explanation": "Current depends on the external circuit resistance and is not what E°cell measures." },
+            { "answer": "power output", "explanation": "Power depends on both voltage and current; E°cell measures only the potential difference." }
+          ]
+        },
+        "2": {
+          "correct": "1",
+          "correctExplanation": "Standard conditions specify 1 mol/L concentration for all aqueous solutions.",
+          "distractors": [
+            { "answer": "0.1", "explanation": "0.1 mol/L is a common laboratory concentration but is not the standard condition for E° measurements." },
+            { "answer": "2", "explanation": "2 mol/L is not the defined standard concentration; standard conditions use 1 mol/L." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "mc",
+      "question": "A galvanic cell is constructed using Co²⁺(aq)/Co(s) (E° = −0.28 V) and Cu²⁺(aq)/Cu(s) (E° = +0.34 V). What is the standard cell potential?",
+      "correct": "+0.62 V",
+      "correctExplanation": "E°cell = E°reduction − E°oxidation = +0.34 − (−0.28) = +0.62 V. Cu²⁺/Cu is reduced and Co is oxidised.",
+      "distractors": [
+        { "answer": "+0.06 V", "explanation": "This results from subtracting the magnitudes (+0.34 − 0.28) without accounting for the negative sign of Co's E°." },
+        { "answer": "−0.62 V", "explanation": "This results from reversing the subtraction order, subtracting Cu's E° from Co's E° instead." },
+        { "answer": "+1.24 V", "explanation": "This would result from incorrectly doubling the cell potential, perhaps by adding both absolute values." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student doubles both half-equations to balance electrons in a Zn/Cu cell. How does this affect the calculated E°cell?",
+      "correct": "E°cell remains +1.10 V because E° values are intensive properties",
+      "correctExplanation": "Standard electrode potentials are intensive and do not change when half-equations are multiplied by coefficients.",
+      "distractors": [
+        { "answer": "E°cell doubles to +2.20 V because both potentials are multiplied by two", "explanation": "This is a common misconception; E° is intensive and does not scale with stoichiometric coefficients." },
+        { "answer": "E°cell halves to +0.55 V because the electrons cancel when equations are combined", "explanation": "Cancelling electrons does not alter the E° values; they remain unchanged regardless of balancing." },
+        { "answer": "E°cell becomes zero because multiplying reverses the sign of the electrode potentials", "explanation": "Multiplying half-equations by coefficients does not change or reverse the E° values." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Calculate E°cell for a galvanic cell with half-reactions Mn²⁺(aq)/Mn(s) (E° = −1.18 V) and Ni²⁺(aq)/Ni(s) (E° = −0.25 V).",
+      "correct": "+0.93 V",
+      "correctExplanation": "E°cell = −0.25 − (−1.18) = −0.25 + 1.18 = +0.93 V. Ni²⁺/Ni undergoes reduction and Mn undergoes oxidation.",
+      "distractors": [
+        { "answer": "−0.93 V", "explanation": "This results from subtracting in the wrong order: −1.18 − (−0.25), reversing reduction and oxidation." },
+        { "answer": "+1.43 V", "explanation": "This results from adding the absolute values of both E° values instead of applying the subtraction formula." },
+        { "answer": "−1.43 V", "explanation": "This results from adding both negative E° values directly without reversing the oxidation half-reaction." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A galvanic cell uses Ag⁺(aq)/Ag(s) (+0.80 V) and Fe²⁺(aq)/Fe(s) (−0.44 V). What is E°cell?",
+      "correct": "+1.24 V",
+      "correctExplanation": "E°cell = +0.80 − (−0.44) = +0.80 + 0.44 = +1.24 V. Silver is reduced and iron is oxidised.",
+      "distractors": [
+        { "answer": "+0.36 V", "explanation": "This results from subtracting the magnitudes (+0.80 − 0.44) without correctly handling the negative sign." },
+        { "answer": "−1.24 V", "explanation": "This results from reversing the subtraction order, which would indicate a non-spontaneous reaction." },
+        { "answer": "+0.80 V", "explanation": "This uses only the silver half-cell potential and ignores the contribution of the iron half-cell entirely." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A galvanic cell with Cd²⁺(aq)/Cd(s) (E° = −0.40 V) and Pb²⁺(aq)/Pb(s) (E° = −0.13 V) is constructed. Which metal is oxidised and what is E°cell?",
+      "correct": "Cd is oxidised; E°cell = +0.27 V",
+      "correctExplanation": "Cd has the more negative E°, so it is oxidised. E°cell = −0.13 − (−0.40) = +0.27 V.",
+      "distractors": [
+        { "answer": "Pb is oxidised; E°cell = +0.27 V", "explanation": "Pb²⁺/Pb has the higher E° (−0.13 V), so Pb²⁺ is reduced, not oxidised." },
+        { "answer": "Cd is oxidised; E°cell = −0.27 V", "explanation": "Cd is correctly identified as oxidised, but the E°cell is +0.27 V, not negative." },
+        { "answer": "Pb is oxidised; E°cell = +0.53 V", "explanation": "Pb is not oxidised, and +0.53 V results from adding the magnitudes incorrectly." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which combination of half-cells produces the highest standard cell potential?",
+      "correct": "Li⁺(aq)/Li(s) and Au⁺(aq)/Au(s)",
+      "correctExplanation": "E°cell = +1.68 − (−3.04) = +4.72 V. These represent the extremes of the electrochemical series and produce the largest voltage.",
+      "distractors": [
+        { "answer": "Zn²⁺(aq)/Zn(s) and Cu²⁺(aq)/Cu(s)", "explanation": "E°cell = +0.34 − (−0.76) = +1.10 V, which is significant but far less than the Li/Au combination." },
+        { "answer": "Mg²⁺(aq)/Mg(s) and Ag⁺(aq)/Ag(s)", "explanation": "E°cell = +0.80 − (−2.37) = +3.17 V, which is large but less than the Li/Au combination." },
+        { "answer": "Fe²⁺(aq)/Fe(s) and Ni²⁺(aq)/Ni(s)", "explanation": "E°cell = −0.25 − (−0.44) = +0.19 V, which is a relatively small cell potential." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "For a galvanic cell using Zn²⁺(aq)/Zn(s) (E° = −0.76 V) and I₂(s)/I⁻(aq) (E° = +0.54 V), what is the standard cell potential?",
+      "correct": "+1.30 V",
+      "correctExplanation": "E°cell = +0.54 − (−0.76) = +0.54 + 0.76 = +1.30 V. I₂ is reduced and Zn is oxidised.",
+      "distractors": [
+        { "answer": "+0.22 V", "explanation": "This results from subtracting the magnitudes without properly handling the negative sign of zinc's E°." },
+        { "answer": "−1.30 V", "explanation": "This results from reversing the subtraction order, which would represent a non-spontaneous reaction." },
+        { "answer": "+2.60 V", "explanation": "This incorrectly doubles the cell potential, perhaps by multiplying one of the E° values by a coefficient." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the calculation for the given galvanic cell.",
+      "sentence": "For a galvanic cell with Al³⁺/Al (E° = −1.66 V) and Cu²⁺/Cu (E° = +0.34 V), E°cell = +0.34 − (−1.66) = {{blank:1}} V, confirming the reaction is {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "+2.00",
+          "correctExplanation": "E°cell = +0.34 − (−1.66) = +0.34 + 1.66 = +2.00 V.",
+          "distractors": [
+            { "answer": "−2.00", "explanation": "A negative answer results from reversing the subtraction order; the correct formula gives a positive value." },
+            { "answer": "+1.32", "explanation": "This results from subtracting the magnitudes (1.66 − 0.34) without applying the correct formula." }
+          ]
+        },
+        "2": {
+          "correct": "spontaneous",
+          "correctExplanation": "A positive E°cell of +2.00 V confirms the reaction proceeds spontaneously in a galvanic cell.",
+          "distractors": [
+            { "answer": "non-spontaneous", "explanation": "A non-spontaneous reaction would have a negative E°cell, not a positive one." },
+            { "answer": "at equilibrium", "explanation": "At equilibrium, E°cell would be zero, not +2.00 V." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the calculation for the Mg/Ag galvanic cell.",
+      "sentence": "For a cell with Mg²⁺/Mg (−2.37 V) and Ag⁺/Ag (+0.80 V), E°cell = {{blank:1}} − (−2.37) = {{blank:2}} V.",
+      "blanks": {
+        "1": {
+          "correct": "+0.80",
+          "correctExplanation": "Ag⁺/Ag has the higher E° (+0.80 V) and undergoes reduction, so its value is used as E°reduction.",
+          "distractors": [
+            { "answer": "−2.37", "explanation": "−2.37 V is Mg's E° and represents the oxidation half-reaction, not the reduction value." },
+            { "answer": "+2.37", "explanation": "This incorrectly reverses the sign of Mg's E° rather than using the Ag value." }
+          ]
+        },
+        "2": {
+          "correct": "+3.17",
+          "correctExplanation": "E°cell = +0.80 − (−2.37) = +0.80 + 2.37 = +3.17 V.",
+          "distractors": [
+            { "answer": "+1.57", "explanation": "This results from subtracting magnitudes (2.37 − 0.80) rather than applying the correct formula." },
+            { "answer": "−3.17", "explanation": "A negative result would indicate a non-spontaneous reaction, which contradicts the correct subtraction order." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the statement about the Fe³⁺/Fe²⁺ and Sn half-cells.",
+      "sentence": "For a cell with Fe³⁺/Fe²⁺ (+0.77 V) and Sn²⁺/Sn (−0.14 V), the {{blank:1}} half-reaction is oxidised and E°cell = +0.77 − (−0.14) = {{blank:2}} V.",
+      "blanks": {
+        "1": {
+          "correct": "Sn²⁺/Sn",
+          "correctExplanation": "Sn²⁺/Sn has the lower E° (−0.14 V), so tin is oxidised: Sn(s) → Sn²⁺(aq) + 2e⁻.",
+          "distractors": [
+            { "answer": "Fe³⁺/Fe²⁺", "explanation": "Fe³⁺/Fe²⁺ has the higher E° (+0.77 V) and undergoes reduction, not oxidation." },
+            { "answer": "Sn⁴⁺/Sn²⁺", "explanation": "Sn⁴⁺/Sn²⁺ is a different redox couple and is not the half-reaction involved in this cell." }
+          ]
+        },
+        "2": {
+          "correct": "+0.91",
+          "correctExplanation": "E°cell = +0.77 − (−0.14) = +0.77 + 0.14 = +0.91 V.",
+          "distractors": [
+            { "answer": "+0.63", "explanation": "This results from subtracting the magnitudes (0.77 − 0.14) without handling the negative sign." },
+            { "answer": "−0.91", "explanation": "A negative result comes from reversing the subtraction order, indicating a non-spontaneous reaction." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "mc",
+      "question": "A student claims that doubling the Ag⁺/Ag half-equation to balance electrons with Cu²⁺/Cu doubles E°cell from +0.46 V to +0.92 V. Evaluate this claim.",
+      "correct": "The claim is incorrect because E° values are intensive and independent of stoichiometric coefficients",
+      "correctExplanation": "Standard electrode potentials are intensive properties. Multiplying a half-equation by any coefficient does not change its E° value, so E°cell remains +0.46 V.",
+      "distractors": [
+        { "answer": "The claim is correct because more moles of electrons transferred means more voltage is generated", "explanation": "Voltage is a measure of driving force per unit charge, not total charge transferred. More electrons do not increase voltage." },
+        { "answer": "The claim is incorrect because E° values should be halved when equations are doubled to compensate", "explanation": "E° values are never halved or adjusted by coefficients; they remain constant regardless of balancing." },
+        { "answer": "The claim is correct because the Nernst equation shows voltage depends on the number of electrons", "explanation": "Under standard conditions, the Nernst correction is zero and E°cell equals the standard value regardless of electron count." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Three galvanic cells are constructed: Cell A (Zn/Cu, E°cell = +1.10 V), Cell B (Zn/Ag, E°cell = +1.56 V), and Cell C (Cu/Ag, E°cell = +0.46 V). What relationship exists between these cell potentials?",
+      "correct": "E°cell(A) = E°cell(B) − E°cell(C), because Zn/Cu can be derived from the other two cells",
+      "correctExplanation": "Since E° values are referenced to the same standard, cell potentials are additive: E°(Zn/Cu) = E°(Zn/Ag) − E°(Cu/Ag) = 1.56 − 0.46 = 1.10 V.",
+      "distractors": [
+        { "answer": "E°cell(A) = E°cell(B) + E°cell(C), because cell potentials are always added together", "explanation": "+1.56 + 0.46 = +2.02 V, which does not equal +1.10 V. Cell potentials are not simply additive." },
+        { "answer": "E°cell(A) = E°cell(B) × E°cell(C), because the shared copper electrode multiplies the effect", "explanation": "Cell potentials are never multiplied; they are combined through addition or subtraction." },
+        { "answer": "No mathematical relationship exists because each cell is an independent electrochemical system", "explanation": "All three cells use the same reference scale, so their E° values are mathematically related." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student calculates E°cell for an Al/Mg cell as +0.71 V. Evaluate whether this cell would function as a galvanic cell.",
+      "correct": "Yes, because a positive E°cell confirms a spontaneous redox reaction will occur",
+      "correctExplanation": "E°cell = −1.66 − (−2.37) = +0.71 V. The positive value confirms the Al/Mg cell produces a spontaneous reaction.",
+      "distractors": [
+        { "answer": "No, because both metals have negative E° values so no spontaneous reaction can occur", "explanation": "Both metals having negative E° values does not prevent a spontaneous reaction; it is the difference that matters." },
+        { "answer": "Yes, but only if both electrode concentrations are exactly equal at one molar", "explanation": "The E°cell calculation already assumes standard conditions. The sign indicates spontaneity at those conditions." },
+        { "answer": "No, because galvanic cells require one positive and one negative electrode potential value", "explanation": "Galvanic cells only require a positive E°cell; both individual E° values can be negative." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Compare the standard cell potentials of a Zn/Ni cell and a Zn/Cu cell. Which produces a higher voltage and why?",
+      "correct": "Zn/Cu (+1.10 V) produces a higher voltage because Cu²⁺/Cu has a more positive E° than Ni²⁺/Ni",
+      "correctExplanation": "E°(Zn/Cu) = +0.34 − (−0.76) = +1.10 V; E°(Zn/Ni) = −0.25 − (−0.76) = +0.51 V. The more positive reduction E° of Cu²⁺/Cu increases the cell potential.",
+      "distractors": [
+        { "answer": "Zn/Ni (+0.51 V) produces a higher voltage because Ni is closer to Zn in the series", "explanation": "Closeness in the series means a smaller E° difference, resulting in lower voltage, not higher." },
+        { "answer": "Both produce the same voltage because they share the same oxidation half-reaction at zinc", "explanation": "While both use Zn as the anode, the different reduction half-reactions give different E°cell values." },
+        { "answer": "Zn/Cu (+1.10 V) produces a higher voltage because copper has a higher atomic mass than nickel", "explanation": "Atomic mass has no bearing on standard electrode potential or cell voltage." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A galvanic cell produces an experimental voltage of +0.85 V, but the calculated E°cell is +1.10 V. Which factor best explains this discrepancy?",
+      "correct": "The solution concentrations may differ from the standard 1 mol/L conditions",
+      "correctExplanation": "E°cell assumes standard conditions. Non-standard concentrations alter the actual cell potential, as described by the Nernst equation.",
+      "distractors": [
+        { "answer": "The student forgot to multiply the E° values by the stoichiometric coefficients", "explanation": "E° values are intensive and should never be multiplied by coefficients; doing so would be incorrect." },
+        { "answer": "The electrochemical series values are only theoretical and cannot be achieved practically", "explanation": "E° values can be closely achieved in practice under standard conditions; the discrepancy is due to non-standard conditions." },
+        { "answer": "The voltmeter used was incorrectly calibrated to read in millivolts rather than volts", "explanation": "A calibration error to millivolts would show 1100 mV, not 0.85 V, so this does not explain the discrepancy." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Cells X and Y both use zinc as the anode. Cell X uses Cu²⁺/Cu (+0.34 V) and Cell Y uses Ag⁺/Ag (+0.80 V) as the cathode. What is the difference in their cell potentials?",
+      "correct": "+0.46 V",
+      "correctExplanation": "E°(Cell X) = +0.34 − (−0.76) = +1.10 V; E°(Cell Y) = +0.80 − (−0.76) = +1.56 V. Difference = 1.56 − 1.10 = +0.46 V.",
+      "distractors": [
+        { "answer": "+0.80 V", "explanation": "This is simply the E° of the Ag⁺/Ag half-cell, not the difference between the two cell potentials." },
+        { "answer": "+1.14 V", "explanation": "This does not correspond to any correct subtraction of the cell potentials or half-cell values." },
+        { "answer": "+0.34 V", "explanation": "This is simply the E° of the Cu²⁺/Cu half-cell, not the difference between the two cell potentials." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student argues that a Na/K galvanic cell cannot work because both metals have very negative E° values (Na: −2.71 V, K: −2.93 V). Evaluate this reasoning.",
+      "correct": "The reasoning is flawed; the cell can work because E°cell = −2.71 − (−2.93) = +0.22 V, which is positive",
+      "correctExplanation": "A positive E°cell only requires that one half-reaction has a more positive E° than the other. Both being negative does not prevent a spontaneous reaction.",
+      "distractors": [
+        { "answer": "The reasoning is correct; both metals are too reactive to form a stable galvanic cell under any conditions", "explanation": "While highly reactive, the calculation shows a positive E°cell, meaning the reaction is thermodynamically spontaneous." },
+        { "answer": "The reasoning is flawed; the cell works because negative E° values become positive when the reaction is reversed", "explanation": "While one E° is reversed, this alone does not explain why the cell works. The key is that E°cell is positive." },
+        { "answer": "The reasoning is correct; galvanic cells always require at least one half-cell with a positive E° value", "explanation": "This is a common misconception; the E°cell only needs to be positive, regardless of individual half-cell signs." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "For a Zn/Cu galvanic cell, a student writes: '2 × (−0.76) = −1.52 V for zinc, so E°cell = +0.34 − (−1.52) = +1.86 V.' Identify the error in this calculation.",
+      "correct": "The student incorrectly multiplied zinc's E° by 2; E° values should not be multiplied by coefficients",
+      "correctExplanation": "E° is an intensive property. The correct calculation is E°cell = +0.34 − (−0.76) = +1.10 V without any coefficient multiplication.",
+      "distractors": [
+        { "answer": "The student should have also multiplied copper's E° by 2 to keep the calculation consistent", "explanation": "Neither E° value should be multiplied; multiplying both would still give an incorrect result." },
+        { "answer": "The student used the wrong E° value for zinc; it should be −0.44 V from the iron half-cell", "explanation": "−0.76 V is the correct E° for Zn²⁺/Zn; −0.44 V belongs to Fe²⁺/Fe, a different half-reaction." },
+        { "answer": "The student should have divided zinc's E° by 2 rather than multiplying it to account for electron transfer", "explanation": "E° values should neither be multiplied nor divided; they remain unchanged regardless of electron numbers." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the analysis of the relationship between cell potential and the electrochemical series.",
+      "sentence": "The further apart two half-reactions are in the electrochemical series, the {{blank:1}} the E°cell value, because the difference between their standard electrode potentials is {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "larger",
+          "correctExplanation": "Greater separation in the series means a bigger difference in E° values, producing a higher cell potential.",
+          "distractors": [
+            { "answer": "smaller", "explanation": "Greater separation increases the E° difference, not decreases it." },
+            { "answer": "more variable", "explanation": "E°cell is fixed under standard conditions; greater separation consistently gives a larger value." }
+          ]
+        },
+        "2": {
+          "correct": "greater",
+          "correctExplanation": "A larger gap between E° values in the series directly translates to a greater E°cell.",
+          "distractors": [
+            { "answer": "smaller", "explanation": "Half-reactions further apart have a larger E° difference, not a smaller one." },
+            { "answer": "unchanged", "explanation": "The E° difference clearly changes depending on which half-reactions are paired." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the evaluation of a student's cell potential calculation.",
+      "sentence": "A student calculates E°cell for a Fe/Sn cell as −0.30 V by using E°cell = E°oxidation − E°reduction. The error is that the student {{blank:1}} the formula, and the correct E°cell is {{blank:2}} V.",
+      "blanks": {
+        "1": {
+          "correct": "reversed",
+          "correctExplanation": "The student subtracted reduction from oxidation instead of oxidation from reduction, producing a negative value.",
+          "distractors": [
+            { "answer": "doubled", "explanation": "Doubling would change the magnitude, not simply reverse the sign of the result." },
+            { "answer": "simplified", "explanation": "The issue is an inversion of the formula terms, not oversimplification of the calculation." }
+          ]
+        },
+        "2": {
+          "correct": "+0.30",
+          "correctExplanation": "Correctly: E°cell = E°reduction − E°oxidation = −0.14 − (−0.44) = +0.30 V.",
+          "distractors": [
+            { "answer": "+0.58", "explanation": "This would result from adding the absolute values of the two E° values instead of subtracting." },
+            { "answer": "+0.14", "explanation": "This is simply the magnitude of tin's E° value, not the result of the correct cell potential formula." }
+          ]
+        }
+      }
+    }
+  ]
+}

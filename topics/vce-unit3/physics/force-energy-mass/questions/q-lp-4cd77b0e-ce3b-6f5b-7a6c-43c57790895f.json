@@ -1,0 +1,495 @@
+{
+  "_link": {
+    "uuid": "lp-4cd77b0e-ce3b-6f5b-7a6c-43c57790895f",
+    "version": 1,
+    "contentHash": "hash-8026ad5d",
+    "title": "I can apply momentum conservation to problems with objects initially at rest",
+    "generatedAt": "2026-02-08T12:15:00Z"
+  },
+  "toLevel2": [
+    {
+      "type": "mc",
+      "question": "When one object is initially at rest, what is its initial momentum?",
+      "correct": "Zero",
+      "correctExplanation": "If v = 0, then p = mv = m × 0 = 0. A stationary object has zero momentum.",
+      "distractors": [
+        { "answer": "Equal to its mass", "explanation": "Momentum requires velocity; a stationary object has zero momentum regardless of mass." },
+        { "answer": "Equal to its weight", "explanation": "Weight is a force (mg), not momentum. A stationary object has zero momentum." },
+        { "answer": "Undefined", "explanation": "Momentum is well-defined at zero velocity; it is simply zero." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "How does the conservation equation simplify when object 2 is initially at rest?",
+      "correct": "m₁u₁ = m₁v₁ + m₂v₂",
+      "correctExplanation": "Since u₂ = 0, the term m₂u₂ = 0, simplifying the equation to m₁u₁ = m₁v₁ + m₂v₂.",
+      "distractors": [
+        { "answer": "m₁u₁ = m₂v₂ only", "explanation": "This assumes the first object stops (v₁ = 0), which is not always the case." },
+        { "answer": "m₁u₁ + m₂u₂ = 0", "explanation": "This sets total momentum to zero, which is incorrect unless both start at rest." },
+        { "answer": "m₁ = m₂", "explanation": "The masses do not need to be equal for momentum conservation." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A moving ball hits a stationary ball. What happens to the total momentum?",
+      "correct": "It remains the same before and after the collision",
+      "correctExplanation": "Conservation of momentum ensures total momentum is unchanged in all collisions.",
+      "distractors": [
+        { "answer": "It increases because both balls are now moving", "explanation": "Total momentum is conserved; more objects moving does not mean more total momentum." },
+        { "answer": "It decreases due to the collision impact", "explanation": "Momentum is conserved; it does not decrease in isolated collisions." },
+        { "answer": "It becomes zero after the collision", "explanation": "Total momentum equals the initial momentum of the moving ball, not zero." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "In a collision with a stationary target, which object provides all the initial momentum?",
+      "correct": "The moving object",
+      "correctExplanation": "The stationary object has zero momentum (v = 0), so all initial momentum comes from the moving object.",
+      "distractors": [
+        { "answer": "The stationary object", "explanation": "The stationary object has zero velocity and therefore zero initial momentum." },
+        { "answer": "Both objects contribute equally", "explanation": "Only the moving object contributes initial momentum; the stationary one has none." },
+        { "answer": "Neither object has momentum initially", "explanation": "The moving object has momentum p = mv, which provides the total initial momentum." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A hockey player hits a puck from rest. What happens to the player?",
+      "correct": "The player recoils slightly in the opposite direction",
+      "correctExplanation": "To conserve momentum (initially zero), the player must recoil opposite to the puck's motion.",
+      "distractors": [
+        { "answer": "The player remains perfectly still", "explanation": "Conservation of momentum requires the player to recoil when the puck gains momentum." },
+        { "answer": "The player moves in the same direction as the puck", "explanation": "The player must move opposite to the puck to conserve the initial zero momentum." },
+        { "answer": "The player gains the same speed as the puck", "explanation": "The player's recoil is much slower than the puck due to the large mass difference." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "When a moving object collides with a stationary one, the total initial momentum equals just m₁u₁.",
+      "correct": "True",
+      "correctExplanation": "Since the second object is at rest (u₂ = 0), its momentum is zero, so total initial momentum = m₁u₁ + 0 = m₁u₁.",
+      "distractors": [
+        { "answer": "False", "explanation": "Students may think both objects contribute, but a stationary object has zero momentum." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "If two objects start at rest and then push apart, the total momentum after separation is zero.",
+      "correct": "True",
+      "correctExplanation": "Initial momentum = 0. By conservation, final momentum = 0, so the objects have equal and opposite momenta.",
+      "distractors": [
+        { "answer": "False", "explanation": "Students may think momentum is created, but total momentum remains zero as objects push apart." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the simplified equation.",
+      "sentence": "When object 2 starts at rest: m₁u₁ = m₁v₁ + {{blank:1}}.",
+      "blanks": {
+        "1": {
+          "correct": "m₂v₂",
+          "correctExplanation": "The stationary object's initial term (m₂u₂) drops out, leaving m₁u₁ = m₁v₁ + m₂v₂.",
+          "distractors": [
+            { "answer": "m₂u₂", "explanation": "m₂u₂ = 0 since object 2 starts at rest; the final term is m₂v₂." },
+            { "answer": "m₁u₂", "explanation": "The second object's final momentum uses its own mass m₂, not m₁." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about stationary targets.",
+      "sentence": "When a moving ball hits a stationary ball, the stationary ball's initial momentum is {{blank:1}}.",
+      "blanks": {
+        "1": {
+          "correct": "zero",
+          "correctExplanation": "A stationary object has v = 0, so its momentum p = mv = 0.",
+          "distractors": [
+            { "answer": "equal to its mass", "explanation": "Momentum = mass × velocity; with zero velocity, momentum is zero." },
+            { "answer": "negative", "explanation": "A stationary object has zero momentum, not negative momentum." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about recoil.",
+      "sentence": "When a system starts at rest and an object is ejected in one direction, another part must move in the {{blank:1}} direction.",
+      "blanks": {
+        "1": {
+          "correct": "opposite",
+          "correctExplanation": "Starting from zero total momentum, the parts must have equal and opposite momenta to sum to zero.",
+          "distractors": [
+            { "answer": "same", "explanation": "Moving the same direction would give non-zero total momentum, violating conservation." },
+            { "answer": "downward", "explanation": "The recoil direction is opposite to the ejected object, not necessarily downward." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "mc",
+      "question": "Why does the conservation equation simplify when one object is at rest?",
+      "correct": "Because the stationary object's initial momentum term is zero",
+      "correctExplanation": "With u₂ = 0, the m₂u₂ term equals zero, removing it from the equation.",
+      "distractors": [
+        { "answer": "Because stationary objects have no mass", "explanation": "Stationary objects still have mass; their zero velocity makes their momentum zero." },
+        { "answer": "Because momentum is not conserved with stationary objects", "explanation": "Momentum is always conserved; the equation simply has fewer non-zero terms." },
+        { "answer": "Because the collision does not occur with stationary objects", "explanation": "Collisions with stationary objects are common; the equation simplifies but still applies." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A billiard cue ball hits a stationary red ball. The cue ball stops completely. What can you conclude?",
+      "correct": "The red ball moves with the cue ball's initial momentum",
+      "correctExplanation": "If v₁ = 0 after collision: m₁u₁ = m₂v₂. All momentum transfers to the red ball.",
+      "distractors": [
+        { "answer": "Momentum was not conserved in this collision", "explanation": "Momentum is conserved; all of it transferred from the cue ball to the red ball." },
+        { "answer": "The red ball must have gained extra momentum", "explanation": "No extra momentum is created; the red ball gained exactly the cue ball's initial momentum." },
+        { "answer": "Both balls must have the same mass for this to happen", "explanation": "While equal mass makes this likely, the statement is about momentum transfer regardless." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An astronaut at rest throws a wrench. Why does the astronaut move backward?",
+      "correct": "To conserve the initial zero total momentum of the system",
+      "correctExplanation": "The wrench gains forward momentum, so the astronaut must gain equal backward momentum to keep total at zero.",
+      "distractors": [
+        { "answer": "Because the wrench pushes air that pushes back on the astronaut", "explanation": "In space there is no air; the recoil is due to conservation of momentum (Newton's third law)." },
+        { "answer": "Because the astronaut is lighter than the wrench", "explanation": "The astronaut recoils regardless of relative mass; the direction is opposite to the throw." },
+        { "answer": "Because gravity pushes the astronaut backward", "explanation": "In space, gravity does not push backward; the recoil is from momentum conservation." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A moving ball hits an identical stationary ball and stops. Why does the second ball move at the first ball's initial speed?",
+      "correct": "Because with equal masses and the first ball stopping, conservation gives v₂ = u₁",
+      "correctExplanation": "m × u₁ = m × 0 + m × v₂, so v₂ = u₁. The speed is fully transferred.",
+      "distractors": [
+        { "answer": "Because energy is always conserved in collisions", "explanation": "While this is an elastic collision, the speed transfer is explained by momentum conservation with equal masses." },
+        { "answer": "Because the stationary ball absorbs the kinetic energy", "explanation": "The ball absorbs momentum and KE, but the speed equality comes from momentum conservation with equal masses." },
+        { "answer": "Because Newton's second law requires equal speeds", "explanation": "Newton's second law relates force and acceleration, not directly to final speeds in collisions." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A rifle fires a bullet. The rifle recoils much more slowly than the bullet. Why?",
+      "correct": "The rifle has much more mass, so the same momentum produces a smaller velocity",
+      "correctExplanation": "Both gain equal magnitude momentum. Since p = mv, the rifle's larger mass means a smaller velocity.",
+      "distractors": [
+        { "answer": "The rifle gains less momentum than the bullet", "explanation": "By conservation, both gain equal magnitude momentum in opposite directions." },
+        { "answer": "Friction on the rifle reduces its speed", "explanation": "Even without friction, the rifle would recoil slowly due to its larger mass." },
+        { "answer": "The bullet has more force acting on it", "explanation": "Newton's third law gives equal forces; the mass difference explains the velocity difference." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A particle accelerator fires particles at stationary targets. Why is this setup useful for studying collisions?",
+      "correct": "The stationary target simplifies momentum calculations and allows precise energy measurements",
+      "correctExplanation": "With one object at rest, the initial total momentum equals just the beam momentum, simplifying analysis.",
+      "distractors": [
+        { "answer": "Because momentum is only conserved with stationary targets", "explanation": "Momentum is conserved in all collisions; stationary targets just simplify the mathematics." },
+        { "answer": "Because particles cannot collide if both are moving", "explanation": "Moving particles can collide; stationary targets are a design choice, not a requirement." },
+        { "answer": "Because stationary particles have infinite mass", "explanation": "Stationary particles have finite mass; their zero velocity simplifies the initial conditions." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "When a heavy object hits a light stationary object, the heavy object barely slows down.",
+      "correct": "True",
+      "correctExplanation": "The heavy object transfers a small fraction of its momentum to the light object, so its velocity changes very little.",
+      "distractors": [
+        { "answer": "False", "explanation": "Students may think equal forces mean equal speed changes, but the heavy object's large inertia limits its velocity change." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about momentum transfer.",
+      "sentence": "When a moving object hits a stationary one and stops, {{blank:1}} of the momentum has been transferred.",
+      "blanks": {
+        "1": {
+          "correct": "all",
+          "correctExplanation": "If the first object stops (v₁ = 0), all its initial momentum transfers to the second object.",
+          "distractors": [
+            { "answer": "half", "explanation": "If the first object stops, all momentum transfers, not just half." },
+            { "answer": "none", "explanation": "The first object lost all its momentum; it was transferred to the second object." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about recoil velocity.",
+      "sentence": "A heavier gun has a {{blank:1}} recoil velocity than a lighter gun firing the same bullet at the same speed.",
+      "blanks": {
+        "1": {
+          "correct": "smaller",
+          "correctExplanation": "Same momentum change but larger mass means smaller velocity: v = p/m decreases with larger m.",
+          "distractors": [
+            { "answer": "larger", "explanation": "Greater mass means the same momentum produces a smaller velocity change." },
+            { "answer": "equal", "explanation": "Different masses produce different recoil velocities for the same momentum." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about equal mass collisions.",
+      "sentence": "When a moving ball hits an identical stationary ball and stops, the stationary ball moves at the {{blank:1}} ball's original speed.",
+      "blanks": {
+        "1": {
+          "correct": "first",
+          "correctExplanation": "With equal masses and the first ball stopping, conservation gives the second ball the first ball's initial speed.",
+          "distractors": [
+            { "answer": "second", "explanation": "The second ball was initially at rest; it moves at the first ball's original speed." },
+            { "answer": "combined", "explanation": "The second ball takes the first ball's speed, not some combined value." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "mc",
+      "question": "A 5 kg ball moving at 8 m/s hits a stationary 3 kg ball. After collision, the 5 kg ball moves at 2 m/s. What is the 3 kg ball's velocity?",
+      "correct": "10 m/s",
+      "correctExplanation": "5(8) = 5(2) + 3v₂. 40 = 10 + 3v₂. v₂ = 30/3 = 10 m/s.",
+      "distractors": [
+        { "answer": "6 m/s", "explanation": "This may subtract speeds (8 − 2) instead of using momentum conservation." },
+        { "answer": "13.3 m/s", "explanation": "This uses 40/3 without subtracting the first ball's final momentum." },
+        { "answer": "5 m/s", "explanation": "This may use (8 − 2)/2 + some error." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An 85.7 kg hockey player at rest hits a 0.154 kg puck to 22.5 m/s. What is the player's recoil velocity?",
+      "correct": "0.0404 m/s",
+      "correctExplanation": "0 = 85.7v + 0.154(22.5). 85.7v = −3.465. v = −0.0404 m/s (opposite to puck).",
+      "distractors": [
+        { "answer": "22.5 m/s", "explanation": "This gives the player the puck's speed, ignoring the mass difference." },
+        { "answer": "0.404 m/s", "explanation": "This is 10 times too large, likely a decimal error." },
+        { "answer": "0 m/s", "explanation": "The player must recoil to conserve the initial zero momentum." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A 2 kg clay ball at 6 m/s hits a stationary 4 kg block and sticks. What is their combined speed?",
+      "correct": "2 m/s",
+      "correctExplanation": "2(6) = 6v. v = 12/6 = 2 m/s.",
+      "distractors": [
+        { "answer": "3 m/s", "explanation": "This divides by the block's mass alone (12/4) instead of the combined mass." },
+        { "answer": "6 m/s", "explanation": "This assumes the combined object keeps the clay ball's initial speed." },
+        { "answer": "1 m/s", "explanation": "This divides by 12 instead of dividing 12 by 6." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A 0.05 kg bullet at 400 m/s embeds in a stationary 2.95 kg block. What is the combined velocity?",
+      "correct": "6.67 m/s",
+      "correctExplanation": "0.05(400) = 3v. 20 = 3v. v = 20/3 = 6.67 m/s.",
+      "distractors": [
+        { "answer": "6.78 m/s", "explanation": "This divides by 2.95 only instead of the combined mass of 3 kg." },
+        { "answer": "400 m/s", "explanation": "The combined mass is much larger than the bullet, so the speed drops dramatically." },
+        { "answer": "0.017 m/s", "explanation": "This divides the bullet mass by the total momentum instead of the reverse." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A 10 kg cannon at rest fires a 0.5 kg ball at 60 m/s. What is the cannon's recoil speed?",
+      "correct": "3 m/s",
+      "correctExplanation": "0 = 10v + 0.5(60). 10v = −30. v = −3 m/s.",
+      "distractors": [
+        { "answer": "60 m/s", "explanation": "This gives the cannon the ball's speed, ignoring the 20:1 mass ratio." },
+        { "answer": "0.3 m/s", "explanation": "This divides by 100 instead of 10." },
+        { "answer": "6 m/s", "explanation": "This doubles the correct answer." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A 0.3 kg ball at 12 m/s hits a stationary 0.3 kg ball. The first ball bounces back at 4 m/s. What speed does the second ball reach?",
+      "correct": "16 m/s",
+      "correctExplanation": "0.3(12) = 0.3(−4) + 0.3v₂. 3.6 = −1.2 + 0.3v₂. 0.3v₂ = 4.8. v₂ = 16 m/s.",
+      "distractors": [
+        { "answer": "8 m/s", "explanation": "This subtracts speeds (12 − 4) without accounting for the direction reversal." },
+        { "answer": "12 m/s", "explanation": "This assumes a direct speed transfer without accounting for the bounce-back." },
+        { "answer": "4 m/s", "explanation": "This is the first ball's bounce-back speed, not the second ball's speed." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A 1000 kg car at 15 m/s hits a stationary 500 kg trailer and they couple together. What is the combined speed?",
+      "correct": "10 m/s",
+      "correctExplanation": "1000(15) = 1500v. v = 15 000/1500 = 10 m/s.",
+      "distractors": [
+        { "answer": "15 m/s", "explanation": "The combined object is heavier, so it moves slower than the initial car speed." },
+        { "answer": "7.5 m/s", "explanation": "This halves the initial speed instead of using momentum conservation." },
+        { "answer": "30 m/s", "explanation": "This doubles the speed, possibly dividing by mass difference instead of total mass." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the calculation.",
+      "sentence": "A 2 kg ball at 10 m/s hits a stationary 3 kg ball. They stick: 2 × 10 = 5 × v, so v = {{blank:1}} m/s.",
+      "blanks": {
+        "1": {
+          "correct": "4",
+          "correctExplanation": "20/5 = 4 m/s.",
+          "distractors": [
+            { "answer": "5", "explanation": "This may divide 10 by 2 instead of 20 by 5." },
+            { "answer": "10", "explanation": "10 m/s is the initial speed; the combined object is slower." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the recoil calculation.",
+      "sentence": "A 50 kg person throws a 0.5 kg ball at 20 m/s. The person's recoil velocity is {{blank:1}} m/s.",
+      "blanks": {
+        "1": {
+          "correct": "0.2",
+          "correctExplanation": "0 = 50v + 0.5(20). 50v = −10. v = −0.2 m/s.",
+          "distractors": [
+            { "answer": "2", "explanation": "This is 10 times too large, possibly a decimal error." },
+            { "answer": "20", "explanation": "This gives the person the ball's speed, ignoring the 100:1 mass ratio." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about stationary target collisions.",
+      "sentence": "When a light ball hits a heavy stationary block, most of the momentum stays with the {{blank:1}} object.",
+      "blanks": {
+        "1": {
+          "correct": "light",
+          "correctExplanation": "A light ball bouncing off a heavy block retains most of its momentum (reversed direction) while the block barely moves.",
+          "distractors": [
+            { "answer": "heavy", "explanation": "The heavy block gains very little velocity and thus little momentum; the light ball retains most." },
+            { "answer": "combined", "explanation": "The objects do not combine if the ball bounces; the light ball retains most momentum." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "mc",
+      "question": "A 0.01 kg bullet at 500 m/s embeds in a 4.99 kg wooden block on a frictionless surface. The block then slides up a ramp. What height does it reach?",
+      "correct": "0.051 m",
+      "correctExplanation": "Bullet-block: 0.01(500) = 5v. v = 1 m/s. Up ramp: ½mv² = mgh. h = v²/(2g) = 1/19.6 = 0.051 m.",
+      "distractors": [
+        { "answer": "12.8 m", "explanation": "This uses the bullet's speed (500 m/s) instead of the combined velocity (1 m/s)." },
+        { "answer": "0.5 m", "explanation": "This may use v = 10 m/s from an incorrect momentum calculation." },
+        { "answer": "0.102 m", "explanation": "This uses v²/g instead of v²/(2g), missing the factor of 2." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A 3 kg ball at 8 m/s hits a stationary 1 kg ball. After collision, both move in the same direction: the 3 kg ball at 5 m/s. Is this collision elastic?",
+      "correct": "No, kinetic energy is not conserved",
+      "correctExplanation": "v₂ = (24 − 15)/1 = 9 m/s. Initial KE = ½(3)(64) = 96 J. Final KE = ½(3)(25) + ½(1)(81) = 37.5 + 40.5 = 78 J. KE decreased, so inelastic.",
+      "distractors": [
+        { "answer": "Yes, because momentum is conserved", "explanation": "Momentum conservation applies to all collisions; elastic requires KE conservation too." },
+        { "answer": "Yes, because both objects are moving after the collision", "explanation": "Both moving does not guarantee elastic; KE must be checked." },
+        { "answer": "It cannot be determined without more information", "explanation": "We can calculate both initial and final KE from the given data to determine if elastic." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A 150 g cricket ball at 30 m/s is hit by a bat and returns at 40 m/s. If the bat (1.2 kg) was initially at rest, what speed does the bat reach?",
+      "correct": "8.75 m/s",
+      "correctExplanation": "0.15(30) = 0.15(−40) + 1.2v₂. 4.5 = −6 + 1.2v₂. 1.2v₂ = 10.5. v₂ = 8.75 m/s.",
+      "distractors": [
+        { "answer": "3.75 m/s", "explanation": "This uses (4.5)/1.2 without accounting for the ball's reversed momentum." },
+        { "answer": "70 m/s", "explanation": "This adds the ball's speeds (30 + 40) and divides by the ball mass." },
+        { "answer": "5.83 m/s", "explanation": "This subtracts the speeds (40 − 30)/1.2 = 8.33, not accounting for direction reversal correctly." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A 2000 kg spacecraft at rest ejects 50 kg of exhaust at 3000 m/s. What velocity does the remaining spacecraft achieve?",
+      "correct": "76.9 m/s",
+      "correctExplanation": "0 = 1950v + 50(−3000). 1950v = 150 000. v = 150 000/1950 = 76.9 m/s.",
+      "distractors": [
+        { "answer": "75 m/s", "explanation": "This uses the full 2000 kg mass (150 000/2000) instead of the remaining 1950 kg." },
+        { "answer": "3000 m/s", "explanation": "This gives the spacecraft the exhaust speed, ignoring the mass ratio." },
+        { "answer": "150 m/s", "explanation": "This divides by 1000 instead of 1950." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A 4 kg ball at 6 m/s hits a stationary 2 kg ball head-on. The collision is perfectly elastic. What are the final velocities?",
+      "correct": "4 kg ball: 2 m/s, 2 kg ball: 8 m/s",
+      "correctExplanation": "For elastic collision with stationary target: v₁ = u₁(m₁−m₂)/(m₁+m₂) = 6(2)/6 = 2 m/s. v₂ = u₁(2m₁)/(m₁+m₂) = 6(8)/6 = 8 m/s.",
+      "distractors": [
+        { "answer": "4 kg ball: 0 m/s, 2 kg ball: 12 m/s", "explanation": "The first ball only stops if the masses are equal; here m₁ ≠ m₂." },
+        { "answer": "4 kg ball: 3 m/s, 2 kg ball: 6 m/s", "explanation": "This does not satisfy both momentum and energy conservation simultaneously." },
+        { "answer": "4 kg ball: 4 m/s, 2 kg ball: 4 m/s", "explanation": "This splits the speed equally but does not conserve momentum (24 ≠ 16 + 8)." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A pendulum ball (0.5 kg) swings down from 0.8 m and hits a stationary ball (1.5 kg) at the bottom. They stick together. How high does the combined mass swing?",
+      "correct": "0.05 m",
+      "correctExplanation": "Swing speed: v = √(2 × 9.8 × 0.8) = 3.96 m/s. Collision: 0.5(3.96) = 2v. v = 0.99 m/s. Height: h = 0.99²/(2 × 9.8) = 0.05 m.",
+      "distractors": [
+        { "answer": "0.8 m", "explanation": "This assumes the combined mass reaches the same height, ignoring the velocity reduction." },
+        { "answer": "0.2 m", "explanation": "This may use v/2 for the height calculation instead of the correct combined velocity." },
+        { "answer": "0.4 m", "explanation": "This halves the original height instead of using momentum conservation." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A neutron (mass 1 u) at velocity v hits a stationary carbon nucleus (mass 12 u). In an elastic collision, what fraction of the neutron's kinetic energy is transferred?",
+      "correct": "28.4%",
+      "correctExplanation": "Fraction transferred = 4m₁m₂/(m₁ + m₂)² = 4(1)(12)/(13)² = 48/169 = 0.284 = 28.4%.",
+      "distractors": [
+        { "answer": "50%", "explanation": "50% transfer occurs only when the masses are equal; with 1:12 ratio, it is much less." },
+        { "answer": "92.3%", "explanation": "This may be 12/13 or some other incorrect fraction." },
+        { "answer": "8.3%", "explanation": "This uses 1/12 instead of the correct elastic transfer formula." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A 75 kg ice skater at rest catches a 0.4 kg ball thrown at 25 m/s. What percentage of the ball's kinetic energy is retained as KE of the combined system?",
+      "correct": "0.53%",
+      "correctExplanation": "v_combined = 0.4(25)/75.4 = 0.1326 m/s. Initial KE = ½(0.4)(625) = 125 J. Final KE = ½(75.4)(0.01758) = 0.663 J. Percentage = 0.663/125 = 0.53%.",
+      "distractors": [
+        { "answer": "50%", "explanation": "Very little KE is retained because the combined mass is much larger than the ball." },
+        { "answer": "99.5%", "explanation": "This is the percentage of KE lost, not retained." },
+        { "answer": "100%", "explanation": "This would require an elastic collision; catching the ball is perfectly inelastic." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the two-step problem approach.",
+      "sentence": "In a ballistic pendulum, first use {{blank:1}} conservation for the collision, then energy conservation for the swing.",
+      "blanks": {
+        "1": {
+          "correct": "momentum",
+          "correctExplanation": "The collision is inelastic (objects stick), so use momentum conservation. Then use energy conservation for the swing upward.",
+          "distractors": [
+            { "answer": "energy", "explanation": "Energy is not conserved in the inelastic collision step; momentum conservation must be used first." },
+            { "answer": "force", "explanation": "Force analysis is not needed; momentum conservation handles the collision." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about elastic collisions with stationary targets.",
+      "sentence": "In an elastic collision with a stationary target of equal mass, the moving object {{blank:1}} and all velocity transfers to the target.",
+      "blanks": {
+        "1": {
+          "correct": "stops",
+          "correctExplanation": "With equal masses in an elastic collision, the first object stops and the second moves with the first's initial velocity.",
+          "distractors": [
+            { "answer": "bounces back", "explanation": "Bouncing back occurs when the target is much heavier, not when masses are equal." },
+            { "answer": "continues forward", "explanation": "In an equal-mass elastic collision, the first object stops completely." }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,577 @@
+{
+  "_link": {
+    "uuid": "lp-3abbff5a-76b9-eba3-d85e-053e7e2cf95b",
+    "version": 1,
+    "contentHash": "hash-88cf00cd",
+    "title": "I can calculate the time required for a cell to produce a given amount of substance at constant current",
+    "generatedAt": "2026-02-08T17:40:00Z"
+  },
+  "toLevel2": [
+    {
+      "type": "mc",
+      "question": "Which formula is used to calculate the time required for an electrochemical cell to produce a given amount of charge?",
+      "correct": "t = Q / I",
+      "correctExplanation": "Time equals charge divided by current, rearranged from Q = I × t.",
+      "distractors": [
+        { "answer": "t = I / Q", "explanation": "This inverts the relationship; time equals charge divided by current, not current divided by charge." },
+        { "answer": "t = Q × I", "explanation": "Multiplying charge by current does not give time; time is found by dividing charge by current." },
+        { "answer": "t = I × F", "explanation": "This formula does not exist in this context; Faraday's constant is used with moles of electrons, not directly with current to find time." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What is the correct sequence of steps to calculate time for electrochemical deposition?",
+      "correct": "Find moles of substance → find moles of electrons → calculate charge → calculate time",
+      "correctExplanation": "You must first determine how much substance is needed, then use stoichiometry to find electrons, convert to charge using Q = n(e⁻) × F, then find time from t = Q/I.",
+      "distractors": [
+        { "answer": "Calculate charge → find moles of electrons → find moles of substance → calculate time", "explanation": "This reverses the logical order; you need to start from the desired amount of substance." },
+        { "answer": "Calculate time → calculate charge → find moles of electrons → find moles of substance", "explanation": "Time is the final answer, not the starting point of the calculation." },
+        { "answer": "Find moles of substance → calculate time → calculate charge → find moles of electrons", "explanation": "Time cannot be calculated before charge is known; the steps must follow a logical sequence." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What is the value of Faraday's constant used to calculate charge from moles of electrons?",
+      "correct": "96,500 C mol⁻¹",
+      "correctExplanation": "Faraday's constant F = 96,500 C mol⁻¹ represents the charge carried by 1 mole of electrons.",
+      "distractors": [
+        { "answer": "9,650 C mol⁻¹", "explanation": "This is one-tenth of the correct value; Faraday's constant is 96,500 C mol⁻¹." },
+        { "answer": "96.5 C mol⁻¹", "explanation": "This is one-thousandth of the correct value; the constant is 96,500 C mol⁻¹." },
+        { "answer": "965,000 C mol⁻¹", "explanation": "This is ten times the correct value; Faraday's constant is 96,500 C mol⁻¹." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "If 193,000 C of charge is required and the current is 10 A, what is the time needed?",
+      "correct": "19,300 s",
+      "correctExplanation": "t = Q/I = 193,000/10 = 19,300 seconds.",
+      "distractors": [
+        { "answer": "1,930 s", "explanation": "This is ten times too small; 193,000 ÷ 10 = 19,300 s, not 1,930 s." },
+        { "answer": "1,930,000 s", "explanation": "This incorrectly multiplies charge by current instead of dividing." },
+        { "answer": "193,000 s", "explanation": "This would be correct only if the current were 1 A, not 10 A." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "In the equation Q = n(e⁻) × F, what does n(e⁻) represent?",
+      "correct": "The number of moles of electrons",
+      "correctExplanation": "n(e⁻) is the moles of electrons transferred, determined from the stoichiometry of the half-equation.",
+      "distractors": [
+        { "answer": "The number of individual electrons", "explanation": "n(e⁻) represents moles of electrons, not the count of individual electrons." },
+        { "answer": "The charge of each electron", "explanation": "The charge per electron is a constant; n(e⁻) is the moles of electrons involved." },
+        { "answer": "The moles of metal deposited", "explanation": "n(e⁻) is the moles of electrons, which differs from the moles of metal unless the ionic charge is 1+." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "To convert time from seconds to minutes, you divide the time in seconds by 60.",
+      "correct": "True",
+      "correctExplanation": "There are 60 seconds per minute, so dividing seconds by 60 gives the time in minutes.",
+      "distractors": [
+        { "answer": "False", "explanation": "Students may confuse multiplication and division for unit conversions; dividing by 60 is correct for seconds to minutes." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "The time required to deposit a substance increases if the current is increased while all other factors remain constant.",
+      "correct": "False",
+      "correctExplanation": "From t = Q/I, increasing current decreases the time needed because charge is delivered faster.",
+      "distractors": [
+        { "answer": "True", "explanation": "Students may think more current takes more time, but higher current delivers charge faster, reducing the time." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about calculating time.",
+      "sentence": "Time is calculated using the formula t = {{blank:1}} / I, where I is the {{blank:2}} in amperes.",
+      "blanks": {
+        "1": {
+          "correct": "Q",
+          "correctExplanation": "Q represents the total electric charge in coulombs needed for the reaction.",
+          "distractors": [
+            { "answer": "F", "explanation": "F is Faraday's constant, not the total charge; Q is used in the time formula." },
+            { "answer": "n", "explanation": "n represents moles; the formula uses charge Q divided by current I." }
+          ]
+        },
+        "2": {
+          "correct": "current",
+          "correctExplanation": "Current (I) is the rate of charge flow, measured in amperes.",
+          "distractors": [
+            { "answer": "voltage", "explanation": "Voltage is the potential difference, not what I represents in this formula." },
+            { "answer": "resistance", "explanation": "Resistance is measured in ohms; I represents current in amperes." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the calculation sequence.",
+      "sentence": "To find time, first calculate the charge using Q = n(e⁻) × {{blank:1}}, then divide by the {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "F",
+          "correctExplanation": "Faraday's constant (F = 96,500 C mol⁻¹) converts moles of electrons to coulombs of charge.",
+          "distractors": [
+            { "answer": "I", "explanation": "I is current; Faraday's constant F is used to convert moles of electrons to charge." },
+            { "answer": "t", "explanation": "t is time, which is what we are trying to find; F is the conversion constant." }
+          ]
+        },
+        "2": {
+          "correct": "current",
+          "correctExplanation": "Dividing the total charge by the current gives the time: t = Q/I.",
+          "distractors": [
+            { "answer": "charge", "explanation": "Dividing charge by charge would give a dimensionless number, not time." },
+            { "answer": "moles", "explanation": "Dividing charge by moles gives Faraday's constant, not time." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the worked example.",
+      "sentence": "To deposit 1 mol of Cu from Cu²⁺ at 5 A: n(e⁻) = 2 mol, Q = 2 × 96,500 = {{blank:1}} C, t = 193,000/5 = {{blank:2}} s.",
+      "blanks": {
+        "1": {
+          "correct": "193,000",
+          "correctExplanation": "Q = n(e⁻) × F = 2 × 96,500 = 193,000 C.",
+          "distractors": [
+            { "answer": "96,500", "explanation": "96,500 C is 1 Faraday; Cu²⁺ requires 2 Faradays per mole, giving 193,000 C." },
+            { "answer": "289,500", "explanation": "289,500 C corresponds to 3 Faradays, which would apply to a 3+ ion, not Cu²⁺." }
+          ]
+        },
+        "2": {
+          "correct": "38,600",
+          "correctExplanation": "t = Q/I = 193,000/5 = 38,600 seconds.",
+          "distractors": [
+            { "answer": "19,300", "explanation": "19,300 s would be correct at 10 A, not 5 A." },
+            { "answer": "965,000", "explanation": "This incorrectly multiplies charge by current instead of dividing." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "mc",
+      "question": "Why does doubling the current halve the time required to deposit the same amount of substance?",
+      "correct": "Because charge is delivered twice as fast while the total charge needed remains the same",
+      "correctExplanation": "From t = Q/I, if I doubles and Q is unchanged, then t is halved. The same total charge is delivered in less time.",
+      "distractors": [
+        { "answer": "Because doubling current doubles the number of electrons required", "explanation": "The electrons required depend on the amount of substance, not the current; current only affects how fast they are delivered." },
+        { "answer": "Because higher current makes the metal ions move faster", "explanation": "Ion speed may increase slightly, but the time change is due to the mathematical relationship t = Q/I." },
+        { "answer": "Because higher current changes the half-equation stoichiometry", "explanation": "Stoichiometry is fixed by the chemical reaction and does not change with current." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Why must the moles of electrons be determined before calculating the charge in a time calculation?",
+      "correct": "Because charge depends on how many electrons are transferred in the reaction",
+      "correctExplanation": "The total charge Q = n(e⁻) × F requires knowing the moles of electrons, which comes from the stoichiometry of the half-equation and the moles of substance.",
+      "distractors": [
+        { "answer": "Because electrons must be counted individually before Faraday's law applies", "explanation": "Electrons are calculated in moles using stoichiometry, not counted individually." },
+        { "answer": "Because the current cannot flow without knowing the electron count", "explanation": "Current flows regardless; the calculation sequence is a mathematical requirement, not a physical one." },
+        { "answer": "Because charge is always equal to the moles of substance produced", "explanation": "Charge equals moles of electrons times Faraday's constant, not moles of substance directly." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What is the relationship between the mass of substance desired and the time required for deposition?",
+      "correct": "Greater mass requires more moles and therefore more time at constant current",
+      "correctExplanation": "More mass means more moles of substance, more moles of electrons, more charge, and therefore more time at the same current.",
+      "distractors": [
+        { "answer": "Mass and time are inversely proportional in electrochemistry", "explanation": "Mass and time are directly proportional at constant current; more mass requires more time." },
+        { "answer": "Mass does not affect time because current determines deposition rate", "explanation": "While current determines rate, the total time depends on how much substance must be deposited." },
+        { "answer": "Greater mass requires less time because heavier atoms deposit faster", "explanation": "Atomic mass does not affect deposition speed; moles of electrons and current determine the time." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Why is it important to use the correct half-equation when calculating time for electrochemical deposition?",
+      "correct": "The half-equation determines the electron-to-substance mole ratio needed for the calculation",
+      "correctExplanation": "The stoichiometric ratio of electrons to substance in the half-equation is essential for determining n(e⁻), which feeds into the charge and time calculations.",
+      "distractors": [
+        { "answer": "The half-equation determines the voltage of the cell", "explanation": "While half-equations relate to electrode potential, for time calculations their role is providing the stoichiometric ratio." },
+        { "answer": "Different half-equations produce different values of Faraday's constant", "explanation": "Faraday's constant is universal (96,500 C mol⁻¹) and does not change with different reactions." },
+        { "answer": "The half-equation is only needed for balancing, not for calculations", "explanation": "The electron coefficient in the half-equation is essential for determining the charge required." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student calculates a time of 3,547 seconds. Why might they need to convert this to minutes?",
+      "correct": "Because minutes are more practical for understanding how long a process takes",
+      "correctExplanation": "While the calculation gives seconds, converting to approximately 59 minutes gives a more intuitive understanding of the process duration.",
+      "distractors": [
+        { "answer": "Because the SI unit for time in chemistry is always minutes", "explanation": "The SI unit for time is the second; minutes are used for practical communication, not because they are the SI unit." },
+        { "answer": "Because the formula only works correctly in minutes", "explanation": "The formula t = Q/I works in seconds when Q is in coulombs and I is in amperes." },
+        { "answer": "Because converting to minutes changes the answer's precision", "explanation": "Converting units does not change precision; it changes the unit for easier interpretation." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "If two cells require the same total charge but one operates at double the current, the higher-current cell will take half the time.",
+      "correct": "True",
+      "correctExplanation": "From t = Q/I, if Q is the same and I is doubled, then t is halved. Time is inversely proportional to current.",
+      "distractors": [
+        { "answer": "False", "explanation": "Students may not recognise the inverse relationship between current and time when charge is constant." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "The time formula t = Q/I can be used regardless of whether the current is constant or variable.",
+      "correct": "False",
+      "correctExplanation": "The simple formula t = Q/I assumes constant current. If current varies over time, a more complex calculation involving integration would be needed.",
+      "distractors": [
+        { "answer": "True", "explanation": "Students may assume the formula works universally, but it requires constant current for direct application." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence explaining the relationship between current and time.",
+      "sentence": "At constant charge, time and current are {{blank:1}} proportional, meaning higher current results in {{blank:2}} time.",
+      "blanks": {
+        "1": {
+          "correct": "inversely",
+          "correctExplanation": "From t = Q/I, when Q is constant, increasing I decreases t, which is an inverse relationship.",
+          "distractors": [
+            { "answer": "directly", "explanation": "Direct proportionality would mean higher current takes more time, which contradicts t = Q/I." },
+            { "answer": "exponentially", "explanation": "The relationship is a simple inverse proportion, not exponential." }
+          ]
+        },
+        "2": {
+          "correct": "shorter",
+          "correctExplanation": "Higher current delivers the required charge faster, reducing the time needed.",
+          "distractors": [
+            { "answer": "longer", "explanation": "Higher current delivers charge faster, not slower, so the time is shorter." },
+            { "answer": "identical", "explanation": "Time changes with current when charge is constant; they are not independent." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the worked example explanation.",
+      "sentence": "To deposit 2.00 g of Ni (M = 58.69 g/mol) from Ni²⁺, the moles of Ni = 2.00/58.69 = {{blank:1}} mol, requiring {{blank:2}} mol of electrons.",
+      "blanks": {
+        "1": {
+          "correct": "0.034",
+          "correctExplanation": "n(Ni) = mass/molar mass = 2.00/58.69 = 0.034 mol.",
+          "distractors": [
+            { "answer": "0.34", "explanation": "This is ten times too large; 2.00/58.69 ≈ 0.034, not 0.34." },
+            { "answer": "0.068", "explanation": "0.068 is the moles of electrons needed, not the moles of Ni." }
+          ]
+        },
+        "2": {
+          "correct": "0.068",
+          "correctExplanation": "Ni²⁺ + 2e⁻ → Ni: 2 mol electrons per mol Ni, so 0.034 × 2 = 0.068 mol electrons.",
+          "distractors": [
+            { "answer": "0.034", "explanation": "0.034 is the moles of Ni; the electron moles are double this because Ni²⁺ requires 2 electrons." },
+            { "answer": "0.102", "explanation": "0.102 would apply if Ni had a 3+ charge, but Ni²⁺ requires only 2 electrons per ion." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the unit conversion.",
+      "sentence": "A time of 3,547 seconds equals approximately {{blank:1}} minutes, calculated by dividing by {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "59",
+          "correctExplanation": "3,547 ÷ 60 = 59.1 ≈ 59 minutes.",
+          "distractors": [
+            { "answer": "35", "explanation": "35 minutes would be 2,100 seconds, not 3,547 seconds." },
+            { "answer": "354", "explanation": "354 would result from dividing by 10 instead of 60." }
+          ]
+        },
+        "2": {
+          "correct": "60",
+          "correctExplanation": "There are 60 seconds per minute, so dividing seconds by 60 converts to minutes.",
+          "distractors": [
+            { "answer": "100", "explanation": "100 is not the conversion factor; there are 60 seconds per minute, not 100." },
+            { "answer": "3600", "explanation": "3,600 converts seconds to hours, not minutes." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "mc",
+      "question": "A jeweller wants to deposit 5.00 g of silver (M = 107.87 g/mol) from AgNO₃ solution using a current of 2.0 A. What time is required?",
+      "correct": "2,240 s (approximately 37 minutes)",
+      "correctExplanation": "n(Ag) = 5.00/107.87 = 0.0464 mol. Ag⁺ + e⁻ → Ag: n(e⁻) = 0.0464 mol. Q = 0.0464 × 96,500 = 4,478 C. t = 4,478/2.0 = 2,239 ≈ 2,240 s.",
+      "distractors": [
+        { "answer": "4,478 s (approximately 75 minutes)", "explanation": "4,478 is the charge in coulombs, not the time; time requires dividing by the current." },
+        { "answer": "1,120 s (approximately 19 minutes)", "explanation": "This incorrectly halves the time, perhaps by using a current of 4.0 A instead of 2.0 A." },
+        { "answer": "48,250 s (approximately 804 minutes)", "explanation": "This uses 1 mol of Ag instead of the correct 0.0464 mol calculated from 5.00 g." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An electroplating bath operates at 15 A to deposit copper (Cu²⁺, M = 63.55 g/mol). How long does it take to deposit 10.0 g of copper?",
+      "correct": "2,020 s (approximately 34 minutes)",
+      "correctExplanation": "n(Cu) = 10.0/63.55 = 0.157 mol. n(e⁻) = 0.314 mol. Q = 0.314 × 96,500 = 30,301 C. t = 30,301/15 = 2,020 s.",
+      "distractors": [
+        { "answer": "1,010 s (approximately 17 minutes)", "explanation": "This uses only 1 electron per Cu instead of 2; Cu²⁺ requires 2 electrons for reduction." },
+        { "answer": "6,060 s (approximately 101 minutes)", "explanation": "This may use a current of 5 A instead of 15 A in the calculation." },
+        { "answer": "4,040 s (approximately 67 minutes)", "explanation": "This may incorrectly double the charge requirement by using 4 electrons instead of 2." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A fuel cell consumes hydrogen at a rate that produces a current of 50 A. How long can it operate before consuming 2.0 mol of H₂? (H₂ → 2H⁺ + 2e⁻)",
+      "correct": "7,720 s (approximately 129 minutes)",
+      "correctExplanation": "n(e⁻) = 2 × 2.0 = 4.0 mol. Q = 4.0 × 96,500 = 386,000 C. t = 386,000/50 = 7,720 s.",
+      "distractors": [
+        { "answer": "3,860 s (approximately 64 minutes)", "explanation": "This uses only 1 electron per H₂ instead of 2; each H₂ molecule produces 2 electrons." },
+        { "answer": "1,930 s (approximately 32 minutes)", "explanation": "This uses 1 mol of electrons instead of 4 mol, ignoring both the stoichiometry and the moles of H₂." },
+        { "answer": "15,440 s (approximately 257 minutes)", "explanation": "This doubles the correct answer, perhaps by incorrectly using 4 electrons per H₂." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A factory operates two electrolytic cells in series at 100 A. One contains CuSO₄ and the other contains AgNO₃. How much longer does it take to produce 1 mol of Cu compared to 1 mol of Ag?",
+      "correct": "965 s longer for Cu",
+      "correctExplanation": "Cu: Q = 2 × 96,500 = 193,000 C, t = 1,930 s. Ag: Q = 1 × 96,500 = 96,500 C, t = 965 s. Difference = 965 s.",
+      "distractors": [
+        { "answer": "They take the same time because the current is the same", "explanation": "Different ionic charges mean different charge requirements, so different times even at the same current." },
+        { "answer": "1,930 s longer for Cu", "explanation": "1,930 s is the total time for Cu, not the time difference between Cu and Ag." },
+        { "answer": "965 s longer for Ag", "explanation": "Ag⁺ has a lower charge and takes less time, not more time, than Cu²⁺." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An engineer needs to reduce the deposition time for a nickel electroplating process from 60 minutes to 20 minutes without changing the amount deposited. What change is required?",
+      "correct": "Triple the current",
+      "correctExplanation": "Since t = Q/I and Q is constant, reducing time by a factor of 3 requires increasing current by a factor of 3.",
+      "distractors": [
+        { "answer": "Double the current", "explanation": "Doubling current would reduce time by half (to 30 min), not to one-third (20 min)." },
+        { "answer": "Halve the current", "explanation": "Halving current would double the time to 120 minutes, not reduce it." },
+        { "answer": "Use a different electrolyte solution", "explanation": "Changing the electrolyte does not directly affect the time if the same metal and charge requirement apply." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "If a process requires 96,500 C and operates at 96.5 A, the process will take exactly 1,000 seconds.",
+      "correct": "True",
+      "correctExplanation": "t = Q/I = 96,500/96.5 = 1,000 seconds exactly.",
+      "distractors": [
+        { "answer": "False", "explanation": "Students may make arithmetic errors; 96,500 ÷ 96.5 = 1,000 s exactly." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "To reduce the time for an electrochemical process by half, you must double both the current and the amount of substance.",
+      "correct": "False",
+      "correctExplanation": "To halve the time, you only need to double the current. Doubling the amount of substance would double the charge required, which would counteract the effect of doubling current.",
+      "distractors": [
+        { "answer": "True", "explanation": "Students may not recognise that changing both variables simultaneously cancels the time reduction." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the problem-solving steps.",
+      "sentence": "To deposit 3.00 g of Ag (M = 107.87) at 5 A: n(Ag) = 0.0278 mol, Q = 0.0278 × {{blank:1}} = 2,683 C, t = 2,683/5 = {{blank:2}} s.",
+      "blanks": {
+        "1": {
+          "correct": "96,500",
+          "correctExplanation": "Faraday's constant (96,500 C mol⁻¹) converts moles of electrons to charge in coulombs.",
+          "distractors": [
+            { "answer": "9,650", "explanation": "This is one-tenth of Faraday's constant; the correct value is 96,500 C mol⁻¹." },
+            { "answer": "48,250", "explanation": "This is half of Faraday's constant; the full value of 96,500 C mol⁻¹ must be used." }
+          ]
+        },
+        "2": {
+          "correct": "537",
+          "correctExplanation": "t = Q/I = 2,683/5 = 536.6 ≈ 537 seconds.",
+          "distractors": [
+            { "answer": "13,415", "explanation": "This multiplies charge by current instead of dividing." },
+            { "answer": "268", "explanation": "This divides by 10 instead of 5." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the time calculation for a fuel cell.",
+      "sentence": "A fuel cell delivering 20 A consumes 0.5 mol of H₂ (producing {{blank:1}} mol of electrons). The operating time is {{blank:2}} seconds.",
+      "blanks": {
+        "1": {
+          "correct": "1.0",
+          "correctExplanation": "H₂ → 2H⁺ + 2e⁻: each mol of H₂ produces 2 mol electrons, so 0.5 × 2 = 1.0 mol electrons.",
+          "distractors": [
+            { "answer": "0.5", "explanation": "0.5 is the moles of H₂, not the moles of electrons; each H₂ produces 2 electrons." },
+            { "answer": "2.0", "explanation": "2.0 would be correct for 1 mol of H₂, not 0.5 mol." }
+          ]
+        },
+        "2": {
+          "correct": "4,825",
+          "correctExplanation": "Q = 1.0 × 96,500 = 96,500 C. t = 96,500/20 = 4,825 s.",
+          "distractors": [
+            { "answer": "2,413", "explanation": "This uses 0.5 mol electrons instead of 1.0 mol, ignoring the 2:1 electron-to-H₂ ratio." },
+            { "answer": "9,650", "explanation": "This divides by 10 instead of 20." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the industrial scenario.",
+      "sentence": "To reduce plating time from 2 hours to 40 minutes at the same deposition amount, the current must be increased by a factor of {{blank:1}}.",
+      "blanks": {
+        "1": {
+          "correct": "3",
+          "correctExplanation": "2 hours = 120 minutes. 120/40 = 3. To reduce time by a factor of 3, current must increase by a factor of 3.",
+          "distractors": [
+            { "answer": "2", "explanation": "A factor of 2 would reduce 120 minutes to 60 minutes, not 40 minutes." },
+            { "answer": "4", "explanation": "A factor of 4 would reduce 120 minutes to 30 minutes, not 40 minutes." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "mc",
+      "question": "A battery manufacturer claims their zinc-air battery can operate for 100 hours at 0.5 A. If the battery contains 50 g of zinc (M = 65.38, Zn → Zn²⁺ + 2e⁻), evaluate whether this claim is realistic.",
+      "correct": "The claim is approximately correct: the zinc provides enough charge for about 41 hours at 0.5 A",
+      "correctExplanation": "n(Zn) = 50/65.38 = 0.765 mol. n(e⁻) = 1.53 mol. Q = 147,645 C. t = 147,645/0.5 = 295,290 s ≈ 82 hours. The claim of 100 hours exceeds the theoretical maximum.",
+      "distractors": [
+        { "answer": "The claim is exactly correct based on Faraday's laws calculations", "explanation": "The theoretical maximum is about 82 hours, which is less than the claimed 100 hours." },
+        { "answer": "The claim significantly underestimates the battery life", "explanation": "The theoretical maximum of ~82 hours is below the claimed 100 hours, so the claim overestimates, not underestimates." },
+        { "answer": "Faraday's laws cannot be applied to battery lifetime predictions", "explanation": "Faraday's laws directly relate charge to substance consumed, making them applicable to battery life calculations." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Two competing electroplating processes for chromium (Cr³⁺, M = 52.00) are compared. Process A uses 30 A for 2 hours. Process B uses 15 A for 3 hours. Which deposits more chromium and by how much?",
+      "correct": "Process A deposits more: 19.4 g versus 14.5 g for Process B",
+      "correctExplanation": "A: Q = 30 × 7200 = 216,000 C. n(e⁻) = 2.238 mol. n(Cr) = 0.746 mol = 38.8 g. B: Q = 15 × 10800 = 162,000 C. n(e⁻) = 1.679 mol. n(Cr) = 0.560 mol = 29.1 g. A deposits about 33% more.",
+      "distractors": [
+        { "answer": "Both deposit equal amounts because higher current compensates for shorter time", "explanation": "The products Q = I × t are different (216,000 vs 162,000 C), so unequal amounts are deposited." },
+        { "answer": "Process B deposits more because it runs for a longer time", "explanation": "Process B runs longer but at lower current; the total charge is smaller than Process A." },
+        { "answer": "Neither deposits significant chromium because Cr³⁺ requires too many electrons", "explanation": "Both processes deposit substantial amounts; the 3+ charge reduces amount per coulomb but doesn't prevent deposition." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An engineer designs a fuel cell backup power system. The system must deliver 10 A for 24 hours. How many moles of H₂ (H₂ → 2H⁺ + 2e⁻) must be stored?",
+      "correct": "4.47 mol",
+      "correctExplanation": "Q = 10 × 86,400 = 864,000 C. n(e⁻) = 864,000/96,500 = 8.95 mol. n(H₂) = 8.95/2 = 4.47 mol.",
+      "distractors": [
+        { "answer": "8.95 mol", "explanation": "8.95 is the moles of electrons, not H₂; each H₂ provides 2 electrons, so half as many moles of H₂ are needed." },
+        { "answer": "2.24 mol", "explanation": "This incorrectly halves the correct answer, perhaps by using 12 hours instead of 24." },
+        { "answer": "17.9 mol", "explanation": "This doubles the electron moles, perhaps by using 4 electrons per H₂ instead of 2." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student calculates that depositing 1.00 g of gold (Au³⁺, M = 196.97) at 0.5 A takes 2,950 seconds but gets only 2,800 s experimentally. What is the most likely explanation?",
+      "correct": "The experimental current was slightly higher than the nominal 0.5 A",
+      "correctExplanation": "Less time than calculated suggests more charge was delivered per second, meaning the actual current exceeded the nominal value.",
+      "distractors": [
+        { "answer": "Faraday's constant is not exactly 96,500 C mol⁻¹", "explanation": "Faraday's constant is well-established; small variations don't account for a 5% discrepancy." },
+        { "answer": "Gold ions have a charge greater than 3+", "explanation": "Au³⁺ is the correct ion in standard gold plating solutions; the charge is fixed at 3+." },
+        { "answer": "The temperature was too low for the reaction to occur properly", "explanation": "Lower temperature would slow the reaction and increase time, not decrease it." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Compare the operational considerations of running an electroplating line at 50 A versus 200 A to achieve the same deposition. What trade-off must the engineer consider?",
+      "correct": "Higher current reduces time but increases power consumption and may cause uneven deposition",
+      "correctExplanation": "While 200 A deposits metal 4 times faster, the higher current density may cause rough, uneven deposits and requires more expensive power supplies.",
+      "distractors": [
+        { "answer": "Higher current always produces better quality deposits in less time", "explanation": "Excessive current density often causes rough, porous, or burned deposits, reducing quality." },
+        { "answer": "Lower current is always preferable because it uses less total energy", "explanation": "Total energy depends on charge and voltage, not just current; the trade-off involves time versus quality." },
+        { "answer": "The total charge passed is different at different currents", "explanation": "For the same amount deposited, the total charge is identical regardless of current." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "When planning industrial electrolysis, the time calculated from Faraday's laws represents the minimum possible time, and actual processes always take longer due to inefficiencies.",
+      "correct": "True",
+      "correctExplanation": "Faraday's law calculations assume 100% current efficiency. In practice, side reactions consume some charge, so actual deposition takes longer than the theoretical minimum.",
+      "distractors": [
+        { "answer": "False", "explanation": "Students may not realise that side reactions and inefficiencies always increase the time beyond the theoretical calculation." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "If two different metals require the same charge for deposition, they will always take the same time regardless of other process variables.",
+      "correct": "True",
+      "correctExplanation": "If the charge Q and current I are the same, then t = Q/I gives the same time. The type of metal does not affect the time calculation directly.",
+      "distractors": [
+        { "answer": "False", "explanation": "Students may think metal properties affect time, but the time formula depends only on charge and current." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the analysis of a fuel cell backup system.",
+      "sentence": "A fuel cell delivering 5 A must run for 48 hours. The total charge needed is {{blank:1}} C, requiring {{blank:2}} mol of electrons.",
+      "blanks": {
+        "1": {
+          "correct": "864,000",
+          "correctExplanation": "Q = I × t = 5 × (48 × 3600) = 5 × 172,800 = 864,000 C.",
+          "distractors": [
+            { "answer": "86,400", "explanation": "86,400 is the number of seconds in 24 hours, not the charge for 48 hours at 5 A." },
+            { "answer": "432,000", "explanation": "This would be correct for 24 hours at 5 A, not 48 hours." }
+          ]
+        },
+        "2": {
+          "correct": "8.95",
+          "correctExplanation": "n(e⁻) = Q/F = 864,000/96,500 = 8.95 mol of electrons.",
+          "distractors": [
+            { "answer": "4.48", "explanation": "This is half the correct value, perhaps confusing moles of electrons with moles of H₂." },
+            { "answer": "17.9", "explanation": "This doubles the correct value, perhaps using an incorrect value of Faraday's constant." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the evaluation of process efficiency.",
+      "sentence": "If the theoretical time for deposition is 1,000 s but the actual time is 1,200 s, the current efficiency is approximately {{blank:1}}%, meaning {{blank:2}}% of the charge was consumed by side reactions.",
+      "blanks": {
+        "1": {
+          "correct": "83",
+          "correctExplanation": "Current efficiency = theoretical time/actual time × 100 = 1000/1200 × 100 = 83.3 ≈ 83%.",
+          "distractors": [
+            { "answer": "120", "explanation": "120% would imply more product than theoretically possible; efficiency cannot exceed 100%." },
+            { "answer": "20", "explanation": "20% significantly underestimates the efficiency; the actual time is only 20% longer than theoretical." }
+          ]
+        },
+        "2": {
+          "correct": "17",
+          "correctExplanation": "If 83% of charge was effective, then 100 - 83 = 17% was consumed by side reactions.",
+          "distractors": [
+            { "answer": "83", "explanation": "83% is the efficient portion, not the wasted portion." },
+            { "answer": "50", "explanation": "50% would mean half the charge was wasted, which is far more than the actual 17%." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the comparison of electroplating processes.",
+      "sentence": "Process A at 100 A takes {{blank:1}} times less time than Process B at 25 A for the same deposition, demonstrating the {{blank:2}} relationship between current and time.",
+      "blanks": {
+        "1": {
+          "correct": "4",
+          "correctExplanation": "100 A / 25 A = 4, so Process A takes 1/4 the time of Process B for the same charge.",
+          "distractors": [
+            { "answer": "2", "explanation": "The current ratio is 100/25 = 4, not 2." },
+            { "answer": "75", "explanation": "75 is the difference in current values, not the ratio that determines the time relationship." }
+          ]
+        },
+        "2": {
+          "correct": "inverse",
+          "correctExplanation": "Time is inversely proportional to current (t = Q/I), so higher current means proportionally shorter time.",
+          "distractors": [
+            { "answer": "direct", "explanation": "Direct proportionality would mean higher current takes more time, which is the opposite of reality." },
+            { "answer": "logarithmic", "explanation": "The relationship is a simple inverse proportion, not logarithmic." }
+          ]
+        }
+      }
+    }
+  ]
+}

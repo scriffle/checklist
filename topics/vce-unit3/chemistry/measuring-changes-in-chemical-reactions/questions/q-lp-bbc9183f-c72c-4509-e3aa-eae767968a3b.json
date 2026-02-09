@@ -1,0 +1,506 @@
+{
+  "_link": {
+    "uuid": "lp-bbc9183f-c72c-4509-e3aa-eae767968a3b",
+    "version": 1,
+    "contentHash": "hash-308cb7f5",
+    "title": "I can measure food energy experimentally using simple calorimetry",
+    "generatedAt": "2026-02-08T00:00:00.000Z"
+  },
+  "toLevel2": [
+    {
+      "type": "mc",
+      "question": "In a simple food calorimetry experiment, what is burned to heat the water?",
+      "correct": "A known mass of food",
+      "correctExplanation": "A known mass of food is ignited and burned beneath a container of water. The heat released is absorbed by the water, allowing calculation of energy content.",
+      "distractors": [
+        { "answer": "A known mass of fuel", "explanation": "In food calorimetry, food is burned, not a separate fuel. Fuel calorimetry is a different experiment." },
+        { "answer": "A known volume of gas", "explanation": "Gas is not burned in a simple food calorimetry experiment; a solid food sample is used." },
+        { "answer": "An electrical heating element", "explanation": "Electrical heating is used in electrical calibration of calorimeters, not in direct food calorimetry." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which equation is used to calculate the heat absorbed by water in a food calorimetry experiment?",
+      "correct": "q = mcΔT",
+      "correctExplanation": "The equation q = mcΔT relates the heat absorbed (q) to the mass of water (m), the specific heat capacity of water (c = 4.18 J g⁻¹ °C⁻¹), and the temperature change (ΔT).",
+      "distractors": [
+        { "answer": "E = ΔH × n", "explanation": "This equation calculates energy from enthalpy and moles, not the heat absorbed by water in a calorimetry experiment." },
+        { "answer": "PV = nRT", "explanation": "This is the ideal gas law, which is not used to calculate heat absorbed by water." },
+        { "answer": "q = It", "explanation": "This equation relates charge to current and time in electrical circuits, not heat absorbed by water." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What is the specific heat capacity of water used in food calorimetry calculations?",
+      "correct": "4.18 J g⁻¹ °C⁻¹",
+      "correctExplanation": "The specific heat capacity of water is 4.18 J g⁻¹ °C⁻¹, meaning 4.18 J of energy is needed to raise 1 g of water by 1°C.",
+      "distractors": [
+        { "answer": "4.18 kJ g⁻¹ °C⁻¹", "explanation": "The units are J g⁻¹ °C⁻¹, not kJ g⁻¹ °C⁻¹. Using kJ would give an answer 1000 times too large." },
+        { "answer": "1.00 J g⁻¹ °C⁻¹", "explanation": "1.00 is not the correct value. The specific heat capacity of water is 4.18 J g⁻¹ °C⁻¹." },
+        { "answer": "4.18 J mol⁻¹ °C⁻¹", "explanation": "The units should be per gram, not per mole. The molar heat capacity of water is 75.3 J mol⁻¹ °C⁻¹." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "After calculating the total heat absorbed by the water, how is the energy content of the food in kJ g⁻¹ determined?",
+      "correct": "Divide the heat energy by the mass of food burned",
+      "correctExplanation": "Energy content (kJ g⁻¹) = total heat absorbed by water ÷ mass of food sample burned. This gives the energy released per gram of food.",
+      "distractors": [
+        { "answer": "Divide the heat energy by the mass of water", "explanation": "Dividing by the mass of water gives a value related to temperature change, not the energy content per gram of food." },
+        { "answer": "Multiply the heat energy by the mass of food", "explanation": "Multiplying would give incorrect units. Division is needed to find energy per gram of food." },
+        { "answer": "Divide the mass of food by the heat energy", "explanation": "This inverts the calculation, giving grams per kilojoule rather than kilojoules per gram." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What measurement tool is used to determine the temperature change of the water?",
+      "correct": "A thermometer",
+      "correctExplanation": "A thermometer measures the initial and final temperatures of the water, allowing calculation of ΔT for the q = mcΔT equation.",
+      "distractors": [
+        { "answer": "A balance", "explanation": "A balance measures mass, not temperature. It is used to measure the mass of food and water, not the temperature change." },
+        { "answer": "A measuring cylinder", "explanation": "A measuring cylinder measures volume of liquids, not temperature." },
+        { "answer": "A calorimeter lid", "explanation": "A lid helps reduce heat loss but does not measure temperature." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the statement about food calorimetry.",
+      "sentence": "In simple food calorimetry, a known mass of food is burned beneath a container of {{blank:1}} and the temperature rise is recorded.",
+      "blanks": {
+        "1": {
+          "correct": "water",
+          "correctExplanation": "Water is used as the heat-absorbing medium because its specific heat capacity is well known (4.18 J g⁻¹ °C⁻¹), allowing accurate energy calculations.",
+          "distractors": [
+            { "answer": "oil", "explanation": "Oil is not used because its specific heat capacity varies and it is flammable, making it unsuitable for this experiment." },
+            { "answer": "acid", "explanation": "Acid is not used in food calorimetry. Water is the standard medium due to its known specific heat capacity." },
+            { "answer": "ethanol", "explanation": "Ethanol is flammable and has a different specific heat capacity. Water is the standard medium for calorimetry." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the statement about energy content calculation.",
+      "sentence": "To find the energy content in kJ g⁻¹, the total heat absorbed by the water is divided by the {{blank:1}} of food burned.",
+      "blanks": {
+        "1": {
+          "correct": "mass",
+          "correctExplanation": "Dividing total energy by the mass of food gives the energy content per gram (kJ g⁻¹), which allows comparison between different foods.",
+          "distractors": [
+            { "answer": "volume", "explanation": "Energy content of food is expressed per gram (mass), not per volume. Volume is not typically used for solid food samples." },
+            { "answer": "temperature", "explanation": "Temperature is used in the q = mcΔT calculation, but the final step divides energy by the mass of food burned." },
+            { "answer": "density", "explanation": "Density is not used in this calculation. The energy is divided by the mass of the food sample." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the statement about units in food calorimetry.",
+      "sentence": "The equation q = mcΔT gives the heat energy in {{blank:1}}, which must be converted to kJ by dividing by 1000.",
+      "blanks": {
+        "1": {
+          "correct": "joules",
+          "correctExplanation": "Since the specific heat capacity of water is in J g⁻¹ °C⁻¹, the result of q = mcΔT is in joules. Dividing by 1000 converts to kilojoules.",
+          "distractors": [
+            { "answer": "kilojoules", "explanation": "The result is in joules (J), not kilojoules, because the specific heat capacity is given in J g⁻¹ °C⁻¹." },
+            { "answer": "calories", "explanation": "The SI unit from this calculation is joules, not calories. The specific heat capacity is given in J g⁻¹ °C⁻¹." },
+            { "answer": "megajoules", "explanation": "The result is in joules. Megajoules would require dividing by 1 000 000, which is far too large a conversion." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "tf",
+      "question": "In a simple food calorimetry experiment, the food sample must be weighed before and after burning to determine the mass of food consumed.",
+      "correct": "True",
+      "correctExplanation": "Weighing the food before and after burning determines how much food was actually combusted, which is needed to calculate energy per gram.",
+      "distractors": [
+        { "answer": "False", "explanation": "This is true. The mass of food burned is essential for calculating energy content in kJ g⁻¹. It is found from the difference in mass before and after burning." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "Simple food calorimetry typically gives values higher than the true energy content of the food.",
+      "correct": "False",
+      "correctExplanation": "Simple food calorimetry gives values lower than true values because heat is lost to the surroundings rather than being fully absorbed by the water.",
+      "distractors": [
+        { "answer": "True", "explanation": "Simple calorimetry underestimates energy content because heat loss to the surroundings means not all combustion energy is captured by the water." }
+      ]
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "mc",
+      "question": "Why does simple food calorimetry typically underestimate the energy content of food?",
+      "correct": "Heat is lost to the surroundings during combustion",
+      "correctExplanation": "In a simple calorimeter, heat escapes to the air, the container, and the stand rather than being entirely absorbed by the water, leading to a lower measured energy value.",
+      "distractors": [
+        { "answer": "The food does not burn completely", "explanation": "While incomplete combustion can contribute, the primary source of error in simple calorimetry is heat loss to the surroundings." },
+        { "answer": "The thermometer is always inaccurate", "explanation": "Thermometer accuracy is not the main reason for underestimation; heat loss to surroundings is the dominant source of error." },
+        { "answer": "Water absorbs too much energy", "explanation": "Water absorbing more energy would overestimate, not underestimate, the result. The issue is that water absorbs less energy than the food releases due to heat loss." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student burns 0.50 g of a cracker and heats 100 g of water from 20.0°C to 35.0°C. What is the heat absorbed by the water?",
+      "correct": "6270 J",
+      "correctExplanation": "q = mcΔT = 100 × 4.18 × (35.0 − 20.0) = 100 × 4.18 × 15.0 = 6270 J.",
+      "distractors": [
+        { "answer": "627 J", "explanation": "This is 10 times too small. Check that mass is 100 g, not 10 g, in the calculation." },
+        { "answer": "62700 J", "explanation": "This is 10 times too large. The correct calculation is 100 × 4.18 × 15.0 = 6270 J." },
+        { "answer": "3135 J", "explanation": "This uses half the correct ΔT or halves the result incorrectly. ΔT = 15.0°C, giving 6270 J." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A food sample with a mass of 0.20 g is burned and releases 4180 J of heat to the water. What is the energy content of the food in kJ g⁻¹?",
+      "correct": "20.9 kJ g⁻¹",
+      "correctExplanation": "Energy content = 4180 J ÷ 1000 ÷ 0.20 g = 4.18 kJ ÷ 0.20 g = 20.9 kJ g⁻¹.",
+      "distractors": [
+        { "answer": "836 kJ g⁻¹", "explanation": "This forgets to convert joules to kilojoules: 4180 ÷ 0.20 = 20 900 J g⁻¹, not kJ g⁻¹. Must divide by 1000 first." },
+        { "answer": "2.09 kJ g⁻¹", "explanation": "This divides by 2.0 g instead of 0.20 g. The mass of food burned was 0.20 g." },
+        { "answer": "0.84 kJ g⁻¹", "explanation": "This incorrectly multiplies 4.18 × 0.20 = 0.836. The correct operation is division, not multiplication." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "In a food calorimetry experiment, why is it important to use a metal can rather than a glass beaker to hold the water?",
+      "correct": "Metal conducts heat more efficiently from the flame to the water",
+      "correctExplanation": "A metal can has higher thermal conductivity than glass, allowing more heat from the burning food to transfer to the water, improving the accuracy of the measurement.",
+      "distractors": [
+        { "answer": "Glass would melt from the food flame", "explanation": "Glass has a higher melting point than the temperatures reached by burning food. The reason for using metal is better heat conduction." },
+        { "answer": "Metal does not absorb any heat", "explanation": "Metal does absorb some heat, but it conducts heat to the water more efficiently than glass." },
+        { "answer": "Glass changes the specific heat capacity of water", "explanation": "The container material does not change the specific heat capacity of water. Metal is preferred for better heat transfer." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student measures the energy content of a peanut as 15 kJ g⁻¹ using simple calorimetry. The accepted value is 26 kJ g⁻¹. What is the most likely explanation for the difference?",
+      "correct": "Significant heat was lost to the surroundings",
+      "correctExplanation": "The measured value is much lower than the accepted value, indicating that a large proportion of the combustion energy escaped to the surroundings rather than heating the water.",
+      "distractors": [
+        { "answer": "The peanut contained more energy than expected", "explanation": "The measured value is lower, not higher, than expected. The issue is heat loss, not extra energy." },
+        { "answer": "The water gained extra energy from the room", "explanation": "If the water gained extra energy, the measured value would be higher, not lower, than the accepted value." },
+        { "answer": "The thermometer read too high", "explanation": "If the thermometer read too high, the calculated energy would be too high, not too low." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which of the following would improve the accuracy of a simple food calorimetry experiment?",
+      "correct": "Shielding the flame from draughts to reduce heat loss",
+      "correctExplanation": "Shielding the flame reduces convective heat loss to the surroundings, ensuring more of the combustion energy is transferred to the water.",
+      "distractors": [
+        { "answer": "Using less water in the container", "explanation": "Using less water increases the temperature change but does not reduce heat loss, which is the main source of error." },
+        { "answer": "Burning a larger piece of food", "explanation": "A larger food sample does not inherently improve accuracy; the proportion of heat lost to surroundings remains similar." },
+        { "answer": "Using a plastic container instead of metal", "explanation": "Plastic is a poor heat conductor and would reduce the amount of heat transferred to the water, decreasing accuracy." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Interpret the result of a food calorimetry experiment.",
+      "sentence": "Simple food calorimetry gives energy values that are {{blank:1}} than the true values because heat is lost to the surroundings.",
+      "blanks": {
+        "1": {
+          "correct": "lower",
+          "correctExplanation": "Heat loss means not all combustion energy is captured by the water, so the measured energy content is lower than the actual value.",
+          "distractors": [
+            { "answer": "higher", "explanation": "Heat loss reduces the measured value, making it lower, not higher, than the true value." },
+            { "answer": "equal", "explanation": "Heat loss causes systematic underestimation, so the measured value is not equal to the true value." },
+            { "answer": "variable", "explanation": "While there is some variability, the systematic effect of heat loss consistently makes values lower than true values." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the calculation steps for food calorimetry.",
+      "sentence": "After calculating q = mcΔT in joules, the energy content in kJ g⁻¹ is found by dividing the energy in {{blank:1}} by the mass of food burned.",
+      "blanks": {
+        "1": {
+          "correct": "kilojoules",
+          "correctExplanation": "The energy must first be converted from joules to kilojoules (÷ 1000) before dividing by the mass of food to get the final answer in kJ g⁻¹.",
+          "distractors": [
+            { "answer": "joules", "explanation": "If you divide joules by grams, you get J g⁻¹, not kJ g⁻¹. The energy must be converted to kJ first." },
+            { "answer": "calories", "explanation": "The calculation uses joules and kilojoules, not calories, as the standard SI energy units." },
+            { "answer": "megajoules", "explanation": "Megajoules is too large a unit. Food energy is reported in kJ g⁻¹, so the energy should be in kilojoules." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the statement about experimental procedure.",
+      "sentence": "The mass of food burned is calculated as the difference between the {{blank:1}} mass and the final mass of the food sample.",
+      "blanks": {
+        "1": {
+          "correct": "initial",
+          "correctExplanation": "Mass burned = initial mass − final mass. The food sample is weighed before and after burning to determine how much was consumed.",
+          "distractors": [
+            { "answer": "total", "explanation": "The term 'total mass' is ambiguous. The correct term is 'initial mass' — the mass before burning." },
+            { "answer": "average", "explanation": "The average mass is not used. The mass burned is the initial mass minus the final mass." },
+            { "answer": "molar", "explanation": "Molar mass refers to mass per mole of a substance. The initial mass of the food sample is what is needed here." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "tf",
+      "question": "Using a lid on the water container during food calorimetry helps reduce heat loss and improve the accuracy of the result.",
+      "correct": "True",
+      "correctExplanation": "A lid reduces evaporative and convective heat loss from the water surface, ensuring more of the absorbed heat is retained for an accurate temperature measurement.",
+      "distractors": [
+        { "answer": "False", "explanation": "A lid does help by reducing heat loss through evaporation and convection from the water surface, improving measurement accuracy." }
+      ]
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "mc",
+      "question": "A student burns 0.15 g of a cashew nut beneath 200 g of water. The temperature rises from 21.0°C to 28.5°C. What is the energy content of the cashew in kJ g⁻¹?",
+      "correct": "41.8 kJ g⁻¹",
+      "correctExplanation": "q = 200 × 4.18 × (28.5 − 21.0) = 200 × 4.18 × 7.5 = 6270 J = 6.270 kJ. Energy content = 6.270 ÷ 0.15 = 41.8 kJ g⁻¹.",
+      "distractors": [
+        { "answer": "6.27 kJ g⁻¹", "explanation": "This is the total heat absorbed (6.27 kJ) without dividing by the mass of food (0.15 g)." },
+        { "answer": "4.18 kJ g⁻¹", "explanation": "4.18 is the specific heat capacity of water, not the energy content of the food." },
+        { "answer": "83.6 kJ g⁻¹", "explanation": "This may result from using 0.075 g instead of 0.15 g, or another calculation error. The correct mass is 0.15 g." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student burns 0.30 g of cheese and heats 150 g of water from 19.0°C to 33.0°C. What is the energy content of the cheese in kJ g⁻¹?",
+      "correct": "29.3 kJ g⁻¹",
+      "correctExplanation": "q = 150 × 4.18 × (33.0 − 19.0) = 150 × 4.18 × 14.0 = 8778 J = 8.778 kJ. Energy content = 8.778 ÷ 0.30 = 29.3 kJ g⁻¹.",
+      "distractors": [
+        { "answer": "8.78 kJ g⁻¹", "explanation": "This is the total heat absorbed (8.78 kJ) without dividing by the mass of cheese burned." },
+        { "answer": "58.5 kJ g⁻¹", "explanation": "This may result from using 0.15 g instead of 0.30 g. The correct food mass is 0.30 g." },
+        { "answer": "14.6 kJ g⁻¹", "explanation": "This may result from doubling the food mass to 0.60 g. The correct mass is 0.30 g." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An experiment measures the energy content of a biscuit as 18.5 kJ g⁻¹. The accepted value from bomb calorimetry is 22.0 kJ g⁻¹. What is the percentage of energy captured in the simple calorimetry experiment?",
+      "correct": "84.1%",
+      "correctExplanation": "Percentage captured = (18.5 ÷ 22.0) × 100 = 84.1%. This means 84.1% of the combustion energy was transferred to the water.",
+      "distractors": [
+        { "answer": "15.9%", "explanation": "15.9% is the percentage of energy lost, not captured. The captured percentage is 84.1%." },
+        { "answer": "118.9%", "explanation": "This incorrectly divides 22.0 by 18.5 × 100. The measured value should be divided by the accepted value." },
+        { "answer": "3.5%", "explanation": "This divides the difference (3.5) by 100. The correct calculation is (18.5 ÷ 22.0) × 100 = 84.1%." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Two students burn the same type of food. Student A uses 100 g of water and records ΔT = 12.0°C. Student B uses 200 g of water and records ΔT = 6.0°C. Assuming the same mass of food was burned with equal heat loss, which student calculated the higher energy content?",
+      "correct": "Both calculated the same energy content",
+      "correctExplanation": "Student A: q = 100 × 4.18 × 12.0 = 5016 J. Student B: q = 200 × 4.18 × 6.0 = 5016 J. With equal food mass, both get the same energy content.",
+      "distractors": [
+        { "answer": "Student A", "explanation": "Although Student A has a higher ΔT, the smaller mass of water compensates. Both calculate the same total heat: 100 × 12.0 = 200 × 6.0." },
+        { "answer": "Student B", "explanation": "Although Student B uses more water, the smaller ΔT compensates. Both calculate the same total heat." },
+        { "answer": "Cannot be determined", "explanation": "It can be determined. Since m × ΔT is equal for both (100 × 12.0 = 200 × 6.0 = 1200), both calculate the same energy." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student burns 0.25 g of bread beneath 120 g of water, raising its temperature by 8.0°C. What is the energy content of the bread?",
+      "correct": "16.1 kJ g⁻¹",
+      "correctExplanation": "q = 120 × 4.18 × 8.0 = 4012.8 J = 4.013 kJ. Energy content = 4.013 ÷ 0.25 = 16.1 kJ g⁻¹.",
+      "distractors": [
+        { "answer": "4.01 kJ g⁻¹", "explanation": "This is the total heat absorbed without dividing by the mass of bread burned." },
+        { "answer": "32.1 kJ g⁻¹", "explanation": "This may result from using 0.125 g instead of 0.25 g for the food mass." },
+        { "answer": "1.00 kJ g⁻¹", "explanation": "This value is far too low and does not match any correct calculation pathway." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "In a food calorimetry experiment, the food burned incompletely, leaving a black residue. How does this affect the result?",
+      "correct": "The calculated energy content will be lower than the true value",
+      "correctExplanation": "Incomplete combustion means not all the chemical energy in the food was released. The energy transferred to the water is less than the total energy content, underestimating the result.",
+      "distractors": [
+        { "answer": "The calculated energy content will be higher", "explanation": "Incomplete combustion releases less energy, not more, leading to an underestimate." },
+        { "answer": "The result will be unaffected", "explanation": "Incomplete combustion directly reduces the energy released, affecting the accuracy of the result." },
+        { "answer": "The mass of food burned will appear larger", "explanation": "The mass burned is calculated from the difference in mass. With residue remaining, the mass burned is actually smaller, not larger." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student records the following data: mass of water = 180 g, initial temperature = 22.0°C, final temperature = 30.0°C, initial food mass = 0.85 g, final food mass = 0.65 g. What is the energy content of the food?",
+      "correct": "30.1 kJ g⁻¹",
+      "correctExplanation": "Mass burned = 0.85 − 0.65 = 0.20 g. ΔT = 30.0 − 22.0 = 8.0°C. q = 180 × 4.18 × 8.0 = 6019.2 J = 6.019 kJ. Energy content = 6.019 ÷ 0.20 = 30.1 kJ g⁻¹.",
+      "distractors": [
+        { "answer": "7.08 kJ g⁻¹", "explanation": "This divides by the initial mass (0.85 g) instead of the mass burned (0.20 g)." },
+        { "answer": "9.26 kJ g⁻¹", "explanation": "This divides by the final mass (0.65 g) instead of the mass burned (0.20 g)." },
+        { "answer": "6.02 kJ g⁻¹", "explanation": "This is the total heat absorbed (6.02 kJ) without dividing by the mass of food burned." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the calculation for food energy content.",
+      "sentence": "Burning 0.10 g of a food sample heats 100 g of water by 10.0°C. The energy content is q = 100 × 4.18 × 10.0 = 4180 J = 4.18 kJ, so the energy content is 4.18 ÷ 0.10 = {{blank:1}} kJ g⁻¹.",
+      "blanks": {
+        "1": {
+          "correct": "41.8",
+          "correctExplanation": "Energy content = 4.18 kJ ÷ 0.10 g = 41.8 kJ g⁻¹.",
+          "distractors": [
+            { "answer": "4.18", "explanation": "4.18 kJ is the total heat absorbed. It must be divided by the mass of food (0.10 g) to get the energy per gram." },
+            { "answer": "0.418", "explanation": "This divides by 10 instead of 0.10. Energy content = 4.18 ÷ 0.10 = 41.8 kJ g⁻¹." },
+            { "answer": "418", "explanation": "This fails to convert joules to kilojoules. 4180 J ÷ 0.10 g = 41 800 J g⁻¹ = 41.8 kJ g⁻¹." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Identify the source of error in food calorimetry.",
+      "sentence": "The main source of systematic error in simple food calorimetry is {{blank:1}} to the surroundings, which causes the measured energy to be lower than the true value.",
+      "blanks": {
+        "1": {
+          "correct": "heat loss",
+          "correctExplanation": "Heat escapes to the air, container walls, and stand during combustion, meaning not all released energy is captured by the water.",
+          "distractors": [
+            { "answer": "heat gain", "explanation": "Heat gain from the surroundings would increase the measured value. The problem is heat loss, which decreases it." },
+            { "answer": "mass loss", "explanation": "Mass loss of the food is expected and measured. The systematic error comes from heat loss, not mass loss." },
+            { "answer": "water loss", "explanation": "While some water may evaporate, the primary systematic error is heat loss from the system to the surroundings." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the calculation for temperature change.",
+      "sentence": "If 250 g of water absorbs 5225 J of energy from burning food, the temperature rise is ΔT = q ÷ (m × c) = 5225 ÷ (250 × 4.18) = {{blank:1}}°C.",
+      "blanks": {
+        "1": {
+          "correct": "5.0",
+          "correctExplanation": "ΔT = 5225 ÷ (250 × 4.18) = 5225 ÷ 1045 = 5.0°C.",
+          "distractors": [
+            { "answer": "50.0", "explanation": "This is 10 times too large. 5225 ÷ 1045 = 5.0°C, not 50.0°C." },
+            { "answer": "0.50", "explanation": "This is 10 times too small. 5225 ÷ 1045 = 5.0°C." },
+            { "answer": "20.9", "explanation": "This incorrectly uses only the mass (5225 ÷ 250 = 20.9), forgetting to include the specific heat capacity." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "mc",
+      "question": "A student burns 0.50 g of a food sample beneath 200 g of water, raising the temperature by 12.0°C. The accepted energy content of the food is 30.0 kJ g⁻¹. What percentage of the accepted value was captured experimentally?",
+      "correct": "66.9%",
+      "correctExplanation": "q = 200 × 4.18 × 12.0 = 10 032 J = 10.03 kJ. Experimental energy = 10.03 ÷ 0.50 = 20.1 kJ g⁻¹. Efficiency = (20.1 ÷ 30.0) × 100 = 66.9%.",
+      "distractors": [
+        { "answer": "33.1%", "explanation": "33.1% is the percentage of energy lost, not captured. The correct efficiency is (20.1 ÷ 30.0) × 100 = 66.9%." },
+        { "answer": "50.2%", "explanation": "This does not match the correct calculation. q = 200 × 4.18 × 12.0 = 10 032 J, giving 20.1 kJ g⁻¹." },
+        { "answer": "10.0%", "explanation": "This divides the total energy (10.03 kJ) by 100 rather than calculating the energy per gram and comparing to the accepted value." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student performs two food calorimetry trials on the same food. Trial 1 uses 100 g of water and records ΔT = 15.0°C. Trial 2 uses 250 g of water and records ΔT = 6.5°C. Both trials burn the same mass of food. Which trial likely has less heat loss?",
+      "correct": "Trial 2",
+      "correctExplanation": "Trial 1: q = 100 × 4.18 × 15.0 = 6270 J. Trial 2: q = 250 × 4.18 × 6.5 = 6792.5 J. Trial 2 captures more energy (6792.5 J vs 6270 J), suggesting less heat loss. More water stays closer to room temperature, reducing heat loss from the water to the surroundings.",
+      "distractors": [
+        { "answer": "Trial 1", "explanation": "Trial 1 captured less total energy (6270 J vs 6792.5 J), indicating more heat was lost to the surroundings." },
+        { "answer": "Both have equal heat loss", "explanation": "The different total energies (6270 J vs 6792.5 J) show that heat loss differed between trials." },
+        { "answer": "Cannot be determined", "explanation": "It can be determined by comparing the total heat absorbed. Trial 2 captured more energy, indicating less heat loss." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student burns 0.40 g of walnut beneath 200 g of water, raising it from 20.0°C to 32.0°C. The accepted energy content of walnut is 27.2 kJ g⁻¹. What is the energy transformation efficiency of this experiment?",
+      "correct": "92.2%",
+      "correctExplanation": "q = 200 × 4.18 × 12.0 = 10 032 J = 10.03 kJ. Experimental energy = 10.03 ÷ 0.40 = 25.1 kJ g⁻¹. Efficiency = (25.1 ÷ 27.2) × 100 = 92.2%.",
+      "distractors": [
+        { "answer": "7.8%", "explanation": "This is 100% − 92.2% = 7.8%, which is the percentage lost, not the efficiency." },
+        { "answer": "50.2%", "explanation": "This does not match the correct calculation. The experimental value (25.1 kJ g⁻¹) is close to the accepted value (27.2 kJ g⁻¹)." },
+        { "answer": "36.9%", "explanation": "This may result from dividing the total energy (10.03 kJ) by the accepted value (27.2 kJ g⁻¹) without accounting for the food mass." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student proposes improving their food calorimetry by using a smaller mass of water. Evaluate this proposal.",
+      "correct": "A smaller water mass gives a larger ΔT but does not reduce heat loss, so accuracy may not improve",
+      "correctExplanation": "Using less water increases the temperature rise, making it easier to read, but the water temperature rises further above room temperature, potentially increasing heat loss. The total energy captured may not improve.",
+      "distractors": [
+        { "answer": "Using less water always improves accuracy", "explanation": "Less water can increase heat loss because the water temperature rises more above room temperature, increasing the temperature gradient." },
+        { "answer": "Using less water eliminates heat loss", "explanation": "Heat loss depends on the temperature difference between the water and surroundings, not the amount of water used." },
+        { "answer": "Using less water reduces systematic error", "explanation": "Using less water may actually increase systematic error if the water temperature rises significantly above room temperature." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Two foods are tested by simple calorimetry. Food X (high fat content) yields 28.5 kJ g⁻¹ experimentally. Food Y (high carbohydrate) yields 14.2 kJ g⁻¹. If both experiments had the same percentage heat loss, which food has the higher accepted energy content?",
+      "correct": "Food X",
+      "correctExplanation": "If both experiments lose the same percentage of heat, the ratio of experimental values reflects the ratio of true values. Since 28.5 > 14.2, Food X has the higher accepted energy content. This is consistent with fats having higher energy density (37 kJ g⁻¹) than carbohydrates (16 kJ g⁻¹).",
+      "distractors": [
+        { "answer": "Food Y", "explanation": "Food Y has a lower experimental value, so with equal percentage heat loss, its accepted value is also lower." },
+        { "answer": "Both have the same accepted energy content", "explanation": "Different experimental values with equal percentage losses correspond to different accepted values." },
+        { "answer": "Cannot be determined without knowing the heat loss", "explanation": "If the same percentage is lost, the relative ranking is preserved. Food X has higher accepted energy content." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student notes that their experimental energy content for a cracker (15.8 kJ g⁻¹) is lower than the reference value for carbohydrates (16 kJ g⁻¹). They conclude the cracker must be pure carbohydrate. What is the flaw in this reasoning?",
+      "correct": "The experimental value underestimates true energy due to heat loss, so the true value is higher than 15.8 kJ g⁻¹",
+      "correctExplanation": "Simple calorimetry always underestimates energy content due to heat loss. The true energy content of the cracker is higher than 15.8 kJ g⁻¹, meaning it likely contains fat or protein as well.",
+      "distractors": [
+        { "answer": "The reference value for carbohydrates is incorrect", "explanation": "The reference value of 16 kJ g⁻¹ for carbohydrates is a standard accepted value and is not the source of the error." },
+        { "answer": "Crackers cannot be tested by calorimetry", "explanation": "Crackers can be tested by food calorimetry. The issue is the student's interpretation of the underestimated result." },
+        { "answer": "The cracker is pure protein, not carbohydrate", "explanation": "The student's error is not in identifying the wrong macronutrient, but in ignoring the systematic underestimation of simple calorimetry." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A food calorimetry experiment gives q = 8360 J. If the mass of food burned was 0.40 g and the accepted energy content is 30.0 kJ g⁻¹, what is the energy transformation efficiency?",
+      "correct": "69.7%",
+      "correctExplanation": "Experimental energy = 8360 J ÷ 1000 = 8.36 kJ. Per gram = 8.36 ÷ 0.40 = 20.9 kJ g⁻¹. Efficiency = (20.9 ÷ 30.0) × 100 = 69.7%.",
+      "distractors": [
+        { "answer": "30.3%", "explanation": "This is the percentage of energy lost (100% − 69.7%), not the efficiency." },
+        { "answer": "27.9%", "explanation": "This may result from dividing 8.36 by 30.0, which does not account for the food mass correctly." },
+        { "answer": "83.6%", "explanation": "This does not match the correct calculation. The experimental value is 20.9 kJ g⁻¹ compared to 30.0 kJ g⁻¹." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student argues that bomb calorimetry and simple food calorimetry should give the same results for the same food because both burn the food completely. Evaluate this claim.",
+      "correct": "Bomb calorimetry captures nearly all heat in a sealed system, while simple calorimetry loses heat to surroundings",
+      "correctExplanation": "A bomb calorimeter is a sealed, insulated system that captures virtually all combustion energy. Simple calorimetry is an open system with significant heat loss, so it always gives lower values.",
+      "distractors": [
+        { "answer": "The claim is correct; both methods give equal results", "explanation": "Simple calorimetry loses significant heat to the surroundings, so it always gives lower values than bomb calorimetry." },
+        { "answer": "Simple calorimetry gives higher values than bomb calorimetry", "explanation": "Simple calorimetry gives lower values due to heat loss, not higher values." },
+        { "answer": "Bomb calorimetry is less accurate than simple calorimetry", "explanation": "Bomb calorimetry is more accurate because it captures nearly all released energy in a sealed, insulated system." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Calculate the energy transformation efficiency.",
+      "sentence": "An experiment measures 15.0 kJ g⁻¹ for a food with an accepted value of 25.0 kJ g⁻¹. The energy transformation efficiency is (15.0 ÷ 25.0) × 100 = {{blank:1}}%.",
+      "blanks": {
+        "1": {
+          "correct": "60.0",
+          "correctExplanation": "Efficiency = (15.0 ÷ 25.0) × 100 = 60.0%. This means 60% of the combustion energy was captured by the water.",
+          "distractors": [
+            { "answer": "40.0", "explanation": "40.0% is the percentage of energy lost, not the efficiency. Efficiency = 60.0%." },
+            { "answer": "166.7", "explanation": "This incorrectly divides 25.0 by 15.0. Efficiency = measured ÷ accepted × 100 = 60.0%." },
+            { "answer": "0.60", "explanation": "0.60 is the decimal fraction, not the percentage. Multiply by 100 to get 60.0%." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Analyse a food calorimetry result.",
+      "sentence": "If a food calorimetry experiment captures only 50% of the true combustion energy, and the measured energy content is 12.0 kJ g⁻¹, then the true energy content is {{blank:1}} kJ g⁻¹.",
+      "blanks": {
+        "1": {
+          "correct": "24.0",
+          "correctExplanation": "If 50% efficiency gives 12.0 kJ g⁻¹, then the true value = 12.0 ÷ 0.50 = 24.0 kJ g⁻¹.",
+          "distractors": [
+            { "answer": "6.0", "explanation": "6.0 would be 50% of 12.0, but the measured value is already 50% of the true value. True = 12.0 ÷ 0.50 = 24.0." },
+            { "answer": "12.0", "explanation": "12.0 is the measured value at 50% efficiency, not the true value. The true value is double: 24.0 kJ g⁻¹." },
+            { "answer": "18.0", "explanation": "This adds 50% of 12.0 to 12.0. The correct approach is to divide by the fraction: 12.0 ÷ 0.50 = 24.0." }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,495 @@
+{
+  "_link": {
+    "uuid": "lp-2c74b0e8-62f8-55f9-6c58-4c2ae285a8cd",
+    "version": 1,
+    "contentHash": "hash-f2aa5f46",
+    "title": "I can apply conservation of momentum to solve collision problems",
+    "generatedAt": "2026-02-08T12:00:00Z"
+  },
+  "toLevel2": [
+    {
+      "type": "mc",
+      "question": "What does conservation of momentum state?",
+      "correct": "Total momentum before a collision equals total momentum after the collision",
+      "correctExplanation": "In an isolated system with no external forces, the total momentum is constant: m₁u₁ + m₂u₂ = m₁v₁ + m₂v₂.",
+      "distractors": [
+        { "answer": "Total kinetic energy is always conserved in collisions", "explanation": "KE is only conserved in elastic collisions; momentum is always conserved." },
+        { "answer": "Velocity is conserved before and after a collision", "explanation": "Individual velocities change in collisions; it is total momentum that is conserved." },
+        { "answer": "Force is conserved during a collision", "explanation": "Force is not a conserved quantity; momentum is the quantity that is conserved." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What condition must be met for momentum to be conserved?",
+      "correct": "No external forces act on the system",
+      "correctExplanation": "Momentum is conserved only in an isolated system where no net external force acts.",
+      "distractors": [
+        { "answer": "The collision must be elastic", "explanation": "Momentum is conserved in all collisions (elastic and inelastic), not just elastic ones." },
+        { "answer": "Both objects must have equal mass", "explanation": "Conservation applies regardless of mass; equal mass is not required." },
+        { "answer": "Both objects must be moving before the collision", "explanation": "One object can be stationary; conservation still applies." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What is the conservation of momentum equation for two objects?",
+      "correct": "m₁u₁ + m₂u₂ = m₁v₁ + m₂v₂",
+      "correctExplanation": "The sum of initial momenta equals the sum of final momenta for the two objects.",
+      "distractors": [
+        { "answer": "m₁u₁ × m₂u₂ = m₁v₁ × m₂v₂", "explanation": "Momenta are added, not multiplied, in the conservation equation." },
+        { "answer": "m₁ + m₂ = v₁ + v₂", "explanation": "This incorrectly adds masses and velocities separately." },
+        { "answer": "m₁u₁ − m₂u₂ = m₁v₁ − m₂v₂", "explanation": "Momenta are added (with sign convention), not subtracted." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "In the equation m₁u₁ + m₂u₂ = m₁v₁ + m₂v₂, what do u and v represent?",
+      "correct": "u is the initial velocity and v is the final velocity",
+      "correctExplanation": "The subscript u denotes velocities before the collision, and v denotes velocities after.",
+      "distractors": [
+        { "answer": "u is speed and v is velocity", "explanation": "Both u and v are velocities (with direction); u is initial and v is final." },
+        { "answer": "u is the unknown and v is the known velocity", "explanation": "u and v refer to initial and final states, not known and unknown." },
+        { "answer": "u is the velocity of the lighter object", "explanation": "u and v are not assigned by mass; they represent before and after states." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Is momentum conserved in both elastic and inelastic collisions?",
+      "correct": "Yes, momentum is conserved in all types of collisions",
+      "correctExplanation": "Conservation of momentum applies to all collisions in isolated systems, whether elastic or inelastic.",
+      "distractors": [
+        { "answer": "Only in elastic collisions", "explanation": "Momentum is conserved in all collisions; it is KE that is only conserved in elastic ones." },
+        { "answer": "Only in inelastic collisions", "explanation": "Momentum is conserved in both elastic and inelastic collisions." },
+        { "answer": "No, momentum is never truly conserved", "explanation": "In isolated systems, momentum is always conserved by Newton's third law." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "In a collision between two objects, the total momentum of the system can change.",
+      "correct": "False",
+      "correctExplanation": "In an isolated system, the total momentum is conserved and cannot change during a collision.",
+      "distractors": [
+        { "answer": "True", "explanation": "Students may think momentum can be lost, but it is conserved in all collisions in isolated systems." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "Conservation of momentum applies to collisions in a straight line only.",
+      "correct": "False",
+      "correctExplanation": "Conservation of momentum applies in all dimensions, but VCE Unit 3 focuses on one-dimensional (straight line) collisions.",
+      "distractors": [
+        { "answer": "True", "explanation": "Students may think the principle is limited to 1D, but it applies in all directions; VCE just focuses on 1D." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the conservation of momentum equation.",
+      "sentence": "m₁u₁ + m₂u₂ = m₁v₁ + {{blank:1}}",
+      "blanks": {
+        "1": {
+          "correct": "m₂v₂",
+          "correctExplanation": "The equation sums initial momenta on the left and final momenta on the right.",
+          "distractors": [
+            { "answer": "m₂u₂", "explanation": "m₂u₂ is the initial momentum of object 2, already on the left side." },
+            { "answer": "m₁v₂", "explanation": "The final momentum of object 2 uses its own mass m₂, not m₁." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about when conservation applies.",
+      "sentence": "Momentum is conserved when no {{blank:1}} forces act on the system.",
+      "blanks": {
+        "1": {
+          "correct": "external",
+          "correctExplanation": "Conservation requires an isolated system with no net external forces. Internal forces between objects cancel out.",
+          "distractors": [
+            { "answer": "internal", "explanation": "Internal forces between colliding objects cancel (Newton's third law); it is external forces that must be absent." },
+            { "answer": "friction", "explanation": "While friction is one type of external force, the general condition is no net external forces." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about momentum in collisions.",
+      "sentence": "Total momentum before a collision equals total momentum {{blank:1}} the collision.",
+      "blanks": {
+        "1": {
+          "correct": "after",
+          "correctExplanation": "Conservation of momentum means the total is the same before and after any collision in an isolated system.",
+          "distractors": [
+            { "answer": "during", "explanation": "The comparison is between before and after states; momentum is actually constant throughout." },
+            { "answer": "without", "explanation": "The correct comparison is between before and after the collision." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "mc",
+      "question": "Why does conservation of momentum allow us to predict outcomes of collisions without knowing the forces involved?",
+      "correct": "Because it relates total initial momentum to total final momentum directly",
+      "correctExplanation": "The principle bypasses the need for force details by equating total momentum before and after the collision.",
+      "distractors": [
+        { "answer": "Because forces are not involved in collisions", "explanation": "Forces are involved in collisions; conservation lets us avoid calculating them." },
+        { "answer": "Because the forces are always equal to zero", "explanation": "Internal forces exist during collisions; they cancel due to Newton's third law." },
+        { "answer": "Because momentum is always zero before a collision", "explanation": "Total momentum before a collision depends on the objects' masses and velocities." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Two skaters push off from each other while at rest. What can be said about their momenta after pushing off?",
+      "correct": "Their momenta are equal in magnitude but opposite in direction",
+      "correctExplanation": "Initial total momentum = 0. After pushing: p₁ + p₂ = 0, so p₁ = −p₂.",
+      "distractors": [
+        { "answer": "Both have zero momentum after pushing off", "explanation": "Each skater gains momentum; only the total remains zero." },
+        { "answer": "The heavier skater has more momentum", "explanation": "Both have equal magnitude momentum but in opposite directions." },
+        { "answer": "Momentum is not conserved when they push apart", "explanation": "Momentum is conserved; the internal forces between the skaters are equal and opposite." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Why must we use a sign convention when solving momentum problems?",
+      "correct": "Because momentum is a vector and direction must be accounted for",
+      "correctExplanation": "Objects moving in opposite directions have momenta with opposite signs. A consistent sign convention ensures correct calculations.",
+      "distractors": [
+        { "answer": "Because momentum can be negative or zero only", "explanation": "Momentum can be positive, negative, or zero depending on direction; the sign convention tracks this." },
+        { "answer": "Because all momentum values must be positive", "explanation": "Momentum can be negative in a given direction; sign conventions allow this." },
+        { "answer": "Because the formula requires positive numbers", "explanation": "The formula works with negative values; the sign convention ensures direction is correctly represented." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "In a collision, object A exerts a force on object B. What does Newton's third law tell us about the force B exerts on A?",
+      "correct": "It is equal in magnitude and opposite in direction",
+      "correctExplanation": "Newton's third law guarantees equal and opposite forces, which ensures momentum is conserved.",
+      "distractors": [
+        { "answer": "It is smaller because B is lighter", "explanation": "Newton's third law forces are always equal regardless of mass." },
+        { "answer": "It is in the same direction as A's force", "explanation": "The forces are in opposite directions by Newton's third law." },
+        { "answer": "It depends on the type of collision", "explanation": "Newton's third law applies to all collisions equally." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Two objects collide and one bounces backward. Has momentum been conserved?",
+      "correct": "Yes, the total momentum of the system is still conserved",
+      "correctExplanation": "Individual momenta change direction, but the total momentum of the system remains constant.",
+      "distractors": [
+        { "answer": "No, because one object changed direction", "explanation": "Direction changes are expected; total momentum is still conserved." },
+        { "answer": "Only if both objects bounce backward", "explanation": "Conservation applies regardless of how individual objects move." },
+        { "answer": "Only if no energy is lost", "explanation": "Momentum is conserved in all collisions, whether or not energy is lost." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Why is momentum conservation useful in particle physics experiments like those at the Large Hadron Collider?",
+      "correct": "It allows prediction of particle velocities after collisions without tracking forces during impact",
+      "correctExplanation": "Subatomic collisions involve forces too complex to measure, but momentum conservation still applies.",
+      "distractors": [
+        { "answer": "Because particles have no mass", "explanation": "Particles have mass; momentum conservation applies to all objects with mass." },
+        { "answer": "Because particles do not experience forces", "explanation": "Particles experience forces during collisions, but conservation avoids the need to calculate them." },
+        { "answer": "Because energy is always conserved in particle collisions", "explanation": "While energy conservation also applies, the question asks about momentum specifically." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "If two objects stick together after a collision, momentum is still conserved.",
+      "correct": "True",
+      "correctExplanation": "Momentum is conserved in all collisions, including perfectly inelastic ones where objects stick together.",
+      "distractors": [
+        { "answer": "False", "explanation": "Students may confuse KE loss with momentum loss; momentum is always conserved." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about Newton's third law and momentum.",
+      "sentence": "Newton's third law ensures that the forces between colliding objects are equal and {{blank:1}}, which is why momentum is conserved.",
+      "blanks": {
+        "1": {
+          "correct": "opposite",
+          "correctExplanation": "Equal and opposite forces for the same time produce equal and opposite impulses, conserving total momentum.",
+          "distractors": [
+            { "answer": "parallel", "explanation": "The forces are in opposite directions, not the same direction." },
+            { "answer": "unequal", "explanation": "Newton's third law states the forces are equal; they are never unequal." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about isolated systems.",
+      "sentence": "An {{blank:1}} system is one where no external forces act, allowing momentum to be conserved.",
+      "blanks": {
+        "1": {
+          "correct": "isolated",
+          "correctExplanation": "An isolated system has no net external forces, so internal forces cancel and total momentum is constant.",
+          "distractors": [
+            { "answer": "open", "explanation": "An open system allows energy exchange; an isolated system has no external forces." },
+            { "answer": "elastic", "explanation": "Elastic describes a type of collision; the system must be isolated for momentum conservation." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about collisions.",
+      "sentence": "Momentum is conserved in {{blank:1}} types of collisions, whether elastic or inelastic.",
+      "blanks": {
+        "1": {
+          "correct": "all",
+          "correctExplanation": "Conservation of momentum applies universally to all collisions in isolated systems.",
+          "distractors": [
+            { "answer": "some", "explanation": "Momentum is conserved in all collisions in isolated systems, not just some." },
+            { "answer": "no", "explanation": "Momentum is always conserved in isolated system collisions." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "mc",
+      "question": "A 4 kg ball moving at 6 m/s east collides with a 2 kg ball at rest. After the collision, the 4 kg ball moves at 2 m/s east. What is the velocity of the 2 kg ball?",
+      "correct": "8 m/s east",
+      "correctExplanation": "4(6) + 2(0) = 4(2) + 2v₂. 24 = 8 + 2v₂. v₂ = 8 m/s east.",
+      "distractors": [
+        { "answer": "4 m/s east", "explanation": "This may average the speeds instead of applying conservation correctly." },
+        { "answer": "12 m/s east", "explanation": "This may use 24/2 without subtracting the first ball's final momentum." },
+        { "answer": "2 m/s east", "explanation": "This confuses the 4 kg ball's final velocity with the 2 kg ball's." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A 3 kg object at 5 m/s collides head-on with a 2 kg object at 3 m/s (opposite direction). They stick together. What is their combined velocity?",
+      "correct": "1.8 m/s in the direction of the 3 kg object",
+      "correctExplanation": "Taking the 3 kg object's direction as positive: 3(5) + 2(−3) = 5v. 15 − 6 = 5v. v = 9/5 = 1.8 m/s.",
+      "distractors": [
+        { "answer": "4.2 m/s", "explanation": "This may add momenta magnitudes: (15 + 6)/5 = 4.2, ignoring opposite directions." },
+        { "answer": "1.0 m/s", "explanation": "This may make an arithmetic error in the subtraction." },
+        { "answer": "0 m/s", "explanation": "The momenta do not cancel because 15 ≠ 6." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Mark (86 kg at 4.35 m/s north) collides with Max (62 kg at 5.55 m/s south). After collision, Mark moves at 3.64 m/s south. What is Max's velocity after the collision?",
+      "correct": "5.53 m/s north",
+      "correctExplanation": "Taking north as positive: 86(4.35) + 62(−5.55) = 86(−3.64) + 62v₂. 374.1 − 344.1 = −313.04 + 62v₂. 30 = −313.04 + 62v₂. v₂ = 343.04/62 = 5.53 m/s north.",
+      "distractors": [
+        { "answer": "5.53 m/s south", "explanation": "The speed is correct but Max moves north (positive direction) after the collision." },
+        { "answer": "3.64 m/s north", "explanation": "This is Mark's post-collision speed, not Max's." },
+        { "answer": "0.48 m/s north", "explanation": "This divides the total momentum by total mass, treating it as a stick-together collision." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A 0.5 kg ball at 10 m/s collides with a 1.5 kg ball at rest. The 0.5 kg ball bounces back at 5 m/s. What velocity does the 1.5 kg ball reach?",
+      "correct": "5 m/s",
+      "correctExplanation": "0.5(10) + 1.5(0) = 0.5(−5) + 1.5v₂. 5 = −2.5 + 1.5v₂. 1.5v₂ = 7.5. v₂ = 5 m/s.",
+      "distractors": [
+        { "answer": "10 m/s", "explanation": "This assumes the second ball takes the first ball's initial speed." },
+        { "answer": "3.33 m/s", "explanation": "This divides total initial momentum by the second ball's mass (5/1.5) without accounting for the bounce." },
+        { "answer": "7.5 m/s", "explanation": "This uses 7.5/1 instead of 7.5/1.5." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Two ice hockey pucks collide. Puck A (0.17 kg at 8 m/s) hits stationary puck B (0.17 kg). After collision, puck A stops. What is puck B's velocity?",
+      "correct": "8 m/s",
+      "correctExplanation": "0.17(8) + 0.17(0) = 0.17(0) + 0.17v₂. 1.36 = 0.17v₂. v₂ = 8 m/s.",
+      "distractors": [
+        { "answer": "4 m/s", "explanation": "This halves the velocity, possibly thinking momentum is shared equally." },
+        { "answer": "16 m/s", "explanation": "This doubles the velocity, possibly forgetting to divide by mass." },
+        { "answer": "0 m/s", "explanation": "Puck B cannot remain stationary if puck A stops; momentum must be transferred." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A 1500 kg car at 20 m/s rear-ends a 1000 kg car at 10 m/s (same direction). They lock together. What is their combined speed?",
+      "correct": "16 m/s",
+      "correctExplanation": "1500(20) + 1000(10) = 2500v. 30 000 + 10 000 = 2500v. v = 40 000/2500 = 16 m/s.",
+      "distractors": [
+        { "answer": "15 m/s", "explanation": "This averages the speeds (20 + 10)/2 without weighting by mass." },
+        { "answer": "30 m/s", "explanation": "This adds the speeds directly instead of using momentum conservation." },
+        { "answer": "10 m/s", "explanation": "This uses only the slower car's speed." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A 70 kg astronaut at rest throws a 5 kg tool at 14 m/s. What is the astronaut's recoil velocity?",
+      "correct": "1 m/s in the opposite direction",
+      "correctExplanation": "0 = 70v₁ + 5(14). 70v₁ = −70. v₁ = −1 m/s (opposite to the tool).",
+      "distractors": [
+        { "answer": "14 m/s in the opposite direction", "explanation": "This gives the astronaut the tool's speed, ignoring the mass difference." },
+        { "answer": "0.07 m/s", "explanation": "This divides 5 by 70 instead of using momentum conservation." },
+        { "answer": "0 m/s", "explanation": "The astronaut must recoil to conserve momentum when throwing the tool." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the conservation equation for objects that stick together.",
+      "sentence": "When two objects stick together: m₁u₁ + m₂u₂ = (m₁ + m₂) × {{blank:1}}.",
+      "blanks": {
+        "1": {
+          "correct": "v",
+          "correctExplanation": "When objects stick together, they share a common final velocity v, so the equation simplifies.",
+          "distractors": [
+            { "answer": "u", "explanation": "u represents initial velocities; the combined object moves at a common final velocity v." },
+            { "answer": "a", "explanation": "Acceleration (a) is not used in the conservation equation; the final velocity v is needed." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the calculation.",
+      "sentence": "A 3 kg ball at 4 m/s hits a 1 kg ball at rest. They stick: (3 × 4 + 1 × 0) = 4 × v. v = {{blank:1}} m/s.",
+      "blanks": {
+        "1": {
+          "correct": "3",
+          "correctExplanation": "12/4 = 3 m/s.",
+          "distractors": [
+            { "answer": "4", "explanation": "4 m/s is the initial speed of the 3 kg ball, not the combined final speed." },
+            { "answer": "12", "explanation": "12 is the total initial momentum, not the final velocity." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about sign conventions.",
+      "sentence": "In collision problems, objects moving in opposite directions are given {{blank:1}} signs for their velocities.",
+      "blanks": {
+        "1": {
+          "correct": "opposite",
+          "correctExplanation": "A sign convention assigns positive to one direction and negative to the opposite, reflecting the vector nature of velocity.",
+          "distractors": [
+            { "answer": "equal", "explanation": "Objects in opposite directions have opposite signs, not equal ones." },
+            { "answer": "no", "explanation": "Signs are essential for direction; ignoring them leads to incorrect results." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "mc",
+      "question": "A 2 kg ball at 8 m/s east collides with a 3 kg ball at 4 m/s west. After collision, the 2 kg ball moves at 2 m/s west. What is the 3 kg ball's final velocity?",
+      "correct": "2.67 m/s east",
+      "correctExplanation": "Taking east as +: 2(8) + 3(−4) = 2(−2) + 3v₂. 16 − 12 = −4 + 3v₂. 4 = −4 + 3v₂. 3v₂ = 8. v₂ = 2.67 m/s east.",
+      "distractors": [
+        { "answer": "4 m/s east", "explanation": "This does not correctly account for the 2 kg ball's final momentum." },
+        { "answer": "2.67 m/s west", "explanation": "The magnitude is correct but the direction should be east (positive)." },
+        { "answer": "0.8 m/s east", "explanation": "This may divide total momentum by total mass instead of solving correctly." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A stationary 5 kg block is hit by a 1 kg ball at 12 m/s. The ball bounces back at 2 m/s. What speed does the block reach?",
+      "correct": "2.8 m/s",
+      "correctExplanation": "1(12) + 5(0) = 1(−2) + 5v₂. 12 = −2 + 5v₂. 5v₂ = 14. v₂ = 2.8 m/s.",
+      "distractors": [
+        { "answer": "2.4 m/s", "explanation": "This uses 12/5 without accounting for the ball's bounce-back momentum." },
+        { "answer": "2.0 m/s", "explanation": "This uses (12 − 2)/5 without correctly handling the sign change." },
+        { "answer": "14 m/s", "explanation": "This is the total momentum change (14) without dividing by the block's mass." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Two football players collide head-on. Player A (90 kg at 6 m/s) and player B (80 kg at 5 m/s) stick together. What is their combined velocity?",
+      "correct": "0.82 m/s in player A's original direction",
+      "correctExplanation": "Taking A's direction as +: 90(6) + 80(−5) = 170v. 540 − 400 = 170v. v = 140/170 = 0.82 m/s.",
+      "distractors": [
+        { "answer": "5.53 m/s", "explanation": "This adds momenta magnitudes: (540 + 400)/170 = 5.53." },
+        { "answer": "0 m/s", "explanation": "The momenta are not equal (540 ≠ 400), so they do not cancel." },
+        { "answer": "0.82 m/s in player B's direction", "explanation": "The net momentum is in A's direction because 540 > 400." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A 10 kg cannon fires a 0.5 kg cannonball at 80 m/s. What is the recoil velocity of the cannon?",
+      "correct": "4 m/s backward",
+      "correctExplanation": "0 = 10v₁ + 0.5(80). 10v₁ = −40. v₁ = −4 m/s (backward).",
+      "distractors": [
+        { "answer": "80 m/s backward", "explanation": "This gives the cannon the cannonball's speed, ignoring the mass ratio." },
+        { "answer": "0.4 m/s backward", "explanation": "This divides by 100 instead of 10." },
+        { "answer": "8 m/s backward", "explanation": "This doubles the correct answer." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A 1200 kg car at 25 m/s north collides with a 1800 kg truck at 15 m/s south. They lock together. What is their combined velocity?",
+      "correct": "1 m/s north",
+      "correctExplanation": "Taking north as +: 1200(25) + 1800(−15) = 3000v. 30 000 − 27 000 = 3000. v = 3000/3000 = 1 m/s north.",
+      "distractors": [
+        { "answer": "19 m/s south", "explanation": "This adds momenta magnitudes (57 000/3000) and uses the truck's direction." },
+        { "answer": "1 m/s south", "explanation": "The magnitude is correct but the net momentum is northward (car's momentum exceeds truck's)." },
+        { "answer": "5 m/s north", "explanation": "This may divide by the wrong total mass or make an arithmetic error." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A 0.3 kg billiard ball at 4 m/s hits a stationary 0.3 kg ball. After the collision, the first ball moves at 1 m/s at the same direction. What is the second ball's speed?",
+      "correct": "3 m/s",
+      "correctExplanation": "0.3(4) + 0.3(0) = 0.3(1) + 0.3v₂. 1.2 = 0.3 + 0.3v₂. v₂ = 0.9/0.3 = 3 m/s.",
+      "distractors": [
+        { "answer": "4 m/s", "explanation": "This assumes the second ball takes the first ball's initial speed." },
+        { "answer": "1 m/s", "explanation": "This is the first ball's final speed, not the second ball's." },
+        { "answer": "5 m/s", "explanation": "This adds the initial and final speeds of the first ball." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A 50 kg ice skater throws a 0.4 kg puck at 30 m/s. The skater then catches a second identical puck coming at 30 m/s from the opposite direction. What is the skater's final velocity?",
+      "correct": "0 m/s",
+      "correctExplanation": "Throw: 0 = 50v₁ + 0.4(30). v₁ = −0.24 m/s. Catch: 50(−0.24) + 0.4(30) = 50.4v₂. −12 + 12 = 0. v₂ = 0 m/s.",
+      "distractors": [
+        { "answer": "0.48 m/s", "explanation": "This doubles the recoil without accounting for the catch cancelling it." },
+        { "answer": "0.24 m/s", "explanation": "This is the recoil from the throw alone without the catch." },
+        { "answer": "−0.24 m/s", "explanation": "The catch reverses the recoil from the throw, bringing the skater back to rest." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Three objects in a line: A (2 kg at 6 m/s right), B (3 kg at rest), C (1 kg at 4 m/s left). A and C simultaneously hit B and all three stick together. What is the final velocity?",
+      "correct": "1.33 m/s right",
+      "correctExplanation": "Total initial p = 2(6) + 3(0) + 1(−4) = 12 − 4 = 8 kg m/s. Combined mass = 6 kg. v = 8/6 = 1.33 m/s right.",
+      "distractors": [
+        { "answer": "2.67 m/s right", "explanation": "This uses (12 + 4)/6 = 2.67, adding magnitudes instead of using signs." },
+        { "answer": "0 m/s", "explanation": "The net momentum is not zero (8 kg m/s right), so the combined object moves." },
+        { "answer": "1.33 m/s left", "explanation": "The magnitude is correct but the direction is right (positive) since net momentum is positive." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about recoil.",
+      "sentence": "When an object at rest breaks apart, the pieces move in {{blank:1}} directions to conserve the initial zero momentum.",
+      "blanks": {
+        "1": {
+          "correct": "opposite",
+          "correctExplanation": "Starting from rest (p = 0), the pieces must have equal and opposite momenta to sum to zero.",
+          "distractors": [
+            { "answer": "the same", "explanation": "If pieces moved the same way, total momentum would not be zero." },
+            { "answer": "random", "explanation": "The directions are constrained by conservation; pieces must move in opposite directions." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about bouncing collisions.",
+      "sentence": "When an object bounces off another, the momentum change is {{blank:1}} than if it simply stopped.",
+      "blanks": {
+        "1": {
+          "correct": "greater",
+          "correctExplanation": "Bouncing reverses direction, so the change is from +mv to −mv, giving Δp = 2mv instead of just mv.",
+          "distractors": [
+            { "answer": "less", "explanation": "Bouncing involves a larger momentum change because the direction reverses." },
+            { "answer": "equal", "explanation": "Stopping gives Δp = mv; bouncing gives up to Δp = 2mv, which is greater." }
+          ]
+        }
+      }
+    }
+  ]
+}

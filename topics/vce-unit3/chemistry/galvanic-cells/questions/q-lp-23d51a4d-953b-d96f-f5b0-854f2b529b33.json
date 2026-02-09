@@ -1,0 +1,551 @@
+{
+  "_link": {
+    "uuid": "lp-23d51a4d-953b-d96f-f5b0-854f2b529b33",
+    "version": 1,
+    "contentHash": "hash-994803c3",
+    "title": "I can write complete cell equations with calculated voltages for galvanic cells",
+    "generatedAt": "2026-02-08T10:15:00Z"
+  },
+  "toLevel2": [
+    {
+      "type": "mc",
+      "question": "What formula is used to calculate the standard cell potential of a galvanic cell?",
+      "correct": "E0cell = E0reduction - E0oxidation",
+      "correctExplanation": "The standard cell potential is calculated by subtracting the E0 of the oxidation half-reaction from the E0 of the reduction half-reaction.",
+      "distractors": [
+        { "answer": "E0cell = E0reduction + E0oxidation", "explanation": "The formula uses subtraction, not addition, of the standard electrode potentials." },
+        { "answer": "E0cell = E0oxidation - E0reduction", "explanation": "This formula is reversed; it should be reduction minus oxidation." },
+        { "answer": "E0cell = E0reduction × E0oxidation", "explanation": "Standard electrode potentials are subtracted, not multiplied." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What does a positive E0cell value indicate about a galvanic cell reaction?",
+      "correct": "The reaction is spontaneous",
+      "correctExplanation": "A positive standard cell potential confirms that the reaction proceeds spontaneously and can produce electrical energy.",
+      "distractors": [
+        { "answer": "The reaction is non-spontaneous", "explanation": "A non-spontaneous reaction would have a negative E0cell; positive values indicate spontaneity." },
+        { "answer": "The reaction is at equilibrium", "explanation": "At equilibrium, the cell potential would be zero, not positive." },
+        { "answer": "The reaction requires an external power source", "explanation": "External power is needed for electrolysis (negative E0); positive E0 means the reaction drives itself." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What must be done to electrons before combining two half-equations into an overall equation?",
+      "correct": "They must be equalised by multiplying the half-equations",
+      "correctExplanation": "The number of electrons lost in oxidation must equal the number gained in reduction, achieved by multiplying equations.",
+      "distractors": [
+        { "answer": "They must be added to both sides of the overall equation", "explanation": "Electrons should cancel completely in the overall equation, not appear on both sides." },
+        { "answer": "They must be converted to protons before combining", "explanation": "Electrons are not converted to protons; they are balanced and cancelled." },
+        { "answer": "They can be ignored when writing overall equations", "explanation": "Electrons must be properly balanced and cancelled; they cannot be ignored." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "In a Zn/Cu galvanic cell, E0(Cu2+/Cu) = +0.34 V and E0(Zn2+/Zn) = -0.76 V. What is the standard cell potential?",
+      "correct": "+1.10 V",
+      "correctExplanation": "E0cell = +0.34 - (-0.76) = +0.34 + 0.76 = +1.10 V.",
+      "distractors": [
+        { "answer": "-0.42 V", "explanation": "This results from incorrect subtraction; +0.34 - (-0.76) = +1.10 V, not -0.42 V." },
+        { "answer": "+0.42 V", "explanation": "This would result from subtracting incorrectly; the correct answer is +0.34 + 0.76 = +1.10 V." },
+        { "answer": "-1.10 V", "explanation": "A negative value would indicate the cell is non-spontaneous in this direction; the correct value is +1.10 V." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What is the unit used for standard cell potential?",
+      "correct": "Volts (V)",
+      "correctExplanation": "Standard cell potential is measured in volts, representing the electrical potential difference between the two electrodes.",
+      "distractors": [
+        { "answer": "Amperes (A)", "explanation": "Amperes measure electric current, not potential difference." },
+        { "answer": "Joules (J)", "explanation": "Joules measure energy; volts measure electrical potential difference." },
+        { "answer": "Ohms (Ω)", "explanation": "Ohms measure electrical resistance, not potential difference." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "When calculating E0cell, the E0 values are multiplied by the stoichiometric coefficients used to balance electrons.",
+      "correct": "False",
+      "correctExplanation": "Standard electrode potentials are intensive properties and do not change when the equation is multiplied by a coefficient.",
+      "distractors": [
+        { "answer": "True", "explanation": "Students commonly make this error, but E0 values are not affected by multiplying the half-equation; they remain the same." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "A complete cell equation should include the calculated E0cell value with its unit.",
+      "correct": "True",
+      "correctExplanation": "A complete cell equation includes the balanced overall equation and the standard cell potential with units (V) to fully describe the cell.",
+      "distractors": [
+        { "answer": "False", "explanation": "Students may write only the equation, but a complete description requires the cell potential to be stated." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the formula for standard cell potential.",
+      "sentence": "E0cell = E0{{blank:1}} - E0{{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "reduction",
+          "correctExplanation": "The E0 of the half-reaction that occurs as reduction is the first term in the calculation.",
+          "distractors": [
+            { "answer": "oxidation", "explanation": "Oxidation is subtracted, not the first term; the formula is E0reduction - E0oxidation." },
+            { "answer": "cathode", "explanation": "While the cathode is where reduction occurs, the formula uses the term 'reduction' for the E0 value." }
+          ]
+        },
+        "2": {
+          "correct": "oxidation",
+          "correctExplanation": "The E0 of the half-reaction that occurs as oxidation is subtracted from the reduction E0.",
+          "distractors": [
+            { "answer": "reduction", "explanation": "Reduction is the first term, not the subtracted term." },
+            { "answer": "anode", "explanation": "While the anode is where oxidation occurs, the formula uses the term 'oxidation' for the E0 value." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about cell potential.",
+      "sentence": "A positive E0cell value confirms that the overall redox reaction is {{blank:1}}.",
+      "blanks": {
+        "1": {
+          "correct": "spontaneous",
+          "correctExplanation": "A positive cell potential means the reaction will proceed in the forward direction without external energy input.",
+          "distractors": [
+            { "answer": "non-spontaneous", "explanation": "A non-spontaneous reaction has a negative E0cell; positive means spontaneous." },
+            { "answer": "reversible", "explanation": "While reactions can be reversible, the positive E0 specifically indicates spontaneity in the forward direction." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about combining half-equations.",
+      "sentence": "Before combining half-equations, the number of {{blank:1}} in each half-equation must be made equal by multiplying.",
+      "blanks": {
+        "1": {
+          "correct": "electrons",
+          "correctExplanation": "Electrons must be equalised so they cancel completely when the half-equations are added together.",
+          "distractors": [
+            { "answer": "atoms", "explanation": "While atoms are balanced within each half-equation, it is electrons that must be equalised between the two." },
+            { "answer": "moles", "explanation": "Moles of reactants are adjusted through the multiplication, but the focus is on equalising electrons." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "mc",
+      "question": "Why does multiplying a half-equation by a coefficient not change the E0 value?",
+      "correct": "E0 is an intensive property that does not depend on the amount of substance",
+      "correctExplanation": "Standard electrode potential measures the tendency of a species to be reduced, which is independent of the quantity involved.",
+      "distractors": [
+        { "answer": "E0 values are always rounded to the nearest whole number anyway", "explanation": "E0 values are precise measurements, not rounded; they are unchanged because they are intensive properties." },
+        { "answer": "Multiplying the equation also multiplies the voltage by the same factor", "explanation": "This is a common misconception; E0 values do not change with stoichiometric multiplication." },
+        { "answer": "The coefficient only affects the number of atoms, not the electron transfer", "explanation": "The coefficient affects electron numbers, but the E0 value remains constant because it is intensive." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "For the cell Al/Al3+ and Co2+/Co, with E0(Al3+/Al) = -1.66 V and E0(Co2+/Co) = -0.28 V, which species is reduced?",
+      "correct": "Co2+ is reduced because it has the higher E0 value",
+      "correctExplanation": "The half-reaction with the higher (less negative) E0 value occurs as reduction; Co2+/Co at -0.28 V is higher than Al3+/Al at -1.66 V.",
+      "distractors": [
+        { "answer": "Al3+ is reduced because it has the more negative E0 value", "explanation": "The more negative E0 indicates a weaker tendency to be reduced; Al is oxidised instead." },
+        { "answer": "Both species are reduced simultaneously in the cell", "explanation": "In a galvanic cell, one species is reduced and the other is oxidised; they cannot both be reduced." },
+        { "answer": "Neither is reduced because both E0 values are negative", "explanation": "Negative E0 values still allow a reaction if one is higher than the other; the relative values matter." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What is the purpose of including the E0cell value in a complete cell equation?",
+      "correct": "It shows the maximum voltage the cell can produce under standard conditions",
+      "correctExplanation": "The E0cell value indicates the driving force of the reaction and the maximum potential difference available from the cell.",
+      "distractors": [
+        { "answer": "It indicates the amount of product formed per hour of operation", "explanation": "Cell potential measures voltage, not reaction rate or product quantity." },
+        { "answer": "It determines the physical size of the cell required", "explanation": "Cell size is a design parameter unrelated to the standard cell potential." },
+        { "answer": "It shows the temperature at which the cell will operate", "explanation": "Standard conditions assume 25°C; the cell potential does not indicate operating temperature." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "When combining 2Al(s) → 2Al3+(aq) + 6e- and 3Co2+(aq) + 6e- → 3Co(s), why is the answer 2Al(s) + 3Co2+(aq) → 2Al3+(aq) + 3Co(s)?",
+      "correct": "The 6 electrons on each side cancel when the equations are added",
+      "correctExplanation": "With equal numbers of electrons on opposite sides, they cancel completely, leaving only the ionic species in the overall equation.",
+      "distractors": [
+        { "answer": "The electrons are converted to energy during the combination", "explanation": "Electrons do not convert to energy; they cancel mathematically when combining half-equations." },
+        { "answer": "The electrons combine with the metal ions to form neutral atoms", "explanation": "While reduction forms neutral atoms, the mathematical cancellation is the reason electrons disappear from the overall equation." },
+        { "answer": "Only the reduction equation contributes to the overall equation", "explanation": "Both half-equations contribute to the overall equation; neither is discarded." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What is the E0cell for a cell with E0(Ag+/Ag) = +0.80 V and E0(Pb2+/Pb) = -0.13 V, where Ag+ is reduced?",
+      "correct": "+0.93 V",
+      "correctExplanation": "E0cell = E0reduction - E0oxidation = +0.80 - (-0.13) = +0.80 + 0.13 = +0.93 V.",
+      "distractors": [
+        { "answer": "+0.67 V", "explanation": "This results from subtracting incorrectly as +0.80 - 0.13; the E0oxidation of -0.13 must be subtracted." },
+        { "answer": "-0.93 V", "explanation": "This would indicate a non-spontaneous reaction; the correct calculation gives a positive value." },
+        { "answer": "+1.60 V", "explanation": "This would result from adding both values; the formula requires subtraction." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Why must the E0cell value always be positive for a galvanic cell?",
+      "correct": "A positive value confirms the reaction releases energy spontaneously",
+      "correctExplanation": "Galvanic cells use spontaneous reactions, which always have positive cell potentials. A negative value would require energy input.",
+      "distractors": [
+        { "answer": "Negative voltages do not exist in electrochemistry", "explanation": "Negative cell potentials exist but indicate non-spontaneous reactions requiring electrolysis." },
+        { "answer": "The measuring equipment cannot display negative readings", "explanation": "Voltmeters can read negative values; the sign indicates spontaneity, not equipment limitation." },
+        { "answer": "Positive values are an arbitrary convention with no physical meaning", "explanation": "The sign has physical meaning: positive indicates spontaneous, negative indicates non-spontaneous." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "When two half-equations are combined, the electrons should not appear in the final overall equation.",
+      "correct": "True",
+      "correctExplanation": "Electrons must be equalised and cancelled completely; their presence in the final equation indicates an error in balancing.",
+      "distractors": [
+        { "answer": "False", "explanation": "Students may leave electrons in the overall equation, but properly combined equations have all electrons cancelled." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about cell potential calculation.",
+      "sentence": "For a cell where Ag+ is reduced and Pb is oxidised, E0cell = {{blank:1}} - ({{blank:2}}) = +0.93 V.",
+      "blanks": {
+        "1": {
+          "correct": "+0.80",
+          "correctExplanation": "The E0 for the Ag+/Ag reduction half-reaction is +0.80 V.",
+          "distractors": [
+            { "answer": "-0.13", "explanation": "-0.13 V is the E0 for Pb2+/Pb, which is the oxidation half-reaction in this cell." },
+            { "answer": "+0.93", "explanation": "+0.93 V is the final E0cell, not the individual E0 for silver." }
+          ]
+        },
+        "2": {
+          "correct": "-0.13",
+          "correctExplanation": "The E0 for the Pb2+/Pb half-reaction is -0.13 V, which is subtracted as the oxidation value.",
+          "distractors": [
+            { "answer": "+0.80", "explanation": "+0.80 V is the E0 for Ag+/Ag, which is the reduction value." },
+            { "answer": "+0.13", "explanation": "The E0 for Pb2+/Pb is -0.13 V, not +0.13 V." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about electron balancing.",
+      "sentence": "If one half-equation has 3 electrons and the other has 2, the lowest common multiple is {{blank:1}}, requiring multiplication by appropriate factors.",
+      "blanks": {
+        "1": {
+          "correct": "6",
+          "correctExplanation": "The lowest common multiple of 3 and 2 is 6, so the first equation is multiplied by 2 and the second by 3.",
+          "distractors": [
+            { "answer": "5", "explanation": "5 is the sum of 3 and 2, not the lowest common multiple." },
+            { "answer": "12", "explanation": "12 is a common multiple but not the lowest; 6 is the smallest number divisible by both 3 and 2." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the overall equation.",
+      "sentence": "The overall equation for the Al/Co cell is 2Al(s) + 3Co2+(aq) → 2Al3+(aq) + 3Co(s), with E0cell = {{blank:1}} V.",
+      "blanks": {
+        "1": {
+          "correct": "+1.38",
+          "correctExplanation": "E0cell = -0.28 - (-1.66) = -0.28 + 1.66 = +1.38 V.",
+          "distractors": [
+            { "answer": "-1.38", "explanation": "The cell potential should be positive for a spontaneous galvanic cell reaction." },
+            { "answer": "+1.94", "explanation": "This would result from adding both absolute values; the correct calculation gives +1.38 V." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "mc",
+      "question": "A student calculates E0cell for a Ni/Ag cell using E0(Ni2+/Ni) = -0.26 V and E0(Ag+/Ag) = +0.80 V. They get -0.54 V. What error did they make?",
+      "correct": "They subtracted the wrong way: E0oxidation - E0reduction instead of E0reduction - E0oxidation",
+      "correctExplanation": "The correct calculation is E0cell = +0.80 - (-0.26) = +1.06 V. The student reversed the subtraction order.",
+      "distractors": [
+        { "answer": "They used the wrong E0 values from the electrochemical series", "explanation": "The E0 values are correct; the error is in the calculation method." },
+        { "answer": "They forgot to multiply the E0 values by the stoichiometric coefficients", "explanation": "E0 values are not multiplied by coefficients; the error is in the subtraction order." },
+        { "answer": "They should have added the two E0 values instead of subtracting", "explanation": "The formula requires subtraction: E0reduction - E0oxidation, applied in the correct order." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Calculate the E0cell and write the overall equation for a cell using Fe2+/Fe (E0 = -0.44 V) and Sn2+/Sn (E0 = -0.14 V).",
+      "correct": "Sn2+(aq) + Fe(s) → Sn(s) + Fe2+(aq), E0cell = +0.30 V",
+      "correctExplanation": "Sn2+ has the higher E0 (-0.14 V) and is reduced; E0cell = -0.14 - (-0.44) = +0.30 V.",
+      "distractors": [
+        { "answer": "Fe2+(aq) + Sn(s) → Fe(s) + Sn2+(aq), E0cell = +0.30 V", "explanation": "This reverses the reaction; Fe has the lower E0 and is oxidised, not reduced." },
+        { "answer": "Sn2+(aq) + Fe(s) → Sn(s) + Fe2+(aq), E0cell = -0.30 V", "explanation": "The correct E0cell is positive (+0.30 V) for the spontaneous direction." },
+        { "answer": "Sn2+(aq) + Fe(s) → Sn(s) + Fe2+(aq), E0cell = +0.58 V", "explanation": "This results from adding the absolute values; the correct calculation gives +0.30 V." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "For the cell Mg/Mg2+ and Cu2+/Cu, with E0(Mg2+/Mg) = -2.37 V and E0(Cu2+/Cu) = +0.34 V, what is the complete cell equation?",
+      "correct": "Mg(s) + Cu2+(aq) → Mg2+(aq) + Cu(s), E0cell = +2.71 V",
+      "correctExplanation": "Cu2+ is reduced (higher E0), Mg is oxidised; E0cell = +0.34 - (-2.37) = +2.71 V.",
+      "distractors": [
+        { "answer": "Cu(s) + Mg2+(aq) → Cu2+(aq) + Mg(s), E0cell = +2.71 V", "explanation": "This reverses the spontaneous direction; Mg is the stronger reducing agent and is oxidised." },
+        { "answer": "Mg(s) + Cu2+(aq) → Mg2+(aq) + Cu(s), E0cell = +2.03 V", "explanation": "This results from incorrect subtraction; +0.34 - (-2.37) = +2.71 V." },
+        { "answer": "Mg(s) + Cu2+(aq) → Mg2+(aq) + Cu(s), E0cell = -2.71 V", "explanation": "The E0cell must be positive for a spontaneous galvanic cell reaction." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A cell uses Cr3+/Cr (E0 = -0.74 V) and Ni2+/Ni (E0 = -0.26 V). How many electrons must be balanced, and what is the overall equation?",
+      "correct": "6 electrons: 2Cr(s) + 3Ni2+(aq) → 2Cr3+(aq) + 3Ni(s)",
+      "correctExplanation": "Cr loses 3e- and Ni2+ gains 2e-; LCM is 6, so multiply Cr by 2 and Ni by 3.",
+      "distractors": [
+        { "answer": "5 electrons: Cr(s) + Ni2+(aq) → Cr3+(aq) + Ni(s)", "explanation": "5 is the sum, not the LCM; electrons are unequal (3 vs 2) and must be properly balanced." },
+        { "answer": "6 electrons: 3Cr(s) + 2Ni2+(aq) → 3Cr3+(aq) + 2Ni(s)", "explanation": "The coefficients are reversed; Cr should be multiplied by 2 and Ni by 3 to give 6e-." },
+        { "answer": "3 electrons: Cr(s) + Ni2+(aq) → Cr3+(aq) + Ni(s)", "explanation": "This leaves 3e- from Cr and 2e- from Ni unbalanced; both must equal 6e-." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Calculate E0cell for a cell combining F2/F- (E0 = +2.87 V) and Li+/Li (E0 = -3.04 V). What does the magnitude indicate?",
+      "correct": "+5.91 V, indicating an extremely strong driving force for this reaction",
+      "correctExplanation": "E0cell = +2.87 - (-3.04) = +5.91 V. This is one of the largest possible cell potentials, reflecting the extreme reactivity of these species.",
+      "distractors": [
+        { "answer": "+5.91 V, but this value is too high and must contain an error", "explanation": "The value is correct; F2 is the strongest oxidising agent and Li is the strongest reducing agent." },
+        { "answer": "-0.17 V, indicating a weak non-spontaneous reaction", "explanation": "This results from incorrect subtraction; the correct value is +5.91 V." },
+        { "answer": "+2.87 V, because only the reduction potential determines cell voltage", "explanation": "Both half-reactions contribute to the cell potential through the subtraction formula." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student multiplies E0(Ag+/Ag) = +0.80 V by 2 when writing 2Ag+(aq) + 2e- → 2Ag(s) and uses +1.60 V in their calculation. What is their error?",
+      "correct": "E0 values are not multiplied by stoichiometric coefficients; it should remain +0.80 V",
+      "correctExplanation": "Standard electrode potential is an intensive property. Multiplying the equation does not change the E0 value.",
+      "distractors": [
+        { "answer": "The student should have divided by 2 instead of multiplying", "explanation": "E0 values are never divided or multiplied by coefficients; they remain unchanged." },
+        { "answer": "The error is using silver in the calculation; only base metals have E0 values", "explanation": "All half-reactions in the electrochemical series have E0 values, including noble metals like silver." },
+        { "answer": "The student's approach is correct and +1.60 V should be used", "explanation": "E0 values are intensive properties and do not change when the equation is multiplied." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Write the complete cell equation for a Zn/Ag cell. E0(Zn2+/Zn) = -0.76 V, E0(Ag+/Ag) = +0.80 V.",
+      "correct": "Zn(s) + 2Ag+(aq) → Zn2+(aq) + 2Ag(s), E0cell = +1.56 V",
+      "correctExplanation": "Ag+ is reduced (2 needed for 2e-), Zn is oxidised; E0cell = +0.80 - (-0.76) = +1.56 V.",
+      "distractors": [
+        { "answer": "Zn(s) + Ag+(aq) → Zn2+(aq) + Ag(s), E0cell = +1.56 V", "explanation": "The equation is unbalanced; 2Ag+ and 2Ag are needed to balance the 2 electrons from Zn." },
+        { "answer": "Zn(s) + 2Ag+(aq) → Zn2+(aq) + 2Ag(s), E0cell = +0.04 V", "explanation": "This results from an incorrect calculation; +0.80 - (-0.76) = +1.56 V." },
+        { "answer": "2Zn(s) + 2Ag+(aq) → 2Zn2+(aq) + 2Ag(s), E0cell = +1.56 V", "explanation": "The 2Zn coefficient is incorrect; only 1 Zn provides the 2 electrons needed for 2Ag+." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the cell potential calculation.",
+      "sentence": "For a Fe/Cu cell with E0(Fe2+/Fe) = -0.44 V and E0(Cu2+/Cu) = +0.34 V, E0cell = +0.34 - ({{blank:1}}) = {{blank:2}} V.",
+      "blanks": {
+        "1": {
+          "correct": "-0.44",
+          "correctExplanation": "The E0 of the oxidation half-reaction (Fe2+/Fe = -0.44 V) is subtracted from the reduction E0.",
+          "distractors": [
+            { "answer": "+0.44", "explanation": "The E0 for Fe2+/Fe is -0.44 V, not +0.44 V; the sign must be preserved." },
+            { "answer": "+0.34", "explanation": "+0.34 V is the E0 for Cu2+/Cu (reduction), not the oxidation value." }
+          ]
+        },
+        "2": {
+          "correct": "+0.78",
+          "correctExplanation": "E0cell = +0.34 - (-0.44) = +0.34 + 0.44 = +0.78 V.",
+          "distractors": [
+            { "answer": "-0.10", "explanation": "This results from subtracting +0.34 - 0.44 without the double negative; the correct answer is +0.78 V." },
+            { "answer": "+0.10", "explanation": "This results from an incorrect calculation; +0.34 + 0.44 = +0.78 V." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the overall equation for the Zn/Ag cell.",
+      "sentence": "{{blank:1}}(s) + 2Ag+(aq) → {{blank:2}}(aq) + 2Ag(s), E0cell = +1.56 V.",
+      "blanks": {
+        "1": {
+          "correct": "Zn",
+          "correctExplanation": "Zinc is oxidised at the anode, going from solid metal to ions in solution.",
+          "distractors": [
+            { "answer": "Ag", "explanation": "Silver is reduced from Ag+ to Ag(s); it is not oxidised." },
+            { "answer": "Cu", "explanation": "Copper is not part of this cell; the cell uses zinc and silver." }
+          ]
+        },
+        "2": {
+          "correct": "Zn2+",
+          "correctExplanation": "Zinc atoms lose 2 electrons to form Zn2+ ions in solution.",
+          "distractors": [
+            { "answer": "Ag+", "explanation": "Ag+ is a reactant that is reduced, not a product of oxidation." },
+            { "answer": "Zn-", "explanation": "Zinc forms Zn2+ cations when oxidised, not anions." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about E0 and stoichiometry.",
+      "sentence": "Standard electrode potentials are {{blank:1}} properties, meaning they do not change when half-equations are {{blank:2}} by a coefficient.",
+      "blanks": {
+        "1": {
+          "correct": "intensive",
+          "correctExplanation": "Intensive properties, like voltage, do not depend on the amount of substance and remain constant regardless of equation coefficients.",
+          "distractors": [
+            { "answer": "extensive", "explanation": "Extensive properties depend on amount (like mass or volume); E0 does not." },
+            { "answer": "variable", "explanation": "E0 values are constant for a given half-reaction under standard conditions." }
+          ]
+        },
+        "2": {
+          "correct": "multiplied",
+          "correctExplanation": "Multiplying a half-equation by a coefficient changes the number of moles but not the E0 value.",
+          "distractors": [
+            { "answer": "reversed", "explanation": "Reversing a half-equation changes the sign of E0; multiplying does not change E0." },
+            { "answer": "balanced", "explanation": "Balancing is part of multiplying, but the specific term for changing coefficients is multiplication." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "mc",
+      "question": "A student calculates E0cell = +0.48 V for a cell but measures only +0.41 V in the laboratory. Evaluate the most likely explanation.",
+      "correct": "Non-standard conditions such as concentrations different from 1 M affect the measured voltage",
+      "correctExplanation": "The standard cell potential assumes 1 M concentrations, 25°C, and 100 kPa. Deviations from these conditions alter the measured voltage.",
+      "distractors": [
+        { "answer": "The student must have made a calculation error in the E0cell formula", "explanation": "The calculation may be correct; the difference is likely due to non-standard experimental conditions." },
+        { "answer": "The electrochemical series values are only approximate estimates", "explanation": "E0 values are precisely measured; the discrepancy is due to non-standard conditions, not inaccurate reference values." },
+        { "answer": "The voltmeter is broken and needs to be replaced immediately", "explanation": "Small voltage differences are expected under non-standard conditions; this does not indicate equipment failure." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Compare the E0cell values for Zn/Cu (+1.10 V) and Mg/Cu (+2.71 V) cells. Analyse what the difference in voltage reveals about the metals.",
+      "correct": "Magnesium is a much stronger reducing agent than zinc, producing a larger driving force with copper",
+      "correctExplanation": "The larger E0cell for Mg/Cu reflects magnesium's much more negative E0, indicating it more readily donates electrons than zinc.",
+      "distractors": [
+        { "answer": "The Mg/Cu cell is more efficient at converting chemical to electrical energy", "explanation": "Higher voltage does not mean higher efficiency; it indicates a larger thermodynamic driving force." },
+        { "answer": "The Mg/Cu cell will last longer before the reactants are depleted", "explanation": "Cell longevity depends on the amount of reactants, not the cell potential." },
+        { "answer": "The copper cathode behaves differently depending on which anode metal is used", "explanation": "The Cu2+/Cu half-reaction is the same in both cells; the voltage difference comes from the different anode metals." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Evaluate why connecting two identical Zn/Cu cells in series gives 2.20 V, but this is NOT how E0cell is calculated from half-equations.",
+      "correct": "Series connection adds voltages of separate cells, while E0cell is an intrinsic property of one cell's chemistry",
+      "correctExplanation": "Adding cells in series is a physical arrangement of complete cells, while E0cell = E0red - E0ox reflects the thermodynamic properties of a single cell.",
+      "distractors": [
+        { "answer": "The 2.20 V reading must be an error because each cell should still show 1.10 V", "explanation": "Series connection does double the voltage; this is the basis for multi-cell batteries." },
+        { "answer": "The E0 values of each half-reaction double when cells are connected in series", "explanation": "Individual E0 values do not change; the overall voltage increases because cells are additive in series." },
+        { "answer": "Series connection changes the underlying chemical reaction to a different one", "explanation": "The same reaction occurs in each cell; series connection simply adds the voltages of independent cells." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A researcher needs a galvanic cell producing exactly +1.50 V. Using the electrochemical series, analyse which pair would come closest: Fe/Ag, Zn/Ag, or Ni/Ag.",
+      "correct": "Zn/Ag gives E0cell = +0.80 - (-0.76) = +1.56 V, closest to the target",
+      "correctExplanation": "Of the three options, Zn/Ag produces +1.56 V, which is closest to the target of +1.50 V.",
+      "distractors": [
+        { "answer": "Fe/Ag gives exactly +1.50 V and is the perfect choice", "explanation": "Fe/Ag gives +0.80 - (-0.44) = +1.24 V, which is not +1.50 V." },
+        { "answer": "Ni/Ag gives +1.50 V because nickel has the ideal E0 value", "explanation": "Ni/Ag gives +0.80 - (-0.26) = +1.06 V, which is further from the target." },
+        { "answer": "All three cells produce the same voltage because they all use silver", "explanation": "Cell voltage depends on both half-reactions; different anode metals produce different voltages." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Analyse why the complete cell equation 3Mg(s) + 2Al3+(aq) → 3Mg2+(aq) + 2Al(s) with E0cell = +0.71 V is correct even though both metals have negative E0 values.",
+      "correct": "Relative positions matter, not absolute signs; Mg is lower in the series than Al, making it a stronger reducing agent",
+      "correctExplanation": "The positive E0cell results from the difference: E0(Al3+/Al) - E0(Mg2+/Mg) = -1.66 - (-2.37) = +0.71 V.",
+      "distractors": [
+        { "answer": "The equation must be wrong because two negative E0 values cannot produce a positive cell potential", "explanation": "This is a common misconception; the subtraction of two negatives can yield a positive result." },
+        { "answer": "The equation is only valid under non-standard conditions", "explanation": "The E0cell calculation is valid under standard conditions; negative individual E0 values do not prevent a positive cell potential." },
+        { "answer": "The positive value is achieved by reversing the sign convention for one electrode", "explanation": "No sign convention is reversed; the formula E0red - E0ox naturally produces the positive result." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student writes the overall equation Pb(s) + Sn2+(aq) → Pb2+(aq) + Sn(s) and calculates E0cell = +0.01 V. Evaluate the practical implications of this very small positive value.",
+      "correct": "The reaction is barely spontaneous and may be difficult to observe or sustain under non-standard conditions",
+      "correctExplanation": "A very small positive E0cell means the driving force is minimal; small deviations from standard conditions could make the reaction non-spontaneous.",
+      "distractors": [
+        { "answer": "The reaction will proceed just as reliably as one with E0cell = +1.00 V", "explanation": "Small E0cell values indicate weak driving force, making the reaction sensitive to conditions." },
+        { "answer": "The positive sign is meaningless when the value is this small", "explanation": "The sign is always meaningful; +0.01 V still indicates thermodynamic spontaneity under standard conditions." },
+        { "answer": "The student must have made an error because E0cell cannot be this small", "explanation": "Small positive values are possible and occur when two metals have very similar E0 values." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Compare the information provided by the complete cell equation 2Al(s) + 3Co2+(aq) → 2Al3+(aq) + 3Co(s), E0cell = +1.38 V with the half-equations alone. What additional insight does the complete equation provide?",
+      "correct": "The stoichiometric ratios of reactants and products consumed and formed during operation",
+      "correctExplanation": "The complete equation shows that 2 moles of Al react with 3 moles of Co2+, information not available from individual half-equations.",
+      "distractors": [
+        { "answer": "The complete equation reveals which species is the oxidising agent, which half-equations cannot show", "explanation": "Half-equations already show which species gains and loses electrons, identifying oxidising and reducing agents." },
+        { "answer": "The complete equation provides the E0 values for each individual half-reaction", "explanation": "The complete equation shows only E0cell; individual E0 values must come from the electrochemical series." },
+        { "answer": "The complete equation is needed to determine which electrode is the anode", "explanation": "Half-equations already indicate oxidation (anode) and reduction (cathode) from electron position." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Evaluate whether the statement 'A higher E0cell always means a better battery' is scientifically accurate.",
+      "correct": "Not necessarily; battery quality also depends on capacity, discharge rate, rechargeability, and cost",
+      "correctExplanation": "While higher voltage is advantageous, practical battery performance depends on many factors beyond just the standard cell potential.",
+      "distractors": [
+        { "answer": "The statement is completely correct because voltage is the only important metric", "explanation": "Voltage is one factor; energy density, cycle life, cost, and safety are equally important." },
+        { "answer": "The statement is wrong because lower E0cell values are actually preferable", "explanation": "Lower voltages are not inherently preferable; higher voltage is one advantage among several factors." },
+        { "answer": "The statement is correct for primary cells but wrong for rechargeable cells", "explanation": "Both primary and rechargeable cells are evaluated on multiple criteria beyond just voltage." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the analysis of cell potential calculation.",
+      "sentence": "Two metals with negative E0 values can still produce a {{blank:1}} E0cell because the formula calculates the {{blank:2}} between the two values.",
+      "blanks": {
+        "1": {
+          "correct": "positive",
+          "correctExplanation": "Subtracting a more negative value from a less negative value yields a positive result.",
+          "distractors": [
+            { "answer": "negative", "explanation": "The subtraction of a more negative from a less negative value gives a positive result." },
+            { "answer": "zero", "explanation": "Zero would only occur if both E0 values were identical." }
+          ]
+        },
+        "2": {
+          "correct": "difference",
+          "correctExplanation": "The cell potential is the difference between the two half-cell potentials, not their individual values.",
+          "distractors": [
+            { "answer": "sum", "explanation": "The formula uses subtraction, not addition, of the E0 values." },
+            { "answer": "product", "explanation": "E0 values are subtracted, not multiplied, in the cell potential formula." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the evaluation of voltage and battery performance.",
+      "sentence": "While a high E0cell indicates a strong {{blank:1}} driving force, practical battery performance also depends on factors such as energy density and {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "thermodynamic",
+          "correctExplanation": "E0cell reflects the thermodynamic tendency of the reaction to proceed, representing the maximum work per unit charge.",
+          "distractors": [
+            { "answer": "kinetic", "explanation": "E0cell is a thermodynamic quantity; reaction rate (kinetics) is a separate factor." },
+            { "answer": "mechanical", "explanation": "Mechanical driving force relates to physical motion, not electrochemical reactions." }
+          ]
+        },
+        "2": {
+          "correct": "cost",
+          "correctExplanation": "Practical battery selection considers cost alongside voltage, capacity, safety, and other engineering factors.",
+          "distractors": [
+            { "answer": "colour", "explanation": "Colour is not a significant factor in battery performance evaluation." },
+            { "answer": "temperature", "explanation": "While temperature matters, cost is a more universally important practical factor for battery selection." }
+          ]
+        }
+      }
+    }
+  ]
+}

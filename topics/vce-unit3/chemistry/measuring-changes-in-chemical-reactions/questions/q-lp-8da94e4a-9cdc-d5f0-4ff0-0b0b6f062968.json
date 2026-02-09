@@ -1,0 +1,567 @@
+{
+  "_link": {
+    "uuid": "lp-8da94e4a-9cdc-d5f0-4ff0-0b0b6f062968",
+    "version": 1,
+    "contentHash": "hash-15ba7f16",
+    "title": "I can calculate the calibration factor using electrical calibration",
+    "generatedAt": "2026-02-08T10:20:00Z"
+  },
+  "toLevel2": [
+    {
+      "type": "mc",
+      "question": "What does the calibration factor (CF) of a calorimeter represent?",
+      "correct": "The energy needed to raise the calorimeter system's temperature by 1°C",
+      "correctExplanation": "The calibration factor, measured in J °C⁻¹, tells us how many joules of energy are needed to raise the entire calorimeter system by one degree Celsius.",
+      "distractors": [
+        { "answer": "The mass of water required to fill the calorimeter completely", "explanation": "Mass of water is measured separately; the calibration factor relates energy input to temperature change." },
+        { "answer": "The temperature at which the calorimeter begins to lose heat", "explanation": "Heat loss occurs at all temperatures; the calibration factor measures energy per degree, not a loss threshold." },
+        { "answer": "The specific heat capacity of the insulating material used", "explanation": "The calibration factor accounts for the entire system, not just the insulating material's properties." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What is the unit of the calibration factor (CF)?",
+      "correct": "J °C⁻¹",
+      "correctExplanation": "The calibration factor is measured in joules per degree Celsius (J °C⁻¹), representing energy absorbed by the system per degree of temperature change.",
+      "distractors": [
+        { "answer": "J g⁻¹ °C⁻¹", "explanation": "J g⁻¹ °C⁻¹ is the unit for specific heat capacity, not the calibration factor which is for the whole system." },
+        { "answer": "°C J⁻¹", "explanation": "This inverts the relationship; the calibration factor gives energy per degree, not degrees per joule." },
+        { "answer": "kJ mol⁻¹", "explanation": "kJ mol⁻¹ is the unit for molar enthalpy, not the calibration factor." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "In electrical calibration, what formula is used to calculate the calibration factor?",
+      "correct": "CF = VIt / ΔT",
+      "correctExplanation": "The calibration factor equals the electrical energy input (V × I × t) divided by the temperature change (ΔT).",
+      "distractors": [
+        { "answer": "CF = ΔT / VIt", "explanation": "This inverts the formula; CF equals energy divided by temperature change, not the reverse." },
+        { "answer": "CF = mcΔT", "explanation": "q = mcΔT calculates heat energy; the calibration factor uses electrical energy divided by ΔT." },
+        { "answer": "CF = V + I + t", "explanation": "The variables V, I and t are multiplied together to give energy (VIt), not added." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What does V represent in the electrical calibration formula CF = VIt / ΔT?",
+      "correct": "Voltage in volts",
+      "correctExplanation": "V represents the voltage (potential difference) applied to the heating element, measured in volts.",
+      "distractors": [
+        { "answer": "Volume in litres", "explanation": "Volume is not part of the electrical calibration formula; V stands for voltage in volts." },
+        { "answer": "Velocity in metres per second", "explanation": "Velocity is not relevant to calorimetry; V represents voltage in the electrical calibration formula." },
+        { "answer": "Viscosity of the solution", "explanation": "Viscosity is not part of electrical calibration; V represents voltage applied to the heater." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What does the product VIt calculate in the calibration formula?",
+      "correct": "The electrical energy supplied in joules",
+      "correctExplanation": "V × I × t = voltage × current × time gives the total electrical energy supplied to the heating element in joules.",
+      "distractors": [
+        { "answer": "The temperature change of the water in the system", "explanation": "Temperature change is measured separately; VIt calculates the electrical energy input." },
+        { "answer": "The mass of water heated by the electrical element", "explanation": "Mass is measured separately; VIt gives the energy supplied by the electrical heater." },
+        { "answer": "The resistance of the heating element in the calorimeter", "explanation": "Resistance is V/I; VIt calculates energy, not resistance." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "The calibration factor is calculated by dividing the electrical energy input by the temperature change.",
+      "correct": "True",
+      "correctExplanation": "CF = VIt/ΔT, where VIt is the electrical energy input and ΔT is the resulting temperature change.",
+      "distractors": [
+        { "answer": "False", "explanation": "Students may think it is ΔT divided by energy, but CF = energy/ΔT is correct." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "In the formula CF = VIt / ΔT, the variable I represents the initial temperature.",
+      "correct": "False",
+      "correctExplanation": "I represents the electrical current in amperes, not initial temperature. ΔT represents the temperature change.",
+      "distractors": [
+        { "answer": "True", "explanation": "Students may confuse I with initial temperature, but in electrical calibration I is current in amperes." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the calibration formula.",
+      "sentence": "The calibration factor is calculated using CF = {{blank:1}} / ΔT, where V is voltage, I is current and t is {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "VIt",
+          "correctExplanation": "VIt (voltage × current × time) gives the total electrical energy supplied to the calorimeter in joules.",
+          "distractors": [
+            { "answer": "mcΔT", "explanation": "mcΔT calculates heat absorbed by water; VIt calculates electrical energy input for calibration." },
+            { "answer": "ΔH × n", "explanation": "ΔH × n calculates energy from combustion; VIt is the electrical energy used for calibration." }
+          ]
+        },
+        "2": {
+          "correct": "time",
+          "correctExplanation": "The variable t represents the time in seconds that the electrical current flows through the heating element.",
+          "distractors": [
+            { "answer": "temperature", "explanation": "Temperature is represented by ΔT in the denominator; t is time in seconds." },
+            { "answer": "thickness", "explanation": "Thickness is not a variable in the calibration formula; t represents time in seconds." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the calibration factor units.",
+      "sentence": "The calibration factor has units of {{blank:1}}, meaning it measures energy per degree of {{blank:2}} change.",
+      "blanks": {
+        "1": {
+          "correct": "J °C⁻¹",
+          "correctExplanation": "J °C⁻¹ (joules per degree Celsius) is the unit of the calibration factor.",
+          "distractors": [
+            { "answer": "J g⁻¹", "explanation": "J g⁻¹ would be energy per gram; the calibration factor is energy per degree Celsius." },
+            { "answer": "kJ mol⁻¹", "explanation": "kJ mol⁻¹ is the unit for molar enthalpy, not the calibration factor." }
+          ]
+        },
+        "2": {
+          "correct": "temperature",
+          "correctExplanation": "The calibration factor tells us how many joules are needed per degree Celsius of temperature change in the calorimeter.",
+          "distractors": [
+            { "answer": "pressure", "explanation": "Pressure is not measured by the calibration factor; it relates to temperature change." },
+            { "answer": "volume", "explanation": "Volume change is not part of the calibration factor; it measures energy per degree of temperature change." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Identify the variables in CF = VIt / ΔT.",
+      "sentence": "In the calibration formula, V is voltage in {{blank:1}} and I is current in {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "volts",
+          "correctExplanation": "Voltage is measured in volts (V), the SI unit for electrical potential difference.",
+          "distractors": [
+            { "answer": "watts", "explanation": "Watts is the unit of power (P = VI), not voltage; voltage is measured in volts." },
+            { "answer": "joules", "explanation": "Joules is the unit of energy; voltage is measured in volts." }
+          ]
+        },
+        "2": {
+          "correct": "amperes",
+          "correctExplanation": "Electrical current is measured in amperes (A), the SI unit for the flow of electric charge.",
+          "distractors": [
+            { "answer": "ohms", "explanation": "Ohms is the unit of electrical resistance (R = V/I), not current." },
+            { "answer": "coulombs", "explanation": "Coulombs measure electric charge (Q = It); current is the rate of charge flow in amperes." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "mc",
+      "question": "Why does electrical calibration use a known amount of electrical energy rather than chemical energy?",
+      "correct": "Electrical energy input can be precisely controlled and measured using V, I and t",
+      "correctExplanation": "Voltage, current and time can all be measured with high precision using instruments, giving an accurately known energy input for calibration.",
+      "distractors": [
+        { "answer": "Chemical reactions are too dangerous to use for calibration experiments", "explanation": "Chemical calibration exists and is safe; electrical calibration is preferred for its measurement precision." },
+        { "answer": "Electrical energy produces more heat than chemical energy per joule input", "explanation": "One joule of energy is the same regardless of source; electrical calibration is preferred for its measurement precision." },
+        { "answer": "Electrical energy does not cause any temperature change in the calorimeter", "explanation": "Electrical energy does cause a temperature change; this change is used to calculate the calibration factor." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "How does the calibration factor account for heat absorbed by the calorimeter walls and components?",
+      "correct": "CF includes the heat capacity of the entire system, both water and apparatus",
+      "correctExplanation": "The calibration factor represents the total energy needed to raise the whole system by 1°C, automatically accounting for heat absorbed by walls, stirrer and other components.",
+      "distractors": [
+        { "answer": "CF only measures the water's heat capacity and ignores the apparatus entirely", "explanation": "CF measures the total system; if it only measured water, q = mcΔT would suffice and calibration would be unnecessary." },
+        { "answer": "CF subtracts the water's contribution to isolate the apparatus heat capacity", "explanation": "CF includes both water and apparatus; it represents the whole system's response to energy input." },
+        { "answer": "CF is independent of the calorimeter and applies equally to all instruments", "explanation": "CF is specific to each calorimeter; different apparatus have different calibration factors." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What happens to the calibration factor if the calorimeter is used with a different mass of water?",
+      "correct": "The calibration factor changes because the total heat capacity of the system changes",
+      "correctExplanation": "Adding more or less water changes the total system heat capacity, so the calibration factor must be recalculated for each different water mass.",
+      "distractors": [
+        { "answer": "The calibration factor remains exactly the same regardless of water mass", "explanation": "CF depends on the total system; changing the water mass changes the total heat capacity and therefore the CF." },
+        { "answer": "The calibration factor doubles when the water mass is doubled precisely", "explanation": "CF would increase but not necessarily double, as the apparatus contribution remains constant." },
+        { "answer": "The calibration factor decreases to zero when more water is added to it", "explanation": "Adding water increases the total heat capacity; CF increases, it does not decrease to zero." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Why is the product VIt expressed in joules?",
+      "correct": "Volts × amperes × seconds = watts × seconds = joules",
+      "correctExplanation": "V × I gives power in watts (W = J s⁻¹), and multiplying by time in seconds gives energy in joules: W × s = J.",
+      "distractors": [
+        { "answer": "VIt is expressed in kilojoules per mole, not joules per experiment", "explanation": "VIt gives energy in joules; kilojoules per mole is a different quantity used for molar enthalpy." },
+        { "answer": "VIt is expressed in joules only when the current is exactly 1 ampere", "explanation": "VIt gives joules regardless of the specific values of V, I and t; the unit analysis always yields joules." },
+        { "answer": "VIt is expressed in calories, which must be converted to joules separately", "explanation": "The SI units of V (volts), I (amperes) and t (seconds) directly give energy in joules, not calories." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "If a larger ΔT is observed during electrical calibration, what does this indicate about the calorimeter?",
+      "correct": "The system has a lower calibration factor (less energy needed per degree of temperature rise)",
+      "correctExplanation": "CF = VIt/ΔT. If ΔT is larger for the same energy input (VIt), then CF is smaller, meaning less energy is needed per degree.",
+      "distractors": [
+        { "answer": "The system has a higher calibration factor and absorbs more energy per degree", "explanation": "Higher ΔT for the same energy means lower CF, not higher; less energy is needed per degree." },
+        { "answer": "The heating element is broken and needs to be replaced immediately", "explanation": "A larger ΔT simply means the system has less heat capacity; it does not indicate equipment failure." },
+        { "answer": "The result is invalid and the calibration must be repeated with less water", "explanation": "A larger ΔT is a valid result; it reflects the system's heat capacity, not an error." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What is the purpose of calibrating a calorimeter before performing a reaction measurement?",
+      "correct": "To determine how much energy the entire system absorbs per degree of temperature change",
+      "correctExplanation": "Calibration establishes the system's total heat capacity (CF), which is then used to convert measured ΔT values from reactions into accurate energy values.",
+      "distractors": [
+        { "answer": "To clean the calorimeter and remove contaminants from previous experiments", "explanation": "Cleaning is important but separate from calibration; calibration determines the system's heat capacity." },
+        { "answer": "To check if the thermometer is displaying the correct room temperature reading", "explanation": "Thermometer accuracy is verified separately; calibration determines the calorimeter's energy-temperature relationship." },
+        { "answer": "To pre-heat the calorimeter so reactions proceed faster during measurement", "explanation": "Calibration is not pre-heating; it is a measurement procedure to determine the system's calibration factor." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "A calorimeter with a higher calibration factor absorbs more energy for each degree of temperature change.",
+      "correct": "True",
+      "correctExplanation": "CF in J °C⁻¹ represents energy per degree; a higher CF means the system (water + apparatus) absorbs more total energy for each 1°C rise.",
+      "distractors": [
+        { "answer": "False", "explanation": "Students may confuse calibration factor with sensitivity; higher CF means more energy absorbed per degree, which is correct." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the explanation of calibration purpose.",
+      "sentence": "Calibration accounts for heat absorbed by the {{blank:1}} itself, which would otherwise cause the measured energy to be too {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "calorimeter",
+          "correctExplanation": "The calorimeter walls, stirrer and thermometer all absorb some heat that is not reflected in the water temperature change alone.",
+          "distractors": [
+            { "answer": "thermometer", "explanation": "The thermometer is just one component; calibration accounts for the entire calorimeter system." },
+            { "answer": "reactant", "explanation": "Reactants release energy; calibration accounts for heat absorbed by the apparatus, not the reactants." }
+          ]
+        },
+        "2": {
+          "correct": "low",
+          "correctExplanation": "Without calibration, energy absorbed by the apparatus is not counted, leading to an underestimate of the total energy released.",
+          "distractors": [
+            { "answer": "high", "explanation": "Missing the apparatus absorption leads to underestimation, not overestimation, of total energy." },
+            { "answer": "variable", "explanation": "The error is consistently low (systematic), not randomly variable." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about electrical energy.",
+      "sentence": "Electrical energy in joules is calculated as voltage (V) × {{blank:1}} (I) × time (t), which equals {{blank:2}} × seconds.",
+      "blanks": {
+        "1": {
+          "correct": "current",
+          "correctExplanation": "I represents electrical current measured in amperes, which when multiplied by V and t gives energy in joules.",
+          "distractors": [
+            { "answer": "insulation", "explanation": "Insulation is a property of the calorimeter; I in the formula represents electrical current." },
+            { "answer": "intensity", "explanation": "Intensity is not the correct term; I represents electrical current measured in amperes." }
+          ]
+        },
+        "2": {
+          "correct": "watts",
+          "correctExplanation": "V × I gives power in watts (W), and watts × seconds gives joules: W = J s⁻¹, so W × s = J.",
+          "distractors": [
+            { "answer": "grams", "explanation": "Grams is a unit of mass; V × I gives watts (power), which multiplied by time gives joules." },
+            { "answer": "moles", "explanation": "Moles is a unit of amount; V × I gives power in watts, not an amount-related quantity." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about calibration factor specificity.",
+      "sentence": "Each calorimeter has its own unique calibration factor because different systems have different total {{blank:1}} capacities.",
+      "blanks": {
+        "1": {
+          "correct": "heat",
+          "correctExplanation": "Each calorimeter's total heat capacity depends on the mass of water, the type and amount of insulation, and other components.",
+          "distractors": [
+            { "answer": "volume", "explanation": "Volume capacity is not what calibration measures; it is the heat (energy) capacity of the system." },
+            { "answer": "pressure", "explanation": "Pressure capacity is not relevant; calibration relates to the heat capacity of the entire system." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "mc",
+      "question": "Calculate the calibration factor when 5.25 V and 2.25 A are applied for 45.75 s, producing a temperature increase of 1.64°C.",
+      "correct": "330 J °C⁻¹",
+      "correctExplanation": "CF = VIt/ΔT = (5.25 × 2.25 × 45.75)/1.64 = 540.28/1.64 = 329.4 ≈ 330 J °C⁻¹.",
+      "distractors": [
+        { "answer": "540 J °C⁻¹", "explanation": "540 J is the total energy input (VIt); dividing by ΔT = 1.64°C gives the calibration factor of 330 J °C⁻¹." },
+        { "answer": "1.64 J °C⁻¹", "explanation": "1.64 is the temperature change in °C; the calibration factor is 330 J °C⁻¹." },
+        { "answer": "0.0030 J °C⁻¹", "explanation": "This results from inverting the formula (ΔT/VIt); CF = VIt/ΔT = 330 J °C⁻¹." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A calorimeter is calibrated with 6.0 V, 3.0 A for 60 s, giving ΔT = 2.5°C. What is the calibration factor?",
+      "correct": "432 J °C⁻¹",
+      "correctExplanation": "CF = VIt/ΔT = (6.0 × 3.0 × 60)/2.5 = 1080/2.5 = 432 J °C⁻¹.",
+      "distractors": [
+        { "answer": "1080 J °C⁻¹", "explanation": "1080 J is the total electrical energy; dividing by ΔT = 2.5°C gives CF = 432 J °C⁻¹." },
+        { "answer": "2.5 J °C⁻¹", "explanation": "2.5 is the temperature change; the calibration factor requires dividing energy by this value." },
+        { "answer": "18.0 J °C⁻¹", "explanation": "This results from using V × I only (18 W) without including time; the correct answer uses VIt." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student obtains CF = 450 J °C⁻¹ from electrical calibration. If a reaction causes ΔT = 3.2°C, what energy was released?",
+      "correct": "1440 J",
+      "correctExplanation": "E = CF × ΔT = 450 × 3.2 = 1440 J.",
+      "distractors": [
+        { "answer": "141 J", "explanation": "This results from dividing CF by ΔT (450/3.2); the correct operation is multiplication." },
+        { "answer": "453.2 J", "explanation": "This results from adding CF and ΔT; the correct operation is multiplication." },
+        { "answer": "446.8 J", "explanation": "This results from subtracting ΔT from CF; the correct operation is multiplication." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "During electrical calibration, the voltage drops slightly from 5.0 V to 4.8 V over the measurement period. How should this be handled?",
+      "correct": "Use the average voltage of 4.9 V in the CF calculation",
+      "correctExplanation": "If voltage varies during calibration, the average value should be used to best represent the actual energy input over the measurement period.",
+      "distractors": [
+        { "answer": "Use only the initial voltage of 5.0 V because that is the starting condition", "explanation": "Using only the initial value overestimates the energy input; the average better represents the actual energy delivered." },
+        { "answer": "The calibration is invalid and must be completely repeated from the start", "explanation": "Small voltage variations are normal; using the average value accounts for this variation adequately." },
+        { "answer": "Ignore the voltage change because it has no effect on the calibration factor", "explanation": "Voltage directly affects the energy calculation (VIt); changes in V change the calculated energy input." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Two calorimeters are calibrated: A has CF = 280 J °C⁻¹ and B has CF = 520 J °C⁻¹. Both measure the same exothermic reaction. Which shows a larger ΔT?",
+      "correct": "Calorimeter A, because its lower CF means less energy is needed per degree of rise",
+      "correctExplanation": "For the same energy input, ΔT = E/CF. A lower CF gives a larger ΔT: the system with less heat capacity shows a bigger temperature change.",
+      "distractors": [
+        { "answer": "Calorimeter B, because its higher CF means it absorbs more energy per degree", "explanation": "Higher CF means more energy per degree, resulting in a smaller ΔT for the same energy input, not larger." },
+        { "answer": "Both show exactly the same ΔT because the same reaction releases the same energy", "explanation": "While the same energy is released, different CF values mean different ΔT values for each calorimeter." },
+        { "answer": "Neither shows any ΔT because the calibration factor cancels out the temperature change", "explanation": "CF does not cancel ΔT; it relates the energy to the temperature change, which will differ between systems." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Calculate the calibration factor when 12.0 V and 1.5 A are applied for 120 s, producing ΔT = 4.0°C.",
+      "correct": "540 J °C⁻¹",
+      "correctExplanation": "CF = VIt/ΔT = (12.0 × 1.5 × 120)/4.0 = 2160/4.0 = 540 J °C⁻¹.",
+      "distractors": [
+        { "answer": "2160 J °C⁻¹", "explanation": "2160 J is the total energy input; dividing by ΔT = 4.0°C gives CF = 540 J °C⁻¹." },
+        { "answer": "18.0 J °C⁻¹", "explanation": "This uses V × I only (18 W) divided by ΔT; the time (120 s) must also be included." },
+        { "answer": "4.5 J °C⁻¹", "explanation": "This results from an incorrect calculation; the correct answer is 540 J °C⁻¹." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student accidentally uses the calibration factor from a different calorimeter. How does this affect their energy calculation?",
+      "correct": "The calculated energy will be systematically wrong, either too high or too low",
+      "correctExplanation": "Using the wrong CF means E = CF × ΔT will give an incorrect energy value. If the borrowed CF is too high, the energy will be overestimated, and vice versa.",
+      "distractors": [
+        { "answer": "The calculation will still be correct because all calibration factors are identical", "explanation": "Each calorimeter has a unique CF; using another's value gives an incorrect energy result." },
+        { "answer": "The error will only affect the temperature reading, not the energy calculation", "explanation": "The CF directly multiplies the ΔT to give energy; using the wrong CF directly affects the energy result." },
+        { "answer": "The result will be correct as long as the same amount of water is used", "explanation": "Even with the same water mass, different calorimeters have different apparatus contributions to CF." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the worked calculation.",
+      "sentence": "For V = 5.25 V, I = 2.25 A, t = 45.75 s: energy = 5.25 × 2.25 × 45.75 = {{blank:1}} J, so CF = {{blank:1}} / 1.64 = {{blank:2}} J °C⁻¹.",
+      "blanks": {
+        "1": {
+          "correct": "540",
+          "correctExplanation": "VIt = 5.25 × 2.25 × 45.75 = 540.28 ≈ 540 J of electrical energy input.",
+          "distractors": [
+            { "answer": "53.25", "explanation": "This results from adding the values instead of multiplying them; VIt requires multiplication." },
+            { "answer": "11.81", "explanation": "This results from multiplying only V × I without t; all three must be multiplied." }
+          ]
+        },
+        "2": {
+          "correct": "330",
+          "correctExplanation": "CF = 540/1.64 = 329.3 ≈ 330 J °C⁻¹.",
+          "distractors": [
+            { "answer": "885.6", "explanation": "This results from multiplying rather than dividing: 540 × 1.64 = 885.6." },
+            { "answer": "0.003", "explanation": "This results from inverting the formula: 1.64/540 = 0.003." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about using the calibration factor.",
+      "sentence": "Once the calibration factor is determined, the energy from a reaction is calculated as E = CF × {{blank:1}}.",
+      "blanks": {
+        "1": {
+          "correct": "ΔT",
+          "correctExplanation": "The energy released by a reaction equals the calibration factor multiplied by the temperature change observed during the reaction.",
+          "distractors": [
+            { "answer": "VIt", "explanation": "VIt is the electrical energy used during calibration, not during the reaction measurement." },
+            { "answer": "mcΔT", "explanation": "mcΔT calculates heat absorbed by water alone; E = CF × ΔT uses the whole system's calibration factor." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about calibration factor comparison.",
+      "sentence": "A calorimeter with a {{blank:1}} calibration factor shows a smaller ΔT for the same energy input because it absorbs {{blank:2}} energy per degree.",
+      "blanks": {
+        "1": {
+          "correct": "higher",
+          "correctExplanation": "A higher CF means more energy is needed per degree, so the same energy input produces a smaller ΔT.",
+          "distractors": [
+            { "answer": "lower", "explanation": "A lower CF would show a larger ΔT for the same energy, not a smaller one." },
+            { "answer": "zero", "explanation": "A zero CF would be physically impossible; all systems have some heat capacity." }
+          ]
+        },
+        "2": {
+          "correct": "more",
+          "correctExplanation": "A higher CF value means the system absorbs more joules for each degree of temperature change.",
+          "distractors": [
+            { "answer": "less", "explanation": "A higher CF means more energy per degree, not less; the relationship is direct." },
+            { "answer": "no", "explanation": "All physical systems absorb energy when heated; a calorimeter with any CF value absorbs energy." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "mc",
+      "question": "Analyse why electrical calibration is considered more reliable than simply using q = mcΔT for the water alone.",
+      "correct": "Electrical calibration accounts for heat absorbed by the entire system, not just the water",
+      "correctExplanation": "Using q = mcΔT for water alone ignores heat absorbed by the calorimeter walls, stirrer and thermometer. Electrical calibration captures the total system heat capacity.",
+      "distractors": [
+        { "answer": "Electrical calibration uses more expensive equipment, which is inherently more accurate", "explanation": "Cost does not determine accuracy; the advantage is that electrical calibration measures the complete system response." },
+        { "answer": "Water's specific heat capacity is unknown, making q = mcΔT impossible to use", "explanation": "Water's c (4.18 J g⁻¹ °C⁻¹) is well known; the issue is that q = mcΔT ignores the apparatus." },
+        { "answer": "Electrical energy is fundamentally different from chemical energy and gives better results", "explanation": "Energy is energy regardless of source; electrical calibration is better because it measures the total system." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Evaluate how heat loss during electrical calibration affects the determined calibration factor and subsequent energy calculations.",
+      "correct": "Heat loss causes ΔT to be smaller, giving a larger CF, which then overcompensates when applied to reaction measurements",
+      "correctExplanation": "If heat is lost during calibration, the measured ΔT is too small, making CF = VIt/ΔT too large. Using this inflated CF for reactions overestimates the reaction energy.",
+      "distractors": [
+        { "answer": "Heat loss has no effect because the calibration and reaction losses cancel each other exactly", "explanation": "Losses may differ between calibration and reaction measurements; they do not necessarily cancel." },
+        { "answer": "Heat loss makes CF smaller, causing all subsequent energy calculations to be underestimates", "explanation": "Heat loss reduces ΔT, making CF larger (not smaller), which overestimates subsequent energy values." },
+        { "answer": "Heat loss only affects the reaction measurement, not the calibration procedure itself", "explanation": "Heat loss affects both procedures; during calibration, lost heat reduces the measured ΔT." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Compare the calibration factors of two systems: System A uses 200 g of water in a polystyrene cup (CF = 870 J °C⁻¹), and System B uses 200 g of water in a metal container (CF = 960 J °C⁻¹). Analyse the difference.",
+      "correct": "The metal container has a higher heat capacity than polystyrene, absorbing more energy per degree",
+      "correctExplanation": "Both have 200 g water (contributing 836 J °C⁻¹), so the difference (90 J °C⁻¹) is due to the metal container absorbing more heat than the polystyrene cup.",
+      "distractors": [
+        { "answer": "The water in System B has a higher specific heat capacity than in System A", "explanation": "Water's specific heat capacity is constant at 4.18 J g⁻¹ °C⁻¹ regardless of the container material." },
+        { "answer": "System B must contain more water than System A despite both being labeled 200 g", "explanation": "Both contain 200 g of water; the difference is in the container material's heat capacity." },
+        { "answer": "The polystyrene cup generates additional heat that lowers the calibration factor", "explanation": "Polystyrene does not generate heat; its lower heat capacity means it absorbs less energy per degree." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student notices that repeating the electrical calibration gives slightly different CF values each time. Analyse possible sources of this variation.",
+      "correct": "Variations in heat loss, slight fluctuations in voltage or current, and measurement uncertainties in ΔT",
+      "correctExplanation": "Multiple sources of random error contribute: inconsistent heat loss between trials, minor electrical fluctuations, and thermometer reading precision all affect the result.",
+      "distractors": [
+        { "answer": "The fundamental physics of electrical energy changes between trials unpredictably", "explanation": "Physical laws are constant; the variation comes from experimental uncertainties, not changing physics." },
+        { "answer": "The water's specific heat capacity changes each time it is heated by electricity", "explanation": "Water's specific heat capacity remains constant; the variation is from experimental measurement errors." },
+        { "answer": "The calibration factor is not a real physical quantity and varies randomly by nature", "explanation": "CF is a real, measurable property of the system; variations come from experimental uncertainties." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Critically assess whether a single electrical calibration is sufficient or whether multiple calibrations should be performed.",
+      "correct": "Multiple calibrations should be performed and averaged to reduce the impact of random errors",
+      "correctExplanation": "Repeating the calibration and averaging results reduces the effect of random measurement errors, giving a more reliable CF value for subsequent calculations.",
+      "distractors": [
+        { "answer": "A single calibration is always sufficient because the result is perfectly reproducible", "explanation": "Experimental measurements always have some uncertainty; averaging multiple trials improves reliability." },
+        { "answer": "Multiple calibrations are unnecessary because the first result is always the most accurate", "explanation": "There is no reason the first trial would be more accurate; averaging multiple trials is standard practice." },
+        { "answer": "Calibration should only be done once because repeated heating damages the calorimeter", "explanation": "Calorimeters are designed for repeated use; multiple calibrations improve measurement quality." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Analyse what the difference between CF and mc (where m is the water mass and c is water's specific heat capacity) represents physically.",
+      "correct": "The difference represents the heat capacity of the calorimeter apparatus itself (walls, stirrer, thermometer)",
+      "correctExplanation": "CF = heat capacity of total system. mc = heat capacity of water alone. CF − mc = heat capacity of the apparatus components.",
+      "distractors": [
+        { "answer": "The difference represents the amount of heat lost to the surroundings during every experiment", "explanation": "Heat loss is not part of CF; the difference is the apparatus heat capacity, a fixed system property." },
+        { "answer": "The difference has no physical meaning and is simply due to measurement error", "explanation": "The difference is physically meaningful: it represents the heat capacity of the non-water components." },
+        { "answer": "The difference represents the chemical energy stored in the water molecules themselves", "explanation": "Chemical energy in water is not relevant here; the difference is the apparatus heat capacity." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Evaluate whether the calibration factor determined at 20°C would be valid for reactions that raise the temperature to 60°C.",
+      "correct": "It is approximately valid because water's specific heat capacity changes very little over this range",
+      "correctExplanation": "Water's c varies by less than 1% between 20°C and 60°C, so the calibration factor remains approximately valid for moderate temperature ranges.",
+      "distractors": [
+        { "answer": "It is completely invalid because calibration is only accurate at the exact calibration temperature", "explanation": "While exact temperature matching is ideal, the small variation in water's c makes the CF approximately valid across moderate ranges." },
+        { "answer": "It would be exactly valid at all temperatures because the calibration factor never changes", "explanation": "CF can change slightly with temperature due to minor changes in water's c and the apparatus properties." },
+        { "answer": "The calibration factor triples between 20°C and 60°C due to thermal expansion effects", "explanation": "The CF changes minimally; water's c varies by less than 1% and thermal expansion effects are very small." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student proposes calibrating the calorimeter after the reaction rather than before. Evaluate this approach.",
+      "correct": "Post-reaction calibration is valid and may better account for the system's state during measurement",
+      "correctExplanation": "Calibrating after the reaction, or both before and after, can give a more accurate CF because the system conditions during calibration match those during measurement.",
+      "distractors": [
+        { "answer": "Calibration must always come before the reaction or the results are completely invalid", "explanation": "Post-reaction calibration is accepted practice; some protocols calibrate both before and after for best accuracy." },
+        { "answer": "The reaction changes the water's specific heat capacity permanently, making post-calibration wrong", "explanation": "Reactions in solution do not permanently change water's specific heat capacity significantly." },
+        { "answer": "Post-reaction calibration always gives a lower CF because the water has been heated", "explanation": "The CF value does not systematically decrease after heating; it depends on the system's heat capacity." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the analysis of calibration versus q = mcΔT.",
+      "sentence": "The calibration factor gives more accurate results than q = mcΔT because it includes the heat capacity of both the {{blank:1}} and the {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "water",
+          "correctExplanation": "The calibration factor includes the water's heat capacity as part of the total system measurement.",
+          "distractors": [
+            { "answer": "fuel", "explanation": "The fuel is not part of the calorimeter system; the CF accounts for water and apparatus." },
+            { "answer": "air", "explanation": "Air above the solution is not the primary concern; the CF accounts for water and apparatus components." }
+          ]
+        },
+        "2": {
+          "correct": "apparatus",
+          "correctExplanation": "The apparatus (walls, stirrer, thermometer) absorbs heat that q = mcΔT for water alone would miss.",
+          "distractors": [
+            { "answer": "reactants", "explanation": "Reactants release energy; the apparatus absorbs energy that must be accounted for." },
+            { "answer": "surroundings", "explanation": "Surroundings are outside the system; the CF accounts for internal apparatus heat capacity." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the error analysis.",
+      "sentence": "If heat is lost during calibration, the measured ΔT is too {{blank:1}}, making the calculated CF too {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "small",
+          "correctExplanation": "Heat loss means the water temperature rises less than it should, giving a smaller ΔT than expected.",
+          "distractors": [
+            { "answer": "large", "explanation": "Heat loss reduces the temperature rise, making ΔT smaller, not larger." },
+            { "answer": "variable", "explanation": "Heat loss consistently reduces ΔT (systematic effect), not making it randomly variable." }
+          ]
+        },
+        "2": {
+          "correct": "large",
+          "correctExplanation": "CF = VIt/ΔT: if ΔT is too small, the denominator is too small, making the fraction (CF) too large.",
+          "distractors": [
+            { "answer": "small", "explanation": "A smaller ΔT in the denominator makes the fraction larger, not smaller." },
+            { "answer": "accurate", "explanation": "Heat loss introduces error; the CF would not be accurate if ΔT is too small." }
+          ]
+        }
+      }
+    }
+  ]
+}

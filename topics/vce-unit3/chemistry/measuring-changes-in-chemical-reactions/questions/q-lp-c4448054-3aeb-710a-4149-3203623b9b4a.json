@@ -1,0 +1,555 @@
+{
+  "_link": {
+    "uuid": "lp-c4448054-3aeb-710a-4149-3203623b9b4a",
+    "version": 1,
+    "contentHash": "hash-8844388c",
+    "title": "I can use reference tables for heats of combustion of food groups",
+    "generatedAt": "2026-02-08T00:00:00.000Z"
+  },
+
+  "toLevel2": [
+    {
+      "type": "mc",
+      "question": "What is the heat of combustion of fats and oils?",
+      "correct": "37 kJ g⁻¹",
+      "correctExplanation": "Fats and oils release 37 kJ per gram when completely combusted, the highest energy density of the three macronutrient groups.",
+      "distractors": [
+        {"answer": "17 kJ g⁻¹", "explanation": "17 kJ g⁻¹ is the value for proteins, not fats. Fats release 37 kJ g⁻¹."},
+        {"answer": "16 kJ g⁻¹", "explanation": "16 kJ g⁻¹ is the value for carbohydrates. Fats release 37 kJ g⁻¹."},
+        {"answer": "27 kJ g⁻¹", "explanation": "This is not a standard reference value. Fats release 37 kJ g⁻¹."}
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What is the heat of combustion of proteins?",
+      "correct": "17 kJ g⁻¹",
+      "correctExplanation": "Proteins release 17 kJ per gram when completely combusted.",
+      "distractors": [
+        {"answer": "37 kJ g⁻¹", "explanation": "37 kJ g⁻¹ is the value for fats and oils, not proteins."},
+        {"answer": "16 kJ g⁻¹", "explanation": "16 kJ g⁻¹ is the value for carbohydrates. Proteins release 17 kJ g⁻¹."},
+        {"answer": "7 kJ g⁻¹", "explanation": "This is not a standard reference value. Proteins release 17 kJ g⁻¹."}
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What is the heat of combustion of carbohydrates?",
+      "correct": "16 kJ g⁻¹",
+      "correctExplanation": "Carbohydrates release 16 kJ per gram when completely combusted, the lowest of the three macronutrient groups.",
+      "distractors": [
+        {"answer": "37 kJ g⁻¹", "explanation": "37 kJ g⁻¹ is the value for fats and oils, not carbohydrates."},
+        {"answer": "17 kJ g⁻¹", "explanation": "17 kJ g⁻¹ is the value for proteins. Carbohydrates release 16 kJ g⁻¹."},
+        {"answer": "26 kJ g⁻¹", "explanation": "This is not a standard reference value. Carbohydrates release 16 kJ g⁻¹."}
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which food group releases the most energy per gram when combusted?",
+      "correct": "Fats and oils",
+      "correctExplanation": "Fats release 37 kJ g⁻¹, more than double the energy of proteins (17 kJ g⁻¹) or carbohydrates (16 kJ g⁻¹).",
+      "distractors": [
+        {"answer": "Proteins", "explanation": "Proteins release 17 kJ g⁻¹, far less than fats at 37 kJ g⁻¹."},
+        {"answer": "Carbohydrates", "explanation": "Carbohydrates release 16 kJ g⁻¹, the lowest of the three groups."},
+        {"answer": "All release the same energy", "explanation": "The values differ significantly: fats (37), proteins (17), carbohydrates (16) kJ g⁻¹."}
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What units are used for the heat of combustion of food groups?",
+      "correct": "kJ g⁻¹",
+      "correctExplanation": "Food energy values are expressed in kilojoules per gram (kJ g⁻¹) because foods are mixtures of molecules with varying molar masses.",
+      "distractors": [
+        {"answer": "kJ mol⁻¹", "explanation": "kJ mol⁻¹ is used for pure fuels, not food groups. Foods use kJ g⁻¹ because they are mixtures."},
+        {"answer": "J g⁻¹", "explanation": "Food energy values use kilojoules (kJ), not joules (J) per gram."},
+        {"answer": "kJ L⁻¹", "explanation": "kJ L⁻¹ is not the standard unit for food energy; kJ g⁻¹ is used."}
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the reference table for food energy values.",
+      "sentence": "Fats release {{blank:1}} kJ g⁻¹, proteins release {{blank:2}} kJ g⁻¹, and carbohydrates release 16 kJ g⁻¹.",
+      "blanks": {
+        "1": {
+          "correct": "37",
+          "correctExplanation": "Fats and oils have the highest heat of combustion at 37 kJ g⁻¹.",
+          "distractors": [
+            {"answer": "17", "explanation": "17 kJ g⁻¹ is the value for proteins, not fats."},
+            {"answer": "47", "explanation": "47 kJ g⁻¹ is not the standard reference value for fats; it is 37 kJ g⁻¹."}
+          ]
+        },
+        "2": {
+          "correct": "17",
+          "correctExplanation": "Proteins release 17 kJ g⁻¹, between fats (37) and carbohydrates (16).",
+          "distractors": [
+            {"answer": "16", "explanation": "16 kJ g⁻¹ is carbohydrates; proteins release 17 kJ g⁻¹."},
+            {"answer": "27", "explanation": "27 kJ g⁻¹ is not a standard value; proteins release 17 kJ g⁻¹."}
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the energy calculation for a pure food group.",
+      "sentence": "A 10 g sample of pure fat releases {{blank:1}} kJ of energy when combusted.",
+      "blanks": {
+        "1": {
+          "correct": "370",
+          "correctExplanation": "Energy = mass × heat of combustion = 10 × 37 = 370 kJ.",
+          "distractors": [
+            {"answer": "170", "explanation": "170 kJ uses the protein value (10 × 17); fat releases 10 × 37 = 370 kJ."},
+            {"answer": "160", "explanation": "160 kJ uses the carbohydrate value (10 × 16); fat releases 370 kJ."}
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the statement about food energy ranking.",
+      "sentence": "From highest to lowest energy per gram, the food groups are ranked: {{blank:1}}, proteins, {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "fats",
+          "correctExplanation": "Fats have the highest energy at 37 kJ g⁻¹.",
+          "distractors": [
+            {"answer": "carbohydrates", "explanation": "Carbohydrates have the lowest energy (16 kJ g⁻¹); fats are highest (37 kJ g⁻¹)."},
+            {"answer": "proteins", "explanation": "Proteins are in the middle (17 kJ g⁻¹); fats are highest (37 kJ g⁻¹)."}
+          ]
+        },
+        "2": {
+          "correct": "carbohydrates",
+          "correctExplanation": "Carbohydrates have the lowest energy at 16 kJ g⁻¹.",
+          "distractors": [
+            {"answer": "fats", "explanation": "Fats have the highest energy (37 kJ g⁻¹); carbohydrates are lowest."},
+            {"answer": "vitamins", "explanation": "Vitamins are not a macronutrient energy source; carbohydrates are the lowest at 16 kJ g⁻¹."}
+          ]
+        }
+      }
+    },
+    {
+      "type": "tf",
+      "question": "Proteins release more energy per gram than carbohydrates.",
+      "correct": "True",
+      "correctExplanation": "Proteins release 17 kJ g⁻¹ while carbohydrates release 16 kJ g⁻¹, so proteins release slightly more.",
+      "distractors": [
+        {"answer": "False", "explanation": "Proteins (17 kJ g⁻¹) do release more per gram than carbohydrates (16 kJ g⁻¹)."}
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "Carbohydrates release more energy per gram than fats.",
+      "correct": "False",
+      "correctExplanation": "Carbohydrates release 16 kJ g⁻¹ while fats release 37 kJ g⁻¹. Fats release more than double the energy per gram.",
+      "distractors": [
+        {"answer": "True", "explanation": "Fats (37 kJ g⁻¹) release far more energy than carbohydrates (16 kJ g⁻¹)."}
+      ]
+    }
+  ],
+
+  "toLevel3": [
+    {
+      "type": "mc",
+      "question": "A food contains 20 g of fat. How much energy does the fat component contribute?",
+      "correct": "740 kJ",
+      "correctExplanation": "Energy = 20 × 37 = 740 kJ.",
+      "distractors": [
+        {"answer": "340 kJ", "explanation": "This uses the protein value (20 × 17 = 340); fat uses 37 kJ g⁻¹, giving 740 kJ."},
+        {"answer": "320 kJ", "explanation": "This uses the carbohydrate value (20 × 16 = 320); fat releases 740 kJ."},
+        {"answer": "370 kJ", "explanation": "This uses 10 g × 37 instead of 20 g × 37; the correct answer is 740 kJ."}
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Why do fats release more energy per gram than carbohydrates?",
+      "correct": "Fats have a higher proportion of C-H bonds, which release more energy when oxidised",
+      "correctExplanation": "Fats contain more carbon-hydrogen bonds per gram than carbohydrates, and the oxidation of these bonds releases significant energy.",
+      "distractors": [
+        {"answer": "Fats have a higher molar mass", "explanation": "Molar mass alone does not determine energy per gram; it is the bond structure and C:H ratio that matters."},
+        {"answer": "Fats burn at a higher temperature", "explanation": "Burning temperature does not determine energy content; the chemical structure and bond energies do."},
+        {"answer": "Fats contain more oxygen atoms", "explanation": "Fats actually contain fewer oxygen atoms per gram than carbohydrates; their higher C-H content gives more energy."}
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A 50 g chocolate bar contains 15 g fat, 5 g protein, and 30 g carbohydrates. What is the total energy content?",
+      "correct": "1120 kJ",
+      "correctExplanation": "Fat: 15 × 37 = 555 kJ. Protein: 5 × 17 = 85 kJ. Carbs: 30 × 16 = 480 kJ. Total = 555 + 85 + 480 = 1120 kJ.",
+      "distractors": [
+        {"answer": "800 kJ", "explanation": "This uses 16 kJ g⁻¹ for all components (50 × 16 = 800); each group has its own value."},
+        {"answer": "1850 kJ", "explanation": "This uses 37 kJ g⁻¹ for all components (50 × 37 = 1850); different values apply to each group."},
+        {"answer": "960 kJ", "explanation": "This omits the protein contribution; all three groups must be included."}
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What percentage of a food's energy comes from fat if it contains 10 g fat, 10 g protein, and 10 g carbohydrate?",
+      "correct": "52.9%",
+      "correctExplanation": "Fat: 10 × 37 = 370 kJ. Protein: 10 × 17 = 170 kJ. Carbs: 10 × 16 = 160 kJ. Total = 700 kJ. Fat % = 370/700 × 100 = 52.9%.",
+      "distractors": [
+        {"answer": "33.3%", "explanation": "This divides mass equally (10/30 = 33.3%), but energy percentages depend on the different kJ g⁻¹ values."},
+        {"answer": "37.0%", "explanation": "37 is the kJ g⁻¹ value for fat, not the percentage; fat contributes 370/700 = 52.9%."},
+        {"answer": "47.1%", "explanation": "This may use incorrect arithmetic; 370/700 × 100 = 52.9%."}
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A nutritionist wants a snack with exactly 500 kJ from carbohydrates alone. How many grams of carbohydrate are needed?",
+      "correct": "31.3 g",
+      "correctExplanation": "m = E / heat of combustion = 500/16 = 31.25 ≈ 31.3 g.",
+      "distractors": [
+        {"answer": "29.4 g", "explanation": "This uses the protein value (500/17 = 29.4); carbohydrates use 16 kJ g⁻¹."},
+        {"answer": "13.5 g", "explanation": "This uses the fat value (500/37 = 13.5); carbohydrates use 16 kJ g⁻¹."},
+        {"answer": "50.0 g", "explanation": "This uses 10 kJ g⁻¹; the correct carbohydrate value is 16 kJ g⁻¹."}
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "How much more energy does 25 g of fat release compared to 25 g of carbohydrate?",
+      "correct": "525 kJ more",
+      "correctExplanation": "Fat: 25 × 37 = 925 kJ. Carbs: 25 × 16 = 400 kJ. Difference = 925 − 400 = 525 kJ.",
+      "distractors": [
+        {"answer": "21 kJ more", "explanation": "21 is the difference in kJ g⁻¹ values (37−16), not the total energy difference for 25 g."},
+        {"answer": "525 kJ less", "explanation": "Fat releases more energy, not less; the difference is 925 − 400 = 525 kJ more."},
+        {"answer": "250 kJ more", "explanation": "This may use an incorrect calculation; 25 × (37−16) = 525 kJ."}
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the energy calculation for a food sample.",
+      "sentence": "A sample contains 8 g protein and 12 g carbohydrate. Protein energy = {{blank:1}} kJ, carbohydrate energy = {{blank:2}} kJ.",
+      "blanks": {
+        "1": {
+          "correct": "136",
+          "correctExplanation": "8 × 17 = 136 kJ from protein.",
+          "distractors": [
+            {"answer": "128", "explanation": "This uses the carbohydrate value (8 × 16 = 128); protein uses 17 kJ g⁻¹."},
+            {"answer": "296", "explanation": "This uses the fat value (8 × 37 = 296); protein uses 17 kJ g⁻¹."}
+          ]
+        },
+        "2": {
+          "correct": "192",
+          "correctExplanation": "12 × 16 = 192 kJ from carbohydrate.",
+          "distractors": [
+            {"answer": "204", "explanation": "This uses the protein value (12 × 17 = 204); carbohydrate uses 16 kJ g⁻¹."},
+            {"answer": "444", "explanation": "This uses the fat value (12 × 37 = 444); carbohydrate uses 16 kJ g⁻¹."}
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the statement about energy density.",
+      "sentence": "Fats release approximately {{blank:1}} times more energy per gram than carbohydrates.",
+      "blanks": {
+        "1": {
+          "correct": "2.3",
+          "correctExplanation": "37/16 = 2.3125 ≈ 2.3 times more energy per gram.",
+          "distractors": [
+            {"answer": "1.5", "explanation": "37/16 = 2.3, not 1.5. Fats release more than double the energy of carbohydrates."},
+            {"answer": "3.7", "explanation": "3.7 is not the ratio; 37/16 = 2.3."}
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the reverse calculation.",
+      "sentence": "A food label states that fat contributes 555 kJ. The mass of fat in the food is {{blank:1}} g.",
+      "blanks": {
+        "1": {
+          "correct": "15.0",
+          "correctExplanation": "m = E/kJ g⁻¹ = 555/37 = 15.0 g.",
+          "distractors": [
+            {"answer": "32.6", "explanation": "This divides by the protein value (555/17 = 32.6); fat uses 37 kJ g⁻¹."},
+            {"answer": "34.7", "explanation": "This divides by the carbohydrate value (555/16 = 34.7); fat uses 37 kJ g⁻¹."}
+          ]
+        }
+      }
+    },
+    {
+      "type": "tf",
+      "question": "A food containing equal masses of fat, protein, and carbohydrate gets most of its energy from fat.",
+      "correct": "True",
+      "correctExplanation": "Fat releases 37 kJ g⁻¹ compared to 17 (protein) and 16 (carbohydrate). With equal masses, fat contributes the most energy.",
+      "distractors": [
+        {"answer": "False", "explanation": "Fat at 37 kJ g⁻¹ provides more energy per gram than protein (17) or carbohydrate (16), so it dominates."}
+      ]
+    }
+  ],
+
+  "toLevel4": [
+    {
+      "type": "mc",
+      "question": "A meal contains 30 g fat, 45 g protein, and 80 g carbohydrates. What is the total energy content?",
+      "correct": "3155 kJ",
+      "correctExplanation": "Fat: 30 × 37 = 1110. Protein: 45 × 17 = 765. Carbs: 80 × 16 = 1280. Total = 1110 + 765 + 1280 = 3155 kJ.",
+      "distractors": [
+        {"answer": "2485 kJ", "explanation": "This uses 16 kJ g⁻¹ for all groups (155 × 16 = 2480); each group has its own value."},
+        {"answer": "5735 kJ", "explanation": "This uses 37 kJ g⁻¹ for all groups (155 × 37 = 5735); different values apply."},
+        {"answer": "2390 kJ", "explanation": "This omits the fat contribution; all three must be included."}
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A food provides 2000 kJ total. It contains 25 g fat and 30 g protein. How many grams of carbohydrate does it contain?",
+      "correct": "35.3 g",
+      "correctExplanation": "Fat: 25 × 37 = 925 kJ. Protein: 30 × 17 = 510 kJ. Remaining for carbs = 2000 − 925 − 510 = 565 kJ. m = 565/16 = 35.3 g.",
+      "distractors": [
+        {"answer": "56.6 g", "explanation": "This divides the remaining energy by the wrong value; 565/16 = 35.3 g, not 56.6 g."},
+        {"answer": "125 g", "explanation": "This uses total energy (2000/16 = 125) without subtracting fat and protein contributions."},
+        {"answer": "28.3 g", "explanation": "This subtracts only fat energy (2000 − 925 = 1075, 1075/16 ≈ 67.2), then halves; the correct calculation gives 35.3 g."}
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Two snacks have the same mass (40 g). Snack A is 50% fat and 50% carbohydrate. Snack B is 50% protein and 50% carbohydrate. Which has more energy?",
+      "correct": "Snack A",
+      "correctExplanation": "A: 20g fat (740 kJ) + 20g carb (320 kJ) = 1060 kJ. B: 20g protein (340 kJ) + 20g carb (320 kJ) = 660 kJ. A has more.",
+      "distractors": [
+        {"answer": "Snack B", "explanation": "B provides 660 kJ while A provides 1060 kJ; fat's higher energy density makes A more energy-rich."},
+        {"answer": "Both have the same energy", "explanation": "They differ because fat (37 kJ g⁻¹) provides more than protein (17 kJ g⁻¹)."},
+        {"answer": "Cannot determine without more information", "explanation": "The compositions and reference values are sufficient to calculate the energy."}
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A sports bar provides 2260 kJ. The label shows 20 g fat and 60 g carbohydrate. What mass of protein does it contain?",
+      "correct": "32.9 g",
+      "correctExplanation": "Fat: 20 × 37 = 740 kJ. Carbs: 60 × 16 = 960 kJ. Protein energy = 2260 − 740 − 960 = 560 kJ. m = 560/17 = 32.9 g.",
+      "distractors": [
+        {"answer": "15.1 g", "explanation": "This divides by 37 (fat value) instead of 17; 560/17 = 32.9 g."},
+        {"answer": "132.9 g", "explanation": "This divides total energy by 17 (2260/17) without subtracting fat and carb contributions."},
+        {"answer": "35.0 g", "explanation": "This divides by 16 (carbohydrate value) instead of 17; 560/17 = 32.9 g."}
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An athlete needs 12 000 kJ per day. If 30% of energy comes from fat, what mass of fat does the athlete consume?",
+      "correct": "97.3 g",
+      "correctExplanation": "Energy from fat = 12 000 × 0.30 = 3600 kJ. m = 3600/37 = 97.3 g.",
+      "distractors": [
+        {"answer": "324 g", "explanation": "This divides by the wrong value; 3600/37 = 97.3 g, not 3600/something else."},
+        {"answer": "48.6 g", "explanation": "This halves the correct answer; 3600/37 = 97.3 g."},
+        {"answer": "225 g", "explanation": "This uses the carbohydrate value (3600/16 = 225); fat uses 37 kJ g⁻¹."}
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Food X contains 5 g fat, 15 g protein, and 25 g carbohydrate. What fraction of its total energy comes from protein?",
+      "correct": "30.4%",
+      "correctExplanation": "Fat: 5 × 37 = 185 kJ. Protein: 15 × 17 = 255 kJ. Carbs: 25 × 16 = 400 kJ. Total = 840 kJ. Protein % = 255/840 × 100 = 30.4%.",
+      "distractors": [
+        {"answer": "33.3%", "explanation": "This uses mass fraction (15/45 = 33.3%), not energy fraction; protein contributes 30.4% of energy."},
+        {"answer": "17.0%", "explanation": "17 is the kJ g⁻¹ value for protein, not the percentage contribution."},
+        {"answer": "22.0%", "explanation": "This is an incorrect calculation; 255/840 × 100 = 30.4%."}
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A food label states 'Energy: 1480 kJ per 100 g'. The food contains 12 g fat, 8 g protein, and 55 g carbohydrates per 100 g. Does the label match the calculated energy?",
+      "correct": "No, the calculated energy is 1460 kJ",
+      "correctExplanation": "Fat: 12 × 37 = 444. Protein: 8 × 17 = 136. Carbs: 55 × 16 = 880. Total = 444 + 136 + 880 = 1460 kJ, not 1480 kJ.",
+      "distractors": [
+        {"answer": "Yes, it matches exactly", "explanation": "The calculated value is 1460 kJ, not 1480 kJ; there is a 20 kJ discrepancy."},
+        {"answer": "No, the calculated energy is 1580 kJ", "explanation": "1460 kJ is the correct calculated total, not 1580 kJ."},
+        {"answer": "No, the calculated energy is 1200 kJ", "explanation": "The calculated total is 1460 kJ, not 1200 kJ."}
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the energy contribution calculation.",
+      "sentence": "A food with 15 g fat and 40 g carbohydrate provides {{blank:1}} kJ from fat and {{blank:2}} kJ from carbohydrate.",
+      "blanks": {
+        "1": {
+          "correct": "555",
+          "correctExplanation": "15 × 37 = 555 kJ from fat.",
+          "distractors": [
+            {"answer": "240", "explanation": "This uses the carbohydrate value (15 × 16 = 240); fat uses 37 kJ g⁻¹."},
+            {"answer": "255", "explanation": "This uses the protein value (15 × 17 = 255); fat uses 37 kJ g⁻¹."}
+          ]
+        },
+        "2": {
+          "correct": "640",
+          "correctExplanation": "40 × 16 = 640 kJ from carbohydrate.",
+          "distractors": [
+            {"answer": "680", "explanation": "This uses the protein value (40 × 17 = 680); carbohydrate uses 16 kJ g⁻¹."},
+            {"answer": "1480", "explanation": "This uses the fat value (40 × 37 = 1480); carbohydrate uses 16 kJ g⁻¹."}
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the reverse calculation from energy to mass.",
+      "sentence": "If protein contributes 340 kJ to a food, the mass of protein is {{blank:1}} g.",
+      "blanks": {
+        "1": {
+          "correct": "20.0",
+          "correctExplanation": "m = 340/17 = 20.0 g of protein.",
+          "distractors": [
+            {"answer": "21.3", "explanation": "This divides by 16 (carbohydrate value); protein uses 17 kJ g⁻¹."},
+            {"answer": "9.19", "explanation": "This divides by 37 (fat value); protein uses 17 kJ g⁻¹."}
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the percentage energy calculation.",
+      "sentence": "In a food with 10 g fat (370 kJ), 10 g protein (170 kJ), and 10 g carbs (160 kJ), total energy is {{blank:1}} kJ and fat contributes {{blank:2}}% of energy.",
+      "blanks": {
+        "1": {
+          "correct": "700",
+          "correctExplanation": "370 + 170 + 160 = 700 kJ total.",
+          "distractors": [
+            {"answer": "480", "explanation": "This uses 16 kJ g⁻¹ for all groups (30 × 16 = 480); each group has its own value."},
+            {"answer": "1110", "explanation": "This uses 37 kJ g⁻¹ for all groups (30 × 37 = 1110); different values apply."}
+          ]
+        },
+        "2": {
+          "correct": "52.9",
+          "correctExplanation": "370/700 × 100 = 52.9%.",
+          "distractors": [
+            {"answer": "33.3", "explanation": "33.3% is the mass fraction (10/30), not the energy fraction."},
+            {"answer": "37.0", "explanation": "37 is the kJ g⁻¹ value for fat, not its energy percentage."}
+          ]
+        }
+      }
+    }
+  ],
+
+  "toLevel5": [
+    {
+      "type": "mc",
+      "question": "A breakfast cereal is reformulated to reduce fat from 8 g to 3 g per serve and increase carbohydrate from 30 g to 38 g per serve. Protein stays at 10 g. How does the energy content change?",
+      "correct": "Decreases by 57 kJ per serve",
+      "correctExplanation": "Original: 8×37 + 10×17 + 30×16 = 296+170+480 = 946 kJ. New: 3×37 + 10×17 + 38×16 = 111+170+608 = 889 kJ. Change = 889 − 946 = −57 kJ.",
+      "distractors": [
+        {"answer": "Increases by 57 kJ per serve", "explanation": "The energy decreases because fat (37 kJ/g) lost is not fully compensated by carbohydrate (16 kJ/g) gained."},
+        {"answer": "Stays the same", "explanation": "Fat and carbohydrate have different energy densities, so swapping them changes total energy."},
+        {"answer": "Decreases by 185 kJ per serve", "explanation": "This only accounts for the fat reduction (5 × 37 = 185) without adding the carbohydrate increase (8 × 16 = 128); net change is −57 kJ."}
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Two foods have identical total energy of 1000 kJ. Food P gets 60% from fat. Food Q gets 60% from carbohydrate. Which food has less total mass of macronutrients?",
+      "correct": "Food P",
+      "correctExplanation": "P: 600 kJ fat = 16.2 g, 400 kJ from other (assume carb) = 25.0 g. Total ≈ 41.2 g. Q: 600 kJ carb = 37.5 g, 400 kJ from other (assume fat) = 10.8 g. Total ≈ 48.3 g. P has less mass because fat is more energy-dense.",
+      "distractors": [
+        {"answer": "Food Q", "explanation": "Q has more mass because carbohydrate provides less energy per gram, requiring more mass for the same energy."},
+        {"answer": "Both have the same mass", "explanation": "Different energy densities mean equal energy requires different masses of fat vs carbohydrate."},
+        {"answer": "Cannot be determined", "explanation": "With energy values and percentages known, the mass can be calculated from the reference values."}
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A diet requires exactly 8400 kJ per day with 25% from protein, 30% from fat, and 45% from carbohydrates. Calculate the daily mass of each macronutrient.",
+      "correct": "Protein: 123.5 g, Fat: 68.1 g, Carbs: 236.3 g",
+      "correctExplanation": "Protein: 8400 × 0.25 = 2100 kJ → 2100/17 = 123.5 g. Fat: 8400 × 0.30 = 2520 kJ → 2520/37 = 68.1 g. Carbs: 8400 × 0.45 = 3780 kJ → 3780/16 = 236.3 g.",
+      "distractors": [
+        {"answer": "Protein: 123.5 g, Fat: 148.2 g, Carbs: 236.3 g", "explanation": "Fat mass uses 37 kJ g⁻¹, giving 2520/37 = 68.1 g, not 148.2 g."},
+        {"answer": "Protein: 56.8 g, Fat: 68.1 g, Carbs: 236.3 g", "explanation": "Protein uses 17 kJ g⁻¹: 2100/17 = 123.5 g, not 56.8 g (which uses 37)."},
+        {"answer": "Protein: 123.5 g, Fat: 68.1 g, Carbs: 157.5 g", "explanation": "Carbs: 3780/16 = 236.3 g, not 157.5 g (which uses 24)."}
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student argues that replacing 10 g of carbohydrate with 10 g of protein in a meal does not significantly change the energy content. Evaluate this claim.",
+      "correct": "Correct; the energy changes by only 10 kJ (from 160 to 170 kJ)",
+      "correctExplanation": "10 g carb = 160 kJ. 10 g protein = 170 kJ. The difference is only 10 kJ, which is a small change (6.25% increase).",
+      "distractors": [
+        {"answer": "Incorrect; the energy doubles", "explanation": "170 kJ vs 160 kJ is a 6.25% increase, not a doubling."},
+        {"answer": "Incorrect; protein has no energy value", "explanation": "Protein provides 17 kJ g⁻¹; the claim is essentially correct as the difference is minimal."},
+        {"answer": "Correct; both have exactly the same energy", "explanation": "They are close but not identical: 17 vs 16 kJ g⁻¹, a 10 kJ difference for 10 g."}
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A food manufacturer wants to reduce the energy content of a 200 g product by 200 kJ without changing the total mass. They plan to replace fat with carbohydrate. How many grams of fat should be replaced?",
+      "correct": "9.52 g",
+      "correctExplanation": "Replacing x g of fat with x g of carbohydrate: energy change = x(16 − 37) = −21x kJ. Set −21x = −200: x = 200/21 = 9.52 g.",
+      "distractors": [
+        {"answer": "5.41 g", "explanation": "This uses 37 as the divisor (200/37 = 5.41); the correct divisor is 21 (37−16)."},
+        {"answer": "12.5 g", "explanation": "This uses 16 as the divisor (200/16 = 12.5); the net energy change per gram replaced is 21 kJ."},
+        {"answer": "200 g", "explanation": "This assumes 1 kJ per gram of replacement; the net change is 21 kJ per gram swapped."}
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Compare the energy density (kJ per gram of total food) of: Avocado (15 g fat, 2 g protein, 9 g carbs per 100 g) and Banana (0.3 g fat, 1 g protein, 23 g carbs per 100 g).",
+      "correct": "Avocado: 7.33 kJ g⁻¹; Banana: 3.96 kJ g⁻¹",
+      "correctExplanation": "Avocado: 15×37 + 2×17 + 9×16 = 555+34+144 = 733 kJ per 100g = 7.33 kJ g⁻¹. Banana: 0.3×37 + 1×17 + 23×16 = 11.1+17+368 = 396.1 kJ per 100g = 3.96 kJ g⁻¹.",
+      "distractors": [
+        {"answer": "Avocado: 3.96 kJ g⁻¹; Banana: 7.33 kJ g⁻¹", "explanation": "These are swapped; avocado has more fat and therefore higher energy density."},
+        {"answer": "Both: 5.00 kJ g⁻¹", "explanation": "They have different compositions; avocado (fat-rich) has nearly double the energy density of banana."},
+        {"answer": "Avocado: 15.0 kJ g⁻¹; Banana: 0.3 kJ g⁻¹", "explanation": "These use the fat mass as if it were the energy density; the actual calculation gives 7.33 and 3.96 kJ g⁻¹."}
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A nutritional label shows a food has 1200 kJ per 100 g, with 10 g fat and 20 g protein. Using the reference values, what mass of carbohydrate per 100 g best explains the total?",
+      "correct": "30.6 g",
+      "correctExplanation": "Fat: 370 kJ. Protein: 340 kJ. Carb energy = 1200 − 710 = 490 kJ. m = 490/16 = 30.6 g.",
+      "distractors": [
+        {"answer": "75.0 g", "explanation": "This divides total energy by 16 (1200/16 = 75) without subtracting fat and protein energy first."},
+        {"answer": "28.4 g", "explanation": "This may use an incorrect subtraction; 490/16 = 30.6 g."},
+        {"answer": "13.2 g", "explanation": "This uses 37 kJ g⁻¹ for carbohydrate (490/37 = 13.2); carbohydrate uses 16 kJ g⁻¹."}
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A food scientist argues that gram-for-gram, fats are the most efficient way to store energy in food. Using the reference values, by what factor does fat exceed carbohydrate in energy per gram?",
+      "correct": "2.31 times",
+      "correctExplanation": "37/16 = 2.3125 ≈ 2.31 times. Fat provides 2.31 times more energy per gram than carbohydrate.",
+      "distractors": [
+        {"answer": "2.18 times", "explanation": "37/17 = 2.18 compares fat to protein, not carbohydrate; 37/16 = 2.31."},
+        {"answer": "1.06 times", "explanation": "17/16 = 1.06 compares protein to carbohydrate; fat vs carbohydrate is 37/16 = 2.31."},
+        {"answer": "21 times", "explanation": "21 is the difference (37−16), not the ratio; the ratio is 37/16 = 2.31."}
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the dietary planning calculation.",
+      "sentence": "For a 10 000 kJ diet with 20% from fat: fat energy = {{blank:1}} kJ, requiring {{blank:2}} g of fat.",
+      "blanks": {
+        "1": {
+          "correct": "2000",
+          "correctExplanation": "10 000 × 0.20 = 2000 kJ from fat.",
+          "distractors": [
+            {"answer": "200", "explanation": "This is 2% of 10 000, not 20%; 10 000 × 0.20 = 2000 kJ."},
+            {"answer": "3700", "explanation": "This multiplies 100 × 37; the correct calculation is 10 000 × 0.20 = 2000 kJ."}
+          ]
+        },
+        "2": {
+          "correct": "54.1",
+          "correctExplanation": "m = 2000/37 = 54.1 g of fat.",
+          "distractors": [
+            {"answer": "117.6", "explanation": "This uses the protein value (2000/17 = 117.6); fat uses 37 kJ g⁻¹."},
+            {"answer": "125.0", "explanation": "This uses the carbohydrate value (2000/16 = 125.0); fat uses 37 kJ g⁻¹."}
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the food substitution energy analysis.",
+      "sentence": "Replacing 20 g of fat with 20 g of carbohydrate changes the energy by {{blank:1}} kJ, a {{blank:2}} in total energy.",
+      "blanks": {
+        "1": {
+          "correct": "−420",
+          "correctExplanation": "Energy change = 20 × 16 − 20 × 37 = 320 − 740 = −420 kJ.",
+          "distractors": [
+            {"answer": "+420", "explanation": "Fat has more energy, so replacing it with carbohydrate decreases energy; the change is −420 kJ."},
+            {"answer": "−210", "explanation": "This halves the difference; 20 × (16−37) = −420 kJ."}
+          ]
+        },
+        "2": {
+          "correct": "decrease",
+          "correctExplanation": "The negative value indicates a decrease in total energy because carbohydrate provides less energy per gram than fat.",
+          "distractors": [
+            {"answer": "increase", "explanation": "Replacing fat (37 kJ g⁻¹) with carbohydrate (16 kJ g⁻¹) decreases energy."},
+            {"answer": "no change", "explanation": "There is a 420 kJ decrease because fat and carbohydrate have different energy densities."}
+          ]
+        }
+      }
+    }
+  ]
+}

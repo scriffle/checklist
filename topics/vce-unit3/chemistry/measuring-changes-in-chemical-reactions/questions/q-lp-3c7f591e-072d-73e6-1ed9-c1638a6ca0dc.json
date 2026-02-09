@@ -1,0 +1,506 @@
+{
+  "_link": {
+    "uuid": "lp-3c7f591e-072d-73e6-1ed9-c1638a6ca0dc",
+    "version": 1,
+    "contentHash": "hash-0b1def61",
+    "title": "I can apply significant figures correctly in food energy calculations",
+    "generatedAt": "2026-02-08T00:00:00.000Z"
+  },
+  "toLevel2": [
+    {
+      "type": "mc",
+      "question": "In a multiplication or division calculation, the number of significant figures in the answer is determined by which value?",
+      "correct": "The value with the fewest significant figures",
+      "correctExplanation": "For multiplication and division, the answer must have the same number of significant figures as the measurement with the fewest significant figures.",
+      "distractors": [
+        { "answer": "The value with the most significant figures", "explanation": "Using the most significant figures would imply greater precision than the least precise measurement allows." },
+        { "answer": "The average number of significant figures", "explanation": "There is no averaging of significant figures. The answer is limited by the least precise value." },
+        { "answer": "The value with the most decimal places", "explanation": "Decimal places determine precision for addition and subtraction, not multiplication and division." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "How many significant figures are in the number 0.0250?",
+      "correct": "3",
+      "correctExplanation": "The leading zeros are not significant. The digits 2, 5, and the trailing 0 are significant, giving 3 significant figures.",
+      "distractors": [
+        { "answer": "4", "explanation": "Leading zeros are not significant. Only 2, 5, and the trailing 0 are significant (3 sig figs)." },
+        { "answer": "2", "explanation": "The trailing zero after 5 is significant because it follows a non-zero digit after the decimal point." },
+        { "answer": "1", "explanation": "There are three significant figures (2, 5, 0), not just one." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "How many significant figures are in the number 4500?",
+      "correct": "2",
+      "correctExplanation": "Without a decimal point, trailing zeros in 4500 are ambiguous but are typically considered not significant, giving 2 significant figures (4 and 5).",
+      "distractors": [
+        { "answer": "4", "explanation": "Without a decimal point, the trailing zeros are typically not considered significant. Only 4 and 5 are significant." },
+        { "answer": "3", "explanation": "Only the digits 4 and 5 are definitely significant. The trailing zeros are ambiguous without a decimal point." },
+        { "answer": "1", "explanation": "Both the 4 and 5 are significant digits, giving at least 2 significant figures." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "For addition and subtraction, the number of decimal places in the answer is determined by which value?",
+      "correct": "The value with the fewest decimal places",
+      "correctExplanation": "For addition and subtraction, the answer should have the same number of decimal places as the measurement with the fewest decimal places.",
+      "distractors": [
+        { "answer": "The value with the most decimal places", "explanation": "Using the most decimal places would imply greater precision than the least precise measurement." },
+        { "answer": "The value with the fewest significant figures", "explanation": "Significant figures determine precision for multiplication/division, not addition/subtraction." },
+        { "answer": "The total number of values being added", "explanation": "The number of values does not determine the decimal places. The least precise value sets the limit." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student calculates 54.7 × 0.02 = 1.094. How should this answer be reported?",
+      "correct": "1",
+      "correctExplanation": "0.02 has only 1 significant figure, which is the fewest. The answer must be rounded to 1 significant figure: 1.",
+      "distractors": [
+        { "answer": "1.094", "explanation": "This has 4 significant figures, but the least precise value (0.02) has only 1 significant figure." },
+        { "answer": "1.1", "explanation": "1.1 has 2 significant figures, but the answer should have 1 significant figure to match 0.02." },
+        { "answer": "1.09", "explanation": "1.09 has 3 significant figures, but the answer should have only 1 significant figure." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the statement about significant figures.",
+      "sentence": "For multiplication and division, the answer should have the same number of {{blank:1}} as the value with the fewest.",
+      "blanks": {
+        "1": {
+          "correct": "significant figures",
+          "correctExplanation": "In multiplication and division, the number of significant figures in the answer is limited by the measurement with the fewest significant figures.",
+          "distractors": [
+            { "answer": "decimal places", "explanation": "Decimal places determine precision for addition and subtraction, not multiplication and division." },
+            { "answer": "digits", "explanation": "Total digits is not the correct criterion. Significant figures specifically determine the precision of the answer." },
+            { "answer": "zeros", "explanation": "The number of zeros is not a criterion for determining precision. Significant figures is the correct concept." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the statement about precision.",
+      "sentence": "Reporting too many significant figures in a result implies a level of {{blank:1}} that the original measurements do not support.",
+      "blanks": {
+        "1": {
+          "correct": "precision",
+          "correctExplanation": "Significant figures reflect measurement precision. Extra figures suggest the measurement was more precise than it actually was.",
+          "distractors": [
+            { "answer": "accuracy", "explanation": "While related, significant figures specifically address precision (reproducibility) rather than accuracy (closeness to true value)." },
+            { "answer": "mass", "explanation": "Mass is a physical quantity, not related to how many figures should be reported." },
+            { "answer": "energy", "explanation": "Energy is the quantity being calculated, but significant figures relate to precision of the measurement." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the significant figure count.",
+      "sentence": "The number 0.00340 has {{blank:1}} significant figures.",
+      "blanks": {
+        "1": {
+          "correct": "3",
+          "correctExplanation": "Leading zeros are not significant. The significant digits are 3, 4, and the trailing 0, giving 3 significant figures.",
+          "distractors": [
+            { "answer": "5", "explanation": "Leading zeros (0.00) are not significant. Only 3, 4, and the trailing 0 count." },
+            { "answer": "2", "explanation": "The trailing 0 after 4 is significant because it follows the decimal point. There are 3 significant figures." },
+            { "answer": "6", "explanation": "This counts all digits including leading zeros. Leading zeros are never significant." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "tf",
+      "question": "Leading zeros (e.g. the zeros in 0.005) are considered significant figures.",
+      "correct": "False",
+      "correctExplanation": "Leading zeros serve only as placeholders to indicate the position of the decimal point. They are never counted as significant figures.",
+      "distractors": [
+        { "answer": "True", "explanation": "Leading zeros are not significant. In 0.005, only the 5 is significant (1 significant figure)." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "A trailing zero after the decimal point (e.g. the zero in 2.50) is significant.",
+      "correct": "True",
+      "correctExplanation": "Trailing zeros after the decimal point are significant because they indicate that the measurement was made to that level of precision. 2.50 has 3 significant figures.",
+      "distractors": [
+        { "answer": "False", "explanation": "Trailing zeros after the decimal point are significant. Writing 2.50 indicates the measurement is precise to the hundredths place." }
+      ]
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "mc",
+      "question": "A food mass is measured as 12.5 g and the reference energy value is 37 kJ g⁻¹. How many significant figures should the answer have?",
+      "correct": "2",
+      "correctExplanation": "12.5 has 3 significant figures and 37 has 2 significant figures. The answer is limited by the fewest: 2 significant figures.",
+      "distractors": [
+        { "answer": "3", "explanation": "The answer is limited by the value with the fewest significant figures. 37 has only 2, not 3." },
+        { "answer": "5", "explanation": "The total number of significant figures across both values is irrelevant. The answer uses the fewest: 2." },
+        { "answer": "1", "explanation": "Both values have at least 2 significant figures, so the answer should have 2." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student calculates 8.4 × 17 = 142.8 kJ. How should this be reported with correct significant figures?",
+      "correct": "140 kJ",
+      "correctExplanation": "8.4 has 2 significant figures and 17 has 2 significant figures. The answer should have 2 significant figures: 140 kJ.",
+      "distractors": [
+        { "answer": "142.8 kJ", "explanation": "142.8 has 4 significant figures, but the answer should only have 2 to match the least precise input." },
+        { "answer": "143 kJ", "explanation": "143 has 3 significant figures. The answer should have 2 significant figures: 140 kJ." },
+        { "answer": "100 kJ", "explanation": "100 has 1 significant figure, which is too few. Both input values have 2 significant figures." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Why is it important to apply significant figures correctly in food energy calculations?",
+      "correct": "To avoid implying greater precision than the measurements allow",
+      "correctExplanation": "Reporting too many significant figures suggests the result is more precise than the original measurements, which is misleading.",
+      "distractors": [
+        { "answer": "To make the numbers smaller", "explanation": "Significant figures do not necessarily make numbers smaller. They ensure the result reflects the precision of measurements." },
+        { "answer": "To always round up the answer", "explanation": "Significant figures involve rounding to the correct precision, which may round up or down." },
+        { "answer": "To match the textbook answer exactly", "explanation": "The purpose is to reflect measurement precision, not to match specific expected answers." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student adds two energy values: 153 kJ + 784 kJ = 937 kJ. How many decimal places should the answer have?",
+      "correct": "0",
+      "correctExplanation": "Both values have 0 decimal places (they are whole numbers), so the answer should also have 0 decimal places: 937 kJ.",
+      "distractors": [
+        { "answer": "1", "explanation": "Neither input value has a decimal place, so the answer should not have one either." },
+        { "answer": "3", "explanation": "The answer should have the same number of decimal places as the least precise value, which is 0." },
+        { "answer": "2", "explanation": "Neither value has decimal places, so the answer should have 0 decimal places." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A calculation gives 12.345 g × 16 kJ g⁻¹ = 197.52 kJ. How should the answer be reported?",
+      "correct": "200 kJ",
+      "correctExplanation": "12.345 has 5 significant figures, but 16 has only 2 significant figures. The answer must be rounded to 2 significant figures: 200 kJ (2.0 × 10² kJ).",
+      "distractors": [
+        { "answer": "197.52 kJ", "explanation": "This has 5 significant figures, but the answer should have only 2 to match the least precise value (16)." },
+        { "answer": "197.5 kJ", "explanation": "197.5 has 4 significant figures. The answer should have 2 significant figures: 200 kJ." },
+        { "answer": "198 kJ", "explanation": "198 has 3 significant figures. The answer should have 2 significant figures: 200 kJ." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "How many significant figures does the number 1.00 have?",
+      "correct": "3",
+      "correctExplanation": "The trailing zeros after the decimal point are significant. 1.00 has three significant figures: 1, 0, and 0.",
+      "distractors": [
+        { "answer": "1", "explanation": "The trailing zeros after the decimal are significant in 1.00, giving 3 significant figures, not 1." },
+        { "answer": "2", "explanation": "Both trailing zeros after the decimal are significant: 1.00 has 3 significant figures." },
+        { "answer": "4", "explanation": "1.00 has exactly 3 digits, all significant. There are not 4 significant figures." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the rounding instruction.",
+      "sentence": "When multiplying 3.5 g × 37 kJ g⁻¹ = 129.5, the answer should be rounded to {{blank:1}} significant figures because both values have 2 significant figures.",
+      "blanks": {
+        "1": {
+          "correct": "2",
+          "correctExplanation": "3.5 has 2 significant figures and 37 has 2 significant figures. The answer should have 2 significant figures: 130 kJ.",
+          "distractors": [
+            { "answer": "4", "explanation": "129.5 has 4 digits, but the answer should match the fewest significant figures in the inputs (2)." },
+            { "answer": "3", "explanation": "Neither input has 3 significant figures. Both have 2, so the answer should have 2." },
+            { "answer": "1", "explanation": "Both inputs have 2 significant figures, so the answer should have 2, not 1." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Apply the rule for addition.",
+      "sentence": "When adding 12.5 kJ + 340 kJ, the answer 352.5 should be rounded to have {{blank:1}} decimal place(s), giving 353 kJ.",
+      "blanks": {
+        "1": {
+          "correct": "0",
+          "correctExplanation": "12.5 has 1 decimal place and 340 has 0 decimal places. The answer uses the fewest decimal places: 0. So 352.5 rounds to 353 kJ.",
+          "distractors": [
+            { "answer": "1", "explanation": "While 12.5 has 1 decimal place, 340 has 0. The answer must use the fewest: 0 decimal places." },
+            { "answer": "2", "explanation": "Neither value has 2 decimal places. The answer uses the fewest decimal places: 0." },
+            { "answer": "3", "explanation": "Neither value has 3 decimal places. The fewest is 0, from 340." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the significant figure identification.",
+      "sentence": "In the number 0.070, the leading zeros are not significant, so the number has {{blank:1}} significant figure(s).",
+      "blanks": {
+        "1": {
+          "correct": "2",
+          "correctExplanation": "The leading zeros (0.0) are not significant. The 7 and the trailing 0 are significant, giving 2 significant figures.",
+          "distractors": [
+            { "answer": "1", "explanation": "The trailing 0 after 7 is significant because it appears after the decimal point, so there are 2 significant figures." },
+            { "answer": "3", "explanation": "The leading zeros are not significant. Only the 7 and the trailing 0 count, giving 2." },
+            { "answer": "4", "explanation": "This counts all zeros, but leading zeros are never significant." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "tf",
+      "question": "When adding energy values, the number of significant figures in the answer is determined by the value with the fewest significant figures.",
+      "correct": "False",
+      "correctExplanation": "For addition and subtraction, the answer is limited by the value with the fewest decimal places, not significant figures. Significant figures apply to multiplication and division.",
+      "distractors": [
+        { "answer": "True", "explanation": "This is false. Addition and subtraction use decimal places, not significant figures, to determine the precision of the answer." }
+      ]
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "mc",
+      "question": "A student calculates the energy from 12.5 g of fat: 12.5 × 37 = 462.5 kJ. How should this be expressed with correct significant figures?",
+      "correct": "460 kJ",
+      "correctExplanation": "12.5 has 3 significant figures and 37 has 2 significant figures. The answer must have 2 significant figures: 460 kJ.",
+      "distractors": [
+        { "answer": "462.5 kJ", "explanation": "462.5 has 4 significant figures, but the answer should have only 2 (limited by 37)." },
+        { "answer": "463 kJ", "explanation": "463 has 3 significant figures. The answer should have 2 significant figures: 460 kJ." },
+        { "answer": "462 kJ", "explanation": "462 has 3 significant figures. The answer should have 2 significant figures: 460 kJ." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A food contains 4.2 g fat, 8.0 g protein, and 22.5 g carbohydrate. A student calculates: fat = 155.4 kJ, protein = 136.0 kJ, carbohydrate = 360.0 kJ, total = 651.4 kJ. What should the final answer be?",
+      "correct": "660 kJ",
+      "correctExplanation": "Each multiplication is limited to 2 sig figs (by 37, 17, and 16). Fat: 4.2 × 37 ≈ 160 kJ, protein: 8.0 × 17 ≈ 140 kJ, carbohydrate: 22.5 × 16 ≈ 360 kJ. Sum = 160 + 140 + 360 = 660 kJ.",
+      "distractors": [
+        { "answer": "651.4 kJ", "explanation": "This retains too many significant figures. The reference values have only 2 significant figures, limiting the precision." },
+        { "answer": "651 kJ", "explanation": "651 has 3 significant figures, but the individual products should be limited to 2 sig figs." },
+        { "answer": "6.5 × 10² kJ", "explanation": "While correct in magnitude, this notation implies exactly 2 significant figures. The preferred form is 650 kJ." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student measures 0.15 g of food burned, heating 100.0 g of water by 5.2°C. They calculate q = 100.0 × 4.18 × 5.2 = 2173.6 J. What should q be reported as?",
+      "correct": "2200 J",
+      "correctExplanation": "100.0 has 4 sig figs, 4.18 has 3 sig figs, and 5.2 has 2 sig figs. The answer is limited to 2 significant figures: 2200 J.",
+      "distractors": [
+        { "answer": "2173.6 J", "explanation": "This has 5 significant figures. The answer should have only 2, limited by 5.2." },
+        { "answer": "2174 J", "explanation": "This has 4 significant figures. The answer should have 2 significant figures: 2200 J." },
+        { "answer": "2170 J", "explanation": "2170 has 3 significant figures. The answer should have 2 significant figures: 2200 J." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "After finding q = 2200 J from 0.15 g of food, the energy content per gram is 2200 ÷ 0.15 = 14 666.7 J g⁻¹. How should this be reported?",
+      "correct": "15 000 J g⁻¹",
+      "correctExplanation": "2200 has 2 significant figures and 0.15 has 2 significant figures. The answer should have 2 significant figures: 15 000 J g⁻¹ (or 15 kJ g⁻¹).",
+      "distractors": [
+        { "answer": "14 666.7 J g⁻¹", "explanation": "This has 6 significant figures, far more than the 2 allowed by the input values." },
+        { "answer": "14 700 J g⁻¹", "explanation": "14 700 has 3 significant figures. The answer should have 2: 15 000 J g⁻¹." },
+        { "answer": "14 667 J g⁻¹", "explanation": "14 667 has 5 significant figures. The answer should have 2 significant figures." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A food energy calculation gives 1234 kJ. The measurements used were 33.3 g (3 sig figs) and 37 kJ g⁻¹ (2 sig figs). Which is the correctly rounded answer?",
+      "correct": "1200 kJ",
+      "correctExplanation": "The answer is limited to 2 significant figures (by 37): 33.3 × 37 = 1232.1, rounded to 1200 kJ.",
+      "distractors": [
+        { "answer": "1234 kJ", "explanation": "1234 has 4 significant figures. The answer should have 2 significant figures: 1200 kJ." },
+        { "answer": "1230 kJ", "explanation": "1230 has 3 significant figures. The answer should have 2 significant figures: 1200 kJ." },
+        { "answer": "1232 kJ", "explanation": "1232 has 4 significant figures. The answer should have 2 significant figures: 1200 kJ." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student adds three energy contributions: 555 kJ + 340 kJ + 1280 kJ = 2175 kJ. All values have 0 decimal places. How should the answer be reported?",
+      "correct": "2175 kJ",
+      "correctExplanation": "For addition, the answer uses the fewest decimal places. All values have 0 decimal places, so the answer is 2175 kJ (0 decimal places). No rounding is needed.",
+      "distractors": [
+        { "answer": "2180 kJ", "explanation": "Rounding to 3 significant figures is not required for addition. The decimal place rule gives 2175 kJ." },
+        { "answer": "2200 kJ", "explanation": "Rounding to 2 significant figures applies to multiplication, not addition. The answer is 2175 kJ." },
+        { "answer": "2175.0 kJ", "explanation": "Adding a decimal place implies greater precision than the input values have. The answer should have 0 decimal places." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student records a food mass as 0.120 g and calculates energy using 16 kJ g⁻¹. How many significant figures should the product have?",
+      "correct": "2",
+      "correctExplanation": "0.120 has 3 significant figures and 16 has 2 significant figures. The product is limited to the fewest: 2 significant figures.",
+      "distractors": [
+        { "answer": "3", "explanation": "The answer is limited by the value with fewer significant figures. 16 has only 2, so the answer has 2." },
+        { "answer": "4", "explanation": "Neither value has 4 significant figures. The answer uses the fewest: 2 (from 16)." },
+        { "answer": "1", "explanation": "Both values have at least 2 significant figures, so the answer should have 2." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Apply significant figures to a food energy calculation.",
+      "sentence": "Calculating 7.50 g × 37 kJ g⁻¹ = 277.5, the answer should be rounded to {{blank:1}} significant figures, giving 280 kJ.",
+      "blanks": {
+        "1": {
+          "correct": "2",
+          "correctExplanation": "7.50 has 3 significant figures and 37 has 2 significant figures. The answer is limited to 2: 280 kJ.",
+          "distractors": [
+            { "answer": "3", "explanation": "The answer is limited by the value with fewer significant figures. 37 has 2, so the answer has 2." },
+            { "answer": "4", "explanation": "277.5 has 4 digits, but the answer must match the input with fewest significant figures: 2." },
+            { "answer": "1", "explanation": "Both values have at least 2 significant figures, so the answer should have 2, not 1." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Apply the rule for addition to energy values.",
+      "sentence": "Adding 12.5 kJ and 340.0 kJ gives 352.5 kJ. The answer should have {{blank:1}} decimal place(s), giving 352.5 kJ.",
+      "blanks": {
+        "1": {
+          "correct": "1",
+          "correctExplanation": "12.5 has 1 decimal place and 340.0 has 1 decimal place. The answer has the fewest decimal places: 1. So 352.5 kJ is correct.",
+          "distractors": [
+            { "answer": "0", "explanation": "Both values have 1 decimal place (12.5 and 340.0), so the answer should also have 1 decimal place." },
+            { "answer": "2", "explanation": "Neither value has 2 decimal places. The fewest is 1 decimal place." },
+            { "answer": "3", "explanation": "Neither value has 3 decimal places. The answer should have 1 decimal place." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Round a calculated energy value correctly.",
+      "sentence": "A calculation gives 456.78 kJ, but the least precise measurement has 3 significant figures. The correctly rounded answer is {{blank:1}} kJ.",
+      "blanks": {
+        "1": {
+          "correct": "457",
+          "correctExplanation": "Rounding 456.78 to 3 significant figures gives 457 kJ.",
+          "distractors": [
+            { "answer": "456.78", "explanation": "This has 5 significant figures. The answer should be rounded to 3: 457 kJ." },
+            { "answer": "460", "explanation": "460 has 2 significant figures (if no decimal point). The answer should have 3: 457 kJ." },
+            { "answer": "456.8", "explanation": "456.8 has 4 significant figures. The answer should have 3: 457 kJ." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "mc",
+      "question": "A student measures 0.50 g of food, 200.0 g of water, and a temperature change of 8.5°C. They calculate q = 200.0 × 4.18 × 8.5 = 7106 J and energy content = 7106 ÷ 0.50 = 14 212 J g⁻¹ = 14.212 kJ g⁻¹. What is the correctly reported answer?",
+      "correct": "14 kJ g⁻¹",
+      "correctExplanation": "The least precise values are 0.50 and 8.5, both with 2 significant figures. q should be 7100 J (2 sig figs). Energy = 7100 ÷ 0.50 = 14 000 J g⁻¹ = 14 kJ g⁻¹ (2 sig figs).",
+      "distractors": [
+        { "answer": "14.212 kJ g⁻¹", "explanation": "This has 5 significant figures, far more than the 2 allowed by the least precise measurements." },
+        { "answer": "14.2 kJ g⁻¹", "explanation": "14.2 has 3 significant figures. The answer should have 2: 14 kJ g⁻¹." },
+        { "answer": "14.21 kJ g⁻¹", "explanation": "14.21 has 4 significant figures. The answer should have 2: 14 kJ g⁻¹." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A food analysis reports: 4.25 g fat, 12.0 g protein, 35.8 g carbohydrate. Using reference values (37, 17, 16 kJ g⁻¹), which step introduces the most significant rounding limitation?",
+      "correct": "Multiplying by the 2-significant-figure reference values",
+      "correctExplanation": "The reference values (37, 17, 16) have only 2 significant figures, while the measured masses have 3. The reference values limit each product to 2 significant figures.",
+      "distractors": [
+        { "answer": "Measuring the food mass", "explanation": "The mass measurements (3 sig figs) are more precise than the reference values (2 sig figs), so mass is not the limiting factor." },
+        { "answer": "Adding the energy contributions", "explanation": "Addition uses the decimal place rule and does not further reduce significant figures in the same way as multiplication." },
+        { "answer": "Converting units from J to kJ", "explanation": "Unit conversion (÷ 1000) does not change the number of significant figures." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Two students calculate the energy from 25.0 g of protein. Student A reports 425 kJ. Student B reports 430 kJ. Which student applied significant figures correctly?",
+      "correct": "Student B",
+      "correctExplanation": "25.0 × 17 = 425. The value 25.0 has 3 sig figs and 17 has 2 sig figs. The answer should have 2 sig figs: 430 kJ. Student B is correct.",
+      "distractors": [
+        { "answer": "Student A", "explanation": "Student A's answer of 425 kJ has 3 significant figures, but the answer should have 2 (limited by 17)." },
+        { "answer": "Both are correct", "explanation": "Only Student B's answer of 430 kJ correctly applies the 2 significant figure limit from the reference value 17." },
+        { "answer": "Neither is correct", "explanation": "Student B's answer of 430 kJ correctly rounds to 2 significant figures." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A calorimetry experiment measures ΔT = 15.0°C with 150.0 g water. Calculate q and report to the correct number of significant figures.",
+      "correct": "9410 J",
+      "correctExplanation": "q = 150.0 × 4.18 × 15.0 = 9405 J. The values have 4, 3, and 3 sig figs respectively. The answer should have 3 sig figs: 9405 rounds to 9410 J (or 9.41 × 10³ J).",
+      "distractors": [
+        { "answer": "9405 J", "explanation": "9405 has 4 significant figures. The answer should have 3 significant figures." },
+        { "answer": "9400 J", "explanation": "9400 has 2 significant figures. The answer should have 3 significant figures." },
+        { "answer": "9000 J", "explanation": "9000 has 1 significant figure. The answer should have 3 significant figures." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student argues that since reference values for food groups (37, 17, 16 kJ g⁻¹) have only 2 significant figures, all food energy calculations can have at most 2 significant figures. Evaluate this claim.",
+      "correct": "The claim is correct for individual products but the sum may retain more digits via the addition rule",
+      "correctExplanation": "Each mass × reference value product is limited to 2 significant figures. However, when adding these products, the addition rule (fewest decimal places) applies, which may allow the sum to have more digits than 2 significant figures.",
+      "distractors": [
+        { "answer": "The claim is entirely correct", "explanation": "While individual products have 2 sig figs, the addition rule for the sum uses decimal places, potentially allowing more significant figures in the total." },
+        { "answer": "The claim is entirely incorrect", "explanation": "The claim is partially correct — individual products are limited to 2 sig figs. Only the addition step may allow more." },
+        { "answer": "Reference values have unlimited significant figures", "explanation": "37, 17, and 16 are given without a decimal point, so they have 2 significant figures and do limit precision." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student rounds 0.0456 g to 1 significant figure, getting 0.05 g. They then calculate energy = 0.05 × 37 = 1.85 kJ and report 2 kJ. What error in reasoning did they make?",
+      "correct": "They should have rounded only the final answer, not intermediate values",
+      "correctExplanation": "Rounding intermediate values introduces rounding errors that propagate through calculations. The correct approach is to keep extra figures during calculation and round only the final answer.",
+      "distractors": [
+        { "answer": "They should have rounded to 2 significant figures", "explanation": "While 0.0456 has 3 sig figs, the main error is rounding before the final step, not the number of sig figs chosen." },
+        { "answer": "The final answer of 2 kJ is correct", "explanation": "The final answer would be correct if the intermediate rounding hadn't occurred. Using 0.0456 × 37 = 1.6872, rounded to 1 sig fig = 2 kJ. However, 0.0456 has 3 sig figs, so the answer should have 2: 1.7 kJ." },
+        { "answer": "They should not use significant figures at all", "explanation": "Significant figures are essential for expressing the precision of measurements. The error is in when rounding occurs, not whether to use sig figs." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A food energy calculation involves: 8.50 g fat × 37 kJ g⁻¹ = 314.5 kJ and 45.2 g carbohydrate × 16 kJ g⁻¹ = 723.2 kJ. The sum is 1037.7 kJ. What is the correctly reported total?",
+      "correct": "1040 kJ",
+      "correctExplanation": "Each product has 2 sig figs: fat = 310 kJ, carbohydrate = 720 kJ. Sum = 1030 kJ. Using the addition rule on rounded products, the total is 1040 kJ when the intermediate values are carried with extra precision before final rounding.",
+      "distractors": [
+        { "answer": "1037.7 kJ", "explanation": "This retains too many significant figures. The reference values limit the precision of each product to 2 significant figures." },
+        { "answer": "1038 kJ", "explanation": "1038 has 4 significant figures, more than the 2 sig fig reference values allow." },
+        { "answer": "1000 kJ", "explanation": "1000 has 1 significant figure. The precision of the calculation supports at least 2-3 significant figures in the sum." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A food scientist measures 0.250 g of food (3 sig figs) burned in a calorimeter with 100.0 g water (4 sig figs) and ΔT = 12.5°C (3 sig figs). What is the energy content per gram, reported correctly?",
+      "correct": "20.9 kJ g⁻¹",
+      "correctExplanation": "q = 100.0 × 4.18 × 12.5 = 5225 J. Limiting sig figs: 3 (from 4.18 and 12.5). q = 5230 J = 5.23 kJ. Energy = 5.23 ÷ 0.250 = 20.9 kJ g⁻¹ (3 sig figs).",
+      "distractors": [
+        { "answer": "20.900 kJ g⁻¹", "explanation": "This has 5 significant figures, far more than the 3 supported by the measurements." },
+        { "answer": "21 kJ g⁻¹", "explanation": "21 has only 2 significant figures. The measurements support 3 significant figures: 20.9 kJ g⁻¹." },
+        { "answer": "20.90 kJ g⁻¹", "explanation": "20.90 has 4 significant figures. The answer should have 3: 20.9 kJ g⁻¹." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Apply significant figures to a division calculation.",
+      "sentence": "Dividing 6270 J (3 sig figs) by 0.15 g (2 sig figs), the answer 41 800 J g⁻¹ should be rounded to {{blank:1}} significant figures, giving 42 000 J g⁻¹ or 42 kJ g⁻¹.",
+      "blanks": {
+        "1": {
+          "correct": "2",
+          "correctExplanation": "The value with the fewest significant figures is 0.15 (2 sig figs). The answer must also have 2 significant figures: 42 000 J g⁻¹ = 42 kJ g⁻¹.",
+          "distractors": [
+            { "answer": "3", "explanation": "6270 has 3 sig figs, but 0.15 has only 2. The answer is limited by the fewest: 2." },
+            { "answer": "5", "explanation": "41 800 has 3-5 digits, but the answer should have only 2 significant figures." },
+            { "answer": "4", "explanation": "Neither value has 4 significant figures. The answer is limited to 2." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Evaluate precision in a food energy result.",
+      "sentence": "If a student reports food energy as 23.456 kJ g⁻¹ from measurements with 2 significant figures, this answer implies {{blank:1}} precision than the measurements support.",
+      "blanks": {
+        "1": {
+          "correct": "greater",
+          "correctExplanation": "23.456 has 5 significant figures, but the measurements only support 2. This implies false precision that the measurements cannot justify.",
+          "distractors": [
+            { "answer": "less", "explanation": "The answer has more significant figures than the measurements, implying greater (not less) precision." },
+            { "answer": "equal", "explanation": "5 significant figures is greater than 2, so the answer implies more precision than the measurements support." },
+            { "answer": "no", "explanation": "Significant figures do communicate precision. Having too many implies unwarranted precision." }
+          ]
+        }
+      }
+    }
+  ]
+}

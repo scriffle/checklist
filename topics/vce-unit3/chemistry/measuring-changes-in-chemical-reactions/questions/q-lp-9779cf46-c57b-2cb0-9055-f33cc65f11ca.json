@@ -1,0 +1,567 @@
+{
+  "_link": {
+    "uuid": "lp-9779cf46-c57b-2cb0-9055-f33cc65f11ca",
+    "version": 1,
+    "contentHash": "hash-6323e511",
+    "title": "I can analyze temperature-time graphs to determine calibration factors",
+    "generatedAt": "2026-02-08T12:00:00Z"
+  },
+  "toLevel2": [
+    {
+      "type": "mc",
+      "question": "What are the two axes on a temperature-time graph used in calorimetry?",
+      "correct": "Temperature on the y-axis and time on the x-axis",
+      "correctExplanation": "Temperature-time graphs plot temperature (°C) on the vertical y-axis against time (s) on the horizontal x-axis to show how temperature changes during calibration or a reaction.",
+      "distractors": [
+        { "answer": "Energy on the y-axis and temperature on the x-axis", "explanation": "Energy is calculated from the graph data, not plotted directly; the y-axis shows temperature." },
+        { "answer": "Time on the y-axis and temperature on the x-axis", "explanation": "By convention, time is plotted on the x-axis and temperature on the y-axis, not the reverse." },
+        { "answer": "Volume on the y-axis and time on the x-axis", "explanation": "Volume is not measured in temperature-time graphs; the y-axis shows temperature readings." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What quantity is determined from a temperature-time graph to calculate the calibration factor?",
+      "correct": "The temperature change (ΔT)",
+      "correctExplanation": "The temperature change (ΔT) is read from the graph and then used in the formula CF = E/ΔT to calculate the calibration factor.",
+      "distractors": [
+        { "answer": "The total energy released by the reaction", "explanation": "Energy is calculated using the calibration factor and ΔT; it is not read directly from the graph." },
+        { "answer": "The mass of water in the calorimeter system", "explanation": "Mass is measured on a balance, not determined from a temperature-time graph." },
+        { "answer": "The specific heat capacity of the solution", "explanation": "Specific heat capacity is a known constant; the graph provides the temperature change." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Why might a temperature-time graph show a decrease in temperature after the heating element is turned off?",
+      "correct": "Heat is being lost from the calorimeter to the surroundings",
+      "correctExplanation": "After heating stops, the calorimeter gradually loses heat to the cooler surroundings, causing the temperature to decrease over time.",
+      "distractors": [
+        { "answer": "The reaction has become endothermic after the heater is switched off", "explanation": "The reaction or calibration process itself does not change type; the decrease is due to heat loss to the environment." },
+        { "answer": "The thermometer is malfunctioning and giving incorrect lower readings", "explanation": "A gradual decline is expected from heat loss; it is not a thermometer malfunction." },
+        { "answer": "The water in the calorimeter is evaporating and cooling the system", "explanation": "While some evaporation may occur, the primary cause of the temperature drop is heat loss to the surroundings." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "On a temperature-time graph for electrical calibration, what happens to the temperature while the current is flowing?",
+      "correct": "The temperature increases",
+      "correctExplanation": "While the current flows through the heating element, electrical energy is converted to heat energy, causing the temperature of the water to rise.",
+      "distractors": [
+        { "answer": "The temperature decreases steadily", "explanation": "The heating element adds energy to the system, so the temperature rises rather than falls while current flows." },
+        { "answer": "The temperature stays constant throughout the experiment", "explanation": "The temperature increases while the heater is on because energy is being added to the system." },
+        { "answer": "The temperature fluctuates randomly while the current is flowing", "explanation": "The temperature rises in a generally steady manner while the current flows, not randomly." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What does the term 'extrapolation' mean in the context of temperature-time graphs?",
+      "correct": "Extending a line of best fit beyond the measured data points",
+      "correctExplanation": "Extrapolation involves extending the line of best fit beyond the recorded data to estimate a value, such as the corrected maximum temperature at the time the heater was turned off.",
+      "distractors": [
+        { "answer": "Averaging all the temperature readings on the graph", "explanation": "Averaging is a different statistical technique; extrapolation extends a trend line beyond the data." },
+        { "answer": "Drawing a straight line between the first and last data points", "explanation": "A line of best fit follows the trend of the data, not just connecting two endpoints; extrapolation extends this trend." },
+        { "answer": "Removing outlier data points from the temperature readings", "explanation": "Removing outliers is a data-cleaning step; extrapolation extends a trend line to estimate values." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the statement about reading temperature-time graphs.",
+      "sentence": "The temperature change (ΔT) on a temperature-time graph is calculated as {{blank:1}} minus {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "T_final",
+          "correctExplanation": "ΔT = T_final − T_initial, so the final temperature is the first term in the subtraction.",
+          "distractors": [
+            { "answer": "T_initial", "explanation": "T_initial is the starting temperature and is subtracted from T_final, not used as the first term." },
+            { "answer": "ΔH", "explanation": "ΔH is the enthalpy change of a reaction, not a temperature reading from the graph." }
+          ]
+        },
+        "2": {
+          "correct": "T_initial",
+          "correctExplanation": "The initial temperature is subtracted from the final temperature to give the temperature change ΔT.",
+          "distractors": [
+            { "answer": "T_final", "explanation": "T_final is the larger value and is the term from which T_initial is subtracted." },
+            { "answer": "ΔT", "explanation": "ΔT is the result of the subtraction, not a term within it." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the statement about why extrapolation is used.",
+      "sentence": "Extrapolation on a temperature-time graph is used to account for {{blank:1}} that occurs during the experiment.",
+      "blanks": {
+        "1": {
+          "correct": "heat loss",
+          "correctExplanation": "Extrapolation corrects for heat lost to the surroundings, giving a more accurate ΔT than the directly observed maximum temperature.",
+          "distractors": [
+            { "answer": "mass loss", "explanation": "Mass loss is not corrected by extrapolation on a temperature-time graph; it corrects for heat loss." },
+            { "answer": "voltage drop", "explanation": "Voltage drop is an electrical issue; extrapolation on a temperature-time graph corrects for heat loss." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the statement about the calibration factor formula.",
+      "sentence": "The calibration factor is calculated using the formula CF = {{blank:1}} / {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "E",
+          "correctExplanation": "E represents the energy input (either electrical VIt or chemical nΔH), which is divided by the temperature change.",
+          "distractors": [
+            { "answer": "ΔT", "explanation": "ΔT is the temperature change and appears in the denominator, not the numerator." },
+            { "answer": "m", "explanation": "Mass (m) is used in q = mcΔT, not in the calibration factor formula." }
+          ]
+        },
+        "2": {
+          "correct": "ΔT",
+          "correctExplanation": "The energy input is divided by the temperature change (ΔT) to give the calibration factor in J °C⁻¹.",
+          "distractors": [
+            { "answer": "E", "explanation": "E is the energy input and appears in the numerator, not the denominator." },
+            { "answer": "CF", "explanation": "CF is the result of the calculation, not a term within the formula." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "tf",
+      "question": "A temperature-time graph can be used to determine the temperature change (ΔT) needed to calculate the calibration factor.",
+      "correct": "True",
+      "correctExplanation": "Temperature-time graphs display the temperature at each point during the experiment, allowing ΔT to be determined either by direct reading or by extrapolation.",
+      "distractors": [
+        { "answer": "False", "explanation": "Students may think ΔT is only measured with a thermometer reading, but the graph is specifically designed to provide ΔT values." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "Extrapolation is only needed when the temperature-time graph shows a perfectly steady rise followed by a constant maximum temperature.",
+      "correct": "False",
+      "correctExplanation": "When the graph shows a steady rise and a clear constant maximum, ΔT can be read directly. Extrapolation is needed when heat loss causes the temperature to decline after the maximum, making the true ΔT unclear from direct reading.",
+      "distractors": [
+        { "answer": "True", "explanation": "Extrapolation is needed precisely when the graph does NOT show a clear constant maximum, because heat loss causes the temperature to drop." }
+      ]
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "mc",
+      "question": "A temperature-time graph shows the water temperature rising from 18.0°C to 22.0°C while the current was on. What is the ΔT for this experiment?",
+      "correct": "4.0°C",
+      "correctExplanation": "ΔT = T_final − T_initial = 22.0°C − 18.0°C = 4.0°C.",
+      "distractors": [
+        { "answer": "22.0°C", "explanation": "22.0°C is the final temperature, not the temperature change; ΔT is the difference between final and initial." },
+        { "answer": "18.0°C", "explanation": "18.0°C is the initial temperature, not the temperature change." },
+        { "answer": "40.0°C", "explanation": "This is the sum of the two temperatures; ΔT is the difference, not the sum." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Why does extrapolation of a line of best fit give a more accurate ΔT than simply reading the maximum temperature from the graph?",
+      "correct": "Because extrapolation corrects for heat lost to the surroundings during heating",
+      "correctExplanation": "Heat loss causes the observed maximum temperature to be lower than the true value. Extrapolating the post-heating line of best fit back to the time the heater was turned off gives a corrected, higher temperature.",
+      "distractors": [
+        { "answer": "Because extrapolation accounts for the mass of water that evaporated during the experiment", "explanation": "Extrapolation corrects for heat loss to the surroundings, not water evaporation." },
+        { "answer": "Because reading the maximum temperature requires a more expensive and precise thermometer", "explanation": "Extrapolation is a mathematical technique to correct for heat loss, not a matter of thermometer precision." },
+        { "answer": "Because the thermometer readings have a systematic delay in responding to the actual temperature", "explanation": "While thermometer lag can exist, extrapolation on temperature-time graphs primarily corrects for heat loss." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "On a temperature-time graph for electrical calibration, the current is turned on at 60 s and turned off at 360 s. The initial temperature was 18.0°C and the extrapolated final temperature is 23.0°C. What is the ΔT?",
+      "correct": "5.0°C",
+      "correctExplanation": "ΔT = extrapolated T_final − T_initial = 23.0°C − 18.0°C = 5.0°C.",
+      "distractors": [
+        { "answer": "4.0°C", "explanation": "4.0°C would be the result without extrapolation if the directly read maximum was 22.0°C; the extrapolated value gives 5.0°C." },
+        { "answer": "23.0°C", "explanation": "23.0°C is the extrapolated final temperature, not the temperature change." },
+        { "answer": "300°C", "explanation": "300 is the time interval in seconds (360 − 60), not a temperature change." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which section of a temperature-time graph represents the period when the heating element is supplying energy to the calorimeter?",
+      "correct": "The section where the temperature is rising steadily",
+      "correctExplanation": "While the heater is on, electrical energy is continuously converted to heat, causing a steady temperature increase in the calorimeter.",
+      "distractors": [
+        { "answer": "The section where the temperature remains constant before heating", "explanation": "A constant temperature before heating indicates the system has not yet received energy; the heater has not been turned on." },
+        { "answer": "The section where the temperature is decreasing after the maximum", "explanation": "A decreasing temperature occurs after the heater is turned off and heat is being lost to the surroundings." },
+        { "answer": "The entire length of the graph from start to finish", "explanation": "The heater is only on for a specific portion of the experiment, not the entire duration." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "In a temperature-time graph, why is the temperature recorded for some time before the current is switched on?",
+      "correct": "To establish a stable baseline initial temperature",
+      "correctExplanation": "Recording the temperature before heating establishes the initial temperature and confirms the system is at thermal equilibrium before the experiment begins.",
+      "distractors": [
+        { "answer": "To allow the thermometer to reach its maximum reading capacity", "explanation": "Thermometers do not need a warm-up period; the pre-heating phase establishes a baseline temperature." },
+        { "answer": "To calculate the specific heat capacity of the water used", "explanation": "Specific heat capacity is a known constant (4.18 J g⁻¹ °C⁻¹); the pre-heating phase establishes a stable starting temperature." },
+        { "answer": "To measure the rate at which the calorimeter loses heat naturally", "explanation": "While the baseline can indicate environmental stability, its primary purpose is to establish the initial temperature." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A temperature-time graph shows the temperature rising from 19.5°C to a directly read maximum of 24.5°C. When a line of best fit is extrapolated, the corrected final temperature is 25.5°C. By how much does heat loss affect the observed ΔT?",
+      "correct": "1.0°C",
+      "correctExplanation": "The difference between the extrapolated temperature (25.5°C) and the directly read maximum (24.5°C) is 1.0°C, which represents the effect of heat loss.",
+      "distractors": [
+        { "answer": "5.0°C", "explanation": "5.0°C is the directly read ΔT (24.5 − 19.5); the heat loss effect is the difference between extrapolated and observed maximums." },
+        { "answer": "6.0°C", "explanation": "6.0°C is the extrapolated ΔT (25.5 − 19.5); the heat loss effect is only 1.0°C." },
+        { "answer": "24.5°C", "explanation": "24.5°C is the observed maximum temperature, not the difference caused by heat loss." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the statement about using temperature-time graph data.",
+      "sentence": "When a temperature-time graph shows the temperature decreasing after the heater is turned off, a {{blank:1}} is drawn to extrapolate the corrected final temperature back to the time the heater was {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "line of best fit",
+          "correctExplanation": "A line of best fit is drawn through the cooling data and extrapolated backward to estimate the corrected temperature.",
+          "distractors": [
+            { "answer": "tangent line", "explanation": "A tangent line touches a curve at one point; a line of best fit follows the overall trend of data points." },
+            { "answer": "horizontal line", "explanation": "A horizontal line would indicate no temperature change; the cooling section slopes downward." }
+          ]
+        },
+        "2": {
+          "correct": "turned off",
+          "correctExplanation": "The line of best fit from the cooling section is extrapolated back to the moment the heater was turned off to find the corrected maximum temperature.",
+          "distractors": [
+            { "answer": "turned on", "explanation": "Extrapolation goes back to when the heater was turned off, not turned on; the initial temperature is read directly." },
+            { "answer": "replaced", "explanation": "The heater is not replaced; extrapolation relates to the time the heater was switched off." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the statement about the purpose of temperature-time graphs.",
+      "sentence": "Temperature-time graphs are used in calorimetry to determine {{blank:1}} more accurately by accounting for {{blank:2}} to the surroundings.",
+      "blanks": {
+        "1": {
+          "correct": "ΔT",
+          "correctExplanation": "The primary purpose of the temperature-time graph is to determine an accurate temperature change (ΔT) for use in calibration factor calculations.",
+          "distractors": [
+            { "answer": "mass", "explanation": "Mass is measured on a balance; the graph determines the temperature change." },
+            { "answer": "voltage", "explanation": "Voltage is set by the power supply; the graph determines the temperature change." }
+          ]
+        },
+        "2": {
+          "correct": "heat loss",
+          "correctExplanation": "The graph and extrapolation technique account for heat lost from the calorimeter to the cooler surroundings during the experiment.",
+          "distractors": [
+            { "answer": "mass loss", "explanation": "Mass loss is not what temperature-time graphs correct for; they address heat loss." },
+            { "answer": "pressure changes", "explanation": "Pressure changes are not directly corrected by temperature-time graph extrapolation." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the statement about graph features.",
+      "sentence": "On a temperature-time graph for electrical calibration, the three distinct sections are: the {{blank:1}} period, the {{blank:2}} period, and the cooling period.",
+      "blanks": {
+        "1": {
+          "correct": "pre-heating",
+          "correctExplanation": "The pre-heating period is when the temperature is recorded before the heater is turned on, establishing the baseline temperature.",
+          "distractors": [
+            { "answer": "calibration", "explanation": "The entire experiment is a calibration; this specific section is the pre-heating baseline period." },
+            { "answer": "extrapolation", "explanation": "Extrapolation is a data analysis technique, not a section of the experiment." }
+          ]
+        },
+        "2": {
+          "correct": "heating",
+          "correctExplanation": "The heating period is when the current flows through the element and the temperature rises steadily.",
+          "distractors": [
+            { "answer": "equilibrium", "explanation": "Equilibrium implies no temperature change; the heating section shows a rising temperature." },
+            { "answer": "cooling", "explanation": "Cooling occurs after the heater is turned off; the heating period is when energy is being added." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "tf",
+      "question": "A temperature-time graph that shows no decrease in temperature after the heater is turned off indicates that no heat was lost to the surroundings.",
+      "correct": "True",
+      "correctExplanation": "If the temperature remains constant after heating stops, it suggests the calorimeter is well insulated and no significant heat was lost, so ΔT can be read directly without extrapolation.",
+      "distractors": [
+        { "answer": "False", "explanation": "A constant temperature after heating indicates effective insulation; if heat were being lost the temperature would decrease." }
+      ]
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "mc",
+      "question": "A solution calorimeter is calibrated electrically. The temperature-time graph shows the water temperature was steady at 19.0°C before the current was turned on. The directly read maximum was 23.5°C, but extrapolation gives a corrected temperature of 24.5°C at the time the current was turned off. If the electrical energy supplied was 1650 J, what is the calibration factor?",
+      "correct": "300 J °C⁻¹",
+      "correctExplanation": "Using the extrapolated ΔT: ΔT = 24.5 − 19.0 = 5.5°C. CF = E/ΔT = 1650/5.5 = 300 J °C⁻¹.",
+      "distractors": [
+        { "answer": "367 J °C⁻¹", "explanation": "This uses the directly read ΔT of 4.5°C (23.5 − 19.0) instead of the extrapolated value; extrapolation gives the more accurate ΔT." },
+        { "answer": "1650 J °C⁻¹", "explanation": "This is the total energy supplied, not the calibration factor; CF = E/ΔT, not E alone." },
+        { "answer": "275 J °C⁻¹", "explanation": "This uses an incorrect ΔT of 6.0°C; the extrapolated ΔT is 5.5°C giving CF = 300 J °C⁻¹." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A calorimeter is calibrated electrically with V = 6.00 V, I = 1.50 A, and t = 120 s. The temperature-time graph shows an initial temperature of 20.0°C and an extrapolated final temperature of 23.6°C. What is the calibration factor?",
+      "correct": "300 J °C⁻¹",
+      "correctExplanation": "E = VIt = 6.00 × 1.50 × 120 = 1080 J. ΔT = 23.6 − 20.0 = 3.6°C. CF = 1080/3.6 = 300 J °C⁻¹.",
+      "distractors": [
+        { "answer": "270 J °C⁻¹", "explanation": "This would result from using an incorrect ΔT of 4.0°C; the extrapolated ΔT is 3.6°C." },
+        { "answer": "1080 J °C⁻¹", "explanation": "1080 J is the total energy supplied (VIt), not the calibration factor; CF = E/ΔT." },
+        { "answer": "450 J °C⁻¹", "explanation": "This would result from using ΔT = 2.4°C; the correct ΔT from the graph is 3.6°C." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Two students calibrate the same calorimeter. Student A reads ΔT directly from the graph as 3.8°C. Student B uses extrapolation and obtains ΔT = 4.5°C. Both used the same electrical energy input of 1350 J. Which student obtains the more accurate calibration factor, and what is it?",
+      "correct": "Student B: CF = 300 J °C⁻¹",
+      "correctExplanation": "Extrapolation corrects for heat loss and gives a more accurate ΔT. CF = 1350/4.5 = 300 J °C⁻¹.",
+      "distractors": [
+        { "answer": "Student A: CF = 355 J °C⁻¹", "explanation": "Student A's CF = 1350/3.8 = 355 J °C⁻¹, but this overestimates CF because the direct reading underestimates ΔT due to heat loss." },
+        { "answer": "Student A: CF = 300 J °C⁻¹", "explanation": "Student A's ΔT of 3.8°C gives CF = 355 J °C⁻¹, not 300 J °C⁻¹; the 300 value comes from Student B." },
+        { "answer": "Student B: CF = 355 J °C⁻¹", "explanation": "Student B's ΔT of 4.5°C gives CF = 1350/4.5 = 300 J °C⁻¹, not 355 J °C⁻¹." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A temperature-time graph for an electrical calibration shows: baseline at 18.5°C, the heater is turned on at 60 s and off at 300 s, the directly read temperature at 300 s is 22.0°C, and the extrapolated temperature at 300 s from the cooling line of best fit is 22.8°C. The heater operated at 5.00 V and 2.00 A. What is the calibration factor?",
+      "correct": "558 J °C⁻¹",
+      "correctExplanation": "E = VIt = 5.00 × 2.00 × 240 = 2400 J. ΔT = 22.8 − 18.5 = 4.3°C. CF = 2400/4.3 = 558 J °C⁻¹.",
+      "distractors": [
+        { "answer": "686 J °C⁻¹", "explanation": "This uses the directly read ΔT of 3.5°C (22.0 − 18.5) without extrapolation; the extrapolated ΔT should be used for accuracy." },
+        { "answer": "480 J °C⁻¹", "explanation": "This uses an incorrect time of 300 s instead of the heating duration of 240 s (300 − 60); the time must be the duration the current was flowing." },
+        { "answer": "600 J °C⁻¹", "explanation": "This results from using an incorrect ΔT of 4.0°C; the extrapolated ΔT is 4.3°C." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A calorimeter with a known calibration factor of 320 J °C⁻¹ is used to measure a neutralisation reaction. The temperature-time graph shows the initial temperature at 21.0°C and the extrapolated maximum at 22.5°C. What is the energy released?",
+      "correct": "480 J",
+      "correctExplanation": "E = CF × ΔT = 320 × (22.5 − 21.0) = 320 × 1.5 = 480 J.",
+      "distractors": [
+        { "answer": "7200 J", "explanation": "This multiplies CF by the final temperature (320 × 22.5) instead of the temperature change." },
+        { "answer": "320 J", "explanation": "This is the calibration factor itself, not the energy released; E = CF × ΔT, and ΔT = 1.5°C." },
+        { "answer": "213 J", "explanation": "This divides CF by ΔT (320/1.5) instead of multiplying; the correct formula is E = CF × ΔT." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student notices that on a temperature-time graph, the directly read ΔT is always smaller than the extrapolated ΔT. What does this indicate about the calorimeter?",
+      "correct": "The calorimeter is losing heat to the surroundings during the experiment",
+      "correctExplanation": "A smaller directly read ΔT means the observed maximum temperature is lower than the true value because heat has been lost. Extrapolation corrects for this loss.",
+      "distractors": [
+        { "answer": "The calorimeter has too much water, reducing temperature sensitivity", "explanation": "Excess water affects the magnitude of ΔT but does not cause a difference between direct and extrapolated readings." },
+        { "answer": "The thermometer is calibrated incorrectly and reads low by a fixed amount", "explanation": "A systematic thermometer error would shift both T_initial and T_final equally, not affect the ΔT difference between methods." },
+        { "answer": "The student is reading the graph at the wrong time point for the initial temperature", "explanation": "A baseline is established before heating; the difference between direct and extrapolated ΔT is due to heat loss." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An electrical calibration experiment uses V = 4.50 V, I = 3.00 A, and the heater runs for 80.0 s. The temperature-time graph shows T_initial = 17.5°C and extrapolated T_final = 21.1°C. What is the calibration factor?",
+      "correct": "300 J °C⁻¹",
+      "correctExplanation": "E = VIt = 4.50 × 3.00 × 80.0 = 1080 J. ΔT = 21.1 − 17.5 = 3.6°C. CF = 1080/3.6 = 300 J °C⁻¹.",
+      "distractors": [
+        { "answer": "360 J °C⁻¹", "explanation": "This would result from using ΔT = 3.0°C; the extrapolated ΔT is 3.6°C." },
+        { "answer": "240 J °C⁻¹", "explanation": "This would result from using ΔT = 4.5°C; the extrapolated ΔT is 3.6°C." },
+        { "answer": "1080 J °C⁻¹", "explanation": "1080 J is the energy input (VIt), not the calibration factor; CF = E/ΔT." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the statement about interpreting a temperature-time graph.",
+      "sentence": "If the directly read maximum temperature on a graph is 24.0°C but extrapolation gives 25.2°C, then {{blank:1}}°C of temperature rise was not observed due to {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "1.2",
+          "correctExplanation": "The difference between extrapolated (25.2°C) and directly read (24.0°C) maximum is 1.2°C, representing the effect of heat loss.",
+          "distractors": [
+            { "answer": "24.0", "explanation": "24.0°C is the directly read temperature, not the difference caused by heat loss." },
+            { "answer": "25.2", "explanation": "25.2°C is the extrapolated temperature, not the difference caused by heat loss." }
+          ]
+        },
+        "2": {
+          "correct": "heat loss",
+          "correctExplanation": "Heat lost to the surroundings during the experiment causes the directly read temperature to be lower than the true maximum.",
+          "distractors": [
+            { "answer": "evaporation", "explanation": "While evaporation may have a small effect, the primary cause is heat loss to the surroundings." },
+            { "answer": "calibration error", "explanation": "The difference is not a calibration error; it reflects real heat loss that extrapolation corrects for." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the calibration factor calculation.",
+      "sentence": "For an electrical calibration with E = 1500 J and an extrapolated ΔT of 5.0°C, the calibration factor is {{blank:1}} J °C⁻¹.",
+      "blanks": {
+        "1": {
+          "correct": "300",
+          "correctExplanation": "CF = E/ΔT = 1500/5.0 = 300 J °C⁻¹.",
+          "distractors": [
+            { "answer": "7500", "explanation": "This is E × ΔT (1500 × 5.0); the calibration factor is E divided by ΔT." },
+            { "answer": "1500", "explanation": "1500 J is the energy input, not the calibration factor; CF = E/ΔT." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the statement about using the calibration factor after calibration.",
+      "sentence": "Once the calibration factor is known, the energy released by a reaction can be calculated using E = {{blank:1}} × {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "CF",
+          "correctExplanation": "The calibration factor (CF) is multiplied by the temperature change to find the energy released.",
+          "distractors": [
+            { "answer": "m", "explanation": "Mass (m) is used in q = mcΔT; the calibration factor method uses CF × ΔT." },
+            { "answer": "c", "explanation": "Specific heat capacity (c) is used in q = mcΔT; the calibration factor method uses CF × ΔT." }
+          ]
+        },
+        "2": {
+          "correct": "ΔT",
+          "correctExplanation": "The temperature change from the graph is multiplied by the calibration factor to give the energy in joules.",
+          "distractors": [
+            { "answer": "V", "explanation": "Voltage is used to calculate electrical energy (VIt), not in the formula E = CF × ΔT." },
+            { "answer": "n", "explanation": "Moles (n) are used with enthalpy (E = nΔH), not with the calibration factor." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "mc",
+      "question": "A student calibrates a calorimeter electrically using V = 5.00 V, I = 2.00 A for 150 s. The temperature-time graph shows the baseline at 19.0°C, the directly read maximum at 23.0°C, and the extrapolated temperature at 24.0°C. The student then uses the directly read ΔT to calculate CF. By what percentage has the student overestimated the calibration factor?",
+      "correct": "25%",
+      "correctExplanation": "E = 5.00 × 2.00 × 150 = 1500 J. Using directly read ΔT = 4.0°C: CF = 1500/4.0 = 375 J °C⁻¹. Using extrapolated ΔT = 5.0°C: CF = 1500/5.0 = 300 J °C⁻¹. Overestimate = (375 − 300)/300 × 100 = 25%.",
+      "distractors": [
+        { "answer": "20%", "explanation": "This uses (375 − 300)/375 × 100 = 20%, which divides by the incorrect value instead of the true CF." },
+        { "answer": "75 J °C⁻¹", "explanation": "75 J °C⁻¹ is the absolute difference, not the percentage overestimate." },
+        { "answer": "33%", "explanation": "This results from an incorrect calculation; the correct percentage overestimate is 25%." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A calorimeter is calibrated with CF = 350 J °C⁻¹. A neutralisation reaction is performed and the temperature-time graph shows T_initial = 20.5°C, directly read maximum of 22.3°C, and extrapolated maximum of 22.8°C. If the student uses the extrapolated ΔT and the reaction involves 0.0100 mol of limiting reagent, what is the molar enthalpy of neutralisation?",
+      "correct": "80.5 kJ mol⁻¹",
+      "correctExplanation": "ΔT = 22.8 − 20.5 = 2.3°C. E = CF × ΔT = 350 × 2.3 = 805 J = 0.805 kJ. ΔH = E/n = 0.805/0.0100 = 80.5 kJ mol⁻¹.",
+      "distractors": [
+        { "answer": "63.0 kJ mol⁻¹", "explanation": "This uses the directly read ΔT of 1.8°C: E = 350 × 1.8 = 630 J, giving 63.0 kJ mol⁻¹. The extrapolated value should be used." },
+        { "answer": "805 kJ mol⁻¹", "explanation": "This fails to convert joules to kilojoules; E = 805 J = 0.805 kJ, and ΔH = 0.805/0.01 = 80.5 kJ mol⁻¹." },
+        { "answer": "8.05 kJ mol⁻¹", "explanation": "This divides by 0.100 mol instead of 0.0100 mol; the correct moles of limiting reagent is 0.0100." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Two identical calorimeters are used to measure the same reaction. Calorimeter X has better insulation and shows ΔT_direct = 4.8°C and ΔT_extrapolated = 5.0°C. Calorimeter Y shows ΔT_direct = 3.5°C and ΔT_extrapolated = 5.0°C. What can be concluded?",
+      "correct": "Calorimeter Y loses significantly more heat, making extrapolation essential for accurate results",
+      "correctExplanation": "Both calorimeters give the same extrapolated ΔT of 5.0°C, confirming the same true temperature change. Calorimeter Y has a much larger difference between direct and extrapolated values (1.5°C vs 0.2°C), indicating much greater heat loss.",
+      "distractors": [
+        { "answer": "Calorimeter X is less accurate because its directly read value is closer to the extrapolated value", "explanation": "A smaller difference between direct and extrapolated ΔT indicates better insulation and less heat loss, not less accuracy." },
+        { "answer": "Calorimeter Y produces more energy from the same reaction than Calorimeter X", "explanation": "Both measure the same reaction; the difference is in heat loss, not energy production. The extrapolated ΔT is the same." },
+        { "answer": "Extrapolation is unnecessary for both calorimeters since they measure the same reaction", "explanation": "Extrapolation is especially important for Calorimeter Y, which has significant heat loss (ΔT difference of 1.5°C)." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student performs electrical calibration twice on the same calorimeter. Trial 1 uses V = 6.00 V, I = 2.50 A, t = 100 s and gives extrapolated ΔT = 5.0°C. Trial 2 uses V = 3.00 V, I = 2.50 A, t = 200 s and gives extrapolated ΔT = 5.0°C. Do the trials give the same calibration factor?",
+      "correct": "Yes, both give CF = 300 J °C⁻¹",
+      "correctExplanation": "Trial 1: E = 6.00 × 2.50 × 100 = 1500 J, CF = 1500/5.0 = 300. Trial 2: E = 3.00 × 2.50 × 200 = 1500 J, CF = 1500/5.0 = 300. The same energy and same ΔT give the same CF.",
+      "distractors": [
+        { "answer": "No, Trial 1 gives 600 J °C⁻¹ and Trial 2 gives 150 J °C⁻¹", "explanation": "Both trials supply 1500 J of energy; the calibration factor depends on E and ΔT, which are identical in both cases." },
+        { "answer": "No, different voltages always produce different calibration factors", "explanation": "The calibration factor depends on total energy and ΔT, not on the individual voltage value; both trials supply 1500 J." },
+        { "answer": "Yes, but only if the calorimeter insulation is perfect with no heat loss", "explanation": "The extrapolated ΔT already accounts for heat loss; both trials give the same CF regardless of insulation quality." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A temperature-time graph for a chemical calibration using KCl (ΔH_dissolution = +17.2 kJ mol⁻¹) shows the temperature dropping from 22.0°C to a directly read minimum of 20.5°C, with extrapolation giving a corrected minimum of 20.0°C. If 0.500 g of KCl (M = 74.6 g mol⁻¹) was used, what is the calibration factor?",
+      "correct": "57.6 J °C⁻¹",
+      "correctExplanation": "n = 0.500/74.6 = 0.006702 mol. E = n × ΔH = 0.006702 × 17200 = 115.3 J. ΔT = 22.0 − 20.0 = 2.0°C. CF = 115.3/2.0 = 57.6 J °C⁻¹.",
+      "distractors": [
+        { "answer": "76.8 J °C⁻¹", "explanation": "This uses the directly read ΔT of 1.5°C instead of the extrapolated ΔT of 2.0°C; the extrapolated value is more accurate." },
+        { "answer": "172 J °C⁻¹", "explanation": "This uses ΔH directly without calculating n first; E = n × ΔH requires the actual moles of KCl." },
+        { "answer": "115 J °C⁻¹", "explanation": "This is the energy value (115.3 J), not the calibration factor; CF = E/ΔT = 115.3/2.0 = 57.6 J °C⁻¹." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student claims that if two temperature-time graphs for the same calibration have different shapes but the same extrapolated ΔT, the calibration factors must be equal. Is this claim valid?",
+      "correct": "Yes, because the calibration factor depends only on the energy input and ΔT, not the graph shape",
+      "correctExplanation": "CF = E/ΔT. If the energy input and the extrapolated ΔT are the same, the CF is the same regardless of how the temperature changed over time.",
+      "distractors": [
+        { "answer": "No, because different graph shapes indicate different rates of heat loss that affect CF", "explanation": "Different rates of heat loss affect the graph shape, but extrapolation already corrects for heat loss; CF depends on E and the extrapolated ΔT." },
+        { "answer": "No, because the gradient of the heating section must also be the same", "explanation": "The gradient depends on the rate of energy input, but CF = E/ΔT uses only the total energy and final ΔT, not the rate." },
+        { "answer": "Yes, but only if the experiments used exactly the same volume of water", "explanation": "The CF accounts for the entire calorimeter system; if E and ΔT are the same, CF is the same." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "In a poorly insulated calorimeter, a student observes that the temperature starts to decrease even while the heater is still on. How should the student interpret this on a temperature-time graph?",
+      "correct": "The rate of heat loss has exceeded the rate of energy input from the heater",
+      "correctExplanation": "If the temperature decreases while the heater is still running, the calorimeter is losing heat to the surroundings faster than the heater can supply it. This indicates very poor insulation.",
+      "distractors": [
+        { "answer": "The heater has stopped working even though the current appears to be flowing", "explanation": "If the current is flowing, the heater is supplying energy; the temperature drop is due to heat loss exceeding energy input." },
+        { "answer": "The specific heat capacity of the water has increased at higher temperatures", "explanation": "The specific heat capacity of water is approximately constant over small temperature ranges; the decrease is due to heat loss." },
+        { "answer": "An endothermic reaction has begun inside the calorimeter alongside the heating", "explanation": "In an electrical calibration there is no chemical reaction occurring; the temperature drop is from heat loss exceeding energy input." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An electrical calibration uses V = 4.00 V, I = 2.00 A, and t = 60.0 s, producing a ΔT of 1.50°C (extrapolated). A dissolution reaction is then performed in the same calorimeter, producing an extrapolated ΔT of 2.40°C. If 0.0150 mol of solute was used, what is the molar enthalpy of dissolution?",
+      "correct": "51.2 kJ mol⁻¹",
+      "correctExplanation": "CF = VIt/ΔT = (4.00 × 2.00 × 60.0)/1.50 = 480/1.50 = 320 J °C⁻¹. E_reaction = CF × ΔT = 320 × 2.40 = 768 J = 0.768 kJ. ΔH = E/n = 0.768/0.0150 = 51.2 kJ mol⁻¹.",
+      "distractors": [
+        { "answer": "32.0 kJ mol⁻¹", "explanation": "This uses E = CF × 1.50 instead of × 2.40; the reaction ΔT of 2.40°C must be used, not the calibration ΔT." },
+        { "answer": "768 kJ mol⁻¹", "explanation": "This uses 768 J without converting to kJ; 768 J = 0.768 kJ, giving ΔH = 51.2 kJ mol⁻¹." },
+        { "answer": "21.3 kJ mol⁻¹", "explanation": "This uses an incorrect CF; CF = 480/1.50 = 320 J °C⁻¹, not 480/1.50/1.50." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the statement about evaluating experimental accuracy.",
+      "sentence": "When the directly read ΔT is much smaller than the extrapolated ΔT, it indicates that the calorimeter has {{blank:1}} insulation, and the calibration factor calculated from the direct reading would be {{blank:2}} than the true value.",
+      "blanks": {
+        "1": {
+          "correct": "poor",
+          "correctExplanation": "A large difference between directly read and extrapolated ΔT indicates significant heat loss, which means the calorimeter is poorly insulated.",
+          "distractors": [
+            { "answer": "excellent", "explanation": "Excellent insulation would result in very little difference between direct and extrapolated values." },
+            { "answer": "average", "explanation": "A 'much smaller' directly read ΔT indicates significant heat loss, suggesting poor rather than average insulation." }
+          ]
+        },
+        "2": {
+          "correct": "larger",
+          "correctExplanation": "CF = E/ΔT. A smaller ΔT in the denominator gives a larger CF value, so the direct-reading CF overestimates the true calibration factor.",
+          "distractors": [
+            { "answer": "smaller", "explanation": "A smaller ΔT gives a larger CF (since CF = E/ΔT); the direct reading overestimates, not underestimates." },
+            { "answer": "equal to", "explanation": "The direct reading gives a different (larger) CF because it uses a smaller ΔT than the extrapolated value." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the multi-step calibration analysis.",
+      "sentence": "In electrical calibration with V = 5.00 V, I = 2.00 A, t = 100 s, and extrapolated ΔT = 4.0°C, the energy supplied is {{blank:1}} J and the calibration factor is {{blank:2}} J °C⁻¹.",
+      "blanks": {
+        "1": {
+          "correct": "1000",
+          "correctExplanation": "E = VIt = 5.00 × 2.00 × 100 = 1000 J.",
+          "distractors": [
+            { "answer": "500", "explanation": "This omits one of the terms; E = V × I × t = 5.00 × 2.00 × 100 = 1000 J." },
+            { "answer": "107", "explanation": "This incorrectly adds the values; E = V × I × t (multiply, not add)." }
+          ]
+        },
+        "2": {
+          "correct": "250",
+          "correctExplanation": "CF = E/ΔT = 1000/4.0 = 250 J °C⁻¹.",
+          "distractors": [
+            { "answer": "4000", "explanation": "This multiplies E × ΔT instead of dividing; CF = E/ΔT = 1000/4.0 = 250." },
+            { "answer": "1000", "explanation": "1000 J is the energy input; the calibration factor is CF = 1000/4.0 = 250 J °C⁻¹." }
+          ]
+        }
+      }
+    }
+  ]
+}

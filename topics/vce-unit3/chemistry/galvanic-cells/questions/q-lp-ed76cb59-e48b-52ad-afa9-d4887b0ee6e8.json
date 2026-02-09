@@ -1,0 +1,583 @@
+{
+  "_link": {
+    "uuid": "lp-ed76cb59-e48b-52ad-afa9-d4887b0ee6e8",
+    "version": 1,
+    "contentHash": "hash-cdd65542",
+    "title": "I can predict whether a spontaneous redox reaction will occur between given species",
+    "generatedAt": "2026-02-08T00:00:00.000Z"
+  },
+  "toLevel2": [
+    {
+      "type": "mc",
+      "question": "When does a spontaneous redox reaction occur according to the electrochemical series?",
+      "correct": "When the oxidising agent is higher on the left and the reducing agent is lower on the right",
+      "correctExplanation": "A spontaneous reaction requires the oxidising agent (left side, higher E°) to react with the reducing agent (right side, lower E°). This is the 'top-left reacts with bottom-right' rule.",
+      "distractors": [
+        { "answer": "When the oxidising agent is lower on the left and the reducing agent is higher on the right", "explanation": "This describes the reverse (non-spontaneous) arrangement. The oxidising agent must be higher, not lower." },
+        { "answer": "When both species are on the left side of the electrochemical series half-equations", "explanation": "If both are on the left, they are both oxidising agents and will not react with each other." },
+        { "answer": "When both species are on the right side of the electrochemical series half-equations", "explanation": "If both are on the right, they are both reducing agents and will not react with each other." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Will Pb²⁺(aq) spontaneously react with Cd(s)?",
+      "correct": "Yes, because Pb²⁺ is higher on the left and Cd is lower on the right of the ECS",
+      "correctExplanation": "Pb²⁺ (E° = −0.13 V, left side) is higher than Cd²⁺/Cd (E° = −0.40 V). Cd (right side, lower) is the reducing agent. Top-left reacts with bottom-right = spontaneous.",
+      "distractors": [
+        { "answer": "No, because both species have negative E° values", "explanation": "Negative E° values do not prevent reactions. What matters is the relative position: Pb²⁺ is higher than Cd²⁺/Cd." },
+        { "answer": "No, because Pb²⁺ and Cd are both metals and metals do not react with each other", "explanation": "Pb²⁺ is an ion (not a metal), and metals can react with metal ions if the ECS positions are correct." },
+        { "answer": "Yes, because both species have negative E° values, which always means a reaction occurs", "explanation": "The sign of E° alone does not determine spontaneity. It is the relative position on the ECS that matters." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Will Ni²⁺(aq) spontaneously react with Pb(s)?",
+      "correct": "No, because Ni²⁺ is lower on the left than Pb²⁺, so the positions are reversed",
+      "correctExplanation": "Ni²⁺ (E° = −0.25 V) is lower than Pb²⁺ (E° = −0.13 V). For a spontaneous reaction, the oxidising agent must be higher on the left. The positions are reversed here.",
+      "distractors": [
+        { "answer": "Yes, because Ni²⁺ can accept electrons from Pb to form Ni metal", "explanation": "Although Ni²⁺ can theoretically accept electrons, Pb (E° = −0.13 V) is above Ni (E° = −0.25 V) so Ni²⁺ cannot spontaneously oxidise Pb." },
+        { "answer": "Yes, because all metal ions react spontaneously with all metals", "explanation": "Not all metal ions react with all metals. The ECS determines which combinations are spontaneous." },
+        { "answer": "No, because Ni²⁺ and Pb are both in the same group of the periodic table", "explanation": "Periodic table groups do not determine redox spontaneity. The ECS positions are what matter." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Why will Pb²⁺(aq) and Cd²⁺(aq) not react spontaneously with each other?",
+      "correct": "Because both species are on the left side of the ECS, so neither can act as a reducing agent",
+      "correctExplanation": "Pb²⁺ and Cd²⁺ are both on the left side (oxidised forms). A reaction requires one species from the left (oxidising agent) and one from the right (reducing agent).",
+      "distractors": [
+        { "answer": "Because they have identical E° values and cancel each other out completely", "explanation": "They have different E° values (−0.13 V and −0.40 V). The issue is that both are on the same side (left)." },
+        { "answer": "Because both are positively charged ions and like charges always repel each other", "explanation": "Charge repulsion is not the reason. The issue is that both are oxidising agents with no reducing agent present." },
+        { "answer": "Because both species are already in their reduced forms and cannot be reduced further", "explanation": "Pb²⁺ and Cd²⁺ are oxidised forms (left side). They are not in their reduced forms. The issue is they are both on the same side." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A positive E°cell value indicates that a redox reaction is:",
+      "correct": "Spontaneous under standard conditions",
+      "correctExplanation": "When E°cell = E°cathode − E°anode is positive, the reaction proceeds spontaneously in the forward direction under standard conditions.",
+      "distractors": [
+        { "answer": "Non-spontaneous under standard conditions", "explanation": "A negative E°cell indicates non-spontaneity. A positive E°cell means the reaction is spontaneous." },
+        { "answer": "At equilibrium and will not proceed in either direction", "explanation": "Equilibrium corresponds to E°cell = 0, not a positive value." },
+        { "answer": "Impossible regardless of any conditions applied", "explanation": "A positive E°cell means the reaction is spontaneous. Non-spontaneous reactions can also be forced with external energy." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "A spontaneous redox reaction occurs when the oxidising agent is higher on the left side of the ECS than the reducing agent on the right side.",
+      "correct": "True",
+      "correctExplanation": "This is the fundamental rule for predicting spontaneity: top-left species (strong oxidising agent) reacts with bottom-right species (strong reducing agent).",
+      "distractors": [
+        { "answer": "False", "explanation": "Students may reverse the rule. The oxidising agent must be higher (more positive E°) on the left to spontaneously oxidise a species lower on the right." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "Two species that are both on the right side of the electrochemical series will spontaneously react with each other.",
+      "correct": "False",
+      "correctExplanation": "Species on the right side are all reducing agents (reduced forms). A spontaneous reaction requires one from the left (oxidising agent) and one from the right (reducing agent).",
+      "distractors": [
+        { "answer": "True", "explanation": "Two reducing agents cannot react with each other because neither can accept electrons. One species from each side is needed." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the rule for predicting spontaneous reactions.",
+      "sentence": "A spontaneous reaction occurs when the {{blank:1}} agent is higher on the left and the {{blank:2}} agent is lower on the right of the ECS.",
+      "blanks": {
+        "1": {
+          "correct": "oxidising",
+          "correctExplanation": "The oxidising agent (species that accepts electrons) must be on the left side and higher in the ECS (more positive E°).",
+          "distractors": [
+            { "answer": "reducing", "explanation": "The reducing agent is on the right side (lower). The left-side species is the oxidising agent." },
+            { "answer": "catalytic", "explanation": "Catalysts are not part of the ECS prediction. The left side contains oxidising agents." }
+          ]
+        },
+        "2": {
+          "correct": "reducing",
+          "correctExplanation": "The reducing agent (species that donates electrons) must be on the right side and lower in the ECS (more negative E°).",
+          "distractors": [
+            { "answer": "oxidising", "explanation": "The oxidising agent is on the left side (higher). The right-side species is the reducing agent." },
+            { "answer": "neutral", "explanation": "Neutral is not a redox term. The right side of ECS half-equations contains reducing agents." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Predict whether Cu²⁺(aq) reacts with Zn(s).",
+      "sentence": "Cu²⁺ is {{blank:1}} on the left of the ECS than Zn²⁺, and Zn is on the right, so this reaction is {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "higher",
+          "correctExplanation": "Cu²⁺ (E° = +0.34 V) is higher on the ECS than Zn²⁺ (E° = −0.76 V), making Cu²⁺ a stronger oxidising agent.",
+          "distractors": [
+            { "answer": "lower", "explanation": "Cu²⁺ has a more positive E° (+0.34 V) than Zn²⁺ (−0.76 V), so it is higher, not lower." },
+            { "answer": "equal", "explanation": "Cu²⁺ (+0.34 V) and Zn²⁺ (−0.76 V) have very different E° values. They are not equal." }
+          ]
+        },
+        "2": {
+          "correct": "spontaneous",
+          "correctExplanation": "Cu²⁺ (higher left) reacting with Zn (lower right) satisfies the rule for a spontaneous reaction.",
+          "distractors": [
+            { "answer": "non-spontaneous", "explanation": "The positions satisfy the spontaneity rule: oxidising agent higher on left, reducing agent lower on right." },
+            { "answer": "impossible", "explanation": "The reaction is not only possible but spontaneous. Cu²⁺ + Zn → Cu + Zn²⁺ readily occurs." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the statement about E°cell and spontaneity.",
+      "sentence": "If E°cell is {{blank:1}}, the reaction is spontaneous. If E°cell is {{blank:2}}, the reaction is non-spontaneous.",
+      "blanks": {
+        "1": {
+          "correct": "positive",
+          "correctExplanation": "A positive E°cell indicates the reaction has a thermodynamic driving force and will proceed spontaneously under standard conditions.",
+          "distractors": [
+            { "answer": "negative", "explanation": "A negative E°cell means the reaction is non-spontaneous under standard conditions." },
+            { "answer": "zero", "explanation": "An E°cell of zero means the system is at equilibrium and no net reaction occurs." }
+          ]
+        },
+        "2": {
+          "correct": "negative",
+          "correctExplanation": "A negative E°cell means the reverse reaction is favoured. The forward reaction will not proceed spontaneously.",
+          "distractors": [
+            { "answer": "positive", "explanation": "A positive E°cell means the reaction is spontaneous, not non-spontaneous." },
+            { "answer": "zero", "explanation": "Zero E°cell indicates equilibrium, not non-spontaneity. A negative value indicates non-spontaneity." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "mc",
+      "question": "Using the ECS, will Ag⁺(aq) spontaneously react with Fe(s)? Explain your reasoning.",
+      "correct": "Yes, because Ag⁺ (E° = +0.80 V) is higher on the left than Fe²⁺/Fe (E° = −0.44 V) on the right",
+      "correctExplanation": "Ag⁺ is a stronger oxidising agent (higher left) and Fe is a stronger reducing agent (lower right). This satisfies the spontaneity rule.",
+      "distractors": [
+        { "answer": "No, because Fe has a negative E° and Ag⁺ has a positive E°, so they cannot react", "explanation": "The sign difference actually supports spontaneity — the large positive E° difference means a strong driving force." },
+        { "answer": "Yes, but only because both species are metals, and all metals react with all metal ions", "explanation": "Not all metals react with all metal ions. Spontaneity depends on ECS positions, not just being metals." },
+        { "answer": "No, because Fe is higher on the ECS than Ag, preventing any reaction from occurring", "explanation": "Fe²⁺/Fe (E° = −0.44 V) is lower on the ECS than Ag⁺/Ag (E° = +0.80 V), not higher." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Why does the 'top-left reacts with bottom-right' rule work for predicting spontaneous reactions?",
+      "correct": "Because the strongest oxidising agent (top left) has the greatest tendency to accept electrons from the strongest reducing agent (bottom right)",
+      "correctExplanation": "Higher E° means greater tendency to be reduced (accept electrons). Lower E° means greater tendency to be oxidised (donate electrons). This complementary tendency drives the spontaneous reaction.",
+      "distractors": [
+        { "answer": "Because elements at the top of the series are always more reactive than those at the bottom", "explanation": "Reactivity depends on the role (oxidising vs reducing). The top-left species are strong oxidising agents; bottom-right are strong reducing agents." },
+        { "answer": "Because the series is arranged alphabetically and reactions follow alphabetical order", "explanation": "The ECS is arranged by E° values, not alphabetically. The order reflects thermodynamic tendency." },
+        { "answer": "Because top-left species are lighter atoms that move faster and react before heavier bottom-right atoms", "explanation": "Atomic mass and speed are irrelevant. The rule is based on relative electrode potentials and electron transfer tendencies." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student mixes Cu²⁺(aq) with Ag(s). Will a spontaneous reaction occur?",
+      "correct": "No, because Cu²⁺ (E° = +0.34 V) is lower on the left than Ag⁺ (E° = +0.80 V)",
+      "correctExplanation": "For Cu²⁺ to oxidise Ag, Cu²⁺ must be higher than Ag⁺ on the left side. Since Cu²⁺ is lower, it cannot spontaneously oxidise Ag. The positions are reversed.",
+      "distractors": [
+        { "answer": "Yes, because Cu²⁺ is a strong oxidising agent that reacts with all metals", "explanation": "Cu²⁺ is a moderate oxidising agent. It cannot oxidise metals above it on the ECS, such as silver." },
+        { "answer": "Yes, because copper and silver are both transition metals that readily react together", "explanation": "Being transition metals does not guarantee a reaction. The ECS positions determine spontaneity." },
+        { "answer": "No, because Cu²⁺ and Ag are both on the right side of the ECS half-equations", "explanation": "Cu²⁺ is on the left side (oxidised form) and Ag is on the right side (reduced form). The issue is their relative positions." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "If E°cell for a proposed reaction is calculated as −0.37 V, what does this tell you?",
+      "correct": "The reaction is non-spontaneous; the reverse reaction is spontaneous instead",
+      "correctExplanation": "A negative E°cell means the forward reaction is not thermodynamically favoured. The reverse reaction (with E°cell = +0.37 V) would be spontaneous.",
+      "distractors": [
+        { "answer": "The reaction is spontaneous and will produce 0.37 V of electricity", "explanation": "A negative E°cell indicates non-spontaneity. Only positive E°cell values indicate spontaneous reactions." },
+        { "answer": "The reaction is at equilibrium and no net change will occur in either direction", "explanation": "Equilibrium corresponds to E°cell = 0 V. A negative value means the reverse reaction is favoured." },
+        { "answer": "The calculation must be wrong because E°cell values cannot be negative numbers", "explanation": "E°cell can be negative, indicating the reaction as written is non-spontaneous." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Zinc metal is placed into a solution containing Ag⁺ ions. Predict the outcome.",
+      "correct": "A spontaneous reaction occurs: Zn is oxidised and Ag⁺ is reduced",
+      "correctExplanation": "Ag⁺ (E° = +0.80 V, higher left) will oxidise Zn (E° = −0.76 V, lower right). E°cell = +0.80 − (−0.76) = +1.56 V, which is positive.",
+      "distractors": [
+        { "answer": "No reaction occurs because zinc cannot reduce silver ions in solution", "explanation": "Zn is a strong reducing agent (low E°) that readily reduces Ag⁺ (high E°). The reaction is spontaneous." },
+        { "answer": "A spontaneous reaction occurs: Ag is oxidised and Zn²⁺ is reduced", "explanation": "The direction is reversed. Zn (lower E°) is oxidised, and Ag⁺ (higher E°) is reduced." },
+        { "answer": "No reaction occurs because Zn²⁺ and Ag⁺ are both on the left side of the ECS", "explanation": "The reactants are Ag⁺ (left) and Zn (right), not both on the same side. This is a valid spontaneous pair." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student claims that Mg(s) can spontaneously reduce Cu²⁺(aq). Is this claim correct?",
+      "correct": "No; Mg is the reducing agent that is oxidised, causing Cu²⁺ to be reduced — Mg does not 'reduce' Cu²⁺, it causes Cu²⁺ to be reduced",
+      "correctExplanation": "The terminology is important: Mg is oxidised (loses electrons) and is the reducing agent. Cu²⁺ is reduced (gains electrons). Mg causes the reduction of Cu²⁺ by donating electrons.",
+      "distractors": [
+        { "answer": "Yes; Mg reduces Cu²⁺ because Mg gains electrons from the copper ions", "explanation": "Mg loses electrons (is oxidised), it does not gain them. Cu²⁺ gains the electrons from Mg." },
+        { "answer": "No; Mg cannot react with Cu²⁺ because they are on opposite sides of the ECS", "explanation": "Being on opposite sides is exactly what allows the reaction. The reaction is spontaneous (Mg lower right, Cu²⁺ higher left)." },
+        { "answer": "No; Mg is too reactive to participate in controlled redox reactions with Cu²⁺", "explanation": "Mg's high reactivity (low E°) actually makes it an excellent reducing agent for Cu²⁺ (higher E°)." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "If E°cell = 0 V for a proposed reaction, the system is at equilibrium and no net reaction occurs.",
+      "correct": "True",
+      "correctExplanation": "An E°cell of zero means there is no thermodynamic driving force in either direction. The system is at equilibrium with no net reaction.",
+      "distractors": [
+        { "answer": "False", "explanation": "Students may think zero means a very small reaction occurs. In fact, zero E°cell means equilibrium — no net reaction in either direction." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Apply the prediction rule to Fe²⁺(aq) and Zn(s).",
+      "sentence": "Fe²⁺ (E° = −0.44 V) is {{blank:1}} on the left than Zn²⁺ (E° = −0.76 V), and Zn is on the right, so the reaction is {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "higher",
+          "correctExplanation": "Fe²⁺ (E° = −0.44 V) has a more positive E° than Zn²⁺ (E° = −0.76 V), placing it higher on the ECS.",
+          "distractors": [
+            { "answer": "lower", "explanation": "−0.44 V is more positive than −0.76 V, so Fe²⁺ is higher, not lower, on the ECS." },
+            { "answer": "equal", "explanation": "−0.44 V and −0.76 V are different values. Fe²⁺ is higher on the series." }
+          ]
+        },
+        "2": {
+          "correct": "spontaneous",
+          "correctExplanation": "Fe²⁺ (higher left) + Zn (lower right) satisfies the spontaneity rule. E°cell = −0.44 − (−0.76) = +0.32 V (positive).",
+          "distractors": [
+            { "answer": "non-spontaneous", "explanation": "The positions are correct for spontaneity: oxidising agent higher left, reducing agent lower right." },
+            { "answer": "impossible", "explanation": "The reaction is spontaneous. Fe²⁺ will oxidise Zn under standard conditions." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Explain why Cu(s) and Zn(s) do not react spontaneously.",
+      "sentence": "Cu and Zn are both on the {{blank:1}} side of the ECS. A reaction requires one species from each side, so {{blank:2}} reaction occurs.",
+      "blanks": {
+        "1": {
+          "correct": "right",
+          "correctExplanation": "Cu and Zn are both metals (reduced forms), which appear on the right side of ECS half-equations.",
+          "distractors": [
+            { "answer": "left", "explanation": "Cu²⁺ and Zn²⁺ are on the left (oxidised forms). Cu(s) and Zn(s) are on the right (reduced forms)." },
+            { "answer": "top", "explanation": "Top/bottom refers to position in the series. Left/right refers to which side of the half-equation the species appears on." }
+          ]
+        },
+        "2": {
+          "correct": "no",
+          "correctExplanation": "Two species on the same side cannot react because they are both reducing agents (right) or both oxidising agents (left). One from each side is needed.",
+          "distractors": [
+            { "answer": "a spontaneous", "explanation": "Two reducing agents (right side) cannot react with each other. No spontaneous reaction occurs." },
+            { "answer": "a vigorous", "explanation": "No reaction occurs at all. Species on the same side cannot undergo redox with each other." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Predict the reaction between Cl₂(aq) and I⁻(aq).",
+      "sentence": "Cl₂ (E° = +1.36 V) is on the {{blank:1}} and higher than I₂/I⁻ (E° = +0.54 V). I⁻ is on the right and lower. Therefore, Cl₂ will {{blank:2}} I⁻ spontaneously.",
+      "blanks": {
+        "1": {
+          "correct": "left",
+          "correctExplanation": "Cl₂ is the oxidised form in the Cl₂/Cl⁻ half-equation, appearing on the left side.",
+          "distractors": [
+            { "answer": "right", "explanation": "Cl⁻ is on the right (reduced form). Cl₂ is on the left (oxidised form)." },
+            { "answer": "bottom", "explanation": "Cl₂/Cl⁻ (E° = +1.36 V) is near the top of the ECS, not the bottom. Left/right indicates which side of the half-equation." }
+          ]
+        },
+        "2": {
+          "correct": "oxidise",
+          "correctExplanation": "Cl₂ (stronger oxidising agent, higher left) will accept electrons from I⁻ (lower right), oxidising I⁻ to I₂.",
+          "distractors": [
+            { "answer": "reduce", "explanation": "Cl₂ is the oxidising agent — it oxidises I⁻, not reduces it. Cl₂ itself is reduced." },
+            { "answer": "neutralise", "explanation": "Neutralisation is an acid-base process. This is a redox reaction where Cl₂ oxidises I⁻." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "mc",
+      "question": "Will a spontaneous reaction occur if copper metal is placed into Fe²⁺(aq) solution? Use E° values to justify.",
+      "correct": "No; Cu²⁺/Cu (E° = +0.34 V) is higher than Fe²⁺/Fe (E° = −0.44 V), so Fe²⁺ cannot oxidise Cu",
+      "correctExplanation": "For Fe²⁺ to oxidise Cu, Fe²⁺ must be higher on the left than Cu. But Fe²⁺ (E° = −0.44 V) is lower than Cu²⁺ (E° = +0.34 V). The positions are wrong for spontaneity.",
+      "distractors": [
+        { "answer": "Yes; Cu is above Fe in the ECS so Cu will spontaneously dissolve in Fe²⁺ solution", "explanation": "Cu being above Fe means Cu²⁺ is a stronger oxidising agent, not that Cu will dissolve. Fe²⁺ cannot oxidise Cu." },
+        { "answer": "Yes; E°cell = +0.34 − (−0.44) = +0.78 V, which is positive and therefore spontaneous", "explanation": "This calculation assigns Cu as cathode, which is correct if Cu²⁺ is reduced. But Cu is the reactant metal, meaning it would need to be oxidised, giving a negative E°cell." },
+        { "answer": "No; but only because copper has a protective oxide layer like aluminium does", "explanation": "The reason is thermodynamic (ECS positions), not kinetic (oxide layer). Fe²⁺ is simply too low on the ECS to oxidise Cu." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Predict whether Br₂(aq) will spontaneously oxidise Fe²⁺(aq) to Fe³⁺(aq).",
+      "correct": "Yes; Br₂/Br⁻ (E° = +1.09 V) is higher than Fe³⁺/Fe²⁺ (E° = +0.77 V), so Br₂ can oxidise Fe²⁺",
+      "correctExplanation": "Br₂ (higher left, +1.09 V) will accept electrons from Fe²⁺ (lower right as part of the Fe³⁺/Fe²⁺ couple, +0.77 V). E°cell = +1.09 − 0.77 = +0.32 V (positive).",
+      "distractors": [
+        { "answer": "No; both E° values are positive, so no reaction occurs between positive-E° species", "explanation": "Two positive E° values can still react. The higher one (Br₂) oxidises the lower one (Fe²⁺)." },
+        { "answer": "No; Br₂ is a non-metal and cannot participate in redox reactions with metal ions", "explanation": "Non-metals can participate in redox. Br₂ is a strong oxidising agent that readily oxidises Fe²⁺." },
+        { "answer": "Yes; but Fe²⁺ is reduced to Fe(s), not oxidised to Fe³⁺ in this reaction", "explanation": "Br₂ oxidises Fe²⁺ to Fe³⁺ (removing an electron). Fe²⁺ is not reduced in this reaction." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student wants to test if Sn²⁺(aq) will react with Ni(s). Calculate E°cell and predict the outcome.",
+      "correct": "E°cell = −0.14 − (−0.25) = +0.11 V; spontaneous — Sn²⁺ oxidises Ni",
+      "correctExplanation": "Sn²⁺/Sn (E° = −0.14 V) is higher than Ni²⁺/Ni (E° = −0.25 V). E°cell = −0.14 − (−0.25) = +0.11 V (positive), so the reaction is spontaneous.",
+      "distractors": [
+        { "answer": "E°cell = −0.25 − (−0.14) = −0.11 V; non-spontaneous — no reaction occurs", "explanation": "The cathode is Sn²⁺ (higher E°) and the anode is Ni (lower E°). E°cell = −0.14 − (−0.25) = +0.11 V." },
+        { "answer": "E°cell = −0.14 + (−0.25) = −0.39 V; non-spontaneous — no reaction occurs", "explanation": "E°cell is calculated by subtraction (cathode − anode), not addition." },
+        { "answer": "E°cell = −0.25 + (−0.14) = −0.39 V; non-spontaneous — no reaction occurs", "explanation": "E°cell = E°cathode − E°anode = −0.14 − (−0.25) = +0.11 V. Do not add the values." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Predict whether I₂(s) can spontaneously oxidise Ag(s) to Ag⁺(aq).",
+      "correct": "No; I₂/I⁻ (E° = +0.54 V) is lower than Ag⁺/Ag (E° = +0.80 V), so I₂ cannot oxidise Ag",
+      "correctExplanation": "I₂ (E° = +0.54 V) is lower on the ECS than Ag⁺ (E° = +0.80 V). For spontaneity, the oxidising agent must be higher. I₂ is not a strong enough oxidising agent.",
+      "distractors": [
+        { "answer": "Yes; I₂ is a halogen and halogens are strong oxidising agents that react with all metals", "explanation": "Not all halogens can oxidise all metals. I₂ (+0.54 V) is below Ag⁺ (+0.80 V), so it cannot oxidise Ag." },
+        { "answer": "Yes; E°cell = +0.80 − (+0.54) = +0.26 V, which is positive and spontaneous", "explanation": "This calculation assumes Ag⁺ is reduced (cathode), but Ag is the reactant. The correct calculation reverses roles: E°cell = +0.54 − 0.80 = −0.26 V (negative)." },
+        { "answer": "No; but this is because silver is an inert metal that does not participate in redox reactions", "explanation": "Silver does participate in redox. The reason is thermodynamic: I₂ has a lower E° than Ag⁺/Ag." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Tin metal is placed into a solution of Fe³⁺(aq). Predict the outcome using ECS data.",
+      "correct": "A spontaneous reaction occurs: Fe³⁺ is reduced to Fe²⁺ and Sn is oxidised to Sn²⁺",
+      "correctExplanation": "Fe³⁺/Fe²⁺ (E° = +0.77 V, higher left) will oxidise Sn (Sn²⁺/Sn E° = −0.14 V, lower right). E°cell = +0.77 − (−0.14) = +0.91 V (positive).",
+      "distractors": [
+        { "answer": "No reaction occurs because Fe³⁺ and Sn are on the same side of the ECS", "explanation": "Fe³⁺ is on the left (oxidised form) and Sn is on the right (reduced form). They are on opposite sides." },
+        { "answer": "A spontaneous reaction occurs: Sn is reduced to Sn²⁻ and Fe³⁺ is oxidised to Fe⁴⁺", "explanation": "Sn is oxidised (loses electrons), not reduced. Fe³⁺ is reduced to Fe²⁺, not oxidised to Fe⁴⁺." },
+        { "answer": "No reaction occurs because iron has a higher atomic number than tin", "explanation": "Atomic number is irrelevant to redox spontaneity. E° values determine which reactions are spontaneous." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Will H₂(g) spontaneously reduce Cu²⁺(aq) to Cu(s)? Use the ECS to predict.",
+      "correct": "Yes; Cu²⁺/Cu (E° = +0.34 V) is higher than H⁺/H₂ (E° = 0.00 V), so Cu²⁺ will oxidise H₂",
+      "correctExplanation": "Cu²⁺ (E° = +0.34 V, higher left) can oxidise H₂ (E° = 0.00 V, lower right). E°cell = +0.34 − 0.00 = +0.34 V (positive). H₂ reduces Cu²⁺.",
+      "distractors": [
+        { "answer": "No; H₂ has E° = 0.00 V which means it cannot react with any species at all", "explanation": "E° = 0.00 V is the reference point, not zero reactivity. H₂ can reduce species above it on the ECS." },
+        { "answer": "No; gases cannot participate in redox reactions with metal ions in aqueous solution", "explanation": "Gases like H₂ readily participate in redox reactions. This is the basis of the standard hydrogen electrode." },
+        { "answer": "Yes; but only because Cu²⁺ has a positive E° value, and all positive species react with H₂", "explanation": "Not all positive E° species are predicted by this reasoning alone. The spontaneity depends on relative ECS positions." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student wants to dissolve silver metal. Which of these solutions could spontaneously oxidise Ag to Ag⁺?",
+      "correct": "Cl₂(aq), because Cl₂/Cl⁻ (E° = +1.36 V) is higher than Ag⁺/Ag (E° = +0.80 V)",
+      "correctExplanation": "Cl₂ (E° = +1.36 V) is higher on the ECS than Ag⁺ (E° = +0.80 V), so Cl₂ can spontaneously oxidise Ag.",
+      "distractors": [
+        { "answer": "Cu²⁺(aq), because Cu²⁺/Cu (E° = +0.34 V) is a strong enough oxidising agent", "explanation": "Cu²⁺ (E° = +0.34 V) is lower than Ag⁺ (E° = +0.80 V) and cannot oxidise Ag." },
+        { "answer": "Fe²⁺(aq), because Fe²⁺/Fe (E° = −0.44 V) readily dissolves noble metals", "explanation": "Fe²⁺ is actually the reduced form of the Fe³⁺/Fe²⁺ couple. Fe²⁺/Fe has E° = −0.44 V, far below Ag⁺/Ag." },
+        { "answer": "Zn²⁺(aq), because Zn²⁺/Zn (E° = −0.76 V) has high reactivity with all metals", "explanation": "Zn²⁺ (E° = −0.76 V) is much lower than Ag⁺ (E° = +0.80 V) and cannot oxidise Ag." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Predict the reaction between Mg(s) and Pb²⁺(aq).",
+      "sentence": "Pb²⁺ (E° = −0.13 V) is higher on the left than Mg²⁺ (E° = −2.37 V). E°cell = −0.13 − ({{blank:1}}) = +{{blank:2}} V, so the reaction is spontaneous.",
+      "blanks": {
+        "1": {
+          "correct": "−2.37",
+          "correctExplanation": "Mg²⁺/Mg has E° = −2.37 V. As the anode (lower E°), this value is subtracted in the E°cell calculation.",
+          "distractors": [
+            { "answer": "+2.37", "explanation": "Mg²⁺/Mg has E° = −2.37 V (negative), not +2.37 V." },
+            { "answer": "−0.13", "explanation": "−0.13 V is the E° for Pb²⁺/Pb (cathode). The anode E° is −2.37 V for Mg²⁺/Mg." }
+          ]
+        },
+        "2": {
+          "correct": "2.24",
+          "correctExplanation": "E°cell = −0.13 − (−2.37) = −0.13 + 2.37 = +2.24 V. Positive, confirming spontaneity.",
+          "distractors": [
+            { "answer": "2.50", "explanation": "−0.13 − (−2.37) = −0.13 + 2.37 = +2.24, not +2.50. Check the arithmetic." },
+            { "answer": "2.00", "explanation": "−0.13 − (−2.37) = −0.13 + 2.37 = +2.24, not +2.00." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Determine whether a reaction occurs between Cu²⁺(aq) and Ag(s).",
+      "sentence": "Cu²⁺/Cu (E° = +0.34 V) is {{blank:1}} than Ag⁺/Ag (E° = +0.80 V), so Cu²⁺ {{blank:2}} oxidise Ag.",
+      "blanks": {
+        "1": {
+          "correct": "lower",
+          "correctExplanation": "Cu²⁺/Cu (+0.34 V) has a lower E° than Ag⁺/Ag (+0.80 V), placing it lower on the ECS.",
+          "distractors": [
+            { "answer": "higher", "explanation": "+0.34 V is less positive than +0.80 V. Cu²⁺ is lower on the ECS, not higher." },
+            { "answer": "equal to", "explanation": "+0.34 V and +0.80 V are clearly different. Cu²⁺ is lower." }
+          ]
+        },
+        "2": {
+          "correct": "cannot",
+          "correctExplanation": "The oxidising agent (Cu²⁺) must be higher than the species it oxidises. Cu²⁺ is lower than Ag⁺/Ag, so it cannot oxidise Ag.",
+          "distractors": [
+            { "answer": "can", "explanation": "Cu²⁺ is lower on the ECS than Ag⁺. The oxidising agent must be higher for a spontaneous reaction." },
+            { "answer": "will always", "explanation": "Cu²⁺ cannot oxidise Ag because it is lower on the ECS. Not all oxidising agents react with all metals." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Calculate E°cell for the reaction between Cl₂(aq) and I⁻(aq).",
+      "sentence": "E°cell = E°cathode − E°anode = {{blank:1}} − (+0.54) = +{{blank:2}} V.",
+      "blanks": {
+        "1": {
+          "correct": "+1.36",
+          "correctExplanation": "Cl₂/Cl⁻ (E° = +1.36 V) is the cathode (higher E°, reduced). I₂/I⁻ (E° = +0.54 V) is the anode (oxidised).",
+          "distractors": [
+            { "answer": "+0.54", "explanation": "+0.54 V is E° for I₂/I⁻ (anode). The cathode is Cl₂/Cl⁻ at +1.36 V." },
+            { "answer": "−1.36", "explanation": "The E° for Cl₂/Cl⁻ is +1.36 V (positive), not negative." }
+          ]
+        },
+        "2": {
+          "correct": "0.82",
+          "correctExplanation": "E°cell = +1.36 − (+0.54) = +0.82 V. Positive, confirming the reaction is spontaneous.",
+          "distractors": [
+            { "answer": "1.90", "explanation": "1.90 would result from adding (+1.36 + 0.54). E°cell is calculated by subtraction: 1.36 − 0.54 = 0.82." },
+            { "answer": "0.54", "explanation": "0.54 is just the anode E°. E°cell = 1.36 − 0.54 = +0.82 V." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "mc",
+      "question": "A student has access to Mg(s), Fe²⁺(aq), Cu(s), and Ag⁺(aq). Identify all spontaneous reaction pairs.",
+      "correct": "Ag⁺ + Mg, Ag⁺ + Cu (as reducing agents that Ag⁺ can oxidise), and Fe²⁺ + Mg (Fe²⁺ oxidises Mg)",
+      "correctExplanation": "Ag⁺ (E° = +0.80 V) can oxidise Mg (E° = −2.37 V) and Cu (E° = +0.34 V). Fe²⁺ (E° = −0.44 V) can oxidise Mg (E° = −2.37 V). Cu cannot be oxidised by Fe²⁺ (Fe²⁺ is lower).",
+      "distractors": [
+        { "answer": "Only Ag⁺ + Mg, because this pair has the largest E° difference of all combinations", "explanation": "The largest E° difference does react, but other valid pairs also react. Ag⁺ + Cu and Fe²⁺ + Mg are also spontaneous." },
+        { "answer": "All possible pairs react spontaneously because metals always react with metal ions", "explanation": "Not all pairs react. Fe²⁺ cannot oxidise Cu because Fe²⁺ is lower on the ECS than Cu²⁺." },
+        { "answer": "No pairs react because the species are from different groups in the periodic table", "explanation": "Periodic table groups do not determine redox spontaneity. Multiple pairs react based on ECS positions." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Evaluate: 'Adding Cl₂(aq) to a solution containing both Br⁻(aq) and I⁻(aq) will oxidise both halide ions.' Is this correct?",
+      "correct": "Yes; Cl₂ (E° = +1.36 V) is higher than both Br₂/Br⁻ (E° = +1.09 V) and I₂/I⁻ (E° = +0.54 V)",
+      "correctExplanation": "Cl₂ is a stronger oxidising agent than both Br₂ and I₂. It will spontaneously oxidise both Br⁻ and I⁻ because it is higher on the ECS.",
+      "distractors": [
+        { "answer": "Cl₂ will only oxidise I⁻ because the E° difference with Br⁻ is too small for a reaction", "explanation": "The E° difference between Cl₂ and Br₂ is +0.27 V, which is sufficient for a spontaneous reaction. Both are oxidised." },
+        { "answer": "Cl₂ will only oxidise Br⁻ because Br⁻ is closer to Cl⁻ in the periodic table", "explanation": "Periodic table position does not determine which halide is oxidised. Both are below Cl₂ on the ECS." },
+        { "answer": "No; Cl₂ cannot oxidise other halide ions because they are in the same group", "explanation": "Being in the same group does not prevent redox reactions. Cl₂ (stronger oxidising agent) readily oxidises Br⁻ and I⁻." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A solution contains Fe³⁺(aq), Cu²⁺(aq), and Ag⁺(aq). Zinc metal is added. Predict the order in which ions are reduced.",
+      "correct": "Ag⁺ first (E° = +0.80 V), then Fe³⁺ to Fe²⁺ (E° = +0.77 V), then Cu²⁺ (E° = +0.34 V)",
+      "correctExplanation": "The strongest oxidising agent reacts first. Ag⁺ (+0.80 V) is reduced first, then Fe³⁺ to Fe²⁺ (+0.77 V), then Cu²⁺ (+0.34 V). All are above Zn²⁺/Zn (−0.76 V).",
+      "distractors": [
+        { "answer": "All three ions are reduced simultaneously because Zn is a strong enough reducing agent", "explanation": "While Zn can reduce all three, the strongest oxidising agent reacts preferentially first, then the next strongest." },
+        { "answer": "Cu²⁺ first because copper is the most common metal in the solution by mass", "explanation": "Reduction order depends on E° values, not abundance or mass. The highest E° species reacts first." },
+        { "answer": "Fe³⁺ first because iron has the most positive E° value of the three ions", "explanation": "Fe³⁺/Fe²⁺ is +0.77 V. Ag⁺/Ag is +0.80 V, which is higher. Ag⁺ reacts first." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student proposes using Pb²⁺(aq) to oxidise Sn(s) and using Sn²⁺(aq) to oxidise Pb(s). Can both reactions be spontaneous?",
+      "correct": "No; only Pb²⁺ + Sn is spontaneous because Pb²⁺ (E° = −0.13 V) is higher than Sn²⁺ (E° = −0.14 V)",
+      "correctExplanation": "Pb²⁺ is slightly higher on the ECS. The forward reaction (Pb²⁺ + Sn) has E°cell = +0.01 V (positive, spontaneous). The reverse (Sn²⁺ + Pb) has E°cell = −0.01 V (non-spontaneous).",
+      "distractors": [
+        { "answer": "Yes; both reactions are spontaneous because the E° values are nearly identical", "explanation": "Both reactions cannot be spontaneous — they are the reverse of each other. Only the forward direction (positive E°cell) is spontaneous." },
+        { "answer": "Neither reaction is spontaneous because both E° values are negative numbers", "explanation": "Negative E° values do not prevent spontaneity. The E°cell (difference) determines spontaneity, not individual signs." },
+        { "answer": "Yes; both reactions occur because Sn and Pb are adjacent in the periodic table", "explanation": "Periodic table position is irrelevant. Only one direction can be spontaneous for any redox pair." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Evaluate whether F₂(g) can spontaneously oxidise Au(s) to Au⁺(aq). Use E° data.",
+      "correct": "Yes; F₂/F⁻ (E° = +2.87 V) is much higher than Au⁺/Au (E° = +1.68 V), so F₂ can oxidise Au",
+      "correctExplanation": "F₂ is the strongest oxidising agent on the ECS. Even gold, which resists most oxidisers, can be oxidised by F₂. E°cell = +2.87 − 1.68 = +1.19 V.",
+      "distractors": [
+        { "answer": "No; gold is a noble metal and cannot be oxidised by any chemical species", "explanation": "Gold resists most oxidisers, but F₂ (+2.87 V) is above Au⁺ (+1.68 V) and can oxidise gold." },
+        { "answer": "No; both species have very high positive E° values, so neither can oxidise the other", "explanation": "The relative position matters, not the absolute values. F₂ is higher than Au⁺, so F₂ can oxidise Au." },
+        { "answer": "Yes; but only because fluorine is in the same period as gold in the periodic table", "explanation": "F and Au are not in the same period. The reason is the relative E° positions on the ECS." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A galvanic cell is proposed using H₂O₂/H₂O (E° = +1.77 V) and MnO₄⁻/Mn²⁺ (E° = +1.51 V). Will the cell operate with H₂O₂ as the cathode?",
+      "correct": "Yes; H₂O₂/H₂O (E° = +1.77 V) is higher, so H₂O₂ is reduced at the cathode and MnO₄⁻ is not reduced",
+      "correctExplanation": "H₂O₂ (E° = +1.77 V) is higher than MnO₄⁻ (E° = +1.51 V), so H₂O₂ is reduced at the cathode. The Mn²⁺ side would be oxidised at the anode.",
+      "distractors": [
+        { "answer": "No; H₂O₂ always acts as an oxidising agent and cannot be at the cathode", "explanation": "H₂O₂ can act as either oxidising or reducing agent depending on the partner. With MnO₄⁻, H₂O₂ is the stronger oxidiser." },
+        { "answer": "No; both are strong oxidising agents so neither can be reduced in a galvanic cell", "explanation": "One must be reduced (cathode) and the other's reduced form must be oxidised (anode). The higher E° is reduced." },
+        { "answer": "Yes; but E°cell would be negative because both values are above +1.00 V", "explanation": "E°cell = +1.77 − 1.51 = +0.26 V, which is positive. Both being above +1.00 V does not make E°cell negative." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Iron nails are placed in CuSO₄ solution and a brown coating forms. Explain this observation using the ECS.",
+      "correct": "Cu²⁺ (E° = +0.34 V) spontaneously oxidises Fe (E° = −0.44 V), depositing Cu(s) on the nail",
+      "correctExplanation": "Cu²⁺ is higher on the left (stronger oxidising agent) than Fe²⁺/Fe. Fe is oxidised to Fe²⁺ while Cu²⁺ is reduced to Cu, which deposits as a brown coating.",
+      "distractors": [
+        { "answer": "Fe ions from the nail dissolve and form brown FeS precipitate with sulfate ions", "explanation": "FeS is not formed from FeSO₄. The brown coating is metallic copper deposited on the iron surface." },
+        { "answer": "The nail is coated in iron oxide (rust) due to the oxygen dissolved in the CuSO₄ solution", "explanation": "The brown coating is copper metal, not rust. Cu²⁺ is reduced to Cu(s) on the iron surface." },
+        { "answer": "Cu²⁺ is oxidised to Cu³⁺ which forms a brown compound with the iron surface", "explanation": "Cu²⁺ is reduced (gains electrons) to Cu(s), not oxidised. The brown coating is metallic copper." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student needs to selectively reduce only Ag⁺ from a solution containing Ag⁺(aq) and Cu²⁺(aq) using a metal. Which metal should they choose?",
+      "correct": "Cu(s), because Cu can reduce Ag⁺ but cannot reduce Cu²⁺ (which is its own ion)",
+      "correctExplanation": "Cu (E° = +0.34 V) is below Ag⁺ (+0.80 V) so Cu will reduce Ag⁺. Cu cannot reduce Cu²⁺ because that would require Cu to oxidise itself. This selectively removes only Ag⁺.",
+      "distractors": [
+        { "answer": "Zn(s), because Zn is the most reactive common metal and will reduce everything", "explanation": "Zn (E° = −0.76 V) would reduce both Ag⁺ and Cu²⁺, which is not selective." },
+        { "answer": "Mg(s), because Mg is selective for silver ions due to its high E° value", "explanation": "Mg (E° = −2.37 V) would reduce both Ag⁺ and Cu²⁺, not selectively." },
+        { "answer": "Au(s), because gold only reacts with silver ions and ignores copper ions", "explanation": "Au (E° = +1.68 V) is above both Ag⁺ and Cu²⁺ and would not reduce either." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Analyse a sequential reaction scenario.",
+      "sentence": "When Zn is added to a solution of Ag⁺ and Cu²⁺, the ion reduced first is {{blank:1}} because it has the {{blank:2}} E° value.",
+      "blanks": {
+        "1": {
+          "correct": "Ag⁺",
+          "correctExplanation": "Ag⁺ (E° = +0.80 V) is the strongest oxidising agent in the solution, so it reacts first with Zn.",
+          "distractors": [
+            { "answer": "Cu²⁺", "explanation": "Cu²⁺ (E° = +0.34 V) is a weaker oxidising agent than Ag⁺ (+0.80 V). The strongest oxidising agent reacts first." },
+            { "answer": "Zn²⁺", "explanation": "Zn²⁺ is not being reduced; Zn metal is being oxidised. The ions that are reduced are Ag⁺ and Cu²⁺." }
+          ]
+        },
+        "2": {
+          "correct": "highest",
+          "correctExplanation": "The highest E° value indicates the strongest oxidising agent, which has the greatest tendency to accept electrons and react first.",
+          "distractors": [
+            { "answer": "lowest", "explanation": "The lowest E° reacts last, not first. The highest E° species is the strongest oxidising agent and reacts first." },
+            { "answer": "most negative", "explanation": "The most negative E° indicates the weakest oxidising agent. The highest (most positive) E° reacts first." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Evaluate whether Br₂ can oxidise Cl⁻.",
+      "sentence": "Br₂/Br⁻ (E° = +1.09 V) is {{blank:1}} than Cl₂/Cl⁻ (E° = +1.36 V) on the ECS, so Br₂ {{blank:2}} spontaneously oxidise Cl⁻.",
+      "blanks": {
+        "1": {
+          "correct": "lower",
+          "correctExplanation": "Br₂/Br⁻ (+1.09 V) is lower on the ECS than Cl₂/Cl⁻ (+1.36 V).",
+          "distractors": [
+            { "answer": "higher", "explanation": "+1.09 V is less positive than +1.36 V, so Br₂ is lower on the ECS, not higher." },
+            { "answer": "equal to", "explanation": "+1.09 V and +1.36 V are clearly different values. Br₂ is lower." }
+          ]
+        },
+        "2": {
+          "correct": "cannot",
+          "correctExplanation": "The oxidising agent must be higher on the ECS to spontaneously oxidise the other species. Since Br₂ is lower than Cl₂, it cannot oxidise Cl⁻.",
+          "distractors": [
+            { "answer": "can", "explanation": "Br₂ is below Cl₂ on the ECS. To oxidise Cl⁻, the oxidising agent must be above Cl₂, not below." },
+            { "answer": "will always", "explanation": "Br₂ cannot oxidise Cl⁻. The reverse is true: Cl₂ can oxidise Br⁻." }
+          ]
+        }
+      }
+    }
+  ]
+}

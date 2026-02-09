@@ -1,0 +1,563 @@
+{
+  "_link": {
+    "uuid": "lp-d2d53ae5-1d80-81af-b60b-62b0209aa946",
+    "version": 1,
+    "contentHash": "hash-1d945f12",
+    "title": "I can calculate product amounts when a limiting reagent is present",
+    "generatedAt": "2026-02-08T00:00:00.000Z"
+  },
+
+  "toLevel2": [
+    {
+      "type": "mc",
+      "question": "When calculating the amount of product formed in a reaction with a limiting reagent, which reagent's moles should you use?",
+      "correct": "The limiting reagent",
+      "correctExplanation": "The limiting reagent determines the maximum product because it is fully consumed first. All product calculations must be based on its moles.",
+      "distractors": [
+        {"answer": "The excess reagent", "explanation": "The excess reagent is not fully consumed, so using its moles would overestimate the product."},
+        {"answer": "The reagent with the larger mass", "explanation": "Mass alone does not determine product yield; the limiting reagent's moles control the amount of product."},
+        {"answer": "The average of both reagents", "explanation": "Averaging moles of reagents is not valid; only the limiting reagent determines product yield."}
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "In the reaction CH₄ + 2O₂ → CO₂ + 2H₂O, if CH₄ is the limiting reagent with 0.40 mol available, how many moles of CO₂ are produced?",
+      "correct": "0.40 mol",
+      "correctExplanation": "The CH₄:CO₂ ratio is 1:1. Since CH₄ is limiting with 0.40 mol, 0.40 mol of CO₂ is produced.",
+      "distractors": [
+        {"answer": "0.80 mol", "explanation": "This doubles the moles using the O₂ coefficient, but the CH₄:CO₂ ratio is 1:1."},
+        {"answer": "0.20 mol", "explanation": "This halves the moles, but the CH₄:CO₂ ratio is 1:1, so 0.40 mol is correct."},
+        {"answer": "1.20 mol", "explanation": "This adds all product coefficients (1+2), but only the 1:1 ratio with CO₂ applies."}
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "After identifying the limiting reagent, what is the next step in calculating the mass of a product?",
+      "correct": "Use the mole ratio to find moles of product, then convert to mass using m = n × M",
+      "correctExplanation": "The stoichiometric ratio converts limiting reagent moles to product moles, and m = n × M converts moles to mass.",
+      "distractors": [
+        {"answer": "Multiply the mass of the limiting reagent by the molar mass of the product", "explanation": "You cannot multiply masses directly; you must first convert to moles, apply the ratio, then convert back."},
+        {"answer": "Divide the mass of the excess reagent by its molar mass", "explanation": "The excess reagent's moles do not determine the product; the limiting reagent does."},
+        {"answer": "Add the moles of both reactants together", "explanation": "Adding reactant moles is not valid; you must use the limiting reagent's moles with the stoichiometric ratio."}
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "In C₃H₈ + 5O₂ → 3CO₂ + 4H₂O, O₂ is the limiting reagent with 2.50 mol available. How many moles of H₂O are produced?",
+      "correct": "2.00 mol",
+      "correctExplanation": "The O₂:H₂O ratio is 5:4. So n(H₂O) = 2.50 × (4/5) = 2.00 mol.",
+      "distractors": [
+        {"answer": "4.00 mol", "explanation": "This uses the H₂O coefficient directly without scaling from the limiting reagent; 2.50 × 4/5 = 2.00 mol."},
+        {"answer": "10.0 mol", "explanation": "This multiplies by the O₂ coefficient (2.50 × 4), not the ratio (4/5)."},
+        {"answer": "1.50 mol", "explanation": "This uses the CO₂ ratio (3/5) instead of the H₂O ratio (4/5)."}
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Why must product calculations use the limiting reagent rather than the excess reagent?",
+      "correct": "Because the reaction stops when the limiting reagent is consumed",
+      "correctExplanation": "Once the limiting reagent runs out, no more product forms regardless of how much excess reagent remains.",
+      "distractors": [
+        {"answer": "Because the excess reagent does not participate in the reaction", "explanation": "The excess reagent does participate; it just has leftover amount after the limiting reagent is consumed."},
+        {"answer": "Because the limiting reagent has a higher molar mass", "explanation": "Molar mass does not determine which reagent to use; the limiting reagent is used because it runs out first."},
+        {"answer": "Because the excess reagent produces different products", "explanation": "Both reagents produce the same products; the limiting reagent simply controls how much product forms."}
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the product calculation steps.",
+      "sentence": "To calculate product mass: first find the {{blank:1}} of the limiting reagent, then use the {{blank:2}} ratio to find moles of product.",
+      "blanks": {
+        "1": {
+          "correct": "moles",
+          "correctExplanation": "You must convert the limiting reagent's mass to moles using n = m/M before applying the stoichiometric ratio.",
+          "distractors": [
+            {"answer": "volume", "explanation": "Volume is not the first step for solids or liquids; moles are calculated using n = m/M."},
+            {"answer": "density", "explanation": "Density is not used in stoichiometric calculations; moles are the fundamental unit for ratios."}
+          ]
+        },
+        "2": {
+          "correct": "mole",
+          "correctExplanation": "The mole ratio from the balanced equation connects the limiting reagent to the product.",
+          "distractors": [
+            {"answer": "mass", "explanation": "Mass ratios cannot be read directly from coefficients; mole ratios from the balanced equation are used."},
+            {"answer": "volume", "explanation": "Volume ratios only apply to gases; mole ratios are the universal approach."}
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the product calculation for methane combustion.",
+      "sentence": "In CH₄ + 2O₂ → CO₂ + 2H₂O, if 0.50 mol CH₄ is the limiting reagent, then {{blank:1}} mol of H₂O is produced.",
+      "blanks": {
+        "1": {
+          "correct": "1.00",
+          "correctExplanation": "The CH₄:H₂O ratio is 1:2, so 0.50 × 2 = 1.00 mol of H₂O.",
+          "distractors": [
+            {"answer": "0.50", "explanation": "This uses a 1:1 ratio, but CH₄:H₂O is 1:2, giving 1.00 mol."},
+            {"answer": "0.25", "explanation": "This divides by 2 instead of multiplying; 0.50 × 2 = 1.00 mol."}
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the statement about product yield.",
+      "sentence": "The maximum amount of product that can form is called the {{blank:1}} yield, and it is determined by the {{blank:2}} reagent.",
+      "blanks": {
+        "1": {
+          "correct": "theoretical",
+          "correctExplanation": "The theoretical yield is the maximum product calculated from the limiting reagent assuming complete reaction.",
+          "distractors": [
+            {"answer": "actual", "explanation": "The actual yield is what is experimentally obtained, which may be less than the theoretical yield."},
+            {"answer": "percentage", "explanation": "Percentage yield is the ratio of actual to theoretical yield, not the maximum amount itself."}
+          ]
+        },
+        "2": {
+          "correct": "limiting",
+          "correctExplanation": "The limiting reagent is fully consumed and determines the maximum product that can form.",
+          "distractors": [
+            {"answer": "excess", "explanation": "The excess reagent is not fully consumed; the limiting reagent controls product formation."},
+            {"answer": "catalyst", "explanation": "A catalyst speeds up the reaction but does not determine the amount of product formed."}
+          ]
+        }
+      }
+    },
+    {
+      "type": "tf",
+      "question": "If the excess reagent is used for product calculations instead of the limiting reagent, the predicted product amount will be too high.",
+      "correct": "True",
+      "correctExplanation": "The excess reagent has more moles available than can actually react, so using it would overestimate the product formed.",
+      "distractors": [
+        {"answer": "False", "explanation": "Using excess reagent moles gives a larger product prediction because not all of those moles can react."}
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "In the reaction 2H₂ + O₂ → 2H₂O, if O₂ is limiting with 0.50 mol, then 1.00 mol of H₂O is produced.",
+      "correct": "True",
+      "correctExplanation": "The O₂:H₂O ratio is 1:2, so 0.50 mol O₂ produces 0.50 × 2 = 1.00 mol H₂O.",
+      "distractors": [
+        {"answer": "False", "explanation": "The ratio is 1:2, so 0.50 × 2 = 1.00 mol H₂O is correct."}
+      ]
+    }
+  ],
+
+  "toLevel3": [
+    {
+      "type": "mc",
+      "question": "In CH₄ + 2O₂ → CO₂ + 2H₂O, 0.30 mol CH₄ and 0.50 mol O₂ are mixed. O₂ is limiting. What mass of CO₂ is produced? (M of CO₂ = 44.0 g mol⁻¹)",
+      "correct": "11.0 g",
+      "correctExplanation": "O₂ is limiting: n(CO₂) = 0.50 × (1/2) = 0.25 mol. m(CO₂) = 0.25 × 44.0 = 11.0 g.",
+      "distractors": [
+        {"answer": "13.2 g", "explanation": "This uses CH₄ (0.30 × 44.0 = 13.2), but O₂ is limiting; only 0.25 mol CO₂ forms."},
+        {"answer": "22.0 g", "explanation": "This uses 0.50 mol directly (0.50 × 44.0 = 22.0), but the O₂:CO₂ ratio is 2:1, giving 0.25 mol."},
+        {"answer": "5.5 g", "explanation": "This halves the correct answer; 0.25 × 44.0 = 11.0 g, not 5.5 g."}
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "For C₃H₈ + 5O₂ → 3CO₂ + 4H₂O, propane is limiting with 0.20 mol. What mass of H₂O is produced? (M of H₂O = 18.0 g mol⁻¹)",
+      "correct": "14.4 g",
+      "correctExplanation": "n(H₂O) = 0.20 × 4 = 0.80 mol. m(H₂O) = 0.80 × 18.0 = 14.4 g.",
+      "distractors": [
+        {"answer": "3.6 g", "explanation": "This uses 0.20 × 18.0 = 3.6, omitting the mole ratio of 1:4."},
+        {"answer": "7.2 g", "explanation": "This uses a 1:2 ratio instead of 1:4; 0.20 × 4 × 18.0 = 14.4 g."},
+        {"answer": "72.0 g", "explanation": "This multiplies 0.20 × 4 × 18.0 × 5, applying the O₂ coefficient unnecessarily."}
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "In 2C₂H₆ + 7O₂ → 4CO₂ + 6H₂O, O₂ is limiting with 1.40 mol. How many moles of CO₂ are produced?",
+      "correct": "0.80 mol",
+      "correctExplanation": "The O₂:CO₂ ratio is 7:4. n(CO₂) = 1.40 × (4/7) = 0.80 mol.",
+      "distractors": [
+        {"answer": "2.80 mol", "explanation": "This multiplies by 2 instead of (4/7); 1.40 × 4/7 = 0.80 mol."},
+        {"answer": "0.40 mol", "explanation": "This uses (2/7) instead of (4/7); the CO₂ coefficient is 4, not 2."},
+        {"answer": "4.00 mol", "explanation": "This uses the CO₂ coefficient directly without relating to the O₂ amount."}
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student mixes 3.2 g of CH₄ (M = 16.0) with 16.0 g of O₂ (M = 32.0). For CH₄ + 2O₂ → CO₂ + 2H₂O, what mass of CO₂ forms?",
+      "correct": "8.8 g",
+      "correctExplanation": "n(CH₄) = 3.2/16.0 = 0.20 mol. n(O₂) = 16.0/32.0 = 0.50 mol. CH₄ needs 0.40 mol O₂; 0.50 is available, so CH₄ is limiting. n(CO₂) = 0.20 mol. m = 0.20 × 44.0 = 8.8 g.",
+      "distractors": [
+        {"answer": "11.0 g", "explanation": "This uses O₂ as limiting (0.50 × 0.5 × 44 = 11.0), but CH₄ is actually limiting."},
+        {"answer": "17.6 g", "explanation": "This doubles the correct answer, as if the CH₄:CO₂ ratio were 1:2 instead of 1:1."},
+        {"answer": "4.4 g", "explanation": "This halves the correct answer; 0.20 mol × 44.0 = 8.8 g."}
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Why might the actual mass of product obtained be less than the calculated theoretical yield?",
+      "correct": "Incomplete reactions, side reactions, or losses during collection reduce the actual yield",
+      "correctExplanation": "In practice, not all limiting reagent may react, some product may be lost during transfer, and competing side reactions may consume reactants.",
+      "distractors": [
+        {"answer": "The balanced equation is wrong", "explanation": "If the equation is correctly balanced, it accurately represents the stoichiometry; practical losses cause lower yields."},
+        {"answer": "The molar mass changes during the reaction", "explanation": "Molar masses are fixed properties of substances and do not change during reactions."},
+        {"answer": "The excess reagent absorbs the product", "explanation": "The excess reagent does not absorb products; practical factors like incomplete reaction reduce yield."}
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "In C₃H₈ + 5O₂ → 3CO₂ + 4H₂O, 2.20 g of propane (M = 44.0) reacts with excess O₂. What volume of CO₂ is produced at SLC (molar volume = 24.8 L mol⁻¹)?",
+      "correct": "3.72 L",
+      "correctExplanation": "n(C₃H₈) = 2.20/44.0 = 0.0500 mol (limiting). n(CO₂) = 0.0500 × 3 = 0.150 mol. V = 0.150 × 24.8 = 3.72 L.",
+      "distractors": [
+        {"answer": "1.24 L", "explanation": "This uses the propane moles directly (0.0500 × 24.8), omitting the 1:3 ratio."},
+        {"answer": "7.44 L", "explanation": "This doubles the correct answer, as if the ratio were 1:6 instead of 1:3."},
+        {"answer": "3.60 L", "explanation": "This uses a molar volume of 24.0 L mol⁻¹ instead of 24.8 L mol⁻¹; 0.150 × 24.8 = 3.72 L."}
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the product mass calculation.",
+      "sentence": "In CH₄ + 2O₂ → CO₂ + 2H₂O, with O₂ limiting at 1.00 mol: n(CO₂) = {{blank:1}} mol, so m(CO₂) = {{blank:2}} g.",
+      "blanks": {
+        "1": {
+          "correct": "0.50",
+          "correctExplanation": "O₂:CO₂ = 2:1, so 1.00 × (1/2) = 0.50 mol CO₂.",
+          "distractors": [
+            {"answer": "1.00", "explanation": "This assumes a 1:1 ratio, but O₂:CO₂ is 2:1, giving 0.50 mol."},
+            {"answer": "2.00", "explanation": "This multiplies by 2 instead of dividing; the ratio is 2:1."}
+          ]
+        },
+        "2": {
+          "correct": "22.0",
+          "correctExplanation": "m = n × M = 0.50 × 44.0 = 22.0 g.",
+          "distractors": [
+            {"answer": "44.0", "explanation": "This uses 1.00 mol × 44.0, but only 0.50 mol CO₂ is produced."},
+            {"answer": "11.0", "explanation": "This halves the correct answer; 0.50 × 44.0 = 22.0 g."}
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the product calculation with a limiting reagent.",
+      "sentence": "For 2C₄H₁₀ + 13O₂ → 8CO₂ + 10H₂O, if O₂ is limiting with 6.50 mol, then n(CO₂) = {{blank:1}} mol.",
+      "blanks": {
+        "1": {
+          "correct": "4.00",
+          "correctExplanation": "O₂:CO₂ = 13:8. n(CO₂) = 6.50 × (8/13) = 4.00 mol.",
+          "distractors": [
+            {"answer": "8.00", "explanation": "This uses the CO₂ coefficient directly; you must scale: 6.50 × 8/13 = 4.00 mol."},
+            {"answer": "5.00", "explanation": "This uses 6.50 × (10/13) which is the H₂O ratio, not CO₂; CO₂ uses 8/13."}
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the volume calculation from limiting reagent.",
+      "sentence": "In CH₄ + 2O₂ → CO₂ + 2H₂O, 0.100 mol of CH₄ (limiting) produces {{blank:1}} mol CO₂, which occupies {{blank:2}} L at SLC (24.8 L mol⁻¹).",
+      "blanks": {
+        "1": {
+          "correct": "0.100",
+          "correctExplanation": "CH₄:CO₂ = 1:1, so 0.100 mol CH₄ produces 0.100 mol CO₂.",
+          "distractors": [
+            {"answer": "0.200", "explanation": "This uses the H₂O ratio (1:2), not the CO₂ ratio (1:1)."},
+            {"answer": "0.050", "explanation": "This halves the moles; the CH₄:CO₂ ratio is 1:1."}
+          ]
+        },
+        "2": {
+          "correct": "2.48",
+          "correctExplanation": "V = 0.100 × 24.8 = 2.48 L.",
+          "distractors": [
+            {"answer": "4.96", "explanation": "This doubles the volume, using 0.200 mol instead of 0.100 mol."},
+            {"answer": "24.8", "explanation": "This uses 1.00 mol instead of 0.100 mol; V = 0.100 × 24.8 = 2.48 L."}
+          ]
+        }
+      }
+    },
+    {
+      "type": "tf",
+      "question": "In C₃H₈ + 5O₂ → 3CO₂ + 4H₂O, if O₂ is limiting with 2.50 mol, then 1.50 mol of CO₂ is produced.",
+      "correct": "True",
+      "correctExplanation": "O₂:CO₂ = 5:3. n(CO₂) = 2.50 × (3/5) = 1.50 mol.",
+      "distractors": [
+        {"answer": "False", "explanation": "The calculation is correct: 2.50 × 3/5 = 1.50 mol CO₂."}
+      ]
+    }
+  ],
+
+  "toLevel4": [
+    {
+      "type": "mc",
+      "question": "8.0 g of methane (M = 16.0) and 48.0 g of oxygen (M = 32.0) react via CH₄ + 2O₂ → CO₂ + 2H₂O. What mass of water is produced?",
+      "correct": "18.0 g",
+      "correctExplanation": "n(CH₄) = 0.50 mol, n(O₂) = 1.50 mol. CH₄ needs 1.00 mol O₂; 1.50 is available, so CH₄ is limiting. n(H₂O) = 0.50 × 2 = 1.00 mol. m = 1.00 × 18.0 = 18.0 g.",
+      "distractors": [
+        {"answer": "27.0 g", "explanation": "This uses O₂ as limiting (1.50 × 1 × 18 = 27.0), but CH₄ is limiting."},
+        {"answer": "9.0 g", "explanation": "This uses a 1:1 ratio for H₂O instead of 1:2; 0.50 × 2 × 18.0 = 18.0 g."},
+        {"answer": "36.0 g", "explanation": "This doubles the correct answer; only 1.00 mol H₂O forms from 0.50 mol CH₄."}
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "For 2C₄H₁₀ + 13O₂ → 8CO₂ + 10H₂O, 11.6 g of butane (M = 58.0) reacts with 40.0 g of O₂ (M = 32.0). What mass of CO₂ is produced?",
+      "correct": "33.8 g",
+      "correctExplanation": "n(C₄H₁₀) = 0.200 mol, n(O₂) = 1.25 mol. Butane needs 1.30 mol O₂; only 1.25 available, so O₂ is limiting. n(CO₂) = 1.25 × 8/13 = 0.769 mol. m = 0.769 × 44.0 = 33.8 g.",
+      "distractors": [
+        {"answer": "35.2 g", "explanation": "This uses butane as limiting (0.200 × 4 × 44.0 = 35.2), but O₂ is limiting."},
+        {"answer": "44.0 g", "explanation": "This uses 1.00 mol CO₂; the actual amount from limiting O₂ is 0.769 mol."},
+        {"answer": "17.6 g", "explanation": "This halves the butane-based answer; the O₂-limited calculation gives 33.8 g."}
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "In C₃H₈ + 5O₂ → 3CO₂ + 4H₂O, 22.0 g of propane (M = 44.0) is combusted with excess O₂. What volume of CO₂ is produced at SLC?",
+      "correct": "37.2 L",
+      "correctExplanation": "n(C₃H₈) = 22.0/44.0 = 0.500 mol (limiting). n(CO₂) = 0.500 × 3 = 1.50 mol. V = 1.50 × 24.8 = 37.2 L.",
+      "distractors": [
+        {"answer": "12.4 L", "explanation": "This uses the propane moles directly (0.500 × 24.8), omitting the 1:3 ratio."},
+        {"answer": "74.4 L", "explanation": "This doubles the volume, using 3.00 mol instead of 1.50 mol."},
+        {"answer": "49.6 L", "explanation": "This uses the H₂O ratio (1:4) instead of CO₂ (1:3); 0.500 × 3 × 24.8 = 37.2 L."}
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "For CH₄ + 2O₂ → CO₂ + 2H₂O, 4.0 g of CH₄ (M = 16.0) reacts with 12.0 g of O₂ (M = 32.0). Calculate the energy released if ΔH = 890 kJ mol⁻¹ for methane.",
+      "correct": "166.9 kJ",
+      "correctExplanation": "n(CH₄) = 0.250 mol, n(O₂) = 0.375 mol. CH₄ needs 0.500 mol O₂; only 0.375 available, so O₂ is limiting. n(CH₄ reacted) = 0.375/2 = 0.1875 mol. E = 0.1875 × 890 = 166.9 kJ.",
+      "distractors": [
+        {"answer": "222.5 kJ", "explanation": "This uses all CH₄ (0.250 × 890 = 222.5), but O₂ is limiting, so only 0.1875 mol CH₄ reacts."},
+        {"answer": "333.8 kJ", "explanation": "This uses O₂ moles directly (0.375 × 890), but O₂:CH₄ is 2:1, so only 0.1875 mol CH₄ reacts."},
+        {"answer": "83.4 kJ", "explanation": "This halves the correct answer; E = 0.1875 × 890 = 166.9 kJ."}
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A sealed vessel contains 5.0 L of C₃H₈ and 20.0 L of O₂ at constant T and P. Using C₃H₈ + 5O₂ → 3CO₂ + 4H₂O(g), what volume of CO₂ is produced?",
+      "correct": "12.0 L",
+      "correctExplanation": "5.0 L C₃H₈ needs 25.0 L O₂; only 20.0 available, so O₂ is limiting. V(CO₂) = 20.0 × (3/5) = 12.0 L.",
+      "distractors": [
+        {"answer": "15.0 L", "explanation": "This uses propane as limiting (5.0 × 3 = 15.0), but O₂ is limiting."},
+        {"answer": "20.0 L", "explanation": "This equals the O₂ volume; the O₂:CO₂ ratio is 5:3, giving 12.0 L."},
+        {"answer": "60.0 L", "explanation": "This multiplies 20.0 × 3, without dividing by the O₂ coefficient (5); 20.0 × 3/5 = 12.0 L."}
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "In 2H₂ + O₂ → 2H₂O, 2.0 g of H₂ (M = 2.0) reacts with 24.0 g of O₂ (M = 32.0). What mass of H₂O is produced and what mass of excess reagent remains?",
+      "correct": "18.0 g H₂O; 8.0 g O₂ remains",
+      "correctExplanation": "n(H₂) = 1.00 mol, n(O₂) = 0.75 mol. H₂ needs 0.50 mol O₂; 0.75 available, so H₂ is limiting. n(H₂O) = 1.00 mol = 18.0 g. O₂ consumed = 0.50 mol = 16.0 g. Excess O₂ = 24.0 − 16.0 = 8.0 g.",
+      "distractors": [
+        {"answer": "27.0 g H₂O; 0 g O₂ remains", "explanation": "This uses O₂ as limiting (0.75 × 2 × 18 = 27), but H₂ is limiting."},
+        {"answer": "18.0 g H₂O; 16.0 g O₂ remains", "explanation": "16.0 g is the O₂ consumed, not remaining; 24.0 − 16.0 = 8.0 g remains."},
+        {"answer": "9.0 g H₂O; 8.0 g O₂ remains", "explanation": "This halves the H₂O; the H₂:H₂O ratio is 1:1, so 1.00 mol = 18.0 g."}
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "For C₂H₅OH + 3O₂ → 2CO₂ + 3H₂O, 9.2 g of ethanol (M = 46.0) reacts with 14.4 g of O₂ (M = 32.0). What mass of CO₂ is produced?",
+      "correct": "13.2 g",
+      "correctExplanation": "n(C₂H₅OH) = 9.2/46.0 = 0.200 mol. n(O₂) = 14.4/32.0 = 0.450 mol. Ethanol needs 0.600 mol O₂; only 0.450 available, so O₂ is limiting. n(CO₂) = 0.450 × (2/3) = 0.300 mol. m = 0.300 × 44.0 = 13.2 g.",
+      "distractors": [
+        {"answer": "17.6 g", "explanation": "This uses ethanol as limiting (0.200 × 2 × 44.0 = 17.6), but O₂ is limiting."},
+        {"answer": "19.8 g", "explanation": "This uses 0.450 × 44.0 = 19.8, ignoring the O₂:CO₂ ratio of 3:2."},
+        {"answer": "6.6 g", "explanation": "This halves the correct answer; 0.300 × 44.0 = 13.2 g."}
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the product and energy calculation.",
+      "sentence": "In CH₄ + 2O₂ → CO₂ + 2H₂O, 0.60 mol CH₄ reacts with 1.00 mol O₂. O₂ is limiting, so n(CH₄ reacted) = {{blank:1}} mol and energy released = {{blank:2}} kJ. (ΔH = 890 kJ mol⁻¹)",
+      "blanks": {
+        "1": {
+          "correct": "0.50",
+          "correctExplanation": "O₂:CH₄ = 2:1, so 1.00 mol O₂ reacts with 1.00/2 = 0.50 mol CH₄.",
+          "distractors": [
+            {"answer": "0.60", "explanation": "Only 0.50 mol CH₄ can react because O₂ is limiting; 0.10 mol CH₄ is excess."},
+            {"answer": "1.00", "explanation": "This uses the O₂ moles directly; the ratio is 2:1, so 0.50 mol CH₄ reacts."}
+          ]
+        },
+        "2": {
+          "correct": "445",
+          "correctExplanation": "E = 0.50 × 890 = 445 kJ.",
+          "distractors": [
+            {"answer": "534", "explanation": "This uses 0.60 mol (all CH₄), but only 0.50 mol reacts; 0.50 × 890 = 445 kJ."},
+            {"answer": "890", "explanation": "This uses 1.00 mol; only 0.50 mol CH₄ reacts, giving 445 kJ."}
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the product mass calculation for propane.",
+      "sentence": "In C₃H₈ + 5O₂ → 3CO₂ + 4H₂O, 4.40 g of C₃H₈ (M = 44.0) is limiting. n(CO₂) = {{blank:1}} mol and m(CO₂) = {{blank:2}} g.",
+      "blanks": {
+        "1": {
+          "correct": "0.300",
+          "correctExplanation": "n(C₃H₈) = 4.40/44.0 = 0.100 mol. n(CO₂) = 0.100 × 3 = 0.300 mol.",
+          "distractors": [
+            {"answer": "0.100", "explanation": "This is the propane moles without applying the 1:3 ratio; 0.100 × 3 = 0.300 mol."},
+            {"answer": "0.400", "explanation": "This uses the H₂O ratio (1:4) instead of CO₂ (1:3)."}
+          ]
+        },
+        "2": {
+          "correct": "13.2",
+          "correctExplanation": "m = 0.300 × 44.0 = 13.2 g.",
+          "distractors": [
+            {"answer": "4.40", "explanation": "This is the mass of propane, not CO₂; 0.300 × 44.0 = 13.2 g."},
+            {"answer": "26.4", "explanation": "This doubles the correct answer; only 0.300 mol CO₂ forms."}
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the volume calculation from a limiting reagent.",
+      "sentence": "In 2C₂H₆ + 7O₂ → 4CO₂ + 6H₂O, O₂ is limiting with 3.50 mol. n(CO₂) = {{blank:1}} mol, occupying {{blank:2}} L at SLC.",
+      "blanks": {
+        "1": {
+          "correct": "2.00",
+          "correctExplanation": "O₂:CO₂ = 7:4. n(CO₂) = 3.50 × (4/7) = 2.00 mol.",
+          "distractors": [
+            {"answer": "4.00", "explanation": "This uses the CO₂ coefficient directly; you must scale: 3.50 × 4/7 = 2.00 mol."},
+            {"answer": "1.00", "explanation": "This uses (2/7) instead of (4/7); the CO₂ coefficient is 4."}
+          ]
+        },
+        "2": {
+          "correct": "49.6",
+          "correctExplanation": "V = 2.00 × 24.8 = 49.6 L.",
+          "distractors": [
+            {"answer": "24.8", "explanation": "This uses 1.00 mol instead of 2.00 mol; V = 2.00 × 24.8 = 49.6 L."},
+            {"answer": "99.2", "explanation": "This uses 4.00 mol; the correct amount is 2.00 mol."}
+          ]
+        }
+      }
+    }
+  ],
+
+  "toLevel5": [
+    {
+      "type": "mc",
+      "question": "A furnace burns 64.0 g of methane (M = 16.0) with 200.0 g of O₂ (M = 32.0) via CH₄ + 2O₂ → CO₂ + 2H₂O. Calculate the mass of CO₂ produced and the mass of excess reagent remaining.",
+      "correct": "137.5 g CO₂; 14.0 g CH₄ remains",
+      "correctExplanation": "n(CH₄) = 4.00 mol, n(O₂) = 6.25 mol. CH₄ needs 8.00 mol O₂; only 6.25 available, so O₂ is limiting. n(CH₄ reacted) = 3.125 mol. m(CO₂) = 3.125 × 44.0 = 137.5 g. Excess CH₄ = 0.875 mol × 16.0 = 14.0 g.",
+      "distractors": [
+        {"answer": "176.0 g CO₂; 0 g CH₄ remains", "explanation": "This assumes all CH₄ reacts (4.00 × 44 = 176.0), but O₂ is limiting."},
+        {"answer": "137.5 g CO₂; 4.0 g CH₄ remains", "explanation": "Excess CH₄ = 0.875 mol × 16.0 = 14.0 g, not 4.0 g."},
+        {"answer": "110.0 g CO₂; 14.0 g CH₄ remains", "explanation": "CO₂ = 3.125 × 44.0 = 137.5 g, not 110.0 g."}
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "For C₃H₈ + 5O₂ → 3CO₂ + 4H₂O, 8.80 g of propane (M = 44.0) reacts with 28.8 g of O₂ (M = 32.0). Calculate the total mass of all products formed.",
+      "correct": "36.7 g",
+      "correctExplanation": "O₂ is limiting (0.900 mol). n(C₃H₈ reacted) = 0.180 mol. CO₂ = 0.540 × 44.0 = 23.8 g. H₂O = 0.720 × 18.0 = 13.0 g. Total = 23.8 + 13.0 = 36.7 g (or by mass conservation: 7.92 + 28.8 = 36.7 g).",
+      "distractors": [
+        {"answer": "44.0 g", "explanation": "This is one molar mass of CO₂; the actual total product mass from O₂-limited reaction is 36.7 g."},
+        {"answer": "30.8 g", "explanation": "This omits the water mass; both CO₂ and H₂O must be included in total product mass."},
+        {"answer": "50.4 g", "explanation": "This uses propane as limiting (0.200 mol), overestimating products; O₂ is limiting."}
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Two experiments combust methane with limited O₂. Experiment A: 0.40 mol CH₄ with 0.60 mol O₂. Experiment B: 0.20 mol CH₄ with 0.50 mol O₂. Using CH₄ + 2O₂ → CO₂ + 2H₂O, which experiment produces more CO₂?",
+      "correct": "Experiment A produces more CO₂",
+      "correctExplanation": "Exp A: O₂ is limiting (needs 0.80, has 0.60). n(CO₂) = 0.60/2 = 0.30 mol. Exp B: CH₄ is limiting (needs 0.40 mol O₂, has 0.50). n(CO₂) = 0.20 mol. A produces 0.30 mol vs B's 0.20 mol.",
+      "distractors": [
+        {"answer": "Experiment B produces more CO₂", "explanation": "B produces only 0.20 mol CO₂ while A produces 0.30 mol. A produces more."},
+        {"answer": "Both produce the same amount of CO₂", "explanation": "A produces 0.30 mol and B produces 0.20 mol; they are not equal."},
+        {"answer": "Cannot be determined without molar masses", "explanation": "Moles are already given; the comparison can be made directly using stoichiometric ratios."}
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "In 2C₈H₁₈ + 25O₂ → 16CO₂ + 18H₂O, 228.0 g of octane (M = 114.0) reacts with 700.0 g of O₂ (M = 32.0). What volume of CO₂ at SLC is produced?",
+      "correct": "347.2 L",
+      "correctExplanation": "n(C₈H₁₈) = 2.00 mol, n(O₂) = 21.875 mol. Octane needs 25.0 mol O₂; O₂ is limiting. n(CO₂) = 21.875 × 16/25 = 14.0 mol. V = 14.0 × 24.8 = 347.2 L.",
+      "distractors": [
+        {"answer": "396.8 L", "explanation": "This uses octane as limiting (2.00 × 8 × 24.8 = 396.8), but O₂ is limiting."},
+        {"answer": "275.0 L", "explanation": "This uses an incorrect ratio; n(CO₂) = 21.875 × 16/25 = 14.0 mol, V = 347.2 L."},
+        {"answer": "542.5 L", "explanation": "This uses O₂ moles directly with molar volume (21.875 × 24.8), ignoring the ratio."}
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student calculates product from a reaction and gets 22.0 g of CO₂. The experimental yield is only 18.0 g. What is the percentage yield?",
+      "correct": "81.8%",
+      "correctExplanation": "Percentage yield = (actual/theoretical) × 100 = (18.0/22.0) × 100 = 81.8%.",
+      "distractors": [
+        {"answer": "122%", "explanation": "This divides theoretical by actual (22.0/18.0 × 100), which inverts the calculation."},
+        {"answer": "18.2%", "explanation": "This subtracts to get the loss percentage (4.0/22.0 × 100), not the yield percentage."},
+        {"answer": "90.0%", "explanation": "18.0/22.0 = 0.818, which is 81.8%, not 90.0%."}
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "For CH₄ + 2O₂ → CO₂ + 2H₂O, a power plant burns 320 g of methane (M = 16.0) per minute with excess O₂. How much energy is released per minute? (ΔH = 890 kJ mol⁻¹)",
+      "correct": "17 800 kJ",
+      "correctExplanation": "n(CH₄) = 320/16.0 = 20.0 mol (limiting, with excess O₂). E = 20.0 × 890 = 17 800 kJ per minute.",
+      "distractors": [
+        {"answer": "8 900 kJ", "explanation": "This uses 10.0 mol instead of 20.0; n = 320/16.0 = 20.0 mol."},
+        {"answer": "890 kJ", "explanation": "This uses 1.0 mol; 320 g of CH₄ is 20.0 mol, giving 17 800 kJ."},
+        {"answer": "35 600 kJ", "explanation": "This doubles the energy, as if ΔH applied per mole of O₂; it applies per mole of CH₄."}
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "In C₂H₅OH + 3O₂ → 2CO₂ + 3H₂O, 23.0 g of ethanol (M = 46.0) reacts with 32.0 g of O₂ (M = 32.0). Calculate the volume of CO₂ at SLC and the mass of H₂O produced.",
+      "correct": "16.5 L CO₂ and 18.0 g H₂O",
+      "correctExplanation": "n(C₂H₅OH) = 0.500 mol, n(O₂) = 1.000 mol. Ethanol needs 1.500 mol O₂; only 1.000 available. O₂ is limiting. n(CO₂) = 1.000 × 2/3 = 0.667 mol, V = 0.667 × 24.8 = 16.5 L. n(H₂O) = 1.000 × 3/3 = 1.000 mol = 18.0 g.",
+      "distractors": [
+        {"answer": "24.8 L CO₂ and 27.0 g H₂O", "explanation": "This uses ethanol as limiting (0.500 × 2 × 24.8 and 0.500 × 3 × 18), but O₂ is limiting."},
+        {"answer": "16.5 L CO₂ and 12.0 g H₂O", "explanation": "CO₂ is correct but H₂O should be 1.000 × 18.0 = 18.0 g, not 12.0 g."},
+        {"answer": "24.8 L CO₂ and 18.0 g H₂O", "explanation": "H₂O is correct but V(CO₂) = 0.667 × 24.8 = 16.5 L, not 24.8 L."}
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An industrial process burns 88.0 g of propane (M = 44.0) with 400.0 g of O₂ (M = 32.0). Using C₃H₈ + 5O₂ → 3CO₂ + 4H₂O, what mass of CO₂ is emitted?",
+      "correct": "264 g",
+      "correctExplanation": "n(C₃H₈) = 2.00 mol, n(O₂) = 12.5 mol. Propane needs 10.0 mol O₂; 12.5 available. C₃H₈ is limiting. n(CO₂) = 2.00 × 3 = 6.00 mol. m = 6.00 × 44.0 = 264 g.",
+      "distractors": [
+        {"answer": "330 g", "explanation": "This uses O₂ as limiting (12.5 × 3/5 × 44 = 330), but propane is limiting."},
+        {"answer": "132 g", "explanation": "This uses 1.00 mol propane; n(C₃H₈) = 88.0/44.0 = 2.00 mol."},
+        {"answer": "352 g", "explanation": "This uses a 1:4 ratio (H₂O coefficient) instead of 1:3 for CO₂."}
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the full product calculation with limiting reagent.",
+      "sentence": "For CH₄ + 2O₂ → CO₂ + 2H₂O, 12.0 g CH₄ (M=16.0) and 80.0 g O₂ (M=32.0) react. The limiting reagent is {{blank:1}} and {{blank:2}} g of CO₂ is produced.",
+      "blanks": {
+        "1": {
+          "correct": "CH₄",
+          "correctExplanation": "n(CH₄) = 0.750 mol, n(O₂) = 2.50 mol. CH₄ needs 1.50 mol O₂; 2.50 available. CH₄ is limiting.",
+          "distractors": [
+            {"answer": "O₂", "explanation": "2.50 mol O₂ exceeds the 1.50 mol required; O₂ is in excess."},
+            {"answer": "CO₂", "explanation": "CO₂ is a product, not a reactant; it cannot be limiting."}
+          ]
+        },
+        "2": {
+          "correct": "33.0",
+          "correctExplanation": "n(CO₂) = 0.750 mol (1:1 ratio). m = 0.750 × 44.0 = 33.0 g.",
+          "distractors": [
+            {"answer": "55.0", "explanation": "This uses O₂ moles (2.50 × 0.5 × 44 = 55.0), but CH₄ is limiting."},
+            {"answer": "16.5", "explanation": "This halves the correct answer; 0.750 × 44.0 = 33.0 g."}
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the energy calculation with a limiting reagent.",
+      "sentence": "For C₃H₈ + 5O₂ → 3CO₂ + 4H₂O (ΔH = 2220 kJ mol⁻¹), 2.20 g of C₃H₈ (M=44.0) with excess O₂ releases {{blank:1}} kJ of energy.",
+      "blanks": {
+        "1": {
+          "correct": "111",
+          "correctExplanation": "n(C₃H₈) = 2.20/44.0 = 0.0500 mol (limiting). E = 0.0500 × 2220 = 111 kJ.",
+          "distractors": [
+            {"answer": "222", "explanation": "This uses 0.100 mol; n = 2.20/44.0 = 0.0500 mol, giving 111 kJ."},
+            {"answer": "2220", "explanation": "This uses 1.00 mol; only 0.0500 mol reacts, giving 111 kJ."}
+          ]
+        }
+      }
+    }
+  ]
+}

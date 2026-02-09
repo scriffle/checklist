@@ -1,0 +1,495 @@
+{
+  "_link": {
+    "uuid": "lp-d3de24d2-1dce-9417-a970-4749d653de35",
+    "version": 1,
+    "contentHash": "hash-29b692e2",
+    "title": "I can determine elastic potential energy from area under a force-extension graph",
+    "generatedAt": "2026-02-08T16:00:00Z"
+  },
+  "toLevel2": [
+    {
+      "type": "mc",
+      "question": "On a force-extension graph for an ideal spring, what does the area under the line represent?",
+      "correct": "The elastic potential energy stored",
+      "correctExplanation": "The area under a force-extension graph equals the work done on the spring, which is stored as elastic potential energy.",
+      "distractors": [
+        { "answer": "The spring constant", "explanation": "The spring constant is the gradient of the line, not the area." },
+        { "answer": "The force applied to the spring", "explanation": "Force is shown on the y-axis; the area represents energy." },
+        { "answer": "The momentum of the spring", "explanation": "Momentum involves mass and velocity; the area under an F-x graph gives energy." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What shape is the area under an ideal spring's force-extension graph?",
+      "correct": "A triangle",
+      "correctExplanation": "The graph is a straight line from the origin, forming a right triangle with the x-axis.",
+      "distractors": [
+        { "answer": "A rectangle", "explanation": "A rectangle would mean constant force. Spring force increases linearly with extension." },
+        { "answer": "A semicircle", "explanation": "The graph is a straight line, not a curve, so the area is triangular." },
+        { "answer": "A trapezium", "explanation": "A trapezium would require a non-zero y-intercept. The graph starts at the origin." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "How do you calculate the area of the triangle under an ideal spring's force-extension graph?",
+      "correct": "½ × base × height",
+      "correctExplanation": "The area of a triangle is ½ × base × height, where base is extension (m) and height is force (N).",
+      "distractors": [
+        { "answer": "Base × height", "explanation": "Base × height gives the area of a rectangle. The triangular area requires the ½ factor." },
+        { "answer": "Base + height", "explanation": "Adding base and height does not give area in any standard geometry formula." },
+        { "answer": "2 × base × height", "explanation": "Multiplying by 2 would give double the area of the triangle." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What are the units of the area under a force-extension graph?",
+      "correct": "Joules (J)",
+      "correctExplanation": "The y-axis is in newtons (N) and x-axis is in metres (m). Area = N × m = N·m = J.",
+      "distractors": [
+        { "answer": "N/m", "explanation": "N/m is the unit of the gradient (spring constant), not the area." },
+        { "answer": "Newtons (N)", "explanation": "Newtons measure force. The area combines force and distance to give energy (J)." },
+        { "answer": "Metres (m)", "explanation": "Metres measure extension. The area represents energy in joules." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Why is the area under the graph a useful way to find elastic potential energy?",
+      "correct": "Because the force changes as the spring extends, so simple F × x does not apply",
+      "correctExplanation": "Since F varies with x for a spring, you cannot use W = Fs directly. The area method accounts for the changing force.",
+      "distractors": [
+        { "answer": "Because it avoids needing the spring constant", "explanation": "You still need the force values from the graph, which depend on the spring constant." },
+        { "answer": "Because it gives the spring constant directly", "explanation": "The gradient gives the spring constant. The area gives elastic PE." },
+        { "answer": "Because the formula Es = ½kx² does not work", "explanation": "Es = ½kx² does work; the area method and formula give the same result." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "The area under a force-extension graph for an ideal spring equals ½kx².",
+      "correct": "True",
+      "correctExplanation": "The triangle area = ½ × x × kx = ½kx², which matches the elastic PE formula.",
+      "distractors": [
+        { "answer": "False", "explanation": "Students may not recognise that the area formula and Es = ½kx² are equivalent." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "The area under a force-extension graph represents the spring constant.",
+      "correct": "False",
+      "correctExplanation": "The area represents elastic potential energy. The spring constant is given by the gradient.",
+      "distractors": [
+        { "answer": "True", "explanation": "Students may confuse gradient (spring constant) with area (elastic PE)." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the statement about the force-extension graph.",
+      "sentence": "The elastic potential energy stored in a spring equals the {{blank:1}} under the force-extension graph.",
+      "blanks": {
+        "1": {
+          "correct": "area",
+          "correctExplanation": "The area under the F-x graph equals the work done on the spring, stored as elastic PE.",
+          "distractors": [
+            { "answer": "gradient", "explanation": "The gradient gives the spring constant k, not the elastic PE." },
+            { "answer": "length", "explanation": "The length of the line is not physically meaningful for energy." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the calculation of area under the graph.",
+      "sentence": "For an ideal spring, the area under the F-x graph is a {{blank:1}}, calculated as ½ × base × height.",
+      "blanks": {
+        "1": {
+          "correct": "triangle",
+          "correctExplanation": "The straight line from the origin creates a right triangle with the axes.",
+          "distractors": [
+            { "answer": "rectangle", "explanation": "A rectangle applies when force is constant; spring force increases linearly." },
+            { "answer": "trapezium", "explanation": "A trapezium would require the graph to not pass through the origin." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the units analysis.",
+      "sentence": "On a force-extension graph, the area has units of N × m = {{blank:1}}.",
+      "blanks": {
+        "1": {
+          "correct": "J",
+          "correctExplanation": "Newton-metres (N·m) equal joules (J), the unit of energy.",
+          "distractors": [
+            { "answer": "W", "explanation": "Watts (W) are J/s (power), not N·m." },
+            { "answer": "N", "explanation": "Newtons are force; N × m = J, the unit of energy." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "mc",
+      "question": "A force-extension graph for an ideal spring shows the line from (0, 0) to (0.5 m, 400 N). What is the elastic PE stored?",
+      "correct": "100 J",
+      "correctExplanation": "Area = ½ × base × height = ½ × 0.5 × 400 = 100 J.",
+      "distractors": [
+        { "answer": "200 J", "explanation": "200 = 0.5 × 400, which is the rectangle area, not the triangle. Must include ½." },
+        { "answer": "50 J", "explanation": "50 = ½ × 0.5 × 200. The maximum force is 400 N, not 200 N." },
+        { "answer": "400 J", "explanation": "400 is just the force at maximum extension, not the energy." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Why is the area under the F-x graph a triangle rather than a rectangle for an ideal spring?",
+      "correct": "Because the force starts at zero and increases linearly with extension",
+      "correctExplanation": "At x = 0, F = 0. The force increases linearly (F = kx), creating a straight line from the origin — a triangular area.",
+      "distractors": [
+        { "answer": "Because energy is always triangular", "explanation": "The shape depends on the force-displacement relationship, not a general rule about energy." },
+        { "answer": "Because the spring constant changes", "explanation": "For an ideal spring, k is constant. The triangle arises because F starts at zero." },
+        { "answer": "Because the extension is always halved", "explanation": "Extension is not halved; the ½ comes from the triangular area formula." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A spring is extended to 0.3 m where the force is 24 N. Using the graph, what is the elastic PE stored?",
+      "correct": "3.6 J",
+      "correctExplanation": "Area of triangle = ½ × 0.3 × 24 = 3.6 J.",
+      "distractors": [
+        { "answer": "7.2 J", "explanation": "7.2 = 0.3 × 24, using rectangle area and forgetting the ½." },
+        { "answer": "80 J", "explanation": "80 = 24/0.3 = k. This is the spring constant, not the elastic PE." },
+        { "answer": "1.8 J", "explanation": "1.8 = ½ × 0.3 × 12. The maximum force is 24 N, not 12 N." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Two springs both extend to 0.4 m. Spring A reaches 20 N and spring B reaches 40 N at that extension. How do their elastic PEs compare?",
+      "correct": "Spring B stores twice as much energy as spring A",
+      "correctExplanation": "Es_A = ½ × 0.4 × 20 = 4 J. Es_B = ½ × 0.4 × 40 = 8 J. Spring B stores double.",
+      "distractors": [
+        { "answer": "Spring B stores four times the energy", "explanation": "Four times would require double the force AND double the extension. Here only force doubles." },
+        { "answer": "They store equal energy", "explanation": "Same extension but different forces means different energies." },
+        { "answer": "Spring A stores more energy", "explanation": "Spring B has a larger force and the same extension, so it stores more energy." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A force-extension graph shows the force reaching 600 N at an extension of 0.75 m. What is the elastic PE?",
+      "correct": "225 J",
+      "correctExplanation": "Area = ½ × 0.75 × 600 = 225 J.",
+      "distractors": [
+        { "answer": "450 J", "explanation": "450 = 0.75 × 600 = rectangle area, missing the ½." },
+        { "answer": "800 J", "explanation": "800 = 600/0.75 = spring constant, not energy." },
+        { "answer": "112.5 J", "explanation": "112.5 = ½ × 0.75 × 300. The maximum force is 600 N, not 300 N." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "On an ideal spring's F-x graph, if you know the spring constant k = 500 N/m, what is the force at 0.2 m extension and the elastic PE?",
+      "correct": "100 N force and 10 J stored",
+      "correctExplanation": "F = kx = 500 × 0.2 = 100 N. Es = ½ × 0.2 × 100 = 10 J.",
+      "distractors": [
+        { "answer": "100 N force and 20 J stored", "explanation": "20 = 0.2 × 100 = rectangle area. The triangle area is ½ × 0.2 × 100 = 10 J." },
+        { "answer": "500 N force and 50 J stored", "explanation": "F = kx = 500 × 0.2 = 100 N, not 500 N." },
+        { "answer": "100 N force and 5 J stored", "explanation": "5 = ½ × 0.1 × 100, using the wrong extension value." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "If a force-extension graph shows a curve rather than a straight line, the area under the curve still represents elastic potential energy.",
+      "correct": "True",
+      "correctExplanation": "The area under any force-extension graph represents the work done (energy stored), regardless of shape. For non-linear graphs, the simple triangle formula does not apply, but the area still gives the energy.",
+      "distractors": [
+        { "answer": "False", "explanation": "Students may think only triangular areas count. The area always represents energy, but the calculation method changes." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Calculate elastic PE from the F-x graph.",
+      "sentence": "A spring's F-x graph shows the line reaching (0.4 m, 200 N). Es = ½ × 0.4 × 200 = {{blank:1}} J.",
+      "blanks": {
+        "1": {
+          "correct": "40",
+          "correctExplanation": "Es = ½ × 0.4 × 200 = 0.5 × 80 = 40 J.",
+          "distractors": [
+            { "answer": "80", "explanation": "80 = 0.4 × 200, which is the rectangle area (missing ½)." },
+            { "answer": "500", "explanation": "500 = 200/0.4, which is the spring constant, not the energy." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Identify what graph features give different physical quantities.",
+      "sentence": "On an F-x graph, the {{blank:1}} gives elastic PE while the gradient gives the spring constant.",
+      "blanks": {
+        "1": {
+          "correct": "area",
+          "correctExplanation": "Area under the graph = elastic PE; gradient = spring constant k.",
+          "distractors": [
+            { "answer": "intercept", "explanation": "The y-intercept is zero for an ideal spring and does not give elastic PE." },
+            { "answer": "slope", "explanation": "The slope (gradient) gives the spring constant, not the elastic PE." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the equivalence between graph area and formula.",
+      "sentence": "The triangular area ½ × x × kx simplifies to the formula Es = {{blank:1}}.",
+      "blanks": {
+        "1": {
+          "correct": "½kx²",
+          "correctExplanation": "½ × x × kx = ½ × k × x² = ½kx², the elastic PE formula.",
+          "distractors": [
+            { "answer": "kx²", "explanation": "Missing the ½ factor from the triangle area calculation." },
+            { "answer": "½kx", "explanation": "Must multiply x by kx, giving kx², not kx." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "mc",
+      "question": "A spring's force-extension graph is linear from (0, 0) to (0.6 m, 480 N). How much energy is stored between 0.2 m and 0.6 m extension?",
+      "correct": "128 J",
+      "correctExplanation": "k = 480/0.6 = 800 N/m. Energy at 0.6 m: ½ × 0.6 × 480 = 144 J. Energy at 0.2 m: ½ × 0.2 × 160 = 16 J. Change = 144 − 16 = 128 J.",
+      "distractors": [
+        { "answer": "144 J", "explanation": "144 J is the total energy at 0.6 m, not the energy stored between 0.2 m and 0.6 m." },
+        { "answer": "64 J", "explanation": "64 = ½ × 0.4 × 320. This incorrectly uses a trapezium with the wrong dimensions." },
+        { "answer": "160 J", "explanation": "160 = 0.4 × 400, not correctly applying the area method." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "The area under a force-extension graph up to 0.25 m is 12.5 J. What is the spring constant?",
+      "correct": "400 N/m",
+      "correctExplanation": "Es = ½kx², so k = 2Es/x² = 2 × 12.5/0.25² = 25/0.0625 = 400 N/m.",
+      "distractors": [
+        { "answer": "200 N/m", "explanation": "200 = 12.5/0.0625, forgetting to multiply by 2." },
+        { "answer": "50 N/m", "explanation": "50 = 12.5/0.25, not squaring x or multiplying by 2." },
+        { "answer": "100 N/m", "explanation": "100 = 2 × 12.5/0.25, forgetting to square x." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A non-ideal spring has a force-extension graph that is not a straight line. The area under the curve up to 0.3 m is measured as 15 J. Can Es = ½kx² be used to find this value?",
+      "correct": "No, because ½kx² only applies to ideal springs with linear F-x graphs",
+      "correctExplanation": "Es = ½kx² assumes F = kx (linear). For a non-linear graph, the area must be measured directly from the graph.",
+      "distractors": [
+        { "answer": "Yes, Es = ½kx² works for all springs", "explanation": "The formula only applies when the F-x graph is linear (ideal spring obeying Hooke's law)." },
+        { "answer": "Yes, but you use the average k value", "explanation": "There is no single k value for a non-linear spring; the area method is needed." },
+        { "answer": "No, because energy cannot be stored in a non-ideal spring", "explanation": "Non-ideal springs still store elastic PE, but the area method (not the formula) must be used." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A force-extension graph shows a spring reaching 360 N at 0.3 m. A mass launched by this spring reaches a speed of 6 m/s. What is the mass? (Assume all elastic PE → Ek)",
+      "correct": "3 kg",
+      "correctExplanation": "Es = ½ × 0.3 × 360 = 54 J. Setting ½mv² = Es: ½ × m × 36 = 54, 18m = 54, m = 3 kg.",
+      "distractors": [
+        { "answer": "6 kg", "explanation": "6 may come from misapplying the formula. m = 2Es/v² = 108/36 = 3 kg, not 6." },
+        { "answer": "18 kg", "explanation": "18 = 54/3, which uses v = 3 instead of v² = 36." },
+        { "answer": "9 kg", "explanation": "9 = 54/6, which divides by v instead of ½v²." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A spring is compressed and its F-x graph shows a force of 240 N at 0.4 m compression. A 0.5 kg ball is launched. What is the ball's speed? (All Es → Ek)",
+      "correct": "13.9 m/s",
+      "correctExplanation": "Es = ½ × 0.4 × 240 = 48 J. ½mv² = 48, v² = 2 × 48/0.5 = 192, v = √192 = 13.9 m/s.",
+      "distractors": [
+        { "answer": "9.8 m/s", "explanation": "9.8 = √96, which forgets to multiply by 2 when solving ½mv² = Es." },
+        { "answer": "192 m/s", "explanation": "192 = v², not v. Need to take √192 = 13.9 m/s." },
+        { "answer": "19.6 m/s", "explanation": "19.6 = √(2 × 96/0.5), which uses rectangle area (96) instead of triangle (48)." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "On a force-extension graph, the area between x = 0.1 m and x = 0.3 m is a trapezium. The forces at these extensions are 50 N and 150 N respectively. What is the elastic PE gained between these points?",
+      "correct": "20 J",
+      "correctExplanation": "Trapezium area = ½(a + b) × h = ½(50 + 150) × (0.3 − 0.1) = ½ × 200 × 0.2 = 20 J.",
+      "distractors": [
+        { "answer": "30 J", "explanation": "30 = 150 × 0.2, using only the larger force as a rectangle." },
+        { "answer": "10 J", "explanation": "10 = 50 × 0.2, using only the smaller force." },
+        { "answer": "40 J", "explanation": "40 = 200 × 0.2, forgetting the ½ factor in the trapezium formula." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A force-extension graph shows a straight line from (0, 0) to (0.8 m, 320 N). What extension stores exactly 32 J?",
+      "correct": "0.4 m",
+      "correctExplanation": "k = 320/0.8 = 400 N/m. Es = ½kx² = 32, x² = 2 × 32/400 = 0.16, x = √0.16 = 0.4 m.",
+      "distractors": [
+        { "answer": "0.2 m", "explanation": "At 0.2 m, Es = ½ × 400 × 0.04 = 8 J, not 32 J." },
+        { "answer": "0.1 m", "explanation": "At 0.1 m, Es = ½ × 400 × 0.01 = 2 J, not 32 J." },
+        { "answer": "0.6 m", "explanation": "At 0.6 m, Es = ½ × 400 × 0.36 = 72 J, not 32 J." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Calculate elastic PE from the graph area.",
+      "sentence": "A spring's F-x graph goes from (0, 0) to (0.5 m, 300 N). The triangular area = ½ × 0.5 × 300 = {{blank:1}} J.",
+      "blanks": {
+        "1": {
+          "correct": "75",
+          "correctExplanation": "Area = ½ × 0.5 × 300 = 75 J.",
+          "distractors": [
+            { "answer": "150", "explanation": "150 = 0.5 × 300, using rectangle area instead of triangle." },
+            { "answer": "600", "explanation": "600 = 300/0.5, which is the spring constant, not the energy." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Find the energy stored between two extensions using the graph.",
+      "sentence": "The area under the graph from 0 to 0.4 m is 32 J and from 0 to 0.2 m is 8 J. The energy stored between 0.2 m and 0.4 m is {{blank:1}} J.",
+      "blanks": {
+        "1": {
+          "correct": "24",
+          "correctExplanation": "Energy between 0.2 and 0.4 m = 32 − 8 = 24 J.",
+          "distractors": [
+            { "answer": "40", "explanation": "40 = 32 + 8. The energies should be subtracted, not added." },
+            { "answer": "4", "explanation": "4 = 32/8. Division is not the correct operation; subtract 8 from 32." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Determine the spring constant from the graph area.",
+      "sentence": "The area under a spring's F-x graph is 50 J at 0.5 m extension. Since Es = ½kx², k = 2 × 50 / 0.5² = 100 / 0.25 = {{blank:1}} N/m.",
+      "blanks": {
+        "1": {
+          "correct": "400",
+          "correctExplanation": "k = 2Es/x² = 100/0.25 = 400 N/m.",
+          "distractors": [
+            { "answer": "200", "explanation": "200 = 50/0.25, forgetting to multiply by 2." },
+            { "answer": "100", "explanation": "100 = 50/0.5, not squaring x or multiplying by 2." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "mc",
+      "question": "A spring's force-extension graph is linear from (0, 0) to (0.6 m, 480 N). How much more energy is needed to extend the spring from 0.4 m to 0.6 m compared to extending from 0 to 0.2 m?",
+      "correct": "64 J more",
+      "correctExplanation": "k = 480/0.6 = 800 N/m. Es(0.2) = ½ × 800 × 0.04 = 16 J. Es(0.4) = ½ × 800 × 0.16 = 64 J. Es(0.6) = ½ × 800 × 0.36 = 144 J. From 0→0.2: 16 J. From 0.4→0.6: 144 − 64 = 80 J. Difference = 80 − 16 = 64 J.",
+      "distractors": [
+        { "answer": "They require the same energy", "explanation": "Both intervals are 0.2 m wide, but the spring stores more energy at larger extensions due to the x² relationship." },
+        { "answer": "16 J more", "explanation": "16 J is the energy for the first interval alone. The difference is 80 − 16 = 64 J." },
+        { "answer": "80 J more", "explanation": "80 J is the energy for the second interval, not the difference. The difference is 80 − 16 = 64 J." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A spring (k = 1000 N/m) is compressed 0.1 m. A 0.2 kg ball rests against it. When released on a frictionless surface, the ball travels up a 30° ramp. How far along the ramp does it travel? (g = 9.8 m/s²)",
+      "correct": "5.1 m",
+      "correctExplanation": "Es = ½ × 1000 × 0.01 = 5 J. All Es → Eg: mgh = 5, h = 5/(0.2 × 9.8) = 2.551 m. Along ramp: d = h/sin30° = 2.551/0.5 = 5.1 m.",
+      "distractors": [
+        { "answer": "2.55 m", "explanation": "2.55 m is the vertical height h. The ramp distance is h/sin30° = 5.1 m." },
+        { "answer": "10.2 m", "explanation": "10.2 = 5.1 × 2. This may result from doubling the answer or using cos30° instead of sin30°." },
+        { "answer": "1.02 m", "explanation": "1.02 results from using Es = ½kx (forgetting to square x). Es = 5 J, not 50 J." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "On a force-extension graph, a spring's line goes from (0, 0) to (0.5 m, 250 N). A second force-extension graph shows a constant force of 125 N from 0 to 0.5 m. Compare their areas.",
+      "correct": "They are equal at 62.5 J each",
+      "correctExplanation": "Triangle: ½ × 0.5 × 250 = 62.5 J. Rectangle: 125 × 0.5 = 62.5 J. The areas are equal.",
+      "distractors": [
+        { "answer": "The spring stores more (125 J vs 62.5 J)", "explanation": "125 = 0.5 × 250 is the rectangle area, but the spring has a triangular area of 62.5 J." },
+        { "answer": "The constant force stores more (125 J vs 62.5 J)", "explanation": "The constant force stores 125 × 0.5 = 62.5 J, not 125 J." },
+        { "answer": "The spring stores more (125 J vs 31.25 J)", "explanation": "Both areas equal 62.5 J when calculated correctly." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A force-extension graph shows a spring extended to 0.4 m with a force of 200 N. From the graph, what is the elastic PE stored and the spring constant?",
+      "correct": "Es = 40 J and k = 500 N/m",
+      "correctExplanation": "Es = ½ × 0.4 × 200 = 40 J. k = gradient = 200/0.4 = 500 N/m.",
+      "distractors": [
+        { "answer": "Es = 80 J and k = 500 N/m", "explanation": "80 = 0.4 × 200, using rectangle area. The triangle gives 40 J." },
+        { "answer": "Es = 40 J and k = 80 N/m", "explanation": "80 = 200 × 0.4, which multiplies instead of divides for the gradient." },
+        { "answer": "Es = 100 J and k = 250 N/m", "explanation": "100 and 250 don't match either calculation correctly." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "The area under a spring's F-x graph doubles when the extension increases from x to some new value x'. What is x' in terms of x?",
+      "correct": "x√2",
+      "correctExplanation": "Es ∝ x². If Es doubles, x² doubles, so x' = x√2 ≈ 1.414x.",
+      "distractors": [
+        { "answer": "2x", "explanation": "Doubling x quadruples the area (2² = 4), not doubles it." },
+        { "answer": "x/2", "explanation": "Halving x reduces the area to ¼, not doubles it." },
+        { "answer": "4x", "explanation": "Multiplying x by 4 increases the area by 16, not 2." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A force-extension graph shows data with some scatter. The line of best fit goes from (0, 0) to (0.25 m, 100 N). The actual data point at 0.25 m reads 108 N. Using the line of best fit, what is the elastic PE?",
+      "correct": "12.5 J",
+      "correctExplanation": "Using the line of best fit: Es = ½ × 0.25 × 100 = 12.5 J. The line of best fit is more reliable than individual data points.",
+      "distractors": [
+        { "answer": "13.5 J", "explanation": "13.5 = ½ × 0.25 × 108, using the raw data point instead of the line of best fit." },
+        { "answer": "25 J", "explanation": "25 = 0.25 × 100, forgetting the ½ factor." },
+        { "answer": "27 J", "explanation": "27 = 0.25 × 108, using the raw point and forgetting ½." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A spring's F-x graph reaches (0.3 m, 150 N). The elastic PE from the graph is used to launch a 0.1 kg ball straight up. How high does the ball go? (g = 9.8 m/s²)",
+      "correct": "22.96 m",
+      "correctExplanation": "Es = ½ × 0.3 × 150 = 22.5 J. All Es → Eg: mgh = 22.5, h = 22.5/(0.1 × 9.8) = 22.5/0.98 = 22.96 m.",
+      "distractors": [
+        { "answer": "45.9 m", "explanation": "45.9 uses Es = 0.3 × 150 = 45 J (rectangle, not triangle)." },
+        { "answer": "11.48 m", "explanation": "11.48 = 22.5/1.96, using 2g instead of g in the denominator." },
+        { "answer": "2.30 m", "explanation": "2.30 = 22.5/9.8, using mass = 1 kg instead of 0.1 kg." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A force-extension graph for a spring shows a straight line. The area under the graph between 0 and 0.1 m is 2 J. What is the area under the graph between 0 and 0.3 m?",
+      "correct": "18 J",
+      "correctExplanation": "Es ∝ x². If Es = 2 J at x = 0.1 m, then k = 2×2/0.01 = 400 N/m. At 0.3 m: Es = ½ × 400 × 0.09 = 18 J. Alternatively, (0.3/0.1)² = 9, so 2 × 9 = 18 J.",
+      "distractors": [
+        { "answer": "6 J", "explanation": "6 = 2 × 3 (scaling linearly). Energy scales as x², so the factor is 3² = 9." },
+        { "answer": "8 J", "explanation": "8 = 2 × 4 (scaling as x²× 4/1). The correct ratio is (0.3/0.1)² = 9." },
+        { "answer": "54 J", "explanation": "54 = 2 × 27 (scaling as x³). Energy scales as x², giving 2 × 9 = 18 J." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Calculate the energy stored between two extensions using the graph.",
+      "sentence": "A spring (k = 600 N/m) is extended from 0.1 m to 0.2 m. ΔEs = ½ × 600 × (0.2² − 0.1²) = 300 × (0.04 − 0.01) = 300 × 0.03 = {{blank:1}} J.",
+      "blanks": {
+        "1": {
+          "correct": "9",
+          "correctExplanation": "ΔEs = 300 × 0.03 = 9 J.",
+          "distractors": [
+            { "answer": "3", "explanation": "3 = ½ × 600 × 0.1² = energy at 0.1 m only, not the change." },
+            { "answer": "12", "explanation": "12 = ½ × 600 × 0.04 = energy at 0.2 m only, not the change." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Use the graph area to find the launch speed.",
+      "sentence": "A spring's graph gives Es = 50 J. A 0.4 kg object is launched. v = √(2 × 50 / 0.4) = √250 = {{blank:1}} m/s.",
+      "blanks": {
+        "1": {
+          "correct": "15.8",
+          "correctExplanation": "v = √(100/0.4) = √250 = 15.81 ≈ 15.8 m/s.",
+          "distractors": [
+            { "answer": "250", "explanation": "250 = v², not v. Need to take √250 = 15.8 m/s." },
+            { "answer": "11.2", "explanation": "11.2 = √125, which forgets to multiply by 2 in the numerator." }
+          ]
+        }
+      }
+    }
+  ]
+}

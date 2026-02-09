@@ -1,0 +1,506 @@
+{
+  "_link": {
+    "uuid": "lp-df8b0eea-97dc-19dd-e0a1-8c5595f2e43a",
+    "version": 1,
+    "contentHash": "hash-fa32c3b7",
+    "title": "I can calculate energy contribution from individual macronutrients in a food",
+    "generatedAt": "2026-02-08T00:00:00.000Z"
+  },
+  "toLevel2": [
+    {
+      "type": "mc",
+      "question": "How is the energy contribution from a single macronutrient calculated?",
+      "correct": "Multiply the mass of the macronutrient by its reference energy value",
+      "correctExplanation": "Energy from each macronutrient = mass (g) × reference value (kJ g⁻¹). For example, 10 g of fat provides 10 × 37 = 370 kJ.",
+      "distractors": [
+        { "answer": "Divide the total food mass by the reference value", "explanation": "Dividing would give the wrong units and result. The correct operation is multiplication: mass × reference value." },
+        { "answer": "Add the mass to the reference value", "explanation": "Adding mass (g) to energy density (kJ g⁻¹) is not meaningful. Multiply mass by reference value to get energy in kJ." },
+        { "answer": "Multiply the total food energy by the reference value", "explanation": "The total energy is what you are trying to find. Each macronutrient's contribution is calculated separately first." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A food contains 5 g of fat. How much energy does the fat contribute?",
+      "correct": "185 kJ",
+      "correctExplanation": "Energy from fat = 5 × 37 = 185 kJ.",
+      "distractors": [
+        { "answer": "85 kJ", "explanation": "5 × 17 = 85 kJ is the energy from 5 g of protein, not fat. Fat uses the reference value 37 kJ g⁻¹." },
+        { "answer": "80 kJ", "explanation": "5 × 16 = 80 kJ is the energy from 5 g of carbohydrate, not fat." },
+        { "answer": "37 kJ", "explanation": "37 kJ is the energy from only 1 g of fat. For 5 g, multiply: 5 × 37 = 185 kJ." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What is the first step in calculating the total energy of a food from its macronutrient composition?",
+      "correct": "Calculate the energy from each macronutrient separately",
+      "correctExplanation": "Each macronutrient (fat, protein, carbohydrate) is multiplied by its own reference value. The individual energies are then summed to get total energy.",
+      "distractors": [
+        { "answer": "Add all macronutrient masses together first", "explanation": "Different macronutrients have different reference values, so adding masses first would lose this distinction." },
+        { "answer": "Multiply the total food mass by 37", "explanation": "37 kJ g⁻¹ is the reference value for fat only. Different macronutrients have different reference values." },
+        { "answer": "Find the average reference value", "explanation": "Averaging the reference values is not correct because each macronutrient contributes differently based on its mass and energy density." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A food contains 12 g of protein. How much energy does the protein contribute?",
+      "correct": "204 kJ",
+      "correctExplanation": "Energy from protein = 12 × 17 = 204 kJ.",
+      "distractors": [
+        { "answer": "444 kJ", "explanation": "12 × 37 = 444 kJ uses the fat reference value, not the protein value of 17 kJ g⁻¹." },
+        { "answer": "192 kJ", "explanation": "12 × 16 = 192 kJ uses the carbohydrate reference value. Protein is 17 kJ g⁻¹." },
+        { "answer": "17 kJ", "explanation": "17 kJ is the energy from only 1 g of protein. For 12 g, multiply: 12 × 17 = 204 kJ." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A food has 9 g protein and 49 g carbohydrate per 100 g. What is the combined energy from these two macronutrients?",
+      "correct": "937 kJ",
+      "correctExplanation": "Protein: 9 × 17 = 153 kJ. Carbohydrate: 49 × 16 = 784 kJ. Total = 153 + 784 = 937 kJ.",
+      "distractors": [
+        { "answer": "784 kJ", "explanation": "784 kJ is only the carbohydrate contribution. The protein contribution (153 kJ) must also be added." },
+        { "answer": "153 kJ", "explanation": "153 kJ is only the protein contribution. The carbohydrate contribution (784 kJ) must also be added." },
+        { "answer": "958 kJ", "explanation": "This may result from using incorrect reference values. Protein = 17 and carbohydrate = 16 kJ g⁻¹." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the energy calculation for fat.",
+      "sentence": "A food containing 8 g of fat contributes 8 × 37 = {{blank:1}} kJ of energy from fat.",
+      "blanks": {
+        "1": {
+          "correct": "296",
+          "correctExplanation": "8 × 37 = 296 kJ. Each gram of fat provides 37 kJ of energy.",
+          "distractors": [
+            { "answer": "136", "explanation": "8 × 17 = 136 kJ is the energy from 8 g of protein, not fat." },
+            { "answer": "128", "explanation": "8 × 16 = 128 kJ is the energy from 8 g of carbohydrate, not fat." },
+            { "answer": "45", "explanation": "This does not match any correct calculation with the standard reference values." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the energy calculation for carbohydrate.",
+      "sentence": "A food containing 30 g of carbohydrate provides 30 × {{blank:1}} = 480 kJ from carbohydrate.",
+      "blanks": {
+        "1": {
+          "correct": "16",
+          "correctExplanation": "The reference energy value for carbohydrates is 16 kJ g⁻¹. So 30 × 16 = 480 kJ.",
+          "distractors": [
+            { "answer": "37", "explanation": "37 kJ g⁻¹ is the reference value for fats, not carbohydrates." },
+            { "answer": "17", "explanation": "17 kJ g⁻¹ is the reference value for proteins, not carbohydrates." },
+            { "answer": "4.18", "explanation": "4.18 is the specific heat capacity of water, not the energy value of carbohydrates." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the total energy calculation.",
+      "sentence": "To find the total energy of a food, {{blank:1}} the energy contributions from fat, protein, and carbohydrate.",
+      "blanks": {
+        "1": {
+          "correct": "sum",
+          "correctExplanation": "After calculating each macronutrient's energy separately, the values are summed to obtain the total energy content of the food.",
+          "distractors": [
+            { "answer": "multiply", "explanation": "The individual energies are added together, not multiplied. Each is already calculated as mass × reference value." },
+            { "answer": "average", "explanation": "The energies are summed, not averaged. Each macronutrient contributes its full calculated energy to the total." },
+            { "answer": "subtract", "explanation": "Subtraction is not used. All three macronutrient energies are added to get the total." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "tf",
+      "question": "When a food label gives macronutrient content as percentages, you can treat the percentages as grams per 100 g of food.",
+      "correct": "True",
+      "correctExplanation": "A percentage composition directly gives grams per 100 g. For example, 9% protein means 9 g of protein per 100 g of food.",
+      "distractors": [
+        { "answer": "False", "explanation": "This is true. Percentage by mass and grams per 100 g are equivalent. 9% protein = 9 g protein per 100 g food." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "The energy contribution from protein is calculated using the reference value of 37 kJ g⁻¹.",
+      "correct": "False",
+      "correctExplanation": "The reference value for protein is 17 kJ g⁻¹, not 37 kJ g⁻¹. The value 37 kJ g⁻¹ is the reference for fats.",
+      "distractors": [
+        { "answer": "True", "explanation": "37 kJ g⁻¹ is the reference value for fats. Protein uses 17 kJ g⁻¹." }
+      ]
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "mc",
+      "question": "A food contains 10 g fat, 15 g protein, and 40 g carbohydrate per serving. Which macronutrient contributes the most energy?",
+      "correct": "Carbohydrate",
+      "correctExplanation": "Fat: 10 × 37 = 370 kJ. Protein: 15 × 17 = 255 kJ. Carbohydrate: 40 × 16 = 640 kJ. Carbohydrate contributes the most energy (640 kJ) due to its larger mass.",
+      "distractors": [
+        { "answer": "Fat", "explanation": "Fat provides 370 kJ. Although fat has the highest energy per gram, the 40 g of carbohydrate provides more total energy (640 kJ)." },
+        { "answer": "Protein", "explanation": "Protein provides only 255 kJ, the least of the three macronutrients in this food." },
+        { "answer": "All contribute equally", "explanation": "The contributions are 370, 255, and 640 kJ — they are not equal." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Why is it important to calculate each macronutrient's energy separately rather than using a single average value?",
+      "correct": "Each macronutrient has a different energy value per gram",
+      "correctExplanation": "Fats (37 kJ g⁻¹), proteins (17 kJ g⁻¹), and carbohydrates (16 kJ g⁻¹) have very different energy densities, so a single average would give inaccurate results.",
+      "distractors": [
+        { "answer": "All macronutrients have the same energy value", "explanation": "This is incorrect. The three macronutrients have very different energy values per gram (37, 17, 16 kJ g⁻¹)." },
+        { "answer": "Only one macronutrient provides energy", "explanation": "All three macronutrients provide energy, but at different rates per gram." },
+        { "answer": "The calculation is simpler with a single value", "explanation": "While simpler, a single average would be inaccurate because the energy densities differ significantly." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A 100 g serving of cheese contains 33% fat, 25% protein, and 1% carbohydrate. What is the total energy from these macronutrients?",
+      "correct": "1662 kJ",
+      "correctExplanation": "Fat: 33 × 37 = 1221 kJ. Protein: 25 × 17 = 425 kJ. Carbohydrate: 1 × 16 = 16 kJ. Total = 1221 + 425 + 16 = 1662 kJ.",
+      "distractors": [
+        { "answer": "1221 kJ", "explanation": "1221 kJ is only the fat contribution. Protein (425 kJ) and carbohydrate (16 kJ) must also be included." },
+        { "answer": "425 kJ", "explanation": "425 kJ is only the protein contribution. Fat and carbohydrate energies must also be added." },
+        { "answer": "944 kJ", "explanation": "This may result from using incorrect reference values. Fat = 37, protein = 17, carbohydrate = 16 kJ g⁻¹." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student calculates the energy from 20 g of protein as 20 × 16 = 320 kJ. What error did they make?",
+      "correct": "They used the carbohydrate reference value instead of protein",
+      "correctExplanation": "16 kJ g⁻¹ is the reference value for carbohydrates. The correct calculation for protein is 20 × 17 = 340 kJ.",
+      "distractors": [
+        { "answer": "They used the fat reference value", "explanation": "The fat reference value is 37 kJ g⁻¹, not 16. The student used 16, which is the carbohydrate value." },
+        { "answer": "They multiplied instead of dividing", "explanation": "Multiplication is the correct operation. The error was using the wrong reference value (16 instead of 17)." },
+        { "answer": "They did not convert to kilojoules", "explanation": "The reference values are already in kJ g⁻¹, so no conversion is needed. The error was using the wrong reference value." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "In a food with 5 g fat, 10 g protein, and 25 g carbohydrate, what percentage of the total energy comes from fat?",
+      "correct": "24.5%",
+      "correctExplanation": "Fat: 5 × 37 = 185 kJ. Protein: 10 × 17 = 170 kJ. Carbohydrate: 25 × 16 = 400 kJ. Total = 755 kJ. Fat % = (185 ÷ 755) × 100 = 24.5%.",
+      "distractors": [
+        { "answer": "12.5%", "explanation": "This calculates fat as a percentage of total mass (5 ÷ 40 × 100), not total energy." },
+        { "answer": "37.0%", "explanation": "37 is the energy density of fat (kJ g⁻¹), not the percentage of energy from fat in this food." },
+        { "answer": "53.0%", "explanation": "This does not match the correct calculation. Fat contributes 185 kJ out of 755 kJ total." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A food label states per 100 g: 12% fat, 8% protein, 70% carbohydrate. What is the energy from protein?",
+      "correct": "136 kJ",
+      "correctExplanation": "8% protein in 100 g = 8 g protein. Energy = 8 × 17 = 136 kJ.",
+      "distractors": [
+        { "answer": "296 kJ", "explanation": "8 × 37 = 296 kJ uses the fat reference value. Protein is 17 kJ g⁻¹, giving 136 kJ." },
+        { "answer": "128 kJ", "explanation": "8 × 16 = 128 kJ uses the carbohydrate reference value. Protein is 17 kJ g⁻¹, giving 136 kJ." },
+        { "answer": "1360 kJ", "explanation": "This multiplies by 170 instead of 17, likely a decimal error. Energy = 8 × 17 = 136 kJ." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the calculation of total energy.",
+      "sentence": "A food with 6 g fat, 4 g protein, and 20 g carbohydrate has total energy = (6 × 37) + (4 × 17) + (20 × 16) = 222 + 68 + 320 = {{blank:1}} kJ.",
+      "blanks": {
+        "1": {
+          "correct": "610",
+          "correctExplanation": "222 + 68 + 320 = 610 kJ. Each macronutrient is multiplied by its reference value and then summed.",
+          "distractors": [
+            { "answer": "320", "explanation": "320 kJ is only the carbohydrate contribution. Fat (222 kJ) and protein (68 kJ) must be added." },
+            { "answer": "222", "explanation": "222 kJ is only the fat contribution. Protein and carbohydrate contributions must be added." },
+            { "answer": "1110", "explanation": "This may result from using 37 for all macronutrients: (6+4+20) × 37 = 1110. Each macronutrient has its own reference value." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the conversion from percentage to mass.",
+      "sentence": "A food with 15% protein per 100 g contains {{blank:1}} g of protein, which provides energy of that mass multiplied by 17 kJ g⁻¹.",
+      "blanks": {
+        "1": {
+          "correct": "15",
+          "correctExplanation": "15% of 100 g = 15 g. The percentage directly equals grams when using a 100 g sample.",
+          "distractors": [
+            { "answer": "0.15", "explanation": "0.15 is the decimal fraction, not the mass in grams per 100 g. 15% of 100 g = 15 g." },
+            { "answer": "150", "explanation": "150 g would be 15% of 1000 g. For a 100 g sample, 15% = 15 g." },
+            { "answer": "1.5", "explanation": "1.5 g would be 1.5% of 100 g, not 15%." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Identify which macronutrient contributes the most energy.",
+      "sentence": "In a food with 2 g fat (74 kJ), 8 g protein (136 kJ), and 30 g carbohydrate (480 kJ), the macronutrient contributing the most energy is {{blank:1}}.",
+      "blanks": {
+        "1": {
+          "correct": "carbohydrate",
+          "correctExplanation": "Carbohydrate contributes 480 kJ, which is more than protein (136 kJ) and fat (74 kJ), despite carbohydrate having the lowest energy per gram.",
+          "distractors": [
+            { "answer": "fat", "explanation": "Fat has the highest energy per gram (37 kJ g⁻¹), but only 2 g is present, contributing just 74 kJ." },
+            { "answer": "protein", "explanation": "Protein contributes 136 kJ, less than carbohydrate's 480 kJ." },
+            { "answer": "water", "explanation": "Water provides no energy (0 kJ g⁻¹) and is not a macronutrient." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "tf",
+      "question": "A macronutrient with the highest energy per gram always contributes the most energy to a food.",
+      "correct": "False",
+      "correctExplanation": "The total energy contribution depends on both the energy per gram and the mass present. A food with a small amount of fat but a large amount of carbohydrate may get more energy from carbohydrate.",
+      "distractors": [
+        { "answer": "True", "explanation": "This is false. Energy contribution = mass × reference value. A large mass of a lower-density macronutrient can contribute more energy than a small mass of fat." }
+      ]
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "mc",
+      "question": "A 200 g serving of a meal contains 15 g fat, 20 g protein, and 80 g carbohydrate. What is the total energy from macronutrients?",
+      "correct": "2175 kJ",
+      "correctExplanation": "Fat: 15 × 37 = 555 kJ. Protein: 20 × 17 = 340 kJ. Carbohydrate: 80 × 16 = 1280 kJ. Total = 555 + 340 + 1280 = 2175 kJ.",
+      "distractors": [
+        { "answer": "1280 kJ", "explanation": "1280 kJ is only the carbohydrate contribution. Fat (555 kJ) and protein (340 kJ) must also be included." },
+        { "answer": "4255 kJ", "explanation": "This may result from multiplying the total mass (200 g) by an average energy value, rather than calculating each macronutrient separately." },
+        { "answer": "1835 kJ", "explanation": "This may omit the protein contribution (340 kJ). All three macronutrients must be included." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A 100 g food has 12% fat, 8% protein, and 70% carbohydrate. What percentage of the total macronutrient energy comes from fat?",
+      "correct": "26.1%",
+      "correctExplanation": "Fat: 12 × 37 = 444 kJ. Protein: 8 × 17 = 136 kJ. Carbohydrate: 70 × 16 = 1120 kJ. Total = 1700 kJ. Fat % = (444 ÷ 1700) × 100 = 26.1%.",
+      "distractors": [
+        { "answer": "13.3%", "explanation": "This calculates fat as a percentage of total macronutrient mass (12 ÷ 90 × 100 = 13.3%), not energy." },
+        { "answer": "37.0%", "explanation": "37 is the energy density of fat (kJ g⁻¹), not its percentage contribution to total energy." },
+        { "answer": "12.0%", "explanation": "12% is the fat content by mass, not its percentage contribution to total energy." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A 50 g snack bar contains 5 g fat, 3 g protein, and 35 g carbohydrate. What is the energy from each macronutrient and the total?",
+      "correct": "Fat 185, protein 51, carbohydrate 560; total 796 kJ",
+      "correctExplanation": "Fat: 5 × 37 = 185 kJ. Protein: 3 × 17 = 51 kJ. Carbohydrate: 35 × 16 = 560 kJ. Total = 185 + 51 + 560 = 796 kJ.",
+      "distractors": [
+        { "answer": "Fat 185, protein 51, carbohydrate 560; total 896 kJ", "explanation": "The total is 185 + 51 + 560 = 796 kJ, not 896 kJ." },
+        { "answer": "Fat 185, protein 48, carbohydrate 560; total 793 kJ", "explanation": "Protein energy = 3 × 17 = 51 kJ, not 3 × 16 = 48 kJ. The protein reference value is 17 kJ g⁻¹." },
+        { "answer": "Fat 80, protein 51, carbohydrate 560; total 691 kJ", "explanation": "Fat energy = 5 × 37 = 185 kJ, not 5 × 16 = 80 kJ. Fat uses the reference value 37 kJ g⁻¹." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A food has a total macronutrient energy of 2000 kJ. If 740 kJ comes from fat, what mass of fat does the food contain?",
+      "correct": "20.0 g",
+      "correctExplanation": "Mass of fat = energy from fat ÷ reference value = 740 ÷ 37 = 20.0 g.",
+      "distractors": [
+        { "answer": "43.5 g", "explanation": "740 ÷ 17 = 43.5 g uses the protein reference value. Fat is 37 kJ g⁻¹, giving 20.0 g." },
+        { "answer": "46.3 g", "explanation": "740 ÷ 16 = 46.3 g uses the carbohydrate reference value. Fat is 37 kJ g⁻¹, giving 20.0 g." },
+        { "answer": "37.0 g", "explanation": "37 is the reference value for fat, not the mass. Divide 740 by 37 to get 20.0 g." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student analyses a food with 100 g total mass containing 4 g fat, 22 g protein, and 65 g carbohydrate. They calculate the total energy as 1562 kJ. Verify their answer.",
+      "correct": "The student's answer of 1562 kJ is correct",
+      "correctExplanation": "Fat: 4 × 37 = 148 kJ. Protein: 22 × 17 = 374 kJ. Carbohydrate: 65 × 16 = 1040 kJ. Total = 148 + 374 + 1040 = 1562 kJ. The student's calculation is correct.",
+      "distractors": [
+        { "answer": "Incorrect; the total should be 1480 kJ", "explanation": "1480 kJ does not match any correct calculation. The actual total is 148 + 374 + 1040 = 1562 kJ." },
+        { "answer": "Incorrect; the total should be 3700 kJ", "explanation": "3700 kJ would come from multiplying total mass (100 g) by 37, but each macronutrient has its own reference value." },
+        { "answer": "Incorrect; the total should be 1456 kJ", "explanation": "1456 kJ does not match the correct calculation. The actual total is 148 + 374 + 1040 = 1562 kJ." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A food contains 10 g each of fat, protein, and carbohydrate. What fraction of the total energy comes from protein?",
+      "correct": "24.3%",
+      "correctExplanation": "Fat: 10 × 37 = 370 kJ. Protein: 10 × 17 = 170 kJ. Carbohydrate: 10 × 16 = 160 kJ. Total = 700 kJ. Protein % = (170 ÷ 700) × 100 = 24.3%.",
+      "distractors": [
+        { "answer": "33.3%", "explanation": "33.3% is protein's contribution by mass (10 g out of 30 g), not by energy. Energy percentages differ from mass percentages." },
+        { "answer": "17.0%", "explanation": "17 is the reference value for protein (kJ g⁻¹), not its percentage of total energy." },
+        { "answer": "52.9%", "explanation": "52.9% is the percentage of energy from fat (370 ÷ 700), not protein." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student has a 150 g portion of food. Per 100 g, it contains 6 g fat, 12 g protein, and 55 g carbohydrate. What is the total energy of the 150 g portion?",
+      "correct": "1959 kJ",
+      "correctExplanation": "Scale macronutrients for 150 g: fat = 6 × 1.5 = 9 g, protein = 12 × 1.5 = 18 g, carbohydrate = 55 × 1.5 = 82.5 g. Energy: fat = 9 × 37 = 333 kJ, protein = 18 × 17 = 306 kJ, carbohydrate = 82.5 × 16 = 1320 kJ. Total = 333 + 306 + 1320 = 1959 kJ.",
+      "distractors": [
+        { "answer": "1306 kJ", "explanation": "1306 kJ is the energy per 100 g. For 150 g, multiply by 1.5: 1306 × 1.5 = 1959 kJ." },
+        { "answer": "980 kJ", "explanation": "This does not correctly scale the macronutrient amounts for a 150 g portion." },
+        { "answer": "2610 kJ", "explanation": "This doubles the per-100 g value instead of multiplying by 1.5." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the energy breakdown calculation.",
+      "sentence": "In 100 g of a food with 20% fat, the energy from fat is 20 × {{blank:1}} = 740 kJ.",
+      "blanks": {
+        "1": {
+          "correct": "37",
+          "correctExplanation": "Fat has a reference energy value of 37 kJ g⁻¹. In 100 g of food with 20% fat, there are 20 g of fat, providing 20 × 37 = 740 kJ.",
+          "distractors": [
+            { "answer": "17", "explanation": "17 kJ g⁻¹ is the reference value for proteins, not fats." },
+            { "answer": "16", "explanation": "16 kJ g⁻¹ is the reference value for carbohydrates, not fats." },
+            { "answer": "4.18", "explanation": "4.18 is the specific heat capacity of water, not the energy value of fat." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Apply the energy calculation to a food composition.",
+      "sentence": "A food with 5 g fat, 10 g protein, and 40 g carbohydrate has total energy = 185 + 170 + {{blank:1}} = 995 kJ.",
+      "blanks": {
+        "1": {
+          "correct": "640",
+          "correctExplanation": "Carbohydrate energy = 40 × 16 = 640 kJ. Total = 185 + 170 + 640 = 995 kJ.",
+          "distractors": [
+            { "answer": "400", "explanation": "40 × 10 = 400, but the reference value for carbohydrate is 16, not 10. Energy = 40 × 16 = 640 kJ." },
+            { "answer": "680", "explanation": "40 × 17 = 680 uses the protein reference value. Carbohydrate is 16 kJ g⁻¹, giving 640 kJ." },
+            { "answer": "1480", "explanation": "40 × 37 = 1480 uses the fat reference value. Carbohydrate is 16 kJ g⁻¹, giving 640 kJ." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the energy percentage calculation.",
+      "sentence": "If protein contributes 340 kJ out of a total 2000 kJ, the percentage of energy from protein is (340 ÷ 2000) × 100 = {{blank:1}}%.",
+      "blanks": {
+        "1": {
+          "correct": "17.0",
+          "correctExplanation": "(340 ÷ 2000) × 100 = 17.0%. This means 17% of the total energy comes from protein.",
+          "distractors": [
+            { "answer": "34.0", "explanation": "This may result from dividing 340 by 1000 instead of 2000. The correct percentage is 17.0%." },
+            { "answer": "5.88", "explanation": "This divides 2000 by 340, which inverts the calculation. The correct answer is (340 ÷ 2000) × 100 = 17.0%." },
+            { "answer": "0.17", "explanation": "0.17 is the decimal fraction, not the percentage. Multiply by 100 to get 17.0%." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "mc",
+      "question": "A food manufacturer provides this nutrition label per 100 g: total energy 2100 kJ, fat 18 g, protein 12 g, carbohydrate 50 g. A student calculates the energy from macronutrients as 1670 kJ and notes a 430 kJ discrepancy. What is the most likely explanation?",
+      "correct": "The food may contain alcohol or other energy-providing components not listed as macronutrients",
+      "correctExplanation": "Fat: 18 × 37 = 666 kJ. Protein: 12 × 17 = 204 kJ. Carbohydrate: 50 × 16 = 800 kJ. Total = 1670 kJ. The 430 kJ difference could be from alcohol (29 kJ g⁻¹) or rounding in the label values.",
+      "distractors": [
+        { "answer": "The student made a calculation error", "explanation": "The calculation is correct: 666 + 204 + 800 = 1670 kJ. The discrepancy is real and needs another explanation." },
+        { "answer": "The label is always wrong", "explanation": "Food labels are regulated and generally accurate. The discrepancy is likely from energy sources not captured by the three standard macronutrients." },
+        { "answer": "Fibre provides the missing energy", "explanation": "Fibre (cellulose) is indigestible and provides 0 kJ of metabolizable energy. The missing energy likely comes from alcohol or other compounds." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Two foods have identical total energy per 100 g (1500 kJ). Food P has 30 g fat and 20 g carbohydrate. Food Q has 10 g fat and 60 g carbohydrate. Which food has a higher mass of macronutrients per 100 g?",
+      "correct": "Food Q",
+      "correctExplanation": "Food P macronutrient mass = 30 + 20 = 50 g (plus any protein). Food Q macronutrient mass = 10 + 60 = 70 g (plus any protein). Food Q has more macronutrient mass because it relies on the less energy-dense carbohydrate to achieve the same total energy.",
+      "distractors": [
+        { "answer": "Food P", "explanation": "Food P has fewer total grams of macronutrients because fat is more energy-dense, providing the same energy with less mass." },
+        { "answer": "Both have equal macronutrient mass", "explanation": "Equal energy does not mean equal mass. Food Q needs more mass of carbohydrate (less energy-dense) to match Food P's energy." },
+        { "answer": "Cannot be determined", "explanation": "The macronutrient masses are given directly. Food Q has 70 g vs Food P's 50 g of listed macronutrients." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A nutritionist recommends that no more than 30% of total energy should come from fat. For a food with total energy of 2500 kJ, what is the maximum mass of fat allowed?",
+      "correct": "20.3 g",
+      "correctExplanation": "Maximum fat energy = 0.30 × 2500 = 750 kJ. Maximum fat mass = 750 ÷ 37 = 20.3 g.",
+      "distractors": [
+        { "answer": "75.0 g", "explanation": "This is 30% of the total mass (assuming 250 g food), not 30% of the energy converted to fat mass." },
+        { "answer": "750 g", "explanation": "750 is the maximum fat energy in kJ, not grams. Divide by 37 to get mass: 750 ÷ 37 = 20.3 g." },
+        { "answer": "44.1 g", "explanation": "750 ÷ 17 = 44.1 uses the protein reference value. Fat is 37 kJ g⁻¹, giving 20.3 g." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student compares a low-fat yoghurt (2 g fat, 5 g protein, 15 g carbohydrate per 100 g) with a full-fat yoghurt (10 g fat, 4 g protein, 5 g carbohydrate per 100 g). Calculate the energy difference per 100 g.",
+      "correct": "Full-fat has 119 kJ more",
+      "correctExplanation": "Low-fat: (2 × 37) + (5 × 17) + (15 × 16) = 74 + 85 + 240 = 399 kJ. Full-fat: (10 × 37) + (4 × 17) + (5 × 16) = 370 + 68 + 80 = 518 kJ. Difference = 518 − 399 = 119 kJ.",
+      "distractors": [
+        { "answer": "Low-fat has 119 kJ more", "explanation": "The full-fat yoghurt has more energy (518 vs 399 kJ) due to its higher fat content." },
+        { "answer": "Both have equal energy", "explanation": "Low-fat has 399 kJ and full-fat has 518 kJ. They are not equal." },
+        { "answer": "Full-fat has 296 kJ more", "explanation": "296 kJ is the extra energy from 8 g more fat (8 × 37), but this doesn't account for the higher carbohydrate and protein in the low-fat version." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A 75 g cereal serving has 3 g fat, 6 g protein, and 45 g carbohydrate. If 200 mL of full-cream milk (3.4 g fat, 3.3 g protein, 4.8 g carbohydrate per 100 mL) is added, what is the total energy of the meal?",
+      "correct": "1450 kJ",
+      "correctExplanation": "Cereal: (3 × 37) + (6 × 17) + (45 × 16) = 111 + 102 + 720 = 933 kJ. Milk (200 mL): fat = 6.8 g, protein = 6.6 g, carb = 9.6 g. Energy: (6.8 × 37) + (6.6 × 17) + (9.6 × 16) = 251.6 + 112.2 + 153.6 = 517 kJ. Total = 933 + 517 = 1450 kJ.",
+      "distractors": [
+        { "answer": "933 kJ", "explanation": "933 kJ is only the cereal energy. The milk adds additional energy that must be included." },
+        { "answer": "517 kJ", "explanation": "517 kJ is only the milk energy. The cereal energy (933 kJ) must also be included." },
+        { "answer": "1750 kJ", "explanation": "This does not match the correct calculation based on the given macronutrient compositions." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A food contains 100 g of macronutrients total: x g fat, 2x g protein, and (100 − 3x) g carbohydrate. For what value of x does fat contribute exactly 50% of the total energy?",
+      "correct": "x = 31.4 g",
+      "correctExplanation": "Total energy = 37x + 17(2x) + 16(100 − 3x) = 37x + 34x + 1600 − 48x = 23x + 1600. Fat energy = 37x. For 50%: 37x = 0.5(23x + 1600). 37x = 11.5x + 800. 25.5x = 800. x = 31.4 g.",
+      "distractors": [
+        { "answer": "x = 50.0 g", "explanation": "x = 50 g would mean fat is 50 g by mass, but the question asks when fat contributes 50% of energy, not 50% of mass." },
+        { "answer": "x = 37.0 g", "explanation": "37 is the energy density of fat (kJ g⁻¹), not the mass that gives 50% energy contribution." },
+        { "answer": "x = 10.0 g", "explanation": "With x = 10 g, fat energy = 370 kJ and total = 23(10) + 1600 = 1830 kJ. Fat% = 20.2%, well below 50%." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A dietitian analyses a patient's daily intake: 80 g fat, 90 g protein, 300 g carbohydrate. What percentage of total daily energy comes from each macronutrient?",
+      "correct": "Fat 31.9%, protein 16.5%, carbohydrate 51.7%",
+      "correctExplanation": "Fat: 80 × 37 = 2960 kJ (31.9%). Protein: 90 × 17 = 1530 kJ (16.5%). Carbohydrate: 300 × 16 = 4800 kJ (51.7%). Total = 9290 kJ.",
+      "distractors": [
+        { "answer": "Fat 17.0%, protein 19.1%, carbohydrate 63.8%", "explanation": "These are based on mass percentages (80/470, 90/470, 300/470), not energy percentages." },
+        { "answer": "Fat 50.0%, protein 25.0%, carbohydrate 25.0%", "explanation": "These do not match the calculated energy contributions: 2960, 1530, and 4800 kJ respectively." },
+        { "answer": "Fat 37.0%, protein 17.0%, carbohydrate 16.0%", "explanation": "These are the reference energy values in kJ g⁻¹, not the percentage contributions to daily energy." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student observes that replacing 10 g of carbohydrate with 10 g of fat increases energy by 210 kJ, while replacing 10 g of carbohydrate with 10 g of protein increases energy by only 10 kJ. What does this reveal about the three macronutrients?",
+      "correct": "Fat has a much higher energy density than protein or carbohydrate, while protein and carbohydrate are similar",
+      "correctExplanation": "Fat − carbohydrate = 37 − 16 = 21 kJ g⁻¹ difference (× 10 g = 210 kJ). Protein − carbohydrate = 17 − 16 = 1 kJ g⁻¹ difference (× 10 g = 10 kJ). This shows fat is the outlier in energy density.",
+      "distractors": [
+        { "answer": "All three macronutrients have similar energy densities", "explanation": "The large difference (210 kJ vs 10 kJ) for the same mass substitution shows energy densities are very different." },
+        { "answer": "Protein has the highest energy density", "explanation": "The small increase (10 kJ) when replacing carbohydrate with protein shows protein is similar to carbohydrate. Fat causes the large increase." },
+        { "answer": "Carbohydrate has the highest energy density", "explanation": "If carbohydrate had the highest density, replacing it would decrease energy, not increase it. Fat has the highest density." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Analyse a food's energy profile.",
+      "sentence": "A food has 15 g fat (555 kJ), 10 g protein (170 kJ), and 50 g carbohydrate (800 kJ). The total energy is 1525 kJ, and the percentage from fat is (555 ÷ 1525) × 100 = {{blank:1}}%.",
+      "blanks": {
+        "1": {
+          "correct": "36.4",
+          "correctExplanation": "(555 ÷ 1525) × 100 = 36.4%. Fat provides over a third of the total energy despite being only 20% of the macronutrient mass.",
+          "distractors": [
+            { "answer": "20.0", "explanation": "20% is fat's contribution by mass (15 ÷ 75 × 100), not by energy." },
+            { "answer": "52.5", "explanation": "52.5% does not match the calculation (555 ÷ 1525) × 100." },
+            { "answer": "37.0", "explanation": "37 is the reference value for fat in kJ g⁻¹, not the percentage of energy from fat in this food." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Calculate the mass of a macronutrient from its energy contribution.",
+      "sentence": "If a food provides 510 kJ from protein, the mass of protein is 510 ÷ 17 = {{blank:1}} g.",
+      "blanks": {
+        "1": {
+          "correct": "30",
+          "correctExplanation": "510 ÷ 17 = 30 g of protein. This reverses the energy calculation (energy ÷ reference value = mass).",
+          "distractors": [
+            { "answer": "13.8", "explanation": "510 ÷ 37 = 13.8 uses the fat reference value. Protein is 17 kJ g⁻¹, giving 30 g." },
+            { "answer": "31.9", "explanation": "510 ÷ 16 = 31.9 uses the carbohydrate reference value. Protein is 17 kJ g⁻¹, giving 30 g." },
+            { "answer": "8670", "explanation": "510 × 17 = 8670 multiplies instead of dividing. Mass = energy ÷ reference value." }
+          ]
+        }
+      }
+    }
+  ]
+}

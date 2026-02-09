@@ -1,0 +1,559 @@
+{
+  "_link": {
+    "uuid": "lp-6b643df6-fbf1-b228-e42e-e706baa60237",
+    "version": 1,
+    "contentHash": "hash-d682a947",
+    "title": "I can calculate percentage energy transformation efficiency",
+    "generatedAt": "2026-02-08T12:20:00Z"
+  },
+  "toLevel2": [
+    {
+      "type": "mc",
+      "question": "What is the formula for calculating percentage energy transformation efficiency?",
+      "correct": "% efficiency = (experimental energy / theoretical energy) × 100%",
+      "correctExplanation": "Percentage efficiency compares the experimentally measured energy to the theoretical maximum energy, expressed as a percentage.",
+      "distractors": [
+        { "answer": "% efficiency = (theoretical energy / experimental energy) × 100%", "explanation": "This inverts the fraction; efficiency divides experimental by theoretical, not the reverse." },
+        { "answer": "% efficiency = (experimental energy − theoretical energy) × 100%", "explanation": "Efficiency is a ratio, not a difference; it divides experimental by theoretical." },
+        { "answer": "% efficiency = (experimental energy + theoretical energy) / 100%", "explanation": "Efficiency is not the sum of energies divided by 100; it is the ratio multiplied by 100%." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Where is the theoretical energy value for a fuel typically obtained?",
+      "correct": "From a data book or reference table of molar heats of combustion",
+      "correctExplanation": "The theoretical energy is calculated using the molar heat of combustion listed in reference tables such as the VCAA Data Book.",
+      "distractors": [
+        { "answer": "By measuring the temperature change in the calorimeter during the experiment", "explanation": "The temperature change gives the experimental energy; the theoretical value comes from published data." },
+        { "answer": "By averaging the results of multiple experimental trials", "explanation": "Averaging trials gives a more reliable experimental value, not the theoretical maximum." },
+        { "answer": "By calculating the mass of fuel consumed during combustion", "explanation": "The mass helps calculate theoretical energy only when combined with the molar heat of combustion." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Why is the percentage efficiency of a simple calorimetry experiment typically less than 100%?",
+      "correct": "Because energy is lost to the surroundings and through incomplete combustion",
+      "correctExplanation": "In a simple calorimeter, heat escapes to the surrounding air and container, and incomplete combustion means not all fuel is fully oxidised, so less energy is captured than the theoretical maximum.",
+      "distractors": [
+        { "answer": "Because the thermometer absorbs most of the energy from the reaction", "explanation": "The thermometer absorbs only a tiny amount of energy; major losses are to the surroundings and incomplete combustion." },
+        { "answer": "Because the theoretical energy values in data books are always inaccurate", "explanation": "Data book values are well-established and accurate; efficiency is less than 100% due to experimental energy losses." },
+        { "answer": "Because water cannot absorb all the energy released by a combustion reaction", "explanation": "Water can absorb energy effectively; the issue is that energy escapes the system before reaching the water." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "In the efficiency formula, what does 'experimental energy' refer to?",
+      "correct": "The energy calculated from the measured temperature change in the calorimeter",
+      "correctExplanation": "The experimental energy is determined using q = mcΔT (or E = CF × ΔT) from the temperature change observed during the experiment.",
+      "distractors": [
+        { "answer": "The energy listed in the VCAA Data Book for the fuel being tested", "explanation": "Data book values provide the theoretical energy, not the experimental energy." },
+        { "answer": "The total electrical energy used to calibrate the calorimeter", "explanation": "Electrical calibration energy is used to find the calibration factor, not the experimental reaction energy." },
+        { "answer": "The energy needed to heat the fuel to its ignition temperature", "explanation": "Ignition energy is not measured in efficiency calculations; the experimental energy is the heat absorbed by the water." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "If an experiment is perfectly efficient, what would the percentage efficiency equal?",
+      "correct": "100%",
+      "correctExplanation": "A perfectly efficient experiment would mean all theoretical energy was captured, so experimental equals theoretical and efficiency = (theoretical/theoretical) × 100% = 100%.",
+      "distractors": [
+        { "answer": "0%", "explanation": "0% efficiency means no energy was captured; a perfect experiment captures all energy." },
+        { "answer": "50%", "explanation": "50% means only half the theoretical energy was measured; perfect efficiency is 100%." },
+        { "answer": "More than 100%", "explanation": "Efficiency cannot exceed 100% because the experiment cannot capture more energy than is theoretically available." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the statement about energy efficiency.",
+      "sentence": "Percentage efficiency compares the {{blank:1}} energy value to the {{blank:2}} energy value.",
+      "blanks": {
+        "1": {
+          "correct": "experimental",
+          "correctExplanation": "The experimental energy is the measured value from the calorimetry experiment, placed in the numerator.",
+          "distractors": [
+            { "answer": "theoretical", "explanation": "The theoretical value goes in the denominator, not the numerator; experimental is compared to theoretical." },
+            { "answer": "calibration", "explanation": "Calibration energy is used to find CF, not directly in the efficiency formula." }
+          ]
+        },
+        "2": {
+          "correct": "theoretical",
+          "correctExplanation": "The theoretical energy from data tables is the maximum expected value and goes in the denominator of the efficiency formula.",
+          "distractors": [
+            { "answer": "experimental", "explanation": "Experimental goes in the numerator; the theoretical maximum is in the denominator." },
+            { "answer": "electrical", "explanation": "Electrical energy is used for calibration; theoretical energy from reference tables is the denominator in efficiency." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the statement about sources of energy loss.",
+      "sentence": "Two common reasons that efficiency is less than 100% are {{blank:1}} to the surroundings and {{blank:2}} combustion of the fuel.",
+      "blanks": {
+        "1": {
+          "correct": "heat loss",
+          "correctExplanation": "Heat escapes from the calorimeter to the surrounding air and surfaces, reducing the measured temperature change.",
+          "distractors": [
+            { "answer": "mass loss", "explanation": "Mass loss of fuel is expected in combustion; the energy loss is due to heat escaping, not mass." },
+            { "answer": "light emission", "explanation": "While some energy may be lost as light, the primary loss is heat transfer to the surroundings." }
+          ]
+        },
+        "2": {
+          "correct": "incomplete",
+          "correctExplanation": "Incomplete combustion means not all fuel molecules are fully oxidised to CO₂ and H₂O, so less energy is released than the theoretical maximum.",
+          "distractors": [
+            { "answer": "complete", "explanation": "Complete combustion would release the maximum energy; it is incomplete combustion that reduces efficiency." },
+            { "answer": "rapid", "explanation": "Rapid combustion does not necessarily reduce efficiency; incomplete combustion is the issue." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the efficiency calculation formula.",
+      "sentence": "% efficiency = (experimental energy / {{blank:1}}) × {{blank:2}}",
+      "blanks": {
+        "1": {
+          "correct": "theoretical energy",
+          "correctExplanation": "The theoretical energy (from data tables) is the denominator in the efficiency formula.",
+          "distractors": [
+            { "answer": "calibration factor", "explanation": "The calibration factor is used to find experimental energy, not as the denominator in efficiency." },
+            { "answer": "mass of fuel", "explanation": "Mass is used to calculate the theoretical energy, but it is not the denominator in the efficiency formula." }
+          ]
+        },
+        "2": {
+          "correct": "100%",
+          "correctExplanation": "The ratio is multiplied by 100% to express it as a percentage.",
+          "distractors": [
+            { "answer": "10%", "explanation": "The ratio is multiplied by 100%, not 10%." },
+            { "answer": "1000", "explanation": "Multiplying by 1000 would not give a correct percentage; the multiplier is 100%." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "tf",
+      "question": "Percentage energy efficiency is always less than or equal to 100%.",
+      "correct": "True",
+      "correctExplanation": "The experimental energy cannot exceed the theoretical maximum, so the ratio can be at most 1 (100%). Energy losses ensure it is typically well below 100%.",
+      "distractors": [
+        { "answer": "False", "explanation": "Efficiency cannot exceed 100% because the experiment cannot capture more energy than is available from the reaction." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "The experimental energy value is obtained from published data tables.",
+      "correct": "False",
+      "correctExplanation": "The experimental energy is measured during the experiment (using q = mcΔT or E = CF × ΔT). Published data tables provide the theoretical energy value.",
+      "distractors": [
+        { "answer": "True", "explanation": "Data tables provide theoretical values; the experimental value comes from the calorimetry measurements." }
+      ]
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "mc",
+      "question": "A student burns 1.50 g of ethanol and measures 15.5 kJ of energy absorbed by the water. The theoretical energy from the data book is 44.4 kJ. What is the percentage efficiency?",
+      "correct": "34.9%",
+      "correctExplanation": "% efficiency = (15.5/44.4) × 100% = 34.9%.",
+      "distractors": [
+        { "answer": "286%", "explanation": "This divides theoretical by experimental (44.4/15.5 × 100); efficiency divides experimental by theoretical." },
+        { "answer": "65.1%", "explanation": "This calculates the energy loss percentage (100 − 34.9); efficiency is the energy captured, not lost." },
+        { "answer": "28.9%", "explanation": "This uses an incorrect division; 15.5/44.4 = 0.349, so efficiency = 34.9%." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "How is the theoretical energy for a fuel sample calculated from data book values?",
+      "correct": "Multiply the moles of fuel by the molar heat of combustion",
+      "correctExplanation": "Theoretical energy = n × ΔH_c, where n is the number of moles of fuel burned and ΔH_c is the molar heat of combustion from the data book.",
+      "distractors": [
+        { "answer": "Multiply the mass of fuel by the specific heat capacity of water", "explanation": "Specific heat capacity of water is used for experimental energy (q = mcΔT), not theoretical energy." },
+        { "answer": "Divide the experimental energy by the mass of fuel burned", "explanation": "This gives the experimental energy per gram, not the theoretical energy." },
+        { "answer": "Multiply the temperature change by the calibration factor", "explanation": "This gives the experimental energy from a calibrated calorimeter, not the theoretical energy." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A combustion experiment has an efficiency of 42%. If the theoretical energy is 80.0 kJ, what was the experimental energy?",
+      "correct": "33.6 kJ",
+      "correctExplanation": "Rearranging: experimental energy = (efficiency/100) × theoretical = (42/100) × 80.0 = 33.6 kJ.",
+      "distractors": [
+        { "answer": "190 kJ", "explanation": "This divides theoretical by efficiency (80/0.42); the correct formula multiplies." },
+        { "answer": "46.4 kJ", "explanation": "This calculates the energy lost (80.0 − 33.6 = 46.4); the experimental energy is 33.6 kJ." },
+        { "answer": "3360 kJ", "explanation": "This multiplies 42 × 80 without dividing by 100; 42/100 × 80 = 33.6 kJ." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which of the following would increase the measured efficiency of a calorimetry experiment?",
+      "correct": "Using better insulation to reduce heat loss to the surroundings",
+      "correctExplanation": "Better insulation means less heat escapes, so more energy is captured by the water, increasing the experimental energy and therefore the efficiency.",
+      "distractors": [
+        { "answer": "Using a larger mass of fuel in the spirit burner", "explanation": "Using more fuel increases both experimental and theoretical energy proportionally; efficiency stays roughly the same." },
+        { "answer": "Using cold water instead of room-temperature water in the calorimeter", "explanation": "The starting temperature of water does not affect efficiency; what matters is how much heat is captured." },
+        { "answer": "Using a fuel with a higher molar heat of combustion", "explanation": "A higher theoretical value with the same experimental losses would decrease, not increase, efficiency." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A 2.00 g sample of methanol (M = 32.0 g mol⁻¹, ΔH_c = 726 kJ mol⁻¹) is burned. It heats 200.0 g of water by 15.0°C. What is the percentage efficiency? (c_water = 4.18 J g⁻¹ °C⁻¹)",
+      "correct": "27.6%",
+      "correctExplanation": "Experimental: q = 200.0 × 4.18 × 15.0 = 12 540 J = 12.54 kJ. Theoretical: n = 2.00/32.0 = 0.0625 mol. E_theory = 0.0625 × 726 = 45.375 kJ. Efficiency = (12.54/45.375) × 100 = 27.6%.",
+      "distractors": [
+        { "answer": "72.4%", "explanation": "This is 100 − 27.6 = 72.4%, which is the energy lost, not the efficiency." },
+        { "answer": "16.7%", "explanation": "This uses an incorrect q calculation; q = mcΔT = 200 × 4.18 × 15 = 12 540 J." },
+        { "answer": "362%", "explanation": "This inverts the ratio (45.375/12.54 × 100); efficiency divides experimental by theoretical." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What does a low percentage efficiency in a combustion experiment suggest?",
+      "correct": "A significant amount of energy was lost during the experiment",
+      "correctExplanation": "Low efficiency means only a small fraction of the theoretical energy was captured, indicating significant losses to the surroundings, incomplete combustion, or other factors.",
+      "distractors": [
+        { "answer": "The fuel has a very low molar heat of combustion", "explanation": "The molar heat of combustion is fixed for each fuel; low efficiency reflects experimental losses, not fuel properties." },
+        { "answer": "The thermometer used was not calibrated properly", "explanation": "While thermometer errors could affect results, low efficiency primarily indicates energy losses, not thermometer issues." },
+        { "answer": "Too much fuel was used in the experiment", "explanation": "Using more fuel does not inherently lower efficiency; losses relative to total energy determine efficiency." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the efficiency calculation.",
+      "sentence": "If the experimental energy is 25.0 kJ and the theoretical energy is 60.0 kJ, the percentage efficiency is {{blank:1}}%.",
+      "blanks": {
+        "1": {
+          "correct": "41.7",
+          "correctExplanation": "% efficiency = (25.0/60.0) × 100 = 41.7%.",
+          "distractors": [
+            { "answer": "240", "explanation": "This divides theoretical by experimental (60/25 × 100 = 240); the formula divides experimental by theoretical." },
+            { "answer": "35.0", "explanation": "This is an incorrect calculation; 25.0/60.0 = 0.417, giving 41.7%." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the statement about theoretical energy.",
+      "sentence": "The theoretical energy is calculated by multiplying the {{blank:1}} of the fuel by the molar heat of {{blank:2}} from the data book.",
+      "blanks": {
+        "1": {
+          "correct": "moles",
+          "correctExplanation": "Theoretical energy = n × ΔH_c, where n is the number of moles of fuel combusted.",
+          "distractors": [
+            { "answer": "mass", "explanation": "Mass must first be converted to moles using n = m/M before multiplying by ΔH_c." },
+            { "answer": "volume", "explanation": "Volume is used for gases at SLC; moles are needed to multiply by ΔH_c." }
+          ]
+        },
+        "2": {
+          "correct": "combustion",
+          "correctExplanation": "The molar heat of combustion (ΔH_c) gives the energy released per mole of fuel during complete combustion.",
+          "distractors": [
+            { "answer": "vaporisation", "explanation": "Heat of vaporisation is for phase changes; the molar heat of combustion gives energy from burning fuel." },
+            { "answer": "dissolution", "explanation": "Heat of dissolution is for dissolving substances; combustion energy is needed for fuel efficiency." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the statement about improving efficiency.",
+      "sentence": "Energy transformation efficiency can be improved by using {{blank:1}} insulation to minimise {{blank:2}} to the surroundings.",
+      "blanks": {
+        "1": {
+          "correct": "better",
+          "correctExplanation": "Better insulation reduces the amount of heat that escapes the calorimeter, increasing the proportion of energy measured.",
+          "distractors": [
+            { "answer": "less", "explanation": "Less insulation would increase heat loss and decrease efficiency." },
+            { "answer": "thinner", "explanation": "Thinner insulation would be less effective at preventing heat loss." }
+          ]
+        },
+        "2": {
+          "correct": "heat loss",
+          "correctExplanation": "Heat loss to the surroundings is the primary factor reducing efficiency in calorimetry experiments.",
+          "distractors": [
+            { "answer": "evaporation", "explanation": "While evaporation can cause some energy loss, the main concern is heat loss to the surroundings." },
+            { "answer": "combustion", "explanation": "Insulation does not directly affect combustion; it reduces heat loss to the surroundings." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "tf",
+      "question": "A calorimetry experiment with 50% efficiency means that half the theoretical energy was lost during the experiment.",
+      "correct": "True",
+      "correctExplanation": "50% efficiency means the experimental energy is half the theoretical value, so the other half was lost to the surroundings, incomplete combustion, or other factors.",
+      "distractors": [
+        { "answer": "False", "explanation": "50% efficiency directly means half the expected energy was captured and half was lost." }
+      ]
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "mc",
+      "question": "A 1.20 g sample of propane (M = 44.0 g mol⁻¹, ΔH_c = 2220 kJ mol⁻¹) is combusted beneath a calorimeter containing 250.0 g of water (c = 4.18 J g⁻¹ °C⁻¹). The temperature increases by 18.5°C. What is the percentage efficiency?",
+      "correct": "31.9%",
+      "correctExplanation": "q = 250.0 × 4.18 × 18.5 = 19 332.5 J = 19.33 kJ. n = 1.20/44.0 = 0.02727 mol. E_theory = 0.02727 × 2220 = 60.55 kJ. Efficiency = (19.33/60.55) × 100 = 31.9%.",
+      "distractors": [
+        { "answer": "68.1%", "explanation": "This is 100 − 31.9 = 68.1%, which is the energy lost, not the efficiency." },
+        { "answer": "313%", "explanation": "This inverts the ratio (60.55/19.33 × 100); efficiency divides experimental by theoretical." },
+        { "answer": "8.70%", "explanation": "This uses n = 1.20/44.0 = 0.02727 but fails to multiply by ΔH_c correctly." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student wants to achieve at least 40% efficiency when burning 0.500 g of ethanol (M = 46.0 g mol⁻¹, ΔH_c = 1360 kJ mol⁻¹) to heat 100.0 g of water (c = 4.18 J g⁻¹ °C⁻¹). What minimum temperature change must the water undergo?",
+      "correct": "14.1°C",
+      "correctExplanation": "n = 0.500/46.0 = 0.01087 mol. E_theory = 0.01087 × 1360 = 14.78 kJ. At 40%: E_exp = 0.40 × 14.78 = 5.913 kJ = 5913 J. ΔT = q/(mc) = 5913/(100.0 × 4.18) = 14.1°C.",
+      "distractors": [
+        { "answer": "35.4°C", "explanation": "This uses the full theoretical energy (14 780 J) instead of 40% of it." },
+        { "answer": "5.91°C", "explanation": "This is the energy in kJ (5.91), not the temperature change." },
+        { "answer": "56.5°C", "explanation": "This calculates using 100% of theoretical energy with incorrect mass." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Two students burn the same fuel in different calorimeters. Student A achieves 35% efficiency and Student B achieves 25% efficiency. Both burn the same mass of fuel. How do their experimental energies compare?",
+      "correct": "Student A measures 1.4 times the experimental energy of Student B",
+      "correctExplanation": "Both have the same theoretical energy. E_A/E_B = 0.35/0.25 = 1.4. Student A captures 40% more of the available energy.",
+      "distractors": [
+        { "answer": "Student A measures 10% more energy than Student B", "explanation": "The difference in efficiency is 10 percentage points, but the ratio is 35/25 = 1.4, meaning 40% more." },
+        { "answer": "Both students measure the same experimental energy", "explanation": "Different efficiencies with the same theoretical energy give different experimental energies." },
+        { "answer": "Student B measures more energy because lower efficiency means more heat was released", "explanation": "Lower efficiency means less energy was captured, not more; Student A captures more." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A 0.800 g sample of butane (M = 58.0 g mol⁻¹, ΔH_c = 2880 kJ mol⁻¹) heats 150.0 g of water from 21.0°C to 33.5°C. What is the percentage efficiency?",
+      "correct": "19.7%",
+      "correctExplanation": "q = 150.0 × 4.18 × 12.5 = 7837.5 J = 7.838 kJ. n = 0.800/58.0 = 0.01379 mol. E_theory = 0.01379 × 2880 = 39.72 kJ. Efficiency = (7.838/39.72) × 100 = 19.7%.",
+      "distractors": [
+        { "answer": "80.3%", "explanation": "This is 100 − 19.7; it represents energy lost, not efficiency." },
+        { "answer": "507%", "explanation": "This inverts the ratio; efficiency divides experimental by theoretical." },
+        { "answer": "2.72%", "explanation": "This uses q in joules (7837.5) divided by E_theory in joules (39 720) without proper conversion." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student obtains 38% efficiency from burning methanol and 28% from burning butane using the same calorimeter. What is the most likely explanation for the difference?",
+      "correct": "Methanol burns more completely in air because it contains oxygen in its structure",
+      "correctExplanation": "Methanol (CH₃OH) contains an oxygen atom, which aids more complete combustion in open-air conditions compared to butane (C₄H₁₀), leading to higher efficiency.",
+      "distractors": [
+        { "answer": "Methanol has a higher molar heat of combustion than butane", "explanation": "Butane actually has a higher ΔH_c (2880 kJ mol⁻¹) than methanol (726 kJ mol⁻¹); efficiency relates to energy capture, not ΔH_c." },
+        { "answer": "The calorimeter absorbs less heat when methanol is burned", "explanation": "The calorimeter's heat absorption is a property of the calorimeter, not the fuel; it stays the same." },
+        { "answer": "Butane produces more water vapour, which carries away more energy", "explanation": "While water vapour carries some energy, the main factor is completeness of combustion in open air." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A fuel produces 8.50 kJ experimentally. If the experiment has 32% efficiency, what is the theoretical energy?",
+      "correct": "26.6 kJ",
+      "correctExplanation": "Rearranging: theoretical = experimental/(%/100) = 8.50/0.32 = 26.6 kJ.",
+      "distractors": [
+        { "answer": "2.72 kJ", "explanation": "This multiplies 8.50 × 0.32 = 2.72; this gives the wrong answer because efficiency = exp/theory, so theory = exp/efficiency." },
+        { "answer": "265.6 kJ", "explanation": "This divides by 0.032 instead of 0.32; 32% = 0.32." },
+        { "answer": "18.1 kJ", "explanation": "This adds rather than divides; theoretical = experimental/0.32 = 26.6 kJ." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "In a simple calorimetry experiment, a student measures the temperature change of the water but does not account for the heat absorbed by the metal can. How does this affect the calculated efficiency?",
+      "correct": "The calculated efficiency will be lower than the true value",
+      "correctExplanation": "The metal can absorbs some heat energy that is not measured when only accounting for the water. This means the experimental energy is underestimated, making the efficiency appear lower.",
+      "distractors": [
+        { "answer": "The calculated efficiency will be higher than the true value", "explanation": "Ignoring the can's heat absorption underestimates the experimental energy, giving lower efficiency." },
+        { "answer": "The calculated efficiency will be unchanged because the can does not absorb significant energy", "explanation": "The metal can does absorb measurable energy; ignoring it leads to an underestimate of experimental energy." },
+        { "answer": "The efficiency cannot be calculated without knowing the can's heat capacity", "explanation": "Efficiency can still be calculated using q = mcΔT for water alone; it will just be lower than the true value." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the efficiency calculation.",
+      "sentence": "A fuel releases 12.0 kJ experimentally and 48.0 kJ theoretically. The percentage efficiency is {{blank:1}}%.",
+      "blanks": {
+        "1": {
+          "correct": "25.0",
+          "correctExplanation": "% efficiency = (12.0/48.0) × 100 = 25.0%.",
+          "distractors": [
+            { "answer": "400", "explanation": "This divides theoretical by experimental (48/12 × 100 = 400); efficiency divides experimental by theoretical." },
+            { "answer": "75.0", "explanation": "This is 100 − 25 = 75%, which is the energy loss percentage, not efficiency." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the multi-step calculation.",
+      "sentence": "For 0.50 g of methanol (M = 32.0 g mol⁻¹, ΔH_c = 726 kJ mol⁻¹), the moles are {{blank:1}} mol and the theoretical energy is {{blank:2}} kJ.",
+      "blanks": {
+        "1": {
+          "correct": "0.01563",
+          "correctExplanation": "n = m/M = 0.50/32.0 = 0.01563 mol.",
+          "distractors": [
+            { "answer": "0.500", "explanation": "0.500 is the mass in grams, not the moles; n = m/M = 0.50/32.0." },
+            { "answer": "64.0", "explanation": "This multiplies m × M; n = m/M = 0.50/32.0 = 0.01563 mol." }
+          ]
+        },
+        "2": {
+          "correct": "11.35",
+          "correctExplanation": "E_theory = n × ΔH_c = 0.01563 × 726 = 11.35 kJ.",
+          "distractors": [
+            { "answer": "726", "explanation": "726 kJ mol⁻¹ is the molar heat of combustion, not the theoretical energy for this mass." },
+            { "answer": "363", "explanation": "This halves ΔH_c without using n; E_theory = n × ΔH_c = 0.01563 × 726 = 11.35 kJ." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the statement about energy losses.",
+      "sentence": "When the calculated efficiency is only 25%, it means that {{blank:1}}% of the theoretical energy was lost, primarily through {{blank:2}} to the surroundings.",
+      "blanks": {
+        "1": {
+          "correct": "75",
+          "correctExplanation": "If 25% of the energy was captured, then 100 − 25 = 75% was lost.",
+          "distractors": [
+            { "answer": "25", "explanation": "25% is the energy captured, not lost; 100 − 25 = 75% was lost." },
+            { "answer": "50", "explanation": "50% would be the loss only if efficiency were 50%; for 25% efficiency, loss is 75%." }
+          ]
+        },
+        "2": {
+          "correct": "heat transfer",
+          "correctExplanation": "Heat transfers from the calorimeter to the surrounding air and surfaces, reducing the energy measured experimentally.",
+          "distractors": [
+            { "answer": "radiation from the fuel", "explanation": "While radiation is a heat transfer mechanism, the general term 'heat transfer' encompasses all mechanisms of energy loss." },
+            { "answer": "chemical reaction", "explanation": "The chemical reaction releases energy; the losses come from heat transfer to the surroundings." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "mc",
+      "question": "A student burns 1.00 g of octane (M = 114.0 g mol⁻¹, ΔH_c = 5460 kJ mol⁻¹) under a calorimeter containing 200.0 g of water (c = 4.18 J g⁻¹ °C⁻¹). The water temperature rises by 12.0°C. What is the percentage efficiency?",
+      "correct": "20.9%",
+      "correctExplanation": "q = 200.0 × 4.18 × 12.0 = 10 032 J = 10.03 kJ. n = 1.00/114.0 = 0.008772 mol. E_theory = 0.008772 × 5460 = 47.90 kJ. Efficiency = (10.03/47.90) × 100 = 20.9%.",
+      "distractors": [
+        { "answer": "79.1%", "explanation": "This is 100 − 20.9 = 79.1%, the energy loss percentage, not efficiency." },
+        { "answer": "477%", "explanation": "This inverts the ratio; efficiency divides experimental by theoretical." },
+        { "answer": "2.09%", "explanation": "This divides by 10 instead of 1; the efficiency is 20.9%, not 2.09%." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Two fuels are tested in the same calorimeter. Fuel X gives 30% efficiency and Fuel Y gives 45% efficiency. A student concludes that Fuel Y releases more energy per gram. Is this conclusion valid?",
+      "correct": "No, higher efficiency means more energy was captured, not that the fuel stores more energy per gram",
+      "correctExplanation": "Efficiency compares experimental to theoretical energy. Fuel Y's higher efficiency means less energy was lost, not that it has a higher energy content. Energy per gram depends on ΔH_c and molar mass.",
+      "distractors": [
+        { "answer": "Yes, higher efficiency always indicates a fuel with more energy per gram", "explanation": "Efficiency depends on experimental conditions (insulation, combustion completeness), not just the fuel's energy content." },
+        { "answer": "Yes, because the more efficient fuel must have a higher molar heat of combustion", "explanation": "Efficiency reflects how well the experiment captures energy; it does not directly measure ΔH_c." },
+        { "answer": "No, because efficiency is independent of the fuel used and depends only on the calorimeter", "explanation": "Efficiency depends on both the calorimeter and the fuel; some fuels combust more completely than others." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student repeats the same combustion experiment three times and obtains efficiencies of 28%, 30%, and 29%. They then improve the insulation and obtain 42%, 43%, and 41%. Which type of error was primarily reduced?",
+      "correct": "Systematic error from heat loss to the surroundings",
+      "correctExplanation": "Heat loss is a systematic error because it consistently causes the measured energy to be lower than the true value. Better insulation reduces this systematic error, shifting all results upward.",
+      "distractors": [
+        { "answer": "Random error from imprecise temperature readings", "explanation": "Random error affects the spread of results; improving insulation shifted all results higher, indicating a systematic error was reduced." },
+        { "answer": "Random error from inconsistent fuel masses", "explanation": "Fuel mass variation would cause random scatter; the consistent upward shift indicates reduction of systematic heat loss." },
+        { "answer": "Systematic error from an incorrectly calibrated thermometer", "explanation": "A calibration error would affect temperature readings; better insulation specifically addresses heat loss." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student burns 2.30 g of ethanol (M = 46.0 g mol⁻¹, ΔH_c = 1360 kJ mol⁻¹) and obtains a temperature rise of 24.0°C in 250.0 g of water (c = 4.18 J g⁻¹ °C⁻¹). They then recalculate using a calibration factor of CF = 340 J °C⁻¹. Compare the two efficiency values.",
+      "correct": "Using q = mcΔT gives 36.6% and using CF gives 12.0%",
+      "correctExplanation": "q = mcΔT: q = 250.0 × 4.18 × 24.0 = 25 080 J = 25.08 kJ. n = 2.30/46.0 = 0.0500 mol. E_theory = 0.0500 × 1360 = 68.0 kJ. Eff = 25.08/68.0 × 100 = 36.9%. Using CF: E = 340 × 24.0 = 8160 J = 8.16 kJ. Eff = 8.16/68.0 × 100 = 12.0%.",
+      "distractors": [
+        { "answer": "Both methods give the same efficiency of 36.6%", "explanation": "The CF method gives a different (lower) experimental energy because CF < mc, giving lower efficiency." },
+        { "answer": "Using q = mcΔT gives 12.0% and using CF gives 36.6%", "explanation": "mc = 250 × 4.18 = 1045 J °C⁻¹ > CF = 340 J °C⁻¹; q = mcΔT gives the larger energy and higher efficiency." },
+        { "answer": "Using CF gives 36.6% and using q = mcΔT gives 24.0%", "explanation": "CF × ΔT = 340 × 24 = 8160 J gives a smaller energy than mcΔT = 25 080 J." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An experiment burning pentane (ΔH_c = 3510 kJ mol⁻¹, M = 72.0 g mol⁻¹) achieves 22% efficiency. The student wants to know how many grams of pentane would be needed to raise 500.0 g of water by 30.0°C at this efficiency. (c = 4.18 J g⁻¹ °C⁻¹)",
+      "correct": "5.85 g",
+      "correctExplanation": "q_needed = 500.0 × 4.18 × 30.0 = 62 700 J = 62.7 kJ. At 22% efficiency: E_theory = 62.7/0.22 = 285.0 kJ. n = 285.0/3510 = 0.0812 mol. m = 0.0812 × 72.0 = 5.85 g.",
+      "distractors": [
+        { "answer": "1.29 g", "explanation": "This uses 100% efficiency (62.7/3510 × 72 = 1.29 g); at 22% efficiency much more fuel is needed." },
+        { "answer": "0.284 g", "explanation": "This applies efficiency as a multiplier (1.29 × 0.22 = 0.284); efficiency should divide, not multiply." },
+        { "answer": "26.6 g", "explanation": "This uses an incorrect molar mass or ΔH_c; m = 0.0812 × 72.0 = 5.85 g." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student burns 0.650 g of hydrogen gas (M = 2.00 g mol⁻¹, ΔH_c = 282 kJ mol⁻¹) and heats 100.0 g of water by 22.0°C. What is the percentage efficiency? (c = 4.18 J g⁻¹ °C⁻¹)",
+      "correct": "10.0%",
+      "correctExplanation": "q = 100.0 × 4.18 × 22.0 = 9196 J = 9.196 kJ. n = 0.650/2.00 = 0.325 mol. E_theory = 0.325 × 282 = 91.65 kJ. Efficiency = (9.196/91.65) × 100 = 10.0%.",
+      "distractors": [
+        { "answer": "90.0%", "explanation": "This is 100 − 10 = 90%, the energy lost, not efficiency." },
+        { "answer": "3.26%", "explanation": "This uses an incorrect q value; q = 100 × 4.18 × 22.0 = 9196 J." },
+        { "answer": "997%", "explanation": "This inverts the ratio; efficiency divides experimental by theoretical." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "In an experiment, a student obtains 35% efficiency using simple calorimetry (q = mcΔT). If they had used a calibrated solution calorimeter (CF method) with CF = 280 J °C⁻¹ while mc = 418 J °C⁻¹, what would the CF-based efficiency be?",
+      "correct": "23.4%",
+      "correctExplanation": "The ratio of CF to mc is 280/418 = 0.6699. The CF-based efficiency = 35% × (280/418) = 35% × 0.6699 = 23.4%. Since CF < mc, the CF method gives a lower experimental energy and thus lower efficiency.",
+      "distractors": [
+        { "answer": "35.0%", "explanation": "The CF-based efficiency differs from the q = mcΔT efficiency because CF ≠ mc." },
+        { "answer": "52.3%", "explanation": "This multiplies by 418/280 instead of 280/418; CF < mc gives a lower, not higher, efficiency." },
+        { "answer": "46.7%", "explanation": "This incorrectly adds the ratio to the original efficiency; the correct approach multiplies." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student performs two combustion experiments with methanol. Experiment 1 burns 0.500 g with efficiency 30%. Experiment 2 burns 1.000 g with efficiency 32%. What is the most likely reason for the small efficiency increase?",
+      "correct": "Burning more fuel releases more total heat, keeping the flame hotter and reducing incomplete combustion",
+      "correctExplanation": "A larger flame from more fuel can achieve more complete combustion and may reduce the relative proportion of heat lost to the surroundings, slightly increasing efficiency.",
+      "distractors": [
+        { "answer": "Using double the fuel always doubles the efficiency", "explanation": "Efficiency does not scale linearly with fuel mass; it changed only from 30% to 32%." },
+        { "answer": "The student made an error in Experiment 1 and the efficiencies should be identical", "explanation": "Small efficiency changes between experiments are common and can reflect real differences in combustion completeness." },
+        { "answer": "The water absorbed exactly twice the energy in Experiment 2", "explanation": "Twice the fuel gives roughly twice the theoretical energy, but the experimental energy increased by slightly more than double due to better combustion." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the analysis.",
+      "sentence": "If a student's experimental energy is 15.0 kJ but the theoretical energy is 50.0 kJ, the efficiency is {{blank:1}}% and {{blank:2}} kJ of energy was lost.",
+      "blanks": {
+        "1": {
+          "correct": "30.0",
+          "correctExplanation": "% efficiency = (15.0/50.0) × 100 = 30.0%.",
+          "distractors": [
+            { "answer": "70.0", "explanation": "70% is the percentage of energy lost, not the efficiency." },
+            { "answer": "333", "explanation": "This inverts the ratio (50/15 × 100); efficiency divides experimental by theoretical." }
+          ]
+        },
+        "2": {
+          "correct": "35.0",
+          "correctExplanation": "Energy lost = theoretical − experimental = 50.0 − 15.0 = 35.0 kJ.",
+          "distractors": [
+            { "answer": "15.0", "explanation": "15.0 kJ is the experimental energy captured, not the energy lost." },
+            { "answer": "50.0", "explanation": "50.0 kJ is the total theoretical energy; the amount lost is 50.0 − 15.0 = 35.0 kJ." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the reverse efficiency calculation.",
+      "sentence": "A fuel with a theoretical energy of 80.0 kJ was burned at 38% efficiency. The experimental energy captured was {{blank:1}} kJ.",
+      "blanks": {
+        "1": {
+          "correct": "30.4",
+          "correctExplanation": "Experimental = (38/100) × 80.0 = 0.38 × 80.0 = 30.4 kJ.",
+          "distractors": [
+            { "answer": "211", "explanation": "This divides 80/0.38 = 211; the correct calculation multiplies 0.38 × 80 = 30.4." },
+            { "answer": "49.6", "explanation": "This calculates 80 − 30.4 = 49.6 kJ, which is the energy lost, not captured." }
+          ]
+        }
+      }
+    }
+  ]
+}

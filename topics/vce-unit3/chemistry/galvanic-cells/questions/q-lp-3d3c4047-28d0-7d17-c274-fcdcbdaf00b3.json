@@ -1,0 +1,567 @@
+{
+  "_link": {
+    "uuid": "lp-3d3c4047-28d0-7d17-c274-fcdcbdaf00b3",
+    "version": 1,
+    "contentHash": "hash-f321dfd5",
+    "title": "I can predict sequential reactions when one reactant is completely consumed",
+    "generatedAt": "2026-02-08T10:30:00Z"
+  },
+  "toLevel2": [
+    {
+      "type": "mc",
+      "question": "In a half-cell containing Cu2+, Ni2+, and Zn2+ ions with an Fe anode, which ion is reduced first?",
+      "correct": "Cu2+",
+      "correctExplanation": "Cu2+ has the highest E0 value (+0.34 V) of the three ions, making it the strongest oxidising agent that is reduced first.",
+      "distractors": [
+        { "answer": "Ni2+", "explanation": "Ni2+ has E0 = -0.26 V, which is lower than Cu2+ and would be reduced after Cu2+ is consumed." },
+        { "answer": "Zn2+", "explanation": "Zn2+ has E0 = -0.76 V, the lowest of the three, and would be reduced last if at all." },
+        { "answer": "Fe2+", "explanation": "Fe is the anode being oxidised; Fe2+ is not reduced in this cell arrangement." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What happens to cell voltage when the strongest oxidising agent in a mixture is completely consumed?",
+      "correct": "The voltage decreases",
+      "correctExplanation": "When the strongest oxidising agent is depleted, the next strongest takes over, producing a lower cell voltage.",
+      "distractors": [
+        { "answer": "The voltage increases", "explanation": "The next oxidising agent has a lower E0, producing a smaller voltage difference." },
+        { "answer": "The voltage stays the same", "explanation": "Different oxidising agents produce different voltages; the value changes when one is consumed." },
+        { "answer": "The voltage becomes negative", "explanation": "The voltage decreases but remains positive as long as a spontaneous reaction is possible." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What determines the order in which multiple oxidising agents are reduced in a galvanic cell?",
+      "correct": "Their position in the electrochemical series",
+      "correctExplanation": "The oxidising agent highest in the series (most positive E0) is reduced first, followed by the next highest.",
+      "distractors": [
+        { "answer": "Their concentration in the solution", "explanation": "Under standard conditions, E0 position determines reaction order, not concentration." },
+        { "answer": "Their colour in the solution", "explanation": "Colour is a physical property unrelated to the order of reduction." },
+        { "answer": "The order in which they were added to the solution", "explanation": "Addition order does not affect which species is reduced first; E0 values determine the sequence." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "When does the reaction in a cell with multiple oxidising agents stop completely?",
+      "correct": "When no remaining oxidising agent is higher than the reducing agent in the series",
+      "correctExplanation": "The reaction stops when all remaining species are below or at the same level as the anode metal in the series.",
+      "distractors": [
+        { "answer": "When exactly half of the ions have been reduced", "explanation": "The reaction stops based on series position, not when a specific fraction is consumed." },
+        { "answer": "When the temperature of the solution drops below 25°C", "explanation": "Temperature affects rate but the reaction stops when no thermodynamically favourable reaction remains." },
+        { "answer": "When the salt bridge runs out of ions to transfer", "explanation": "While salt bridge depletion can stop a cell, the primary reason for sequential stopping is series position." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "In sequential reactions, what is the role of the anode metal throughout the process?",
+      "correct": "It continues to be oxidised as long as a viable cathode reaction exists",
+      "correctExplanation": "The anode metal is oxidised for each sequential cathode reaction until no more oxidising agents above it in the series remain.",
+      "distractors": [
+        { "answer": "It is only oxidised during the first reduction reaction", "explanation": "The anode continues to be oxidised through all sequential reactions as different ions are reduced." },
+        { "answer": "It switches between oxidation and reduction in each step", "explanation": "The anode metal is consistently oxidised throughout; it does not switch roles." },
+        { "answer": "It acts as a catalyst for the sequential reactions", "explanation": "The anode is consumed by oxidation; a catalyst would not be consumed." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "In a cell with multiple oxidising agents, all ions are reduced simultaneously rather than sequentially.",
+      "correct": "False",
+      "correctExplanation": "The strongest oxidising agent is reduced first; subsequent species are reduced only after the stronger one is consumed.",
+      "distractors": [
+        { "answer": "True", "explanation": "Students may think all reactions occur at once, but thermodynamics dictates the strongest oxidiser reacts first." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "Cell voltage decreases each time a new, weaker oxidising agent begins to be reduced in a sequential reaction.",
+      "correct": "True",
+      "correctExplanation": "Each subsequent oxidising agent has a lower E0, producing a smaller difference with the anode and therefore lower voltage.",
+      "distractors": [
+        { "answer": "False", "explanation": "Students may think voltage is constant, but each weaker oxidising agent produces a lower cell potential." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about sequential reactions.",
+      "sentence": "When the strongest oxidising agent is depleted, the {{blank:1}} strongest begins to react, producing a {{blank:2}} cell voltage.",
+      "blanks": {
+        "1": {
+          "correct": "next",
+          "correctExplanation": "The sequence follows the electrochemical series in order of decreasing oxidising strength.",
+          "distractors": [
+            { "answer": "weakest", "explanation": "The next in order reacts, not the weakest; the sequence follows decreasing E0 values." },
+            { "answer": "same", "explanation": "A different oxidising agent reacts each time the previous one is consumed." }
+          ]
+        },
+        "2": {
+          "correct": "lower",
+          "correctExplanation": "Each successive oxidising agent has a lower E0, reducing the voltage difference with the anode.",
+          "distractors": [
+            { "answer": "higher", "explanation": "Weaker oxidising agents produce lower voltages, not higher." },
+            { "answer": "identical", "explanation": "Different E0 values produce different cell voltages." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about reaction cessation.",
+      "sentence": "Sequential reactions stop when no oxidising agent with a {{blank:1}} E0 value than the anode metal remains.",
+      "blanks": {
+        "1": {
+          "correct": "higher",
+          "correctExplanation": "The reaction requires an oxidising agent with E0 higher than the anode metal for a positive cell voltage.",
+          "distractors": [
+            { "answer": "lower", "explanation": "An oxidising agent with lower E0 than the anode cannot spontaneously react with it." },
+            { "answer": "equal", "explanation": "Equal E0 values give zero voltage; a higher E0 is needed for spontaneous reaction." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the electrochemical series and sequential reactions.",
+      "sentence": "The order of reduction in a mixture is determined by the {{blank:1}} of the electrochemical series, with the {{blank:2}} E0 species reduced first.",
+      "blanks": {
+        "1": {
+          "correct": "position",
+          "correctExplanation": "The position (ranking by E0 value) in the series determines the order of reduction.",
+          "distractors": [
+            { "answer": "length", "explanation": "The length of the series is not relevant; position (E0 ranking) determines order." },
+            { "answer": "colour", "explanation": "The series does not use colour; E0 values determine the reduction order." }
+          ]
+        },
+        "2": {
+          "correct": "highest",
+          "correctExplanation": "The species with the highest (most positive) E0 is the strongest oxidising agent and is reduced first.",
+          "distractors": [
+            { "answer": "lowest", "explanation": "The lowest E0 species is the weakest oxidiser and would be reduced last." },
+            { "answer": "middle", "explanation": "The middle species is not preferentially reduced first; the highest E0 reacts first." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "mc",
+      "question": "Why does Cu2+ react before Ni2+ when both are in a half-cell with an iron anode?",
+      "correct": "Cu2+ has a higher E0 value and is a stronger oxidising agent than Ni2+",
+      "correctExplanation": "Cu2+ (+0.34 V) is higher than Ni2+ (-0.26 V) in the series, making it the preferential electron acceptor.",
+      "distractors": [
+        { "answer": "Cu2+ has a higher concentration in solution than Ni2+", "explanation": "Under standard conditions (equal concentrations), E0 determines reaction order, not concentration." },
+        { "answer": "Copper ions are physically larger and react faster", "explanation": "Ion size does not determine thermodynamic preference; E0 values do." },
+        { "answer": "Iron has a special affinity for copper ions over nickel ions", "explanation": "There is no special affinity; the electrochemical series position determines which ion is reduced first." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "In a cell with Cu2+, Ni2+, and Zn2+ in the cathode half-cell and Fe anode, what is the second reaction after Cu2+ is consumed?",
+      "correct": "Fe(s) + Ni2+(aq) → Fe2+(aq) + Ni(s)",
+      "correctExplanation": "After Cu2+ is depleted, Ni2+ (-0.26 V) is the next strongest oxidising agent above Fe (-0.44 V) in the series.",
+      "distractors": [
+        { "answer": "Fe(s) + Zn2+(aq) → Fe2+(aq) + Zn(s)", "explanation": "Zn2+ (-0.76 V) is below Fe (-0.44 V) in the series, so this reaction is non-spontaneous." },
+        { "answer": "Ni(s) + Cu2+(aq) → Ni2+(aq) + Cu(s)", "explanation": "Cu2+ has already been consumed; this reaction cannot continue." },
+        { "answer": "No further reaction occurs after Cu2+ is consumed", "explanation": "Ni2+ is still above Fe in the series, so Fe can reduce Ni2+ in a spontaneous reaction." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Why does the reaction stop when only Zn2+ remains with an Fe anode?",
+      "correct": "Zn2+ is below Fe in the electrochemical series, making the reaction non-spontaneous",
+      "correctExplanation": "Zn2+/Zn has E0 = -0.76 V, below Fe2+/Fe at -0.44 V, so Fe cannot reduce Zn2+. The E0cell would be negative.",
+      "distractors": [
+        { "answer": "Zinc ions are too stable to be reduced by any metal", "explanation": "Zinc ions can be reduced by metals with more negative E0, such as Mg or Na; Fe simply isn't reactive enough." },
+        { "answer": "The iron anode has been completely consumed", "explanation": "While possible, the question asks about why it stops with Zn2+ remaining, which is due to series position." },
+        { "answer": "Zinc ions precipitate out of solution and become unavailable", "explanation": "Zn2+ remains in solution; the reaction stops because E0cell would be negative." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "How does the cell voltage change during the transition from Cu2+ reduction to Ni2+ reduction?",
+      "correct": "It drops from +0.78 V to +0.19 V",
+      "correctExplanation": "With Fe anode: Cu2+ gives +0.34-(-0.44) = +0.78 V; Ni2+ gives -0.26-(-0.44) = +0.18 V (approximately +0.19 V).",
+      "distractors": [
+        { "answer": "It increases from +0.78 V to +1.10 V", "explanation": "Voltage decreases when a weaker oxidising agent takes over, not increases." },
+        { "answer": "It remains constant at +0.78 V throughout", "explanation": "Different oxidising agents produce different cell voltages." },
+        { "answer": "It drops to exactly zero when Cu2+ is consumed", "explanation": "The voltage drops to the value for the Ni2+/Fe cell, not to zero." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What does the stepwise decrease in voltage during sequential reactions tell us about the cell?",
+      "correct": "Each new reaction has a smaller thermodynamic driving force than the previous one",
+      "correctExplanation": "Lower voltage means less energy per electron transferred, indicating a weaker thermodynamic driving force for each successive reaction.",
+      "distractors": [
+        { "answer": "The cell is losing efficiency due to electrode degradation", "explanation": "The voltage decrease is due to different reactions, not electrode degradation." },
+        { "answer": "The salt bridge is becoming depleted of ions over time", "explanation": "Salt bridge depletion would affect current, not the characteristic voltage steps." },
+        { "answer": "The temperature is decreasing inside the cell, reducing voltage", "explanation": "The stepwise changes are due to different reactions, not temperature changes." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "In what practical situation would sequential reactions be most relevant?",
+      "correct": "Predicting how a battery's voltage changes as it discharges",
+      "correctExplanation": "As the primary reactant is consumed, secondary reactions at lower voltages may occur, explaining voltage steps during discharge.",
+      "distractors": [
+        { "answer": "Designing a solar panel that converts sunlight to electricity", "explanation": "Solar panels use photovoltaic effects, not sequential electrochemical reactions." },
+        { "answer": "Measuring the pH of a solution using a pH meter", "explanation": "pH measurement involves acid-base chemistry, not sequential redox reactions." },
+        { "answer": "Filtering impurities from drinking water using activated carbon", "explanation": "Filtration is a physical process, not a sequential electrochemical reaction." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "If three oxidising agents are present in the cathode half-cell, the cell may show up to three distinct voltage levels during discharge.",
+      "correct": "True",
+      "correctExplanation": "Each oxidising agent produces a different voltage with the anode, creating up to three distinct voltage plateaus.",
+      "distractors": [
+        { "answer": "False", "explanation": "Students may think voltage is constant, but each sequential reaction produces a different characteristic voltage." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about voltage changes.",
+      "sentence": "When Cu2+ is fully consumed and Ni2+ begins reacting, the voltage {{blank:1}} because Ni2+ is a {{blank:2}} oxidising agent than Cu2+.",
+      "blanks": {
+        "1": {
+          "correct": "drops",
+          "correctExplanation": "The weaker oxidising agent produces a smaller voltage difference with the anode.",
+          "distractors": [
+            { "answer": "increases", "explanation": "A weaker oxidising agent cannot produce a higher voltage than a stronger one." },
+            { "answer": "stabilises", "explanation": "The voltage changes to a new, lower value; it does not simply stabilise at the old value." }
+          ]
+        },
+        "2": {
+          "correct": "weaker",
+          "correctExplanation": "Ni2+ has a lower E0 than Cu2+, making it a weaker oxidising agent.",
+          "distractors": [
+            { "answer": "stronger", "explanation": "Ni2+ has a lower E0 than Cu2+; it is weaker, not stronger." },
+            { "answer": "identical", "explanation": "Ni2+ and Cu2+ have different E0 values and therefore different oxidising strengths." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about reaction cessation.",
+      "sentence": "Fe cannot reduce Zn2+ because Zn2+ has a {{blank:1}} E0 value than Fe2+/Fe, giving a {{blank:2}} E0cell.",
+      "blanks": {
+        "1": {
+          "correct": "more negative",
+          "correctExplanation": "Zn2+/Zn at -0.76 V is more negative than Fe2+/Fe at -0.44 V, so Fe cannot reduce Zn2+.",
+          "distractors": [
+            { "answer": "more positive", "explanation": "Zn2+/Zn is more negative than Fe2+/Fe, not more positive." },
+            { "answer": "identical", "explanation": "The E0 values are different: -0.76 V for Zn and -0.44 V for Fe." }
+          ]
+        },
+        "2": {
+          "correct": "negative",
+          "correctExplanation": "E0cell = -0.76 - (-0.44) = -0.32 V, a negative value indicating a non-spontaneous reaction.",
+          "distractors": [
+            { "answer": "positive", "explanation": "The E0cell would be negative, indicating the reaction is non-spontaneous." },
+            { "answer": "zero", "explanation": "The E0cell is -0.32 V, not zero." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about sequential reduction.",
+      "sentence": "The sequence of reduction follows the {{blank:1}} from the strongest to the weakest oxidising agent that is still above the anode in the series.",
+      "blanks": {
+        "1": {
+          "correct": "electrochemical series",
+          "correctExplanation": "The electrochemical series ranks oxidising agents by E0, determining the sequential order of reduction.",
+          "distractors": [
+            { "answer": "periodic table", "explanation": "The periodic table organises elements by atomic structure; the electrochemical series determines redox order." },
+            { "answer": "activity series", "explanation": "While related, the specific tool used for E0-based predictions is the electrochemical series." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "mc",
+      "question": "A solution contains Ag+ (E0=+0.80V), Cu2+ (E0=+0.34V), and Pb2+ (E0=-0.13V) with a zinc anode (E0=-0.76V). Calculate the three sequential voltages.",
+      "correct": "+1.56 V, then +1.10 V, then +0.63 V",
+      "correctExplanation": "Ag+: +0.80-(-0.76)=+1.56V. Cu2+: +0.34-(-0.76)=+1.10V. Pb2+: -0.13-(-0.76)=+0.63V.",
+      "distractors": [
+        { "answer": "+0.63 V, then +1.10 V, then +1.56 V", "explanation": "This reverses the order; the highest voltage comes first when the strongest oxidiser reacts." },
+        { "answer": "+1.56 V for all three reactions", "explanation": "Each oxidising agent produces a different voltage; the value decreases with each step." },
+        { "answer": "+0.80 V, then +0.34 V, then -0.13 V", "explanation": "These are the individual E0 values, not the cell potentials calculated against the zinc anode." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A cell has Sn2+ (E0=-0.14V) and Ni2+ (E0=-0.26V) in the cathode compartment with an Al anode (E0=-1.66V). Predict the sequence of reactions.",
+      "correct": "Sn2+ is reduced first at +1.52 V, then Ni2+ at +1.40 V",
+      "correctExplanation": "Sn2+ has higher E0 and reacts first: -0.14-(-1.66)=+1.52V. Then Ni2+: -0.26-(-1.66)=+1.40V.",
+      "distractors": [
+        { "answer": "Ni2+ is reduced first because nickel is more common than tin", "explanation": "Commonality does not determine reaction order; E0 values do." },
+        { "answer": "Both are reduced simultaneously because their E0 values are similar", "explanation": "Even similar E0 values result in sequential reduction, with the higher one first." },
+        { "answer": "Neither is reduced because both have negative E0 values", "explanation": "Both have E0 higher than Al, so both can be reduced sequentially." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Predict what happens when iron filings are added to a solution containing equal concentrations of Cu2+ and Ag+ ions.",
+      "correct": "Ag+ is reduced first to Ag(s), then Cu2+ is reduced to Cu(s) after Ag+ is consumed",
+      "correctExplanation": "Ag+ (E0=+0.80V) is above Cu2+ (E0=+0.34V), so silver ions are reduced preferentially before copper ions.",
+      "distractors": [
+        { "answer": "Both ions are reduced at the same rate simultaneously", "explanation": "The stronger oxidising agent (Ag+) is reduced preferentially." },
+        { "answer": "Cu2+ is reduced first because copper is closer to iron in the series", "explanation": "Series proximity does not determine order; E0 ranking does." },
+        { "answer": "Neither ion is reduced because iron cannot donate enough electrons", "explanation": "Iron (E0=-0.44V) is below both Cu2+ and Ag+ and can reduce both." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A galvanic cell contains Fe3+ (E0=+0.77V) and Fe2+ (E0=-0.44V as Fe2+/Fe) in the cathode compartment with Mg anode. Predict the sequential reactions.",
+      "correct": "Fe3+ is reduced to Fe2+ first, then Fe2+ is reduced to Fe(s) second",
+      "correctExplanation": "Fe3+/Fe2+ (E0=+0.77V) has a higher E0 than Fe2+/Fe (E0=-0.44V), so Fe3+ is reduced first.",
+      "distractors": [
+        { "answer": "Fe3+ is reduced directly to Fe(s) in a single step", "explanation": "While possible in some conditions, the sequential pathway through Fe2+ is thermodynamically favoured." },
+        { "answer": "Fe2+ is reduced first because it requires fewer electrons", "explanation": "The number of electrons does not determine order; E0 position does." },
+        { "answer": "Only Fe3+ is reduced; Fe2+ cannot be reduced by magnesium", "explanation": "Mg (E0=-2.37V) is well below Fe2+/Fe (-0.44V) and can reduce Fe2+ to Fe." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "In a discharge curve for a cell with multiple oxidising agents, what would the voltage-time graph look like?",
+      "correct": "Stepwise decreasing plateaus, each at a constant voltage until that oxidising agent is consumed",
+      "correctExplanation": "Each oxidising agent maintains a constant voltage while it reacts, then the voltage drops to the next plateau when it is depleted.",
+      "distractors": [
+        { "answer": "A smooth, continuous decrease from maximum to zero", "explanation": "The voltage shows distinct steps, not a smooth decline, as different reactions take over." },
+        { "answer": "A constant voltage throughout the entire discharge period", "explanation": "The voltage changes stepwise as different oxidising agents are consumed." },
+        { "answer": "An increasing voltage as weaker ions are consumed first", "explanation": "Stronger oxidising agents react first, producing higher voltages initially." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student adds magnesium ribbon to a solution containing Cu2+ (0.1 mol), Ni2+ (0.2 mol), and Zn2+ (0.3 mol). If 0.4 mol of Mg is available, predict the outcome.",
+      "correct": "All Cu2+ and Ni2+ are reduced; Zn2+ remains because Mg is consumed before it can react with Zn2+",
+      "correctExplanation": "0.1 mol Mg reduces Cu2+, 0.2 mol reduces Ni2+, using 0.3 mol total. The remaining 0.1 mol Mg is not enough to reduce all 0.3 mol Zn2+.",
+      "distractors": [
+        { "answer": "All three ions are completely reduced to their metals", "explanation": "Only 0.1 mol Mg remains after Cu2+ and Ni2+; this reduces only 0.1 of the 0.3 mol Zn2+." },
+        { "answer": "Only Cu2+ is reduced because Mg preferentially reacts with it alone", "explanation": "After Cu2+ is consumed, Mg continues to react with the next strongest oxidiser (Ni2+)." },
+        { "answer": "No reaction occurs because magnesium cannot reduce any of these ions", "explanation": "Mg (E0=-2.37V) is well below all three ions and can reduce them all." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Why might a battery manufacturer include multiple oxidising agents in a single cell design?",
+      "correct": "To extend the total discharge time by providing sequential reactions",
+      "correctExplanation": "Multiple oxidising agents allow the cell to continue producing electricity through successive reactions after the primary reactant is consumed.",
+      "distractors": [
+        { "answer": "To increase the initial voltage above what a single reaction can provide", "explanation": "The initial voltage is determined by the strongest oxidiser; additional agents provide extended, not higher, voltage." },
+        { "answer": "To make the battery lighter by using less material", "explanation": "Additional oxidising agents add mass; the benefit is extended capacity, not reduced weight." },
+        { "answer": "To prevent the battery from overheating during discharge", "explanation": "Multiple agents affect discharge duration, not thermal management." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about discharge curves.",
+      "sentence": "A discharge curve with multiple voltage {{blank:1}} indicates that {{blank:2}} oxidising agents are being sequentially reduced.",
+      "blanks": {
+        "1": {
+          "correct": "plateaus",
+          "correctExplanation": "Each plateau represents a constant voltage produced while a particular oxidising agent is being consumed.",
+          "distractors": [
+            { "answer": "spikes", "explanation": "Spikes suggest transient effects; plateaus indicate sustained reactions at characteristic voltages." },
+            { "answer": "oscillations", "explanation": "Oscillations suggest instability; plateaus indicate sequential steady-state reactions." }
+          ]
+        },
+        "2": {
+          "correct": "different",
+          "correctExplanation": "Each plateau corresponds to a different oxidising agent with its own E0 value.",
+          "distractors": [
+            { "answer": "identical", "explanation": "Identical oxidising agents would produce a single plateau, not multiple." },
+            { "answer": "competing", "explanation": "The agents react sequentially, not in competition; the strongest reacts first." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about stoichiometry in sequential reactions.",
+      "sentence": "The amount of anode metal consumed in each step depends on the {{blank:1}} of the oxidising agent and the electron {{blank:2}} between the half-equations.",
+      "blanks": {
+        "1": {
+          "correct": "amount",
+          "correctExplanation": "The moles of oxidising agent present determine how much anode metal is consumed in each sequential reaction.",
+          "distractors": [
+            { "answer": "colour", "explanation": "Colour does not determine how much anode metal is consumed; the amount of oxidising agent does." },
+            { "answer": "temperature", "explanation": "Temperature affects rate but the amount of oxidising agent determines the stoichiometric consumption." }
+          ]
+        },
+        "2": {
+          "correct": "ratio",
+          "correctExplanation": "The ratio of electrons between the oxidation and reduction half-equations determines the stoichiometric relationship.",
+          "distractors": [
+            { "answer": "speed", "explanation": "Electron speed is not a factor in stoichiometry; the ratio determines how much of each reactant is consumed." },
+            { "answer": "charge", "explanation": "While related, the specific term for the proportional relationship is the electron ratio between half-equations." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the calculation sentence.",
+      "sentence": "For Ag+ with a Zn anode, E0cell = +0.80 - ({{blank:1}}) = {{blank:2}} V.",
+      "blanks": {
+        "1": {
+          "correct": "-0.76",
+          "correctExplanation": "The E0 for Zn2+/Zn is -0.76 V, which is subtracted as the oxidation half-reaction value.",
+          "distractors": [
+            { "answer": "+0.76", "explanation": "The E0 for Zn2+/Zn is -0.76 V, not +0.76 V." },
+            { "answer": "+0.80", "explanation": "+0.80 V is the E0 for Ag+/Ag, which is the reduction value." }
+          ]
+        },
+        "2": {
+          "correct": "+1.56",
+          "correctExplanation": "E0cell = +0.80 - (-0.76) = +0.80 + 0.76 = +1.56 V.",
+          "distractors": [
+            { "answer": "+0.04", "explanation": "This results from incorrect subtraction; +0.80 + 0.76 = +1.56 V." },
+            { "answer": "-1.56", "explanation": "The cell potential is positive for a spontaneous reaction." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "mc",
+      "question": "A cell contains Cu2+ (0.5 mol), Ni2+ (0.5 mol), and Zn2+ (0.5 mol) with excess Fe anode. Analyse the complete discharge sequence including which ions remain unreacted.",
+      "correct": "Cu2+ and Ni2+ are fully reduced; Zn2+ remains entirely unreacted because it is below Fe in the series",
+      "correctExplanation": "Fe reduces Cu2+ first (+0.78 V), then Ni2+ (+0.18 V), but cannot reduce Zn2+ because Zn2+/Zn (-0.76 V) is below Fe2+/Fe (-0.44 V).",
+      "distractors": [
+        { "answer": "All three ions are reduced because Fe has excess capacity", "explanation": "Having excess Fe does not matter; Fe cannot reduce Zn2+ regardless of quantity." },
+        { "answer": "Only Cu2+ is reduced; both Ni2+ and Zn2+ remain unreacted", "explanation": "Ni2+ is above Fe in the series and can be reduced by Fe after Cu2+ is consumed." },
+        { "answer": "The reaction reaches equilibrium with all three ions partially reduced", "explanation": "Each reaction proceeds to completion before the next begins; equilibrium is not reached with partial reduction." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Compare the discharge profiles of two batteries: Battery A has a single cathode reactant, Battery B has three cathode reactants. Evaluate the advantages and disadvantages of each.",
+      "correct": "Battery A provides constant voltage but shorter life; Battery B provides longer life but with voltage steps",
+      "correctExplanation": "Multiple reactants extend capacity but produce stepwise voltage decreases, while a single reactant maintains constant voltage until depletion.",
+      "distractors": [
+        { "answer": "Battery B always outperforms Battery A in every application", "explanation": "Some devices require constant voltage, making Battery A preferable despite shorter life." },
+        { "answer": "Both batteries have identical discharge profiles because they use the same anode", "explanation": "The cathode composition significantly affects the discharge profile regardless of the anode." },
+        { "answer": "Battery A has longer life because single reactions are more efficient", "explanation": "Battery B has more total reactive material and therefore longer overall discharge time." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Analyse what happens at the microscopic level during the transition between sequential reactions in a galvanic cell.",
+      "correct": "The concentration of the first oxidising agent drops to near zero before the second begins to be significantly reduced",
+      "correctExplanation": "Thermodynamically, the stronger oxidiser is preferentially reduced; the second reaction only becomes dominant when the first is nearly exhausted.",
+      "distractors": [
+        { "answer": "Both reactions occur simultaneously throughout, with the ratio shifting gradually", "explanation": "While some overlap exists in practice, the thermodynamic preference strongly favours sequential reaction." },
+        { "answer": "The anode metal stops reacting momentarily during the transition period", "explanation": "The anode continues to be oxidised; only the cathode reaction changes." },
+        { "answer": "The salt bridge reverses ion flow direction during each transition", "explanation": "Ion flow direction in the salt bridge may change slightly but does not reverse between sequential reactions." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Evaluate the following experimental observation: a student measures voltages of +1.10 V, +0.78 V, and +0.30 V during sequential discharge. Identify the likely cell components.",
+      "correct": "The cell likely has a Zn anode with Cu2+, Fe2+ (or similar), and Sn2+ being reduced sequentially",
+      "correctExplanation": "Working backwards: +1.10 V suggests Cu2+/Zn, +0.78 V suggests a species at approximately E0=+0.02 V, and +0.30 V suggests a species near Sn2+/Sn.",
+      "distractors": [
+        { "answer": "The decreasing voltages must indicate a faulty voltmeter losing calibration", "explanation": "Stepwise voltage decreases are expected in sequential reactions, not equipment malfunction." },
+        { "answer": "The three voltages indicate three separate cells connected in series", "explanation": "Series cells produce combined voltage; the stepwise decrease indicates sequential reactions in one cell." },
+        { "answer": "The voltages must all be from the same reaction showing gradual decline", "explanation": "Distinct voltage plateaus indicate different reactions, not gradual decline of a single reaction." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A mining company uses cementation to extract silver and copper from a waste solution using scrap iron. Analyse the process in terms of sequential reactions.",
+      "correct": "Ag+ is cemented first because it has the highest E0, then Cu2+ is recovered after all Ag+ is extracted",
+      "correctExplanation": "Iron reduces Ag+ preferentially due to its higher E0 (+0.80 V > +0.34 V), allowing sequential recovery of pure metals.",
+      "distractors": [
+        { "answer": "Both metals are recovered as a mixed alloy simultaneously", "explanation": "Sequential reduction allows separate recovery: silver first, then copper." },
+        { "answer": "Copper is recovered first because it is more commercially valuable", "explanation": "Commercial value does not determine chemical reaction order; E0 values do." },
+        { "answer": "Iron cannot reduce either metal from solution under any conditions", "explanation": "Iron (E0=-0.44V) is below both Ag+ and Cu2+ and readily reduces both." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Evaluate why the voltage transition between sequential reactions is not perfectly sharp but shows a brief transition period.",
+      "correct": "Near depletion of the first oxidising agent, its concentration drops, causing gradual voltage decline before the second reaction dominates",
+      "correctExplanation": "As the first oxidising agent's concentration approaches zero, the Nernst equation predicts voltage decrease before the next reaction fully takes over.",
+      "distractors": [
+        { "answer": "The salt bridge requires time to adjust its ion flow to the new reaction", "explanation": "Salt bridge adjustment is rapid; the transition is due to concentration effects on voltage." },
+        { "answer": "The anode metal needs time to adapt to the new cathode reaction", "explanation": "The anode reaction is the same throughout; the gradual transition is at the cathode due to concentration changes." },
+        { "answer": "Temperature changes during the first reaction must equilibrate before the second begins", "explanation": "The transition is due to concentration effects, not thermal equilibration." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Compare sequential reactions in galvanic cells with the concept of selective metal extraction in hydrometallurgy. What principle do they share?",
+      "correct": "Both exploit the electrochemical series to reduce metals in order of their E0 values",
+      "correctExplanation": "Sequential extraction in hydrometallurgy uses the same principle: the strongest oxidising agent is reduced first, allowing selective recovery.",
+      "distractors": [
+        { "answer": "Both require exactly the same equipment and conditions", "explanation": "Hydrometallurgy uses different equipment, but the underlying electrochemical principle is the same." },
+        { "answer": "They share no common principles because one is industrial and the other is academic", "explanation": "The same electrochemical series principles govern both sequential cell reactions and industrial metal extraction." },
+        { "answer": "Both always recover all metals in the solution regardless of E0 position", "explanation": "Both are limited by E0 position; metals below the reducing agent in the series cannot be recovered." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Analyse why a battery with sequential reactions might be problematic for electronic devices that require constant voltage input.",
+      "correct": "The stepwise voltage drops may cause devices to malfunction when voltage falls below operating thresholds",
+      "correctExplanation": "Electronic devices typically require voltage within a narrow range; stepwise drops could push voltage below minimum operating requirements.",
+      "distractors": [
+        { "answer": "Sequential reactions have no effect on device operation whatsoever", "explanation": "Voltage changes directly affect device operation and can cause malfunctions." },
+        { "answer": "All electronic devices can automatically adapt to any voltage level", "explanation": "Most devices have minimum voltage requirements and cannot function at arbitrarily low voltages." },
+        { "answer": "Sequential reactions always produce higher voltage than single reactions", "explanation": "Sequential reactions produce decreasing voltages, not increasing ones." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the analysis of sequential extraction.",
+      "sentence": "In cementation, silver is recovered {{blank:1}} copper because Ag+ is a {{blank:2}} oxidising agent with a higher E0 value.",
+      "blanks": {
+        "1": {
+          "correct": "before",
+          "correctExplanation": "Ag+ has a higher E0 than Cu2+ and is reduced preferentially by the iron scrap.",
+          "distractors": [
+            { "answer": "after", "explanation": "Silver is recovered first due to its higher E0, not after copper." },
+            { "answer": "alongside", "explanation": "Sequential reduction means silver is recovered before copper, not simultaneously." }
+          ]
+        },
+        "2": {
+          "correct": "stronger",
+          "correctExplanation": "Ag+ (+0.80 V) is a stronger oxidising agent than Cu2+ (+0.34 V), so it is reduced preferentially.",
+          "distractors": [
+            { "answer": "weaker", "explanation": "Ag+ is stronger than Cu2+ as an oxidising agent due to its higher E0 value." },
+            { "answer": "similar", "explanation": "Ag+ and Cu2+ have significantly different E0 values and oxidising strengths." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the evaluation of battery design.",
+      "sentence": "Batteries with multiple cathode reactants provide extended {{blank:1}} but produce {{blank:2}} voltage over time as weaker oxidising agents take over.",
+      "blanks": {
+        "1": {
+          "correct": "capacity",
+          "correctExplanation": "Multiple reactants increase the total available chemical energy, extending the battery's useful life.",
+          "distractors": [
+            { "answer": "voltage", "explanation": "Multiple reactants do not extend voltage; they extend capacity while voltage decreases stepwise." },
+            { "answer": "temperature", "explanation": "Multiple reactants affect capacity, not operating temperature." }
+          ]
+        },
+        "2": {
+          "correct": "decreasing",
+          "correctExplanation": "Each successive reaction involves a weaker oxidising agent, producing a lower cell voltage.",
+          "distractors": [
+            { "answer": "increasing", "explanation": "Voltage decreases as weaker oxidising agents react; it does not increase." },
+            { "answer": "constant", "explanation": "The voltage steps down with each new reaction, not remaining constant." }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,559 @@
+{
+  "_link": {
+    "uuid": "lp-6dc77866-40f2-dcf1-55f2-907659f0dd79",
+    "version": 1,
+    "contentHash": "hash-a86bc3c7",
+    "title": "I can calculate the calibration factor using chemical calibration",
+    "generatedAt": "2026-02-08T10:25:00Z"
+  },
+  "toLevel2": [
+    {
+      "type": "mc",
+      "question": "What formula is used to calculate the calibration factor in chemical calibration?",
+      "correct": "CF = (n × ΔH) / ΔT",
+      "correctExplanation": "Chemical calibration uses a reference compound with known enthalpy of dissolution. CF equals the known energy (n × ΔH) divided by the measured temperature change.",
+      "distractors": [
+        { "answer": "CF = VIt / ΔT", "explanation": "CF = VIt/ΔT is used for electrical calibration, not chemical calibration." },
+        { "answer": "CF = mcΔT / n", "explanation": "This is not the correct formula for the calibration factor; CF = (n × ΔH)/ΔT is used for chemical calibration." },
+        { "answer": "CF = ΔT / (n × ΔH)", "explanation": "This inverts the correct formula; CF = (n × ΔH)/ΔT, with energy in the numerator." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which compound is commonly used as a reference substance in chemical calibration?",
+      "correct": "Potassium nitrate (KNO₃)",
+      "correctExplanation": "KNO₃ is commonly used because it has a well-known enthalpy of dissolution (+34.9 kJ mol⁻¹) and is safe to handle.",
+      "distractors": [
+        { "answer": "Sodium chloride (NaCl)", "explanation": "While NaCl dissolves in water, KNO₃ is the standard reference compound with a well-characterised enthalpy of dissolution." },
+        { "answer": "Hydrochloric acid (HCl)", "explanation": "HCl is a strong acid used in reactions, not as a standard reference substance for calibration." },
+        { "answer": "Pure distilled water (H₂O)", "explanation": "Water is the solvent, not the reference compound; a solute with known ΔH is needed for chemical calibration." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What is the enthalpy of dissolution of KNO₃ used in chemical calibration?",
+      "correct": "+34.9 kJ mol⁻¹",
+      "correctExplanation": "KNO₃ has an enthalpy of dissolution of +34.9 kJ mol⁻¹, meaning it absorbs 34.9 kJ of energy per mole when dissolving.",
+      "distractors": [
+        { "answer": "−34.9 kJ mol⁻¹", "explanation": "The dissolution of KNO₃ is endothermic (positive ΔH), not exothermic (negative ΔH)." },
+        { "answer": "+4.18 kJ mol⁻¹", "explanation": "4.18 is the specific heat capacity of water in J g⁻¹ °C⁻¹, not the enthalpy of dissolution of KNO₃." },
+        { "answer": "+349 kJ mol⁻¹", "explanation": "This is ten times too large; the correct enthalpy of dissolution of KNO₃ is +34.9 kJ mol⁻¹." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What does the positive sign of ΔH = +34.9 kJ mol⁻¹ for KNO₃ dissolution indicate?",
+      "correct": "The dissolution is endothermic and absorbs heat",
+      "correctExplanation": "A positive ΔH indicates an endothermic process where energy is absorbed from the surroundings, causing the temperature to decrease.",
+      "distractors": [
+        { "answer": "The dissolution is exothermic and releases heat", "explanation": "Exothermic processes have negative ΔH values; positive ΔH means energy is absorbed." },
+        { "answer": "The dissolution occurs at exactly 34.9°C only", "explanation": "ΔH indicates energy change, not the temperature at which the dissolution occurs." },
+        { "answer": "The dissolution produces 34.9 grams of product", "explanation": "ΔH is an energy value in kJ mol⁻¹, not a mass measurement." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "In chemical calibration, what is measured to calculate the calibration factor?",
+      "correct": "The temperature change when a known mass of reference compound dissolves",
+      "correctExplanation": "The temperature change (ΔT) caused by dissolving a known mass of reference compound is measured and used with the known ΔH to calculate CF.",
+      "distractors": [
+        { "answer": "The voltage and current supplied to a heating element over time", "explanation": "Voltage and current are used in electrical calibration, not chemical calibration." },
+        { "answer": "The colour change of the solution when the compound is added", "explanation": "Colour change is not relevant to calibration; the temperature change is what is measured." },
+        { "answer": "The volume of gas produced when the reference compound dissolves", "explanation": "Gas volume is not measured in chemical calibration; the temperature change is the key measurement." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "Chemical calibration uses a compound with a known enthalpy of dissolution to determine the calibration factor.",
+      "correct": "True",
+      "correctExplanation": "Chemical calibration relies on dissolving a reference compound with a precisely known ΔH value, then measuring ΔT to calculate CF = (n × ΔH)/ΔT.",
+      "distractors": [
+        { "answer": "False", "explanation": "Students may confuse chemical calibration with electrical calibration; chemical calibration does use a known ΔH value." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "When KNO₃ dissolves in water during chemical calibration, the temperature of the solution increases.",
+      "correct": "False",
+      "correctExplanation": "KNO₃ dissolution is endothermic (ΔH = +34.9 kJ mol⁻¹), so it absorbs heat from the water, causing the temperature to decrease.",
+      "distractors": [
+        { "answer": "True", "explanation": "Students may assume dissolution always releases heat, but KNO₃ dissolution is endothermic and causes cooling." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the chemical calibration formula.",
+      "sentence": "The calibration factor is calculated as CF = (n × {{blank:1}}) / {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "ΔH",
+          "correctExplanation": "ΔH is the known enthalpy of dissolution of the reference compound, measured in kJ mol⁻¹.",
+          "distractors": [
+            { "answer": "ΔT", "explanation": "ΔT is the temperature change in the denominator, not in the numerator; ΔH is the enthalpy value." },
+            { "answer": "CF", "explanation": "CF is the calibration factor being calculated, not a variable in the numerator." }
+          ]
+        },
+        "2": {
+          "correct": "ΔT",
+          "correctExplanation": "ΔT is the measured temperature change caused by dissolving the reference compound in the calorimeter.",
+          "distractors": [
+            { "answer": "ΔH", "explanation": "ΔH is in the numerator; the denominator is ΔT, the measured temperature change." },
+            { "answer": "m", "explanation": "Mass is used to calculate n (moles), but the denominator of the CF formula is ΔT." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about KNO₃ in calibration.",
+      "sentence": "KNO₃ is used as a reference compound because its enthalpy of dissolution ({{blank:1}} kJ mol⁻¹) is precisely {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "+34.9",
+          "correctExplanation": "KNO₃ has an enthalpy of dissolution of +34.9 kJ mol⁻¹, a well-established reference value.",
+          "distractors": [
+            { "answer": "−34.9", "explanation": "The positive sign indicates endothermic dissolution; the value is +34.9, not −34.9." },
+            { "answer": "+4.18", "explanation": "4.18 is the specific heat capacity of water, not the enthalpy of dissolution of KNO₃." }
+          ]
+        },
+        "2": {
+          "correct": "known",
+          "correctExplanation": "The precisely known and well-documented ΔH value of KNO₃ allows accurate calibration calculations.",
+          "distractors": [
+            { "answer": "unknown", "explanation": "The enthalpy of dissolution must be known for the calculation to work; KNO₃'s value is well established." },
+            { "answer": "variable", "explanation": "The enthalpy of dissolution is a fixed property for a given compound at standard conditions, not variable." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the temperature change.",
+      "sentence": "When KNO₃ dissolves endothermically, the temperature of the solution {{blank:1}}.",
+      "blanks": {
+        "1": {
+          "correct": "decreases",
+          "correctExplanation": "Endothermic dissolution absorbs heat from the water, causing the solution temperature to decrease.",
+          "distractors": [
+            { "answer": "increases", "explanation": "Temperature increases occur in exothermic processes; KNO₃ dissolution is endothermic, causing cooling." },
+            { "answer": "stays the same", "explanation": "The temperature must change for calibration to work; endothermic dissolution causes a measurable decrease." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "mc",
+      "question": "Why is it important to use the absolute value of ΔT when calculating CF for an endothermic dissolution?",
+      "correct": "The calibration factor must be positive, representing energy per degree regardless of direction",
+      "correctExplanation": "CF is always positive because it represents the system's heat capacity. The absolute ΔT ensures CF remains positive even when temperature decreases during endothermic processes.",
+      "distractors": [
+        { "answer": "Negative ΔT values are always experimental errors that need correction", "explanation": "Negative ΔT is expected for endothermic processes; using absolute values ensures a positive CF, not error correction." },
+        { "answer": "The sign of ΔT has no effect on the calibration factor calculation at all", "explanation": "Without using absolute values, a negative ΔT would give a negative CF, which is physically meaningless." },
+        { "answer": "Absolute values are only used in chemical calibration, never in electrical methods", "explanation": "In electrical calibration ΔT is naturally positive (heating); in chemical calibration with endothermic reactions, absolute values are needed." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "How does chemical calibration mimic actual experimental conditions better than electrical calibration?",
+      "correct": "It uses a chemical process similar to the reactions being measured in the calorimeter",
+      "correctExplanation": "Chemical calibration involves dissolving a substance, which is similar to the mixing and reaction processes measured in solution calorimetry, making conditions more representative.",
+      "distractors": [
+        { "answer": "Chemical calibration uses much higher temperatures than electrical calibration does", "explanation": "Temperature ranges are similar; the advantage is the similarity of the physical process, not the temperature." },
+        { "answer": "Chemical calibration is faster and requires fewer measurements than electrical methods", "explanation": "Speed is not the advantage; chemical calibration better mimics the conditions of actual solution reactions." },
+        { "answer": "Chemical calibration does not require any temperature measurements at all", "explanation": "Temperature measurement is essential in both methods; chemical calibration still requires measuring ΔT." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What must be calculated from the mass of KNO₃ before the calibration factor can be determined?",
+      "correct": "The number of moles using n = m/M",
+      "correctExplanation": "Since ΔH is in kJ mol⁻¹, the mass must be converted to moles using n = m/M before the energy can be calculated as n × ΔH.",
+      "distractors": [
+        { "answer": "The volume of KNO₃ using density calculations", "explanation": "Volume is not needed; the mass is converted to moles using the molar mass for the CF calculation." },
+        { "answer": "The temperature of the KNO₃ before adding it to water", "explanation": "While initial temperature matters, the key calculation step is converting mass to moles using n = m/M." },
+        { "answer": "The specific heat capacity of solid KNO₃ crystals", "explanation": "The specific heat capacity of KNO₃ is not needed; its enthalpy of dissolution (ΔH) is used instead." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What is the molar mass of KNO₃ needed to convert mass to moles?",
+      "correct": "101.1 g mol⁻¹",
+      "correctExplanation": "M(KNO₃) = 39.1 (K) + 14.0 (N) + 3 × 16.0 (O) = 101.1 g mol⁻¹.",
+      "distractors": [
+        { "answer": "39.1 g mol⁻¹", "explanation": "39.1 g mol⁻¹ is the atomic mass of potassium alone, not the full molar mass of KNO₃." },
+        { "answer": "62.0 g mol⁻¹", "explanation": "62.0 g mol⁻¹ is the molar mass of the nitrate ion (NO₃⁻) only, not the complete KNO₃." },
+        { "answer": "200.2 g mol⁻¹", "explanation": "This is approximately double the correct value; M(KNO₃) = 101.1 g mol⁻¹." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Why is the energy calculated as n × ΔH in chemical calibration?",
+      "correct": "ΔH is the energy per mole, so multiplying by moles gives the total energy change",
+      "correctExplanation": "Since ΔH is in kJ mol⁻¹, multiplying by the number of moles (n) gives the total energy absorbed or released by the dissolution.",
+      "distractors": [
+        { "answer": "n and ΔH must be divided to find the energy per gram of substance", "explanation": "Energy per gram would be ΔH/M; n × ΔH gives the total energy for the specific amount dissolved." },
+        { "answer": "The product n × ΔH gives the temperature change, not the energy value", "explanation": "n × ΔH gives energy in kJ; the temperature change is measured separately." },
+        { "answer": "Multiplying by n converts the energy from joules to kilojoules automatically", "explanation": "Multiplying by n scales the energy by the amount of substance; it does not convert units." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "How does an endothermic dissolution of KNO₃ still allow calibration even though the temperature decreases?",
+      "correct": "The known energy absorbed and the measured temperature decrease allow CF calculation using absolute values",
+      "correctExplanation": "The magnitude of energy absorbed (n × ΔH) and the magnitude of temperature decrease (|ΔT|) are used to calculate CF, regardless of the direction of heat flow.",
+      "distractors": [
+        { "answer": "Endothermic reactions cannot be used for calibration under any circumstances", "explanation": "Endothermic reactions work perfectly well for calibration; the absolute value of ΔT is used in the calculation." },
+        { "answer": "The temperature actually increases because KNO₃ dissolution is exothermic", "explanation": "KNO₃ dissolution is endothermic (ΔH = +34.9 kJ mol⁻¹), causing a temperature decrease." },
+        { "answer": "The decrease must be converted to an increase by reversing the sign of ΔH", "explanation": "Both ΔH and ΔT are used with their absolute values; the signs are not reversed." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "Chemical calibration requires converting the mass of the reference compound to moles before calculating the calibration factor.",
+      "correct": "True",
+      "correctExplanation": "Since ΔH is given per mole, the mass of KNO₃ must be converted to moles using n = m/M before calculating the energy (n × ΔH) and then CF.",
+      "distractors": [
+        { "answer": "False", "explanation": "Students may think mass can be used directly, but ΔH is per mole, so conversion to moles is essential." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the step-by-step process.",
+      "sentence": "In chemical calibration: (1) dissolve a known mass of KNO₃, (2) convert mass to {{blank:1}} using n = m/M, (3) calculate energy as n × ΔH, (4) divide by {{blank:2}} to get CF.",
+      "blanks": {
+        "1": {
+          "correct": "moles",
+          "correctExplanation": "The mass must be converted to moles because ΔH is expressed per mole of substance.",
+          "distractors": [
+            { "answer": "litres", "explanation": "Volume in litres is not needed; the mass is converted to moles for energy calculation." },
+            { "answer": "grams", "explanation": "The mass is already in grams; it must be converted to moles using n = m/M." }
+          ]
+        },
+        "2": {
+          "correct": "ΔT",
+          "correctExplanation": "The calibration factor is energy divided by temperature change: CF = (n × ΔH)/ΔT.",
+          "distractors": [
+            { "answer": "mass", "explanation": "The denominator is ΔT (temperature change), not mass; mass was used earlier to find moles." },
+            { "answer": "volume", "explanation": "Volume is not part of the CF calculation; the denominator is the temperature change." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about chemical vs electrical calibration.",
+      "sentence": "Chemical calibration uses a {{blank:1}} reaction to mimic experimental conditions, while electrical calibration uses a {{blank:2}} element.",
+      "blanks": {
+        "1": {
+          "correct": "dissolution",
+          "correctExplanation": "Chemical calibration involves dissolving a reference compound (like KNO₃) with a known enthalpy of dissolution.",
+          "distractors": [
+            { "answer": "combustion", "explanation": "Combustion is not used for calibration; dissolution of a reference compound is the standard chemical method." },
+            { "answer": "neutralisation", "explanation": "Neutralisation is a type of reaction that can be measured, but calibration specifically uses dissolution of a reference compound." }
+          ]
+        },
+        "2": {
+          "correct": "heating",
+          "correctExplanation": "Electrical calibration passes current through a heating element to deliver a known amount of electrical energy (VIt).",
+          "distractors": [
+            { "answer": "cooling", "explanation": "Electrical calibration heats the system using a heating element, not a cooling element." },
+            { "answer": "magnetic", "explanation": "A magnetic element is not used for calibration; a heating element converts electrical energy to heat." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the molar mass calculation.",
+      "sentence": "The molar mass of KNO₃ = 39.1 + 14.0 + 3 × 16.0 = {{blank:1}} g mol⁻¹.",
+      "blanks": {
+        "1": {
+          "correct": "101.1",
+          "correctExplanation": "M(KNO₃) = 39.1 (K) + 14.0 (N) + 48.0 (3O) = 101.1 g mol⁻¹.",
+          "distractors": [
+            { "answer": "69.1", "explanation": "This omits the oxygen contribution; 39.1 + 14.0 + 16.0 = 69.1 counts only one oxygen instead of three." },
+            { "answer": "53.1", "explanation": "This omits the oxygen entirely; 39.1 + 14.0 = 53.1 ignores the three oxygen atoms." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "mc",
+      "question": "Calculate the calibration factor when 1.00 g of KNO₃ (M = 101.1 g mol⁻¹, ΔH = +34.9 kJ mol⁻¹) dissolves and causes a temperature decrease of 2.01°C.",
+      "correct": "172 J °C⁻¹",
+      "correctExplanation": "n = 1.00/101.1 = 0.00989 mol. Energy = 0.00989 × 34 900 = 345.2 J. CF = 345.2/2.01 = 172 J °C⁻¹.",
+      "distractors": [
+        { "answer": "345 J °C⁻¹", "explanation": "345 J is the total energy absorbed; dividing by ΔT = 2.01°C gives CF = 172 J °C⁻¹." },
+        { "answer": "34.9 J °C⁻¹", "explanation": "34.9 is the ΔH in kJ mol⁻¹; the CF requires calculating n × ΔH and dividing by ΔT." },
+        { "answer": "17.4 J °C⁻¹", "explanation": "This results from dividing ΔH by ΔT directly without converting to the correct units or accounting for moles." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student dissolves 2.50 g of KNO₃ in a calorimeter and measures ΔT = −4.85°C. Calculate the calibration factor. (M = 101.1 g mol⁻¹, ΔH = +34.9 kJ mol⁻¹)",
+      "correct": "178 J °C⁻¹",
+      "correctExplanation": "n = 2.50/101.1 = 0.02473 mol. Energy = 0.02473 × 34 900 = 863.1 J. CF = 863.1/4.85 = 178 J °C⁻¹.",
+      "distractors": [
+        { "answer": "863 J °C⁻¹", "explanation": "863 J is the total energy; dividing by |ΔT| = 4.85°C gives CF = 178 J °C⁻¹." },
+        { "answer": "87.3 J °C⁻¹", "explanation": "This results from using ΔH = 34.9 kJ without converting to joules properly in the calculation." },
+        { "answer": "7.20 J °C⁻¹", "explanation": "This results from dividing ΔH directly by ΔT without calculating moles: 34.9/4.85." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "After chemical calibration gives CF = 180 J °C⁻¹, a neutralisation reaction produces ΔT = +5.5°C. Calculate the energy released.",
+      "correct": "990 J",
+      "correctExplanation": "E = CF × ΔT = 180 × 5.5 = 990 J.",
+      "distractors": [
+        { "answer": "32.7 J", "explanation": "This results from dividing CF by ΔT (180/5.5); the correct operation is multiplication." },
+        { "answer": "185.5 J", "explanation": "This results from adding CF and ΔT; the correct operation is multiplication." },
+        { "answer": "174.5 J", "explanation": "This results from subtracting ΔT from CF; the correct operation is multiplication." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student uses 0.50 g of KNO₃ instead of 1.00 g for calibration. How does this affect the accuracy of the calibration?",
+      "correct": "Smaller mass gives a smaller ΔT, increasing the relative measurement error in ΔT",
+      "correctExplanation": "Using less KNO₃ produces a smaller temperature change, which is harder to measure precisely. This increases the percentage error in ΔT and therefore in CF.",
+      "distractors": [
+        { "answer": "Less KNO₃ always gives a more accurate calibration factor regardless of ΔT size", "explanation": "Smaller temperature changes are harder to measure precisely, reducing accuracy rather than improving it." },
+        { "answer": "The amount of KNO₃ has no effect on the calibration factor accuracy at all", "explanation": "The amount affects ΔT magnitude, which directly affects the precision of the CF determination." },
+        { "answer": "Using less KNO₃ changes its enthalpy of dissolution from the reference value", "explanation": "ΔH is an intensive property that does not change with amount; the issue is the smaller ΔT measurement." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Why must the ΔH value be converted from kJ mol⁻¹ to J mol⁻¹ when calculating CF in J °C⁻¹?",
+      "correct": "So that the units of CF are in joules per degree, not kilojoules per degree",
+      "correctExplanation": "If ΔH is in kJ, multiplying by n gives energy in kJ. To get CF in J °C⁻¹, the energy must be in joules, requiring multiplication by 1000.",
+      "distractors": [
+        { "answer": "The conversion is not necessary because kJ and J are interchangeable in all calculations", "explanation": "kJ and J differ by a factor of 1000; mixing them without conversion produces an answer that is 1000 times wrong." },
+        { "answer": "Converting to J makes the ΔH value negative, which is needed for the formula", "explanation": "Unit conversion does not change the sign; multiplying by 1000 only changes the magnitude." },
+        { "answer": "The conversion is only needed for electrical calibration, not for chemical calibration", "explanation": "Unit consistency is needed in all calculations; chemical calibration also requires matching units." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Compare chemical calibration results to electrical calibration results for the same calorimeter. Should they give the same CF?",
+      "correct": "They should give similar CF values; differences indicate measurement errors in one or both methods",
+      "correctExplanation": "Both methods measure the same property (total system heat capacity), so they should agree. Discrepancies suggest experimental error such as heat loss or measurement imprecision.",
+      "distractors": [
+        { "answer": "They will always give very different values because the methods measure different things", "explanation": "Both methods measure the same calibration factor; they should give similar results when performed accurately." },
+        { "answer": "Chemical calibration always gives exactly double the electrical calibration value", "explanation": "There is no fixed ratio between the methods; they should give the same CF for the same system." },
+        { "answer": "Only electrical calibration gives valid results; chemical calibration is unreliable", "explanation": "Both methods are valid and complementary; each has advantages and should give similar results." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "In a chemical calibration, 3.03 g of KNO₃ is dissolved. Calculate the number of moles. (M = 101.1 g mol⁻¹)",
+      "correct": "0.0300 mol",
+      "correctExplanation": "n = m/M = 3.03/101.1 = 0.02997 ≈ 0.0300 mol.",
+      "distractors": [
+        { "answer": "3.03 mol", "explanation": "This uses the mass directly as moles without dividing by the molar mass." },
+        { "answer": "33.4 mol", "explanation": "This results from multiplying mass by molar mass instead of dividing." },
+        { "answer": "0.300 mol", "explanation": "This is ten times too large; n = 3.03/101.1 = 0.0300 mol." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the worked calculation.",
+      "sentence": "For 1.00 g KNO₃: n = 1.00/101.1 = {{blank:1}} mol. Energy = {{blank:1}} × 34 900 = 345 J. CF = 345/2.01 = {{blank:2}} J °C⁻¹.",
+      "blanks": {
+        "1": {
+          "correct": "0.00989",
+          "correctExplanation": "n = m/M = 1.00/101.1 = 0.009891 ≈ 0.00989 mol.",
+          "distractors": [
+            { "answer": "0.0989", "explanation": "This is ten times too large; 1.00/101.1 = 0.00989, not 0.0989." },
+            { "answer": "1.011", "explanation": "This results from dividing M by m instead of m by M." }
+          ]
+        },
+        "2": {
+          "correct": "172",
+          "correctExplanation": "CF = 345/2.01 = 171.6 ≈ 172 J °C⁻¹.",
+          "distractors": [
+            { "answer": "693", "explanation": "This results from multiplying energy by ΔT instead of dividing." },
+            { "answer": "17.2", "explanation": "This is ten times too small; 345/2.01 = 172, not 17.2." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the unit conversion.",
+      "sentence": "ΔH = +34.9 kJ mol⁻¹ = +{{blank:1}} J mol⁻¹ when converted for use in CF calculations.",
+      "blanks": {
+        "1": {
+          "correct": "34 900",
+          "correctExplanation": "34.9 kJ × 1000 = 34 900 J. This conversion is needed to get CF in J °C⁻¹.",
+          "distractors": [
+            { "answer": "0.0349", "explanation": "This results from dividing by 1000 instead of multiplying; kJ to J requires × 1000." },
+            { "answer": "349", "explanation": "This results from multiplying by 10 instead of 1000; 34.9 kJ = 34 900 J." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about applying the calibration factor.",
+      "sentence": "After calibration with KNO₃, the energy from a reaction is calculated as E = {{blank:1}} × ΔT, where ΔT is from the {{blank:2}} being measured.",
+      "blanks": {
+        "1": {
+          "correct": "CF",
+          "correctExplanation": "The calibration factor multiplied by the reaction's temperature change gives the total energy of the reaction.",
+          "distractors": [
+            { "answer": "mc", "explanation": "mc is used in q = mcΔT for water alone; CF accounts for the entire system." },
+            { "answer": "ΔH", "explanation": "ΔH is the enthalpy change per mole; CF is the system's calibration factor in J °C⁻¹." }
+          ]
+        },
+        "2": {
+          "correct": "reaction",
+          "correctExplanation": "The ΔT measured during the actual reaction (not calibration) is used with CF to calculate the reaction energy.",
+          "distractors": [
+            { "answer": "calibration", "explanation": "The calibration ΔT was used to determine CF; the reaction ΔT is used to find the reaction energy." },
+            { "answer": "heating element", "explanation": "The heating element is used in electrical calibration; in this context, the reaction's ΔT is measured." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "mc",
+      "question": "Analyse the advantages of chemical calibration over electrical calibration for measuring neutralisation reactions in solution.",
+      "correct": "Chemical calibration mimics the mixing and dissolution conditions of neutralisation more closely than electrical heating",
+      "correctExplanation": "Chemical calibration involves adding a substance to a solution and measuring the heat change, which closely mirrors the conditions of neutralisation reactions. Electrical calibration heats from a localised element, which is less representative.",
+      "distractors": [
+        { "answer": "Chemical calibration is always more accurate because it uses more expensive reference compounds", "explanation": "Cost does not determine accuracy; the advantage is in mimicking experimental conditions more closely." },
+        { "answer": "Electrical calibration cannot be used for any solution-based calorimetry measurements", "explanation": "Electrical calibration can be used for solution calorimetry; chemical calibration simply mimics conditions better." },
+        { "answer": "Chemical calibration eliminates all sources of error from the calorimetry experiment", "explanation": "No method eliminates all error; chemical calibration reduces certain systematic errors by matching conditions." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Evaluate the effect on the calculated CF if the KNO₃ is not completely dissolved before the temperature reading is taken.",
+      "correct": "The measured |ΔT| will be smaller than expected, giving an artificially high CF value",
+      "correctExplanation": "If not all KNO₃ dissolves, less energy is absorbed than calculated (n × ΔH), but the full n × ΔH is used in the numerator, making CF too large.",
+      "distractors": [
+        { "answer": "Incomplete dissolution has no effect because the formula accounts for partial dissolution", "explanation": "The formula assumes complete dissolution; undissolved KNO₃ means less actual energy absorption than calculated." },
+        { "answer": "The CF will be too low because more energy is absorbed than the formula predicts", "explanation": "Less energy is actually absorbed (incomplete dissolution), but the formula uses full n × ΔH, overestimating CF." },
+        { "answer": "Incomplete dissolution causes the temperature to increase instead of decrease", "explanation": "Partial dissolution still absorbs heat (endothermic); the temperature decreases less, but does not increase." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Compare the precision of chemical calibration when using 0.50 g versus 5.00 g of KNO₃. Analyse the trade-offs.",
+      "correct": "5.00 g gives a larger ΔT with lower relative error, but may exceed the calorimeter's optimal temperature range",
+      "correctExplanation": "More KNO₃ produces a larger, more precisely measurable ΔT. However, too large a temperature change may increase heat loss or take the system outside its linear response range.",
+      "distractors": [
+        { "answer": "0.50 g is always more precise because smaller amounts produce cleaner dissolutions", "explanation": "Smaller amounts give smaller ΔT values with higher relative measurement error, reducing precision." },
+        { "answer": "Both masses give identical precision because the calibration factor is an intensive property", "explanation": "CF depends on the system, but measurement precision is affected by the magnitude of ΔT, which varies with mass." },
+        { "answer": "The mass of KNO₃ has no effect on precision because ΔH is the only factor that matters", "explanation": "Mass affects n and therefore the energy absorbed, which determines ΔT magnitude and measurement precision." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A researcher obtains CF = 165 J °C⁻¹ from chemical calibration and CF = 180 J °C⁻¹ from electrical calibration on the same system. Analyse possible reasons for this discrepancy.",
+      "correct": "Differences in heat loss patterns, incomplete dissolution, or mixing effects between the two methods",
+      "correctExplanation": "The methods have different heat distribution patterns: electrical heating is localised while chemical dissolution is distributed. Different heat loss profiles and incomplete dissolution can cause discrepancies.",
+      "distractors": [
+        { "answer": "The two methods measure fundamentally different properties so different results are expected", "explanation": "Both methods measure the same property (system heat capacity); discrepancies indicate experimental differences." },
+        { "answer": "Chemical calibration is always exactly 10% lower than electrical calibration by definition", "explanation": "There is no fixed ratio; both should give similar results, and discrepancies indicate experimental variation." },
+        { "answer": "The discrepancy proves that both calibration methods are unreliable and should be abandoned", "explanation": "Small discrepancies are normal; averaging or investigating the source of difference improves reliability." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Evaluate whether the assumption that ΔH of KNO₃ is exactly +34.9 kJ mol⁻¹ at all experimental temperatures is valid.",
+      "correct": "It is approximately valid for small temperature ranges but ΔH varies slightly with temperature",
+      "correctExplanation": "Enthalpy values change slightly with temperature. For typical calorimetry experiments with small ΔT values (a few degrees), the reference value is sufficiently accurate.",
+      "distractors": [
+        { "answer": "ΔH is perfectly constant at all temperatures and never varies under any conditions", "explanation": "Enthalpy values do vary with temperature, though the change is small over typical experimental ranges." },
+        { "answer": "ΔH changes by more than 50% between 20°C and 25°C for KNO₃ dissolution", "explanation": "The change is very small (typically less than 1%) over such a narrow temperature range." },
+        { "answer": "ΔH only applies at exactly 25°C and is completely invalid at all other temperatures", "explanation": "Reference values are given at standard conditions but remain approximately valid over typical laboratory ranges." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Analyse how using a reference compound with a very small ΔH would affect the reliability of chemical calibration.",
+      "correct": "A small ΔH produces a tiny ΔT that is difficult to measure accurately, reducing calibration reliability",
+      "correctExplanation": "Small ΔH means small energy change, producing a small ΔT. The relative measurement error in ΔT becomes large, making the calculated CF unreliable.",
+      "distractors": [
+        { "answer": "A small ΔH is preferable because it produces more accurate temperature measurements", "explanation": "Small temperature changes are harder to measure precisely; larger ΔT values give better measurement accuracy." },
+        { "answer": "The size of ΔH has no effect on calibration reliability because CF corrects for it", "explanation": "ΔH affects the magnitude of ΔT, which directly impacts measurement precision and CF reliability." },
+        { "answer": "A small ΔH would cause the calibration factor to be exactly zero in all cases", "explanation": "A small ΔH gives a small ΔT, but CF = (n × ΔH)/ΔT would still be non-zero." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Critically assess whether chemical calibration or electrical calibration should be preferred for high-precision calorimetry research.",
+      "correct": "Both methods should be used and compared; electrical calibration offers better control while chemical offers more representative conditions",
+      "correctExplanation": "Electrical calibration provides precise, controllable energy input. Chemical calibration better represents actual reaction conditions. Using both and comparing results provides the most reliable CF.",
+      "distractors": [
+        { "answer": "Chemical calibration should always be used because electrical methods are obsolete", "explanation": "Both methods are current and complementary; electrical calibration offers unique advantages in precision." },
+        { "answer": "Electrical calibration should always be used because chemical methods are too imprecise", "explanation": "Chemical calibration is a valid and useful method that complements electrical calibration, not a replacement." },
+        { "answer": "Neither method is necessary for high-precision work because q = mcΔT is sufficient", "explanation": "q = mcΔT ignores the apparatus heat capacity; calibration is essential for high-precision measurements." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student performs chemical calibration three times and obtains CF values of 168, 175 and 171 J °C⁻¹. Evaluate what value should be used for subsequent calculations.",
+      "correct": "Use the average value of 171 J °C⁻¹ to reduce the impact of random measurement errors",
+      "correctExplanation": "Averaging (168 + 175 + 171)/3 = 171.3 ≈ 171 J °C⁻¹ reduces the effect of random errors in individual trials, giving a more reliable CF.",
+      "distractors": [
+        { "answer": "Use only the first value (168) because initial measurements are always most accurate", "explanation": "There is no reason the first measurement is most accurate; averaging all trials gives a more reliable result." },
+        { "answer": "Use the highest value (175) to account for maximum possible heat absorption", "explanation": "Using the maximum overestimates the CF; the average provides the best estimate of the true value." },
+        { "answer": "Discard all results because the variation proves the method is fundamentally flawed", "explanation": "Small variations are normal in experimental measurements; averaging gives a reliable result." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the comparison of calibration methods.",
+      "sentence": "Chemical calibration better mimics experimental conditions because the {{blank:1}} process is similar to reactions being measured, while electrical calibration offers more {{blank:2}} control of energy input.",
+      "blanks": {
+        "1": {
+          "correct": "dissolution",
+          "correctExplanation": "Chemical calibration involves dissolution, which is similar to the mixing and reaction processes in solution calorimetry.",
+          "distractors": [
+            { "answer": "combustion", "explanation": "Combustion is not used in chemical calibration; dissolution of a reference compound is the standard method." },
+            { "answer": "evaporation", "explanation": "Evaporation is not the calibration process; dissolution of a known compound is used." }
+          ]
+        },
+        "2": {
+          "correct": "precise",
+          "correctExplanation": "Electrical calibration allows precise control of energy input through accurate measurement of voltage, current and time.",
+          "distractors": [
+            { "answer": "random", "explanation": "Electrical calibration offers precise, not random, control of energy input." },
+            { "answer": "limited", "explanation": "Electrical calibration offers excellent control; the control is precise, not limited." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the error analysis.",
+      "sentence": "Incomplete dissolution of KNO₃ causes the calculated CF to be too {{blank:1}} because the actual energy absorbed is {{blank:2}} than n × ΔH predicts.",
+      "blanks": {
+        "1": {
+          "correct": "high",
+          "correctExplanation": "The formula uses the full n × ΔH in the numerator, but if dissolution is incomplete, the actual ΔT is smaller, making CF = (n × ΔH)/ΔT too large.",
+          "distractors": [
+            { "answer": "low", "explanation": "The numerator is overestimated relative to the denominator, making CF too high, not too low." },
+            { "answer": "accurate", "explanation": "Incomplete dissolution introduces error; the calculated CF will not be accurate." }
+          ]
+        },
+        "2": {
+          "correct": "less",
+          "correctExplanation": "If not all KNO₃ dissolves, less energy is actually absorbed than the full n × ΔH calculation assumes.",
+          "distractors": [
+            { "answer": "more", "explanation": "Incomplete dissolution means less material dissolves, absorbing less energy, not more." },
+            { "answer": "exactly the same as what", "explanation": "Incomplete dissolution means less energy is absorbed than the formula calculates for complete dissolution." }
+          ]
+        }
+      }
+    }
+  ]
+}

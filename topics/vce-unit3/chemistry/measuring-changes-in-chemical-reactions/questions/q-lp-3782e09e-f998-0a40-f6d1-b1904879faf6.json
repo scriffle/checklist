@@ -1,0 +1,563 @@
+{
+  "_link": {
+    "uuid": "lp-3782e09e-f998-0a40-f6d1-b1904879faf6",
+    "version": 1,
+    "contentHash": "hash-6714a4da",
+    "title": "I can calculate total energy content from food composition percentages",
+    "generatedAt": "2026-02-08T00:00:00.000Z"
+  },
+
+  "toLevel2": [
+    {
+      "type": "mc",
+      "question": "What is the first step in calculating total energy from food composition percentages?",
+      "correct": "Convert the percentages to masses, assuming a 100 g sample",
+      "correctExplanation": "With a 100 g sample, percentage values equal mass in grams (e.g., 30% fat = 30 g fat), simplifying the calculation.",
+      "distractors": [
+        {"answer": "Multiply all percentages together", "explanation": "Percentages should be converted to masses then multiplied by kJ g⁻¹ values individually, not multiplied together."},
+        {"answer": "Add all the percentages to get total energy", "explanation": "Percentages represent composition, not energy; each must be multiplied by its heat of combustion value."},
+        {"answer": "Divide each percentage by the molar mass", "explanation": "Food calculations use kJ g⁻¹, not kJ mol⁻¹, so molar mass is not needed."}
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A food is 20% fat. In a 100 g sample, what mass of fat is present?",
+      "correct": "20 g",
+      "correctExplanation": "20% of 100 g = 20 g of fat.",
+      "distractors": [
+        {"answer": "0.20 g", "explanation": "0.20 g would be 0.2% of 100 g; 20% = 20 g."},
+        {"answer": "200 g", "explanation": "200 g exceeds the total sample mass; 20% of 100 g = 20 g."},
+        {"answer": "2.0 g", "explanation": "2.0 g would be 2% of 100 g; 20% = 20 g."}
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What formula is used to calculate the energy from one food component?",
+      "correct": "Energy = mass of component × heat of combustion (kJ g⁻¹)",
+      "correctExplanation": "Each component's energy contribution is found by multiplying its mass by the appropriate heat of combustion value.",
+      "distractors": [
+        {"answer": "Energy = percentage × total mass × molar mass", "explanation": "Food energy calculations do not use molar mass; they use the kJ g⁻¹ reference values."},
+        {"answer": "Energy = total mass ÷ heat of combustion", "explanation": "You multiply, not divide; division would give mass from energy, not energy from mass."},
+        {"answer": "Energy = percentage × heat of combustion × 100", "explanation": "If using percentages directly with a 100 g sample, multiply by the kJ g⁻¹ value only; no extra ×100."}
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A food is 10% fat, 15% protein, and 60% carbohydrate. Using a 100 g sample, what is the energy from fat alone?",
+      "correct": "370 kJ",
+      "correctExplanation": "10 g fat × 37 kJ g⁻¹ = 370 kJ.",
+      "distractors": [
+        {"answer": "170 kJ", "explanation": "This uses the protein value (10 × 17); fat releases 37 kJ g⁻¹, giving 370 kJ."},
+        {"answer": "160 kJ", "explanation": "This uses the carbohydrate value (10 × 16); fat releases 37 kJ g⁻¹."},
+        {"answer": "37 kJ", "explanation": "37 kJ is per gram; 10 g × 37 = 370 kJ."}
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "After calculating energy from each food component, how do you find the total energy?",
+      "correct": "Sum the energy contributions from fat, protein, and carbohydrate",
+      "correctExplanation": "Total energy = E(fat) + E(protein) + E(carbohydrate).",
+      "distractors": [
+        {"answer": "Multiply all three energy values together", "explanation": "Energy contributions are added, not multiplied."},
+        {"answer": "Take the average of the three values", "explanation": "Total energy is the sum, not the average, of all contributions."},
+        {"answer": "Use only the largest value", "explanation": "All three contributions must be included in the total."}
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the energy calculation for a food sample.",
+      "sentence": "A food with 30% fat in a 100 g sample has {{blank:1}} g of fat, contributing {{blank:2}} kJ of energy.",
+      "blanks": {
+        "1": {
+          "correct": "30",
+          "correctExplanation": "30% of 100 g = 30 g of fat.",
+          "distractors": [
+            {"answer": "3.0", "explanation": "3.0 g is 3%; 30% of 100 g = 30 g."},
+            {"answer": "300", "explanation": "300 g exceeds the total; 30% of 100 g = 30 g."}
+          ]
+        },
+        "2": {
+          "correct": "1110",
+          "correctExplanation": "30 g × 37 kJ g⁻¹ = 1110 kJ.",
+          "distractors": [
+            {"answer": "510", "explanation": "This uses 30 × 17 (protein value); fat uses 37 kJ g⁻¹, giving 1110 kJ."},
+            {"answer": "480", "explanation": "This uses 30 × 16 (carbohydrate value); fat uses 37 kJ g⁻¹."}
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the total energy calculation.",
+      "sentence": "For a food with 10 g fat (370 kJ), 20 g protein (340 kJ), and 50 g carbohydrate (800 kJ), the total energy per 100 g is {{blank:1}} kJ.",
+      "blanks": {
+        "1": {
+          "correct": "1510",
+          "correctExplanation": "370 + 340 + 800 = 1510 kJ per 100 g.",
+          "distractors": [
+            {"answer": "800", "explanation": "800 kJ is only the carbohydrate contribution; all three must be summed."},
+            {"answer": "370", "explanation": "370 kJ is only the fat contribution; total = 370 + 340 + 800 = 1510 kJ."}
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the conversion to kJ g⁻¹.",
+      "sentence": "If a 100 g food sample provides 2000 kJ total, its energy content is {{blank:1}} kJ g⁻¹.",
+      "blanks": {
+        "1": {
+          "correct": "20.0",
+          "correctExplanation": "2000 kJ / 100 g = 20.0 kJ g⁻¹.",
+          "distractors": [
+            {"answer": "200", "explanation": "200 would be kJ per 10 g, not per gram; 2000/100 = 20.0 kJ g⁻¹."},
+            {"answer": "2.0", "explanation": "2.0 would be kJ per 1000 g; 2000/100 = 20.0 kJ g⁻¹."}
+          ]
+        }
+      }
+    },
+    {
+      "type": "tf",
+      "question": "Water in food does not contribute energy, so it is excluded from energy calculations.",
+      "correct": "True",
+      "correctExplanation": "Water has no heat of combustion (0 kJ g⁻¹) and provides no energy. Only fat, protein, and carbohydrate contribute.",
+      "distractors": [
+        {"answer": "False", "explanation": "Water cannot be combusted and provides 0 kJ g⁻¹; it is correctly excluded from energy calculations."}
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "When calculating food energy from percentages, a 100 g sample makes percentages numerically equal to masses in grams.",
+      "correct": "True",
+      "correctExplanation": "In a 100 g sample, x% = x grams, which simplifies calculations significantly.",
+      "distractors": [
+        {"answer": "False", "explanation": "This is correct: 30% of 100 g = 30 g. The numerical equality simplifies the calculation."}
+      ]
+    }
+  ],
+
+  "toLevel3": [
+    {
+      "type": "mc",
+      "question": "A cereal is 5% fat, 12% protein, and 70% carbohydrate. Calculate its total energy per 100 g.",
+      "correct": "1509 kJ",
+      "correctExplanation": "Fat: 5 × 37 = 185. Protein: 12 × 17 = 204. Carbs: 70 × 16 = 1120. Total = 185 + 204 + 1120 = 1509 kJ.",
+      "distractors": [
+        {"answer": "1120 kJ", "explanation": "This counts only carbohydrate; all three components must be included."},
+        {"answer": "3219 kJ", "explanation": "This uses 37 kJ g⁻¹ for all groups (87 × 37 = 3219); each has its own value."},
+        {"answer": "1392 kJ", "explanation": "This uses 16 kJ g⁻¹ for all groups (87 × 16 = 1392); different values apply."}
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Almonds contain 52% fat, 6% protein, 21% carbohydrate, and 21% water. What is the energy per 100 g?",
+      "correct": "2362 kJ",
+      "correctExplanation": "Fat: 52 × 37 = 1924. Protein: 6 × 17 = 102. Carbs: 21 × 16 = 336. Water: 0. Total = 1924 + 102 + 336 = 2362 kJ.",
+      "distractors": [
+        {"answer": "2921 kJ", "explanation": "This uses 37 kJ g⁻¹ for all components (79 × 37 = 2923); each group has its own value."},
+        {"answer": "1924 kJ", "explanation": "This counts only fat; protein (102 kJ) and carbohydrate (336 kJ) must also be included."},
+        {"answer": "2698 kJ", "explanation": "This includes water at 16 kJ g⁻¹ (21 × 16 = 336 extra); water has 0 kJ g⁻¹."}
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Two foods each weigh 100 g. Food A: 40% fat, 10% protein, 30% carb. Food B: 5% fat, 30% protein, 50% carb. Which has more energy?",
+      "correct": "Food A",
+      "correctExplanation": "A: 40×37 + 10×17 + 30×16 = 1480+170+480 = 2130 kJ. B: 5×37 + 30×17 + 50×16 = 185+510+800 = 1495 kJ. A has more.",
+      "distractors": [
+        {"answer": "Food B", "explanation": "B = 1495 kJ, less than A's 2130 kJ; A's higher fat content gives it more energy."},
+        {"answer": "Both have the same energy", "explanation": "A = 2130 kJ and B = 1495 kJ; the higher fat content in A gives it significantly more energy."},
+        {"answer": "Cannot determine without more information", "explanation": "The compositions and reference values are sufficient to calculate energy."}
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A food has 25% fat, 15% protein, 40% carbohydrate, and 20% water. What is its energy content in kJ g⁻¹?",
+      "correct": "18.2 kJ g⁻¹",
+      "correctExplanation": "Per 100 g: 25×37 + 15×17 + 40×16 = 925+255+640 = 1820 kJ. Per gram: 1820/100 = 18.2 kJ g⁻¹.",
+      "distractors": [
+        {"answer": "23.3 kJ g⁻¹", "explanation": "This uses 37 kJ g⁻¹ for all groups; each has its own reference value."},
+        {"answer": "12.8 kJ g⁻¹", "explanation": "This uses 16 kJ g⁻¹ for all groups; the correct calculation gives 18.2 kJ g⁻¹."},
+        {"answer": "9.25 kJ g⁻¹", "explanation": "This counts only fat energy (925/100 = 9.25); all three must be included."}
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "If a 50 g serving of food contains 8% fat, 12% protein, and 65% carbohydrate, what is the energy per serving?",
+      "correct": "770 kJ",
+      "correctExplanation": "Fat: 50×0.08 = 4 g × 37 = 148 kJ. Protein: 50×0.12 = 6 g × 17 = 102 kJ. Carbs: 50×0.65 = 32.5 g × 16 = 520 kJ. Total = 770 kJ.",
+      "distractors": [
+        {"answer": "1540 kJ", "explanation": "This is the energy per 100 g, not per 50 g serving; divide by 2."},
+        {"answer": "385 kJ", "explanation": "This halves the correct answer; the 50 g serving provides 770 kJ."},
+        {"answer": "520 kJ", "explanation": "This counts only the carbohydrate contribution; all three must be included."}
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What percentage of the total energy comes from fat in a food with 20% fat, 10% protein, and 50% carbohydrate per 100 g?",
+      "correct": "43.3%",
+      "correctExplanation": "Fat: 740 kJ. Protein: 170 kJ. Carbs: 800 kJ. Total = 1710 kJ. Fat % = 740/1710 × 100 = 43.3%.",
+      "distractors": [
+        {"answer": "25.0%", "explanation": "This is the mass fraction (20/80 = 25%), not the energy fraction; fat contributes 43.3% of energy."},
+        {"answer": "37.0%", "explanation": "37 is the kJ g⁻¹ value, not the percentage contribution; 740/1710 = 43.3%."},
+        {"answer": "50.0%", "explanation": "50% is the carbohydrate mass fraction; fat energy fraction = 43.3%."}
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the energy calculation for chocolate.",
+      "sentence": "Dark chocolate: 31% fat, 8% protein, 45% carbohydrate. Fat energy = {{blank:1}} kJ, total energy per 100 g = {{blank:2}} kJ.",
+      "blanks": {
+        "1": {
+          "correct": "1147",
+          "correctExplanation": "31 × 37 = 1147 kJ from fat.",
+          "distractors": [
+            {"answer": "527", "explanation": "This uses 31 × 17 (protein value); fat uses 37 kJ g⁻¹."},
+            {"answer": "496", "explanation": "This uses 31 × 16 (carbohydrate value); fat uses 37 kJ g⁻¹."}
+          ]
+        },
+        "2": {
+          "correct": "2003",
+          "correctExplanation": "Fat: 1147 + Protein: 8×17=136 + Carbs: 45×16=720 = 2003 kJ.",
+          "distractors": [
+            {"answer": "1147", "explanation": "This counts only fat; protein (136) and carbs (720) must be added."},
+            {"answer": "3108", "explanation": "This uses 37 for all groups (84×37); each group has its own value."}
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the energy per gram calculation.",
+      "sentence": "A nut mix with 50% fat, 15% protein, and 20% carbohydrate has {{blank:1}} kJ per 100 g, or {{blank:2}} kJ g⁻¹.",
+      "blanks": {
+        "1": {
+          "correct": "2425",
+          "correctExplanation": "50×37 + 15×17 + 20×16 = 1850+255+320 = 2425 kJ.",
+          "distractors": [
+            {"answer": "1850", "explanation": "This counts only fat; 2425 includes all three components."},
+            {"answer": "3145", "explanation": "This uses 37 for all groups (85×37 = 3145); each has its own value."}
+          ]
+        },
+        "2": {
+          "correct": "24.3",
+          "correctExplanation": "2425/100 = 24.25 ≈ 24.3 kJ g⁻¹.",
+          "distractors": [
+            {"answer": "2.43", "explanation": "This divides by 1000 instead of 100; 2425/100 = 24.3 kJ g⁻¹."},
+            {"answer": "242.5", "explanation": "This divides by 10 instead of 100; 2425/100 = 24.3 kJ g⁻¹."}
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the statement about water in food energy calculations.",
+      "sentence": "A food is 15% water. In a 100 g sample, {{blank:1}} g is water, contributing {{blank:2}} kJ to total energy.",
+      "blanks": {
+        "1": {
+          "correct": "15",
+          "correctExplanation": "15% of 100 g = 15 g of water.",
+          "distractors": [
+            {"answer": "1.5", "explanation": "1.5 g would be 1.5%; 15% = 15 g."},
+            {"answer": "150", "explanation": "150 g exceeds the sample; 15% of 100 g = 15 g."}
+          ]
+        },
+        "2": {
+          "correct": "0",
+          "correctExplanation": "Water has no heat of combustion (0 kJ g⁻¹) and contributes no energy.",
+          "distractors": [
+            {"answer": "240", "explanation": "This would use 16 kJ g⁻¹ (carbohydrate value) for water; water provides 0 kJ g⁻¹."},
+            {"answer": "555", "explanation": "This would use 37 kJ g⁻¹ (fat value) for water; water provides 0 kJ g⁻¹."}
+          ]
+        }
+      }
+    },
+    {
+      "type": "tf",
+      "question": "A food with 50% fat, 10% protein, and 20% carbohydrate per 100 g has more energy than a food with 10% fat, 20% protein, and 50% carbohydrate per 100 g.",
+      "correct": "True",
+      "correctExplanation": "Food 1: 50×37+10×17+20×16 = 1850+170+320 = 2340 kJ. Food 2: 10×37+20×17+50×16 = 370+340+800 = 1510 kJ. Food 1 has more energy.",
+      "distractors": [
+        {"answer": "False", "explanation": "2340 kJ > 1510 kJ; the higher fat content makes Food 1 more energy-dense."}
+      ]
+    }
+  ],
+
+  "toLevel4": [
+    {
+      "type": "mc",
+      "question": "Cheese contains 33% fat, 25% protein, 1% carbohydrate, and 37% water. Calculate the energy per 100 g and per gram.",
+      "correct": "1662 kJ per 100 g; 16.6 kJ g⁻¹",
+      "correctExplanation": "33×37 + 25×17 + 1×16 = 1221+425+16 = 1662 kJ per 100 g. Per gram: 16.6 kJ g⁻¹.",
+      "distractors": [
+        {"answer": "2183 kJ per 100 g; 21.8 kJ g⁻¹", "explanation": "This uses 37 kJ g⁻¹ for all groups; each has its own value."},
+        {"answer": "1221 kJ per 100 g; 12.2 kJ g⁻¹", "explanation": "This counts only fat; protein and carbohydrate contributions must be included."},
+        {"answer": "944 kJ per 100 g; 9.44 kJ g⁻¹", "explanation": "This uses 16 kJ g⁻¹ for all groups; different values apply."}
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A food product has total energy of 2500 kJ per 100 g. It contains 20% protein and 35% carbohydrate. What percentage is fat?",
+      "correct": "43.0%",
+      "correctExplanation": "Protein: 20×17 = 340 kJ. Carbs: 35×16 = 560 kJ. Fat energy = 2500−340−560 = 1600 kJ. Fat mass = 1600/37 = 43.2 g ≈ 43.0% of 100 g.",
+      "distractors": [
+        {"answer": "45.0%", "explanation": "The exact calculation gives 1600/37 = 43.2%, not 45.0%."},
+        {"answer": "64.0%", "explanation": "This uses 2500/37 = 67.6 without subtracting other contributions."},
+        {"answer": "35.0%", "explanation": "35% is the carbohydrate percentage; fat = 1600/37 = 43.2%."}
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Compare a 250 g serving of rice (2% fat, 7% protein, 80% carb) with a 30 g serving of butter (81% fat, 1% protein, 0% carb). Which serving has more energy?",
+      "correct": "Rice serving has more energy",
+      "correctExplanation": "Rice per 250 g: 250(0.02×37 + 0.07×17 + 0.80×16) = 250(0.74+1.19+12.8) = 250×14.73 = 3683 kJ. Butter per 30 g: 30(0.81×37 + 0.01×17) = 30(29.97+0.17) = 30×30.14 = 904 kJ. Rice serving has more.",
+      "distractors": [
+        {"answer": "Butter serving has more energy", "explanation": "Per gram butter is higher, but 250 g rice provides 3683 kJ vs 30 g butter's 904 kJ."},
+        {"answer": "Both provide the same energy", "explanation": "3683 kJ vs 904 kJ; they differ significantly due to serving sizes."},
+        {"answer": "Cannot compare different foods", "explanation": "Energy from both can be calculated from composition and mass; rice provides more per serving."}
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A nutrition label shows: per 100 g — 12 g fat, 8 g protein, 65 g carbohydrate, 5 g fibre, 10 g water. Calculate the total energy using only fat, protein, and carbohydrate.",
+      "correct": "1620 kJ",
+      "correctExplanation": "Fat: 12×37 = 444. Protein: 8×17 = 136. Carbs: 65×16 = 1040. Total = 1620 kJ. Fibre and water do not contribute.",
+      "distractors": [
+        {"answer": "3700 kJ", "explanation": "This uses 37 kJ g⁻¹ for everything (100×37); each component has its own value."},
+        {"answer": "1040 kJ", "explanation": "This counts only carbohydrate; fat and protein must also be included."},
+        {"answer": "1716 kJ", "explanation": "This includes fibre as carbohydrate (70×16+rest); only the stated 65 g carbs should be used."}
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A dietitian needs to design a 150 g meal with 2400 kJ. If 20% is fat and 30% protein, what percentage should be carbohydrate?",
+      "correct": "21.9%",
+      "correctExplanation": "Fat: 30 g × 37 = 1110 kJ. Protein: 45 g × 17 = 765 kJ. Carb energy needed = 2400−1875 = 525 kJ. Carb mass = 525/16 = 32.8 g. Percentage = 32.8/150 × 100 = 21.9%.",
+      "distractors": [
+        {"answer": "50.0%", "explanation": "This assumes 50% of remaining mass; the correct calculation from energy balance gives 21.9%."},
+        {"answer": "30.0%", "explanation": "30% is the protein percentage; the carbohydrate calculation gives 21.9%."},
+        {"answer": "10.0%", "explanation": "This underestimates; 525/16 = 32.8 g, which is 21.9% of 150 g."}
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Peanut butter (50% fat, 25% protein, 13% carb) has an energy density of how many kJ g⁻¹?",
+      "correct": "24.8 kJ g⁻¹",
+      "correctExplanation": "Per 100 g: 50×37 + 25×17 + 13×16 = 1850+425+208 = 2483 kJ. Per gram: 24.8 kJ g⁻¹.",
+      "distractors": [
+        {"answer": "32.6 kJ g⁻¹", "explanation": "This uses 37 kJ g⁻¹ for all groups; each has its own value. 2483/100 = 24.8 kJ g⁻¹."},
+        {"answer": "18.5 kJ g⁻¹", "explanation": "This is too low; the correct calculation gives 24.8 kJ g⁻¹."},
+        {"answer": "14.1 kJ g⁻¹", "explanation": "This uses 16 kJ g⁻¹ for all groups; the correct weighted calculation gives 24.8 kJ g⁻¹."}
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A food claims '30% reduced energy'. The original had 15% fat, 10% protein, and 60% carb. What should the new energy per 100 g be?",
+      "correct": "1180 kJ",
+      "correctExplanation": "Original: 15×37 + 10×17 + 60×16 = 555+170+960 = 1685 kJ. Reduced by 30%: 1685 × 0.70 = 1180 kJ.",
+      "distractors": [
+        {"answer": "505.5 kJ", "explanation": "This is 30% of the original (1685 × 0.30); '30% reduced' means 70% remains."},
+        {"answer": "1685 kJ", "explanation": "This is the original energy; 30% reduction gives 1685 × 0.70 = 1180 kJ."},
+        {"answer": "1180 kJ per gram", "explanation": "The unit is kJ per 100 g, not per gram; per gram it would be 11.8 kJ g⁻¹."}
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the food composition calculation.",
+      "sentence": "Milk: 4% fat, 3% protein, 5% carbohydrate. Per 100 g: fat = {{blank:1}} kJ, protein = 51 kJ, carbs = 80 kJ. Total = {{blank:2}} kJ.",
+      "blanks": {
+        "1": {
+          "correct": "148",
+          "correctExplanation": "4 × 37 = 148 kJ from fat.",
+          "distractors": [
+            {"answer": "68", "explanation": "This uses 4 × 17 (protein value); fat uses 37 kJ g⁻¹."},
+            {"answer": "64", "explanation": "This uses 4 × 16 (carbohydrate value); fat uses 37 kJ g⁻¹."}
+          ]
+        },
+        "2": {
+          "correct": "279",
+          "correctExplanation": "148 + 51 + 80 = 279 kJ per 100 g.",
+          "distractors": [
+            {"answer": "148", "explanation": "This counts only fat; protein and carbohydrate must be added."},
+            {"answer": "444", "explanation": "This uses 37 for all groups (12×37 = 444); each has its own value."}
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the per-serving calculation.",
+      "sentence": "A 200 g serving of a food with 1500 kJ per 100 g provides {{blank:1}} kJ.",
+      "blanks": {
+        "1": {
+          "correct": "3000",
+          "correctExplanation": "200 g is 2 × 100 g, so energy = 2 × 1500 = 3000 kJ.",
+          "distractors": [
+            {"answer": "1500", "explanation": "1500 is per 100 g; a 200 g serving is double, giving 3000 kJ."},
+            {"answer": "750", "explanation": "This halves instead of doubling; 200/100 × 1500 = 3000 kJ."}
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the energy density comparison.",
+      "sentence": "Avocado (15% fat, 2% protein, 9% carbs) has energy density {{blank:1}} kJ g⁻¹, while apple (0.2% fat, 0.3% protein, 14% carbs) has {{blank:2}} kJ g⁻¹.",
+      "blanks": {
+        "1": {
+          "correct": "7.33",
+          "correctExplanation": "15×37 + 2×17 + 9×16 = 555+34+144 = 733 kJ per 100 g = 7.33 kJ g⁻¹.",
+          "distractors": [
+            {"answer": "5.55", "explanation": "This counts only fat (555/100); all three components contribute."},
+            {"answer": "14.4", "explanation": "This uses 37 for all (26×37/100 = 9.62); the correct weighted value is 7.33 kJ g⁻¹."}
+          ]
+        },
+        "2": {
+          "correct": "2.36",
+          "correctExplanation": "0.2×37 + 0.3×17 + 14×16 = 7.4+5.1+224 = 236.5 kJ per 100 g = 2.36 kJ g⁻¹.",
+          "distractors": [
+            {"answer": "2.24", "explanation": "This counts only carbohydrate (224/100); fat and protein also contribute."},
+            {"answer": "5.37", "explanation": "This uses 37 for all groups; the correct weighted value is 2.36 kJ g⁻¹."}
+          ]
+        }
+      }
+    }
+  ],
+
+  "toLevel5": [
+    {
+      "type": "mc",
+      "question": "A food scientist reformulates a snack by reducing fat from 25% to 10% and increasing carbohydrate from 40% to 55%. Protein stays at 15%. Calculate the energy change per 100 g.",
+      "correct": "Decreases by 315 kJ",
+      "correctExplanation": "Original: 25×37+15×17+40×16 = 925+255+640 = 1820 kJ. New: 10×37+15×17+55×16 = 370+255+880 = 1505 kJ. Change = 1505−1820 = −315 kJ.",
+      "distractors": [
+        {"answer": "Increases by 315 kJ", "explanation": "Replacing fat (37 kJ g⁻¹) with carbohydrate (16 kJ g⁻¹) decreases energy; −315 kJ."},
+        {"answer": "No change because total composition stays at 80%", "explanation": "The energy depends on which components changed; fat→carb swap reduces energy."},
+        {"answer": "Decreases by 555 kJ", "explanation": "This only accounts for fat reduction (15×37) without the carbohydrate increase (15×16 = 240)."}
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An energy bar claims 850 kJ per 40 g serving. It lists 6 g fat, 8 g protein, and 20 g carbohydrate. Does the calculated energy match the claim?",
+      "correct": "No; calculated energy is 678 kJ, less than the claimed 850 kJ",
+      "correctExplanation": "Fat: 6×37 = 222. Protein: 8×17 = 136. Carbs: 20×16 = 320. Total = 222+136+320 = 678 kJ. This is 172 kJ less than claimed.",
+      "distractors": [
+        {"answer": "Yes; the energy matches exactly", "explanation": "The calculated 678 kJ does not match the claimed 850 kJ; there is a 172 kJ discrepancy."},
+        {"answer": "No; calculated energy is 1480 kJ, more than claimed", "explanation": "1480 kJ would be per 100 g (extrapolated); per 40 g serving, it is 678 kJ."},
+        {"answer": "No; calculated energy is 320 kJ, much less than claimed", "explanation": "320 is only the carbohydrate contribution; total is 678 kJ."}
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Two meals provide 3000 kJ each. Meal A: 60% of energy from fat. Meal B: 60% of energy from carbohydrate. Calculate the total mass of macronutrients in each meal.",
+      "correct": "Meal A has less total macronutrient mass than Meal B",
+      "correctExplanation": "Meal A: 1800 kJ fat = 48.6 g, 1200 kJ (assume carb) = 75.0 g. Total = 123.6 g. Meal B: 1800 kJ carb = 112.5 g, 1200 kJ (assume fat) = 32.4 g. Total = 144.9 g. A has less mass.",
+      "distractors": [
+        {"answer": "Meal B has less total mass", "explanation": "B has more mass because carbohydrate provides less energy per gram, requiring more mass for 60% energy."},
+        {"answer": "Both have the same total mass", "explanation": "Fat is more energy-dense (37 vs 16), so the fat-heavy meal needs less mass for the same energy."},
+        {"answer": "Cannot determine without knowing protein content", "explanation": "The comparison can be made with reasonable assumptions; fat meals always require less mass for same energy."}
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student measures a food sample at 20.0 kJ g⁻¹ experimentally. The label shows 18% fat, 12% protein, and 55% carb. What is the percentage difference between measured and calculated values?",
+      "correct": "14.3% higher than calculated",
+      "correctExplanation": "Calculated: 18×37+12×17+55×16 = 1750 kJ/100g = 17.5 kJ g⁻¹. % diff = (20.0−17.5)/17.5 × 100 = 14.3% higher.",
+      "distractors": [
+        {"answer": "2.5% higher", "explanation": "2.5 is the absolute kJ g⁻¹ difference; the percentage is 2.5/17.5 × 100 = 14.3%."},
+        {"answer": "12.5% lower than calculated", "explanation": "The measured value (20.0) is higher, not lower, than the calculated (17.5)."},
+        {"answer": "Exactly matches the calculated value", "explanation": "20.0 ≠ 17.5; there is a 14.3% difference."}
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A vegan protein bar and a dairy protein bar each have 2000 kJ per 100 g. The vegan bar has 10% fat, while the dairy bar has 20% fat. Which has a higher percentage of carbohydrate (assuming identical protein at 25%)?",
+      "correct": "The vegan bar has more carbohydrate",
+      "correctExplanation": "Vegan: fat=370, protein=425, carb energy = 2000−795=1205, carb mass = 75.3 g = 75.3%. Dairy: fat=740, protein=425, carb energy = 2000−1165=835, carb mass = 52.2 g = 52.2%. Vegan has more carbs.",
+      "distractors": [
+        {"answer": "The dairy bar has more carbohydrate", "explanation": "With more fat, less energy remains for carbohydrate; dairy bar has 52.2% vs vegan's 75.3%."},
+        {"answer": "Both have the same carbohydrate percentage", "explanation": "Different fat percentages with the same total energy mean different carbohydrate amounts."},
+        {"answer": "Cannot determine from the information given", "explanation": "With total energy, fat, and protein known, carbohydrate can be calculated."}
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A nutrition researcher needs a food providing exactly 10 000 kJ per kg. Using 30% fat, 15% protein, and the rest carbohydrate, what total percentage of macronutrients is needed?",
+      "correct": "The fat and protein alone already exceed the target (1365 vs 1000 kJ per 100 g)",
+      "correctExplanation": "30×37 + 15×17 = 1110+255 = 1365 kJ per 100 g. This exceeds the 1000 kJ target before adding carbohydrate, so the composition must be adjusted.",
+      "distractors": [
+        {"answer": "45% total macronutrients is sufficient", "explanation": "Even 45% as fat+protein gives 1365 kJ, exceeding the target; the composition needs reducing."},
+        {"answer": "55% carbohydrate is needed to reach the target", "explanation": "Adding carbohydrate would increase energy further above 1365 kJ; the fat/protein must be reduced."},
+        {"answer": "The target is achievable with this composition", "explanation": "1365 kJ from fat+protein alone exceeds 1000 kJ; the composition must be changed."}
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Rank these foods from highest to lowest energy density (kJ g⁻¹): Olive oil (100% fat), Chicken breast (3% fat, 31% protein, 0% carb), White rice (0.3% fat, 3% protein, 28% carb).",
+      "correct": "Olive oil (37.0) > Chicken breast (6.38) > White rice (5.00)",
+      "correctExplanation": "Oil: 100×37/100 = 37.0. Chicken: 3×37+31×17 = 111+527 = 638/100 = 6.38. Rice: 0.3×37+3×17+28×16 = 11.1+51+448 = 510.1/100 = 5.10. Oil > Chicken > Rice.",
+      "distractors": [
+        {"answer": "Chicken breast > Olive oil > White rice", "explanation": "Olive oil at 37.0 kJ g⁻¹ far exceeds chicken's 6.38 kJ g⁻¹."},
+        {"answer": "White rice > Chicken breast > Olive oil", "explanation": "This is the reverse order; oil has the highest energy density at 37.0 kJ g⁻¹."},
+        {"answer": "All three are approximately equal", "explanation": "They differ dramatically: 37.0, 6.38, and 5.10 kJ g⁻¹."}
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A food label shows 2100 kJ per 100 g. Analysis reveals 50% of energy comes from fat and 20% from protein. Calculate the mass of each macronutrient per 100 g.",
+      "correct": "Fat: 28.4 g, Protein: 24.7 g, Carbs: 39.4 g",
+      "correctExplanation": "Fat energy: 2100×0.50 = 1050 kJ → 1050/37 = 28.4 g. Protein energy: 2100×0.20 = 420 kJ → 420/17 = 24.7 g. Carb energy: 2100×0.30 = 630 kJ → 630/16 = 39.4 g.",
+      "distractors": [
+        {"answer": "Fat: 50 g, Protein: 20 g, Carbs: 30 g", "explanation": "These are the energy percentages, not the mass values; mass must be calculated from energy/kJ g⁻¹."},
+        {"answer": "Fat: 56.8 g, Protein: 12.4 g, Carbs: 19.7 g", "explanation": "This uses incorrect conversion values; fat = 1050/37 = 28.4 g."},
+        {"answer": "Fat: 28.4 g, Protein: 24.7 g, Carbs: 47.0 g", "explanation": "Carb energy = 630 kJ, giving 630/16 = 39.4 g, not 47.0 g."}
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the energy reformulation analysis.",
+      "sentence": "Replacing 10 g of fat with 10 g of carbohydrate changes energy by {{blank:1}} kJ, because fat provides {{blank:2}} kJ g⁻¹ more than carbohydrate.",
+      "blanks": {
+        "1": {
+          "correct": "−210",
+          "correctExplanation": "Energy change = 10×16 − 10×37 = 160−370 = −210 kJ.",
+          "distractors": [
+            {"answer": "+210", "explanation": "The change is negative because fat has higher energy; replacing fat with carb reduces energy."},
+            {"answer": "−370", "explanation": "This counts only the fat removed (10×37) without adding the carbohydrate gained (10×16)."}
+          ]
+        },
+        "2": {
+          "correct": "21",
+          "correctExplanation": "37 − 16 = 21 kJ g⁻¹ more energy per gram for fat compared to carbohydrate.",
+          "distractors": [
+            {"answer": "37", "explanation": "37 is the fat value alone; the difference is 37−16 = 21 kJ g⁻¹."},
+            {"answer": "53", "explanation": "This adds the values (37+16); the difference is 37−16 = 21 kJ g⁻¹."}
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the dietary energy analysis.",
+      "sentence": "A diet with 2000 kJ from fat ({{blank:1}} g), 1700 kJ from protein (100 g), and 4800 kJ from carbs (300 g) totals {{blank:2}} kJ.",
+      "blanks": {
+        "1": {
+          "correct": "54.1",
+          "correctExplanation": "2000/37 = 54.1 g of fat.",
+          "distractors": [
+            {"answer": "117.6", "explanation": "This divides by 17 (protein value); fat uses 37 kJ g⁻¹."},
+            {"answer": "125.0", "explanation": "This divides by 16 (carbohydrate value); fat uses 37 kJ g⁻¹."}
+          ]
+        },
+        "2": {
+          "correct": "8500",
+          "correctExplanation": "2000 + 1700 + 4800 = 8500 kJ total.",
+          "distractors": [
+            {"answer": "4800", "explanation": "This counts only carbohydrate; all three must be summed."},
+            {"answer": "2000", "explanation": "This counts only fat; total = 2000+1700+4800 = 8500 kJ."}
+          ]
+        }
+      }
+    }
+  ]
+}

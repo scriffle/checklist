@@ -1,0 +1,551 @@
+{
+  "_link": {
+    "uuid": "lp-b9f33130-f771-aab7-8706-f9f1bbc4c4ee",
+    "version": 1,
+    "contentHash": "hash-2be0cef0",
+    "title": "I can calculate energy released using the calibration factor",
+    "generatedAt": "2026-02-08T12:10:00Z"
+  },
+  "toLevel2": [
+    {
+      "type": "mc",
+      "question": "What formula is used to calculate the energy released by a reaction once the calibration factor is known?",
+      "correct": "E = CF × ΔT",
+      "correctExplanation": "Once the calibration factor (CF) has been determined, the energy released by a reaction is calculated by multiplying CF by the temperature change (ΔT) observed during the reaction.",
+      "distractors": [
+        { "answer": "E = mc × ΔT", "explanation": "This is the specific heat capacity formula q = mcΔT, which does not use the calibration factor." },
+        { "answer": "E = CF / ΔT", "explanation": "Dividing CF by ΔT does not give energy; E = CF × ΔT multiplies them." },
+        { "answer": "E = ΔT / CF", "explanation": "Dividing ΔT by CF inverts the relationship; E = CF × ΔT is correct." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What are the units of the calibration factor (CF)?",
+      "correct": "J °C⁻¹",
+      "correctExplanation": "The calibration factor is expressed in joules per degree Celsius (J °C⁻¹), representing the energy absorbed by the entire calorimeter system per degree of temperature change.",
+      "distractors": [
+        { "answer": "J g⁻¹ °C⁻¹", "explanation": "J g⁻¹ °C⁻¹ is the unit for specific heat capacity, which is per gram; CF applies to the whole system." },
+        { "answer": "kJ mol⁻¹", "explanation": "kJ mol⁻¹ is the unit for molar enthalpy, not the calibration factor." },
+        { "answer": "°C J⁻¹", "explanation": "This inverts the relationship; CF measures energy per degree, not degrees per joule." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Why does using the calibration factor give a more accurate energy value than using q = mcΔT with just the mass of water?",
+      "correct": "Because CF accounts for heat absorbed by both the water and the calorimeter apparatus",
+      "correctExplanation": "The calibration factor includes the heat capacity of the entire system — the water, the container, the stirrer and the thermometer — not just the water alone.",
+      "distractors": [
+        { "answer": "Because CF eliminates all random errors from the experiment", "explanation": "CF reduces systematic error from ignoring the calorimeter's heat capacity, but it does not eliminate random errors." },
+        { "answer": "Because CF is a universal constant that applies to all calorimeters equally", "explanation": "Each calorimeter has its own unique CF; it is not a universal constant." },
+        { "answer": "Because CF measures the energy lost to the surroundings during the reaction", "explanation": "CF accounts for heat absorbed by the apparatus, not heat lost to the surroundings; heat loss is addressed by extrapolation." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "In the formula E = CF × ΔT, what does ΔT represent?",
+      "correct": "The temperature change observed during the reaction",
+      "correctExplanation": "ΔT is the difference between the final and initial temperatures measured during the reaction in the calorimeter.",
+      "distractors": [
+        { "answer": "The temperature change during the calibration step", "explanation": "The calibration ΔT is used to find CF; the ΔT in E = CF × ΔT is from the reaction being measured." },
+        { "answer": "The initial temperature of the water in the calorimeter", "explanation": "ΔT is the change in temperature, not the starting temperature." },
+        { "answer": "The maximum temperature reached by the calorimeter system", "explanation": "ΔT is the difference between final and initial temperatures, not the maximum temperature alone." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "After calculating the energy released (E) using E = CF × ΔT, what additional calculation gives the molar enthalpy?",
+      "correct": "ΔH = E / n",
+      "correctExplanation": "Dividing the total energy released by the number of moles of the limiting reagent gives the molar enthalpy of the reaction in kJ mol⁻¹.",
+      "distractors": [
+        { "answer": "ΔH = E × n", "explanation": "Multiplying energy by moles gives an incorrect result; ΔH = E/n divides energy by moles." },
+        { "answer": "ΔH = n / E", "explanation": "This inverts the formula; ΔH is energy divided by moles, not moles divided by energy." },
+        { "answer": "ΔH = E × CF", "explanation": "CF was already used to calculate E; multiplying again would be incorrect." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the statement about the calibration factor.",
+      "sentence": "The calibration factor accounts for the heat capacity of the entire {{blank:1}}, including the water, container and other components.",
+      "blanks": {
+        "1": {
+          "correct": "calorimeter system",
+          "correctExplanation": "CF represents the heat capacity of the whole calorimeter system — not just the water but also the container walls, stirrer and thermometer.",
+          "distractors": [
+            { "answer": "heating element", "explanation": "The heating element is used during calibration to supply known energy; CF applies to the system being heated." },
+            { "answer": "chemical reaction", "explanation": "The chemical reaction releases energy; CF describes the calorimeter system that absorbs it." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the energy calculation process.",
+      "sentence": "To find the energy released by a reaction: first determine the {{blank:1}} from the temperature-time graph, then multiply it by the {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "ΔT",
+          "correctExplanation": "The temperature change (ΔT) for the reaction is read from the temperature-time graph, either directly or via extrapolation.",
+          "distractors": [
+            { "answer": "CF", "explanation": "CF is determined during the calibration step, not from the reaction's temperature-time graph." },
+            { "answer": "mass", "explanation": "Mass is measured on a balance; the graph provides the temperature change." }
+          ]
+        },
+        "2": {
+          "correct": "calibration factor",
+          "correctExplanation": "E = CF × ΔT: multiplying the calibration factor by the temperature change gives the energy released.",
+          "distractors": [
+            { "answer": "specific heat capacity", "explanation": "Specific heat capacity is used in q = mcΔT; the calibration factor method uses CF × ΔT." },
+            { "answer": "molar mass", "explanation": "Molar mass is used to convert grams to moles; it is not multiplied by ΔT for energy." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the statement about converting energy to molar enthalpy.",
+      "sentence": "After calculating E = CF × ΔT, the molar enthalpy is found by dividing E by the number of {{blank:1}} of the limiting reagent.",
+      "blanks": {
+        "1": {
+          "correct": "moles",
+          "correctExplanation": "ΔH = E/n, where n is the number of moles of the limiting reagent, gives the molar enthalpy in kJ mol⁻¹.",
+          "distractors": [
+            { "answer": "grams", "explanation": "Dividing by grams would give energy per gram, not molar enthalpy; moles are needed for kJ mol⁻¹." },
+            { "answer": "litres", "explanation": "Dividing by volume does not give molar enthalpy; dividing by moles gives kJ mol⁻¹." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "tf",
+      "question": "The formula E = CF × ΔT uses the temperature change from the reaction, not from the calibration step.",
+      "correct": "True",
+      "correctExplanation": "The ΔT in E = CF × ΔT is the temperature change measured during the actual reaction. The calibration ΔT was used earlier to determine the CF value.",
+      "distractors": [
+        { "answer": "False", "explanation": "Students may confuse the two ΔT values; the calibration ΔT finds CF, and the reaction ΔT is used in E = CF × ΔT." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "The calibration factor is a universal constant that is the same for every calorimeter.",
+      "correct": "False",
+      "correctExplanation": "Each calorimeter has a unique calibration factor that depends on its materials, mass, insulation and construction. CF must be determined individually for each calorimeter.",
+      "distractors": [
+        { "answer": "True", "explanation": "CF varies between calorimeters because each system has different materials and construction; it must be measured for each device." }
+      ]
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "mc",
+      "question": "A calorimeter has a calibration factor of 320 J °C⁻¹. During a neutralisation reaction, the temperature increases by 1.23°C. How much energy was released?",
+      "correct": "394 J",
+      "correctExplanation": "E = CF × ΔT = 320 × 1.23 = 393.6 J ≈ 394 J.",
+      "distractors": [
+        { "answer": "260 J", "explanation": "This uses CF/ΔT (320/1.23); the correct formula multiplies CF by ΔT." },
+        { "answer": "320 J", "explanation": "320 J °C⁻¹ is the calibration factor itself; E = CF × ΔT = 320 × 1.23 = 394 J." },
+        { "answer": "39.4 J", "explanation": "This divides the correct answer by 10; E = 320 × 1.23 = 393.6 J, not 39.4 J." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A calorimeter with CF = 450 J °C⁻¹ measures a reaction that produces a temperature change of 2.50°C. What is the energy released in kilojoules?",
+      "correct": "1.13 kJ",
+      "correctExplanation": "E = CF × ΔT = 450 × 2.50 = 1125 J = 1.125 kJ ≈ 1.13 kJ.",
+      "distractors": [
+        { "answer": "1125 kJ", "explanation": "1125 is the answer in joules, not kilojoules; divide by 1000 to get 1.13 kJ." },
+        { "answer": "180 kJ", "explanation": "This divides CF by ΔT instead of multiplying; E = CF × ΔT." },
+        { "answer": "0.113 kJ", "explanation": "This divides by 10 000 instead of 1000; 1125 J ÷ 1000 = 1.13 kJ." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Why must the calibration step and the reaction measurement be performed in the same calorimeter?",
+      "correct": "Because the calibration factor is specific to that particular calorimeter",
+      "correctExplanation": "Each calorimeter has a unique CF that depends on its specific construction, materials and heat capacity. Using a CF from a different calorimeter would give inaccurate results.",
+      "distractors": [
+        { "answer": "Because the calibration factor depends on the type of reaction being performed", "explanation": "CF depends on the calorimeter, not the reaction; it measures the system's heat capacity." },
+        { "answer": "Because calibration changes the water's specific heat capacity permanently", "explanation": "Calibration does not change the specific heat capacity of water; CF characterises the calorimeter system." },
+        { "answer": "Because using different calorimeters would produce different amounts of energy", "explanation": "The reaction produces the same energy regardless; the CF is needed to measure it accurately in each specific calorimeter." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A reaction releases 768 J of energy in a calorimeter with CF = 320 J °C⁻¹. What was the temperature change during the reaction?",
+      "correct": "2.40°C",
+      "correctExplanation": "Rearranging E = CF × ΔT: ΔT = E/CF = 768/320 = 2.40°C.",
+      "distractors": [
+        { "answer": "245 760°C", "explanation": "This multiplies E × CF instead of dividing; ΔT = E/CF." },
+        { "answer": "0.417°C", "explanation": "This divides CF by E (320/768) instead of E by CF." },
+        { "answer": "448°C", "explanation": "This subtracts CF from E; ΔT = E/CF = 768/320 = 2.40°C." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student calculates E = CF × ΔT and obtains 560 J. The reaction involved 0.00800 mol of limiting reagent. What is the molar enthalpy of the reaction?",
+      "correct": "70.0 kJ mol⁻¹",
+      "correctExplanation": "ΔH = E/n = 560 J / 0.00800 mol = 70 000 J mol⁻¹ = 70.0 kJ mol⁻¹.",
+      "distractors": [
+        { "answer": "4.48 kJ mol⁻¹", "explanation": "This multiplies E × n (560 × 0.008 = 4.48); ΔH = E/n, not E × n." },
+        { "answer": "70 000 kJ mol⁻¹", "explanation": "70 000 is the answer in J mol⁻¹; dividing by 1000 gives 70.0 kJ mol⁻¹." },
+        { "answer": "0.070 kJ mol⁻¹", "explanation": "This divides by 1 000 000 instead of 1000; 70 000 J mol⁻¹ = 70.0 kJ mol⁻¹." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "How does the calibration factor method differ from the q = mcΔT method for measuring reaction energy?",
+      "correct": "The CF method accounts for the heat capacity of the entire calorimeter, not just the water",
+      "correctExplanation": "In q = mcΔT, only the mass and specific heat capacity of the water are used. The CF method includes the heat absorbed by the container, stirrer, and thermometer as well.",
+      "distractors": [
+        { "answer": "The CF method does not require any temperature measurements from the experiment", "explanation": "Both methods require temperature measurements; the CF method still uses ΔT in E = CF × ΔT." },
+        { "answer": "The CF method uses a different value of ΔT than q = mcΔT for the same experiment", "explanation": "Both methods use the same ΔT from the reaction; the difference is what the ΔT is multiplied by." },
+        { "answer": "The CF method is only used for combustion reactions, not neutralisation reactions", "explanation": "The CF method can be used for any type of reaction in a calorimeter, including neutralisation and dissolution." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the energy calculation.",
+      "sentence": "With a calibration factor of 280 J °C⁻¹ and a reaction ΔT of 3.50°C, the energy released is {{blank:1}} J.",
+      "blanks": {
+        "1": {
+          "correct": "980",
+          "correctExplanation": "E = CF × ΔT = 280 × 3.50 = 980 J.",
+          "distractors": [
+            { "answer": "80.0", "explanation": "This divides CF by ΔT (280/3.50); the correct calculation multiplies them." },
+            { "answer": "283.5", "explanation": "This adds CF and ΔT; the correct calculation multiplies CF × ΔT = 980 J." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the statement about the two-step process for finding molar enthalpy.",
+      "sentence": "First, calculate the total energy using E = {{blank:1}} × ΔT, then divide E by the number of {{blank:2}} to find ΔH.",
+      "blanks": {
+        "1": {
+          "correct": "CF",
+          "correctExplanation": "The calibration factor (CF) is multiplied by the reaction's temperature change to find the total energy released.",
+          "distractors": [
+            { "answer": "m", "explanation": "Mass (m) is used in q = mcΔT; the calibration factor method uses CF × ΔT." },
+            { "answer": "V", "explanation": "Voltage (V) is used in electrical energy calculations, not in E = CF × ΔT." }
+          ]
+        },
+        "2": {
+          "correct": "moles",
+          "correctExplanation": "ΔH = E/n gives the molar enthalpy when the energy is divided by the moles of limiting reagent.",
+          "distractors": [
+            { "answer": "grams", "explanation": "Dividing by grams gives energy per gram, not molar enthalpy in kJ mol⁻¹." },
+            { "answer": "degrees", "explanation": "Dividing by degrees would give J °C⁻¹, which is the calibration factor, not molar enthalpy." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the statement about unit conversion.",
+      "sentence": "Since E = CF × ΔT gives the energy in {{blank:1}}, it must be divided by {{blank:2}} to convert to kilojoules before calculating ΔH in kJ mol⁻¹.",
+      "blanks": {
+        "1": {
+          "correct": "joules",
+          "correctExplanation": "CF is in J °C⁻¹ and ΔT in °C, so E = CF × ΔT gives energy in joules.",
+          "distractors": [
+            { "answer": "kilojoules", "explanation": "CF is in J °C⁻¹, so the energy is initially in joules and must be converted to kilojoules." },
+            { "answer": "calories", "explanation": "The SI unit used in these calculations is joules, not calories." }
+          ]
+        },
+        "2": {
+          "correct": "1000",
+          "correctExplanation": "To convert joules to kilojoules, divide by 1000 (1 kJ = 1000 J).",
+          "distractors": [
+            { "answer": "100", "explanation": "Dividing by 100 does not convert to kilojoules; 1 kJ = 1000 J." },
+            { "answer": "10", "explanation": "Dividing by 10 does not convert to kilojoules; 1 kJ = 1000 J." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "tf",
+      "question": "If a calorimeter has a larger calibration factor, the same reaction will produce a smaller temperature change.",
+      "correct": "True",
+      "correctExplanation": "A larger CF means the system absorbs more energy per degree. For the same energy released, ΔT = E/CF will be smaller when CF is larger.",
+      "distractors": [
+        { "answer": "False", "explanation": "Since ΔT = E/CF, a larger CF in the denominator produces a smaller ΔT for the same energy." }
+      ]
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "mc",
+      "question": "A calorimeter with CF = 350 J °C⁻¹ is used to measure a neutralisation reaction. The temperature rises from 21.0°C to 23.3°C. If 0.0100 mol of the limiting reagent was used, what is the molar enthalpy of neutralisation?",
+      "correct": "80.5 kJ mol⁻¹",
+      "correctExplanation": "ΔT = 23.3 − 21.0 = 2.3°C. E = 350 × 2.3 = 805 J = 0.805 kJ. ΔH = 0.805/0.0100 = 80.5 kJ mol⁻¹.",
+      "distractors": [
+        { "answer": "8.05 kJ mol⁻¹", "explanation": "This divides by 0.100 mol instead of 0.0100 mol; the correct n is 0.0100 mol." },
+        { "answer": "805 kJ mol⁻¹", "explanation": "This fails to convert joules to kilojoules; 805 J = 0.805 kJ." },
+        { "answer": "35.0 kJ mol⁻¹", "explanation": "This uses only CF/n (350/0.01) without multiplying by ΔT first." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A calorimeter is calibrated electrically: V = 6.00 V, I = 2.50 A, t = 80.0 s produces ΔT = 4.00°C. A dissolution reaction then produces ΔT = 1.80°C with 0.0200 mol of solute. What is the molar enthalpy of dissolution?",
+      "correct": "27.0 kJ mol⁻¹",
+      "correctExplanation": "CF = VIt/ΔT = (6.00 × 2.50 × 80.0)/4.00 = 1200/4.00 = 300 J °C⁻¹. E = 300 × 1.80 = 540 J = 0.540 kJ. ΔH = 0.540/0.0200 = 27.0 kJ mol⁻¹.",
+      "distractors": [
+        { "answer": "60.0 kJ mol⁻¹", "explanation": "This uses the calibration ΔT of 4.00°C for the reaction energy instead of 1.80°C." },
+        { "answer": "540 kJ mol⁻¹", "explanation": "This fails to convert 540 J to 0.540 kJ before dividing by moles." },
+        { "answer": "2.70 kJ mol⁻¹", "explanation": "This divides by 0.200 mol instead of 0.0200 mol." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Two reactions are performed in the same calorimeter (CF = 400 J °C⁻¹). Reaction A produces ΔT = 3.0°C and Reaction B produces ΔT = 1.5°C. How do the energies released compare?",
+      "correct": "Reaction A releases twice as much energy as Reaction B",
+      "correctExplanation": "E_A = 400 × 3.0 = 1200 J. E_B = 400 × 1.5 = 600 J. Reaction A releases exactly twice the energy of Reaction B.",
+      "distractors": [
+        { "answer": "Both reactions release the same energy because they use the same calorimeter", "explanation": "The energy depends on CF × ΔT; different ΔT values give different energies even in the same calorimeter." },
+        { "answer": "Reaction A releases four times as much energy as Reaction B", "explanation": "The ratio of ΔT values is 3.0/1.5 = 2, not 4; energy is proportional to ΔT." },
+        { "answer": "Reaction B releases twice as much energy as Reaction A", "explanation": "Reaction A has the larger ΔT and therefore releases more energy, not less." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A calorimeter with CF = 290 J °C⁻¹ is used to measure the dissolution of 1.49 g of KCl (M = 74.6 g mol⁻¹). The temperature drops by 1.19°C. What is the molar enthalpy of dissolution?",
+      "correct": "17.3 kJ mol⁻¹",
+      "correctExplanation": "n = 1.49/74.6 = 0.01997 mol. E = 290 × 1.19 = 345.1 J = 0.3451 kJ. ΔH = 0.3451/0.01997 = 17.3 kJ mol⁻¹.",
+      "distractors": [
+        { "answer": "231 kJ mol⁻¹", "explanation": "This uses E in joules (345.1) without converting to kJ; 345.1 J = 0.3451 kJ." },
+        { "answer": "1.73 kJ mol⁻¹", "explanation": "This divides by 0.1997 mol (incorrect n calculation); n = 1.49/74.6 = 0.01997 mol." },
+        { "answer": "345 kJ mol⁻¹", "explanation": "This uses E in joules and divides by n = 0.001; n = 1.49/74.6 = 0.01997 mol." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A reaction releases 1.20 kJ of energy in a calorimeter with CF = 300 J °C⁻¹. What temperature change would be observed?",
+      "correct": "4.00°C",
+      "correctExplanation": "E = 1.20 kJ = 1200 J. ΔT = E/CF = 1200/300 = 4.00°C.",
+      "distractors": [
+        { "answer": "0.400°C", "explanation": "This uses E = 1.20 kJ without converting to joules; 1.20 kJ = 1200 J, giving ΔT = 1200/300 = 4.00°C." },
+        { "answer": "360 000°C", "explanation": "This multiplies E by CF instead of dividing; ΔT = E/CF." },
+        { "answer": "250°C", "explanation": "This divides CF by E incorrectly; ΔT = E/CF = 1200/300 = 4.00°C." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student obtains CF = 310 J °C⁻¹ from calibration. A combustion reaction in the same calorimeter gives ΔT = 5.20°C and uses 0.0250 mol of fuel. What is the molar heat of combustion?",
+      "correct": "64.5 kJ mol⁻¹",
+      "correctExplanation": "E = CF × ΔT = 310 × 5.20 = 1612 J = 1.612 kJ. ΔH = 1.612/0.0250 = 64.5 kJ mol⁻¹.",
+      "distractors": [
+        { "answer": "1612 kJ mol⁻¹", "explanation": "This uses E in joules (1612) without converting to kJ; 1612 J = 1.612 kJ." },
+        { "answer": "40.3 kJ mol⁻¹", "explanation": "This uses E = 310 × 5.20/5.20 = 310 J incorrectly; E = CF × ΔT = 1612 J." },
+        { "answer": "6.45 kJ mol⁻¹", "explanation": "This divides by 0.250 mol instead of 0.0250 mol." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A calorimeter with CF = 340 J °C⁻¹ measures an exothermic reaction with ΔT = 2.80°C. If the student incorrectly uses CF = 280 J °C⁻¹, how does the calculated energy compare to the true value?",
+      "correct": "The calculated energy is 168 J less than the true value of 952 J",
+      "correctExplanation": "True E = 340 × 2.80 = 952 J. Incorrect E = 280 × 2.80 = 784 J. Difference = 952 − 784 = 168 J.",
+      "distractors": [
+        { "answer": "The calculated energy is 168 J more than the true value", "explanation": "Using a smaller CF gives a smaller energy value, not a larger one." },
+        { "answer": "The calculated energy is the same because ΔT is unchanged", "explanation": "E depends on both CF and ΔT; changing CF changes the calculated energy." },
+        { "answer": "The calculated energy is 60 J less than the true value", "explanation": "The difference is (340 − 280) × 2.80 = 60 × 2.80 = 168 J, not 60 J." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the multi-step calculation.",
+      "sentence": "For CF = 350 J °C⁻¹ and a reaction ΔT of 2.00°C, the energy released is {{blank:1}} J, which equals {{blank:2}} kJ.",
+      "blanks": {
+        "1": {
+          "correct": "700",
+          "correctExplanation": "E = CF × ΔT = 350 × 2.00 = 700 J.",
+          "distractors": [
+            { "answer": "175", "explanation": "This divides CF by ΔT; the correct calculation multiplies them: 350 × 2.00 = 700 J." },
+            { "answer": "352", "explanation": "This adds CF and ΔT; E = CF × ΔT = 350 × 2.00 = 700 J." }
+          ]
+        },
+        "2": {
+          "correct": "0.700",
+          "correctExplanation": "700 J ÷ 1000 = 0.700 kJ.",
+          "distractors": [
+            { "answer": "7.00", "explanation": "This divides by 100 instead of 1000; 700 J = 0.700 kJ." },
+            { "answer": "700", "explanation": "700 is the value in joules; to convert to kJ, divide by 1000." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the molar enthalpy calculation.",
+      "sentence": "A reaction in a calorimeter (CF = 300 J °C⁻¹) produces ΔT = 2.50°C with 0.0100 mol of reagent. The molar enthalpy is {{blank:1}} kJ mol⁻¹.",
+      "blanks": {
+        "1": {
+          "correct": "75.0",
+          "correctExplanation": "E = 300 × 2.50 = 750 J = 0.750 kJ. ΔH = 0.750/0.0100 = 75.0 kJ mol⁻¹.",
+          "distractors": [
+            { "answer": "7.50", "explanation": "This divides by 0.100 mol instead of 0.0100 mol; ΔH = 0.750/0.0100 = 75.0 kJ mol⁻¹." },
+            { "answer": "750", "explanation": "This is E in joules (750 J), not the molar enthalpy; converting and dividing by n gives 75.0 kJ mol⁻¹." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the rearranged formula.",
+      "sentence": "To find the temperature change when E and CF are known, rearrange E = CF × ΔT to give ΔT = {{blank:1}} / {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "E",
+          "correctExplanation": "Rearranging E = CF × ΔT gives ΔT = E/CF, so E is in the numerator.",
+          "distractors": [
+            { "answer": "CF", "explanation": "CF is in the denominator when solving for ΔT; ΔT = E/CF." },
+            { "answer": "ΔH", "explanation": "ΔH is the molar enthalpy, not a variable in ΔT = E/CF." }
+          ]
+        },
+        "2": {
+          "correct": "CF",
+          "correctExplanation": "Dividing the energy (E) by the calibration factor (CF) gives the temperature change.",
+          "distractors": [
+            { "answer": "E", "explanation": "E is in the numerator; CF is in the denominator: ΔT = E/CF." },
+            { "answer": "n", "explanation": "Moles (n) are used to calculate ΔH, not ΔT; ΔT = E/CF." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "mc",
+      "question": "A calorimeter is calibrated electrically with V = 5.00 V, I = 2.00 A, t = 60.0 s, and ΔT_cal = 1.50°C. A dissolution reaction is then performed with 0.746 g of KCl (M = 74.6 g mol⁻¹) and gives ΔT_rxn = 0.538°C. What is the experimental molar enthalpy of dissolution of KCl?",
+      "correct": "21.5 kJ mol⁻¹",
+      "correctExplanation": "CF = VIt/ΔT = (5.00 × 2.00 × 60.0)/1.50 = 400 J °C⁻¹. n = 0.746/74.6 = 0.01000 mol. E = 400 × 0.538 = 215.2 J = 0.2152 kJ. ΔH = 0.2152/0.01000 = 21.5 kJ mol⁻¹.",
+      "distractors": [
+        { "answer": "17.2 kJ mol⁻¹", "explanation": "17.2 kJ mol⁻¹ is the literature value for KCl dissolution; the experimental value from these data is 21.5 kJ mol⁻¹." },
+        { "answer": "215 kJ mol⁻¹", "explanation": "This fails to convert 215.2 J to kJ; 215.2 J = 0.2152 kJ, giving ΔH = 21.5 kJ mol⁻¹." },
+        { "answer": "2.15 kJ mol⁻¹", "explanation": "This divides by 0.100 mol instead of 0.0100 mol; n = 0.746/74.6 = 0.01000 mol." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student uses CF = 320 J °C⁻¹ and measures ΔT = 1.23°C for a neutralisation of 0.00750 mol NaOH with excess HCl. They calculate ΔH = 52.5 kJ mol⁻¹. The accepted value is 57.0 kJ mol⁻¹. What is the percentage error?",
+      "correct": "7.9%",
+      "correctExplanation": "Percentage error = |52.5 − 57.0|/57.0 × 100 = 4.5/57.0 × 100 = 7.9%.",
+      "distractors": [
+        { "answer": "8.6%", "explanation": "This divides by the experimental value (4.5/52.5 × 100 = 8.6%); percentage error uses the accepted value." },
+        { "answer": "4.5%", "explanation": "4.5 is the absolute difference in kJ mol⁻¹, not the percentage error." },
+        { "answer": "92.1%", "explanation": "This calculates 52.5/57.0 × 100 = 92.1%, which is the percentage of the accepted value, not the percentage error." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student performs calibration and obtains CF = 300 J °C⁻¹. They then measure a reaction with ΔT = 3.20°C using 0.0200 mol. A second student uses q = mcΔT with 150.0 g of water (c = 4.18 J g⁻¹ °C⁻¹) and the same ΔT. Which student calculates a larger energy value, and why?",
+      "correct": "The q = mcΔT student, because mc = 627 J °C⁻¹ is larger than CF = 300 J °C⁻¹",
+      "correctExplanation": "mc = 150.0 × 4.18 = 627 J °C⁻¹ > CF = 300 J °C⁻¹. The q = mcΔT method overestimates the system's effective heat capacity by assuming all heat goes into the water.",
+      "distractors": [
+        { "answer": "The CF student, because the calibration factor is more accurate and gives a higher result", "explanation": "CF = 300 is smaller than mc = 627, so CF × ΔT gives a smaller, more accurate energy value." },
+        { "answer": "Both students calculate the same energy because they use the same ΔT", "explanation": "The multiplier differs: CF = 300 vs mc = 627; the same ΔT gives different energies." },
+        { "answer": "The CF student, because calibration adds extra energy to the measurement", "explanation": "Calibration characterises the system; it does not add energy. CF gives a smaller energy because it is smaller than mc." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Two reactions are performed in the same calorimeter (CF = 280 J °C⁻¹). Reaction A uses 0.0100 mol and produces ΔT = 2.50°C. Reaction B uses 0.0200 mol and produces ΔT = 5.00°C. Do these reactions have the same molar enthalpy?",
+      "correct": "Yes, both give ΔH = 70.0 kJ mol⁻¹",
+      "correctExplanation": "Reaction A: E = 280 × 2.50 = 700 J = 0.700 kJ. ΔH = 0.700/0.0100 = 70.0 kJ mol⁻¹. Reaction B: E = 280 × 5.00 = 1400 J = 1.400 kJ. ΔH = 1.400/0.0200 = 70.0 kJ mol⁻¹.",
+      "distractors": [
+        { "answer": "No, Reaction B has double the molar enthalpy because it produced double the ΔT", "explanation": "Reaction B used double the moles, so the molar enthalpy (energy per mole) is the same." },
+        { "answer": "No, Reaction A has a higher molar enthalpy because it used fewer moles", "explanation": "Both reactions give the same ΔH; using fewer moles produces a proportionally smaller ΔT." },
+        { "answer": "Yes, both give ΔH = 140 kJ mol⁻¹", "explanation": "E_A = 700 J = 0.700 kJ, and ΔH = 0.700/0.0100 = 70.0, not 140 kJ mol⁻¹." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A calorimeter with CF = 350 J °C⁻¹ is used to measure an endothermic dissolution. The temperature drops from 25.0°C to 23.2°C when 0.0150 mol of solute dissolves. What is the molar enthalpy of dissolution?",
+      "correct": "42.0 kJ mol⁻¹",
+      "correctExplanation": "ΔT = |25.0 − 23.2| = 1.8°C. E = 350 × 1.8 = 630 J = 0.630 kJ. ΔH = 0.630/0.0150 = 42.0 kJ mol⁻¹ (endothermic, so positive).",
+      "distractors": [
+        { "answer": "4.20 kJ mol⁻¹", "explanation": "This divides by 0.150 mol instead of 0.0150 mol; n = 0.0150 mol." },
+        { "answer": "630 kJ mol⁻¹", "explanation": "630 is the energy in joules; converting to kJ (0.630) and dividing by n gives 42.0 kJ mol⁻¹." },
+        { "answer": "23.3 kJ mol⁻¹", "explanation": "This uses ΔT = 1.0°C (incorrect); the correct ΔT is |25.0 − 23.2| = 1.8°C." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student claims that increasing the amount of water in a calorimeter will increase the energy measured from a reaction. Evaluate this claim using the calibration factor method.",
+      "correct": "Increasing water changes CF but the calculated energy remains the same if calibration is repeated",
+      "correctExplanation": "Adding more water increases the system's heat capacity and thus CF. However, the reaction ΔT will be proportionally smaller. If calibration is redone, the new CF accounts for the extra water, and E = CF × ΔT gives the same energy.",
+      "distractors": [
+        { "answer": "The claim is correct because more water absorbs more energy from the reaction", "explanation": "The total energy released by the reaction is fixed; more water simply changes how the energy distributes, and re-calibration corrects for this." },
+        { "answer": "The claim is incorrect because the calibration factor is independent of the amount of water", "explanation": "CF depends on the entire system's heat capacity, which changes when water is added." },
+        { "answer": "The claim is correct because a larger CF always gives a larger energy value", "explanation": "A larger CF gives a smaller ΔT for the same reaction energy; E = CF × ΔT remains constant." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A calorimeter calibration gives CF = 330 J °C⁻¹. A reaction produces ΔT = 2.10°C. If the calibration was performed incorrectly and the true CF is 300 J °C⁻¹, by what percentage does the student overestimate the energy?",
+      "correct": "10%",
+      "correctExplanation": "Student's E = 330 × 2.10 = 693 J. True E = 300 × 2.10 = 630 J. Overestimate = (693 − 630)/630 × 100 = 10%.",
+      "distractors": [
+        { "answer": "9.1%", "explanation": "This divides by the student's value (63/693 × 100 = 9.1%); percentage overestimate uses the true value." },
+        { "answer": "30 J", "explanation": "30 J °C⁻¹ is the difference in CF values, not the percentage overestimate in energy." },
+        { "answer": "63%", "explanation": "63 J is the absolute difference in energy; the percentage is (63/630) × 100 = 10%." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student performs electrical calibration (V = 4.00 V, I = 3.00 A, t = 50.0 s, ΔT_cal = 2.00°C) and then measures a precipitation reaction (ΔT_rxn = 0.800°C) using 50.0 mL of 0.100 M lead(II) nitrate mixed with 50.0 mL of 0.100 M potassium iodide. What is the molar enthalpy of precipitation?",
+      "correct": "48.0 kJ mol⁻¹",
+      "correctExplanation": "CF = VIt/ΔT = (4.00 × 3.00 × 50.0)/2.00 = 300 J °C⁻¹. Pb(NO₃)₂ + 2KI → PbI₂ + 2KNO₃. n(Pb²⁺) = 0.0500 × 0.100 = 0.00500 mol; n(KI) = 0.0500 × 0.100 = 0.00500 mol; KI is limiting (needs 2:1). n(reaction) = 0.00500/2 = 0.00250 mol based on KI stoichiometry. E = 300 × 0.800 = 240 J = 0.240 kJ. ΔH = 0.240/0.00500 = 48.0 kJ mol⁻¹ per mol Pb(NO₃)₂.",
+      "distractors": [
+        { "answer": "24.0 kJ mol⁻¹", "explanation": "This divides by 0.0100 mol (total moles of both reagents) instead of moles of one specific reagent." },
+        { "answer": "96.0 kJ mol⁻¹", "explanation": "This divides by 0.00250 mol (moles of KI/2); ΔH should be reported per mole of the stated equation." },
+        { "answer": "240 kJ mol⁻¹", "explanation": "This uses E in joules (240 J) without converting to kJ; 240 J = 0.240 kJ." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the analysis of calibration factor accuracy.",
+      "sentence": "If a student uses an incorrectly high calibration factor, their calculated energy will be {{blank:1}} than the true value, and their molar enthalpy will also be {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "larger",
+          "correctExplanation": "E = CF × ΔT; a larger CF gives a larger calculated energy for the same ΔT.",
+          "distractors": [
+            { "answer": "smaller", "explanation": "A larger CF multiplied by the same ΔT gives a larger E, not smaller." },
+            { "answer": "unchanged", "explanation": "Changing CF directly changes the calculated energy." }
+          ]
+        },
+        "2": {
+          "correct": "overestimated",
+          "correctExplanation": "Since ΔH = E/n and E is overestimated, the molar enthalpy will also be overestimated.",
+          "distractors": [
+            { "answer": "underestimated", "explanation": "A larger E divided by the same n gives a larger ΔH, which is an overestimate." },
+            { "answer": "unaffected", "explanation": "ΔH depends directly on E; if E is wrong, ΔH will also be wrong." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the full calculation chain.",
+      "sentence": "For electrical calibration with E_cal = 600 J and ΔT_cal = 2.00°C, CF = {{blank:1}} J °C⁻¹. If a reaction gives ΔT = 1.60°C, then E_rxn = {{blank:2}} J.",
+      "blanks": {
+        "1": {
+          "correct": "300",
+          "correctExplanation": "CF = E_cal/ΔT_cal = 600/2.00 = 300 J °C⁻¹.",
+          "distractors": [
+            { "answer": "1200", "explanation": "This multiplies E by ΔT instead of dividing; CF = E/ΔT = 600/2.00 = 300." },
+            { "answer": "600", "explanation": "600 J is the calibration energy, not the calibration factor; CF = 600/2.00 = 300." }
+          ]
+        },
+        "2": {
+          "correct": "480",
+          "correctExplanation": "E_rxn = CF × ΔT = 300 × 1.60 = 480 J.",
+          "distractors": [
+            { "answer": "188", "explanation": "This divides CF by ΔT (300/1.60); E = CF × ΔT = 480 J." },
+            { "answer": "960", "explanation": "This uses E_cal (600) instead of CF (300) in the multiplication." }
+          ]
+        }
+      }
+    }
+  ]
+}

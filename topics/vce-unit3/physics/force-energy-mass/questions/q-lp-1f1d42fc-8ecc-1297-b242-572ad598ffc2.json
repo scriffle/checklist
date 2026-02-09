@@ -1,0 +1,495 @@
+{
+  "_link": {
+    "uuid": "lp-1f1d42fc-8ecc-1297-b242-572ad598ffc2",
+    "version": 1,
+    "contentHash": "hash-b3afdc9e",
+    "title": "I can calculate spring constant from a force-extension graph",
+    "generatedAt": "2026-02-08T15:30:00Z"
+  },
+  "toLevel2": [
+    {
+      "type": "mc",
+      "question": "What does the gradient of a force-extension graph represent for an ideal spring?",
+      "correct": "The spring constant",
+      "correctExplanation": "The gradient of a force-extension graph equals ΔF/Δx, which is the spring constant k in N/m.",
+      "distractors": [
+        { "answer": "The elastic potential energy", "explanation": "Elastic potential energy is the area under the graph, not the gradient." },
+        { "answer": "The extension of the spring", "explanation": "Extension is plotted on the x-axis; the gradient gives the spring constant." },
+        { "answer": "The work done on the spring", "explanation": "Work done is the area under the graph, not the gradient." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What are the units of the spring constant k?",
+      "correct": "N/m",
+      "correctExplanation": "Since k = F/x, the units are newtons per metre (N/m or N m⁻¹).",
+      "distractors": [
+        { "answer": "N·m", "explanation": "N·m is the unit of work or torque, not the spring constant." },
+        { "answer": "kg/m", "explanation": "kg/m is a unit of linear mass density, not the spring constant." },
+        { "answer": "J/m", "explanation": "J/m equals N, which is force, not the spring constant." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "For an ideal spring, what shape does a force-extension graph produce?",
+      "correct": "A straight line through the origin",
+      "correctExplanation": "An ideal spring obeys Hooke's law (F = kx), giving a linear graph that passes through the origin.",
+      "distractors": [
+        { "answer": "A curved line through the origin", "explanation": "A curve would indicate a non-linear relationship, not Hooke's law behaviour." },
+        { "answer": "A straight line with a y-intercept", "explanation": "For an ideal spring with no pre-load, the line passes through the origin." },
+        { "answer": "A horizontal straight line", "explanation": "A horizontal line would mean constant force regardless of extension, which is not how springs behave." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which axis is force plotted on in a standard force-extension graph?",
+      "correct": "The vertical (y) axis",
+      "correctExplanation": "By convention, force (N) is plotted on the y-axis and extension (m) on the x-axis.",
+      "distractors": [
+        { "answer": "The horizontal (x) axis", "explanation": "Extension is plotted on the x-axis; force goes on the y-axis." },
+        { "answer": "Either axis gives the same gradient", "explanation": "Swapping axes would give 1/k instead of k as the gradient." },
+        { "answer": "Force is not plotted on either axis", "explanation": "Force is always one of the two variables on a force-extension graph." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A stiffer spring will have a force-extension graph with which characteristic?",
+      "correct": "A steeper gradient",
+      "correctExplanation": "A stiffer spring has a larger spring constant k, which means a steeper gradient on the force-extension graph.",
+      "distractors": [
+        { "answer": "A shallower gradient", "explanation": "A shallower gradient means a smaller k, indicating a softer spring." },
+        { "answer": "A longer line", "explanation": "Line length depends on how far the spring is extended, not its stiffness." },
+        { "answer": "A curved shape", "explanation": "The shape is still a straight line for an ideal spring regardless of stiffness." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "The spring constant can be calculated by dividing force by extension at any point on a linear force-extension graph.",
+      "correct": "True",
+      "correctExplanation": "Since the graph is a straight line through the origin, k = F/x at any point, which equals the gradient ΔF/Δx.",
+      "distractors": [
+        { "answer": "False", "explanation": "Students may think you must always use two points, but since the line passes through the origin, any single point gives k = F/x." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "On a force-extension graph, the area under the line represents the spring constant.",
+      "correct": "False",
+      "correctExplanation": "The area under the force-extension graph represents the elastic potential energy stored in the spring. The spring constant is the gradient.",
+      "distractors": [
+        { "answer": "True", "explanation": "Students may confuse gradient and area. The gradient is the spring constant; the area is elastic PE." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the statement about how to find the spring constant from a graph.",
+      "sentence": "The spring constant is the {{blank:1}} of a force-extension graph.",
+      "blanks": {
+        "1": {
+          "correct": "gradient",
+          "correctExplanation": "k = ΔF/Δx, which is the gradient (slope) of the force-extension graph.",
+          "distractors": [
+            { "answer": "area", "explanation": "The area under the graph gives the elastic potential energy, not the spring constant." },
+            { "answer": "intercept", "explanation": "For an ideal spring the graph passes through the origin, so the intercept is zero." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the formula for the spring constant from graph data.",
+      "sentence": "k = ΔF / {{blank:1}}, measured in N/m.",
+      "blanks": {
+        "1": {
+          "correct": "Δx",
+          "correctExplanation": "The spring constant is force change divided by extension change: k = ΔF/Δx.",
+          "distractors": [
+            { "answer": "Δt", "explanation": "Δt is a change in time, not relevant to a force-extension graph." },
+            { "answer": "Δp", "explanation": "Δp is change in momentum, not used in spring constant calculations." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about what the spring constant tells us.",
+      "sentence": "A spring with a large spring constant is {{blank:1}} and requires more force per unit extension.",
+      "blanks": {
+        "1": {
+          "correct": "stiff",
+          "correctExplanation": "A large k means the spring is stiff — it resists extension and requires more force to stretch it.",
+          "distractors": [
+            { "answer": "soft", "explanation": "A soft spring has a small spring constant, not a large one." },
+            { "answer": "elastic", "explanation": "Elasticity refers to the ability to return to shape, not the stiffness measured by k." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "mc",
+      "question": "Why does the force-extension graph of an ideal spring pass through the origin?",
+      "correct": "Because no force is needed when there is zero extension",
+      "correctExplanation": "When x = 0, F = kx = 0. No restoring force exists when the spring is at its natural length.",
+      "distractors": [
+        { "answer": "Because the spring constant is zero at the start", "explanation": "The spring constant is the same at every point; it is the force that is zero at zero extension." },
+        { "answer": "Because the graph must always start at the origin", "explanation": "Not all graphs start at the origin; this one does because F = 0 when x = 0." },
+        { "answer": "Because the spring has no mass", "explanation": "The spring's mass is irrelevant to why the graph passes through the origin." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A force-extension graph shows a straight line from (0, 0) to (0.2 m, 10 N). What is the spring constant?",
+      "correct": "50 N/m",
+      "correctExplanation": "k = ΔF/Δx = 10/0.2 = 50 N/m.",
+      "distractors": [
+        { "answer": "2 N/m", "explanation": "2 = 0.2/0.1 — this divides extension by force (Δx/ΔF), which is the inverse." },
+        { "answer": "0.02 N/m", "explanation": "0.02 = 0.2/10, dividing extension by force — the calculation is inverted." },
+        { "answer": "5 N/m", "explanation": "5 results from misreading the graph values. k = 10/0.2 = 50 N/m." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Two springs A and B have force-extension graphs. Spring A has a gradient of 200 N/m and spring B has a gradient of 80 N/m. Which spring is stiffer?",
+      "correct": "Spring A",
+      "correctExplanation": "The gradient equals the spring constant k. A larger k (200 > 80) means a stiffer spring.",
+      "distractors": [
+        { "answer": "Spring B", "explanation": "Spring B has a smaller gradient (80 N/m), so it is softer, not stiffer." },
+        { "answer": "They are equally stiff", "explanation": "Different gradients mean different stiffnesses; 200 ≠ 80." },
+        { "answer": "Cannot be determined from the graph", "explanation": "The gradient directly gives k, so stiffness can be determined." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "If the gradient of a force-extension graph is calculated using two points (0.1 m, 5 N) and (0.4 m, 20 N), what is the spring constant?",
+      "correct": "50 N/m",
+      "correctExplanation": "k = ΔF/Δx = (20 − 5)/(0.4 − 0.1) = 15/0.3 = 50 N/m.",
+      "distractors": [
+        { "answer": "75 N/m", "explanation": "75 would come from an error such as 15/0.2. The correct denominator is 0.4 − 0.1 = 0.3." },
+        { "answer": "0.02 N/m", "explanation": "0.02 = 0.3/15, which divides extension change by force change — the ratio is inverted." },
+        { "answer": "25 N/m", "explanation": "25 might come from using only one point (5/0.2). The gradient uses the change in both values." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What happens to the force-extension graph if the spring exceeds its elastic limit?",
+      "correct": "The graph curves and is no longer a straight line",
+      "correctExplanation": "Beyond the elastic limit, the spring deforms permanently and no longer obeys Hooke's law, so the graph deviates from a straight line.",
+      "distractors": [
+        { "answer": "The gradient becomes negative", "explanation": "The gradient does not become negative; the graph curves but the force still increases." },
+        { "answer": "The graph becomes a horizontal line", "explanation": "The force does not stay constant; the relationship simply becomes non-linear." },
+        { "answer": "The graph resets back to the origin", "explanation": "The graph continues from where it was; exceeding the elastic limit does not reset it." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "On a force-extension graph, the gradient has units of N/m. What does the area under the graph represent and what are its units?",
+      "correct": "Elastic potential energy, measured in joules",
+      "correctExplanation": "Area = ½ × F × x = ½kx², which is elastic PE in joules (N × m = J).",
+      "distractors": [
+        { "answer": "Spring constant, measured in N/m", "explanation": "The spring constant is the gradient, not the area under the graph." },
+        { "answer": "Momentum, measured in kg m/s", "explanation": "Momentum is not related to a force-extension graph." },
+        { "answer": "Impulse, measured in N·s", "explanation": "Impulse relates to force-time graphs, not force-extension graphs." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "If a force-extension graph has a steeper gradient, the spring will extend more for the same applied force.",
+      "correct": "False",
+      "correctExplanation": "A steeper gradient means a larger k. For the same force, x = F/k will be smaller — the spring extends less.",
+      "distractors": [
+        { "answer": "True", "explanation": "Students may confuse steeper with more extension. A steeper gradient means stiffer, so less extension for the same force." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about reading a force-extension graph.",
+      "sentence": "To find the spring constant from a force-extension graph, calculate the {{blank:1}} by dividing the rise by the run.",
+      "blanks": {
+        "1": {
+          "correct": "gradient",
+          "correctExplanation": "The spring constant equals the gradient: k = rise/run = ΔF/Δx.",
+          "distractors": [
+            { "answer": "area", "explanation": "The area gives elastic potential energy, not the spring constant." },
+            { "answer": "intercept", "explanation": "The y-intercept of an ideal spring's graph is zero and does not give k." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the statement about comparing springs on a force-extension graph.",
+      "sentence": "A spring with a steeper line on a force-extension graph has a {{blank:1}} spring constant and is harder to stretch.",
+      "blanks": {
+        "1": {
+          "correct": "larger",
+          "correctExplanation": "Steeper gradient = larger k = stiffer spring that requires more force per unit extension.",
+          "distractors": [
+            { "answer": "smaller", "explanation": "A smaller k gives a shallower gradient, not a steeper one." },
+            { "answer": "negative", "explanation": "The spring constant is always positive; the negative sign is in the Hooke's law direction." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the description of the force-extension graph for an ideal spring.",
+      "sentence": "An ideal spring's force-extension graph is a straight line passing through the {{blank:1}}, confirming a linear relationship.",
+      "blanks": {
+        "1": {
+          "correct": "origin",
+          "correctExplanation": "When extension is zero, force is zero (F = kx = k × 0 = 0), so the line passes through (0, 0).",
+          "distractors": [
+            { "answer": "y-axis", "explanation": "All lines on this graph cross the y-axis, but the key feature is passing through the origin specifically." },
+            { "answer": "elastic limit", "explanation": "The elastic limit is where the graph stops being linear, not where it passes through." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "mc",
+      "question": "A spring extends from 0 to 0.25 m when a force increases linearly from 0 to 15 N. What is the spring constant?",
+      "correct": "60 N/m",
+      "correctExplanation": "k = ΔF/Δx = 15/0.25 = 60 N/m.",
+      "distractors": [
+        { "answer": "3.75 N/m", "explanation": "3.75 = 15 × 0.25, which multiplies instead of divides." },
+        { "answer": "0.017 N/m", "explanation": "0.017 = 0.25/15, which inverts the fraction." },
+        { "answer": "6 N/m", "explanation": "6 may come from misreading 0.25 m as 2.5 m. k = 15/0.25 = 60 N/m." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A force-extension graph shows data points at (0.05 m, 4 N), (0.10 m, 8 N), and (0.15 m, 12 N). What is the spring constant?",
+      "correct": "80 N/m",
+      "correctExplanation": "Using any two points: k = ΔF/Δx = (12 − 4)/(0.15 − 0.05) = 8/0.1 = 80 N/m. Alternatively, 4/0.05 = 80 N/m.",
+      "distractors": [
+        { "answer": "40 N/m", "explanation": "40 might come from using only one data point incorrectly, e.g. 4/0.1. The correct calculation gives 80." },
+        { "answer": "120 N/m", "explanation": "120 = 12/0.1, which uses the final force with a wrong denominator." },
+        { "answer": "160 N/m", "explanation": "160 = 8/0.05, which uses the force difference with a single point's extension." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A spring has a spring constant of 400 N/m. On a force-extension graph, what force corresponds to an extension of 0.08 m?",
+      "correct": "32 N",
+      "correctExplanation": "F = kx = 400 × 0.08 = 32 N.",
+      "distractors": [
+        { "answer": "5000 N", "explanation": "5000 = 400/0.08, which divides instead of multiplies." },
+        { "answer": "3.2 N", "explanation": "3.2 results from using x = 0.008 m instead of 0.08 m." },
+        { "answer": "320 N", "explanation": "320 results from using x = 0.8 m instead of 0.08 m." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student plots force-extension data and draws a line of best fit. The line passes through (0, 0) and (0.35 m, 21 N). What is the spring constant?",
+      "correct": "60 N/m",
+      "correctExplanation": "k = ΔF/Δx = 21/0.35 = 60 N/m.",
+      "distractors": [
+        { "answer": "7.35 N/m", "explanation": "7.35 = 21 × 0.35, which multiplies the values instead of dividing." },
+        { "answer": "0.017 N/m", "explanation": "0.017 = 0.35/21, which inverts the ratio." },
+        { "answer": "42 N/m", "explanation": "42 might come from misreading the extension as 0.5 m. k = 21/0.35 = 60." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Two springs are tested and their force-extension graphs plotted. Spring P reaches 20 N at 0.1 m extension. Spring Q reaches 20 N at 0.4 m extension. What is the ratio k_P : k_Q?",
+      "correct": "4 : 1",
+      "correctExplanation": "k_P = 20/0.1 = 200 N/m. k_Q = 20/0.4 = 50 N/m. Ratio = 200:50 = 4:1.",
+      "distractors": [
+        { "answer": "1 : 4", "explanation": "1:4 is the inverse ratio; spring P is stiffer, so k_P > k_Q." },
+        { "answer": "2 : 1", "explanation": "2:1 would require the extensions to differ by a factor of 2, not 4." },
+        { "answer": "1 : 2", "explanation": "The extension ratio is 1:4 (0.1:0.4), making the spring constant ratio 4:1, not 1:2." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A 2.5 kg mass hangs from a spring and stretches it by 0.20 m. What is the spring constant? (g = 9.8 m/s²)",
+      "correct": "122.5 N/m",
+      "correctExplanation": "At equilibrium, F = mg = 2.5 × 9.8 = 24.5 N. k = F/x = 24.5/0.20 = 122.5 N/m.",
+      "distractors": [
+        { "answer": "12.5 N/m", "explanation": "12.5 = 2.5/0.2, which uses mass instead of weight (forgetting to multiply by g)." },
+        { "answer": "49 N/m", "explanation": "49 = 24.5 × 0.2 × 10, which multiplies rather than divides by the extension." },
+        { "answer": "245 N/m", "explanation": "245 = 24.5/0.1, which uses the wrong extension value." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student reads two points from a force-extension graph: (0.12 m, 6 N) and (0.32 m, 16 N). What spring constant does this give?",
+      "correct": "50 N/m",
+      "correctExplanation": "k = ΔF/Δx = (16 − 6)/(0.32 − 0.12) = 10/0.20 = 50 N/m.",
+      "distractors": [
+        { "answer": "34 N/m", "explanation": "34 might come from (16 − 6)/(0.32 − 0.02). The correct Δx is 0.32 − 0.12 = 0.20." },
+        { "answer": "100 N/m", "explanation": "100 = 10/0.10, using only half the extension change." },
+        { "answer": "25 N/m", "explanation": "25 = 10/0.40, using the sum of the x-values instead of the difference." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Calculate the spring constant from the given graph data.",
+      "sentence": "A force-extension graph passes through (0, 0) and (0.4 m, 24 N). The spring constant is k = 24 / 0.4 = {{blank:1}} N/m.",
+      "blanks": {
+        "1": {
+          "correct": "60",
+          "correctExplanation": "k = ΔF/Δx = 24/0.4 = 60 N/m.",
+          "distractors": [
+            { "answer": "9.6", "explanation": "9.6 = 24 × 0.4, which multiplies instead of dividing." },
+            { "answer": "6", "explanation": "6 results from misplacing the decimal point. 24/0.4 = 60, not 6." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Use the force-extension data to find the extension.",
+      "sentence": "A spring with k = 150 N/m has a force of 30 N applied. The extension is x = 30 / 150 = {{blank:1}} m.",
+      "blanks": {
+        "1": {
+          "correct": "0.2",
+          "correctExplanation": "x = F/k = 30/150 = 0.2 m.",
+          "distractors": [
+            { "answer": "5", "explanation": "5 = 150/30, which divides k by F instead of F by k." },
+            { "answer": "4500", "explanation": "4500 = 150 × 30, which multiplies instead of dividing." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the calculation comparing two springs.",
+      "sentence": "Spring A has k = 300 N/m and spring B has k = 100 N/m. Spring A is {{blank:1}} times stiffer than spring B.",
+      "blanks": {
+        "1": {
+          "correct": "3",
+          "correctExplanation": "The ratio of spring constants is 300/100 = 3, so spring A is 3 times stiffer.",
+          "distractors": [
+            { "answer": "200", "explanation": "200 = 300 − 100, which is the difference, not the ratio." },
+            { "answer": "0.33", "explanation": "0.33 = 100/300, which gives how many times softer A is than B." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "mc",
+      "question": "A spring is tested by hanging masses and measuring extension. The results are: (0.5 kg, 0.04 m), (1.0 kg, 0.08 m), (1.5 kg, 0.12 m). What is the spring constant? (g = 9.8 m/s²)",
+      "correct": "122.5 N/m",
+      "correctExplanation": "Using the gradient: ΔF = (1.5 − 0.5) × 9.8 = 9.8 N, Δx = 0.12 − 0.04 = 0.08 m. k = 9.8/0.08 = 122.5 N/m. Alternatively, F = 0.5 × 9.8 = 4.9 N at x = 0.04 m gives k = 4.9/0.04 = 122.5 N/m.",
+      "distractors": [
+        { "answer": "12.5 N/m", "explanation": "12.5 = 1.0/0.08, which uses mass (kg) instead of weight (N) in the calculation." },
+        { "answer": "245 N/m", "explanation": "245 = 9.8/0.04, which uses ΔF from a 1 kg change with Δx from a 0.5 kg change." },
+        { "answer": "98 N/m", "explanation": "98 = 9.8/0.1, which uses an incorrect extension change." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A force-extension graph shows two springs. Spring X has a gradient of 250 N/m and spring Y has a gradient of 100 N/m. If both springs are extended by 0.06 m, what is the difference in force applied?",
+      "correct": "9 N",
+      "correctExplanation": "F_X = 250 × 0.06 = 15 N. F_Y = 100 × 0.06 = 6 N. Difference = 15 − 6 = 9 N.",
+      "distractors": [
+        { "answer": "150 N", "explanation": "150 = 250 − 100, which is the difference in spring constants, not the force difference." },
+        { "answer": "21 N", "explanation": "21 = 15 + 6, which adds the forces instead of finding the difference." },
+        { "answer": "0.9 N", "explanation": "0.9 results from a decimal error. (250 − 100) × 0.06 = 9 N." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student's force-extension data gives the points (0.02 m, 3.1 N), (0.05 m, 7.4 N), (0.08 m, 12.2 N), and (0.11 m, 16.5 N). Using the first and last data points, what is the spring constant to 3 significant figures?",
+      "correct": "149 N/m",
+      "correctExplanation": "k = ΔF/Δx = (16.5 − 3.1)/(0.11 − 0.02) = 13.4/0.09 = 148.9 ≈ 149 N/m.",
+      "distractors": [
+        { "answer": "150 N/m", "explanation": "150 is a rounded value. The precise calculation gives 148.9, which rounds to 149 to 3 significant figures." },
+        { "answer": "143 N/m", "explanation": "143 = (12.2 − 3.1)/(0.08 − 0.02) = 9.1/0.06 ≈ 151.7 — this uses middle points and gives a different result." },
+        { "answer": "155 N/m", "explanation": "155 = 3.1/0.02 = 155, which uses only the first point. The gradient from the full range is more accurate." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Two identical springs each with k = 200 N/m are connected in series (end to end). A force-extension graph is plotted for the combination. What is the effective spring constant (gradient)?",
+      "correct": "100 N/m",
+      "correctExplanation": "For springs in series: 1/k_eff = 1/k₁ + 1/k₂ = 1/200 + 1/200 = 2/200. So k_eff = 200/2 = 100 N/m.",
+      "distractors": [
+        { "answer": "400 N/m", "explanation": "400 would be correct for springs in parallel (k₁ + k₂), not in series." },
+        { "answer": "200 N/m", "explanation": "200 is the individual spring constant. In series, each spring extends, giving a lower effective k." },
+        { "answer": "50 N/m", "explanation": "50 = 200/4, which applies the wrong formula for combining springs." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A non-ideal spring produces a curved force-extension graph. At 0.1 m extension the tangent has a gradient of 40 N/m, and at 0.3 m the tangent has a gradient of 80 N/m. What does this tell us?",
+      "correct": "The spring gets stiffer as it is extended further",
+      "correctExplanation": "The gradient (local spring constant) increases from 40 to 80 N/m as extension increases, showing the spring becomes stiffer.",
+      "distractors": [
+        { "answer": "The spring gets softer as it extends", "explanation": "The gradient increases, meaning more force per unit extension — the spring gets stiffer, not softer." },
+        { "answer": "The spring obeys Hooke's law", "explanation": "A changing gradient means the spring does not obey Hooke's law, which requires a constant gradient." },
+        { "answer": "The spring has reached its elastic limit", "explanation": "The elastic limit causes permanent deformation; this spring simply has a non-linear stiffness." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A car suspension spring compresses 0.03 m when a 60 kg person sits on the corner it supports. What is the spring constant, and how much additional compression occurs when a 90 kg person sits there instead? (g = 9.8 m/s²)",
+      "correct": "k = 19 600 N/m; additional compression = 0.015 m",
+      "correctExplanation": "k = mg/x = (60 × 9.8)/0.03 = 588/0.03 = 19 600 N/m. For 90 kg: x = (90 × 9.8)/19 600 = 882/19 600 = 0.045 m. Additional = 0.045 − 0.03 = 0.015 m.",
+      "distractors": [
+        { "answer": "k = 19 600 N/m; additional compression = 0.045 m", "explanation": "0.045 m is the total compression for 90 kg, not the additional compression beyond 0.03 m." },
+        { "answer": "k = 2000 N/m; additional compression = 0.147 m", "explanation": "2000 = 60/0.03, which uses mass instead of weight." },
+        { "answer": "k = 19 600 N/m; additional compression = 0.030 m", "explanation": "0.030 m would mean the 90 kg person compresses it by double, but 90/60 = 1.5, not 2." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A force-extension graph for a spring shows a linear region from 0 to 0.15 m, then curves. A student calculates k using points (0.05 m, 6 N) and (0.20 m, 30 N). Why is this spring constant value unreliable?",
+      "correct": "One data point (0.20 m) is beyond the elastic limit where Hooke's law no longer applies",
+      "correctExplanation": "The linear region ends at 0.15 m. Using a point at 0.20 m includes the non-linear region, making the gradient calculation unreliable.",
+      "distractors": [
+        { "answer": "The gradient cannot be found from only two points", "explanation": "Two points are sufficient to calculate a gradient; the issue is that one point lies outside the linear region." },
+        { "answer": "The student should use the origin instead", "explanation": "Using the origin is valid but not required. The real issue is using a point beyond the elastic limit." },
+        { "answer": "The force values are too large", "explanation": "The magnitude of force is not the issue; the problem is that the graph is no longer linear at 0.20 m." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A spring extends 0.16 m under a 50 N force. A second identical spring is connected in parallel (side by side) and the same 50 N force is applied. What is the extension of the parallel combination?",
+      "correct": "0.08 m",
+      "correctExplanation": "Single spring: k = 50/0.16 = 312.5 N/m. Parallel: k_eff = 2 × 312.5 = 625 N/m. Extension = 50/625 = 0.08 m.",
+      "distractors": [
+        { "answer": "0.16 m", "explanation": "0.16 m is the extension for one spring alone. Two in parallel share the force, halving the extension." },
+        { "answer": "0.32 m", "explanation": "0.32 m would be the extension if the springs were in series (doubling extension), not parallel." },
+        { "answer": "0.04 m", "explanation": "0.04 m = 0.16/4, which would require four springs in parallel, not two." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Use graph data to calculate the spring constant.",
+      "sentence": "A force-extension graph has a linear region from (0.02 m, 3 N) to (0.14 m, 21 N). The spring constant is k = (21 − 3) / (0.14 − 0.02) = 18 / 0.12 = {{blank:1}} N/m.",
+      "blanks": {
+        "1": {
+          "correct": "150",
+          "correctExplanation": "k = ΔF/Δx = 18/0.12 = 150 N/m.",
+          "distractors": [
+            { "answer": "2.16", "explanation": "2.16 = 18 × 0.12, which multiplies instead of dividing." },
+            { "answer": "15", "explanation": "15 results from a decimal error. 18/0.12 = 150, not 15." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Determine the extension from the force-extension relationship.",
+      "sentence": "A spring with k = 500 N/m supports a 4 kg mass. The weight is F = 4 × 9.8 = 39.2 N. The extension is x = 39.2 / 500 = {{blank:1}} m.",
+      "blanks": {
+        "1": {
+          "correct": "0.0784",
+          "correctExplanation": "x = F/k = 39.2/500 = 0.0784 m.",
+          "distractors": [
+            { "answer": "0.008", "explanation": "0.008 = 4/500, which uses mass instead of weight." },
+            { "answer": "19600", "explanation": "19600 = 500 × 39.2, which multiplies instead of dividing." }
+          ]
+        }
+      }
+    }
+  ]
+}

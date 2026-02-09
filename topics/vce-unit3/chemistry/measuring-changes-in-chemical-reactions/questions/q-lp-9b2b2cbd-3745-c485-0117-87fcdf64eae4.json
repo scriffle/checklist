@@ -1,0 +1,559 @@
+{
+  "_link": {
+    "uuid": "lp-9b2b2cbd-3745-c485-0117-87fcdf64eae4",
+    "version": 1,
+    "contentHash": "hash-17ecba01",
+    "title": "I can perform mass-mass stoichiometry calculations for combustion products",
+    "generatedAt": "2026-02-08T13:00:00Z"
+  },
+  "toLevel2": [
+    {
+      "type": "mc",
+      "question": "What is the first step in a mass-mass stoichiometry calculation?",
+      "correct": "Convert the given mass of the known substance to moles using n = m/M",
+      "correctExplanation": "Mass-mass stoichiometry begins by converting the mass of the known substance to moles, because mole ratios from the balanced equation are needed for the next step.",
+      "distractors": [
+        { "answer": "Write the products of the reaction and their masses", "explanation": "Product masses are calculated at the end; the first step is converting given mass to moles." },
+        { "answer": "Balance the equation by adjusting the masses on both sides", "explanation": "Equations are balanced using coefficients (moles), not masses; mass-to-moles conversion comes first." },
+        { "answer": "Multiply the mass by the molar heat of combustion", "explanation": "Multiplying by ΔH gives energy; mass-mass stoichiometry converts mass to moles first." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What formula is used to convert mass to moles?",
+      "correct": "n = m / M",
+      "correctExplanation": "The number of moles (n) equals the mass in grams (m) divided by the molar mass (M) in g mol⁻¹.",
+      "distractors": [
+        { "answer": "n = M / m", "explanation": "This inverts the formula; n = m/M divides mass by molar mass." },
+        { "answer": "n = m × M", "explanation": "Multiplying mass by molar mass does not give moles; n = m/M." },
+        { "answer": "n = m − M", "explanation": "Subtracting molar mass from mass is not meaningful; n = m/M." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "After finding the moles of a known substance, what do you use to find the moles of an unknown substance?",
+      "correct": "The mole ratio from the balanced equation",
+      "correctExplanation": "The coefficients in the balanced equation provide the mole ratio between reactants and products, allowing conversion from known to unknown moles.",
+      "distractors": [
+        { "answer": "The mass ratio of the two substances", "explanation": "Mass ratios are not directly used; mole ratios from the balanced equation are needed." },
+        { "answer": "The density of the unknown substance", "explanation": "Density relates mass to volume, not moles to moles; mole ratios are from the equation." },
+        { "answer": "The enthalpy change of the reaction", "explanation": "Enthalpy relates to energy, not to converting between moles of different substances." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What formula converts moles of a product back to mass?",
+      "correct": "m = n × M",
+      "correctExplanation": "Mass equals the number of moles multiplied by the molar mass of the substance.",
+      "distractors": [
+        { "answer": "m = n / M", "explanation": "Dividing moles by molar mass gives a different quantity; m = n × M gives mass in grams." },
+        { "answer": "m = M / n", "explanation": "This inverts the relationship; m = n × M multiplies moles by molar mass." },
+        { "answer": "m = n + M", "explanation": "Adding moles and molar mass is not meaningful; m = n × M gives mass." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "In the three-step mass-mass stoichiometry process, what is the correct order?",
+      "correct": "Mass → moles (known) → moles (unknown) → mass (unknown)",
+      "correctExplanation": "Step 1: Convert known mass to moles (n = m/M). Step 2: Use mole ratio to find unknown moles. Step 3: Convert unknown moles to mass (m = n × M).",
+      "distractors": [
+        { "answer": "Moles → mass → mole ratio → mass", "explanation": "The first step is mass to moles, not moles to mass." },
+        { "answer": "Mass → mole ratio → mass directly", "explanation": "Mole ratios convert between moles, not masses directly; mass must first be converted to moles." },
+        { "answer": "Mass → energy → moles → mass", "explanation": "Energy is not part of mass-mass stoichiometry; the steps are mass → moles → mole ratio → mass." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the first step of a mass-mass calculation.",
+      "sentence": "To convert mass to moles, divide the {{blank:1}} of the substance by its {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "mass",
+          "correctExplanation": "The mass (m) in grams is the numerator in n = m/M.",
+          "distractors": [
+            { "answer": "volume", "explanation": "Volume is used in mass-volume stoichiometry; here we use mass in the formula n = m/M." },
+            { "answer": "moles", "explanation": "Moles is what we are calculating, not what we divide; mass is divided by molar mass." }
+          ]
+        },
+        "2": {
+          "correct": "molar mass",
+          "correctExplanation": "The molar mass (M) in g mol⁻¹ is the denominator in n = m/M.",
+          "distractors": [
+            { "answer": "density", "explanation": "Density relates mass to volume; molar mass converts mass to moles." },
+            { "answer": "coefficient", "explanation": "The coefficient is used in the mole ratio step, not in converting mass to moles." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the final step of a mass-mass calculation.",
+      "sentence": "To convert moles of the product back to mass, {{blank:1}} the moles by the product's {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "multiply",
+          "correctExplanation": "m = n × M: moles are multiplied by the molar mass to obtain mass in grams.",
+          "distractors": [
+            { "answer": "divide", "explanation": "Dividing moles by molar mass gives n/M, which is not mass; m = n × M." },
+            { "answer": "subtract", "explanation": "Subtracting is not part of the conversion; m = n × M multiplies." }
+          ]
+        },
+        "2": {
+          "correct": "molar mass",
+          "correctExplanation": "The molar mass (M) converts moles back to grams using m = n × M.",
+          "distractors": [
+            { "answer": "coefficient", "explanation": "The coefficient gives the mole ratio; molar mass converts moles to grams." },
+            { "answer": "density", "explanation": "Density converts between mass and volume; molar mass converts moles to grams." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the statement about mole ratios.",
+      "sentence": "The mole ratio used in stoichiometry comes from the {{blank:1}} in the balanced chemical equation.",
+      "blanks": {
+        "1": {
+          "correct": "coefficients",
+          "correctExplanation": "The coefficients in front of each substance in the balanced equation provide the mole ratios between reactants and products.",
+          "distractors": [
+            { "answer": "subscripts", "explanation": "Subscripts define the molecular formula of each substance, not the ratio between substances." },
+            { "answer": "masses", "explanation": "Masses are not directly shown in balanced equations; coefficients provide mole ratios." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "tf",
+      "question": "In mass-mass stoichiometry, you can directly convert the mass of a reactant to the mass of a product using mole ratios alone.",
+      "correct": "False",
+      "correctExplanation": "Mass must first be converted to moles, then the mole ratio is applied, and finally moles are converted back to mass. Direct mass-to-mass conversion using mole ratios alone is incorrect.",
+      "distractors": [
+        { "answer": "True", "explanation": "Mole ratios work with moles, not masses; mass must be converted to moles first using n = m/M." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "The molar mass of CO₂ is 44.0 g mol⁻¹.",
+      "correct": "True",
+      "correctExplanation": "M(CO₂) = 12.0 (C) + 2 × 16.0 (O) = 44.0 g mol⁻¹.",
+      "distractors": [
+        { "answer": "False", "explanation": "The molar mass of CO₂ is 12.0 + 32.0 = 44.0 g mol⁻¹, which is correct." }
+      ]
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "mc",
+      "question": "Propane combusts: C₃H₈ + 5O₂ → 3CO₂ + 4H₂O. What is the mole ratio of propane to carbon dioxide?",
+      "correct": "1 : 3",
+      "correctExplanation": "The coefficients show 1 mol C₃H₈ produces 3 mol CO₂, giving a 1:3 ratio.",
+      "distractors": [
+        { "answer": "3 : 1", "explanation": "This reverses the ratio; 1 mol propane produces 3 mol CO₂, so it is 1:3." },
+        { "answer": "1 : 5", "explanation": "1:5 is the ratio of propane to O₂, not CO₂." },
+        { "answer": "1 : 4", "explanation": "1:4 is the ratio of propane to H₂O, not CO₂." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "How many grams of CO₂ are produced from burning 4.4 g of propane (M = 44.0 g mol⁻¹)? C₃H₈ + 5O₂ → 3CO₂ + 4H₂O",
+      "correct": "13.2 g",
+      "correctExplanation": "n(C₃H₈) = 4.4/44.0 = 0.10 mol. Mole ratio 1:3 → n(CO₂) = 0.30 mol. m(CO₂) = 0.30 × 44.0 = 13.2 g.",
+      "distractors": [
+        { "answer": "4.4 g", "explanation": "4.4 g is the mass of propane, not CO₂; the mole ratio and molar mass conversion give 13.2 g." },
+        { "answer": "44.0 g", "explanation": "44.0 g is the mass of 1 mol of CO₂; only 0.30 mol is produced, giving 13.2 g." },
+        { "answer": "0.30 g", "explanation": "0.30 is the moles of CO₂; m = 0.30 × 44.0 = 13.2 g." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Methane combusts: CH₄ + 2O₂ → CO₂ + 2H₂O. How many grams of H₂O are produced from 8.0 g of methane (M = 16.0 g mol⁻¹)?",
+      "correct": "18.0 g",
+      "correctExplanation": "n(CH₄) = 8.0/16.0 = 0.50 mol. Ratio 1:2 → n(H₂O) = 1.0 mol. m(H₂O) = 1.0 × 18.0 = 18.0 g.",
+      "distractors": [
+        { "answer": "9.0 g", "explanation": "9.0 g assumes a 1:1 ratio; the ratio CH₄:H₂O is 1:2, giving 1.0 mol H₂O." },
+        { "answer": "36.0 g", "explanation": "36.0 g assumes 2 mol CH₄; only 0.50 mol is available from 8.0 g." },
+        { "answer": "16.0 g", "explanation": "16.0 g is the molar mass of methane; m(H₂O) = 1.0 × 18.0 = 18.0 g." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Butane combusts: 2C₄H₁₀ + 13O₂ → 8CO₂ + 10H₂O. What mass of CO₂ is produced from 11.6 g of butane (M = 58.0 g mol⁻¹)?",
+      "correct": "35.2 g",
+      "correctExplanation": "n(C₄H₁₀) = 11.6/58.0 = 0.200 mol. Ratio 2:8 = 1:4 → n(CO₂) = 0.200 × 4 = 0.800 mol. m(CO₂) = 0.800 × 44.0 = 35.2 g.",
+      "distractors": [
+        { "answer": "17.6 g", "explanation": "This uses a 1:2 ratio instead of 1:4; the balanced equation gives 2C₄H₁₀ : 8CO₂ = 1:4." },
+        { "answer": "70.4 g", "explanation": "This uses a 1:8 ratio (without simplifying from 2:8); per mole of butane, the ratio is 1:4." },
+        { "answer": "44.0 g", "explanation": "44.0 g is the mass of 1 mol CO₂; 0.800 mol gives 35.2 g." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What is the molar mass of water (H₂O)?",
+      "correct": "18.0 g mol⁻¹",
+      "correctExplanation": "M(H₂O) = 2 × 1.0 (H) + 16.0 (O) = 18.0 g mol⁻¹.",
+      "distractors": [
+        { "answer": "16.0 g mol⁻¹", "explanation": "16.0 is the molar mass of oxygen (O); water also has 2 hydrogen atoms, giving 18.0." },
+        { "answer": "2.0 g mol⁻¹", "explanation": "2.0 is the molar mass of H₂; water is H₂O with molar mass 18.0." },
+        { "answer": "20.0 g mol⁻¹", "explanation": "This incorrectly adds the atomic numbers; M(H₂O) = 2(1.0) + 16.0 = 18.0." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Ethanol combusts: C₂H₅OH + 3O₂ → 2CO₂ + 3H₂O. If 23.0 g of ethanol (M = 46.0 g mol⁻¹) is burned, what mass of CO₂ is produced?",
+      "correct": "44.0 g",
+      "correctExplanation": "n(C₂H₅OH) = 23.0/46.0 = 0.500 mol. Ratio 1:2 → n(CO₂) = 1.00 mol. m(CO₂) = 1.00 × 44.0 = 44.0 g.",
+      "distractors": [
+        { "answer": "22.0 g", "explanation": "This uses a 1:1 ratio; the balanced equation shows 1:2 for ethanol to CO₂." },
+        { "answer": "88.0 g", "explanation": "This uses 1.00 mol ethanol; only 0.500 mol is available from 23.0 g." },
+        { "answer": "66.0 g", "explanation": "This uses a 1:3 ratio (the H₂O ratio, not CO₂); ethanol:CO₂ = 1:2." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the mass-mass calculation for methane combustion.",
+      "sentence": "For 32.0 g of CH₄ (M = 16.0), n = {{blank:1}} mol. Using the ratio CH₄:CO₂ = 1:1, n(CO₂) = {{blank:2}} mol.",
+      "blanks": {
+        "1": {
+          "correct": "2.00",
+          "correctExplanation": "n = m/M = 32.0/16.0 = 2.00 mol.",
+          "distractors": [
+            { "answer": "0.500", "explanation": "0.500 = 16.0/32.0 which inverts the formula; n = m/M = 32.0/16.0 = 2.00." },
+            { "answer": "32.0", "explanation": "32.0 is the mass in grams, not the moles." }
+          ]
+        },
+        "2": {
+          "correct": "2.00",
+          "correctExplanation": "CH₄ : CO₂ = 1 : 1, so 2.00 mol CH₄ produces 2.00 mol CO₂.",
+          "distractors": [
+            { "answer": "4.00", "explanation": "This uses a 1:2 ratio; the balanced equation shows CH₄ + 2O₂ → CO₂ + 2H₂O, giving 1:1 for CH₄:CO₂." },
+            { "answer": "1.00", "explanation": "1.00 mol CO₂ would come from 1.00 mol CH₄; 2.00 mol CH₄ gives 2.00 mol CO₂." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the final conversion step.",
+      "sentence": "If 0.30 mol of CO₂ is produced and M(CO₂) = 44.0 g mol⁻¹, the mass of CO₂ is {{blank:1}} g.",
+      "blanks": {
+        "1": {
+          "correct": "13.2",
+          "correctExplanation": "m = n × M = 0.30 × 44.0 = 13.2 g.",
+          "distractors": [
+            { "answer": "147", "explanation": "This divides M by n (44.0/0.30 = 147); m = n × M = 13.2 g." },
+            { "answer": "44.3", "explanation": "This adds n and M; m = n × M = 0.30 × 44.0 = 13.2 g." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the statement about the stoichiometric process.",
+      "sentence": "In mass-mass stoichiometry, the mole {{blank:1}} from the balanced equation connects the known substance to the {{blank:2}} substance.",
+      "blanks": {
+        "1": {
+          "correct": "ratio",
+          "correctExplanation": "The mole ratio (from the equation coefficients) converts between moles of different substances.",
+          "distractors": [
+            { "answer": "mass", "explanation": "Mole ratios are used, not mass ratios; masses are converted to moles first." },
+            { "answer": "fraction", "explanation": "The term used is mole ratio, derived from equation coefficients." }
+          ]
+        },
+        "2": {
+          "correct": "unknown",
+          "correctExplanation": "The mole ratio connects the moles of the known substance to the moles of the unknown (target) substance.",
+          "distractors": [
+            { "answer": "known", "explanation": "The known substance is what you start with; the ratio connects to the unknown substance you are solving for." },
+            { "answer": "balanced", "explanation": "The balanced equation provides the ratio; it does not refer to a substance." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "tf",
+      "question": "In the combustion of propane (C₃H₈ + 5O₂ → 3CO₂ + 4H₂O), 1 mole of propane produces 3 moles of CO₂.",
+      "correct": "True",
+      "correctExplanation": "The coefficients show that 1 mol C₃H₈ produces 3 mol CO₂.",
+      "distractors": [
+        { "answer": "False", "explanation": "The balanced equation clearly shows the ratio C₃H₈ : CO₂ = 1 : 3." }
+      ]
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "mc",
+      "question": "How many grams of CO₂ are produced from the complete combustion of 58.0 g of butane (M = 58.0 g mol⁻¹)? 2C₄H₁₀ + 13O₂ → 8CO₂ + 10H₂O",
+      "correct": "176 g",
+      "correctExplanation": "n(C₄H₁₀) = 58.0/58.0 = 1.00 mol. Ratio 2:8 = 1:4 → n(CO₂) = 4.00 mol. m(CO₂) = 4.00 × 44.0 = 176 g.",
+      "distractors": [
+        { "answer": "352 g", "explanation": "This uses a 1:8 ratio without simplifying from 2:8; per mole of butane, the ratio is 1:4." },
+        { "answer": "44.0 g", "explanation": "44.0 g is the mass of 1 mol CO₂; 4.00 mol gives 176 g." },
+        { "answer": "88.0 g", "explanation": "This uses a 1:2 ratio; the correct ratio is 1:4 for butane to CO₂." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Octane combusts: 2C₈H₁₈ + 25O₂ → 16CO₂ + 18H₂O. What mass of H₂O is produced from 114 g of octane (M = 114.0 g mol⁻¹)?",
+      "correct": "162 g",
+      "correctExplanation": "n(C₈H₁₈) = 114/114.0 = 1.00 mol. Ratio 2:18 = 1:9 → n(H₂O) = 9.00 mol. m(H₂O) = 9.00 × 18.0 = 162 g.",
+      "distractors": [
+        { "answer": "324 g", "explanation": "This uses a 1:18 ratio without simplifying from 2:18; per mole of octane, the ratio is 1:9." },
+        { "answer": "18.0 g", "explanation": "18.0 g is the mass of 1 mol H₂O; 9.00 mol gives 162 g." },
+        { "answer": "81.0 g", "explanation": "This uses a 1:4.5 ratio; the correct simplified ratio is 2:18 = 1:9." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A car burns 5.00 kg of octane (M = 114.0 g mol⁻¹). What mass of CO₂ is emitted? 2C₈H₁₈ + 25O₂ → 16CO₂ + 18H₂O",
+      "correct": "15.4 kg",
+      "correctExplanation": "n = 5000/114.0 = 43.86 mol. Ratio 1:8 → n(CO₂) = 350.9 mol. m = 350.9 × 44.0 = 15 440 g = 15.4 kg.",
+      "distractors": [
+        { "answer": "1.54 kg", "explanation": "This divides by 10; m = 350.9 × 44.0 = 15 440 g = 15.4 kg." },
+        { "answer": "5.00 kg", "explanation": "5.00 kg is the mass of octane burned, not the CO₂ produced; CO₂ mass is larger due to added oxygen." },
+        { "answer": "44.0 kg", "explanation": "This uses 1000 mol (5000/5) × 44; n = 5000/114 = 43.86 mol of octane." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Given CH₄ + 2O₂ → CO₂ + 2H₂O, what mass of oxygen is needed to completely combust 48.0 g of methane (M = 16.0)?",
+      "correct": "192 g",
+      "correctExplanation": "n(CH₄) = 48.0/16.0 = 3.00 mol. Ratio 1:2 → n(O₂) = 6.00 mol. m(O₂) = 6.00 × 32.0 = 192 g.",
+      "distractors": [
+        { "answer": "96.0 g", "explanation": "This uses a 1:1 ratio; CH₄:O₂ = 1:2, giving 6.00 mol O₂ = 192 g." },
+        { "answer": "64.0 g", "explanation": "This uses 2.00 mol O₂; the ratio gives 6.00 mol O₂ for 3.00 mol CH₄." },
+        { "answer": "32.0 g", "explanation": "32.0 g is the mass of 1 mol O₂; 6.00 mol requires 192 g." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Pentane combusts: C₅H₁₂ + 8O₂ → 5CO₂ + 6H₂O. If 36.0 g each of CO₂ and H₂O are produced, how many grams of pentane were burned?",
+      "correct": "This scenario is impossible — 36.0 g CO₂ and 36.0 g H₂O do not satisfy the 5:6 mole ratio",
+      "correctExplanation": "n(CO₂) = 36.0/44.0 = 0.818 mol. n(H₂O) = 36.0/18.0 = 2.00 mol. Ratio would need to be 5:6 (0.818:0.982), but 0.818:2.00 is approximately 1:2.4, not 5:6. The given masses are inconsistent.",
+      "distractors": [
+        { "answer": "7.2 g of pentane", "explanation": "This assumes the CO₂ data is correct and ignores the inconsistency with H₂O; both products must satisfy the ratio." },
+        { "answer": "11.8 g of pentane", "explanation": "This assumes the H₂O data is correct; however, the CO₂ and H₂O masses are inconsistent with the balanced equation." },
+        { "answer": "72.0 g of pentane", "explanation": "This adds the two product masses; the scenario is actually impossible due to inconsistent mole ratios." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What total mass of products (CO₂ + H₂O) is formed from combusting 16.0 g of methane (M = 16.0)? CH₄ + 2O₂ → CO₂ + 2H₂O",
+      "correct": "80.0 g",
+      "correctExplanation": "n(CH₄) = 1.00 mol. n(CO₂) = 1.00 mol → 44.0 g. n(H₂O) = 2.00 mol → 36.0 g. Total = 44.0 + 36.0 = 80.0 g.",
+      "distractors": [
+        { "answer": "44.0 g", "explanation": "44.0 g is only the CO₂ mass; the total includes H₂O as well: 44.0 + 36.0 = 80.0 g." },
+        { "answer": "62.0 g", "explanation": "This adds CO₂ (44.0) + H₂O (18.0) for 1 mol H₂O; there are 2 mol H₂O = 36.0 g." },
+        { "answer": "16.0 g", "explanation": "16.0 g is the mass of methane burned; the products have a larger total mass because oxygen is also consumed." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Ethanol combusts: C₂H₅OH + 3O₂ → 2CO₂ + 3H₂O. What mass of H₂O is produced from 92.0 g of ethanol (M = 46.0)?",
+      "correct": "108 g",
+      "correctExplanation": "n(C₂H₅OH) = 92.0/46.0 = 2.00 mol. Ratio 1:3 → n(H₂O) = 6.00 mol. m(H₂O) = 6.00 × 18.0 = 108 g.",
+      "distractors": [
+        { "answer": "54.0 g", "explanation": "This uses a 1:1.5 ratio or halves the result; the ratio is 1:3 giving 6.00 mol H₂O." },
+        { "answer": "36.0 g", "explanation": "This uses only 2.00 mol H₂O (1:1 ratio); the correct ratio is 1:3." },
+        { "answer": "162 g", "explanation": "This uses 9 mol H₂O; the ratio is 1:3, giving 6.00 mol from 2.00 mol ethanol." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the mass-mass calculation for octane combustion.",
+      "sentence": "For 228 g of octane (M = 114.0), n = {{blank:1}} mol. Using ratio 1:8 for C₈H₁₈:CO₂, the mass of CO₂ produced is {{blank:2}} g.",
+      "blanks": {
+        "1": {
+          "correct": "2.00",
+          "correctExplanation": "n = 228/114.0 = 2.00 mol.",
+          "distractors": [
+            { "answer": "0.500", "explanation": "This divides M by m; n = m/M = 228/114 = 2.00 mol." },
+            { "answer": "228", "explanation": "228 is the mass; n = 228/114.0 = 2.00 mol." }
+          ]
+        },
+        "2": {
+          "correct": "704",
+          "correctExplanation": "n(CO₂) = 2.00 × 8 = 16.0 mol. m = 16.0 × 44.0 = 704 g.",
+          "distractors": [
+            { "answer": "352", "explanation": "This uses only 1.00 mol octane; 2.00 mol gives 16.0 mol CO₂ = 704 g." },
+            { "answer": "88.0", "explanation": "This uses 2.00 mol CO₂; with ratio 1:8, 2.00 mol octane gives 16.0 mol CO₂." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the calculation for propane.",
+      "sentence": "Burning 22.0 g of propane (M = 44.0) produces {{blank:1}} mol of CO₂ (ratio 1:3), which has a mass of {{blank:2}} g.",
+      "blanks": {
+        "1": {
+          "correct": "1.50",
+          "correctExplanation": "n(C₃H₈) = 22.0/44.0 = 0.500 mol. Ratio 1:3 → n(CO₂) = 0.500 × 3 = 1.50 mol.",
+          "distractors": [
+            { "answer": "0.500", "explanation": "0.500 is the moles of propane; CO₂ = 0.500 × 3 = 1.50 mol." },
+            { "answer": "3.00", "explanation": "3 is the ratio coefficient; n(CO₂) = 0.500 × 3 = 1.50 mol." }
+          ]
+        },
+        "2": {
+          "correct": "66.0",
+          "correctExplanation": "m = 1.50 × 44.0 = 66.0 g.",
+          "distractors": [
+            { "answer": "22.0", "explanation": "22.0 g is the mass of propane; m(CO₂) = 1.50 × 44.0 = 66.0 g." },
+            { "answer": "44.0", "explanation": "44.0 g is the mass of 1 mol CO₂; 1.50 mol = 66.0 g." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Verify conservation of mass.",
+      "sentence": "When 44.0 g of propane reacts with 160 g of O₂, the total mass of products must equal {{blank:1}} g.",
+      "blanks": {
+        "1": {
+          "correct": "204",
+          "correctExplanation": "Conservation of mass: total reactant mass = total product mass. 44.0 + 160 = 204 g of products.",
+          "distractors": [
+            { "answer": "116", "explanation": "This subtracts instead of adding; total products = 44.0 + 160 = 204 g." },
+            { "answer": "160", "explanation": "160 g is only the oxygen mass; the total includes propane: 44.0 + 160 = 204 g." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "mc",
+      "question": "A factory burns 1.00 tonne (1000 kg) of methane per day. How many tonnes of CO₂ are emitted daily? CH₄ + 2O₂ → CO₂ + 2H₂O (M: CH₄ = 16.0, CO₂ = 44.0)",
+      "correct": "2.75 tonnes",
+      "correctExplanation": "n(CH₄) = 1 000 000/16.0 = 62 500 mol. Ratio 1:1 → n(CO₂) = 62 500 mol. m = 62 500 × 44.0 = 2 750 000 g = 2.75 tonnes.",
+      "distractors": [
+        { "answer": "1.00 tonne", "explanation": "CO₂ has a higher molar mass than CH₄, so the mass of CO₂ exceeds the mass of CH₄ burned." },
+        { "answer": "0.364 tonnes", "explanation": "This divides 1000 × 16/44 = 364 kg; the correct calculation gives 2750 kg." },
+        { "answer": "2750 tonnes", "explanation": "The calculation gives 2 750 000 g = 2750 kg = 2.75 tonnes, not 2750 tonnes." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student burns 10.0 g of an unknown hydrocarbon and collects 30.6 g of CO₂ and 16.2 g of H₂O. Determine the empirical formula of the fuel.",
+      "correct": "C₅H₁₂",
+      "correctExplanation": "n(CO₂) = 30.6/44.0 = 0.6955 → 0.6955 mol C. n(H₂O) = 16.2/18.0 = 0.900 → 1.800 mol H. Ratio C:H = 0.6955:1.800 ≈ 1:2.59. Check mass: C = 0.6955 × 12 = 8.35 g, H = 1.800 × 1.0 = 1.80 g, total = 10.15 g ≈ 10.0 g. Ratio 5:13 → closest is C₅H₁₂ (pentane) with 5:12 ratio.",
+      "distractors": [
+        { "answer": "CH₄", "explanation": "CH₄ has a C:H ratio of 1:4; the data shows approximately 1:2.6, closer to C₅H₁₂." },
+        { "answer": "C₂H₆", "explanation": "C₂H₆ has a C:H ratio of 1:3; the data shows a different ratio." },
+        { "answer": "C₃H₈", "explanation": "C₃H₈ has a C:H ratio of 3:8 = 1:2.67, close but the mass check confirms C₅H₁₂." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Two power plants burn different fuels. Plant A burns propane (C₃H₈, M = 44.0, ΔH = 2220 kJ mol⁻¹) and Plant B burns methane (CH₄, M = 16.0, ΔH = 890 kJ mol⁻¹). Which plant produces less CO₂ per kJ of energy?",
+      "correct": "Methane produces less CO₂ per kJ",
+      "correctExplanation": "Propane: 1 mol → 3 mol CO₂ (132 g) and 2220 kJ. CO₂/kJ = 132/2220 = 0.0595 g/kJ. Methane: 1 mol → 1 mol CO₂ (44.0 g) and 890 kJ. CO₂/kJ = 44.0/890 = 0.0494 g/kJ. Methane produces less CO₂ per kJ.",
+      "distractors": [
+        { "answer": "Propane produces less CO₂ per kJ because it has a higher ΔH", "explanation": "Higher ΔH does not guarantee less CO₂ per kJ; methane produces 0.049 g/kJ vs propane's 0.060 g/kJ." },
+        { "answer": "Both produce the same CO₂ per kJ because they are both hydrocarbons", "explanation": "Different hydrocarbons have different CO₂/energy ratios; methane is more carbon-efficient." },
+        { "answer": "Propane produces less CO₂ per kJ because it has more hydrogen atoms", "explanation": "More H atoms means more energy from H₂O formation, but the C:H ratio matters; methane has the lowest CO₂/kJ." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A barbecue uses 3.00 kg of propane (M = 44.0). Calculate the total mass of greenhouse gases (CO₂ + H₂O) produced. C₃H₈ + 5O₂ → 3CO₂ + 4H₂O",
+      "correct": "13.8 kg",
+      "correctExplanation": "n(C₃H₈) = 3000/44.0 = 68.18 mol. n(CO₂) = 204.5 mol → m = 204.5 × 44.0 = 9000 g. n(H₂O) = 272.7 mol → m = 272.7 × 18.0 = 4909 g. Total = 9000 + 4909 = 13 909 g ≈ 13.9 kg.",
+      "distractors": [
+        { "answer": "9.00 kg", "explanation": "9.00 kg is only the CO₂ mass; the total includes H₂O as well." },
+        { "answer": "3.00 kg", "explanation": "3.00 kg is the mass of propane, not the products; products are heavier due to added oxygen." },
+        { "answer": "4.91 kg", "explanation": "4.91 kg is only the H₂O mass; the total includes CO₂ as well." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student wants to produce exactly 100 g of CO₂ from burning methane. What mass of methane is needed? CH₄ + 2O₂ → CO₂ + 2H₂O",
+      "correct": "36.4 g",
+      "correctExplanation": "n(CO₂) = 100/44.0 = 2.273 mol. Ratio 1:1 → n(CH₄) = 2.273 mol. m(CH₄) = 2.273 × 16.0 = 36.4 g.",
+      "distractors": [
+        { "answer": "100 g", "explanation": "The mass of CH₄ is not equal to the mass of CO₂; they have different molar masses." },
+        { "answer": "16.0 g", "explanation": "16.0 g is the mass of 1 mol CH₄; 2.273 mol requires 36.4 g." },
+        { "answer": "275 g", "explanation": "This multiplies 100 × 44/16; the correct method gives n(CO₂) = 100/44 → m(CH₄) = n × 16." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "For the combustion of glucose: C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O. What is the mass ratio of CO₂ produced to glucose burned?",
+      "correct": "1.47 g CO₂ per g glucose",
+      "correctExplanation": "Per mol glucose (180 g): 6 mol CO₂ = 264 g. Ratio = 264/180 = 1.47 g CO₂ per g glucose.",
+      "distractors": [
+        { "answer": "0.68 g CO₂ per g glucose", "explanation": "This inverts the ratio (180/264); the correct ratio is 264/180 = 1.47." },
+        { "answer": "6.00 g CO₂ per g glucose", "explanation": "6 is the mole ratio, not the mass ratio; mass ratio = (6 × 44)/(1 × 180) = 1.47." },
+        { "answer": "0.244 g CO₂ per g glucose", "explanation": "This divides 44/180 for 1 mol CO₂; 6 mol CO₂ gives 264/180 = 1.47." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Verify conservation of mass: 88.0 g of propane (C₃H₈) reacts with excess oxygen. C₃H₈ + 5O₂ → 3CO₂ + 4H₂O. What is the minimum mass of O₂ needed and total product mass?",
+      "correct": "320 g O₂ needed; 408 g total products",
+      "correctExplanation": "n(C₃H₈) = 88.0/44.0 = 2.00 mol. n(O₂) = 10.0 mol → m = 10.0 × 32.0 = 320 g. Total reactants = 88.0 + 320 = 408 g = total products. Check: n(CO₂) = 6.00 mol → 264 g. n(H₂O) = 8.00 mol → 144 g. 264 + 144 = 408 g.",
+      "distractors": [
+        { "answer": "160 g O₂ needed; 248 g total products", "explanation": "This uses a 1:5 ratio for 1 mol propane; 2.00 mol needs 10.0 mol O₂ = 320 g." },
+        { "answer": "320 g O₂ needed; 320 g total products", "explanation": "Total products = total reactants = 88 + 320 = 408 g, not 320 g." },
+        { "answer": "256 g O₂ needed; 344 g total products", "explanation": "This uses 8 mol O₂; the correct ratio gives 10 mol O₂ = 320 g." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student is asked: 'How much heavier is the CO₂ produced compared to the fuel burned, for methane vs octane?' Calculate the CO₂-to-fuel mass ratio for each.",
+      "correct": "Methane: 2.75; Octane: 3.07",
+      "correctExplanation": "Methane: 1 mol (16 g) → 1 mol CO₂ (44 g). Ratio = 44/16 = 2.75. Octane: 1 mol (114 g) → 8 mol CO₂ (352 g). Ratio = 352/114 = 3.09 ≈ 3.07.",
+      "distractors": [
+        { "answer": "Methane: 1.00; Octane: 8.00", "explanation": "These are the mole ratios, not mass ratios; mass ratios account for molar masses." },
+        { "answer": "Methane: 0.364; Octane: 0.324", "explanation": "These are inverted (fuel/CO₂ ratio); CO₂/fuel gives 2.75 and 3.07." },
+        { "answer": "Both have the same ratio because both are hydrocarbons", "explanation": "Different hydrocarbons have different C:H ratios, giving different CO₂/fuel mass ratios." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the emissions calculation.",
+      "sentence": "Burning 1.00 kg of methane (M = 16.0) produces {{blank:1}} mol of CO₂, which has a mass of {{blank:2}} kg.",
+      "blanks": {
+        "1": {
+          "correct": "62.5",
+          "correctExplanation": "n(CH₄) = 1000/16.0 = 62.5 mol. Ratio 1:1 → n(CO₂) = 62.5 mol.",
+          "distractors": [
+            { "answer": "16.0", "explanation": "16.0 is the molar mass of CH₄; n = 1000/16.0 = 62.5 mol." },
+            { "answer": "1000", "explanation": "1000 is the mass in grams; n = 1000/16.0 = 62.5 mol." }
+          ]
+        },
+        "2": {
+          "correct": "2.75",
+          "correctExplanation": "m = 62.5 × 44.0 = 2750 g = 2.75 kg.",
+          "distractors": [
+            { "answer": "2750", "explanation": "2750 is the mass in grams; in kg this is 2.75 kg." },
+            { "answer": "0.275", "explanation": "This divides by 10 000 instead of 1000; 2750 g = 2.75 kg." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the reverse stoichiometry problem.",
+      "sentence": "To determine how much fuel produced 440 g of CO₂ via CH₄ combustion (ratio 1:1): n(CO₂) = {{blank:1}} mol, so m(CH₄) = {{blank:2}} g.",
+      "blanks": {
+        "1": {
+          "correct": "10.0",
+          "correctExplanation": "n(CO₂) = 440/44.0 = 10.0 mol.",
+          "distractors": [
+            { "answer": "44.0", "explanation": "44.0 is the molar mass of CO₂; n = 440/44.0 = 10.0 mol." },
+            { "answer": "440", "explanation": "440 is the mass in grams; n = 440/44.0 = 10.0 mol." }
+          ]
+        },
+        "2": {
+          "correct": "160",
+          "correctExplanation": "Ratio 1:1 → n(CH₄) = 10.0 mol. m = 10.0 × 16.0 = 160 g.",
+          "distractors": [
+            { "answer": "16.0", "explanation": "16.0 g is the mass of 1 mol CH₄; 10.0 mol = 160 g." },
+            { "answer": "10.0", "explanation": "10.0 is the moles of CH₄; m = n × M = 10.0 × 16.0 = 160 g." }
+          ]
+        }
+      }
+    }
+  ]
+}
