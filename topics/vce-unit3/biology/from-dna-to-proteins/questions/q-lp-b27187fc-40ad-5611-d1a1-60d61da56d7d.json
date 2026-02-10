@@ -1,0 +1,583 @@
+{
+  "_link": {
+    "uuid": "lp-b27187fc-40ad-5611-d1a1-60d61da56d7d",
+    "version": 1,
+    "contentHash": "75eb0cc5",
+    "title": "I can describe how the trp operon functions when tryptophan levels are high",
+    "generatedAt": "2026-02-09T12:08:00.000Z"
+  },
+  "toLevel2": [
+    {
+      "type": "MC",
+      "question": "When tryptophan levels are high, what happens to the repressor protein?",
+      "correct": "Tryptophan binds to the repressor, changing its shape so it can bind to the operator",
+      "correctExplanation": "Tryptophan acts as a co-repressor, binding to the repressor protein and activating it by inducing a conformational change.",
+      "distractors": [
+        { "answer": "The repressor is destroyed by high tryptophan levels", "explanation": "Tryptophan does not destroy the repressor. It binds to it and changes its shape to make it active." },
+        { "answer": "The repressor detaches from the operator and becomes inactive", "explanation": "This describes what happens when tryptophan is low, not high. High tryptophan activates the repressor." },
+        { "answer": "The repressor binds directly to RNA polymerase to speed up transcription", "explanation": "The repressor binds to the operator to block transcription, not to RNA polymerase to speed it up." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "When the active repressor binds to the operator, what is the effect on transcription?",
+      "correct": "RNA polymerase is blocked from transcribing the structural genes",
+      "correctExplanation": "The repressor on the operator physically blocks RNA polymerase, preventing it from reaching and transcribing the structural genes.",
+      "distractors": [
+        { "answer": "RNA polymerase transcribes the structural genes at a faster rate", "explanation": "The repressor blocks transcription, it does not accelerate it." },
+        { "answer": "RNA polymerase transcribes the regulatory gene instead of the structural genes", "explanation": "The repressor on the operator blocks structural gene transcription. The regulatory gene is transcribed separately." },
+        { "answer": "RNA polymerase detaches from the DNA and leaves the cell", "explanation": "RNA polymerase is blocked at the operator but does not leave the cell." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "What role does tryptophan play in regulating the trp operon when levels are high?",
+      "correct": "It acts as a co-repressor that activates the repressor protein",
+      "correctExplanation": "Tryptophan is the co-repressor — it binds to the repressor protein and changes its shape so it can bind the operator.",
+      "distractors": [
+        { "answer": "It acts as an activator that increases transcription of the structural genes", "explanation": "High tryptophan represses the operon, it does not activate transcription." },
+        { "answer": "It binds directly to the operator to block RNA polymerase", "explanation": "Tryptophan binds to the repressor protein, not directly to the operator. The activated repressor then binds the operator." },
+        { "answer": "It binds to RNA polymerase to prevent it from functioning", "explanation": "Tryptophan binds to the repressor, not to RNA polymerase." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "When tryptophan levels are high, are tryptophan-synthesising enzymes produced?",
+      "correct": "No, because the repressor blocks transcription of the structural genes",
+      "correctExplanation": "With the repressor blocking the operator, no mRNA is made from the structural genes, so no tryptophan-synthesising enzymes are produced.",
+      "distractors": [
+        { "answer": "Yes, because high tryptophan stimulates enzyme production", "explanation": "High tryptophan activates the repressor, which blocks transcription and stops enzyme production." },
+        { "answer": "Yes, but at a reduced rate compared to when tryptophan is low", "explanation": "Transcription is completely blocked when the repressor is bound, not just reduced." },
+        { "answer": "No, because tryptophan destroys the structural genes directly", "explanation": "Tryptophan does not damage genes. It activates the repressor, which blocks transcription." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "What type of feedback does the trp operon demonstrate when tryptophan levels are high?",
+      "correct": "Negative feedback",
+      "correctExplanation": "The product of the pathway (tryptophan) inhibits its own production by activating the repressor, which is a classic negative feedback mechanism.",
+      "distractors": [
+        { "answer": "Positive feedback", "explanation": "Positive feedback would amplify tryptophan production. The trp operon shuts down production, which is negative feedback." },
+        { "answer": "No feedback", "explanation": "The trp operon clearly demonstrates feedback — the product controls its own production." },
+        { "answer": "Feed-forward regulation", "explanation": "The trp operon uses feedback (product controls its own production), not feed-forward regulation." }
+      ]
+    },
+    {
+      "type": "CLOZE",
+      "prompt": "Complete the sentence about high tryptophan levels.",
+      "sentence": "When tryptophan levels are high, tryptophan binds to the {{blank:1}} protein, which then binds to the {{blank:2}} to block transcription.",
+      "blanks": {
+        "1": {
+          "correct": "repressor",
+          "correctExplanation": "Tryptophan acts as a co-repressor by binding to the repressor protein and activating it.",
+          "distractors": [
+            { "answer": "polymerase", "explanation": "Tryptophan binds to the repressor protein, not RNA polymerase." },
+            { "answer": "ribosome", "explanation": "Tryptophan binds to the repressor, not to ribosomes." }
+          ]
+        },
+        "2": {
+          "correct": "operator",
+          "correctExplanation": "The activated repressor binds to the operator region, blocking RNA polymerase from transcribing the structural genes.",
+          "distractors": [
+            { "answer": "promoter", "explanation": "The repressor binds to the operator. RNA polymerase binds to the promoter." },
+            { "answer": "terminator", "explanation": "The repressor binds to the operator, not the terminator." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CLOZE",
+      "prompt": "Complete the sentence about the effect on enzyme production.",
+      "sentence": "When the repressor is bound to the operator, no {{blank:1}} is produced from the structural genes, so no tryptophan-synthesising {{blank:2}} are made.",
+      "blanks": {
+        "1": {
+          "correct": "mRNA",
+          "correctExplanation": "The repressor blocks transcription, preventing mRNA production from the structural genes.",
+          "distractors": [
+            { "answer": "DNA", "explanation": "DNA is not produced by transcription. mRNA production is blocked." },
+            { "answer": "tRNA", "explanation": "tRNA is not produced by the trp structural genes. mRNA production is what is blocked." }
+          ]
+        },
+        "2": {
+          "correct": "enzymes",
+          "correctExplanation": "Without mRNA, the tryptophan-synthesising enzymes cannot be translated at the ribosome.",
+          "distractors": [
+            { "answer": "repressors", "explanation": "The repressor is produced by the regulatory gene. The structural genes produce enzymes." },
+            { "answer": "ribosomes", "explanation": "Ribosomes are not produced by the trp structural genes. The blocked products are enzymes." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CLOZE",
+      "prompt": "Complete the sentence about negative feedback.",
+      "sentence": "The trp operon demonstrates negative feedback because the {{blank:1}} of the pathway (tryptophan) acts as the signal to {{blank:2}} its own production.",
+      "blanks": {
+        "1": {
+          "correct": "product",
+          "correctExplanation": "Tryptophan is the end product of the biosynthesis pathway controlled by the trp operon.",
+          "distractors": [
+            { "answer": "substrate", "explanation": "Tryptophan is the product, not the substrate, of the biosynthesis pathway." },
+            { "answer": "enzyme", "explanation": "The enzymes are the catalysts. Tryptophan is the product that feeds back." }
+          ]
+        },
+        "2": {
+          "correct": "shut down",
+          "correctExplanation": "High tryptophan levels shut down its own production by activating the repressor — classic negative feedback.",
+          "distractors": [
+            { "answer": "increase", "explanation": "Increasing production would be positive feedback. Tryptophan shuts down its own production." },
+            { "answer": "maintain", "explanation": "Tryptophan actively shuts down production, not merely maintains it." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "TF",
+      "question": "When tryptophan levels are high, the structural genes of the trp operon are actively transcribed.",
+      "correct": "False",
+      "correctExplanation": "High tryptophan activates the repressor, which blocks the operator and prevents transcription of the structural genes.",
+      "distractors": [
+        { "answer": "True", "explanation": "High tryptophan blocks transcription. The structural genes are only actively transcribed when tryptophan is low." }
+      ]
+    },
+    {
+      "type": "TF",
+      "question": "Tryptophan acts as a co-repressor by binding to the repressor protein and changing its shape.",
+      "correct": "True",
+      "correctExplanation": "Tryptophan binds to the repressor, inducing a conformational change that allows the repressor to bind to the operator.",
+      "distractors": [
+        { "answer": "False", "explanation": "Tryptophan does act as a co-repressor. It binds to and activates the repressor protein." }
+      ]
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "MC",
+      "question": "Why does high tryptophan cause the repressor to change shape and bind the operator?",
+      "correct": "Tryptophan acts as a co-repressor that binds to a specific site on the repressor, inducing a conformational change that allows it to fit the operator sequence",
+      "correctExplanation": "The repressor has an allosteric site for tryptophan. When tryptophan binds, the repressor changes shape so its DNA-binding domain can recognise the operator.",
+      "distractors": [
+        { "answer": "Tryptophan chemically modifies the repressor by adding phosphate groups, creating a new binding site", "explanation": "Tryptophan does not phosphorylate the repressor. It induces a conformational change through non-covalent binding." },
+        { "answer": "High tryptophan increases the temperature inside the cell, which denatures the repressor into its active form", "explanation": "Cell temperature does not change with tryptophan levels. The shape change is caused by tryptophan binding to the repressor." },
+        { "answer": "Tryptophan replaces one of the amino acids in the repressor, permanently changing its structure", "explanation": "Tryptophan binds non-covalently to the repressor as a co-repressor, it does not replace amino acids." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Explain why the trp operon's response to high tryptophan is described as negative feedback rather than positive feedback.",
+      "correct": "Because the product (tryptophan) inhibits its own production — the output of the system reduces its own input",
+      "correctExplanation": "In negative feedback, the product opposes or reduces further production. Tryptophan shuts down the genes that produce tryptophan-synthesising enzymes.",
+      "distractors": [
+        { "answer": "Because the product (tryptophan) stimulates more of its own production — the output amplifies itself", "explanation": "This describes positive feedback. In the trp operon, tryptophan inhibits, not stimulates, its own production." },
+        { "answer": "Because the repressor is a negative protein that always prevents transcription regardless of conditions", "explanation": "The repressor is only active when tryptophan binds to it. It is inactive when tryptophan is absent." },
+        { "answer": "Because 'negative' refers to the fact that gene expression is harmful to the cell", "explanation": "'Negative' refers to the inhibitory nature of the feedback loop, not to any harmful effect." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "How does the trp operon conserve cellular resources when tryptophan is abundant?",
+      "correct": "By preventing the unnecessary production of tryptophan-synthesising enzymes when tryptophan is already available",
+      "correctExplanation": "Producing enzymes costs energy and amino acids. The operon saves resources by only making enzymes when tryptophan is actually needed.",
+      "distractors": [
+        { "answer": "By destroying all existing tryptophan to recycle its components for other processes", "explanation": "The operon does not destroy tryptophan. It prevents unnecessary enzyme production." },
+        { "answer": "By converting tryptophan into energy that the cell can use for other functions", "explanation": "The trp operon regulates gene expression. It does not convert tryptophan into energy." },
+        { "answer": "By shutting down all gene expression in the cell, not just the trp operon", "explanation": "Only the trp operon is regulated by the trp repressor. Other genes continue to be expressed normally." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "What is the sequence of events that leads to the trp operon being switched off when tryptophan levels rise?",
+      "correct": "Tryptophan binds to repressor → repressor changes shape → repressor binds operator → RNA polymerase is blocked → no mRNA produced → no enzymes made",
+      "correctExplanation": "This sequential pathway shows how the molecular signal (tryptophan) is converted into a change in gene expression.",
+      "distractors": [
+        { "answer": "Tryptophan binds to operator → operator changes shape → RNA polymerase detaches → repressor is destroyed", "explanation": "Tryptophan binds to the repressor, not the operator. The repressor then binds the operator." },
+        { "answer": "RNA polymerase detects tryptophan → RNA polymerase detaches from DNA → repressor binds promoter → gene is silenced", "explanation": "RNA polymerase does not detect tryptophan. The repressor binds the operator, not the promoter." },
+        { "answer": "Tryptophan binds to mRNA → mRNA is degraded → no protein is produced → repressor binds DNA", "explanation": "Tryptophan binds to the repressor protein, not to mRNA. The regulation is at the transcription level." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "What would happen to tryptophan levels in the cell after the trp operon is switched off?",
+      "correct": "Tryptophan levels would gradually decrease as the cell uses tryptophan for protein synthesis without producing more",
+      "correctExplanation": "With no new tryptophan being synthesised, the existing supply is consumed for protein production, causing levels to fall.",
+      "distractors": [
+        { "answer": "Tryptophan levels would remain permanently high because the operon never turns back on", "explanation": "As tryptophan is consumed, levels drop, eventually deactivating the repressor and reactivating the operon." },
+        { "answer": "Tryptophan levels would increase further because the repressor also produces tryptophan", "explanation": "The repressor is a regulatory protein. It does not produce tryptophan." },
+        { "answer": "Tryptophan levels would drop to zero instantly because all tryptophan is immediately used", "explanation": "Tryptophan is gradually consumed, not instantly depleted. The decrease is progressive." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "How does the trp operon system create a self-regulating cycle of tryptophan production?",
+      "correct": "High tryptophan turns off the operon → tryptophan is consumed and levels drop → low tryptophan reactivates the operon → more tryptophan is made → cycle repeats",
+      "correctExplanation": "This negative feedback cycle maintains tryptophan at an appropriate level without wasting resources.",
+      "distractors": [
+        { "answer": "The operon permanently switches between on and off states at fixed time intervals regardless of tryptophan levels", "explanation": "The switching is regulated by tryptophan concentration, not by fixed time intervals." },
+        { "answer": "The operon is always on and tryptophan levels are controlled by degradation enzymes only", "explanation": "The trp operon is regulated by the repressor-tryptophan interaction, not just by tryptophan degradation." },
+        { "answer": "Once the operon is turned off, it can never be reactivated because the repressor is permanently bound", "explanation": "When tryptophan levels drop, it dissociates from the repressor, which then releases the operator." }
+      ]
+    },
+    {
+      "type": "CLOZE",
+      "prompt": "Explain the sequence of molecular events when tryptophan is high.",
+      "sentence": "Tryptophan acts as a {{blank:1}} by binding to the repressor, which then blocks the {{blank:2}} and prevents transcription.",
+      "blanks": {
+        "1": {
+          "correct": "co-repressor",
+          "correctExplanation": "Tryptophan is the co-repressor — it binds to the repressor protein and activates it.",
+          "distractors": [
+            { "answer": "activator", "explanation": "An activator would stimulate transcription. Tryptophan inhibits transcription by activating the repressor." },
+            { "answer": "substrate", "explanation": "Tryptophan is the product and co-repressor of this system, not a substrate." }
+          ]
+        },
+        "2": {
+          "correct": "operator",
+          "correctExplanation": "The activated repressor binds to the operator, physically blocking RNA polymerase from reaching the structural genes.",
+          "distractors": [
+            { "answer": "ribosome", "explanation": "The repressor blocks the operator on DNA, not the ribosome." },
+            { "answer": "terminator", "explanation": "The repressor binds the operator, not the terminator." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CLOZE",
+      "prompt": "Explain the resource-saving benefit of the trp operon.",
+      "sentence": "When tryptophan is abundant, the operon is switched {{blank:1}}, saving the cell's {{blank:2}} that would otherwise be used to produce unnecessary enzymes.",
+      "blanks": {
+        "1": {
+          "correct": "off",
+          "correctExplanation": "High tryptophan switches the operon off by activating the repressor, which blocks the operator.",
+          "distractors": [
+            { "answer": "on", "explanation": "High tryptophan switches the operon off, not on. The repressor blocks transcription." },
+            { "answer": "up", "explanation": "The operon is switched off (not up). Gene expression is reduced to zero." }
+          ]
+        },
+        "2": {
+          "correct": "energy",
+          "correctExplanation": "Producing enzymes requires ATP and amino acids. Turning off the operon saves these resources.",
+          "distractors": [
+            { "answer": "DNA", "explanation": "DNA is not consumed during gene expression. The resources saved are energy and amino acids." },
+            { "answer": "tryptophan", "explanation": "The operon saves energy. Tryptophan is already abundant and is why the operon is turned off." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CLOZE",
+      "prompt": "Describe what happens after tryptophan shuts down the operon.",
+      "sentence": "After the operon is switched off, tryptophan levels gradually {{blank:1}} as the cell uses it for {{blank:2}} synthesis.",
+      "blanks": {
+        "1": {
+          "correct": "decrease",
+          "correctExplanation": "Without new tryptophan being produced, levels fall as the cell consumes existing tryptophan.",
+          "distractors": [
+            { "answer": "increase", "explanation": "Tryptophan decreases because no more is being made while it continues to be consumed." },
+            { "answer": "stabilise", "explanation": "Levels decrease because consumption continues without new production." }
+          ]
+        },
+        "2": {
+          "correct": "protein",
+          "correctExplanation": "Tryptophan is an amino acid used in protein synthesis. The cell consumes it when building proteins.",
+          "distractors": [
+            { "answer": "DNA", "explanation": "Tryptophan is not used in DNA synthesis. It is an amino acid used for protein synthesis." },
+            { "answer": "lipid", "explanation": "Tryptophan is not used in lipid synthesis. It is consumed during protein synthesis." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "TF",
+      "question": "When the repressor binds to the operator, RNA polymerase can still transcribe the structural genes at a reduced rate.",
+      "correct": "False",
+      "correctExplanation": "The repressor completely blocks RNA polymerase. Transcription is fully prevented, not just reduced.",
+      "distractors": [
+        { "answer": "True", "explanation": "The repressor completely blocks access. There is no reduced-rate transcription — it is fully blocked." }
+      ]
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "MC",
+      "question": "An E. coli cell is growing in a medium rich in tryptophan. If the medium is suddenly changed to one with no tryptophan, predict the sequence of events.",
+      "correct": "Tryptophan levels drop → tryptophan dissociates from the repressor → repressor changes shape and detaches from the operator → RNA polymerase transcribes the structural genes → enzymes are made → tryptophan is synthesised",
+      "correctExplanation": "Removing tryptophan deactivates the repressor, allowing the operon to switch on and resume tryptophan production.",
+      "distractors": [
+        { "answer": "The operon would remain off permanently because the repressor is permanently bound to the operator", "explanation": "The repressor only binds when tryptophan is present. Without tryptophan, it releases the operator." },
+        { "answer": "The cell would immediately die because it cannot survive without external tryptophan", "explanation": "The trp operon exists precisely to allow the cell to synthesise its own tryptophan when it is not available externally." },
+        { "answer": "The regulatory gene would be deleted so the cell can produce enzymes without any regulation", "explanation": "Genes are not deleted in response to environmental changes. The repressor simply becomes inactive." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A mutation changes the repressor so that tryptophan can no longer bind to it. Predict the effect when tryptophan levels are high.",
+      "correct": "The repressor would remain inactive and unable to bind the operator, so the structural genes would be continuously transcribed despite high tryptophan",
+      "correctExplanation": "Without tryptophan binding, the repressor cannot change to its active shape, so it can never block the operator.",
+      "distractors": [
+        { "answer": "The repressor would still bind the operator because it does not need tryptophan to be active", "explanation": "The repressor requires tryptophan as a co-repressor to become active. Without binding, it remains inactive." },
+        { "answer": "The structural genes would be silenced because the mutation makes the repressor permanently active", "explanation": "The mutation prevents tryptophan binding, making the repressor permanently inactive, not active." },
+        { "answer": "The cell would compensate by using RNA polymerase to detect tryptophan levels directly", "explanation": "RNA polymerase does not detect tryptophan. The regulation depends on the repressor-tryptophan interaction." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Compare the trp operon's state when tryptophan is high versus when it is low. How does the repressor's behaviour change?",
+      "correct": "When tryptophan is high, the repressor is active and bound to the operator; when low, the repressor is inactive and free in the cytoplasm",
+      "correctExplanation": "The repressor exists in two states depending on tryptophan concentration — active (with tryptophan bound) or inactive (without tryptophan).",
+      "distractors": [
+        { "answer": "The repressor is destroyed when tryptophan is high and newly synthesised when tryptophan is low", "explanation": "The repressor is not destroyed or newly made. It changes between active and inactive conformations." },
+        { "answer": "The repressor is always active and always bound to the operator regardless of tryptophan levels", "explanation": "The repressor's activity depends on tryptophan. Without tryptophan, it is inactive and cannot bind the operator." },
+        { "answer": "The repressor binds to the promoter when tryptophan is high and to the operator when tryptophan is low", "explanation": "The repressor always targets the operator, not the promoter. It only binds when tryptophan is present." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "If a cell has high tryptophan but the operator has a mutation preventing repressor binding, what would happen?",
+      "correct": "The structural genes would be continuously transcribed because the repressor cannot bind to the mutant operator, despite tryptophan being present",
+      "correctExplanation": "Even though tryptophan activates the repressor, it has nowhere to bind. The operon behaves as if it is always on.",
+      "distractors": [
+        { "answer": "The operon would be switched off because high tryptophan is sufficient to block transcription directly", "explanation": "Tryptophan does not block transcription directly. It works through the repressor-operator interaction, which is disrupted." },
+        { "answer": "The repressor would find an alternative binding site on the DNA to compensate", "explanation": "The repressor is specific to the operator sequence. It cannot bind to alternative sites to block transcription." },
+        { "answer": "The structural genes would produce tryptophan at double the normal rate", "explanation": "The genes would be constitutively expressed, but the rate depends on RNA polymerase activity, not doubled." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A student draws a diagram showing tryptophan binding directly to the operator instead of to the repressor. What conceptual error has the student made?",
+      "correct": "Tryptophan binds to the repressor protein (not the operator), and the activated repressor then binds to the operator",
+      "correctExplanation": "The regulation is indirect: tryptophan → repressor activation → operator binding. Tryptophan does not interact with DNA directly.",
+      "distractors": [
+        { "answer": "The student's diagram is actually correct because tryptophan can bind to both the repressor and the operator", "explanation": "Tryptophan only binds to the repressor protein. It does not bind to the DNA operator." },
+        { "answer": "Tryptophan does bind to the operator, but only after first binding to the repressor", "explanation": "Tryptophan remains bound to the repressor. It is the repressor (with tryptophan attached) that binds the operator." },
+        { "answer": "The student's diagram is wrong because tryptophan binds to RNA polymerase, not the operator", "explanation": "Tryptophan binds to the repressor, not RNA polymerase or the operator." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "How does the trp operon system differ from simply degrading excess tryptophan?",
+      "correct": "The operon prevents unnecessary enzyme production at the genetic level, which is more energy-efficient than producing enzymes and then degrading their product",
+      "correctExplanation": "Regulation at the gene level saves the energy that would be wasted making enzymes. Degradation wastes both the enzyme production energy and the degraded tryptophan.",
+      "distractors": [
+        { "answer": "There is no difference — both mechanisms achieve the same result with the same energy cost", "explanation": "Gene regulation is more efficient because it prevents enzyme production entirely, saving the energy cost of making enzymes." },
+        { "answer": "Degradation would be more efficient because it removes tryptophan faster than gene regulation", "explanation": "Speed is not the main issue. Preventing unnecessary enzyme production saves more energy overall." },
+        { "answer": "The operon system is less efficient because it requires making and maintaining the repressor protein", "explanation": "The small cost of maintaining the repressor is far less than continuously producing five enzymes unnecessarily." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Why is the repressor described as having two conformations (shapes)?",
+      "correct": "Without tryptophan it has an inactive shape that cannot bind the operator; with tryptophan it has an active shape that can bind the operator",
+      "correctExplanation": "The repressor is an allosteric protein that switches between two functional states depending on whether tryptophan is bound.",
+      "distractors": [
+        { "answer": "The repressor has two shapes because it is made of two different proteins that alternate", "explanation": "The repressor is one protein with two conformations, not two different proteins." },
+        { "answer": "The repressor changes shape only once and then remains permanently in the active form", "explanation": "The shape change is reversible. When tryptophan dissociates, the repressor returns to its inactive shape." },
+        { "answer": "The two conformations refer to the repressor being either folded or unfolded (denatured)", "explanation": "Both conformations are folded and functional. One is active (binds operator) and one is inactive (cannot bind)." }
+      ]
+    },
+    {
+      "type": "CLOZE",
+      "prompt": "Predict the outcome of a repressor mutation.",
+      "sentence": "If a mutation prevents tryptophan from binding to the repressor, the operon will be {{blank:1}} expressed even when tryptophan is high, because the repressor remains {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "continuously",
+          "correctExplanation": "Without tryptophan activation, the repressor stays inactive and cannot block the operator, resulting in continuous expression.",
+          "distractors": [
+            { "answer": "never", "explanation": "Without the repressor being active, the operon is always on, not off." },
+            { "answer": "occasionally", "explanation": "The operon would be continuously expressed, not occasionally." }
+          ]
+        },
+        "2": {
+          "correct": "inactive",
+          "correctExplanation": "Without tryptophan binding, the repressor remains in its inactive conformation and cannot bind the operator.",
+          "distractors": [
+            { "answer": "active", "explanation": "The mutation prevents tryptophan binding, keeping the repressor inactive, not active." },
+            { "answer": "destroyed", "explanation": "The repressor is not destroyed. It exists but cannot be activated without tryptophan binding." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CLOZE",
+      "prompt": "Compare the operon's state in high vs low tryptophan.",
+      "sentence": "When tryptophan is high, the operon is {{blank:1}} and no enzymes are made; when tryptophan is low, the operon is {{blank:2}} and enzymes are produced.",
+      "blanks": {
+        "1": {
+          "correct": "off",
+          "correctExplanation": "High tryptophan activates the repressor, which blocks the operator and turns the operon off.",
+          "distractors": [
+            { "answer": "on", "explanation": "High tryptophan turns the operon off. Low tryptophan turns it on." },
+            { "answer": "mutated", "explanation": "The operon is not mutated. It is regulated to be off when tryptophan is abundant." }
+          ]
+        },
+        "2": {
+          "correct": "on",
+          "correctExplanation": "Low tryptophan means the repressor is inactive, the operator is unblocked, and the structural genes are transcribed.",
+          "distractors": [
+            { "answer": "off", "explanation": "Low tryptophan turns the operon on because the repressor cannot block the operator." },
+            { "answer": "deleted", "explanation": "The operon is not deleted. It is simply turned on when tryptophan is low." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CLOZE",
+      "prompt": "Describe the effect of an operator mutation on regulation.",
+      "sentence": "If the operator cannot bind the repressor, the operon will be expressed {{blank:1}} because the repressor has no {{blank:2}} site to block transcription.",
+      "blanks": {
+        "1": {
+          "correct": "constitutively",
+          "correctExplanation": "Without a functional repressor-binding site, the operon cannot be turned off and is expressed continuously (constitutively).",
+          "distractors": [
+            { "answer": "never", "explanation": "Without the operator functioning, the operon cannot be turned off, not on. It would be always on." },
+            { "answer": "randomly", "explanation": "Expression would be continuous and predictable, not random." }
+          ]
+        },
+        "2": {
+          "correct": "binding",
+          "correctExplanation": "The repressor needs to bind the operator to block transcription. Without a binding site, it cannot perform this function.",
+          "distractors": [
+            { "answer": "coding", "explanation": "The operator is a regulatory region, not a coding region. The issue is the lack of a repressor binding site." },
+            { "answer": "promoter", "explanation": "The operator provides the repressor binding site, which is distinct from the promoter." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "MC",
+      "question": "Analyse why the trp operon uses tryptophan itself as the co-repressor rather than a separate signalling molecule.",
+      "correct": "Using tryptophan directly creates a simple, direct connection between the pathway's output and its regulation, requiring no additional signalling molecules",
+      "correctExplanation": "Direct sensing of the product is the simplest and most efficient feedback mechanism, requiring no intermediary signals.",
+      "distractors": [
+        { "answer": "Because tryptophan is the only molecule in the cell that can change the shape of any protein", "explanation": "Many molecules can change protein shapes (allosteric regulation). Tryptophan is used because it is the direct product of the pathway." },
+        { "answer": "Because the cell cannot produce any other signalling molecules", "explanation": "Cells produce many signalling molecules. Using tryptophan directly is more efficient for this specific pathway." },
+        { "answer": "Because tryptophan is toxic at high levels and must be detected directly to prevent damage", "explanation": "Tryptophan is not particularly toxic. The regulation is about resource efficiency, not toxicity prevention." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Evaluate the trp operon as a model for understanding gene regulation in more complex organisms. What are its limitations?",
+      "correct": "The trp operon is a useful model for basic regulation but is simpler than eukaryotic regulation, which involves multiple regulatory regions, epigenetics, and post-transcriptional control",
+      "correctExplanation": "Eukaryotic gene regulation is far more complex, with enhancers, silencers, chromatin remodelling, and multiple levels of post-transcriptional control.",
+      "distractors": [
+        { "answer": "The trp operon is a perfect model that fully explains gene regulation in all organisms including humans", "explanation": "Eukaryotic regulation is vastly more complex. The trp operon illustrates basic principles but not the full picture." },
+        { "answer": "The trp operon is completely irrelevant to understanding eukaryotic gene regulation", "explanation": "The basic principles (feedback, repression) are relevant, but the mechanism is simpler than eukaryotic regulation." },
+        { "answer": "The trp operon is only found in plants and cannot be used to understand bacterial gene regulation", "explanation": "The trp operon is found in E. coli (a bacterium). It is a classic model for prokaryotic gene regulation." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A researcher engineers a modified trp operon where the repressor binds the operator in the absence of tryptophan and releases when tryptophan is present. How would this change the operon's behaviour?",
+      "correct": "The operon would be off when tryptophan is low and on when tryptophan is high — the opposite of normal, creating positive regulation of enzyme production with tryptophan",
+      "correctExplanation": "Reversing the repressor's behaviour inverts the regulation: enzymes are produced only when tryptophan is already abundant, which is biologically counterproductive.",
+      "distractors": [
+        { "answer": "The operon would function identically to the normal version because the repressor still binds the operator", "explanation": "The timing of binding matters. Binding without tryptophan and releasing with tryptophan inverts the response." },
+        { "answer": "The operon would be permanently off because the repressor would always be bound to the operator", "explanation": "The modified repressor releases when tryptophan is present, so the operon would turn on when tryptophan is high." },
+        { "answer": "The modification would have no effect because the operator cannot distinguish between active and inactive repressor", "explanation": "The operator is blocked when the repressor is bound. The change in when binding occurs inverts the regulation." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Compare the energy cost to the cell of two scenarios: (1) constitutive expression of the trp operon, and (2) normal regulated expression with high tryptophan. Which is more costly and why?",
+      "correct": "Constitutive expression is more costly because the cell wastes energy producing five unnecessary enzymes when tryptophan is already available",
+      "correctExplanation": "Each enzyme requires ATP for transcription and translation. Producing five unnecessary enzymes multiplied by continuous production creates significant energy waste.",
+      "distractors": [
+        { "answer": "Regulated expression is more costly because maintaining the repressor system requires more energy than just expressing the genes", "explanation": "The cost of one repressor protein is far less than continuously producing five enzymes." },
+        { "answer": "Both scenarios cost the same energy because gene expression always uses a fixed amount of energy", "explanation": "The energy cost depends on how many genes are being expressed. Five unnecessary enzymes cost more than one repressor." },
+        { "answer": "Constitutive expression is cheaper because the cell does not need to produce the repressor protein", "explanation": "The repressor is one small protein. Five continuously produced enzymes cost far more energy." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Analyse how the trp operon system would respond if a cell were in a fluctuating environment where tryptophan levels rapidly oscillate between high and low.",
+      "correct": "The operon would cycle between on and off states as the repressor alternately becomes active and inactive, creating oscillating enzyme production",
+      "correctExplanation": "The repressor responds directly to tryptophan concentration, so rapid fluctuations would cause the operon to switch states frequently.",
+      "distractors": [
+        { "answer": "The operon would remain permanently on because it cannot respond to rapid changes", "explanation": "The repressor-tryptophan interaction is relatively fast. The operon can respond to changing conditions." },
+        { "answer": "The operon would remain permanently off as a protective mechanism against fluctuating conditions", "explanation": "The operon has no 'protective' permanent off state. It responds to current tryptophan levels." },
+        { "answer": "The operon would break down and stop functioning after a few cycles of on-off switching", "explanation": "The operon is designed for repeated switching. The repressor reversibly changes between active and inactive states." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Evaluate whether the trp operon mechanism could hypothetically be used to regulate a gene involved in an entirely different metabolic pathway.",
+      "correct": "Yes — the repressor-operator system could regulate any structural genes placed under the same promoter and operator, as long as the co-repressor signal is appropriate",
+      "correctExplanation": "The regulatory mechanism is modular. Any genes placed after the trp operator would be regulated by tryptophan levels through the same repressor system.",
+      "distractors": [
+        { "answer": "No — the trp repressor can only regulate genes related to tryptophan metabolism", "explanation": "The repressor recognises the operator sequence, not the gene content. Any genes behind the trp operator would be regulated." },
+        { "answer": "No — gene regulation systems are permanently linked to specific genes and cannot be repurposed", "explanation": "Genetic engineering routinely repurposes regulatory systems. Synthetic biology relies on this modularity." },
+        { "answer": "Yes — but only if the new genes also produce tryptophan as a byproduct", "explanation": "The regulatory mechanism works based on the operator sequence, not the products of the genes it controls." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A student claims that the trp operon demonstrates that 'genes are smart because they know when to turn on and off.' Critically evaluate this statement.",
+      "correct": "Genes are not 'smart' — the system works through molecular interactions: tryptophan physically binding the repressor, which physically blocks the operator, with no awareness or decision-making involved",
+      "correctExplanation": "Gene regulation is purely chemical and physical. Molecules interact based on shape and charge, not intelligence or awareness.",
+      "distractors": [
+        { "answer": "The statement is correct because genes can sense their environment and make decisions about when to be expressed", "explanation": "Genes do not sense or decide. Regulation occurs through physical molecular interactions." },
+        { "answer": "The statement is partially correct because the repressor protein has a simple form of intelligence that allows it to detect tryptophan", "explanation": "The repressor is not intelligent. It changes shape when tryptophan binds, a purely chemical process." },
+        { "answer": "The statement is wrong because genes never change their expression — they are always active", "explanation": "Gene expression does change, but through molecular mechanisms, not through gene 'intelligence.'" }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "How does the trp operon's negative feedback mechanism relate to homeostasis in the broader context of cell biology?",
+      "correct": "It maintains tryptophan homeostasis by adjusting enzyme production to match demand — the same principle as homeostatic mechanisms that maintain stable internal conditions in organisms",
+      "correctExplanation": "The trp operon is a molecular-level example of homeostasis, maintaining tryptophan levels within a functional range through negative feedback.",
+      "distractors": [
+        { "answer": "It has no connection to homeostasis because homeostasis only applies to temperature regulation in mammals", "explanation": "Homeostasis applies to many biological systems at all levels, including molecular regulation of metabolite levels." },
+        { "answer": "It demonstrates positive feedback, which is the main mechanism of homeostasis", "explanation": "Homeostasis primarily uses negative feedback. The trp operon also uses negative feedback." },
+        { "answer": "It demonstrates that cells cannot maintain stable conditions and must rely on external signals", "explanation": "The trp operon shows cells can self-regulate internal conditions through their own molecular mechanisms." }
+      ]
+    },
+    {
+      "type": "CLOZE",
+      "prompt": "Analyse why tryptophan is the ideal co-repressor for this system.",
+      "sentence": "Tryptophan is the ideal co-repressor because it is the direct {{blank:1}} of the pathway, creating the simplest possible {{blank:2}} feedback loop.",
+      "blanks": {
+        "1": {
+          "correct": "product",
+          "correctExplanation": "Tryptophan is the end product of the biosynthesis pathway controlled by the trp operon enzymes.",
+          "distractors": [
+            { "answer": "substrate", "explanation": "Tryptophan is the product, not the substrate, of the tryptophan biosynthesis pathway." },
+            { "answer": "enzyme", "explanation": "Tryptophan is an amino acid, not an enzyme. The enzymes are the products of the structural genes." }
+          ]
+        },
+        "2": {
+          "correct": "negative",
+          "correctExplanation": "Using the product to inhibit its own production creates a direct negative feedback loop.",
+          "distractors": [
+            { "answer": "positive", "explanation": "The product inhibits its own production, which is negative feedback, not positive." },
+            { "answer": "random", "explanation": "The feedback is specifically negative and predictable, not random." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CLOZE",
+      "prompt": "Evaluate the broader significance of the trp operon.",
+      "sentence": "The trp operon demonstrates that gene expression is not fixed but is {{blank:1}} regulated in response to {{blank:2}} conditions.",
+      "blanks": {
+        "1": {
+          "correct": "dynamically",
+          "correctExplanation": "The trp operon switches between on and off states based on tryptophan levels, showing dynamic regulation.",
+          "distractors": [
+            { "answer": "permanently", "explanation": "Gene expression in the trp operon changes based on conditions. It is not permanently fixed." },
+            { "answer": "randomly", "explanation": "Regulation is specific and predictable based on tryptophan levels, not random." }
+          ]
+        },
+        "2": {
+          "correct": "cellular",
+          "correctExplanation": "The trp operon responds to cellular conditions (tryptophan concentration), adjusting gene expression accordingly.",
+          "distractors": [
+            { "answer": "unchanging", "explanation": "The operon responds to changing conditions. If conditions were unchanging, regulation would not be needed." },
+            { "answer": "external", "explanation": "While external factors can influence tryptophan levels, the operon directly senses internal cellular tryptophan concentration." }
+          ]
+        }
+      }
+    }
+  ]
+}

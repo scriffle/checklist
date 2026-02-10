@@ -1,0 +1,583 @@
+{
+  "_link": {
+    "uuid": "lp-7e69b320-27d9-2ec5-e67b-f633a278fbf3",
+    "version": 1,
+    "contentHash": "ef9b374d",
+    "title": "I can determine the number of DNA fragments produced when restriction enzymes cut linear or circular DNA",
+    "generatedAt": "2026-02-09T18:10:00.000Z"
+  },
+  "toLevel2": [
+    {
+      "type": "MC",
+      "question": "A restriction enzyme cuts a linear piece of DNA at 3 recognition sites. How many fragments are produced?",
+      "correct": "4 fragments",
+      "correctExplanation": "When linear DNA is cut, the number of fragments produced is always one more than the number of cuts. Three cuts produce 4 fragments.",
+      "distractors": [
+        { "answer": "3 fragments", "explanation": "3 fragments would be the result of cutting circular DNA at 3 sites. For linear DNA, the number of fragments is one more than the number of cuts." },
+        { "answer": "6 fragments", "explanation": "6 fragments would mean two fragments per cut, which is not how restriction enzymes work. Each cut divides one fragment into two, giving cuts + 1 total for linear DNA." },
+        { "answer": "2 fragments", "explanation": "2 fragments would result from only 1 cut in linear DNA. Three cuts in linear DNA produce 4 fragments." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A restriction enzyme cuts a circular piece of DNA at 2 recognition sites. How many fragments are produced?",
+      "correct": "2 fragments",
+      "correctExplanation": "When circular DNA is cut, the number of fragments equals the number of cuts. Two cuts in circular DNA produce 2 fragments because the ends are already connected in a circle.",
+      "distractors": [
+        { "answer": "3 fragments", "explanation": "3 fragments would result from cutting linear DNA at 2 sites. For circular DNA, the number of fragments equals the number of cuts." },
+        { "answer": "1 fragment", "explanation": "1 fragment would mean the DNA was not cut at all, or only cut once to linearise it. Two cuts in circular DNA produce 2 fragments." },
+        { "answer": "4 fragments", "explanation": "4 fragments is too many. For circular DNA, the number of fragments equals the number of cuts: 2 cuts produce 2 fragments." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Why does cutting linear DNA at 1 recognition site produce 2 fragments, while cutting circular DNA at 1 site produces only 1 fragment?",
+      "correct": "Circular DNA has no free ends, so one cut only opens the circle into a single linear fragment",
+      "correctExplanation": "Linear DNA has two free ends, so one cut divides it into two separate pieces. Circular DNA is a closed loop with no free ends, so one cut simply opens it into a single linear piece.",
+      "distractors": [
+        { "answer": "Circular DNA is smaller and can only be cut into one piece", "explanation": "The size of the DNA does not determine the number of fragments. The difference is due to the circular shape having no free ends." },
+        { "answer": "Restriction enzymes work differently on circular DNA than on linear DNA", "explanation": "The enzyme works the same way regardless of DNA shape. The difference in fragment number comes from the topology (linear vs circular) of the DNA molecule." },
+        { "answer": "Circular DNA repairs itself after being cut", "explanation": "DNA does not self-repair after restriction enzyme cutting. The single fragment is produced because opening a circle at one point creates one linear piece." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Which type of DNA is typically circular?",
+      "correct": "Prokaryotic DNA (bacterial chromosomes and plasmids)",
+      "correctExplanation": "Prokaryotic organisms such as bacteria have circular chromosomes and circular plasmids. Eukaryotic chromosomes are linear.",
+      "distractors": [
+        { "answer": "Eukaryotic chromosomal DNA", "explanation": "Eukaryotic chromosomes are linear, not circular. Circular DNA is characteristic of prokaryotes." },
+        { "answer": "Human mitochondrial and nuclear DNA", "explanation": "Human nuclear DNA is linear. While mitochondrial DNA is circular, the question asks about the typical source of circular DNA, which is prokaryotes." },
+        { "answer": "All DNA in all organisms", "explanation": "Not all DNA is circular. Eukaryotic chromosomal DNA is linear; only prokaryotic DNA and some organelle DNA are circular." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A restriction enzyme has 4 recognition sites on a linear piece of DNA. How many fragments will be produced?",
+      "correct": "5 fragments",
+      "correctExplanation": "For linear DNA, the number of fragments is always one more than the number of cuts. Four recognition sites mean 4 cuts, producing 5 fragments.",
+      "distractors": [
+        { "answer": "4 fragments", "explanation": "4 fragments would be produced if the DNA were circular. For linear DNA, the number of fragments is cuts + 1." },
+        { "answer": "8 fragments", "explanation": "This would mean two fragments per cut, which is not how restriction enzymes work. Linear DNA with 4 cuts produces 5 fragments." },
+        { "answer": "3 fragments", "explanation": "3 fragments would result from 2 cuts in linear DNA. Four cuts in linear DNA produce 5 fragments." }
+      ]
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the rule for cutting linear DNA.",
+      "sentence": "When a restriction enzyme cuts linear DNA, the number of fragments produced is always {{blank:1}} more than the number of {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "one",
+          "correctExplanation": "Linear DNA has two free ends, so each cut adds one new fragment. The total is always one more than the number of cuts.",
+          "distractors": [
+            { "answer": "two", "explanation": "The rule for linear DNA is fragments = cuts + 1, not cuts + 2." },
+            { "answer": "equal to", "explanation": "Equal to the number of cuts is the rule for circular DNA, not linear DNA." }
+          ]
+        },
+        "2": {
+          "correct": "cuts",
+          "correctExplanation": "Each cut site where the restriction enzyme acts produces one additional fragment, so the total fragments equal the number of cuts plus one.",
+          "distractors": [
+            { "answer": "nucleotides", "explanation": "The number of fragments depends on the number of cuts (recognition sites), not the number of nucleotides in the DNA." },
+            { "answer": "enzymes", "explanation": "The number of fragments depends on the number of recognition sites cut, not the number of enzyme types used." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the rule for cutting circular DNA.",
+      "sentence": "When a restriction enzyme cuts circular DNA, the number of fragments produced is {{blank:1}} the number of cuts because the ends are already {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "equal to",
+          "correctExplanation": "In circular DNA, the ends are joined, so each cut converts the circle into fragments without the extra fragment that free ends would produce in linear DNA.",
+          "distractors": [
+            { "answer": "one more than", "explanation": "One more than the number of cuts is the rule for linear DNA, not circular DNA." },
+            { "answer": "double", "explanation": "The number of fragments is not double the number of cuts. For circular DNA, fragments equal the number of cuts exactly." }
+          ]
+        },
+        "2": {
+          "correct": "connected",
+          "correctExplanation": "Circular DNA forms a closed loop where the ends are connected, so there are no free ends. This means each cut produces one fragment rather than splitting a free end to create an extra piece.",
+          "distractors": [
+            { "answer": "separated", "explanation": "The ends of circular DNA are connected, not separated. Separated ends are a feature of linear DNA." },
+            { "answer": "replicated", "explanation": "The key feature is that the ends are connected in a circle, not that they are replicated." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the sentence about identifying circular DNA in exam questions.",
+      "sentence": "If a question mentions {{blank:1}} DNA or a plasmid, the DNA is circular, so the number of fragments equals the number of {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "prokaryotic",
+          "correctExplanation": "Prokaryotic organisms (bacteria) have circular chromosomes and plasmids, so mentioning prokaryotic DNA or bacteria is a clue that the DNA is circular.",
+          "distractors": [
+            { "answer": "eukaryotic", "explanation": "Eukaryotic chromosomal DNA is linear, not circular. Prokaryotic DNA is the circular type." },
+            { "answer": "human", "explanation": "Human DNA is eukaryotic and linear. Circular DNA is characteristic of prokaryotes." }
+          ]
+        },
+        "2": {
+          "correct": "cuts",
+          "correctExplanation": "For circular DNA, the fragment count equals the number of restriction enzyme cuts, unlike linear DNA where fragments = cuts + 1.",
+          "distractors": [
+            { "answer": "bases", "explanation": "The number of fragments depends on the number of cuts, not the number of bases in the DNA sequence." },
+            { "answer": "strands", "explanation": "The number of fragments depends on the number of restriction enzyme cuts, not the number of DNA strands." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "TF",
+      "question": "A restriction enzyme that cuts linear DNA at 2 recognition sites will produce 3 fragments.",
+      "correct": "True",
+      "correctExplanation": "For linear DNA, the number of fragments is one more than the number of cuts. Two cuts produce 3 fragments.",
+      "distractors": [
+        { "answer": "False", "explanation": "This statement is true. Linear DNA cut at 2 sites produces 3 fragments (cuts + 1 = 2 + 1 = 3)." }
+      ]
+    },
+    {
+      "type": "TF",
+      "question": "Cutting circular DNA at 3 recognition sites produces 4 fragments.",
+      "correct": "False",
+      "correctExplanation": "For circular DNA, the number of fragments equals the number of cuts. Three cuts in circular DNA produce 3 fragments, not 4. The rule of cuts + 1 only applies to linear DNA.",
+      "distractors": [
+        { "answer": "True", "explanation": "This would be correct for linear DNA (3 cuts = 4 fragments), but circular DNA produces fragments equal to the number of cuts (3 cuts = 3 fragments)." }
+      ]
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "MC",
+      "question": "A bacterial plasmid has 3 recognition sites for EcoRI. How many fragments would EcoRI digestion produce?",
+      "correct": "3 fragments",
+      "correctExplanation": "Plasmids are circular DNA. For circular DNA, the number of fragments equals the number of cuts. Three recognition sites produce 3 fragments.",
+      "distractors": [
+        { "answer": "4 fragments", "explanation": "4 fragments would result from 3 cuts in linear DNA. Plasmids are circular, so the number of fragments equals the number of cuts." },
+        { "answer": "2 fragments", "explanation": "2 fragments would result from 2 cuts in circular DNA or 1 cut in linear DNA. Three cuts in a circular plasmid produce 3 fragments." },
+        { "answer": "6 fragments", "explanation": "6 fragments would require 6 cuts in circular DNA or 5 cuts in linear DNA. Three cuts in circular DNA produce only 3 fragments." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A linear piece of human DNA has the same nucleotide sequence as a region of circular bacterial DNA. Both are cut with the same restriction enzyme at 2 recognition sites. How do the fragment numbers compare?",
+      "correct": "The linear DNA produces 3 fragments; the circular DNA produces 2 fragments",
+      "correctExplanation": "Linear DNA: fragments = cuts + 1 = 2 + 1 = 3. Circular DNA: fragments = cuts = 2. The same number of cuts produces different fragment numbers depending on whether the DNA is linear or circular.",
+      "distractors": [
+        { "answer": "Both produce 2 fragments", "explanation": "This is only correct for the circular DNA. Linear DNA with 2 cuts produces 3 fragments because it has free ends." },
+        { "answer": "Both produce 3 fragments", "explanation": "This is only correct for the linear DNA. Circular DNA with 2 cuts produces only 2 fragments." },
+        { "answer": "The linear DNA produces 2 fragments; the circular DNA produces 3 fragments", "explanation": "This is reversed. Linear DNA always produces one more fragment than circular DNA for the same number of cuts." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Why does one cut in circular DNA produce only 1 fragment while one cut in linear DNA produces 2 fragments?",
+      "correct": "One cut in circular DNA opens the circle into a single linear piece, while one cut in linear DNA divides it at the cut point",
+      "correctExplanation": "Circular DNA is a closed loop. One cut breaks the loop at one point, converting it into a single linear fragment. Linear DNA already has two free ends, so one cut divides it into two separate pieces.",
+      "distractors": [
+        { "answer": "Circular DNA is double-stranded while linear DNA is single-stranded", "explanation": "Both circular and linear DNA can be double-stranded. The difference in fragment number is due to topology (shape), not strandedness." },
+        { "answer": "Restriction enzymes cut circular DNA less efficiently than linear DNA", "explanation": "Restriction enzymes cut at recognition sites with equal efficiency regardless of DNA shape. The fragment count difference is due to the topology." },
+        { "answer": "Circular DNA has more hydrogen bonds holding it together", "explanation": "Hydrogen bonds between bases do not affect the number of fragments. The difference is due to the circular DNA having no free ends." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A student is given an unknown DNA sample and told it has 5 recognition sites for a restriction enzyme. After digestion, gel electrophoresis shows 5 bands. What can the student conclude about the DNA?",
+      "correct": "The DNA is circular, because 5 cuts produced 5 fragments",
+      "correctExplanation": "If the DNA were linear, 5 cuts would produce 6 fragments (5 + 1 = 6). Since only 5 fragments were observed, the DNA must be circular (fragments = cuts = 5).",
+      "distractors": [
+        { "answer": "The DNA is linear, because the fragment count matches the number of cuts", "explanation": "For linear DNA, fragments = cuts + 1, so 5 cuts would produce 6 fragments. Five fragments from 5 cuts indicates circular DNA." },
+        { "answer": "The DNA could be either linear or circular", "explanation": "The result is diagnostic: 5 cuts producing 5 fragments can only occur with circular DNA. Linear DNA would have produced 6 fragments." },
+        { "answer": "The gel result is incorrect because 5 cuts should always produce more than 5 fragments", "explanation": "For circular DNA, 5 cuts correctly produce 5 fragments. The gel result is consistent with circular DNA." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A plasmid is cut once with a restriction enzyme to linearise it for gene cloning. How many fragments does this single cut produce?",
+      "correct": "1 fragment (the linearised plasmid)",
+      "correctExplanation": "A plasmid is circular, so one cut opens the circle into a single linear piece. This is exactly why one cut is used to linearise a plasmid before inserting a gene.",
+      "distractors": [
+        { "answer": "2 fragments", "explanation": "2 fragments would result from one cut in linear DNA. One cut in circular DNA (the plasmid) produces a single linear fragment." },
+        { "answer": "0 fragments because the plasmid cannot be cut", "explanation": "Plasmids can be cut by restriction enzymes at their recognition sites. One cut produces one linear fragment." },
+        { "answer": "3 fragments", "explanation": "3 fragments would require 2 cuts in linear DNA or 3 cuts in circular DNA. One cut in a circular plasmid produces 1 fragment." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "An exam question states: 'A restriction enzyme cuts a strand of DNA from E. coli at 4 recognition sites.' How many fragments would be produced?",
+      "correct": "4 fragments, because E. coli DNA is circular",
+      "correctExplanation": "E. coli is a prokaryote with circular DNA. For circular DNA, fragments = cuts = 4. The mention of E. coli is the key clue that the DNA is circular.",
+      "distractors": [
+        { "answer": "5 fragments, because cuts + 1 = 5", "explanation": "The cuts + 1 rule applies to linear DNA. E. coli has circular DNA, so fragments = cuts = 4." },
+        { "answer": "8 fragments, because each cut produces 2 fragments", "explanation": "Each cut does not produce 2 fragments. For circular DNA, the total number of fragments equals the total number of cuts." },
+        { "answer": "3 fragments, because circular DNA always produces fewer fragments", "explanation": "Circular DNA produces fragments equal to the number of cuts, which is 4, not fewer than 4." }
+      ]
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Apply the fragment counting rules to a practical example.",
+      "sentence": "A plasmid with 4 EcoRI recognition sites would produce {{blank:1}} fragments when digested, while a linear DNA molecule with 4 EcoRI sites would produce {{blank:2}} fragments.",
+      "blanks": {
+        "1": {
+          "correct": "4",
+          "correctExplanation": "Plasmids are circular, so fragments = cuts = 4.",
+          "distractors": [
+            { "answer": "5", "explanation": "5 fragments would result from 4 cuts in linear DNA. A plasmid is circular, so fragments = cuts = 4." },
+            { "answer": "3", "explanation": "3 fragments would result from 3 cuts in circular DNA. Four cuts in circular DNA produce 4 fragments." }
+          ]
+        },
+        "2": {
+          "correct": "5",
+          "correctExplanation": "Linear DNA produces fragments = cuts + 1. Four cuts in linear DNA produce 5 fragments because of the two free ends.",
+          "distractors": [
+            { "answer": "4", "explanation": "4 fragments from 4 cuts applies to circular DNA. Linear DNA produces cuts + 1 = 5 fragments." },
+            { "answer": "8", "explanation": "8 fragments would require 7 cuts in linear DNA. Four cuts produce only 5 fragments." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Explain how to use the organism type to determine the fragment counting rule.",
+      "sentence": "When a question mentions bacteria or plasmids, the DNA is {{blank:1}}, so fragments equal the number of cuts. When a question mentions eukaryotic chromosomes, the DNA is {{blank:2}}, so fragments equal cuts plus one.",
+      "blanks": {
+        "1": {
+          "correct": "circular",
+          "correctExplanation": "Bacterial chromosomes and plasmids are circular DNA molecules, so the circular DNA rule (fragments = cuts) applies.",
+          "distractors": [
+            { "answer": "linear", "explanation": "Bacterial DNA and plasmids are circular, not linear. Linear DNA is found in eukaryotic chromosomes." },
+            { "answer": "single-stranded", "explanation": "Bacterial DNA is typically double-stranded. The key distinction for fragment counting is circular vs linear, not single vs double-stranded." }
+          ]
+        },
+        "2": {
+          "correct": "linear",
+          "correctExplanation": "Eukaryotic chromosomes are linear DNA molecules with free ends, so the linear DNA rule (fragments = cuts + 1) applies.",
+          "distractors": [
+            { "answer": "circular", "explanation": "Eukaryotic chromosomal DNA is linear, not circular. Circular DNA is characteristic of prokaryotes." },
+            { "answer": "branched", "explanation": "DNA molecules are not branched. Eukaryotic chromosomal DNA is linear." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Explain why the fragment counting rules differ for linear and circular DNA.",
+      "sentence": "Linear DNA produces one extra fragment because it has two {{blank:1}}, while circular DNA has no free ends because it forms a closed {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "free ends",
+          "correctExplanation": "Linear DNA has two free ends (a 5' end and a 3' end at each terminus). These free ends mean that cutting creates an additional fragment compared to circular DNA.",
+          "distractors": [
+            { "answer": "recognition sites", "explanation": "The extra fragment is due to the free ends of linear DNA, not extra recognition sites. Both linear and circular DNA can have the same recognition sites." },
+            { "answer": "strands", "explanation": "Both linear and circular DNA are double-stranded. The extra fragment comes from linear DNA having free ends." }
+          ]
+        },
+        "2": {
+          "correct": "loop",
+          "correctExplanation": "Circular DNA forms a closed loop where the ends are joined. Without free ends, each cut converts part of the loop into a fragment without creating the extra piece that free ends would produce.",
+          "distractors": [
+            { "answer": "helix", "explanation": "Both linear and circular DNA form a double helix structure. The key difference is the circular topology (closed loop), not the helical structure." },
+            { "answer": "chain", "explanation": "A chain implies a linear structure with ends. Circular DNA forms a closed loop, which is why the fragment counting rule differs." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "TF",
+      "question": "If a restriction enzyme has 3 recognition sites on a circular bacterial chromosome, digestion will produce 4 fragments.",
+      "correct": "False",
+      "correctExplanation": "For circular DNA, fragments = cuts. Three recognition sites in circular DNA produce 3 fragments, not 4. The rule of cuts + 1 applies only to linear DNA.",
+      "distractors": [
+        { "answer": "True", "explanation": "This would be correct for linear DNA (3 + 1 = 4). Bacterial chromosomes are circular, so 3 cuts produce 3 fragments." }
+      ]
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "MC",
+      "question": "A researcher digests a 10 kb circular plasmid with EcoRI and observes 3 bands on a gel at 5 kb, 3 kb, and 2 kb. How many EcoRI recognition sites does this plasmid contain?",
+      "correct": "3 recognition sites",
+      "correctExplanation": "Three bands on the gel mean 3 fragments. For circular DNA, fragments = cuts, so 3 fragments came from 3 recognition sites. The sizes (5 + 3 + 2 = 10 kb) confirm the total matches the plasmid size.",
+      "distractors": [
+        { "answer": "2 recognition sites", "explanation": "2 recognition sites in circular DNA would produce 2 fragments (2 bands), not 3. Three bands indicate 3 cuts." },
+        { "answer": "4 recognition sites", "explanation": "4 recognition sites in circular DNA would produce 4 fragments (4 bands), not 3." },
+        { "answer": "The number cannot be determined from gel results", "explanation": "The number of bands directly tells you the number of fragments. For circular DNA, fragments = cuts, so 3 bands = 3 recognition sites." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A 12 kb linear DNA molecule is digested with HindIII and produces bands at 5 kb, 4 kb, and 3 kb on a gel. How many HindIII recognition sites are present?",
+      "correct": "2 recognition sites",
+      "correctExplanation": "Three bands mean 3 fragments. For linear DNA, fragments = cuts + 1, so 3 fragments came from 2 cuts (2 + 1 = 3). The sizes (5 + 4 + 3 = 12 kb) confirm the total matches the original DNA length.",
+      "distractors": [
+        { "answer": "3 recognition sites", "explanation": "3 recognition sites in linear DNA would produce 4 fragments (3 + 1 = 4). Three fragments means 2 cuts." },
+        { "answer": "1 recognition site", "explanation": "1 recognition site in linear DNA would produce 2 fragments (1 + 1 = 2), not 3." },
+        { "answer": "4 recognition sites", "explanation": "4 recognition sites in linear DNA would produce 5 fragments. Three fragments require only 2 cuts." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A student digests an unknown DNA sample with a restriction enzyme known to have 4 recognition sites. The gel shows 4 bands. Another student claims the DNA must be circular. Is this conclusion valid?",
+      "correct": "Yes, because 4 cuts producing 4 fragments is consistent with circular DNA; linear DNA would have produced 5",
+      "correctExplanation": "For circular DNA: fragments = cuts = 4. For linear DNA: fragments = cuts + 1 = 5. Since only 4 fragments were observed, the DNA must be circular.",
+      "distractors": [
+        { "answer": "No, because both linear and circular DNA produce 4 fragments from 4 cuts", "explanation": "Linear DNA with 4 cuts would produce 5 fragments (4 + 1). Only circular DNA produces 4 fragments from 4 cuts." },
+        { "answer": "No, because the number of bands cannot indicate DNA shape", "explanation": "Comparing the number of fragments to the known number of cuts can distinguish circular from linear DNA." },
+        { "answer": "Yes, but only if the bands are equal in size", "explanation": "The conclusion about circular DNA is based on fragment number versus cut number, not on fragment sizes." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "During gene cloning, a circular plasmid must be cut once to accept a gene insert. If the plasmid originally had 2 EcoRI sites, cutting with EcoRI would produce how many fragments, and why is this a problem?",
+      "correct": "2 fragments, because cutting at 2 sites breaks the plasmid into 2 pieces instead of simply linearising it",
+      "correctExplanation": "Two cuts in circular DNA produce 2 fragments. For gene cloning, the plasmid needs to be linearised (1 cut producing 1 fragment). Using EcoRI with 2 sites would fragment the plasmid, preventing successful cloning.",
+      "distractors": [
+        { "answer": "1 fragment, because the plasmid is simply linearised", "explanation": "1 fragment would result from 1 cut. EcoRI has 2 recognition sites in this plasmid, producing 2 fragments, not 1." },
+        { "answer": "3 fragments, because linear DNA rules apply after the first cut", "explanation": "Both cuts occur in the circular DNA simultaneously during digestion. The circular rule applies: 2 cuts = 2 fragments." },
+        { "answer": "2 fragments, but this is not a problem because both can be used for cloning", "explanation": "Fragmenting the plasmid is a problem because the plasmid needs to remain as a single piece to function as a vector for gene cloning." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A linear DNA molecule and a circular DNA molecule have the same nucleotide sequence. A restriction enzyme has 5 recognition sites in this sequence. What is the difference in fragment count between them?",
+      "correct": "The linear DNA produces exactly 1 more fragment than the circular DNA",
+      "correctExplanation": "Linear: 5 + 1 = 6 fragments. Circular: 5 = 5 fragments. The difference is always exactly 1, regardless of the number of cuts, because linear DNA has two free ends that create one extra fragment.",
+      "distractors": [
+        { "answer": "The linear DNA produces 2 more fragments", "explanation": "The difference is always exactly 1 for any number of cuts. Linear = cuts + 1, circular = cuts, so the difference is always 1." },
+        { "answer": "Both produce the same number of fragments", "explanation": "Linear DNA always produces one more fragment than circular DNA for the same number of cuts." },
+        { "answer": "The difference depends on the total length of the DNA", "explanation": "The difference is always exactly 1 regardless of DNA length. It depends only on topology (linear vs circular)." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A gel electrophoresis result shows 6 bands after digesting a DNA sample with BamHI. If the DNA is from a eukaryotic chromosome, how many BamHI recognition sites are present?",
+      "correct": "5 recognition sites",
+      "correctExplanation": "Eukaryotic chromosomes are linear DNA. For linear DNA: fragments = cuts + 1, so 6 fragments = 5 cuts. Therefore there are 5 BamHI recognition sites.",
+      "distractors": [
+        { "answer": "6 recognition sites", "explanation": "6 sites in linear DNA would produce 7 fragments (6 + 1 = 7). The 6 bands indicate 5 recognition sites." },
+        { "answer": "7 recognition sites", "explanation": "7 sites in linear DNA would produce 8 fragments. Six bands from linear DNA indicate only 5 recognition sites." },
+        { "answer": "4 recognition sites", "explanation": "4 sites in linear DNA would produce 5 fragments (4 + 1 = 5), not 6. Six bands require 5 recognition sites." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A bacterium contains a circular chromosome with 3 EcoRI sites and a circular plasmid with 2 EcoRI sites. If both are digested simultaneously with EcoRI, how many total fragments are produced?",
+      "correct": "5 fragments (3 from the chromosome + 2 from the plasmid)",
+      "correctExplanation": "Both the chromosome and plasmid are circular. Circular chromosome: 3 cuts = 3 fragments. Circular plasmid: 2 cuts = 2 fragments. Total: 3 + 2 = 5 fragments.",
+      "distractors": [
+        { "answer": "7 fragments (4 from chromosome + 3 from plasmid)", "explanation": "This applies the linear DNA rule (cuts + 1) to both. Both are circular, so fragments = cuts for each." },
+        { "answer": "5 fragments, but calculated as 5 cuts in one combined molecule", "explanation": "The chromosome and plasmid are separate molecules. Each is digested independently following the circular rule." },
+        { "answer": "6 fragments (3 from each molecule)", "explanation": "The plasmid has only 2 EcoRI sites, producing 2 fragments, not 3. Total is 3 + 2 = 5." }
+      ]
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Apply fragment counting to determine the shape of an unknown DNA molecule.",
+      "sentence": "If a restriction enzyme with 6 known recognition sites produces 6 fragments, the DNA is {{blank:1}}. If it produces 7 fragments, the DNA is {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "circular",
+          "correctExplanation": "For circular DNA, fragments = cuts. 6 cuts producing 6 fragments is consistent with circular DNA.",
+          "distractors": [
+            { "answer": "linear", "explanation": "Linear DNA with 6 cuts would produce 7 fragments (6 + 1). Six fragments from 6 cuts indicates circular DNA." },
+            { "answer": "single-stranded", "explanation": "Strandedness does not determine fragment count. The 6 fragments from 6 cuts indicate circular topology." }
+          ]
+        },
+        "2": {
+          "correct": "linear",
+          "correctExplanation": "For linear DNA, fragments = cuts + 1. Six cuts producing 7 fragments (6 + 1) is consistent with linear DNA.",
+          "distractors": [
+            { "answer": "circular", "explanation": "Circular DNA with 6 cuts would produce 6 fragments. Seven fragments from 6 cuts indicates linear DNA." },
+            { "answer": "double-stranded", "explanation": "Strandedness does not determine fragment count. The 7 fragments from 6 cuts indicate linear topology." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Explain why cutting a plasmid at 2 sites is problematic for gene cloning.",
+      "sentence": "For gene cloning, the plasmid needs to be linearised with {{blank:1}} cut. If the enzyme has 2 recognition sites, it will produce {{blank:2}} fragments, breaking the plasmid into pieces.",
+      "blanks": {
+        "1": {
+          "correct": "1",
+          "correctExplanation": "One cut in circular DNA produces 1 fragment (the linearised plasmid), which is the desired outcome for inserting a gene.",
+          "distractors": [
+            { "answer": "2", "explanation": "2 cuts would produce 2 fragments in circular DNA, breaking the plasmid into pieces rather than simply linearising it." },
+            { "answer": "0", "explanation": "Without any cuts, the plasmid remains circular and cannot accept a gene insert." }
+          ]
+        },
+        "2": {
+          "correct": "2",
+          "correctExplanation": "For circular DNA, 2 cuts produce 2 fragments (fragments = cuts = 2), which means the plasmid is broken into two pieces and cannot be used as an intact vector.",
+          "distractors": [
+            { "answer": "3", "explanation": "3 fragments would result from 2 cuts in linear DNA. In circular DNA (the plasmid), 2 cuts produce 2 fragments." },
+            { "answer": "1", "explanation": "1 fragment would result from 1 cut in circular DNA. Two cuts in circular DNA produce 2 fragments." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Interpret gel electrophoresis results to determine recognition sites.",
+      "sentence": "A gel showing 4 bands from digesting a circular plasmid indicates {{blank:1}} EcoRI recognition sites, while the same 4 bands from a linear DNA molecule would indicate {{blank:2}} recognition sites.",
+      "blanks": {
+        "1": {
+          "correct": "4",
+          "correctExplanation": "For circular DNA, fragments = cuts. Four bands (4 fragments) from circular DNA indicate 4 recognition sites.",
+          "distractors": [
+            { "answer": "3", "explanation": "3 cuts in circular DNA would produce 3 fragments (3 bands), not 4. Four bands require 4 recognition sites." },
+            { "answer": "5", "explanation": "5 cuts in circular DNA would produce 5 fragments (5 bands). Four bands indicate exactly 4 recognition sites." }
+          ]
+        },
+        "2": {
+          "correct": "3",
+          "correctExplanation": "For linear DNA, fragments = cuts + 1. Four bands (4 fragments) means 4 = cuts + 1, so cuts = 3 recognition sites.",
+          "distractors": [
+            { "answer": "4", "explanation": "4 recognition sites in linear DNA would produce 5 fragments (5 bands). Four bands require 3 recognition sites in linear DNA." },
+            { "answer": "2", "explanation": "2 recognition sites in linear DNA would produce 3 fragments (3 bands). Four bands require 3 recognition sites." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "MC",
+      "question": "A researcher receives a DNA sample labelled 'bacterial chromosome' and digests it with a restriction enzyme known to have 5 recognition sites. The gel shows 6 bands. What is the most likely explanation?",
+      "correct": "The DNA has been linearised (perhaps during extraction), so it behaves as linear DNA producing 6 fragments from 5 cuts",
+      "correctExplanation": "Bacterial chromosomes are circular, which should produce 5 fragments from 5 cuts. Six fragments suggests the DNA was accidentally linearised during extraction, converting it to linear topology where 5 cuts produce 6 fragments.",
+      "distractors": [
+        { "answer": "The enzyme must have an additional recognition site that was not predicted", "explanation": "While possible, the question states the enzyme has 5 known sites. Six fragments from a circular molecule with 5 cuts requires an alternative explanation, such as linearisation." },
+        { "answer": "One fragment ran as two bands due to contamination", "explanation": "A single fragment cannot produce two bands unless there is partial digestion or contamination. The simplest explanation is that the DNA was linearised." },
+        { "answer": "Bacterial chromosomes are actually linear, not circular", "explanation": "Most bacterial chromosomes, especially commonly studied ones, are circular. The unexpected fragment count is better explained by accidental linearisation during DNA extraction." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A partial restriction enzyme digest of a circular plasmid with 3 recognition sites could produce how many bands on a gel?",
+      "correct": "Between 1 and 3 bands, depending on how many of the 3 sites were cut",
+      "correctExplanation": "A partial digest means not all recognition sites are cut. If 0 sites are cut, the intact plasmid produces 1 band. If 1 site is cut, 1 fragment (linearised). If 2 sites are cut, 2 fragments. If all 3 sites are cut, 3 fragments. The result depends on which and how many sites were cleaved.",
+      "distractors": [
+        { "answer": "Always exactly 3 bands because the plasmid has 3 recognition sites", "explanation": "3 bands would occur only if all 3 sites were cut (complete digest). A partial digest may leave some sites uncut, producing fewer fragments." },
+        { "answer": "Between 3 and 6 bands, because partial digestion creates more fragments", "explanation": "Partial digestion creates fewer fragments than complete digestion because some sites remain uncut. The maximum is 3 fragments (all sites cut)." },
+        { "answer": "Exactly 1 band because partial digests do not produce fragments", "explanation": "Partial digests do produce fragments, but fewer than a complete digest. If at least one site is cut, fragments are produced." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Evaluate this student's reasoning: 'I can always determine whether DNA is linear or circular by counting the number of fragments on a gel.' Under what condition would this approach fail?",
+      "correct": "If the number of recognition sites is unknown, you cannot determine which rule (cuts + 1 or cuts) was applied",
+      "correctExplanation": "To distinguish linear from circular DNA using fragment count, you must know how many recognition sites exist. Without this information, you cannot determine whether the fragments resulted from cuts + 1 (linear) or cuts = fragments (circular).",
+      "distractors": [
+        { "answer": "This approach always works regardless of the information available", "explanation": "Without knowing the number of recognition sites, you cannot compare the fragment count to either rule to determine DNA shape." },
+        { "answer": "It fails only if the DNA is single-stranded", "explanation": "Single vs double-stranded DNA is not relevant to the fragment counting rules. The approach fails when the number of recognition sites is unknown." },
+        { "answer": "It fails because gel electrophoresis cannot separate circular DNA fragments", "explanation": "Gel electrophoresis separates all DNA fragments by size, including those from circular DNA. The limitation is informational, not technical." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A bacterium has a 4.6 Mb circular chromosome and a 5 kb circular plasmid. Both contain recognition sites for EcoRI. After EcoRI digestion, the gel shows fragments from both molecules. How would you distinguish plasmid fragments from chromosomal fragments?",
+      "correct": "Plasmid fragments would be much smaller because the plasmid is only 5 kb, while chromosomal fragments would sum to 4.6 Mb",
+      "correctExplanation": "The total size of all plasmid fragments must equal 5 kb, while all chromosomal fragments sum to 4.6 Mb. Plasmid fragments would typically be in the kilobase range while chromosomal fragments could be much larger.",
+      "distractors": [
+        { "answer": "Plasmid fragments would be circular and chromosomal fragments would be linear", "explanation": "After restriction enzyme digestion, all fragments from circular DNA are linear. You cannot distinguish them by shape after cutting." },
+        { "answer": "It is impossible to distinguish them on a gel", "explanation": "While they run on the same gel, the fragment sizes can be used to distinguish them, especially since plasmid fragments must sum to only 5 kb." },
+        { "answer": "Plasmid fragments run faster on the gel because they are from a smaller molecule", "explanation": "Gel migration depends on fragment size, not the size of the original molecule. Small fragments from either source would run the same distance." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A researcher wants to determine the positions of 3 EcoRI sites on a circular plasmid. She performs three separate single-enzyme digests (EcoRI, BamHI, HindIII) and three double digests. Why is this approach necessary rather than simply counting fragments?",
+      "correct": "Counting fragments reveals only the number of sites, not their positions. Double digests help determine the distances between sites on the plasmid",
+      "correctExplanation": "A single EcoRI digest tells you there are 3 sites and gives fragment sizes, but not the order of fragments. Double digests with other enzymes help determine which fragments are adjacent and the distances between recognition sites.",
+      "distractors": [
+        { "answer": "Multiple digests are needed because one enzyme might miss some recognition sites", "explanation": "Restriction enzymes reliably cut all their recognition sites in complete digestion. Multiple digests are for mapping, not for ensuring complete cutting." },
+        { "answer": "Double digests confirm that the DNA is circular rather than linear", "explanation": "The shape of DNA can be determined from a single digest by comparing fragment count to known site count. Double digests are for restriction mapping." },
+        { "answer": "Multiple enzymes are needed because each enzyme can only cut once per DNA molecule", "explanation": "Restriction enzymes cut at every recognition site present, not just once per molecule." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Analyse this scenario: A plasmid has 1 EcoRI site and 1 BamHI site. If digested with both enzymes simultaneously, how many fragments are produced, and how does this compare to digesting with each enzyme separately?",
+      "correct": "Double digest: 2 fragments. EcoRI alone: 1 fragment. BamHI alone: 1 fragment. The double digest creates 2 fragments because 2 cuts in circular DNA produce 2 fragments",
+      "correctExplanation": "Each single enzyme cuts the circular plasmid once, producing 1 linear fragment. Using both enzymes creates 2 cuts in the circular DNA, producing 2 fragments (fragments = cuts for circular DNA).",
+      "distractors": [
+        { "answer": "Double digest: 3 fragments. Each single digest: 2 fragments", "explanation": "Single digests: 1 cut in circular DNA = 1 fragment each. Double digest: 2 cuts in circular DNA = 2 fragments. These follow the circular rule." },
+        { "answer": "Double digest: 4 fragments. Each single digest: 2 fragments", "explanation": "This applies the linear rule to all scenarios. The plasmid is circular: 1 cut = 1 fragment, 2 cuts = 2 fragments." },
+        { "answer": "All three digests produce the same number of fragments", "explanation": "The single and double digests produce different fragment numbers because they involve different numbers of cuts in the circular DNA." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Consider a hypothetical organism with linear mitochondrial DNA (unlike most organisms). If this DNA has 4 recognition sites for a restriction enzyme, how would the fragment count compare to the same sequence as circular mitochondrial DNA found in most organisms?",
+      "correct": "Linear: 5 fragments. Circular: 4 fragments. The linear form produces one additional fragment",
+      "correctExplanation": "Linear DNA: fragments = cuts + 1 = 4 + 1 = 5. Circular DNA: fragments = cuts = 4. The linear form always produces exactly one more fragment due to its two free ends.",
+      "distractors": [
+        { "answer": "Both would produce 4 fragments because mitochondrial DNA follows special rules", "explanation": "Mitochondrial DNA follows the same fragment counting rules as any other DNA. The topology (linear vs circular) determines the rule used." },
+        { "answer": "Linear: 4 fragments. Circular: 5 fragments", "explanation": "This is reversed. Linear DNA always produces one more fragment than circular DNA for the same number of cuts." },
+        { "answer": "The fragment count cannot be compared because different organisms have different rules", "explanation": "The rules depend only on DNA topology (linear vs circular), not on the organism. The same rules apply universally." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Critically evaluate: A student claims that the fragment counting rules prove that prokaryotic DNA is fundamentally different from eukaryotic DNA at the molecular level. Is this correct?",
+      "correct": "No; both are double-stranded DNA with the same chemical composition. The difference is topological (circular vs linear), not molecular",
+      "correctExplanation": "Prokaryotic and eukaryotic DNA are chemically identical (same nucleotides, same base pairing). The fragment counting difference arises from shape (topology) — circular vs linear — not from any molecular difference in the DNA itself.",
+      "distractors": [
+        { "answer": "Yes, because the different fragment counts prove the DNA has different chemical properties", "explanation": "The fragment counts differ due to topology (shape), not chemistry. Both types of DNA are built from the same nucleotides with the same base pairing rules." },
+        { "answer": "Yes, because restriction enzymes work differently on prokaryotic and eukaryotic DNA", "explanation": "Restriction enzymes recognise specific sequences regardless of the source organism. They work identically on prokaryotic and eukaryotic DNA." },
+        { "answer": "No, because prokaryotic DNA is actually linear like eukaryotic DNA", "explanation": "Prokaryotic chromosomal DNA and plasmids are indeed circular. The correct reason the student is wrong is that the difference is topological, not molecular." }
+      ]
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Analyse how partial digestion affects fragment counting in circular DNA.",
+      "sentence": "In a partial digest of circular DNA with 4 recognition sites, if only {{blank:1}} of the 4 sites are cut, the result would be 3 fragments, whereas a complete digest would produce {{blank:2}} fragments.",
+      "blanks": {
+        "1": {
+          "correct": "3",
+          "correctExplanation": "For circular DNA, fragments = cuts. If 3 of the 4 sites are cut, 3 fragments are produced.",
+          "distractors": [
+            { "answer": "2", "explanation": "2 cuts in circular DNA would produce 2 fragments, not 3." },
+            { "answer": "4", "explanation": "If all 4 sites were cut, it would be a complete digest, not partial, producing 4 fragments." }
+          ]
+        },
+        "2": {
+          "correct": "4",
+          "correctExplanation": "A complete digest cuts all 4 recognition sites. For circular DNA, 4 cuts produce 4 fragments.",
+          "distractors": [
+            { "answer": "5", "explanation": "5 fragments from 4 cuts would apply to linear DNA. This is circular DNA, where fragments = cuts = 4." },
+            { "answer": "3", "explanation": "3 fragments from a complete digest would mean only 3 recognition sites. With 4 sites, complete digestion produces 4 fragments." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Evaluate the general relationship between linear and circular fragment counts.",
+      "sentence": "For any number of restriction enzyme cuts, linear DNA always produces exactly {{blank:1}} more fragment(s) than circular DNA because linear DNA has two {{blank:2}} that create an additional piece when the DNA is divided.",
+      "blanks": {
+        "1": {
+          "correct": "one",
+          "correctExplanation": "The difference is always exactly one: linear = cuts + 1, circular = cuts, so linear - circular = 1 for any number of cuts.",
+          "distractors": [
+            { "answer": "two", "explanation": "The difference is always one, not two. Linear produces cuts + 1 fragments, circular produces cuts fragments, giving a difference of exactly one." },
+            { "answer": "zero", "explanation": "Linear and circular DNA do not produce the same number of fragments. Linear always produces one more." }
+          ]
+        },
+        "2": {
+          "correct": "free ends",
+          "correctExplanation": "Linear DNA has two free ends (termini). These ends mean that the first and last segments are separate pieces, adding one extra fragment compared to circular DNA where those ends would be connected.",
+          "distractors": [
+            { "answer": "recognition sites", "explanation": "The extra fragment comes from the free ends of linear DNA, not from extra recognition sites. Both forms can have the same number of recognition sites." },
+            { "answer": "centromeres", "explanation": "Centromeres are structures on eukaryotic chromosomes involved in cell division, not the reason for the extra fragment count." }
+          ]
+        }
+      }
+    }
+  ]
+}

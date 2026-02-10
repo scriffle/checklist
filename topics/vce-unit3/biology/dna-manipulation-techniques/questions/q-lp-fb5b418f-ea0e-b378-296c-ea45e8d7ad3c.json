@@ -1,0 +1,583 @@
+{
+  "_link": {
+    "uuid": "lp-fb5b418f-ea0e-b378-296c-ea45e8d7ad3c",
+    "version": 1,
+    "contentHash": "3c01f0b9",
+    "title": "I can explain the natural function of CRISPR-Cas9 in bacterial defence against viruses",
+    "generatedAt": "2026-02-10T12:08:00.000Z"
+  },
+  "toLevel2": [
+    {
+      "type": "MC",
+      "question": "What does CRISPR stand for in terms of its structure in bacterial DNA?",
+      "correct": "Clustered Regularly Interspaced Short Palindromic Repeats",
+      "correctExplanation": "CRISPR refers to sections of bacterial DNA that contain short repeated palindromic sequences separated by spacer sequences.",
+      "distractors": [
+        { "answer": "Circular Recombinant Inserted Short Protein Repeats", "explanation": "This is not the correct expansion. CRISPR refers to clustered palindromic DNA repeats, not proteins." },
+        { "answer": "Copied Restriction Inserted Sequence Palindrome Region", "explanation": "This is incorrect. CRISPR describes the pattern of repeated palindromic sequences with spacers." },
+        { "answer": "Complementary RNA Inserted Spacer Protein Region", "explanation": "This is incorrect. CRISPR refers to a DNA structure, not an RNA or protein region." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "What is the natural function of the CRISPR-Cas9 system in bacteria?",
+      "correct": "To defend against bacteriophage (viral) infections",
+      "correctExplanation": "CRISPR-Cas9 acts as an immune system in bacteria, recognising and destroying viral DNA that matches stored spacer sequences.",
+      "distractors": [
+        { "answer": "To replicate the bacterial chromosome", "explanation": "DNA replication is carried out by DNA polymerase, not the CRISPR system." },
+        { "answer": "To produce proteins for bacterial growth", "explanation": "Protein production involves transcription and translation; CRISPR defends against viruses." },
+        { "answer": "To transfer plasmids between bacteria", "explanation": "Plasmid transfer occurs through conjugation; CRISPR is a viral defence mechanism." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "What are the spacer sequences in the CRISPR region?",
+      "correct": "Short pieces of viral DNA stored from previous infections",
+      "correctExplanation": "When a bacteriophage infects a bacterium, the CRISPR system stores a piece of the viral DNA as a spacer between the palindromic repeats.",
+      "distractors": [
+        { "answer": "Random DNA sequences with no specific origin", "explanation": "Spacers are not random; they are specific pieces of viral DNA stored as a memory of past infections." },
+        { "answer": "Copies of the bacterial chromosome", "explanation": "Spacers come from viral DNA, not from the bacterial chromosome." },
+        { "answer": "Restriction enzyme recognition sites", "explanation": "Spacers are stored viral sequences, not restriction enzyme sites." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "What is the role of guide RNA (gRNA) in the CRISPR-Cas9 system?",
+      "correct": "To direct Cas9 to the matching viral DNA by complementary base pairing",
+      "correctExplanation": "The gRNA is transcribed from the spacer sequence and guides the Cas9 enzyme to the viral DNA that matches by complementary base pairing.",
+      "distractors": [
+        { "answer": "To cut the viral DNA directly without Cas9", "explanation": "The gRNA guides Cas9 to the target; it is Cas9 that performs the cutting." },
+        { "answer": "To replicate the viral DNA for storage", "explanation": "The gRNA directs destruction of viral DNA, not replication of it." },
+        { "answer": "To join bacterial and viral DNA together", "explanation": "CRISPR destroys viral DNA; it does not join it to bacterial DNA." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "What does the Cas9 enzyme do once guided to the viral DNA?",
+      "correct": "It cuts both strands of the viral DNA, destroying it",
+      "correctExplanation": "Cas9 is an endonuclease that makes a double-stranded cut in the viral DNA, preventing the virus from replicating.",
+      "distractors": [
+        { "answer": "It copies the viral DNA into the bacterial genome", "explanation": "Cas9 cuts and destroys viral DNA; it does not copy it into the genome." },
+        { "answer": "It joins the viral DNA to the bacterial chromosome", "explanation": "Cas9 is a cutting enzyme; it destroys viral DNA rather than joining it." },
+        { "answer": "It translates the viral DNA into protein", "explanation": "Cas9 cuts DNA; translation is performed by ribosomes." }
+      ]
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the sentence about the CRISPR structure.",
+      "sentence": "CRISPR regions contain short repeated {{blank:1}} sequences with {{blank:2}} of viral DNA stored between them.",
+      "blanks": {
+        "1": {
+          "correct": "palindromic",
+          "correctExplanation": "The repeated sequences in CRISPR are palindromic, meaning they read the same forwards and backwards on complementary strands.",
+          "distractors": [
+            { "answer": "linear", "explanation": "The repeats are specifically palindromic, not just linear sequences." },
+            { "answer": "circular", "explanation": "The repeats are palindromic DNA sequences, not circular structures." }
+          ]
+        },
+        "2": {
+          "correct": "spacers",
+          "correctExplanation": "Spacers are short pieces of viral DNA stored between the palindromic repeats as a memory of past infections.",
+          "distractors": [
+            { "answer": "introns", "explanation": "Introns are non-coding sequences in eukaryotic genes; spacers in CRISPR are stored viral DNA." },
+            { "answer": "promoters", "explanation": "Promoters initiate transcription; CRISPR spacers store viral DNA sequences." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the sentence about how CRISPR defends against viruses.",
+      "sentence": "When the same virus attacks again, the bacterium transcribes the spacer into {{blank:1}}, which guides the {{blank:2}} enzyme to cut and destroy the viral DNA.",
+      "blanks": {
+        "1": {
+          "correct": "guide RNA",
+          "correctExplanation": "The spacer sequence is transcribed into guide RNA (gRNA) that is complementary to the viral DNA.",
+          "distractors": [
+            { "answer": "mRNA", "explanation": "While gRNA is an RNA molecule, it is specifically called guide RNA because it guides Cas9 to the target." },
+            { "answer": "tRNA", "explanation": "tRNA carries amino acids during translation; the CRISPR system uses guide RNA." }
+          ]
+        },
+        "2": {
+          "correct": "Cas9",
+          "correctExplanation": "Cas9 is the enzyme that cuts both strands of the viral DNA after being directed to it by the guide RNA.",
+          "distractors": [
+            { "answer": "ligase", "explanation": "Ligase joins DNA fragments; Cas9 is the CRISPR-associated enzyme that cuts viral DNA." },
+            { "answer": "polymerase", "explanation": "Polymerase synthesises DNA; Cas9 is the endonuclease that destroys viral DNA." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the sentence about PAM sequences.",
+      "sentence": "Cas9 recognises a {{blank:1}} sequence that is present in {{blank:2}} DNA but not in the bacterial genome, ensuring the bacterium's own DNA is not cut.",
+      "blanks": {
+        "1": {
+          "correct": "PAM",
+          "correctExplanation": "The PAM (Protospacer Adjacent Motif) sequence is a short DNA sequence adjacent to the target that Cas9 requires for recognition and cutting.",
+          "distractors": [
+            { "answer": "VNTR", "explanation": "VNTRs are variable number tandem repeats used in DNA profiling; PAM sequences are specific to CRISPR targeting." },
+            { "answer": "primer", "explanation": "Primers are used in PCR; PAM sequences are required by Cas9 for target recognition." }
+          ]
+        },
+        "2": {
+          "correct": "viral",
+          "correctExplanation": "PAM sequences are present in the viral DNA but not adjacent to the spacer in the bacterial CRISPR region, preventing self-cutting.",
+          "distractors": [
+            { "answer": "bacterial", "explanation": "PAM sequences are present in viral DNA; the bacterial CRISPR region lacks them, preventing self-destruction." },
+            { "answer": "plasmid", "explanation": "The PAM sequence is found in the invading viral DNA, allowing Cas9 to distinguish foreign from self DNA." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "TF",
+      "question": "CRISPR-Cas9 acts as an immune system in bacteria by storing viral DNA sequences and using them to recognise future infections.",
+      "correct": "True",
+      "correctExplanation": "CRISPR functions as an adaptive immune system in bacteria, storing pieces of viral DNA as spacers and using them to produce gRNA that targets the same virus in future infections.",
+      "distractors": [
+        { "answer": "False", "explanation": "CRISPR-Cas9 is indeed a bacterial immune system that stores viral DNA and uses it to defend against repeat infections." }
+      ]
+    },
+    {
+      "type": "TF",
+      "question": "The guide RNA in the CRISPR system is complementary to the bacterial chromosome.",
+      "correct": "False",
+      "correctExplanation": "The guide RNA is complementary to the viral DNA, not the bacterial chromosome. This specificity ensures that Cas9 targets foreign DNA rather than the bacterium's own genome.",
+      "distractors": [
+        { "answer": "True", "explanation": "The gRNA is complementary to the stored viral sequence, not the bacterial chromosome, which is how it targets invading viruses." }
+      ]
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "MC",
+      "question": "Explain how the CRISPR system stores a 'memory' of past viral infections.",
+      "correct": "When a virus infects the bacterium, a piece of the viral DNA is inserted as a spacer in the CRISPR region, creating a genetic record of the infection",
+      "correctExplanation": "The spacer acts as a genetic memory. If the same virus attacks again, the spacer is transcribed into gRNA that recognises and targets the viral DNA for destruction.",
+      "distractors": [
+        { "answer": "The bacterium produces antibodies that remember the virus", "explanation": "Antibodies are part of the vertebrate immune system; bacteria use CRISPR spacers, not antibodies." },
+        { "answer": "The viral DNA is stored in a separate plasmid", "explanation": "Viral DNA fragments are stored as spacers within the CRISPR region of the bacterial chromosome, not in plasmids." },
+        { "answer": "The bacterium memorises the shape of the viral protein coat", "explanation": "CRISPR works through DNA sequence recognition, not protein shape recognition." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Why is it important that Cas9 only cuts DNA adjacent to a PAM sequence?",
+      "correct": "It prevents Cas9 from cutting the bacterium's own CRISPR region, which contains the spacer but not the PAM sequence",
+      "correctExplanation": "The PAM sequence is present in the viral DNA but absent from the bacterial CRISPR region, ensuring Cas9 distinguishes between self and foreign DNA.",
+      "distractors": [
+        { "answer": "PAM sequences make Cas9 cut faster", "explanation": "PAM sequences provide target specificity, not cutting speed." },
+        { "answer": "Without PAM, Cas9 would cut RNA instead of DNA", "explanation": "Cas9 always cuts DNA; the PAM ensures it cuts only the correct (foreign) DNA." },
+        { "answer": "PAM sequences activate the guide RNA for translation", "explanation": "PAM sequences are recognised by Cas9 protein, not involved in RNA translation." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "How does the CRISPR-Cas9 system differentiate between foreign viral DNA and the bacterium's own DNA?",
+      "correct": "The PAM sequence is present adjacent to the target in viral DNA but is absent from the spacer stored in the bacterial CRISPR region",
+      "correctExplanation": "This is a crucial safety mechanism: the spacer in the CRISPR array lacks a PAM sequence, so Cas9 cannot cut the bacterial genome even though it contains the same sequence.",
+      "distractors": [
+        { "answer": "Cas9 can detect the difference in size between viral and bacterial DNA", "explanation": "Cas9 does not distinguish by DNA size; it uses PAM sequences for target recognition." },
+        { "answer": "Viral DNA has a different sugar-phosphate backbone than bacterial DNA", "explanation": "Both viral and bacterial DNA have the same backbone structure; distinction relies on PAM sequences." },
+        { "answer": "The guide RNA only binds to single-stranded DNA found in viruses", "explanation": "The gRNA can bind to double-stranded DNA after Cas9 unwinds it; the distinction is through PAM recognition." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Describe the sequence of events when a bacteriophage infects a bacterium that has previously encountered the same virus.",
+      "correct": "The spacer is transcribed into gRNA → gRNA guides Cas9 to the viral DNA → Cas9 recognises the PAM and cuts both strands → viral DNA is destroyed",
+      "correctExplanation": "This sequence shows how the stored spacer enables a rapid and specific response to a previously encountered virus.",
+      "distractors": [
+        { "answer": "Cas9 immediately destroys all DNA in the cell → the bacterium dies", "explanation": "Cas9 is guided specifically to viral DNA by gRNA; it does not destroy all DNA indiscriminately." },
+        { "answer": "The bacterium produces restriction enzymes → the enzymes cut viral DNA at random", "explanation": "CRISPR uses gRNA-guided Cas9, not restriction enzymes, for targeted viral DNA destruction." },
+        { "answer": "The virus inserts a new spacer → the old spacer is deleted", "explanation": "New spacers are added during infection, but old spacers are retained; the defence response uses existing spacers." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Why is the CRISPR-Cas9 system described as an 'adaptive' immune response?",
+      "correct": "Because it acquires new spacers from each viral infection, allowing it to respond to new threats and remember them for the future",
+      "correctExplanation": "Unlike innate immunity, which is non-specific, CRISPR adapts to new threats by incorporating viral DNA as spacers, building a specific defence library.",
+      "distractors": [
+        { "answer": "Because it can adapt to any temperature in the environment", "explanation": "Adaptive refers to acquiring new specificities from infections, not to temperature adaptation." },
+        { "answer": "Because it uses different enzymes for each type of virus", "explanation": "CRISPR uses the same Cas9 enzyme for all viruses; specificity comes from the gRNA sequence, not different enzymes." },
+        { "answer": "Because it only works against bacteria, not viruses", "explanation": "CRISPR defends bacteria against viruses; it is the bacteria's own immune system." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "What happens to the viral DNA after Cas9 makes a double-stranded cut?",
+      "correct": "The cut viral DNA cannot replicate and is degraded by cellular nucleases",
+      "correctExplanation": "The double-stranded break prevents the viral DNA from functioning. Cellular enzymes then degrade the fragmented viral DNA.",
+      "distractors": [
+        { "answer": "The viral DNA is repaired by the bacterium and integrated into the chromosome", "explanation": "The purpose of CRISPR is to destroy viral DNA, not to integrate it. The cut fragments are degraded." },
+        { "answer": "The viral DNA is stored as a new spacer in the CRISPR region", "explanation": "Spacer acquisition occurs during initial infection; the Cas9 cutting response destroys the viral DNA." },
+        { "answer": "The viral DNA is transferred to nearby bacteria through conjugation", "explanation": "Cut viral DNA is degraded, not transferred. Conjugation involves plasmid transfer." }
+      ]
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the sentence about how CRISPR acquires immunity.",
+      "sentence": "During the first infection, the CRISPR system captures a piece of {{blank:1}} DNA and stores it as a {{blank:2}} between the palindromic repeats.",
+      "blanks": {
+        "1": {
+          "correct": "viral",
+          "correctExplanation": "The CRISPR system captures a fragment of the invading viral DNA to store as a genetic memory.",
+          "distractors": [
+            { "answer": "bacterial", "explanation": "The stored DNA comes from the invading virus, not from the bacterium's own genome." },
+            { "answer": "plasmid", "explanation": "The spacer DNA comes from the invading bacteriophage, not from plasmids." }
+          ]
+        },
+        "2": {
+          "correct": "spacer",
+          "correctExplanation": "The captured viral DNA fragment is inserted as a spacer in the CRISPR array, providing a record of the infection.",
+          "distractors": [
+            { "answer": "promoter", "explanation": "Promoters regulate gene expression; spacers store viral DNA sequences in the CRISPR system." },
+            { "answer": "plasmid", "explanation": "Spacers are part of the chromosomal CRISPR region, not stored on separate plasmids." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the sentence about why Cas9 does not cut bacterial DNA.",
+      "sentence": "Cas9 only cuts DNA adjacent to a {{blank:1}} sequence, which is present in the viral DNA but {{blank:2}} from the bacterial CRISPR region.",
+      "blanks": {
+        "1": {
+          "correct": "PAM",
+          "correctExplanation": "The PAM (Protospacer Adjacent Motif) sequence is required for Cas9 to bind and cut the target DNA.",
+          "distractors": [
+            { "answer": "VNTR", "explanation": "VNTRs are used in DNA profiling; PAM sequences are specific to the CRISPR-Cas9 targeting mechanism." },
+            { "answer": "restriction", "explanation": "Restriction sites are for restriction enzymes; Cas9 requires PAM sequences for recognition." }
+          ]
+        },
+        "2": {
+          "correct": "absent",
+          "correctExplanation": "The PAM sequence is not present adjacent to the spacer in the CRISPR array, preventing self-cutting.",
+          "distractors": [
+            { "answer": "present", "explanation": "If PAM were present in the CRISPR region, Cas9 would cut the bacterial DNA — which is prevented by PAM absence." },
+            { "answer": "amplified", "explanation": "The PAM is absent from the bacterial CRISPR region; amplification is unrelated to this distinction." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the sentence comparing CRISPR to an immune system.",
+      "sentence": "CRISPR is described as {{blank:1}} immunity because it acquires new spacers from each infection, creating a specific {{blank:2}} of past viral encounters.",
+      "blanks": {
+        "1": {
+          "correct": "adaptive",
+          "correctExplanation": "Like the adaptive immune system of vertebrates, CRISPR acquires new specific defences in response to each new infection.",
+          "distractors": [
+            { "answer": "innate", "explanation": "Innate immunity is non-specific; CRISPR is adaptive because it acquires specific new defences." },
+            { "answer": "passive", "explanation": "Passive immunity involves receiving antibodies; CRISPR actively acquires new spacers." }
+          ]
+        },
+        "2": {
+          "correct": "memory",
+          "correctExplanation": "The stored spacers serve as a genetic memory, allowing the bacterium to rapidly respond to previously encountered viruses.",
+          "distractors": [
+            { "answer": "mutation", "explanation": "Spacer acquisition is not mutation; it is the deliberate incorporation of viral DNA as a defence memory." },
+            { "answer": "replication", "explanation": "The CRISPR system stores memories of past infections, not replications of the full viral genome." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "TF",
+      "question": "The PAM sequence prevents Cas9 from destroying the bacterium's own DNA.",
+      "correct": "True",
+      "correctExplanation": "The PAM sequence is present in viral DNA but absent from the CRISPR spacer region. This ensures Cas9 only cuts foreign DNA, protecting the bacterium's genome.",
+      "distractors": [
+        { "answer": "False", "explanation": "The PAM requirement is a critical safety mechanism that prevents Cas9 from cutting the bacterial genome." }
+      ]
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "MC",
+      "question": "A researcher discovers a bacterial strain with many spacer sequences in its CRISPR region. What can you infer about this bacterium's history?",
+      "correct": "It has survived infections by many different bacteriophages, each adding a new spacer to the CRISPR array",
+      "correctExplanation": "Each spacer represents a stored memory of a past viral infection. More spacers indicate exposure to and survival of more diverse viral attacks.",
+      "distractors": [
+        { "answer": "The bacterium has never been infected by any virus", "explanation": "Spacers are acquired from viral infections; many spacers indicate many past encounters." },
+        { "answer": "The bacterium is producing too many restriction enzymes", "explanation": "Spacer number relates to viral infection history, not restriction enzyme production." },
+        { "answer": "The CRISPR system is malfunctioning and creating random sequences", "explanation": "Spacers are not random; they are specific viral DNA fragments acquired during real infections." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A mutant bacterium has a non-functional Cas9 enzyme but an intact CRISPR array with many spacers. Predict what would happen when this bacterium is infected by a previously encountered virus.",
+      "correct": "The gRNA would be produced and bind to the viral DNA, but without functional Cas9, the virus would not be cut and could replicate",
+      "correctExplanation": "The CRISPR system can still produce gRNA from the spacers, but without Cas9 to make the double-stranded cut, the viral DNA remains intact and the virus can replicate.",
+      "distractors": [
+        { "answer": "The bacterium would still be protected because gRNA alone can destroy viral DNA", "explanation": "gRNA alone cannot cut DNA; Cas9 is the enzyme that makes the cut." },
+        { "answer": "The CRISPR system would recruit restriction enzymes instead", "explanation": "CRISPR uses Cas9, not restriction enzymes; there is no alternative cutting mechanism in the CRISPR system." },
+        { "answer": "New spacers would be added to compensate for the non-functional Cas9", "explanation": "Adding spacers would not help because the cutting enzyme (Cas9) is still non-functional." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "If a bacteriophage mutates its DNA sequence in the region that matches a CRISPR spacer, predict the outcome of the next infection.",
+      "correct": "The gRNA would no longer be complementary to the mutated viral DNA, so Cas9 could not target it and the virus would evade the CRISPR defence",
+      "correctExplanation": "CRISPR relies on complementary base pairing between gRNA and viral DNA. If the virus mutates the target region, the gRNA can no longer bind and guide Cas9 to cut.",
+      "distractors": [
+        { "answer": "The CRISPR system would automatically update the spacer to match the mutation", "explanation": "The existing spacer does not update; a new spacer from the mutant virus must be acquired during infection." },
+        { "answer": "Cas9 would still cut the mutated DNA because it recognises the PAM sequence alone", "explanation": "Both the gRNA-target match and the PAM sequence are needed; the PAM alone is insufficient." },
+        { "answer": "The mutation would have no effect on the CRISPR defence", "explanation": "Mutations in the target region disrupt gRNA binding, allowing the virus to evade the defence." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Explain why the CRISPR-Cas9 defence system provides better protection against repeat infections than against first-time infections by a new virus.",
+      "correct": "During a first infection, the bacterium must survive long enough to acquire a spacer; during repeat infections, the spacer is already present for immediate gRNA production",
+      "correctExplanation": "The initial infection is dangerous because the CRISPR system has no memory of the virus. Once a spacer is acquired, future infections trigger an immediate and specific response.",
+      "distractors": [
+        { "answer": "First infections produce more gRNA than repeat infections", "explanation": "No gRNA can be produced during a first infection until a spacer is acquired." },
+        { "answer": "Cas9 is only active during repeat infections", "explanation": "Cas9 is always present; the key factor is whether a matching spacer and gRNA exist." },
+        { "answer": "First infections do not involve bacteriophages", "explanation": "Both first and repeat infections involve bacteriophages; the difference is the presence of a matching spacer." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A scientist discovers that some bacteria can share their CRISPR spacers with neighbouring bacteria through horizontal gene transfer. Apply your understanding to explain the significance of this finding.",
+      "correct": "Sharing spacers could provide neighbouring bacteria with immunity to viruses they have never encountered, extending the protection to the community",
+      "correctExplanation": "If spacers can be shared, bacteria that have never been infected by a particular virus could gain the gRNA template to defend against it, creating a form of community immunity.",
+      "distractors": [
+        { "answer": "Sharing spacers would make all bacteria vulnerable to viruses", "explanation": "Sharing spacers provides additional protection, not vulnerability." },
+        { "answer": "Shared spacers would be destroyed by the recipient's Cas9 enzyme", "explanation": "Shared spacers lack PAM sequences in their genomic context, so they would not be cut by the recipient's Cas9." },
+        { "answer": "This finding is impossible because CRISPR regions cannot be transferred", "explanation": "Horizontal gene transfer can include CRISPR regions, though it may be uncommon." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Compare the CRISPR-Cas9 bacterial defence system with restriction enzymes as a method of viral defence. What is a key advantage of CRISPR?",
+      "correct": "CRISPR provides specific, targeted defence against previously encountered viruses, while restriction enzymes cut at fixed recognition sites regardless of the virus",
+      "correctExplanation": "CRISPR is adaptive and specific to each virus through stored spacers, while restriction enzymes are innate and cut any DNA containing their recognition sequence, including potentially the bacterium's own DNA.",
+      "distractors": [
+        { "answer": "Restriction enzymes are more specific than CRISPR", "explanation": "CRISPR is more specific because it uses stored viral sequences to target particular viruses." },
+        { "answer": "CRISPR cannot target viral DNA, only bacterial DNA", "explanation": "CRISPR specifically targets viral DNA using gRNA derived from stored spacers." },
+        { "answer": "Restriction enzymes provide adaptive immunity while CRISPR provides innate immunity", "explanation": "This is reversed: CRISPR provides adaptive (acquired) immunity while restriction enzymes are innate." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A bacterium has a CRISPR spacer matching virus A and is simultaneously infected by virus A and a new virus B. Predict the outcome.",
+      "correct": "Virus A would be destroyed by Cas9 guided by the matching gRNA, but virus B could replicate because no matching spacer exists yet",
+      "correctExplanation": "The CRISPR system can only target viruses it has previously encountered (stored spacers). Virus A matches an existing spacer, but virus B has no matching spacer, so it can initially replicate.",
+      "distractors": [
+        { "answer": "Both viruses would be destroyed because CRISPR targets all foreign DNA", "explanation": "CRISPR only targets DNA matching its stored spacers; it cannot target unknown viruses." },
+        { "answer": "Neither virus would be affected because CRISPR cannot handle dual infections", "explanation": "CRISPR can handle virus A with the existing spacer; only virus B would be unaffected." },
+        { "answer": "Virus B would be destroyed first because new viruses trigger a stronger response", "explanation": "New viruses actually trigger no CRISPR response until a spacer is acquired." }
+      ]
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Apply your understanding to predict the outcome by completing the sentence.",
+      "sentence": "If a bacteriophage mutates its target sequence, the existing {{blank:1}} would no longer be complementary, allowing the virus to {{blank:2}} the CRISPR defence.",
+      "blanks": {
+        "1": {
+          "correct": "spacer",
+          "correctExplanation": "The stored spacer would no longer match the mutated viral DNA, so the gRNA derived from it could not guide Cas9 to the target.",
+          "distractors": [
+            { "answer": "PAM", "explanation": "Even if the PAM is present, the gRNA must match the target; a mismatched spacer would be the problem." },
+            { "answer": "Cas9", "explanation": "Cas9 is the cutting enzyme; the complementarity issue is with the spacer-derived gRNA." }
+          ]
+        },
+        "2": {
+          "correct": "evade",
+          "correctExplanation": "Without gRNA complementarity, Cas9 cannot target the mutated virus, allowing it to escape (evade) the CRISPR defence.",
+          "distractors": [
+            { "answer": "strengthen", "explanation": "The mutation allows the virus to escape, not strengthen the defence." },
+            { "answer": "activate", "explanation": "The virus evades the defence; it does not activate it more strongly." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Apply your knowledge to complete the sentence comparing CRISPR and restriction enzymes.",
+      "sentence": "CRISPR provides {{blank:1}} immunity because it acquires new spacers from infections, while restriction enzymes provide {{blank:2}} immunity because they always cut the same recognition sequences.",
+      "blanks": {
+        "1": {
+          "correct": "adaptive",
+          "correctExplanation": "CRISPR is adaptive because it acquires new spacers from each viral infection, building a specific defence library.",
+          "distractors": [
+            { "answer": "innate", "explanation": "Innate immunity is non-specific; CRISPR is adaptive because it learns from each infection." },
+            { "answer": "passive", "explanation": "CRISPR actively acquires new defences; it is not a passive system." }
+          ]
+        },
+        "2": {
+          "correct": "innate",
+          "correctExplanation": "Restriction enzymes are part of innate immunity because they recognise fixed sequences without adapting to specific threats.",
+          "distractors": [
+            { "answer": "adaptive", "explanation": "Restriction enzymes do not adapt to new threats; they always recognise the same sequences." },
+            { "answer": "acquired", "explanation": "Restriction enzymes are not acquired in response to infections; they are constitutively expressed." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Apply your understanding to complete the sentence about a mutant bacterium.",
+      "sentence": "A bacterium with non-functional {{blank:1}} can still produce guide RNA from its spacers but cannot {{blank:2}} viral DNA, leaving it vulnerable to repeat infections.",
+      "blanks": {
+        "1": {
+          "correct": "Cas9",
+          "correctExplanation": "Without functional Cas9, the endonuclease needed to cut viral DNA is missing, leaving the bacterium defenceless.",
+          "distractors": [
+            { "answer": "RNA polymerase", "explanation": "Without RNA polymerase, gRNA could not be produced at all; the scenario describes non-functional Cas9." },
+            { "answer": "DNA ligase", "explanation": "DNA ligase joins DNA fragments; Cas9 is the enzyme needed for cutting viral DNA." }
+          ]
+        },
+        "2": {
+          "correct": "cut",
+          "correctExplanation": "Cas9 makes the double-stranded cut in viral DNA; without it, the viral DNA remains intact.",
+          "distractors": [
+            { "answer": "transcribe", "explanation": "Transcription of gRNA still occurs; the problem is the inability to cut the target DNA." },
+            { "answer": "store", "explanation": "Spacer storage occurs during initial infection; the issue here is the inability to cut during the defence response." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "MC",
+      "question": "Evaluate the analogy: 'CRISPR spacers are like a criminal database of mugshots that police use to identify repeat offenders.' How well does this analogy explain the system?",
+      "correct": "The analogy is useful because spacers store 'identifiers' of past threats (like mugshots) that are used to recognise and respond to repeat encounters, but it does not capture the molecular mechanism of gRNA-guided cutting",
+      "correctExplanation": "The analogy effectively conveys the concept of stored memories for recognising repeat threats but simplifies the molecular details of complementary base pairing and enzymatic cutting.",
+      "distractors": [
+        { "answer": "The analogy is perfect and captures every aspect of the CRISPR system", "explanation": "No analogy is perfect; this one misses the molecular mechanism of gRNA complementarity and Cas9 cutting." },
+        { "answer": "The analogy is completely wrong because CRISPR has nothing to do with recognition", "explanation": "CRISPR does involve recognition of previously encountered viral sequences, which the analogy captures." },
+        { "answer": "The analogy fails because mugshots are visual while CRISPR uses DNA", "explanation": "Analogies translate concepts across domains; the visual-molecular difference is expected and does not invalidate the analogy." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Analyse the evolutionary arms race between bacteria and bacteriophages in the context of CRISPR. How might this relationship drive evolution in both organisms?",
+      "correct": "Bacteria evolve more diverse CRISPR spacers for broader protection, while viruses evolve mutations in target regions and PAM sites to evade CRISPR, driving continuous co-evolution",
+      "correctExplanation": "This represents a classic evolutionary arms race: bacteria with better CRISPR systems survive more infections, while viruses that mutate to evade CRISPR have a reproductive advantage, maintaining selective pressure on both.",
+      "distractors": [
+        { "answer": "CRISPR prevents all viral evolution because it destroys every virus", "explanation": "CRISPR does not destroy every virus; mutations in target regions allow some viruses to evade the system." },
+        { "answer": "Bacteriophages always win the arms race because they mutate faster", "explanation": "Neither side always wins; the arms race drives continuous adaptation in both organisms." },
+        { "answer": "There is no evolutionary relationship between CRISPR and viral evolution", "explanation": "CRISPR exerts strong selection pressure on viruses, driving evolution of escape mutants." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Critically evaluate why CRISPR-Cas9 was described as a 'revolutionary' discovery for molecular biology, considering its natural function in bacteria.",
+      "correct": "Scientists recognised that CRISPR's ability to cut DNA at any sequence specified by a guide RNA could be repurposed as a programmable genome editing tool for any organism",
+      "correctExplanation": "The revolutionary insight was that by designing custom guide RNAs, Cas9 could be directed to cut any DNA sequence in any organism, making genome editing precise, cheap and accessible.",
+      "distractors": [
+        { "answer": "CRISPR was revolutionary only because it was the first immune system discovered in bacteria", "explanation": "While CRISPR's immune function was novel, the revolution was in recognising its potential as a universal genome editing tool." },
+        { "answer": "CRISPR was not actually revolutionary because restriction enzymes already cut DNA", "explanation": "Restriction enzymes cut at fixed sites; CRISPR can be programmed to cut at any sequence, which was the breakthrough." },
+        { "answer": "The discovery was revolutionary solely because of its commercial value", "explanation": "The revolution was scientific — a programmable DNA cutting tool — though commercial applications followed." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Evaluate the following student claim: 'CRISPR is identical to the vertebrate adaptive immune system because both provide acquired immunity.'",
+      "correct": "While both provide acquired immunity against specific threats, they differ fundamentally: CRISPR uses DNA/RNA complementarity and enzyme cutting, while vertebrates use antibodies and immune cells",
+      "correctExplanation": "Both systems share the concept of acquiring specific defences, but their molecular mechanisms are entirely different — CRISPR is nucleic acid-based while vertebrate immunity is protein and cell-based.",
+      "distractors": [
+        { "answer": "The claim is completely correct; both systems are identical", "explanation": "While both provide acquired immunity, their molecular mechanisms are fundamentally different." },
+        { "answer": "The claim is completely wrong; CRISPR is innate, not adaptive", "explanation": "CRISPR is correctly described as adaptive because it acquires new spacers; the claim's error is in saying the systems are identical." },
+        { "answer": "The only difference is that CRISPR works faster than vertebrate immunity", "explanation": "The differences extend far beyond speed; the mechanisms (nucleic acid vs protein-based) are fundamentally distinct." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Analyse why some bacteria have been found with hundreds of CRISPR spacers while others have very few. What does this variation suggest about bacterial ecology?",
+      "correct": "Bacteria in environments with high viral diversity need more spacers for protection, while those in less challenging environments maintain fewer",
+      "correctExplanation": "The number of spacers reflects the diversity of viral threats encountered. Bacteria in high-phage environments accumulate more spacers as they encounter and survive more diverse infections.",
+      "distractors": [
+        { "answer": "Bacteria with more spacers are weaker because their CRISPR system is overloaded", "explanation": "More spacers generally provide broader protection, not weakness." },
+        { "answer": "The number of spacers is random and has no ecological significance", "explanation": "Spacer number reflects viral encounter history and environmental pressure." },
+        { "answer": "Bacteria with few spacers have never been infected by any virus", "explanation": "Few spacers could mean fewer infections or loss of spacers over time, not necessarily zero infections." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Evaluate the potential consequences if a bacterium's CRISPR system accidentally acquired a spacer from its own chromosomal DNA instead of viral DNA.",
+      "correct": "The bacterium would produce gRNA complementary to its own chromosome, and Cas9 would cut its own DNA, likely killing the cell — a form of autoimmunity",
+      "correctExplanation": "Self-targeting would be lethal because Cas9 would cut the bacterium's own essential DNA. This is analogous to autoimmune disease in vertebrates.",
+      "distractors": [
+        { "answer": "Nothing would happen because Cas9 cannot cut bacterial DNA", "explanation": "If a self-spacer had an adjacent PAM sequence in the genome, Cas9 could cut the bacterial DNA." },
+        { "answer": "The bacterium would become resistant to all viruses simultaneously", "explanation": "Self-targeting would damage the bacterium, not provide universal viral resistance." },
+        { "answer": "The bacterium would produce more proteins from the targeted gene", "explanation": "Cas9 cutting would destroy the gene, not increase its expression." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Compare the specificity of CRISPR-Cas9 defence with restriction enzyme defence. Which provides more precise protection and why?",
+      "correct": "CRISPR is more precise because its 20-nucleotide guide RNA targets a unique sequence, while restriction enzymes recognise only 4-8 nucleotide sites that occur frequently throughout any genome",
+      "correctExplanation": "A 20-nucleotide gRNA sequence is statistically likely to occur only once in a genome, providing pinpoint targeting. Restriction enzyme sites are short and common, making their targeting less specific.",
+      "distractors": [
+        { "answer": "Restriction enzymes are more precise because they have fixed recognition sites", "explanation": "Fixed sites are common in genomes; CRISPR's longer target sequence provides much greater specificity." },
+        { "answer": "Both systems have identical precision", "explanation": "CRISPR targets 20-nucleotide sequences (very specific) while restriction enzymes target 4-8 nucleotide sequences (less specific)." },
+        { "answer": "Neither system is specific; both cut DNA randomly", "explanation": "Both systems are specific, but CRISPR targets longer sequences, providing greater precision." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Analyse why understanding the natural CRISPR function in bacteria was essential before scientists could develop it as a genome editing tool.",
+      "correct": "Understanding that gRNA directs Cas9 to a complementary sequence revealed that designing custom gRNAs would allow targeting any gene in any organism",
+      "correctExplanation": "The key insight was that the system is programmable through the gRNA sequence. Without understanding this mechanism, scientists could not have recognised or exploited this programmability.",
+      "distractors": [
+        { "answer": "Scientists did not need to understand the natural function; they could have discovered the tool independently", "explanation": "The tool was discovered by studying the natural function; the understanding was what revealed the editing potential." },
+        { "answer": "Understanding the natural function was only needed for publishing papers, not for developing the tool", "explanation": "Mechanistic understanding was essential for designing the sgRNA approach used in genome editing." },
+        { "answer": "The natural function is irrelevant because the editing tool works completely differently", "explanation": "The genome editing tool uses the same mechanism (gRNA + Cas9) as the natural system." }
+      ]
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Evaluate the evolutionary significance by completing the sentence.",
+      "sentence": "The CRISPR-phage arms race drives {{blank:1}} in both organisms: bacteria accumulate new spacers for broader defence, while viruses evolve {{blank:2}} in target regions to escape CRISPR recognition.",
+      "blanks": {
+        "1": {
+          "correct": "co-evolution",
+          "correctExplanation": "Both organisms evolve in response to each other's adaptations, creating a continuous cycle of co-evolution.",
+          "distractors": [
+            { "answer": "extinction", "explanation": "Neither organism goes extinct; the arms race maintains diversity in both populations." },
+            { "answer": "stagnation", "explanation": "The arms race drives active evolution, not stagnation." }
+          ]
+        },
+        "2": {
+          "correct": "mutations",
+          "correctExplanation": "Viruses with mutations in the CRISPR target region can evade recognition, giving them a selective advantage.",
+          "distractors": [
+            { "answer": "spacers", "explanation": "Spacers are bacterial CRISPR components; viruses evolve mutations to evade CRISPR." },
+            { "answer": "plasmids", "explanation": "Viruses do not evolve plasmids; they accumulate mutations in target regions." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Critically evaluate why CRISPR was revolutionary by completing the sentence.",
+      "sentence": "CRISPR was revolutionary because scientists recognised that by designing custom {{blank:1}} RNA sequences, Cas9 could be directed to cut any DNA target in any {{blank:2}}, making genome editing programmable.",
+      "blanks": {
+        "1": {
+          "correct": "guide",
+          "correctExplanation": "Custom guide RNA sequences allow Cas9 to be programmed to target any complementary DNA sequence.",
+          "distractors": [
+            { "answer": "messenger", "explanation": "Messenger RNA carries genetic information for translation; guide RNA directs Cas9 to targets." },
+            { "answer": "transfer", "explanation": "Transfer RNA carries amino acids; guide RNA is the programmable element of CRISPR." }
+          ]
+        },
+        "2": {
+          "correct": "organism",
+          "correctExplanation": "The programmability of CRISPR means it can edit genes in bacteria, plants, animals and humans — any organism.",
+          "distractors": [
+            { "answer": "bacterium", "explanation": "CRISPR can target any organism, not just bacteria; this universality is what made it revolutionary." },
+            { "answer": "virus", "explanation": "While CRISPR naturally targets viruses, its revolutionary application is genome editing in any organism." }
+          ]
+        }
+      }
+    }
+  ]
+}

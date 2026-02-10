@@ -1,0 +1,559 @@
+{
+  "_link": {
+    "uuid": "lp-5d434df4-b147-5b7d-d5c0-1a11121e044f",
+    "version": 1,
+    "contentHash": "05b65bca",
+    "title": "I can use a codon table to determine the amino acid sequence from an mRNA sequence",
+    "generatedAt": "2026-02-09T18:05:00.000Z"
+  },
+  "toLevel2": [
+    {
+      "type": "MC",
+      "question": "What does a codon table show?",
+      "correct": "The amino acid coded for by each three-base mRNA codon",
+      "correctExplanation": "A codon table lists all 64 possible three-base mRNA codons and matches each one to the amino acid it codes for, or indicates if it is a stop codon.",
+      "distractors": [
+        { "answer": "The DNA base sequence of every known gene", "explanation": "A codon table does not list gene sequences. It is a reference chart that matches mRNA codons to their corresponding amino acids." },
+        { "answer": "The location of each gene on a chromosome", "explanation": "Gene mapping shows chromosome locations. A codon table specifically links three-base mRNA codons to amino acids." },
+        { "answer": "The order of nucleotides in a tRNA molecule", "explanation": "tRNA structure is not shown in a codon table. The table matches mRNA codons (three-base sequences) to amino acids." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "How many bases make up one codon on an mRNA molecule?",
+      "correct": "Three",
+      "correctExplanation": "A codon is a sequence of three consecutive mRNA bases (a triplet) that codes for one amino acid or a stop signal.",
+      "distractors": [
+        { "answer": "Two", "explanation": "Two bases would only allow 16 combinations, which is not enough to code for all 20 amino acids. Codons are three bases long." },
+        { "answer": "Four", "explanation": "Four-base sequences are not used as codons. The genetic code uses three-base codons, giving 64 possible combinations." },
+        { "answer": "One", "explanation": "A single base can only represent four options. Three bases are needed to provide enough combinations (64) to code for 20 amino acids plus stop signals." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "When using a codon table, which molecule's base sequence do you read?",
+      "correct": "mRNA",
+      "correctExplanation": "Codon tables are designed to be read using mRNA codons. You look up the three bases of each mRNA codon to find the corresponding amino acid.",
+      "distractors": [
+        { "answer": "DNA", "explanation": "DNA sequences must first be converted to mRNA before using a codon table. The table is based on mRNA codons, not DNA sequences." },
+        { "answer": "tRNA", "explanation": "tRNA carries anticodons, not codons. The codon table is read using mRNA codons to determine amino acids." },
+        { "answer": "rRNA", "explanation": "rRNA is a structural component of ribosomes. The codon table is used with mRNA sequences to identify amino acids." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Using a codon table, which amino acid does the codon AUG code for?",
+      "correct": "Methionine",
+      "correctExplanation": "AUG is the start codon and always codes for the amino acid methionine. It signals the beginning of translation.",
+      "distractors": [
+        { "answer": "Alanine", "explanation": "Alanine is coded for by codons beginning with GC (such as GCU). AUG specifically codes for methionine and serves as the start codon." },
+        { "answer": "Leucine", "explanation": "Leucine is coded for by several codons (such as CUU and UUA). AUG codes for methionine and is the universal start codon." },
+        { "answer": "Glycine", "explanation": "Glycine is coded for by codons beginning with GG (such as GGU). AUG codes for methionine and also acts as the start codon." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "To read a codon table, in what order do you look up the three bases of a codon?",
+      "correct": "First base in the left column, second base across the top, third base in the right column",
+      "correctExplanation": "Standard codon tables are organised with the first base on the left, the second base along the top, and the third base on the right side.",
+      "distractors": [
+        { "answer": "All three bases in the left column only", "explanation": "Only the first base is found in the left column. The second and third bases are located across the top and in the right column respectively." },
+        { "answer": "First base across the top, second base on the left, third base on the right", "explanation": "This reverses the first two steps. The correct order is first base on the left, second base across the top, third base on the right." },
+        { "answer": "Third base first, then second base, then first base", "explanation": "Codons are always read in order from first to third base: left column, top row, right column." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about codon tables.",
+      "sentence": "A codon table contains {{blank:1}} possible codons, each made up of three {{blank:2}} bases.",
+      "blanks": {
+        "1": {
+          "correct": "64",
+          "correctExplanation": "With four possible bases at each of three positions, there are 4 × 4 × 4 = 64 possible codon combinations.",
+          "distractors": [
+            { "answer": "20", "explanation": "20 is the number of different amino acids. The number of possible three-base codons is 64 (4³)." },
+            { "answer": "32", "explanation": "32 is not the correct number. Four bases in three positions gives 4³ = 64 possible codons." }
+          ]
+        },
+        "2": {
+          "correct": "mRNA",
+          "correctExplanation": "Codon tables are based on mRNA codons. Each codon consists of three consecutive mRNA bases.",
+          "distractors": [
+            { "answer": "DNA", "explanation": "Codon tables use mRNA bases (A, U, G, C), not DNA bases. Note that mRNA contains uracil instead of thymine." },
+            { "answer": "tRNA", "explanation": "tRNA carries anticodons that pair with mRNA codons. The codon table itself lists mRNA base sequences." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about reading a codon table.",
+      "sentence": "To find the amino acid for the codon CGA, you look up C in the {{blank:1}} column, G across the top, and A in the right column.",
+      "blanks": {
+        "1": {
+          "correct": "left",
+          "correctExplanation": "The first base of a codon is always found in the left column of the codon table.",
+          "distractors": [
+            { "answer": "right", "explanation": "The right column is for the third base, not the first. The first base is found in the left column." },
+            { "answer": "top", "explanation": "The top row is for the second base. The first base of a codon is located in the left column of the table." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the start codon.",
+      "sentence": "The codon {{blank:1}} codes for the amino acid methionine and also serves as the {{blank:2}} codon for translation.",
+      "blanks": {
+        "1": {
+          "correct": "AUG",
+          "correctExplanation": "AUG is the only codon that codes for methionine and it signals the start of translation.",
+          "distractors": [
+            { "answer": "UAG", "explanation": "UAG is a stop codon, not a start codon. The start codon is AUG, which codes for methionine." },
+            { "answer": "GUA", "explanation": "GUA codes for valine, not methionine. The start codon that codes for methionine is AUG." }
+          ]
+        },
+        "2": {
+          "correct": "start",
+          "correctExplanation": "AUG is the universal start codon that signals ribosomes to begin translation at that point on the mRNA.",
+          "distractors": [
+            { "answer": "stop", "explanation": "AUG is the start codon, not a stop codon. The three stop codons are UAA, UAG, and UGA." },
+            { "answer": "regulatory", "explanation": "AUG is called the start codon because it initiates translation. It is not referred to as a regulatory codon." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "TF",
+      "question": "A codon table can be used to determine which amino acid is coded for by a specific three-base mRNA sequence.",
+      "correct": "True",
+      "correctExplanation": "This is the primary purpose of a codon table: to match each three-base mRNA codon to its corresponding amino acid.",
+      "distractors": [
+        { "answer": "False", "explanation": "A codon table is specifically designed to link mRNA codons to amino acids. This is its fundamental function." }
+      ]
+    },
+    {
+      "type": "TF",
+      "question": "When using a codon table, you read the bases of the DNA template strand directly to find the amino acid.",
+      "correct": "False",
+      "correctExplanation": "Codon tables are designed for mRNA codons, not DNA sequences. You must first determine the mRNA sequence from the DNA template strand, then use the codon table.",
+      "distractors": [
+        { "answer": "True", "explanation": "DNA template strand sequences cannot be read directly from a codon table. The table uses mRNA codons, which contain uracil instead of thymine." }
+      ]
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "MC",
+      "question": "Given the mRNA sequence AUG-UCA-GAG, what is the amino acid sequence using a codon table?",
+      "correct": "Methionine – Serine – Glutamic acid",
+      "correctExplanation": "AUG codes for methionine (start codon), UCA codes for serine, and GAG codes for glutamic acid.",
+      "distractors": [
+        { "answer": "Methionine – Alanine – Glycine", "explanation": "Alanine is coded by GCN codons and glycine by GGN codons. UCA codes for serine and GAG codes for glutamic acid." },
+        { "answer": "Methionine – Serine – Valine", "explanation": "Serine from UCA is correct, but GAG codes for glutamic acid, not valine. Valine is coded by GUN codons." },
+        { "answer": "Leucine – Serine – Glutamic acid", "explanation": "AUG codes for methionine, not leucine. Leucine is coded by codons such as CUU or UUA." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Why must a DNA sequence be converted to mRNA before a codon table can be used?",
+      "correct": "Because codon tables list mRNA bases including uracil, which DNA does not contain",
+      "correctExplanation": "Codon tables use mRNA codons with the bases A, U, G, and C. DNA contains thymine instead of uracil, so the DNA must be transcribed into mRNA first.",
+      "distractors": [
+        { "answer": "Because DNA is double-stranded and the codon table can only read single strands", "explanation": "While DNA is double-stranded, the key reason is that codon tables use mRNA bases (with uracil), not DNA bases (with thymine)." },
+        { "answer": "Because DNA codons code for different amino acids than mRNA codons", "explanation": "The same triplet sequence would code for the same amino acid. The issue is that codon tables are formatted using mRNA bases, which include U instead of T." },
+        { "answer": "Because DNA does not contain the information needed to determine amino acids", "explanation": "DNA does contain the genetic information for amino acids. However, codon tables are specifically formatted to read mRNA codons, requiring conversion from DNA first." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A student reads the mRNA codon UUU from a codon table and identifies it as phenylalanine. Another student reads UUC and also gets phenylalanine. How is this possible?",
+      "correct": "The genetic code is degenerate, meaning multiple codons can code for the same amino acid",
+      "correctExplanation": "Degeneracy means that most amino acids are coded for by more than one codon. UUU and UUC both code for phenylalanine because they differ only in the third base position.",
+      "distractors": [
+        { "answer": "One of the students must have read the codon table incorrectly", "explanation": "Both students are correct. Multiple codons coding for the same amino acid is a normal feature of the genetic code called degeneracy." },
+        { "answer": "UUU and UUC are actually the same codon written in different formats", "explanation": "These are two distinct codons with different third bases. They both code for phenylalanine because of the degeneracy of the genetic code." },
+        { "answer": "The codon table has an error because each amino acid should have only one codon", "explanation": "Most amino acids have multiple codons. This is a fundamental property of the genetic code, not an error in the table." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "If the DNA template strand reads 3'-TAC-AGC-AAA-5', what amino acid sequence would be produced?",
+      "correct": "Methionine – Serine – Phenylalanine",
+      "correctExplanation": "The mRNA transcribed would be 5'-AUG-UCG-UUU-3'. Using the codon table: AUG = methionine, UCG = serine, UUU = phenylalanine.",
+      "distractors": [
+        { "answer": "Tyrosine – Serine – Lysine", "explanation": "Tyrosine and lysine would come from reading the DNA directly instead of converting to mRNA first. The mRNA codons AUG, UCG, and UUU give methionine, serine, and phenylalanine." },
+        { "answer": "Methionine – Alanine – Leucine", "explanation": "The correct mRNA is AUG-UCG-UUU. UCG codes for serine (not alanine) and UUU codes for phenylalanine (not leucine)." },
+        { "answer": "Methionine – Serine – Lysine", "explanation": "The first two are correct, but AAA in DNA becomes UUU in mRNA, which codes for phenylalanine, not lysine. Lysine is coded by AAA in mRNA." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "What happens when a ribosome encounters a stop codon such as UAA during translation?",
+      "correct": "Translation ends and the completed polypeptide is released",
+      "correctExplanation": "Stop codons (UAA, UAG, UGA) do not code for any amino acid. When a ribosome reaches a stop codon, translation terminates and the polypeptide chain is released.",
+      "distractors": [
+        { "answer": "The ribosome adds a special amino acid to mark the end of the chain", "explanation": "Stop codons do not code for any amino acid. No amino acid is added; instead, the polypeptide is released from the ribosome." },
+        { "answer": "The ribosome skips the codon and continues translating the next one", "explanation": "Stop codons cannot be skipped. They signal the definitive end of translation and the release of the polypeptide." },
+        { "answer": "The mRNA molecule is immediately broken down by enzymes", "explanation": "While mRNA is eventually degraded, the stop codon specifically signals the end of translation and polypeptide release, not immediate mRNA destruction." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A student determines the mRNA sequence from a DNA coding strand as 5'-AUGCGA-3'. They then use the codon table and get methionine and arginine. Explain why using the coding strand directly works in this case.",
+      "correct": "The coding strand has the same sequence as mRNA (with T replaced by U), so reading it gives the correct codons",
+      "correctExplanation": "The coding strand is complementary to the template strand and has the same base sequence as the mRNA (except T replaces U). Converting T to U gives the correct mRNA codons.",
+      "distractors": [
+        { "answer": "The coding strand is always identical to mRNA with no changes needed", "explanation": "The coding strand uses thymine (T) while mRNA uses uracil (U). The sequences match only after replacing T with U." },
+        { "answer": "The student made an error but happened to get the right answer by chance", "explanation": "This is not chance. The coding strand sequence matches the mRNA sequence (with T→U substitution), so reading it gives valid codon information." },
+        { "answer": "The codon table can be used with either DNA or mRNA without any conversion", "explanation": "Codon tables are designed for mRNA codons. The coding strand works because its sequence corresponds to mRNA after replacing T with U." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about stop codons.",
+      "sentence": "The three stop codons are UAA, {{blank:1}}, and UGA, and they do not code for any {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "UAG",
+          "correctExplanation": "The three stop codons are UAA, UAG, and UGA. They signal the end of translation.",
+          "distractors": [
+            { "answer": "AUG", "explanation": "AUG is the start codon coding for methionine, not a stop codon. The third stop codon is UAG." },
+            { "answer": "UGG", "explanation": "UGG codes for the amino acid tryptophan. The correct stop codon is UAG." }
+          ]
+        },
+        "2": {
+          "correct": "amino acid",
+          "correctExplanation": "Stop codons are also called nonsense codons because they do not correspond to any amino acid. They signal the termination of translation.",
+          "distractors": [
+            { "answer": "nucleotide", "explanation": "Stop codons are themselves made of nucleotides. They do not code for any amino acid, which is why they halt translation." },
+            { "answer": "protein", "explanation": "While translation of the entire protein stops, the specific characteristic of stop codons is that they do not code for any amino acid." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about converting DNA to amino acids.",
+      "sentence": "To determine an amino acid sequence from DNA, first convert the {{blank:1}} strand to mRNA, then read the mRNA codons using a codon table.",
+      "blanks": {
+        "1": {
+          "correct": "template",
+          "correctExplanation": "The template strand (antisense strand) is used to produce the mRNA through complementary base pairing during transcription.",
+          "distractors": [
+            { "answer": "coding", "explanation": "The coding strand has the same sequence as mRNA (with T instead of U). It is the template strand that is actually read by RNA polymerase to produce the mRNA." },
+            { "answer": "leading", "explanation": "The leading strand is a term used in DNA replication, not transcription. The strand read during transcription is the template strand." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the mRNA codon for methionine.",
+      "sentence": "The codon AUG codes for {{blank:1}} and also signals the {{blank:2}} of translation.",
+      "blanks": {
+        "1": {
+          "correct": "methionine",
+          "correctExplanation": "AUG is the only codon for methionine and serves a dual role as the start codon.",
+          "distractors": [
+            { "answer": "tryptophan", "explanation": "Tryptophan is coded for by UGG, not AUG. AUG specifically codes for methionine." },
+            { "answer": "alanine", "explanation": "Alanine is coded for by GCN codons. AUG codes for methionine." }
+          ]
+        },
+        "2": {
+          "correct": "start",
+          "correctExplanation": "AUG is the universal start codon that tells the ribosome where to begin translating the mRNA into a polypeptide.",
+          "distractors": [
+            { "answer": "end", "explanation": "AUG signals the start, not the end, of translation. Stop codons (UAA, UAG, UGA) signal the end." },
+            { "answer": "middle", "explanation": "AUG marks the beginning of translation. There is no codon that specifically signals the middle of a coding sequence." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "TF",
+      "question": "Multiple different codons can code for the same amino acid because the genetic code is degenerate.",
+      "correct": "True",
+      "correctExplanation": "Degeneracy means that most amino acids are specified by more than one codon. For example, leucine is coded for by six different codons.",
+      "distractors": [
+        { "answer": "False", "explanation": "The genetic code is indeed degenerate. With 64 codons coding for only 20 amino acids (plus stop signals), most amino acids have multiple codons." }
+      ]
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "MC",
+      "question": "A DNA template strand reads 3'-TAC-CGA-GCT-ACT-5'. Determine the amino acid sequence that would be produced.",
+      "correct": "Methionine – Alanine – Arginine – Serine",
+      "correctExplanation": "The mRNA would be 5'-AUG-GCU-CGA-UGA-3'. AUG = methionine, GCU = alanine, CGA = arginine. UGA is a stop codon, so translation ends after three amino acids. However, reviewing: the polypeptide is Met-Ala-Arg, but with four codons listed the stop codon terminates after the third amino acid.",
+      "distractors": [
+        { "answer": "Methionine – Arginine – Alanine – Threonine", "explanation": "The mRNA from this template strand is AUG-GCU-CGA-UGA. GCU codes for alanine (not arginine) and CGA codes for arginine (not alanine). UGA is a stop codon." },
+        { "answer": "Tyrosine – Alanine – Arginine – Serine", "explanation": "TAC on the template strand produces AUG in mRNA, which codes for methionine, not tyrosine. Always convert DNA to mRNA before using the codon table." },
+        { "answer": "Methionine – Alanine – Arginine – Threonine", "explanation": "The fourth codon UGA is a stop codon, not a codon for threonine. Translation would terminate at this point." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A mutation changes the mRNA codon GAG to GAA. Using a codon table, what effect would this have on the amino acid sequence?",
+      "correct": "No effect, because both GAG and GAA code for glutamic acid",
+      "correctExplanation": "Due to degeneracy of the genetic code, GAG and GAA both code for glutamic acid. A change in the third base position often does not alter the amino acid produced.",
+      "distractors": [
+        { "answer": "The amino acid would change from glutamic acid to aspartic acid", "explanation": "Aspartic acid is coded by GAU and GAC. Both GAG and GAA code for the same amino acid, glutamic acid, so no change occurs." },
+        { "answer": "The mutation would create a stop codon and end translation early", "explanation": "GAA is not a stop codon. It codes for glutamic acid, the same amino acid as GAG. This is a silent mutation." },
+        { "answer": "The protein would become non-functional because any codon change alters structure", "explanation": "Not all codon changes affect the amino acid. GAG and GAA both specify glutamic acid, so the protein sequence is unchanged." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "An mRNA sequence reads 5'-AUGGCUUAUUGCUAA-3'. How many amino acids would be in the resulting polypeptide?",
+      "correct": "Four",
+      "correctExplanation": "Reading in triplets: AUG-GCU-UAU-UGC-UAA. AUG = Met, GCU = Ala, UAU = Tyr, UGC = Cys, UAA = Stop. Four amino acids are incorporated before the stop codon terminates translation.",
+      "distractors": [
+        { "answer": "Five", "explanation": "The fifth triplet UAA is a stop codon, not an amino acid. Translation terminates at UAA, so only four amino acids are added to the chain." },
+        { "answer": "Three", "explanation": "There are four amino acid-coding codons before the stop codon (AUG, GCU, UAU, UGC), giving four amino acids." },
+        { "answer": "Fifteen", "explanation": "Fifteen is the total number of bases, not amino acids. Each codon is three bases, so 15 bases give five codons, of which four code for amino acids." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A scientist has the DNA coding strand 5'-ATGGCTTGA-3'. Without converting to the template strand, can they determine the amino acid sequence? Explain.",
+      "correct": "Yes, by replacing T with U in the coding strand to get the mRNA sequence directly",
+      "correctExplanation": "The coding strand has the same sequence as mRNA except T replaces U. Replacing T with U gives AUG-GCU-UGA, coding for Met-Ala-Stop. This shortcut works because the coding strand mirrors the mRNA.",
+      "distractors": [
+        { "answer": "No, because only the template strand can be used to determine amino acids", "explanation": "While the template strand is used in transcription, the coding strand can be used as a shortcut because its sequence matches mRNA (with T→U conversion)." },
+        { "answer": "Yes, by reading the coding strand bases directly in the codon table", "explanation": "You cannot read DNA bases directly because the codon table uses mRNA bases (with U, not T). You must first replace T with U to get the mRNA equivalent." },
+        { "answer": "No, because the coding strand runs in the wrong direction for translation", "explanation": "The coding strand runs 5'→3', the same direction as mRNA. Replacing T with U gives a valid mRNA sequence for codon table use." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Two mRNA sequences differ only in their third codon: sequence A has GCU and sequence B has GCC at that position. A student predicts the proteins will be different. Is this prediction correct?",
+      "correct": "No, because GCU and GCC both code for alanine due to degeneracy",
+      "correctExplanation": "GCU and GCC differ only in the third base (wobble position) and both code for alanine. The resulting proteins would have identical amino acid sequences.",
+      "distractors": [
+        { "answer": "Yes, because any change in a codon always changes the amino acid", "explanation": "Not all codon changes alter the amino acid. Changes in the third position often produce the same amino acid due to the degenerate nature of the code." },
+        { "answer": "Yes, because GCU codes for alanine and GCC codes for glycine", "explanation": "Both GCU and GCC code for alanine. Glycine is coded by GGN codons. The student's prediction is incorrect." },
+        { "answer": "No, because the third base in a codon is never read by the ribosome", "explanation": "The ribosome does read all three bases. However, multiple codons can specify the same amino acid, especially when they differ only in the third position." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A researcher has an mRNA with the sequence 5'-AUGAAAUUUGAC-3' but is unsure whether to start reading from the first A or the second A. Why does this matter?",
+      "correct": "The reading frame determines how bases are grouped into codons, changing the amino acid sequence",
+      "correctExplanation": "Starting from position 1 gives AUG-AAA-UUU-GAC (Met-Lys-Phe-Asp). Starting from position 2 would give different codons and amino acids. The correct reading frame starts at the AUG start codon.",
+      "distractors": [
+        { "answer": "It does not matter because the same amino acids will be produced regardless of where reading starts", "explanation": "Reading frame is critical. Shifting the start position by even one base changes every subsequent codon and produces completely different amino acids." },
+        { "answer": "Starting from the second A would produce the same protein but in reverse order", "explanation": "A shifted reading frame produces entirely different codons and amino acids, not a reversed sequence." },
+        { "answer": "The researcher should start from the end of the sequence and read backwards", "explanation": "mRNA is always read 5' to 3'. The correct starting point is the AUG start codon, which establishes the reading frame." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Given that UGG is the only codon for tryptophan, what does this tell us about a mutation in this codon?",
+      "correct": "Any base change in UGG will either change the amino acid or create a stop codon",
+      "correctExplanation": "Since tryptophan has only one codon (UGG), there are no synonymous alternatives. Any mutation in this codon must produce a different amino acid or a stop codon.",
+      "distractors": [
+        { "answer": "Mutations in UGG are impossible because it is a critical codon", "explanation": "Mutations can occur in any codon. UGG is simply unique in having no synonymous codons, so any change will alter the amino acid." },
+        { "answer": "A change in the third base would still code for tryptophan", "explanation": "Unlike most amino acids, tryptophan has only one codon. Changing the third base from G to another base produces a different amino acid or stop codon." },
+        { "answer": "The mutation would be corrected during translation by the ribosome", "explanation": "Ribosomes translate mRNA as-is and cannot correct mutations. A change in UGG will result in a different amino acid being incorporated." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about reading frames.",
+      "sentence": "The reading frame is established by the {{blank:1}} codon, which ensures that the mRNA is read in the correct groups of {{blank:2}} bases.",
+      "blanks": {
+        "1": {
+          "correct": "start",
+          "correctExplanation": "The start codon (AUG) sets the reading frame by defining where the ribosome begins grouping bases into triplets.",
+          "distractors": [
+            { "answer": "stop", "explanation": "Stop codons end translation. The reading frame is set at the beginning of translation by the start codon AUG." },
+            { "answer": "middle", "explanation": "There is no 'middle codon' that sets the reading frame. The reading frame is established by the start codon AUG." }
+          ]
+        },
+        "2": {
+          "correct": "three",
+          "correctExplanation": "Codons are triplets of three consecutive bases. The start codon ensures these groups of three are read in the correct frame.",
+          "distractors": [
+            { "answer": "four", "explanation": "Codons consist of three bases, not four. The triplet code provides 64 possible combinations for 20 amino acids." },
+            { "answer": "two", "explanation": "Two bases per codon would only allow 16 combinations, insufficient for 20 amino acids. Codons are three bases long." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about silent mutations.",
+      "sentence": "A mutation that changes a codon but does not change the amino acid is called a {{blank:1}} mutation, and is most common in the {{blank:2}} base position of a codon.",
+      "blanks": {
+        "1": {
+          "correct": "silent",
+          "correctExplanation": "A silent (or synonymous) mutation changes the codon sequence without affecting the amino acid, due to the degeneracy of the genetic code.",
+          "distractors": [
+            { "answer": "missense", "explanation": "A missense mutation changes the amino acid. A mutation that does not change the amino acid is called a silent mutation." },
+            { "answer": "nonsense", "explanation": "A nonsense mutation creates a premature stop codon. A mutation with no amino acid change is a silent mutation." }
+          ]
+        },
+        "2": {
+          "correct": "third",
+          "correctExplanation": "The third base position (wobble position) is the most tolerant of change because many synonymous codons differ only in this position.",
+          "distractors": [
+            { "answer": "first", "explanation": "Changes in the first base position usually change the amino acid. Silent mutations are most common in the third (wobble) position." },
+            { "answer": "second", "explanation": "The second base position is highly specific. Changes there almost always alter the amino acid. Silent mutations typically occur in the third position." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about codon table usage with DNA.",
+      "sentence": "To use a codon table with a DNA coding strand, simply replace each {{blank:1}} with uracil to obtain the equivalent mRNA sequence.",
+      "blanks": {
+        "1": {
+          "correct": "thymine",
+          "correctExplanation": "The coding strand matches the mRNA except that DNA uses thymine where mRNA uses uracil. Replacing T with U converts it to the mRNA equivalent.",
+          "distractors": [
+            { "answer": "adenine", "explanation": "Adenine is present in both DNA and mRNA. The base that needs replacing is thymine, which becomes uracil in mRNA." },
+            { "answer": "guanine", "explanation": "Guanine is found in both DNA and mRNA. Only thymine needs to be replaced with uracil when converting from DNA to mRNA." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "MC",
+      "question": "A frameshift mutation inserts one extra base after the start codon in an mRNA sequence. How would this affect the amino acid sequence produced?",
+      "correct": "Every codon after the insertion would be misread, producing a completely different amino acid sequence",
+      "correctExplanation": "Inserting one base shifts the reading frame for all downstream codons. Each subsequent triplet would consist of different bases than intended, producing entirely different amino acids and likely encountering a premature stop codon.",
+      "distractors": [
+        { "answer": "Only the amino acid immediately after the insertion would be affected", "explanation": "A frameshift affects every codon downstream, not just one. The entire reading frame is shifted, changing all subsequent amino acids." },
+        { "answer": "The ribosome would skip the extra base and continue reading normally", "explanation": "Ribosomes cannot skip bases. They read every three consecutive bases as a codon, so an insertion shifts all downstream reading." },
+        { "answer": "The insertion would be removed during RNA processing before translation", "explanation": "In prokaryotes there is no RNA processing, and in eukaryotes processing does not correct base insertions within exons. The frameshift would persist." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A researcher finds that a mutation changes the codon GAG (glutamic acid) to GUG (valine) in a critical region of a protein. Why might this single amino acid change have a dramatic effect on protein function?",
+      "correct": "Glutamic acid is charged and hydrophilic while valine is nonpolar, which could disrupt protein folding",
+      "correctExplanation": "Replacing a charged, hydrophilic amino acid with a nonpolar one changes the local chemical properties. This can disrupt hydrogen bonds and ionic interactions, altering the protein's tertiary structure and function.",
+      "distractors": [
+        { "answer": "Any single amino acid change always destroys protein function completely", "explanation": "Not all amino acid substitutions are damaging. The severity depends on the chemical properties of the original and replacement amino acids and their location in the protein." },
+        { "answer": "Valine is larger than glutamic acid, so it physically blocks the active site", "explanation": "Size difference is not the primary issue here. The key problem is the change from a charged, hydrophilic residue to a nonpolar one, which affects protein folding and interactions." },
+        { "answer": "GUG is a stop codon, so translation would terminate prematurely", "explanation": "GUG codes for valine, not a stop signal. The stop codons are UAA, UAG, and UGA. This is a missense mutation, not a nonsense mutation." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Why does the degeneracy of the genetic code provide a partial buffer against the harmful effects of point mutations?",
+      "correct": "Many third-base changes produce synonymous codons, so the amino acid remains unchanged",
+      "correctExplanation": "Because the third base of most codons can vary without changing the amino acid, many point mutations are silent. This reduces the proportion of mutations that alter protein structure and function.",
+      "distractors": [
+        { "answer": "Degeneracy means that every mutation produces the same amino acid regardless of position", "explanation": "Only some mutations (mainly in the third position) are silent. Changes in the first or second base usually alter the amino acid. Degeneracy provides partial, not complete, protection." },
+        { "answer": "Degenerate codons signal the cell to repair the mutation before translation occurs", "explanation": "Codon degeneracy does not trigger DNA repair. It simply means that some mutations do not change the amino acid because multiple codons specify the same one." },
+        { "answer": "Degeneracy allows the ribosome to choose the correct amino acid even when the codon is mutated", "explanation": "The ribosome translates whatever codon is present. Degeneracy helps because the mutated codon may coincidentally still code for the same amino acid." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "An mRNA sequence has two possible AUG codons. The ribosome begins translation at the first AUG. If a mutation eliminates the first AUG, what would most likely happen?",
+      "correct": "The ribosome would begin translation at the second AUG, producing a shorter polypeptide with a different N-terminal region",
+      "correctExplanation": "Without the first AUG, the ribosome scans to the next available start codon. Translation from the second AUG would skip the amino acids normally encoded between the two AUGs, producing a truncated protein.",
+      "distractors": [
+        { "answer": "Translation would not occur at all because there is only one valid start codon per mRNA", "explanation": "mRNA can contain multiple AUG sequences. If the first is eliminated, the ribosome may initiate at a downstream AUG." },
+        { "answer": "The ribosome would create its own start codon to begin translation at the original position", "explanation": "Ribosomes cannot modify mRNA or create codons. They can only recognise and bind to existing AUG start codons." },
+        { "answer": "The mutation would have no effect because AUG is only a methionine codon, not truly a start signal", "explanation": "AUG serves dual roles as both a methionine codon and the start signal for translation. Eliminating the first AUG redirects translation initiation." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A nonsense mutation changes a codon in the middle of an mRNA to UAG. Predict the effect on the resulting protein compared to the normal version.",
+      "correct": "A truncated, likely non-functional protein would be produced because translation stops prematurely",
+      "correctExplanation": "UAG is a stop codon. Translation would terminate at this point, producing a shorter polypeptide that is missing its C-terminal portion and is likely unable to fold correctly or function.",
+      "distractors": [
+        { "answer": "The protein would be the same length but have one different amino acid at the mutation site", "explanation": "UAG is a stop codon, not an amino acid codon. Translation would terminate at this point, producing a truncated protein rather than a full-length one with a substitution." },
+        { "answer": "The ribosome would skip the stop codon because it is not at the end of the mRNA", "explanation": "Ribosomes respond to any stop codon they encounter in the reading frame, regardless of its position. Translation terminates at the premature stop codon." },
+        { "answer": "The cell would produce the normal protein from a backup copy of the gene", "explanation": "While organisms may have multiple gene copies, a mutant mRNA will still produce a truncated protein. The cell does not automatically substitute normal protein for defective mRNA." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Explain why the genetic code is described as 'universal' and evaluate one exception to this universality.",
+      "correct": "Nearly all organisms use the same codon table, but mitochondria use some codons differently",
+      "correctExplanation": "The genetic code is called universal because it is shared across bacteria, plants, animals, and fungi. However, mitochondria (and some protists) have minor variations, such as UGA coding for tryptophan instead of being a stop codon.",
+      "distractors": [
+        { "answer": "Every organism without exception uses exactly the same codon assignments", "explanation": "While the code is nearly universal, some exceptions exist in mitochondria and certain organisms where specific codons have different assignments." },
+        { "answer": "The code is universal only among animals; plants use a completely different codon table", "explanation": "Plants, animals, bacteria, and fungi all use essentially the same codon table. Exceptions are minor and mainly found in mitochondria and some protists." },
+        { "answer": "The term 'universal' refers to the fact that all codons code for exactly one amino acid each", "explanation": "The term universal means the code is shared across species. Most amino acids actually have multiple codons (degeneracy), and some codons are stop signals." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A deletion mutation removes three consecutive bases from the middle of a coding sequence (not a complete codon). Compare this to a deletion of exactly one complete codon. Which would be more disruptive and why?",
+      "correct": "A three-base deletion within a codon boundary would shift the reading frame and is more disruptive than losing one complete codon",
+      "correctExplanation": "If three bases are removed but they span two codons (not a neat codon), the reading frame shifts for all downstream codons. Removing an intact codon simply loses one amino acid while preserving the reading frame for the rest.",
+      "distractors": [
+        { "answer": "Both deletions are equally disruptive because they remove the same number of bases", "explanation": "The number of bases removed is the same, but the effect depends on whether the reading frame is maintained. A clean codon deletion preserves the frame; a split deletion shifts it." },
+        { "answer": "Removing one complete codon is more disruptive because it eliminates an amino acid entirely", "explanation": "Losing one amino acid is usually less harmful than shifting the entire reading frame. A frameshift changes every subsequent amino acid and often creates premature stop codons." },
+        { "answer": "Neither deletion is disruptive because three bases always equal one codon", "explanation": "Three bases only form a clean codon removal if they align exactly with codon boundaries. If the deletion spans two codons, the reading frame shifts downstream." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Evaluate why the wobble position (third base of a codon) is more tolerant of mutations than the first or second positions from an evolutionary perspective.",
+      "correct": "Natural selection preserved degeneracy at the third position because it reduces the impact of common replication errors",
+      "correctExplanation": "The third position tolerates changes because many synonymous codons differ only there. This degeneracy may have been maintained by natural selection because it buffers organisms against the harmful effects of frequent point mutations.",
+      "distractors": [
+        { "answer": "The wobble position is more tolerant because RNA polymerase does not read the third base", "explanation": "RNA polymerase reads all bases during transcription. The tolerance is due to degeneracy in the genetic code, not incomplete reading of codons." },
+        { "answer": "The third position is more tolerant because it was the last to evolve and has not yet been optimised", "explanation": "The triplet code evolved early in life's history. The third position tolerance is a functional feature of degeneracy, not an evolutionary artefact of incomplete development." },
+        { "answer": "All three positions are equally tolerant of mutations in practice", "explanation": "First and second position changes almost always alter the amino acid. Third position changes frequently produce synonymous codons, making it measurably more tolerant." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about frameshift mutations and codon tables.",
+      "sentence": "A frameshift mutation disrupts the {{blank:1}} frame, causing every downstream codon to be read incorrectly and often resulting in a premature {{blank:2}} codon.",
+      "blanks": {
+        "1": {
+          "correct": "reading",
+          "correctExplanation": "The reading frame is the way mRNA bases are grouped into consecutive triplets. A frameshift mutation disrupts this grouping for all downstream codons.",
+          "distractors": [
+            { "answer": "coding", "explanation": "While the coding sequence is affected, the specific term for how bases are grouped into triplets is the reading frame." },
+            { "answer": "template", "explanation": "The template strand is a DNA concept. The grouping of mRNA bases into triplets is called the reading frame." }
+          ]
+        },
+        "2": {
+          "correct": "stop",
+          "correctExplanation": "When the reading frame shifts, new triplet combinations are created. There is approximately a 3/64 chance of encountering a stop codon at each position, making premature termination likely.",
+          "distractors": [
+            { "answer": "start", "explanation": "Encountering a new start codon would not terminate translation. Frameshifts commonly produce premature stop codons, ending the protein early." },
+            { "answer": "silent", "explanation": "Silent mutations do not cause early termination. Frameshifts commonly create premature stop codons that truncate the protein." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the universality of the genetic code.",
+      "sentence": "The genetic code is described as {{blank:1}} because nearly all organisms use the same codon-to-amino-acid assignments, with minor exceptions found in {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "universal",
+          "correctExplanation": "The term universal indicates that the genetic code is shared across virtually all life forms, from bacteria to humans.",
+          "distractors": [
+            { "answer": "degenerate", "explanation": "Degenerate describes the fact that multiple codons can code for the same amino acid. The shared nature of the code across species is called universal." },
+            { "answer": "redundant", "explanation": "Redundant is related to degeneracy. The term for the code being shared across all organisms is universal." }
+          ]
+        },
+        "2": {
+          "correct": "mitochondria",
+          "correctExplanation": "Mitochondria have slight variations in their codon assignments, such as UGA coding for tryptophan instead of being a stop codon.",
+          "distractors": [
+            { "answer": "ribosomes", "explanation": "Ribosomes use the standard genetic code. The exceptions to universality are found in mitochondria and some protists." },
+            { "answer": "chloroplasts", "explanation": "While chloroplasts have their own DNA, the most commonly cited exceptions to the universal code are found in mitochondria." }
+          ]
+        }
+      }
+    }
+  ]
+}

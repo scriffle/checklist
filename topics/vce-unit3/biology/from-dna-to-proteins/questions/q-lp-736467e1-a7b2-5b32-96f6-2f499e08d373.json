@@ -1,0 +1,567 @@
+{
+  "_link": {
+    "uuid": "lp-736467e1-a7b2-5b32-96f6-2f499e08d373",
+    "version": 1,
+    "contentHash": "dd202d28",
+    "title": "I can convert a DNA sequence to an mRNA sequence and then to an amino acid sequence",
+    "generatedAt": "2026-02-09T18:25:00.000Z"
+  },
+  "toLevel2": [
+    {
+      "type": "MC",
+      "question": "What is the first step when converting a DNA template strand sequence into an amino acid sequence?",
+      "correct": "Write the complementary mRNA sequence using RNA base pairing rules",
+      "correctExplanation": "The first step is to transcribe the DNA template strand into mRNA by matching complementary bases (A→U, T→A, C→G, G→C).",
+      "distractors": [
+        { "answer": "Look up each DNA triplet directly in the codon table", "explanation": "Codon tables are designed for mRNA, not DNA. You must first convert the DNA template strand to mRNA before using the codon table." },
+        { "answer": "Translate the DNA sequence directly into amino acids", "explanation": "DNA cannot be translated directly. The sequence must first be converted to mRNA, which is then used with a codon table to find amino acids." },
+        { "answer": "Identify the stop codons in the DNA sequence", "explanation": "Stop codons are identified in the mRNA sequence, not DNA. The first step is to convert the DNA template strand to mRNA." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "When converting a DNA template strand to mRNA, which base in mRNA replaces thymine in DNA?",
+      "correct": "Adenine in mRNA pairs with thymine on the DNA template strand",
+      "correctExplanation": "During transcription, thymine (T) on the DNA template strand pairs with adenine (A) in the mRNA. RNA does not contain thymine; it uses uracil instead of thymine.",
+      "distractors": [
+        { "answer": "Uracil replaces thymine directly in the mRNA sequence", "explanation": "Uracil in mRNA pairs with adenine on DNA, not thymine. When the DNA template has adenine, the mRNA gets uracil. When DNA has thymine, mRNA gets adenine." },
+        { "answer": "Guanine replaces thymine in the mRNA", "explanation": "Guanine pairs with cytosine, not thymine. Thymine on the DNA template pairs with adenine in the mRNA." },
+        { "answer": "Cytosine replaces thymine in the mRNA", "explanation": "Cytosine pairs with guanine. Thymine on the DNA template strand is complemented by adenine in the mRNA." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Given the DNA template strand 3'-TAC-CGC-GAG-5', what is the mRNA sequence?",
+      "correct": "5'-AUG-GCG-CUC-3'",
+      "correctExplanation": "Converting each DNA base to its RNA complement: T→A, A→U, C→G, C→G, G→C, C→G, G→C, A→U, G→C gives AUG-GCG-CUC.",
+      "distractors": [
+        { "answer": "5'-ATG-GCG-CTC-3'", "explanation": "This is a DNA sequence containing thymine. mRNA uses uracil instead of thymine, so the correct answer contains U, not T." },
+        { "answer": "5'-UAC-CGC-GAG-3'", "explanation": "This would be the result of simply replacing T with U in the template strand. You need to write the complementary sequence, not just substitute bases." },
+        { "answer": "3'-AUG-GCG-CUC-5'", "explanation": "The bases are correct but the direction is wrong. mRNA is synthesised and read in the 5' to 3' direction." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "After converting a DNA template strand to mRNA, what do you do next to find the amino acid sequence?",
+      "correct": "Read each three-base mRNA codon using a codon table to find the corresponding amino acid",
+      "correctExplanation": "The second step is to use the codon table to translate each mRNA codon (three-base sequence) into its corresponding amino acid.",
+      "distractors": [
+        { "answer": "Convert the mRNA back to DNA and then look up amino acids", "explanation": "There is no need to convert back to DNA. The mRNA codons are read directly from the codon table to determine amino acids." },
+        { "answer": "Count the total number of bases to determine how many amino acids there are", "explanation": "While dividing by three gives the number of codons, you must actually look up each codon in the table to identify the specific amino acids." },
+        { "answer": "Match each individual mRNA base to an amino acid using the codon table", "explanation": "Amino acids are coded by three-base codons, not individual bases. You must read the mRNA in groups of three." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Using the DNA template strand TAC-CGC-GAG, which amino acid sequence would be produced?",
+      "correct": "Methionine – Alanine – Leucine",
+      "correctExplanation": "The mRNA is AUG-GCG-CUC. Using the codon table: AUG = methionine (start), GCG = alanine, CUC = leucine.",
+      "distractors": [
+        { "answer": "Tyrosine – Arginine – Glutamic acid", "explanation": "These amino acids would result from reading the DNA directly. You must first convert DNA to mRNA (AUG-GCG-CUC) before looking up amino acids." },
+        { "answer": "Methionine – Arginine – Glutamic acid", "explanation": "CGC in DNA becomes GCG in mRNA (alanine, not arginine). GAG in DNA becomes CUC in mRNA (leucine, not glutamic acid)." },
+        { "answer": "Methionine – Alanine – Glutamic acid", "explanation": "The first two are correct, but GAG in DNA becomes CUC in mRNA, which codes for leucine, not glutamic acid." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the conversion process.",
+      "sentence": "To convert DNA to amino acids, first transcribe the {{blank:1}} strand into mRNA, then use a {{blank:2}} table to find each amino acid.",
+      "blanks": {
+        "1": {
+          "correct": "template",
+          "correctExplanation": "The template strand is the DNA strand that is read by RNA polymerase to produce the complementary mRNA sequence.",
+          "distractors": [
+            { "answer": "coding", "explanation": "The coding strand has the same sequence as mRNA. The template strand is the one actually read to produce mRNA." },
+            { "answer": "leading", "explanation": "The leading strand is a replication term. In transcription, the strand read by RNA polymerase is called the template strand." }
+          ]
+        },
+        "2": {
+          "correct": "codon",
+          "correctExplanation": "A codon table matches each three-base mRNA codon to its corresponding amino acid.",
+          "distractors": [
+            { "answer": "periodic", "explanation": "The periodic table lists chemical elements. Amino acids are identified using a codon table." },
+            { "answer": "gene", "explanation": "There is no 'gene table.' The reference chart used to convert mRNA codons to amino acids is called a codon table." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about base pairing during transcription.",
+      "sentence": "When converting DNA to mRNA, adenine on the DNA template strand pairs with {{blank:1}}, and thymine on DNA pairs with {{blank:2}} in mRNA.",
+      "blanks": {
+        "1": {
+          "correct": "uracil",
+          "correctExplanation": "In RNA, uracil replaces thymine. Adenine on the DNA template strand pairs with uracil in the mRNA.",
+          "distractors": [
+            { "answer": "thymine", "explanation": "Thymine is found in DNA, not RNA. Adenine on the DNA template pairs with uracil in mRNA." },
+            { "answer": "cytosine", "explanation": "Cytosine pairs with guanine. Adenine on the DNA template pairs with uracil in mRNA." }
+          ]
+        },
+        "2": {
+          "correct": "adenine",
+          "correctExplanation": "Thymine on the DNA template strand pairs with adenine in mRNA, following the standard base pairing rule.",
+          "distractors": [
+            { "answer": "uracil", "explanation": "Uracil pairs with adenine, not thymine. Thymine on DNA pairs with adenine in mRNA." },
+            { "answer": "guanine", "explanation": "Guanine pairs with cytosine. Thymine on the DNA template pairs with adenine in mRNA." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the two-step process.",
+      "sentence": "The conversion from DNA to amino acids involves two steps: {{blank:1}} (DNA to mRNA) and {{blank:2}} (mRNA to amino acids).",
+      "blanks": {
+        "1": {
+          "correct": "transcription",
+          "correctExplanation": "Transcription is the process where the DNA template strand is used to produce a complementary mRNA molecule.",
+          "distractors": [
+            { "answer": "translation", "explanation": "Translation converts mRNA to amino acids. The step that converts DNA to mRNA is called transcription." },
+            { "answer": "replication", "explanation": "Replication copies DNA. The process of making mRNA from DNA is transcription." }
+          ]
+        },
+        "2": {
+          "correct": "translation",
+          "correctExplanation": "Translation is the process where mRNA codons are read by ribosomes to assemble the amino acid sequence of a polypeptide.",
+          "distractors": [
+            { "answer": "transcription", "explanation": "Transcription converts DNA to mRNA. The step that converts mRNA to amino acids is translation." },
+            { "answer": "replication", "explanation": "Replication copies DNA. The process of converting mRNA to amino acids is called translation." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "TF",
+      "question": "To convert a DNA template strand to an amino acid sequence, you must first write the mRNA sequence before using a codon table.",
+      "correct": "True",
+      "correctExplanation": "Codon tables are designed for mRNA codons. The DNA template strand must be transcribed into mRNA first, then the mRNA codons can be looked up in the codon table.",
+      "distractors": [
+        { "answer": "False", "explanation": "You cannot use DNA sequences directly in a codon table. The conversion requires two steps: DNA→mRNA (transcription) then mRNA→amino acids (using the codon table)." }
+      ]
+    },
+    {
+      "type": "TF",
+      "question": "The mRNA sequence produced from a DNA template strand will contain thymine bases.",
+      "correct": "False",
+      "correctExplanation": "mRNA does not contain thymine. It uses uracil instead. When converting from DNA, all positions where thymine would appear in DNA are replaced by uracil in mRNA.",
+      "distractors": [
+        { "answer": "True", "explanation": "mRNA uses uracil instead of thymine. This is one of the key differences between RNA and DNA." }
+      ]
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "MC",
+      "question": "Why can you not look up DNA triplets directly in a standard codon table?",
+      "correct": "Because codon tables are based on mRNA sequences, which use uracil instead of thymine",
+      "correctExplanation": "Codon tables list mRNA codons containing A, U, G, and C. DNA contains thymine instead of uracil, so DNA triplets must be converted to mRNA codons first.",
+      "distractors": [
+        { "answer": "Because DNA triplets code for different amino acids than mRNA codons", "explanation": "The same sequence information codes for the same amino acids. The issue is that codon tables use mRNA notation (with U), not DNA notation (with T)." },
+        { "answer": "Because DNA does not contain any information about amino acids", "explanation": "DNA does contain the genetic information for amino acids. The codon table simply requires mRNA format (with U instead of T) for lookup." },
+        { "answer": "Because DNA is always double-stranded and cannot be read as individual codons", "explanation": "While DNA is double-stranded, the main reason is that codon tables use mRNA bases. You must convert to mRNA before looking up amino acids." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A student is given the DNA coding strand 5'-ATGGCG-3'. How can they determine the amino acid sequence without finding the template strand first?",
+      "correct": "Replace each T with U to get the mRNA sequence, then use the codon table",
+      "correctExplanation": "The coding strand has the same base sequence as the mRNA (with T instead of U). Simply replacing T with U gives AUG-GCG, which can be looked up directly in the codon table.",
+      "distractors": [
+        { "answer": "Read the coding strand directly in the codon table without any changes", "explanation": "Codon tables use mRNA bases (with U). You must replace T with U in the coding strand to get the mRNA equivalent before looking up amino acids." },
+        { "answer": "Write the complement of the coding strand, then replace T with U", "explanation": "Taking the complement of the coding strand gives the template strand. You would then need to take the complement again to get mRNA, which is just the original coding strand with T→U." },
+        { "answer": "The coding strand cannot be used; you must always start with the template strand", "explanation": "The coding strand can be used as a shortcut. Since it matches the mRNA (with T→U), simply replacing T with U gives a valid mRNA sequence." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Convert the following DNA template strand to an amino acid sequence: 3'-TAC-AAA-GGC-ATT-5'",
+      "correct": "Methionine – Phenylalanine – Proline (stop at UAA)",
+      "correctExplanation": "mRNA: 5'-AUG-UUU-CCG-UAA-3'. AUG = methionine, UUU = phenylalanine, CCG = proline, UAA = stop codon. The polypeptide is three amino acids long.",
+      "distractors": [
+        { "answer": "Methionine – Lysine – Glycine – Isoleucine", "explanation": "This would result from reading DNA bases directly instead of converting to mRNA first. The correct mRNA is AUG-UUU-CCG-UAA." },
+        { "answer": "Methionine – Phenylalanine – Proline – Isoleucine", "explanation": "The fourth codon UAA is a stop codon, not isoleucine. Translation ends at the stop codon after three amino acids." },
+        { "answer": "Tyrosine – Phenylalanine – Proline", "explanation": "TAC on the template produces AUG in mRNA, which codes for methionine, not tyrosine. Always convert DNA to mRNA before using the codon table." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A student writes the mRNA from the DNA template strand 3'-GCA-5' as 5'-GCA-3'. Identify the error.",
+      "correct": "The student copied the template strand directly instead of writing the complementary mRNA sequence",
+      "correctExplanation": "The correct mRNA would be 5'-CGU-3' (G→C, C→G, A→U). The student failed to apply complementary base pairing rules.",
+      "distractors": [
+        { "answer": "The student wrote the correct mRNA but in the wrong direction", "explanation": "GCA is the template strand sequence, not the mRNA. The mRNA complement of 3'-GCA-5' is 5'-CGU-3'." },
+        { "answer": "The student should have replaced G with U to get the mRNA", "explanation": "mRNA is built by complementary base pairing, not by replacing specific bases. G pairs with C, C pairs with G, and A pairs with U." },
+        { "answer": "There is no error; GCA is the correct mRNA sequence from this template", "explanation": "This is incorrect. The mRNA must be complementary to the template strand: G→C, C→G, A→U, giving CGU." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Explain the relationship between the DNA coding strand and the mRNA sequence.",
+      "correct": "The coding strand has the same base sequence as the mRNA, except with T instead of U",
+      "correctExplanation": "The coding strand is complementary to the template strand. Since mRNA is also complementary to the template strand, the coding strand and mRNA share the same sequence (with T→U substitution).",
+      "distractors": [
+        { "answer": "The coding strand is complementary to the mRNA sequence", "explanation": "The coding strand has the same sequence as mRNA (not complementary). The template strand is complementary to the mRNA." },
+        { "answer": "The coding strand has the reverse sequence of the mRNA", "explanation": "The coding strand has the same sequence and same 5'→3' direction as the mRNA, not the reverse." },
+        { "answer": "The coding strand and mRNA have completely different sequences", "explanation": "They share the same base sequence with only one difference: DNA uses thymine where mRNA uses uracil." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "When reading codons from an mRNA sequence, why must you always start from the AUG start codon?",
+      "correct": "AUG establishes the reading frame that determines how all subsequent bases are grouped into codons",
+      "correctExplanation": "The start codon sets the reading frame. Starting from any other position would group bases into different triplets, producing incorrect amino acids.",
+      "distractors": [
+        { "answer": "AUG is the only codon that can be read by the ribosome", "explanation": "Ribosomes can read all 64 codons. AUG is special because it establishes where codon reading begins (the reading frame)." },
+        { "answer": "Reading can start from any position as long as you count in groups of three", "explanation": "The reading frame must be set by AUG. Starting from a different position changes how bases are grouped and produces different codons." },
+        { "answer": "AUG must come first because methionine is required for protein folding", "explanation": "While methionine is the first amino acid, the importance of AUG is that it establishes the reading frame for all subsequent codons." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the conversion shortcut using the coding strand.",
+      "sentence": "The DNA coding strand can be used as a shortcut because its sequence is {{blank:1}} to the mRNA, requiring only the replacement of T with {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "identical",
+          "correctExplanation": "The coding strand and mRNA share the same base sequence (except T in DNA becomes U in RNA), because both are complementary to the template strand.",
+          "distractors": [
+            { "answer": "complementary", "explanation": "The coding strand is not complementary to mRNA. It has the same sequence as mRNA (with T→U). The template strand is complementary to mRNA." },
+            { "answer": "opposite", "explanation": "The coding strand is not opposite to mRNA. They share the same sequence, making the coding strand a convenient shortcut." }
+          ]
+        },
+        "2": {
+          "correct": "U",
+          "correctExplanation": "The only difference between the coding strand and mRNA is that DNA uses thymine (T) where RNA uses uracil (U).",
+          "distractors": [
+            { "answer": "A", "explanation": "Adenine does not replace thymine. The base that replaces thymine in RNA is uracil (U)." },
+            { "answer": "C", "explanation": "Cytosine does not replace thymine. In RNA, uracil (U) takes the place of thymine." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the conversion from DNA template to amino acid.",
+      "sentence": "DNA template: 3'-TAC-5' → mRNA: 5'-{{blank:1}}-3' → amino acid: {{blank:2}}",
+      "blanks": {
+        "1": {
+          "correct": "AUG",
+          "correctExplanation": "TAC on the template strand converts to AUG in mRNA (T→A, A→U, C→G).",
+          "distractors": [
+            { "answer": "UAC", "explanation": "UAC would result from simply replacing T with U without complementary pairing. The correct complement of TAC is AUG." },
+            { "answer": "TAC", "explanation": "TAC is the DNA template sequence. The mRNA complement is AUG, using RNA bases and complementary pairing." }
+          ]
+        },
+        "2": {
+          "correct": "methionine",
+          "correctExplanation": "AUG is the start codon and codes for methionine, the first amino acid in every polypeptide.",
+          "distractors": [
+            { "answer": "tyrosine", "explanation": "Tyrosine is coded by UAC or UAU. AUG codes for methionine and serves as the start codon." },
+            { "answer": "valine", "explanation": "Valine is coded by GUN codons. AUG specifically codes for methionine." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about common errors in DNA-to-protein conversion.",
+      "sentence": "A common mistake is reading DNA bases directly from a codon table, which gives incorrect amino acids because the table requires {{blank:1}} codons, not DNA triplets.",
+      "blanks": {
+        "1": {
+          "correct": "mRNA",
+          "correctExplanation": "Codon tables are designed for mRNA codons. Using DNA sequences directly gives wrong results because DNA contains thymine where mRNA contains uracil.",
+          "distractors": [
+            { "answer": "DNA", "explanation": "Codon tables do not use DNA triplets. They are specifically designed for mRNA codons, which is why DNA must be converted first." },
+            { "answer": "tRNA", "explanation": "Codon tables list mRNA codons, not tRNA anticodons. The correct step is to convert DNA to mRNA before using the table." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "TF",
+      "question": "If you are given the DNA coding strand, you can determine the amino acid sequence by replacing T with U and reading the codon table.",
+      "correct": "True",
+      "correctExplanation": "The coding strand has the same sequence as mRNA except for T→U. Replacing T with U gives you the mRNA sequence, which can be read directly from the codon table.",
+      "distractors": [
+        { "answer": "False", "explanation": "This is a valid shortcut. The coding strand matches the mRNA sequence with only the T→U difference, so replacing T with U gives correct mRNA codons." }
+      ]
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "MC",
+      "question": "A student is given a DNA coding strand: 5'-ATGCCTGAATGA-3'. Determine the amino acid sequence without first finding the template strand.",
+      "correct": "Methionine – Proline – Glutamic acid (stop at UGA)",
+      "correctExplanation": "Replace T with U: AUG-CCU-GAA-UGA. AUG = Met, CCU = Pro, GAA = Glu, UGA = stop. Three amino acids before termination.",
+      "distractors": [
+        { "answer": "Methionine – Proline – Glutamic acid – Cysteine", "explanation": "UGA is a stop codon, not a cysteine codon. Translation terminates at UGA, producing a three-amino-acid polypeptide." },
+        { "answer": "Methionine – Proline – Aspartic acid", "explanation": "GAA codes for glutamic acid, not aspartic acid. Aspartic acid is coded by GAU and GAC." },
+        { "answer": "Threonine – Proline – Glutamic acid", "explanation": "AUG codes for methionine (start codon), not threonine. The first amino acid should be methionine." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A DNA template strand reads 3'-TAC-GGA-CCC-ACT-5'. Convert this to an amino acid sequence and identify where translation stops.",
+      "correct": "Methionine – Proline – Glycine; translation stops at UGA",
+      "correctExplanation": "mRNA: 5'-AUG-CCU-GGG-UGA-3'. AUG = Met, CCU = Pro, GGG = Gly, UGA = stop. Translation produces three amino acids before the stop codon.",
+      "distractors": [
+        { "answer": "Methionine – Proline – Glycine – Threonine", "explanation": "UGA is a stop codon, not threonine. Translation terminates at UGA after three amino acids." },
+        { "answer": "Methionine – Glycine – Proline", "explanation": "The order matters. The second codon is CCU (proline) and the third is GGG (glycine), not the reverse." },
+        { "answer": "Tyrosine – Proline – Glycine", "explanation": "TAC on the template produces AUG in mRNA, which codes for methionine, not tyrosine." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Two students convert the same DNA template strand. Student A gets Met-Ala-Leu and Student B gets Tyr-Arg-Glu. Which student is correct and what error did the other make?",
+      "correct": "Student A is correct; Student B likely read the DNA template directly without converting to mRNA first",
+      "correctExplanation": "Reading DNA directly in a codon table produces incorrect amino acids because the table expects mRNA codons. Student B's amino acids suggest they used DNA triplets instead of mRNA codons.",
+      "distractors": [
+        { "answer": "Student B is correct; Student A forgot to complement the DNA before reading it", "explanation": "The correct procedure is to complement the template strand to get mRNA, then use the codon table. Student A followed this correctly." },
+        { "answer": "Both students are correct because different codon tables give different amino acids", "explanation": "There is only one standard codon table. Different results indicate one student made an error in the conversion process." },
+        { "answer": "Neither student is correct because you cannot determine amino acids from DNA", "explanation": "DNA can be converted to amino acid sequences through the standard two-step process. Student A performed this correctly." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A mutation changes one base in the DNA template strand from C to T. Trace how this affects each step of the conversion to amino acids.",
+      "correct": "The mRNA codon changes (C→T in DNA means G→A in mRNA), which may change the amino acid depending on the codon position",
+      "correctExplanation": "C on the template pairs with G in mRNA. If C mutates to T, the mRNA gets A instead of G. This changes the mRNA codon, which may or may not change the amino acid due to degeneracy.",
+      "distractors": [
+        { "answer": "The mutation in DNA would be corrected during transcription, so the mRNA and amino acid would be normal", "explanation": "RNA polymerase does not correct DNA mutations. It reads whatever base is present, so the mutation will be reflected in the mRNA." },
+        { "answer": "The mRNA would be unaffected because DNA mutations do not change mRNA sequences", "explanation": "mRNA is made from the DNA template. A change in the template strand directly changes the corresponding base in the mRNA." },
+        { "answer": "The amino acid would definitely change because any base change always alters the protein", "explanation": "Not all base changes alter the amino acid. Due to degeneracy, the new codon might still code for the same amino acid, especially if the third position changed." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A researcher has the mRNA sequence 5'-AUGGCUUUCCAGUAA-3'. Convert this back to the original DNA template strand.",
+      "correct": "3'-TACCGAAAGGTCATT-5'",
+      "correctExplanation": "To find the template strand, write the complementary DNA bases: A→T, U→A, G→C, G→C, C→G, U→A, U→A, U→A, C→G, C→G, A→T, G→C, U→A, A→T, A→T.",
+      "distractors": [
+        { "answer": "5'-TACCGAAAGGTCATT-3'", "explanation": "The bases are correct but the directionality is wrong. The template strand runs antiparallel to the mRNA, so it should be 3'→5' when mRNA is 5'→3'." },
+        { "answer": "3'-AUGCCUUUCCAGUAA-5'", "explanation": "This is the mRNA sequence in the wrong direction, not the DNA template. The DNA template must use DNA bases (T instead of U)." },
+        { "answer": "3'-ATGGCTTTCCAGTAA-5'", "explanation": "This is the DNA coding strand (same sequence as mRNA with T replacing U). The template strand must be complementary to the mRNA." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Why does a single base change in the third position of a codon often not change the amino acid in the final protein?",
+      "correct": "The genetic code is degenerate, so many codons differing only in the third base code for the same amino acid",
+      "correctExplanation": "Most amino acids are specified by multiple codons that often differ only in the third (wobble) position. A base change here frequently produces a synonymous codon coding for the same amino acid.",
+      "distractors": [
+        { "answer": "The ribosome skips the third base of every codon during translation", "explanation": "Ribosomes read all three bases of every codon. The third position tolerance is due to degeneracy, not incomplete reading." },
+        { "answer": "The third base is always uracil, so changing it has no effect", "explanation": "The third base can be any of the four RNA bases. Its tolerance of change is due to multiple codons specifying the same amino acid." },
+        { "answer": "DNA repair enzymes fix any changes in the third base position before translation", "explanation": "DNA repair does not selectively fix third-position changes. The tolerance is an inherent property of the degenerate genetic code." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Given both strands of a DNA molecule, how do you determine which strand is the template strand for a specific gene?",
+      "correct": "The template strand is the one that produces an mRNA beginning with AUG when transcribed",
+      "correctExplanation": "The template strand for a gene will produce an mRNA with a start codon (AUG) in the correct position. The strand whose complement begins with AUG at the gene's start is the template.",
+      "distractors": [
+        { "answer": "The template strand is always the top strand as written in a diagram", "explanation": "Either strand can be the template for different genes. Which strand serves as template depends on the gene's promoter, not its position in a diagram." },
+        { "answer": "The template strand always runs from 5' to 3'", "explanation": "RNA polymerase reads the template strand 3' to 5'. Both strands have 5' and 3' ends; the template is identified by producing correct mRNA." },
+        { "answer": "The strand with more adenine bases is always the template strand", "explanation": "Base composition does not determine which strand is the template. Template identity depends on which strand produces a functional mRNA for a specific gene." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the full conversion from DNA to amino acids.",
+      "sentence": "DNA template: 3'-TAC-AAA-5' → mRNA: 5'-AUG-{{blank:1}}-3' → amino acids: methionine – {{blank:2}}",
+      "blanks": {
+        "1": {
+          "correct": "UUU",
+          "correctExplanation": "AAA on the DNA template strand converts to UUU in mRNA (A→U, A→U, A→U).",
+          "distractors": [
+            { "answer": "AAA", "explanation": "AAA would be a copy of the DNA, not a complement. The mRNA complement of AAA on the template is UUU." },
+            { "answer": "TTT", "explanation": "TTT contains thymine, which is not found in RNA. The correct mRNA complement of AAA is UUU." }
+          ]
+        },
+        "2": {
+          "correct": "phenylalanine",
+          "correctExplanation": "UUU codes for phenylalanine according to the codon table.",
+          "distractors": [
+            { "answer": "lysine", "explanation": "Lysine is coded by AAA and AAG. UUU codes for phenylalanine." },
+            { "answer": "leucine", "explanation": "Leucine is coded by several codons (CUN, UUA, UUG) but not UUU. UUU codes for phenylalanine." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about tracing mutations through the conversion process.",
+      "sentence": "A point mutation in DNA changes the {{blank:1}} strand sequence, which alters the mRNA {{blank:2}}, potentially changing the amino acid at that position.",
+      "blanks": {
+        "1": {
+          "correct": "template",
+          "correctExplanation": "A mutation in the template strand directly changes the mRNA sequence produced during transcription.",
+          "distractors": [
+            { "answer": "mRNA", "explanation": "Mutations occur in DNA, not mRNA. The template strand mutation is then reflected in the mRNA during transcription." },
+            { "answer": "protein", "explanation": "Mutations begin in DNA and flow through to mRNA then protein. The initial change is in the DNA template strand." }
+          ]
+        },
+        "2": {
+          "correct": "codon",
+          "correctExplanation": "A base change in the DNA template alters the corresponding base in the mRNA codon, which may change the amino acid it codes for.",
+          "distractors": [
+            { "answer": "promoter", "explanation": "The promoter is a regulatory region. A point mutation in a coding region changes a specific mRNA codon." },
+            { "answer": "intron", "explanation": "Introns are non-coding sequences. A mutation in a coding exon changes an mRNA codon that directly affects the amino acid sequence." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the coding strand shortcut.",
+      "sentence": "Using the coding strand as a shortcut works because the coding strand runs in the {{blank:1}} direction as mRNA and has the same base sequence except for the T to U difference.",
+      "blanks": {
+        "1": {
+          "correct": "same",
+          "correctExplanation": "Both the coding strand and mRNA run in the 5' to 3' direction and share the same base sequence (with T→U substitution).",
+          "distractors": [
+            { "answer": "opposite", "explanation": "The coding strand and mRNA run in the same direction (5'→3'). It is the template strand that is antiparallel to the mRNA." },
+            { "answer": "reverse", "explanation": "The coding strand runs in the same direction as mRNA, not the reverse. Both are read 5' to 3'." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "MC",
+      "question": "A researcher sequences both strands of a DNA molecule and obtains: Strand 1: 5'-ATGCCTGAATGA-3' and Strand 2: 3'-TACGGACTTACT-5'. Determine which strand is the template and what polypeptide would be produced.",
+      "correct": "Strand 2 is the template; the polypeptide is Met-Pro-Glu (stop at UGA)",
+      "correctExplanation": "Strand 2 (3'-TACGGACTTACT-5') produces mRNA 5'-AUGCCUGAAUГА-3'. AUG=Met, CCU=Pro, GAA=Glu, UGA=stop. Strand 1 is the coding strand with the same sequence as the mRNA.",
+      "distractors": [
+        { "answer": "Strand 1 is the template; the polypeptide is Tyr-Gly-Leu-Thr", "explanation": "Using Strand 1 as template would give mRNA 3'-UACGGACUUACU-5', which lacks an AUG start codon in the correct reading frame. Strand 2 produces the valid mRNA with AUG." },
+        { "answer": "Both strands produce the same polypeptide from different reading frames", "explanation": "The two strands are complementary and produce different mRNA sequences. Only one (Strand 2) produces an mRNA with a valid start codon and reading frame." },
+        { "answer": "Strand 2 is the template; the polypeptide is Met-Pro-Glu-Cys", "explanation": "UGA is a stop codon, not cysteine. The polypeptide contains only three amino acids before translation terminates." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A silent mutation occurs at the third position of a codon, changing the DNA template base from G to A. Trace the complete effect through transcription and translation, explaining why the protein is unaffected.",
+      "correct": "G→A in DNA template means C→U in mRNA, but the new codon is synonymous and codes for the same amino acid",
+      "correctExplanation": "The DNA change (G→A on template) produces a corresponding mRNA change (C→U). Because the genetic code is degenerate, the new codon (differing in the third position) codes for the same amino acid, so the protein is unchanged.",
+      "distractors": [
+        { "answer": "The mutation is corrected during RNA processing so the mRNA is unchanged", "explanation": "RNA processing does not correct mutations. The mRNA does change, but the new codon codes for the same amino acid due to degeneracy." },
+        { "answer": "The ribosome ignores the third base of each codon, so the change has no effect", "explanation": "Ribosomes do read all three bases. The protein is unaffected because many synonymous codons differ only in the third position." },
+        { "answer": "The tRNA anticodon adjusts to match any codon, so the same amino acid is always delivered", "explanation": "While wobble base pairing provides some flexibility, the key reason is that the changed codon still specifies the same amino acid in the codon table." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A missense mutation changes the DNA template strand codon from CTT to CCT. Trace the effect through to the protein and evaluate its potential impact.",
+      "correct": "mRNA changes from GAA (glutamic acid) to GGA (glycine), replacing a charged amino acid with a nonpolar one, potentially disrupting protein function",
+      "correctExplanation": "CTT→GAA (Glu) becomes CCT→GGA (Gly). Glutamic acid is negatively charged while glycine is nonpolar. This dramatic chemical property change could disrupt ionic bonds in the protein's tertiary structure.",
+      "distractors": [
+        { "answer": "The change from CTT to CCT has no effect because both code for the same amino acid", "explanation": "CTT gives GAA (Glu) and CCT gives GGA (Gly). These are different amino acids with very different chemical properties." },
+        { "answer": "The mutation creates a stop codon, truncating the protein prematurely", "explanation": "GGA codes for glycine, not a stop codon. This is a missense mutation that substitutes one amino acid for another." },
+        { "answer": "The protein would be completely unfolded because any amino acid change destroys all structure", "explanation": "Not all amino acid substitutions destroy protein structure. However, replacing a charged residue with a nonpolar one at a critical position can significantly impact function." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Explain why converting a DNA sequence to amino acids requires knowledge of which strand is the template strand. What happens if you accidentally use the wrong strand?",
+      "correct": "Using the wrong strand produces a completely different mRNA and amino acid sequence because the two DNA strands are complementary, not identical",
+      "correctExplanation": "The two DNA strands have complementary sequences. Using the coding strand as if it were the template would produce an mRNA complementary to the actual mRNA, yielding entirely different codons and amino acids.",
+      "distractors": [
+        { "answer": "Using the wrong strand would produce the same amino acids in reverse order", "explanation": "The two strands do not produce reversed amino acid sequences. They have complementary base sequences that yield completely different mRNA codons and amino acids." },
+        { "answer": "It does not matter which strand is used because both produce the same protein", "explanation": "The two strands produce entirely different mRNA sequences and therefore different amino acid sequences. Using the wrong strand gives incorrect results." },
+        { "answer": "Using the wrong strand would only affect the first amino acid while the rest would be the same", "explanation": "Every codon would be different when using the wrong strand. The entire amino acid sequence would change, not just the first one." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A bioinformatician has a long DNA sequence and needs to find all possible reading frames. How many reading frames exist on a single strand of DNA, and why does this matter?",
+      "correct": "Three reading frames exist per strand (starting at positions 1, 2, and 3), and each produces a completely different amino acid sequence",
+      "correctExplanation": "Shifting the start position by one or two bases changes how all subsequent bases are grouped into codons. Each of the three possible starting positions produces a different set of codons and amino acids.",
+      "distractors": [
+        { "answer": "Only one reading frame exists per strand because codons can only be read one way", "explanation": "Three reading frames exist depending on where grouping begins. The biological reading frame is set by AUG, but computationally all three can be analysed." },
+        { "answer": "Six reading frames exist per strand because codons can be read in both directions", "explanation": "Six reading frames exist across both strands (three per strand). A single strand has three reading frames based on offset position." },
+        { "answer": "Two reading frames exist per strand: one starting from AUG and one starting from the next base", "explanation": "There are three possible reading frames on any single strand, corresponding to starting at positions 1, 2, or 3 within the sequence." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A gene has the following DNA template strand: 3'-TAC-CGA-AGC-ATT-5'. A mutation deletes the second base (A), causing a frameshift. Determine the new amino acid sequence.",
+      "correct": "The deletion shifts all downstream codons: new mRNA is AUG-GCU-UCG-UA..., producing Met-Ala-Ser before an incomplete codon",
+      "correctExplanation": "After deleting the A, the template becomes 3'-TC-CGA-AGC-ATT-5'. Regrouped: 3'-TCC-GAA-GCA-TT-5'. mRNA: 5'-AGG-CUU-CGU-...-3'. Actually, let's be precise: template without the A at position 2 is T_C-CGA-AGC-ATT. Regrouping from the start: TCC-GAA-GCA-TT → mRNA: AGG-CUU-CGU, which gives Arg-Leu-Arg, completely different from the original Met-Ala-Ser.",
+      "distractors": [
+        { "answer": "The amino acid sequence would be unchanged because one base deletion has no effect", "explanation": "A single base deletion causes a frameshift, changing every codon downstream. The amino acid sequence would be completely different." },
+        { "answer": "Only the second amino acid would change while the rest remain the same", "explanation": "A frameshift changes the grouping of all downstream bases. Every codon after the deletion is different, changing all subsequent amino acids." },
+        { "answer": "The protein would be one amino acid shorter but otherwise identical", "explanation": "A frameshift does not simply remove one amino acid. It changes the reading frame for all downstream codons, producing entirely different amino acids." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Critically evaluate the statement: 'The central dogma of molecular biology states that information flows from DNA to mRNA to protein, and this flow is always one-directional.'",
+      "correct": "The statement is mostly correct but incomplete; reverse transcriptase can copy RNA back to DNA, and some RNA viruses replicate RNA to RNA",
+      "correctExplanation": "While the standard flow DNA→RNA→protein holds true for most organisms, exceptions exist: retroviruses use reverse transcriptase for RNA→DNA, and RNA viruses can replicate RNA→RNA. Protein→DNA or Protein→RNA transfer has not been observed.",
+      "distractors": [
+        { "answer": "The statement is completely correct with no exceptions in any organism", "explanation": "Exceptions exist. Retroviruses demonstrate RNA→DNA flow via reverse transcriptase, showing that information transfer is not always strictly one-directional." },
+        { "answer": "The statement is incorrect because proteins can also be converted back into DNA", "explanation": "There is no known mechanism for converting proteins back into nucleic acids. The exceptions involve RNA→DNA (reverse transcriptase) and RNA→RNA replication." },
+        { "answer": "The statement is incorrect because information always flows from protein to DNA", "explanation": "The standard flow is DNA→RNA→protein. Protein-to-DNA information flow has never been demonstrated." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A student converts a DNA template strand and gets Met-Ser-Arg-Stop. Their classmate converts the same template strand but starts reading one base earlier and gets Cys-Val-Gly-Leu. Explain how both can get completely different answers from the same DNA.",
+      "correct": "They are using different reading frames, which changes how the mRNA bases are grouped into codons",
+      "correctExplanation": "Starting at different positions shifts the reading frame. The same mRNA sequence read in different frames produces completely different codons and amino acids. The correct frame is determined by the AUG start codon.",
+      "distractors": [
+        { "answer": "One student is reading the coding strand while the other reads the template strand", "explanation": "The question states both used the same template strand. The difference is the reading frame, not the strand choice." },
+        { "answer": "One student made an error; both should get the same amino acid sequence", "explanation": "Different reading frames legitimately produce different amino acids. The correct frame is determined by the AUG start codon position." },
+        { "answer": "Both answers are equally valid because any reading frame can produce functional proteins", "explanation": "While multiple reading frames exist, only the one established by the AUG start codon produces the biologically correct amino acid sequence." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the information flow in gene expression.",
+      "sentence": "The central dogma describes information flowing from DNA through {{blank:1}} to protein, with the exception of {{blank:2}} which can copy RNA back to DNA.",
+      "blanks": {
+        "1": {
+          "correct": "mRNA",
+          "correctExplanation": "mRNA is the intermediate molecule that carries genetic information from DNA to the ribosome for protein synthesis.",
+          "distractors": [
+            { "answer": "tRNA", "explanation": "tRNA carries amino acids to the ribosome but is not the primary information carrier. The central dogma flow goes through mRNA." },
+            { "answer": "rRNA", "explanation": "rRNA is a structural component of ribosomes. The information carrier in the central dogma is mRNA." }
+          ]
+        },
+        "2": {
+          "correct": "reverse transcriptase",
+          "correctExplanation": "Reverse transcriptase is an enzyme found in retroviruses that can copy RNA into DNA, reversing the normal flow of genetic information.",
+          "distractors": [
+            { "answer": "RNA polymerase", "explanation": "RNA polymerase copies DNA into RNA (the normal flow). The enzyme that reverses this flow (RNA→DNA) is reverse transcriptase." },
+            { "answer": "DNA polymerase", "explanation": "DNA polymerase copies DNA to DNA. The enzyme that copies RNA back to DNA is reverse transcriptase, found in retroviruses." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about reading frames and the start codon.",
+      "sentence": "The correct reading frame is established by the {{blank:1}} codon, and shifting the frame by even one base produces a completely different {{blank:2}} sequence.",
+      "blanks": {
+        "1": {
+          "correct": "start",
+          "correctExplanation": "The AUG start codon determines where the ribosome begins reading mRNA in groups of three, establishing the correct reading frame.",
+          "distractors": [
+            { "answer": "stop", "explanation": "Stop codons terminate translation but do not establish the reading frame. The start codon AUG sets the reading frame." },
+            { "answer": "first", "explanation": "While the start codon is the first codon translated, the specific term for the codon that sets the reading frame is the start codon (AUG)." }
+          ]
+        },
+        "2": {
+          "correct": "amino acid",
+          "correctExplanation": "A shifted reading frame changes every codon downstream, resulting in completely different amino acids being incorporated into the polypeptide.",
+          "distractors": [
+            { "answer": "nucleotide", "explanation": "The nucleotide sequence of the mRNA does not change when the reading frame shifts. It is the amino acid sequence that changes because codons are grouped differently." },
+            { "answer": "DNA", "explanation": "The DNA sequence is unaffected by reading frame shifts. The reading frame determines how mRNA is grouped into codons, affecting the amino acid sequence." }
+          ]
+        }
+      }
+    }
+  ]
+}

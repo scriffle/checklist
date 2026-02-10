@@ -1,0 +1,583 @@
+{
+  "_link": {
+    "uuid": "lp-cf607218-5186-348a-31f7-8d51d8a03601",
+    "version": 1,
+    "contentHash": "efb96c3a",
+    "title": "I can define codon and anticodon and explain how they interact",
+    "generatedAt": "2026-02-09T12:09:00.000Z"
+  },
+  "toLevel2": [
+    {
+      "type": "MC",
+      "question": "What is a codon?",
+      "correct": "A set of three bases on mRNA that codes for a specific amino acid",
+      "correctExplanation": "A codon is a triplet of nucleotides on the mRNA strand that specifies which amino acid should be added during translation.",
+      "distractors": [
+        { "answer": "A set of three bases on tRNA that pairs with mRNA", "explanation": "Three bases on tRNA form the anticodon, not the codon. Codons are found on mRNA." },
+        { "answer": "A set of three bases on DNA that codes for an amino acid", "explanation": "While DNA does have triplets, codons specifically refer to the three-base sequences on mRNA." },
+        { "answer": "A single base on mRNA that codes for one amino acid", "explanation": "A codon consists of three bases, not one. Three bases are needed to code for each amino acid." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "What is an anticodon?",
+      "correct": "A set of three complementary bases on tRNA that binds to the mRNA codon",
+      "correctExplanation": "The anticodon on tRNA is complementary to the mRNA codon, ensuring the correct amino acid is delivered during translation.",
+      "distractors": [
+        { "answer": "A set of three bases on mRNA that codes for a stop signal", "explanation": "Stop signals are codons on mRNA, not anticodons. Anticodons are found on tRNA." },
+        { "answer": "A set of three bases on rRNA that forms the ribosome", "explanation": "Anticodons are found on tRNA, not rRNA. They pair with codons on mRNA." },
+        { "answer": "A set of three bases on DNA that is read during replication", "explanation": "Anticodons are on tRNA and pair with mRNA codons during translation, not DNA replication." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Where are codons found?",
+      "correct": "On mRNA",
+      "correctExplanation": "Codons are three-base sequences on the mRNA strand that are read by the ribosome during translation.",
+      "distractors": [
+        { "answer": "On tRNA", "explanation": "tRNA carries anticodons, not codons. Codons are on mRNA." },
+        { "answer": "On rRNA", "explanation": "rRNA is a structural component of ribosomes. Codons are found on mRNA." },
+        { "answer": "On DNA", "explanation": "While DNA has base triplets, the term 'codon' specifically refers to sequences on mRNA." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "If an mRNA codon is GUC, what is the complementary anticodon on the tRNA?",
+      "correct": "CAG",
+      "correctExplanation": "The anticodon is complementary to the codon: G pairs with C, U pairs with A, C pairs with G, giving CAG.",
+      "distractors": [
+        { "answer": "GUC", "explanation": "GUC is the codon itself, not the anticodon. The anticodon must be complementary: CAG." },
+        { "answer": "CTG", "explanation": "CTG contains thymine, which is found in DNA, not RNA. The anticodon uses RNA bases: CAG." },
+        { "answer": "GAC", "explanation": "GAC is not the correct complement. G→C, U→A, C→G gives CAG." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "What amino acid does the tRNA with anticodon CAG carry?",
+      "correct": "Valine",
+      "correctExplanation": "The anticodon CAG pairs with the mRNA codon GUC, which codes for valine according to the codon table.",
+      "distractors": [
+        { "answer": "Methionine", "explanation": "Methionine is coded by AUG. The codon GUC (paired by anticodon CAG) codes for valine." },
+        { "answer": "Leucine", "explanation": "Leucine has several codons but GUC is not one of them. GUC codes for valine." },
+        { "answer": "Alanine", "explanation": "Alanine is coded by GCX codons. GUC codes for valine." }
+      ]
+    },
+    {
+      "type": "CLOZE",
+      "prompt": "Complete the sentence about codons and anticodons.",
+      "sentence": "A {{blank:1}} is a three-base sequence on mRNA, and an {{blank:2}} is the complementary three-base sequence on tRNA.",
+      "blanks": {
+        "1": {
+          "correct": "codon",
+          "correctExplanation": "Codons are found on mRNA and each codes for a specific amino acid.",
+          "distractors": [
+            { "answer": "anticodon", "explanation": "Anticodons are on tRNA. Codons are the three-base sequences on mRNA." },
+            { "answer": "intron", "explanation": "Introns are non-coding sequences within genes. Codons are three-base coding units on mRNA." }
+          ]
+        },
+        "2": {
+          "correct": "anticodon",
+          "correctExplanation": "The anticodon on tRNA is complementary to the mRNA codon, enabling correct amino acid delivery.",
+          "distractors": [
+            { "answer": "codon", "explanation": "The codon is on mRNA. The complementary sequence on tRNA is the anticodon." },
+            { "answer": "exon", "explanation": "Exons are coding sequences in genes. The complementary sequence on tRNA is the anticodon." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CLOZE",
+      "prompt": "Complete the sentence about how codons and anticodons interact.",
+      "sentence": "During translation, the anticodon on {{blank:1}} pairs with the codon on {{blank:2}} through complementary base pairing.",
+      "blanks": {
+        "1": {
+          "correct": "tRNA",
+          "correctExplanation": "The anticodon is located on tRNA, which carries the corresponding amino acid.",
+          "distractors": [
+            { "answer": "mRNA", "explanation": "mRNA carries codons. tRNA carries the anticodon." },
+            { "answer": "rRNA", "explanation": "rRNA is part of the ribosome structure. tRNA carries the anticodon." }
+          ]
+        },
+        "2": {
+          "correct": "mRNA",
+          "correctExplanation": "Codons are found on the mRNA strand and are read by the ribosome during translation.",
+          "distractors": [
+            { "answer": "tRNA", "explanation": "tRNA has the anticodon. The codon is on mRNA." },
+            { "answer": "DNA", "explanation": "While DNA has base triplets, codons specifically refer to mRNA sequences during translation." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CLOZE",
+      "prompt": "Complete the sentence using a specific example.",
+      "sentence": "The mRNA codon GUC codes for {{blank:1}}, and the tRNA that carries this amino acid has the anticodon {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "valine",
+          "correctExplanation": "The codon GUC codes for the amino acid valine according to the codon table.",
+          "distractors": [
+            { "answer": "glycine", "explanation": "Glycine is coded by GGX codons. GUC codes for valine." },
+            { "answer": "leucine", "explanation": "Leucine has several codons but GUC is not one of them. GUC codes for valine." }
+          ]
+        },
+        "2": {
+          "correct": "CAG",
+          "correctExplanation": "The anticodon CAG is complementary to the codon GUC (G-C, U-A, C-G).",
+          "distractors": [
+            { "answer": "GUC", "explanation": "GUC is the codon, not the anticodon. The anticodon is the complementary sequence CAG." },
+            { "answer": "CUG", "explanation": "CUG is not the correct complement of GUC. The correct anticodon is CAG." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "TF",
+      "question": "The anticodon is found on the mRNA molecule.",
+      "correct": "False",
+      "correctExplanation": "The anticodon is found on tRNA, not mRNA. mRNA contains codons; tRNA contains anticodons.",
+      "distractors": [
+        { "answer": "True", "explanation": "Anticodons are on tRNA. Codons are the three-base sequences found on mRNA." }
+      ]
+    },
+    {
+      "type": "TF",
+      "question": "A codon is a set of three bases on mRNA that codes for a specific amino acid.",
+      "correct": "True",
+      "correctExplanation": "Codons are three-nucleotide sequences on mRNA, each specifying a particular amino acid (or a stop signal).",
+      "distractors": [
+        { "answer": "False", "explanation": "This is the correct definition of a codon — a three-base sequence on mRNA coding for an amino acid." }
+      ]
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "MC",
+      "question": "Why must the anticodon be complementary to the codon for protein synthesis to work correctly?",
+      "correct": "Complementary base pairing ensures that only the tRNA carrying the correct amino acid can bind to each codon",
+      "correctExplanation": "The specificity of codon-anticodon pairing guarantees that the right amino acid is added at each position in the growing polypeptide.",
+      "distractors": [
+        { "answer": "Complementary base pairing is not important because any tRNA can bind to any codon", "explanation": "If any tRNA could bind any codon, the wrong amino acids would be incorporated, producing non-functional proteins." },
+        { "answer": "Complementary base pairing only occurs between DNA strands and does not apply to codon-anticodon interactions", "explanation": "Complementary base pairing also occurs between RNA molecules, including codon-anticodon interactions during translation." },
+        { "answer": "Complementary base pairing ensures the mRNA is copied correctly into a new mRNA molecule", "explanation": "Codon-anticodon pairing is about translation (protein synthesis), not mRNA copying." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "How does the codon-anticodon interaction ensure accuracy during protein synthesis?",
+      "correct": "Each tRNA has a specific anticodon that only pairs with the correct mRNA codon, guaranteeing the right amino acid is delivered",
+      "correctExplanation": "The three-base anticodon provides specificity through complementary base pairing, acting as a molecular matchmaker.",
+      "distractors": [
+        { "answer": "The ribosome checks each amino acid visually before allowing it to be added to the chain", "explanation": "Ribosomes do not check amino acids visually. Accuracy comes from codon-anticodon base pairing." },
+        { "answer": "Each amino acid can recognise its own codon directly without needing tRNA", "explanation": "Amino acids cannot recognise codons. tRNA acts as the adaptor between codons and amino acids." },
+        { "answer": "The codon-anticodon interaction is random, and errors are corrected after the protein is made", "explanation": "The interaction is specific, not random. Errors in amino acid incorporation are difficult to correct after the fact." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Why are codons described as being three bases long rather than one or two?",
+      "correct": "Because three bases provide 64 possible combinations, which is enough to code for all 20 amino acids plus start and stop signals",
+      "correctExplanation": "With four bases, one-base codons give only 4 combinations and two-base codons give 16 — both insufficient for 20 amino acids. Three bases give 64.",
+      "distractors": [
+        { "answer": "Because three is an arbitrary number chosen by scientists for convenience", "explanation": "The triplet code is a biological fact determined by evolution, not an arbitrary choice." },
+        { "answer": "Because one-base codons would provide 20 combinations, which is exactly the right number", "explanation": "One-base codons provide only 4 combinations (A, U, G, C), far too few for 20 amino acids." },
+        { "answer": "Because two-base codons would give too many combinations, causing confusion", "explanation": "Two-base codons give only 16 combinations, still fewer than the 20 amino acids needed." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "If the mRNA codon is AUG, what is the anticodon, and what amino acid does this code for?",
+      "correct": "The anticodon is UAC, and AUG codes for methionine (the start codon)",
+      "correctExplanation": "AUG is the start codon coding for methionine. The complementary anticodon on the initiator tRNA is UAC.",
+      "distractors": [
+        { "answer": "The anticodon is TAC, and AUG codes for methionine", "explanation": "TAC contains thymine, which is found in DNA. The RNA anticodon uses uracil: UAC." },
+        { "answer": "The anticodon is UAC, and AUG codes for a stop signal", "explanation": "AUG is the start codon (methionine), not a stop codon. The anticodon UAC is correct." },
+        { "answer": "The anticodon is AUG, and it codes for valine", "explanation": "AUG is the codon, not the anticodon. The anticodon is UAC, and AUG codes for methionine." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "What would happen if a tRNA had the wrong amino acid attached to it but the correct anticodon?",
+      "correct": "The wrong amino acid would be incorporated into the protein because the ribosome relies on codon-anticodon pairing, not amino acid identity",
+      "correctExplanation": "The ribosome checks the codon-anticodon match, not the amino acid itself. A mismatch between anticodon and amino acid would introduce an error.",
+      "distractors": [
+        { "answer": "The ribosome would detect the mismatch and reject the tRNA", "explanation": "The ribosome verifies codon-anticodon pairing, not whether the correct amino acid is attached." },
+        { "answer": "The amino acid would spontaneously change to the correct one when it enters the ribosome", "explanation": "Amino acids cannot spontaneously change identity. The wrong amino acid would be incorporated." },
+        { "answer": "Translation would stop completely because the tRNA is defective", "explanation": "Translation would continue normally, but with the wrong amino acid at that position in the protein." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Why is tRNA described as an 'adaptor' molecule in translation?",
+      "correct": "Because tRNA connects the language of nucleic acids (codons) to the language of proteins (amino acids)",
+      "correctExplanation": "tRNA translates between two molecular languages: it reads mRNA codons with its anticodon and delivers the corresponding amino acid.",
+      "distractors": [
+        { "answer": "Because tRNA physically connects the ribosome to the mRNA molecule", "explanation": "While tRNA binds both mRNA and the ribosome, its adaptor role refers to connecting codons to amino acids." },
+        { "answer": "Because tRNA converts amino acids into nucleotides during translation", "explanation": "tRNA does not convert molecules. It matches codons to amino acids through its anticodon-amino acid combination." },
+        { "answer": "Because tRNA changes its shape to adapt to different codons in the ribosome", "explanation": "Each tRNA has a fixed anticodon. The adaptor role refers to bridging codons and amino acids, not shape changes." }
+      ]
+    },
+    {
+      "type": "CLOZE",
+      "prompt": "Explain why three-base codons are necessary.",
+      "sentence": "Three-base codons are needed because they provide {{blank:1}} possible combinations, which is more than enough for the {{blank:2}} different amino acids.",
+      "blanks": {
+        "1": {
+          "correct": "64",
+          "correctExplanation": "With four possible bases at each of three positions, there are 4×4×4 = 64 possible codons.",
+          "distractors": [
+            { "answer": "20", "explanation": "20 is the number of amino acids, not codons. There are 64 possible three-base codons." },
+            { "answer": "16", "explanation": "16 would be the number of two-base combinations (4×4). Three-base codons give 64." }
+          ]
+        },
+        "2": {
+          "correct": "20",
+          "correctExplanation": "There are 20 standard amino acids used in protein synthesis, all coded for by the 64 codons.",
+          "distractors": [
+            { "answer": "64", "explanation": "64 is the number of codons. There are 20 different amino acids." },
+            { "answer": "4", "explanation": "4 is the number of different RNA bases. There are 20 different amino acids." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CLOZE",
+      "prompt": "Describe tRNA's adaptor function.",
+      "sentence": "tRNA acts as an adaptor by carrying a specific {{blank:1}} at one end and an {{blank:2}} at the other end that pairs with the mRNA codon.",
+      "blanks": {
+        "1": {
+          "correct": "amino acid",
+          "correctExplanation": "One end of tRNA carries a specific amino acid, while the other end reads the mRNA codon.",
+          "distractors": [
+            { "answer": "nucleotide", "explanation": "tRNA carries amino acids, not free nucleotides, to the ribosome." },
+            { "answer": "codon", "explanation": "Codons are on mRNA. tRNA carries an amino acid at one end and an anticodon at the other." }
+          ]
+        },
+        "2": {
+          "correct": "anticodon",
+          "correctExplanation": "The anticodon is the three-base sequence on tRNA that recognises and pairs with the complementary mRNA codon.",
+          "distractors": [
+            { "answer": "codon", "explanation": "Codons are on mRNA. The sequence on tRNA is called the anticodon." },
+            { "answer": "promoter", "explanation": "Promoters are DNA sequences for transcription. The tRNA sequence is the anticodon." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CLOZE",
+      "prompt": "Explain codon-anticodon pairing with an example.",
+      "sentence": "If the mRNA codon is AUG, the tRNA anticodon {{blank:1}} pairs with it and delivers the amino acid {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "UAC",
+          "correctExplanation": "UAC is complementary to AUG: A-U, U-A, G-C.",
+          "distractors": [
+            { "answer": "AUG", "explanation": "AUG is the codon. The anticodon must be complementary: UAC." },
+            { "answer": "TAC", "explanation": "TAC uses thymine, which is found in DNA. The RNA anticodon is UAC." }
+          ]
+        },
+        "2": {
+          "correct": "methionine",
+          "correctExplanation": "AUG is the start codon and codes for the amino acid methionine.",
+          "distractors": [
+            { "answer": "valine", "explanation": "Valine is coded by GUX codons. AUG codes for methionine." },
+            { "answer": "alanine", "explanation": "Alanine is coded by GCX codons. AUG codes for methionine." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "TF",
+      "question": "If the codon-anticodon pairing is incorrect, the ribosome will always detect and correct the error.",
+      "correct": "False",
+      "correctExplanation": "While the ribosome has some proofreading, it primarily relies on correct codon-anticodon pairing. If a tRNA with the wrong amino acid but correct anticodon binds, the error may not be detected.",
+      "distractors": [
+        { "answer": "True", "explanation": "The ribosome's main quality check is codon-anticodon complementarity. Some errors can slip through." }
+      ]
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "MC",
+      "question": "A mutation changes an mRNA codon from GUC to GUU. The codon table shows both GUC and GUU code for valine. What effect would this mutation have on the protein?",
+      "correct": "No effect — both codons code for the same amino acid (valine), so the protein would be unchanged",
+      "correctExplanation": "This is a silent mutation. Due to the degeneracy of the genetic code, different codons can specify the same amino acid.",
+      "distractors": [
+        { "answer": "The protein would have a different amino acid at this position", "explanation": "Both GUC and GUU code for valine. The amino acid would be the same." },
+        { "answer": "The protein would be completely non-functional because any codon change is harmful", "explanation": "Silent mutations do not change the amino acid, so the protein is unaffected." },
+        { "answer": "Translation would stop at this position because GUU is a stop codon", "explanation": "GUU is not a stop codon. It codes for valine, the same amino acid as GUC." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A mutation changes the anticodon of a tRNA from CAG to CAA. This tRNA still carries valine. What would happen during translation?",
+      "correct": "The tRNA would now pair with the codon GUU instead of GUC, inserting valine at positions that should have valine — potentially no effect if GUU codes for valine",
+      "correctExplanation": "The mutant tRNA with anticodon CAA would pair with codon GUU. Since GUU also codes for valine, the amino acid delivered would still be correct.",
+      "distractors": [
+        { "answer": "The tRNA would be unable to pair with any codon and would be useless", "explanation": "The mutant anticodon CAA can still pair with the complementary codon GUU." },
+        { "answer": "The mutation would change the amino acid carried by the tRNA from valine to a different amino acid", "explanation": "Anticodon mutations do not change which amino acid the tRNA carries. The aminoacyl-tRNA synthetase determines this." },
+        { "answer": "Translation would stop completely because mutant tRNAs poison the ribosome", "explanation": "A tRNA with a mutant anticodon simply pairs with a different codon. It does not poison the ribosome." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "During translation, two different tRNA molecules approach the ribosome at the same time. How does the ribosome select the correct one?",
+      "correct": "Only the tRNA whose anticodon is complementary to the exposed mRNA codon will form stable base pairs and be accepted by the ribosome",
+      "correctExplanation": "The ribosome checks the stability of codon-anticodon pairing. Only the correctly matched tRNA forms three stable base pairs.",
+      "distractors": [
+        { "answer": "The ribosome randomly selects one of the two tRNAs and checks the amino acid afterwards", "explanation": "Selection is based on codon-anticodon complementarity, not random choice." },
+        { "answer": "The ribosome selects the tRNA that arrives first, regardless of its anticodon", "explanation": "Arrival order does not determine selection. Correct base pairing is required." },
+        { "answer": "The ribosome reads the amino acid attached to each tRNA and selects the correct one", "explanation": "The ribosome checks codon-anticodon pairing, not amino acid identity." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A researcher engineers a tRNA so that its anticodon pairs with a stop codon (UAG) and it carries the amino acid glutamine. What would happen during translation?",
+      "correct": "The engineered tRNA would insert glutamine at positions where translation would normally stop, producing a longer protein",
+      "correctExplanation": "This is called a suppressor tRNA. It reads the stop codon as a sense codon, inserting an amino acid instead of terminating translation.",
+      "distractors": [
+        { "answer": "The ribosome would reject the tRNA because stop codons can never pair with anticodons", "explanation": "Stop codons can physically pair with complementary anticodons. The engineered tRNA would function at these sites." },
+        { "answer": "The engineered tRNA would cause all proteins in the cell to become longer", "explanation": "Only proteins using UAG as their stop codon would be affected. Other stop codons (UAA, UGA) would still function." },
+        { "answer": "The tRNA would be destroyed by the ribosome because it pairs with a stop codon", "explanation": "The ribosome does not destroy tRNAs. The engineered tRNA would compete with release factors at UAG codons." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Explain why the concept of 'wobble' in the third position of a codon is significant for translation efficiency.",
+      "correct": "Wobble allows one tRNA anticodon to pair with more than one codon, reducing the number of different tRNA molecules a cell needs to produce",
+      "correctExplanation": "Wobble base pairing at the third codon position means fewer tRNA types are needed, as one tRNA can recognise multiple synonymous codons.",
+      "distractors": [
+        { "answer": "Wobble means the third base of every codon is ignored during translation", "explanation": "The third base is not ignored. Wobble allows non-standard pairing at this position, but the base still matters." },
+        { "answer": "Wobble prevents any mutations in the third position from affecting the protein", "explanation": "While wobble increases tolerance of third-position mutations, it does not prevent all effects." },
+        { "answer": "Wobble means each tRNA can carry any of the 20 amino acids", "explanation": "Wobble allows one tRNA to recognise multiple codons for the same amino acid, not to carry different amino acids." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A student writes the anticodon for the mRNA codon CGA as GCU. Is this correct? Explain your reasoning.",
+      "correct": "Yes — applying complementary base pairing in the antiparallel direction: C→G, G→C, A→U gives the anticodon GCU (read 3' to 5')",
+      "correctExplanation": "The anticodon is complementary and antiparallel to the codon. C pairs with G, G with C, and A with U.",
+      "distractors": [
+        { "answer": "No — the anticodon should be written as UCG because anticodons are read in the same direction as codons", "explanation": "While direction matters, the standard convention for writing the anticodon as the complement gives GCU." },
+        { "answer": "No — the anticodon should be GCT because tRNA uses thymine", "explanation": "tRNA is RNA and uses uracil, not thymine. The correct anticodon is GCU." },
+        { "answer": "No — anticodons only have two bases, not three", "explanation": "Anticodons have three bases, matching the three bases of each codon." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "If a mutation in an aminoacyl-tRNA synthetase enzyme causes it to load the wrong amino acid onto a tRNA, but the anticodon is correct, what is the consequence?",
+      "correct": "The wrong amino acid would be incorporated at every position where that tRNA's codon appears, because the ribosome checks anticodon pairing, not amino acid identity",
+      "correctExplanation": "The aminoacyl-tRNA synthetase error would be undetectable by the ribosome, leading to systematic incorporation of the wrong amino acid.",
+      "distractors": [
+        { "answer": "The ribosome would detect the mismatch and reject the incorrectly loaded tRNA", "explanation": "The ribosome does not verify amino acid identity. It relies on codon-anticodon pairing." },
+        { "answer": "The tRNA would be unable to enter the ribosome because the amino acid does not fit", "explanation": "The ribosome accommodates all 20 amino acids. The wrong amino acid would still be accepted." },
+        { "answer": "The error would only affect one protein molecule before being corrected by proofreading", "explanation": "The error would persist in all proteins translated using that tRNA until the enzyme is corrected." }
+      ]
+    },
+    {
+      "type": "CLOZE",
+      "prompt": "Apply codon-anticodon knowledge to predict the effect of a mutation.",
+      "sentence": "A mutation changing a codon from GUC to GUG would change the amino acid from {{blank:1}} to another, unless both codons code for the same amino acid due to code {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "valine",
+          "correctExplanation": "GUC codes for valine. A change to GUG would need to be checked against the codon table.",
+          "distractors": [
+            { "answer": "methionine", "explanation": "Methionine is coded by AUG. GUC codes for valine." },
+            { "answer": "alanine", "explanation": "Alanine is coded by GCX codons. GUC codes for valine." }
+          ]
+        },
+        "2": {
+          "correct": "degeneracy",
+          "correctExplanation": "Degeneracy means multiple codons can code for the same amino acid. GUG also codes for valine.",
+          "distractors": [
+            { "answer": "mutation", "explanation": "The genetic code is described as degenerate (redundant), meaning multiple codons encode the same amino acid." },
+            { "answer": "specificity", "explanation": "Degeneracy (redundancy) of the code means multiple codons can specify the same amino acid." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CLOZE",
+      "prompt": "Explain why the ribosome cannot detect certain amino acid errors.",
+      "sentence": "The ribosome checks {{blank:1}}-anticodon pairing but not the {{blank:2}} attached to the tRNA, so a wrongly loaded tRNA would go undetected.",
+      "blanks": {
+        "1": {
+          "correct": "codon",
+          "correctExplanation": "The ribosome verifies that the tRNA anticodon is complementary to the mRNA codon.",
+          "distractors": [
+            { "answer": "amino acid", "explanation": "The ribosome checks codon-anticodon pairing, not amino acid identity." },
+            { "answer": "protein", "explanation": "The ribosome checks codon-anticodon pairing during translation." }
+          ]
+        },
+        "2": {
+          "correct": "amino acid",
+          "correctExplanation": "The ribosome does not verify which amino acid is attached to the tRNA. It trusts the aminoacyl-tRNA synthetase to have loaded the correct one.",
+          "distractors": [
+            { "answer": "anticodon", "explanation": "The ribosome does check the anticodon. It is the amino acid that it cannot verify." },
+            { "answer": "codon", "explanation": "The ribosome reads the codon on mRNA. It is the amino acid on tRNA that it cannot verify." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CLOZE",
+      "prompt": "Apply the wobble concept to translation efficiency.",
+      "sentence": "Wobble pairing at the {{blank:1}} position of the codon allows one tRNA to recognise {{blank:2}} different codons for the same amino acid.",
+      "blanks": {
+        "1": {
+          "correct": "third",
+          "correctExplanation": "Wobble occurs at the third (3') position of the codon, which corresponds to the first (5') position of the anticodon.",
+          "distractors": [
+            { "answer": "first", "explanation": "Wobble pairing occurs at the third position of the codon, not the first." },
+            { "answer": "second", "explanation": "The second position is the most specific. Wobble occurs at the third position." }
+          ]
+        },
+        "2": {
+          "correct": "multiple",
+          "correctExplanation": "Wobble allows one anticodon to pair with two or more codons that differ only at the third position.",
+          "distractors": [
+            { "answer": "zero", "explanation": "Wobble allows recognition of more codons, not fewer." },
+            { "answer": "sixty-four", "explanation": "One tRNA recognises only a few codons (typically 2-3), not all 64." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "MC",
+      "question": "Analyse why the codon-anticodon system is described as a 'translation' between two molecular languages.",
+      "correct": "Because it converts the nucleotide language of mRNA (codons) into the amino acid language of proteins, bridging two fundamentally different types of biological information",
+      "correctExplanation": "The codon-anticodon interaction is the point where genetic information in nucleotides is 'translated' into the structural language of amino acids.",
+      "distractors": [
+        { "answer": "Because it converts one mRNA molecule into another mRNA molecule with different codons", "explanation": "Translation does not produce new mRNA. It converts mRNA information into an amino acid sequence." },
+        { "answer": "Because it translates one DNA strand into the complementary DNA strand", "explanation": "That describes DNA replication, not translation. The codon-anticodon system converts mRNA to protein." },
+        { "answer": "Because it translates English descriptions of proteins into molecular structures", "explanation": "The term 'translation' refers to converting nucleotide codes to amino acid sequences, not human language." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Evaluate the claim that the codon-anticodon interaction is the most critical step for ensuring protein accuracy. Is there any other step that is equally important?",
+      "correct": "While codon-anticodon pairing is crucial, the aminoacyl-tRNA synthetase step is equally important because it must correctly match each amino acid to its tRNA",
+      "correctExplanation": "Both steps are critical checkpoints. Even perfect codon-anticodon pairing fails if the wrong amino acid is loaded onto the tRNA.",
+      "distractors": [
+        { "answer": "Codon-anticodon pairing is the only accuracy checkpoint because all other steps are error-free", "explanation": "The aminoacyl-tRNA synthetase step is another critical checkpoint. Errors there bypass the ribosome's codon-anticodon check." },
+        { "answer": "No other step matters because the ribosome has perfect proofreading that catches all errors", "explanation": "The ribosome does not check amino acid identity. Aminoacyl-tRNA synthetase accuracy is equally vital." },
+        { "answer": "Transcription accuracy is more important because a mistake in mRNA affects all proteins made from that copy", "explanation": "While transcription accuracy matters, the question asks about protein-level accuracy, where both codon-anticodon and tRNA loading are critical." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Some organisms have been engineered with expanded genetic codes that include unnatural amino acids. How does this work at the codon-anticodon level?",
+      "correct": "Engineered tRNAs with novel anticodons are paired with unnatural amino acids by modified aminoacyl-tRNA synthetases, typically using stop codons as the codon for the new amino acid",
+      "correctExplanation": "The standard stop codon UAG is often repurposed by creating an orthogonal tRNA/synthetase pair that reads UAG and inserts an unnatural amino acid.",
+      "distractors": [
+        { "answer": "New codons are created by making mRNA with five different bases instead of four", "explanation": "Most expanded code systems reassign existing codons (like stop codons) rather than creating new bases." },
+        { "answer": "Unnatural amino acids are added directly to the ribosome without any tRNA involvement", "explanation": "The ribosome still requires tRNA to deliver amino acids. Expanded codes use engineered tRNAs." },
+        { "answer": "The genetic code cannot be expanded because only 20 amino acids exist in nature", "explanation": "Many unnatural amino acids have been synthesised and incorporated into proteins using expanded genetic codes." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Analyse the consequence of a mutation that changes a sense codon (coding for an amino acid) to a stop codon. How would this affect the protein?",
+      "correct": "Translation would terminate prematurely at the mutant stop codon, producing a truncated (shortened) protein that is likely non-functional",
+      "correctExplanation": "A nonsense mutation introduces a premature stop codon, causing the ribosome to release an incomplete polypeptide.",
+      "distractors": [
+        { "answer": "The ribosome would skip the stop codon and continue translating normally", "explanation": "Ribosomes do not skip stop codons. Translation terminates when a stop codon is reached." },
+        { "answer": "The protein would have one amino acid replaced but would otherwise be normal length", "explanation": "A stop codon does not code for an amino acid. Translation terminates, producing a shorter protein." },
+        { "answer": "The mutation would have no effect because the cell would use an alternative reading frame", "explanation": "Cells do not spontaneously switch reading frames. The premature stop codon terminates translation." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Evaluate the role of aminoacyl-tRNA synthetases in the fidelity of translation. Why are they sometimes called 'the second genetic code'?",
+      "correct": "Because they determine which amino acid is loaded onto each tRNA, creating the physical link between anticodon and amino acid that the ribosome relies on",
+      "correctExplanation": "These enzymes establish the codon-amino acid assignment by correctly pairing each tRNA with its amino acid. Without their accuracy, codon-anticodon pairing would be meaningless.",
+      "distractors": [
+        { "answer": "Because they rewrite the genetic code in DNA before transcription begins", "explanation": "These enzymes do not modify DNA. They load amino acids onto tRNAs, establishing the codon-amino acid relationship." },
+        { "answer": "Because they create new codons by modifying the mRNA sequence during translation", "explanation": "These enzymes do not modify mRNA. They load the correct amino acid onto each tRNA." },
+        { "answer": "Because they are a backup system that only functions when the first genetic code (codon-anticodon pairing) fails", "explanation": "They are not a backup. They are essential for establishing the codon-amino acid relationship that the codon table represents." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Critically analyse why the genetic code has 64 codons for only 20 amino acids and 3 stop signals. What advantage does this redundancy provide?",
+      "correct": "Redundancy (degeneracy) provides a buffer against mutations — many single-base changes in the third position of a codon are silent because they still code for the same amino acid",
+      "correctExplanation": "With 64 codons for 20 amino acids, most amino acids have multiple codons, especially differing at the third position. This reduces the impact of point mutations.",
+      "distractors": [
+        { "answer": "The extra codons are unused and serve no purpose — they are evolutionary leftovers", "explanation": "All 64 codons are assigned. The redundancy provides mutation resistance and is not purposeless." },
+        { "answer": "The extra codons code for amino acids that have not yet been discovered", "explanation": "All 64 codons are assigned to known amino acids or stop signals. No undiscovered amino acids are coded for." },
+        { "answer": "Redundancy is a design flaw that causes errors during translation because multiple codons compete", "explanation": "Redundancy is beneficial. Each codon still codes for exactly one amino acid, so there is no confusion." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A researcher discovers a tRNA that can recognise four different codons through extensive wobble at the third position. Evaluate the implications for translation efficiency.",
+      "correct": "This tRNA would be highly efficient because it could deliver its amino acid at more codon positions, reducing the total number of different tRNA molecules needed",
+      "correctExplanation": "Greater wobble capacity means fewer tRNA species are needed, potentially making translation more efficient in organisms with limited tRNA diversity.",
+      "distractors": [
+        { "answer": "This tRNA would be less efficient because it would deliver the wrong amino acid at most positions", "explanation": "If all four codons code for the same amino acid, the tRNA would still deliver the correct amino acid." },
+        { "answer": "This tRNA would have no advantage because all organisms already have exactly one tRNA per codon", "explanation": "Most organisms have fewer than 64 tRNAs. Extended wobble reduces the need for many tRNA types." },
+        { "answer": "This tRNA would be rejected by all ribosomes because four-codon recognition is biologically impossible", "explanation": "Extended wobble recognition exists in some organisms, particularly in mitochondria." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Compare the consequences of a mutation in a codon's first position versus its third position. Which is generally more severe?",
+      "correct": "First-position mutations are generally more severe because the first base is more critical for amino acid determination, while third-position changes are often silent due to wobble",
+      "correctExplanation": "The codon table shows that third-position changes frequently result in the same amino acid (due to degeneracy), while first-position changes usually alter the amino acid.",
+      "distractors": [
+        { "answer": "Third-position mutations are more severe because they always create stop codons", "explanation": "Third-position mutations rarely create stop codons and are often silent. First-position changes are more likely to alter the amino acid." },
+        { "answer": "Both positions are equally likely to cause severe effects because all positions contribute equally to amino acid coding", "explanation": "The third position is the most tolerant of changes due to degeneracy. First-position mutations more often change the amino acid." },
+        { "answer": "Neither position matters because mutations in codons never affect the protein sequence", "explanation": "Mutations in codons can absolutely affect the protein. First-position mutations are more likely to do so." }
+      ]
+    },
+    {
+      "type": "CLOZE",
+      "prompt": "Analyse why aminoacyl-tRNA synthetases are critical for translation accuracy.",
+      "sentence": "These enzymes establish the link between each tRNA's {{blank:1}} and its specific {{blank:2}}, creating the physical basis for the genetic code.",
+      "blanks": {
+        "1": {
+          "correct": "anticodon",
+          "correctExplanation": "The aminoacyl-tRNA synthetase recognises both the tRNA's anticodon (and other features) and loads the matching amino acid.",
+          "distractors": [
+            { "answer": "codon", "explanation": "Codons are on mRNA. The synthetase recognises the tRNA's anticodon and loads the correct amino acid." },
+            { "answer": "ribosome", "explanation": "Ribosomes are not part of the tRNA. The synthetase links the anticodon to the amino acid." }
+          ]
+        },
+        "2": {
+          "correct": "amino acid",
+          "correctExplanation": "By loading the correct amino acid onto each tRNA, the synthetase creates the functional link that the codon table represents.",
+          "distractors": [
+            { "answer": "nucleotide", "explanation": "The synthetase loads amino acids, not nucleotides, onto tRNA." },
+            { "answer": "ribosome", "explanation": "The synthetase does not load ribosomes onto tRNA. It loads the correct amino acid." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CLOZE",
+      "prompt": "Evaluate why third-position mutations are often silent.",
+      "sentence": "Due to the {{blank:1}} of the genetic code, changes at the third codon position often still code for the {{blank:2}} amino acid.",
+      "blanks": {
+        "1": {
+          "correct": "degeneracy",
+          "correctExplanation": "Degeneracy (redundancy) means multiple codons specify the same amino acid, especially varying at the third position.",
+          "distractors": [
+            { "answer": "specificity", "explanation": "While the code is specific (each codon codes for one amino acid), the relevant property is degeneracy (multiple codons per amino acid)." },
+            { "answer": "universality", "explanation": "Universality means the code is the same across organisms. Degeneracy explains why third-position changes are often silent." }
+          ]
+        },
+        "2": {
+          "correct": "same",
+          "correctExplanation": "Many amino acids have multiple codons that differ only at the third position, so mutations there often produce the same amino acid.",
+          "distractors": [
+            { "answer": "different", "explanation": "Third-position changes often code for the same amino acid, not a different one. This is why they are called silent mutations." },
+            { "answer": "larger", "explanation": "Silent mutations produce the same amino acid, not a larger or smaller one." }
+          ]
+        }
+      }
+    }
+  ]
+}

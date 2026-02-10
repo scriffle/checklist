@@ -1,0 +1,583 @@
+{
+  "_link": {
+    "uuid": "lp-74a0d263-6e09-a502-336d-bdc4a25cc4e8",
+    "version": 1,
+    "contentHash": "8a1edd6a",
+    "title": "I can explain why sticky end restriction enzymes are preferred over blunt end enzymes in gene cloning",
+    "generatedAt": "2026-02-09T18:00:00.000Z"
+  },
+  "toLevel2": [
+    {
+      "type": "MC",
+      "question": "Why are sticky end restriction enzymes preferred over blunt end enzymes in gene cloning?",
+      "correct": "They produce specific overhangs that allow controlled joining of fragments",
+      "correctExplanation": "Sticky ends have complementary overhanging nucleotides that base-pair with matching overhangs, making the joining of DNA fragments specific and controlled rather than random.",
+      "distractors": [
+        { "answer": "They cut DNA into smaller fragments than blunt end enzymes", "explanation": "Fragment size depends on where the recognition site occurs in the DNA, not on whether the enzyme produces sticky or blunt ends." },
+        { "answer": "They work faster than blunt end enzymes", "explanation": "The preference for sticky ends is about specificity of joining, not enzyme speed." },
+        { "answer": "They do not require DNA ligase to seal the fragments", "explanation": "DNA ligase is still required to form phosphodiester bonds between fragments, even when sticky ends are used." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "What must be true for two sticky end fragments to join together?",
+      "correct": "They must have complementary overhanging nucleotides",
+      "correctExplanation": "Sticky ends join through complementary base pairing between the single-stranded overhangs, so the overhangs must be complementary for hydrogen bonds to form.",
+      "distractors": [
+        { "answer": "They must come from the same organism", "explanation": "Fragments from different organisms can join as long as they have complementary sticky ends, which is the basis of recombinant DNA technology." },
+        { "answer": "They must be the same length", "explanation": "Fragment length does not determine whether sticky ends can join; complementary overhangs are what matters." },
+        { "answer": "They must be cut by different restriction enzymes", "explanation": "Fragments are typically cut by the same enzyme to ensure the overhangs are complementary." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "In gene cloning, why are the plasmid and the gene of interest usually cut with the same restriction enzyme?",
+      "correct": "So that both fragments have complementary sticky ends that can join",
+      "correctExplanation": "Using the same enzyme ensures both the plasmid and the gene of interest have matching overhangs, allowing them to join specifically through complementary base pairing.",
+      "distractors": [
+        { "answer": "So that both fragments are exactly the same size", "explanation": "The plasmid and gene insert will be different sizes; using the same enzyme ensures complementary ends, not equal sizes." },
+        { "answer": "So that the enzyme can also act as DNA ligase", "explanation": "Restriction enzymes only cut DNA; DNA ligase is a separate enzyme needed to seal the joined fragments." },
+        { "answer": "So that the DNA is cut at every base pair", "explanation": "Restriction enzymes cut only at specific recognition sequences, not at every base pair." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "What is the main disadvantage of using blunt end restriction enzymes in gene cloning?",
+      "correct": "Fragments join randomly because there are no complementary overhangs to guide joining",
+      "correctExplanation": "Blunt ends have no single-stranded overhangs, so any blunt-ended fragment can join to any other blunt-ended fragment in a random, uncontrolled manner.",
+      "distractors": [
+        { "answer": "Blunt end enzymes cannot cut double-stranded DNA", "explanation": "Blunt end restriction enzymes do cut double-stranded DNA; they simply cut straight across both strands rather than in a staggered pattern." },
+        { "answer": "Blunt end fragments cannot be sealed by DNA ligase", "explanation": "DNA ligase can seal both blunt and sticky end fragments, though blunt end ligation is less efficient." },
+        { "answer": "Blunt end enzymes destroy the gene of interest during cutting", "explanation": "Blunt end enzymes cut DNA at their recognition site without destroying the gene, provided the recognition site is outside the gene sequence." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A plasmid is cut with HindIII, which produces AGCT sticky overhangs. Which fragment could join to this plasmid?",
+      "correct": "A gene fragment also cut with HindIII, producing TCGA overhangs",
+      "correctExplanation": "HindIII produces complementary AGCT and TCGA overhangs, so a fragment cut with the same enzyme will have matching sticky ends that can base-pair with the plasmid's overhangs.",
+      "distractors": [
+        { "answer": "A gene fragment cut with BamHI, producing GATC overhangs", "explanation": "GATC overhangs from BamHI are not complementary to AGCT overhangs from HindIII, so these fragments cannot join through base pairing." },
+        { "answer": "A gene fragment cut with a blunt end enzyme", "explanation": "Blunt end fragments have no overhangs and cannot base-pair with the sticky overhangs produced by HindIII." },
+        { "answer": "Any fragment regardless of how it was cut", "explanation": "Only fragments with complementary sticky ends can join specifically; this is the key advantage of sticky end enzymes." }
+      ]
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the sentence about why sticky ends are preferred in gene cloning.",
+      "sentence": "Sticky end restriction enzymes are preferred because they produce {{blank:1}} overhanging nucleotides that allow {{blank:2}} joining of DNA fragments.",
+      "blanks": {
+        "1": {
+          "correct": "single-stranded",
+          "correctExplanation": "Sticky ends have single-stranded overhanging nucleotides that extend beyond the double-stranded region, enabling complementary base pairing.",
+          "distractors": [
+            { "answer": "double-stranded", "explanation": "Blunt ends are double-stranded with no overhang; sticky ends specifically have single-stranded overhangs." },
+            { "answer": "circular", "explanation": "The overhangs are linear single-stranded sequences, not circular structures." }
+          ]
+        },
+        "2": {
+          "correct": "specific",
+          "correctExplanation": "Sticky ends allow specific joining because only fragments with complementary overhangs can base-pair, making the process controlled rather than random.",
+          "distractors": [
+            { "answer": "random", "explanation": "Random joining is a feature of blunt ends, not sticky ends. The specificity of sticky end joining is the reason they are preferred." },
+            { "answer": "permanent", "explanation": "Both sticky and blunt end joins require DNA ligase to become permanent; specificity, not permanence, is the advantage of sticky ends." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the sentence about blunt end joining.",
+      "sentence": "Blunt end joining is less useful in gene cloning because any blunt-ended fragment can join to any other, making the process {{blank:1}} rather than {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "random",
+          "correctExplanation": "Without overhangs to guide base pairing, blunt-ended fragments join in a random and uncontrolled manner.",
+          "distractors": [
+            { "answer": "specific", "explanation": "Specificity is the advantage of sticky ends, not blunt ends." },
+            { "answer": "impossible", "explanation": "Blunt end joining is possible but occurs randomly, not in a targeted way." }
+          ]
+        },
+        "2": {
+          "correct": "controlled",
+          "correctExplanation": "Sticky ends provide controlled joining through complementary base pairing, which is the property that blunt ends lack.",
+          "distractors": [
+            { "answer": "rapid", "explanation": "The issue with blunt ends is lack of specificity, not speed." },
+            { "answer": "visible", "explanation": "Whether joining is visible is not relevant to why sticky ends are preferred over blunt ends." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the sentence about how the same enzyme ensures correct insertion.",
+      "sentence": "To ensure the gene of interest joins correctly to the plasmid, both are cut with the {{blank:1}} restriction enzyme so that they have {{blank:2}} sticky ends.",
+      "blanks": {
+        "1": {
+          "correct": "same",
+          "correctExplanation": "Using the same restriction enzyme on both the plasmid and the gene of interest ensures both have matching, complementary overhangs.",
+          "distractors": [
+            { "answer": "different", "explanation": "Different enzymes produce different overhangs that would not be complementary, preventing the fragments from joining." },
+            { "answer": "blunt end", "explanation": "Blunt end enzymes do not produce overhangs, so they cannot provide the specific joining advantage of sticky ends." }
+          ]
+        },
+        "2": {
+          "correct": "complementary",
+          "correctExplanation": "Complementary sticky ends can form hydrogen bonds through base pairing, holding the fragments together before DNA ligase seals them.",
+          "distractors": [
+            { "answer": "identical", "explanation": "The sticky ends are complementary (e.g. AGCT pairs with TCGA), not identical. Identical ends would not base-pair with each other." },
+            { "answer": "blunt", "explanation": "The whole point of using sticky end enzymes is to produce overhanging ends, not blunt ends." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "TF",
+      "question": "Sticky end restriction enzymes produce fragments with single-stranded overhanging nucleotides that can base-pair with complementary overhangs.",
+      "correct": "True",
+      "correctExplanation": "This is the defining feature of sticky ends: they have single-stranded overhangs that form hydrogen bonds with complementary overhangs, allowing specific joining of fragments.",
+      "distractors": [
+        { "answer": "False", "explanation": "This statement is true. Sticky ends do produce single-stranded overhangs that base-pair with complementary sequences, which is why they are preferred in gene cloning." }
+      ]
+    },
+    {
+      "type": "TF",
+      "question": "A fragment cut with HindIII can join specifically to a fragment cut with BamHI because both produce sticky ends.",
+      "correct": "False",
+      "correctExplanation": "Although both enzymes produce sticky ends, the overhangs they produce are not complementary to each other. HindIII and BamHI have different recognition sequences and produce different overhangs, so their fragments cannot join specifically.",
+      "distractors": [
+        { "answer": "True", "explanation": "Simply having sticky ends is not enough; the overhangs must be complementary. Different enzymes produce different overhang sequences that cannot base-pair with each other." }
+      ]
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "MC",
+      "question": "A scientist wants to insert a human gene into a bacterial plasmid. Why would using the same sticky end restriction enzyme on both the gene and plasmid be more effective than using a blunt end enzyme?",
+      "correct": "The complementary overhangs ensure the gene inserts in a predictable orientation",
+      "correctExplanation": "Sticky ends from the same enzyme have complementary overhangs that can only base-pair in specific orientations, giving the scientist more control over how the gene is inserted into the plasmid.",
+      "distractors": [
+        { "answer": "Blunt end enzymes cannot cut bacterial plasmid DNA", "explanation": "Blunt end enzymes can cut any DNA with their recognition sequence, including plasmid DNA." },
+        { "answer": "Sticky end enzymes do not require DNA ligase to seal the join", "explanation": "DNA ligase is still required to form covalent phosphodiester bonds between fragments joined by sticky ends." },
+        { "answer": "Blunt end enzymes would destroy the human gene during cutting", "explanation": "Blunt end enzymes cut at their recognition sites without destroying nearby sequences." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "If a plasmid cut with EcoRI is mixed with gene fragments cut with BamHI, what would you expect to happen?",
+      "correct": "The fragments would not join specifically because the sticky ends are not complementary",
+      "correctExplanation": "EcoRI and BamHI produce different overhang sequences. Since the single-stranded overhangs are not complementary, they cannot form hydrogen bonds with each other, preventing specific joining.",
+      "distractors": [
+        { "answer": "The fragments would join efficiently because both enzymes produce sticky ends", "explanation": "Having sticky ends is not sufficient; the overhangs must be complementary. Different enzymes produce non-complementary overhangs." },
+        { "answer": "The gene would insert into the plasmid in the reverse orientation", "explanation": "The fragments would not join at all because the overhangs are incompatible, not insert in reverse." },
+        { "answer": "DNA ligase would convert the incompatible ends into compatible ones", "explanation": "DNA ligase seals nicks in the sugar-phosphate backbone; it cannot change the nucleotide sequence of overhangs to make them compatible." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Why does blunt end ligation often produce unwanted recombinant molecules in gene cloning experiments?",
+      "correct": "Any blunt-ended fragment can join to any other, so non-target fragments may insert into the plasmid",
+      "correctExplanation": "Without complementary overhangs to guide joining, blunt end ligation is non-specific. The plasmid can re-close on itself or join to the wrong fragment, reducing the efficiency of cloning.",
+      "distractors": [
+        { "answer": "Blunt end enzymes cut the gene of interest into too many small pieces", "explanation": "The number of cuts depends on how many recognition sites exist in the DNA, not on whether the enzyme produces blunt or sticky ends." },
+        { "answer": "Blunt end fragments are too large to fit inside a plasmid", "explanation": "Fragment size depends on the distance between recognition sites, not on the type of cut. Blunt-ended fragments can be any size." },
+        { "answer": "Blunt end ligation destroys the antibiotic resistance gene on the plasmid", "explanation": "Ligation joins fragments without destroying other genes on the plasmid." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A student claims that sticky ends are preferred because they make stronger bonds between DNA fragments. What is the correct explanation?",
+      "correct": "Sticky ends are preferred for specificity, not bond strength; DNA ligase creates the same covalent bonds in both cases",
+      "correctExplanation": "The advantage of sticky ends is that complementary overhangs provide specificity through base pairing. Once DNA ligase seals the join, the covalent phosphodiester bonds formed are identical whether sticky or blunt ends were used.",
+      "distractors": [
+        { "answer": "The student is correct because hydrogen bonds in sticky ends are stronger than covalent bonds", "explanation": "Hydrogen bonds are actually weaker than covalent bonds. DNA ligase forms the same covalent bonds regardless of end type." },
+        { "answer": "Sticky ends are preferred because they do not require any enzyme to join", "explanation": "While sticky ends can temporarily hold together via hydrogen bonds, DNA ligase is still required to form permanent covalent bonds." },
+        { "answer": "The student is correct because blunt ends repel each other", "explanation": "Blunt ends do not repel each other; they can join, but do so randomly without the specificity provided by sticky end complementary base pairing." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "In a gene cloning experiment, the plasmid and insulin gene are both cut with HindIII. Which of the following best explains why this increases the chance of successful insertion?",
+      "correct": "The HindIII overhangs on the insulin gene are complementary to those on the plasmid, so they base-pair specifically",
+      "correctExplanation": "Because both are cut with HindIII, the single-stranded overhangs on the insulin gene fragment are complementary to those on the linearised plasmid, allowing them to anneal through hydrogen bonding before DNA ligase seals the join.",
+      "distractors": [
+        { "answer": "HindIII only cuts the plasmid once, so the insulin gene must fill the gap", "explanation": "While cutting the plasmid once is important, the reason for using the same enzyme is to generate complementary sticky ends, not to create a gap." },
+        { "answer": "HindIII removes the antibiotic resistance gene, making room for the insulin gene", "explanation": "The restriction enzyme cuts at its recognition site, which is chosen to be in a location that does not disrupt essential plasmid features like antibiotic resistance genes." },
+        { "answer": "HindIII modifies the insulin gene so it can be expressed in bacteria", "explanation": "Restriction enzymes cut DNA; they do not modify genes for expression. Expression depends on promoters and other regulatory elements." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Which statement correctly distinguishes how sticky ends and blunt ends behave during ligation?",
+      "correct": "Sticky ends temporarily hold fragments together by base pairing before ligation, while blunt ends cannot",
+      "correctExplanation": "The complementary overhangs of sticky ends form hydrogen bonds that temporarily align the fragments correctly, making ligation by DNA ligase more efficient and specific. Blunt ends lack this initial alignment step.",
+      "distractors": [
+        { "answer": "Sticky ends can be ligated without DNA ligase, while blunt ends require it", "explanation": "Both types of ends require DNA ligase to form permanent covalent bonds. Sticky ends only hold together temporarily through hydrogen bonds without ligase." },
+        { "answer": "Blunt ends produce recombinant DNA, while sticky ends only rejoin original fragments", "explanation": "Both sticky and blunt ends can produce recombinant DNA. The advantage of sticky ends is specificity, not an inability to create recombinant molecules." },
+        { "answer": "Blunt ends join faster than sticky ends because they have a simpler structure", "explanation": "Blunt end ligation is actually less efficient because the fragments cannot be held in position by base pairing before ligase acts." }
+      ]
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Explain why sticky ends provide specificity in gene cloning.",
+      "sentence": "Sticky ends are preferred because the {{blank:1}} overhangs can only base-pair with fragments that have {{blank:2}} overhangs, ensuring the gene of interest joins to the plasmid rather than random fragments.",
+      "blanks": {
+        "1": {
+          "correct": "single-stranded",
+          "correctExplanation": "Sticky ends have single-stranded overhanging nucleotides that extend beyond the cut site, and these can form hydrogen bonds with complementary sequences.",
+          "distractors": [
+            { "answer": "double-stranded", "explanation": "Double-stranded ends are blunt ends, which lack the overhangs needed for specific base pairing." },
+            { "answer": "methylated", "explanation": "Methylation is a modification that protects DNA from restriction enzymes; it is not related to the overhang structure of sticky ends." }
+          ]
+        },
+        "2": {
+          "correct": "complementary",
+          "correctExplanation": "Complementary overhangs have nucleotide sequences that can form hydrogen bonds through base pairing (A-T and G-C), ensuring specific joining.",
+          "distractors": [
+            { "answer": "identical", "explanation": "Identical overhangs would have the same sequence and could not base-pair with each other. The overhangs must be complementary, not identical." },
+            { "answer": "longer", "explanation": "The length of overhangs is not the key factor; complementarity of the nucleotide sequences determines whether fragments can join specifically." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Explain the disadvantage of blunt end ligation in gene cloning.",
+      "sentence": "When blunt end enzymes are used, any fragment can join to any other fragment because there are no {{blank:1}} to guide the joining, resulting in many {{blank:2}} recombinant molecules.",
+      "blanks": {
+        "1": {
+          "correct": "overhangs",
+          "correctExplanation": "Blunt ends lack the single-stranded overhangs that sticky ends have, so there is no base pairing to guide specific fragment joining.",
+          "distractors": [
+            { "answer": "promoters", "explanation": "Promoters are regulatory sequences for gene expression, not structures involved in joining DNA fragments." },
+            { "answer": "codons", "explanation": "Codons are triplets in mRNA that code for amino acids; they are unrelated to how DNA fragments join during ligation." }
+          ]
+        },
+        "2": {
+          "correct": "unwanted",
+          "correctExplanation": "Without specificity, blunt end ligation produces many random combinations including plasmids that have re-closed without an insert or have incorporated the wrong fragment.",
+          "distractors": [
+            { "answer": "identical", "explanation": "The recombinant molecules are not identical; they are varied and mostly incorrect because the joining is random." },
+            { "answer": "circular", "explanation": "While plasmids are circular, the problem is that the wrong fragments are being incorporated, not the shape of the resulting molecules." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Describe how the same enzyme ensures correct joining in gene cloning.",
+      "sentence": "By cutting both the plasmid and the gene of interest with {{blank:1}}, the resulting sticky ends are guaranteed to be complementary, which increases the {{blank:2}} of the cloning process.",
+      "blanks": {
+        "1": {
+          "correct": "the same restriction enzyme",
+          "correctExplanation": "Using the same restriction enzyme on both DNA molecules ensures that both have matching overhang sequences that can base-pair with each other.",
+          "distractors": [
+            { "answer": "DNA ligase", "explanation": "DNA ligase joins fragments but does not cut them. Restriction enzymes are needed to cut the DNA and produce sticky ends." },
+            { "answer": "two different enzymes", "explanation": "Different enzymes produce different overhangs that are not complementary, so the fragments would not join specifically." }
+          ]
+        },
+        "2": {
+          "correct": "efficiency",
+          "correctExplanation": "Using the same enzyme increases the efficiency of cloning because complementary sticky ends promote specific and targeted joining of the correct fragments.",
+          "distractors": [
+            { "answer": "mutation rate", "explanation": "Using the same enzyme does not increase mutations; it improves the specificity of fragment joining." },
+            { "answer": "fragment size", "explanation": "Fragment size depends on where the recognition sites are located, not on whether the same or different enzymes are used." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "TF",
+      "question": "Using blunt end restriction enzymes in gene cloning results in random joining of fragments because there are no complementary overhangs to guide the process.",
+      "correct": "True",
+      "correctExplanation": "Blunt ends have no single-stranded overhangs, so there is no complementary base pairing to guide which fragments join together. This results in random, non-specific ligation.",
+      "distractors": [
+        { "answer": "False", "explanation": "This statement is true. Blunt ends lack overhangs, so fragment joining is random and uncontrolled, which is why sticky ends are preferred in gene cloning." }
+      ]
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "MC",
+      "question": "A scientist attempts to insert a human growth hormone gene into a plasmid. She cuts the gene with EcoRI and the plasmid with BamHI. She finds that the gene does not insert. What is the most likely explanation?",
+      "correct": "The sticky ends produced by EcoRI and BamHI are not complementary, so they cannot base-pair",
+      "correctExplanation": "Different restriction enzymes produce different overhang sequences. EcoRI and BamHI sticky ends are not complementary, so the fragments cannot align through base pairing and the gene cannot be inserted specifically.",
+      "distractors": [
+        { "answer": "EcoRI destroyed the growth hormone gene during cutting", "explanation": "EcoRI cuts at its recognition site flanking the gene, not within the gene itself if the experiment is designed correctly." },
+        { "answer": "BamHI cannot cut plasmid DNA, only human DNA", "explanation": "Restriction enzymes cut any DNA that contains their recognition sequence, regardless of the organism of origin." },
+        { "answer": "DNA ligase was needed before the restriction enzymes could cut", "explanation": "Restriction enzymes cut DNA independently; DNA ligase is used after cutting to seal joined fragments, not before." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "In an experiment, a researcher uses a blunt end enzyme to clone a gene. Many of the resulting plasmids do not contain the gene insert. Which of the following best explains this observation?",
+      "correct": "The linearised plasmid re-closed on itself without incorporating the gene because blunt end joining is non-specific",
+      "correctExplanation": "Without sticky ends to guide joining, the plasmid ends can re-ligate to each other, closing the plasmid without any insert. This is a common problem with blunt end cloning.",
+      "distractors": [
+        { "answer": "The blunt end enzyme cut the gene into fragments too small to be detected", "explanation": "Fragment size depends on the number of recognition sites within the gene, not on whether the enzyme produces blunt or sticky ends." },
+        { "answer": "DNA ligase cannot seal blunt-ended fragments", "explanation": "DNA ligase can seal blunt-ended fragments, although less efficiently. The problem is non-specific joining, not inability to ligate." },
+        { "answer": "The restriction enzyme also degraded the plasmid's origin of replication", "explanation": "Restriction enzymes cut at specific recognition sites; they do not randomly degrade DNA sequences." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Two students debate whether it matters which sticky end enzyme is chosen for a cloning experiment, as long as it produces sticky ends. Which student's reasoning is correct?",
+      "correct": "Student A: The same enzyme must be used on both the plasmid and the insert so that the overhangs are complementary",
+      "correctExplanation": "The key requirement is that the overhangs on both fragments are complementary, which is achieved by using the same restriction enzyme on both the plasmid and the gene of interest.",
+      "distractors": [
+        { "answer": "Student B: Any sticky end enzyme will work because all sticky ends are identical", "explanation": "Different restriction enzymes produce different overhang sequences. Only matching enzymes produce complementary overhangs." },
+        { "answer": "Student A: A blunt end enzyme should be used on one and a sticky end enzyme on the other", "explanation": "A blunt end cannot base-pair with a sticky end. Both fragments must have compatible ends for joining." },
+        { "answer": "Student B: The enzyme choice does not matter because DNA ligase will join any fragments", "explanation": "While DNA ligase can technically join various fragment types, specific and efficient joining requires complementary sticky ends from the same enzyme." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A research team uses sticky end cloning to insert a gene into a plasmid. After ligation, they find some plasmids contain the gene in the correct orientation and others contain it in reverse. What explains this result?",
+      "correct": "The gene fragment can insert in two orientations because either sticky end of the fragment can pair with either end of the cut plasmid",
+      "correctExplanation": "When the same enzyme cuts both ends of a gene fragment, the two sticky ends of the fragment are both complementary to the two ends of the linearised plasmid, allowing insertion in either forward or reverse orientation.",
+      "distractors": [
+        { "answer": "The restriction enzyme cut the gene at different sites in different experiments", "explanation": "Restriction enzymes always cut at their specific recognition sequence; the cut sites do not vary between experiments." },
+        { "answer": "DNA ligase randomly decides which orientation to seal the gene in", "explanation": "DNA ligase seals whatever fragments are aligned; it does not choose orientation. The two orientations result from the symmetry of complementary sticky ends." },
+        { "answer": "Reverse-oriented genes indicate that blunt end joining occurred instead", "explanation": "Reverse insertion is a normal outcome of sticky end cloning when the same enzyme is used at both ends of the insert." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A forensic scientist needs to compare DNA samples. Would sticky end or blunt end restriction enzymes be more appropriate for generating DNA fragments for gel electrophoresis, and why?",
+      "correct": "Either type can be used because the purpose is to generate fragments of different sizes for comparison, not to join fragments",
+      "correctExplanation": "In DNA profiling, restriction enzymes are used to cut DNA into fragments that are then separated by size on a gel. Since the fragments are not being joined to other DNA, the choice between sticky and blunt ends does not matter.",
+      "distractors": [
+        { "answer": "Only sticky end enzymes can be used because they produce fragments visible on a gel", "explanation": "Both sticky and blunt end enzymes produce fragments that can be separated and visualised on a gel. Visibility depends on fragment size and staining, not end type." },
+        { "answer": "Only blunt end enzymes can be used because sticky ends would cause fragments to join on the gel", "explanation": "During gel electrophoresis, fragments are separated in an electric field and do not rejoin, regardless of their end type." },
+        { "answer": "Sticky end enzymes must be used because blunt end fragments cannot move through a gel", "explanation": "Both sticky and blunt end fragments are DNA and move through a gel based on their size and charge, not their end type." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Why would a scientist choose to use two different sticky end restriction enzymes (one for each end of the gene) rather than a single enzyme when cloning a gene into a plasmid?",
+      "correct": "To ensure the gene can only insert in one specific orientation",
+      "correctExplanation": "Using two different enzymes creates two different sticky ends on the gene fragment. Since each end can only pair with its matching site on the plasmid, the gene is forced to insert in only one orientation.",
+      "distractors": [
+        { "answer": "To make the gene fragment shorter so it fits in the plasmid", "explanation": "Using two enzymes does not change the size of the gene; it changes the type of sticky ends at each end of the fragment." },
+        { "answer": "To prevent DNA ligase from sealing the join", "explanation": "DNA ligase will still seal the phosphodiester backbone regardless of which enzyme was used to create the sticky ends." },
+        { "answer": "To ensure the gene cannot be expressed in the host cell", "explanation": "The choice of restriction enzyme affects how the gene inserts, not whether it can be expressed. Expression depends on promoters and other regulatory elements." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "In a cloning experiment, a student accidentally uses a restriction enzyme that has a recognition site within the gene of interest. What would be the consequence?",
+      "correct": "The gene would be cut into two or more fragments and could not be cloned as a complete gene",
+      "correctExplanation": "If the restriction enzyme cuts within the gene of interest, the gene will be fragmented. Only portions of the gene would ligate into the plasmid, resulting in an incomplete and non-functional gene clone.",
+      "distractors": [
+        { "answer": "The gene would be unaffected because restriction enzymes only cut plasmid DNA", "explanation": "Restriction enzymes cut any DNA containing their recognition sequence, including human genes." },
+        { "answer": "The sticky ends within the gene would repair themselves automatically", "explanation": "Cut DNA does not self-repair; DNA ligase or cellular repair mechanisms are needed to rejoin fragments." },
+        { "answer": "The gene fragments would still join correctly because sticky ends always find their original partner", "explanation": "Sticky ends join with any complementary overhang; they do not 'remember' which fragment they originally came from." }
+      ]
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Explain why using two different restriction enzymes can control gene orientation during cloning.",
+      "sentence": "Using two different sticky end enzymes creates {{blank:1}} types of overhangs on the gene fragment, which means it can only insert in {{blank:2}} orientation because each end only matches its corresponding site on the plasmid.",
+      "blanks": {
+        "1": {
+          "correct": "two",
+          "correctExplanation": "Two different enzymes produce two different overhang sequences, one at each end of the gene fragment, providing directional control during ligation.",
+          "distractors": [
+            { "answer": "one", "explanation": "One type of overhang would allow insertion in two orientations. Two different types are needed to force a single orientation." },
+            { "answer": "four", "explanation": "Each enzyme produces one type of overhang at each cut site, giving two different overhang types total, not four." }
+          ]
+        },
+        "2": {
+          "correct": "one",
+          "correctExplanation": "With two different overhang types, each end of the gene can only pair with its specific complementary site on the plasmid, restricting insertion to a single orientation.",
+          "distractors": [
+            { "answer": "two", "explanation": "Two orientations occur when the same enzyme is used at both ends. Using two different enzymes restricts insertion to one orientation." },
+            { "answer": "any", "explanation": "The purpose of using two different enzymes is to restrict orientation, not allow any orientation." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Explain why plasmid re-closure is a problem in blunt end cloning.",
+      "sentence": "In blunt end cloning, the linearised plasmid often {{blank:1}} without incorporating the gene insert because blunt ends lack the {{blank:2}} needed to direct the gene into the plasmid.",
+      "blanks": {
+        "1": {
+          "correct": "re-closes",
+          "correctExplanation": "Without specific overhangs to preferentially pair with the insert, the two blunt ends of the linearised plasmid can ligate back together, re-forming the original circular plasmid without an insert.",
+          "distractors": [
+            { "answer": "degrades", "explanation": "The plasmid does not degrade during ligation. The problem is that it re-circularises without incorporating the gene." },
+            { "answer": "replicates", "explanation": "Ligation occurs in vitro before the plasmid is introduced into bacteria for replication. The issue is re-closure, not premature replication." }
+          ]
+        },
+        "2": {
+          "correct": "complementary overhangs",
+          "correctExplanation": "Complementary overhangs from sticky ends would preferentially pair the insert with the plasmid. Without them, the plasmid ends are just as likely to join to each other as to the insert.",
+          "distractors": [
+            { "answer": "restriction enzymes", "explanation": "Restriction enzymes are used for cutting, not for directing fragment joining. The missing element is complementary overhangs that guide specific joining." },
+            { "answer": "antibiotic resistance", "explanation": "Antibiotic resistance is used for selection after transformation, not for directing the ligation of fragments." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Apply your understanding of sticky ends to a practical scenario.",
+      "sentence": "If a plasmid is cut with HindIII (producing AGCT overhangs) and mixed with gene fragments cut with BamHI (producing GATC overhangs), the fragments will not join specifically because the overhangs are not {{blank:1}}, demonstrating why both must be cut with the {{blank:2}} enzyme.",
+      "blanks": {
+        "1": {
+          "correct": "complementary",
+          "correctExplanation": "AGCT overhangs from HindIII and GATC overhangs from BamHI have different sequences that cannot form hydrogen bonds through base pairing.",
+          "distractors": [
+            { "answer": "parallel", "explanation": "The issue is not strand orientation but nucleotide sequence complementarity. The overhangs must have complementary bases to form hydrogen bonds." },
+            { "answer": "visible", "explanation": "Whether overhangs are visible is irrelevant; the issue is that non-complementary sequences cannot base-pair." }
+          ]
+        },
+        "2": {
+          "correct": "same",
+          "correctExplanation": "Using the same enzyme on both DNA molecules ensures that the overhangs produced are complementary and can base-pair for specific joining.",
+          "distractors": [
+            { "answer": "fastest", "explanation": "Enzyme speed is not the relevant factor; complementarity of the overhangs, achieved by using the same enzyme, is what matters." },
+            { "answer": "largest", "explanation": "Enzyme size is unrelated to overhang compatibility. The key is using the same enzyme to produce complementary sticky ends." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "MC",
+      "question": "A biotechnology company wants to clone a therapeutic gene into a plasmid vector. They have access to four restriction enzymes. Enzyme A (sticky end) has a recognition site within the gene. Enzyme B (blunt end) has sites flanking the gene. Enzyme C (sticky end) has sites flanking the gene and one site in the plasmid's multiple cloning region. Enzyme D (sticky end) has sites flanking the gene but no site in the plasmid. Which enzyme should they use?",
+      "correct": "Enzyme C, because it produces sticky ends, has sites flanking the gene without cutting within it, and has a compatible site in the plasmid",
+      "correctExplanation": "Enzyme C is the only option that produces sticky ends (for specificity), cuts flanking the gene (to excise it intact), and has a recognition site in the plasmid (to linearise it with complementary overhangs). All three conditions are necessary for successful cloning.",
+      "distractors": [
+        { "answer": "Enzyme A, because sticky ends are always preferred over blunt ends", "explanation": "Although sticky ends are preferred, Enzyme A cuts within the gene, which would destroy it. The enzyme must not cut within the gene of interest." },
+        { "answer": "Enzyme B, because it has sites flanking the gene on both sides", "explanation": "While Enzyme B can excise the gene intact, it produces blunt ends, leading to non-specific and inefficient ligation." },
+        { "answer": "Enzyme D, because sticky ends flanking the gene are sufficient for cloning", "explanation": "Without a recognition site in the plasmid, Enzyme D cannot linearise the plasmid with complementary sticky ends, making insertion impossible." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Evaluate the following experimental approach: a researcher uses EcoRI to cut the gene of interest and HindIII to cut the plasmid, then attempts ligation. They are surprised when no successful recombinant plasmids are produced. What is the fundamental flaw?",
+      "correct": "EcoRI and HindIII produce different overhang sequences, so the sticky ends are not complementary and cannot base-pair",
+      "correctExplanation": "For successful ligation, the overhangs on the gene and plasmid must be complementary. Different enzymes produce different overhang sequences that cannot form hydrogen bonds, preventing specific joining.",
+      "distractors": [
+        { "answer": "EcoRI and HindIII cancel each other out when used in the same solution", "explanation": "Restriction enzymes function independently; they do not interact with or cancel each other." },
+        { "answer": "Using two enzymes means twice as much DNA ligase is required", "explanation": "The amount of ligase needed depends on the number of joins, not the number of enzymes used for cutting. The problem is incompatible overhangs." },
+        { "answer": "HindIII cannot cut plasmid DNA because plasmids are circular", "explanation": "Restriction enzymes can cut circular DNA at their recognition sites; the circular shape does not prevent cutting." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A research group develops a new cloning strategy using two different sticky end enzymes to cut the gene of interest at each end, with matching sites in the plasmid. Compared to using a single sticky end enzyme, what advantage does this dual-enzyme approach provide?",
+      "correct": "It forces the gene to insert in only one orientation because each end has a unique overhang that matches only one site on the plasmid",
+      "correctExplanation": "With two different overhangs, each end of the gene can only pair with its corresponding site on the plasmid, eliminating the possibility of reverse insertion that occurs when a single enzyme produces identical overhangs at both ends.",
+      "distractors": [
+        { "answer": "It doubles the number of recombinant plasmids produced because two enzymes work twice as fast", "explanation": "The number of enzymes does not determine the yield of recombinant plasmids. The advantage is directional control of insertion." },
+        { "answer": "It eliminates the need for DNA ligase because two sets of sticky ends create a stronger temporary bond", "explanation": "DNA ligase is always required for permanent joining regardless of how many different sticky end types are present." },
+        { "answer": "It prevents the gene from being expressed in the wrong reading frame", "explanation": "While correct orientation can help with reading frame, the primary advantage of the dual-enzyme approach is controlling insertion direction, not directly ensuring reading frame." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Analyse why some cloning experiments still use blunt end enzymes despite the advantages of sticky ends. Under what circumstance might a blunt end approach be necessary?",
+      "correct": "When no sticky end enzyme has recognition sites in appropriate positions flanking the gene without cutting within it",
+      "correctExplanation": "If the gene of interest contains recognition sites for all available sticky end enzymes, using those enzymes would fragment the gene. A blunt end enzyme that does not cut within the gene may be the only option for excising it intact.",
+      "distractors": [
+        { "answer": "When the gene is too large for sticky end enzymes to cut", "explanation": "Restriction enzymes cut at their recognition sequences regardless of gene size. Size does not determine whether sticky or blunt end enzymes can be used." },
+        { "answer": "When the experiment requires the highest possible cloning efficiency", "explanation": "Blunt end cloning is actually less efficient than sticky end cloning due to non-specific joining. Blunt ends are used out of necessity, not for efficiency." },
+        { "answer": "When the host organism cannot replicate DNA with sticky end joints", "explanation": "Once DNA ligase seals the join, the resulting DNA is identical regardless of whether sticky or blunt ends were used. The host cannot distinguish between the two." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A student designs a cloning experiment and proposes cutting the plasmid with one enzyme and the gene with a different enzyme that happens to produce the same overhang sequence (isoschizomers). Evaluate whether this approach would work.",
+      "correct": "It would work because the overhangs are complementary regardless of which enzyme produced them",
+      "correctExplanation": "Isoschizomers recognise different sequences but produce the same overhangs. Since complementary base pairing depends only on the overhang sequence, fragments cut by different isoschizomers can join just as effectively as fragments cut by the same enzyme.",
+      "distractors": [
+        { "answer": "It would fail because the enzymes have different recognition sequences", "explanation": "The recognition sequence determines where the enzyme cuts, but the overhang sequence determines whether fragments can join. If the overhangs are the same, joining will occur." },
+        { "answer": "It would fail because DNA ligase can only seal joins made by the same enzyme", "explanation": "DNA ligase seals phosphodiester bonds between adjacent nucleotides regardless of which enzyme created the cut. It does not detect which enzyme was used." },
+        { "answer": "It would fail because using two enzymes always produces incompatible ends", "explanation": "Compatibility depends on overhang sequence, not enzyme identity. Isoschizomers produce compatible overhangs despite being different enzymes." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Consider a scenario where a researcher uses a single sticky end enzyme for cloning and obtains recombinant plasmids with the gene in both orientations. The gene has a promoter on the plasmid that reads in one direction. What proportion of the recombinant plasmids would express the gene correctly?",
+      "correct": "Approximately half, because the gene can insert in two orientations with roughly equal probability",
+      "correctExplanation": "When the same enzyme is used at both ends, the gene fragment has complementary overhangs at each end that can pair with either end of the linearised plasmid. This gives roughly equal probability of forward and reverse insertion, so about 50% would have the correct orientation for expression.",
+      "distractors": [
+        { "answer": "All of them, because sticky ends ensure correct orientation", "explanation": "Sticky ends from the same enzyme provide specificity of joining but not directional control. The gene can insert in either orientation." },
+        { "answer": "None, because genes always insert in reverse when sticky ends are used", "explanation": "There is no preference for reverse insertion; both orientations are equally likely when the same enzyme is used at both ends." },
+        { "answer": "About 25%, because there are four possible arrangements of the fragments", "explanation": "With a single gene fragment and a linearised plasmid, there are only two possible orientations (forward and reverse), giving approximately 50%, not 25%." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A geneticist argues that the advantage of sticky ends in cloning is entirely due to the temporary hydrogen bonding between overhangs, and has nothing to do with enzyme specificity. Critically evaluate this claim.",
+      "correct": "The claim is partially correct; hydrogen bonding provides alignment, but the specificity comes from using the same enzyme to ensure the overhangs are complementary",
+      "correctExplanation": "Hydrogen bonding between complementary overhangs does temporarily hold fragments together, aiding ligation. However, this only occurs because the same enzyme was used on both DNA molecules, producing complementary overhangs. The specificity is therefore a combined result of enzyme choice and hydrogen bonding.",
+      "distractors": [
+        { "answer": "The claim is fully correct because hydrogen bonding alone determines which fragments join", "explanation": "Hydrogen bonding only occurs between complementary sequences. The enzyme choice determines which overhangs are produced, so enzyme specificity is also essential." },
+        { "answer": "The claim is fully incorrect because hydrogen bonds play no role in sticky end joining", "explanation": "Hydrogen bonds between complementary overhangs do play an important role by temporarily aligning fragments before DNA ligase creates permanent covalent bonds." },
+        { "answer": "The claim is incorrect because sticky end joining is entirely due to covalent bonds formed by restriction enzymes", "explanation": "Restriction enzymes cut DNA; they do not form bonds. The temporary alignment is from hydrogen bonds between overhangs, and the permanent seal is from DNA ligase." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Evaluate the following statement: 'Sticky end cloning guarantees that every plasmid will contain the gene of interest.' Is this accurate?",
+      "correct": "No, because the plasmid can re-close without an insert, and multiple gene fragments can ligate together before inserting",
+      "correctExplanation": "Even with sticky ends, the linearised plasmid can re-circularise by having its own complementary ends join together. Additionally, multiple insert fragments can concatenate. Selection methods like antibiotic resistance and blue-white screening are needed to identify correct recombinants.",
+      "distractors": [
+        { "answer": "Yes, because complementary sticky ends ensure that only the gene fragment can join to the plasmid", "explanation": "The plasmid's own sticky ends are complementary to each other, allowing self-ligation without any insert. Sticky ends improve specificity but do not guarantee insert incorporation." },
+        { "answer": "Yes, because DNA ligase only seals joins between the plasmid and the gene", "explanation": "DNA ligase seals any adjacent DNA ends with compatible overhangs, including plasmid self-ligation. It does not distinguish between insert-containing and empty plasmids." },
+        { "answer": "No, but only because blunt end contamination always occurs in sticky end experiments", "explanation": "Blunt end contamination is not a standard problem in sticky end experiments. The issue is plasmid self-ligation and insert concatenation." }
+      ]
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Evaluate the trade-offs between single-enzyme and dual-enzyme cloning strategies.",
+      "sentence": "Using a single sticky end enzyme is simpler but allows the gene to insert in {{blank:1}} orientations, whereas using two different enzymes forces insertion in {{blank:2}} orientation at the cost of requiring both enzymes to have appropriate recognition sites.",
+      "blanks": {
+        "1": {
+          "correct": "two",
+          "correctExplanation": "With a single enzyme, both ends of the gene fragment have identical complementary overhangs, so the fragment can insert in either forward or reverse orientation with roughly equal probability.",
+          "distractors": [
+            { "answer": "four", "explanation": "A linear fragment inserting into a linearised plasmid has only two possible orientations (forward or reverse), not four." },
+            { "answer": "one", "explanation": "A single enzyme produces identical overhangs at both ends of the fragment, allowing insertion in two orientations, not one." }
+          ]
+        },
+        "2": {
+          "correct": "one",
+          "correctExplanation": "Two different enzymes create two unique overhang types, meaning each end of the gene can only pair with its specific complementary site on the plasmid, restricting insertion to a single orientation.",
+          "distractors": [
+            { "answer": "three", "explanation": "There are only two possible orientations for a fragment inserting into a plasmid. A dual-enzyme strategy restricts this to one, not three." },
+            { "answer": "two", "explanation": "The dual-enzyme approach specifically eliminates the ambiguity of two orientations by ensuring each end has a unique overhang, restricting insertion to one orientation." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Analyse why sticky end cloning does not guarantee 100% correct recombinant plasmids.",
+      "sentence": "Even with sticky ends, a linearised plasmid can {{blank:1}} without incorporating an insert because its own ends are complementary, which is why additional {{blank:2}} methods are needed to identify successful recombinants.",
+      "blanks": {
+        "1": {
+          "correct": "re-circularise",
+          "correctExplanation": "The two sticky ends of the linearised plasmid are complementary to each other, so they can base-pair and be sealed by DNA ligase, re-forming the original circular plasmid without any gene insert.",
+          "distractors": [
+            { "answer": "denature", "explanation": "Denaturation refers to DNA strand separation by heat or chemicals, not the re-closing of a linearised plasmid." },
+            { "answer": "mutate", "explanation": "Ligation does not introduce mutations; the plasmid re-closes with its original sequence intact." }
+          ]
+        },
+        "2": {
+          "correct": "screening",
+          "correctExplanation": "Screening methods such as blue-white screening or antibiotic selection are necessary to distinguish plasmids that contain the gene insert from those that have re-circularised without it.",
+          "distractors": [
+            { "answer": "amplification", "explanation": "Amplification (e.g. by PCR) increases the amount of DNA but does not help distinguish between plasmids with and without inserts." },
+            { "answer": "restriction", "explanation": "While restriction enzyme digestion can be used for verification, the primary methods for identifying correct recombinants are screening techniques like blue-white selection." }
+          ]
+        }
+      }
+    }
+  ]
+}

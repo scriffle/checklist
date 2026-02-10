@@ -1,0 +1,583 @@
+{
+  "_link": {
+    "uuid": "lp-5ffdefea-3348-df98-0b08-8f23cb0777eb",
+    "version": 1,
+    "contentHash": "ea6d7ed0",
+    "title": "I can interpret gel electrophoresis diagrams for DNA profiling, including paternity and forensic scenarios",
+    "generatedAt": "2026-02-09T18:40:00.000Z"
+  },
+  "toLevel2": [
+    {
+      "type": "MC",
+      "question": "In a DNA profile gel, how many bands does each individual typically show per VNTR region?",
+      "correct": "Two bands, one from each homologous chromosome",
+      "correctExplanation": "Each person has two alleles at each VNTR region (one from each parent). If the alleles have different repeat numbers, two bands appear at different positions on the gel.",
+      "distractors": [
+        { "answer": "One band, because DNA profiling only analyses one chromosome", "explanation": "DNA profiling analyses both alleles at each VNTR region. Two bands appear unless the person is homozygous." },
+        { "answer": "Thirteen bands, one for each VNTR region", "explanation": "Thirteen regions are analysed, but each region produces up to two bands. The question asks about bands per region." },
+        { "answer": "Three bands, one from each parent plus one mixed band", "explanation": "Each parent contributes one allele, producing up to two bands per region. There is no mixed band." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "In a paternity test gel, which bands must a child have?",
+      "correct": "One band matching the mother and one band matching the biological father at each VNTR region",
+      "correctExplanation": "A child inherits one allele from each parent. Therefore, at each VNTR region, one of the child's bands must match a band in the mother's profile and the other must match a band in the father's profile.",
+      "distractors": [
+        { "answer": "All bands must match the mother only", "explanation": "The child inherits alleles from both parents. Only one band per region matches the mother; the other must come from the father." },
+        { "answer": "The child's bands do not need to match either parent", "explanation": "The child's bands must be a combination of parental bands. Each allele in the child must be present in one of the parents." },
+        { "answer": "The child's bands must be exactly halfway between the parents' bands", "explanation": "Alleles are inherited as discrete units, not blended. The child has one specific band from each parent, not a midpoint." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "In a forensic DNA profile gel, how do you determine if a suspect matches a crime scene sample?",
+      "correct": "Compare the band positions in the suspect's lane with those in the crime scene lane — they must match at all VNTR regions",
+      "correctExplanation": "If the suspect's bands are at the same positions as the crime scene bands at every VNTR region tested, the suspect cannot be excluded as the source of the crime scene DNA.",
+      "distractors": [
+        { "answer": "Count the total number of bands — if the numbers are equal, it is a match", "explanation": "Band count is not sufficient. The bands must be at the same positions, not just the same number." },
+        { "answer": "Check if the suspect has more bands than the crime scene sample", "explanation": "A match requires identical band positions, not comparison of total band numbers." },
+        { "answer": "A match requires only half of the bands to be at the same positions", "explanation": "A complete match at all analysed regions is required. A partial match constitutes an exclusion." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A mother has bands at positions A and B at one VNTR region, and a father has bands at positions C and D. Which of the following could NOT be the child's band combination at this region?",
+      "correct": "Bands at positions A and E",
+      "correctExplanation": "The child must have one allele from each parent. Possible combinations are A+C, A+D, B+C, or B+D. Band E is not present in either parent, so A+E is impossible.",
+      "distractors": [
+        { "answer": "Bands at positions A and C", "explanation": "A from the mother and C from the father is a valid combination." },
+        { "answer": "Bands at positions B and D", "explanation": "B from the mother and D from the father is a valid combination." },
+        { "answer": "Bands at positions A and D", "explanation": "A from the mother and D from the father is a valid combination." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "On a DNA profiling gel, what does it mean when a person shows only one band at a particular VNTR region?",
+      "correct": "The person is homozygous — they inherited the same allele from both parents at that region",
+      "correctExplanation": "When both alleles have the same number of repeats, both fragments are the same size and co-migrate to one position, appearing as a single band.",
+      "distractors": [
+        { "answer": "The DNA sample was degraded and one band was lost", "explanation": "While possible, the most common explanation for one band is homozygosity — inheriting identical alleles from both parents." },
+        { "answer": "The person only has one chromosome at that region", "explanation": "Diploid humans have two copies of each autosomal region. One band indicates identical alleles (homozygosity), not a missing chromosome." },
+        { "answer": "The gel was not run long enough to separate the two bands", "explanation": "A single band from homozygosity is not due to insufficient separation. Both alleles genuinely produce identical-sized fragments." }
+      ]
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the sentence about interpreting paternity test gels.",
+      "sentence": "In a paternity test, every band in the child's profile must match a band in either the {{blank:1}} or the alleged father. A band present in the child but absent from both parents indicates the alleged father is {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "mother",
+          "correctExplanation": "The child inherits one allele from the mother and one from the father. Each of the child's bands must be traceable to one parent.",
+          "distractors": [
+            { "answer": "sibling", "explanation": "Siblings are not the source of alleles. The child's bands come from the mother and father." },
+            { "answer": "grandparent", "explanation": "While alleles originate from grandparents, they are passed through the parents directly." }
+          ]
+        },
+        "2": {
+          "correct": "excluded",
+          "correctExplanation": "If the child has an allele not found in the mother or the alleged father, the alleged father cannot be the biological father and is excluded.",
+          "distractors": [
+            { "answer": "confirmed", "explanation": "An unmatched band excludes, not confirms, the alleged father." },
+            { "answer": "included", "explanation": "Inclusion requires all bands to match. An unmatched band results in exclusion." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the sentence about forensic gel interpretation.",
+      "sentence": "In a forensic DNA profile, the suspect's bands must be at the {{blank:1}} positions as the crime scene sample bands at every VNTR region for the suspect to be {{blank:2}} as a possible source.",
+      "blanks": {
+        "1": {
+          "correct": "same",
+          "correctExplanation": "Bands at the same position indicate fragments of the same size, meaning the suspect and crime scene DNA have the same alleles at that VNTR region.",
+          "distractors": [
+            { "answer": "different", "explanation": "Different band positions indicate different alleles, which would exclude the suspect rather than include them." },
+            { "answer": "adjacent", "explanation": "Bands must be at exactly the same positions, not merely adjacent. Same position means same fragment size." }
+          ]
+        },
+        "2": {
+          "correct": "included",
+          "correctExplanation": "When all bands match between suspect and crime scene sample, the suspect is included as a possible source of the crime scene DNA.",
+          "distractors": [
+            { "answer": "excluded", "explanation": "Matching bands at all regions lead to inclusion, not exclusion." },
+            { "answer": "convicted", "explanation": "DNA inclusion is not the same as conviction. It means the suspect cannot be excluded as a possible DNA source." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the sentence about child allele combinations.",
+      "sentence": "If a mother has alleles X and Y, and a father has alleles P and Q, the possible allele combinations for their child are X+P, X+Q, {{blank:1}}, or Y+Q, because the child receives one allele from each {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "Y+P",
+          "correctExplanation": "Y from the mother combined with P from the father is one of the four possible combinations.",
+          "distractors": [
+            { "answer": "X+Y", "explanation": "X+Y would mean both alleles came from the mother. The child must receive one allele from each parent." },
+            { "answer": "P+Q", "explanation": "P+Q would mean both alleles came from the father. The child must receive one from each parent." }
+          ]
+        },
+        "2": {
+          "correct": "parent",
+          "correctExplanation": "One allele is inherited from each parent through meiosis, following standard Mendelian genetics.",
+          "distractors": [
+            { "answer": "chromosome", "explanation": "While alleles are on chromosomes, the inheritance is from parents (one allele per parent per VNTR region)." },
+            { "answer": "gene", "explanation": "VNTRs are non-coding and not genes. The alleles are inherited from parents." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "TF",
+      "question": "If a child's DNA profile shows a band that is not present in the mother's or the alleged father's profile, the alleged father can be excluded as the biological father.",
+      "correct": "True",
+      "correctExplanation": "Every allele in the child must come from one of the two biological parents. If an allele cannot be traced to either the known mother or the alleged father, the alleged father is not the biological father.",
+      "distractors": [
+        { "answer": "False", "explanation": "This statement is true. A child cannot have an allele that is absent from both biological parents. An unexplained band excludes the alleged father." }
+      ]
+    },
+    {
+      "type": "TF",
+      "question": "In a forensic gel, a suspect who matches the crime scene sample at 10 out of 13 VNTR regions is considered a match.",
+      "correct": "False",
+      "correctExplanation": "A true match requires the suspect to match at all analysed VNTR regions. Mismatches at 3 regions mean the crime scene DNA did not come from the suspect.",
+      "distractors": [
+        { "answer": "True", "explanation": "Partial matches are not considered matches in DNA profiling. All tested regions must match for the suspect to be included." }
+      ]
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "MC",
+      "question": "A paternity test shows the following for one VNTR region — Mother: bands at 3 and 8, Child: bands at 3 and 10, Alleged Father: bands at 6 and 10. Is the alleged father excluded?",
+      "correct": "No, the alleged father is not excluded because the child's 10-repeat allele matches one of the father's alleles",
+      "correctExplanation": "The child's 3-repeat allele matches the mother's, and the 10-repeat allele matches one of the alleged father's alleles (he has 6 and 10). This is consistent with paternity at this region.",
+      "distractors": [
+        { "answer": "Yes, because the father's 6-repeat allele is not in the child", "explanation": "The father only needs to pass one of his two alleles. He passed the 10-repeat allele, not the 6. Not all paternal alleles need to appear in the child." },
+        { "answer": "Yes, because the child's bands do not exactly match both of the father's bands", "explanation": "The child inherits only one allele from the father. Matching one of the father's two alleles is expected, not matching both." },
+        { "answer": "The result is inconclusive because the mother could have contributed the 10-repeat allele", "explanation": "The mother has 3 and 8, not 10. The 10-repeat allele must have come from the father." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "In a forensic case, three suspects are tested against a crime scene sample at one VNTR region. The crime scene shows bands at positions 5 and 9. Suspect A has bands at 5 and 9, Suspect B has bands at 5 and 7, and Suspect C has bands at 3 and 9. Who can be excluded at this region?",
+      "correct": "Suspects B and C are excluded because neither has both bands matching the crime scene sample",
+      "correctExplanation": "The crime scene sample has alleles 5 and 9. Suspect A matches both (5 and 9). Suspect B has 5 but not 9 (has 7 instead). Suspect C has 9 but not 5 (has 3 instead). Both B and C are excluded.",
+      "distractors": [
+        { "answer": "Only Suspect C is excluded because they don't share the 5-repeat allele", "explanation": "Suspect B is also excluded because they have a 7-repeat allele where the crime scene has 9. Both alleles must match." },
+        { "answer": "No suspects can be excluded because each shares at least one allele with the crime scene", "explanation": "Sharing one allele is not sufficient. Both alleles at each region must match for inclusion." },
+        { "answer": "All three suspects are excluded because none is a perfect match", "explanation": "Suspect A has bands at 5 and 9, matching the crime scene exactly. Suspect A cannot be excluded at this region." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Why does a child's DNA profile sometimes show bands at positions not seen in either parent individually, but found when both parents' profiles are combined?",
+      "correct": "The child inherits one allele from each parent, creating a unique combination that neither parent has individually",
+      "correctExplanation": "If the mother has alleles 3 and 7, and the father has alleles 5 and 11, the child might have 3 and 11 — a combination neither parent shows individually but each allele is traceable to one parent.",
+      "distractors": [
+        { "answer": "Mutations during reproduction create new alleles not found in either parent", "explanation": "While mutations can occur, the normal explanation is recombination of parental alleles creating new combinations, not new alleles." },
+        { "answer": "The child's bands represent an error in the gel electrophoresis process", "explanation": "Novel combinations from parental alleles are expected and normal. They do not indicate an error." },
+        { "answer": "This can never happen — all of a child's bands must be visible in one parent", "explanation": "A child's combination may not exist in either parent individually because one allele comes from each parent, creating a unique pairing." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A forensic gel shows the crime scene sample has 4 bands at two VNTR regions. A suspect matches 3 of the 4 bands but not the fourth. What is the conclusion?",
+      "correct": "The suspect is excluded because all bands at all regions must match",
+      "correctExplanation": "Even one mismatched band means the DNA profiles are different. The suspect's DNA could not have produced the crime scene pattern, so they are excluded.",
+      "distractors": [
+        { "answer": "The suspect is a 75% match and should be considered a strong lead", "explanation": "Partial matches are exclusions in DNA profiling. A 3/4 match is not a valid match." },
+        { "answer": "The fourth band might be from contamination, so the suspect could still match", "explanation": "While contamination is possible, a mismatched band is treated as an exclusion unless there is specific evidence of contamination affecting that band." },
+        { "answer": "More VNTR regions need to be tested to compensate for the mismatch", "explanation": "A mismatch at any band is an exclusion. Testing more regions cannot override a definitive mismatch." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "How can you determine which allele a child inherited from the mother and which from the father using a DNA profiling gel?",
+      "correct": "Identify which of the child's bands matches a band in the mother's profile — the other band must have come from the father",
+      "correctExplanation": "Since the mother is usually known, match the child's bands to the mother first. The remaining band must have been inherited from the biological father.",
+      "distractors": [
+        { "answer": "The larger band always comes from the father and the smaller from the mother", "explanation": "Band size does not indicate parental origin. Either parent can contribute a larger or smaller allele." },
+        { "answer": "The band closest to the well is from the father because paternal DNA is larger", "explanation": "There is no rule that paternal DNA produces larger fragments. Allele matching, not position, determines parental origin." },
+        { "answer": "It is impossible to determine which parent contributed which allele", "explanation": "By comparing child and mother, any band in the child not from the mother must be from the father. This is routine in paternity testing." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "In a paternity dispute, the mother has VNTR alleles of 4 and 7, the child has 7 and 11. Alleged Father 1 has 8 and 11, and Alleged Father 2 has 5 and 11. Based on this single region, which father can be excluded?",
+      "correct": "Neither can be excluded at this region because both alleged fathers have the 11-repeat allele that the child needs",
+      "correctExplanation": "The child's 7 came from the mother. The 11 must come from the father. Both alleged fathers have an 11-repeat allele, so neither can be excluded based on this single region. More VNTR regions are needed.",
+      "distractors": [
+        { "answer": "Alleged Father 1 is excluded because his other allele (8) is not in the child", "explanation": "The father only passes one allele. Alleged Father 1 could have passed his 11-repeat allele. His 8-repeat allele not appearing in the child is expected." },
+        { "answer": "Alleged Father 2 is excluded because his 5-repeat allele is not in the child", "explanation": "The father only passes one of his two alleles. Alleged Father 2 could have passed his 11-repeat allele." },
+        { "answer": "Both are excluded because the child's 7-repeat allele does not match either father", "explanation": "The 7-repeat allele came from the mother (who has 4 and 7). The father contributed the 11-repeat allele." }
+      ]
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Describe the process of interpreting a paternity gel.",
+      "sentence": "First, identify which of the child's bands {{blank:1}} the mother's bands. The remaining band must have come from the {{blank:2}} father.",
+      "blanks": {
+        "1": {
+          "correct": "match",
+          "correctExplanation": "Matching the child's bands to the mother identifies which allele the child inherited from her.",
+          "distractors": [
+            { "answer": "exceed", "explanation": "The child's bands don't exceed the mother's; they match specific bands that indicate inherited alleles." },
+            { "answer": "overlap", "explanation": "The precise term is 'match' — the child's band is at the same position as one of the mother's bands." }
+          ]
+        },
+        "2": {
+          "correct": "biological",
+          "correctExplanation": "The unmatched band must come from the biological father. If the alleged father does not have this allele, he is excluded.",
+          "distractors": [
+            { "answer": "alleged", "explanation": "The remaining band comes from the biological father, who may or may not be the alleged father. If the alleged father lacks this allele, he is excluded." },
+            { "answer": "unknown", "explanation": "The band comes from the biological father. The purpose of the test is to determine if the alleged father is the biological father." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Explain how homozygosity affects gel interpretation.",
+      "sentence": "When a person shows only {{blank:1}} band at a VNTR region instead of two, they are {{blank:2}} at that region, meaning both alleles have the same number of repeats.",
+      "blanks": {
+        "1": {
+          "correct": "one",
+          "correctExplanation": "Both alleles produce fragments of the same size, which migrate to the same position and appear as a single band.",
+          "distractors": [
+            { "answer": "three", "explanation": "Three bands at one region would be abnormal. Homozygosity produces one band, heterozygosity produces two." },
+            { "answer": "zero", "explanation": "Zero bands would indicate no DNA at that region. Homozygosity produces one visible band." }
+          ]
+        },
+        "2": {
+          "correct": "homozygous",
+          "correctExplanation": "Homozygous means having two identical alleles at a locus. Both VNTR alleles have the same repeat number, producing one band.",
+          "distractors": [
+            { "answer": "heterozygous", "explanation": "Heterozygous means having two different alleles, which would produce two bands, not one." },
+            { "answer": "hemizygous", "explanation": "Hemizygous refers to having only one copy of a gene (e.g. X-linked genes in males). One band at an autosomal VNTR indicates homozygosity." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Describe the possible allele combinations for a child.",
+      "sentence": "If a mother has alleles 3 and 8, and a father has alleles 6 and 10, a biological child could have alleles 3+6, 3+10, {{blank:1}}, or 8+10, but could NOT have an allele like {{blank:2}} that is absent from both parents.",
+      "blanks": {
+        "1": {
+          "correct": "8+6",
+          "correctExplanation": "8 from the mother and 6 from the father is one of the four possible combinations.",
+          "distractors": [
+            { "answer": "3+8", "explanation": "3+8 would mean both alleles came from the mother. The child must receive one from each parent." },
+            { "answer": "6+10", "explanation": "6+10 would mean both alleles came from the father. The child must receive one from each parent." }
+          ]
+        },
+        "2": {
+          "correct": "13",
+          "correctExplanation": "The allele 13 does not exist in either parent's profile. A child cannot have an allele that neither parent carries.",
+          "distractors": [
+            { "answer": "3", "explanation": "Allele 3 is present in the mother's profile (she has 3 and 8). This is a valid allele for the child." },
+            { "answer": "10", "explanation": "Allele 10 is present in the father's profile (he has 6 and 10). This is a valid allele for the child." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "TF",
+      "question": "In a paternity test, the child must have bands that match both of the father's bands at each VNTR region.",
+      "correct": "False",
+      "correctExplanation": "The child inherits only one allele from the father at each VNTR region. The child needs to match just one of the father's two bands at each region, not both.",
+      "distractors": [
+        { "answer": "True", "explanation": "The father passes only one of his two alleles to the child. The child matches one of the father's bands, not both, at each region." }
+      ]
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "MC",
+      "question": "A forensic gel shows the crime scene sample with bands at 4, 7, 11, and 15 (from two VNTR regions). The analyst suspects this is a mixed sample from two people. How could they determine this?",
+      "correct": "A single person would show at most 2 bands per VNTR region; 4 bands at one region suggests DNA from two individuals",
+      "correctExplanation": "Each person has a maximum of 2 alleles per VNTR region. If a single region shows more than 2 bands, the sample likely contains DNA from more than one person, which complicates interpretation.",
+      "distractors": [
+        { "answer": "Mixed samples always produce smeared bands rather than discrete bands", "explanation": "Mixed samples from two people would still produce discrete bands, but potentially more than 2 per region." },
+        { "answer": "Mixed samples cannot be detected by gel electrophoresis", "explanation": "Mixed samples can often be detected when more than 2 bands appear at a single VNTR region." },
+        { "answer": "The total band count across all regions indicates mixture, not bands per region", "explanation": "The key indicator is more than 2 bands at a single region, not the total count across all regions." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "In a paternity case, a child has VNTR alleles of 5 and 12 at one region. The mother has alleles 5 and 9. Two alleged fathers are tested: Father A has 7 and 12, Father B has 12 and 15. At a second region, the child has alleles 3 and 8, the mother has 3 and 6, Father A has 8 and 10, Father B has 4 and 8. Which father is more likely the biological father?",
+      "correct": "Both fathers match at both regions, so more VNTR regions need to be tested",
+      "correctExplanation": "At region 1: child needs 12 from father (both have 12). At region 2: child needs 8 from father (both have 8). Neither can be excluded based on just two regions. More regions must be analysed.",
+      "distractors": [
+        { "answer": "Father A is the biological father because his alleles are closer in value to the child's", "explanation": "Allele values are not compared by proximity. What matters is whether the specific allele is present, not how close the numbers are." },
+        { "answer": "Father B is the biological father because he has a 15-repeat allele which is closer to the child's 12", "explanation": "The 15-repeat allele is irrelevant because the child inherited 12, not 15. Both fathers have 12, so neither is excluded." },
+        { "answer": "Neither father can be the biological father because neither matches exactly at all bands", "explanation": "Both fathers match at the alleles the child needed to inherit. A father only needs to match one band per region, which both do." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A gel from a forensic case shows that the crime scene sample has faint bands at positions 6 and 10, and a strong band at position 3. What might this pattern indicate?",
+      "correct": "A DNA mixture where one contributor provided a large amount of DNA (strong band at 3) and another provided less (faint bands at 6 and 10)",
+      "correctExplanation": "Differences in band intensity suggest a mixed sample with unequal contributions. The major contributor's alleles appear as stronger bands, while the minor contributor's appear fainter.",
+      "distractors": [
+        { "answer": "The strong band is a larger fragment and the faint bands are smaller fragments", "explanation": "Band intensity relates to the amount of DNA, not fragment size. All bands from a single source should have similar intensity." },
+        { "answer": "The faint bands are artifacts and should be ignored", "explanation": "Faint bands may represent a minor contributor and should not be ignored. They could belong to the perpetrator or the victim." },
+        { "answer": "The strong band indicates the person's dominant allele", "explanation": "Genetic dominance does not apply to VNTR band intensity. Band strength relates to DNA quantity, not allele dominance." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "During a paternity test, the child shows a VNTR allele that is not present in either the mother or the alleged father. The mother and father's profiles are verified as correct. What are possible explanations?",
+      "correct": "A mutation may have occurred during meiosis, creating a new allele, or the alleged father is not the biological father",
+      "correctExplanation": "VNTR mutations (changes in repeat number) can occur during meiosis due to replication slippage. If verified at other regions, a single mismatch might be explained by mutation. Multiple mismatches strongly suggest non-paternity.",
+      "distractors": [
+        { "answer": "The gel must be re-run because this result is always a laboratory error", "explanation": "While confirming results is good practice, a novel allele can genuinely occur through mutation. It is not always an error." },
+        { "answer": "The child must have been switched at birth", "explanation": "While theoretically possible, this is an extreme explanation. Mutation or non-paternity are more likely." },
+        { "answer": "VNTRs cannot mutate, so the result must be an error", "explanation": "VNTRs can and do mutate, particularly through replication slippage. They have a higher mutation rate than coding DNA." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A gel shows crime scene DNA in lane 1 and three suspects in lanes 2-4. At one VNTR region, the crime scene has bands at positions X and Y. Suspect 1 has X and Y, Suspect 2 has X and Z, Suspect 3 has Y and W. This is only one of 13 regions. What is the status of each suspect so far?",
+      "correct": "Suspect 1 cannot be excluded yet; Suspects 2 and 3 are already excluded based on this single region",
+      "correctExplanation": "Suspects 2 and 3 each have one band that doesn't match the crime scene (Z and W respectively). A single mismatch at any region is sufficient for exclusion. Suspect 1 matches but must still match at the remaining 12 regions.",
+      "distractors": [
+        { "answer": "All suspects need to be tested at all 13 regions before any conclusions", "explanation": "A mismatch at even one region is sufficient for exclusion. Suspects 2 and 3 can be excluded immediately." },
+        { "answer": "Suspect 1 is confirmed as the source and the case is solved", "explanation": "Matching at one region does not confirm identity. Suspect 1 must match at all 13 regions to be included." },
+        { "answer": "Only Suspect 3 is excluded because W is furthest from the crime scene bands", "explanation": "Distance between band positions is irrelevant. Both Z and W don't match the crime scene bands, excluding both Suspects 2 and 3." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Explain why identical twin suspects pose a unique challenge in forensic DNA profiling.",
+      "correct": "Identical twins have the same DNA profile at all VNTR regions, so gel electrophoresis cannot distinguish between them",
+      "correctExplanation": "Identical twins share the same genome, including identical VNTR repeat numbers at all regions. Standard DNA profiling cannot determine which twin's DNA was found at the crime scene.",
+      "distractors": [
+        { "answer": "Identical twins can be distinguished because they have different fingerprints", "explanation": "While twins do have different fingerprints, the question is about DNA profiling specifically, which cannot distinguish them." },
+        { "answer": "Identical twins are distinguishable by analysing more VNTR regions", "explanation": "Adding more VNTR regions would not help because identical twins are identical at all regions." },
+        { "answer": "This is not actually a challenge because identical twins always confess", "explanation": "This is not a scientifically valid response. Identical twins present a genuine limitation for standard DNA profiling." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A student is shown a gel with a DNA standard ladder, a crime scene sample, and a suspect sample. The student notices that the suspect has two bands that are very close together at one VNTR region, appearing almost as one thick band. What does this suggest?",
+      "correct": "The suspect has two alleles with very similar repeat numbers, producing fragments of nearly the same size that migrate close together",
+      "correctExplanation": "When two alleles differ by only a few repeats, their fragments are similar in size and migrate to nearly the same position. High-resolution gels or capillary electrophoresis may be needed to clearly resolve them.",
+      "distractors": [
+        { "answer": "The suspect is homozygous and the thick band represents two identical alleles", "explanation": "A thick band that shows slight separation suggests two different alleles, not homozygosity. True homozygosity produces a single sharp band." },
+        { "answer": "The gel was overloaded with too much DNA in the suspect's well", "explanation": "Overloading produces all bands appearing thicker or smeared, not just one band appearing as two close bands." },
+        { "answer": "The suspect has a genetic abnormality causing extra DNA at this region", "explanation": "Two close bands are normal for a heterozygous individual with alleles of similar size, not a genetic abnormality." }
+      ]
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Explain how mixed DNA samples complicate gel interpretation.",
+      "sentence": "A mixed sample may show more than {{blank:1}} bands per VNTR region because DNA from {{blank:2}} individuals is present, each contributing their own alleles.",
+      "blanks": {
+        "1": {
+          "correct": "two",
+          "correctExplanation": "A single person has at most 2 alleles per VNTR region. More than 2 bands at a region suggests DNA from multiple contributors.",
+          "distractors": [
+            { "answer": "thirteen", "explanation": "Thirteen is the number of VNTR regions analysed, not the maximum bands per region." },
+            { "answer": "one", "explanation": "Even a single person typically shows two bands per region. The question is about mixed samples showing more than the normal maximum." }
+          ]
+        },
+        "2": {
+          "correct": "multiple",
+          "correctExplanation": "Mixed DNA from two or more individuals combines their alleles at each region, potentially producing 3 or 4 bands per region.",
+          "distractors": [
+            { "answer": "degraded", "explanation": "Degraded DNA produces faint or missing bands, not extra bands. Extra bands indicate multiple contributors." },
+            { "answer": "amplified", "explanation": "PCR amplification increases the amount of DNA but does not create extra bands unless contamination is present." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Describe how to determine if an alleged father is excluded in a paternity test.",
+      "sentence": "After identifying which allele the child inherited from the mother, check if the alleged father carries the child's {{blank:1}} allele. If the father does not have this allele at {{blank:2}} region tested, he is excluded.",
+      "blanks": {
+        "1": {
+          "correct": "remaining",
+          "correctExplanation": "The remaining allele (the one not from the mother) must have come from the biological father. If the alleged father doesn't carry it, he is excluded.",
+          "distractors": [
+            { "answer": "maternal", "explanation": "The maternal allele came from the mother. It is the remaining (non-maternal) allele that must be checked against the father." },
+            { "answer": "largest", "explanation": "Allele size does not determine parental origin. The remaining allele (after matching to the mother) is what must be checked." }
+          ]
+        },
+        "2": {
+          "correct": "any",
+          "correctExplanation": "A mismatch at any single VNTR region is sufficient to exclude the alleged father, assuming mutation has been ruled out.",
+          "distractors": [
+            { "answer": "every", "explanation": "Exclusion requires a mismatch at only one region, not every region. A single mismatch is sufficient for exclusion." },
+            { "answer": "the last", "explanation": "Exclusion can happen at any region, not only the last one tested. A mismatch at any region is sufficient." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Interpret band intensity differences on a forensic gel.",
+      "sentence": "In a mixed DNA sample, bands from the {{blank:1}} contributor appear stronger because more of their DNA is present, while bands from the {{blank:2}} contributor appear fainter.",
+      "blanks": {
+        "1": {
+          "correct": "major",
+          "correctExplanation": "The major contributor provided more DNA to the sample, so their allele fragments are more abundant and produce stronger (brighter) bands.",
+          "distractors": [
+            { "answer": "larger", "explanation": "Band intensity relates to DNA quantity, not fragment size. The major contributor has more DNA, producing stronger bands." },
+            { "answer": "guilty", "explanation": "Band intensity does not indicate guilt. It indicates how much DNA each person contributed to the sample." }
+          ]
+        },
+        "2": {
+          "correct": "minor",
+          "correctExplanation": "The minor contributor provided less DNA, so their bands are fainter. Identifying minor contributor profiles in mixed samples requires careful analysis.",
+          "distractors": [
+            { "answer": "smaller", "explanation": "Band faintness relates to DNA quantity, not fragment size. The minor contributor simply has less DNA in the sample." },
+            { "answer": "innocent", "explanation": "Band intensity does not indicate innocence or guilt. It reflects the relative amount of each person's DNA in the mixture." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "MC",
+      "question": "A forensic analyst finds that a crime scene sample contains DNA from at least two individuals. At one VNTR region, bands appear at positions 4, 7, 9, and 12. A victim's profile shows bands at 7 and 12. What can be determined about the unknown contributor?",
+      "correct": "The unknown contributor has alleles at positions 4 and 9, obtained by subtracting the victim's known alleles from the mixed profile",
+      "correctExplanation": "By removing the victim's known bands (7 and 12) from the mixture (4, 7, 9, 12), the remaining bands (4 and 9) can be attributed to the unknown contributor. This deconvolution is a standard forensic technique.",
+      "distractors": [
+        { "answer": "The unknown contributor's profile cannot be determined from a mixed sample", "explanation": "When one contributor (the victim) is known, their alleles can be subtracted to deduce the unknown contributor's profile." },
+        { "answer": "The unknown contributor has all four alleles: 4, 7, 9, and 12", "explanation": "A single person can have at most 2 alleles per region. The 4 bands represent alleles from both the victim and the unknown person." },
+        { "answer": "The unknown contributor must have bands at 4 and 12 because those are the extremes", "explanation": "Allele assignment is based on subtracting known profiles, not on band position. Bands 7 and 12 belong to the victim." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Evaluate the limitations of DNA profiling in cases involving close relatives as suspects. Why might a match between a suspect and crime scene be less significant if the suspect and the actual perpetrator are related?",
+      "correct": "Related individuals share more alleles by descent, so the probability of a coincidental match is higher than for unrelated people",
+      "correctExplanation": "The standard random match probability assumes unrelated individuals. Relatives share a higher proportion of alleles, increasing the chance of a partial or full coincidental match and reducing the statistical significance.",
+      "distractors": [
+        { "answer": "Related individuals have identical DNA profiles, making profiling useless", "explanation": "Only identical twins have the same profile. Other relatives share some alleles but not all. Profiling is still useful, just with adjusted statistics." },
+        { "answer": "DNA profiling cannot distinguish between people of the same family", "explanation": "DNA profiling can usually distinguish relatives (except identical twins) because each person has a unique combination of alleles across 13 regions." },
+        { "answer": "The limitation only applies to parent-child pairs, not siblings or cousins", "explanation": "The limitation applies to any related pair, though the degree of allele sharing decreases with more distant relationships." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Critically analyse a scenario where a forensic DNA profile matches a suspect who claims they were not at the crime scene. What alternative explanations should be considered?",
+      "correct": "Secondary transfer, laboratory contamination, sample mislabelling, or the suspect having an identical twin should all be investigated",
+      "correctExplanation": "A DNA match at a crime scene does not prove the person was there. DNA can transfer through touching objects that are later moved, lab errors can introduce contamination, and identical twins share profiles.",
+      "distractors": [
+        { "answer": "No alternative explanations exist — a DNA match proves the suspect was at the scene", "explanation": "DNA evidence is strong but not infallible. Transfer, contamination, and processing errors must be considered." },
+        { "answer": "The only alternative explanation is that the suspect is lying", "explanation": "There are legitimate scientific explanations for a DNA match without physical presence, including secondary transfer and contamination." },
+        { "answer": "DNA profiling results should never be questioned because the technology is perfect", "explanation": "All forensic evidence should be critically evaluated. The science is excellent but the process involves human steps where errors can occur." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "In a complex paternity case, a mother has alleles 5 and 8 at one VNTR region. The child has alleles 5 and 5 (homozygous). Two alleged fathers are tested: Father 1 has alleles 3 and 5, Father 2 has alleles 5 and 9. Can either be excluded at this region?",
+      "correct": "Neither can be excluded because both fathers have a 5-repeat allele that could have been passed to the child",
+      "correctExplanation": "The child's two 5-repeat alleles indicate one came from the mother (who has 5) and one from the father. Both alleged fathers carry a 5-repeat allele, so neither can be excluded at this region.",
+      "distractors": [
+        { "answer": "Father 2 is excluded because his 9-repeat allele is not in the child", "explanation": "Fathers pass only one allele. Father 2 could have passed his 5-repeat allele without the 9 appearing in the child." },
+        { "answer": "Both are excluded because the child is homozygous and neither father is", "explanation": "A heterozygous father (with one allele matching) can produce a homozygous child if the matching allele is passed." },
+        { "answer": "Father 1 is excluded because his 3-repeat allele should appear in the child", "explanation": "The father passes only one allele. Father 1 could have passed his 5-repeat allele; the 3 does not need to appear." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A new forensic technique allows analysis of epigenetic differences between identical twins. Evaluate the significance of this advance for forensic science.",
+      "correct": "It could resolve the major limitation of standard profiling by distinguishing identical twins, who accumulate different epigenetic marks throughout their lives",
+      "correctExplanation": "Identical twins start with the same DNA but acquire different epigenetic modifications (such as DNA methylation patterns) due to different environmental exposures. Detecting these differences could identify which twin was the source of crime scene DNA.",
+      "distractors": [
+        { "answer": "This advance is insignificant because identical twin crimes are extremely rare", "explanation": "While rare, the inability to distinguish twins is a fundamental limitation. Resolving it strengthens the overall reliability of DNA evidence." },
+        { "answer": "Epigenetic analysis would replace VNTR profiling entirely", "explanation": "Epigenetic analysis supplements VNTR/STR profiling for the specific case of identical twins but would not replace the well-established profiling system." },
+        { "answer": "Identical twins cannot have different epigenetic marks because they share the same DNA", "explanation": "Epigenetic modifications are influenced by environment and accumulate differently in each twin over their lifetime, despite having identical DNA sequences." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Evaluate the challenges of interpreting DNA profiling gels when a crime scene sample is a mixture of three or more individuals. Why does this make analysis significantly more difficult?",
+      "correct": "With 3+ contributors, up to 6 alleles per region could be present, making it extremely difficult to determine which alleles belong to which individual",
+      "correctExplanation": "Each person contributes up to 2 alleles per region. Three people could produce up to 6 bands at one region. Determining which combinations of alleles belong to which individuals becomes statistically complex and may be impossible without additional information.",
+      "distractors": [
+        { "answer": "Three-person mixtures are no more difficult than two-person mixtures", "explanation": "Each additional contributor adds more possible allele combinations, exponentially increasing the complexity of interpretation." },
+        { "answer": "Mixtures of three people always produce exactly 6 bands per region", "explanation": "If contributors share some alleles, fewer than 6 bands may appear, further complicating the determination of individual profiles." },
+        { "answer": "Modern software can always perfectly separate three-person mixtures", "explanation": "While probabilistic genotyping software helps, complex mixtures remain challenging and may produce ambiguous results." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A forensic report concludes: 'The suspect is included as a possible contributor to the crime scene DNA with a random match probability of 1 in 10 billion.' A jury member interprets this as 'there is a 1 in 10 billion chance the suspect is innocent.' Evaluate this interpretation.",
+      "correct": "This is the 'prosecutor's fallacy' — the probability refers to a random person matching, not to the probability of innocence. These are fundamentally different statistics",
+      "correctExplanation": "The random match probability describes how likely an unrelated random person would match the profile. The probability of innocence depends on many other factors including other evidence, population size, and case circumstances. Confusing these two probabilities is a well-known logical error.",
+      "distractors": [
+        { "answer": "The jury member's interpretation is correct — 1 in 10 billion chance of innocence", "explanation": "This is the prosecutor's fallacy. The probability of a random match and the probability of innocence are different calculations." },
+        { "answer": "The report should not include probabilities because juries cannot understand statistics", "explanation": "Probabilities are an essential part of forensic evidence. The issue is clear communication, not avoiding statistics entirely." },
+        { "answer": "The random match probability is meaningless because it applies to the whole world population", "explanation": "The probability is meaningful and calculated for a relevant population. The issue is the specific logical error of equating it with probability of innocence." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Synthesise your understanding of gel interpretation to explain why forensic DNA profiles now use capillary electrophoresis with fluorescent detection rather than traditional gel electrophoresis.",
+      "correct": "Capillary electrophoresis provides higher resolution, automated detection, internal size standards for each sample, and digital results that are easier to compare and store",
+      "correctExplanation": "Traditional gels require manual interpretation and have limited resolution. Capillary electrophoresis uses fluorescently labelled primers that are detected by laser, providing precise digital readouts with internal size standards for every sample, reducing human error.",
+      "distractors": [
+        { "answer": "Capillary electrophoresis uses different VNTR regions that are more variable", "explanation": "The improvement is in the detection technology, not in which DNA regions are analysed. Both methods can analyse the same regions." },
+        { "answer": "Traditional gel electrophoresis has been proven to produce incorrect results", "explanation": "Traditional gels are scientifically valid but have practical limitations (lower resolution, manual interpretation). They have not been 'proven incorrect'." },
+        { "answer": "Capillary electrophoresis does not require PCR amplification of the DNA samples", "explanation": "PCR is still required before capillary electrophoresis. The improvement is in the separation and detection step, not in sample preparation." }
+      ]
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Analyse the prosecutor's fallacy in DNA evidence interpretation.",
+      "sentence": "The {{blank:1}} fallacy occurs when a jury confuses the probability of a random match with the probability of the suspect being {{blank:2}}, which are fundamentally different statistics.",
+      "blanks": {
+        "1": {
+          "correct": "prosecutor's",
+          "correctExplanation": "The prosecutor's fallacy is a well-known statistical error where the random match probability is misinterpreted as the probability of innocence.",
+          "distractors": [
+            { "answer": "defendant's", "explanation": "The defendant's fallacy is different — it overestimates the significance of database size. The prosecutor's fallacy confuses match probability with innocence probability." },
+            { "answer": "scientist's", "explanation": "This is specifically called the prosecutor's fallacy because it typically benefits the prosecution's argument." }
+          ]
+        },
+        "2": {
+          "correct": "innocent",
+          "correctExplanation": "The random match probability (e.g. 1 in 10 billion) is the chance a random person would match, not the chance the suspect is innocent. The probability of innocence depends on all evidence in the case.",
+          "distractors": [
+            { "answer": "guilty", "explanation": "The fallacy confuses the match probability with the probability of innocence, not guilt. The match probability is incorrectly treated as proving guilt." },
+            { "answer": "related", "explanation": "The fallacy is about confusing two different probabilities, not about relatedness." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Evaluate the technique of deconvolving mixed DNA profiles.",
+      "sentence": "When a crime scene contains DNA from the victim and an unknown perpetrator, the victim's known {{blank:1}} can be subtracted from the mixture to deduce the unknown contributor's {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "profile",
+          "correctExplanation": "The victim's DNA profile (known alleles at each VNTR region) can be identified and subtracted from the mixed pattern to reveal the unknown person's alleles.",
+          "distractors": [
+            { "answer": "blood type", "explanation": "Blood type is a separate test. DNA profiling uses VNTR alleles, and the victim's known VNTR profile is what is subtracted." },
+            { "answer": "fingerprints", "explanation": "Fingerprints are physical evidence. DNA mixture deconvolution uses the victim's known DNA profile, not fingerprints." }
+          ]
+        },
+        "2": {
+          "correct": "alleles",
+          "correctExplanation": "After removing the victim's alleles from the mixed band pattern, the remaining alleles are attributed to the unknown contributor.",
+          "distractors": [
+            { "answer": "identity", "explanation": "Deconvolution reveals the unknown contributor's alleles (genetic profile), not directly their identity. The profile must then be compared to suspects or databases." },
+            { "answer": "motive", "explanation": "DNA analysis reveals genetic information, not psychological information like motive." }
+          ]
+        }
+      }
+    }
+  ]
+}

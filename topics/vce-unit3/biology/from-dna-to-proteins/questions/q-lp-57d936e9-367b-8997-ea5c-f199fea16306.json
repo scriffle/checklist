@@ -1,0 +1,559 @@
+{
+  "_link": {
+    "uuid": "lp-57d936e9-367b-8997-ea5c-f199fea16306",
+    "version": 1,
+    "contentHash": "b0ffb276",
+    "title": "I can describe the three main steps of transcription",
+    "generatedAt": "2026-02-09T18:20:00.000Z"
+  },
+  "toLevel2": [
+    {
+      "type": "MC",
+      "question": "What is the first step of transcription?",
+      "correct": "RNA polymerase binds to the promoter and separates the DNA double helix",
+      "correctExplanation": "Transcription begins when RNA polymerase recognises and binds to the promoter region, then unwinds the DNA double helix to expose the template strand.",
+      "distractors": [
+        { "answer": "RNA polymerase binds to the terminator and begins reading the DNA", "explanation": "The terminator is where transcription ends, not begins. RNA polymerase binds to the promoter to initiate transcription." },
+        { "answer": "Ribosomes attach to the DNA and begin building a protein", "explanation": "Ribosomes are involved in translation, not transcription. Transcription is carried out by RNA polymerase." },
+        { "answer": "The mRNA molecule is spliced to remove introns before reading begins", "explanation": "Splicing occurs after transcription during RNA processing. The first step of transcription is RNA polymerase binding to the promoter." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "During the second step of transcription, what does RNA polymerase do?",
+      "correct": "It moves along the template strand linking free RNA nucleotides to build a pre-mRNA strand",
+      "correctExplanation": "RNA polymerase reads the template strand in the 3' to 5' direction, adding complementary RNA nucleotides to construct the pre-mRNA strand in the 5' to 3' direction.",
+      "distractors": [
+        { "answer": "It moves along the coding strand and copies it directly into mRNA", "explanation": "RNA polymerase reads the template strand, not the coding strand. The template strand provides the complementary sequence for mRNA synthesis." },
+        { "answer": "It attaches amino acids to the growing polypeptide chain", "explanation": "Amino acid attachment occurs during translation at the ribosome. RNA polymerase builds a pre-mRNA strand from RNA nucleotides during transcription." },
+        { "answer": "It adds a 5' cap and poly-A tail to the completed mRNA", "explanation": "Capping and polyadenylation occur after transcription during RNA processing. The second step of transcription involves building the pre-mRNA strand." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "What signals the end of transcription?",
+      "correct": "RNA polymerase reaches the terminator sequence and detaches from the DNA",
+      "correctExplanation": "The terminator is a specific DNA sequence that signals RNA polymerase to stop transcription, detach from the DNA, and release the completed pre-mRNA.",
+      "distractors": [
+        { "answer": "RNA polymerase reaches the promoter at the other end of the gene", "explanation": "The promoter is at the start of the gene. Transcription ends at the terminator, a distinct sequence at the end of the gene." },
+        { "answer": "The ribosome sends a signal for transcription to stop", "explanation": "In eukaryotes, transcription and translation occur in different compartments. The terminator sequence, not the ribosome, signals the end of transcription." },
+        { "answer": "All the RNA nucleotides in the nucleus are used up", "explanation": "Nucleotide depletion does not signal the end of transcription. The specific terminator DNA sequence signals RNA polymerase to detach." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Which enzyme is responsible for carrying out transcription?",
+      "correct": "RNA polymerase",
+      "correctExplanation": "RNA polymerase is the enzyme that reads the DNA template strand and synthesises the complementary pre-mRNA molecule during transcription.",
+      "distractors": [
+        { "answer": "DNA polymerase", "explanation": "DNA polymerase is involved in DNA replication, not transcription. RNA polymerase is the enzyme responsible for making mRNA from a DNA template." },
+        { "answer": "Helicase", "explanation": "Helicase unwinds DNA during replication. While RNA polymerase does separate the DNA strands locally, it is RNA polymerase (not helicase) that performs transcription." },
+        { "answer": "Ligase", "explanation": "Ligase joins DNA fragments during replication. RNA polymerase is the enzyme that transcribes DNA into pre-mRNA." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "If the DNA template strand reads 3'-TACGGA-5', what would the pre-mRNA sequence be?",
+      "correct": "5'-AUGCCU-3'",
+      "correctExplanation": "RNA polymerase reads the template strand and builds complementary mRNA: T→A, A→U, C→G, G→C, G→C, A→U, giving AUGCCU.",
+      "distractors": [
+        { "answer": "5'-ATGCCT-3'", "explanation": "This is a DNA sequence (contains T instead of U). mRNA uses uracil, not thymine, so the correct answer contains U." },
+        { "answer": "3'-UACGGU-5'", "explanation": "This would be the sequence if you simply replaced the DNA bases with RNA equivalents without complementary pairing. RNA polymerase builds a complementary strand." },
+        { "answer": "5'-AUGCGU-3'", "explanation": "Check the base pairing: the fourth DNA base G pairs with C (not G) in mRNA, and the fifth G also pairs with C. The correct sequence is AUGCCU." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the start of transcription.",
+      "sentence": "Transcription begins when RNA polymerase binds to the {{blank:1}} region and separates the DNA {{blank:2}} helix.",
+      "blanks": {
+        "1": {
+          "correct": "promoter",
+          "correctExplanation": "The promoter is the specific DNA sequence upstream of a gene where RNA polymerase binds to initiate transcription.",
+          "distractors": [
+            { "answer": "terminator", "explanation": "The terminator signals the end of transcription. RNA polymerase binds to the promoter to begin transcription." },
+            { "answer": "operator", "explanation": "The operator is a regulatory sequence in operons. RNA polymerase binds to the promoter to initiate transcription." }
+          ]
+        },
+        "2": {
+          "correct": "double",
+          "correctExplanation": "DNA normally exists as a double helix. RNA polymerase must separate the two strands to access the template strand for transcription.",
+          "distractors": [
+            { "answer": "single", "explanation": "DNA is a double helix, not a single helix. RNA polymerase separates the two strands to read the template." },
+            { "answer": "triple", "explanation": "DNA is a double helix with two strands. RNA polymerase separates this double helix to expose the template strand." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the elongation phase of transcription.",
+      "sentence": "During transcription, RNA polymerase reads the {{blank:1}} strand and links free RNA {{blank:2}} to build a complementary pre-mRNA molecule.",
+      "blanks": {
+        "1": {
+          "correct": "template",
+          "correctExplanation": "The template strand (also called the antisense strand) is the DNA strand read by RNA polymerase to produce the complementary pre-mRNA.",
+          "distractors": [
+            { "answer": "coding", "explanation": "The coding strand has the same sequence as the mRNA. RNA polymerase reads the template strand, which is complementary to both the coding strand and the mRNA." },
+            { "answer": "leading", "explanation": "The leading strand is a term from DNA replication. In transcription, RNA polymerase reads the template strand." }
+          ]
+        },
+        "2": {
+          "correct": "nucleotides",
+          "correctExplanation": "RNA polymerase adds individual RNA nucleotides (A, U, G, C) one at a time, matching them to the DNA template through complementary base pairing.",
+          "distractors": [
+            { "answer": "amino acids", "explanation": "Amino acids are linked during translation, not transcription. RNA polymerase adds RNA nucleotides to build the pre-mRNA strand." },
+            { "answer": "proteins", "explanation": "Proteins are produced during translation. Transcription involves linking RNA nucleotides to form pre-mRNA." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the end of transcription.",
+      "sentence": "Transcription ends when RNA polymerase reaches the {{blank:1}} sequence and detaches, releasing the completed {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "terminator",
+          "correctExplanation": "The terminator is a specific DNA sequence that signals RNA polymerase to stop transcription and release the pre-mRNA.",
+          "distractors": [
+            { "answer": "promoter", "explanation": "The promoter is where transcription begins. The sequence that signals the end of transcription is the terminator." },
+            { "answer": "start codon", "explanation": "Start codons are used during translation. The DNA sequence that ends transcription is the terminator." }
+          ]
+        },
+        "2": {
+          "correct": "pre-mRNA",
+          "correctExplanation": "In eukaryotes, the initial transcript is called pre-mRNA because it must undergo processing before becoming mature mRNA.",
+          "distractors": [
+            { "answer": "protein", "explanation": "Proteins are made during translation. Transcription produces pre-mRNA, which is then processed into mature mRNA." },
+            { "answer": "DNA", "explanation": "Transcription produces pre-mRNA from DNA. DNA is not the product of transcription." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "TF",
+      "question": "During transcription, RNA polymerase reads the template strand of DNA in the 3' to 5' direction.",
+      "correct": "True",
+      "correctExplanation": "RNA polymerase reads the template strand from 3' to 5' and synthesises the pre-mRNA in the 5' to 3' direction.",
+      "distractors": [
+        { "answer": "False", "explanation": "RNA polymerase does read the template strand from 3' to 5'. This allows the new pre-mRNA strand to be built in the 5' to 3' direction." }
+      ]
+    },
+    {
+      "type": "TF",
+      "question": "The three steps of transcription are initiation, elongation, and translation.",
+      "correct": "False",
+      "correctExplanation": "The three steps of transcription are initiation (RNA polymerase binds the promoter), elongation (mRNA is built), and termination (RNA polymerase reaches the terminator). Translation is a separate process.",
+      "distractors": [
+        { "answer": "True", "explanation": "Translation is the process of building a protein from mRNA, not a step of transcription. The third step of transcription is termination." }
+      ]
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "MC",
+      "question": "Why must RNA polymerase separate the DNA double helix during the first step of transcription?",
+      "correct": "To expose the bases on the template strand so complementary RNA nucleotides can be matched",
+      "correctExplanation": "The template strand bases must be accessible for complementary base pairing with incoming RNA nucleotides. Separating the double helix exposes these bases.",
+      "distractors": [
+        { "answer": "To allow ribosomes to attach to the DNA and begin translation", "explanation": "Ribosomes do not attach to DNA. DNA separation exposes the template strand for RNA polymerase to read during transcription." },
+        { "answer": "To permanently unwind the gene so it can be used repeatedly", "explanation": "The DNA rewinds behind RNA polymerase as it moves. The separation is temporary and localised, not permanent." },
+        { "answer": "To break the hydrogen bonds between nucleotides in the same strand", "explanation": "Hydrogen bonds connect the two DNA strands (between complementary bases), not nucleotides within the same strand. Separation exposes the template for reading." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "How does the base pairing during transcription differ from base pairing during DNA replication?",
+      "correct": "In transcription, adenine on DNA pairs with uracil in RNA instead of thymine",
+      "correctExplanation": "RNA uses uracil instead of thymine. So during transcription, adenine on the DNA template pairs with uracil in the new RNA strand, whereas in replication it pairs with thymine.",
+      "distractors": [
+        { "answer": "In transcription, guanine pairs with adenine instead of cytosine", "explanation": "Guanine always pairs with cytosine in both transcription and replication. The key difference is that RNA uses uracil instead of thymine." },
+        { "answer": "Transcription uses the same base pairing rules as replication with no differences", "explanation": "There is one key difference: RNA contains uracil instead of thymine. Adenine on DNA pairs with uracil in mRNA." },
+        { "answer": "In transcription, cytosine on DNA pairs with uracil in RNA", "explanation": "Cytosine pairs with guanine in both transcription and replication. The difference is that adenine on DNA pairs with uracil (not thymine) in RNA." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "What is the significance of the terminator sequence in transcription?",
+      "correct": "It signals RNA polymerase to stop transcribing and release the pre-mRNA",
+      "correctExplanation": "Without the terminator, RNA polymerase would continue reading past the gene. The terminator ensures that only the intended gene is transcribed and the pre-mRNA is released.",
+      "distractors": [
+        { "answer": "It signals where introns should be removed from the pre-mRNA", "explanation": "Intron removal is guided by splice sites within the pre-mRNA, not by the terminator. The terminator specifically ends transcription." },
+        { "answer": "It codes for the stop codon that ends translation of the protein", "explanation": "Stop codons are within the coding sequence. The terminator is a separate DNA element that ends transcription, not translation." },
+        { "answer": "It marks the location where the 5' cap is added to the mRNA", "explanation": "The 5' cap is added to the beginning of the pre-mRNA during processing. The terminator marks the end of transcription." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "During transcription, RNA polymerase builds the pre-mRNA in which direction?",
+      "correct": "5' to 3'",
+      "correctExplanation": "RNA polymerase reads the template strand 3' to 5' and synthesises the new RNA strand in the 5' to 3' direction by adding nucleotides to the 3' end.",
+      "distractors": [
+        { "answer": "3' to 5'", "explanation": "The template strand is read 3' to 5', but the new pre-mRNA is synthesised in the 5' to 3' direction. Nucleotides are added to the growing 3' end." },
+        { "answer": "Both directions simultaneously", "explanation": "RNA polymerase synthesises mRNA in one direction only: 5' to 3'. It cannot build in both directions at once." },
+        { "answer": "The direction depends on which gene is being transcribed", "explanation": "All RNA synthesis occurs in the 5' to 3' direction regardless of the gene. This is a fundamental rule of nucleic acid synthesis." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Explain the difference between the product of transcription in eukaryotes versus prokaryotes.",
+      "correct": "Eukaryotes produce pre-mRNA that requires processing, while prokaryotes produce mRNA that is ready for translation",
+      "correctExplanation": "In eukaryotes, the initial transcript is pre-mRNA that needs capping, polyadenylation, and splicing. In prokaryotes, the mRNA can be translated immediately without processing.",
+      "distractors": [
+        { "answer": "Eukaryotes produce DNA copies while prokaryotes produce RNA copies", "explanation": "Both eukaryotes and prokaryotes produce RNA during transcription. The difference is in post-transcriptional processing requirements." },
+        { "answer": "Prokaryotes produce pre-mRNA while eukaryotes produce mature mRNA directly", "explanation": "This is reversed. Eukaryotes produce pre-mRNA requiring processing, while prokaryotes produce mRNA that is immediately usable." },
+        { "answer": "Both produce identical pre-mRNA that undergoes the same processing", "explanation": "Prokaryotic mRNA does not undergo the same processing. It lacks introns, 5' caps, and poly-A tails, and can be translated during transcription." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A student states that during transcription, 'RNA polymerase copies the entire chromosome into mRNA.' Identify the error in this statement.",
+      "correct": "RNA polymerase only transcribes specific genes, not the entire chromosome",
+      "correctExplanation": "Transcription is gene-specific. RNA polymerase binds to the promoter of a specific gene and transcribes only that gene, stopping at the terminator. The entire chromosome is not copied.",
+      "distractors": [
+        { "answer": "The statement is correct because all DNA must be transcribed for the cell to function", "explanation": "Not all DNA is transcribed. Only specific genes are expressed at any given time, controlled by regulatory mechanisms." },
+        { "answer": "The error is that DNA polymerase, not RNA polymerase, performs transcription", "explanation": "RNA polymerase is correct. The error is that it transcribes specific genes, not the entire chromosome." },
+        { "answer": "The error is that transcription produces DNA, not mRNA", "explanation": "Transcription does produce mRNA (or pre-mRNA). The actual error is that only individual genes are transcribed, not entire chromosomes." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about complementary base pairing in transcription.",
+      "sentence": "During transcription, adenine on the DNA template strand pairs with {{blank:1}} in the pre-mRNA, and cytosine on DNA pairs with {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "uracil",
+          "correctExplanation": "In RNA, uracil replaces thymine. So adenine on the DNA template pairs with uracil in the new RNA strand.",
+          "distractors": [
+            { "answer": "thymine", "explanation": "Thymine is found in DNA, not RNA. During transcription, adenine on DNA pairs with uracil in RNA." },
+            { "answer": "guanine", "explanation": "Guanine pairs with cytosine. Adenine on DNA pairs with uracil in RNA." }
+          ]
+        },
+        "2": {
+          "correct": "guanine",
+          "correctExplanation": "Cytosine and guanine are complementary bases in both DNA and RNA. This pairing rule applies in both replication and transcription.",
+          "distractors": [
+            { "answer": "adenine", "explanation": "Adenine pairs with thymine (DNA) or uracil (RNA). Cytosine specifically pairs with guanine." },
+            { "answer": "uracil", "explanation": "Uracil pairs with adenine. Cytosine pairs with guanine in both DNA and RNA." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the three steps of transcription.",
+      "sentence": "The three steps of transcription are: (1) {{blank:1}}, when RNA polymerase binds the promoter; (2) elongation, when the pre-mRNA is built; and (3) {{blank:2}}, when RNA polymerase reaches the terminator.",
+      "blanks": {
+        "1": {
+          "correct": "initiation",
+          "correctExplanation": "Initiation is the first phase of transcription, where RNA polymerase binds to the promoter and separates the DNA strands.",
+          "distractors": [
+            { "answer": "replication", "explanation": "Replication is the copying of entire DNA molecules. The first step of transcription is called initiation." },
+            { "answer": "translation", "explanation": "Translation is the process of building proteins from mRNA. The first step of transcription is initiation." }
+          ]
+        },
+        "2": {
+          "correct": "termination",
+          "correctExplanation": "Termination is the final phase of transcription, where RNA polymerase reaches the terminator sequence, detaches, and releases the pre-mRNA.",
+          "distractors": [
+            { "answer": "translation", "explanation": "Translation is a separate process that occurs at the ribosome. The final step of transcription is termination." },
+            { "answer": "splicing", "explanation": "Splicing is part of RNA processing after transcription. The third step of transcription itself is termination." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about what RNA polymerase produces.",
+      "sentence": "RNA polymerase produces a {{blank:1}} strand that is complementary to the DNA template strand.",
+      "blanks": {
+        "1": {
+          "correct": "pre-mRNA",
+          "correctExplanation": "In eukaryotes, the initial RNA transcript is called pre-mRNA because it has not yet been processed into mature mRNA.",
+          "distractors": [
+            { "answer": "DNA", "explanation": "Transcription produces RNA, not DNA. The product is pre-mRNA, which is complementary to the template strand." },
+            { "answer": "protein", "explanation": "Proteins are produced during translation. Transcription produces pre-mRNA from the DNA template." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "TF",
+      "question": "After RNA polymerase passes a section of DNA during transcription, the two DNA strands rejoin behind it.",
+      "correct": "True",
+      "correctExplanation": "RNA polymerase only separates a small region of DNA at a time. As it moves forward, the DNA strands behind it re-form their hydrogen bonds and the double helix is restored.",
+      "distractors": [
+        { "answer": "False", "explanation": "The DNA does rejoin behind RNA polymerase. The separation is localised and temporary, creating a moving 'transcription bubble' along the gene." }
+      ]
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "MC",
+      "question": "A mutation deletes the promoter region of a gene. What would be the effect on transcription of that gene?",
+      "correct": "Transcription would not occur because RNA polymerase has no binding site",
+      "correctExplanation": "Without a promoter, RNA polymerase cannot recognise where to begin transcription. The gene would be silent because the initiation step cannot occur.",
+      "distractors": [
+        { "answer": "Transcription would begin at a random location on the DNA", "explanation": "RNA polymerase requires a specific promoter sequence to initiate transcription. Without one, it does not randomly start elsewhere on the same gene." },
+        { "answer": "Transcription would proceed normally but produce a shorter mRNA", "explanation": "The promoter is needed for initiation. Without it, no transcription occurs at all, not a shorter transcript." },
+        { "answer": "Another enzyme would substitute for RNA polymerase and transcribe the gene", "explanation": "No other enzyme can replace RNA polymerase for transcription. Without a promoter, the gene cannot be transcribed." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A mutation in the terminator sequence causes RNA polymerase to continue past the end of a gene. What would be the consequence?",
+      "correct": "An abnormally long pre-mRNA would be produced containing sequences beyond the gene",
+      "correctExplanation": "Without a functional terminator, RNA polymerase would not stop at the correct location and would continue transcribing downstream DNA, producing an extended pre-mRNA.",
+      "distractors": [
+        { "answer": "The pre-mRNA would be shorter because the terminator normally adds extra sequence", "explanation": "The terminator signals the end of transcription. Without it, transcription continues longer, producing a longer pre-mRNA, not a shorter one." },
+        { "answer": "RNA polymerase would stop at the next gene's promoter instead", "explanation": "RNA polymerase does not recognise promoters as stop signals. It would continue transcribing until encountering another terminator-like sequence." },
+        { "answer": "The gene would not be transcribed at all because the terminator is essential for initiation", "explanation": "The terminator is needed for ending transcription, not starting it. The gene would still be transcribed; the problem would be an extended transcript." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "During transcription, if the DNA template strand contains the base sequence 3'-AATCGC-5', what mRNA sequence would RNA polymerase produce?",
+      "correct": "5'-UUAGCG-3'",
+      "correctExplanation": "Using complementary base pairing: A→U, A→U, T→A, C→G, G→C, C→G. The mRNA is synthesised 5' to 3': UUAGCG.",
+      "distractors": [
+        { "answer": "5'-TTAGCG-3'", "explanation": "This contains thymine (T), which is found in DNA not RNA. The correct mRNA would have uracil (U) instead of thymine." },
+        { "answer": "5'-AAUCGC-3'", "explanation": "This is not complementary to the template. You need to pair each template base with its RNA complement: A→U, not A→A." },
+        { "answer": "3'-UUAGCG-5'", "explanation": "The bases are correct but the directionality is wrong. mRNA is synthesised in the 5' to 3' direction, so it should read 5'-UUAGCG-3'." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Why can transcription and translation occur simultaneously in prokaryotes but not in eukaryotes?",
+      "correct": "Prokaryotes lack a nuclear membrane, so ribosomes can access mRNA while it is still being transcribed",
+      "correctExplanation": "In prokaryotes, transcription and translation both occur in the cytoplasm. Ribosomes can attach to the mRNA and begin translation before RNA polymerase has finished transcribing. In eukaryotes, the nuclear membrane separates these processes.",
+      "distractors": [
+        { "answer": "Prokaryotic RNA polymerase works faster than eukaryotic RNA polymerase", "explanation": "Speed is not the determining factor. The key is that prokaryotes lack a nuclear membrane, allowing ribosomes direct access to nascent mRNA." },
+        { "answer": "Eukaryotic mRNA is too fragile to be translated during transcription", "explanation": "mRNA stability is not the issue. The nuclear membrane physically separates transcription (nucleus) from translation (cytoplasm) in eukaryotes." },
+        { "answer": "Prokaryotes use different ribosomes that can function during transcription", "explanation": "While prokaryotic and eukaryotic ribosomes differ, the key factor is the absence of a nuclear membrane in prokaryotes, not ribosome type." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Multiple RNA polymerase molecules can transcribe the same gene simultaneously. What advantage does this provide to the cell?",
+      "correct": "It allows rapid production of many mRNA copies from a single gene when high levels of a protein are needed",
+      "correctExplanation": "Multiple RNA polymerases on the same gene produce multiple mRNA copies quickly. Each mRNA can then be translated into protein, allowing the cell to rapidly increase production of a needed protein.",
+      "distractors": [
+        { "answer": "It prevents mutations from occurring in the gene during transcription", "explanation": "Multiple RNA polymerases do not protect against mutations. Their advantage is increased mRNA production rate." },
+        { "answer": "It ensures that both DNA strands are transcribed simultaneously", "explanation": "Only the template strand of a gene is transcribed. Multiple RNA polymerases all read the same template strand, producing multiple copies of the same mRNA." },
+        { "answer": "It speeds up transcription by allowing each polymerase to read a different section", "explanation": "Each RNA polymerase transcribes the entire gene independently. They do not divide the gene into sections; they produce complete, separate mRNA copies." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A researcher observes that a specific gene produces pre-mRNA with a different sequence than expected. Which step of transcription most likely contains the error?",
+      "correct": "The elongation step, where RNA polymerase may have mismatched a nucleotide during base pairing",
+      "correctExplanation": "Errors in the pre-mRNA sequence would result from incorrect nucleotide incorporation during elongation. RNA polymerase occasionally inserts the wrong nucleotide, changing the mRNA sequence.",
+      "distractors": [
+        { "answer": "The initiation step, because RNA polymerase bound to the wrong promoter", "explanation": "Binding to the wrong promoter would transcribe a different gene entirely, not produce an altered sequence from the intended gene." },
+        { "answer": "The termination step, because the terminator was read incorrectly", "explanation": "Terminator errors would affect where transcription ends, not the internal sequence of the pre-mRNA." },
+        { "answer": "All three steps equally, because errors are distributed evenly across transcription", "explanation": "Sequence errors specifically occur during elongation when nucleotides are being added. Initiation and termination errors affect different aspects of transcription." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "If a drug blocked RNA polymerase from binding to promoters, what would happen to the cell?",
+      "correct": "No genes could be transcribed, halting mRNA and protein production throughout the cell",
+      "correctExplanation": "Without promoter binding, RNA polymerase cannot initiate transcription of any gene. No mRNA would be produced, and without mRNA, no new proteins could be synthesised, which would be lethal.",
+      "distractors": [
+        { "answer": "Only genes without promoters would be affected", "explanation": "All genes require promoters for transcription. Blocking promoter binding would affect all gene expression in the cell." },
+        { "answer": "The cell would switch to using DNA polymerase for transcription instead", "explanation": "DNA polymerase cannot substitute for RNA polymerase in transcription. Blocking RNA polymerase binding would stop all transcription." },
+        { "answer": "Translation would continue normally using existing proteins in the cell", "explanation": "While existing proteins would persist temporarily, no new mRNA would be made. As mRNA degrades and proteins are used up, the cell would die." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about a promoter deletion.",
+      "sentence": "If the promoter of a gene is deleted, RNA polymerase cannot {{blank:1}} transcription, and no {{blank:2}} will be produced from that gene.",
+      "blanks": {
+        "1": {
+          "correct": "initiate",
+          "correctExplanation": "The promoter is the binding site for RNA polymerase. Without it, transcription cannot be initiated.",
+          "distractors": [
+            { "answer": "terminate", "explanation": "Termination is controlled by the terminator, not the promoter. Deleting the promoter prevents initiation of transcription." },
+            { "answer": "elongate", "explanation": "Elongation is the middle phase. Without a promoter, RNA polymerase cannot begin, so elongation never occurs." }
+          ]
+        },
+        "2": {
+          "correct": "pre-mRNA",
+          "correctExplanation": "Without transcription initiation, no pre-mRNA transcript can be synthesised from the gene.",
+          "distractors": [
+            { "answer": "DNA", "explanation": "DNA is not a product of transcription. The product that would be lost is pre-mRNA." },
+            { "answer": "tRNA", "explanation": "While tRNA genes also require promoters, this question refers to the pre-mRNA product of a specific gene." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about simultaneous transcription in prokaryotes.",
+      "sentence": "In prokaryotes, {{blank:1}} can begin translating the mRNA while RNA polymerase is still {{blank:2}} the gene.",
+      "blanks": {
+        "1": {
+          "correct": "ribosomes",
+          "correctExplanation": "In prokaryotes, ribosomes can attach to the mRNA and begin translation even before RNA polymerase has completed transcription.",
+          "distractors": [
+            { "answer": "tRNA", "explanation": "tRNA carries amino acids to ribosomes. It is the ribosomes themselves that begin translating the mRNA during ongoing transcription." },
+            { "answer": "enzymes", "explanation": "While ribosomes are complex structures, they are not typically referred to simply as enzymes in this context. Ribosomes begin translation on the nascent mRNA." }
+          ]
+        },
+        "2": {
+          "correct": "transcribing",
+          "correctExplanation": "Coupled transcription-translation is possible in prokaryotes because there is no nuclear membrane separating the two processes.",
+          "distractors": [
+            { "answer": "replicating", "explanation": "Replication copies DNA. The process occurring simultaneously with translation in prokaryotes is transcription." },
+            { "answer": "splicing", "explanation": "Prokaryotes generally do not perform splicing. Translation begins while RNA polymerase is still transcribing the gene." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the transcription bubble.",
+      "sentence": "As RNA polymerase moves along the gene, it creates a temporary opening called the transcription {{blank:1}}, and the DNA rewinds behind it.",
+      "blanks": {
+        "1": {
+          "correct": "bubble",
+          "correctExplanation": "The transcription bubble is the localised region where the DNA strands are separated, allowing RNA polymerase to read the template strand.",
+          "distractors": [
+            { "answer": "fork", "explanation": "A replication fork is a term used in DNA replication. The temporary opening during transcription is called the transcription bubble." },
+            { "answer": "loop", "explanation": "While DNA can form loops in other contexts, the temporary separation during transcription is specifically called the transcription bubble." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "MC",
+      "question": "RNA polymerase has a higher error rate than DNA polymerase. Evaluate why this is less harmful to the cell than errors in DNA replication.",
+      "correct": "Transcription errors affect only temporary mRNA copies, while replication errors are permanently inherited in all daughter cells",
+      "correctExplanation": "mRNA molecules are short-lived and eventually degraded. An error in one mRNA copy affects only the proteins made from that copy. DNA replication errors, however, become permanent mutations passed to all future cell generations.",
+      "distractors": [
+        { "answer": "Transcription errors are always corrected by RNA repair enzymes before translation", "explanation": "There are no RNA repair mechanisms equivalent to DNA proofreading. The key is that mRNA errors are temporary because mRNA is degraded and replaced." },
+        { "answer": "RNA polymerase errors are equally harmful but cells have no way to prevent them", "explanation": "Transcription errors are genuinely less harmful because mRNA is temporary. Multiple correct copies are usually produced alongside any erroneous one." },
+        { "answer": "Transcription errors cannot change the amino acid sequence of proteins", "explanation": "Transcription errors can change the mRNA sequence and therefore the protein. However, the impact is limited because the error affects only one mRNA copy, not the permanent DNA." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A researcher discovers a mutant RNA polymerase that can initiate transcription without a promoter. Predict the consequences for gene expression in a cell carrying this mutation.",
+      "correct": "Genes would be transcribed randomly and inappropriately, leading to uncontrolled gene expression and cellular dysfunction",
+      "correctExplanation": "Promoters ensure only specific genes are transcribed at the right time. Without promoter requirements, RNA polymerase could start transcription anywhere on the DNA, producing random mRNA transcripts and disrupting normal gene regulation.",
+      "distractors": [
+        { "answer": "All genes would be transcribed efficiently because promoters are unnecessary barriers", "explanation": "Promoters are essential regulatory elements, not barriers. Without them, transcription would be chaotic and unregulated, not more efficient." },
+        { "answer": "No change would occur because RNA polymerase can already transcribe without promoters", "explanation": "Normal RNA polymerase requires promoters for specific initiation. A mutant bypassing this requirement would fundamentally disrupt gene regulation." },
+        { "answer": "Only genes near the origin of replication would be affected", "explanation": "A promoter-independent RNA polymerase could initiate anywhere on the genome, not just near the origin. This would affect gene expression globally." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Compare the consequences of a mutation in the promoter versus a mutation in the terminator of the same gene. Which would likely be more harmful and why?",
+      "correct": "A promoter mutation would be more harmful because it prevents the gene from being expressed at all",
+      "correctExplanation": "A non-functional promoter means no transcription occurs and no protein is produced. A terminator mutation would produce an abnormally long mRNA, but the gene's coding region would still be transcribed and could potentially produce some functional protein.",
+      "distractors": [
+        { "answer": "A terminator mutation would be more harmful because it produces toxic extended mRNA molecules", "explanation": "While extended mRNA is problematic, the gene's coding region is still transcribed. A promoter mutation prevents any mRNA production, which is more severe." },
+        { "answer": "Both mutations would be equally harmful because they both prevent normal protein production", "explanation": "The severity differs. A promoter mutation abolishes transcription entirely, while a terminator mutation still allows the gene to be transcribed, potentially producing functional protein." },
+        { "answer": "Neither would be harmful because the cell can compensate using other genes", "explanation": "If the gene encodes an essential protein, losing its expression (promoter mutation) would be very harmful. Compensation from other genes is not guaranteed." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Evaluate why some antibiotics specifically target prokaryotic RNA polymerase without affecting eukaryotic RNA polymerase.",
+      "correct": "Prokaryotic and eukaryotic RNA polymerases have different structures, allowing drugs to selectively inhibit the bacterial enzyme",
+      "correctExplanation": "Structural differences between prokaryotic RNA polymerase (a single type) and eukaryotic RNA polymerases (types I, II, III) allow antibiotics like rifampicin to specifically bind and inhibit only the bacterial enzyme.",
+      "distractors": [
+        { "answer": "Eukaryotic cells do not use RNA polymerase, so the antibiotic has no target", "explanation": "Eukaryotic cells do use RNA polymerase. The antibiotic works because the bacterial and eukaryotic enzymes have different structures." },
+        { "answer": "The antibiotic cannot enter eukaryotic cells because of the nuclear membrane", "explanation": "Many antibiotics can enter eukaryotic cells. The selectivity is due to structural differences in the RNA polymerase enzymes, not cell entry barriers." },
+        { "answer": "Prokaryotic and eukaryotic RNA polymerases are identical but respond differently to drugs", "explanation": "The enzymes are structurally different. It is these structural differences that allow selective drug targeting of prokaryotic RNA polymerase." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A scientist proposes that the order of events in transcription (initiation → elongation → termination) is not strictly sequential because multiple RNA polymerases can be at different stages on the same gene simultaneously. Evaluate this claim.",
+      "correct": "The claim is valid because while each RNA polymerase follows the steps sequentially, multiple polymerases can be at different stages on the same gene at the same time",
+      "correctExplanation": "Individual RNA polymerases must proceed through initiation, elongation, and termination in order. However, the first polymerase may be in termination while subsequent ones are in elongation or initiation, creating overlap.",
+      "distractors": [
+        { "answer": "The claim is invalid because only one RNA polymerase can be on a gene at any time", "explanation": "Multiple RNA polymerases can transcribe the same gene simultaneously, each at different positions along the gene." },
+        { "answer": "The claim is invalid because all polymerases must complete the same step before any can move to the next", "explanation": "RNA polymerases act independently. Each proceeds through the steps at its own rate, so different polymerases can be at different stages simultaneously." },
+        { "answer": "The claim is valid because RNA polymerases can skip steps and begin elongation without initiation", "explanation": "Individual polymerases cannot skip steps. The claim is valid because multiple polymerases can be at different stages, not because steps can be skipped." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Analyse why errors during the initiation step of transcription (e.g., RNA polymerase binding to the wrong promoter) could have different consequences than errors during elongation.",
+      "correct": "Initiation errors would transcribe the wrong gene entirely, while elongation errors would alter the sequence of the correct gene's mRNA",
+      "correctExplanation": "Binding the wrong promoter means a different gene is transcribed, potentially producing an unneeded protein. Elongation errors introduce point changes in the correct gene's mRNA, which may or may not affect protein function.",
+      "distractors": [
+        { "answer": "Both types of errors have identical consequences because they both produce incorrect proteins", "explanation": "The consequences differ significantly. Wrong gene transcription produces an entirely different protein, while elongation errors may cause only minor changes in the correct protein." },
+        { "answer": "Initiation errors are always harmless because the cell quickly degrades the wrong mRNA", "explanation": "While incorrect mRNA may be degraded, its translation could still waste cellular resources and produce unwanted proteins before degradation occurs." },
+        { "answer": "Elongation errors are always more harmful because they create frameshift mutations in the mRNA", "explanation": "Single nucleotide errors during elongation create point changes, not frameshifts. Both types of errors have different but significant potential consequences." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "In a genetic engineering experiment, a researcher attaches a very strong promoter to a gene that normally has a weak promoter. Predict how this would affect the amount of protein produced from this gene.",
+      "correct": "Much more protein would be produced because the strong promoter recruits RNA polymerase more frequently",
+      "correctExplanation": "A strong promoter is bound by RNA polymerase more frequently than a weak one, leading to more frequent transcription initiation. More mRNA copies are produced, resulting in more protein through translation.",
+      "distractors": [
+        { "answer": "The same amount of protein would be produced because the gene sequence has not changed", "explanation": "Promoter strength affects how often transcription occurs. Even with the same gene sequence, more frequent transcription produces more mRNA and therefore more protein." },
+        { "answer": "Less protein would be produced because the strong promoter causes RNA polymerase to move too fast", "explanation": "Promoter strength affects initiation frequency, not elongation speed. A strong promoter causes more frequent transcription, producing more mRNA and protein." },
+        { "answer": "No protein would be produced because the strong promoter is incompatible with the gene", "explanation": "Promoters control initiation frequency, and compatible promoters from the same organism generally work with any gene. A strong promoter would increase transcription." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Some genes are transcribed from one DNA strand in one direction, while neighbouring genes are transcribed from the opposite strand in the opposite direction. Explain how this is possible.",
+      "correct": "Either DNA strand can serve as the template strand for different genes, with each gene having its own promoter",
+      "correctExplanation": "The template strand is gene-specific, not chromosome-specific. For one gene, the top strand may be the template, while for a neighbouring gene, the bottom strand serves as the template. Each gene's promoter determines which strand is read.",
+      "distractors": [
+        { "answer": "This is impossible because RNA polymerase can only read one strand of DNA", "explanation": "RNA polymerase can use either strand as a template. Different genes on different strands have their own promoters that direct RNA polymerase to the correct template." },
+        { "answer": "Both genes use the same template strand but are read in opposite directions", "explanation": "RNA polymerase always reads the template strand 3' to 5'. If genes are transcribed in opposite directions, they must use different strands as their templates." },
+        { "answer": "The DNA molecule flips over so the same strand is always the template", "explanation": "DNA does not physically flip. Both strands can serve as templates for different genes, depending on which strand the gene's promoter is associated with." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about transcription error consequences.",
+      "sentence": "Transcription errors are less severe than DNA replication errors because mRNA is {{blank:1}} and will be replaced by new, correct copies through subsequent transcription events.",
+      "blanks": {
+        "1": {
+          "correct": "temporary",
+          "correctExplanation": "mRNA molecules are short-lived and are eventually degraded. Any error in one mRNA copy is not permanent and will not be inherited by daughter cells.",
+          "distractors": [
+            { "answer": "permanent", "explanation": "mRNA is not permanent; it is degraded after use. This temporary nature is precisely why transcription errors are less severe than replication errors." },
+            { "answer": "identical", "explanation": "The key characteristic is that mRNA is temporary, not that it is identical. Its short lifespan limits the impact of any transcription errors." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about promoter strength and gene expression.",
+      "sentence": "A gene with a strong promoter produces {{blank:1}} mRNA copies than a gene with a weak promoter because RNA polymerase binds to it more {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "more",
+          "correctExplanation": "Strong promoters recruit RNA polymerase more effectively, leading to more frequent transcription and more mRNA copies.",
+          "distractors": [
+            { "answer": "fewer", "explanation": "Strong promoters increase mRNA production by binding RNA polymerase more frequently. They produce more copies, not fewer." },
+            { "answer": "longer", "explanation": "Promoter strength affects how often transcription occurs, not the length of each mRNA. Strong promoters produce more copies of the same-length mRNA." }
+          ]
+        },
+        "2": {
+          "correct": "frequently",
+          "correctExplanation": "RNA polymerase binds to strong promoters more frequently, resulting in more transcription initiation events per unit of time.",
+          "distractors": [
+            { "answer": "slowly", "explanation": "Binding to strong promoters occurs more frequently, not more slowly. This increased frequency is what produces more mRNA copies." },
+            { "answer": "tightly", "explanation": "While strong promoters may have higher affinity, the functional consequence is more frequent binding, leading to more transcription events." }
+          ]
+        }
+      }
+    }
+  ]
+}

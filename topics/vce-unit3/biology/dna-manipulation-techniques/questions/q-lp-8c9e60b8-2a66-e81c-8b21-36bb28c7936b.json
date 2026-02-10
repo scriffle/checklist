@@ -1,0 +1,583 @@
+{
+  "_link": {
+    "uuid": "lp-8c9e60b8-2a66-e81c-8b21-36bb28c7936b",
+    "version": 1,
+    "contentHash": "e2760658",
+    "title": "I can explain the action of restriction enzymes in cutting DNA at specific recognition sites",
+    "generatedAt": "2026-02-09T12:10:00.000Z"
+  },
+  "toLevel2": [
+    {
+      "type": "MC",
+      "question": "What do restriction enzymes cut in a DNA molecule?",
+      "correct": "The sugar-phosphate backbone",
+      "correctExplanation": "Restriction enzymes are endonucleases that cut the sugar-phosphate backbone of both DNA strands at specific recognition sites.",
+      "distractors": [
+        { "answer": "The hydrogen bonds between bases", "explanation": "Hydrogen bonds between bases are broken by heat (e.g. in PCR). Restriction enzymes cut covalent bonds in the backbone." },
+        { "answer": "The individual nucleotide bases", "explanation": "Restriction enzymes do not cut individual bases. They cleave the sugar-phosphate backbone at recognition sites." },
+        { "answer": "The RNA polymerase enzyme", "explanation": "Restriction enzymes cut DNA, not other enzymes." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "What is a recognition site on a DNA molecule?",
+      "correct": "A specific base sequence where a restriction enzyme cuts",
+      "correctExplanation": "A recognition site is a short specific DNA sequence (typically 4-6 base pairs) that a restriction enzyme identifies and cuts.",
+      "distractors": [
+        { "answer": "The promoter region where RNA polymerase binds", "explanation": "The promoter is where RNA polymerase binds for transcription. A recognition site is where a restriction enzyme cuts." },
+        { "answer": "The location where DNA ligase joins fragments", "explanation": "DNA ligase joins fragments at any compatible ends. A recognition site is specifically where restriction enzymes cut." },
+        { "answer": "The origin of replication on a chromosome", "explanation": "The origin of replication is where DNA replication starts, not where restriction enzymes cut." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "How long are typical recognition sites for restriction enzymes?",
+      "correct": "4-6 base pairs",
+      "correctExplanation": "Most restriction enzymes recognise sequences that are 4 to 6 base pairs long.",
+      "distractors": [
+        { "answer": "20-30 base pairs", "explanation": "20-30 nucleotides describes the length of a CRISPR guide RNA, not a restriction enzyme recognition site." },
+        { "answer": "100-200 base pairs", "explanation": "Recognition sites are much shorter than this. They are typically only 4-6 base pairs long." },
+        { "answer": "1-2 base pairs", "explanation": "A sequence of 1-2 bases would occur too frequently and would not provide enough specificity. Recognition sites are 4-6 base pairs." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "What does it mean that a recognition site is a palindrome?",
+      "correct": "It reads the same in the 5' to 3' direction on both strands",
+      "correctExplanation": "A palindromic recognition site has the same base sequence when read 5' to 3' on both the top and bottom strands of DNA.",
+      "distractors": [
+        { "answer": "It reads the same forwards and backwards on one strand", "explanation": "A DNA palindrome reads the same on both strands in the 5' to 3' direction, not forwards and backwards on a single strand." },
+        { "answer": "It contains only one type of base", "explanation": "Recognition sites contain different bases. Palindromic means the sequence is the same on both strands when read 5' to 3'." },
+        { "answer": "It can be cut by any restriction enzyme", "explanation": "Each restriction enzyme recognises a specific palindromic sequence, not all palindromes." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Which restriction enzyme recognises the sequence GAATTC?",
+      "correct": "EcoRI",
+      "correctExplanation": "EcoRI is a commonly studied restriction enzyme that recognises and cuts the palindromic sequence GAATTC.",
+      "distractors": [
+        { "answer": "DNA ligase", "explanation": "DNA ligase joins DNA fragments; it does not cut at recognition sites." },
+        { "answer": "Taq polymerase", "explanation": "Taq polymerase synthesises DNA during PCR; it does not cut DNA at recognition sites." },
+        { "answer": "RNA polymerase", "explanation": "RNA polymerase transcribes DNA into mRNA; it does not cut DNA." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Describe the action of restriction enzymes.",
+      "sentence": "Restriction enzymes cut the {{blank:1}} backbone of DNA at specific sequences called {{blank:2}} sites.",
+      "blanks": {
+        "1": {
+          "correct": "sugar-phosphate",
+          "correctExplanation": "Restriction enzymes cleave the covalent bonds in the sugar-phosphate backbone of both DNA strands.",
+          "distractors": [
+            { "answer": "hydrogen bond", "explanation": "Hydrogen bonds hold the two strands together. Restriction enzymes cut the sugar-phosphate backbone, not hydrogen bonds." },
+            { "answer": "polypeptide", "explanation": "Polypeptide backbones are found in proteins, not DNA. Restriction enzymes cut the DNA sugar-phosphate backbone." }
+          ]
+        },
+        "2": {
+          "correct": "recognition",
+          "correctExplanation": "Recognition sites are specific short DNA sequences (4-6 bp) where restriction enzymes bind and cut.",
+          "distractors": [
+            { "answer": "promoter", "explanation": "Promoter sites are where RNA polymerase binds. Restriction enzymes cut at recognition sites." },
+            { "answer": "replication", "explanation": "Replication sites are where DNA copying begins. Restriction enzymes cut at recognition sites." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Describe the properties of recognition sites.",
+      "sentence": "Recognition sites are typically {{blank:1}} base pairs long and are {{blank:2}}, meaning they read the same in the 5' to 3' direction on both strands.",
+      "blanks": {
+        "1": {
+          "correct": "4-6",
+          "correctExplanation": "Most restriction enzymes recognise sequences that are 4 to 6 base pairs in length.",
+          "distractors": [
+            { "answer": "20-30", "explanation": "20-30 nucleotides is the length of a CRISPR guide RNA. Recognition sites are only 4-6 base pairs." },
+            { "answer": "100-200", "explanation": "Recognition sites are much shorter than this, typically only 4-6 base pairs." }
+          ]
+        },
+        "2": {
+          "correct": "palindromes",
+          "correctExplanation": "A palindromic DNA sequence reads the same on both strands when read in the 5' to 3' direction.",
+          "distractors": [
+            { "answer": "codons", "explanation": "Codons are three-base sequences in mRNA. Recognition sites are palindromic DNA sequences." },
+            { "answer": "introns", "explanation": "Introns are non-coding sections of genes. Recognition sites are palindromic sequences cut by restriction enzymes." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Name a specific restriction enzyme and its recognition site.",
+      "sentence": "The restriction enzyme {{blank:1}} recognises the palindromic sequence {{blank:2}} and cuts between the G and A on both strands.",
+      "blanks": {
+        "1": {
+          "correct": "EcoRI",
+          "correctExplanation": "EcoRI is one of the most commonly used restriction enzymes, originally isolated from E. coli.",
+          "distractors": [
+            { "answer": "DNA ligase", "explanation": "DNA ligase joins DNA fragments. EcoRI is the restriction enzyme that cuts at GAATTC." },
+            { "answer": "Taq polymerase", "explanation": "Taq polymerase synthesises DNA during PCR. EcoRI cuts DNA at GAATTC." }
+          ]
+        },
+        "2": {
+          "correct": "GAATTC",
+          "correctExplanation": "GAATTC is EcoRI's recognition site. It reads the same (GAATTC) in the 5' to 3' direction on both strands.",
+          "distractors": [
+            { "answer": "AAGCTT", "explanation": "AAGCTT is the recognition site for HindIII, not EcoRI." },
+            { "answer": "GGATCC", "explanation": "GGATCC is the recognition site for BamHI, not EcoRI." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "TF",
+      "question": "Restriction enzymes cut DNA at random positions along the molecule.",
+      "correct": "False",
+      "correctExplanation": "Restriction enzymes cut only at specific recognition sites, not at random positions. This specificity is what makes them useful tools.",
+      "distractors": [
+        { "answer": "True", "explanation": "Restriction enzymes are highly specific and only cut at their particular recognition sequence, not at random positions." }
+      ]
+    },
+    {
+      "type": "TF",
+      "question": "Recognition sites for restriction enzymes are palindromic sequences that read the same in the 5' to 3' direction on both DNA strands.",
+      "correct": "True",
+      "correctExplanation": "Restriction enzyme recognition sites are indeed palindromes. For example, GAATTC reads the same 5' to 3' on both the top and bottom strands.",
+      "distractors": [
+        { "answer": "False", "explanation": "This is correct. Recognition sites are palindromic, reading identically in the 5' to 3' direction on both strands." }
+      ]
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "MC",
+      "question": "Why is it important that restriction enzyme recognition sites are palindromic?",
+      "correct": "The enzyme can recognise and cut both strands at the same sequence",
+      "correctExplanation": "Because the sequence is the same on both strands (read 5' to 3'), the restriction enzyme can bind to and cut both strands at the recognition site, producing a complete cut through the double helix.",
+      "distractors": [
+        { "answer": "It makes the DNA easier to replicate", "explanation": "Palindromic sequences are a feature of recognition sites, not a factor in DNA replication." },
+        { "answer": "It prevents the enzyme from cutting the wrong DNA", "explanation": "While specificity is important, the palindromic nature ensures both strands are cut at the same location." },
+        { "answer": "It makes the DNA sequence easier to read in the lab", "explanation": "Palindromic nature is a biological feature of how the enzyme recognises and cuts DNA, not a lab convenience." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Why do restriction enzymes originally exist in bacteria?",
+      "correct": "They protect bacteria by cutting up foreign DNA from invading viruses",
+      "correctExplanation": "Bacteria produce restriction enzymes as a natural defence mechanism. When viral (bacteriophage) DNA enters the cell, restriction enzymes recognise and cut it at recognition sites, destroying the foreign DNA.",
+      "distractors": [
+        { "answer": "They help bacteria replicate their own DNA", "explanation": "DNA polymerase replicates DNA. Restriction enzymes cut foreign DNA as a defence mechanism." },
+        { "answer": "They are used for transcription in bacteria", "explanation": "RNA polymerase performs transcription. Restriction enzymes defend against viral DNA." },
+        { "answer": "They were developed by scientists for genetic engineering", "explanation": "Restriction enzymes are natural bacterial proteins. Scientists discovered and adapted them for genetic engineering." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "How does the specificity of restriction enzymes make them useful in genetic engineering?",
+      "correct": "They always cut at the same recognition sequence, producing predictable fragments",
+      "correctExplanation": "Because restriction enzymes only cut at specific sequences, scientists can predict exactly where cuts will occur and plan experiments accordingly, such as isolating a gene of interest.",
+      "distractors": [
+        { "answer": "They cut DNA at random points, creating diverse fragments", "explanation": "Restriction enzymes are specific, not random. Their predictability is what makes them useful." },
+        { "answer": "They can join DNA fragments together", "explanation": "DNA ligase joins fragments. Restriction enzymes cut DNA at specific sites." },
+        { "answer": "They replicate DNA to create multiple copies", "explanation": "DNA polymerase replicates DNA. Restriction enzymes cut DNA." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "If EcoRI has the recognition site GAATTC, explain why the complementary strand also reads GAATTC in the 5' to 3' direction.",
+      "correct": "The complementary bases of GAATTC are CTTAAG, which reads GAATTC when read 5' to 3' on the other strand",
+      "correctExplanation": "On the top strand (5'-GAATTC-3'), the complementary bottom strand is (3'-CTTAAG-5'). Reading this bottom strand 5' to 3' gives GAATTC — the same sequence. This is what makes it palindromic.",
+      "distractors": [
+        { "answer": "Both strands contain the same bases in the same order", "explanation": "The strands are complementary, not identical. They read the same only when both are read in the 5' to 3' direction." },
+        { "answer": "DNA strands always have the same sequence", "explanation": "DNA strands are complementary (A-T, G-C), not identical. Palindromes specifically read the same on both strands in the 5' to 3' direction." },
+        { "answer": "The enzyme copies the sequence from one strand to the other", "explanation": "The enzyme does not copy sequences. The palindromic nature is a property of the DNA sequence itself." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "What would happen if a restriction enzyme's recognition site did not appear anywhere in a DNA sample?",
+      "correct": "The DNA would not be cut and would remain as one intact piece",
+      "correctExplanation": "Restriction enzymes only cut at their specific recognition sites. If the sequence is absent from the DNA, the enzyme has nothing to cut and the DNA remains intact.",
+      "distractors": [
+        { "answer": "The enzyme would cut at random positions instead", "explanation": "Restriction enzymes are specific and will not cut at alternative sites if the recognition sequence is absent." },
+        { "answer": "The enzyme would cut at the closest similar sequence", "explanation": "Restriction enzymes require an exact match to their recognition site. They do not cut at similar sequences." },
+        { "answer": "The DNA would be destroyed completely", "explanation": "Without its recognition site present, the restriction enzyme cannot act on the DNA at all." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Why are restriction enzymes also called restriction endonucleases?",
+      "correct": "Because they cut (nuclease) within (endo-) the DNA molecule, not at the ends",
+      "correctExplanation": "Endonucleases cut within a nucleic acid strand, as opposed to exonucleases which remove nucleotides from the ends. Restriction endonucleases cut internally at specific recognition sites.",
+      "distractors": [
+        { "answer": "Because they only work inside the nucleus", "explanation": "Restriction enzymes are bacterial proteins and bacteria lack nuclei. 'Endo' refers to cutting within the DNA strand." },
+        { "answer": "Because they restrict DNA to the nucleus", "explanation": "'Restriction' refers to the enzyme's ability to restrict viral growth by cutting foreign DNA." },
+        { "answer": "Because they work only on endogenous DNA", "explanation": "Restriction enzymes actually target foreign DNA. 'Endo-' refers to cutting inside the strand." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Explain the natural function of restriction enzymes.",
+      "sentence": "In nature, restriction enzymes protect {{blank:1}} by cutting up foreign DNA from invading {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "bacteria",
+          "correctExplanation": "Restriction enzymes are naturally produced by bacteria as a defence mechanism against viral DNA.",
+          "distractors": [
+            { "answer": "viruses", "explanation": "Restriction enzymes protect bacteria, not viruses. They cut up viral DNA." },
+            { "answer": "eukaryotes", "explanation": "Restriction enzymes are found in bacteria, not eukaryotic cells." }
+          ]
+        },
+        "2": {
+          "correct": "bacteriophages",
+          "correctExplanation": "Bacteriophages (viruses that infect bacteria) inject their DNA into bacterial cells. Restriction enzymes cut this foreign DNA to prevent infection.",
+          "distractors": [
+            { "answer": "plasmids", "explanation": "Plasmids are small circular DNA molecules in bacteria. Restriction enzymes primarily defend against bacteriophage DNA." },
+            { "answer": "antibiotics", "explanation": "Antibiotics are chemical substances. Restriction enzymes cut foreign DNA from viruses, not antibiotics." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Explain the specificity of restriction enzymes.",
+      "sentence": "Each restriction enzyme recognises a {{blank:1}} recognition site and will only cut DNA where that exact {{blank:2}} is found.",
+      "blanks": {
+        "1": {
+          "correct": "specific",
+          "correctExplanation": "Each restriction enzyme has one specific recognition site that it binds to and cuts.",
+          "distractors": [
+            { "answer": "random", "explanation": "Restriction enzymes are not random. They recognise and cut at specific sequences." },
+            { "answer": "variable", "explanation": "The recognition site for each enzyme is fixed and specific, not variable." }
+          ]
+        },
+        "2": {
+          "correct": "sequence",
+          "correctExplanation": "The restriction enzyme will only cut where its exact recognition sequence is found in the DNA.",
+          "distractors": [
+            { "answer": "chromosome", "explanation": "Restriction enzymes cut at specific sequences, not specific chromosomes. They cut any DNA containing their recognition site." },
+            { "answer": "protein", "explanation": "Restriction enzymes recognise DNA sequences, not proteins." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Describe the structure of a palindromic recognition site.",
+      "sentence": "The EcoRI recognition site reads {{blank:1}} on both the top and bottom strands when each is read in the {{blank:2}} direction.",
+      "blanks": {
+        "1": {
+          "correct": "GAATTC",
+          "correctExplanation": "GAATTC is the recognition site for EcoRI and reads the same on both strands when read 5' to 3'.",
+          "distractors": [
+            { "answer": "CTTAAG", "explanation": "CTTAAG is the complement read 3' to 5'. When read 5' to 3', the bottom strand reads GAATTC." },
+            { "answer": "GGATCC", "explanation": "GGATCC is the recognition site for BamHI, not EcoRI." }
+          ]
+        },
+        "2": {
+          "correct": "5' to 3'",
+          "correctExplanation": "A palindromic sequence reads the same on both strands when each strand is read in the standard 5' to 3' direction.",
+          "distractors": [
+            { "answer": "3' to 5'", "explanation": "DNA is conventionally read 5' to 3'. The palindrome reads the same on both strands in this direction." },
+            { "answer": "N to C terminal", "explanation": "N to C terminal describes protein direction. DNA strands are read 5' to 3'." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "TF",
+      "question": "Restriction enzymes were originally discovered in bacteria where they serve as a defence against bacteriophages.",
+      "correct": "True",
+      "correctExplanation": "Restriction enzymes were first discovered in bacteria. They naturally function to cut foreign viral DNA that enters the cell, protecting the bacterium from infection.",
+      "distractors": [
+        { "answer": "False", "explanation": "This is correct. Restriction enzymes are a natural bacterial defence mechanism against bacteriophage infection." }
+      ]
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "MC",
+      "question": "A scientist has a linear DNA molecule 10,000 bp long. EcoRI has 3 recognition sites on this molecule. How many fragments will be produced and what will be their combined length?",
+      "correct": "4 fragments totalling 10,000 bp",
+      "correctExplanation": "Cutting linear DNA at 3 sites produces 4 fragments (sites + 1). No DNA is lost during cutting, so the total length remains 10,000 bp.",
+      "distractors": [
+        { "answer": "3 fragments totalling 10,000 bp", "explanation": "Linear DNA cut at 3 sites produces 4 fragments, not 3. The formula is cuts + 1 for linear DNA." },
+        { "answer": "4 fragments totalling 9,994 bp", "explanation": "Restriction enzymes do not remove bases when cutting. The total DNA length remains 10,000 bp." },
+        { "answer": "6 fragments totalling 10,000 bp", "explanation": "3 cuts in linear DNA produce 4 fragments, not 6." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A researcher wants to isolate a specific gene from human DNA using restriction enzymes. Why must they choose an enzyme whose recognition sites flank the gene but do not occur within it?",
+      "correct": "Cutting within the gene would break it into pieces, making it non-functional",
+      "correctExplanation": "If recognition sites exist within the gene, the enzyme would cut the gene into fragments, destroying its integrity. The sites must be outside the gene to release it as a single intact piece.",
+      "distractors": [
+        { "answer": "The enzyme would not work if sites are within the gene", "explanation": "The enzyme would still cut at internal sites, which is precisely the problem — it would destroy the gene." },
+        { "answer": "Internal sites would make the gene larger", "explanation": "Cutting does not make DNA larger. Internal cuts would fragment the gene." },
+        { "answer": "Restriction enzymes can only cut at the ends of DNA molecules", "explanation": "Restriction endonucleases cut internally at recognition sites, which is why internal sites within the gene are problematic." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Why would a restriction enzyme with a 4-base recognition site cut DNA more frequently than one with a 6-base recognition site?",
+      "correct": "A 4-base sequence occurs more often by chance than a 6-base sequence",
+      "correctExplanation": "Statistically, a 4-base sequence occurs every 4⁴ = 256 base pairs on average, while a 6-base sequence occurs every 4⁶ = 4,096 base pairs. Shorter recognition sites appear more frequently.",
+      "distractors": [
+        { "answer": "4-base enzymes cut faster than 6-base enzymes", "explanation": "Cutting frequency depends on how often the site appears, not enzyme speed. 4-base sites are statistically more common." },
+        { "answer": "6-base enzymes are less active than 4-base enzymes", "explanation": "Both types of enzymes are active. The difference is in how frequently their recognition sites occur in the DNA." },
+        { "answer": "4-base enzymes can recognise any DNA sequence", "explanation": "4-base enzymes are still specific to their particular recognition site, not to any sequence." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Two different DNA samples are cut with the same restriction enzyme. Predict whether they will produce the same fragment pattern on gel electrophoresis.",
+      "correct": "Different samples will likely produce different patterns because recognition sites are at different positions",
+      "correctExplanation": "Different DNA sequences have recognition sites at different positions and in different numbers, producing fragments of different sizes and creating distinct banding patterns.",
+      "distractors": [
+        { "answer": "They will always produce identical patterns", "explanation": "Different DNA sequences have different positions and numbers of recognition sites, producing different fragment patterns." },
+        { "answer": "They will produce no fragments because the enzyme is diluted", "explanation": "A sufficient enzyme is used for complete digestion. Different DNA sequences produce different fragment patterns." },
+        { "answer": "Only one sample will be cut; the other will be resistant", "explanation": "Both samples will be cut wherever recognition sites are present. The resulting patterns will differ because the sites are at different positions." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "How do bacteria protect their own DNA from being cut by the restriction enzymes they produce?",
+      "correct": "They methylate their own recognition sites, preventing the enzyme from cutting",
+      "correctExplanation": "Bacteria add methyl groups to their own recognition sites through a process called methylation. This chemical modification prevents the restriction enzyme from binding and cutting the bacterial DNA.",
+      "distractors": [
+        { "answer": "Bacterial DNA does not contain recognition sites", "explanation": "Bacterial DNA does contain recognition sites. Methylation protects these sites from being cut." },
+        { "answer": "The restriction enzymes only work outside the cell", "explanation": "Restriction enzymes work inside the cell. Bacteria protect their own DNA through methylation." },
+        { "answer": "Bacteria store their restriction enzymes in the nucleus", "explanation": "Bacteria do not have a nucleus. They protect their DNA through methylation of recognition sites." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A plasmid has one EcoRI site and one BamHI site. If both enzymes are used simultaneously, how many fragments are produced from this circular plasmid?",
+      "correct": "2 fragments",
+      "correctExplanation": "Cutting circular DNA at 2 sites produces 2 fragments (fragments = number of cuts for circular DNA). The two cuts linearise and then divide the circular plasmid into 2 pieces.",
+      "distractors": [
+        { "answer": "3 fragments", "explanation": "For circular DNA, the number of fragments equals the number of cuts. Two cuts produce 2 fragments, not 3." },
+        { "answer": "1 fragment", "explanation": "One cut would linearise the plasmid (1 fragment). Two cuts produce 2 fragments." },
+        { "answer": "4 fragments", "explanation": "Two cuts in circular DNA produce 2 fragments. The formula for circular DNA is fragments = number of cuts." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Explain why using two different restriction enzymes to cut a gene and a plasmid (one at each end) can be advantageous over using a single enzyme.",
+      "correct": "It ensures the gene inserts in the correct orientation because the two ends are different",
+      "correctExplanation": "Using two different enzymes creates non-compatible ends, forcing the gene to insert in only one orientation. A single enzyme creates identical ends, allowing the gene to insert in either direction.",
+      "distractors": [
+        { "answer": "Two enzymes cut faster than one", "explanation": "Speed is not the advantage. Using two enzymes ensures directional insertion of the gene." },
+        { "answer": "It produces more fragments", "explanation": "The advantage is controlled orientation of the insert, not the number of fragments." },
+        { "answer": "It prevents the plasmid from re-circularising without the gene", "explanation": "While this is partially true (incompatible ends reduce self-ligation), the main advantage is ensuring correct gene orientation." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Calculate fragment frequency from recognition site length.",
+      "sentence": "A restriction enzyme with a {{blank:1}}-base recognition site would statistically cut once every {{blank:2}} base pairs on average.",
+      "blanks": {
+        "1": {
+          "correct": "6",
+          "correctExplanation": "A 6-base recognition site is the example being used for this calculation.",
+          "distractors": [
+            { "answer": "4", "explanation": "A 4-base site would cut more frequently (every 256 bp). The question asks about a 6-base site cutting every 4,096 bp." },
+            { "answer": "8", "explanation": "An 8-base site would cut less frequently (every 65,536 bp). The correct answer is a 6-base site." }
+          ]
+        },
+        "2": {
+          "correct": "4,096",
+          "correctExplanation": "For a 6-base recognition site, the frequency is 4⁶ = 4,096 base pairs on average.",
+          "distractors": [
+            { "answer": "256", "explanation": "256 (4⁴) is the average frequency for a 4-base recognition site, not a 6-base site." },
+            { "answer": "1,024", "explanation": "1,024 does not correspond to any standard recognition site length. 4⁶ = 4,096." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Apply the linear vs circular DNA fragment rule.",
+      "sentence": "When a restriction enzyme cuts {{blank:1}} DNA at 3 sites, it produces {{blank:2}} fragments.",
+      "blanks": {
+        "1": {
+          "correct": "linear",
+          "correctExplanation": "For linear DNA, the number of fragments is one more than the number of cuts (3 + 1 = 4).",
+          "distractors": [
+            { "answer": "circular", "explanation": "Circular DNA cut at 3 sites produces 3 fragments (cuts = fragments). Linear DNA produces 4 fragments." },
+            { "answer": "single-stranded", "explanation": "Restriction enzymes typically cut double-stranded DNA. For linear DNA, 3 cuts produce 4 fragments." }
+          ]
+        },
+        "2": {
+          "correct": "4",
+          "correctExplanation": "Linear DNA cut at n sites produces n + 1 fragments. 3 sites = 4 fragments.",
+          "distractors": [
+            { "answer": "3", "explanation": "3 fragments would result from 3 cuts in circular DNA. Linear DNA produces cuts + 1 = 4 fragments." },
+            { "answer": "6", "explanation": "The formula is cuts + 1 for linear DNA, giving 4, not 6." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Explain how bacteria protect their own DNA.",
+      "sentence": "Bacteria protect their own DNA from restriction enzymes by {{blank:1}} their recognition sites, which prevents the enzyme from {{blank:2}} at those positions.",
+      "blanks": {
+        "1": {
+          "correct": "methylating",
+          "correctExplanation": "Bacteria add methyl groups to the bases in their own recognition sites, chemically modifying them so restriction enzymes cannot bind.",
+          "distractors": [
+            { "answer": "deleting", "explanation": "Bacteria do not delete recognition sites. They chemically modify them through methylation." },
+            { "answer": "replicating", "explanation": "Replicating sites would not protect them. Methylation prevents restriction enzyme binding." }
+          ]
+        },
+        "2": {
+          "correct": "cutting",
+          "correctExplanation": "Methylation prevents the restriction enzyme from recognising and cutting at the modified site, protecting the bacterial DNA.",
+          "distractors": [
+            { "answer": "binding", "explanation": "While methylation does prevent binding (which prevents cutting), the functional outcome being described is protection from cutting." },
+            { "answer": "replicating", "explanation": "Restriction enzymes cut DNA, not replicate it. Methylation prevents cutting." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "MC",
+      "question": "Evaluate why the discovery of restriction enzymes was considered revolutionary for molecular biology.",
+      "correct": "They provided the first precise tool for cutting DNA at specific, predictable locations",
+      "correctExplanation": "Before restriction enzymes, scientists had no way to cut DNA at specific sites. These enzymes enabled gene isolation, DNA analysis, and recombinant DNA technology, founding modern genetic engineering.",
+      "distractors": [
+        { "answer": "They were the first enzymes ever discovered", "explanation": "Many enzymes were known before restriction enzymes. Their significance was enabling precise DNA cutting." },
+        { "answer": "They could replace DNA polymerase in all applications", "explanation": "Restriction enzymes cut DNA; they cannot replicate it. Each enzyme has a distinct function." },
+        { "answer": "They made DNA sequencing obsolete", "explanation": "Restriction enzymes complemented DNA sequencing rather than replacing it. Both are important tools." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Compare the specificity of restriction enzymes with that of CRISPR-Cas9. Which is more precise for genome editing and why?",
+      "correct": "CRISPR-Cas9 is more precise because its 20-nucleotide guide RNA targets a unique site, while a 6-base restriction site may occur hundreds of times",
+      "correctExplanation": "A 6-base recognition site (like GAATTC) occurs approximately every 4,096 bp, potentially hundreds of times in a genome. CRISPR's 20-nucleotide guide RNA likely targets only one unique site in an entire genome.",
+      "distractors": [
+        { "answer": "Restriction enzymes are more precise because they are natural proteins", "explanation": "Being natural does not make them more precise. Their short recognition sites mean they cut at many locations." },
+        { "answer": "Both have identical specificity", "explanation": "CRISPR-Cas9 has much greater specificity due to its longer targeting sequence." },
+        { "answer": "Restriction enzymes are more precise because they cut both strands", "explanation": "Cas9 also cuts both strands. Precision relates to how many sites are targeted, not whether both strands are cut." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A researcher has a 3 million bp bacterial genome. Predict approximately how many times a 6-base restriction enzyme would cut this genome.",
+      "correct": "Approximately 732 times",
+      "correctExplanation": "A 6-base site occurs on average every 4⁶ = 4,096 bp. In a 3,000,000 bp genome: 3,000,000 ÷ 4,096 ≈ 732 cuts.",
+      "distractors": [
+        { "answer": "Approximately 12 times", "explanation": "12 is far too few. The calculation is 3,000,000 ÷ 4,096 ≈ 732." },
+        { "answer": "Approximately 3,000 times", "explanation": "3,000 is too high. The expected frequency is approximately 732 for a 6-base recognition site." },
+        { "answer": "Exactly once", "explanation": "A 6-base site occurs approximately every 4,096 bp. In 3 million bp, it would occur hundreds of times." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Analyse why restriction enzymes are still widely used in molecular biology despite CRISPR-Cas9 being more precise for genome editing.",
+      "correct": "Restriction enzymes are simpler, cheaper, and ideal for routine tasks like gene cloning, DNA mapping, and DNA profiling",
+      "correctExplanation": "Restriction enzymes are well-established, inexpensive tools perfect for standard lab procedures. CRISPR-Cas9 is more complex and primarily used for genome editing, not routine DNA manipulation.",
+      "distractors": [
+        { "answer": "Restriction enzymes have been completely replaced by CRISPR", "explanation": "Restriction enzymes remain widely used for many applications where their specificity is sufficient." },
+        { "answer": "CRISPR cannot cut DNA, only edit it", "explanation": "CRISPR-Cas9 does cut DNA. Restriction enzymes persist because they are simpler for routine applications." },
+        { "answer": "Restriction enzymes work in all organisms while CRISPR does not", "explanation": "Both can work across species. Restriction enzymes persist due to simplicity and cost-effectiveness for routine tasks." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Evaluate the consequences if a mutation changed a bacterial restriction enzyme recognition site in the bacterium's own genome, making it no longer methylated.",
+      "correct": "The restriction enzyme would cut the bacterium's own DNA at that site, potentially killing the cell",
+      "correctExplanation": "If a recognition site loses its methyl protection (either through mutation creating a new unprotected site or loss of methylation), the bacterium's own restriction enzymes would cut the DNA there, which could be lethal.",
+      "distractors": [
+        { "answer": "Nothing would happen because bacteria are immune to their own enzymes", "explanation": "Bacteria are only protected by methylation. Without it, their own restriction enzymes can cut their DNA." },
+        { "answer": "The enzyme would become inactive", "explanation": "The enzyme remains active. It is the unmethylated DNA that becomes vulnerable to cutting." },
+        { "answer": "The bacterium would produce more restriction enzymes", "explanation": "The bacterium would not compensate by producing more enzymes. The unmethylated site would be cut." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A student claims that restriction enzymes could be used to cut RNA molecules. Evaluate this claim.",
+      "correct": "Incorrect; restriction enzymes are specific to double-stranded DNA and cannot cut RNA",
+      "correctExplanation": "Restriction endonucleases recognise and cut double-stranded DNA. RNA is single-stranded and has a different sugar (ribose), so restriction enzymes cannot act on it.",
+      "distractors": [
+        { "answer": "Correct; restriction enzymes can cut any nucleic acid", "explanation": "Restriction enzymes are specific to double-stranded DNA. They cannot cut RNA." },
+        { "answer": "Correct; but only double-stranded RNA", "explanation": "Even double-stranded RNA has a different sugar backbone. Restriction enzymes are specific to DNA." },
+        { "answer": "Incorrect; but only because RNA lacks recognition sites", "explanation": "The reason is more fundamental: restriction enzymes are designed to recognise and cut dsDNA structure, not RNA." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Design an experiment to determine how many EcoRI recognition sites exist in an unknown plasmid.",
+      "correct": "Digest the plasmid with EcoRI and count the number of fragments on a gel; the number of fragments equals the number of sites for circular DNA",
+      "correctExplanation": "For circular DNA, the number of fragments produced equals the number of cuts. Running the digest on gel electrophoresis and counting the bands reveals how many recognition sites are present.",
+      "distractors": [
+        { "answer": "Add EcoRI and measure how much enzyme is used up", "explanation": "Enzyme consumption is not a practical way to count sites. Gel electrophoresis of fragments is the standard method." },
+        { "answer": "Sequence the entire plasmid and search for GAATTC", "explanation": "While sequencing would work, it is more expensive. The standard approach is digestion followed by gel electrophoresis." },
+        { "answer": "Heat the plasmid and count the melting peaks", "explanation": "Melting analysis does not reveal restriction site locations. Enzyme digestion with gel electrophoresis is the correct approach." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Predict what would happen to the field of genetic engineering if restriction enzymes had never been discovered.",
+      "correct": "Early recombinant DNA technology would not have been possible, significantly delaying advances in gene cloning and DNA analysis",
+      "correctExplanation": "Restriction enzymes were essential for the birth of genetic engineering in the 1970s. Without them, scientists could not have precisely cut DNA, and techniques like gene cloning, DNA profiling, and restriction mapping would not have been developed when they were.",
+      "distractors": [
+        { "answer": "Genetic engineering would have developed at the same pace using CRISPR", "explanation": "CRISPR was not discovered until decades after restriction enzymes. Without restriction enzymes, the foundational techniques would have been delayed." },
+        { "answer": "DNA could still be manipulated easily using physical methods", "explanation": "Physical methods cannot cut DNA at specific sequences. The precision of restriction enzymes was essential." },
+        { "answer": "Only prokaryotic genetics would have been affected", "explanation": "Restriction enzymes are used to manipulate DNA from all organisms, not just prokaryotes." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Compare restriction enzyme specificity with CRISPR-Cas9 specificity.",
+      "sentence": "A restriction enzyme with a 6-base recognition site may find {{blank:1}} of matches in a human genome, while CRISPR-Cas9 with a 20-nucleotide guide RNA typically finds only {{blank:2}} match.",
+      "blanks": {
+        "1": {
+          "correct": "hundreds",
+          "correctExplanation": "A 6-base site occurs approximately every 4,096 bp. The human genome (3 billion bp) contains approximately 730,000 potential sites for a given enzyme.",
+          "distractors": [
+            { "answer": "one", "explanation": "One match is expected for CRISPR's 20-nucleotide guide, not for a 6-base restriction enzyme site." },
+            { "answer": "zero", "explanation": "A 6-base sequence will occur many times in a large genome like the human genome." }
+          ]
+        },
+        "2": {
+          "correct": "one",
+          "correctExplanation": "A 20-nucleotide sequence is so specific (4²⁰ = over 1 trillion possibilities) that it statistically appears only once in a human genome.",
+          "distractors": [
+            { "answer": "hundreds", "explanation": "Hundreds of matches describes a 6-base restriction site. A 20-nucleotide guide is specific enough to typically match only once." },
+            { "answer": "thousands", "explanation": "A 20-nucleotide sequence is far too specific to match thousands of times in any genome." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Evaluate the arms race between bacteria and bacteriophages.",
+      "sentence": "Bacteria use restriction enzymes to destroy {{blank:1}} DNA, while bacteriophages have evolved to {{blank:2}} their own DNA to avoid being cut.",
+      "blanks": {
+        "1": {
+          "correct": "viral",
+          "correctExplanation": "Restriction enzymes are part of the bacterial immune system that targets and destroys foreign viral (bacteriophage) DNA.",
+          "distractors": [
+            { "answer": "bacterial", "explanation": "Bacteria protect their own DNA through methylation. Restriction enzymes target foreign viral DNA." },
+            { "answer": "human", "explanation": "Restriction enzymes evolved to fight bacteriophages, not human DNA." }
+          ]
+        },
+        "2": {
+          "correct": "modify",
+          "correctExplanation": "Some bacteriophages have evolved to modify their DNA (e.g., through methylation or base substitution) to avoid recognition by bacterial restriction enzymes.",
+          "distractors": [
+            { "answer": "replicate", "explanation": "Replicating DNA does not protect it from restriction enzymes. Modification prevents enzyme recognition." },
+            { "answer": "transcribe", "explanation": "Transcribing DNA does not protect it. Bacteriophages modify their DNA to avoid restriction enzyme cutting." }
+          ]
+        }
+      }
+    }
+  ]
+}

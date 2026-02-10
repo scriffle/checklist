@@ -1,0 +1,583 @@
+{
+  "_link": {
+    "uuid": "lp-839964a9-2882-41d1-80bd-66cbafb03ea9",
+    "version": 1,
+    "contentHash": "a1dd725a",
+    "title": "I can compare transcription in eukaryotic and prokaryotic cells",
+    "generatedAt": "2026-02-09T12:03:00.000Z"
+  },
+  "toLevel2": [
+    {
+      "type": "MC",
+      "question": "Where does transcription occur in eukaryotic cells?",
+      "correct": "In the nucleus",
+      "correctExplanation": "Eukaryotic cells have a membrane-bound nucleus where DNA is stored and transcription takes place.",
+      "distractors": [
+        { "answer": "In the cytoplasm", "explanation": "Transcription occurs in the cytoplasm in prokaryotes, not eukaryotes." },
+        { "answer": "In the ribosome", "explanation": "Ribosomes are the site of translation, not transcription." },
+        { "answer": "In the mitochondria only", "explanation": "While mitochondria have their own DNA and can transcribe it, nuclear genes are transcribed in the nucleus." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Where does transcription occur in prokaryotic cells?",
+      "correct": "In the cytosol",
+      "correctExplanation": "Prokaryotic cells lack a nucleus, so their DNA is in the cytosol where transcription occurs.",
+      "distractors": [
+        { "answer": "In the nucleus", "explanation": "Prokaryotic cells do not have a nucleus. Transcription occurs in the cytosol." },
+        { "answer": "In the endoplasmic reticulum", "explanation": "Prokaryotes do not have an endoplasmic reticulum. Transcription occurs in the cytosol." },
+        { "answer": "In the Golgi apparatus", "explanation": "Prokaryotes do not have a Golgi apparatus. Transcription occurs in the cytosol." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "In prokaryotic cells, can translation begin before transcription is finished?",
+      "correct": "Yes, translation can begin while transcription is still occurring",
+      "correctExplanation": "In prokaryotes, there is no nuclear membrane separating the DNA from the ribosomes, so ribosomes can attach to the mRNA and begin translation while RNA polymerase is still transcribing.",
+      "distractors": [
+        { "answer": "No, transcription must finish before translation can start", "explanation": "This is true for eukaryotes, not prokaryotes. In prokaryotes, transcription and translation can occur simultaneously." },
+        { "answer": "Yes, but only in the nucleus", "explanation": "Prokaryotes do not have a nucleus. Simultaneous transcription and translation occur in the cytosol." },
+        { "answer": "No, prokaryotes do not perform translation", "explanation": "Prokaryotes do perform translation. They can even begin it while transcription is still underway." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Does pre-mRNA undergo RNA processing in prokaryotic cells?",
+      "correct": "No, prokaryotic mRNA does not undergo RNA processing",
+      "correctExplanation": "Prokaryotic genes generally lack introns, and their mRNA does not receive a 5' cap or poly-A tail. The mRNA can be translated directly.",
+      "distractors": [
+        { "answer": "Yes, introns are spliced out in prokaryotes", "explanation": "Prokaryotic genes typically lack introns, so splicing is not needed." },
+        { "answer": "Yes, a 5' cap and poly-A tail are added", "explanation": "These modifications occur in eukaryotes, not prokaryotes." },
+        { "answer": "Yes, but only in some prokaryotic species", "explanation": "RNA processing (capping, polyadenylation, splicing) is a characteristic of eukaryotes, not prokaryotes." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "What prevents simultaneous transcription and translation in eukaryotic cells?",
+      "correct": "The nuclear membrane separates transcription (nucleus) from translation (cytoplasm)",
+      "correctExplanation": "In eukaryotes, transcription occurs inside the nucleus while translation occurs on ribosomes in the cytoplasm. The mRNA must be processed and exported before translation can begin.",
+      "distractors": [
+        { "answer": "Eukaryotes do not have ribosomes", "explanation": "Eukaryotes do have ribosomes; the nuclear membrane is what separates transcription from translation." },
+        { "answer": "RNA polymerase blocks ribosome attachment", "explanation": "It is the nuclear membrane, not RNA polymerase, that prevents simultaneous transcription and translation." },
+        { "answer": "Eukaryotic mRNA cannot be translated", "explanation": "Eukaryotic mRNA is translated after it is processed and exported from the nucleus." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Compare the location of transcription in different cell types.",
+      "sentence": "In eukaryotes, transcription occurs in the {{blank:1}}, while in prokaryotes it occurs in the {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "nucleus",
+          "correctExplanation": "Eukaryotic cells have a membrane-bound nucleus that houses DNA and is the site of transcription.",
+          "distractors": [
+            { "answer": "cytoplasm", "explanation": "The cytoplasm is where transcription occurs in prokaryotes, not eukaryotes." },
+            { "answer": "ribosome", "explanation": "Ribosomes are the site of translation, not transcription." }
+          ]
+        },
+        "2": {
+          "correct": "cytosol",
+          "correctExplanation": "Prokaryotes lack a nucleus, so transcription occurs in the cytosol where the DNA is located.",
+          "distractors": [
+            { "answer": "nucleus", "explanation": "Prokaryotes do not have a nucleus. Their DNA is in the cytosol." },
+            { "answer": "ribosome", "explanation": "Ribosomes perform translation, not transcription." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Describe RNA processing differences between cell types.",
+      "sentence": "In eukaryotes, pre-mRNA must be {{blank:1}} before translation, but in prokaryotes, mRNA does not undergo {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "processed",
+          "correctExplanation": "Eukaryotic pre-mRNA undergoes three modifications: 5' capping, 3' polyadenylation, and intron splicing before it becomes mature mRNA.",
+          "distractors": [
+            { "answer": "replicated", "explanation": "mRNA is not replicated. It is processed (capped, tailed, and spliced) before translation." },
+            { "answer": "destroyed", "explanation": "Pre-mRNA is not destroyed; it is processed into mature mRNA for translation." }
+          ]
+        },
+        "2": {
+          "correct": "RNA processing",
+          "correctExplanation": "Prokaryotic mRNA does not require a 5' cap, poly-A tail, or intron splicing. It can be translated directly.",
+          "distractors": [
+            { "answer": "transcription", "explanation": "Prokaryotes do undergo transcription. They do not undergo RNA processing." },
+            { "answer": "translation", "explanation": "Prokaryotes do perform translation. They skip RNA processing." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Describe simultaneous transcription and translation.",
+      "sentence": "In prokaryotes, {{blank:1}} can begin on the mRNA while {{blank:2}} is still occurring because there is no nuclear membrane.",
+      "blanks": {
+        "1": {
+          "correct": "translation",
+          "correctExplanation": "Ribosomes can attach to the mRNA and begin translating it while RNA polymerase is still transcribing the gene.",
+          "distractors": [
+            { "answer": "replication", "explanation": "DNA replication is a separate process. Translation is what occurs simultaneously with transcription in prokaryotes." },
+            { "answer": "splicing", "explanation": "Prokaryotes do not perform RNA splicing. Translation is the process that occurs alongside transcription." }
+          ]
+        },
+        "2": {
+          "correct": "transcription",
+          "correctExplanation": "RNA polymerase can still be transcribing the gene while ribosomes have already begun translating the 5' end of the mRNA.",
+          "distractors": [
+            { "answer": "replication", "explanation": "DNA replication is a separate process. Transcription is the process occurring simultaneously with translation." },
+            { "answer": "splicing", "explanation": "Prokaryotes generally do not perform splicing. Transcription is occurring while translation begins." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "TF",
+      "question": "In prokaryotic cells, translation can begin before transcription has finished.",
+      "correct": "True",
+      "correctExplanation": "Without a nuclear membrane, ribosomes can access the mRNA and begin translation while RNA polymerase is still transcribing the rest of the gene.",
+      "distractors": [
+        { "answer": "False", "explanation": "This is correct for prokaryotes. The lack of a nuclear membrane allows simultaneous transcription and translation." }
+      ]
+    },
+    {
+      "type": "TF",
+      "question": "Eukaryotic cells process their pre-mRNA before it can be translated, but prokaryotic cells do not.",
+      "correct": "True",
+      "correctExplanation": "Eukaryotic pre-mRNA undergoes capping, polyadenylation, and splicing. Prokaryotic mRNA is translated directly without processing.",
+      "distractors": [
+        { "answer": "False", "explanation": "This statement is correct. RNA processing (capping, tailing, splicing) is a eukaryotic feature that does not occur in prokaryotes." }
+      ]
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "MC",
+      "question": "Why can prokaryotes begin translation before transcription is complete, but eukaryotes cannot?",
+      "correct": "Prokaryotes lack a nuclear membrane, so ribosomes can access mRNA immediately",
+      "correctExplanation": "In prokaryotes, the DNA, mRNA, and ribosomes are all in the cytosol. Ribosomes can attach to the 5' end of the mRNA while the 3' end is still being transcribed. In eukaryotes, the nuclear membrane physically separates these processes.",
+      "distractors": [
+        { "answer": "Prokaryotic ribosomes are faster than eukaryotic ribosomes", "explanation": "While there are speed differences, the key reason is the absence of a nuclear membrane, not ribosome speed." },
+        { "answer": "Eukaryotic RNA polymerase is slower than prokaryotic RNA polymerase", "explanation": "Polymerase speed is not the primary reason. The nuclear membrane physically separates transcription from translation." },
+        { "answer": "Prokaryotes have more ribosomes than eukaryotes", "explanation": "Ribosome number is not the determining factor. The absence of a nuclear membrane is what allows simultaneous processes." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "What is the biological advantage of coupled transcription and translation in prokaryotes?",
+      "correct": "Proteins can be produced faster, allowing rapid responses to environmental changes",
+      "correctExplanation": "By beginning translation immediately, prokaryotes can produce proteins more quickly than if they had to wait for transcription to finish and mRNA to be exported, enabling faster adaptation.",
+      "distractors": [
+        { "answer": "It prevents mutations from occurring", "explanation": "Coupled transcription and translation does not prevent mutations. Its advantage is speed of protein production." },
+        { "answer": "It makes the mRNA more stable", "explanation": "The mRNA is actually degraded faster in prokaryotes. The advantage is speed, not stability." },
+        { "answer": "It allows proteins to fold inside the nucleus", "explanation": "Prokaryotes do not have a nucleus. The advantage is rapid protein production." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Why is RNA processing necessary in eukaryotes but not in prokaryotes?",
+      "correct": "Eukaryotic genes contain introns that must be removed, and mRNA needs protection for nuclear export",
+      "correctExplanation": "Eukaryotic genes contain introns (non-coding sequences) that must be spliced out. The 5' cap and poly-A tail protect the mRNA and assist in export from the nucleus and ribosome recognition.",
+      "distractors": [
+        { "answer": "Prokaryotic mRNA is already protected by the cell wall", "explanation": "The cell wall does not protect mRNA. Prokaryotic mRNA simply does not need the same modifications." },
+        { "answer": "Eukaryotic RNA polymerase produces defective mRNA that needs fixing", "explanation": "RNA polymerase does not produce defective mRNA. Processing removes introns and adds protective modifications." },
+        { "answer": "Prokaryotes have enzymes that automatically process their mRNA", "explanation": "Prokaryotes do not process their mRNA because their genes typically lack introns and their mRNA does not need capping or polyadenylation." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "How does the presence of a nuclear membrane in eukaryotes create an additional level of gene regulation?",
+      "correct": "It separates transcription from translation, allowing mRNA processing to regulate which proteins are made",
+      "correctExplanation": "The nuclear membrane means mRNA must be processed and exported before translation. This adds regulatory steps such as alternative splicing, which can produce different proteins from the same gene.",
+      "distractors": [
+        { "answer": "The nuclear membrane directly binds to mRNA to control translation", "explanation": "The nuclear membrane does not bind mRNA. It creates physical separation that allows processing and regulation." },
+        { "answer": "It prevents RNA polymerase from functioning", "explanation": "RNA polymerase functions inside the nucleus. The membrane separates transcription from translation." },
+        { "answer": "It makes transcription unnecessary in eukaryotes", "explanation": "Eukaryotes absolutely require transcription. The nuclear membrane adds regulation, not elimination, of gene expression." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "In E. coli, a prokaryote, why does the lack of RNA processing make gene expression faster?",
+      "correct": "The mRNA can be translated immediately without modification steps",
+      "correctExplanation": "Without needing a 5' cap, poly-A tail, or intron splicing, prokaryotic mRNA is ready for translation as soon as it begins forming, saving time.",
+      "distractors": [
+        { "answer": "E. coli does not perform transcription", "explanation": "E. coli does perform transcription. It simply does not process the resulting mRNA." },
+        { "answer": "E. coli mRNA is already processed in the DNA", "explanation": "DNA is not pre-processed. Prokaryotic genes simply lack the introns and regulatory features that require processing." },
+        { "answer": "E. coli has a nucleus that speeds up processing", "explanation": "E. coli is a prokaryote and does not have a nucleus." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "What structural feature of eukaryotic genes makes RNA processing (specifically splicing) necessary?",
+      "correct": "The presence of introns within the gene",
+      "correctExplanation": "Eukaryotic genes contain introns (non-coding sequences) interspersed with exons (coding sequences). Introns must be removed by splicing before the mRNA can be correctly translated.",
+      "distractors": [
+        { "answer": "The absence of a promoter region", "explanation": "Eukaryotic genes do have promoter regions. Introns are the feature that necessitates splicing." },
+        { "answer": "The presence of multiple start codons", "explanation": "Multiple start codons are not typical. Introns are the structural feature requiring splicing." },
+        { "answer": "The circular shape of eukaryotic chromosomes", "explanation": "Eukaryotic chromosomes are linear, not circular. Introns are what require splicing." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Explain why simultaneous transcription and translation is possible in prokaryotes.",
+      "sentence": "In prokaryotes, the absence of a {{blank:1}} means that ribosomes in the {{blank:2}} can immediately access the mRNA being transcribed.",
+      "blanks": {
+        "1": {
+          "correct": "nuclear membrane",
+          "correctExplanation": "Without a nuclear membrane, there is no physical barrier between the DNA (where transcription occurs) and the ribosomes.",
+          "distractors": [
+            { "answer": "cell wall", "explanation": "The cell wall is an external structure. The nuclear membrane is what separates transcription from translation in eukaryotes." },
+            { "answer": "plasma membrane", "explanation": "The plasma membrane surrounds the cell. The nuclear membrane is what eukaryotes have that prokaryotes lack." }
+          ]
+        },
+        "2": {
+          "correct": "cytosol",
+          "correctExplanation": "Prokaryotic ribosomes are free in the cytosol, the same compartment where DNA is located and transcription occurs.",
+          "distractors": [
+            { "answer": "nucleus", "explanation": "Prokaryotes do not have a nucleus. Both transcription and translation occur in the cytosol." },
+            { "answer": "rough ER", "explanation": "Prokaryotes do not have an endoplasmic reticulum. Ribosomes are free in the cytosol." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Describe the key differences in mRNA between the two cell types.",
+      "sentence": "Eukaryotic mature mRNA has a 5' cap, poly-A tail, and has had {{blank:1}} removed, while prokaryotic mRNA lacks these modifications and still contains {{blank:2}} sequences throughout.",
+      "blanks": {
+        "1": {
+          "correct": "introns",
+          "correctExplanation": "Introns are non-coding sequences that are spliced out during RNA processing in eukaryotes.",
+          "distractors": [
+            { "answer": "exons", "explanation": "Exons are the coding sequences that are retained. Introns are removed during splicing." },
+            { "answer": "codons", "explanation": "Codons are not removed during processing. Introns (non-coding sequences) are removed." }
+          ]
+        },
+        "2": {
+          "correct": "coding",
+          "correctExplanation": "Prokaryotic genes generally lack introns, so the mRNA is entirely coding sequence that can be directly translated.",
+          "distractors": [
+            { "answer": "non-coding", "explanation": "Prokaryotic mRNA is generally all coding sequence because prokaryotic genes lack introns." },
+            { "answer": "regulatory", "explanation": "While regulatory sequences exist in DNA, the mRNA itself contains the coding sequence ready for translation." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Compare gene expression timing in the two cell types.",
+      "sentence": "Eukaryotic gene expression is {{blank:1}} than prokaryotic because mRNA must be processed and {{blank:2}} from the nucleus before translation can begin.",
+      "blanks": {
+        "1": {
+          "correct": "slower",
+          "correctExplanation": "The additional steps of RNA processing and nuclear export make eukaryotic gene expression slower than prokaryotic.",
+          "distractors": [
+            { "answer": "faster", "explanation": "Eukaryotic gene expression is slower due to RNA processing and the need to export mRNA from the nucleus." },
+            { "answer": "identical", "explanation": "Eukaryotic gene expression involves more steps and is therefore slower than prokaryotic." }
+          ]
+        },
+        "2": {
+          "correct": "exported",
+          "correctExplanation": "Mature mRNA must be exported through nuclear pores from the nucleus to the cytoplasm where ribosomes can translate it.",
+          "distractors": [
+            { "answer": "replicated", "explanation": "mRNA is not replicated. It is exported from the nucleus to the cytoplasm for translation." },
+            { "answer": "destroyed", "explanation": "mRNA is not destroyed before translation. It is exported to the cytoplasm for translation." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "TF",
+      "question": "The nuclear membrane in eukaryotes acts as a physical barrier that separates transcription from translation.",
+      "correct": "True",
+      "correctExplanation": "Transcription occurs inside the nucleus while translation occurs in the cytoplasm. The nuclear membrane separates these two processes, requiring mRNA export.",
+      "distractors": [
+        { "answer": "False", "explanation": "This is correct. The nuclear membrane physically separates the nucleus (transcription) from the cytoplasm (translation)." }
+      ]
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "MC",
+      "question": "A researcher introduces a eukaryotic gene (containing introns) into a prokaryotic cell. Predict what would happen when the cell tries to express this gene.",
+      "correct": "The mRNA would be translated with introns included, producing a non-functional protein",
+      "correctExplanation": "Prokaryotes lack the splicing machinery to remove introns. The intron sequences would be translated along with exons, inserting incorrect amino acids and likely producing a non-functional protein.",
+      "distractors": [
+        { "answer": "The prokaryote would splice out the introns normally", "explanation": "Prokaryotes lack spliceosomes and cannot perform intron splicing." },
+        { "answer": "The gene would not be transcribed at all", "explanation": "The gene could still be transcribed if it has a prokaryotic promoter, but the mRNA would contain untranslatable intron sequences." },
+        { "answer": "The introns would be automatically converted to exons", "explanation": "Introns cannot be converted to exons. They are non-coding sequences that must be removed by splicing." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "How does the ability of prokaryotes to couple transcription and translation relate to the function of the trp operon?",
+      "correct": "Rapid protein production allows prokaryotes to quickly respond to changes in tryptophan levels",
+      "correctExplanation": "The trp operon enables E. coli to rapidly produce tryptophan synthesis enzymes when levels drop. Coupled transcription and translation ensures the enzymes are produced as quickly as possible.",
+      "distractors": [
+        { "answer": "The trp operon only functions in eukaryotic cells", "explanation": "The trp operon is a prokaryotic gene regulation system found in bacteria like E. coli." },
+        { "answer": "Coupled transcription and translation prevents tryptophan production", "explanation": "Coupled processes actually speed up tryptophan enzyme production when the operon is active." },
+        { "answer": "The trp operon requires RNA processing to function", "explanation": "Prokaryotic operons do not require RNA processing. mRNA is translated directly." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A biotechnologist wants to produce a human protein in E. coli. Why would they need to use a cDNA copy of the gene rather than the genomic DNA?",
+      "correct": "cDNA lacks introns, so E. coli can translate the mRNA correctly without needing to splice",
+      "correctExplanation": "cDNA is made from mature mRNA (introns already removed). Since E. coli cannot splice introns, using cDNA ensures the gene is correctly expressed.",
+      "distractors": [
+        { "answer": "E. coli cannot transcribe human DNA", "explanation": "E. coli can transcribe human DNA if the correct promoter is provided. The issue is intron removal during translation." },
+        { "answer": "cDNA is smaller and fits better in prokaryotic cells", "explanation": "While cDNA is smaller, the main reason is that it lacks introns, which E. coli cannot remove." },
+        { "answer": "Genomic DNA would be destroyed by E. coli enzymes", "explanation": "E. coli can maintain foreign DNA (especially in plasmids). The issue is the inability to splice introns." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Compare the fate of a newly transcribed mRNA molecule in a eukaryotic cell versus a prokaryotic cell.",
+      "correct": "In eukaryotes it is processed, exported, then translated; in prokaryotes it is translated immediately",
+      "correctExplanation": "Eukaryotic mRNA undergoes capping, polyadenylation, and splicing in the nucleus before export and translation. Prokaryotic mRNA is translated directly as it is being made.",
+      "distractors": [
+        { "answer": "In both cell types, mRNA is processed before translation", "explanation": "Only eukaryotic mRNA is processed. Prokaryotic mRNA is translated without processing." },
+        { "answer": "In eukaryotes it is translated immediately; in prokaryotes it is processed first", "explanation": "This is reversed. Eukaryotes process mRNA; prokaryotes translate it immediately." },
+        { "answer": "In both cell types, mRNA is translated while still being transcribed", "explanation": "This only occurs in prokaryotes. In eukaryotes, the nuclear membrane prevents simultaneous transcription and translation." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "How does alternative splicing in eukaryotes demonstrate an advantage that prokaryotic gene expression cannot achieve?",
+      "correct": "One eukaryotic gene can produce multiple different proteins by including different combinations of exons",
+      "correctExplanation": "Alternative splicing allows different exon combinations from the same pre-mRNA, producing multiple protein variants from one gene. Prokaryotes lack introns and splicing, so each gene produces only one protein.",
+      "distractors": [
+        { "answer": "Alternative splicing also occurs in prokaryotes", "explanation": "Prokaryotes lack introns and spliceosomes, so alternative splicing does not occur." },
+        { "answer": "Alternative splicing makes eukaryotic gene expression faster", "explanation": "Alternative splicing does not speed up expression; it increases protein diversity from a single gene." },
+        { "answer": "Prokaryotes achieve the same result through coupled transcription and translation", "explanation": "Coupled transcription and translation speeds up expression but does not produce multiple proteins from one gene." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "An antibiotic targets the 70S ribosome found in prokaryotic cells. Explain why this antibiotic would not affect human cells.",
+      "correct": "Human cells have 80S ribosomes with different structure, so the antibiotic cannot bind to them",
+      "correctExplanation": "Prokaryotic (70S) and eukaryotic (80S) ribosomes differ in structure. Antibiotics targeting 70S ribosomes bind specifically to prokaryotic ribosome components, leaving human 80S ribosomes unaffected.",
+      "distractors": [
+        { "answer": "Human cells do not perform translation", "explanation": "Human cells do perform translation using 80S ribosomes. The antibiotic simply does not target these ribosomes." },
+        { "answer": "The antibiotic is broken down by the nuclear membrane", "explanation": "The nuclear membrane does not break down antibiotics. The selectivity is due to ribosome structural differences." },
+        { "answer": "Human ribosomes are also 70S and would be affected", "explanation": "Human cytoplasmic ribosomes are 80S, not 70S, so they are not targeted by antibiotics specific to 70S ribosomes." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A mutation in a eukaryotic cell destroys the nuclear pore complexes. How would this specifically affect gene expression?",
+      "correct": "mRNA could not be exported to the cytoplasm, preventing translation",
+      "correctExplanation": "Nuclear pores allow mature mRNA to exit the nucleus. Without functional pores, processed mRNA would be trapped in the nucleus and could not reach ribosomes for translation.",
+      "distractors": [
+        { "answer": "Transcription would stop completely", "explanation": "Transcription occurs inside the nucleus and does not require nuclear pores. Export of mRNA would be blocked." },
+        { "answer": "Translation would occur inside the nucleus instead", "explanation": "Ribosomes are not normally present inside the nucleus, so translation would not occur there." },
+        { "answer": "RNA processing would be prevented", "explanation": "RNA processing occurs in the nucleus and does not require nuclear pores. Export is the step that would be blocked." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Apply your knowledge to a biotechnology scenario.",
+      "sentence": "To express a human gene in E. coli, scientists use {{blank:1}} (made from mature mRNA) rather than genomic DNA because E. coli lacks the machinery to remove {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "cDNA",
+          "correctExplanation": "cDNA (complementary DNA) is synthesised from mature mRNA using reverse transcriptase, so it contains only exons with no introns.",
+          "distractors": [
+            { "answer": "rDNA", "explanation": "rDNA refers to recombinant DNA, which is a broader term. cDNA specifically refers to DNA made from mRNA." },
+            { "answer": "tRNA", "explanation": "tRNA carries amino acids during translation. cDNA is the correct term for DNA made from mRNA." }
+          ]
+        },
+        "2": {
+          "correct": "introns",
+          "correctExplanation": "Prokaryotes lack spliceosomes and cannot remove introns. cDNA has no introns, so the protein is produced correctly.",
+          "distractors": [
+            { "answer": "exons", "explanation": "Exons are the coding sequences that must be retained. Introns are the non-coding sequences that need removal." },
+            { "answer": "promoters", "explanation": "Promoters are needed for transcription. Introns are what E. coli cannot remove." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Compare ribosome types in different cell types.",
+      "sentence": "Prokaryotic ribosomes are {{blank:1}} in size, while eukaryotic cytoplasmic ribosomes are {{blank:2}} in size.",
+      "blanks": {
+        "1": {
+          "correct": "70S",
+          "correctExplanation": "Prokaryotic ribosomes are 70S, composed of a 30S small subunit and a 50S large subunit.",
+          "distractors": [
+            { "answer": "80S", "explanation": "80S ribosomes are found in eukaryotic cells, not prokaryotes." },
+            { "answer": "60S", "explanation": "60S is the large subunit of eukaryotic ribosomes, not the complete prokaryotic ribosome." }
+          ]
+        },
+        "2": {
+          "correct": "80S",
+          "correctExplanation": "Eukaryotic cytoplasmic ribosomes are 80S, composed of a 40S small subunit and a 60S large subunit.",
+          "distractors": [
+            { "answer": "70S", "explanation": "70S ribosomes are found in prokaryotes, not in the eukaryotic cytoplasm." },
+            { "answer": "90S", "explanation": "90S is not a standard ribosome size. Eukaryotic cytoplasmic ribosomes are 80S." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Explain the consequence of spatial separation in eukaryotes.",
+      "sentence": "The spatial separation of transcription and translation in eukaryotes allows for {{blank:1}} splicing, which enables one gene to produce {{blank:2}} different proteins.",
+      "blanks": {
+        "1": {
+          "correct": "alternative",
+          "correctExplanation": "Alternative splicing allows different combinations of exons to be joined, producing multiple mRNA variants from one pre-mRNA.",
+          "distractors": [
+            { "answer": "mandatory", "explanation": "While splicing is required in eukaryotes, the specific advantage described here is alternative splicing, which produces protein diversity." },
+            { "answer": "reverse", "explanation": "Reverse splicing is not a standard biological process. Alternative splicing is the correct term." }
+          ]
+        },
+        "2": {
+          "correct": "multiple",
+          "correctExplanation": "By selecting different exon combinations, alternative splicing can produce several different proteins from a single gene.",
+          "distractors": [
+            { "answer": "identical", "explanation": "Alternative splicing produces different protein variants, not identical copies." },
+            { "answer": "fewer", "explanation": "Alternative splicing increases the number of proteins from one gene, not decreases it." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "MC",
+      "question": "Evaluate the evolutionary significance of the nuclear membrane in terms of gene regulation complexity.",
+      "correct": "The nuclear membrane enabled additional regulatory steps between transcription and translation, increasing complexity",
+      "correctExplanation": "The physical separation allowed the evolution of RNA processing, alternative splicing, and mRNA quality control. These additional regulatory layers contribute to the greater complexity of eukaryotic organisms.",
+      "distractors": [
+        { "answer": "The nuclear membrane reduced gene regulation by isolating DNA", "explanation": "Rather than reducing regulation, the nuclear membrane added regulatory opportunities by separating transcription from translation." },
+        { "answer": "The nuclear membrane had no effect on gene regulation evolution", "explanation": "The membrane was a key innovation that enabled new regulatory mechanisms like RNA processing and alternative splicing." },
+        { "answer": "Prokaryotes have more complex gene regulation because they lack a nuclear membrane", "explanation": "While prokaryotes have sophisticated regulation (e.g., operons), eukaryotes have additional layers of post-transcriptional regulation enabled by the nuclear membrane." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A student argues that prokaryotic gene expression is 'better' than eukaryotic because it is faster. Critically evaluate this claim.",
+      "correct": "Speed is advantageous for rapid responses, but eukaryotic processing enables greater protein diversity and regulation",
+      "correctExplanation": "Prokaryotic speed is advantageous for quick adaptation, but eukaryotic processing (especially alternative splicing) allows more protein variants from fewer genes and more precise regulation of gene expression.",
+      "distractors": [
+        { "answer": "The student is correct; faster is always better in biology", "explanation": "Speed is one advantage, but complexity, regulation, and protein diversity are equally important. Neither system is universally 'better'." },
+        { "answer": "The student is incorrect; eukaryotic expression is faster", "explanation": "Eukaryotic expression is actually slower due to processing and export. The student's observation about speed is correct, but their conclusion is flawed." },
+        { "answer": "Both systems are identical in speed and regulation", "explanation": "The two systems differ significantly in both speed and regulatory complexity." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Analyse how the differences between prokaryotic and eukaryotic transcription are exploited in modern biotechnology.",
+      "correct": "Understanding these differences allows scientists to express eukaryotic genes in prokaryotes using cDNA and appropriate vectors",
+      "correctExplanation": "Biotechnologists use cDNA (which lacks introns) with prokaryotic expression vectors to produce human proteins like insulin in bacteria, exploiting the differences between the two systems.",
+      "distractors": [
+        { "answer": "These differences are not relevant to biotechnology", "explanation": "Understanding these differences is fundamental to recombinant DNA technology and protein production." },
+        { "answer": "Biotechnologists only use eukaryotic cells for protein production", "explanation": "Prokaryotic cells (like E. coli) are widely used for protein production, especially when the gene is provided as cDNA." },
+        { "answer": "The differences prevent any cross-kingdom gene expression", "explanation": "Using cDNA and appropriate promoters, eukaryotic genes can be expressed in prokaryotes." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Compare the consequences of a mutation in a splice site in a eukaryotic gene versus a similar position mutation in a prokaryotic gene.",
+      "correct": "In eukaryotes, intron retention could produce a non-functional protein; in prokaryotes, there are no splice sites to mutate",
+      "correctExplanation": "Eukaryotic splice site mutations can prevent intron removal, leading to inclusion of non-coding sequence in the mRNA and a non-functional protein. Prokaryotic genes lack introns, so this type of mutation cannot occur.",
+      "distractors": [
+        { "answer": "Both organisms would be equally affected", "explanation": "Prokaryotes lack introns and splice sites, so this specific type of mutation is irrelevant to them." },
+        { "answer": "The mutation would have no effect in either organism", "explanation": "In eukaryotes, a splice site mutation can have severe effects on protein function." },
+        { "answer": "Prokaryotes would be more severely affected because they lack repair mechanisms", "explanation": "Prokaryotes lack splice sites entirely, so a mutation in the equivalent position would not cause a splicing error." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Evaluate how the coupled transcription-translation in prokaryotes relates to the speed at which bacteria can develop antibiotic resistance.",
+      "correct": "Rapid protein production allows resistance genes to be expressed quickly once acquired, providing immediate survival advantage",
+      "correctExplanation": "When a bacterium acquires a resistance gene (e.g., via plasmid transfer), coupled transcription-translation enables rapid production of the resistance protein, giving immediate protection against the antibiotic.",
+      "distractors": [
+        { "answer": "Coupled transcription-translation causes antibiotic resistance mutations", "explanation": "Coupled processes do not cause mutations. They allow rapid expression of existing resistance genes." },
+        { "answer": "Speed of expression is irrelevant to antibiotic resistance", "explanation": "Rapid expression of resistance genes provides an immediate survival advantage when exposed to antibiotics." },
+        { "answer": "Only eukaryotic organisms can develop antibiotic resistance", "explanation": "Antibiotic resistance is primarily a prokaryotic phenomenon. Eukaryotic cells are not typically targeted by antibiotics." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Predict what would happen if a eukaryotic cell lost the ability to add a 5' cap to its pre-mRNA.",
+      "correct": "The mRNA would be rapidly degraded and poorly recognised by ribosomes, severely reducing protein production",
+      "correctExplanation": "The 5' cap protects mRNA from degradation by exonucleases and helps ribosomes recognise and bind to the mRNA. Without it, mRNA would be unstable and translation would be greatly reduced.",
+      "distractors": [
+        { "answer": "Protein production would continue normally", "explanation": "Without the 5' cap, mRNA would be degraded faster and ribosomes would have difficulty initiating translation." },
+        { "answer": "The cell would switch to prokaryotic-style translation", "explanation": "Eukaryotic cells cannot switch to prokaryotic translation mechanisms. The loss of capping would impair gene expression." },
+        { "answer": "Only translation of intron-containing genes would be affected", "explanation": "The 5' cap is added to all eukaryotic mRNAs, not just those from intron-containing genes. All gene expression would be affected." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Analyse why some viruses that infect eukaryotic cells carry their own RNA processing enzymes while others rely on the host cell's machinery.",
+      "correct": "Viruses replicating in the cytoplasm need their own enzymes since host processing occurs in the nucleus",
+      "correctExplanation": "Viruses that replicate in the cytoplasm cannot access the nuclear RNA processing machinery. They must carry their own enzymes for capping and other modifications. Viruses that replicate in the nucleus can use the host's processing machinery.",
+      "distractors": [
+        { "answer": "All viruses use host cell processing machinery", "explanation": "Cytoplasmic viruses cannot access nuclear processing machinery and must provide their own enzymes." },
+        { "answer": "No viruses require RNA processing", "explanation": "Viral mRNAs need caps and other modifications for translation. Either the virus or host must provide this machinery." },
+        { "answer": "Viruses in the nucleus cannot use host enzymes", "explanation": "Nuclear-replicating viruses can and do use host RNA processing enzymes." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Critically compare the error-checking opportunities in eukaryotic versus prokaryotic gene expression.",
+      "correct": "Eukaryotes have more quality control checkpoints due to RNA processing and nuclear export, reducing defective protein production",
+      "correctExplanation": "Eukaryotic mRNA undergoes quality checks during processing, splicing, and nuclear export. Nonsense-mediated decay can catch aberrant mRNAs. Prokaryotes have fewer checkpoints since translation begins immediately.",
+      "distractors": [
+        { "answer": "Prokaryotes have more error-checking because of faster expression", "explanation": "Faster expression means fewer checkpoints, not more. Prokaryotic rapid expression sacrifices some quality control." },
+        { "answer": "Both systems have identical quality control mechanisms", "explanation": "Eukaryotic gene expression has additional quality control steps due to RNA processing and nuclear export." },
+        { "answer": "Neither system has quality control for mRNA", "explanation": "Both systems have some quality control, but eukaryotes have additional mechanisms including nonsense-mediated decay." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Evaluate the trade-offs between prokaryotic and eukaryotic gene expression.",
+      "sentence": "Prokaryotic gene expression prioritises {{blank:1}} of protein production, while eukaryotic gene expression prioritises {{blank:2}} through additional processing steps.",
+      "blanks": {
+        "1": {
+          "correct": "speed",
+          "correctExplanation": "Coupled transcription and translation in prokaryotes maximises the speed at which proteins are produced, enabling rapid responses to environmental changes.",
+          "distractors": [
+            { "answer": "accuracy", "explanation": "While prokaryotes have quality control, their main advantage over eukaryotes in gene expression is speed, not accuracy." },
+            { "answer": "diversity", "explanation": "Eukaryotes achieve greater protein diversity through alternative splicing. Prokaryotic expression prioritises speed." }
+          ]
+        },
+        "2": {
+          "correct": "regulation and diversity",
+          "correctExplanation": "RNA processing, alternative splicing, and nuclear export provide eukaryotes with more regulatory control and greater protein diversity from fewer genes.",
+          "distractors": [
+            { "answer": "speed and simplicity", "explanation": "Speed and simplicity characterise prokaryotic expression. Eukaryotic expression trades speed for regulation and diversity." },
+            { "answer": "energy efficiency", "explanation": "Eukaryotic processing requires additional energy. The advantage is regulation and diversity, not energy savings." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Analyse the biotechnology implications of these differences.",
+      "sentence": "When producing human insulin in bacteria, scientists must use {{blank:1}} because prokaryotes cannot perform {{blank:2}}, which is required to remove non-coding sequences from eukaryotic genes.",
+      "blanks": {
+        "1": {
+          "correct": "cDNA",
+          "correctExplanation": "cDNA is made from mature mRNA (after splicing) and contains only the coding sequence, allowing correct expression in prokaryotes.",
+          "distractors": [
+            { "answer": "genomic DNA", "explanation": "Genomic DNA contains introns that prokaryotes cannot remove, leading to incorrect protein production." },
+            { "answer": "plasmid DNA", "explanation": "While plasmids are used as vectors, the gene itself must be cDNA. Plasmid DNA is the carrier, not the gene source." }
+          ]
+        },
+        "2": {
+          "correct": "RNA splicing",
+          "correctExplanation": "Prokaryotes lack spliceosomes and cannot remove introns from pre-mRNA. Using cDNA bypasses this limitation.",
+          "distractors": [
+            { "answer": "transcription", "explanation": "Prokaryotes can transcribe foreign DNA. The problem is their inability to splice introns from the resulting mRNA." },
+            { "answer": "translation", "explanation": "Prokaryotes can translate mRNA. The issue is the inability to process intron-containing mRNA before translation." }
+          ]
+        }
+      }
+    }
+  ]
+}

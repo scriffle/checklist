@@ -1,0 +1,583 @@
+{
+  "_link": {
+    "uuid": "lp-9f57222b-2180-66e0-46d8-72be11f97c3d",
+    "version": 1,
+    "contentHash": "befe1e57",
+    "title": "I can describe how CRISPR-Cas9 is applied as a genome editing tool",
+    "generatedAt": "2026-02-10T12:09:00.000Z"
+  },
+  "toLevel2": [
+    {
+      "type": "MC",
+      "question": "What do scientists design to target a specific gene using CRISPR-Cas9?",
+      "correct": "A single guide RNA (sgRNA) complementary to the target sequence",
+      "correctExplanation": "Scientists create a synthetic sgRNA with a sequence complementary to the target gene, which directs Cas9 to the precise location for cutting.",
+      "distractors": [
+        { "answer": "A restriction enzyme specific to the target gene", "explanation": "CRISPR uses sgRNA and Cas9, not restriction enzymes, for targeted cutting." },
+        { "answer": "A primer pair for PCR amplification of the gene", "explanation": "Primers are used in PCR; CRISPR uses sgRNA to guide Cas9 to the target." },
+        { "answer": "A recombinant plasmid containing the gene", "explanation": "Recombinant plasmids are used in gene cloning; CRISPR uses sgRNA and Cas9 for genome editing." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "What does Cas9 do once it is guided to the target DNA sequence?",
+      "correct": "It cuts both strands of the DNA at the target location",
+      "correctExplanation": "Cas9 is an endonuclease that creates a double-stranded break at the precise location specified by the sgRNA.",
+      "distractors": [
+        { "answer": "It copies the target DNA sequence", "explanation": "Cas9 cuts DNA; copying is performed by DNA polymerase." },
+        { "answer": "It joins two DNA fragments together", "explanation": "Joining DNA is the role of DNA ligase; Cas9 creates cuts." },
+        { "answer": "It translates the DNA into protein", "explanation": "Translation is performed by ribosomes; Cas9 cuts DNA." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "What happens after Cas9 cuts both strands of the target DNA?",
+      "correct": "The cell's natural repair enzymes either disable the gene or insert a new DNA sequence",
+      "correctExplanation": "After the cut, cellular DNA repair mechanisms either introduce insertions/deletions (disabling the gene) or incorporate a provided template to insert a beneficial sequence.",
+      "distractors": [
+        { "answer": "The DNA is permanently destroyed and cannot be repaired", "explanation": "Cells have DNA repair mechanisms that act on the cut site." },
+        { "answer": "Cas9 automatically inserts the correct replacement sequence", "explanation": "Cas9 only cuts; the cell's own repair enzymes handle the repair or insertion." },
+        { "answer": "The cut DNA is removed from the cell entirely", "explanation": "The DNA remains in the cell and is repaired by cellular mechanisms." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "What short DNA sequence must be adjacent to the target for Cas9 to cut?",
+      "correct": "A PAM (Protospacer Adjacent Motif) sequence",
+      "correctExplanation": "Cas9 requires a PAM sequence next to the target site for recognition and cutting. Without a PAM, Cas9 cannot bind and cut.",
+      "distractors": [
+        { "answer": "A VNTR sequence", "explanation": "VNTRs are used in DNA profiling; PAM sequences are required for Cas9 function." },
+        { "answer": "A promoter sequence", "explanation": "Promoters initiate transcription; PAM sequences are required for Cas9 recognition." },
+        { "answer": "A restriction enzyme recognition site", "explanation": "CRISPR uses PAM sequences, not restriction enzyme sites, for targeting." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Which disease has been targeted for correction using CRISPR-Cas9 genome editing?",
+      "correct": "Sickle cell disease",
+      "correctExplanation": "CRISPR-Cas9 has been used to correct the mutation in the haemoglobin gene that causes sickle cell disease, restoring normal protein production.",
+      "distractors": [
+        { "answer": "The common cold", "explanation": "The common cold is caused by viral infection, not a single gene mutation suitable for CRISPR editing." },
+        { "answer": "A broken bone", "explanation": "A broken bone is a physical injury, not a genetic condition that can be corrected by gene editing." },
+        { "answer": "Sunburn", "explanation": "Sunburn is caused by UV damage, not a genetic mutation amenable to CRISPR editing." }
+      ]
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the sentence about how CRISPR-Cas9 genome editing works.",
+      "sentence": "Scientists design a {{blank:1}} that is complementary to the target gene, and inject it along with the {{blank:2}} enzyme into the cell.",
+      "blanks": {
+        "1": {
+          "correct": "single guide RNA",
+          "correctExplanation": "The sgRNA is designed to be complementary to the target DNA sequence, directing Cas9 to the correct location.",
+          "distractors": [
+            { "answer": "restriction enzyme", "explanation": "CRISPR uses sgRNA, not restriction enzymes, for targeting." },
+            { "answer": "DNA primer", "explanation": "Primers are used in PCR; sgRNA is the targeting molecule in CRISPR." }
+          ]
+        },
+        "2": {
+          "correct": "Cas9",
+          "correctExplanation": "Cas9 is the endonuclease that creates the double-stranded cut at the sgRNA-specified location.",
+          "distractors": [
+            { "answer": "ligase", "explanation": "Ligase joins DNA; Cas9 is the cutting enzyme in CRISPR." },
+            { "answer": "polymerase", "explanation": "Polymerase copies DNA; Cas9 cuts DNA at the target site." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the sentence about the outcome of CRISPR editing.",
+      "sentence": "After Cas9 cuts the DNA, the cell's repair enzymes can either {{blank:1}} the gene by introducing errors, or {{blank:2}} a new beneficial DNA sequence.",
+      "blanks": {
+        "1": {
+          "correct": "disable",
+          "correctExplanation": "The cell's error-prone repair can introduce insertions or deletions that disrupt the gene's reading frame, disabling it.",
+          "distractors": [
+            { "answer": "amplify", "explanation": "Amplification copies DNA; the repair mechanism can disable the gene by introducing errors." },
+            { "answer": "translate", "explanation": "Translation produces protein; repair enzymes can disable the gene through insertions or deletions." }
+          ]
+        },
+        "2": {
+          "correct": "insert",
+          "correctExplanation": "If a template DNA sequence is provided, the cell's repair machinery can incorporate it at the cut site, inserting a correct or beneficial sequence.",
+          "distractors": [
+            { "answer": "delete", "explanation": "While deletion can occur, the sentence describes the alternative outcome of inserting a new sequence." },
+            { "answer": "transcribe", "explanation": "Transcription produces RNA; the repair mechanism can insert a new DNA sequence." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the sentence about correcting sickle cell disease.",
+      "sentence": "To correct sickle cell disease, scientists design sgRNA complementary to the {{blank:1}} sequence, and Cas9 cuts the DNA so repair enzymes can insert the {{blank:2}} sequence.",
+      "blanks": {
+        "1": {
+          "correct": "mutated",
+          "correctExplanation": "The sgRNA targets the specific mutation in the haemoglobin gene that causes sickle cell disease.",
+          "distractors": [
+            { "answer": "normal", "explanation": "The sgRNA targets the mutated sequence that needs to be corrected, not the normal sequence." },
+            { "answer": "viral", "explanation": "Sickle cell disease is caused by a gene mutation, not a viral sequence." }
+          ]
+        },
+        "2": {
+          "correct": "correct",
+          "correctExplanation": "The repair enzymes incorporate the correct DNA sequence at the cut site, restoring normal haemoglobin production.",
+          "distractors": [
+            { "answer": "mutated", "explanation": "The goal is to replace the mutation with the correct sequence, not to introduce more mutations." },
+            { "answer": "viral", "explanation": "The replacement sequence is the normal human gene, not a viral sequence." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "TF",
+      "question": "CRISPR-Cas9 can be programmed to target any specific DNA sequence by changing the sgRNA.",
+      "correct": "True",
+      "correctExplanation": "The key advantage of CRISPR is its programmability. By designing an sgRNA complementary to any target, Cas9 can be directed to cut at that specific location.",
+      "distractors": [
+        { "answer": "False", "explanation": "CRISPR-Cas9 is indeed programmable; changing the sgRNA sequence changes the target location." }
+      ]
+    },
+    {
+      "type": "TF",
+      "question": "Cas9 both cuts the DNA and repairs it at the target site.",
+      "correct": "False",
+      "correctExplanation": "Cas9 only creates the double-stranded cut. The cell's own natural repair enzymes handle the repair or insertion of new sequences.",
+      "distractors": [
+        { "answer": "True", "explanation": "Cas9 is only a cutting enzyme. DNA repair is carried out by the cell's own repair machinery, not by Cas9." }
+      ]
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "MC",
+      "question": "Explain why the sgRNA must be complementary to the target DNA sequence for CRISPR-Cas9 to work.",
+      "correct": "Complementary base pairing between sgRNA and target DNA ensures Cas9 binds to the correct location and does not cut elsewhere",
+      "correctExplanation": "The specificity of CRISPR relies on Watson-Crick base pairing. The sgRNA finds its target through A-U and G-C pairing, ensuring precise targeting.",
+      "distractors": [
+        { "answer": "The sgRNA directly cuts the DNA, so it needs to match for cutting", "explanation": "The sgRNA guides Cas9 to the target; Cas9 performs the actual cutting." },
+        { "answer": "Complementary binding is optional; Cas9 can find targets without sgRNA", "explanation": "Cas9 requires sgRNA for target recognition; without it, Cas9 cannot locate specific sequences." },
+        { "answer": "The sgRNA folds the DNA into a shape that Cas9 can recognise", "explanation": "The sgRNA binds by complementary base pairing, not by folding the DNA." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "What are the two possible outcomes after Cas9 creates a double-stranded break in the target gene?",
+      "correct": "The gene is disabled by error-prone repair (insertions/deletions), or a provided template sequence is incorporated at the cut site",
+      "correctExplanation": "Non-homologous end joining (NHEJ) introduces errors that disable the gene, while homology-directed repair (HDR) can insert a template sequence to correct or modify the gene.",
+      "distractors": [
+        { "answer": "The gene is always perfectly repaired to its original state", "explanation": "Repair is not always perfect; NHEJ introduces errors, and HDR requires a template." },
+        { "answer": "The cell always dies after a double-stranded break", "explanation": "Cells have repair mechanisms that handle double-stranded breaks; they do not always die." },
+        { "answer": "Cas9 repairs the break automatically using its own repair domain", "explanation": "Cas9 only cuts; it has no repair function. Cellular enzymes handle repair." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "How does CRISPR-Cas9 genome editing differ from traditional gene cloning with plasmids?",
+      "correct": "CRISPR edits genes directly within the organism's own chromosome, while gene cloning inserts foreign genes into bacteria using plasmid vectors",
+      "correctExplanation": "CRISPR modifies existing genes in situ, while gene cloning transfers genes between organisms using vectors.",
+      "distractors": [
+        { "answer": "Both techniques produce identical results", "explanation": "CRISPR edits existing genes while cloning copies foreign genes into bacteria — fundamentally different approaches." },
+        { "answer": "Gene cloning is more precise than CRISPR", "explanation": "CRISPR offers unprecedented precision in targeting specific sequences within a genome." },
+        { "answer": "CRISPR requires restriction enzymes while gene cloning does not", "explanation": "Gene cloning uses restriction enzymes; CRISPR uses sgRNA and Cas9 instead." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Why is a PAM sequence required for Cas9 to cut the target DNA?",
+      "correct": "The PAM sequence is a short motif that Cas9 must recognise before it can bind and unwind the DNA for sgRNA base pairing",
+      "correctExplanation": "Cas9 first scans for PAM sequences, then checks for sgRNA complementarity. The PAM acts as an initial recognition site that triggers the cutting mechanism.",
+      "distractors": [
+        { "answer": "The PAM sequence is where the sgRNA binds", "explanation": "The sgRNA binds to the target sequence adjacent to the PAM; Cas9 recognises the PAM directly." },
+        { "answer": "The PAM sequence repairs the DNA after cutting", "explanation": "The PAM is a recognition motif; DNA repair is performed by cellular enzymes." },
+        { "answer": "The PAM sequence is only needed in bacterial systems, not in genome editing", "explanation": "Cas9 requires a PAM sequence for all targets, including genome editing applications." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Describe how CRISPR-Cas9 could be used to correct the sickle cell disease mutation.",
+      "correct": "Design sgRNA targeting the mutated haemoglobin sequence, deliver it with Cas9 to patient cells, cut the mutation, and provide a template for repair enzymes to insert the correct sequence",
+      "correctExplanation": "This step-by-step approach uses the sgRNA for targeting, Cas9 for cutting, and a provided DNA template for the cell's repair machinery to insert the normal sequence.",
+      "distractors": [
+        { "answer": "Insert the entire haemoglobin gene into a plasmid and transform patient blood cells", "explanation": "This describes gene cloning, not CRISPR editing; CRISPR corrects the existing gene in place." },
+        { "answer": "Use PCR to amplify the normal gene and inject it into patient cells", "explanation": "PCR copies DNA but does not integrate it into the genome; CRISPR precisely edits the existing gene." },
+        { "answer": "Cut out the entire haemoglobin gene and replace it with one from a donor", "explanation": "CRISPR makes a precise edit at the mutation site, not a whole-gene replacement." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "What is the advantage of using CRISPR-Cas9 to disable a harmful gene rather than correcting it?",
+      "correct": "Disabling a gene through insertions or deletions is simpler because it does not require providing a template DNA sequence for repair",
+      "correctExplanation": "Gene knockout by NHEJ simply disrupts the gene through random insertions/deletions, while gene correction (HDR) requires an additional template sequence, making it more complex.",
+      "distractors": [
+        { "answer": "Disabling a gene is always better than correcting it", "explanation": "Disabling is simpler but not always preferable; some conditions require a functional replacement." },
+        { "answer": "Gene correction is easier than gene disabling", "explanation": "Gene disabling uses error-prone repair which is simpler; correction requires a template sequence." },
+        { "answer": "There is no advantage; both approaches have identical complexity", "explanation": "Gene disabling is technically simpler because it relies on error-prone repair without a template." }
+      ]
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the sentence about the two repair outcomes.",
+      "sentence": "Error-prone repair introduces {{blank:1}} or deletions that disable the gene, while template-directed repair inserts a {{blank:2}} DNA sequence to correct it.",
+      "blanks": {
+        "1": {
+          "correct": "insertions",
+          "correctExplanation": "Non-homologous end joining (NHEJ) can introduce random insertions or deletions at the cut site, disrupting the gene.",
+          "distractors": [
+            { "answer": "translations", "explanation": "Translation is protein synthesis; the repair mechanism introduces insertions (extra nucleotides)." },
+            { "answer": "amplifications", "explanation": "Amplification copies DNA; NHEJ introduces random insertions or deletions." }
+          ]
+        },
+        "2": {
+          "correct": "correct",
+          "correctExplanation": "When a DNA template with the correct sequence is provided, the cell's repair machinery can incorporate it at the cut site.",
+          "distractors": [
+            { "answer": "random", "explanation": "Template-directed repair uses a specific provided sequence, not a random one." },
+            { "answer": "viral", "explanation": "The template sequence is designed by scientists, not derived from a virus." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the sentence comparing CRISPR with gene cloning.",
+      "sentence": "CRISPR edits genes {{blank:1}} within the organism's own genome, while gene cloning transfers genes into {{blank:2}} using plasmid vectors.",
+      "blanks": {
+        "1": {
+          "correct": "directly",
+          "correctExplanation": "CRISPR makes precise changes to genes within their natural chromosomal location.",
+          "distractors": [
+            { "answer": "randomly", "explanation": "CRISPR is highly targeted, not random; the sgRNA ensures precise targeting." },
+            { "answer": "externally", "explanation": "CRISPR works inside the cell on the organism's own genome, not externally." }
+          ]
+        },
+        "2": {
+          "correct": "bacteria",
+          "correctExplanation": "Traditional gene cloning uses plasmid vectors to insert foreign genes into bacterial cells.",
+          "distractors": [
+            { "answer": "viruses", "explanation": "While viral vectors exist, the standard gene cloning example uses bacterial plasmids." },
+            { "answer": "proteins", "explanation": "Genes are transferred into bacteria, not into proteins." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the sentence about CRISPR delivery.",
+      "sentence": "To edit a gene in a patient's cells, the sgRNA and {{blank:1}} enzyme are delivered into the target cells, where Cas9 cuts the DNA adjacent to a {{blank:2}} sequence.",
+      "blanks": {
+        "1": {
+          "correct": "Cas9",
+          "correctExplanation": "Both the sgRNA and the Cas9 enzyme must be delivered into the cell for genome editing to occur.",
+          "distractors": [
+            { "answer": "ligase", "explanation": "Ligase joins DNA; Cas9 is the cutting enzyme used in CRISPR editing." },
+            { "answer": "restriction", "explanation": "CRISPR uses Cas9, not restriction enzymes, for targeted cutting." }
+          ]
+        },
+        "2": {
+          "correct": "PAM",
+          "correctExplanation": "Cas9 requires a PAM sequence adjacent to the target for recognition and cutting.",
+          "distractors": [
+            { "answer": "VNTR", "explanation": "VNTRs are used in DNA profiling; PAM sequences are required for Cas9 targeting." },
+            { "answer": "promoter", "explanation": "Promoters initiate gene expression; PAM sequences are needed for Cas9 recognition." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "TF",
+      "question": "CRISPR-Cas9 can only be used to disable genes, not to correct them.",
+      "correct": "False",
+      "correctExplanation": "CRISPR-Cas9 can both disable genes (through error-prone repair) and correct them (by providing a template for homology-directed repair).",
+      "distractors": [
+        { "answer": "True", "explanation": "CRISPR can be used for both gene knockout (disabling) and gene correction (inserting correct sequences), depending on whether a repair template is provided." }
+      ]
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "MC",
+      "question": "A researcher wants to correct a point mutation causing cystic fibrosis in a patient's lung cells. Design the CRISPR strategy they would use.",
+      "correct": "Design sgRNA targeting the mutated CFTR gene region, deliver sgRNA and Cas9 to lung cells, cut at the mutation site, and provide a template containing the correct sequence for repair",
+      "correctExplanation": "The strategy requires specific sgRNA targeting, Cas9 delivery, double-stranded cutting at the mutation, and a template with the correct CFTR sequence for homology-directed repair.",
+      "distractors": [
+        { "answer": "Use CRISPR to delete the entire CFTR gene from the patient's genome", "explanation": "Deleting the entire gene would eliminate CFTR function completely; the goal is to correct the mutation." },
+        { "answer": "Amplify the mutated gene using PCR and remove it from the genome", "explanation": "PCR copies DNA outside the cell; CRISPR edits the gene directly within the cell." },
+        { "answer": "Clone the CFTR gene into a bacterial plasmid and inject the bacteria into the patient", "explanation": "Bacterial injection would cause infection; CRISPR corrects the gene directly in the patient's cells." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A student claims that CRISPR-Cas9 always perfectly corrects disease-causing mutations. Evaluate this claim.",
+      "correct": "The claim is incorrect because off-target cuts can occur at similar sequences, and repair is not always perfect — error-prone repair may introduce additional mutations",
+      "correctExplanation": "CRISPR can cut at unintended sites with similar sequences (off-target effects), and NHEJ repair introduces random changes. Gene correction via HDR is also not 100% efficient.",
+      "distractors": [
+        { "answer": "The claim is correct because sgRNA ensures perfect targeting every time", "explanation": "While sgRNA provides high specificity, off-target cutting at similar sequences can occur." },
+        { "answer": "The claim is correct because Cas9 also repairs the DNA it cuts", "explanation": "Cas9 only cuts; it has no repair function. Cellular repair is imperfect." },
+        { "answer": "The claim is irrelevant because CRISPR is never used for disease correction", "explanation": "CRISPR is actively being developed for disease correction, including clinical trials for sickle cell disease." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Compare how CRISPR-Cas9 edits a gene versus how a restriction enzyme cuts DNA. What is the fundamental difference in their targeting mechanism?",
+      "correct": "CRISPR uses a customisable RNA guide to target any 20-nucleotide sequence, while restriction enzymes always cut at the same fixed 4-8 nucleotide recognition sites",
+      "correctExplanation": "CRISPR's targeting is programmable through sgRNA design, while restriction enzymes are limited to their specific recognition sequences.",
+      "distractors": [
+        { "answer": "Restriction enzymes are more precise than CRISPR because they cut at fixed sites", "explanation": "Fixed sites are less precise because they occur frequently; CRISPR targets unique 20-nucleotide sequences." },
+        { "answer": "CRISPR and restriction enzymes use the same targeting mechanism", "explanation": "They use fundamentally different mechanisms: RNA-guided versus protein-DNA recognition." },
+        { "answer": "CRISPR cannot target specific sequences; it cuts randomly", "explanation": "CRISPR is highly specific, targeting 20-nucleotide sequences via sgRNA complementarity." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A CRISPR experiment intended to disable a cancer-promoting gene accidentally also cuts a similar sequence in an essential gene. What is this problem called and why does it occur?",
+      "correct": "This is called an off-target effect, occurring because the sgRNA has partial complementarity to other genomic sequences",
+      "correctExplanation": "Off-target effects happen when the sgRNA matches non-target sequences closely enough for Cas9 to bind and cut, damaging unintended genes.",
+      "distractors": [
+        { "answer": "This is called a mutation and occurs because Cas9 is faulty", "explanation": "Off-target cutting is not a Cas9 fault; it results from sequence similarity between different genomic regions." },
+        { "answer": "This cannot happen because sgRNA only binds to one exact sequence", "explanation": "While sgRNA is specific, partial matches can lead to off-target binding and cutting." },
+        { "answer": "This is called transformation and is a normal part of CRISPR editing", "explanation": "Off-target effects are unintended consequences, not a normal or desired part of the process." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Why might CRISPR-Cas9 editing of somatic cells be considered less ethically controversial than editing germline cells?",
+      "correct": "Somatic cell edits affect only the treated individual and are not inherited, while germline edits would be passed to all future generations",
+      "correctExplanation": "Somatic editing is limited to the patient; germline editing creates heritable changes that affect descendants who cannot consent, raising deeper ethical concerns.",
+      "distractors": [
+        { "answer": "Somatic cells are easier to edit than germline cells", "explanation": "Technical ease is not the ethical distinction; the key issue is heritability." },
+        { "answer": "Germline editing has no biological effects on future generations", "explanation": "Germline edits are inherited and do affect future generations, which is exactly the ethical concern." },
+        { "answer": "Both types of editing have identical ethical implications", "explanation": "The heritability of germline changes creates additional ethical concerns not present in somatic editing." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A researcher uses CRISPR to disable a gene in a plant that makes the crop susceptible to a fungal disease. After cutting, no template DNA is provided. What type of repair occurs and what is the outcome?",
+      "correct": "Error-prone repair (NHEJ) introduces insertions or deletions that disrupt the susceptibility gene, potentially making the plant resistant to the fungus",
+      "correctExplanation": "Without a template, the cell uses NHEJ, which introduces random insertions/deletions. If these disrupt the susceptibility gene, the plant may no longer be susceptible to the fungal disease.",
+      "distractors": [
+        { "answer": "The gene is perfectly repaired to its original state", "explanation": "Without a template, NHEJ introduces errors that change the gene; perfect repair is not typical." },
+        { "answer": "Cas9 inserts a resistance gene from another species", "explanation": "Cas9 only cuts; it does not insert genes. Without a template, only error-prone repair occurs." },
+        { "answer": "The plant dies because the broken gene cannot be repaired", "explanation": "NHEJ repairs the break, though imperfectly. The plant survives but the gene is disrupted." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A clinical trial uses CRISPR-Cas9 to treat sickle cell disease. The treatment edits haematopoietic stem cells outside the body, then returns them to the patient. Why are stem cells targeted rather than mature red blood cells?",
+      "correct": "Stem cells continuously produce new blood cells, so editing them provides a lasting source of corrected cells; mature red blood cells lack nuclei and cannot be edited",
+      "correctExplanation": "Editing stem cells ensures all daughter blood cells carry the correction. Mature red blood cells lack nuclei (and DNA), so they cannot be edited.",
+      "distractors": [
+        { "answer": "Mature red blood cells are easier to edit but the effects wear off quickly", "explanation": "Mature RBCs cannot be edited at all because they lack nuclei and DNA." },
+        { "answer": "Stem cells are chosen because they are cheaper to work with", "explanation": "Stem cells are chosen for biological reasons (self-renewal), not cost." },
+        { "answer": "Only stem cells contain the haemoglobin gene", "explanation": "All nucleated cells contain the haemoglobin gene, but mature RBCs lack nuclei." }
+      ]
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Apply your understanding to the sickle cell treatment.",
+      "sentence": "In the CRISPR treatment for sickle cell disease, {{blank:1}} stem cells are edited outside the body and then returned to the patient, providing a lasting source of {{blank:2}} blood cells.",
+      "blanks": {
+        "1": {
+          "correct": "haematopoietic",
+          "correctExplanation": "Haematopoietic stem cells produce all types of blood cells, so editing them ensures the correction is propagated to all new blood cells.",
+          "distractors": [
+            { "answer": "epithelial", "explanation": "Epithelial stem cells produce skin cells, not blood cells." },
+            { "answer": "neural", "explanation": "Neural stem cells produce brain cells; haematopoietic stem cells produce blood cells." }
+          ]
+        },
+        "2": {
+          "correct": "corrected",
+          "correctExplanation": "The edited stem cells produce blood cells with the corrected haemoglobin gene, resolving the sickle cell phenotype.",
+          "distractors": [
+            { "answer": "mutated", "explanation": "The goal is to produce corrected, not mutated, blood cells." },
+            { "answer": "deleted", "explanation": "The gene is corrected, not deleted, so normal haemoglobin is produced." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Apply your knowledge to complete the sentence about off-target effects.",
+      "sentence": "Off-target effects occur when the sgRNA has partial {{blank:1}} to sequences other than the intended target, causing Cas9 to make {{blank:2}} cuts at wrong locations.",
+      "blanks": {
+        "1": {
+          "correct": "complementarity",
+          "correctExplanation": "Partial complementarity between the sgRNA and non-target sequences can lead to unintended binding and cutting.",
+          "distractors": [
+            { "answer": "identity", "explanation": "The binding is through complementary base pairing, not identity of sequences." },
+            { "answer": "resistance", "explanation": "Resistance is unrelated to the binding mechanism of sgRNA to target DNA." }
+          ]
+        },
+        "2": {
+          "correct": "unintended",
+          "correctExplanation": "Off-target cutting is unintended and can damage essential genes, which is a major safety concern.",
+          "distractors": [
+            { "answer": "beneficial", "explanation": "Off-target cuts are not beneficial; they are unintended and potentially harmful." },
+            { "answer": "precise", "explanation": "Off-target cuts are, by definition, not precise — they occur at wrong locations." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the sentence about the ethical distinction between somatic and germline editing.",
+      "sentence": "Somatic cell editing affects only the {{blank:1}} individual, while germline editing creates changes that are {{blank:2}} by future generations.",
+      "blanks": {
+        "1": {
+          "correct": "treated",
+          "correctExplanation": "Changes to somatic cells are confined to the patient who receives the treatment.",
+          "distractors": [
+            { "answer": "unborn", "explanation": "Somatic editing is performed on the patient, not on unborn individuals." },
+            { "answer": "entire", "explanation": "Somatic editing affects the individual, not the entire population." }
+          ]
+        },
+        "2": {
+          "correct": "inherited",
+          "correctExplanation": "Germline edits are passed to offspring, making them heritable changes that affect future generations.",
+          "distractors": [
+            { "answer": "destroyed", "explanation": "Germline changes are inherited, not destroyed, in future generations." },
+            { "answer": "reversed", "explanation": "Germline changes are inherited as permanent alterations, not reversed in offspring." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "MC",
+      "question": "Evaluate the potential for CRISPR-Cas9 to be used for both therapeutic (curing diseases) and enhancement (improving traits) purposes. What are the ethical implications of this dual-use potential?",
+      "correct": "Therapeutic use is widely supported, but enhancement raises concerns about creating genetic inequalities, as only wealthy families could afford trait modification for their children",
+      "correctExplanation": "While treating genetic diseases is broadly accepted, using CRISPR for enhancement could create a genetic divide between those who can and cannot afford modifications, raising serious ethical concerns.",
+      "distractors": [
+        { "answer": "There is no ethical difference between therapeutic and enhancement uses", "explanation": "Most ethicists distinguish between treating disease (widely accepted) and enhancing traits (controversial)." },
+        { "answer": "Enhancement is more ethical than therapy because it improves humanity", "explanation": "Enhancement raises more ethical concerns because it is not medically necessary and could create social inequalities." },
+        { "answer": "CRISPR technology cannot be used for both purposes", "explanation": "CRISPR can target any gene, making it technically capable of both therapeutic and enhancement applications." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Analyse why off-target effects are a more serious concern in clinical applications of CRISPR than in laboratory research.",
+      "correct": "In patients, off-target cuts could damage tumour suppressor genes or essential genes, potentially causing cancer or other serious conditions",
+      "correctExplanation": "In clinical settings, off-target effects could have life-threatening consequences for patients. In laboratories, off-target effects can be detected and discarded without harming anyone.",
+      "distractors": [
+        { "answer": "Off-target effects only occur in laboratory settings, not in clinical applications", "explanation": "Off-target effects can occur in any application; they are more concerning in clinical settings due to patient safety." },
+        { "answer": "Off-target effects are always beneficial in clinical applications", "explanation": "Off-target cuts are unintended and can damage essential genes, which is potentially harmful." },
+        { "answer": "Laboratory research does not use sgRNA so off-target effects cannot occur", "explanation": "Both clinical and research applications use sgRNA; the difference is the consequence of errors." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Critique the claim: 'CRISPR-Cas9 has made all other genome editing techniques obsolete.'",
+      "correct": "While CRISPR is simpler and cheaper than alternatives, older techniques like TALENs and ZFNs may still be preferred in specific situations where their characteristics are advantageous",
+      "correctExplanation": "CRISPR has significant advantages but is not perfect; off-target effects, PAM requirements and delivery challenges mean older techniques still have niche applications.",
+      "distractors": [
+        { "answer": "The claim is completely correct; CRISPR has replaced all other techniques", "explanation": "Other techniques still have roles, particularly where CRISPR's limitations are problematic." },
+        { "answer": "CRISPR is actually less effective than all older techniques", "explanation": "CRISPR is generally more efficient and accessible, though not universally superior." },
+        { "answer": "Genome editing techniques cannot be compared because they do different things", "explanation": "All genome editing techniques modify DNA sequences and can be compared on criteria like precision and efficiency." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A government bans germline editing but allows somatic cell editing. Evaluate the scientific and ethical reasoning behind this policy.",
+      "correct": "Somatic editing treats individual patients without heritable consequences, while germline editing creates permanent changes in the human gene pool without consent from future generations",
+      "correctExplanation": "The policy reflects the ethical principle that changes to the human gene pool require extraordinary justification, while treating individual patients with somatic editing is more ethically straightforward.",
+      "distractors": [
+        { "answer": "The policy is scientifically unjustified because both types of editing carry the same risks", "explanation": "Germline editing carries unique risks because changes are heritable and affect unconsenting future individuals." },
+        { "answer": "The policy should ban all editing because both types are equally dangerous", "explanation": "Somatic editing has clear therapeutic benefits and does not affect future generations." },
+        { "answer": "Germline editing should be allowed because it could eliminate genetic diseases permanently", "explanation": "While potentially beneficial, the permanent and heritable nature of germline changes raises unique ethical concerns." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Evaluate the significance of the CRISPR-Cas9 sickle cell disease treatment as a model for future gene therapies.",
+      "correct": "It demonstrates that CRISPR can correct a specific point mutation in patient cells, providing proof of concept for treating other single-gene disorders, while highlighting challenges like delivery and off-target effects",
+      "correctExplanation": "The sickle cell treatment is a landmark proof of concept that validates CRISPR for clinical use, while also revealing practical challenges that must be addressed for broader application.",
+      "distractors": [
+        { "answer": "The treatment proves that CRISPR can cure all genetic diseases immediately", "explanation": "The treatment is a proof of concept for single-gene disorders; multi-gene conditions remain challenging." },
+        { "answer": "The treatment has no significance beyond sickle cell disease", "explanation": "The principles demonstrated apply to many other genetic conditions." },
+        { "answer": "The treatment proves that off-target effects are not a concern", "explanation": "The treatment highlights the need to monitor for off-target effects in all CRISPR applications." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Analyse the challenges of delivering CRISPR-Cas9 components to specific tissues within a living patient. Why is this considered one of the biggest obstacles?",
+      "correct": "The sgRNA and Cas9 must reach the correct cell type in sufficient quantities, while avoiding immune responses and off-target editing in unintended tissues",
+      "correctExplanation": "Delivery challenges include getting components past biological barriers, targeting specific tissues, avoiding immune destruction, and ensuring sufficient uptake for therapeutic effect.",
+      "distractors": [
+        { "answer": "Delivery is not a challenge because Cas9 naturally enters all human cells", "explanation": "Cas9 is a bacterial protein that does not naturally enter human cells; delivery is a major challenge." },
+        { "answer": "The only challenge is designing the sgRNA; delivery is straightforward", "explanation": "sgRNA design is relatively simple; delivery to specific tissues in a patient is much more challenging." },
+        { "answer": "CRISPR components can only be delivered to cells outside the body", "explanation": "While ex vivo editing is common, in vivo delivery is being developed for tissues that cannot be edited externally." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Compare the natural function of CRISPR in bacteria with its application in human gene therapy. Evaluate how the system has been adapted for a completely different purpose.",
+      "correct": "The core mechanism (gRNA-guided Cas9 cutting) is identical, but scientists replaced viral spacers with custom-designed sgRNAs targeting human disease genes, repurposing a defence system as an editing tool",
+      "correctExplanation": "The fundamental mechanism is conserved — gRNA directs Cas9 to complementary DNA. The revolutionary adaptation was designing synthetic sgRNAs to target any gene in any organism.",
+      "distractors": [
+        { "answer": "The natural function and the editing tool work through completely different mechanisms", "explanation": "Both use the same mechanism of gRNA-guided Cas9 cutting; only the target is different." },
+        { "answer": "Scientists created Cas9 artificially; it was not found in bacteria", "explanation": "Cas9 was discovered in bacteria as part of the natural CRISPR immune system." },
+        { "answer": "The application has nothing in common with the natural function", "explanation": "The core mechanism is identical; the innovation was in repurposing it for genome editing." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Critically evaluate whether CRISPR-Cas9 genome editing could eventually eliminate all genetic diseases from the human population.",
+      "correct": "This is unlikely because many diseases are polygenic, new mutations continually arise, somatic editing does not affect future generations, and germline editing raises unresolved ethical concerns",
+      "correctExplanation": "While CRISPR can correct single-gene disorders, eliminating all genetic disease would require addressing multi-gene conditions, stopping new mutations, and resolving profound ethical questions about germline modification.",
+      "distractors": [
+        { "answer": "CRISPR will definitely eliminate all genetic diseases within the next decade", "explanation": "Technical, biological and ethical barriers make complete elimination unrealistic in any timeframe." },
+        { "answer": "CRISPR cannot treat any genetic disease and never will", "explanation": "CRISPR has already been used to treat sickle cell disease; it can address single-gene disorders." },
+        { "answer": "Only germline editing is needed to eliminate all genetic diseases", "explanation": "Even germline editing cannot address all diseases because many are polygenic and new mutations constantly arise." }
+      ]
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Evaluate the adaptation of CRISPR by completing the sentence.",
+      "sentence": "Scientists adapted the bacterial CRISPR system by replacing viral {{blank:1}} with custom-designed sgRNAs, turning a natural immune defence into a programmable {{blank:2}} editing tool.",
+      "blanks": {
+        "1": {
+          "correct": "spacers",
+          "correctExplanation": "In bacteria, spacers store viral DNA sequences. Scientists replaced this with designed sgRNA sequences targeting human genes.",
+          "distractors": [
+            { "answer": "chromosomes", "explanation": "Bacterial chromosomes are not replaced; the viral spacers are substituted with custom sgRNAs." },
+            { "answer": "plasmids", "explanation": "Plasmids are used in gene cloning; CRISPR adaptation involves replacing spacers with custom sgRNAs." }
+          ]
+        },
+        "2": {
+          "correct": "genome",
+          "correctExplanation": "The adapted CRISPR system can edit any genome — bacterial, plant, animal or human — making it a universal genome editing tool.",
+          "distractors": [
+            { "answer": "protein", "explanation": "CRISPR edits DNA (the genome), not proteins directly." },
+            { "answer": "viral", "explanation": "While CRISPR naturally targets viral DNA, the adapted tool edits genomes of any organism." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Critically analyse the limitations by completing the sentence.",
+      "sentence": "CRISPR cannot eliminate all genetic diseases because many conditions are {{blank:1}} (involving multiple genes), and new {{blank:2}} continuously introduce disease alleles into the population.",
+      "blanks": {
+        "1": {
+          "correct": "polygenic",
+          "correctExplanation": "Polygenic conditions involve multiple genes, making them much more difficult to correct with CRISPR than single-gene disorders.",
+          "distractors": [
+            { "answer": "infectious", "explanation": "The sentence discusses genetic diseases, not infections. The limitation is that many are polygenic." },
+            { "answer": "curable", "explanation": "The sentence explains why elimination is difficult; saying they are curable would contradict the point." }
+          ]
+        },
+        "2": {
+          "correct": "mutations",
+          "correctExplanation": "Spontaneous mutations continually create new disease alleles, meaning CRISPR would need to be applied continuously across the population.",
+          "distractors": [
+            { "answer": "vaccines", "explanation": "Vaccines prevent infections; mutations are what introduce new disease alleles." },
+            { "answer": "proteins", "explanation": "New mutations in DNA introduce disease alleles; proteins do not introduce genetic changes." }
+          ]
+        }
+      }
+    }
+  ]
+}

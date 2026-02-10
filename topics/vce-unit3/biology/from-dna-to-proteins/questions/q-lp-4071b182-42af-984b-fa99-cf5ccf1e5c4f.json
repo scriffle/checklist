@@ -1,0 +1,583 @@
+{
+  "_link": {
+    "uuid": "lp-4071b182-42af-984b-fa99-cf5ccf1e5c4f",
+    "version": 1,
+    "contentHash": "db5166b3",
+    "title": "I can define and identify the key structural components of a gene",
+    "generatedAt": "2026-02-09T12:06:00.000Z"
+  },
+  "toLevel2": [
+    {
+      "type": "MC",
+      "question": "What is the function of the promoter in a gene?",
+      "correct": "It is the region where RNA polymerase binds to start transcription",
+      "correctExplanation": "The promoter is a specific DNA sequence at the beginning of a gene that signals RNA polymerase where to bind and begin transcription.",
+      "distractors": [
+        { "answer": "It is the region where a repressor binds to block transcription", "explanation": "The region where a repressor binds is the operator, not the promoter." },
+        { "answer": "It is a coding sequence that appears in the final mRNA", "explanation": "Coding sequences that appear in the final mRNA are called exons, not promoters." },
+        { "answer": "It signals the end of transcription and causes RNA polymerase to detach", "explanation": "The signal to end transcription is the terminator, not the promoter." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "What are exons?",
+      "correct": "Coding sequences within a gene that appear in the final mRNA",
+      "correctExplanation": "Exons are the portions of a gene that are expressed — they remain in the mature mRNA after introns are spliced out.",
+      "distractors": [
+        { "answer": "Non-coding sequences that are removed during splicing", "explanation": "Non-coding sequences removed during splicing are introns, not exons." },
+        { "answer": "Regions where RNA polymerase binds to begin transcription", "explanation": "The region where RNA polymerase binds is the promoter, not exons." },
+        { "answer": "Regions where repressor proteins bind to block gene expression", "explanation": "The region where repressors bind is the operator, not exons." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "What are introns?",
+      "correct": "Non-coding sequences within a gene that are removed during RNA splicing",
+      "correctExplanation": "Introns are intervening sequences that do not code for protein and are spliced out of the pre-mRNA during processing.",
+      "distractors": [
+        { "answer": "Coding sequences that remain in the mature mRNA", "explanation": "Coding sequences that remain are exons. Introns are the non-coding sequences that are removed." },
+        { "answer": "Sequences that signal the end of transcription", "explanation": "The sequence that signals the end of transcription is the terminator, not introns." },
+        { "answer": "Sequences where RNA polymerase binds to start transcription", "explanation": "RNA polymerase binds at the promoter, not at introns." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "What is the function of the operator in a gene?",
+      "correct": "It is the region where a repressor protein can bind to block transcription",
+      "correctExplanation": "The operator sits between the promoter and the coding region. When a repressor binds to it, RNA polymerase is blocked from transcribing the gene.",
+      "distractors": [
+        { "answer": "It is where RNA polymerase binds to begin transcription", "explanation": "RNA polymerase binds at the promoter, not the operator." },
+        { "answer": "It signals the end of transcription and releases mRNA", "explanation": "The end-of-transcription signal is the terminator, not the operator." },
+        { "answer": "It joins exons together after introns are removed", "explanation": "Exon joining occurs during RNA splicing. The operator is a regulatory region for controlling transcription." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "What is the role of the terminator in a gene?",
+      "correct": "It signals the end of transcription and causes RNA polymerase to detach from the DNA",
+      "correctExplanation": "The terminator is a DNA sequence at the end of a gene that tells RNA polymerase to stop transcribing and release the pre-mRNA.",
+      "distractors": [
+        { "answer": "It signals where RNA polymerase should begin transcription", "explanation": "The beginning of transcription is signalled by the promoter, not the terminator." },
+        { "answer": "It blocks repressor proteins from binding to the gene", "explanation": "The terminator ends transcription. It does not interact with repressor proteins." },
+        { "answer": "It removes introns from the pre-mRNA molecule", "explanation": "Intron removal is done by splicing machinery. The terminator signals the end of transcription." }
+      ]
+    },
+    {
+      "type": "CLOZE",
+      "prompt": "Complete the sentence about gene components.",
+      "sentence": "The {{blank:1}} is where RNA polymerase binds to start transcription, and the {{blank:2}} is where a repressor can bind to block it.",
+      "blanks": {
+        "1": {
+          "correct": "promoter",
+          "correctExplanation": "The promoter is the binding site for RNA polymerase at the start of a gene.",
+          "distractors": [
+            { "answer": "operator", "explanation": "The operator is where the repressor binds. The promoter is where RNA polymerase binds." },
+            { "answer": "terminator", "explanation": "The terminator signals the end of transcription. The promoter is the start site." }
+          ]
+        },
+        "2": {
+          "correct": "operator",
+          "correctExplanation": "The operator is the regulatory region where a repressor protein can bind to prevent transcription.",
+          "distractors": [
+            { "answer": "promoter", "explanation": "The promoter is for RNA polymerase binding. The operator is for repressor binding." },
+            { "answer": "exon", "explanation": "Exons are coding regions. The operator is the regulatory region for repressor binding." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CLOZE",
+      "prompt": "Complete the sentence about exons and introns.",
+      "sentence": "{{blank:1}} are coding sequences that remain in the final mRNA, while {{blank:2}} are non-coding sequences that are removed during splicing.",
+      "blanks": {
+        "1": {
+          "correct": "Exons",
+          "correctExplanation": "Exons are the expressed sequences that code for protein and remain in the mature mRNA.",
+          "distractors": [
+            { "answer": "Introns", "explanation": "Introns are the non-coding sequences removed during splicing. Exons remain." },
+            { "answer": "Promoters", "explanation": "Promoters are regulatory regions, not coding sequences in the mRNA." }
+          ]
+        },
+        "2": {
+          "correct": "introns",
+          "correctExplanation": "Introns are intervening non-coding sequences that are spliced out of the pre-mRNA.",
+          "distractors": [
+            { "answer": "exons", "explanation": "Exons are the coding sequences that stay. Introns are removed." },
+            { "answer": "terminators", "explanation": "Terminators signal the end of transcription. Introns are the non-coding sequences removed by splicing." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CLOZE",
+      "prompt": "Complete the sentence about gene structure order.",
+      "sentence": "In a gene diagram, the components appear in this order: promoter, operator, then {{blank:1}} and introns, ending with the {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "exons",
+          "correctExplanation": "The coding region of a gene contains alternating exons and introns between the operator and the terminator.",
+          "distractors": [
+            { "answer": "promoters", "explanation": "There is only one promoter per gene, at the start. Exons and introns make up the coding region." },
+            { "answer": "operators", "explanation": "There is typically one operator per gene. The coding region contains exons and introns." }
+          ]
+        },
+        "2": {
+          "correct": "terminator",
+          "correctExplanation": "The terminator is the final component of a gene, signalling the end of transcription.",
+          "distractors": [
+            { "answer": "promoter", "explanation": "The promoter is at the beginning of the gene, not the end. The terminator is at the end." },
+            { "answer": "operator", "explanation": "The operator is near the beginning. The terminator is the final component." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "TF",
+      "question": "Introns are coding sequences that appear in the final mRNA.",
+      "correct": "False",
+      "correctExplanation": "Introns are non-coding sequences that are removed during RNA splicing. Exons are the coding sequences that appear in the final mRNA.",
+      "distractors": [
+        { "answer": "True", "explanation": "Introns are non-coding and are removed. Exons are the coding sequences found in the mature mRNA." }
+      ]
+    },
+    {
+      "type": "TF",
+      "question": "The promoter is the region of a gene where RNA polymerase binds to begin transcription.",
+      "correct": "True",
+      "correctExplanation": "The promoter is a specific DNA sequence that serves as the binding site for RNA polymerase to initiate transcription.",
+      "distractors": [
+        { "answer": "False", "explanation": "The promoter is indeed where RNA polymerase binds. This is the correct definition of the promoter's function." }
+      ]
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "MC",
+      "question": "Why is the promoter essential for gene expression?",
+      "correct": "Because without the promoter, RNA polymerase would not know where to bind and begin transcribing the gene",
+      "correctExplanation": "The promoter provides the specific signal that positions RNA polymerase correctly to start transcription.",
+      "distractors": [
+        { "answer": "Because the promoter contains the amino acid code that is translated into protein", "explanation": "The promoter is a regulatory region, not a coding region. It does not encode amino acids." },
+        { "answer": "Because the promoter splices out introns from the pre-mRNA molecule", "explanation": "Intron splicing is performed by splicing machinery, not by the promoter." },
+        { "answer": "Because the promoter delivers amino acids to the ribosome during translation", "explanation": "Amino acid delivery is the role of tRNA. The promoter signals where transcription begins." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "How do the operator and promoter work together to regulate gene expression?",
+      "correct": "The promoter allows RNA polymerase to bind, while the operator can block this process when a repressor protein binds to it",
+      "correctExplanation": "The promoter is the 'on' signal for transcription, while the operator acts as a switch that can block access when a repressor is present.",
+      "distractors": [
+        { "answer": "The operator allows RNA polymerase to bind while the promoter blocks transcription", "explanation": "This is reversed. The promoter is the binding site for RNA polymerase; the operator is where the repressor binds." },
+        { "answer": "Both the promoter and operator code for different sections of the final protein", "explanation": "Neither the promoter nor the operator codes for protein. They are regulatory regions." },
+        { "answer": "The promoter and operator are identical sequences that perform the same function", "explanation": "The promoter and operator have different sequences and different functions in gene regulation." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Why are introns removed from pre-mRNA before translation?",
+      "correct": "Because introns are non-coding sequences that do not carry instructions for amino acids and would disrupt the protein if included",
+      "correctExplanation": "Including intron sequences in the mRNA would add incorrect codons, producing a non-functional protein.",
+      "distractors": [
+        { "answer": "Because introns are toxic to ribosomes and would destroy them during translation", "explanation": "Introns are not toxic. They simply do not code for protein and would disrupt the correct amino acid sequence." },
+        { "answer": "Because introns are actually DNA sequences that cannot be read by ribosomes", "explanation": "Introns are transcribed into RNA but are non-coding. They are removed because they do not encode protein." },
+        { "answer": "Because introns contain stop codons that would prematurely end translation", "explanation": "While introns may contain stop codons, the main reason is that they are non-coding sequences not meant to be translated." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "What would happen if the terminator sequence of a gene were deleted?",
+      "correct": "RNA polymerase would continue transcribing past the gene into adjacent DNA, producing an abnormally long mRNA",
+      "correctExplanation": "Without the terminator signal, RNA polymerase would not know where to stop and would continue reading downstream DNA.",
+      "distractors": [
+        { "answer": "Transcription would not begin because the terminator is needed to start the process", "explanation": "Transcription begins at the promoter, not the terminator. Deleting the terminator affects stopping, not starting." },
+        { "answer": "The gene would produce a normal protein because the terminator has no effect on the final product", "explanation": "An abnormally long mRNA could produce an abnormal protein or disrupt downstream genes." },
+        { "answer": "The introns would not be removed because the terminator controls splicing", "explanation": "Splicing is controlled by splice sites within the pre-mRNA, not by the terminator." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "How does the order of gene components (promoter → operator → exons/introns → terminator) relate to the process of transcription?",
+      "correct": "RNA polymerase binds at the promoter, passes the operator, transcribes exons and introns, and detaches at the terminator",
+      "correctExplanation": "The physical order of components matches the sequential steps of transcription from initiation to termination.",
+      "distractors": [
+        { "answer": "RNA polymerase starts at the terminator and works backwards to the promoter", "explanation": "Transcription proceeds from the promoter to the terminator, not in reverse." },
+        { "answer": "RNA polymerase skips the introns during transcription and only reads the exons", "explanation": "RNA polymerase transcribes both exons and introns. Introns are removed later during RNA processing." },
+        { "answer": "The order of components is random and does not relate to how transcription occurs", "explanation": "The order is specific and matches the sequential process of transcription." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A mnemonic for remembering that exons are expressed and introns are intervening sequences is helpful. Which statement correctly uses these memory aids?",
+      "correct": "Exons are 'expressed' (kept in the mRNA), while introns are 'intervening' sequences (removed during splicing)",
+      "correctExplanation": "The prefix 'ex' in exon relates to 'expressed,' and 'in' in intron relates to 'intervening' — sequences that interrupt the coding regions.",
+      "distractors": [
+        { "answer": "Exons are 'external' (outside the gene) while introns are 'internal' (inside the gene)", "explanation": "Both exons and introns are inside the gene. Exons are expressed; introns are intervening sequences." },
+        { "answer": "Exons are 'excluded' (removed from mRNA) while introns are 'included' (kept in mRNA)", "explanation": "This is reversed. Exons are kept (expressed) and introns are removed (intervening)." },
+        { "answer": "Exons are 'extra' (unnecessary) while introns are 'integral' (essential for the protein)", "explanation": "Exons are essential for the protein. Introns are the non-coding sequences that are removed." }
+      ]
+    },
+    {
+      "type": "CLOZE",
+      "prompt": "Explain the function of the terminator.",
+      "sentence": "The terminator signals RNA polymerase to {{blank:1}} transcribing and {{blank:2}} from the DNA template.",
+      "blanks": {
+        "1": {
+          "correct": "stop",
+          "correctExplanation": "The terminator is the signal that tells RNA polymerase to cease transcription.",
+          "distractors": [
+            { "answer": "start", "explanation": "Starting transcription is the function of the promoter. The terminator signals stopping." },
+            { "answer": "speed up", "explanation": "The terminator does not increase transcription speed. It signals termination." }
+          ]
+        },
+        "2": {
+          "correct": "detach",
+          "correctExplanation": "When RNA polymerase reaches the terminator, it releases the pre-mRNA and detaches from the DNA.",
+          "distractors": [
+            { "answer": "attach", "explanation": "RNA polymerase attaches at the promoter. At the terminator, it detaches." },
+            { "answer": "reverse", "explanation": "RNA polymerase does not reverse direction. It detaches at the terminator." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CLOZE",
+      "prompt": "Explain why introns must be removed.",
+      "sentence": "Introns must be removed because they are {{blank:1}} sequences that do not code for {{blank:2}} and would disrupt the protein if translated.",
+      "blanks": {
+        "1": {
+          "correct": "non-coding",
+          "correctExplanation": "Introns do not contain instructions for amino acids and are therefore non-coding.",
+          "distractors": [
+            { "answer": "coding", "explanation": "Introns are non-coding. Exons are the coding sequences." },
+            { "answer": "regulatory", "explanation": "While introns may have some regulatory roles, they are classified as non-coding sequences that are removed." }
+          ]
+        },
+        "2": {
+          "correct": "amino acids",
+          "correctExplanation": "Introns do not encode amino acids. Only exon sequences are translated into the protein's amino acid chain.",
+          "distractors": [
+            { "answer": "nucleotides", "explanation": "Introns do contain nucleotides but they don't code for amino acids in the final protein." },
+            { "answer": "sugars", "explanation": "Gene components code for proteins (amino acids), not sugars. Introns are non-coding for amino acids." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CLOZE",
+      "prompt": "Describe the relationship between the operator and transcription regulation.",
+      "sentence": "When a {{blank:1}} protein binds to the operator, it physically blocks RNA polymerase from reaching the {{blank:2}} region of the gene.",
+      "blanks": {
+        "1": {
+          "correct": "repressor",
+          "correctExplanation": "The repressor protein binds to the operator to block transcription.",
+          "distractors": [
+            { "answer": "polymerase", "explanation": "RNA polymerase binds to the promoter. The repressor binds to the operator." },
+            { "answer": "ribosome", "explanation": "Ribosomes are involved in translation. The repressor is the protein that binds the operator." }
+          ]
+        },
+        "2": {
+          "correct": "coding",
+          "correctExplanation": "When the repressor blocks the operator, RNA polymerase cannot proceed to transcribe the coding region (exons and introns).",
+          "distractors": [
+            { "answer": "promoter", "explanation": "The promoter is upstream of the operator. Blocking the operator prevents access to the downstream coding region." },
+            { "answer": "terminator", "explanation": "The terminator is at the end of the gene. Blocking the operator prevents transcription of the coding region." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "TF",
+      "question": "RNA polymerase transcribes only the exons and skips over the introns during transcription.",
+      "correct": "False",
+      "correctExplanation": "RNA polymerase transcribes both exons and introns into pre-mRNA. The introns are removed later during RNA processing (splicing).",
+      "distractors": [
+        { "answer": "True", "explanation": "RNA polymerase transcribes the entire gene including both exons and introns. Intron removal occurs after transcription." }
+      ]
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "MC",
+      "question": "A mutation deletes the operator region of a gene. Predict the effect on gene expression.",
+      "correct": "The gene would be continuously transcribed because the repressor has no binding site to block RNA polymerase",
+      "correctExplanation": "Without the operator, the repressor cannot bind and block transcription, resulting in constitutive (constant) gene expression.",
+      "distractors": [
+        { "answer": "The gene would never be transcribed because the operator is needed for RNA polymerase to bind", "explanation": "RNA polymerase binds at the promoter, not the operator. Deleting the operator removes the 'off switch,' not the 'on switch.'" },
+        { "answer": "The gene would produce a shorter protein because the operator codes for part of the amino acid sequence", "explanation": "The operator is a regulatory region, not a coding region. It does not encode amino acids." },
+        { "answer": "The gene would function normally because the operator has no role in gene regulation", "explanation": "The operator is essential for regulation. Without it, the gene cannot be switched off by the repressor." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A gene has three exons and two introns. After RNA processing, which components would be present in the mature mRNA?",
+      "correct": "Only the three exons joined together, with introns removed",
+      "correctExplanation": "During splicing, introns are cut out and exons are joined. The mature mRNA contains only exon sequences plus the 5' cap and poly-A tail.",
+      "distractors": [
+        { "answer": "All three exons and both introns in their original order", "explanation": "Introns are removed during splicing. Only exons remain in the mature mRNA." },
+        { "answer": "Only the two introns, with exons removed during processing", "explanation": "This is reversed. Exons are kept and introns are removed." },
+        { "answer": "The promoter, operator, exons, and terminator in order", "explanation": "The promoter, operator, and terminator are not transcribed into the mature mRNA. Only exon sequences remain." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Scientists discover that a gene has an unusually large number of introns compared to exons. How might this affect the pre-mRNA processing of this gene?",
+      "correct": "More splicing events would be needed to remove all the introns, but the final mRNA would still contain only the exon sequences",
+      "correctExplanation": "Regardless of intron number, the splicing machinery removes all introns and joins the exons to produce the mature mRNA.",
+      "distractors": [
+        { "answer": "The gene could not be transcribed because too many introns would block RNA polymerase", "explanation": "RNA polymerase transcribes through introns without difficulty. Intron number does not affect transcription." },
+        { "answer": "The introns would be kept in the mature mRNA because there are too many to splice out", "explanation": "The splicing machinery removes introns regardless of their number." },
+        { "answer": "The gene would produce a larger protein because introns are translated when they outnumber exons", "explanation": "Introns are always removed, never translated. The protein size depends on exon content only." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A researcher modifies a gene by swapping the positions of the promoter and terminator. What would happen when the cell tries to express this gene?",
+      "correct": "Transcription would not begin correctly because RNA polymerase cannot bind at the terminator position",
+      "correctExplanation": "RNA polymerase specifically recognises promoter sequences. Placing the terminator at the start means there is no proper initiation signal.",
+      "distractors": [
+        { "answer": "The gene would be transcribed in reverse, producing a mirror-image mRNA", "explanation": "RNA polymerase cannot initiate at a terminator sequence. Swapping positions prevents proper transcription initiation." },
+        { "answer": "The gene would function normally because the promoter and terminator are interchangeable", "explanation": "Promoters and terminators have different sequences and functions. They are not interchangeable." },
+        { "answer": "The gene would produce a double-stranded mRNA because both ends would initiate transcription", "explanation": "Terminators cannot initiate transcription. Only the promoter can recruit RNA polymerase." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "In a gene diagram, a student labels an intron as an exon and vice versa. How would this conceptual error affect their understanding of RNA processing?",
+      "correct": "They would incorrectly predict that coding sequences are removed and non-coding sequences remain in the mature mRNA",
+      "correctExplanation": "Confusing exons and introns reverses the understanding of what is kept and what is removed during splicing.",
+      "distractors": [
+        { "answer": "It would have no effect because exons and introns are functionally identical", "explanation": "Exons and introns have completely different functions. Exons code for protein; introns are non-coding." },
+        { "answer": "They would correctly understand RNA processing because the labels do not matter", "explanation": "Correct labelling is essential. Exons are expressed; introns are removed." },
+        { "answer": "They would think the promoter and terminator switch positions after transcription", "explanation": "Confusing exons and introns does not affect understanding of promoter/terminator positions." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Alternative splicing allows different combinations of exons to be included in the mature mRNA from the same gene. What is the significance of this?",
+      "correct": "One gene can produce multiple different proteins by including different exon combinations in the final mRNA",
+      "correctExplanation": "Alternative splicing increases protein diversity without requiring additional genes, allowing one gene to code for several related proteins.",
+      "distractors": [
+        { "answer": "Alternative splicing has no significance because all exons must always be included in every mRNA", "explanation": "Alternative splicing is a real and important mechanism. Different exon combinations produce different proteins." },
+        { "answer": "Alternative splicing only removes different introns, which has no effect on the protein produced", "explanation": "Alternative splicing includes or excludes different exons, directly changing the protein sequence." },
+        { "answer": "Alternative splicing means the promoter and terminator change positions in different cell types", "explanation": "Alternative splicing affects which exons are included, not the positions of regulatory regions." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A mutation in the operator makes it unable to bind the repressor protein. Compare this to a mutation that deletes the operator entirely.",
+      "correct": "Both mutations would have the same effect — the gene would be continuously expressed because the repressor cannot block transcription in either case",
+      "correctExplanation": "Whether the operator is non-functional or absent, the outcome is the same: no repressor binding, so the gene is always on.",
+      "distractors": [
+        { "answer": "The non-binding mutation would silence the gene while the deletion would activate it", "explanation": "Both mutations prevent repressor binding, resulting in constitutive expression in both cases." },
+        { "answer": "The deletion would destroy the gene entirely while the non-binding mutation would have no effect", "explanation": "Deleting the operator does not destroy the gene. Both mutations prevent regulation." },
+        { "answer": "The non-binding mutation would affect translation while the deletion would affect transcription", "explanation": "Both mutations affect transcription regulation at the operator level." }
+      ]
+    },
+    {
+      "type": "CLOZE",
+      "prompt": "Predict the outcome of a promoter mutation.",
+      "sentence": "If the promoter is mutated so RNA polymerase cannot bind, the gene will not be {{blank:1}} and no {{blank:2}} will be produced.",
+      "blanks": {
+        "1": {
+          "correct": "transcribed",
+          "correctExplanation": "Without a functional promoter, RNA polymerase cannot initiate transcription of the gene.",
+          "distractors": [
+            { "answer": "translated", "explanation": "Translation occurs at ribosomes. The promoter affects transcription, not translation directly." },
+            { "answer": "replicated", "explanation": "DNA replication does not depend on gene promoters. The promoter is needed for transcription." }
+          ]
+        },
+        "2": {
+          "correct": "mRNA",
+          "correctExplanation": "Without transcription, no mRNA is produced from the gene, and consequently no protein can be made.",
+          "distractors": [
+            { "answer": "DNA", "explanation": "DNA production (replication) does not depend on the gene's promoter." },
+            { "answer": "tRNA", "explanation": "tRNA is produced from different genes. The specific gene's promoter mutation affects its mRNA production." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CLOZE",
+      "prompt": "Describe the effect of alternative splicing.",
+      "sentence": "Alternative splicing allows one gene to produce {{blank:1}} different proteins by including different combinations of {{blank:2}} in the mature mRNA.",
+      "blanks": {
+        "1": {
+          "correct": "multiple",
+          "correctExplanation": "By varying which exons are included, a single gene can code for several different protein variants.",
+          "distractors": [
+            { "answer": "identical", "explanation": "Alternative splicing produces different proteins, not identical ones." },
+            { "answer": "fewer", "explanation": "Alternative splicing increases protein diversity, producing more variants, not fewer." }
+          ]
+        },
+        "2": {
+          "correct": "exons",
+          "correctExplanation": "Different exon combinations in the mRNA lead to different protein products from the same gene.",
+          "distractors": [
+            { "answer": "introns", "explanation": "Introns are removed. Alternative splicing works by varying which exons are included." },
+            { "answer": "promoters", "explanation": "Genes typically have one promoter. Alternative splicing involves exon selection." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CLOZE",
+      "prompt": "Predict the result of an operator deletion.",
+      "sentence": "Deleting the operator means the {{blank:1}} protein cannot bind, so the gene is {{blank:2}} expressed regardless of cellular conditions.",
+      "blanks": {
+        "1": {
+          "correct": "repressor",
+          "correctExplanation": "The repressor protein needs the operator to bind and block transcription.",
+          "distractors": [
+            { "answer": "polymerase", "explanation": "RNA polymerase binds at the promoter. The repressor binds at the operator." },
+            { "answer": "ribosome", "explanation": "Ribosomes are involved in translation. The repressor is the protein that binds the operator." }
+          ]
+        },
+        "2": {
+          "correct": "continuously",
+          "correctExplanation": "Without the operator, there is no way to block transcription, so the gene is expressed all the time.",
+          "distractors": [
+            { "answer": "never", "explanation": "The gene would be always on, not always off. The promoter still functions normally." },
+            { "answer": "randomly", "explanation": "The gene would be constitutively (continuously) expressed, not randomly." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "MC",
+      "question": "Analyse why eukaryotic genes have introns while many prokaryotic genes do not. What advantage might introns provide?",
+      "correct": "Introns enable alternative splicing, allowing one gene to produce multiple different proteins, increasing proteome diversity without increasing genome size",
+      "correctExplanation": "Alternative splicing of exons separated by introns is a major mechanism for protein diversity in eukaryotes.",
+      "distractors": [
+        { "answer": "Introns have no function and are simply parasitic DNA that eukaryotes have not yet evolved to remove", "explanation": "While some introns may be vestigial, alternative splicing demonstrates a clear functional advantage." },
+        { "answer": "Introns protect the gene from mutations by absorbing all base changes before they reach the exons", "explanation": "Introns do not selectively absorb mutations. Mutations occur randomly throughout the gene." },
+        { "answer": "Introns are found in all organisms equally and provide no specific advantage to eukaryotes", "explanation": "Introns are far more common in eukaryotes and enable alternative splicing, which is rare in prokaryotes." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Evaluate the claim: 'The operator is unnecessary because the promoter alone is sufficient to regulate gene expression.'",
+      "correct": "Incorrect — the promoter enables transcription but cannot turn it off; the operator provides the mechanism to block transcription when the gene product is not needed",
+      "correctExplanation": "The promoter is an 'on switch' for RNA polymerase binding, but the operator is the 'off switch' that allows regulation via repressor binding.",
+      "distractors": [
+        { "answer": "Correct — the promoter can both activate and repress transcription, making the operator redundant", "explanation": "The promoter only activates transcription. It cannot block transcription — that is the operator's role." },
+        { "answer": "Correct — because genes are always expressed and never need to be turned off", "explanation": "Gene regulation is essential. Genes must be turned off when their products are not needed." },
+        { "answer": "Incorrect — but only because the operator codes for essential amino acids that the promoter does not", "explanation": "Neither the operator nor the promoter codes for amino acids. The operator's role is regulatory, not coding." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A biotechnology company wants to design an artificial gene that is always active and cannot be silenced. Which gene components should they include and which should they omit?",
+      "correct": "Include the promoter, exons, and terminator, but omit the operator so no repressor can bind to block transcription",
+      "correctExplanation": "Without an operator, there is no binding site for a repressor, making the gene constitutively active.",
+      "distractors": [
+        { "answer": "Include only the exons and omit all regulatory regions including the promoter", "explanation": "Without a promoter, RNA polymerase cannot bind and transcription cannot begin." },
+        { "answer": "Include all components including the operator to ensure the gene works correctly", "explanation": "Including the operator would allow the gene to be silenced by a repressor, defeating the purpose." },
+        { "answer": "Omit the promoter and include only the operator and exons", "explanation": "The promoter is essential for transcription initiation. Omitting it would prevent the gene from being expressed." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Compare the consequences of a mutation in an exon versus a mutation in an intron. Which is more likely to affect the protein produced?",
+      "correct": "An exon mutation is more likely to affect the protein because exons code for amino acids, while an intron mutation is often removed during splicing and has no effect",
+      "correctExplanation": "Exon mutations directly change the mRNA codons and potentially the amino acid sequence. Most intron mutations are spliced out.",
+      "distractors": [
+        { "answer": "An intron mutation is more likely to affect the protein because introns control how the protein folds", "explanation": "Introns are removed and do not directly affect protein folding. Exon mutations are more impactful." },
+        { "answer": "Both mutations are equally likely to affect the protein because exons and introns are both translated", "explanation": "Only exons are translated. Introns are removed during splicing, so their mutations usually have no effect on the protein." },
+        { "answer": "Neither mutation would affect the protein because DNA mutations cannot change amino acid sequences", "explanation": "Exon mutations can directly change codons and amino acid sequences." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Analyse how the modular structure of genes (exons separated by introns) may have contributed to the evolution of new proteins.",
+      "correct": "Exon shuffling allows exons from different genes to recombine, creating new protein combinations faster than random mutations in a single gene",
+      "correctExplanation": "The modular arrangement of exons allows genetic recombination to create novel protein domain combinations, accelerating evolution.",
+      "distractors": [
+        { "answer": "The modular structure slows evolution because introns must be removed before any protein can function", "explanation": "Intron removal is an efficient process. The modular structure actually accelerates evolution through exon shuffling." },
+        { "answer": "Gene structure has no influence on evolution because all evolutionary change comes from point mutations only", "explanation": "Evolution involves multiple mechanisms including recombination. Modular gene structure facilitates exon shuffling." },
+        { "answer": "The modular structure prevents evolution because exons cannot be rearranged once they are in a gene", "explanation": "Exons can be rearranged through recombination. This exon shuffling is a real evolutionary mechanism." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A mutation at an intron-exon boundary (splice site) prevents the intron from being removed. Analyse the consequences for the protein.",
+      "correct": "The intron sequence would remain in the mature mRNA, adding non-coding codons that would alter the amino acid sequence and likely produce a non-functional protein",
+      "correctExplanation": "A retained intron introduces extra codons that disrupt the reading frame, often introducing premature stop codons or incorrect amino acids.",
+      "distractors": [
+        { "answer": "The protein would be completely normal because introns have no effect on translation", "explanation": "Retained introns are translated along with exons, disrupting the amino acid sequence." },
+        { "answer": "The cell would simply skip the retained intron during translation and produce a normal protein", "explanation": "Ribosomes translate the entire mRNA sequence. They cannot skip retained introns." },
+        { "answer": "Only the intron portion would be translated, replacing the entire protein with a non-coding product", "explanation": "The entire mRNA (exons plus retained intron) would be translated, not just the intron." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Evaluate whether the terms 'intron' and 'junk DNA' are interchangeable.",
+      "correct": "They are not interchangeable — introns are specific non-coding sequences within genes, while 'junk DNA' is an outdated term for all non-coding DNA, much of which has regulatory functions",
+      "correctExplanation": "Introns are a specific type of non-coding sequence within genes. The broader category of non-coding DNA includes many functional elements.",
+      "distractors": [
+        { "answer": "They are interchangeable because both refer to DNA sequences with absolutely no function", "explanation": "Introns can have regulatory roles, and much non-coding DNA has been found to be functional." },
+        { "answer": "They are interchangeable because introns make up all of the non-coding DNA in a genome", "explanation": "Introns are only one type of non-coding DNA. Non-coding DNA also includes regulatory sequences, repetitive elements, and more." },
+        { "answer": "Introns are coding sequences while junk DNA is non-coding, so they are completely different", "explanation": "Introns are non-coding sequences within genes. The distinction is that introns are specifically within genes while 'junk DNA' was used broadly." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A gene therapy approach involves inserting a corrected copy of a gene into a patient's cells. Which gene components must be included for the inserted gene to be expressed correctly?",
+      "correct": "A functional promoter, the correct exon sequences, and a terminator are essential; the operator may or may not be needed depending on whether regulation is required",
+      "correctExplanation": "The minimum requirements for expression are a promoter (to initiate transcription), exons (to code for the protein), and a terminator (to end transcription).",
+      "distractors": [
+        { "answer": "Only the exons are needed because the cell will supply all other gene components automatically", "explanation": "Exons alone cannot be transcribed without a promoter. The cell does not automatically add regulatory regions to inserted DNA." },
+        { "answer": "Only the introns are needed because they contain the regulatory information for gene expression", "explanation": "Introns are non-coding and are removed. Exons and a promoter are essential for expression." },
+        { "answer": "All components including introns must be identical to the natural gene or the therapy will fail", "explanation": "Introns are not strictly necessary for a functional gene therapy construct, though they may improve expression efficiency." }
+      ]
+    },
+    {
+      "type": "CLOZE",
+      "prompt": "Analyse the consequences of a splice site mutation.",
+      "sentence": "If a splice site mutation prevents intron removal, the {{blank:1}} sequence remains in the mRNA and is {{blank:2}}, disrupting the amino acid sequence.",
+      "blanks": {
+        "1": {
+          "correct": "intron",
+          "correctExplanation": "A splice site mutation prevents the intron from being correctly identified and removed during processing.",
+          "distractors": [
+            { "answer": "exon", "explanation": "Exons are normally retained. A splice site mutation causes introns to be retained abnormally." },
+            { "answer": "promoter", "explanation": "The promoter is not part of the mRNA. Splice site mutations affect intron removal." }
+          ]
+        },
+        "2": {
+          "correct": "translated",
+          "correctExplanation": "The ribosome reads the entire mRNA including the retained intron, translating the non-coding intron sequence into incorrect amino acids.",
+          "distractors": [
+            { "answer": "ignored", "explanation": "Ribosomes cannot skip sequences. The retained intron is translated along with the exons." },
+            { "answer": "replicated", "explanation": "Replication applies to DNA. The retained intron in mRNA is translated at the ribosome." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CLOZE",
+      "prompt": "Evaluate the advantage of introns for protein diversity.",
+      "sentence": "Introns enable {{blank:1}} splicing, which allows one gene to produce multiple {{blank:2}} by including different exon combinations.",
+      "blanks": {
+        "1": {
+          "correct": "alternative",
+          "correctExplanation": "Alternative splicing selects different combinations of exons from the same gene to produce different mRNA variants.",
+          "distractors": [
+            { "answer": "identical", "explanation": "Alternative, not identical, splicing is the mechanism. Different exon combinations produce different proteins." },
+            { "answer": "random", "explanation": "Alternative splicing is regulated, not random. Specific exon combinations are selected in different cell types." }
+          ]
+        },
+        "2": {
+          "correct": "proteins",
+          "correctExplanation": "Different mRNA variants produced by alternative splicing are translated into different protein products.",
+          "distractors": [
+            { "answer": "genes", "explanation": "Alternative splicing does not create new genes. It produces multiple proteins from one existing gene." },
+            { "answer": "introns", "explanation": "Alternative splicing produces different mRNAs and proteins, not different introns." }
+          ]
+        }
+      }
+    }
+  ]
+}
