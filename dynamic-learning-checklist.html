@@ -5140,20 +5140,26 @@ body {
                             <label class="form-label" for="class-input">Your Class</label>
                             <select id="class-input" class="form-input">
                                 <option value="">-- Select your class --</option>
-                                <option value="12BioTSH">12BioTSH</option>
-                                <option value="12CheDMH">12CheDMH</option>
-                                <option value="12PhyJIM">12PhyJIM</option>
-                                <option value="12PhyEVA">12PhyEVA</option>
-                                <option value="11PhyJIM">11PhyJIM</option>
-                                <option value="11BioTSH">11BioTSH</option>
-                                <option value="11CheNGU">11CheNGU</option>
-                                <option value="11CheJMC">11CheJMC</option>
-                                <option value="11PsyPBU">11PsyPBU</option>
-                                <option value="12PsyPBU">12PsyPBU</option>
+                                <option value="08SciDMH">08SciDMH</option>
+                                <option value="10SciDMH">10SciDMH</option>
                                 <option value="10SciJIM">10SciJIM</option>
                                 <option value="10SciKLA">10SciKLA</option>
-                                <option value="10SciDMH">10SciDMH</option>
-                                <option value="08SciDMH">08SciDMH</option>
+                                <option value="11BioTSH">11BioTSH</option>
+                                <option value="11BusBCO">11BusBCO</option>
+                                <option value="11CheJMC">11CheJMC</option>
+                                <option value="11CheNGU">11CheNGU</option>
+                                <option value="11EcoKAD">11EcoKAD</option>
+                                <option value="11HHDMOK">11HHDMOK</option>
+                                <option value="11PhyJIM">11PhyJIM</option>
+                                <option value="11PsyPBU">11PsyPBU</option>
+                                <option value="12BioTSH">12BioTSH</option>
+                                <option value="12BusBCO">12BusBCO</option>
+                                <option value="12CheDMH">12CheDMH</option>
+                                <option value="12EcoBCO">12EcoBCO</option>
+                                <option value="12HHDCAH">12HHDCAH</option>
+                                <option value="12PhyEVA">12PhyEVA</option>
+                                <option value="12PhyJIM">12PhyJIM</option>
+                                <option value="12PsyPBU">12PsyPBU</option>
                             </select>
                         </div>
                     </div>
@@ -6058,17 +6064,22 @@ function pushProgressToServer(eventType, detail) {
 // Lookup table: manifest yearLevel/subject → possible class codes
 // Key format: "yearLevelId/subjectId" matching manifest structure
 const CLASS_CODE_LOOKUP = {
+    'year8/science':     ['08SciDMH'],
     'year10/science':    ['10SciJIM', '10SciKLA', '10SciDMH'],
     'vce-unit1/physics': ['11PhyJIM'],
     'vce-unit1/biology': ['11BioTSH'],
     'vce-unit1/chemistry': ['11CheNGU', '11CheJMC'],
     'vce-unit1/psychology': ['11PsyPBU'],
+    'vce-unit1/business-management': ['11BusBCO'],
+    'vce-unit1/health-and-human-development': ['11HHDMOK'],
+    'vce-unit1/economics': ['11EcoKAD'],
     'vce-unit3/biology': ['12BioTSH'],
     'vce-unit3/physics': ['12PhyJIM', '12PhyEVA'],
     'vce-unit3/chemistry': ['12CheDMH'],
     'vce-unit3/psychology': ['12PsyPBU'],
-    // Future topics — ready when content is added
-    'year8/science':     ['08SciDMH']
+    'vce-unit3/business-management': ['12BusBCO'],
+    'vce-unit3/health-and-human-development': ['12HHDCAH'],
+    'vce-unit3/economics': ['12EcoBCO']
 };
 
 function updateClassBadge() {
