@@ -8476,7 +8476,7 @@ function populateSubjectDropdown(yearLevelId) {
     const yearLevel = manifest.yearLevels.find(y => y.id === yearLevelId);
     if (!yearLevel) return;
     
-    yearLevel.subjects.forEach(subject => {
+    [...yearLevel.subjects].sort((a, b) => a.name.localeCompare(b.name)).forEach(subject => {
         const option = document.createElement('option');
         option.value = subject.id;
         option.textContent = `${subject.icon || ''} ${subject.name}`.trim();
@@ -8502,8 +8502,8 @@ function populateTopicDropdown(yearLevelId, subjectId) {
     const subject = yearLevel.subjects.find(s => s.id === subjectId);
     if (!subject || !subject.topics) return;
     
-    // Add topics with availability status
-    subject.topics.forEach(topic => {
+    // Add topics with availability status (sorted alphabetically)
+    [...subject.topics].sort((a, b) => a.name.localeCompare(b.name)).forEach(topic => {
         const option = document.createElement('option');
         option.value = topic.id;
         option.dataset.path = topic.path;
