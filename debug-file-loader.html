@@ -1,0 +1,1141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Checklist 2.0 — File Loader Debugger</title>
+<style>
+  :root {
+    --bg: #0d1117; --surface: #161b22; --border: #30363d;
+    --text: #c9d1d9; --muted: #8b949e; --accent: #58a6ff;
+    --ok: #3fb950; --warn: #d29922; --err: #f85149; --info: #58a6ff;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'SF Mono', 'Fira Code', 'Cascadia Code', monospace; background: var(--bg); color: var(--text); font-size: 13px; line-height: 1.5; }
+
+  header { background: var(--surface); border-bottom: 1px solid var(--border); padding: 16px 24px; display: flex; align-items: center; gap: 16px; position: sticky; top: 0; z-index: 100; }
+  header h1 { font-size: 16px; font-weight: 600; color: var(--accent); white-space: nowrap; }
+  header .controls { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+
+  select, button { font-family: inherit; font-size: 12px; padding: 6px 12px; border-radius: 6px; border: 1px solid var(--border); background: var(--surface); color: var(--text); cursor: pointer; }
+  select:hover, button:hover { border-color: var(--accent); }
+  button.primary { background: var(--accent); color: #000; font-weight: 600; border-color: var(--accent); }
+  button.primary:hover { opacity: 0.9; }
+  button.danger { background: var(--err); color: #fff; border-color: var(--err); }
+
+  .container { max-width: 1400px; margin: 0 auto; padding: 16px 24px; }
+
+  /* Summary bar */
+  .summary-bar { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 16px; }
+  .stat-card { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 12px 16px; min-width: 140px; }
+  .stat-card .label { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; }
+  .stat-card .value { font-size: 24px; font-weight: 700; margin-top: 2px; }
+  .stat-card .value.ok { color: var(--ok); }
+  .stat-card .value.warn { color: var(--warn); }
+  .stat-card .value.err { color: var(--err); }
+
+  /* Phase blocks */
+  .phase { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; margin-bottom: 16px; overflow: hidden; }
+  .phase-header { padding: 12px 16px; border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 8px; cursor: pointer; user-select: none; }
+  .phase-header:hover { background: rgba(88,166,255,0.05); }
+  .phase-header .arrow { transition: transform 0.2s; font-size: 10px; }
+  .phase-header .arrow.open { transform: rotate(90deg); }
+  .phase-header .title { font-weight: 600; font-size: 14px; }
+  .phase-header .badge { font-size: 11px; padding: 2px 8px; border-radius: 10px; font-weight: 600; }
+  .badge.ok { background: rgba(63,185,80,0.15); color: var(--ok); }
+  .badge.warn { background: rgba(210,153,34,0.15); color: var(--warn); }
+  .badge.err { background: rgba(248,81,73,0.15); color: var(--err); }
+  .badge.loading { background: rgba(88,166,255,0.15); color: var(--info); }
+  .badge.skip { background: rgba(139,148,158,0.15); color: var(--muted); }
+  .phase-body { padding: 0; max-height: 600px; overflow-y: auto; }
+  .phase-body.collapsed { display: none; }
+
+  /* Log lines */
+  .log-line { padding: 4px 16px; display: flex; gap: 8px; align-items: flex-start; border-bottom: 1px solid rgba(48,54,61,0.5); font-size: 12px; }
+  .log-line:hover { background: rgba(88,166,255,0.03); }
+  .log-line .icon { width: 16px; text-align: center; flex-shrink: 0; margin-top: 1px; }
+  .log-line .ts { color: var(--muted); min-width: 70px; flex-shrink: 0; }
+  .log-line .msg { flex: 1; word-break: break-all; }
+  .log-line.ok .icon { color: var(--ok); }
+  .log-line.warn .icon { color: var(--warn); }
+  .log-line.err .icon { color: var(--err); }
+  .log-line.info .icon { color: var(--info); }
+  .log-line.err { background: rgba(248,81,73,0.05); }
+  .log-line.warn { background: rgba(210,153,34,0.05); }
+
+  code { background: rgba(88,166,255,0.1); padding: 1px 5px; border-radius: 3px; font-size: 11.5px; }
+  .uuid { color: var(--accent); }
+  .hash { color: #d2a8ff; }
+  .fname { color: #7ee787; }
+  .errtext { color: var(--err); font-weight: 600; }
+
+  /* File detail table */
+  .file-table { width: 100%; border-collapse: collapse; font-size: 12px; }
+  .file-table th { text-align: left; padding: 8px 12px; background: rgba(0,0,0,0.3); color: var(--muted); font-weight: 600; text-transform: uppercase; font-size: 10px; letter-spacing: 0.5px; position: sticky; top: 0; }
+  .file-table td { padding: 6px 12px; border-bottom: 1px solid rgba(48,54,61,0.5); vertical-align: top; }
+  .file-table tr:hover td { background: rgba(88,166,255,0.03); }
+  .file-table tr.err td { background: rgba(248,81,73,0.06); }
+  .file-table tr.warn td { background: rgba(210,153,34,0.06); }
+  .file-table tr.orphan td { background: rgba(139,148,158,0.06); }
+
+  .tag { display: inline-block; font-size: 10px; padding: 1px 6px; border-radius: 3px; font-weight: 600; margin: 1px 2px; }
+  .tag.mc { background: rgba(88,166,255,0.15); color: var(--info); }
+  .tag.tf { background: rgba(210,153,34,0.15); color: var(--warn); }
+  .tag.cloze { background: rgba(163,113,247,0.15); color: #d2a8ff; }
+  .tag.bad { background: rgba(248,81,73,0.2); color: var(--err); }
+
+  .progress-bar { width: 100%; height: 6px; background: var(--border); border-radius: 3px; overflow: hidden; margin: 8px 0; }
+  .progress-fill { height: 100%; background: var(--accent); transition: width 0.3s ease; border-radius: 3px; }
+
+  .filter-bar { display: flex; gap: 8px; margin-bottom: 12px; align-items: center; flex-wrap: wrap; }
+  .filter-bar label { font-size: 11px; color: var(--muted); }
+  .filter-btn { font-size: 11px; padding: 3px 10px; border-radius: 12px; border: 1px solid var(--border); background: transparent; color: var(--muted); cursor: pointer; }
+  .filter-btn.active { border-color: var(--accent); color: var(--accent); background: rgba(88,166,255,0.1); }
+
+  .json-preview { background: #0d1117; border: 1px solid var(--border); border-radius: 6px; padding: 12px; max-height: 300px; overflow: auto; font-size: 11px; white-space: pre-wrap; margin-top: 8px; }
+
+  .empty-state { text-align: center; padding: 40px; color: var(--muted); }
+  .empty-state .big { font-size: 40px; margin-bottom: 8px; }
+
+  /* Expandable detail row */
+  .detail-row { display: none; }
+  .detail-row.open { display: table-row; }
+  .detail-row td { padding: 12px 16px; background: rgba(0,0,0,0.2); }
+  .detail-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .detail-section h4 { font-size: 11px; text-transform: uppercase; color: var(--muted); margin-bottom: 4px; }
+
+  @media (max-width: 900px) {
+    .detail-grid { grid-template-columns: 1fr; }
+    .summary-bar { flex-direction: column; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>🔍 File Loader Debugger</h1>
+  <div class="controls">
+    <select id="topic-select"><option value="">Select a topic...</option></select>
+    <button class="primary" id="run-btn" disabled>▶ Run Full Audit</button>
+    <button id="export-btn" disabled>📋 Copy Report</button>
+  </div>
+</header>
+
+<div class="container">
+  <div id="empty-state" class="empty-state">
+    <div class="big">📂</div>
+    <p>Select a topic from the dropdown and click <strong>Run Full Audit</strong></p>
+    <p style="margin-top:8px; font-size:11px; color:var(--muted);">This tool mimics the load sequence in dynamic-learning-checklist.html<br>and reports every file-related issue it finds.</p>
+  </div>
+
+  <div id="results" style="display:none;">
+    <!-- Summary -->
+    <div class="summary-bar" id="summary-bar"></div>
+    <div class="progress-bar"><div class="progress-fill" id="progress-fill" style="width:0%"></div></div>
+
+    <!-- Phase 1: Manifest -->
+    <div class="phase" id="phase-manifest">
+      <div class="phase-header" onclick="togglePhase('manifest')">
+        <span class="arrow open" id="arrow-manifest">▶</span>
+        <span class="title">Phase 1 — Manifest Load</span>
+        <span class="badge loading" id="badge-manifest">pending</span>
+      </div>
+      <div class="phase-body" id="body-manifest"></div>
+    </div>
+
+    <!-- Phase 2: Topic & Subtopics -->
+    <div class="phase" id="phase-topic">
+      <div class="phase-header" onclick="togglePhase('topic')">
+        <span class="arrow open" id="arrow-topic">▶</span>
+        <span class="title">Phase 2 — Topic & Subtopic Load</span>
+        <span class="badge loading" id="badge-topic">pending</span>
+      </div>
+      <div class="phase-body" id="body-topic"></div>
+    </div>
+
+    <!-- Phase 3: Question File Discovery -->
+    <div class="phase" id="phase-discovery">
+      <div class="phase-header" onclick="togglePhase('discovery')">
+        <span class="arrow open" id="arrow-discovery">▶</span>
+        <span class="title">Phase 3 — Question File Discovery & UUID Matching</span>
+        <span class="badge loading" id="badge-discovery">pending</span>
+      </div>
+      <div class="phase-body" id="body-discovery"></div>
+    </div>
+
+    <!-- Phase 4: JSON Parse & Structure -->
+    <div class="phase" id="phase-parse">
+      <div class="phase-header" onclick="togglePhase('parse')">
+        <span class="arrow open" id="arrow-parse">▶</span>
+        <span class="title">Phase 4 — JSON Parse & Structure Validation</span>
+        <span class="badge loading" id="badge-parse">pending</span>
+      </div>
+      <div class="phase-body" id="body-parse"></div>
+    </div>
+
+    <!-- Phase 5: Deep Content Audit -->
+    <div class="phase" id="phase-content">
+      <div class="phase-header" onclick="togglePhase('content')">
+        <span class="arrow open" id="arrow-content">▶</span>
+        <span class="title">Phase 5 — Deep Content Audit (Hash, Types, Questions)</span>
+        <span class="badge loading" id="badge-content">pending</span>
+      </div>
+      <div class="phase-body" id="body-content"></div>
+    </div>
+
+    <!-- File Overview Table -->
+    <div class="phase" id="phase-table">
+      <div class="phase-header" onclick="togglePhase('table')">
+        <span class="arrow open" id="arrow-table">▶</span>
+        <span class="title">File Overview — All Question Files</span>
+        <span class="badge" id="badge-table" style="background:rgba(88,166,255,0.15);color:var(--info);">table</span>
+      </div>
+      <div class="phase-body" id="body-table"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+// ================================================
+// STATE
+// ================================================
+let manifest = null;
+let auditResults = { errors: 0, warnings: 0, passed: 0, files: [] };
+const startTime = performance.now();
+
+// ================================================
+// UTILITY
+// ================================================
+function ts() {
+  return `+${((performance.now() - startTime) / 1000).toFixed(2)}s`;
+}
+
+function log(phaseId, level, msg) {
+  const body = document.getElementById(`body-${phaseId}`);
+  if (!body) return;
+  const icons = { ok: '✓', warn: '⚠', err: '✗', info: 'ℹ' };
+  const div = document.createElement('div');
+  div.className = `log-line ${level}`;
+  div.innerHTML = `<span class="icon">${icons[level] || '·'}</span><span class="ts">${ts()}</span><span class="msg">${msg}</span>`;
+  body.appendChild(div);
+  body.scrollTop = body.scrollHeight;
+}
+
+function setBadge(phaseId, text, level) {
+  const badge = document.getElementById(`badge-${phaseId}`);
+  if (badge) { badge.textContent = text; badge.className = `badge ${level}`; }
+}
+
+function togglePhase(id) {
+  const body = document.getElementById(`body-${id}`);
+  const arrow = document.getElementById(`arrow-${id}`);
+  if (!body) return;
+  body.classList.toggle('collapsed');
+  arrow.classList.toggle('open');
+}
+
+function setProgress(pct) {
+  document.getElementById('progress-fill').style.width = pct + '%';
+}
+
+// ================================================
+// PHASE 1: MANIFEST
+// ================================================
+async function phase1_loadManifest() {
+  const phase = 'manifest';
+  log(phase, 'info', 'Fetching <code>manifest.json</code> with cache-bust...');
+
+  try {
+    const url = `manifest.json?v=${Date.now()}`;
+    const resp = await fetch(url);
+
+    if (!resp.ok) {
+      log(phase, 'err', `HTTP <span class="errtext">${resp.status} ${resp.statusText}</span> — manifest.json not found or server error`);
+      setBadge(phase, `HTTP ${resp.status}`, 'err');
+      auditResults.errors++;
+      return null;
+    }
+
+    const text = await resp.text();
+    log(phase, 'ok', `Received ${text.length.toLocaleString()} bytes`);
+
+    // Try parsing
+    try {
+      manifest = JSON.parse(text);
+    } catch (parseErr) {
+      log(phase, 'err', `<span class="errtext">JSON PARSE ERROR</span>: ${escHtml(parseErr.message)}`);
+      log(phase, 'err', `Raw response starts with: <code>${escHtml(text.substring(0, 200))}</code>`);
+      setBadge(phase, 'parse error', 'err');
+      auditResults.errors++;
+      return null;
+    }
+
+    // Validate structure
+    if (!manifest.yearLevels || !Array.isArray(manifest.yearLevels)) {
+      log(phase, 'err', '<span class="errtext">STRUCTURE ERROR</span>: Missing or invalid <code>yearLevels</code> array');
+      setBadge(phase, 'bad structure', 'err');
+      auditResults.errors++;
+      return null;
+    }
+
+    const totalTopics = manifest.yearLevels.reduce((sum, yl) =>
+      sum + (yl.subjects || []).reduce((s2, sub) => s2 + (sub.topics || []).length, 0), 0);
+
+    log(phase, 'ok', `Version: <code>${manifest.version || 'n/a'}</code> | Year levels: <code>${manifest.yearLevels.length}</code> | Total topics: <code>${totalTopics}</code>`);
+
+    // Check for duplicate topic IDs
+    const allIds = [];
+    manifest.yearLevels.forEach(yl => (yl.subjects || []).forEach(sub => (sub.topics || []).forEach(t => allIds.push(t.id))));
+    const dupes = allIds.filter((id, i) => allIds.indexOf(id) !== i);
+    if (dupes.length) {
+      log(phase, 'warn', `Duplicate topic IDs found: <code>${dupes.join(', ')}</code>`);
+      auditResults.warnings++;
+    }
+
+    setBadge(phase, `${totalTopics} topics`, 'ok');
+    auditResults.passed++;
+    return manifest;
+
+  } catch (networkErr) {
+    log(phase, 'err', `<span class="errtext">NETWORK ERROR</span>: ${escHtml(networkErr.message)}`);
+    setBadge(phase, 'network error', 'err');
+    auditResults.errors++;
+    return null;
+  }
+}
+
+// ================================================
+// PHASE 2: TOPIC & SUBTOPICS
+// ================================================
+async function phase2_loadTopic(topicPath) {
+  const phase = 'topic';
+  const basePath = topicPath.endsWith('/') ? topicPath : topicPath + '/';
+
+  // 2a: Load topic.json
+  log(phase, 'info', `Fetching <code class="fname">${basePath}topic.json</code>`);
+
+  let topicData;
+  try {
+    const resp = await fetch(`${basePath}topic.json`);
+    if (!resp.ok) {
+      log(phase, 'err', `<span class="errtext">HTTP ${resp.status}</span> for topic.json — file missing or inaccessible`);
+      setBadge(phase, 'topic.json missing', 'err');
+      auditResults.errors++;
+      return null;
+    }
+    const text = await resp.text();
+    try {
+      topicData = JSON.parse(text);
+    } catch (e) {
+      log(phase, 'err', `<span class="errtext">JSON PARSE ERROR</span> in topic.json: ${escHtml(e.message)}`);
+      setBadge(phase, 'parse error', 'err');
+      auditResults.errors++;
+      return null;
+    }
+  } catch (e) {
+    log(phase, 'err', `<span class="errtext">NETWORK ERROR</span> loading topic.json: ${escHtml(e.message)}`);
+    setBadge(phase, 'network error', 'err');
+    auditResults.errors++;
+    return null;
+  }
+
+  // Validate topic structure
+  if (!topicData.name) {
+    log(phase, 'warn', 'topic.json has no <code>name</code> field');
+    auditResults.warnings++;
+  }
+  if (!topicData.subtopics || !Array.isArray(topicData.subtopics)) {
+    log(phase, 'err', '<span class="errtext">STRUCTURE ERROR</span>: topic.json missing <code>subtopics</code> array');
+    setBadge(phase, 'bad structure', 'err');
+    auditResults.errors++;
+    return null;
+  }
+
+  log(phase, 'ok', `Topic: <strong>${escHtml(topicData.name)}</strong> | ID: <code>${topicData.id || 'n/a'}</code> | ${topicData.subtopics.length} subtopic references`);
+
+  // 2b: Load each subtopic
+  const subtopicsLoaded = [];
+  let subtopicErrors = 0;
+
+  for (let i = 0; i < topicData.subtopics.length; i++) {
+    const ref = topicData.subtopics[i];
+    const filename = ref.file || ref.id + '.json';
+    const url = `${basePath}subtopics/${filename}`;
+
+    log(phase, 'info', `Loading subtopic ${i + 1}/${topicData.subtopics.length}: <code class="fname">${filename}</code>`);
+
+    try {
+      const resp = await fetch(url);
+      if (!resp.ok) {
+        log(phase, 'err', `<span class="errtext">HTTP ${resp.status}</span> for subtopic <code>${ref.id}</code> — file: <code class="fname">${filename}</code>`);
+        subtopicErrors++;
+        auditResults.errors++;
+        subtopicsLoaded.push({ id: ref.id, name: ref.name, items: [], _loadError: true });
+        continue;
+      }
+
+      const text = await resp.text();
+      let subData;
+      try {
+        subData = JSON.parse(text);
+      } catch (e) {
+        log(phase, 'err', `<span class="errtext">JSON PARSE ERROR</span> in <code class="fname">${filename}</code>: ${escHtml(e.message)}`);
+        subtopicErrors++;
+        auditResults.errors++;
+        subtopicsLoaded.push({ id: ref.id, name: ref.name, items: [], _loadError: true, _parseError: e.message });
+        continue;
+      }
+
+      const items = subData.items || [];
+      log(phase, 'ok', `Subtopic <strong>${escHtml(subData.name || ref.name)}</strong>: ${items.length} learning points`);
+
+      // Validate each learning point
+      items.forEach((item, idx) => {
+        if (!item.uuid) {
+          log(phase, 'err', `Item #${idx + 1} in <code>${ref.id}</code> has <span class="errtext">NO UUID</span>`);
+          auditResults.errors++;
+        } else if (!item.uuid.startsWith('lp-')) {
+          log(phase, 'warn', `Item #${idx + 1} UUID doesn't start with "lp-": <code class="uuid">${item.uuid}</code>`);
+          auditResults.warnings++;
+        }
+        if (!item.contentHash) {
+          log(phase, 'warn', `Item #${idx + 1} (<code class="uuid">${item.uuid || 'no-uuid'}</code>) has no <code>contentHash</code>`);
+          auditResults.warnings++;
+        }
+        if (!item.title) {
+          log(phase, 'warn', `Item #${idx + 1} (<code class="uuid">${item.uuid || 'no-uuid'}</code>) has no <code>title</code>`);
+          auditResults.warnings++;
+        }
+      });
+
+      // Check for duplicate UUIDs within subtopic
+      const uuids = items.map(i => i.uuid).filter(Boolean);
+      const dupeUuids = uuids.filter((u, i) => uuids.indexOf(u) !== i);
+      if (dupeUuids.length) {
+        log(phase, 'err', `<span class="errtext">DUPLICATE UUIDs</span> in <code>${ref.id}</code>: ${dupeUuids.map(u => `<code class="uuid">${u}</code>`).join(', ')}`);
+        auditResults.errors++;
+      }
+
+      subtopicsLoaded.push({ ...subData, id: subData.id || ref.id, items });
+
+    } catch (e) {
+      log(phase, 'err', `<span class="errtext">NETWORK ERROR</span> loading <code class="fname">${filename}</code>: ${escHtml(e.message)}`);
+      subtopicErrors++;
+      auditResults.errors++;
+      subtopicsLoaded.push({ id: ref.id, name: ref.name, items: [], _loadError: true });
+    }
+  }
+
+  topicData.subtopics = subtopicsLoaded;
+  const totalItems = subtopicsLoaded.reduce((s, st) => s + st.items.length, 0);
+
+  if (subtopicErrors > 0) {
+    setBadge(phase, `${subtopicErrors} errors`, 'err');
+  } else {
+    setBadge(phase, `${totalItems} LPs loaded`, 'ok');
+  }
+
+  log(phase, subtopicErrors ? 'warn' : 'ok', `<strong>Summary:</strong> ${subtopicsLoaded.length} subtopics, ${totalItems} learning points, ${subtopicErrors} load errors`);
+
+  return topicData;
+}
+
+// ================================================
+// PHASE 3: QUESTION FILE DISCOVERY & UUID MATCHING
+// ================================================
+async function phase3_discoverQuestions(topicData, basePath) {
+  const phase = 'discovery';
+  const questionsPath = basePath + 'questions/';
+
+  // Collect all expected UUIDs from learning points
+  const expectedUuids = {};
+  topicData.subtopics.forEach(st => {
+    (st.items || []).forEach(item => {
+      if (item.uuid) {
+        expectedUuids[item.uuid] = {
+          subtopic: st.id,
+          title: item.title,
+          contentHash: item.contentHash,
+          itemId: item.id,
+          expectedFile: `q-${item.uuid}.json`
+        };
+      }
+    });
+  });
+
+  const expectedCount = Object.keys(expectedUuids).length;
+  log(phase, 'info', `Expecting <code>${expectedCount}</code> question files based on learning point UUIDs`);
+
+  // Try to fetch each expected file (mirrors loadQuestionsForItem)
+  const found = {};
+  const missing = [];
+  let fetchErrors = 0;
+
+  for (const [uuid, info] of Object.entries(expectedUuids)) {
+    const filename = info.expectedFile;
+    const url = questionsPath + filename;
+
+    try {
+      const resp = await fetch(url, { method: 'HEAD' });
+
+      if (resp.ok) {
+        found[uuid] = { filename, url, status: resp.status, info };
+        log(phase, 'ok', `<code class="uuid">${uuid}</code> → <code class="fname">${filename}</code> <span style="color:var(--ok)">found</span>`);
+      } else if (resp.status === 404) {
+        missing.push({ uuid, info, filename });
+        log(phase, 'err', `<code class="uuid">${uuid}</code> → <code class="fname">${filename}</code> <span class="errtext">404 NOT FOUND</span>`);
+        auditResults.errors++;
+      } else {
+        log(phase, 'warn', `<code class="uuid">${uuid}</code> → <code class="fname">${filename}</code> HTTP <code>${resp.status}</code>`);
+        auditResults.warnings++;
+        fetchErrors++;
+      }
+    } catch (e) {
+      log(phase, 'err', `<code class="uuid">${uuid}</code> → <code class="fname">${filename}</code> <span class="errtext">FETCH ERROR</span>: ${escHtml(e.message)}`);
+      missing.push({ uuid, info, filename, networkError: e.message });
+      auditResults.errors++;
+      fetchErrors++;
+    }
+  }
+
+  // Now check for orphan question files (files that exist but don't match any LP)
+  log(phase, 'info', 'Scanning for orphan question files (no matching learning point)...');
+
+  // We'll try to detect orphans by fetching a directory listing or known patterns
+  // Since we can't list directories via fetch, we check for common UUID mismatch patterns
+  // by trying slight variations of missing files
+  let orphansDetected = [];
+
+  // For missing files, try fetching with just the short prefix to detect mismatch
+  for (const m of missing) {
+    const shortPrefix = m.uuid.replace('lp-', '').substring(0, 8);
+    log(phase, 'info', `Checking for UUID-prefix match: <code>${shortPrefix}*</code> (might exist with wrong suffix)`);
+  }
+
+  // Summary
+  const foundCount = Object.keys(found).length;
+  const missingCount = missing.length;
+
+  if (missingCount > 0) {
+    log(phase, 'err', `<strong>MISSING FILES:</strong> ${missingCount} learning points have no question file`);
+    missing.forEach(m => {
+      log(phase, 'err', `  └ <code class="uuid">${m.uuid}</code> — "${escHtml(m.info.title)}" [subtopic: ${m.info.subtopic}]`);
+    });
+    setBadge(phase, `${missingCount} missing`, 'err');
+  } else {
+    log(phase, 'ok', `All ${foundCount} expected question files found`);
+    setBadge(phase, `${foundCount}/${expectedCount} found`, foundCount === expectedCount ? 'ok' : 'warn');
+  }
+
+  return { expectedUuids, found, missing };
+}
+
+// ================================================
+// PHASE 4: JSON PARSE & STRUCTURE VALIDATION
+// ================================================
+async function phase4_parseAndValidate(discoveryResult, basePath) {
+  const phase = 'parse';
+  const questionsPath = basePath + 'questions/';
+  const fileDetails = [];
+  let parseErrors = 0;
+  let structureErrors = 0;
+
+  for (const [uuid, entry] of Object.entries(discoveryResult.found)) {
+    const url = questionsPath + entry.filename;
+    log(phase, 'info', `Parsing <code class="fname">${entry.filename}</code>`);
+
+    const detail = {
+      uuid, filename: entry.filename, url,
+      expected: entry.info,
+      status: 'ok', errors: [], warnings: [],
+      data: null
+    };
+
+    try {
+      const resp = await fetch(url);
+      const text = await resp.text();
+      detail.rawSize = text.length;
+
+      // Parse JSON
+      try {
+        detail.data = JSON.parse(text);
+      } catch (parseErr) {
+        detail.status = 'err';
+        detail.errors.push(`JSON PARSE ERROR: ${parseErr.message}`);
+        log(phase, 'err', `<code class="fname">${entry.filename}</code>: <span class="errtext">JSON PARSE ERROR</span> — ${escHtml(parseErr.message)}`);
+
+        // Try to identify location
+        const match = parseErr.message.match(/position (\d+)/i);
+        if (match) {
+          const pos = parseInt(match[1]);
+          const snippet = text.substring(Math.max(0, pos - 40), pos + 40);
+          log(phase, 'err', `  └ Near position ${pos}: <code>${escHtml(snippet)}</code>`);
+        }
+
+        parseErrors++;
+        auditResults.errors++;
+        fileDetails.push(detail);
+        continue;
+      }
+
+      const data = detail.data;
+
+      // Validate _link block
+      if (!data._link) {
+        detail.errors.push('Missing _link metadata block');
+        log(phase, 'err', `<code class="fname">${entry.filename}</code>: <span class="errtext">Missing _link block</span>`);
+        structureErrors++;
+        auditResults.errors++;
+      } else {
+        detail.linkUuid = data._link.uuid;
+        detail.linkHash = data._link.contentHash;
+        detail.linkTitle = data._link.title;
+        detail.linkVersion = data._link.version;
+
+        // UUID match: _link.uuid vs filename
+        const expectedUuidFromFilename = uuid; // e.g. "lp-xxxx"
+        if (data._link.uuid !== expectedUuidFromFilename) {
+          detail.errors.push(`UUID MISMATCH: filename says "${uuid}" but _link.uuid says "${data._link.uuid}"`);
+          log(phase, 'err', `<code class="fname">${entry.filename}</code>: <span class="errtext">UUID MISMATCH</span> — filename: <code class="uuid">${uuid}</code> vs _link: <code class="uuid">${data._link.uuid}</code>`);
+          structureErrors++;
+          auditResults.errors++;
+        } else {
+          log(phase, 'ok', `<code class="fname">${entry.filename}</code>: UUID match ✓`);
+        }
+
+        // ContentHash match: _link.contentHash vs subtopic item contentHash
+        if (entry.info.contentHash && data._link.contentHash) {
+          if (data._link.contentHash !== entry.info.contentHash) {
+            detail.warnings.push(`contentHash MISMATCH: LP has "${entry.info.contentHash}" but question _link has "${data._link.contentHash}"`);
+            log(phase, 'warn', `<code class="fname">${entry.filename}</code>: <span style="color:var(--warn)">contentHash mismatch</span> — LP: <code class="hash">${entry.info.contentHash}</code> vs JSON: <code class="hash">${data._link.contentHash}</code>`);
+            auditResults.warnings++;
+          }
+        }
+
+        // Title match
+        if (entry.info.title && data._link.title && data._link.title !== entry.info.title) {
+          detail.warnings.push(`Title mismatch: LP="${entry.info.title}" vs JSON="${data._link.title}"`);
+          log(phase, 'warn', `<code class="fname">${entry.filename}</code>: Title mismatch between LP and _link`);
+          auditResults.warnings++;
+        }
+      }
+
+      // Validate level arrays
+      const levels = ['toLevel2', 'toLevel3', 'toLevel4', 'toLevel5'];
+      detail.levelCounts = {};
+
+      levels.forEach(lk => {
+        if (!data[lk]) {
+          detail.errors.push(`Missing "${lk}" array`);
+          log(phase, 'err', `<code class="fname">${entry.filename}</code>: <span class="errtext">Missing ${lk}</span> array`);
+          structureErrors++;
+          auditResults.errors++;
+          detail.levelCounts[lk] = 0;
+        } else if (!Array.isArray(data[lk])) {
+          detail.errors.push(`"${lk}" is not an array (type: ${typeof data[lk]})`);
+          log(phase, 'err', `<code class="fname">${entry.filename}</code>: <span class="errtext">${lk} is not an array</span>`);
+          structureErrors++;
+          auditResults.errors++;
+          detail.levelCounts[lk] = 0;
+        } else {
+          detail.levelCounts[lk] = data[lk].length;
+          if (data[lk].length === 0) {
+            detail.warnings.push(`"${lk}" is empty (0 questions)`);
+            log(phase, 'warn', `<code class="fname">${entry.filename}</code>: ${lk} is <span style="color:var(--warn)">empty</span>`);
+            auditResults.warnings++;
+          }
+        }
+      });
+
+      detail.totalQuestions = Object.values(detail.levelCounts).reduce((a, b) => a + b, 0);
+
+      if (detail.errors.length > 0) {
+        detail.status = 'err';
+      } else if (detail.warnings.length > 0) {
+        detail.status = 'warn';
+      }
+
+      if (detail.errors.length === 0) {
+        auditResults.passed++;
+      }
+
+    } catch (e) {
+      detail.status = 'err';
+      detail.errors.push(`FETCH ERROR: ${e.message}`);
+      log(phase, 'err', `<code class="fname">${entry.filename}</code>: <span class="errtext">FETCH ERROR</span> — ${escHtml(e.message)}`);
+      auditResults.errors++;
+    }
+
+    fileDetails.push(detail);
+  }
+
+  log(phase, parseErrors + structureErrors > 0 ? 'warn' : 'ok',
+    `<strong>Summary:</strong> ${fileDetails.length} files parsed, ${parseErrors} parse errors, ${structureErrors} structure errors`);
+
+  setBadge(phase, parseErrors + structureErrors > 0 ? `${parseErrors + structureErrors} issues` : `${fileDetails.length} valid`, parseErrors + structureErrors > 0 ? 'err' : 'ok');
+
+  return fileDetails;
+}
+
+// ================================================
+// PHASE 5: DEEP CONTENT AUDIT
+// ================================================
+async function phase5_deepAudit(fileDetails, basePath) {
+  const phase = 'content';
+  let typeIssues = 0;
+  let questionIssues = 0;
+
+  // Expected question counts per level
+  const expectedCounts = {
+    toLevel2: { mc: 5, tf: 2, cloze: 3, total: 10 },
+    toLevel3: { mc: 6, tf: 1, cloze: 3, total: 10 },
+    toLevel4: { mc: 7, tf: 0, cloze: 3, total: 10 },
+    toLevel5: { mc: 8, tf: 0, cloze: 2, total: 10 }
+  };
+
+  for (const detail of fileDetails) {
+    if (!detail.data) continue;
+
+    const data = detail.data;
+    log(phase, 'info', `Auditing <code class="fname">${detail.filename}</code>`);
+
+    // Check each level's questions
+    for (const [levelKey, expected] of Object.entries(expectedCounts)) {
+      const questions = data[levelKey];
+      if (!Array.isArray(questions)) continue;
+
+      // Count by type
+      const typeCounts = { mc: 0, tf: 0, cloze: 0, unknown: 0 };
+      const rawTypes = {};
+
+      questions.forEach((q, idx) => {
+        if (!q || typeof q !== 'object') {
+          detail.errors.push(`${levelKey}[${idx}]: not an object`);
+          log(phase, 'err', `<code class="fname">${detail.filename}</code> → ${levelKey}[${idx}]: <span class="errtext">not an object</span>`);
+          questionIssues++;
+          auditResults.errors++;
+          return;
+        }
+
+        const rawType = q.type || '(missing)';
+        rawTypes[rawType] = (rawTypes[rawType] || 0) + 1;
+        const normType = (q.type || '').toLowerCase();
+
+        if (normType === 'mc') typeCounts.mc++;
+        else if (normType === 'tf') typeCounts.tf++;
+        else if (normType === 'cloze') typeCounts.cloze++;
+        else {
+          typeCounts.unknown++;
+          detail.errors.push(`${levelKey}[${idx}]: unknown type "${rawType}"`);
+          log(phase, 'err', `<code class="fname">${detail.filename}</code> → ${levelKey}[${idx}]: <span class="errtext">unknown type</span> "<code>${escHtml(rawType)}</code>"`);
+          typeIssues++;
+          auditResults.errors++;
+        }
+
+        // Check if type was uppercase (cosmetic but worth flagging)
+        if (q.type && q.type !== q.type.toLowerCase()) {
+          detail.warnings.push(`${levelKey}[${idx}]: type "${q.type}" is not lowercase (app will normalize, but not canonical)`);
+          if (!detail._typeWarningLogged) {
+            log(phase, 'warn', `<code class="fname">${detail.filename}</code>: contains uppercase type values (e.g. "<code>${q.type}</code>") — app normalizes these but they're non-canonical`);
+            detail._typeWarningLogged = true;
+          }
+        }
+
+        // Validate MC question structure
+        if (normType === 'mc' || normType === 'tf') {
+          if (!q.question && !q.stem && !q.statement) {
+            detail.errors.push(`${levelKey}[${idx}]: MC/TF missing question text`);
+            questionIssues++;
+          }
+          if (q.correct === undefined && q.correctAnswer === undefined && !q.options) {
+            detail.errors.push(`${levelKey}[${idx}]: MC/TF missing correct answer`);
+            questionIssues++;
+          }
+        }
+
+        // Validate Cloze structure
+        if (normType === 'cloze') {
+          if (!q.sentence && !q.template && !q.segments && !q.question) {
+            detail.errors.push(`${levelKey}[${idx}]: Cloze missing sentence/template`);
+            questionIssues++;
+          }
+          if (!q.blanks && !q.correctAnswer && !q.correct) {
+            detail.errors.push(`${levelKey}[${idx}]: Cloze missing blanks/answer data`);
+            questionIssues++;
+          }
+        }
+      });
+
+      // Check total count
+      if (questions.length !== expected.total) {
+        detail.warnings.push(`${levelKey}: has ${questions.length} questions, expected ${expected.total}`);
+        log(phase, 'warn', `<code class="fname">${detail.filename}</code> → ${levelKey}: <code>${questions.length}</code> questions (expected <code>${expected.total}</code>)`);
+        auditResults.warnings++;
+      }
+
+      // Check type distribution
+      if (typeCounts.mc !== expected.mc) {
+        detail.warnings.push(`${levelKey}: ${typeCounts.mc} MC (expected ${expected.mc})`);
+      }
+      if (typeCounts.tf !== expected.tf) {
+        detail.warnings.push(`${levelKey}: ${typeCounts.tf} TF (expected ${expected.tf})`);
+      }
+      if (typeCounts.cloze !== expected.cloze) {
+        detail.warnings.push(`${levelKey}: ${typeCounts.cloze} Cloze (expected ${expected.cloze})`);
+      }
+
+      // Store type breakdown for table
+      if (!detail.typeBreakdown) detail.typeBreakdown = {};
+      detail.typeBreakdown[levelKey] = { ...typeCounts, rawTypes };
+    }
+
+    // Update status
+    if (detail.errors.length > 0) detail.status = 'err';
+    else if (detail.warnings.length > 0) detail.status = 'warn';
+  }
+
+  log(phase, typeIssues + questionIssues > 0 ? 'warn' : 'ok',
+    `<strong>Summary:</strong> ${typeIssues} type issues, ${questionIssues} question structure issues`);
+
+  setBadge(phase, typeIssues + questionIssues > 0 ? `${typeIssues + questionIssues} issues` : 'all valid', typeIssues + questionIssues > 0 ? 'warn' : 'ok');
+
+  return fileDetails;
+}
+
+// ================================================
+// BUILD FILE TABLE
+// ================================================
+function buildFileTable(fileDetails, missingFiles) {
+  const phase = 'table';
+  const body = document.getElementById(`body-${phase}`);
+  if (!body) return;
+
+  let html = `
+    <div style="padding:8px 16px;">
+      <div class="filter-bar">
+        <label>Filter:</label>
+        <button class="filter-btn active" onclick="filterTable('all')">All</button>
+        <button class="filter-btn" onclick="filterTable('err')">Errors</button>
+        <button class="filter-btn" onclick="filterTable('warn')">Warnings</button>
+        <button class="filter-btn" onclick="filterTable('ok')">Passed</button>
+        <button class="filter-btn" onclick="filterTable('missing')">Missing</button>
+      </div>
+    </div>
+    <table class="file-table" id="file-table">
+    <thead>
+      <tr>
+        <th style="width:30px;">#</th>
+        <th>Filename</th>
+        <th>UUID Match</th>
+        <th>Hash Match</th>
+        <th>Questions</th>
+        <th>Types</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>`;
+
+  // Render found files
+  fileDetails.forEach((d, i) => {
+    const uuidOk = !d.errors.some(e => e.includes('UUID MISMATCH'));
+    const hashOk = !d.warnings.some(w => w.includes('contentHash'));
+
+    html += `
+      <tr class="${d.status}" style="cursor:pointer;" onclick="toggleDetailRow('detail-${i}')">
+        <td>${i + 1}</td>
+        <td><code class="fname">${d.filename}</code></td>
+        <td>${uuidOk ? '<span style="color:var(--ok)">✓</span>' : '<span style="color:var(--err)">✗ mismatch</span>'}</td>
+        <td>${hashOk ? '<span style="color:var(--ok)">✓</span>' : '<span style="color:var(--warn)">⚠ differs</span>'}</td>
+        <td>${d.totalQuestions || 0}</td>
+        <td>${renderTypeTags(d)}</td>
+        <td>${d.status === 'ok' ? '<span style="color:var(--ok)">PASS</span>' : d.status === 'err' ? '<span class="errtext">FAIL</span>' : '<span style="color:var(--warn)">WARN</span>'}</td>
+      </tr>
+      <tr class="detail-row" id="detail-${i}">
+        <td colspan="7">
+          <div class="detail-grid">
+            <div class="detail-section">
+              <h4>_link metadata</h4>
+              <div>UUID: <code class="uuid">${d.linkUuid || 'n/a'}</code></div>
+              <div>Hash: <code class="hash">${d.linkHash || 'n/a'}</code></div>
+              <div>Title: ${escHtml(d.linkTitle || 'n/a')}</div>
+              <div>Version: ${d.linkVersion || 'n/a'}</div>
+              <div>Size: ${d.rawSize ? d.rawSize.toLocaleString() + ' bytes' : 'n/a'}</div>
+            </div>
+            <div class="detail-section">
+              <h4>Expected (from subtopic)</h4>
+              <div>UUID: <code class="uuid">${d.uuid}</code></div>
+              <div>Hash: <code class="hash">${d.expected?.contentHash || 'n/a'}</code></div>
+              <div>Title: ${escHtml(d.expected?.title || 'n/a')}</div>
+              <div>Subtopic: ${d.expected?.subtopic || 'n/a'}</div>
+            </div>
+          </div>
+          ${d.errors.length ? '<h4 style="margin-top:8px;color:var(--err);">Errors</h4><ul style="margin:4px 0 0 16px;">' + d.errors.map(e => `<li style="color:var(--err);font-size:11px;">${escHtml(e)}</li>`).join('') + '</ul>' : ''}
+          ${d.warnings.length ? '<h4 style="margin-top:8px;color:var(--warn);">Warnings</h4><ul style="margin:4px 0 0 16px;">' + d.warnings.map(w => `<li style="color:var(--warn);font-size:11px;">${escHtml(w)}</li>`).join('') + '</ul>' : ''}
+          ${renderLevelDetail(d)}
+        </td>
+      </tr>`;
+  });
+
+  // Render missing files
+  missingFiles.forEach((m, i) => {
+    html += `
+      <tr class="err" data-filter="missing">
+        <td style="color:var(--err);">—</td>
+        <td><code class="fname" style="opacity:0.6;">${m.filename}</code> <span class="errtext">MISSING</span></td>
+        <td>—</td>
+        <td>—</td>
+        <td>0</td>
+        <td>—</td>
+        <td><span class="errtext">404</span></td>
+      </tr>`;
+  });
+
+  html += '</tbody></table>';
+  body.innerHTML = html;
+
+  setBadge(phase, `${fileDetails.length + missingFiles.length} files`, 'info');
+}
+
+function renderTypeTags(detail) {
+  if (!detail.typeBreakdown) return '—';
+  let mc = 0, tf = 0, cloze = 0, unknown = 0;
+  Object.values(detail.typeBreakdown).forEach(tb => {
+    mc += tb.mc; tf += tb.tf; cloze += tb.cloze; unknown += tb.unknown;
+  });
+  let html = '';
+  if (mc) html += `<span class="tag mc">mc:${mc}</span>`;
+  if (tf) html += `<span class="tag tf">tf:${tf}</span>`;
+  if (cloze) html += `<span class="tag cloze">cloze:${cloze}</span>`;
+  if (unknown) html += `<span class="tag bad">?:${unknown}</span>`;
+  return html || '—';
+}
+
+function renderLevelDetail(detail) {
+  if (!detail.levelCounts) return '';
+  const expected = { toLevel2: 10, toLevel3: 10, toLevel4: 10, toLevel5: 10 };
+  let html = '<h4 style="margin-top:8px;">Question Counts by Level</h4><div style="display:flex;gap:12px;margin-top:4px;">';
+  for (const [lk, count] of Object.entries(detail.levelCounts)) {
+    const exp = expected[lk];
+    const ok = count === exp;
+    html += `<div style="text-align:center;"><div style="font-size:10px;color:var(--muted);">${lk}</div><div style="font-size:18px;font-weight:700;color:${ok ? 'var(--ok)' : 'var(--warn)'};">${count}</div><div style="font-size:10px;color:var(--muted);">/ ${exp}</div></div>`;
+  }
+  html += '</div>';
+
+  // Show type breakdown per level
+  if (detail.typeBreakdown) {
+    html += '<div style="margin-top:8px;font-size:11px;">';
+    for (const [lk, tb] of Object.entries(detail.typeBreakdown)) {
+      if (tb.rawTypes && Object.keys(tb.rawTypes).length) {
+        const rawStr = Object.entries(tb.rawTypes).map(([t, c]) => `${t}:${c}`).join(', ');
+        html += `<div>${lk}: ${rawStr}</div>`;
+      }
+    }
+    html += '</div>';
+  }
+
+  return html;
+}
+
+function toggleDetailRow(id) {
+  const row = document.getElementById(id);
+  if (row) row.classList.toggle('open');
+}
+
+function filterTable(filter) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  event.target.classList.add('active');
+
+  const table = document.getElementById('file-table');
+  if (!table) return;
+  const rows = table.querySelectorAll('tbody tr:not(.detail-row)');
+  rows.forEach(row => {
+    if (filter === 'all') { row.style.display = ''; return; }
+    if (filter === 'missing') {
+      row.style.display = row.dataset.filter === 'missing' || row.classList.contains('err') ? '' : 'none';
+      return;
+    }
+    row.style.display = row.classList.contains(filter) ? '' : 'none';
+  });
+}
+
+// ================================================
+// SUMMARY BAR
+// ================================================
+function updateSummary(fileDetails, missingFiles) {
+  const bar = document.getElementById('summary-bar');
+  const totalFiles = fileDetails.length + missingFiles.length;
+  const errFiles = fileDetails.filter(f => f.status === 'err').length + missingFiles.length;
+  const warnFiles = fileDetails.filter(f => f.status === 'warn').length;
+  const okFiles = fileDetails.filter(f => f.status === 'ok').length;
+  const totalQ = fileDetails.reduce((s, f) => s + (f.totalQuestions || 0), 0);
+
+  bar.innerHTML = `
+    <div class="stat-card"><div class="label">Total Files</div><div class="value">${totalFiles}</div></div>
+    <div class="stat-card"><div class="label">Passed</div><div class="value ok">${okFiles}</div></div>
+    <div class="stat-card"><div class="label">Warnings</div><div class="value ${warnFiles ? 'warn' : 'ok'}">${warnFiles}</div></div>
+    <div class="stat-card"><div class="label">Errors</div><div class="value ${errFiles ? 'err' : 'ok'}">${errFiles}</div></div>
+    <div class="stat-card"><div class="label">Missing</div><div class="value ${missingFiles.length ? 'err' : 'ok'}">${missingFiles.length}</div></div>
+    <div class="stat-card"><div class="label">Total Questions</div><div class="value">${totalQ}</div></div>
+  `;
+}
+
+// ================================================
+// REPORT EXPORT
+// ================================================
+function generateReport(fileDetails, missingFiles, topicPath) {
+  let report = `FILE LOADER DEBUG REPORT\n${'='.repeat(60)}\nTopic: ${topicPath}\nDate: ${new Date().toISOString()}\n\n`;
+
+  report += `SUMMARY\n${'-'.repeat(40)}\n`;
+  report += `Total files expected: ${fileDetails.length + missingFiles.length}\n`;
+  report += `Files found: ${fileDetails.length}\n`;
+  report += `Files missing: ${missingFiles.length}\n`;
+  report += `Files with errors: ${fileDetails.filter(f => f.status === 'err').length}\n`;
+  report += `Files with warnings: ${fileDetails.filter(f => f.status === 'warn').length}\n`;
+  report += `Files passed: ${fileDetails.filter(f => f.status === 'ok').length}\n\n`;
+
+  if (missingFiles.length) {
+    report += `MISSING FILES\n${'-'.repeat(40)}\n`;
+    missingFiles.forEach(m => {
+      report += `  ${m.filename}\n    UUID: ${m.uuid}\n    Title: ${m.info.title}\n    Subtopic: ${m.info.subtopic}\n\n`;
+    });
+  }
+
+  const errFiles = fileDetails.filter(f => f.errors.length > 0);
+  if (errFiles.length) {
+    report += `FILES WITH ERRORS\n${'-'.repeat(40)}\n`;
+    errFiles.forEach(f => {
+      report += `  ${f.filename}\n`;
+      f.errors.forEach(e => report += `    ERROR: ${e}\n`);
+      f.warnings.forEach(w => report += `    WARN:  ${w}\n`);
+      report += '\n';
+    });
+  }
+
+  const warnFiles = fileDetails.filter(f => f.warnings.length > 0 && f.errors.length === 0);
+  if (warnFiles.length) {
+    report += `FILES WITH WARNINGS\n${'-'.repeat(40)}\n`;
+    warnFiles.forEach(f => {
+      report += `  ${f.filename}\n`;
+      f.warnings.forEach(w => report += `    WARN: ${w}\n`);
+      report += '\n';
+    });
+  }
+
+  return report;
+}
+
+// ================================================
+// ESCAPE HTML
+// ================================================
+function escHtml(s) {
+  if (!s) return '';
+  return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}
+
+// ================================================
+// MAIN ORCHESTRATOR
+// ================================================
+async function runAudit(topicPath) {
+  const results = document.getElementById('results');
+  const emptyState = document.getElementById('empty-state');
+  emptyState.style.display = 'none';
+  results.style.display = 'block';
+
+  // Clear previous
+  ['manifest', 'topic', 'discovery', 'parse', 'content'].forEach(id => {
+    document.getElementById(`body-${id}`).innerHTML = '';
+    setBadge(id, 'running...', 'loading');
+  });
+  document.getElementById('body-table').innerHTML = '';
+  auditResults = { errors: 0, warnings: 0, passed: 0, files: [] };
+
+  const basePath = topicPath.endsWith('/') ? topicPath : topicPath + '/';
+
+  // Phase 1
+  setProgress(5);
+  const man = await phase1_loadManifest();
+  if (!man) { setProgress(100); return; }
+
+  // Phase 2
+  setProgress(20);
+  const topicData = await phase2_loadTopic(basePath);
+  if (!topicData) { setProgress(100); return; }
+
+  // Phase 3
+  setProgress(40);
+  const discovery = await phase3_discoverQuestions(topicData, basePath);
+
+  // Phase 4
+  setProgress(60);
+  const fileDetails = await phase4_parseAndValidate(discovery, basePath);
+
+  // Phase 5
+  setProgress(80);
+  await phase5_deepAudit(fileDetails, basePath);
+
+  // Build table
+  setProgress(95);
+  buildFileTable(fileDetails, discovery.missing);
+  updateSummary(fileDetails, discovery.missing);
+
+  // Store for export
+  auditResults.files = fileDetails;
+  auditResults.missing = discovery.missing;
+  auditResults.topicPath = basePath;
+
+  document.getElementById('export-btn').disabled = false;
+  setProgress(100);
+}
+
+// ================================================
+// INIT
+// ================================================
+document.addEventListener('DOMContentLoaded', async () => {
+  const topicSelect = document.getElementById('topic-select');
+  const runBtn = document.getElementById('run-btn');
+  const exportBtn = document.getElementById('export-btn');
+
+  // Load manifest to populate dropdown
+  try {
+    const resp = await fetch('manifest.json?v=' + Date.now());
+    if (resp.ok) {
+      manifest = await resp.json();
+
+      (manifest.yearLevels || []).forEach(yl => {
+        (yl.subjects || []).forEach(sub => {
+          const group = document.createElement('optgroup');
+          group.label = `${yl.name} — ${sub.name}`;
+          (sub.topics || []).forEach(topic => {
+            const opt = document.createElement('option');
+            opt.value = topic.path;
+            opt.textContent = topic.name;
+            group.appendChild(opt);
+          });
+          if (group.children.length) topicSelect.appendChild(group);
+        });
+      });
+    }
+  } catch (e) {
+    console.error('Could not pre-load manifest:', e);
+  }
+
+  topicSelect.addEventListener('change', () => {
+    runBtn.disabled = !topicSelect.value;
+  });
+
+  runBtn.addEventListener('click', () => {
+    if (topicSelect.value) runAudit(topicSelect.value);
+  });
+
+  exportBtn.addEventListener('click', () => {
+    const report = generateReport(auditResults.files || [], auditResults.missing || [], auditResults.topicPath || '');
+    navigator.clipboard.writeText(report).then(() => {
+      exportBtn.textContent = '✓ Copied!';
+      setTimeout(() => exportBtn.textContent = '📋 Copy Report', 2000);
+    });
+  });
+});
+</script>
+
+</body>
+</html>
