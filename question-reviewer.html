@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Checklist 2.0 — Question Reviewer</title>
+<style>
+  :root {
+    --bg: #0d1117; --surface: #161b22; --border: #30363d;
+    --text: #c9d1d9; --muted: #8b949e; --accent: #58a6ff;
+    --ok: #3fb950; --warn: #d29922; --err: #f85149;
+    --correct-bg: rgba(63,185,80,0.12); --correct-border: rgba(63,185,80,0.3);
+    --distractor-bg: rgba(248,81,73,0.08); --distractor-border: rgba(248,81,73,0.2);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); font-size: 13px; line-height: 1.5; }
+
+  /* Header */
+  header { background: var(--surface); border-bottom: 1px solid var(--border); padding: 12px 24px; display: flex; align-items: center; gap: 16px; position: sticky; top: 0; z-index: 100; flex-wrap: wrap; }
+  header h1 { font-size: 16px; font-weight: 600; color: var(--accent); white-space: nowrap; }
+  header .controls { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+
+  select, button { font-family: inherit; font-size: 12px; padding: 6px 12px; border-radius: 6px; border: 1px solid var(--border); background: var(--surface); color: var(--text); cursor: pointer; }
+  select:hover, button:hover { border-color: var(--accent); }
+  button.primary { background: var(--accent); color: #000; font-weight: 600; border-color: var(--accent); }
+  button.primary:hover { opacity: 0.9; }
+
+  .container { max-width: 1200px; margin: 0 auto; padding: 16px 24px; }
+
+  /* Summary bar */
+  .summary-bar { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 16px; }
+  .stat-card { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 10px 14px; min-width: 110px; }
+  .stat-card .label { font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; }
+  .stat-card .value { font-size: 22px; font-weight: 700; margin-top: 2px; }
+
+  /* LP accordion */
+  .lp-card { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; margin-bottom: 8px; overflow: hidden; }
+  .lp-header { padding: 10px 14px; display: flex; align-items: center; gap: 10px; cursor: pointer; user-select: none; }
+  .lp-header:hover { background: rgba(88,166,255,0.04); }
+  .lp-chevron { font-size: 10px; color: var(--muted); transition: transform 0.2s; flex-shrink: 0; }
+  .lp-chevron.open { transform: rotate(90deg); }
+  .lp-title { font-size: 13px; font-weight: 500; flex: 1; }
+  .lp-meta { display: flex; gap: 6px; flex-shrink: 0; }
+
+  .tag { display: inline-block; font-size: 10px; padding: 1px 6px; border-radius: 3px; font-weight: 600; }
+  .tag.mc { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .tag.tf { background: rgba(210,153,34,0.15); color: var(--warn); }
+  .tag.cloze { background: rgba(163,113,247,0.15); color: #d2a8ff; }
+  .tag.count { background: rgba(139,148,158,0.15); color: var(--muted); }
+
+  .lp-body { display: none; border-top: 1px solid var(--border); }
+  .lp-body.open { display: block; }
+
+  /* Level section */
+  .level-section { border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .level-section:last-child { border-bottom: none; }
+  .level-header { padding: 8px 14px; background: rgba(0,0,0,0.2); font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: var(--muted); cursor: pointer; display: flex; align-items: center; gap: 8px; }
+  .level-header:hover { background: rgba(0,0,0,0.3); }
+  .level-chevron { font-size: 9px; transition: transform 0.2s; }
+  .level-chevron.open { transform: rotate(90deg); }
+  .level-body { display: none; }
+  .level-body.open { display: block; }
+
+  /* Question row */
+  .q-row { padding: 6px 14px 6px 28px; border-bottom: 1px solid rgba(48,54,61,0.3); font-size: 12px; }
+  .q-row:last-child { border-bottom: none; }
+
+  .q-stem { font-weight: 500; margin-bottom: 4px; display: flex; align-items: flex-start; gap: 6px; }
+  .q-num { color: var(--muted); font-size: 10px; min-width: 20px; text-align: right; flex-shrink: 0; margin-top: 2px; }
+  .q-type-badge { font-size: 9px; padding: 0px 5px; border-radius: 3px; font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+  .q-type-badge.mc { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .q-type-badge.tf { background: rgba(210,153,34,0.15); color: var(--warn); }
+  .q-type-badge.cloze { background: rgba(163,113,247,0.15); color: #d2a8ff; }
+
+  .q-text { flex: 1; }
+
+  /* Answer rows */
+  .answer-row { padding: 3px 14px 3px 56px; font-size: 11px; display: flex; align-items: flex-start; gap: 6px; border-radius: 3px; margin: 1px 8px 1px 28px; }
+  .answer-row.correct { background: var(--correct-bg); border-left: 3px solid var(--correct-border); }
+  .answer-row.distractor { background: var(--distractor-bg); border-left: 3px solid var(--distractor-border); }
+  .answer-icon { flex-shrink: 0; font-size: 10px; margin-top: 2px; width: 14px; text-align: center; }
+  .answer-text { flex: 1; }
+  .answer-explanation { color: var(--muted); font-size: 10px; margin-top: 1px; font-style: italic; }
+
+  /* Cloze display */
+  .cloze-sentence { font-size: 12px; padding: 4px 14px 4px 56px; color: var(--text); margin-bottom: 2px; }
+  .cloze-blank { font-weight: 700; color: var(--accent); background: rgba(88,166,255,0.1); padding: 1px 4px; border-radius: 3px; }
+  .blank-group { margin: 2px 28px 4px 56px; padding: 4px 8px; background: rgba(0,0,0,0.15); border-radius: 4px; }
+  .blank-label { font-size: 10px; color: var(--muted); font-weight: 600; margin-bottom: 2px; }
+
+  /* Length parity warning */
+  .length-warn { color: var(--warn); font-size: 10px; font-weight: 600; margin-left: 6px; }
+
+  /* Expand/collapse controls */
+  .toolbar { display: flex; gap: 8px; margin-bottom: 12px; align-items: center; flex-wrap: wrap; }
+  .toolbar button { font-size: 11px; padding: 4px 10px; }
+
+  .empty-state { text-align: center; padding: 60px 20px; color: var(--muted); }
+  .empty-state .big { font-size: 40px; margin-bottom: 8px; }
+
+  .loading-indicator { text-align: center; padding: 20px; color: var(--accent); }
+
+  /* Show explanation on hover */
+  .answer-row { position: relative; }
+  .answer-explanation { display: none; }
+  .answer-row:hover .answer-explanation { display: block; }
+
+  /* Scrollable */
+  .lp-body { max-height: 800px; overflow-y: auto; }
+
+  @media (max-width: 768px) {
+    .container { padding: 8px 12px; }
+    header { padding: 8px 12px; }
+    .q-row { padding-left: 14px; }
+    .answer-row { padding-left: 28px; margin-left: 14px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Question Reviewer</h1>
+  <div class="controls">
+    <select id="topic-select"><option value="">Select a topic...</option></select>
+    <button class="primary" id="load-btn" disabled>Load Questions</button>
+    <button id="expand-all-btn" style="display:none;">Expand All</button>
+    <button id="collapse-all-btn" style="display:none;">Collapse All</button>
+  </div>
+</header>
+
+<div class="container">
+  <div id="empty-state" class="empty-state">
+    <div class="big">📋</div>
+    <p>Select a topic and click <strong>Load Questions</strong></p>
+    <p style="margin-top:8px; font-size:11px; color:var(--muted);">Displays all questions grouped by Learning Point and Level,<br>with correct answers in green and distractors in red.</p>
+  </div>
+
+  <div id="results" style="display:none;">
+    <div class="summary-bar" id="summary-bar"></div>
+    <div class="toolbar" id="toolbar"></div>
+    <div id="lp-list"></div>
+  </div>
+
+  <div id="loading" class="loading-indicator" style="display:none;">Loading question files...</div>
+</div>
+
+<script>
+// ================================================
+// STATE
+// ================================================
+let manifest = null;
+let loadedFiles = [];
+
+// ================================================
+// HELPERS
+// ================================================
+function escHtml(s) {
+  if (!s) return '';
+  return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}
+
+// ================================================
+// LOAD MANIFEST & POPULATE DROPDOWN
+// ================================================
+async function loadManifest() {
+  try {
+    const resp = await fetch('manifest.json?v=' + Date.now());
+    if (!resp.ok) return;
+    manifest = await resp.json();
+
+    const sel = document.getElementById('topic-select');
+    (manifest.yearLevels || []).forEach(yl => {
+      (yl.subjects || []).forEach(sub => {
+        const group = document.createElement('optgroup');
+        group.label = `${yl.name} — ${sub.name}`;
+        (sub.topics || []).forEach(topic => {
+          const opt = document.createElement('option');
+          opt.value = topic.path;
+          opt.textContent = topic.name;
+          group.appendChild(opt);
+        });
+        if (group.children.length) sel.appendChild(group);
+      });
+    });
+  } catch (e) {
+    console.error('Could not load manifest:', e);
+  }
+}
+
+// ================================================
+// LOAD TOPIC & ALL QUESTION FILES
+// ================================================
+async function loadTopic(topicPath) {
+  const basePath = topicPath.endsWith('/') ? topicPath : topicPath + '/';
+
+  // Load topic.json
+  const topicResp = await fetch(`${basePath}topic.json`);
+  if (!topicResp.ok) throw new Error('topic.json not found');
+  const topicData = await topicResp.json();
+
+  // Load all subtopics to get learning points
+  const learningPoints = [];
+  for (const ref of (topicData.subtopics || [])) {
+    const filename = ref.file || ref.id + '.json';
+    try {
+      const resp = await fetch(`${basePath}subtopics/${filename}`);
+      if (!resp.ok) continue;
+      const subData = await resp.json();
+      for (const item of (subData.items || [])) {
+        learningPoints.push({
+          uuid: item.uuid,
+          title: item.title,
+          contentHash: item.contentHash,
+          subtopicName: subData.name || ref.name || ref.id
+        });
+      }
+    } catch (e) {
+      console.warn('Failed to load subtopic:', filename, e);
+    }
+  }
+
+  // Load each question file
+  const questionsPath = basePath + 'questions/';
+  const files = [];
+
+  for (const lp of learningPoints) {
+    if (!lp.uuid) continue;
+    const qFile = `q-${lp.uuid}.json`;
+    try {
+      const resp = await fetch(questionsPath + qFile);
+      if (!resp.ok) {
+        files.push({ lp, data: null, error: `HTTP ${resp.status}` });
+        continue;
+      }
+      const data = await resp.json();
+      files.push({ lp, data, error: null });
+    } catch (e) {
+      files.push({ lp, data: null, error: e.message });
+    }
+  }
+
+  return { topicData, files };
+}
+
+// ================================================
+// RENDER CLOZE SENTENCE WITH BLANKS HIGHLIGHTED
+// ================================================
+function renderClozeSentence(sentence) {
+  return escHtml(sentence).replace(/\{\{blank:(\d+)\}\}/g,
+    '<span class="cloze-blank">[blank $1]</span>');
+}
+
+// ================================================
+// CHECK LENGTH PARITY (correct vs distractors)
+// ================================================
+function checkLengthParity(correct, distractors) {
+  if (!correct || !distractors || !distractors.length) return false;
+  const correctLen = correct.length;
+  const maxDistractorLen = Math.max(...distractors.map(d => (d.answer || d).length));
+  // Flag if correct answer is notably longer than the longest distractor
+  return correctLen > maxDistractorLen * 1.4 && correctLen - maxDistractorLen > 8;
+}
+
+// ================================================
+// RENDER A SINGLE QUESTION
+// ================================================
+function renderQuestion(q, idx) {
+  const type = (q.type || '').toLowerCase();
+  let html = '';
+
+  if (type === 'mc' || type === 'tf') {
+    // Question stem
+    html += `<div class="q-row">`;
+    html += `<div class="q-stem">`;
+    html += `<span class="q-num">${idx + 1}</span>`;
+    html += `<span class="q-type-badge ${type}">${type.toUpperCase()}</span>`;
+    html += `<span class="q-text">${escHtml(q.question)}</span>`;
+    html += `</div>`;
+
+    // Correct answer
+    const lengthIssue = type === 'mc' && checkLengthParity(q.correct, q.distractors);
+    html += `<div class="answer-row correct">`;
+    html += `<span class="answer-icon" style="color:var(--ok);">&#10003;</span>`;
+    html += `<span class="answer-text">${escHtml(q.correct)}`;
+    if (lengthIssue) html += `<span class="length-warn">&#9888; LENGTH</span>`;
+    html += `<div class="answer-explanation">${escHtml(q.correctExplanation)}</div>`;
+    html += `</span></div>`;
+
+    // Distractors
+    (q.distractors || []).forEach(d => {
+      html += `<div class="answer-row distractor">`;
+      html += `<span class="answer-icon" style="color:var(--err);">&#10007;</span>`;
+      html += `<span class="answer-text">${escHtml(d.answer)}`;
+      html += `<div class="answer-explanation">${escHtml(d.explanation)}</div>`;
+      html += `</span></div>`;
+    });
+
+    html += `</div>`;
+
+  } else if (type === 'cloze') {
+    html += `<div class="q-row">`;
+    html += `<div class="q-stem">`;
+    html += `<span class="q-num">${idx + 1}</span>`;
+    html += `<span class="q-type-badge cloze">CLOZE</span>`;
+    html += `<span class="q-text">${escHtml(q.prompt || '')}</span>`;
+    html += `</div>`;
+
+    // Sentence with blanks
+    if (q.sentence) {
+      html += `<div class="cloze-sentence">${renderClozeSentence(q.sentence)}</div>`;
+    }
+
+    // Each blank's answers
+    if (q.blanks) {
+      for (const [blankId, blank] of Object.entries(q.blanks)) {
+        html += `<div class="blank-group">`;
+        html += `<div class="blank-label">Blank ${blankId}</div>`;
+
+        const lengthIssue = checkLengthParity(blank.correct, blank.distractors);
+
+        html += `<div class="answer-row correct">`;
+        html += `<span class="answer-icon" style="color:var(--ok);">&#10003;</span>`;
+        html += `<span class="answer-text">${escHtml(blank.correct)}`;
+        if (lengthIssue) html += `<span class="length-warn">&#9888; LENGTH</span>`;
+        html += `<div class="answer-explanation">${escHtml(blank.correctExplanation)}</div>`;
+        html += `</span></div>`;
+
+        (blank.distractors || []).forEach(d => {
+          html += `<div class="answer-row distractor">`;
+          html += `<span class="answer-icon" style="color:var(--err);">&#10007;</span>`;
+          html += `<span class="answer-text">${escHtml(d.answer)}`;
+          html += `<div class="answer-explanation">${escHtml(d.explanation)}</div>`;
+          html += `</span></div>`;
+        });
+
+        html += `</div>`;
+      }
+    }
+
+    html += `</div>`;
+  }
+
+  return html;
+}
+
+// ================================================
+// RENDER ALL LOADED FILES
+// ================================================
+function renderResults(result) {
+  const { topicData, files } = result;
+  loadedFiles = files;
+
+  const container = document.getElementById('lp-list');
+  container.innerHTML = '';
+
+  // Summary stats
+  let totalQ = 0, totalMC = 0, totalTF = 0, totalCloze = 0, filesLoaded = 0, filesMissing = 0;
+  const levels = ['toLevel2', 'toLevel3', 'toLevel4', 'toLevel5'];
+
+  files.forEach(f => {
+    if (f.data) {
+      filesLoaded++;
+      levels.forEach(lk => {
+        (f.data[lk] || []).forEach(q => {
+          totalQ++;
+          const t = (q.type || '').toLowerCase();
+          if (t === 'mc') totalMC++;
+          else if (t === 'tf') totalTF++;
+          else if (t === 'cloze') totalCloze++;
+        });
+      });
+    } else {
+      filesMissing++;
+    }
+  });
+
+  document.getElementById('summary-bar').innerHTML = `
+    <div class="stat-card"><div class="label">LPs Loaded</div><div class="value" style="color:var(--ok);">${filesLoaded}</div></div>
+    <div class="stat-card"><div class="label">LPs Missing</div><div class="value" style="color:${filesMissing ? 'var(--err)' : 'var(--ok)'};">${filesMissing}</div></div>
+    <div class="stat-card"><div class="label">Total Qs</div><div class="value">${totalQ}</div></div>
+    <div class="stat-card"><div class="label">MC</div><div class="value" style="color:var(--accent);">${totalMC}</div></div>
+    <div class="stat-card"><div class="label">TF</div><div class="value" style="color:var(--warn);">${totalTF}</div></div>
+    <div class="stat-card"><div class="label">Cloze</div><div class="value" style="color:#d2a8ff;">${totalCloze}</div></div>
+  `;
+
+  // Render each LP
+  files.forEach((file, fIdx) => {
+    const card = document.createElement('div');
+    card.className = 'lp-card';
+    card.dataset.idx = fIdx;
+
+    const lpTitle = file.lp.title || file.lp.uuid || 'Unknown LP';
+    const lpSubtopic = file.lp.subtopicName || '';
+
+    // Count questions for this LP
+    let lpQCount = 0;
+    let lpTypes = { mc: 0, tf: 0, cloze: 0 };
+    if (file.data) {
+      levels.forEach(lk => {
+        (file.data[lk] || []).forEach(q => {
+          lpQCount++;
+          const t = (q.type || '').toLowerCase();
+          if (lpTypes[t] !== undefined) lpTypes[t]++;
+        });
+      });
+    }
+
+    // Header
+    let headerHtml = `
+      <div class="lp-header" onclick="toggleLP(${fIdx})">
+        <span class="lp-chevron" id="lp-chev-${fIdx}">&#9654;</span>
+        <span class="lp-title">`;
+
+    if (lpSubtopic) {
+      headerHtml += `<span style="color:var(--muted);font-size:10px;">${escHtml(lpSubtopic)} &raquo; </span>`;
+    }
+    headerHtml += `${escHtml(lpTitle)}</span>`;
+
+    if (file.error) {
+      headerHtml += `<span class="tag" style="background:rgba(248,81,73,0.2);color:var(--err);">MISSING</span>`;
+    } else {
+      headerHtml += `<div class="lp-meta">`;
+      headerHtml += `<span class="tag count">${lpQCount}q</span>`;
+      if (lpTypes.mc) headerHtml += `<span class="tag mc">MC:${lpTypes.mc}</span>`;
+      if (lpTypes.tf) headerHtml += `<span class="tag tf">TF:${lpTypes.tf}</span>`;
+      if (lpTypes.cloze) headerHtml += `<span class="tag cloze">CL:${lpTypes.cloze}</span>`;
+      headerHtml += `</div>`;
+    }
+
+    headerHtml += `</div>`;
+
+    // Body
+    let bodyHtml = `<div class="lp-body" id="lp-body-${fIdx}">`;
+
+    if (file.error) {
+      bodyHtml += `<div style="padding:12px 14px;color:var(--err);font-size:12px;">Could not load question file: ${escHtml(file.error)}</div>`;
+    } else if (file.data) {
+      const levelNames = {
+        toLevel2: 'Level 2 — Recall & Comprehension',
+        toLevel3: 'Level 3 — Application',
+        toLevel4: 'Level 4 — Analysis & Application',
+        toLevel5: 'Level 5 — Evaluation & Synthesis'
+      };
+
+      levels.forEach((lk, lIdx) => {
+        const questions = file.data[lk] || [];
+        if (questions.length === 0) return;
+
+        const levelId = `level-${fIdx}-${lIdx}`;
+        bodyHtml += `<div class="level-section">`;
+        bodyHtml += `<div class="level-header" onclick="toggleLevel('${levelId}')">`;
+        bodyHtml += `<span class="level-chevron open" id="chev-${levelId}">&#9654;</span>`;
+        bodyHtml += `${levelNames[lk] || lk} <span style="color:var(--muted);">(${questions.length} questions)</span>`;
+        bodyHtml += `</div>`;
+        bodyHtml += `<div class="level-body open" id="body-${levelId}">`;
+
+        questions.forEach((q, qIdx) => {
+          bodyHtml += renderQuestion(q, qIdx);
+        });
+
+        bodyHtml += `</div></div>`;
+      });
+    }
+
+    bodyHtml += `</div>`;
+
+    card.innerHTML = headerHtml + bodyHtml;
+    container.appendChild(card);
+  });
+
+  // Show expand/collapse buttons
+  document.getElementById('expand-all-btn').style.display = '';
+  document.getElementById('collapse-all-btn').style.display = '';
+}
+
+// ================================================
+// TOGGLE FUNCTIONS
+// ================================================
+function toggleLP(idx) {
+  const body = document.getElementById(`lp-body-${idx}`);
+  const chev = document.getElementById(`lp-chev-${idx}`);
+  if (!body) return;
+  body.classList.toggle('open');
+  chev.classList.toggle('open');
+}
+
+function toggleLevel(id) {
+  const body = document.getElementById(`body-${id}`);
+  const chev = document.getElementById(`chev-${id}`);
+  if (!body) return;
+  body.classList.toggle('open');
+  chev.classList.toggle('open');
+}
+
+function expandAll() {
+  document.querySelectorAll('.lp-body').forEach(el => el.classList.add('open'));
+  document.querySelectorAll('.lp-chevron').forEach(el => el.classList.add('open'));
+  document.querySelectorAll('.level-body').forEach(el => el.classList.add('open'));
+  document.querySelectorAll('.level-chevron').forEach(el => el.classList.add('open'));
+}
+
+function collapseAll() {
+  document.querySelectorAll('.lp-body').forEach(el => el.classList.remove('open'));
+  document.querySelectorAll('.lp-chevron').forEach(el => el.classList.remove('open'));
+}
+
+// ================================================
+// MAIN LOAD
+// ================================================
+async function loadQuestions(topicPath) {
+  const emptyState = document.getElementById('empty-state');
+  const results = document.getElementById('results');
+  const loading = document.getElementById('loading');
+
+  emptyState.style.display = 'none';
+  results.style.display = 'none';
+  loading.style.display = 'block';
+
+  try {
+    const result = await loadTopic(topicPath);
+    loading.style.display = 'none';
+    results.style.display = 'block';
+    renderResults(result);
+  } catch (e) {
+    loading.style.display = 'none';
+    emptyState.style.display = 'block';
+    emptyState.innerHTML = `<div class="big" style="color:var(--err);">&#10007;</div><p style="color:var(--err);">Error loading topic: ${escHtml(e.message)}</p>`;
+  }
+}
+
+// ================================================
+// INIT
+// ================================================
+document.addEventListener('DOMContentLoaded', async () => {
+  await loadManifest();
+
+  const topicSelect = document.getElementById('topic-select');
+  const loadBtn = document.getElementById('load-btn');
+
+  topicSelect.addEventListener('change', () => {
+    loadBtn.disabled = !topicSelect.value;
+  });
+
+  loadBtn.addEventListener('click', () => {
+    if (topicSelect.value) loadQuestions(topicSelect.value);
+  });
+
+  document.getElementById('expand-all-btn').addEventListener('click', expandAll);
+  document.getElementById('collapse-all-btn').addEventListener('click', collapseAll);
+});
+</script>
+
+</body>
+</html>
