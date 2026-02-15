@@ -104,6 +104,52 @@
   .detail-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
   .detail-section h4 { font-size: 11px; text-transform: uppercase; color: var(--muted); margin-bottom: 4px; }
 
+  /* Modal overlay */
+  .modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.7); z-index: 200; align-items: center; justify-content: center; }
+  .modal-overlay.show { display: flex; }
+  .modal { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 24px; max-width: 520px; width: 90%; box-shadow: 0 16px 48px rgba(0,0,0,0.4); }
+  .modal h2 { font-size: 16px; color: var(--warn); margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+  .modal p { font-size: 13px; color: var(--text); margin-bottom: 8px; line-height: 1.6; }
+  .modal .modal-detail { font-size: 11px; color: var(--muted); margin-bottom: 16px; }
+  .modal .modal-actions { display: flex; gap: 8px; justify-content: flex-end; }
+  .modal .modal-actions button { min-width: 100px; }
+
+  /* Comprehensive check panel */
+  .comp-panel { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; margin-bottom: 16px; overflow: hidden; }
+  .comp-panel-header { padding: 12px 16px; border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 10px; }
+  .comp-panel-header h3 { font-size: 14px; font-weight: 600; color: var(--accent); flex: 1; }
+  .comp-progress-bar { width: 100%; height: 6px; background: var(--border); border-radius: 3px; overflow: hidden; margin: 0 16px 4px; }
+  .comp-progress-fill { height: 100%; background: var(--accent); transition: width 0.3s ease; border-radius: 3px; width: 0%; }
+  .comp-status { padding: 6px 16px 10px; font-size: 11px; color: var(--muted); display: flex; justify-content: space-between; }
+  .comp-body { max-height: 500px; overflow-y: auto; }
+  .comp-topic-row:hover { background: rgba(88,166,255,0.03); }
+  .comp-topic-row .comp-icon { width: 18px; text-align: center; flex-shrink: 0; }
+  .comp-topic-row .comp-name { flex: 1; }
+  .comp-topic-row .comp-stats { display: flex; gap: 6px; flex-shrink: 0; }
+  .comp-topic-row.running { background: rgba(88,166,255,0.05); }
+  .comp-topic-row.passed .comp-icon { color: var(--ok); }
+  .comp-topic-row.failed .comp-icon { color: var(--err); }
+  .comp-topic-row.warned .comp-icon { color: var(--warn); }
+  .comp-topic-row.pending .comp-icon { color: var(--muted); }
+  .comp-topic-row.skipped .comp-icon { color: var(--muted); opacity: 0.5; }
+
+  /* Subject group accordion within comprehensive check */
+  .comp-group { border-top: 1px solid var(--border); }
+  .comp-group:first-child { border-top: none; }
+  .comp-group-header { padding: 8px 16px; background: rgba(0,0,0,0.25); display: flex; align-items: center; gap: 8px; cursor: pointer; user-select: none; }
+  .comp-group-header:hover { background: rgba(0,0,0,0.35); }
+  .comp-group-chevron { font-size: 9px; color: var(--muted); transition: transform 0.2s; }
+  .comp-group-chevron.open { transform: rotate(90deg); }
+  .comp-group-label { font-size: 12px; font-weight: 600; color: var(--accent); flex: 1; }
+  .comp-group-summary { display: flex; gap: 6px; flex-shrink: 0; }
+  .comp-group-body { display: none; }
+  .comp-group-body.open { display: block; }
+  .comp-topic-row { padding: 6px 16px 6px 32px; display: flex; align-items: center; gap: 10px; border-bottom: 1px solid rgba(48,54,61,0.4); font-size: 12px; }
+
+  button.warn-btn { background: var(--warn); color: #000; font-weight: 600; border-color: var(--warn); }
+  button.warn-btn:hover { opacity: 0.9; }
+  button.warn-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
   @media (max-width: 900px) {
     .detail-grid { grid-template-columns: 1fr; }
     .summary-bar { flex-direction: column; }
@@ -117,6 +163,7 @@
   <div class="controls">
     <select id="topic-select"><option value="">Select a topic...</option></select>
     <button class="primary" id="run-btn" disabled>▶ Run Full Audit</button>
+    <button class="warn-btn" id="check-all-btn">⚡ Check All Topics</button>
     <button id="export-btn" disabled>📋 Copy Report</button>
   </div>
 </header>
@@ -191,6 +238,35 @@
         <span class="badge" id="badge-table" style="background:rgba(88,166,255,0.15);color:var(--info);">table</span>
       </div>
       <div class="phase-body" id="body-table"></div>
+    </div>
+  </div>
+
+  <!-- Comprehensive check panel (hidden until running) -->
+  <div id="comp-panel" class="comp-panel" style="display:none;">
+    <div class="comp-panel-header">
+      <h3>⚡ Comprehensive Check — All Topics</h3>
+      <span class="badge loading" id="comp-badge">pending</span>
+      <button id="comp-cancel-btn" style="font-size:11px;padding:3px 10px;">Cancel</button>
+    </div>
+    <div class="comp-progress-bar"><div class="comp-progress-fill" id="comp-progress-fill"></div></div>
+    <div class="comp-status">
+      <span id="comp-status-text">Waiting...</span>
+      <span id="comp-status-count"></span>
+    </div>
+    <div class="comp-body" id="comp-body"></div>
+  </div>
+</div>
+
+<!-- Confirmation modal -->
+<div class="modal-overlay" id="modal-overlay">
+  <div class="modal">
+    <h2>⚠ Comprehensive Check</h2>
+    <p>This will run a full audit on <strong>every topic</strong> in the manifest, loading and validating all subtopics and question files across all subjects.</p>
+    <p class="modal-detail" id="modal-detail">Scanning manifest...</p>
+    <p style="font-size:12px; color:var(--warn);">This may take a while and will generate a large number of HTTP requests. The existing single-topic audit results will be preserved.</p>
+    <div class="modal-actions">
+      <button id="modal-cancel-btn">Cancel</button>
+      <button class="warn-btn" id="modal-confirm-btn">Run Full Check</button>
     </div>
   </div>
 </div>
@@ -1088,6 +1164,366 @@ async function runAudit(topicPath) {
 }
 
 // ================================================
+// COMPREHENSIVE CHECK — ALL TOPICS
+// ================================================
+let compCancelled = false;
+
+function getAllTopicsFromManifest() {
+  if (!manifest || !manifest.yearLevels) return { groups: [], flat: [] };
+  const groups = [];
+  const flat = [];
+  let globalIdx = 0;
+  manifest.yearLevels.forEach(yl => {
+    (yl.subjects || []).forEach(sub => {
+      const groupTopics = [];
+      (sub.topics || []).forEach(topic => {
+        const entry = {
+          path: topic.path,
+          name: topic.name,
+          subject: sub.name,
+          yearLevel: yl.name,
+          globalIdx
+        };
+        groupTopics.push(entry);
+        flat.push(entry);
+        globalIdx++;
+      });
+      if (groupTopics.length) {
+        groups.push({
+          label: `${yl.name} — ${sub.name}`,
+          yearLevel: yl.name,
+          subject: sub.name,
+          topics: groupTopics
+        });
+      }
+    });
+  });
+  return { groups, flat };
+}
+
+function setCompProgress(pct) {
+  document.getElementById('comp-progress-fill').style.width = Math.round(pct) + '%';
+}
+
+function setCompStatus(text, count) {
+  document.getElementById('comp-status-text').textContent = text;
+  if (count !== undefined) document.getElementById('comp-status-count').textContent = count;
+}
+
+function setCompBadge(text, level) {
+  const badge = document.getElementById('comp-badge');
+  if (badge) { badge.textContent = text; badge.className = `badge ${level}`; }
+}
+
+function toggleCompGroup(gIdx) {
+  const body = document.getElementById(`comp-group-body-${gIdx}`);
+  const chev = document.getElementById(`comp-group-chev-${gIdx}`);
+  if (!body) return;
+  body.classList.toggle('open');
+  chev.classList.toggle('open');
+}
+
+function updateGroupSummary(gIdx, groupResults) {
+  const summaryEl = document.getElementById(`comp-group-summary-${gIdx}`);
+  if (!summaryEl) return;
+  const errs = groupResults.filter(r => r.errors > 0).length;
+  const warns = groupResults.filter(r => r.errors === 0 && r.warnings > 0).length;
+  const ok = groupResults.filter(r => r.errors === 0 && r.warnings === 0).length;
+  const totalQ = groupResults.reduce((s, r) => s + r.totalQuestions, 0);
+
+  let html = '';
+  if (ok > 0) html += `<span class="tag" style="background:rgba(63,185,80,0.15);color:var(--ok);">${ok} pass</span>`;
+  if (warns > 0) html += `<span class="tag tf">${warns} warn</span>`;
+  if (errs > 0) html += `<span class="tag bad">${errs} fail</span>`;
+  html += `<span class="tag" style="background:rgba(88,166,255,0.15);color:var(--accent);">${totalQ}q</span>`;
+  summaryEl.innerHTML = html;
+}
+
+async function runComprehensiveCheck() {
+  compCancelled = false;
+  const { groups, flat } = getAllTopicsFromManifest();
+  if (!flat.length) { alert('No topics found in manifest.'); return; }
+
+  // Show panel
+  const panel = document.getElementById('comp-panel');
+  const bodyEl = document.getElementById('comp-body');
+  panel.style.display = '';
+  bodyEl.innerHTML = '';
+  setCompProgress(0);
+  setCompBadge('running...', 'loading');
+  setCompStatus('Starting...', `0/${flat.length}`);
+  document.getElementById('comp-cancel-btn').disabled = false;
+  document.getElementById('comp-cancel-btn').textContent = 'Cancel';
+
+  // Build grouped structure
+  groups.forEach((group, gIdx) => {
+    const groupDiv = document.createElement('div');
+    groupDiv.className = 'comp-group';
+    groupDiv.id = `comp-group-${gIdx}`;
+
+    // Group header
+    const header = document.createElement('div');
+    header.className = 'comp-group-header';
+    header.onclick = () => toggleCompGroup(gIdx);
+    header.innerHTML = `
+      <span class="comp-group-chevron open" id="comp-group-chev-${gIdx}">&#9654;</span>
+      <span class="comp-group-label">${escHtml(group.label)}</span>
+      <span class="comp-group-summary" id="comp-group-summary-${gIdx}">
+        <span class="tag" style="background:rgba(139,148,158,0.15);color:var(--muted);">${group.topics.length} topics</span>
+      </span>
+    `;
+    groupDiv.appendChild(header);
+
+    // Group body (contains topic rows)
+    const groupBody = document.createElement('div');
+    groupBody.className = 'comp-group-body open';
+    groupBody.id = `comp-group-body-${gIdx}`;
+
+    group.topics.forEach(t => {
+      const row = document.createElement('div');
+      row.className = 'comp-topic-row pending';
+      row.id = `comp-row-${t.globalIdx}`;
+      row.innerHTML = `
+        <span class="comp-icon">○</span>
+        <span class="comp-name">${escHtml(t.name)}</span>
+        <span class="comp-stats" id="comp-stats-${t.globalIdx}"></span>
+      `;
+      groupBody.appendChild(row);
+    });
+
+    groupDiv.appendChild(groupBody);
+    bodyEl.appendChild(groupDiv);
+  });
+
+  // Expected question counts (same as phase5)
+  const expectedCounts = {
+    toLevel2: { mc: 5, tf: 2, cloze: 3, total: 10 },
+    toLevel3: { mc: 6, tf: 1, cloze: 3, total: 10 },
+    toLevel4: { mc: 7, tf: 0, cloze: 3, total: 10 },
+    toLevel5: { mc: 8, tf: 0, cloze: 2, total: 10 }
+  };
+
+  // Track results per group for group summaries
+  const groupResultsMap = {};
+  groups.forEach((g, gIdx) => { groupResultsMap[gIdx] = []; });
+
+  const allResults = [];
+  let totalErrors = 0, totalWarnings = 0, totalPassed = 0;
+
+  for (let gIdx = 0; gIdx < groups.length; gIdx++) {
+    const group = groups[gIdx];
+
+    for (let tIdx = 0; tIdx < group.topics.length; tIdx++) {
+      if (compCancelled) break;
+
+      const topic = group.topics[tIdx];
+      const i = topic.globalIdx;
+      const row = document.getElementById(`comp-row-${i}`);
+      const statsEl = document.getElementById(`comp-stats-${i}`);
+      row.className = 'comp-topic-row running';
+      row.querySelector('.comp-icon').textContent = '⟳';
+      setCompStatus(`Checking: ${topic.name}`, `${allResults.length + 1}/${flat.length}`);
+      setCompProgress((allResults.length / flat.length) * 100);
+
+      // Scroll running row into view
+      row.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+
+      const result = { topic, errors: 0, warnings: 0, lpCount: 0, fileCount: 0, missingCount: 0, totalQuestions: 0 };
+
+      try {
+        const basePath = topic.path.endsWith('/') ? topic.path : topic.path + '/';
+
+        // Load topic.json
+        const topicResp = await fetch(`${basePath}topic.json`);
+        if (!topicResp.ok) {
+          result.errors++;
+          row.className = 'comp-topic-row failed';
+          row.querySelector('.comp-icon').textContent = '✗';
+          statsEl.innerHTML = '<span class="tag bad">topic.json missing</span>';
+          totalErrors++;
+          allResults.push(result);
+          groupResultsMap[gIdx].push(result);
+          updateGroupSummary(gIdx, groupResultsMap[gIdx]);
+          continue;
+        }
+        const topicData = await topicResp.json();
+
+        // Load subtopics
+        const learningPoints = [];
+        for (const ref of (topicData.subtopics || [])) {
+          if (compCancelled) break;
+          const filename = ref.file || ref.id + '.json';
+          try {
+            const resp = await fetch(`${basePath}subtopics/${filename}`);
+            if (!resp.ok) { result.errors++; continue; }
+            const subData = await resp.json();
+            for (const item of (subData.items || [])) {
+              learningPoints.push({
+                uuid: item.uuid,
+                title: item.title,
+                contentHash: item.contentHash
+              });
+            }
+          } catch (e) {
+            result.errors++;
+          }
+        }
+
+        result.lpCount = learningPoints.length;
+
+        // Check each question file
+        const questionsPath = basePath + 'questions/';
+        for (const lp of learningPoints) {
+          if (compCancelled) break;
+          if (!lp.uuid) continue;
+
+          const qFile = `q-${lp.uuid}.json`;
+          try {
+            const resp = await fetch(questionsPath + qFile);
+            if (!resp.ok) {
+              result.missingCount++;
+              result.errors++;
+              continue;
+            }
+
+            const data = await resp.json();
+            result.fileCount++;
+
+            // Validate _link
+            if (!data._link) {
+              result.errors++;
+            } else {
+              if (data._link.uuid !== lp.uuid) result.errors++;
+              if (lp.contentHash && data._link.contentHash && data._link.contentHash !== lp.contentHash) result.warnings++;
+            }
+
+            // Validate levels
+            const levels = ['toLevel2', 'toLevel3', 'toLevel4', 'toLevel5'];
+            for (const lk of levels) {
+              const questions = data[lk];
+              if (!Array.isArray(questions)) { result.errors++; continue; }
+
+              result.totalQuestions += questions.length;
+              const expected = expectedCounts[lk];
+              if (questions.length !== expected.total) result.warnings++;
+
+              // Count types
+              const typeCounts = { mc: 0, tf: 0, cloze: 0 };
+              for (const q of questions) {
+                if (!q || typeof q !== 'object') { result.errors++; continue; }
+                const t = (q.type || '').toLowerCase();
+                if (t === 'mc') typeCounts.mc++;
+                else if (t === 'tf') typeCounts.tf++;
+                else if (t === 'cloze') typeCounts.cloze++;
+                else result.errors++;
+
+                // Validate structure
+                if (t === 'mc' || t === 'tf') {
+                  if (!q.question) result.errors++;
+                  if (q.correct === undefined) result.errors++;
+                  if (t === 'mc' && (!q.distractors || q.distractors.length === 0)) result.errors++;
+                }
+                if (t === 'cloze') {
+                  if (!q.sentence) result.errors++;
+                  if (!q.blanks) result.errors++;
+                }
+              }
+
+              if (typeCounts.mc !== expected.mc) result.warnings++;
+              if (typeCounts.tf !== expected.tf) result.warnings++;
+              if (typeCounts.cloze !== expected.cloze) result.warnings++;
+            }
+
+          } catch (e) {
+            result.errors++;
+          }
+        }
+
+      } catch (e) {
+        result.errors++;
+      }
+
+      // Update row
+      let rowClass, icon;
+      if (result.errors > 0) {
+        rowClass = 'failed'; icon = '✗'; totalErrors++;
+      } else if (result.warnings > 0) {
+        rowClass = 'warned'; icon = '⚠'; totalWarnings++;
+      } else {
+        rowClass = 'passed'; icon = '✓'; totalPassed++;
+      }
+      row.className = `comp-topic-row ${rowClass}`;
+      row.querySelector('.comp-icon').textContent = icon;
+
+      let statsHtml = '';
+      statsHtml += `<span class="tag" style="background:rgba(139,148,158,0.15);color:var(--muted);">${result.lpCount} LPs</span>`;
+      statsHtml += `<span class="tag" style="background:rgba(63,185,80,0.15);color:var(--ok);">${result.fileCount} files</span>`;
+      if (result.missingCount > 0) statsHtml += `<span class="tag bad">${result.missingCount} missing</span>`;
+      statsHtml += `<span class="tag" style="background:rgba(88,166,255,0.15);color:var(--accent);">${result.totalQuestions}q</span>`;
+      if (result.errors > 0) statsHtml += `<span class="tag bad">${result.errors} err</span>`;
+      if (result.warnings > 0) statsHtml += `<span class="tag tf">${result.warnings} warn</span>`;
+      statsEl.innerHTML = statsHtml;
+
+      allResults.push(result);
+      groupResultsMap[gIdx].push(result);
+      updateGroupSummary(gIdx, groupResultsMap[gIdx]);
+    }
+
+    if (compCancelled) break;
+  }
+
+  // Mark cancelled rows
+  if (compCancelled) {
+    flat.forEach(t => {
+      if (!allResults.some(r => r.topic.globalIdx === t.globalIdx)) {
+        const row = document.getElementById(`comp-row-${t.globalIdx}`);
+        if (row) {
+          row.className = 'comp-topic-row skipped';
+          row.querySelector('.comp-icon').textContent = '—';
+        }
+      }
+    });
+    // Update remaining group summaries
+    groups.forEach((g, gIdx) => updateGroupSummary(gIdx, groupResultsMap[gIdx]));
+  }
+
+  // Final summary
+  setCompProgress(100);
+  const total = allResults.length;
+  document.getElementById('comp-cancel-btn').disabled = true;
+
+  if (compCancelled) {
+    setCompBadge(`cancelled (${total}/${flat.length})`, 'warn');
+    setCompStatus(`Cancelled after ${total} topics`, `${totalPassed} pass, ${totalWarnings} warn, ${totalErrors} fail`);
+  } else if (totalErrors > 0) {
+    setCompBadge(`${totalErrors} failed`, 'err');
+    setCompStatus(`Done — ${flat.length} topics checked`, `${totalPassed} pass, ${totalWarnings} warn, ${totalErrors} fail`);
+  } else if (totalWarnings > 0) {
+    setCompBadge(`${totalWarnings} warnings`, 'warn');
+    setCompStatus(`Done — ${flat.length} topics checked`, `${totalPassed} pass, ${totalWarnings} warn`);
+  } else {
+    setCompBadge('all passed', 'ok');
+    setCompStatus(`Done — ${flat.length} topics checked`, `All ${totalPassed} passed`);
+  }
+}
+
+function showCompModal() {
+  const { groups, flat } = getAllTopicsFromManifest();
+  const detail = document.getElementById('modal-detail');
+  if (flat.length > 0) {
+    const groupList = groups.map(g => `${g.label} (${g.topics.length})`).join(', ');
+    detail.textContent = `Found ${flat.length} topics across ${groups.length} subject groups: ${groupList}. Results will be organised by subject.`;
+  } else {
+    detail.textContent = 'No topics found in manifest. Load the manifest first by selecting a topic.';
+  }
+  document.getElementById('modal-overlay').classList.add('show');
+}
+
+function hideCompModal() {
+  document.getElementById('modal-overlay').classList.remove('show');
+}
+
+// ================================================
 // INIT
 // ================================================
 document.addEventListener('DOMContentLoaded', async () => {
@@ -1133,6 +1569,37 @@ document.addEventListener('DOMContentLoaded', async () => {
       exportBtn.textContent = '✓ Copied!';
       setTimeout(() => exportBtn.textContent = '📋 Copy Report', 2000);
     });
+  });
+
+  // Comprehensive check wiring
+  const checkAllBtn = document.getElementById('check-all-btn');
+  const modalOverlay = document.getElementById('modal-overlay');
+  const modalCancelBtn = document.getElementById('modal-cancel-btn');
+  const modalConfirmBtn = document.getElementById('modal-confirm-btn');
+  const compCancelBtn = document.getElementById('comp-cancel-btn');
+
+  checkAllBtn.addEventListener('click', () => {
+    showCompModal();
+  });
+
+  modalCancelBtn.addEventListener('click', () => {
+    hideCompModal();
+  });
+
+  modalOverlay.addEventListener('click', (e) => {
+    if (e.target === modalOverlay) hideCompModal();
+  });
+
+  modalConfirmBtn.addEventListener('click', () => {
+    hideCompModal();
+    runComprehensiveCheck();
+  });
+
+  compCancelBtn.addEventListener('click', () => {
+    compCancelled = true;
+    compCancelBtn.disabled = true;
+    compCancelBtn.textContent = 'Cancelling...';
+    setCompStatus('Cancelling after current topic finishes...', '');
   });
 });
 </script>

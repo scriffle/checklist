@@ -98,7 +98,14 @@
   .empty-state { text-align: center; padding: 60px 20px; color: var(--muted); }
   .empty-state .big { font-size: 40px; margin-bottom: 8px; }
 
-  .loading-indicator { text-align: center; padding: 20px; color: var(--accent); }
+  .loading-indicator { text-align: center; padding: 30px 20px; color: var(--accent); }
+  .loading-indicator .load-text { margin-bottom: 12px; font-size: 13px; }
+  .loading-indicator .load-detail { font-size: 11px; color: var(--muted); margin-top: 6px; }
+
+  /* Progress bar */
+  .progress-bar { width: 100%; max-width: 500px; height: 8px; background: var(--border); border-radius: 4px; overflow: hidden; margin: 0 auto; }
+  .progress-fill { height: 100%; background: var(--accent); border-radius: 4px; transition: width 0.25s ease; width: 0%; }
+  .progress-pct { font-size: 11px; color: var(--muted); margin-top: 6px; font-variant-numeric: tabular-nums; }
 
   /* Show explanation on hover */
   .answer-row { position: relative; }
@@ -141,7 +148,12 @@
     <div id="lp-list"></div>
   </div>
 
-  <div id="loading" class="loading-indicator" style="display:none;">Loading question files...</div>
+  <div id="loading" class="loading-indicator" style="display:none;">
+    <div class="load-text" id="load-text">Loading question files...</div>
+    <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+    <div class="progress-pct" id="progress-pct"></div>
+    <div class="load-detail" id="load-detail"></div>
+  </div>
 </div>
 
 <script>
@@ -188,20 +200,40 @@ async function loadManifest() {
 }
 
 // ================================================
+// PROGRESS REPORTING
+// ================================================
+function setLoadProgress(pct, text, detail) {
+  const fill = document.getElementById('progress-fill');
+  const pctEl = document.getElementById('progress-pct');
+  const textEl = document.getElementById('load-text');
+  const detailEl = document.getElementById('load-detail');
+  if (fill) fill.style.width = Math.round(pct) + '%';
+  if (pctEl) pctEl.textContent = Math.round(pct) + '%';
+  if (text && textEl) textEl.textContent = text;
+  if (detailEl) detailEl.textContent = detail || '';
+}
+
+// ================================================
 // LOAD TOPIC & ALL QUESTION FILES
 // ================================================
 async function loadTopic(topicPath) {
   const basePath = topicPath.endsWith('/') ? topicPath : topicPath + '/';
 
-  // Load topic.json
+  // Phase 1: Load topic.json (0-5%)
+  setLoadProgress(2, 'Loading topic structure...', 'Fetching topic.json');
   const topicResp = await fetch(`${basePath}topic.json`);
   if (!topicResp.ok) throw new Error('topic.json not found');
   const topicData = await topicResp.json();
+  setLoadProgress(5, 'Loading subtopics...', `Topic: ${topicData.name || 'unknown'}`);
 
-  // Load all subtopics to get learning points
+  // Phase 2: Load subtopics (5-20%)
   const learningPoints = [];
-  for (const ref of (topicData.subtopics || [])) {
+  const subtopics = topicData.subtopics || [];
+  for (let si = 0; si < subtopics.length; si++) {
+    const ref = subtopics[si];
     const filename = ref.file || ref.id + '.json';
+    const subPct = 5 + (si / subtopics.length) * 15;
+    setLoadProgress(subPct, 'Loading subtopics...', `Subtopic ${si + 1}/${subtopics.length}: ${ref.name || ref.id}`);
     try {
       const resp = await fetch(`${basePath}subtopics/${filename}`);
       if (!resp.ok) continue;
@@ -219,13 +251,21 @@ async function loadTopic(topicPath) {
     }
   }
 
-  // Load each question file
+  setLoadProgress(20, 'Loading question files...', `Found ${learningPoints.length} learning points`);
+
+  // Phase 3: Load question files (20-100%)
   const questionsPath = basePath + 'questions/';
   const files = [];
+  const totalLPs = learningPoints.filter(lp => lp.uuid).length;
+  let loaded = 0;
 
   for (const lp of learningPoints) {
     if (!lp.uuid) continue;
+    loaded++;
     const qFile = `q-${lp.uuid}.json`;
+    const filePct = 20 + (loaded / totalLPs) * 80;
+    setLoadProgress(filePct, 'Loading question files...', `${loaded}/${totalLPs}: ${lp.title || lp.uuid}`);
+
     try {
       const resp = await fetch(questionsPath + qFile);
       if (!resp.ok) {
@@ -239,6 +279,7 @@ async function loadTopic(topicPath) {
     }
   }
 
+  setLoadProgress(100, 'Rendering...', `${files.filter(f => f.data).length} files loaded successfully`);
   return { topicData, files };
 }
 
