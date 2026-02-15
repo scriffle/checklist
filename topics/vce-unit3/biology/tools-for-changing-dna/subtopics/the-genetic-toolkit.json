@@ -1,0 +1,75 @@
+{
+  "id": "the-genetic-toolkit",
+  "name": "The Genetic Toolkit",
+  "icon": "✂️",
+  "what": "This subtopic covers the three key enzymes used to manipulate DNA: restriction enzymes (endonucleases) that cut DNA, DNA ligase that joins DNA, and DNA polymerase that synthesises DNA. It also covers the differences between sticky ends and blunt ends produced by restriction enzymes.",
+  "why": "These enzymes are the fundamental tools of genetic engineering. Every application in this chapter, from gene cloning to CRISPR, relies on understanding how DNA can be cut, joined and copied using these molecular tools.",
+  "items": [
+    {
+      "id": 1,
+      "uuid": "lp-8c9e60b8-2a66-e81c-8b21-36bb28c7936b",
+      "version": 1,
+      "title": "I can explain the action of restriction enzymes in cutting DNA at specific recognition sites",
+      "code": "3A.1",
+      "what": "Restriction enzymes (restriction endonucleases) are proteins that cut the sugar-phosphate backbone of DNA at specific sequences called recognition sites. These recognition sites are typically 4-6 base pairs long and are palindromes, reading the same in the 5' to 3' direction on both strands.",
+      "why": "Restriction enzymes are the molecular scissors used in nearly all DNA manipulation techniques. Understanding how they work is essential for gene cloning, DNA profiling, and creating recombinant DNA.",
+      "example": "EcoRI recognises the sequence GAATTC and cuts between G and A on both strands, producing sticky ends. The sequence reads GAATTC from 5' to 3' on both the coding and template strands, making it a palindrome.",
+      "contentHash": "hash-e2760658"
+    },
+    {
+      "id": 2,
+      "uuid": "lp-4de7b5c7-85c5-5660-5ec1-bb95b32192b6",
+      "version": 1,
+      "title": "I can draw and compare the differences between blunt ends and sticky ends",
+      "code": "3A.2",
+      "what": "Blunt ends are produced when a restriction enzyme cuts straight across both strands at the same position, leaving no overhanging nucleotides. Sticky ends are produced when the enzyme cuts at staggered positions on the two strands, leaving short single-stranded overhangs of unpaired nucleotides.",
+      "why": "The type of ends produced determines how DNA fragments can be joined. Sticky ends are more specific because the overhanging nucleotides must be complementary to join, whereas blunt ends can join to any other blunt end fragment.",
+      "example": "AluI cuts straight across the sequence AGCT to produce blunt ends. EcoRI cuts the sequence GAATTC in a staggered way, producing sticky ends with AATT overhangs. Two fragments cut by EcoRI can join because their AATT overhangs are complementary.",
+      "contentHash": "hash-770e9a1b"
+    },
+    {
+      "id": 3,
+      "uuid": "lp-3f742c44-7155-f378-fd24-4365637b72dc",
+      "version": 1,
+      "title": "I can explain the action and importance of DNA ligase in joining DNA fragments",
+      "code": "3A.3",
+      "what": "DNA ligase is an enzyme that catalyses the joining of two pieces of DNA at their sugar-phosphate backbone, forming phosphodiester bonds. It can join fragments to create longer linear DNA, circular DNA, or combine DNA from different species.",
+      "why": "DNA ligase is the molecular glue that makes recombinant DNA possible. Without it, the cut gene of interest could not be permanently inserted into a plasmid vector during gene cloning.",
+      "example": "In gene cloning, after a plasmid and the human insulin gene are both cut with the same restriction enzyme (e.g. BamHI) to produce complementary sticky ends, DNA ligase joins the two fragments together at the sugar-phosphate backbone to create a closed circular recombinant plasmid.",
+      "contentHash": "hash-f2e96d05"
+    },
+    {
+      "id": 4,
+      "uuid": "lp-74a0d263-6e09-a502-336d-bdc4a25cc4e8",
+      "version": 1,
+      "title": "I can explain why sticky end restriction enzymes are preferred over blunt end enzymes in gene cloning",
+      "code": "3A.4",
+      "what": "Sticky end restriction enzymes produce fragments with overhanging nucleotides that can only join to fragments with complementary overhangs, typically cut by the same enzyme. This makes the joining process more specific and controlled than blunt end joining, which is random.",
+      "why": "Specificity is critical in genetic engineering. Using sticky ends ensures the gene of interest is inserted correctly into the plasmid, rather than random fragments joining together.",
+      "example": "If both the plasmid and the insulin gene are cut with HindIII (producing AGCT sticky overhangs), only fragments with complementary TCGA overhangs can join. A fragment cut with BamHI (GATC overhangs) could not join to a HindIII fragment because the overhangs are not complementary.",
+      "contentHash": "hash-8a1edd6a"
+    },
+    {
+      "id": 5,
+      "uuid": "lp-b206f2ce-a451-fe05-78cf-6681442751e5",
+      "version": 1,
+      "title": "I can outline the role of DNA polymerase in synthesising DNA and explain why Taq polymerase is used in PCR",
+      "code": "3A.5",
+      "what": "DNA polymerase synthesises new DNA by adding free nucleotides complementary to a template strand. Taq polymerase, from the thermophilic bacterium Thermus aquaticus, has an optimal temperature of approximately 72°C and is not denatured at temperatures above 90°C, making it suitable for PCR.",
+      "why": "PCR requires repeated heating to 90-95°C to denature the DNA. Human DNA polymerase (optimal temperature 37°C) would be permanently denatured at this temperature, but Taq polymerase remains functional throughout the cycling.",
+      "example": "During the extension stage of PCR at 72°C, Taq polymerase binds to each primer and moves along each template strand, adding free nucleotides through complementary base pairing to create two copies of the original DNA.",
+      "contentHash": "hash-b6b00dcc"
+    },
+    {
+      "id": 6,
+      "uuid": "lp-7e69b320-27d9-2ec5-e67b-f633a278fbf3",
+      "version": 1,
+      "title": "I can determine the number of DNA fragments produced when restriction enzymes cut linear or circular DNA",
+      "code": "3A.6",
+      "what": "When a restriction enzyme cuts linear DNA at a recognition site, it produces one more fragment than the number of cuts. When the same enzyme cuts circular DNA (from prokaryotes), it produces the same number of fragments as the number of cuts, because the ends are already connected.",
+      "why": "This distinction between linear and circular DNA is commonly tested and requires understanding that prokaryotic DNA is circular. Reading questions carefully for clues about the DNA source is essential.",
+      "example": "A linear piece of DNA cut at 2 recognition sites produces 3 fragments. The same sequence as circular prokaryotic DNA cut at 2 recognition sites produces only 2 fragments, because the two 'end' pieces are connected in a circle.",
+      "contentHash": "hash-ef9b374d"
+    }
+  ]
+}
