@@ -587,6 +587,37 @@
     margin-bottom: 0.2rem;
   }
 
+  /* ── Timeline charts ── */
+  .timeline-charts {
+    margin-top: 0.75rem;
+    border-top: 1px solid var(--border);
+    padding-top: 0.5rem;
+  }
+  .timeline-charts h4 {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    margin-bottom: 0.4rem;
+    font-weight: 600;
+  }
+  .timeline-charts canvas {
+    max-width: 100%;
+    max-height: 200px;
+    margin-bottom: 0.5rem;
+  }
+  .timeline-nodata {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    font-style: italic;
+    text-align: center;
+    padding: 1rem 0;
+  }
+  .chart-grid.timeline-expanded {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (max-width: 1024px) {
+    .chart-grid.timeline-expanded { grid-template-columns: 1fr; }
+  }
+
   /* ── Print styles ── */
   @media print {
     .tab-bar, .input-section, .match-panel, .no-print, #tabSetup { display: none !important; }
@@ -598,6 +629,7 @@
     .guide-body { display: block !important; }
     .summary-bar { padding: 0.5rem 1rem; margin-bottom: 0.75rem; }
     .chart-grid { grid-template-columns: repeat(3, 1fr); gap: 0.5rem; }
+    .chart-grid.timeline-expanded { grid-template-columns: 1fr !important; gap: 0.75rem; }
     .chart-card {
       padding: 0.4rem;
       break-inside: avoid;
@@ -606,6 +638,8 @@
     .chart-card h3 { font-size: 0.8rem; }
     .chart-card .subtitle { font-size: 0.65rem; }
     .chart-card canvas { max-height: 200px; }
+    .timeline-charts canvas { max-height: 150px; }
+    .timeline-charts h4 { font-size: 0.7rem; }
     .comment-copy-btn, .comment-toggle-btn { display: none !important; }
     .comment-text { display: block !important; font-size: 0.7rem; }
     .copy-all-panel { break-before: page; page-break-before: always; }
@@ -701,6 +735,10 @@
         <input type="checkbox" id="rollFilterCb" checked onchange="handleRollFilterToggle()" style="margin-right:0.35rem;vertical-align:middle;">
         Roll students only
       </label>
+      <label style="font-size:0.85rem;font-weight:600;color:var(--text-muted);cursor:pointer;user-select:none;">
+        <input type="checkbox" id="timelineCb" onchange="handleTimelineToggle()" style="margin-right:0.35rem;vertical-align:middle;">
+        Timeline charts
+      </label>
       <span style="border-left:1px solid var(--border);height:1.5rem;margin:0 0.25rem;"></span>
       <span style="font-size:0.78rem;font-weight:600;color:var(--text-muted);">Tone:</span>
       <div class="pill-group" id="tonePills">
@@ -773,6 +811,8 @@ let parsedData = null;
 let chartInstances = [];
 let activeNameMap = null;      // roll students + extras (used when checkbox unchecked, to rename)
 let rollOnlyNameMap = null;    // roll students only (used when checkbox checked)
+let timelineChartInstances = [];
+let lastTimeSeriesData = null;
 
 // ══════════════════════════════════════
 //  TAB SWITCHING
@@ -1106,10 +1146,17 @@ function applyFilter() {
   // - checkbox unchecked: show all CSV students (no filter)
   const rollFilterCb = document.getElementById('rollFilterCb');
   const useRoll = rollOnlyNameMap && rollFilterCb && rollFilterCb.checked;
-  const metrics = computeMetrics(rows, useRoll ? rollOnlyNameMap : null);
+  const nameMap = useRoll ? rollOnlyNameMap : null;
+  const metrics = computeMetrics(rows, nameMap);
   // Compute class benchmarks for Effort context
   const classBenchmarks = computeClassBenchmarks(metrics);
+  // Build time-series data from the same filtered rows
+  lastTimeSeriesData = buildTimeSeriesData(rows, nameMap);
   renderCharts(metrics, classBenchmarks);
+  // Render timeline charts if toggle is on
+  if (document.getElementById('timelineCb')?.checked) {
+    renderTimelineCharts(metrics, lastTimeSeriesData);
+  }
 }
 
 function computeClassBenchmarks(metrics) {
@@ -1126,6 +1173,475 @@ function computeClassBenchmarks(metrics) {
     minQ: sortedQ[0],
     minM: Math.round(sortedM[0]),
   };
+}
+
+// ══════════════════════════════════════
+//  TIMELINE: TIMESTAMP PARSING
+// ══════════════════════════════════════
+function parseTimestamp(str) {
+  if (!str) return null;
+  const d = new Date(str);
+  if (!isNaN(d)) return d;
+  // Fallback: manual parse for "M/D/YYYY H:MM:SS"
+  const parts = str.trim().split(' ');
+  const [m, day, y] = (parts[0] || '').split('/').map(Number);
+  const [h, min, sec] = (parts[1] || '0:0:0').split(':').map(Number);
+  if (!y || !m) return null;
+  return new Date(y, m - 1, day, h || 0, min || 0, sec || 0);
+}
+
+function formatShortDate(d) {
+  return (d.getMonth() + 1) + '/' + d.getDate();
+}
+
+// ══════════════════════════════════════
+//  TIMELINE: BUILD TIME-SERIES DATA
+// ══════════════════════════════════════
+function buildTimeSeriesData(rows, nameMap) {
+  const students = {};
+
+  rows.forEach(row => {
+    const csvName = ((row['Preferred Name'] || '').trim() + ' ' + (row['Family Name'] || '').trim()).trim();
+    if (!csvName) return;
+
+    let displayName = csvName;
+    if (nameMap) {
+      if (nameMap[csvName]) displayName = nameMap[csvName];
+      else return;
+    }
+
+    const ts = parseTimestamp(row['Timestamp']);
+    if (!ts) return;
+
+    if (!students[displayName]) students[displayName] = [];
+    const et = (row['Event Type'] || '').trim();
+    let qd = {};
+    try { qd = JSON.parse(row['Quiz Data'] || '{}'); } catch(e) {}
+
+    students[displayName].push({
+      timestamp: ts,
+      eventType: et,
+      correct: et === 'quiz-result' ? !!qd.correct : null,
+      activeMs: et === 'session-end' ? (qd.activeMs || 0) : 0,
+    });
+  });
+
+  // Sort each student's events chronologically and build cumulative series
+  const result = {};
+  for (const [name, events] of Object.entries(students)) {
+    events.sort((a, b) => a.timestamp - b.timestamp);
+
+    let cumAttempts = 0, cumCorrect = 0, cumActiveMs = 0;
+    const dataPoints = [];
+
+    events.forEach(ev => {
+      if (ev.eventType === 'quiz-result') {
+        cumAttempts++;
+        if (ev.correct) cumCorrect++;
+      } else if (ev.eventType === 'session-end') {
+        cumActiveMs += ev.activeMs;
+      }
+      // Emit a data point at every event (so both axes update)
+      dataPoints.push({
+        date: ev.timestamp,
+        cumulativeAttempts: cumAttempts,
+        cumulativeCorrect: cumCorrect,
+        cumulativeActiveMinutes: cumActiveMs / 60000,
+        rollingAccuracy: cumAttempts > 0 ? cumCorrect / cumAttempts : 0,
+      });
+    });
+
+    result[name] = dataPoints;
+  }
+
+  // Compute class medians from each student's final data point
+  const finalAttempts = [];
+  const finalMinutes = [];
+  const finalAccuracy = [];
+  for (const pts of Object.values(result)) {
+    if (pts.length > 0) {
+      const last = pts[pts.length - 1];
+      finalAttempts.push(last.cumulativeAttempts);
+      finalMinutes.push(last.cumulativeActiveMinutes);
+      finalAccuracy.push(last.rollingAccuracy);
+    }
+  }
+
+  function median(arr) {
+    if (arr.length === 0) return 0;
+    const s = arr.slice().sort((a, b) => a - b);
+    const m = Math.floor(s.length / 2);
+    return s.length % 2 ? s[m] : (s[m - 1] + s[m]) / 2;
+  }
+
+  return {
+    students: result,
+    classMedians: {
+      medianAttempts: median(finalAttempts),
+      medianActiveMinutes: median(finalMinutes),
+      medianAccuracy: median(finalAccuracy),
+    },
+  };
+}
+
+// ══════════════════════════════════════
+//  TIMELINE: CHART.JS PLUGINS
+// ══════════════════════════════════════
+function quadrantPlugin(medX, medY, labelsArr) {
+  // labelsArr: [bottomLeft, bottomRight, topLeft, topRight]
+  const labels = labelsArr || ['Getting Started', 'Exploring', 'Building', 'Extending'];
+  return {
+    id: 'quadrantLines',
+    afterDraw(chart) {
+      const { ctx, chartArea, scales } = chart;
+      if (!chartArea) return;
+      const xPx = scales.x.getPixelForValue(medX);
+      const yPx = scales.y.getPixelForValue(medY);
+
+      ctx.save();
+      ctx.strokeStyle = '#cbd5e1';
+      ctx.lineWidth = 1;
+      ctx.setLineDash([4, 4]);
+      // Vertical median line
+      ctx.beginPath();
+      ctx.moveTo(xPx, chartArea.top);
+      ctx.lineTo(xPx, chartArea.bottom);
+      ctx.stroke();
+      // Horizontal median line
+      ctx.beginPath();
+      ctx.moveTo(chartArea.left, yPx);
+      ctx.lineTo(chartArea.right, yPx);
+      ctx.stroke();
+      ctx.setLineDash([]);
+
+      // Quadrant labels
+      ctx.font = '8px -apple-system, BlinkMacSystemFont, sans-serif';
+      ctx.fillStyle = '#94a3b8';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      // Bottom-left
+      ctx.fillText(labels[0], (chartArea.left + xPx) / 2, (yPx + chartArea.bottom) / 2);
+      // Bottom-right
+      ctx.fillText(labels[1], (xPx + chartArea.right) / 2, (yPx + chartArea.bottom) / 2);
+      // Top-left
+      ctx.fillText(labels[2], (chartArea.left + xPx) / 2, (chartArea.top + yPx) / 2);
+      // Top-right
+      ctx.fillText(labels[3], (xPx + chartArea.right) / 2, (chartArea.top + yPx) / 2);
+      ctx.restore();
+    }
+  };
+}
+
+function startEndPlugin() {
+  return {
+    id: 'startEndLabels',
+    afterDraw(chart) {
+      const { ctx } = chart;
+      // Dataset 1 = start point, Dataset 2 = end point
+      if (chart.data.datasets.length < 3) return;
+      const startMeta = chart.getDatasetMeta(1);
+      const endMeta = chart.getDatasetMeta(2);
+
+      ctx.save();
+      ctx.font = 'bold 9px -apple-system, BlinkMacSystemFont, sans-serif';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'bottom';
+
+      if (startMeta.data[0]) {
+        const { x, y } = startMeta.data[0];
+        ctx.fillStyle = '#64748b';
+        ctx.fillText('S', x, y - 6);
+      }
+      if (endMeta.data[0]) {
+        const { x, y } = endMeta.data[0];
+        ctx.fillStyle = '#1e293b';
+        ctx.fillText('E', x, y - 6);
+      }
+      ctx.restore();
+    }
+  };
+}
+
+// ══════════════════════════════════════
+//  TIMELINE: RENDER TIMELINE CHARTS
+// ══════════════════════════════════════
+function renderTimelineCharts(metrics, tsData) {
+  // Destroy previous instances
+  timelineChartInstances.forEach(c => c.destroy());
+  timelineChartInstances = [];
+
+  if (!tsData || !tsData.students) return;
+  const medians = tsData.classMedians;
+
+  metrics.forEach((student, idx) => {
+    const points = tsData.students[student.name];
+    const section = document.getElementById('timeline-section-' + idx);
+    if (!section) return;
+
+    // Filter to quiz-result data points only for scatter (where attempts change)
+    // But keep all points for the cumulative chart
+    if (!points || points.length < 3) {
+      // Not enough data — show message
+      const canvases = section.querySelectorAll('canvas');
+      canvases.forEach(c => c.style.display = 'none');
+      let nodata = section.querySelector('.timeline-nodata');
+      if (!nodata) {
+        nodata = document.createElement('p');
+        nodata.className = 'timeline-nodata';
+        nodata.textContent = 'Timeline charts need at least 3 events to display.';
+        section.appendChild(nodata);
+      }
+      return;
+    }
+
+    // Remove any "no data" message
+    const nodata = section.querySelector('.timeline-nodata');
+    if (nodata) nodata.remove();
+    section.querySelectorAll('canvas').forEach(c => c.style.display = '');
+
+    const colour = COLOURS[idx % COLOURS.length];
+
+    // ── Chart 1: Cumulative Progress ──
+    // Deduplicate labels: group by date string and take the last point per date
+    const dateMap = new Map();
+    points.forEach(p => {
+      const key = formatShortDate(p.date);
+      dateMap.set(key, p);
+    });
+    const cumulPoints = [...dateMap.values()];
+    const cumulLabels = cumulPoints.map(p => formatShortDate(p.date));
+
+    const cumulCtx = document.getElementById('timeline-cumul-' + idx);
+    if (cumulCtx) {
+      timelineChartInstances.push(new Chart(cumulCtx.getContext('2d'), {
+        type: 'line',
+        data: {
+          labels: cumulLabels,
+          datasets: [
+            {
+              label: 'Cumulative Attempts',
+              data: cumulPoints.map(p => p.cumulativeAttempts),
+              borderColor: '#3b82f6',
+              backgroundColor: '#3b82f640',
+              yAxisID: 'yAttempts',
+              tension: 0.3,
+              pointRadius: 1,
+              borderWidth: 1.5,
+              fill: false,
+            },
+            {
+              label: 'Active Time (min)',
+              data: cumulPoints.map(p => Math.round(p.cumulativeActiveMinutes * 10) / 10),
+              borderColor: '#10b981',
+              backgroundColor: '#10b98140',
+              yAxisID: 'yTime',
+              tension: 0.3,
+              pointRadius: 1,
+              borderWidth: 1.5,
+              fill: false,
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: true,
+          animation: false,
+          plugins: {
+            legend: { display: true, position: 'bottom', labels: { font: { size: 8 }, boxWidth: 12 } },
+            tooltip: { mode: 'index', intersect: false },
+          },
+          scales: {
+            x: {
+              ticks: { font: { size: 8 }, maxRotation: 0, autoSkip: true, maxTicksLimit: 8 },
+            },
+            yAttempts: {
+              position: 'left',
+              title: { display: true, text: 'Attempts', font: { size: 8 } },
+              ticks: { font: { size: 8 } },
+              beginAtZero: true,
+            },
+            yTime: {
+              position: 'right',
+              title: { display: true, text: 'Minutes', font: { size: 8 } },
+              ticks: { font: { size: 8 } },
+              beginAtZero: true,
+              grid: { drawOnChartArea: false },
+            },
+          },
+        },
+      }));
+    }
+
+    // For scatter charts, only use points where attempts > 0 (quiz-result events)
+    const quizPoints = points.filter(p => p.cumulativeAttempts > 0);
+    if (quizPoints.length < 2) return;
+
+    const first = quizPoints[0];
+    const last = quizPoints[quizPoints.length - 1];
+
+    // ── Chart 2: Accuracy x Practice Volume ──
+    const scatterAttCtx = document.getElementById('timeline-scatter-attempts-' + idx);
+    if (scatterAttCtx) {
+      const attCap = 80;
+      timelineChartInstances.push(new Chart(scatterAttCtx.getContext('2d'), {
+        type: 'scatter',
+        data: {
+          datasets: [
+            {
+              label: 'Path',
+              data: quizPoints.map(p => ({
+                x: Math.min(p.cumulativeAttempts, attCap),
+                y: Math.round(p.rollingAccuracy * 1000) / 10,
+              })),
+              showLine: true,
+              borderColor: colour + '80',
+              backgroundColor: colour + '20',
+              pointRadius: 1,
+              borderWidth: 1.5,
+              tension: 0.2,
+              fill: false,
+            },
+            {
+              label: 'Start',
+              data: [{ x: Math.min(first.cumulativeAttempts, attCap), y: Math.round(first.rollingAccuracy * 1000) / 10 }],
+              pointStyle: 'rectRot',
+              pointRadius: 5,
+              backgroundColor: '#94a3b8',
+              borderColor: '#64748b',
+              borderWidth: 1,
+            },
+            {
+              label: 'End',
+              data: [{ x: Math.min(last.cumulativeAttempts, attCap), y: Math.round(last.rollingAccuracy * 1000) / 10 }],
+              pointStyle: 'triangle',
+              pointRadius: 6,
+              backgroundColor: colour,
+              borderColor: colour,
+              borderWidth: 1,
+            },
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: true,
+          animation: false,
+          plugins: {
+            legend: { display: false },
+            tooltip: { enabled: false },
+          },
+          scales: {
+            x: {
+              min: 0, max: attCap,
+              title: { display: true, text: 'Cumulative Attempts', font: { size: 8 } },
+              ticks: { font: { size: 8 } },
+            },
+            y: {
+              min: 0, max: 100,
+              title: { display: true, text: 'Accuracy %', font: { size: 8 } },
+              ticks: { font: { size: 8 } },
+            },
+          },
+        },
+        plugins: [
+          quadrantPlugin(Math.min(medians.medianAttempts, attCap), medians.medianAccuracy * 100),
+          startEndPlugin(),
+        ],
+      }));
+    }
+
+    // ── Chart 3: Accuracy x Time Invested ──
+    const scatterTimeCtx = document.getElementById('timeline-scatter-time-' + idx);
+    if (scatterTimeCtx) {
+      const timeCap = 40;
+      timelineChartInstances.push(new Chart(scatterTimeCtx.getContext('2d'), {
+        type: 'scatter',
+        data: {
+          datasets: [
+            {
+              label: 'Path',
+              data: quizPoints.map(p => ({
+                x: Math.min(p.cumulativeActiveMinutes, timeCap),
+                y: Math.round(p.rollingAccuracy * 1000) / 10,
+              })),
+              showLine: true,
+              borderColor: colour + '80',
+              backgroundColor: colour + '20',
+              pointRadius: 1,
+              borderWidth: 1.5,
+              tension: 0.2,
+              fill: false,
+            },
+            {
+              label: 'Start',
+              data: [{ x: Math.min(first.cumulativeActiveMinutes, timeCap), y: Math.round(first.rollingAccuracy * 1000) / 10 }],
+              pointStyle: 'rectRot',
+              pointRadius: 5,
+              backgroundColor: '#94a3b8',
+              borderColor: '#64748b',
+              borderWidth: 1,
+            },
+            {
+              label: 'End',
+              data: [{ x: Math.min(last.cumulativeActiveMinutes, timeCap), y: Math.round(last.rollingAccuracy * 1000) / 10 }],
+              pointStyle: 'triangle',
+              pointRadius: 6,
+              backgroundColor: colour,
+              borderColor: colour,
+              borderWidth: 1,
+            },
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: true,
+          animation: false,
+          plugins: {
+            legend: { display: false },
+            tooltip: { enabled: false },
+          },
+          scales: {
+            x: {
+              min: 0, max: timeCap,
+              title: { display: true, text: 'Active Time (min)', font: { size: 8 } },
+              ticks: { font: { size: 8 } },
+            },
+            y: {
+              min: 0, max: 100,
+              title: { display: true, text: 'Accuracy %', font: { size: 8 } },
+              ticks: { font: { size: 8 } },
+            },
+          },
+        },
+        plugins: [
+          quadrantPlugin(Math.min(medians.medianActiveMinutes, timeCap), medians.medianAccuracy * 100),
+          startEndPlugin(),
+        ],
+      }));
+    }
+  });
+}
+
+// ══════════════════════════════════════
+//  TIMELINE: TOGGLE HANDLER
+// ══════════════════════════════════════
+function handleTimelineToggle() {
+  const show = document.getElementById('timelineCb').checked;
+
+  // Show/hide timeline containers
+  document.querySelectorAll('.timeline-charts').forEach(el => {
+    el.style.display = show ? 'block' : 'none';
+  });
+
+  // Toggle grid column count
+  const grid = document.getElementById('chartGrid');
+  grid.classList.toggle('timeline-expanded', show);
+
+  if (show && lastTimeSeriesData && lastRenderedMetrics) {
+    renderTimelineCharts(lastRenderedMetrics, lastTimeSeriesData);
+  } else if (!show) {
+    timelineChartInstances.forEach(c => c.destroy());
+    timelineChartInstances = [];
+  }
 }
 
 // ══════════════════════════════════════
@@ -1327,6 +1843,7 @@ function renderCharts(metrics, benchmarks) {
 
     // Overall score as percentage (mean of 6 normalised metrics, 0–100%)
     const scorePct = (student.overallScore * 100).toFixed(0);
+    const timelineVisible = document.getElementById('timelineCb')?.checked ? 'block' : 'none';
 
     card.innerHTML = `
       <h3>${student.name} <span style="font-size:0.75rem;font-weight:400;color:var(--text-muted);">#${idx + 1}</span></h3>
@@ -1337,6 +1854,12 @@ function renderCharts(metrics, benchmarks) {
       <p class="subtitle">${student.totalQuestions}q &middot; ${student.rawAccuracy} correct &middot; ${mins}m active &middot; ${scorePct}% overall</p>
       <p class="subtitle" style="font-size:0.68rem;color:#94a3b8;">vs median: ${qLabel}q, ${mLabel}m</p>
       <canvas id="chart-${idx}"></canvas>
+      <div class="timeline-charts" id="timeline-section-${idx}" style="display:${timelineVisible}">
+        <h4>Progress Over Time</h4>
+        <canvas id="timeline-cumul-${idx}"></canvas>
+        <canvas id="timeline-scatter-attempts-${idx}"></canvas>
+        <canvas id="timeline-scatter-time-${idx}"></canvas>
+      </div>
       <div class="comment-wrapper">
         <button class="comment-toggle-btn no-print" id="comment-toggle-${idx}" onclick="toggleCardComment(${idx})">&#9662; Hide comment</button>
         <button class="comment-copy-btn no-print" onclick="copyCardComment(${idx})">Copy</button>
