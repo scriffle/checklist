@@ -740,6 +740,21 @@
         Timeline charts
       </label>
       <span style="border-left:1px solid var(--border);height:1.5rem;margin:0 0.25rem;"></span>
+      <span style="font-size:0.78rem;font-weight:600;color:var(--text-muted);">Sort:</span>
+      <select id="sortField" onchange="handleSortChange()" style="font-size:0.78rem;padding:0.3rem 0.5rem;border:1px solid var(--border);border-radius:5px;background:white;color:var(--text);cursor:pointer;">
+        <option value="overallScore">Overall</option>
+        <option value="accuracy">Accuracy</option>
+        <option value="progression">Progression</option>
+        <option value="depth">Depth</option>
+        <option value="breadth">Breadth</option>
+        <option value="mastery">Mastery</option>
+        <option value="effort">Effort</option>
+      </select>
+      <div class="pill-group" id="sortDirPills">
+        <label class="pill-active"><input type="radio" name="sortDir" value="desc" checked onchange="handleSortChange()">Highest first</label>
+        <label><input type="radio" name="sortDir" value="asc" onchange="handleSortChange()">Lowest first</label>
+      </div>
+      <span style="border-left:1px solid var(--border);height:1.5rem;margin:0 0.25rem;"></span>
       <span style="font-size:0.78rem;font-weight:600;color:var(--text-muted);">Tone:</span>
       <div class="pill-group" id="tonePills">
         <label class="pill-active"><input type="radio" name="commentTone" value="student" checked>Student</label>
@@ -1134,6 +1149,31 @@ function handleRollFilterToggle() {
   applyFilter();
 }
 
+// ══════════════════════════════════════
+//  SORT CONTROLS
+// ══════════════════════════════════════
+function getSortField() {
+  return document.getElementById('sortField')?.value || 'overallScore';
+}
+function getSortDesc() {
+  const el = document.querySelector('input[name="sortDir"]:checked');
+  return !el || el.value === 'desc';
+}
+function sortMetrics(metrics) {
+  const field = getSortField();
+  const desc = getSortDesc();
+  metrics.sort((a, b) => desc ? b[field] - a[field] : a[field] - b[field]);
+  return metrics;
+}
+function handleSortChange() {
+  if (!lastRenderedMetrics || !lastRenderedBenchmarks) return;
+  sortMetrics(lastRenderedMetrics);
+  renderCharts(lastRenderedMetrics, lastRenderedBenchmarks);
+  if (document.getElementById('timelineCb')?.checked && lastTimeSeriesData) {
+    renderTimelineCharts(lastRenderedMetrics, lastTimeSeriesData);
+  }
+}
+
 function applyFilter() {
   if (!parsedData) return;
   const classCode = document.getElementById('classFilter').value;
@@ -1148,6 +1188,7 @@ function applyFilter() {
   const useRoll = rollOnlyNameMap && rollFilterCb && rollFilterCb.checked;
   const nameMap = useRoll ? rollOnlyNameMap : null;
   const metrics = computeMetrics(rows, nameMap);
+  sortMetrics(metrics);
   // Compute class benchmarks for Effort context
   const classBenchmarks = computeClassBenchmarks(metrics);
   // Build time-series data from the same filtered rows
@@ -1244,6 +1285,7 @@ function buildTimeSeriesData(rows, nameMap) {
       // Emit a data point at every event (so both axes update)
       dataPoints.push({
         date: ev.timestamp,
+        eventType: ev.eventType,
         cumulativeAttempts: cumAttempts,
         cumulativeCorrect: cumCorrect,
         cumulativeActiveMinutes: cumActiveMs / 60000,
@@ -1295,18 +1337,22 @@ function quadrantPlugin(medX, medY, labelsArr) {
     afterDraw(chart) {
       const { ctx, chartArea, scales } = chart;
       if (!chartArea) return;
-      const xPx = scales.x.getPixelForValue(medX);
       const yPx = scales.y.getPixelForValue(medY);
 
       ctx.save();
       ctx.strokeStyle = '#cbd5e1';
       ctx.lineWidth = 1;
       ctx.setLineDash([4, 4]);
-      // Vertical median line
-      ctx.beginPath();
-      ctx.moveTo(xPx, chartArea.top);
-      ctx.lineTo(xPx, chartArea.bottom);
-      ctx.stroke();
+
+      if (medX != null) {
+        const xPx = scales.x.getPixelForValue(medX);
+        // Vertical median line
+        ctx.beginPath();
+        ctx.moveTo(xPx, chartArea.top);
+        ctx.lineTo(xPx, chartArea.bottom);
+        ctx.stroke();
+      }
+
       // Horizontal median line
       ctx.beginPath();
       ctx.moveTo(chartArea.left, yPx);
@@ -1314,19 +1360,26 @@ function quadrantPlugin(medX, medY, labelsArr) {
       ctx.stroke();
       ctx.setLineDash([]);
 
-      // Quadrant labels
-      ctx.font = '8px -apple-system, BlinkMacSystemFont, sans-serif';
-      ctx.fillStyle = '#94a3b8';
-      ctx.textAlign = 'center';
-      ctx.textBaseline = 'middle';
-      // Bottom-left
-      ctx.fillText(labels[0], (chartArea.left + xPx) / 2, (yPx + chartArea.bottom) / 2);
-      // Bottom-right
-      ctx.fillText(labels[1], (xPx + chartArea.right) / 2, (yPx + chartArea.bottom) / 2);
-      // Top-left
-      ctx.fillText(labels[2], (chartArea.left + xPx) / 2, (chartArea.top + yPx) / 2);
-      // Top-right
-      ctx.fillText(labels[3], (xPx + chartArea.right) / 2, (chartArea.top + yPx) / 2);
+      if (medX != null) {
+        const xPx = scales.x.getPixelForValue(medX);
+        // Quadrant labels
+        ctx.font = '8px -apple-system, BlinkMacSystemFont, sans-serif';
+        ctx.fillStyle = '#94a3b8';
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        ctx.fillText(labels[0], (chartArea.left + xPx) / 2, (yPx + chartArea.bottom) / 2);
+        ctx.fillText(labels[1], (xPx + chartArea.right) / 2, (yPx + chartArea.bottom) / 2);
+        ctx.fillText(labels[2], (chartArea.left + xPx) / 2, (chartArea.top + yPx) / 2);
+        ctx.fillText(labels[3], (xPx + chartArea.right) / 2, (chartArea.top + yPx) / 2);
+      } else {
+        // Horizontal-only: label the median line
+        ctx.font = '7px -apple-system, BlinkMacSystemFont, sans-serif';
+        ctx.fillStyle = '#94a3b8';
+        ctx.textAlign = 'left';
+        ctx.textBaseline = 'bottom';
+        ctx.fillText('Class median', chartArea.left + 4, yPx - 3);
+      }
+
       ctx.restore();
     }
   };
@@ -1472,8 +1525,8 @@ function renderTimelineCharts(metrics, tsData) {
       }));
     }
 
-    // For scatter charts, only use points where attempts > 0 (quiz-result events)
-    const quizPoints = points.filter(p => p.cumulativeAttempts > 0);
+    // Filter to quiz-result events only (where accuracy actually changes)
+    const quizPoints = points.filter(p => p.eventType === 'quiz-result');
     if (quizPoints.length < 2) return;
 
     const first = quizPoints[0];
@@ -1497,6 +1550,7 @@ function renderTimelineCharts(metrics, tsData) {
               borderColor: colour + '80',
               backgroundColor: colour + '20',
               pointRadius: 1,
+              pointHitRadius: 8,
               borderWidth: 1.5,
               tension: 0.2,
               fill: false,
@@ -1527,7 +1581,28 @@ function renderTimelineCharts(metrics, tsData) {
           animation: false,
           plugins: {
             legend: { display: false },
-            tooltip: { enabled: false },
+            tooltip: {
+              displayColors: false,
+              titleFont: { size: 10, weight: 'bold' },
+              bodyFont: { size: 9 },
+              padding: 6,
+              callbacks: {
+                title: items => {
+                  const ds = items[0].datasetIndex;
+                  if (ds === 1) return 'Start';
+                  if (ds === 2) return 'Current';
+                  return formatShortDate(quizPoints[items[0].dataIndex].date);
+                },
+                label: ctx => {
+                  const p = ctx.datasetIndex === 1 ? first : ctx.datasetIndex === 2 ? last : quizPoints[ctx.dataIndex];
+                  return [
+                    'Attempts: ' + p.cumulativeAttempts,
+                    'Accuracy: ' + (Math.round(p.rollingAccuracy * 1000) / 10) + '%',
+                    p.cumulativeCorrect + ' of ' + p.cumulativeAttempts + ' correct',
+                  ];
+                },
+              },
+            },
           },
           scales: {
             x: {
@@ -1549,10 +1624,9 @@ function renderTimelineCharts(metrics, tsData) {
       }));
     }
 
-    // ── Chart 3: Accuracy x Time Invested ──
+    // ── Chart 3: Accuracy Over Calendar Time ──
     const scatterTimeCtx = document.getElementById('timeline-scatter-time-' + idx);
     if (scatterTimeCtx) {
-      const timeCap = 40;
       timelineChartInstances.push(new Chart(scatterTimeCtx.getContext('2d'), {
         type: 'scatter',
         data: {
@@ -1560,20 +1634,21 @@ function renderTimelineCharts(metrics, tsData) {
             {
               label: 'Path',
               data: quizPoints.map(p => ({
-                x: Math.min(p.cumulativeActiveMinutes, timeCap),
+                x: p.date.getTime(),
                 y: Math.round(p.rollingAccuracy * 1000) / 10,
               })),
               showLine: true,
               borderColor: colour + '80',
               backgroundColor: colour + '20',
               pointRadius: 1,
+              pointHitRadius: 8,
               borderWidth: 1.5,
               tension: 0.2,
               fill: false,
             },
             {
               label: 'Start',
-              data: [{ x: Math.min(first.cumulativeActiveMinutes, timeCap), y: Math.round(first.rollingAccuracy * 1000) / 10 }],
+              data: [{ x: first.date.getTime(), y: Math.round(first.rollingAccuracy * 1000) / 10 }],
               pointStyle: 'rectRot',
               pointRadius: 5,
               backgroundColor: '#94a3b8',
@@ -1582,7 +1657,7 @@ function renderTimelineCharts(metrics, tsData) {
             },
             {
               label: 'End',
-              data: [{ x: Math.min(last.cumulativeActiveMinutes, timeCap), y: Math.round(last.rollingAccuracy * 1000) / 10 }],
+              data: [{ x: last.date.getTime(), y: Math.round(last.rollingAccuracy * 1000) / 10 }],
               pointStyle: 'triangle',
               pointRadius: 6,
               backgroundColor: colour,
@@ -1597,13 +1672,42 @@ function renderTimelineCharts(metrics, tsData) {
           animation: false,
           plugins: {
             legend: { display: false },
-            tooltip: { enabled: false },
+            tooltip: {
+              displayColors: false,
+              titleFont: { size: 10, weight: 'bold' },
+              bodyFont: { size: 9 },
+              padding: 6,
+              callbacks: {
+                title: items => {
+                  const ds = items[0].datasetIndex;
+                  if (ds === 1) return 'Start';
+                  if (ds === 2) return 'Current';
+                  return formatShortDate(quizPoints[items[0].dataIndex].date);
+                },
+                label: ctx => {
+                  const p = ctx.datasetIndex === 1 ? first : ctx.datasetIndex === 2 ? last : quizPoints[ctx.dataIndex];
+                  return [
+                    'Accuracy: ' + (Math.round(p.rollingAccuracy * 1000) / 10) + '%',
+                    p.cumulativeCorrect + ' of ' + p.cumulativeAttempts + ' correct',
+                    'Attempts so far: ' + p.cumulativeAttempts,
+                  ];
+                },
+              },
+            },
           },
           scales: {
             x: {
-              min: 0, max: timeCap,
-              title: { display: true, text: 'Active Time (min)', font: { size: 8 } },
-              ticks: { font: { size: 8 } },
+              type: 'linear',
+              title: { display: true, text: 'Date', font: { size: 8 } },
+              ticks: {
+                font: { size: 8 },
+                maxTicksLimit: 6,
+                maxRotation: 0,
+                callback: function(value) {
+                  const d = new Date(value);
+                  return (d.getMonth() + 1) + '/' + d.getDate();
+                }
+              },
             },
             y: {
               min: 0, max: 100,
@@ -1613,7 +1717,7 @@ function renderTimelineCharts(metrics, tsData) {
           },
         },
         plugins: [
-          quadrantPlugin(Math.min(medians.medianActiveMinutes, timeCap), medians.medianAccuracy * 100),
+          quadrantPlugin(null, medians.medianAccuracy * 100),
           startEndPlugin(),
         ],
       }));
@@ -1756,6 +1860,66 @@ function computeMetrics(rows, nameMap) {
   }
 
   return results;
+}
+
+// ══════════════════════════════════════
+//  TOOLTIP INFRASTRUCTURE
+// ══════════════════════════════════════
+const METRIC_NAMES = ['Accuracy', 'Progression', 'Depth', 'Breadth', 'Mastery', 'Effort'];
+const METRIC_DESCS = [
+  'Proportion of all questions answered correctly',
+  'Rate of level-ups per question attempted',
+  'Total number of level progressions achieved',
+  'Number of unique topics covered',
+  'Accuracy in the most recent 25% of attempts — shows current understanding vs early learning',
+  'Combined practice volume — questions attempted and active time spent',
+];
+
+let hoverTip = null;
+function getHoverTip() {
+  if (!hoverTip) {
+    hoverTip = document.createElement('div');
+    hoverTip.style.cssText = 'position:fixed;padding:6px 10px;background:rgba(30,41,59,0.92);color:#fff;font-size:11px;font-family:-apple-system,BlinkMacSystemFont,sans-serif;line-height:1.4;border-radius:6px;pointer-events:none;z-index:9999;max-width:240px;opacity:0;transition:opacity 0.15s;';
+    document.body.appendChild(hoverTip);
+  }
+  return hoverTip;
+}
+
+function radarLabelPlugin() {
+  return {
+    id: 'radarLabelHover',
+    afterEvent(chart, args) {
+      const { event } = args;
+      if (event.type === 'mouseout') { getHoverTip().style.opacity = '0'; return; }
+      if (event.type !== 'mousemove') return;
+
+      const scale = chart.scales.r;
+      if (!scale) return;
+
+      const cx = scale.xCenter, cy = scale.yCenter;
+      const r = scale.drawingArea + (scale.options.pointLabels?.padding || 8) + 10;
+      const n = chart.data.labels.length;
+
+      let hitIdx = -1;
+      for (let i = 0; i < n; i++) {
+        const angle = (2 * Math.PI / n) * i - Math.PI / 2;
+        const lx = cx + Math.cos(angle) * r;
+        const ly = cy + Math.sin(angle) * r;
+        if (Math.sqrt((event.x - lx) ** 2 + (event.y - ly) ** 2) < 28) { hitIdx = i; break; }
+      }
+
+      const tip = getHoverTip();
+      if (hitIdx >= 0) {
+        tip.innerHTML = '<strong>' + METRIC_NAMES[hitIdx] + '</strong><br>' + METRIC_DESCS[hitIdx];
+        const rect = chart.canvas.getBoundingClientRect();
+        tip.style.left = (rect.left + event.x + 14) + 'px';
+        tip.style.top = (rect.top + event.y - 12) + 'px';
+        tip.style.opacity = '1';
+      } else {
+        tip.style.opacity = '0';
+      }
+    }
+  };
 }
 
 // ══════════════════════════════════════
@@ -1905,7 +2069,15 @@ function renderCharts(metrics, benchmarks) {
         plugins: {
           legend: { display: false },
           tooltip: {
-            callbacks: { label: ctx => rawLabels[ctx.dataIndex] }
+            displayColors: false,
+            titleFont: { size: 11, weight: 'bold' },
+            bodyFont: { size: 10 },
+            padding: 8,
+            callbacks: {
+              title: items => METRIC_NAMES[items[0].dataIndex],
+              label: ctx => rawLabels[ctx.dataIndex],
+              afterLabel: ctx => METRIC_DESCS[ctx.dataIndex],
+            }
           }
         },
         scales: {
@@ -1923,7 +2095,7 @@ function renderCharts(metrics, benchmarks) {
         },
         animation: { duration: 400 },
       },
-      plugins: [{
+      plugins: [radarLabelPlugin(), {
         id: 'rawValueLabels',
         afterDraw(chart) {
           const { ctx } = chart;
