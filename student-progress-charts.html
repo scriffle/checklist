@@ -3,9 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Student Progress Learning Profiles</title>
+<title>Dynamic Checklist — Student Analytics</title>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
 <script src="https://cdn.jsdelivr.net/npm/papaparse@5"></script>
+<script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.2/dist/jspdf.umd.min.js"></script>
 <style>
   :root {
     --primary: #2563eb;
@@ -393,11 +394,6 @@
 
   /* ── Summary bar ── */
   .summary-bar {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 1rem 1.5rem;
-    margin-bottom: 1.5rem;
     display: flex;
     gap: 2rem;
     flex-wrap: wrap;
@@ -466,14 +462,6 @@
   }
 
   /* ── Definitions ── */
-  .definitions {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 1.5rem;
-    margin-top: 1.5rem;
-  }
-  .definitions h2 { font-size: 1.1rem; margin-bottom: 0.75rem; }
   .def-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -542,10 +530,14 @@
     line-height: 1.55;
     margin-top: 0.25rem;
   }
-  .comment-copy-btn {
+  .comment-btn-row {
     position: absolute;
     top: 0;
     right: 0;
+    display: flex;
+    gap: 0.3rem;
+  }
+  .comment-copy-btn {
     background: var(--bg);
     border: 1px solid var(--border);
     border-radius: 4px;
@@ -611,6 +603,7 @@
     text-align: center;
     padding: 1rem 0;
   }
+
   .chart-grid.timeline-expanded {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -640,20 +633,64 @@
     .chart-card canvas { max-height: 200px; }
     .timeline-charts canvas { max-height: 150px; }
     .timeline-charts h4 { font-size: 0.7rem; }
-    .comment-copy-btn, .comment-toggle-btn { display: none !important; }
+    .comment-btn-row, .comment-toggle-btn { display: none !important; }
     .comment-text { display: block !important; font-size: 0.7rem; }
     .copy-all-panel { break-before: page; page-break-before: always; }
     .copy-all-panel .no-print { display: none !important; }
     .definitions { break-before: page; page-break-before: always; }
     body { background: white; }
   }
+
+  /* ── Trajectory insight modal ── */
+  .traj-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    z-index: 10000;
+    justify-content: center;
+    align-items: center;
+  }
+  .traj-overlay.open { display: flex; }
+  .traj-modal {
+    background: #fff;
+    border-radius: 12px;
+    max-width: 520px;
+    width: 92%;
+    padding: 1.5rem;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+    position: relative;
+    max-height: 85vh;
+    overflow-y: auto;
+  }
+  .traj-modal h3 { font-size: 1rem; margin-bottom: 0.15rem; color: #1e293b; }
+  .traj-modal .traj-sub { font-size: 0.78rem; color: #64748b; margin-bottom: 0.75rem; }
+  .traj-modal .traj-body { font-size: 0.85rem; color: #334155; line-height: 1.6; }
+  .traj-modal .traj-body strong { color: #1e293b; }
+  .traj-modal .traj-close {
+    position: absolute; top: 0.6rem; right: 0.8rem;
+    background: none; border: none; font-size: 1.3rem;
+    cursor: pointer; color: #94a3b8; line-height: 1;
+  }
+  .traj-modal .traj-close:hover { color: #475569; }
+  .traj-modal .traj-copy {
+    margin-top: 0.75rem;
+    padding: 0.4rem 1rem;
+    font-size: 0.8rem;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  .traj-modal .traj-copy:hover { background: #1d4ed8; }
 </style>
 </head>
 <body>
 
 <header>
-  <h1>Student Progress Learning Profiles</h1>
-  <p>Upload CSV data from the Dynamic Checklist platform and match to your class roll</p>
+  <h1>Dynamic Checklist &mdash; Student Analytics</h1>
+  <p>Radar profiles, progress timelines, and auto-generated comments for every student</p>
 </header>
 
 <div class="container">
@@ -670,7 +707,7 @@
     <div class="input-section">
       <h2>1. Class Roll (optional)</h2>
       <p class="hint">Paste two columns from your spreadsheet: Surname, Firstname. If provided, student names will be matched to the official roll.</p>
-      <textarea id="rollInput" placeholder="Paste Surname + Firstname columns from spreadsheet here...&#10;e.g.&#10;Benfield&#9;Araleyah&#10;Chang&#9;William&#10;Smith&#9;Liv"></textarea>
+      <textarea id="rollInput" placeholder="Paste Surname + Firstname columns from spreadsheet here...&#10;e.g.&#10;Anderson&#9;Alex&#10;Brooks&#9;Bailey&#10;Chen&#9;Casey"></textarea>
 
       <h2>2. Progress Data</h2>
       <p class="hint">Drag and drop your CSV file, or click to browse. You can also paste CSV text below.</p>
@@ -705,7 +742,7 @@
 
     <!-- Collapsible interpretation guide -->
     <div class="guide-toggle" id="guideToggle">
-      <button class="guide-toggle-btn" onclick="toggleGuide()">
+      <button class="guide-toggle-btn" id="guideBtn" onclick="toggleGuide()">
         How to Read These Charts
         <span class="arrow">&#9660;</span>
       </button>
@@ -716,7 +753,7 @@
           A value at the centre means the student is at the class minimum for that metric; the outer ring means class maximum.
           The <strong>raw values</strong> (e.g. 86%, 92 level-ups, 25 learning points) are shown at each data point so you can assess absolute performance.
           For <strong>Effort</strong>, each chart also shows how the student's questions and active time compare to the class median (e.g. "+20q, +5m" means 20 more questions and 5 more active minutes than the typical student).
-          The summary bar at the top shows the class median and full range for questions and time, so you can judge whether the class baseline itself is high or low.
+          The Class Summary panel shows the class median and full range for questions and time, so you can judge whether the class baseline itself is high or low.
           <strong>Key relationship &mdash; Accuracy vs Mastery:</strong> Accuracy is the proportion correct across <em>all</em> attempts. Mastery is accuracy in the student's <em>most recent</em> attempts only.
           When both are high, the student understood from the start.
           When Accuracy is lower than Mastery, the student has built understanding over time &mdash; that's real learning in action.
@@ -729,19 +766,69 @@
       </div>
     </div>
 
+    <!-- Collapsible: Class Summary (populated by JS) -->
+    <div class="guide-toggle" id="summaryToggle" style="display:none;">
+      <button class="guide-toggle-btn" id="summaryBtn" onclick="togglePanel('summary')">
+        Class Summary
+        <span class="arrow">&#9660;</span>
+      </button>
+      <div class="guide-body" id="summaryBody">
+        <div id="summaryBar" class="summary-bar"></div>
+      </div>
+    </div>
+
+    <!-- Collapsible: Metric Definitions -->
+    <div class="guide-toggle" id="definitionsToggle" style="display:none;">
+      <button class="guide-toggle-btn" id="definitionsBtn" onclick="togglePanel('definitions')">
+        Metric Definitions
+        <span class="arrow">&#9660;</span>
+      </button>
+      <div class="guide-body" id="definitionsBody">
+        <div class="def-grid">
+          <div class="def-item"><strong>Accuracy</strong><p>Proportion of questions answered correctly</p></div>
+          <div class="def-item"><strong>Progression</strong><p>Rate of advancing through Bloom's cognitive levels per question attempted</p></div>
+          <div class="def-item"><strong>Depth</strong><p>Total Bloom's cognitive levels achieved (raw level-up count)</p></div>
+          <div class="def-item"><strong>Breadth</strong><p>Number of distinct learning points engaged with</p></div>
+          <div class="def-item"><strong>Mastery</strong><p>Accuracy in the student's most recent attempts (final quarter). High Accuracy + High Mastery = understood from the start. Lower Accuracy + High Mastery = understanding has been built over time.</p></div>
+          <div class="def-item"><strong>Effort</strong><p>Combined measure of total questions attempted and active time invested, shown relative to the class. Check the Class Summary for absolute median and range values to judge the class baseline.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Collapsible: Archetype Labels -->
+    <div class="guide-toggle" id="archetypeToggle" style="display:none;">
+      <button class="guide-toggle-btn" id="archetypeBtn" onclick="togglePanel('archetype')">
+        Archetype Labels &mdash; Quick Reference
+        <span class="arrow">&#9660;</span>
+      </button>
+      <div class="guide-body" id="archetypeBody">
+        <ul style="margin:0.4rem 0 0.4rem 1.2rem;padding:0;list-style:disc;font-size:0.8rem;line-height:1.5;color:var(--text-muted);">
+          <li><strong style="color:var(--text);">All-Rounder</strong> &mdash; strong across all six metrics; accurate, deep, broad, and putting in the work</li>
+          <li><strong style="color:var(--text);">Persistent</strong> &mdash; high effort and wide coverage; accuracy and progression are the next areas to develop</li>
+          <li><strong style="color:var(--text);">Focused</strong> &mdash; very accurate in the areas they've covered; broadening coverage is the next step</li>
+          <li><strong style="color:var(--text);">Rising</strong> &mdash; recent mastery is high, showing real learning has taken place since earlier attempts</li>
+          <li><strong style="color:var(--text);">Early Stage</strong> &mdash; beginning their learning journey; even small steps forward will show up clearly on the radar</li>
+          <li><strong style="color:var(--text);">Specialist</strong> &mdash; gone deep into a small number of topics, reaching high cognitive levels</li>
+          <li><strong style="color:var(--text);">Explorer</strong> &mdash; sampled many topics; ready to choose a few and go deeper</li>
+          <li><strong style="color:var(--text);">Rebuilding</strong> &mdash; earlier accuracy shows genuine capability; recent focus is on consolidating and regaining momentum</li>
+        </ul>
+        <p style="margin-top:0.5rem;font-size:0.8rem;color:var(--text-muted);line-height:1.5;">Each student is matched to the two closest profiles. These are <em>pattern suggestions, not diagnoses</em> &mdash; your knowledge of the student's circumstances will always matter more than an algorithm.</p>
+      </div>
+    </div>
+
     <div class="controls-row no-print" style="margin-bottom:1rem;">
-      <button class="btn btn-secondary" onclick="window.print()">Print Charts</button>
-      <label id="rollFilterToggle" style="display:none;font-size:0.85rem;font-weight:600;color:var(--text-muted);cursor:pointer;user-select:none;">
+      <button class="btn btn-secondary" onclick="window.print()" title="Print or save as PDF using your browser's print dialog">Print Charts</button>
+      <label id="rollFilterToggle" style="display:none;font-size:0.85rem;font-weight:600;color:var(--text-muted);cursor:pointer;user-select:none;" title="When checked, only students on the uploaded class roll are shown">
         <input type="checkbox" id="rollFilterCb" checked onchange="handleRollFilterToggle()" style="margin-right:0.35rem;vertical-align:middle;">
         Roll students only
       </label>
-      <label style="font-size:0.85rem;font-weight:600;color:var(--text-muted);cursor:pointer;user-select:none;">
-        <input type="checkbox" id="timelineCb" onchange="handleTimelineToggle()" style="margin-right:0.35rem;vertical-align:middle;">
+      <label style="font-size:0.85rem;font-weight:600;color:var(--text-muted);cursor:pointer;user-select:none;" title="Show per-student cumulative progress and trajectory charts below each radar">
+        <input type="checkbox" id="timelineCb" checked onchange="handleTimelineToggle()" style="margin-right:0.35rem;vertical-align:middle;">
         Timeline charts
       </label>
       <span style="border-left:1px solid var(--border);height:1.5rem;margin:0 0.25rem;"></span>
       <span style="font-size:0.78rem;font-weight:600;color:var(--text-muted);">Sort:</span>
-      <select id="sortField" onchange="handleSortChange()" style="font-size:0.78rem;padding:0.3rem 0.5rem;border:1px solid var(--border);border-radius:5px;background:white;color:var(--text);cursor:pointer;">
+      <select id="sortField" onchange="handleSortChange()" title="Choose which metric to sort student cards by" style="font-size:0.78rem;padding:0.3rem 0.5rem;border:1px solid var(--border);border-radius:5px;background:white;color:var(--text);cursor:pointer;">
         <option value="overallScore">Overall</option>
         <option value="accuracy">Accuracy</option>
         <option value="progression">Progression</option>
@@ -750,49 +837,37 @@
         <option value="mastery">Mastery</option>
         <option value="effort">Effort</option>
       </select>
-      <div class="pill-group" id="sortDirPills">
+      <div class="pill-group" id="sortDirPills" title="Toggle between highest-first (descending) and lowest-first (ascending) sort order">
         <label class="pill-active"><input type="radio" name="sortDir" value="desc" checked onchange="handleSortChange()">Highest first</label>
         <label><input type="radio" name="sortDir" value="asc" onchange="handleSortChange()">Lowest first</label>
       </div>
       <span style="border-left:1px solid var(--border);height:1.5rem;margin:0 0.25rem;"></span>
       <span style="font-size:0.78rem;font-weight:600;color:var(--text-muted);">Tone:</span>
-      <div class="pill-group" id="tonePills">
+      <div class="pill-group" id="tonePills" title="Set the voice of generated comments: Student (you), Parent (their child), or Teacher (concise shorthand)">
         <label class="pill-active"><input type="radio" name="commentTone" value="student" checked>Student</label>
         <label><input type="radio" name="commentTone" value="parent">Parent</label>
         <label><input type="radio" name="commentTone" value="teacher">Teacher</label>
       </div>
       <span style="font-size:0.78rem;font-weight:600;color:var(--text-muted);">Length:</span>
-      <div class="pill-group" id="lengthPills">
+      <div class="pill-group" id="lengthPills" title="Brief covers key metrics only; Detailed adds progression, breadth, and effort commentary">
         <label class="pill-active"><input type="radio" name="commentLength" value="brief" checked>Brief</label>
         <label><input type="radio" name="commentLength" value="detailed">Detailed</label>
       </div>
       <span style="font-size:0.78rem;font-weight:600;color:var(--text-muted);">Focus:</span>
-      <div class="pill-group" id="focusPills">
+      <div class="pill-group" id="focusPills" title="Knowledge leads with current understanding; Growth leads with the learning trajectory over time">
         <label class="pill-active"><input type="radio" name="commentFocus" value="knowledge" checked>Knowledge</label>
         <label><input type="radio" name="commentFocus" value="growth">Growth</label>
       </div>
-      <button class="btn btn-secondary" style="font-size:0.78rem;padding:0.35rem 0.75rem;" onclick="scrollToCopyAll()">&#128203; Copy All</button>
+      <button class="btn btn-secondary" style="font-size:0.78rem;padding:0.35rem 0.75rem;" onclick="scrollToCopyAll()" title="Scroll to the combined comments panel for all students">&#128203; Copy All</button>
+      <button class="btn btn-secondary" style="font-size:0.78rem;padding:0.35rem 0.75rem;" onclick="downloadAllPDFs()" title="Download a separate PDF for every student currently displayed">&#128196; All PDFs</button>
     </div>
 
-    <div id="summaryBar" class="summary-bar" style="display:none;"></div>
     <div id="chartGrid" class="chart-grid"></div>
 
     <div class="copy-all-panel" id="copyAllPanel" style="display:none;">
       <h2>All Student Comments</h2>
       <div class="copy-all-content" id="copyAllContent"></div>
       <button class="btn btn-green no-print" onclick="copyAllComments()">&#128203; Copy All to Clipboard</button>
-    </div>
-
-    <div class="definitions" id="definitions" style="display:none;">
-      <h2>Metric Definitions</h2>
-      <div class="def-grid">
-        <div class="def-item"><strong>Accuracy</strong><p>Proportion of questions answered correctly</p></div>
-        <div class="def-item"><strong>Progression</strong><p>Rate of advancing through Bloom's cognitive levels per question attempted</p></div>
-        <div class="def-item"><strong>Depth</strong><p>Total Bloom's cognitive levels achieved (raw level-up count)</p></div>
-        <div class="def-item"><strong>Breadth</strong><p>Number of distinct learning points engaged with</p></div>
-        <div class="def-item"><strong>Mastery</strong><p>Accuracy in the student's most recent attempts (final quarter). High Accuracy + High Mastery = understood from the start. Lower Accuracy + High Mastery = understanding has been built over time.</p></div>
-        <div class="def-item"><strong>Effort</strong><p>Combined measure of total questions attempted and active time invested, shown relative to the class. Check the summary bar for absolute median and range values to judge the class baseline.</p></div>
-      </div>
     </div>
   </div>
 
@@ -1329,9 +1404,15 @@ function buildTimeSeriesData(rows, nameMap) {
 // ══════════════════════════════════════
 //  TIMELINE: CHART.JS PLUGINS
 // ══════════════════════════════════════
-function quadrantPlugin(medX, medY, labelsArr) {
+function quadrantPlugin(medX, medY, labelsArr, descsArr) {
   // labelsArr: [bottomLeft, bottomRight, topLeft, topRight]
   const labels = labelsArr || ['Getting Started', 'Exploring', 'Building', 'Extending'];
+  const descs = descsArr || [
+    'low attempts, low accuracy',
+    'high attempts, low accuracy',
+    'low attempts, high accuracy',
+    'high attempts, high accuracy',
+  ];
   return {
     id: 'quadrantLines',
     afterDraw(chart) {
@@ -1362,15 +1443,30 @@ function quadrantPlugin(medX, medY, labelsArr) {
 
       if (medX != null) {
         const xPx = scales.x.getPixelForValue(medX);
-        // Quadrant labels
-        ctx.font = '8px -apple-system, BlinkMacSystemFont, sans-serif';
-        ctx.fillStyle = '#94a3b8';
+        // Quadrant labels (bold name + lighter descriptor)
+        const cx = [
+          (chartArea.left + xPx) / 2,
+          (xPx + chartArea.right) / 2,
+          (chartArea.left + xPx) / 2,
+          (xPx + chartArea.right) / 2,
+        ];
+        const cy = [
+          (yPx + chartArea.bottom) / 2,
+          (yPx + chartArea.bottom) / 2,
+          (chartArea.top + yPx) / 2,
+          (chartArea.top + yPx) / 2,
+        ];
         ctx.textAlign = 'center';
-        ctx.textBaseline = 'middle';
-        ctx.fillText(labels[0], (chartArea.left + xPx) / 2, (yPx + chartArea.bottom) / 2);
-        ctx.fillText(labels[1], (xPx + chartArea.right) / 2, (yPx + chartArea.bottom) / 2);
-        ctx.fillText(labels[2], (chartArea.left + xPx) / 2, (chartArea.top + yPx) / 2);
-        ctx.fillText(labels[3], (xPx + chartArea.right) / 2, (chartArea.top + yPx) / 2);
+        for (let i = 0; i < 4; i++) {
+          ctx.font = 'bold 8px -apple-system, BlinkMacSystemFont, sans-serif';
+          ctx.fillStyle = '#94a3b8';
+          ctx.textBaseline = 'bottom';
+          ctx.fillText(labels[i], cx[i], cy[i]);
+          ctx.font = '7px -apple-system, BlinkMacSystemFont, sans-serif';
+          ctx.fillStyle = '#b0b8c4';
+          ctx.textBaseline = 'top';
+          ctx.fillText(descs[i], cx[i], cy[i] + 1);
+        }
       } else {
         // Horizontal-only: label the median line
         ctx.font = '7px -apple-system, BlinkMacSystemFont, sans-serif';
@@ -1622,6 +1718,23 @@ function renderTimelineCharts(metrics, tsData) {
           startEndPlugin(),
         ],
       }));
+
+      // Store trajectory data and attach shift-click handler
+      const medAtt = Math.min(medians.medianAttempts, attCap);
+      const medAcc = medians.medianAccuracy * 100;
+      const startX = Math.min(first.cumulativeAttempts, attCap);
+      const startY = Math.round(first.rollingAccuracy * 1000) / 10;
+      const endX = Math.min(last.cumulativeAttempts, attCap);
+      const endY = Math.round(last.rollingAccuracy * 1000) / 10;
+      trajectoryStore[idx] = {
+        studentName: student.name,
+        startQ: getQuadrant(startX, medAtt, startY, medAcc),
+        endQ: getQuadrant(endX, medAtt, endY, medAcc),
+        endAcc: endY,
+      };
+      scatterAttCtx.onclick = function(e) {
+        if (e.shiftKey) { e.preventDefault(); showTrajModal(idx); }
+      };
     }
 
     // ── Chart 3: Accuracy Over Calendar Time ──
@@ -1934,7 +2047,7 @@ function renderCharts(metrics, benchmarks) {
   const grid = document.getElementById('chartGrid');
   grid.innerHTML = '';
 
-  const summaryBar = document.getElementById('summaryBar');
+  // Populate and show collapsible panels
   const totalStudents = metrics.length;
   const totalQuestions = metrics.reduce((s, m) => s + m.totalQuestions, 0);
   const avgAccuracy = metrics.length > 0
@@ -1942,7 +2055,7 @@ function renderCharts(metrics, benchmarks) {
   const avgMastery = metrics.length > 0
     ? (metrics.reduce((s, m) => s + m.mastery, 0) / metrics.length * 100).toFixed(1) : 0;
   const bm = benchmarks || { medianQ: 0, medianM: 0, maxQ: 0, maxM: 0, minQ: 0, minM: 0 };
-  summaryBar.style.display = 'flex';
+  const summaryBar = document.getElementById('summaryBar');
   summaryBar.innerHTML = `
     <div class="summary-stat"><div class="val">${totalStudents}</div><div class="lbl">Students</div></div>
     <div class="summary-stat"><div class="val">${totalQuestions.toLocaleString()}</div><div class="lbl">Total Questions</div></div>
@@ -1953,30 +2066,9 @@ function renderCharts(metrics, benchmarks) {
     <div class="summary-stat"><div class="val">${bm.minQ}&#8211;${bm.maxQ}</div><div class="lbl">Questions Range</div></div>
     <div class="summary-stat"><div class="val">${bm.minM}&#8211;${bm.maxM}m</div><div class="lbl">Time Range</div></div>
   `;
-
-  document.getElementById('definitions').style.display = 'block';
-
-  // Archetype disclaimer
-  let disclaimer = document.getElementById('archetypeDisclaimer');
-  if (!disclaimer) {
-    disclaimer = document.createElement('div');
-    disclaimer.id = 'archetypeDisclaimer';
-    disclaimer.style.cssText = 'background:#fffbeb;border:1px solid #fde68a;border-radius:8px;padding:0.7rem 1rem;margin-bottom:1.25rem;font-size:0.8rem;color:#92400e;line-height:1.5;';
-    grid.parentNode.insertBefore(disclaimer, grid);
-  }
-  disclaimer.innerHTML = '<strong>Archetype labels &mdash; quick reference:</strong>'
-    + '<ul style="margin:0.4rem 0 0.4rem 1.2rem;padding:0;list-style:disc;">'
-    + '<li><strong>All-Rounder</strong> &mdash; strong across all six metrics; accurate, deep, broad, and putting in the work</li>'
-    + '<li><strong>Persistent</strong> &mdash; high effort and wide coverage; accuracy and progression are the next areas to develop</li>'
-    + '<li><strong>Focused</strong> &mdash; very accurate in the areas they\'ve covered; broadening coverage is the next step</li>'
-    + '<li><strong>Rising</strong> &mdash; recent mastery is high, showing real learning has taken place since earlier attempts</li>'
-    + '<li><strong>Untapped</strong> &mdash; just getting started; engagement is the key opportunity</li>'
-    + '<li><strong>Specialist</strong> &mdash; gone deep into a small number of topics, reaching high cognitive levels</li>'
-    + '<li><strong>Explorer</strong> &mdash; sampled many topics; ready to choose a few and go deeper</li>'
-    + '<li><strong>Coasting</strong> &mdash; earlier accuracy shows capability; recent results suggest an opportunity to rebuild momentum</li>'
-    + '</ul>'
-    + '<p style="margin-top:0.5rem;">Each student is matched to the two closest profiles. These are <em>pattern suggestions, not diagnoses</em> &mdash; '
-    + 'your knowledge of the student\'s circumstances will always matter more than an algorithm.</p>';
+  document.getElementById('summaryToggle').style.display = '';
+  document.getElementById('definitionsToggle').style.display = '';
+  document.getElementById('archetypeToggle').style.display = '';
 
   if (metrics.length === 0) {
     grid.innerHTML = '<p style="padding:2rem;text-align:center;color:var(--text-muted);">No student data found for the selected filter.</p>';
@@ -2019,14 +2111,19 @@ function renderCharts(metrics, benchmarks) {
       <p class="subtitle" style="font-size:0.68rem;color:#94a3b8;">vs median: ${qLabel}q, ${mLabel}m</p>
       <canvas id="chart-${idx}"></canvas>
       <div class="timeline-charts" id="timeline-section-${idx}" style="display:${timelineVisible}">
-        <h4>Progress Over Time</h4>
+        <h4 title="Shows cumulative attempts (blue) and active time (green) over dates. When both lines climb at a similar rate the student works at a steady pace. If attempts (blue) rise faster than time (green), they are answering quickly with less thinking time per question. If time (green) rises faster than attempts (blue), they are being more deliberate with more thinking time per question." style="cursor:help;">Progress Over Time</h4>
         <canvas id="timeline-cumul-${idx}"></canvas>
+        <h4 title="Rolling accuracy plotted against cumulative attempts. Dashed lines mark the class medians, dividing the chart into four quadrants. Grey diamond = starting position, orange triangle (E) = current position. The trajectory shows whether accuracy is improving, declining, or holding steady as practice increases." style="cursor:help;">Accuracy × Attempts</h4>
         <canvas id="timeline-scatter-attempts-${idx}"></canvas>
+        <h4 title="Rolling accuracy plotted over calendar dates. The horizontal dashed line marks the class median accuracy. Grey diamond = starting position, orange triangle (E) = current position. Look for upward trends (improving) or flattening (plateauing). Gaps between dates indicate periods of inactivity." style="cursor:help;">Accuracy Over Time</h4>
         <canvas id="timeline-scatter-time-${idx}"></canvas>
       </div>
       <div class="comment-wrapper">
         <button class="comment-toggle-btn no-print" id="comment-toggle-${idx}" onclick="toggleCardComment(${idx})">&#9662; Hide comment</button>
-        <button class="comment-copy-btn no-print" onclick="copyCardComment(${idx})">Copy</button>
+        <div class="comment-btn-row no-print">
+          <button class="comment-copy-btn" onclick="copyCardComment(${idx})">Copy</button>
+          <button class="comment-copy-btn" onclick="downloadStudentPDF(${idx})" title="Download this student's profile as a PDF">PDF</button>
+        </div>
         <div class="comment-text" id="comment-text-${idx}"></div>
       </div>
     `;
@@ -2156,15 +2253,20 @@ function renderCharts(metrics, benchmarks) {
 }
 
 // ══════════════════════════════════════
-//  GUIDE TOGGLE + ARCHETYPE CHARTS
+//  COLLAPSIBLE PANEL TOGGLES
 // ══════════════════════════════════════
-function toggleGuide() {
-  const btn = document.querySelector('.guide-toggle-btn');
-  const body = document.getElementById('guideBody');
+function togglePanel(id) {
+  const btn = document.getElementById(id + 'Btn');
+  const body = document.getElementById(id + 'Body');
+  if (!btn || !body) return;
   btn.classList.toggle('open');
   body.classList.toggle('open');
+}
 
+function toggleGuide() {
+  togglePanel('guide');
   // Render archetype mini-charts once when first opened
+  const body = document.getElementById('guideBody');
   if (body.classList.contains('open') && !body._rendered) {
     body._rendered = true;
     renderArchetypes();
@@ -2227,12 +2329,12 @@ const ARCHETYPES = [
     action: 'Reinforce their progress explicitly \u2014 the gap between their Accuracy and Mastery IS the evidence of learning. This student responds well to persistence.'
   },
   {
-    name: 'Untapped',
+    name: 'Early Stage',
     data: [0.15, 0.05, 0.05, 0.15, 0.1, 0.1],
     colour: '#ef4444',
-    pattern: 'Small shape near the centre — just getting started',
-    means: 'Engagement is still in its earliest stages across all metrics. This student may be finding their feet, or may benefit from support to get started.',
-    action: 'Prioritise a supportive conversation. Identify what would help them get started. Set a small, achievable first goal and check in regularly.'
+    pattern: 'Small shape near the centre — beginning their learning journey',
+    means: 'This student is at the start of their journey across all metrics. Even small steps forward will show up clearly on the radar, making early progress very visible and rewarding.',
+    action: 'Start with a supportive conversation. Help them pick one topic and set a small, achievable first goal. Early wins build confidence quickly.'
   },
   {
     name: 'Specialist',
@@ -2251,11 +2353,11 @@ const ARCHETYPES = [
     action: 'Guide them to pick 2\u20133 topics and commit to mastering those. Model what \u201cfinishing a topic\u201d looks like in the platform. Their curiosity is an asset.'
   },
   {
-    name: 'Coasting',
+    name: 'Rebuilding',
     data: [0.6, 0.5, 0.5, 0.5, 0.3, 0.6],
     colour: '#d946ef',
-    pattern: 'Accuracy higher than Mastery \u2014 earlier capability shown',
-    means: 'Overall accuracy shows real capability, and there is an opportunity to bring recent performance back to that level. May benefit from revisiting recent material.',
+    pattern: 'Accuracy higher than Mastery — earlier capability evident, now consolidating',
+    means: 'Overall accuracy shows genuine capability, and recent focus is on consolidating and regaining momentum. The foundation is strong — it just needs refreshing.',
     action: 'Check in about their experience. Suggest revisiting earlier content to rebuild confidence and momentum before moving into new material.'
   },
 ];
@@ -2442,7 +2544,7 @@ const COMMENT_BANK = {
       parent: 'The gap between $NAME\'s earlier and recent accuracy is clear evidence of real learning — please encourage them to continue.',
       teacher: 'Positive trend. Reinforce progress explicitly.',
     },
-    'Untapped': {
+    'Early Stage': {
       student: 'A great place to start is choosing one topic and having a go — even a small amount of focused engagement will make a real difference.',
       parent: 'We encourage $NAME to choose one topic and get started — even a small amount of focused engagement will make a real difference.',
       teacher: 'Action: encourage a starting point. One topic, achievable first goal.',
@@ -2452,7 +2554,7 @@ const COMMENT_BANK = {
       parent: 'We recommend $NAME pick 2–3 topics and commit to mastering those — the curiosity is an asset, and focusing it will build deeper understanding.',
       teacher: 'Action: focus curiosity on 2–3 topics for deeper mastery.',
     },
-    'Coasting': {
+    'Rebuilding': {
       student: 'Revisiting some earlier material would be a good way to rebuild confidence and momentum before moving into new content.',
       parent: 'Revisiting some earlier material would help $NAME rebuild confidence and momentum before moving into new content.',
       teacher: 'Action: revisit earlier content to rebuild momentum.',
@@ -2618,6 +2720,163 @@ function getCommentFocus() {
   return checked ? checked.value : 'knowledge';
 }
 
+// ══════════════════════════════════════
+//  PDF DOWNLOAD
+// ══════════════════════════════════════
+function downloadStudentPDF(idx) {
+  // Pure jsPDF approach — bypasses html2canvas entirely.
+  // Converts Chart.js canvases to PNG data-URLs, then places
+  // text + images directly onto a jsPDF document.
+
+  const cards = document.querySelectorAll('.chart-card');
+  if (idx < 0 || idx >= cards.length) return Promise.resolve();
+  const card = cards[idx];
+  const student = (lastRenderedMetrics && lastRenderedMetrics[idx]) || null;
+  const studentName = student ? student.name : 'Student-' + (idx + 1);
+  const safeName = studentName.replace(/[^a-zA-Z0-9 _-]/g, '').replace(/\s+/g, '_');
+
+  const { jsPDF } = window.jspdf;
+  const doc = new jsPDF({ orientation: 'portrait', unit: 'mm', format: 'a4' });
+  const pageW = 210, pageH = 297;
+  const mL = 12, mR = 12, mT = 12;
+  const usableW = pageW - mL - mR;
+  let y = mT;
+
+  // ── Helper: add a canvas image, respecting page breaks ──
+  // Re-renders Chart.js at 4× resolution, composites onto a white-background
+  // offscreen canvas, and exports as JPEG for crisp, compact PDF output.
+  function addChart(canvasId, maxH) {
+    const cvs = document.getElementById(canvasId);
+    if (!cvs) return;
+    const displayW = cvs.offsetWidth;
+    const displayH = cvs.offsetHeight;
+    if (displayW === 0 || displayH === 0) return;
+    try {
+      // Bump Chart.js to 4× device-pixel-ratio, re-render, then capture
+      const ci = Chart.getChart(cvs);
+      if (ci) {
+        ci.options.devicePixelRatio = 4;
+        ci.resize();
+      }
+
+      // Composite onto a white-background offscreen canvas (eliminates
+      // PNG transparency which causes soft/blurry rendering in PDF viewers)
+      const offscreen = document.createElement('canvas');
+      offscreen.width = cvs.width;
+      offscreen.height = cvs.height;
+      const octx = offscreen.getContext('2d');
+      octx.fillStyle = '#ffffff';
+      octx.fillRect(0, 0, offscreen.width, offscreen.height);
+      octx.drawImage(cvs, 0, 0);
+      const dataUrl = offscreen.toDataURL('image/jpeg', 0.95);
+
+      // Restore original resolution
+      if (ci) {
+        ci.options.devicePixelRatio = window.devicePixelRatio || 1;
+        ci.resize();
+      }
+
+      const ratio = displayH / displayW;
+      let w = usableW;
+      let h = w * ratio;
+      if (h > maxH) { h = maxH; w = h / ratio; }
+      const x = mL + (usableW - w) / 2;
+      if (y + h > pageH - 10) { doc.addPage(); y = mT; }
+      doc.addImage(dataUrl, 'JPEG', x, y, w, h);
+      y += h + 3;
+    } catch (e) { /* canvas tainted or empty */ }
+  }
+
+  // ── Header: student name ──
+  doc.setFont('helvetica', 'bold');
+  doc.setFontSize(16);
+  doc.setTextColor(30, 41, 59);
+  doc.text(studentName, pageW / 2, y + 5, { align: 'center' });
+  y += 10;
+
+  // ── Archetype tags ──
+  const tags = card.querySelectorAll('.arch-tag');
+  if (tags.length > 0) {
+    doc.setFont('helvetica', 'normal');
+    doc.setFontSize(10);
+    doc.setTextColor(80, 80, 80);
+    const tagText = Array.from(tags).map(t => t.textContent.trim()).join('   \u2022   ');
+    doc.text(tagText, pageW / 2, y + 3, { align: 'center' });
+    y += 7;
+  }
+
+  // ── Subtitle lines ──
+  const subs = card.querySelectorAll('.subtitle');
+  doc.setFontSize(9);
+  doc.setTextColor(100, 116, 139);
+  subs.forEach(s => {
+    doc.text(s.textContent.trim(), pageW / 2, y + 3, { align: 'center' });
+    y += 5;
+  });
+  y += 3;
+  doc.setTextColor(30, 41, 59);
+
+  // ── Radar chart ──
+  addChart('chart-' + idx, 120);
+
+  // ── Timeline charts (if visible) ──
+  const tlSection = document.getElementById('timeline-section-' + idx);
+  if (tlSection && tlSection.style.display !== 'none') {
+    if (y + 12 > pageH - 10) { doc.addPage(); y = mT; }
+    doc.setFont('helvetica', 'bold');
+    doc.setFontSize(11);
+    doc.text('Progress Over Time', pageW / 2, y + 4, { align: 'center' });
+    y += 9;
+    doc.setFont('helvetica', 'normal');
+    addChart('timeline-cumul-' + idx, 65);
+    addChart('timeline-scatter-attempts-' + idx, 65);
+    addChart('timeline-scatter-time-' + idx, 65);
+  }
+
+  // ── Comment text in a rounded box ──
+  const commentEl = document.getElementById('comment-text-' + idx);
+  if (commentEl && commentEl.textContent.trim()) {
+    doc.setFontSize(9);
+    doc.setFont('helvetica', 'normal');
+    doc.setTextColor(51, 65, 85);
+    const wrapped = doc.splitTextToSize(commentEl.textContent.trim(), usableW - 12);
+    const lineH = 3.8;
+    const boxH = wrapped.length * lineH + 8;
+
+    if (y + boxH > pageH - 10) { doc.addPage(); y = mT; }
+
+    // Subtle background box
+    doc.setDrawColor(226, 232, 240);
+    doc.setFillColor(248, 250, 252);
+    doc.roundedRect(mL + 2, y, usableW - 4, boxH, 2, 2, 'FD');
+
+    y += 5;
+    wrapped.forEach(line => {
+      if (y + lineH > pageH - 10) { doc.addPage(); y = mT; }
+      doc.text(line, mL + 7, y + 2);
+      y += lineH;
+    });
+  }
+
+  doc.save(safeName + '_profile.pdf');
+  return Promise.resolve();
+}
+
+async function downloadAllPDFs() {
+  if (!lastRenderedMetrics || lastRenderedMetrics.length === 0) return;
+  const btn = document.querySelector('[onclick="downloadAllPDFs()"]');
+  const origText = btn ? btn.innerHTML : '';
+  const total = lastRenderedMetrics.length;
+
+  for (let i = 0; i < total; i++) {
+    if (btn) btn.innerHTML = '&#128196; ' + (i + 1) + '/' + total + '...';
+    await downloadStudentPDF(i);
+    // Small delay between downloads so browser doesn't choke
+    await new Promise(r => setTimeout(r, 600));
+  }
+  if (btn) btn.innerHTML = origText;
+}
+
 function renderAllComments() {
   if (!lastRenderedMetrics || !lastRenderedBenchmarks) return;
   const tone = getCommentTone();
@@ -2767,7 +3026,154 @@ function renderArchetypes() {
     });
   });
 }
+
+// ══════════════════════════════════════
+//  TRAJECTORY INSIGHT MODAL
+// ══════════════════════════════════════
+
+// Quadrant indices: 0=Getting Started (BL), 1=Exploring (BR), 2=Building (TL), 3=Extending (TR)
+function getQuadrant(x, medX, y, medY) {
+  const right = x >= medX;
+  const top = y >= medY;
+  if (!right && !top) return 0;  // Getting Started
+  if (right && !top)  return 1;  // Exploring
+  if (!right && top)  return 2;  // Building
+  return 3;                      // Extending
+}
+
+const QUADRANT_NAMES = ['Getting Started', 'Exploring', 'Building', 'Extending'];
+
+const TRAJECTORY_BANK = {
+  // Each entry has currentAdj / moreWorkAdj — offsets applied to the student's
+  // actual rolling accuracy to produce a 20-percentage-point estimated range.
+  // currentAdj: shift for "if tested now" (negative = exam penalty for low volume / declining trend)
+  // moreWorkAdj: shift for "with continued practice in same pattern"
+  '0-0': {
+    label: 'Stagnant',
+    currentAdj: -5, moreWorkAdj: 10,
+    text: 'This student has completed very few questions and accuracy remains below the class median. There is insufficient evidence of understanding. <strong>At this rate, they are likely to perform poorly on tests and exams.</strong> More practice \u2014 even in the same pattern \u2014 will build familiarity, but if accuracy doesn\u2019t lift with volume, they need direct intervention on the content before assessment.',
+  },
+  '0-2': {
+    label: 'Awakening',
+    currentAdj: -12, moreWorkAdj: 8,
+    text: 'Accuracy is strong but practice volume is well below classmates. This student understands the content when they engage, but has not consolidated through repetition. <strong>If tested now, they may underperform their ability \u2014 exam speed and recall require volume they haven\u2019t done.</strong> More work in the same pattern will almost certainly translate to strong test results, because the understanding is already there.',
+  },
+  '0-1': {
+    label: 'Grinding without gain',
+    currentAdj: -3, moreWorkAdj: 3,
+    text: 'This student has increased their practice but accuracy has not followed. The volume alone is not producing learning. <strong>Continuing this pattern will not lead to test or exam success \u2014 more of the same will produce more of the same result.</strong> They need to slow down, review errors, and focus on understanding rather than completion. Consider whether they are guessing or rushing.',
+  },
+  '0-3': {
+    label: 'Full growth',
+    currentAdj: 0, moreWorkAdj: 8,
+    text: 'Excellent growth \u2014 this student started with limited practice and low accuracy but has improved on both fronts. <strong>They are now well positioned for test and exam success.</strong> If they continue at this rate, results should be strong. The key risk is complacency \u2014 maintaining the current practice rate will consolidate this progress.',
+  },
+  '2-2': {
+    label: 'Undercooked',
+    currentAdj: -15, moreWorkAdj: 10,
+    text: 'This student answers correctly when they engage, but has not put in the practice volume. Accuracy suggests they understand the material, but limited repetition means it may not be deeply retained. <strong>Under exam pressure, gaps are likely to appear. They could do well, but are at risk of underperforming their actual understanding.</strong> More practice at this standard would move them to an excellent position \u2014 the understanding is there, they just need the reps.',
+  },
+  '2-3': {
+    label: 'Textbook progression',
+    currentAdj: 2, moreWorkAdj: 5,
+    text: 'This is the ideal learning pattern \u2014 strong accuracy maintained as practice volume increased. <strong>This student is well prepared for tests and exams.</strong> Continued practice will build exam-ready speed and deepen retention. They are on track for strong results and should be encouraged to maintain this approach.',
+  },
+  '2-0': {
+    label: 'Fading',
+    currentAdj: -8, moreWorkAdj: 5,
+    text: 'This student initially showed higher accuracy but performance has declined. This could indicate disengagement, increasing content difficulty, or early results masking gaps now being exposed. <strong>Current trajectory suggests test and exam results will be below potential.</strong> More practice is needed, but critically they should review recent errors \u2014 repeating mistakes without correction will not help.',
+  },
+  '2-1': {
+    label: 'Collapsing under volume',
+    currentAdj: -5, moreWorkAdj: 3,
+    text: 'Accuracy has fallen below the class median as this student attempted more questions. They may be rushing, encountering harder content, or prioritising speed over understanding. <strong>If this pattern continues, test and exam results will likely disappoint despite the effort.</strong> They need to pause volume, consolidate what they know, and address their error patterns before pushing further.',
+  },
+  '1-1': {
+    label: 'Spinning wheels',
+    currentAdj: -2, moreWorkAdj: 2,
+    text: 'This student has put in significant effort but accuracy remains stubbornly low. Persistence alone is not translating to understanding. <strong>Continuing this approach will not lead to test or exam success \u2014 effort without accuracy improvement suggests a strategy problem, not an effort problem.</strong> Intervention is needed: review error patterns, revisit foundational content, and consider whether they are engaging meaningfully with feedback.',
+  },
+  '1-3': {
+    label: 'Breakthrough',
+    currentAdj: 3, moreWorkAdj: 8,
+    text: 'This student\u2019s persistence has paid off \u2014 after a period of high volume with low accuracy, understanding has caught up. <strong>They should now perform solidly on tests and exams if this trajectory continues.</strong> The risk is that they stop practising and skills erode. Encourage them to maintain the current rate \u2014 the hard work is translating to results.',
+  },
+  '3-3': {
+    label: 'Firing on all cylinders',
+    currentAdj: 3, moreWorkAdj: 5,
+    text: 'This student is performing at a high level across both volume and accuracy. <strong>They are strongly positioned for test and exam success.</strong> Continued practice will further consolidate knowledge. Consider extending them with harder content or challenge questions to prevent plateau.',
+  },
+  '3-1': {
+    label: 'Slipping',
+    currentAdj: -8, moreWorkAdj: 3,
+    text: 'This student previously demonstrated strong accuracy but is now slipping below the class median despite continued practice. This may signal fatigue, content difficulty increasing, or loss of focus. <strong>If the decline continues, test and exam performance will suffer despite the practice volume.</strong> They should reduce pace, review recent errors, and ensure they are learning from mistakes rather than accumulating them.',
+  },
+};
+
+// Global store: populated when each Accuracy×Attempts chart is created
+const trajectoryStore = {};
+
+function estimateRange(acc, adj) {
+  // 20-point bucket centred on accuracy + adjustment, clamped to 5–100
+  const centre = Math.round(Math.max(15, Math.min(90, acc + adj)));
+  const lo = Math.max(5, centre - 10);
+  const hi = Math.min(100, centre + 10);
+  return lo + '\u2013' + hi + '%';
+}
+
+function showTrajModal(studentIdx) {
+  const info = trajectoryStore[studentIdx];
+  if (!info) return;
+  const key = info.startQ + '-' + info.endQ;
+  const entry = TRAJECTORY_BANK[key];
+  if (!entry) return;
+
+  const startName = QUADRANT_NAMES[info.startQ];
+  const endName = QUADRANT_NAMES[info.endQ];
+  const acc = info.endAcc; // rolling accuracy at current position (0–100)
+
+  const currentRange = estimateRange(acc, entry.currentAdj);
+  const moreWorkRange = estimateRange(acc, entry.moreWorkAdj);
+
+  const rangeHTML = '<div style="margin-top:0.75rem;padding:0.6rem 0.75rem;background:#f1f5f9;border-radius:8px;font-size:0.82rem;line-height:1.6;">'
+    + '<strong>Estimated test outcome at current pace:</strong> ' + currentRange
+    + '<br><strong>Estimated test outcome with more practice:</strong> ' + moreWorkRange
+    + '</div>';
+
+  document.getElementById('trajTitle').textContent = info.studentName + ' \u2014 ' + entry.label;
+  document.getElementById('trajSub').textContent = startName + ' \u2192 ' + endName;
+  document.getElementById('trajBody').innerHTML = entry.text + rangeHTML;
+  document.getElementById('trajOverlay').classList.add('open');
+}
+
+function closeTrajModal() {
+  document.getElementById('trajOverlay').classList.remove('open');
+}
+
+function copyTrajText() {
+  const title = document.getElementById('trajTitle').textContent;
+  const sub = document.getElementById('trajSub').textContent;
+  const body = document.getElementById('trajBody').innerText;
+  const text = title + '\n' + sub + '\n\n' + body;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector('.traj-copy');
+    btn.textContent = 'Copied!';
+    setTimeout(() => { btn.textContent = 'Copy to clipboard'; }, 1500);
+  });
+}
+
 </script>
+
+<!-- Trajectory insight modal (shift-click on Accuracy × Attempts chart) -->
+<div class="traj-overlay" id="trajOverlay" onclick="if(event.target===this)closeTrajModal()">
+  <div class="traj-modal">
+    <button class="traj-close" onclick="closeTrajModal()">&times;</button>
+    <h3 id="trajTitle"></h3>
+    <div class="traj-sub" id="trajSub"></div>
+    <div class="traj-body" id="trajBody"></div>
+    <button class="traj-copy" onclick="copyTrajText()">Copy to clipboard</button>
+  </div>
+</div>
 
 </body>
 </html>
