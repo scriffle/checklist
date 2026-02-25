@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Checklist 2.0 — Index</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 600px; margin: 2rem auto; padding: 0 1rem; color: #1e293b; }
+  h1 { font-size: 1.3rem; margin-bottom: 1rem; }
+  ul { list-style: none; padding: 0; }
+  li { margin: 0.4rem 0; }
+  a { color: #2563eb; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .note { font-size: 0.8rem; color: #94a3b8; margin-top: 1rem; }
+</style>
+</head>
+<body>
+<h1>Checklist 2.0</h1>
+<ul id="fileList"><li style="color:#94a3b8;">Loading…</li></ul>
+<p class="note" id="note"></p>
+<script>
+// Fetches the browser's directory listing for the current folder (file:// protocol)
+// and extracts all .html files except this index page.
+fetch('./')
+  .then(r => r.text())
+  .then(html => {
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(html, 'text/html');
+    const links = [...doc.querySelectorAll('a')];
+    const files = links
+      .map(a => decodeURIComponent(a.getAttribute('href') || ''))
+      .filter(f => f.endsWith('.html') && f !== 'index.html')
+      .sort();
+
+    const ul = document.getElementById('fileList');
+    if (files.length === 0) {
+      ul.innerHTML = '<li style="color:#94a3b8;">No .html files found.</li>';
+      return;
+    }
+    ul.innerHTML = files.map(f => {
+      const label = f.replace('.html', '').replace(/[-_]/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+      return '<li><a href="' + f + '">' + label + '</a></li>';
+    }).join('');
+    document.getElementById('note').textContent = files.length + ' files found';
+  })
+  .catch(() => {
+    document.getElementById('fileList').innerHTML =
+      '<li style="color:#dc2626;">Could not read directory. Open this folder directly in your browser instead.</li>';
+  });
+</script>
+</body>
+</html>
