@@ -730,6 +730,12 @@
             <option value="__all__">All Classes</option>
           </select>
         </div>
+        <div>
+          <label for="topicFilter">Filter by topic:</label>
+          <select id="topicFilter" onchange="handleClassFilter()">
+            <option value="__all__">All Topics</option>
+          </select>
+        </div>
       </div>
     </div>
 
@@ -1196,6 +1202,16 @@ function handleGenerate() {
     sel.appendChild(opt);
   });
 
+  // Populate topic filter
+  const topics = [...new Set(parsedData.map(r => r['Topic Code']).filter(Boolean))].sort();
+  const topicSel = document.getElementById('topicFilter');
+  topicSel.innerHTML = '<option value="__all__">All Topics</option>';
+  topics.forEach(t => {
+    const opt = document.createElement('option');
+    opt.value = t; opt.textContent = t;
+    topicSel.appendChild(opt);
+  });
+
   const rollText = document.getElementById('rollInput').value.trim();
   if (rollText) {
     const rollNames = parseRoll(rollText);
@@ -1252,9 +1268,13 @@ function handleSortChange() {
 function applyFilter() {
   if (!parsedData) return;
   const classCode = document.getElementById('classFilter').value;
-  const rows = classCode === '__all__'
+  const topicCode = document.getElementById('topicFilter').value;
+  let rows = classCode === '__all__'
     ? parsedData
     : parsedData.filter(r => r['Class Code'] === classCode);
+  if (topicCode !== '__all__') {
+    rows = rows.filter(r => r['Topic Code'] === topicCode);
+  }
 
   // Determine which name map to use:
   // - checkbox checked: roll students only (rollOnlyNameMap)
