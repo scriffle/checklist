@@ -1963,18 +1963,22 @@ function computeMetrics(rows, nameMap) {
       r.effort = maxM > minM ? (normQ + normM) / 2 : normQ;
     });
 
-    // Min-max normalise all 6
+    // Percentile-rank normalise all 6
+    // Each student's normalised value = their rank among peers (0 = lowest, 1 = highest).
+    // Ties get the average rank. Immune to outlier compression.
     const fields = ['accuracy','progression','depth','breadth','mastery','effort'];
-    const mins = {}, maxs = {};
+    const n = results.length;
     fields.forEach(f => {
-      const vals = results.map(r => r[f]);
-      mins[f] = Math.min(...vals); maxs[f] = Math.max(...vals);
-    });
-    results.forEach(r => {
-      r.normalised = {};
-      fields.forEach(f => {
-        const range = maxs[f] - mins[f];
-        r.normalised[f] = range > 0 ? (r[f] - mins[f]) / range : 0.5;
+      const sorted = results.map(r => r[f]).sort((a, b) => a - b);
+      results.forEach(r => {
+        if (!r.normalised) r.normalised = {};
+        if (n === 1) { r.normalised[f] = 0.5; return; }
+        const val = r[f];
+        // Find all indices matching this value (for tied ranks)
+        let first = sorted.indexOf(val);
+        let last = sorted.lastIndexOf(val);
+        const avgRank = (first + last) / 2;
+        r.normalised[f] = avgRank / (n - 1);
       });
     });
 
