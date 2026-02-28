@@ -1256,6 +1256,17 @@ body {
     pointer-events: none;
 }
 
+.level-notch.sequence-locked::after {
+    content: '—';
+    position: absolute;
+    font-size: 9px;
+    font-weight: 700;
+    bottom: -2px;
+    right: -2px;
+    color: var(--color-text-muted);
+    line-height: 1;
+}
+
 .level-notch[data-level="1"] { background: var(--level-1-light); }
 .level-notch[data-level="2"] { background: var(--level-2-light); }
 .level-notch[data-level="3"] { background: var(--level-3-light); }
@@ -10124,6 +10135,14 @@ function applyLevelChange(itemKey, level) {
                 const notchLevel = parseInt(notch.dataset.level);
                 notch.classList.toggle('filled', notchLevel <= level);
                 notch.classList.toggle('active', notchLevel === level);
+                // Recalculate sequence lock: only the next level up is reachable
+                const isSeqLocked = notchLevel > level + 1;
+                notch.classList.toggle('sequence-locked', isSeqLocked);
+                if (isSeqLocked) {
+                    notch.dataset.lockType = 'sequence';
+                } else if (notch.dataset.lockType === 'sequence') {
+                    notch.dataset.lockType = '';
+                }
                 notch.setAttribute('aria-checked', notchLevel === level);
                 notch.setAttribute('tabindex', notchLevel === level ? '0' : '-1');
             });
