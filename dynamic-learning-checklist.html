@@ -1249,6 +1249,13 @@ body {
     right: -2px;
 }
 
+/* Sequence lock - level not yet reachable (must complete previous level first) */
+.level-notch.sequence-locked {
+    opacity: 0.25;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
 .level-notch[data-level="1"] { background: var(--level-1-light); }
 .level-notch[data-level="2"] { background: var(--level-2-light); }
 .level-notch[data-level="3"] { background: var(--level-3-light); }
@@ -1563,6 +1570,11 @@ body {
 
 .quiz-body {
     padding: var(--space-4);
+    background: #fffde7;
+}
+
+[data-theme="dark"] .quiz-body {
+    background: rgba(255, 253, 231, 0.08);
 }
 
 .quiz-context {
@@ -1574,7 +1586,7 @@ body {
 
 .quiz-item-title {
     font-size: var(--text-sm);
-    font-weight: 600;
+    font-weight: 400;
     color: var(--color-text);
     margin-bottom: var(--space-2);
 }
@@ -5532,7 +5544,7 @@ body {
         <div class="quiz-modal" role="dialog" aria-labelledby="quiz-header-title" aria-modal="true">
             <div class="quiz-header">
                 <h2 class="quiz-header-title" id="quiz-header-title">
-                    <span>🧠</span> Quick Check
+                    Quick Check
                 </h2>
                 <button class="quiz-close-btn" id="quiz-cancel-btn" aria-label="Close quiz">×</button>
             </div>
@@ -7858,11 +7870,13 @@ function loadQuizState() {
             const now = Date.now();
             Object.keys(quizState).forEach(key => {
                 if (quizState[key].lockedUntil && quizState[key].lockedUntil < now) {
+                    // Extract toLevel from key (format: "topicPath-itemKey-toLevelN")
+                    const keyToLevel = parseInt((key.match(/toLevel(\d+)$/) || [])[1]) || 0;
                     quizState[key] = {
                         usedQuestions: [],
                         wrongCount: 0,
                         correctStreak: 0,
-                        requiredCorrect: 1,
+                        requiredCorrect: keyToLevel === 5 ? 2 : 1,
                         lockedUntil: null
                     };
                 }
@@ -9538,19 +9552,21 @@ function renderLearningItem(item, subtopic) {
             ${[1, 2, 3, 4, 5].map(level => {
                 const isFilled = level <= data.level;
                 const isActive = level === data.level;
+                // Check for sequential lock (must complete previous level first)
+                const isSequenceLocked = level > data.level + 1;
                 // Check for direct lock on this level
-                const isDirectlyLocked = level > data.level && isLevelLocked(itemKey, level);
+                const isDirectlyLocked = !isSequenceLocked && level > data.level && isLevelLocked(itemKey, level);
                 // Check for cascade lock (a lower level is blocking this one)
-                const isCascadeLocked = level > data.level && !isDirectlyLocked && isAnyLevelLockedBelow(itemKey, data.level, level);
+                const isCascadeLocked = !isSequenceLocked && level > data.level && !isDirectlyLocked && isAnyLevelLockedBelow(itemKey, data.level, level);
                 const isLocked = isDirectlyLocked || isCascadeLocked;
-                const lockType = isDirectlyLocked ? 'direct' : (isCascadeLocked ? 'cascade' : '');
-                return `<button class="level-notch ${isFilled ? 'filled' : ''} ${isActive ? 'active' : ''} ${isLocked ? 'locked' : ''} ${isCascadeLocked ? 'cascade-locked' : ''}"
+                const lockType = isSequenceLocked ? 'sequence' : (isDirectlyLocked ? 'direct' : (isCascadeLocked ? 'cascade' : ''));
+                return `<button class="level-notch ${isFilled ? 'filled' : ''} ${isActive ? 'active' : ''} ${isLocked ? 'locked' : ''} ${isCascadeLocked ? 'cascade-locked' : ''} ${isSequenceLocked ? 'sequence-locked' : ''}"
                     data-level="${level}"
                     data-label="${levelNames[level - 1]}"
                     data-lock-type="${lockType}"
                     role="radio"
                     aria-checked="${isActive}"
-                    aria-label="${emojis[level - 1]} ${levelNames[level - 1]}${isDirectlyLocked ? ' (locked)' : ''}${isCascadeLocked ? ' (blocked)' : ''}"
+                    aria-label="${emojis[level - 1]} ${levelNames[level - 1]}${isDirectlyLocked ? ' (locked)' : ''}${isCascadeLocked ? ' (blocked)' : ''}${isSequenceLocked ? ' (not yet available)' : ''}"
                     tabindex="${isActive ? '0' : '-1'}">${getNotchContent(level)}</button>`;
             }).join('')}
         </div>
@@ -9666,6 +9682,12 @@ function setupLearningContentListeners() {
             const itemKey = notchContainer.dataset.itemKey;
             const level = parseInt(notch.dataset.level);
             const currentLevel = appState.learningItems[itemKey]?.level || 1;
+
+            // Check if this level is sequence-locked (not yet reachable)
+            if (notch.classList.contains('sequence-locked')) {
+                showToast(`Complete level ${currentLevel + 1} first`, 'info');
+                return;
+            }
 
             // Check if this level is locked
             if (notch.classList.contains('locked')) {
@@ -9979,7 +10001,7 @@ function getQuizStateForItem(itemKey, toLevel) {
             usedQuestions: [],
             wrongCount: 0,
             correctStreak: 0,
-            requiredCorrect: 1,
+            requiredCorrect: toLevel === 5 ? 2 : 1,
             lockedUntil: null
         };
     }
@@ -9992,11 +10014,11 @@ function isLevelLocked(itemKey, toLevel) {
         if (Date.now() < state.lockedUntil) {
             return true;
         } else {
-            // Lockout expired, reset
+            // Lockout expired, reset (preserve toLevel5 minimum of 2)
             state.usedQuestions = [];
             state.wrongCount = 0;
             state.correctStreak = 0;
-            state.requiredCorrect = 1;
+            state.requiredCorrect = toLevel === 5 ? 2 : 1;
             state.lockedUntil = null;
             saveQuizState();
         }
@@ -10043,11 +10065,17 @@ function findBlockingLevel(itemKey, currentLevel, targetLevel) {
 // ============================================
 async function handleLevelChange(itemKey, newLevel) {
     const currentLevel = appState.learningItems[itemKey]?.level || 1;
-    
+
+    // Sequential unlock: can only advance one level at a time
+    if (newLevel > currentLevel + 1) {
+        showToast(`Complete level ${currentLevel + 1} first`, 'info');
+        return;
+    }
+
     // Pre-topic check-in: allow free level changes without quizzes ONLY if setting is enabled
     const isPreTopicCheckin = checkinModeActive && currentCheckinType === 'pre';
     const shouldSkipQuiz = isPreTopicCheckin && appState.skipPreTopicQuestions;
-    
+
     if (newLevel > currentLevel) {
         // Moving UP - check if quiz needed
         if (shouldSkipQuiz) {
@@ -11053,11 +11081,11 @@ function processQuizResult(isCorrect, explanation) {
             document.getElementById('quiz-submit-btn').onclick = () => {
                 closeQuiz();
                 applyLevelChange(itemKey, toLevel);
-                // Reset state
+                // Reset state (preserve toLevel5 minimum of 2)
                 state.usedQuestions = [];
                 state.wrongCount = 0;
                 state.correctStreak = 0;
-                state.requiredCorrect = 1;
+                state.requiredCorrect = toLevel === 5 ? 2 : 1;
                 saveQuizState();
             };
             document.getElementById('quiz-cancel-btn').style.display = 'none';
@@ -11086,7 +11114,7 @@ function processQuizResult(isCorrect, explanation) {
             // Lockout
             state.lockedUntil = Date.now() + QUIZ_LOCKOUT_DURATION;
             state.usedQuestions = [];
-            state.requiredCorrect = 1;
+            state.requiredCorrect = currentQuiz.toLevel === 5 ? 2 : 1;
             
             document.getElementById('quiz-result-explanation').textContent = 
                 explanation + '\n\nThis level is now locked for 5 minutes. Take some time to review this concept.';
@@ -11101,9 +11129,10 @@ function processQuizResult(isCorrect, explanation) {
             document.getElementById('quiz-cancel-btn').style.display = 'none';
             document.getElementById('quiz-cancel-btn-footer').style.display = 'none';
         } else {
-            // Increase required
-            state.requiredCorrect = state.wrongCount + 1;
-            
+            // Increase required (enforce minimum 2 for toLevel5)
+            const baseRequired = currentQuiz.toLevel === 5 ? 2 : 1;
+            state.requiredCorrect = Math.max(baseRequired, state.wrongCount + 1);
+
             // Capture values before closeQuiz nullifies currentQuiz
             const itemKey = currentQuiz.itemKey;
             const fromLevel = currentQuiz.fromLevel;
