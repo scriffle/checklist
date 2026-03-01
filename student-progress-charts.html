@@ -736,6 +736,10 @@
             <option value="__all__">All Topics</option>
           </select>
         </div>
+        <div>
+          <label for="teacherInput">Teacher:</label>
+          <input type="text" id="teacherInput" placeholder="e.g. Mr Smith" style="width:120px;padding:4px 8px;border:1px solid var(--border);border-radius:6px;font-size:0.85rem;">
+        </div>
       </div>
     </div>
 
@@ -2094,6 +2098,16 @@ function renderCharts(metrics, benchmarks) {
   document.getElementById('definitionsToggle').style.display = '';
   document.getElementById('archetypeToggle').style.display = '';
 
+  // Build context line from active filters + teacher input
+  const activeClass = document.getElementById('classFilter').value;
+  const activeTopic = document.getElementById('topicFilter').value;
+  const teacherName = (document.getElementById('teacherInput').value || '').trim();
+  const ctxParts = [];
+  if (activeTopic !== '__all__') ctxParts.push(activeTopic);
+  else if (activeClass !== '__all__') ctxParts.push(activeClass);
+  if (teacherName) ctxParts.push(teacherName);
+  const contextLine = ctxParts.length > 0 ? ctxParts.join(' \u2022 ') : '';
+
   if (metrics.length === 0) {
     grid.innerHTML = '<p style="padding:2rem;text-align:center;color:var(--text-muted);">No student data found for the selected filter.</p>';
     return;
@@ -2127,6 +2141,7 @@ function renderCharts(metrics, benchmarks) {
 
     card.innerHTML = `
       <h3>${student.name} <span style="font-size:0.75rem;font-weight:400;color:var(--text-muted);">#${idx + 1}</span></h3>
+      ${contextLine ? '<p class="subtitle" style="font-size:0.7rem;color:#94a3b8;margin-top:-0.1rem;">' + contextLine + '</p>' : ''}
       <div class="archetype-tags">
         <span class="arch-tag arch-tag-primary" style="background:${primary.colour};border-color:${primary.colour};">${primary.name}</span>
         <span class="arch-tag arch-tag-secondary" style="color:${secondary.colour};border-color:${secondary.colour};">${secondary.name}</span>
@@ -2820,12 +2835,28 @@ function downloadStudentPDF(idx) {
     } catch (e) { /* canvas tainted or empty */ }
   }
 
-  // ── Header: student name ──
+  // ── Header: student name + context ──
   doc.setFont('helvetica', 'bold');
   doc.setFontSize(16);
   doc.setTextColor(30, 41, 59);
   doc.text(studentName, pageW / 2, y + 5, { align: 'center' });
   y += 10;
+
+  // Context line: topic/class + teacher
+  const pdfCtxParts = [];
+  const pdfTopic = document.getElementById('topicFilter').value;
+  const pdfClass = document.getElementById('classFilter').value;
+  const pdfTeacher = (document.getElementById('teacherInput').value || '').trim();
+  if (pdfTopic !== '__all__') pdfCtxParts.push(pdfTopic);
+  else if (pdfClass !== '__all__') pdfCtxParts.push(pdfClass);
+  if (pdfTeacher) pdfCtxParts.push(pdfTeacher);
+  if (pdfCtxParts.length > 0) {
+    doc.setFont('helvetica', 'normal');
+    doc.setFontSize(10);
+    doc.setTextColor(148, 163, 184);
+    doc.text(pdfCtxParts.join('  \u2022  '), pageW / 2, y + 3, { align: 'center' });
+    y += 6;
+  }
 
   // ── Archetype tags ──
   const tags = card.querySelectorAll('.arch-tag');

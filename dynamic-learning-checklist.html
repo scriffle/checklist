@@ -14256,7 +14256,8 @@ function exportAllData() {
  */
 function generateEmailSubject(metrics) {
     const date = new Date().toISOString().split('T')[0];
-    return `Learning Progress: ${metrics.student} - ${metrics.topic.name} - ${date}`;
+    const classPart = metrics.studentClass ? ` (${metrics.studentClass})` : '';
+    return `Learning Progress: ${metrics.student}${classPart} - ${metrics.topic.name} - ${date}`;
 }
 
 /**
@@ -14382,7 +14383,7 @@ function generateEmailText(metrics) {
     let text = `LEARNING PROGRESS REPORT
 ========================
 
-Student: ${metrics.student}
+Student: ${metrics.student}${metrics.studentClass ? ' (' + metrics.studentClass + ')' : ''}
 Topic: ${metrics.topic.name}
 Subject: ${metrics.topic.subject || 'N/A'} | Year: ${metrics.topic.yearLevel || 'N/A'}
 Report Date: ${new Date().toISOString().split('T')[0]}
@@ -14547,6 +14548,7 @@ function generateEmailJSON(metrics) {
         reportVersion: '1.0',
         generatedAt: metrics.generated,
         student: metrics.student,
+        studentClass: metrics.studentClass || '',
         topic: {
             name: metrics.topic.name,
             subject: metrics.topic.subject,
