@@ -206,6 +206,23 @@
     align-items: center;
     flex-wrap: wrap;
   }
+  .topic-checklist {
+    max-height: 5.5rem;
+    overflow-y: auto;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 0.25rem 0.5rem;
+    min-width: 140px;
+    font-size: 0.82rem;
+  }
+  .topic-checklist label {
+    display: block;
+    padding: 0.15rem 0;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+  .topic-checklist label:hover { background: var(--bg); }
+  .topic-checklist input[type="checkbox"] { margin-right: 0.35rem; }
 
   /* ── Match review panel ── */
   .match-panel {
@@ -731,10 +748,10 @@
           </select>
         </div>
         <div>
-          <label for="topicFilter">Filter by topic:</label>
-          <select id="topicFilter" onchange="handleClassFilter()">
-            <option value="__all__">All Topics</option>
-          </select>
+          <label>Topics: <a href="#" id="topicToggleAll" onclick="toggleAllTopics(event)" style="font-size:0.75rem;font-weight:400;margin-left:0.25rem;">all / none</a></label>
+          <div id="topicChecklist" class="topic-checklist">
+            <!-- populated by JS when CSV loads -->
+          </div>
         </div>
         <div>
           <label for="teacherInput">Teacher:</label>
@@ -870,6 +887,7 @@
       </div>
       <button class="btn btn-secondary" style="font-size:0.78rem;padding:0.35rem 0.75rem;" onclick="scrollToCopyAll()" title="Scroll to the combined comments panel for all students">&#128203; Copy All</button>
       <button class="btn btn-secondary" style="font-size:0.78rem;padding:0.35rem 0.75rem;" onclick="downloadAllPDFs()" title="Download a separate PDF for every student currently displayed">&#128196; All PDFs</button>
+      <button class="btn btn-secondary" style="font-size:0.78rem;padding:0.35rem 0.75rem;" onclick="exportTrajectoryCSV()" title="Export estimated test outcomes for all students as CSV">&#128202; Estimates CSV</button>
     </div>
 
     <div id="chartGrid" class="chart-grid"></div>
@@ -942,6 +960,8 @@ function loadFile(file) {
     document.getElementById('csvInput').value = ev.target.result;
     dropFileName.textContent = '✓ ' + file.name;
     dropFileName.style.display = 'block';
+    // Populate class/topic filters immediately so the user can set them before generating
+    populateFiltersFromCSV(ev.target.result);
   };
   reader.readAsText(file);
 }
@@ -967,6 +987,15 @@ dropZone.addEventListener('drop', function(e) {
   } else {
     alert('Please drop a .csv file.');
   }
+});
+
+// Populate filters when CSV is pasted into the textarea
+document.getElementById('csvInput').addEventListener('paste', function() {
+  // Use setTimeout so the pasted content is available in the textarea
+  setTimeout(() => {
+    const csv = this.value.trim();
+    if (csv) populateFiltersFromCSV(csv);
+  }, 0);
 });
 
 // ══════════════════════════════════════
@@ -1186,15 +1215,18 @@ function confirmAndGenerate() {
 }
 
 // ══════════════════════════════════════
-//  MAIN GENERATE
+//  FILTER POPULATION (from CSV data)
 // ══════════════════════════════════════
-function handleGenerate() {
-  const csv = document.getElementById('csvInput').value.trim();
-  if (!csv) { alert('Please drop a CSV file or paste data.'); return; }
-
-  const result = Papa.parse(csv, { header: true, skipEmptyLines: true });
+/** Parse CSV text and populate the class / topic filter dropdowns.
+ *  Called whenever new CSV data arrives (file drop, paste, or generate). */
+function populateFiltersFromCSV(csvText) {
+  if (!csvText) return;
+  const result = Papa.parse(csvText, { header: true, skipEmptyLines: true });
   if (result.errors.length > 0) console.warn('CSV parse warnings:', result.errors);
   parsedData = result.data;
+
+  // Preserve current class selection if it still exists in the new data
+  const prevClass = document.getElementById('classFilter').value;
 
   // Populate class filter
   const classes = [...new Set(parsedData.map(r => r['Class Code']).filter(Boolean))].sort();
@@ -1205,16 +1237,67 @@ function handleGenerate() {
     opt.value = c; opt.textContent = c;
     sel.appendChild(opt);
   });
+  if (classes.includes(prevClass)) sel.value = prevClass;
 
-  // Populate topic filter
-  const topics = [...new Set(parsedData.map(r => r['Topic Code']).filter(Boolean))].sort();
-  const topicSel = document.getElementById('topicFilter');
-  topicSel.innerHTML = '<option value="__all__">All Topics</option>';
-  topics.forEach(t => {
-    const opt = document.createElement('option');
-    opt.value = t; opt.textContent = t;
-    topicSel.appendChild(opt);
+  // Populate topic checklist
+  populateTopicChecklist();
+}
+
+/** Build the topic checkbox list from parsedData. Preserves checked state on refresh. */
+function populateTopicChecklist() {
+  if (!parsedData) return;
+  const container = document.getElementById('topicChecklist');
+
+  // Remember which topics were previously checked
+  const prevChecked = new Set();
+  let hadPrev = false;
+  container.querySelectorAll('input[type="checkbox"]').forEach(cb => {
+    hadPrev = true;
+    if (cb.checked) prevChecked.add(cb.value);
   });
+
+  const topics = [...new Set(parsedData.map(r => r['Topic Code']).filter(Boolean))].sort();
+  if (topics.length === 0) {
+    container.innerHTML = '<span style="color:var(--text-muted);font-size:0.78rem;">No topics found</span>';
+    return;
+  }
+
+  container.innerHTML = topics.map(t => {
+    // Default: all checked. If repopulating, preserve previous state.
+    const checked = hadPrev ? (prevChecked.has(t) ? ' checked' : '') : ' checked';
+    return '<label><input type="checkbox" value="' + t + '"' + checked + ' onchange="handleClassFilter()"> ' + t + '</label>';
+  }).join('');
+}
+
+/** Return array of checked topic values, or null if ALL are checked (no filter needed). */
+function getCheckedTopics() {
+  const cbs = document.querySelectorAll('#topicChecklist input[type="checkbox"]');
+  if (cbs.length === 0) return null;
+  const checked = [...cbs].filter(cb => cb.checked).map(cb => cb.value);
+  // All checked = no filter
+  if (checked.length === cbs.length) return null;
+  return checked;
+}
+
+/** Toggle all topic checkboxes on/off. */
+function toggleAllTopics(e) {
+  if (e) e.preventDefault();
+  const cbs = document.querySelectorAll('#topicChecklist input[type="checkbox"]');
+  // If all are checked, uncheck all; otherwise check all
+  const allChecked = [...cbs].every(cb => cb.checked);
+  cbs.forEach(cb => { cb.checked = !allChecked; });
+  handleClassFilter();
+}
+
+// ══════════════════════════════════════
+//  MAIN GENERATE
+// ══════════════════════════════════════
+function handleGenerate() {
+  const csv = document.getElementById('csvInput').value.trim();
+  if (!csv) { alert('Please drop a CSV file or paste data.'); return; }
+
+  // Populate / refresh filters (also sets parsedData)
+  populateFiltersFromCSV(csv);
 
   const rollText = document.getElementById('rollInput').value.trim();
   if (rollText) {
@@ -1272,12 +1355,13 @@ function handleSortChange() {
 function applyFilter() {
   if (!parsedData) return;
   const classCode = document.getElementById('classFilter').value;
-  const topicCode = document.getElementById('topicFilter').value;
   let rows = classCode === '__all__'
     ? parsedData
     : parsedData.filter(r => r['Class Code'] === classCode);
-  if (topicCode !== '__all__') {
-    rows = rows.filter(r => r['Topic Code'] === topicCode);
+  const checkedTopics = getCheckedTopics();
+  if (checkedTopics) {
+    const topicSet = new Set(checkedTopics);
+    rows = rows.filter(r => topicSet.has(r['Topic Code']));
   }
 
   // Determine which name map to use:
@@ -1300,18 +1384,29 @@ function applyFilter() {
 }
 
 function computeClassBenchmarks(metrics) {
-  if (metrics.length === 0) return { medianQ: 0, medianM: 0, maxQ: 0, maxM: 0, minQ: 0, minM: 0 };
+  if (metrics.length === 0) return { medianQ: 0, medianM: 0, maxQ: 0, maxM: 0, minQ: 0, minM: 0, maxBreadth: 1, medianBreadth: 0, medianPace: 0 };
+  const median = arr => {
+    const s = arr.slice().sort((a, b) => a - b);
+    const m = Math.floor(s.length / 2);
+    return s.length % 2 ? s[m] : (s[m - 1] + s[m]) / 2;
+  };
   const sortedQ = metrics.map(m => m.totalQuestions).sort((a, b) => a - b);
   const sortedM = metrics.map(m => m.activeMinutes).sort((a, b) => a - b);
-  const mid = Math.floor(sortedQ.length / 2);
-  const medianQ = sortedQ.length % 2 ? sortedQ[mid] : Math.round((sortedQ[mid - 1] + sortedQ[mid]) / 2);
-  const medianM = sortedM.length % 2 ? Math.round(sortedM[mid]) : Math.round((sortedM[mid - 1] + sortedM[mid]) / 2);
+  const medianQ = Math.round(median(sortedQ));
+  const medianM = Math.round(median(sortedM));
+  const maxBreadth = Math.max(...metrics.map(m => m.breadth), 1);
+  const medianBreadth = Math.round(median(metrics.map(m => m.breadth)));
+  // Pace: seconds per question (for students with > 0 questions)
+  const paces = metrics.filter(m => m.totalQuestions > 0 && m.activeMinutes > 0)
+    .map(m => (m.activeMinutes * 60) / m.totalQuestions);
+  const medianPace = paces.length > 0 ? median(paces) : 0;
   return {
     medianQ, medianM,
     maxQ: sortedQ[sortedQ.length - 1],
     maxM: Math.round(sortedM[sortedM.length - 1]),
     minQ: sortedQ[0],
     minM: Math.round(sortedM[0]),
+    maxBreadth, medianBreadth, medianPace,
   };
 }
 
@@ -2064,6 +2159,37 @@ function radarLabelPlugin() {
 }
 
 // ══════════════════════════════════════
+//  REPORT CONTEXT HELPER
+// ══════════════════════════════════════
+/** Returns the current class / topic / teacher context string, or '' if none set. */
+function getReportContext() {
+  const parts = [];
+  const clsSel = document.getElementById('classFilter');
+  const tch = (document.getElementById('teacherInput').value || '').trim();
+
+  // Class: use selected value, or if "All" and only one class exists, use that
+  if (clsSel.value !== '__all__') {
+    parts.push(clsSel.value);
+  } else {
+    const opts = [...clsSel.options].filter(o => o.value !== '__all__');
+    if (opts.length === 1) parts.push(opts[0].value);
+  }
+
+  // Topics: from checklist checkboxes
+  const allCbs = document.querySelectorAll('#topicChecklist input[type="checkbox"]');
+  const checkedCbs = [...allCbs].filter(cb => cb.checked);
+  if (allCbs.length > 0 && checkedCbs.length > 0) {
+    // If all checked: show all topic names (or just the single one)
+    // If subset checked: show only the checked ones
+    const topicNames = checkedCbs.map(cb => cb.value);
+    parts.push(topicNames.join(', '));
+  }
+
+  if (tch) parts.push(tch);
+  return parts.join(' \u2022 ');
+}
+
+// ══════════════════════════════════════
 //  RENDER CHARTS
 // ══════════════════════════════════════
 function renderCharts(metrics, benchmarks) {
@@ -2084,6 +2210,13 @@ function renderCharts(metrics, benchmarks) {
     ? (metrics.reduce((s, m) => s + m.mastery, 0) / metrics.length * 100).toFixed(1) : 0;
   const bm = benchmarks || { medianQ: 0, medianM: 0, maxQ: 0, maxM: 0, minQ: 0, minM: 0 };
   const summaryBar = document.getElementById('summaryBar');
+  const summaryCtx = getReportContext();
+  document.getElementById('summaryBtn').textContent = summaryCtx ? 'Class Summary \u2014 ' + summaryCtx : 'Class Summary';
+  // Re-add the arrow that textContent wiped
+  const sArrow = document.createElement('span');
+  sArrow.className = 'arrow';
+  sArrow.innerHTML = '&#9660;';
+  document.getElementById('summaryBtn').appendChild(sArrow);
   summaryBar.innerHTML = `
     <div class="summary-stat"><div class="val">${totalStudents}</div><div class="lbl">Students</div></div>
     <div class="summary-stat"><div class="val">${totalQuestions.toLocaleString()}</div><div class="lbl">Total Questions</div></div>
@@ -2098,15 +2231,7 @@ function renderCharts(metrics, benchmarks) {
   document.getElementById('definitionsToggle').style.display = '';
   document.getElementById('archetypeToggle').style.display = '';
 
-  // Build context line from active filters + teacher input
-  const activeClass = document.getElementById('classFilter').value;
-  const activeTopic = document.getElementById('topicFilter').value;
-  const teacherName = (document.getElementById('teacherInput').value || '').trim();
-  const ctxParts = [];
-  if (activeTopic !== '__all__') ctxParts.push(activeTopic);
-  else if (activeClass !== '__all__') ctxParts.push(activeClass);
-  if (teacherName) ctxParts.push(teacherName);
-  const contextLine = ctxParts.length > 0 ? ctxParts.join(' \u2022 ') : '';
+  const contextLine = getReportContext();
 
   if (metrics.length === 0) {
     grid.innerHTML = '<p style="padding:2rem;text-align:center;color:var(--text-muted);">No student data found for the selected filter.</p>';
@@ -2843,18 +2968,12 @@ function downloadStudentPDF(idx) {
   y += 10;
 
   // Context line: topic/class + teacher
-  const pdfCtxParts = [];
-  const pdfTopic = document.getElementById('topicFilter').value;
-  const pdfClass = document.getElementById('classFilter').value;
-  const pdfTeacher = (document.getElementById('teacherInput').value || '').trim();
-  if (pdfTopic !== '__all__') pdfCtxParts.push(pdfTopic);
-  else if (pdfClass !== '__all__') pdfCtxParts.push(pdfClass);
-  if (pdfTeacher) pdfCtxParts.push(pdfTeacher);
-  if (pdfCtxParts.length > 0) {
+  const pdfContext = getReportContext();
+  if (pdfContext) {
     doc.setFont('helvetica', 'normal');
     doc.setFontSize(10);
     doc.setTextColor(148, 163, 184);
-    doc.text(pdfCtxParts.join('  \u2022  '), pageW / 2, y + 3, { align: 'center' });
+    doc.text(pdfContext, pageW / 2, y + 3, { align: 'center' });
     y += 6;
   }
 
@@ -2966,6 +3085,11 @@ function renderCopyAllPanel() {
   const focus = getCommentFocus();
   const panel = document.getElementById('copyAllPanel');
   const content = document.getElementById('copyAllContent');
+  const ctx = getReportContext();
+
+  // Update heading with context
+  const heading = panel.querySelector('h2');
+  if (heading) heading.textContent = ctx ? 'All Student Comments \u2014 ' + ctx : 'All Student Comments';
 
   panel.style.display = 'block';
   let html = '';
@@ -2982,7 +3106,11 @@ function renderCopyAllPanel() {
 function copyCardComment(idx) {
   const textEl = document.getElementById('comment-text-' + idx);
   if (!textEl) return;
-  navigator.clipboard.writeText(textEl.textContent).then(() => {
+  const student = lastRenderedMetrics && lastRenderedMetrics[idx];
+  const ctx = getReportContext();
+  const name = student ? student.name : '';
+  const header = (name || ctx) ? [name, ctx].filter(Boolean).join(' \u2014 ') + '\n' : '';
+  navigator.clipboard.writeText(header + textEl.textContent).then(() => {
     const btn = textEl.parentElement.querySelector('.comment-copy-btn');
     if (btn) { btn.textContent = '✓ Copied'; setTimeout(() => { btn.textContent = 'Copy'; }, 1500); }
   });
@@ -2993,10 +3121,12 @@ function copyAllComments() {
   const tone = getCommentTone();
   const length = getCommentLength();
   const focus = getCommentFocus();
+  const ctx = getReportContext();
+  const header = ctx ? ctx + '\n' + '='.repeat(ctx.length) + '\n\n' : '';
   const lines = lastRenderedMetrics.map(student => {
     return student.name + '\n' + generateComment(student, lastRenderedBenchmarks, tone, length, focus);
   });
-  navigator.clipboard.writeText(lines.join('\n\n')).then(() => {
+  navigator.clipboard.writeText(header + lines.join('\n\n')).then(() => {
     const btn = document.querySelector('#copyAllPanel .btn-green');
     if (btn) {
       const orig = btn.innerHTML;
@@ -3108,68 +3238,54 @@ function getQuadrant(x, medX, y, medY) {
 const QUADRANT_NAMES = ['Getting Started', 'Exploring', 'Building', 'Extending'];
 
 const TRAJECTORY_BANK = {
-  // Each entry has currentAdj / moreWorkAdj — offsets applied to the student's
-  // actual rolling accuracy to produce a 20-percentage-point estimated range.
-  // currentAdj: shift for "if tested now" (negative = exam penalty for low volume / declining trend)
-  // moreWorkAdj: shift for "with continued practice in same pattern"
+  // Qualitative labels and directive text for each start→end quadrant pair.
+  // Numeric estimates are now computed by estimateTestOutcome() using all six metrics.
   '0-0': {
     label: 'Stagnant',
-    currentAdj: -5, moreWorkAdj: 10,
     text: 'This student has completed very few questions and accuracy remains below the class median. There is not enough data to suggest understanding of the material. <strong>They will perform poorly on tests and exams at this rate.</strong> Increasing volume may build basic familiarity, but if accuracy does not lift, they need direct intervention on the content before assessment.',
   },
   '0-2': {
     label: 'Awakening',
-    currentAdj: -12, moreWorkAdj: 8,
     text: 'Practice volume is well below classmates, but accuracy has risen above the class median. The data suggests understanding is developing, though it has not been tested through volume. <strong>If assessed now, they risk underperforming \u2014 exam conditions demand speed and recall that only come from repetition.</strong> More practice at this level will likely translate to strong results. The understanding appears to be there; it needs consolidation.',
   },
   '0-1': {
     label: 'Practice without Progress',
-    currentAdj: -3, moreWorkAdj: 3,
     text: 'This student has increased practice volume but accuracy has not followed. More attempts have not produced better results. <strong>Continuing this pattern will not lead to test or exam success.</strong> They need to stop, review errors, and change approach. This may require the courage to slow down and engage differently with the material rather than pushing more volume.',
   },
   '0-3': {
     label: 'Growing toward Excellence',
-    currentAdj: 0, moreWorkAdj: 8,
     text: 'Both practice volume and accuracy have improved \u2014 this student has moved from below the class median on both measures to above. <strong>They are well positioned for test and exam success.</strong> The risk is complacency. Maintaining the current rate will consolidate this progress; dropping off could see gains erode.',
   },
   '2-2': {
     label: 'Undercooked',
-    currentAdj: -15, moreWorkAdj: 10,
     text: 'Accuracy is above the class median but practice volume remains low. The data suggests understanding, but without sufficient repetition it is unlikely to hold under exam pressure. <strong>They could perform well, but are at significant risk of underperforming their actual ability.</strong> The gap between what they appear to know and what they can reliably demonstrate under timed conditions is the concern.',
   },
   '2-3': {
     label: 'Path to Excellence',
-    currentAdj: 2, moreWorkAdj: 5,
     text: 'Strong accuracy maintained as practice volume increased \u2014 this is the pattern that produces excellence. <strong>This student is well prepared for tests and exams.</strong> Continued practice will deepen retention and build speed. Consider extending with harder content to prevent plateau.',
   },
   '2-0': {
     label: 'Fading',
-    currentAdj: -8, moreWorkAdj: 5,
     text: 'Accuracy has dropped below the class median and practice volume remains low. Early results may have masked gaps now being exposed, or engagement has declined. <strong>Test and exam results will fall below this student\u2019s earlier potential.</strong> They need to review recent errors and re-engage with the material. Confronting a decline is uncomfortable, but avoiding it will widen the gap.',
   },
   '2-1': {
     label: 'Collapsing under volume',
-    currentAdj: -5, moreWorkAdj: 3,
     text: 'Accuracy has fallen below the class median as attempts increased. This suggests rushing, increasing content difficulty, or prioritising completion over understanding. <strong>Test and exam results will likely disappoint despite the volume of practice.</strong> They need to slow down and address error patterns. It takes courage to reduce pace when effort feels productive, but volume without accuracy is not learning.',
   },
   '1-1': {
     label: 'Perseverance without Gain',
-    currentAdj: -2, moreWorkAdj: 2,
     text: 'Significant practice volume has not translated to accuracy above the class median. The data shows sustained engagement but not sustained improvement. <strong>This pattern will not lead to test or exam success \u2014 this is a strategy problem, not an effort problem.</strong> Intervention is needed: review what is being answered incorrectly, revisit foundational content, and change approach. Continued engagement despite poor results is notable, but that engagement now needs to be redirected \u2014 which requires a different kind of courage.',
   },
   '1-3': {
     label: 'Perseverance Rewarded',
-    currentAdj: 3, moreWorkAdj: 8,
     text: 'After sustained practice with accuracy below the class median, accuracy has now risen above it. The volume of practice appears to have produced genuine understanding. <strong>Test and exam results should be solid if this trajectory continues.</strong> The risk is stopping \u2014 skills built through volume can erode without maintenance.',
   },
   '3-3': {
     label: 'Sustained Excellence',
-    currentAdj: 3, moreWorkAdj: 5,
     text: 'High practice volume and high accuracy sustained throughout. <strong>This student is strongly positioned for test and exam success.</strong> Consider extending with harder content or challenge material to prevent plateau and maintain engagement.',
   },
   '3-1': {
     label: 'Slipping',
-    currentAdj: -8, moreWorkAdj: 3,
     text: 'Accuracy has dropped below the class median despite continued high practice volume. This may indicate fatigue, increasing content difficulty, or declining engagement quality. <strong>If this trend continues, test and exam performance will decline despite the effort being put in.</strong> They need to review recent errors and ensure they are learning from mistakes rather than repeating them.',
   },
 };
@@ -3177,11 +3293,97 @@ const TRAJECTORY_BANK = {
 // Global store: populated when each Accuracy×Attempts chart is created
 const trajectoryStore = {};
 
-function estimateRange(acc, adj) {
-  // 20-point bucket centred on accuracy + adjustment, clamped to 5–100
-  const centre = Math.round(Math.max(15, Math.min(90, acc + adj)));
-  const lo = Math.max(5, centre - 10);
-  const hi = Math.min(100, centre + 10);
+// ══════════════════════════════════════
+//  DATA-DRIVEN TEST OUTCOME ESTIMATION
+// ══════════════════════════════════════
+/**
+ * Estimate a student's likely test outcome (0–100%) using all six metrics.
+ *
+ * @param {object} student  - from computeMetrics (has accuracy, mastery, breadth,
+ *                            totalQuestions, activeMinutes, depth, progression)
+ * @param {object} bm       - from computeClassBenchmarks (medianQ, maxBreadth, medianPace, etc.)
+ * @param {string} mode     - 'current' or 'improved'
+ * @returns {number}         centre estimate (0–100, integer)
+ */
+function estimateTestOutcome(student, bm, mode) {
+  // ── 1. BASE: mastery (recent-quarter accuracy) ──
+  // Mastery is the best predictor of current capability.
+  const base = student.mastery * 100;
+
+  // ── 2. VOLUME CONFIDENCE ──
+  // Low volume → understanding is untested under pressure → penalty.
+  // Volume at or above median → neutral. Very high → slight bonus (consolidation).
+  const volRatio = bm.medianQ > 0 ? student.totalQuestions / bm.medianQ : 1;
+  let volumeMod = 0;
+  if (volRatio < 0.25)      volumeMod = -12;  // barely started
+  else if (volRatio < 0.5)  volumeMod = -8;   // well below peers
+  else if (volRatio < 0.75) volumeMod = -4;   // somewhat below
+  else if (volRatio < 1.0)  volumeMod = -1;   // slightly below median
+  else if (volRatio > 2.0)  volumeMod = 2;    // well above — consolidation bonus
+  else                      volumeMod = 0;    // at/above median
+
+  // ── 3. BREADTH COVERAGE ──
+  // Tests cover the full topic. Low breadth → unseen content → penalty.
+  const breadthRatio = bm.maxBreadth > 0 ? student.breadth / bm.maxBreadth : 1;
+  let breadthMod = 0;
+  if (breadthRatio < 0.2)      breadthMod = -10;
+  else if (breadthRatio < 0.4) breadthMod = -6;
+  else if (breadthRatio < 0.6) breadthMod = -3;
+  else if (breadthRatio < 0.8) breadthMod = -1;
+  else                         breadthMod = 0;
+
+  // ── 4. TREND (mastery vs overall accuracy) ──
+  // Improving students (mastery > accuracy) carry momentum into tests.
+  // Declining students (mastery < accuracy) may underperform their record.
+  const trend = (student.mastery - student.accuracy) * 100;
+  let trendMod = 0;
+  if (trend > 10)       trendMod = 3;   // strong improvement
+  else if (trend > 3)   trendMod = 1;   // mild improvement
+  else if (trend < -10) trendMod = -4;  // significant decline
+  else if (trend < -3)  trendMod = -2;  // mild decline
+  // else stable → 0
+
+  // ── 5. PACE (seconds per question vs class median) ──
+  // Rushing (far below median pace) → careless errors under exam conditions.
+  // Deliberate pace → neutral or slight bonus.
+  let paceMod = 0;
+  if (bm.medianPace > 0 && student.totalQuestions > 0 && student.activeMinutes > 0) {
+    const pace = (student.activeMinutes * 60) / student.totalQuestions;
+    const paceRatio = pace / bm.medianPace;
+    if (paceRatio < 0.4)      paceMod = -3;  // very fast / rushing
+    else if (paceRatio < 0.7) paceMod = -1;  // somewhat fast
+    else if (paceRatio > 1.5) paceMod = 1;   // very deliberate
+    // else normal pace → 0
+  }
+
+  // ── 6. "WITH IMPROVEMENT" ADJUSTMENTS ──
+  // Model achievable gains rather than a fixed bump.
+  let improvementMod = 0;
+  if (mode === 'improved') {
+    // Volume gain: if currently low, more practice helps a lot; if already high, diminishing returns
+    if (volRatio < 0.5)       improvementMod += 8;
+    else if (volRatio < 1.0)  improvementMod += 4;
+    else                      improvementMod += 1;  // already high volume — small marginal gain
+
+    // Breadth gain: covering unseen content helps more on tests
+    if (breadthRatio < 0.5)   improvementMod += 6;
+    else if (breadthRatio < 0.8) improvementMod += 3;
+    else                      improvementMod += 1;  // already broad
+
+    // Trend bonus: if already improving, continued work amplifies
+    if (trend > 5)            improvementMod += 2;
+    else if (trend < -5)      improvementMod += 0;  // declining — more work in same pattern won't help much
+  }
+
+  // ── COMBINE ──
+  const raw = base + volumeMod + breadthMod + trendMod + paceMod + improvementMod;
+  return Math.round(Math.max(5, Math.min(98, raw)));
+}
+
+/** Format an estimate as a 10-point range string centred on the estimate. */
+function estimateRange(est) {
+  const lo = Math.max(5, est - 5);
+  const hi = Math.min(100, est + 5);
   return lo + '\u2013' + hi + '%';
 }
 
@@ -3192,20 +3394,40 @@ function showTrajModal(studentIdx) {
   const entry = TRAJECTORY_BANK[key];
   if (!entry) return;
 
+  const student = lastRenderedMetrics && lastRenderedMetrics[studentIdx];
+  const bm = lastRenderedBenchmarks;
+
   const startName = QUADRANT_NAMES[info.startQ];
   const endName = QUADRANT_NAMES[info.endQ];
-  const acc = info.endAcc; // rolling accuracy at current position (0–100)
 
-  const currentRange = estimateRange(acc, entry.currentAdj);
-  const moreWorkRange = estimateRange(acc, entry.moreWorkAdj);
+  // Data-driven estimates using all six metrics
+  let rangeHTML = '';
+  if (student && bm) {
+    const currentEst = estimateTestOutcome(student, bm, 'current');
+    const improvedEst = estimateTestOutcome(student, bm, 'improved');
+    const currentRange = estimateRange(currentEst);
+    const moreWorkRange = estimateRange(improvedEst);
 
-  const rangeHTML = '<div style="margin-top:0.75rem;padding:0.6rem 0.75rem;background:#f1f5f9;border-radius:8px;font-size:0.82rem;line-height:1.6;">'
-    + '<strong>Estimated test outcome at current pace:</strong> ' + currentRange
-    + '<br><strong>Estimated test outcome with more practice:</strong> ' + moreWorkRange
-    + '</div>';
+    // Factors breakdown for transparency
+    const volRatio = bm.medianQ > 0 ? (student.totalQuestions / bm.medianQ).toFixed(1) : '?';
+    const breadthRatio = bm.maxBreadth > 0 ? Math.round((student.breadth / bm.maxBreadth) * 100) : '?';
+    const trendDir = student.mastery > student.accuracy + 0.03 ? '\u2191 improving'
+      : student.mastery < student.accuracy - 0.03 ? '\u2193 declining' : '\u2194 stable';
 
+    rangeHTML = '<div style="margin-top:0.75rem;padding:0.6rem 0.75rem;background:#f1f5f9;border-radius:8px;font-size:0.82rem;line-height:1.6;">'
+      + '<strong>Estimated test outcome at current pace:</strong> ' + currentRange
+      + '<br><strong>Estimated test outcome with more practice:</strong> ' + moreWorkRange
+      + '<div style="margin-top:0.5rem;font-size:0.75rem;color:#64748b;line-height:1.5;">'
+      + 'Based on: mastery ' + Math.round(student.mastery * 100) + '%'
+      + ' · volume ' + volRatio + '\u00d7 median'
+      + ' · breadth ' + breadthRatio + '% of topics'
+      + ' · trend ' + trendDir
+      + '</div></div>';
+  }
+
+  const trajCtx = getReportContext();
   document.getElementById('trajTitle').textContent = info.studentName + ' \u2014 ' + entry.label;
-  document.getElementById('trajSub').textContent = startName + ' \u2192 ' + endName;
+  document.getElementById('trajSub').textContent = (trajCtx ? trajCtx + '  |  ' : '') + startName + ' \u2192 ' + endName;
   document.getElementById('trajBody').innerHTML = entry.text + rangeHTML;
   document.getElementById('trajOverlay').classList.add('open');
 }
@@ -3224,6 +3446,56 @@ function copyTrajText() {
     btn.textContent = 'Copied!';
     setTimeout(() => { btn.textContent = 'Copy to clipboard'; }, 1500);
   });
+}
+
+/** Export trajectory estimates for all displayed students as a CSV download. */
+function exportTrajectoryCSV() {
+  if (!lastRenderedMetrics || lastRenderedMetrics.length === 0 || !lastRenderedBenchmarks) return;
+
+  const ctx = getReportContext();
+  const bm = lastRenderedBenchmarks;
+  const rows = [['Surname', 'First Name', 'Trajectory', 'Estimated Current %', 'Estimated with Improvement %']];
+
+  lastRenderedMetrics.forEach((student, idx) => {
+    const info = trajectoryStore[idx];
+    if (!info) return;
+    const key = info.startQ + '-' + info.endQ;
+    const entry = TRAJECTORY_BANK[key];
+    if (!entry) return;
+
+    const currentEst = estimateTestOutcome(student, bm, 'current');
+    const improvedEst = estimateTestOutcome(student, bm, 'improved');
+
+    // Split name: last word = surname, rest = first name
+    const nameParts = student.name.trim().split(/\s+/);
+    const surname = nameParts.length > 1 ? nameParts[nameParts.length - 1] : student.name;
+    const firstName = nameParts.length > 1 ? nameParts.slice(0, -1).join(' ') : '';
+
+    rows.push([surname, firstName, entry.label, currentEst, improvedEst]);
+  });
+
+  // Sort by surname
+  const header = rows.shift();
+  rows.sort((a, b) => a[0].localeCompare(b[0]));
+  rows.unshift(header);
+
+  // Build CSV text
+  const csvText = rows.map(r => r.map(cell => {
+    const s = String(cell);
+    return s.includes(',') ? '"' + s.replace(/"/g, '""') + '"' : s;
+  }).join(',')).join('\n');
+
+  // Download
+  const blob = new Blob([csvText], { type: 'text/csv;charset=utf-8;' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  const fileCtx = ctx ? ctx.replace(/[^a-zA-Z0-9 ]/g, '').replace(/\s+/g, '_') + '_' : '';
+  a.download = fileCtx + 'trajectory_estimates.csv';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
 }
 
 </script>
