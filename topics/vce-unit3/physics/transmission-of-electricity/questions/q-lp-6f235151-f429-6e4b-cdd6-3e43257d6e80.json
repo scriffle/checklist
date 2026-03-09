@@ -1,0 +1,583 @@
+{
+  "_link": {
+    "uuid": "lp-6f235151-f429-6e4b-cdd6-3e43257d6e80",
+    "version": 1,
+    "contentHash": "hash-68eb8f3a",
+    "title": "I can use the turns ratio formula to calculate primary or secondary current in an ideal transformer",
+    "generatedAt": "2026-03-09"
+  },
+  "toLevel2": [
+    {
+      "type": "mc",
+      "question": "In an ideal transformer, which one of the following correctly relates the turns ratio to the currents?",
+      "correct": "N₁/N₂ = I₂/I₁",
+      "correctExplanation": "For an ideal transformer, the current ratio is the inverse of the turns ratio: N₁/N₂ = I₂/I₁. When turns increase, current decreases.",
+      "distractors": [
+        { "answer": "N₁/N₂ = I₁/I₂", "explanation": "This incorrectly makes the current ratio the same as the turns ratio. Currents and turns are inversely related." },
+        { "answer": "N₁ × N₂ = I₁ × I₂", "explanation": "The turns ratio involves division, not multiplication." },
+        { "answer": "N₁ + N₂ = I₁ + I₂", "explanation": "Turns and current have different units and cannot be added." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A step-up transformer has 100 primary turns and 500 secondary turns. The primary current is 10 A. Which one of the following is closest to the secondary current?",
+      "correct": "2.0 A",
+      "correctExplanation": "I₂ = I₁ × N₁/N₂ = 10 × 100/500 = 10 × 0.20 = 2.0 A.",
+      "distractors": [
+        { "answer": "50 A", "explanation": "This results from I₂ = I₁ × N₂/N₁ = 10 × 5 = 50 A, which inverts the relationship." },
+        { "answer": "10 A", "explanation": "The secondary current is not equal to the primary current when the turns differ." },
+        { "answer": "0.020 A", "explanation": "This does not follow from the correct application of the current-turns relationship." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A step-down transformer has 2000 primary turns and 100 secondary turns. The secondary current is 40 A. Which one of the following is closest to the primary current?",
+      "correct": "2.0 A",
+      "correctExplanation": "I₁ = I₂ × N₂/N₁ = 40 × 100/2000 = 40 × 0.050 = 2.0 A.",
+      "distractors": [
+        { "answer": "800 A", "explanation": "This results from I₁ = I₂ × N₁/N₂ = 40 × 20 = 800 A, which inverts the relationship." },
+        { "answer": "40 A", "explanation": "The primary current is not equal to the secondary current in a step-down transformer." },
+        { "answer": "20 A", "explanation": "This does not follow from the correct application of the turns-current formula." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "In an ideal transformer, if the number of turns on the secondary is greater than on the primary, which one of the following is true about the currents?",
+      "correct": "The secondary current is less than the primary current",
+      "correctExplanation": "If N₂ > N₁, the voltage is stepped up. Since power is conserved (V₁I₁ = V₂I₂), the secondary current must be less than the primary current.",
+      "distractors": [
+        { "answer": "The secondary current is greater than the primary current", "explanation": "More secondary turns means higher voltage and lower current, not higher current." },
+        { "answer": "The primary and secondary currents are always equal", "explanation": "Currents are only equal when the turns are equal (isolation transformer)." },
+        { "answer": "The secondary current is zero because no current flows in a step-up transformer", "explanation": "Current does flow in the secondary. It is reduced, not zero, when voltage is stepped up." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which one of the following best explains why the current relationship in a transformer is the inverse of the turns ratio?",
+      "correct": "Power must be conserved, so if voltage increases by a factor the current must decrease by the same factor",
+      "correctExplanation": "V₁I₁ = V₂I₂. Since V₂/V₁ = N₂/N₁, it follows that I₁/I₂ = N₂/N₁, making the current ratio inverse to the turns ratio.",
+      "distractors": [
+        { "answer": "More turns create more resistance, which reduces current", "explanation": "The current change is due to power conservation, not coil resistance." },
+        { "answer": "The magnetic field in the core limits the current in the secondary coil", "explanation": "The current relationship comes from conservation of energy, not a magnetic field limitation." },
+        { "answer": "Current and turns are always proportional in any electrical device", "explanation": "In transformers, current and turns are inversely related, not directly proportional." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "In an ideal step-up transformer, the secondary current is always less than the primary current.",
+      "correct": "True",
+      "correctExplanation": "A step-up transformer increases voltage (N₂ > N₁). Since V₁I₁ = V₂I₂ and V₂ > V₁, the secondary current I₂ must be less than I₁.",
+      "distractors": [
+        { "answer": "False", "explanation": "In a step-up transformer, voltage increases and current decreases to conserve power. I₂ < I₁." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "The turns ratio for current in an ideal transformer is N₁/N₂ = I₁/I₂.",
+      "correct": "False",
+      "correctExplanation": "The correct relationship is N₁/N₂ = I₂/I₁. The current ratio is the inverse of the turns ratio.",
+      "distractors": [
+        { "answer": "True", "explanation": "This incorrectly makes the current ratio the same as the turns ratio. The correct form is N₁/N₂ = I₂/I₁." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about current in an ideal transformer.",
+      "sentence": "In an ideal transformer, the current ratio is the {{blank:1}} of the turns ratio: N₁/N₂ = {{blank:2}}/I₁.",
+      "blanks": {
+        "1": {
+          "correct": "inverse",
+          "correctExplanation": "While voltage follows the turns ratio directly (V₁/V₂ = N₁/N₂), current follows the inverse: N₁/N₂ = I₂/I₁.",
+          "distractors": [
+            { "answer": "same as", "explanation": "Current follows the inverse of the turns ratio, not the same." },
+            { "answer": "square of", "explanation": "Current is inversely proportional to turns, not related by squaring." }
+          ]
+        },
+        "2": {
+          "correct": "I₂",
+          "correctExplanation": "The formula is N₁/N₂ = I₂/I₁. The secondary current I₂ appears in the numerator.",
+          "distractors": [
+            { "answer": "I₁", "explanation": "I₁ is in the denominator. N₁/N₂ = I₂/I₁, not I₁/I₁." },
+            { "answer": "V₂", "explanation": "V₂ is voltage, not current. The current relationship uses I₂." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about a step-up transformer.",
+      "sentence": "A step-up transformer with a turns ratio N₁:N₂ of 1:10 {{blank:1}} the voltage by a factor of 10 and {{blank:2}} the current by a factor of 10.",
+      "blanks": {
+        "1": {
+          "correct": "increases",
+          "correctExplanation": "A 1:10 turns ratio means N₂ = 10N₁, so V₂ = 10V₁. The voltage increases by a factor of 10.",
+          "distractors": [
+            { "answer": "decreases", "explanation": "A 1:10 ratio has more secondary turns, so voltage increases, not decreases." },
+            { "answer": "maintains", "explanation": "A 1:10 ratio changes the voltage by a factor of 10, it does not maintain it." }
+          ]
+        },
+        "2": {
+          "correct": "decreases",
+          "correctExplanation": "By power conservation, if voltage increases by 10, current must decrease by 10.",
+          "distractors": [
+            { "answer": "increases", "explanation": "Current changes inversely to voltage. If voltage increases, current decreases." },
+            { "answer": "maintains", "explanation": "Current must decrease when voltage increases to conserve power." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about conservation of power.",
+      "sentence": "Since power is conserved in an ideal transformer (V₁I₁ = V₂I₂), a transformer that doubles the voltage must {{blank:1}} the current. This means I₂ = {{blank:2}} × I₁.",
+      "blanks": {
+        "1": {
+          "correct": "halve",
+          "correctExplanation": "Doubling the voltage requires halving the current to keep V × I constant.",
+          "distractors": [
+            { "answer": "double", "explanation": "Doubling both voltage and current would quadruple the power, violating conservation of energy." },
+            { "answer": "quarter", "explanation": "Doubling voltage requires halving current, not quartering it." }
+          ]
+        },
+        "2": {
+          "correct": "0.50",
+          "correctExplanation": "If voltage doubles, current halves: I₂ = 0.50 × I₁.",
+          "distractors": [
+            { "answer": "2.0", "explanation": "I₂ = 2.0 × I₁ would double the current, which violates power conservation when voltage is also doubled." },
+            { "answer": "0.25", "explanation": "Halving current gives I₂ = 0.50 × I₁, not 0.25 × I₁." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "mc",
+      "question": "An ideal transformer has 600 primary turns and 30 secondary turns. The primary current is 0.50 A. Which one of the following is closest to the secondary current?",
+      "correct": "10 A",
+      "correctExplanation": "I₂ = I₁ × N₁/N₂ = 0.50 × 600/30 = 0.50 × 20 = 10 A.",
+      "distractors": [
+        { "answer": "0.025 A", "explanation": "This results from I₂ = I₁ × N₂/N₁ = 0.50 × 30/600 = 0.025 A, which inverts the relationship." },
+        { "answer": "0.50 A", "explanation": "The secondary current is not equal to the primary current in a step-down transformer." },
+        { "answer": "300 A", "explanation": "This does not follow from the correct application of the current-turns formula." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A transformer has a turns ratio N₁:N₂ of 1:25. The secondary current is 0.40 A. Which one of the following is closest to the primary current?",
+      "correct": "10 A",
+      "correctExplanation": "I₁ = I₂ × N₂/N₁ = 0.40 × 25/1 = 0.40 × 25 = 10 A.",
+      "distractors": [
+        { "answer": "0.016 A", "explanation": "This results from I₁ = I₂ × N₁/N₂ = 0.40 × 1/25 = 0.016 A, which inverts the relationship." },
+        { "answer": "0.40 A", "explanation": "The primary current differs from the secondary current when the turns ratio is not 1:1." },
+        { "answer": "100 A", "explanation": "This does not follow from the correct application of the current-turns formula." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A step-up transformer increases 240 V to 4800 V. If the primary current is 20 A, which one of the following is closest to the secondary current?",
+      "correct": "1.0 A",
+      "correctExplanation": "The voltage ratio is 4800/240 = 20. Current is inversely proportional: I₂ = I₁/20 = 20/20 = 1.0 A. Check: 240 × 20 = 4800 × 1.0 = 4800 W.",
+      "distractors": [
+        { "answer": "400 A", "explanation": "This multiplies I₁ by the voltage ratio instead of dividing." },
+        { "answer": "20 A", "explanation": "The secondary current is not equal to the primary current in a step-up transformer." },
+        { "answer": "0.050 A", "explanation": "This does not follow from the correct calculation." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Eva measures the secondary current of an ideal transformer as 8.0 A. The transformer has 200 primary turns and 50 secondary turns. Which one of the following is closest to the primary current?",
+      "correct": "2.0 A",
+      "correctExplanation": "I₁ = I₂ × N₂/N₁ = 8.0 × 50/200 = 8.0 × 0.25 = 2.0 A.",
+      "distractors": [
+        { "answer": "32 A", "explanation": "This results from I₁ = I₂ × N₁/N₂ = 8.0 × 200/50 = 32 A, which inverts the relationship." },
+        { "answer": "8.0 A", "explanation": "The primary and secondary currents differ when the turns differ." },
+        { "answer": "0.50 A", "explanation": "This does not follow from the correct application of the current-turns formula." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A transformer steps down 11 kV to 240 V. The current drawn from the 11 kV line is 2.0 A. Which one of the following is closest to the current available at 240 V?",
+      "correct": "92 A",
+      "correctExplanation": "I₂ = I₁ × V₁/V₂ = 2.0 × 11 000/240 = 2.0 × 45.83 ≈ 92 A. Check: 11 000 × 2 = 22 000 W, 22 000/240 ≈ 92 A.",
+      "distractors": [
+        { "answer": "0.044 A", "explanation": "This results from inverting: I₂ = I₁ × V₂/V₁ = 2.0 × 240/11 000 ≈ 0.044 A." },
+        { "answer": "2.0 A", "explanation": "The secondary current is much larger than the primary in a step-down transformer." },
+        { "answer": "46 A", "explanation": "This halves the correct answer and does not follow from the formula." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which one of the following best explains why high-voltage transmission lines carry less current than low-voltage distribution lines for the same power?",
+      "correct": "Since P = VI, transmitting the same power at higher voltage requires less current",
+      "correctExplanation": "For a given power P, I = P/V. Higher voltage means lower current, which reduces I²R losses in the wires.",
+      "distractors": [
+        { "answer": "High-voltage wires have more resistance, which reduces the current", "explanation": "The current reduction is due to higher voltage, not higher resistance." },
+        { "answer": "The transformer creates extra current that is stored in the transmission line", "explanation": "Transformers do not create or store current. They change the voltage-current ratio while conserving power." },
+        { "answer": "Current naturally decreases as voltage increases regardless of power", "explanation": "The inverse relationship only holds when power is constant, such as across an ideal transformer." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "In an ideal step-down transformer, the primary current is always greater than the secondary current.",
+      "correct": "False",
+      "correctExplanation": "In a step-down transformer, voltage decreases and current increases. The secondary current is greater than the primary current.",
+      "distractors": [
+        { "answer": "True", "explanation": "In a step-down transformer, the secondary has lower voltage and higher current: I₂ > I₁." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about calculating secondary current.",
+      "sentence": "To find the secondary current of an ideal transformer, use I₂ = I₁ × {{blank:1}}/{{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "N₁",
+          "correctExplanation": "I₂ = I₁ × N₁/N₂. The primary turns N₁ appear in the numerator because current is inversely related to turns.",
+          "distractors": [
+            { "answer": "N₂", "explanation": "Using N₂ in the numerator would give I₂ = I₁ × N₂/N₁, which is the voltage ratio, not the current formula." },
+            { "answer": "V₁", "explanation": "While I₂ = I₁ × V₁/V₂ is also valid, the turns version uses N₁/N₂." }
+          ]
+        },
+        "2": {
+          "correct": "N₂",
+          "correctExplanation": "I₂ = I₁ × N₁/N₂. The secondary turns N₂ appear in the denominator.",
+          "distractors": [
+            { "answer": "N₁", "explanation": "N₁ is in the numerator, not the denominator." },
+            { "answer": "V₂", "explanation": "The turns version of the formula uses N₁/N₂, not V₁/V₂." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about current in a step-down transformer.",
+      "sentence": "A step-down transformer with a turns ratio N₁:N₂ of 20:1 has a primary current of 0.50 A. The secondary current is I₂ = 0.50 × 20 = {{blank:1}} A, which is {{blank:2}} than the primary current.",
+      "blanks": {
+        "1": {
+          "correct": "10",
+          "correctExplanation": "I₂ = I₁ × N₁/N₂ = 0.50 × 20/1 = 10 A.",
+          "distractors": [
+            { "answer": "0.025", "explanation": "This results from I₂ = I₁ × N₂/N₁ = 0.50/20 = 0.025 A, which inverts the ratio." },
+            { "answer": "0.50", "explanation": "The secondary current is not equal to the primary in a 20:1 step-down transformer." }
+          ]
+        },
+        "2": {
+          "correct": "greater",
+          "correctExplanation": "In a step-down transformer, voltage decreases and current increases. I₂ = 10 A > I₁ = 0.50 A.",
+          "distractors": [
+            { "answer": "less", "explanation": "In a step-down transformer, the secondary current is greater, not less, than the primary." },
+            { "answer": "equal to", "explanation": "The currents are only equal in an isolation transformer with a 1:1 turns ratio." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about power conservation and current.",
+      "sentence": "A transformer steps up 240 V to 2400 V. The voltage increases by a factor of {{blank:1}}, so the current must decrease by a factor of {{blank:2}} to conserve power.",
+      "blanks": {
+        "1": {
+          "correct": "10",
+          "correctExplanation": "2400/240 = 10. The voltage increases by a factor of 10.",
+          "distractors": [
+            { "answer": "2160", "explanation": "2160 is the difference (2400 − 240), not the factor." },
+            { "answer": "100", "explanation": "100 would be the factor squared. The voltage factor is 10." }
+          ]
+        },
+        "2": {
+          "correct": "10",
+          "correctExplanation": "To conserve power, current decreases by the same factor that voltage increases: a factor of 10.",
+          "distractors": [
+            { "answer": "100", "explanation": "The current factor equals the voltage factor (10), not its square (100)." },
+            { "answer": "5", "explanation": "The current must decrease by the same factor as the voltage increase, which is 10." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "mc",
+      "question": "A welding transformer steps down 240 V to 10 V. The welding operation requires 200 A. Which one of the following is closest to the current drawn from the 240 V supply?",
+      "correct": "8.3 A",
+      "correctExplanation": "I₁ = I₂ × V₂/V₁ = 200 × 10/240 = 2000/240 = 8.33 ≈ 8.3 A.",
+      "distractors": [
+        { "answer": "4800 A", "explanation": "This results from I₁ = I₂ × V₁/V₂ = 200 × 240/10 = 4800 A, which inverts the relationship." },
+        { "answer": "200 A", "explanation": "The primary current is much less than the secondary current in a step-down transformer." },
+        { "answer": "24 A", "explanation": "This does not follow from the correct application of the current formula." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An ideal transformer has 4000 primary turns and 200 secondary turns. The primary current is 0.25 A. Which one of the following is closest to the secondary current?",
+      "correct": "5.0 A",
+      "correctExplanation": "I₂ = I₁ × N₁/N₂ = 0.25 × 4000/200 = 0.25 × 20 = 5.0 A.",
+      "distractors": [
+        { "answer": "0.0125 A", "explanation": "This results from inverting: I₂ = I₁ × N₂/N₁ = 0.25 × 200/4000 = 0.0125 A." },
+        { "answer": "1000 A", "explanation": "This does not follow from the correct calculation." },
+        { "answer": "0.25 A", "explanation": "The secondary current differs from the primary when the turns ratio is not 1:1." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A substation step-down transformer reduces 66 kV to 11 kV. If the secondary supplies 300 A, which one of the following is closest to the primary current?",
+      "correct": "50 A",
+      "correctExplanation": "I₁ = I₂ × V₂/V₁ = 300 × 11 000/66 000 = 300 × 1/6 = 50 A.",
+      "distractors": [
+        { "answer": "1800 A", "explanation": "This results from I₁ = I₂ × V₁/V₂ = 300 × 6 = 1800 A, which inverts the relationship." },
+        { "answer": "300 A", "explanation": "The primary current is less than the secondary current in a step-down transformer." },
+        { "answer": "5.0 A", "explanation": "This does not follow from the correct calculation." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A power station generates 500 MW at 25 kV. A step-up transformer increases the voltage to 500 kV for transmission. Which one of the following is closest to the transmission line current?",
+      "correct": "1000 A",
+      "correctExplanation": "I = P/V = 500 × 10⁶/500 × 10³ = 1000 A.",
+      "distractors": [
+        { "answer": "20 000 A", "explanation": "This is the current at 25 kV: I = 500 × 10⁶/25 × 10³ = 20 000 A, before the step-up." },
+        { "answer": "250 A", "explanation": "This does not follow from the correct calculation of I = P/V." },
+        { "answer": "100 A", "explanation": "This does not follow from the correct calculation of I = P/V." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Sophie compares two transformers connected to the same 240 V supply. Transformer X has a turns ratio N₁:N₂ of 1:5 with I₁ = 2.0 A. Transformer Y has a turns ratio N₁:N₂ of 5:1 with I₁ = 2.0 A. Which one of the following correctly gives the secondary currents?",
+      "correct": "Transformer X: 0.40 A; Transformer Y: 10 A",
+      "correctExplanation": "X: I₂ = 2.0 × 1/5 = 0.40 A (step-up, current decreases). Y: I₂ = 2.0 × 5/1 = 10 A (step-down, current increases).",
+      "distractors": [
+        { "answer": "Transformer X: 10 A; Transformer Y: 0.40 A", "explanation": "These are swapped. The step-up transformer (X) has lower secondary current." },
+        { "answer": "Transformer X: 2.0 A; Transformer Y: 2.0 A", "explanation": "Both secondary currents differ from the primary because the turns ratios are not 1:1." },
+        { "answer": "Transformer X: 0.40 A; Transformer Y: 0.40 A", "explanation": "Transformer Y is a step-down transformer, so its secondary current increases to 10 A." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An ideal transformer has a secondary current of 25 A and a secondary voltage of 48 V. The primary voltage is 240 V. Which one of the following is closest to the primary current?",
+      "correct": "5.0 A",
+      "correctExplanation": "Using V₁I₁ = V₂I₂: I₁ = V₂I₂/V₁ = 48 × 25/240 = 1200/240 = 5.0 A.",
+      "distractors": [
+        { "answer": "125 A", "explanation": "This results from I₁ = V₁I₂/V₂ = 240 × 25/48 = 125 A, which inverts the relationship." },
+        { "answer": "25 A", "explanation": "The primary current differs from the secondary when the voltages differ." },
+        { "answer": "1.0 A", "explanation": "This does not follow from the correct application of V₁I₁ = V₂I₂." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A technician needs to find the turns ratio of a transformer. She measures the primary current as 0.50 A and the secondary current as 15 A. Which one of the following is closest to the turns ratio N₁:N₂?",
+      "correct": "30:1",
+      "correctExplanation": "N₁/N₂ = I₂/I₁ = 15/0.50 = 30. The turns ratio is 30:1 (step-down).",
+      "distractors": [
+        { "answer": "1:30", "explanation": "This inverts the ratio. Since I₂ > I₁, the primary has more turns, giving N₁:N₂ = 30:1." },
+        { "answer": "15:1", "explanation": "This does not follow from the correct calculation of N₁/N₂ = I₂/I₁ = 30." },
+        { "answer": "7.5:1", "explanation": "This does not follow from the correct calculation." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about a transformer used for transmission.",
+      "sentence": "A power station transmits 10 MW at 250 kV. The transmission current is I = P/V = {{blank:1}} A. If the voltage were only 25 kV, the current would be {{blank:2}} A.",
+      "blanks": {
+        "1": {
+          "correct": "40",
+          "correctExplanation": "I = P/V = 10 000 000/250 000 = 40 A.",
+          "distractors": [
+            { "answer": "400", "explanation": "This would require V = 25 kV, not 250 kV." },
+            { "answer": "4.0", "explanation": "This does not follow from the correct calculation." }
+          ]
+        },
+        "2": {
+          "correct": "400",
+          "correctExplanation": "I = P/V = 10 000 000/25 000 = 400 A. Ten times lower voltage gives ten times higher current.",
+          "distractors": [
+            { "answer": "40", "explanation": "40 A is the current at 250 kV, not 25 kV." },
+            { "answer": "4000", "explanation": "This does not follow from the correct calculation of I = P/V." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about verifying current with power conservation.",
+      "sentence": "An ideal transformer has V₁ = 240 V, I₁ = 5.0 A, V₂ = 12 V. The secondary current is I₂ = V₁I₁/V₂ = {{blank:1}} A. We can verify: P₁ = 240 × 5.0 = 1200 W and P₂ = 12 × {{blank:2}} = 1200 W.",
+      "blanks": {
+        "1": {
+          "correct": "100",
+          "correctExplanation": "I₂ = 240 × 5.0/12 = 1200/12 = 100 A.",
+          "distractors": [
+            { "answer": "0.25", "explanation": "This results from I₂ = V₂I₁/V₁ = 12 × 5/240 = 0.25 A, which inverts the relationship." },
+            { "answer": "5.0", "explanation": "The secondary current is much larger than the primary in a step-down transformer." }
+          ]
+        },
+        "2": {
+          "correct": "100",
+          "correctExplanation": "P₂ = V₂ × I₂ = 12 × 100 = 1200 W, confirming power conservation.",
+          "distractors": [
+            { "answer": "5.0", "explanation": "5.0 A is the primary current. The secondary current is 100 A." },
+            { "answer": "1200", "explanation": "1200 is the power in watts, not the current." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about determining the turns ratio from current measurements.",
+      "sentence": "If a transformer has I₁ = 3.0 A and I₂ = 60 A, the turns ratio is N₁/N₂ = I₂/I₁ = {{blank:1}}. This transformer is a step-{{blank:2}} transformer.",
+      "blanks": {
+        "1": {
+          "correct": "20",
+          "correctExplanation": "N₁/N₂ = I₂/I₁ = 60/3.0 = 20.",
+          "distractors": [
+            { "answer": "0.050", "explanation": "This is I₁/I₂ = 3/60 = 0.050, which inverts the ratio." },
+            { "answer": "57", "explanation": "57 = I₂ − I₁ = 60 − 3. Subtraction is not used to find the turns ratio." }
+          ]
+        },
+        "2": {
+          "correct": "down",
+          "correctExplanation": "Since N₁ > N₂ (ratio 20:1), the secondary has fewer turns and lower voltage — a step-down transformer. The higher secondary current confirms this.",
+          "distractors": [
+            { "answer": "up", "explanation": "A 20:1 ratio means more primary turns, so voltage decreases — this is step-down." },
+            { "answer": "through", "explanation": "There is no such thing as a step-through transformer." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "mc",
+      "question": "A power station generates 200 MW at 20 kV. A step-up transformer increases the voltage to 400 kV for transmission. Which one of the following is closest to the current in the transmission line?",
+      "correct": "500 A",
+      "correctExplanation": "I = P/V = 200 × 10⁶/400 × 10³ = 500 A.",
+      "distractors": [
+        { "answer": "10 000 A", "explanation": "This is the generator current at 20 kV: I = 200 × 10⁶/20 × 10³ = 10 000 A." },
+        { "answer": "50 A", "explanation": "This does not follow from the correct calculation of I = P/V." },
+        { "answer": "800 A", "explanation": "This does not follow from the correct calculation." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An ideal transformer system has three stages: Stage 1 steps up 25 kV to 500 kV, Stage 2 steps down 500 kV to 66 kV, Stage 3 steps down 66 kV to 240 V. The generator produces 2.0 MW. Which one of the following is closest to the final current delivered at 240 V?",
+      "correct": "8300 A",
+      "correctExplanation": "Since all transformers are ideal, power is conserved: P = 2.0 MW. I = P/V = 2 000 000/240 = 8333 ≈ 8300 A.",
+      "distractors": [
+        { "answer": "80 A", "explanation": "This is approximately the current at 25 kV: 2 000 000/25 000 = 80 A." },
+        { "answer": "4.0 A", "explanation": "This is the current at 500 kV: 2 000 000/500 000 = 4.0 A." },
+        { "answer": "30 A", "explanation": "This is approximately the current at 66 kV: 2 000 000/66 000 ≈ 30 A." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A factory draws 50 A from the 240 V mains through an ideal step-down transformer connected to an 11 kV line. Which one of the following is closest to the current in the 11 kV line?",
+      "correct": "1.1 A",
+      "correctExplanation": "I₁ = I₂ × V₂/V₁ = 50 × 240/11 000 = 12 000/11 000 = 1.09 ≈ 1.1 A.",
+      "distractors": [
+        { "answer": "2292 A", "explanation": "This results from I₁ = I₂ × V₁/V₂ = 50 × 11 000/240, which inverts the relationship." },
+        { "answer": "50 A", "explanation": "The primary current is much less than the secondary current in a step-down transformer." },
+        { "answer": "5.0 A", "explanation": "This does not follow from the correct calculation." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An engineer compares two transmission options for 100 MW. Option A uses 110 kV and Option B uses 330 kV. Which one of the following correctly gives the transmission currents?",
+      "correct": "Option A: 909 A; Option B: 303 A",
+      "correctExplanation": "I_A = 100 × 10⁶/110 × 10³ = 909 A. I_B = 100 × 10⁶/330 × 10³ = 303 A.",
+      "distractors": [
+        { "answer": "Option A: 303 A; Option B: 909 A", "explanation": "These are swapped. Higher voltage (Option B) gives lower current." },
+        { "answer": "Option A: 909 A; Option B: 909 A", "explanation": "Higher voltage reduces current. Option B has one-third the current of Option A." },
+        { "answer": "Option A: 100 A; Option B: 100 A", "explanation": "These values do not follow from I = P/V." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A phone charger transformer has a primary voltage of 230 V, a secondary voltage of 5.0 V, and delivers 2.0 A to the phone. Which one of the following is closest to the current drawn from the mains?",
+      "correct": "0.043 A",
+      "correctExplanation": "I₁ = V₂I₂/V₁ = 5.0 × 2.0/230 = 10/230 = 0.043 A.",
+      "distractors": [
+        { "answer": "92 A", "explanation": "This results from I₁ = V₁I₂/V₂ = 230 × 2.0/5.0 = 92 A, which inverts the relationship." },
+        { "answer": "2.0 A", "explanation": "The mains current is much less than the secondary current in a step-down transformer." },
+        { "answer": "0.46 A", "explanation": "This does not follow from the correct calculation." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A hydroelectric plant generates 50 MW. The voltage is stepped up from 11 kV to 220 kV for transmission, then stepped down to 240 V at the consumer end. Assuming ideal transformers, which one of the following correctly gives the current at each stage?",
+      "correct": "Generator: 4545 A; Transmission: 227 A; Consumer: 208 000 A total",
+      "correctExplanation": "I_gen = 50 × 10⁶/11 × 10³ = 4545 A. I_trans = 50 × 10⁶/220 × 10³ ≈ 227 A. I_consumer = 50 × 10⁶/240 ≈ 208 000 A (total for all consumers).",
+      "distractors": [
+        { "answer": "Generator: 227 A; Transmission: 4545 A; Consumer: 208 000 A", "explanation": "The generator and transmission currents are swapped. Higher voltage gives lower current." },
+        { "answer": "Generator: 4545 A; Transmission: 227 A; Consumer: 227 A", "explanation": "The consumer current at 240 V is much higher than at 220 kV." },
+        { "answer": "All three currents are equal at 4545 A because power is conserved", "explanation": "Power is conserved but current changes at each voltage level: I = P/V." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A transformer has a primary current of 0.10 A and a secondary current of 5.0 A. The primary has 5000 turns. Which one of the following is closest to the number of secondary turns?",
+      "correct": "100",
+      "correctExplanation": "N₂ = N₁ × I₁/I₂ = 5000 × 0.10/5.0 = 5000 × 0.020 = 100 turns.",
+      "distractors": [
+        { "answer": "250 000", "explanation": "This results from N₂ = N₁ × I₂/I₁ = 5000 × 50 = 250 000, which inverts the current ratio." },
+        { "answer": "5000", "explanation": "Equal turns would give equal currents, which is not the case here." },
+        { "answer": "1000", "explanation": "This does not follow from the correct calculation." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An ideal step-down transformer reduces 11 kV to 415 V for a factory. During peak operation, the factory draws 200 A. During off-peak, it draws 50 A. Which one of the following correctly gives the primary current during peak and off-peak operation?",
+      "correct": "Peak: 7.5 A; Off-peak: 1.9 A",
+      "correctExplanation": "Peak: I₁ = I₂ × V₂/V₁ = 200 × 415/11 000 = 83 000/11 000 = 7.55 ≈ 7.5 A. Off-peak: I₁ = 50 × 415/11 000 = 1.89 ≈ 1.9 A.",
+      "distractors": [
+        { "answer": "Peak: 200 A; Off-peak: 50 A", "explanation": "These are the secondary currents. The primary currents are much smaller at the higher primary voltage." },
+        { "answer": "Peak: 7.5 A; Off-peak: 7.5 A", "explanation": "The primary current changes with the load. Off-peak draws less power and less current." },
+        { "answer": "Peak: 5300 A; Off-peak: 1325 A", "explanation": "These result from inverting the ratio, which gives impossibly high primary currents." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the benefit of high-voltage transmission.",
+      "sentence": "Transmitting 100 MW at 500 kV gives a current of {{blank:1}} A, whereas transmitting at 50 kV gives {{blank:2}} A. The lower current at high voltage means less I²R loss.",
+      "blanks": {
+        "1": {
+          "correct": "200",
+          "correctExplanation": "I = P/V = 100 × 10⁶/500 × 10³ = 200 A.",
+          "distractors": [
+            { "answer": "2000", "explanation": "This is the current at 50 kV, not 500 kV." },
+            { "answer": "20", "explanation": "This does not follow from the correct calculation." }
+          ]
+        },
+        "2": {
+          "correct": "2000",
+          "correctExplanation": "I = P/V = 100 × 10⁶/50 × 10³ = 2000 A.",
+          "distractors": [
+            { "answer": "200", "explanation": "200 A is the current at 500 kV, not 50 kV." },
+            { "answer": "5000", "explanation": "This does not follow from the correct calculation." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about finding a transformer's turns ratio from current measurements.",
+      "sentence": "A transformer draws 0.20 A from the mains and supplies 4.0 A to a device. The ratio I₂/I₁ = {{blank:1}}, which equals the turns ratio N₁/N₂. This is a step-{{blank:2}} transformer.",
+      "blanks": {
+        "1": {
+          "correct": "20",
+          "correctExplanation": "I₂/I₁ = 4.0/0.20 = 20. This equals N₁/N₂ = 20.",
+          "distractors": [
+            { "answer": "0.050", "explanation": "This is I₁/I₂ = 0.20/4.0 = 0.050, which is the inverse." },
+            { "answer": "3.8", "explanation": "3.8 = I₂ − I₁ = 4.0 − 0.20. Subtraction does not give the turns ratio." }
+          ]
+        },
+        "2": {
+          "correct": "down",
+          "correctExplanation": "N₁/N₂ = 20, so the primary has more turns. More primary turns means lower secondary voltage — step-down. The higher secondary current confirms this.",
+          "distractors": [
+            { "answer": "up", "explanation": "N₁ > N₂ means the voltage decreases, making this a step-down transformer." },
+            { "answer": "through", "explanation": "There is no such thing as a step-through transformer." }
+          ]
+        }
+      }
+    }
+  ]
+}

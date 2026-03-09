@@ -1,0 +1,583 @@
+{
+  "_link": {
+    "uuid": "lp-2b906ad5-1868-23e1-8ffc-8e80e43b4c09",
+    "version": 1,
+    "contentHash": "hash-ca7aea4d",
+    "title": "I can define and calculate peak-to-peak voltage (Vp-p)",
+    "generatedAt": "2026-03-07T12:00:00.000Z"
+  },
+  "toLevel2": [
+    {
+      "type": "mc",
+      "question": "Which one of the following best describes peak-to-peak voltage?",
+      "correct": "The total voltage difference from the most negative to the most positive value in one cycle",
+      "correctExplanation": "Peak-to-peak voltage (Vp-p) measures the full vertical span of an AC waveform, from its lowest point to its highest point.",
+      "distractors": [
+        { "answer": "The voltage measured from zero to the maximum positive value in one cycle", "explanation": "This describes the peak voltage (Vp), not the peak-to-peak voltage. Vp-p includes both the positive and negative peaks." },
+        { "answer": "The average voltage over one complete cycle of an AC waveform", "explanation": "The average voltage of a symmetrical AC waveform over one complete cycle is zero. Vp-p is the total span from minimum to maximum." },
+        { "answer": "The root-mean-square voltage used to compare AC with DC power output", "explanation": "This describes the rms voltage (Vrms), not the peak-to-peak voltage. Vrms is related to Vp by Vrms = Vp / √2." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What is the relationship between peak-to-peak voltage (Vp-p) and peak voltage (Vp)?",
+      "correct": "Vp-p = 2 × Vp",
+      "correctExplanation": "The peak-to-peak voltage spans from −Vp to +Vp, giving a total range of 2 × Vp.",
+      "distractors": [
+        { "answer": "Vp-p = Vp / 2", "explanation": "This is the inverse of the correct relationship. Vp-p is always larger than Vp, not smaller." },
+        { "answer": "Vp-p = Vp × √2", "explanation": "The factor √2 relates Vp to Vrms (Vrms = Vp / √2). The peak-to-peak voltage is simply twice the peak voltage." },
+        { "answer": "Vp-p = Vp / √2", "explanation": "This gives the rms voltage, not the peak-to-peak voltage. Vp-p = 2 × Vp." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An AC supply has a peak voltage of 28.3 V. What is the peak-to-peak voltage?",
+      "correct": "56.6 V",
+      "correctExplanation": "Vp-p = 2 × Vp = 2 × 28.3 = 56.6 V.",
+      "distractors": [
+        { "answer": "28.3 V", "explanation": "This is the peak voltage, not the peak-to-peak voltage. Vp-p is twice the peak voltage." },
+        { "answer": "40.0 V", "explanation": "This would result from multiplying the peak voltage by √2, confusing the Vp-p formula with the rms conversion." },
+        { "answer": "14.2 V", "explanation": "This would result from halving the peak voltage. Vp-p = 2 × Vp, not Vp / 2." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Why is the peak-to-peak voltage commonly used when reading an oscilloscope?",
+      "correct": "It is the easiest measurement to take because it spans the full vertical extent of the trace",
+      "correctExplanation": "On an oscilloscope, the full vertical span of the waveform is clearly visible, making Vp-p the most straightforward measurement without needing to locate the zero line.",
+      "distractors": [
+        { "answer": "It gives the same value as the rms voltage, which is needed for power calculations", "explanation": "Vp-p is not equal to Vrms. They are related through Vp: Vrms = Vp / √2 and Vp-p = 2 × Vp." },
+        { "answer": "It is the only voltage quantity that can be measured with an oscilloscope display", "explanation": "An oscilloscope can measure Vp, Vp-p, and other quantities. Vp-p is preferred because it is the easiest to read directly." },
+        { "answer": "It represents the DC-equivalent voltage that delivers the same power to a resistor", "explanation": "The DC-equivalent voltage is the rms voltage, not the peak-to-peak voltage." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An AC signal displayed on an oscilloscope has a total vertical span of 80 V. What is the peak voltage of this signal?",
+      "correct": "40 V",
+      "correctExplanation": "The total vertical span is the peak-to-peak voltage. Vp = Vp-p / 2 = 80 / 2 = 40 V.",
+      "distractors": [
+        { "answer": "80 V", "explanation": "80 V is the peak-to-peak voltage, not the peak voltage. Vp is half of Vp-p." },
+        { "answer": "57 V", "explanation": "This results from dividing by √2 instead of by 2, confusing the Vp-p relationship with the rms conversion." },
+        { "answer": "20 V", "explanation": "This results from dividing by 4, which has no basis in the Vp-p relationship. Vp = Vp-p / 2." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "The peak-to-peak voltage of an AC signal is always exactly twice its peak voltage.",
+      "correct": "True",
+      "correctExplanation": "For a symmetrical sinusoidal AC signal, the waveform ranges from −Vp to +Vp. The total span is therefore Vp − (−Vp) = 2 × Vp.",
+      "distractors": [
+        { "answer": "False", "explanation": "Vp-p = 2 × Vp is the defining relationship for a symmetrical sinusoidal waveform. The signal goes equally above and below zero." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "Peak-to-peak voltage is the same quantity as root-mean-square voltage.",
+      "correct": "False",
+      "correctExplanation": "Peak-to-peak voltage (Vp-p = 2 × Vp) and rms voltage (Vrms = Vp / √2) are different quantities. Vp-p is the full span of the waveform, while Vrms is the DC-equivalent voltage for power calculations.",
+      "distractors": [
+        { "answer": "True", "explanation": "Vp-p and Vrms are distinct. Vp-p = 2 × Vp, whereas Vrms = Vp / √2 ≈ 0.707 × Vp." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the following statement about peak-to-peak voltage.",
+      "sentence": "The peak-to-peak voltage is the total voltage change from the most {{blank:1}} value to the most {{blank:2}} value in one complete cycle.",
+      "blanks": {
+        "1": {
+          "correct": "negative",
+          "correctExplanation": "Vp-p is measured from the lowest (most negative) point of the waveform to the highest point.",
+          "distractors": [
+            { "answer": "positive", "explanation": "The measurement starts from the most negative value, not the most positive. Starting from positive would not capture the full span." },
+            { "answer": "average", "explanation": "Vp-p is measured from the minimum, not the average. Starting from the average would give only the peak voltage." }
+          ]
+        },
+        "2": {
+          "correct": "positive",
+          "correctExplanation": "The measurement ends at the highest (most positive) point, giving the full vertical span of the waveform.",
+          "distractors": [
+            { "answer": "negative", "explanation": "The measurement ends at the most positive value, not the most negative. Measuring from negative to negative would give zero." },
+            { "answer": "average", "explanation": "Vp-p extends to the maximum positive value, not to the average value." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the relationship between Vp-p and Vp.",
+      "sentence": "Vp-p = {{blank:1}} × Vp, so for a peak voltage of 50 V the peak-to-peak voltage is {{blank:2}} V.",
+      "blanks": {
+        "1": {
+          "correct": "2",
+          "correctExplanation": "The peak-to-peak voltage is always twice the peak voltage, since the waveform swings equally above and below zero.",
+          "distractors": [
+            { "answer": "√2", "explanation": "The factor √2 relates Vp to Vrms, not to Vp-p. Vp-p = 2 × Vp." },
+            { "answer": "0.5", "explanation": "This is the inverse. Vp = 0.5 × Vp-p, but Vp-p = 2 × Vp." }
+          ]
+        },
+        "2": {
+          "correct": "100",
+          "correctExplanation": "Vp-p = 2 × 50 = 100 V.",
+          "distractors": [
+            { "answer": "70.7", "explanation": "This results from 50 × √2, confusing the Vp-p formula with the rms conversion factor." },
+            { "answer": "25", "explanation": "This results from dividing by 2 instead of multiplying. Vp-p = 2 × Vp = 100 V." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the statement about oscilloscope measurements.",
+      "sentence": "Peak-to-peak voltage is commonly measured on an {{blank:1}} because it is easy to read the full {{blank:2}} span of the trace without needing to locate the zero line.",
+      "blanks": {
+        "1": {
+          "correct": "oscilloscope",
+          "correctExplanation": "An oscilloscope displays voltage as a function of time, making the full vertical span of the AC waveform directly visible.",
+          "distractors": [
+            { "answer": "ammeter", "explanation": "An ammeter measures current, not voltage waveforms. An oscilloscope is used to visualise AC voltage traces." },
+            { "answer": "voltmeter", "explanation": "A standard voltmeter typically reads rms values, not peak-to-peak. An oscilloscope shows the full waveform." }
+          ]
+        },
+        "2": {
+          "correct": "vertical",
+          "correctExplanation": "On an oscilloscope, voltage is displayed on the vertical axis, so Vp-p corresponds to the full vertical extent of the trace.",
+          "distractors": [
+            { "answer": "horizontal", "explanation": "The horizontal axis represents time, not voltage. The vertical axis shows the voltage." },
+            { "answer": "diagonal", "explanation": "The voltage is represented along the vertical axis only, not along a diagonal." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "mc",
+      "question": "Priya observes a sinusoidal AC waveform on an oscilloscope. The trace extends from −35 V to +35 V. Which one of the following correctly identifies both the peak voltage and the peak-to-peak voltage?",
+      "correct": "Vp = 35 V and Vp-p = 70 V",
+      "correctExplanation": "The peak voltage is the maximum displacement from zero, so Vp = 35 V. The peak-to-peak voltage is the full span: Vp-p = 2 × 35 = 70 V.",
+      "distractors": [
+        { "answer": "Vp = 70 V and Vp-p = 35 V", "explanation": "These values are reversed. Vp is the single-peak value (35 V), and Vp-p is twice that (70 V)." },
+        { "answer": "Vp = 35 V and Vp-p = 49.5 V", "explanation": "49.5 V would result from multiplying 35 by √2, confusing the Vp-p formula with the rms conversion." },
+        { "answer": "Vp = 24.7 V and Vp-p = 70 V", "explanation": "24.7 V results from dividing 35 by √2, which gives Vrms, not Vp. The peak voltage is 35 V." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An AC generator produces a peak voltage of 325 V. Which one of the following is the peak-to-peak voltage?",
+      "correct": "650 V",
+      "correctExplanation": "Vp-p = 2 × Vp = 2 × 325 = 650 V.",
+      "distractors": [
+        { "answer": "460 V", "explanation": "This results from 325 × √2, confusing Vp-p with an rms-related calculation. Vp-p = 2 × Vp." },
+        { "answer": "230 V", "explanation": "230 V is approximately Vp / √2, which gives the rms voltage, not the peak-to-peak voltage." },
+        { "answer": "163 V", "explanation": "This results from halving Vp, which gives Vp / 2 instead of 2 × Vp." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Oliver measures the peak-to-peak voltage of an AC signal to be 120 V. He needs to determine the peak voltage. Which one of the following is correct?",
+      "correct": "60 V",
+      "correctExplanation": "Vp = Vp-p / 2 = 120 / 2 = 60 V.",
+      "distractors": [
+        { "answer": "120 V", "explanation": "120 V is the peak-to-peak voltage, not the peak voltage. Vp = Vp-p / 2." },
+        { "answer": "84.9 V", "explanation": "This results from dividing 120 by √2, confusing the Vp-p relationship with the rms conversion." },
+        { "answer": "42.4 V", "explanation": "This results from dividing 120 by 2√2, which gives Vrms, not Vp." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which one of the following explains why an oscilloscope measurement of peak-to-peak voltage does not require the zero line to be visible?",
+      "correct": "Vp-p is the total vertical distance between the highest and lowest points of the trace, independent of where zero is",
+      "correctExplanation": "Since Vp-p is simply the full vertical span of the waveform, it can be measured directly from the top to the bottom of the trace regardless of the zero reference.",
+      "distractors": [
+        { "answer": "The oscilloscope automatically converts peak-to-peak readings into rms values for the display", "explanation": "This describes a different oscilloscope function. The reason Vp-p does not need the zero line is that it measures the total span." },
+        { "answer": "The zero line is always centred on the oscilloscope screen so it is never missing from the display", "explanation": "The zero line can be offset on an oscilloscope. Vp-p is still measurable because it depends only on the vertical span." },
+        { "answer": "Peak-to-peak voltage is defined relative to the average voltage, which is always visible on the display", "explanation": "Vp-p is defined as the span from minimum to maximum, not relative to the average. It does not depend on the average being visible." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student claims that the peak-to-peak voltage of any sinusoidal AC signal is equal to its rms voltage multiplied by 2√2. Which one of the following best evaluates this claim?",
+      "correct": "The claim is correct because Vp-p = 2 × Vp and Vp = √2 × Vrms, so Vp-p = 2√2 × Vrms",
+      "correctExplanation": "Starting from Vrms = Vp / √2, we get Vp = √2 × Vrms. Then Vp-p = 2 × Vp = 2√2 × Vrms. The claim is correct.",
+      "distractors": [
+        { "answer": "The claim is incorrect because Vp-p = 2 × Vrms, not 2√2 × Vrms", "explanation": "Vp-p ≠ 2 × Vrms. Since Vp = √2 × Vrms, Vp-p = 2 × √2 × Vrms = 2√2 × Vrms." },
+        { "answer": "The claim is incorrect because Vp-p = √2 × Vrms, not 2√2 × Vrms", "explanation": "√2 × Vrms gives Vp, not Vp-p. The peak-to-peak voltage is twice the peak voltage." },
+        { "answer": "The claim is correct but only for AC signals with a frequency of 50 Hz", "explanation": "The relationship Vp-p = 2√2 × Vrms holds for all sinusoidal AC signals, regardless of frequency." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Amara reads an oscilloscope trace and determines that the peak-to-peak voltage is 200 V. Which one of the following is closest to the rms voltage of this signal?",
+      "correct": "70.7 V",
+      "correctExplanation": "Vp = Vp-p / 2 = 200 / 2 = 100 V. Then Vrms = Vp / √2 = 100 / 1.414 ≈ 70.7 V.",
+      "distractors": [
+        { "answer": "100 V", "explanation": "100 V is the peak voltage, not the rms voltage. Vrms = Vp / √2 ≈ 70.7 V." },
+        { "answer": "141 V", "explanation": "This results from dividing 200 by √2 directly, skipping the step of first finding Vp = Vp-p / 2." },
+        { "answer": "200 V", "explanation": "200 V is the peak-to-peak voltage, not the rms voltage." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "If the peak-to-peak voltage of an AC signal is 100 V, the signal oscillates between +50 V and −50 V.",
+      "correct": "True",
+      "correctExplanation": "Vp = Vp-p / 2 = 100 / 2 = 50 V. A symmetrical sinusoidal signal oscillates between +Vp and −Vp, so it ranges from +50 V to −50 V.",
+      "distractors": [
+        { "answer": "False", "explanation": "For a symmetrical sinusoidal waveform with Vp-p = 100 V, the peak voltage is 50 V, giving a range of +50 V to −50 V." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the following explanation of how to determine Vp from an oscilloscope reading.",
+      "sentence": "Liam reads the peak-to-peak voltage from an oscilloscope as 160 V. Since Vp-p = 2 × Vp, the peak voltage is {{blank:1}} V. The rms voltage is then Vp / √2, which gives approximately {{blank:2}} V.",
+      "blanks": {
+        "1": {
+          "correct": "80",
+          "correctExplanation": "Vp = Vp-p / 2 = 160 / 2 = 80 V.",
+          "distractors": [
+            { "answer": "160", "explanation": "160 V is the peak-to-peak voltage, not the peak voltage. Vp = Vp-p / 2." },
+            { "answer": "113", "explanation": "This results from dividing 160 by √2, confusing the Vp-p relationship with the rms conversion." }
+          ]
+        },
+        "2": {
+          "correct": "56.6",
+          "correctExplanation": "Vrms = Vp / √2 = 80 / 1.414 ≈ 56.6 V.",
+          "distractors": [
+            { "answer": "80.0", "explanation": "80 V is the peak voltage, not the rms voltage. Vrms = Vp / √2." },
+            { "answer": "113", "explanation": "This results from multiplying 80 by √2 instead of dividing, giving a value larger than Vp." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the statement comparing Vp-p with other voltage quantities.",
+      "sentence": "For a sinusoidal AC signal, the peak-to-peak voltage is always the {{blank:1}} of the three quantities Vrms, Vp, and Vp-p. The ratio Vp-p to Vrms is equal to {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "largest",
+          "correctExplanation": "Since Vp-p = 2 × Vp and Vp > Vrms, the ordering is Vrms < Vp < Vp-p, making Vp-p the largest.",
+          "distractors": [
+            { "answer": "smallest", "explanation": "Vp-p is the largest, not the smallest. Vrms < Vp < Vp-p for any sinusoidal AC signal." },
+            { "answer": "middle", "explanation": "The peak voltage Vp is the middle value. Vp-p is the largest." }
+          ]
+        },
+        "2": {
+          "correct": "2√2",
+          "correctExplanation": "Vp-p = 2 × Vp = 2 × √2 × Vrms = 2√2 × Vrms. Therefore Vp-p / Vrms = 2√2 ≈ 2.83.",
+          "distractors": [
+            { "answer": "√2", "explanation": "√2 is the ratio of Vp to Vrms, not of Vp-p to Vrms." },
+            { "answer": "2", "explanation": "2 is the ratio of Vp-p to Vp, not of Vp-p to Vrms." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the worked example.",
+      "sentence": "An AC generator has an rms voltage of 230 V. The peak voltage is Vp = Vrms × {{blank:1}} ≈ 325 V. The peak-to-peak voltage is therefore Vp-p = {{blank:2}} V.",
+      "blanks": {
+        "1": {
+          "correct": "√2",
+          "correctExplanation": "Vp = Vrms × √2. This rearrangement of Vrms = Vp / √2 allows us to find the peak voltage from the rms value.",
+          "distractors": [
+            { "answer": "2", "explanation": "Multiplying Vrms by 2 would give Vp-p directly (approximately), but Vp = Vrms × √2, not Vrms × 2." },
+            { "answer": "1/√2", "explanation": "Multiplying by 1/√2 would reduce the voltage. Vp is larger than Vrms, so the factor must be √2." }
+          ]
+        },
+        "2": {
+          "correct": "650",
+          "correctExplanation": "Vp-p = 2 × Vp = 2 × 325 = 650 V.",
+          "distractors": [
+            { "answer": "460", "explanation": "This results from 325 × √2, confusing the Vp-p formula with an additional rms conversion step." },
+            { "answer": "325", "explanation": "325 V is the peak voltage, not the peak-to-peak voltage. Vp-p = 2 × Vp." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "mc",
+      "question": "Sophia sets up an oscilloscope with a vertical sensitivity of 5.0 V per division. A sinusoidal AC trace spans 8.0 divisions from its lowest to its highest point. Which one of the following is closest to the rms voltage of the signal?",
+      "correct": "14.1 V",
+      "correctExplanation": "Vp-p = 8.0 × 5.0 = 40 V. Vp = 40 / 2 = 20 V. Vrms = 20 / √2 ≈ 14.1 V.",
+      "distractors": [
+        { "answer": "20.0 V", "explanation": "20 V is the peak voltage. The rms voltage requires dividing Vp by √2." },
+        { "answer": "28.3 V", "explanation": "This results from dividing Vp-p by √2 instead of first finding Vp and then converting to rms." },
+        { "answer": "40.0 V", "explanation": "40 V is the peak-to-peak voltage, not the rms voltage." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "James measures the peak-to-peak voltage of a 50 Hz AC signal to be 340 V. He connects this supply to a 100 Ω resistor. Which one of the following is closest to the average power dissipated in the resistor?",
+      "correct": "145 W",
+      "correctExplanation": "Vp = 340 / 2 = 170 V. Vrms = 170 / √2 ≈ 120.2 V. P = Vrms² / R = (120.2)² / 100 ≈ 144.5 W ≈ 145 W.",
+      "distractors": [
+        { "answer": "289 W", "explanation": "This results from using Vp instead of Vrms: P = (170)² / 100 = 289 W. Average power must use rms values." },
+        { "answer": "578 W", "explanation": "This results from using Vp-p directly: P = (340)² / 200 or (170)² / 50. Vp-p must first be halved to get Vp." },
+        { "answer": "1160 W", "explanation": "This results from using Vp-p squared divided by R: (340)² / 100. Peak-to-peak voltage is not used directly in power calculations." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An oscilloscope has a time base of 5.0 ms per division and a vertical sensitivity of 10 V per division. A sinusoidal trace has a vertical span of 6.0 divisions and completes one full cycle in 4.0 divisions. Which one of the following correctly gives both Vp-p and the frequency?",
+      "correct": "Vp-p = 60 V and f = 50 Hz",
+      "correctExplanation": "Vp-p = 6.0 × 10 = 60 V. The period T = 4.0 × 5.0 = 20 ms = 0.020 s. Frequency f = 1/T = 1/0.020 = 50 Hz.",
+      "distractors": [
+        { "answer": "Vp-p = 30 V and f = 50 Hz", "explanation": "30 V is the peak voltage, not the peak-to-peak voltage. The full span of 6.0 divisions gives Vp-p = 60 V." },
+        { "answer": "Vp-p = 60 V and f = 200 Hz", "explanation": "200 Hz results from using f = 1/(5.0 × 10⁻³) for one division, not the full cycle of 4.0 divisions." },
+        { "answer": "Vp-p = 60 V and f = 25 Hz", "explanation": "25 Hz results from using T = 8.0 divisions instead of 4.0. One full cycle spans 4.0 divisions." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Two AC generators produce signals with the same rms voltage but different waveform shapes. Generator A produces a sinusoidal waveform with Vp-p = 100 V. Which one of the following is closest to the rms voltage of both generators?",
+      "correct": "35.4 V",
+      "correctExplanation": "For the sinusoidal waveform: Vp = 100 / 2 = 50 V. Vrms = 50 / √2 ≈ 35.4 V. Both generators have this rms voltage.",
+      "distractors": [
+        { "answer": "50.0 V", "explanation": "50 V is the peak voltage of generator A. Vrms = Vp / √2 ≈ 35.4 V." },
+        { "answer": "70.7 V", "explanation": "This results from dividing 100 by √2 without first halving to get Vp." },
+        { "answer": "100 V", "explanation": "100 V is the peak-to-peak voltage. Vrms is much smaller than Vp-p." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Ava measures the peak-to-peak voltage of an AC signal using an oscilloscope and obtains 400 V. She then checks the reading with an AC voltmeter. Which one of the following is closest to the value the voltmeter would display?",
+      "correct": "141 V",
+      "correctExplanation": "AC voltmeters typically display rms values. Vp = 400 / 2 = 200 V. Vrms = 200 / √2 ≈ 141 V.",
+      "distractors": [
+        { "answer": "200 V", "explanation": "200 V is the peak voltage. An AC voltmeter reads the rms voltage, which is Vp / √2." },
+        { "answer": "283 V", "explanation": "This results from dividing 400 by √2 without first halving to get Vp." },
+        { "answer": "400 V", "explanation": "400 V is the peak-to-peak value. An AC voltmeter does not display Vp-p." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Ethan has an AC supply with Vrms = 230 V connected to a 50 Ω resistive heater. He wants to determine the peak-to-peak voltage across the heater. Which one of the following is closest to the correct value?",
+      "correct": "651 V",
+      "correctExplanation": "Vp = Vrms × √2 = 230 × 1.414 ≈ 325 V. Vp-p = 2 × 325 = 650 V ≈ 651 V.",
+      "distractors": [
+        { "answer": "325 V", "explanation": "325 V is the peak voltage, not the peak-to-peak voltage. Vp-p = 2 × Vp." },
+        { "answer": "460 V", "explanation": "This results from 230 × 2, incorrectly assuming Vp-p = 2 × Vrms. The correct path goes through Vp first." },
+        { "answer": "230 V", "explanation": "230 V is the rms voltage. The peak-to-peak voltage is much larger." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An AC signal has Vp-p = 200 V and a frequency of 50 Hz. After 5.0 ms, starting from zero and increasing, which one of the following is closest to the instantaneous voltage?",
+      "correct": "100 V",
+      "correctExplanation": "Vp = 200 / 2 = 100 V. The period T = 1/50 = 20 ms. At t = 5.0 ms = T/4, the voltage is at its positive peak: V = Vp × sin(2π × 5.0/20) = 100 × sin(π/2) = 100 V.",
+      "distractors": [
+        { "answer": "200 V", "explanation": "200 V is the peak-to-peak voltage. The instantaneous voltage at T/4 equals Vp = 100 V." },
+        { "answer": "70.7 V", "explanation": "This is the rms voltage (100/√2). The question asks for the instantaneous voltage at T/4, which is Vp." },
+        { "answer": "0 V", "explanation": "At T/4, the voltage is at its maximum positive value, not at zero. V = 0 at t = 0 and t = T/2." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the oscilloscope reading calculation.",
+      "sentence": "An oscilloscope has a vertical sensitivity of 2.0 V per division. A sinusoidal trace spans 12 divisions vertically. The peak-to-peak voltage is {{blank:1}} V and the peak voltage is {{blank:2}} V.",
+      "blanks": {
+        "1": {
+          "correct": "24",
+          "correctExplanation": "Vp-p = 12 divisions × 2.0 V/division = 24 V.",
+          "distractors": [
+            { "answer": "12", "explanation": "12 is the number of divisions, not the voltage. Multiply by the sensitivity: 12 × 2.0 = 24 V." },
+            { "answer": "6.0", "explanation": "This results from dividing 12 by 2.0 instead of multiplying. Vp-p = divisions × V/division." }
+          ]
+        },
+        "2": {
+          "correct": "12",
+          "correctExplanation": "Vp = Vp-p / 2 = 24 / 2 = 12 V.",
+          "distractors": [
+            { "answer": "24", "explanation": "24 V is the peak-to-peak voltage. The peak voltage is half: Vp = 12 V." },
+            { "answer": "17", "explanation": "This results from dividing 24 by √2, giving Vrms instead of Vp." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the power calculation from a peak-to-peak voltage measurement.",
+      "sentence": "A signal with Vp-p = 80 V is connected across a 200 Ω resistor. The peak voltage is {{blank:1}} V and the average power dissipated is {{blank:2}} W.",
+      "blanks": {
+        "1": {
+          "correct": "40",
+          "correctExplanation": "Vp = Vp-p / 2 = 80 / 2 = 40 V.",
+          "distractors": [
+            { "answer": "80", "explanation": "80 V is Vp-p, not Vp. The peak voltage is half the peak-to-peak voltage." },
+            { "answer": "56.6", "explanation": "This results from dividing 80 by √2, confusing the Vp-p relationship with the rms conversion." }
+          ]
+        },
+        "2": {
+          "correct": "4.0",
+          "correctExplanation": "Vrms = 40 / √2 ≈ 28.28 V. P = Vrms² / R = (28.28)² / 200 = 800 / 200 = 4.0 W.",
+          "distractors": [
+            { "answer": "8.0", "explanation": "This results from using Vp instead of Vrms: P = (40)² / 200 = 8.0 W. Average power requires rms values." },
+            { "answer": "32", "explanation": "This results from using Vp-p: P = (80)² / 200 = 32 W. Vp-p must not be used directly in power formulas." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the conversion between voltage quantities.",
+      "sentence": "An AC voltmeter reads 100 V. This is the {{blank:1}} voltage. The peak-to-peak voltage of this signal is approximately {{blank:2}} V.",
+      "blanks": {
+        "1": {
+          "correct": "rms",
+          "correctExplanation": "Standard AC voltmeters display the root-mean-square (rms) voltage.",
+          "distractors": [
+            { "answer": "peak", "explanation": "AC voltmeters display rms values, not peak values. A reading of 100 V means Vrms = 100 V." },
+            { "answer": "peak-to-peak", "explanation": "AC voltmeters display rms values, not peak-to-peak values." }
+          ]
+        },
+        "2": {
+          "correct": "283",
+          "correctExplanation": "Vp = Vrms × √2 = 100 × 1.414 ≈ 141 V. Vp-p = 2 × 141 ≈ 283 V.",
+          "distractors": [
+            { "answer": "141", "explanation": "141 V is the peak voltage. The peak-to-peak voltage is twice this: Vp-p = 2 × 141 ≈ 283 V." },
+            { "answer": "200", "explanation": "This results from 2 × 100, incorrectly assuming Vp-p = 2 × Vrms. The correct conversion goes through Vp." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "mc",
+      "question": "A technician measures the peak-to-peak voltage of a signal using two different oscilloscopes. Oscilloscope X reads 84 V and oscilloscope Y reads 80 V. Both oscilloscopes have an uncertainty of ±2 V per division and the trace spans 4 divisions. Which one of the following best accounts for the discrepancy?",
+      "correct": "The difference falls within the combined measurement uncertainty of the two instruments",
+      "correctExplanation": "Each oscilloscope has an uncertainty of ±2 V per division over 4 divisions, giving ±8 V total. A 4 V difference between readings (84 − 80 = 4 V) is well within this combined uncertainty range.",
+      "distractors": [
+        { "answer": "One oscilloscope is measuring Vp while the other is measuring Vp-p, doubling the apparent reading", "explanation": "If one read Vp and the other Vp-p, the ratio would be 2:1. The readings of 84 V and 80 V differ by only 5%, not by a factor of 2." },
+        { "answer": "The frequency of the signal has changed between the two measurements, altering the peak-to-peak voltage", "explanation": "Peak-to-peak voltage is independent of frequency for a given signal. Changing frequency does not alter Vp-p." },
+        { "answer": "The DC offset on one oscilloscope has shifted the baseline, increasing the apparent Vp-p reading", "explanation": "A DC offset shifts the entire trace but does not change the vertical span between the highest and lowest points, so Vp-p is unaffected." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Mia claims that the peak-to-peak voltage of the Australian mains supply is approximately 680 V. Nadia claims it is approximately 460 V. Which one of the following best evaluates these claims?",
+      "correct": "Mia is incorrect and Nadia is incorrect; the correct value is approximately 650 V",
+      "correctExplanation": "Australian mains is 230 V rms. Vp = 230 × √2 ≈ 325 V. Vp-p = 2 × 325 = 650 V. Mia's value of 680 V and Nadia's value of 460 V are both incorrect, though Mia is closer.",
+      "distractors": [
+        { "answer": "Mia is correct because Vp-p = 2√2 × Vrms ≈ 680 V", "explanation": "2√2 × 230 ≈ 651 V, not 680 V. While the formula is correct, Mia's numerical value is inaccurate." },
+        { "answer": "Nadia is correct because Vp-p = 2 × Vrms = 460 V", "explanation": "Vp-p ≠ 2 × Vrms. The correct formula is Vp-p = 2 × Vp = 2 × √2 × Vrms ≈ 651 V." },
+        { "answer": "Both are correct depending on whether the supply frequency is 50 Hz or 60 Hz", "explanation": "Peak-to-peak voltage is independent of frequency. For a 230 V rms supply, Vp-p ≈ 650 V regardless of frequency." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Kai observes an AC trace on an oscilloscope. The trace is clipped at the top of the screen, so the positive peaks are not visible. The lowest point of the trace reads −150 V and the zero crossing is visible. Which one of the following is the best estimate of the peak-to-peak voltage?",
+      "correct": "300 V",
+      "correctExplanation": "For a symmetrical sinusoidal waveform, the negative peak is −Vp = −150 V, so Vp = 150 V. The peak-to-peak voltage is Vp-p = 2 × 150 = 300 V, even though the positive peak is not visible.",
+      "distractors": [
+        { "answer": "150 V", "explanation": "150 V is only the peak voltage. The peak-to-peak voltage spans both the positive and negative peaks: Vp-p = 2 × 150 = 300 V." },
+        { "answer": "212 V", "explanation": "This results from 150 × √2, confusing the Vp-p calculation with an rms conversion." },
+        { "answer": "The peak-to-peak voltage cannot be determined because the positive peak is not visible", "explanation": "For a symmetrical sinusoidal waveform, the positive peak is equal in magnitude to the negative peak. Vp-p = 2 × Vp can be determined from the negative peak alone." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student measures the peak-to-peak voltage of a 50 Hz signal as 100 V using an oscilloscope. She then rectifies the signal using a full-wave rectifier. Which one of the following best describes the peak-to-peak voltage of the rectified output?",
+      "correct": "50 V",
+      "correctExplanation": "The original signal has Vp = 100 / 2 = 50 V and oscillates between +50 V and −50 V. After full-wave rectification, all negative portions are inverted to positive, so the output ranges from 0 V to +50 V. The new peak-to-peak voltage is 50 V − 0 V = 50 V.",
+      "distractors": [
+        { "answer": "100 V", "explanation": "The peak-to-peak voltage of 100 V applies to the original unrectified signal. After rectification, the signal ranges from 0 to +Vp, giving Vp-p = 50 V." },
+        { "answer": "0 V", "explanation": "A full-wave rectified signal is not constant; it pulsates between 0 and Vp, so Vp-p = 50 V, not 0 V." },
+        { "answer": "70.7 V", "explanation": "70.7 V is related to the rms voltage conversion. The peak-to-peak voltage after rectification is simply Vp = 50 V." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Two sinusoidal AC signals, P and Q, are displayed simultaneously on a dual-trace oscilloscope. Signal P has Vp-p = 80 V and signal Q has Vrms = 40 V. Which one of the following correctly compares their peak voltages?",
+      "correct": "Signal Q has a larger peak voltage than signal P",
+      "correctExplanation": "For signal P: Vp = 80 / 2 = 40 V. For signal Q: Vp = Vrms × √2 = 40 × √2 ≈ 56.6 V. Signal Q has the larger peak voltage.",
+      "distractors": [
+        { "answer": "Signal P has a larger peak voltage than signal Q", "explanation": "Signal P has Vp = 80/2 = 40 V. Signal Q has Vp = 40 × √2 ≈ 56.6 V. Signal Q is larger." },
+        { "answer": "Both signals have the same peak voltage of 40 V", "explanation": "Signal P has Vp = 40 V, but signal Q has Vp = 40√2 ≈ 56.6 V. They are not equal." },
+        { "answer": "Signal P has a peak voltage of 80 V, which is larger than signal Q", "explanation": "80 V is the peak-to-peak voltage of P, not its peak voltage. Vp for P is 40 V, which is less than Vp for Q." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An engineer designs a circuit with a maximum voltage rating of 350 V. She needs to verify that an AC supply is safe to use. An oscilloscope shows the supply has Vp-p = 680 V. Which one of the following is the best conclusion?",
+      "correct": "The supply is not safe because the peak voltage of 340 V is close to the maximum rating and may exceed it with normal fluctuations",
+      "correctExplanation": "Vp = 680 / 2 = 340 V. This is only 10 V below the 350 V maximum. Normal supply voltage fluctuations could push the peak voltage above 350 V, making this supply marginal and potentially unsafe.",
+      "distractors": [
+        { "answer": "The supply is safe because the rms voltage of approximately 240 V is well below the 350 V limit", "explanation": "The maximum rating applies to the peak voltage, not the rms voltage. Vp = 340 V is very close to the 350 V limit." },
+        { "answer": "The supply is not safe because the peak-to-peak voltage of 680 V exceeds the 350 V limit", "explanation": "The relevant comparison is between the peak voltage (340 V) and the maximum rating. Vp-p includes both positive and negative excursions; the circuit experiences Vp = 340 V at most." },
+        { "answer": "The supply is safe because 340 V is below the 350 V limit with 10 V of margin", "explanation": "A margin of only 10 V provides inadequate safety given normal voltage fluctuations in an AC supply." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A physics class is debating whether Vp-p depends on the frequency of an AC signal. Student A says increasing the frequency increases Vp-p. Student B says Vp-p is independent of frequency. Which one of the following best evaluates these positions?",
+      "correct": "Student B is correct; Vp-p depends only on the amplitude of the signal and is independent of frequency",
+      "correctExplanation": "Peak-to-peak voltage is determined by the amplitude of the waveform. Changing the frequency changes how often the voltage oscillates but not how far it swings, so Vp-p is unaffected.",
+      "distractors": [
+        { "answer": "Student A is correct; higher frequency means the voltage changes more rapidly, producing a larger peak-to-peak value", "explanation": "Higher frequency increases the rate of change but not the peak values. Vp-p remains the same at any frequency." },
+        { "answer": "Both students are partially correct; Vp-p depends on frequency only when the frequency exceeds 1 kHz", "explanation": "Vp-p is independent of frequency at all frequencies. There is no threshold above which frequency affects Vp-p." },
+        { "answer": "Neither student is correct; Vp-p depends on the resistance of the circuit, not the frequency or amplitude", "explanation": "Vp-p is a property of the voltage waveform itself and depends on the amplitude, not on circuit resistance." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Zara connects two identical AC generators in series. Each generator produces a sinusoidal voltage with Vp-p = 60 V and both are perfectly in phase. Which one of the following is the peak-to-peak voltage of the combined output?",
+      "correct": "120 V",
+      "correctExplanation": "When two identical sinusoidal sources are connected in series and in phase, their voltages add directly at every instant. The combined Vp-p = 60 + 60 = 120 V.",
+      "distractors": [
+        { "answer": "60 V", "explanation": "This would only be correct if the generators were connected in parallel. In series, the voltages add." },
+        { "answer": "84.9 V", "explanation": "This results from √(60² + 60²) = 60√2, which applies when signals are 90° out of phase, not in phase." },
+        { "answer": "0 V", "explanation": "Zero would result if the generators were in anti-phase (180° apart). In phase, their voltages add constructively." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the analysis of a combined oscilloscope and voltmeter measurement.",
+      "sentence": "An oscilloscope shows Vp-p = 340 V for an AC signal. A true-rms voltmeter connected to the same signal reads {{blank:1}} V. The ratio Vp-p / Vrms equals {{blank:2}}, which is constant for all sinusoidal signals.",
+      "blanks": {
+        "1": {
+          "correct": "120",
+          "correctExplanation": "Vp = 340 / 2 = 170 V. Vrms = 170 / √2 ≈ 120 V.",
+          "distractors": [
+            { "answer": "170", "explanation": "170 V is the peak voltage. A true-rms voltmeter reads Vrms = Vp / √2 ≈ 120 V." },
+            { "answer": "240", "explanation": "This results from dividing Vp-p by √2 directly instead of first finding Vp." }
+          ]
+        },
+        "2": {
+          "correct": "2√2",
+          "correctExplanation": "Vp-p / Vrms = (2 × Vp) / (Vp / √2) = 2√2 ≈ 2.83. This ratio is fixed for sinusoidal waveforms.",
+          "distractors": [
+            { "answer": "2", "explanation": "The ratio Vp-p / Vrms = 2√2, not 2. The factor of 2 relates Vp-p to Vp, and the additional √2 relates Vp to Vrms." },
+            { "answer": "√2", "explanation": "√2 is the ratio Vp / Vrms, not Vp-p / Vrms. An additional factor of 2 is needed." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the safety analysis for a circuit component.",
+      "sentence": "A capacitor is rated at a maximum voltage of 400 V. An AC supply with Vrms = 230 V is applied. The peak voltage is {{blank:1}} V, so the capacitor is {{blank:2}} to use with this supply.",
+      "blanks": {
+        "1": {
+          "correct": "325",
+          "correctExplanation": "Vp = Vrms × √2 = 230 × 1.414 ≈ 325 V.",
+          "distractors": [
+            { "answer": "230", "explanation": "230 V is the rms voltage. The peak voltage is higher: Vp = 230 × √2 ≈ 325 V." },
+            { "answer": "460", "explanation": "460 V = 2 × 230. This incorrectly uses Vp = 2 × Vrms instead of Vp = √2 × Vrms." }
+          ]
+        },
+        "2": {
+          "correct": "safe",
+          "correctExplanation": "The peak voltage of 325 V is below the 400 V maximum rating, so the capacitor can safely handle this supply.",
+          "distractors": [
+            { "answer": "unsafe", "explanation": "Since Vp = 325 V is below the 400 V rating, the capacitor is safe to use. It would be unsafe if Vp exceeded 400 V." },
+            { "answer": "only safe at 50 Hz", "explanation": "The voltage rating applies regardless of frequency. Since Vp < 400 V, the capacitor is safe at any frequency." }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,527 @@
+{
+  "_link": {
+    "uuid": "lp-1d9b1836-31e3-e6f9-a711-116fb160d085",
+    "version": 1,
+    "contentHash": "hash-fb1b0402",
+    "title": "I can calculate the speed of an object given proper time and dilated time measurements",
+    "generatedAt": "2026-03-09T23:00:00Z"
+  },
+  "toLevel2": [
+    {
+      "type": "mc",
+      "question": "To find the speed of a moving object from time measurements, the first step is to calculate which quantity?",
+      "correct": "The Lorentz factor γ from γ = t / t₀",
+      "correctExplanation": "Dividing the dilated time by the proper time gives the Lorentz factor, which can then be used to find the speed.",
+      "distractors": [
+        { "answer": "The speed directly from v = t / t₀", "explanation": "Dividing dilated time by proper time gives the Lorentz factor γ, not the speed v." },
+        { "answer": "The rest energy from E₀ = mc²", "explanation": "Rest energy is unrelated to calculating speed from time measurements; γ must be found first." },
+        { "answer": "The contracted length from L = L₀/γ", "explanation": "Length contraction is a separate concept; speed from time measurements requires finding γ first." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which formula is used to find speed v once the Lorentz factor γ is known?",
+      "correct": "v = c√(1 − 1/γ²)",
+      "correctExplanation": "Rearranging γ = 1/√(1 − v²/c²) for v gives v = c√(1 − 1/γ²).",
+      "distractors": [
+        { "answer": "v = c × γ",  "explanation": "Multiplying c by γ does not give the correct speed; v must be extracted from the Lorentz factor formula." },
+        { "answer": "v = c / γ",  "explanation": "Dividing c by γ does not correctly invert the Lorentz factor relationship." },
+        { "answer": "v = c(γ − 1)", "explanation": "This expression does not correctly relate γ to v; the correct formula involves a square root." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A particle has a proper lifetime of 3.44 ps and an observed dilated lifetime of 45.2 ps. What is the Lorentz factor γ?",
+      "correct": "13.1",
+      "correctExplanation": "γ = t/t₀ = 45.2/3.44 = 13.14 ≈ 13.1.",
+      "distractors": [
+        { "answer": "0.076", "explanation": "This is t₀/t, the inverse of the correct Lorentz factor; γ must be greater than 1." },
+        { "answer": "41.8", "explanation": "This would result from subtracting t₀ from t instead of dividing; the correct operation is division." },
+        { "answer": "155", "explanation": "This would result from multiplying t by t₀; the correct operation is division of t by t₀." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which two time measurements are needed to calculate the speed of a moving object using the time dilation formula?",
+      "correct": "Proper time t₀ and dilated time t",
+      "correctExplanation": "The ratio t/t₀ gives the Lorentz factor γ, from which the speed v can be calculated.",
+      "distractors": [
+        { "answer": "Proper time t₀ and the speed of light c", "explanation": "The speed of light is a constant, not a measurement; the dilated time t is also needed." },
+        { "answer": "Dilated time t and the contracted length L", "explanation": "Length and time are separate quantities; to find speed from time alone, both t and t₀ are needed." },
+        { "answer": "Proper time t₀ and the rest mass of the object", "explanation": "Rest mass is unrelated to time dilation calculations for speed; the dilated time t is needed." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "If γ = 2.00, what is the speed of the object as a fraction of c?",
+      "correct": "0.866c",
+      "correctExplanation": "v = c√(1 − 1/2²) = c√(1 − 0.25) = c√(0.75) = 0.866c.",
+      "distractors": [
+        { "answer": "0.500c", "explanation": "This is 1/γ, not the correct calculation; v = c√(1 − 1/γ²) gives 0.866c." },
+        { "answer": "2.000c", "explanation": "Speed cannot equal or exceed c; v must be less than c for any finite Lorentz factor." },
+        { "answer": "0.750c", "explanation": "This would result from using v = c(1 − 1/γ²) without the square root; the correct formula includes √." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "The Lorentz factor γ can be found by dividing the dilated time by the proper time.",
+      "correct": "True",
+      "correctExplanation": "From t = γt₀, rearranging gives γ = t/t₀, so dividing dilated time by proper time yields γ.",
+      "distractors": [
+        { "answer": "False", "explanation": "Students may confuse which time goes in the numerator, but γ = t/t₀ is correct since t > t₀." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "Once the Lorentz factor γ is known, the speed v can be found using v = c√(1 − 1/γ²).",
+      "correct": "True",
+      "correctExplanation": "Rearranging γ = 1/√(1 − v²/c²) for v gives v = c√(1 − 1/γ²), which is the standard formula.",
+      "distractors": [
+        { "answer": "False", "explanation": "Students may not recognise this rearrangement, but it follows directly from the definition of the Lorentz factor." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the steps to find speed from time measurements.",
+      "sentence": "Step 1: Calculate γ = t / {{blank:1}}. Step 2: Find v using v = c√(1 − 1/γ²).",
+      "blanks": {
+        "1": {
+          "correct": "t₀",
+          "correctExplanation": "The Lorentz factor is the ratio of dilated time t to proper time t₀.",
+          "distractors": [
+            { "answer": "c", "explanation": "Dividing time by the speed of light does not give the Lorentz factor; γ = t/t₀." },
+            { "answer": "γ", "explanation": "Dividing t by γ gives t₀, not γ; the formula is γ = t/t₀." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about calculating the Lorentz factor.",
+      "sentence": "If a particle's proper lifetime is 3.44 ps and the observed dilated lifetime is 45.2 ps, then γ = {{blank:1}} / 3.44 = 13.1.",
+      "blanks": {
+        "1": {
+          "correct": "45.2",
+          "correctExplanation": "The dilated time (45.2 ps) goes in the numerator because γ = t/t₀ and γ > 1.",
+          "distractors": [
+            { "answer": "3.44", "explanation": "Putting the proper time in the numerator gives 1/γ = 0.076, which is less than 1." },
+            { "answer": "41.8", "explanation": "41.8 would be the difference t − t₀, not the numerator of the γ calculation." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about finding speed from the Lorentz factor.",
+      "sentence": "After finding γ, the speed is calculated using v = c√(1 − 1/{{blank:1}}).",
+      "blanks": {
+        "1": {
+          "correct": "γ²",
+          "correctExplanation": "The formula v = c√(1 − 1/γ²) is the rearrangement of the Lorentz factor definition solved for v.",
+          "distractors": [
+            { "answer": "γ", "explanation": "The formula requires 1/γ², not 1/γ; squaring γ is essential." },
+            { "answer": "c²", "explanation": "1/c² does not appear in the speed formula; the correct expression involves 1/γ²." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "mc",
+      "question": "Why is the Lorentz factor γ always greater than 1 when calculated from time measurements?",
+      "correct": "Because dilated time is always longer than proper time for any non-zero relative speed",
+      "correctExplanation": "Since t > t₀ for any moving object, the ratio γ = t/t₀ is always greater than 1.",
+      "distractors": [
+        { "answer": "Because the speed of light c is a very large number in the formula for γ", "explanation": "The magnitude of c does not determine γ; the ratio of time measurements does." },
+        { "answer": "Because proper time is defined to be zero for moving objects in all reference frames", "explanation": "Proper time is not zero; it is the time measured in the object's rest frame and is always positive." },
+        { "answer": "Because the Lorentz factor formula contains a square root which always gives positive values", "explanation": "While √ gives positive values, γ > 1 because v < c makes the denominator less than 1." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student calculates γ = 0.50 from time measurements. What error has the student most likely made?",
+      "correct": "The student divided proper time by dilated time instead of dilated time by proper time",
+      "correctExplanation": "γ < 1 is physically impossible; the student has inverted the ratio, using t₀/t instead of t/t₀.",
+      "distractors": [
+        { "answer": "The student forgot to take the square root when calculating the Lorentz factor", "explanation": "The Lorentz factor from time measurements does not involve a square root; γ = t/t₀ directly." },
+        { "answer": "The student used the wrong units for the time measurements in the calculation", "explanation": "Wrong units would change the magnitude but would not cause γ < 1 if the ratio is correct." },
+        { "answer": "The calculation is correct; γ = 0.50 is valid for objects moving faster than light", "explanation": "γ cannot be less than 1; objects cannot travel faster than light." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What does a Lorentz factor of γ = 1.00 indicate about the relative speed between two frames?",
+      "correct": "The relative speed is zero; the frames are at rest relative to each other",
+      "correctExplanation": "When γ = 1, v = 0 because 1/√(1 − 0) = 1. The frames are not in relative motion.",
+      "distractors": [
+        { "answer": "The relative speed is exactly c, the maximum possible value", "explanation": "At v = c, γ approaches infinity, not 1; γ = 1 corresponds to v = 0." },
+        { "answer": "The time dilation effect is at its maximum value for any speed", "explanation": "Maximum time dilation occurs as γ → ∞, not at γ = 1 where there is no dilation." },
+        { "answer": "The frames are moving at 0.50c relative to each other", "explanation": "At 0.50c, γ = 1.15, not 1.00; γ = 1 means zero relative speed." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A muon has a proper lifetime of 2.20 × 10⁻⁶ s and is observed to live for 7.00 × 10⁻⁶ s. What is the Lorentz factor?",
+      "correct": "3.18",
+      "correctExplanation": "γ = t/t₀ = 7.00 × 10⁻⁶ / 2.20 × 10⁻⁶ = 3.18.",
+      "distractors": [
+        { "answer": "0.314", "explanation": "This is the inverse (t₀/t); the Lorentz factor must be greater than 1." },
+        { "answer": "4.80", "explanation": "This would result from subtracting instead of dividing; γ = t/t₀, not t − t₀." },
+        { "answer": "15.4", "explanation": "This would result from multiplying the times; γ requires division, not multiplication." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Using γ = 3.18 from the muon measurement, which one of the following is closest to the muon's speed?",
+      "correct": "0.949c",
+      "correctExplanation": "v = c√(1 − 1/3.18²) = c√(1 − 0.0989) = c√(0.901) = 0.949c.",
+      "distractors": [
+        { "answer": "0.314c", "explanation": "This is 1/γ, not v/c; the speed formula involves a square root of (1 − 1/γ²)." },
+        { "answer": "0.685c", "explanation": "This might result from using v = c√(1 − 1/γ) without squaring γ; the correct formula uses γ²." },
+        { "answer": "3.18c", "explanation": "Speed cannot exceed c; v = γ × c is not the correct formula for finding speed." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "As the ratio t/t₀ increases, what happens to the calculated speed v?",
+      "correct": "The speed increases, approaching but never reaching c",
+      "correctExplanation": "A larger ratio means larger γ, which corresponds to a higher speed. As γ → ∞, v → c.",
+      "distractors": [
+        { "answer": "The speed decreases because larger γ means more time dilation and slower travel", "explanation": "Larger γ means higher speed, not slower; more time dilation occurs at higher relative velocities." },
+        { "answer": "The speed remains constant because it depends only on c, not on time measurements", "explanation": "Speed depends directly on γ, which is determined by the time measurements." },
+        { "answer": "The speed increases and eventually exceeds c for very large time ratios", "explanation": "The formula v = c√(1 − 1/γ²) always gives v < c; speed can approach but never reach c." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "If the Lorentz factor calculated from time measurements is less than 1, the calculation contains an error.",
+      "correct": "True",
+      "correctExplanation": "γ ≥ 1 always. If γ < 1, the proper and dilated times were likely swapped in the calculation.",
+      "distractors": [
+        { "answer": "False", "explanation": "Students may think γ < 1 is possible, but by definition γ = 1/√(1 − v²/c²) ≥ 1 for all v ≤ c." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the calculation of speed from time measurements.",
+      "sentence": "Given t₀ = 2.20 × 10⁻⁶ s and t = 7.00 × 10⁻⁶ s, then γ = {{blank:1}} and v = c√(1 − 1/γ²) = 0.949c.",
+      "blanks": {
+        "1": {
+          "correct": "3.18",
+          "correctExplanation": "γ = t/t₀ = 7.00 × 10⁻⁶ / 2.20 × 10⁻⁶ = 3.18.",
+          "distractors": [
+            { "answer": "0.314", "explanation": "This is t₀/t, the inverse; γ must be greater than 1." },
+            { "answer": "4.80", "explanation": "This would result from an incorrect calculation; dividing the times gives 3.18." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about interpreting the Lorentz factor from time measurements.",
+      "sentence": "A Lorentz factor of γ = 10 means the observed (dilated) lifetime is {{blank:1}} times longer than the proper lifetime.",
+      "blanks": {
+        "1": {
+          "correct": "10",
+          "correctExplanation": "Since t = γt₀, a Lorentz factor of 10 means the dilated time is 10 times the proper time.",
+          "distractors": [
+            { "answer": "100", "explanation": "100 would be γ², not γ; the dilated time is γ (not γ²) times the proper time." },
+            { "answer": "0.1", "explanation": "0.1 is 1/γ; the dilated time is γ times longer, not 1/γ times longer." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the speed formula.",
+      "sentence": "The formula v = c√(1 − 1/γ²) ensures that v is always {{blank:1}} than c for any finite value of γ.",
+      "blanks": {
+        "1": {
+          "correct": "less",
+          "correctExplanation": "Since 1/γ² > 0 for finite γ, the quantity under the square root is less than 1, giving v < c.",
+          "distractors": [
+            { "answer": "greater", "explanation": "v cannot exceed c; the formula guarantees v < c for any finite Lorentz factor." },
+            { "answer": "equal", "explanation": "v = c would require γ → ∞; for any finite γ, v is strictly less than c." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "mc",
+      "question": "A particle is observed to decay after 45.2 ps in the laboratory. Its proper lifetime is 3.44 ps. Which one of the following is closest to the particle's speed?",
+      "correct": "0.997c",
+      "correctExplanation": "γ = 45.2/3.44 = 13.14. v = c√(1 − 1/13.14²) = c√(1 − 0.00579) = c√(0.9942) = 0.997c.",
+      "distractors": [
+        { "answer": "0.924c", "explanation": "This speed corresponds to a lower Lorentz factor; with γ = 13.14, the speed is much closer to c." },
+        { "answer": "0.076c", "explanation": "This is 1/γ, not the speed; the correct formula is v = c√(1 − 1/γ²)." },
+        { "answer": "13.1c", "explanation": "Speed cannot exceed c; 13.1 is the Lorentz factor, not the speed." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Priya measures a clock on a passing spacecraft to tick once every 5.00 s, while an identical clock in her laboratory ticks once every 2.00 s. Which one of the following is closest to the spacecraft's speed?",
+      "correct": "0.917c",
+      "correctExplanation": "γ = t/t₀ = 5.00/2.00 = 2.50. v = c√(1 − 1/2.50²) = c√(1 − 0.16) = c√(0.84) = 0.917c.",
+      "distractors": [
+        { "answer": "0.400c", "explanation": "This is 1/γ = 1/2.50 = 0.40, not the speed; the formula involves a square root." },
+        { "answer": "0.600c", "explanation": "This does not follow from the correct formula; v = c√(1 − 1/γ²) = 0.917c." },
+        { "answer": "2.50c", "explanation": "Speed cannot exceed c; 2.50 is the Lorentz factor, not the speed." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An unstable particle has a proper lifetime of 1.50 × 10⁻⁸ s. In the lab it is observed to survive for 4.50 × 10⁻⁸ s. Which one of the following is closest to its speed?",
+      "correct": "0.943c",
+      "correctExplanation": "γ = 4.50/1.50 = 3.00. v = c√(1 − 1/9) = c√(8/9) = c√(0.889) = 0.943c.",
+      "distractors": [
+        { "answer": "0.333c", "explanation": "This is 1/γ; the correct formula is v = c√(1 − 1/γ²), which gives 0.943c." },
+        { "answer": "0.667c", "explanation": "This might result from v = c(1 − 1/γ) without the square root; the correct formula uses √." },
+        { "answer": "3.00c", "explanation": "Speed cannot exceed c; 3.00 is the Lorentz factor, not the speed." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Kai measures the decay time of a meson as 8.80 × 10⁻⁸ s in the laboratory. The meson's proper lifetime is 2.20 × 10⁻⁸ s. What is the Lorentz factor and the meson's speed?",
+      "correct": "γ = 4.00 and v = 0.968c",
+      "correctExplanation": "γ = 8.80/2.20 = 4.00. v = c√(1 − 1/16) = c√(15/16) = c√(0.9375) = 0.968c.",
+      "distractors": [
+        { "answer": "γ = 4.00 and v = 0.750c", "explanation": "0.750c comes from 1 − 1/γ without taking the square root; the correct formula requires √." },
+        { "answer": "γ = 0.25 and v = 0.968c", "explanation": "γ = 0.25 is less than 1, which is physically impossible; the student has inverted the time ratio." },
+        { "answer": "γ = 4.00 and v = 0.250c", "explanation": "0.250c is 1/γ, not v; the correct speed formula gives 0.968c." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student calculates v = c√(1 − 1/γ) instead of v = c√(1 − 1/γ²). How does this error affect the result for γ = 5.00?",
+      "correct": "The student gets v = 0.894c instead of the correct v = 0.980c — an underestimate",
+      "correctExplanation": "Correct: v = c√(1 − 1/25) = c√(0.96) = 0.980c. Error: v = c√(1 − 1/5) = c√(0.80) = 0.894c.",
+      "distractors": [
+        { "answer": "The student gets the same answer because squaring γ makes no difference here", "explanation": "Squaring γ changes the value significantly: 1/5 ≠ 1/25, so the results differ." },
+        { "answer": "The student gets v = 0.980c, the correct answer, by a different valid method", "explanation": "The method is incorrect; using 1/γ instead of 1/γ² gives a different, wrong answer." },
+        { "answer": "The student gets v > c, which they should recognise as a calculation error", "explanation": "Using 1/γ instead of 1/γ² gives a value less than c, not greater; the error is an underestimate." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A spacecraft clock ticks 1.00 × 10⁻⁹ s for every 1.50 × 10⁻⁹ s on an Earth clock for the same event interval. Which one of the following is closest to the spacecraft's speed relative to Earth?",
+      "correct": "0.745c",
+      "correctExplanation": "γ = t/t₀ = 1.50/1.00 = 1.50. v = c√(1 − 1/1.50²) = c√(1 − 0.444) = c√(0.556) = 0.745c.",
+      "distractors": [
+        { "answer": "0.500c", "explanation": "This does not follow from the formula; at γ = 1.50, v = c√(1 − 1/2.25) = 0.745c." },
+        { "answer": "0.667c", "explanation": "This is 1/γ; the correct formula involves a square root and gives 0.745c." },
+        { "answer": "0.333c", "explanation": "This is 1 − 1/γ without the square root; the correct calculation gives 0.745c." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Why must the dilated time always be placed in the numerator when calculating γ from time measurements?",
+      "correct": "Because γ ≥ 1, and dilated time is always longer than proper time, ensuring the ratio is ≥ 1",
+      "correctExplanation": "Placing the larger value (dilated time) in the numerator guarantees γ ≥ 1, which is physically required.",
+      "distractors": [
+        { "answer": "Because the formula only works if the larger number is on top due to mathematical convention", "explanation": "It is not convention; γ is physically required to be ≥ 1, which demands the larger time in the numerator." },
+        { "answer": "Because proper time can be zero, so it cannot be in the numerator to avoid division errors", "explanation": "Proper time is never zero; the requirement is that γ ≥ 1, which needs dilated time in the numerator." },
+        { "answer": "Because Einstein defined the formula with dilated time on top and this cannot be rearranged", "explanation": "The formula can be rearranged, but γ = t/t₀ with t ≥ t₀ ensures the physically required γ ≥ 1." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the worked example of finding speed from time measurements.",
+      "sentence": "Given proper lifetime 3.44 ps and observed lifetime 45.2 ps: γ = 45.2/3.44 = 13.14, so v = c√(1 − 1/{{blank:1}}) = 0.997c.",
+      "blanks": {
+        "1": {
+          "correct": "13.14²",
+          "correctExplanation": "The speed formula requires squaring γ in the denominator: v = c√(1 − 1/γ²).",
+          "distractors": [
+            { "answer": "13.14", "explanation": "Using 1/γ instead of 1/γ² gives an incorrect (lower) speed value." },
+            { "answer": "45.2", "explanation": "45.2 is the dilated time, not γ; the formula uses the Lorentz factor squared." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about identifying proper and dilated time.",
+      "sentence": "When calculating γ from time measurements, the {{blank:1}} time goes in the numerator and the {{blank:2}} time goes in the denominator.",
+      "blanks": {
+        "1": {
+          "correct": "dilated",
+          "correctExplanation": "Dilated time t is the larger value and goes in the numerator to ensure γ ≥ 1.",
+          "distractors": [
+            { "answer": "proper", "explanation": "Putting proper time in the numerator gives γ < 1, which is physically impossible." },
+            { "answer": "contracted", "explanation": "Contraction applies to length, not time; the correct term is dilated time." }
+          ]
+        },
+        "2": {
+          "correct": "proper",
+          "correctExplanation": "Proper time t₀ is the smaller value measured in the object's rest frame and goes in the denominator.",
+          "distractors": [
+            { "answer": "dilated", "explanation": "Dilated time in the denominator gives γ < 1; it must be in the numerator." },
+            { "answer": "observed", "explanation": "The observed time from another frame is the dilated time, which belongs in the numerator." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the relationship between γ and speed.",
+      "sentence": "As γ increases from 1 toward infinity, the speed v increases from {{blank:1}} toward {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "zero",
+          "correctExplanation": "When γ = 1, v = 0; there is no relative motion between the frames.",
+          "distractors": [
+            { "answer": "c", "explanation": "v = c would require γ = ∞; at γ = 1, v = 0." },
+            { "answer": "0.50c", "explanation": "v = 0.50c corresponds to γ = 1.15, not γ = 1." }
+          ]
+        },
+        "2": {
+          "correct": "c",
+          "correctExplanation": "As γ → ∞, v → c; the speed of light is the upper limit that can never be reached.",
+          "distractors": [
+            { "answer": "zero", "explanation": "As γ increases, speed increases, not decreases." },
+            { "answer": "infinity", "explanation": "Speed cannot exceed c; it approaches c as γ → ∞." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "mc",
+      "question": "A researcher measures a particle's dilated lifetime as 12.6 × 10⁻⁶ s and its proper lifetime as 2.20 × 10⁻⁶ s. She calculates v = 0.985c. Another researcher repeats the experiment and measures a dilated lifetime of 15.0 × 10⁻⁶ s. Which one of the following is closest to the speed from the second measurement?",
+      "correct": "0.989c",
+      "correctExplanation": "γ = 15.0/2.20 = 6.82. v = c√(1 − 1/6.82²) = c√(1 − 0.0215) = c√(0.979) = 0.989c.",
+      "distractors": [
+        { "answer": "0.985c", "explanation": "This was the first researcher's result; the second measurement gives a different γ and therefore a different speed." },
+        { "answer": "0.853c", "explanation": "This would correspond to a much lower Lorentz factor; γ = 6.82 gives a speed much closer to c." },
+        { "answer": "6.82c", "explanation": "Speed cannot exceed c; 6.82 is the Lorentz factor, not the speed." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An experiment measures a particle's dilated lifetime with 5% uncertainty. How does this uncertainty affect the calculated speed when γ is very large?",
+      "correct": "At large γ, v is very close to c and the 5% time uncertainty produces a much smaller percentage uncertainty in v",
+      "correctExplanation": "When γ is large, v is near c and changes slowly with γ, so a 5% change in γ produces a much smaller change in v.",
+      "distractors": [
+        { "answer": "The 5% uncertainty in time translates directly to a 5% uncertainty in the calculated speed", "explanation": "The relationship between γ and v is nonlinear; at large γ, speed is insensitive to small changes in γ." },
+        { "answer": "At large γ, the uncertainty in v is amplified beyond 5% because of the square root in the formula", "explanation": "The square root actually reduces the sensitivity; v changes less than γ at high speeds." },
+        { "answer": "The uncertainty has no effect on the speed calculation because γ is a ratio and errors cancel", "explanation": "Errors do not cancel in a ratio; but the nonlinear relationship does reduce the speed uncertainty at large γ." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student argues that it is impossible to distinguish between v = 0.999c and v = 0.9999c using time measurements because both speeds are 'nearly c'. Evaluate this claim.",
+      "correct": "Incorrect; the Lorentz factors differ significantly (22.4 vs 70.7), producing measurably different dilated times",
+      "correctExplanation": "At 0.999c, γ = 22.4; at 0.9999c, γ = 70.7. The dilated lifetimes differ by a factor of ~3, which is easily measurable.",
+      "distractors": [
+        { "answer": "Correct; both speeds give nearly identical Lorentz factors so the dilated times are indistinguishable", "explanation": "γ differs by a factor of ~3 between these speeds; the dilated times are very different." },
+        { "answer": "Correct; the difference is only 0.0009c which is too small to measure with any instrument", "explanation": "The speed difference is small, but the Lorentz factor and dilated time differences are large and measurable." },
+        { "answer": "Incorrect; but only because the speeds are both below 0.9999c where relativity is more sensitive", "explanation": "The distinguishability comes from the large difference in γ values, not from a specific speed threshold." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "In a particle physics experiment, the same type of particle is measured at two different energies. At Energy 1, its dilated lifetime is 5.0 × 10⁻⁶ s. At Energy 2, its dilated lifetime is 20.0 × 10⁻⁶ s. The proper lifetime is 2.20 × 10⁻⁶ s. Which one of the following best compares the speeds?",
+      "correct": "Energy 1: v = 0.90c, Energy 2: v = 0.99c — a modest speed increase produces a large lifetime increase",
+      "correctExplanation": "γ₁ = 2.27 → v = 0.90c. γ₂ = 9.09 → v = 0.99c. Going from 0.90c to 0.99c quadruples the Lorentz factor.",
+      "distractors": [
+        { "answer": "Energy 1: v = 0.44c, Energy 2: v = 0.11c — both are non-relativistic speeds despite the large γ values", "explanation": "These speeds are far too low for the observed Lorentz factors; γ = 2.27 gives v = 0.90c." },
+        { "answer": "Both particles travel at the same speed because they are the same type of particle in the experiment", "explanation": "Different energies produce different speeds; the same particle type can travel at many different speeds." },
+        { "answer": "Energy 1: v = 2.27c, Energy 2: v = 9.09c — higher energy means the particle exceeds the speed of light", "explanation": "Speed cannot exceed c; 2.27 and 9.09 are the Lorentz factors, not the speeds." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A precision atomic clock experiment measures a time ratio of t/t₀ = 1.000000000002 for a satellite. What does this extremely small deviation from 1 indicate about the satellite's speed?",
+      "correct": "The satellite moves at a very small fraction of c, producing a barely detectable time dilation effect",
+      "correctExplanation": "γ = 1.000000000002 is extremely close to 1, indicating a very low speed. GPS satellites at ~4 km s⁻¹ produce such tiny effects.",
+      "distractors": [
+        { "answer": "The satellite moves at nearly the speed of light because any measurable time dilation requires high speed", "explanation": "Extremely precise clocks can detect very small time dilations at low speeds; high speed is not required." },
+        { "answer": "The measurement is within experimental error and indicates no actual time dilation occurring", "explanation": "The deviation is real and measurable with atomic clocks; GPS systems routinely correct for it." },
+        { "answer": "The satellite speed cannot be determined from such a small time ratio because γ ≈ 1 gives v ≈ 0", "explanation": "The speed can be calculated: v = c√(1 − 1/γ²) gives a small but finite value consistent with orbital speed." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Compare two methods of determining a particle's speed: (1) directly measuring distance and time, and (2) using proper and dilated lifetime measurements. What advantage does method 2 offer?",
+      "correct": "Method 2 uses intrinsic particle properties that are well-characterised and do not require tracking the particle's path",
+      "correctExplanation": "The proper lifetime is a known constant for each particle type, so only the dilated lifetime needs to be measured in the lab.",
+      "distractors": [
+        { "answer": "Method 2 is always more accurate because time measurements are inherently more precise than distance", "explanation": "This is not universally true; the advantage is that the proper lifetime is a known intrinsic property." },
+        { "answer": "Method 2 gives the speed in the particle's rest frame, while method 1 gives the lab-frame speed", "explanation": "Both methods give the relative speed between frames; neither gives 'rest frame speed' of the particle." },
+        { "answer": "Method 2 does not require knowledge of the speed of light, making it simpler to apply in practice", "explanation": "The formula v = c√(1 − 1/γ²) explicitly uses c; knowledge of the speed of light is still required." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A particle's speed is calculated as 0.995c using time measurements. If the proper lifetime has a 1% measurement error, the dilated lifetime has a 1% error, and c is exact, what is the dominant source of uncertainty in the calculated speed?",
+      "correct": "The proper lifetime measurement, since γ is directly proportional to 1/t₀ and small errors in t₀ scale directly to γ",
+      "correctExplanation": "Both times contribute equally to γ uncertainty, but at large γ the speed is insensitive. Both time errors matter equally for γ.",
+      "distractors": [
+        { "answer": "The speed of light c, since it appears directly in the formula and any error is amplified by γ", "explanation": "c is treated as an exact constant; it does not contribute to experimental uncertainty." },
+        { "answer": "The dilated lifetime, because it is always the larger value and larger numbers have larger errors", "explanation": "Percentage uncertainty, not absolute size, determines the contribution; both 1% errors contribute equally to γ." },
+        { "answer": "There is no uncertainty because the formula is exact and eliminates all measurement errors automatically", "explanation": "Measurement errors propagate through the formula; no formula eliminates experimental uncertainty." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A textbook problem gives t₀ = 2.60 × 10⁻⁸ s and t = 5.20 × 10⁻⁸ s. A student writes γ = 2.00 and v = 0.866c. Verify whether this is correct.",
+      "correct": "The answer is correct: γ = 5.20/2.60 = 2.00 and v = c√(1 − 1/4) = c√(0.75) = 0.866c",
+      "correctExplanation": "Both steps are verified: γ = t/t₀ = 2.00, then v = c√(1 − 0.25) = c√(0.75) = 0.866c.",
+      "distractors": [
+        { "answer": "γ is correct but v should be 0.500c because v = c/γ for all Lorentz factor values", "explanation": "v = c/γ is not the correct formula; v = c√(1 − 1/γ²) = 0.866c for γ = 2." },
+        { "answer": "Both are wrong; γ should be 0.50 and v should be recalculated from this corrected value", "explanation": "γ = 0.50 is less than 1 and physically impossible; the student's γ = 2.00 is correct." },
+        { "answer": "γ is correct but v should be 0.750c because v = c(1 − 1/γ²) without the square root", "explanation": "The square root is essential; v = c√(1 − 1/γ²), not c(1 − 1/γ²)." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the analysis of the speed calculation.",
+      "sentence": "The formula v = c√(1 − 1/γ²) ensures that v approaches c as γ approaches {{blank:1}}, and v = 0 when γ equals {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "infinity",
+          "correctExplanation": "As γ → ∞, the term 1/γ² → 0, so v → c√(1) = c.",
+          "distractors": [
+            { "answer": "zero", "explanation": "As γ → 0 is impossible (γ ≥ 1); the speed approaches c as γ → ∞." },
+            { "answer": "one", "explanation": "At γ = 1, v = 0; the speed approaches c as γ increases toward infinity." }
+          ]
+        },
+        "2": {
+          "correct": "1",
+          "correctExplanation": "When γ = 1, v = c√(1 − 1) = c√(0) = 0. The frames are at rest relative to each other.",
+          "distractors": [
+            { "answer": "0", "explanation": "γ cannot equal 0; the minimum value of the Lorentz factor is 1." },
+            { "answer": "infinity", "explanation": "At γ = ∞, v approaches c, not zero; v = 0 occurs at γ = 1." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the evaluation of a common student error.",
+      "sentence": "A student who calculates γ < 1 from time measurements has likely placed the {{blank:1}} time in the numerator instead of the {{blank:2}} time.",
+      "blanks": {
+        "1": {
+          "correct": "proper",
+          "correctExplanation": "Placing the shorter proper time in the numerator gives t₀/t < 1, producing an impossible γ < 1.",
+          "distractors": [
+            { "answer": "dilated", "explanation": "Placing dilated time in the numerator gives t/t₀ > 1, which is correct." },
+            { "answer": "contracted", "explanation": "Contraction applies to length; the time ratio involves proper and dilated time only." }
+          ]
+        },
+        "2": {
+          "correct": "dilated",
+          "correctExplanation": "The dilated time (longer value) must be in the numerator for γ = t/t₀ ≥ 1.",
+          "distractors": [
+            { "answer": "proper", "explanation": "Proper time belongs in the denominator, not the numerator." },
+            { "answer": "average", "explanation": "Averaging the times is not part of the calculation; γ requires a ratio, not an average." }
+          ]
+        }
+      }
+    }
+  ]
+}

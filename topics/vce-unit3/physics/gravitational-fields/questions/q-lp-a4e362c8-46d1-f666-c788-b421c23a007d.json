@@ -1,0 +1,495 @@
+{
+  "_link": {
+    "uuid": "lp-a4e362c8-46d1-f666-c788-b421c23a007d",
+    "version": 1,
+    "contentHash": "hash-a4e362c8",
+    "title": "I can calculate the mass of a central body from its satellite's orbital data",
+    "generatedAt": "2026-03-04T21:28:00Z"
+  },
+  "toLevel2": [
+    {
+      "type": "mc",
+      "question": "Which formula is used to calculate the mass of a central body from the orbital data of its satellite?",
+      "correct": "M = 4π²r³/(GT²)",
+      "correctExplanation": "This formula is derived from the orbital period equation T² = 4π²r³/(GM), rearranged to solve for M.",
+      "distractors": [
+        { "answer": "M = GT²/(4π²r³)", "explanation": "This inverts the relationship. The correct formula has r³ in the numerator and T² in the denominator." },
+        { "answer": "M = 4π²r²/(GT²)", "explanation": "The orbital radius must be cubed, not squared. M = 4π²r³/(GT²)." },
+        { "answer": "M = 4π²r³/(GT)", "explanation": "The period must be squared. M = 4π²r³/(GT²)." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What orbital data is needed to determine the mass of a central body?",
+      "correct": "The orbital radius and orbital period of a satellite",
+      "correctExplanation": "Using M = 4π²r³/(GT²), only the orbital radius r and period T of the satellite are needed, along with G.",
+      "distractors": [
+        { "answer": "The mass and speed of the satellite", "explanation": "The satellite's mass is not needed. M = 4π²r³/(GT²) requires only r and T." },
+        { "answer": "The radius and mass of the central body", "explanation": "The mass of the central body is what we are trying to find. We need the satellite's orbital data." },
+        { "answer": "The gravitational field strength and the satellite's mass", "explanation": "Neither the satellite's mass nor g is needed. Only the orbital radius and period are required." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "How do astronomers determine the mass of distant planets?",
+      "correct": "By observing the orbital radius and period of their natural satellites",
+      "correctExplanation": "Using M = 4π²r³/(GT²), astronomers can determine a planet's mass from the orbital parameters of any satellite orbiting it.",
+      "distractors": [
+        { "answer": "By measuring the planet's size with a telescope", "explanation": "Size alone does not determine mass. The orbital data of a satellite is needed." },
+        { "answer": "By weighing the planet on a scale", "explanation": "Planets cannot be placed on scales. Their mass is determined from satellite orbital data." },
+        { "answer": "By measuring the colour and brightness of the planet", "explanation": "Colour and brightness do not directly give mass. Orbital data of satellites is required." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "In the formula M = 4π²r³/(GT²), what does M represent?",
+      "correct": "The mass of the central body being orbited",
+      "correctExplanation": "M is the mass of the body at the centre of the orbit — the planet, star, or moon around which the satellite moves.",
+      "distractors": [
+        { "answer": "The mass of the orbiting satellite", "explanation": "M is the mass of the central body, not the satellite. The satellite's mass does not appear in this formula." },
+        { "answer": "The total mass of the system", "explanation": "M is the mass of the central body only, not the total mass of both objects." },
+        { "answer": "The mass of the universe", "explanation": "M is the mass of the specific central body being orbited." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Why does the mass of the satellite not appear in the formula M = 4π²r³/(GT²)?",
+      "correct": "Because the satellite's mass cancels during the derivation from Fg = Fc",
+      "correctExplanation": "When equating gravitational force to centripetal force (GMm/r² = mv²/r or equivalent), the satellite mass m cancels from both sides.",
+      "distractors": [
+        { "answer": "Because the satellite has no mass", "explanation": "All satellites have mass. The mass simply cancels in the derivation, so it does not appear in the final formula." },
+        { "answer": "Because the satellite's mass is always negligible", "explanation": "Even for massive satellites, the formula works because the mass cancels mathematically, not because it is negligible." },
+        { "answer": "Because the formula only works for massless objects", "explanation": "The formula works for satellites of any mass. The satellite mass cancels in the derivation." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the formula for the mass of a central body.",
+      "sentence": "The mass of the central body is M = 4π²r³/({{blank:1}}).",
+      "blanks": {
+        "1": {
+          "correct": "GT²",
+          "correctExplanation": "M = 4π²r³/(GT²), where G is the gravitational constant and T is the orbital period.",
+          "distractors": [
+            { "answer": "Gr²", "explanation": "The denominator contains T² (period squared), not r². r³ is in the numerator." },
+            { "answer": "GT", "explanation": "The period must be squared. M = 4π²r³/(GT²)." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about what can be determined from satellite orbital data.",
+      "sentence": "By measuring the orbital radius and period of a satellite, the {{blank:1}} of the body it orbits can be calculated.",
+      "blanks": {
+        "1": {
+          "correct": "mass",
+          "correctExplanation": "M = 4π²r³/(GT²) gives the mass of the central body from the satellite's orbital radius and period.",
+          "distractors": [
+            { "answer": "radius", "explanation": "The formula gives the mass of the central body, not its radius." },
+            { "answer": "temperature", "explanation": "Temperature cannot be determined from orbital data alone. The formula gives the mass." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the derivation.",
+      "sentence": "The formula M = 4π²r³/(GT²) is obtained by rearranging the orbital {{blank:1}} formula T² = 4π²r³/(GM).",
+      "blanks": {
+        "1": {
+          "correct": "period",
+          "correctExplanation": "T² = 4π²r³/(GM) is the orbital period formula. Rearranging for M gives M = 4π²r³/(GT²).",
+          "distractors": [
+            { "answer": "speed", "explanation": "The formula is rearranged from the period equation, not the speed equation." },
+            { "answer": "radius", "explanation": "The formula is rearranged from T² = 4π²r³/(GM), which is the period equation." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "tf",
+      "question": "The mass of the satellite must be known to calculate the mass of the central body using M = 4π²r³/(GT²).",
+      "correct": "False",
+      "correctExplanation": "The satellite's mass does not appear in the formula. Only the orbital radius r and period T are needed, along with G.",
+      "distractors": [
+        { "answer": "True", "explanation": "The satellite's mass cancels in the derivation and is not needed. M = 4π²r³/(GT²) uses only r, T, and G." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "The same formula M = 4π²r³/(GT²) can be used to find the mass of any central body, whether it is a planet, star, or moon.",
+      "correct": "True",
+      "correctExplanation": "The formula applies universally to any body with a satellite in circular orbit. It has been used to determine the masses of planets, stars, and even galaxies.",
+      "distractors": [
+        { "answer": "False", "explanation": "The formula is universal and can be applied to any central body as long as a satellite's orbital data is known." }
+      ]
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "mc",
+      "question": "A satellite orbits a planet with a period of 5.0 × 10⁴ s and an orbital radius of 2.0 × 10⁷ m. What is the mass of the planet?",
+      "correct": "1.9 × 10²⁴ kg",
+      "correctExplanation": "M = 4π²r³/(GT²) = (39.48 × 8.0 × 10²¹)/(6.67 × 10⁻¹¹ × 2.5 × 10⁹) = 3.158 × 10²³/1.668 × 10⁻¹ = 1.9 × 10²⁴ kg.",
+      "distractors": [
+        { "answer": "1.9 × 10²¹ kg", "explanation": "This is three orders of magnitude too small. M = 4π²r³/(GT²) = 1.9 × 10²⁴ kg." },
+        { "answer": "1.9 × 10²⁷ kg", "explanation": "This is three orders of magnitude too large. M = 1.9 × 10²⁴ kg." },
+        { "answer": "5.3 × 10⁻²⁵ kg", "explanation": "This inverts the formula. M = 4π²r³/(GT²), not GT²/(4π²r³)." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Callisto orbits Jupiter with T = 1.443 × 10⁶ s and r = 1.883 × 10⁹ m. Which calculation correctly gives Jupiter's mass?",
+      "correct": "M = 4π² × (1.883 × 10⁹)³ / (6.67 × 10⁻¹¹ × (1.443 × 10⁶)²)",
+      "correctExplanation": "This correctly substitutes into M = 4π²r³/(GT²) with r cubed and T squared.",
+      "distractors": [
+        { "answer": "M = 4π² × (1.883 × 10⁹)² / (6.67 × 10⁻¹¹ × (1.443 × 10⁶)²)", "explanation": "The radius must be cubed, not squared. M = 4π²r³/(GT²)." },
+        { "answer": "M = 4π² × (1.883 × 10⁹)³ / (6.67 × 10⁻¹¹ × 1.443 × 10⁶)", "explanation": "The period must be squared. M = 4π²r³/(GT²)." },
+        { "answer": "M = (6.67 × 10⁻¹¹ × (1.443 × 10⁶)²) / (4π² × (1.883 × 10⁹)³)", "explanation": "This inverts the formula. M = 4π²r³/(GT²), with r³ in the numerator." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Two different satellites orbit the same planet. Satellite A has r = 1.0 × 10⁷ m, T = 2.0 × 10⁴ s. Satellite B has r = 2.0 × 10⁷ m, T = 5.66 × 10⁴ s. If both are used to calculate the planet's mass, what should happen?",
+      "correct": "Both calculations should give the same mass for the planet",
+      "correctExplanation": "The formula M = 4π²r³/(GT²) gives the mass of the central body regardless of which satellite's data is used, as long as the orbital data is consistent.",
+      "distractors": [
+        { "answer": "Satellite A gives a larger mass because it is closer", "explanation": "The formula gives the same mass regardless of which satellite is used. Distance does not bias the result." },
+        { "answer": "Satellite B gives a larger mass because it has a longer period", "explanation": "The r³ and T² adjust proportionally. Both satellites yield the same central body mass." },
+        { "answer": "The masses will be different because the satellites have different orbits", "explanation": "The formula always gives the same central body mass. Different r and T values produce the same M." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What happens to the calculated mass of a planet if a student forgets to cube the orbital radius?",
+      "correct": "The answer will be significantly too small",
+      "correctExplanation": "Using r² instead of r³ divides the numerator by r, making M much smaller. For typical orbital radii (10⁷–10⁹ m), this produces a vastly underestimated mass.",
+      "distractors": [
+        { "answer": "The answer will be slightly too large", "explanation": "Using r² instead of r³ makes the answer much too small, not slightly too large." },
+        { "answer": "The answer will be correct because the error cancels", "explanation": "The error does not cancel. Using r² instead of r³ gives M = 4π²r²/(GT²), which is far too small." },
+        { "answer": "The answer will have wrong units but the correct magnitude", "explanation": "Both the units and the magnitude will be wrong. r must be cubed for the correct result." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "The Moon orbits Earth with T = 2.36 × 10⁶ s and r = 3.84 × 10⁸ m. What is the calculated mass of Earth?",
+      "correct": "6.0 × 10²⁴ kg",
+      "correctExplanation": "M = 4π²(3.84 × 10⁸)³/(6.67 × 10⁻¹¹ × (2.36 × 10⁶)²) = 4π² × 5.66 × 10²⁵/(6.67 × 10⁻¹¹ × 5.57 × 10¹²) ≈ 6.0 × 10²⁴ kg.",
+      "distractors": [
+        { "answer": "7.35 × 10²² kg", "explanation": "This is the mass of the Moon, not Earth. M = 4π²r³/(GT²) gives the mass of the central body." },
+        { "answer": "6.0 × 10²¹ kg", "explanation": "This is three orders of magnitude too small. The correct answer is 6.0 × 10²⁴ kg." },
+        { "answer": "2.0 × 10³⁰ kg", "explanation": "This is the mass of the Sun. Earth's mass calculated from the Moon's orbit is 6.0 × 10²⁴ kg." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student uses the orbital data of a moon to calculate the mass of the planet it orbits. They get M = 3.0 × 10²⁶ kg. The accepted value is 1.9 × 10²⁷ kg. What is the most likely error?",
+      "correct": "A computational error in the powers of ten or arithmetic",
+      "correctExplanation": "The student's answer is about 6.3 times too small. This is likely an arithmetic error with powers of ten in the multi-step calculation.",
+      "distractors": [
+        { "answer": "They used the wrong value of G", "explanation": "While possible, the most common source of error in these calculations is incorrect handling of powers of ten." },
+        { "answer": "The formula cannot give the correct mass", "explanation": "The formula is correct. The discrepancy is due to a calculation error." },
+        { "answer": "The satellite's mass should have been included", "explanation": "The satellite's mass does not appear in the formula. This is not the source of the error." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the calculation step.",
+      "sentence": "If r = 5.0 × 10⁸ m, then r³ = {{blank:1}} m³.",
+      "blanks": {
+        "1": {
+          "correct": "1.25 × 10²⁶",
+          "correctExplanation": "(5.0 × 10⁸)³ = 5.0³ × 10²⁴ = 125 × 10²⁴ = 1.25 × 10²⁶ m³.",
+          "distractors": [
+            { "answer": "1.5 × 10⁹", "explanation": "This is 3 × r, not r³. (5.0 × 10⁸)³ = 1.25 × 10²⁶ m³." },
+            { "answer": "2.5 × 10¹⁷", "explanation": "This is r², not r³. (5.0 × 10⁸)³ = 1.25 × 10²⁶ m³." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about what the formula determines.",
+      "sentence": "M = 4π²r³/(GT²) determines the mass of the {{blank:1}} body, not the satellite.",
+      "blanks": {
+        "1": {
+          "correct": "central",
+          "correctExplanation": "The formula gives the mass of the central body being orbited, such as a planet or star.",
+          "distractors": [
+            { "answer": "orbiting", "explanation": "The formula gives the mass of the central body, not the orbiting satellite." },
+            { "answer": "smaller", "explanation": "The formula gives the mass of the central body, which is typically (but not always) the larger body." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the calculation step for the period squared.",
+      "sentence": "If T = 2.0 × 10⁵ s, then T² = {{blank:1}} s².",
+      "blanks": {
+        "1": {
+          "correct": "4.0 × 10¹⁰",
+          "correctExplanation": "(2.0 × 10⁵)² = 4.0 × 10¹⁰ s².",
+          "distractors": [
+            { "answer": "4.0 × 10⁵", "explanation": "This does not square the power of ten. (2.0 × 10⁵)² = 4.0 × 10¹⁰." },
+            { "answer": "2.0 × 10¹⁰", "explanation": "The coefficient must also be squared: 2.0² = 4.0. T² = 4.0 × 10¹⁰ s²." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "tf",
+      "question": "Using a satellite with a larger orbital radius will give a different (incorrect) value for the central body's mass compared to using a satellite with a smaller orbital radius.",
+      "correct": "False",
+      "correctExplanation": "Both satellites orbit the same central body, so M = 4π²r³/(GT²) gives the same mass regardless of which satellite's data is used.",
+      "distractors": [
+        { "answer": "True", "explanation": "The formula gives the same mass for the central body regardless of which satellite is used. The r³ and T² scale consistently." }
+      ]
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "mc",
+      "question": "A moon orbits a planet with r = 4.0 × 10⁸ m and T = 8.0 × 10⁵ s. Calculate the planet's mass.",
+      "correct": "5.9 × 10²⁵ kg",
+      "correctExplanation": "M = 4π²r³/(GT²) = (39.48 × 6.4 × 10²⁵)/(6.67 × 10⁻¹¹ × 6.4 × 10¹¹) = 2.527 × 10²⁷/4.269 × 10¹ = 5.9 × 10²⁵ kg.",
+      "distractors": [
+        { "answer": "5.9 × 10²² kg", "explanation": "This is three orders of magnitude too small. Check the powers of ten carefully." },
+        { "answer": "5.9 × 10²⁸ kg", "explanation": "This is three orders of magnitude too large. M = 5.9 × 10²⁵ kg." },
+        { "answer": "1.7 × 10⁻²⁶ kg", "explanation": "This inverts the formula. M = 4π²r³/(GT²), with r³ in the numerator." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Phobos orbits Mars with r = 9.38 × 10⁶ m and T = 2.76 × 10⁴ s. What is the mass of Mars?",
+      "correct": "6.4 × 10²³ kg",
+      "correctExplanation": "M = 4π²(9.38 × 10⁶)³/(6.67 × 10⁻¹¹ × (2.76 × 10⁴)²) = 39.48 × 8.25 × 10²⁰/(6.67 × 10⁻¹¹ × 7.62 × 10⁸) = 3.26 × 10²²/5.08 × 10⁻² = 6.4 × 10²³ kg.",
+      "distractors": [
+        { "answer": "6.0 × 10²⁴ kg", "explanation": "This is the mass of Earth. Mars is less massive: 6.4 × 10²³ kg." },
+        { "answer": "1.9 × 10²⁷ kg", "explanation": "This is the mass of Jupiter. Mars is much less massive: 6.4 × 10²³ kg." },
+        { "answer": "6.4 × 10²⁰ kg", "explanation": "This is three orders of magnitude too small. M = 6.4 × 10²³ kg." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student measures a satellite's orbital radius as 1.5 × 10⁷ m and period as 3.0 × 10⁴ s. They calculate M = 4π² × (1.5 × 10⁷)³ / (6.67 × 10⁻¹¹ × (3.0 × 10⁴)²). Which intermediate value is correct?",
+      "correct": "r³ = 3.375 × 10²¹ m³",
+      "correctExplanation": "(1.5 × 10⁷)³ = 1.5³ × 10²¹ = 3.375 × 10²¹ m³.",
+      "distractors": [
+        { "answer": "r³ = 4.5 × 10⁷ m³", "explanation": "This multiplies r by 3 instead of cubing it. (1.5)³ = 3.375, not 4.5." },
+        { "answer": "r³ = 2.25 × 10¹⁴ m³", "explanation": "This is r², not r³. r³ = (1.5 × 10⁷)³ = 3.375 × 10²¹ m³." },
+        { "answer": "r³ = 1.5 × 10²¹ m³", "explanation": "The coefficient must also be cubed: 1.5³ = 3.375, not 1.5." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A newly discovered exoplanet has a moon with r = 5.0 × 10⁸ m and T = 2.0 × 10⁶ s. What is the exoplanet's mass?",
+      "correct": "1.9 × 10²⁵ kg",
+      "correctExplanation": "M = 4π²(5.0 × 10⁸)³/(6.67 × 10⁻¹¹ × (2.0 × 10⁶)²) = 39.48 × 1.25 × 10²⁶/(6.67 × 10⁻¹¹ × 4.0 × 10¹²) = 4.935 × 10²⁷/2.668 × 10² = 1.9 × 10²⁵ kg.",
+      "distractors": [
+        { "answer": "1.9 × 10²² kg", "explanation": "This is three orders of magnitude too small. M = 1.9 × 10²⁵ kg." },
+        { "answer": "1.9 × 10²⁸ kg", "explanation": "This is three orders of magnitude too large. M = 1.9 × 10²⁵ kg." },
+        { "answer": "4.9 × 10²⁷ kg", "explanation": "This is the numerator before dividing by GT². The full calculation gives 1.9 × 10²⁵ kg." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Earth orbits the Sun with r = 1.50 × 10¹¹ m and T = 3.156 × 10⁷ s. What is the mass of the Sun?",
+      "correct": "2.0 × 10³⁰ kg",
+      "correctExplanation": "M = 4π²(1.50 × 10¹¹)³/(6.67 × 10⁻¹¹ × (3.156 × 10⁷)²) = 39.48 × 3.375 × 10³³/(6.67 × 10⁻¹¹ × 9.96 × 10¹⁴) ≈ 2.0 × 10³⁰ kg.",
+      "distractors": [
+        { "answer": "6.0 × 10²⁴ kg", "explanation": "This is the mass of Earth, not the Sun. The Sun is about 330 000 times more massive." },
+        { "answer": "2.0 × 10²⁷ kg", "explanation": "This is three orders of magnitude too small. The Sun's mass is approximately 2.0 × 10³⁰ kg." },
+        { "answer": "2.0 × 10³³ kg", "explanation": "This is three orders of magnitude too large. M = 2.0 × 10³⁰ kg." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "If the orbital radius of a satellite is doubled while orbiting the same planet, and the new period is measured, the mass calculated using M = 4π²r³/(GT²) should:",
+      "correct": "Remain the same, as it is a property of the central body",
+      "correctExplanation": "The mass M is a property of the central body. Changing the satellite's orbit changes both r and T, but M = 4π²r³/(GT²) always gives the same value.",
+      "distractors": [
+        { "answer": "Double, because r doubled", "explanation": "Doubling r also changes T (T ∝ r³/²). The formula still gives the same M." },
+        { "answer": "Halve, because the satellite is further away", "explanation": "Distance does not affect the central body's mass. M remains constant." },
+        { "answer": "Change by a factor of 8", "explanation": "While r³ increases by 8 when r doubles, T² also increases by 8 (since T² ∝ r³). M remains unchanged." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student calculates the mass of a planet using two of its moons and gets slightly different values. Which is the most likely explanation?",
+      "correct": "Small measurement uncertainties in the orbital radius or period of each moon",
+      "correctExplanation": "In practice, measurement uncertainties cause slightly different results. Both values should be close to the true mass if the data is reasonably accurate.",
+      "distractors": [
+        { "answer": "The planet has different masses as seen from different moons", "explanation": "A planet has one mass. Differences arise from measurement uncertainties, not varying mass." },
+        { "answer": "The formula only works for one satellite at a time", "explanation": "The formula works for any satellite. Small differences are due to measurement uncertainty." },
+        { "answer": "The gravitational constant G changes with distance", "explanation": "G is a universal constant. Differences are due to measurement uncertainties in r and T." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the calculation for the mass of a star.",
+      "sentence": "A planet orbits a star with r = 2.0 × 10¹¹ m and T = 4.0 × 10⁷ s. The star's mass is M = 4π²(2.0 × 10¹¹)³/(6.67 × 10⁻¹¹ × (4.0 × 10⁷)²) ≈ {{blank:1}} kg.",
+      "blanks": {
+        "1": {
+          "correct": "2.96 × 10³⁰",
+          "correctExplanation": "M = 39.48 × 8.0 × 10³³/(6.67 × 10⁻¹¹ × 1.6 × 10¹⁵) = 3.158 × 10³⁵/1.067 × 10⁵ = 2.96 × 10³⁰ kg.",
+          "distractors": [
+            { "answer": "2.96 × 10²⁷", "explanation": "This is three orders of magnitude too small. The correct mass is 2.96 × 10³⁰ kg." },
+            { "answer": "2.96 × 10³³", "explanation": "This is three orders of magnitude too large. The correct mass is 2.96 × 10³⁰ kg." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the general applicability of the formula.",
+      "sentence": "The formula M = 4π²r³/(GT²) was used to determine that Jupiter's mass is approximately {{blank:1}} kg from the orbital data of Callisto.",
+      "blanks": {
+        "1": {
+          "correct": "1.90 × 10²⁷",
+          "correctExplanation": "Using Callisto's orbital data (T = 1.443 × 10⁶ s, r = 1.883 × 10⁹ m), M ≈ 1.90 × 10²⁷ kg.",
+          "distractors": [
+            { "answer": "6.0 × 10²⁴", "explanation": "6.0 × 10²⁴ kg is the mass of Earth. Jupiter's mass is about 318 times larger." },
+            { "answer": "2.0 × 10³⁰", "explanation": "2.0 × 10³⁰ kg is the mass of the Sun. Jupiter's mass is approximately 1.90 × 10²⁷ kg." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the rearrangement steps.",
+      "sentence": "Starting from T² = 4π²r³/(GM), multiplying both sides by M and dividing by T² gives M = {{blank:1}}.",
+      "blanks": {
+        "1": {
+          "correct": "4π²r³/(GT²)",
+          "correctExplanation": "Rearranging: T²GM = 4π²r³, so M = 4π²r³/(GT²).",
+          "distractors": [
+            { "answer": "GT²/(4π²r³)", "explanation": "This inverts the expression. M = 4π²r³/(GT²), with r³ in the numerator." },
+            { "answer": "4π²r²/(GT)", "explanation": "The radius must be cubed and the period must be squared. M = 4π²r³/(GT²)." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "mc",
+      "question": "Titan orbits Saturn with r = 1.222 × 10⁹ m and T = 1.378 × 10⁶ s. Calculate Saturn's mass.",
+      "correct": "5.7 × 10²⁶ kg",
+      "correctExplanation": "M = 4π²(1.222 × 10⁹)³/(6.67 × 10⁻¹¹ × (1.378 × 10⁶)²) = 39.48 × 1.825 × 10²⁷/(6.67 × 10⁻¹¹ × 1.899 × 10¹²) = 7.21 × 10²⁸/1.267 × 10² = 5.7 × 10²⁶ kg.",
+      "distractors": [
+        { "answer": "1.9 × 10²⁷ kg", "explanation": "This is the mass of Jupiter. Saturn's mass is 5.7 × 10²⁶ kg." },
+        { "answer": "5.7 × 10²³ kg", "explanation": "This is three orders of magnitude too small. Saturn's mass is 5.7 × 10²⁶ kg." },
+        { "answer": "5.7 × 10²⁹ kg", "explanation": "This is three orders of magnitude too large. Saturn's mass is 5.7 × 10²⁶ kg." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An astronomer observes a binary star system where a smaller star orbits a larger one with r = 3.0 × 10¹¹ m and T = 5.0 × 10⁷ s. What is the mass of the larger star?",
+      "correct": "6.4 × 10³⁰ kg",
+      "correctExplanation": "M = 4π²(3.0 × 10¹¹)³/(6.67 × 10⁻¹¹ × (5.0 × 10⁷)²) = 39.48 × 2.7 × 10³⁴/(6.67 × 10⁻¹¹ × 2.5 × 10¹⁵) = 1.066 × 10³⁶/1.668 × 10⁵ = 6.4 × 10³⁰ kg.",
+      "distractors": [
+        { "answer": "2.0 × 10³⁰ kg", "explanation": "2.0 × 10³⁰ kg is one solar mass. This star is about 3.2 solar masses." },
+        { "answer": "6.4 × 10²⁷ kg", "explanation": "This is three orders of magnitude too small. M = 6.4 × 10³⁰ kg." },
+        { "answer": "6.4 × 10³³ kg", "explanation": "This is three orders of magnitude too large. M = 6.4 × 10³⁰ kg." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A satellite orbits a planet with v = 5000 m s⁻¹ at r = 1.0 × 10⁷ m. First find T, then use M = 4π²r³/(GT²) to find the planet's mass.",
+      "correct": "3.7 × 10²⁴ kg",
+      "correctExplanation": "T = 2πr/v = 2π × 10⁷/5000 = 1.257 × 10⁴ s. M = 4π²(10⁷)³/(6.67 × 10⁻¹¹ × (1.257 × 10⁴)²) = 39.48 × 10²¹/(6.67 × 10⁻¹¹ × 1.58 × 10⁸) = 3.948 × 10²²/1.054 × 10⁻² = 3.7 × 10²⁴ kg.",
+      "distractors": [
+        { "answer": "5.0 × 10²³ kg", "explanation": "This likely has an arithmetic error. Using T = 2πr/v and then M = 4π²r³/(GT²) gives 3.7 × 10²⁴ kg." },
+        { "answer": "3.7 × 10²¹ kg", "explanation": "This is three orders of magnitude too small. M = 3.7 × 10²⁴ kg." },
+        { "answer": "3.7 × 10²⁷ kg", "explanation": "This is three orders of magnitude too large. M = 3.7 × 10²⁴ kg." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Triton orbits Neptune with r = 3.548 × 10⁸ m and T = 5.077 × 10⁵ s. Estimate Neptune's mass and compare with Jupiter (1.90 × 10²⁷ kg).",
+      "correct": "Neptune's mass is approximately 1.0 × 10²⁶ kg, about 19 times less than Jupiter",
+      "correctExplanation": "M = 4π²(3.548 × 10⁸)³/(6.67 × 10⁻¹¹ × (5.077 × 10⁵)²) = 39.48 × 4.47 × 10²⁵/(6.67 × 10⁻¹¹ × 2.58 × 10¹¹) ≈ 1.0 × 10²⁶ kg. Jupiter/Neptune ≈ 19.",
+      "distractors": [
+        { "answer": "Neptune is more massive than Jupiter", "explanation": "Neptune (≈ 10²⁶ kg) is much less massive than Jupiter (1.9 × 10²⁷ kg)." },
+        { "answer": "Neptune and Jupiter have the same mass", "explanation": "Neptune is about 19 times less massive than Jupiter." },
+        { "answer": "Neptune's mass is approximately 1.0 × 10²⁴ kg", "explanation": "This is too small. 10²⁴ kg is approximately Earth's mass. Neptune's mass is about 1.0 × 10²⁶ kg." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student observes a planet with two moons. Moon A: r = 2.0 × 10⁸ m, T = 1.0 × 10⁵ s. Moon B: r = 8.0 × 10⁸ m, T = ?. What should Moon B's period be?",
+      "correct": "8.0 × 10⁵ s",
+      "correctExplanation": "Since T² ∝ r³: (TB/TA)² = (rB/rA)³ = (8.0/2.0)³ = 64. TB = TA × √64 = 10⁵ × 8 = 8.0 × 10⁵ s.",
+      "distractors": [
+        { "answer": "4.0 × 10⁵ s", "explanation": "This uses (rB/rA) directly as the period ratio. The correct relationship is T ∝ r³/², giving TB = 8TA." },
+        { "answer": "6.4 × 10⁶ s", "explanation": "This uses (rB/rA)³ directly as the period ratio. T² ∝ r³, so TB = TA × (rB/rA)³/² = 8.0 × 10⁵ s." },
+        { "answer": "2.0 × 10⁵ s", "explanation": "This uses twice the original period. T ∝ r³/², so the period ratio is 4³/² = 8." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student attempts to find the mass of a moon by observing a satellite orbiting the planet (not the moon). Will this approach work?",
+      "correct": "No — the satellite orbits the planet, so the formula gives the planet's mass, not the moon's mass",
+      "correctExplanation": "M = 4π²r³/(GT²) gives the mass of the body being orbited. To find the moon's mass, a satellite orbiting the moon would be needed.",
+      "distractors": [
+        { "answer": "Yes — the formula can determine any mass in the system", "explanation": "The formula only gives the mass of the body at the centre of the orbit." },
+        { "answer": "Yes — by subtracting the planet's mass from the total", "explanation": "The formula gives only the central body's mass. It cannot determine other masses in the system." },
+        { "answer": "No — the formula only works for stars", "explanation": "The formula works for any central body, but the satellite must orbit the body whose mass you want to find." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An exoplanet orbits a star with T = 1.0 × 10⁷ s and r = 5.0 × 10¹⁰ m. How does the star's mass compare to the Sun's (2.0 × 10³⁰ kg)?",
+      "correct": "The star is approximately 0.37 solar masses",
+      "correctExplanation": "M = 4π²(5.0 × 10¹⁰)³/(6.67 × 10⁻¹¹ × (10⁷)²) = 39.48 × 1.25 × 10³²/(6.67 × 10⁻¹¹ × 10¹⁴) = 4.935 × 10³³/(6.67 × 10³) ≈ 7.4 × 10²⁹ kg. Ratio: 7.4 × 10²⁹/2.0 × 10³⁰ ≈ 0.37 solar masses.",
+      "distractors": [
+        { "answer": "The star is approximately 10 solar masses", "explanation": "The calculation gives approximately 7.4 × 10²⁹ kg, which is about 0.37 solar masses, much less than 10." },
+        { "answer": "The star has the same mass as the Sun", "explanation": "The star's mass is about 7.4 × 10²⁹ kg, which is 0.37 solar masses — less than the Sun." },
+        { "answer": "The star is approximately 3.7 solar masses", "explanation": "This misplaces the decimal. The star is 0.37 solar masses, not 3.7." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "The orbital data for the ISS gives r = 6.778 × 10⁶ m and T = 5.54 × 10³ s. What mass does this give for Earth?",
+      "correct": "6.0 × 10²⁴ kg",
+      "correctExplanation": "M = 4π²(6.778 × 10⁶)³/(6.67 × 10⁻¹¹ × (5.54 × 10³)²) = 39.48 × 3.11 × 10²⁰/(6.67 × 10⁻¹¹ × 3.07 × 10⁷) ≈ 6.0 × 10²⁴ kg.",
+      "distractors": [
+        { "answer": "5.97 × 10²² kg", "explanation": "This is two orders of magnitude too small. Earth's mass is approximately 6.0 × 10²⁴ kg." },
+        { "answer": "2.0 × 10³⁰ kg", "explanation": "This is the Sun's mass. Earth's mass is approximately 6.0 × 10²⁴ kg." },
+        { "answer": "6.0 × 10²⁷ kg", "explanation": "This is three orders of magnitude too large. Earth's mass is approximately 6.0 × 10²⁴ kg." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about calculating stellar mass.",
+      "sentence": "By observing a planet orbiting a distant star with r = 1.5 × 10¹¹ m and T = 3.15 × 10⁷ s, astronomers calculate the star's mass as approximately {{blank:1}} kg, which is close to one solar mass.",
+      "blanks": {
+        "1": {
+          "correct": "2.0 × 10³⁰",
+          "correctExplanation": "Using M = 4π²r³/(GT²) with Earth's orbital parameters gives the Sun's mass of approximately 2.0 × 10³⁰ kg.",
+          "distractors": [
+            { "answer": "6.0 × 10²⁴", "explanation": "6.0 × 10²⁴ kg is Earth's mass. The star's mass is 2.0 × 10³⁰ kg." },
+            { "answer": "2.0 × 10²⁷", "explanation": "This is about Jupiter's mass. One solar mass is 2.0 × 10³⁰ kg." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the sensitivity of the calculation.",
+      "sentence": "Since M ∝ r³/T², a small percentage error in the measured orbital {{blank:1}} has a larger effect on the calculated mass than the same percentage error in the period.",
+      "blanks": {
+        "1": {
+          "correct": "radius",
+          "correctExplanation": "M ∝ r³, so a percentage error in r is amplified threefold. M ∝ 1/T², so a percentage error in T is amplified twofold. The radius has the greater effect.",
+          "distractors": [
+            { "answer": "period", "explanation": "M ∝ r³/T². A percentage error in r is amplified by 3 (due to r³), while an error in T is amplified by 2 (due to T²). Radius has the greater effect." },
+            { "answer": "speed", "explanation": "Speed does not appear directly in M = 4π²r³/(GT²). The radius (r³) has the largest effect on the calculated mass." }
+          ]
+        }
+      }
+    }
+  ]
+}

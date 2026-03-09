@@ -1,0 +1,583 @@
+{
+  "_link": {
+    "uuid": "lp-296b167f-40d7-0d85-e89f-0d9ed49cf65e",
+    "version": 1,
+    "contentHash": "hash-296b167f",
+    "title": "I can predict and justify changes to orbital speed and period when orbital radius changes",
+    "generatedAt": "2026-03-04T21:28:00Z"
+  },
+  "toLevel2": [
+    {
+      "type": "mc",
+      "question": "What happens to the orbital speed of a satellite when it is moved to a higher orbit?",
+      "correct": "The orbital speed decreases",
+      "correctExplanation": "Orbital speed is given by v = √(GM/r). As the orbital radius r increases, the speed v decreases.",
+      "distractors": [
+        { "answer": "The orbital speed increases", "explanation": "Orbital speed decreases with increasing radius because v = √(GM/r) shows v is inversely related to √r." },
+        { "answer": "The orbital speed remains the same", "explanation": "Orbital speed depends on radius. A higher orbit has a lower speed." },
+        { "answer": "The orbital speed becomes zero", "explanation": "The speed decreases but never reaches zero. The satellite still moves, just more slowly." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What happens to the orbital period of a satellite when it is moved to a higher orbit?",
+      "correct": "The orbital period increases",
+      "correctExplanation": "A higher orbit has a larger circumference and a lower speed, both of which increase the time to complete one orbit.",
+      "distractors": [
+        { "answer": "The orbital period decreases", "explanation": "Higher orbits have longer periods. The satellite travels more slowly around a larger circle." },
+        { "answer": "The orbital period stays the same", "explanation": "The orbital period depends on radius. T ∝ r^(3/2), so a larger radius gives a longer period." },
+        { "answer": "The orbital period becomes 24 hours regardless of altitude", "explanation": "A 24-hour period occurs only at the specific geostationary altitude. Other altitudes have different periods." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "How does orbital speed depend on orbital radius?",
+      "correct": "v ∝ 1/√r — speed is inversely proportional to the square root of the radius",
+      "correctExplanation": "From v = √(GM/r), orbital speed is inversely proportional to the square root of the orbital radius.",
+      "distractors": [
+        { "answer": "v ∝ r — speed is directly proportional to radius", "explanation": "This would mean higher orbits have faster speeds, which is incorrect. Speed decreases with increasing radius." },
+        { "answer": "v ∝ r² — speed is proportional to radius squared", "explanation": "This is not the correct relationship. v = √(GM/r) shows v ∝ 1/√r." },
+        { "answer": "v is independent of r", "explanation": "Speed depends strongly on radius. Doubling the radius reduces speed by a factor of √2." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "How does orbital period depend on orbital radius?",
+      "correct": "T ∝ r^(3/2) — period is proportional to the radius raised to the power of 3/2",
+      "correctExplanation": "From T = 2π√(r³/GM), the period is proportional to r^(3/2). Larger orbits have disproportionately longer periods.",
+      "distractors": [
+        { "answer": "T ∝ r — period is directly proportional to radius", "explanation": "The relationship is not linear. T ∝ r^(3/2), meaning period increases faster than radius." },
+        { "answer": "T ∝ 1/r — period is inversely proportional to radius", "explanation": "This would mean larger orbits have shorter periods, which contradicts observation. T increases with r." },
+        { "answer": "T is independent of r", "explanation": "Period depends strongly on radius. A geostationary orbit (r ≈ 42 000 km) has T = 24 hours; the ISS (r ≈ 6 780 km) has T ≈ 92 minutes." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A weather satellite is boosted from an altitude of 850 km to a geostationary orbit at 36 000 km. What happens to its speed and period?",
+      "correct": "Speed decreases and period increases",
+      "correctExplanation": "Moving to a higher orbit always decreases speed (v ∝ 1/√r) and increases period (T ∝ r^(3/2)).",
+      "distractors": [
+        { "answer": "Speed increases and period decreases", "explanation": "This is the opposite of what occurs. Higher orbits have lower speeds and longer periods." },
+        { "answer": "Speed increases and period increases", "explanation": "Speed decreases in higher orbits, not increases. Only the period increases." },
+        { "answer": "Speed decreases and period decreases", "explanation": "The period increases with orbital radius. Only the speed decreases." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "A satellite in a higher orbit moves more slowly than a satellite in a lower orbit around the same planet.",
+      "correct": "True",
+      "correctExplanation": "From v = √(GM/r), a larger orbital radius r gives a smaller orbital speed v. Higher orbits always have lower speeds.",
+      "distractors": [
+        { "answer": "False", "explanation": "Students may think faster motion is needed to stay in a higher orbit, but v = √(GM/r) shows speed decreases with radius." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "Doubling the orbital radius doubles the orbital period.",
+      "correct": "False",
+      "correctExplanation": "T ∝ r^(3/2), so doubling r multiplies the period by 2^(3/2) = 2√2 ≈ 2.83. The period more than doubles.",
+      "distractors": [
+        { "answer": "True", "explanation": "Students may assume a linear relationship, but T ∝ r^(3/2). Doubling the radius increases the period by a factor of about 2.83." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about orbital speed.",
+      "sentence": "As orbital radius increases, the orbital speed {{blank:1}} because v is inversely proportional to the {{blank:2}} of the radius.",
+      "blanks": {
+        "1": {
+          "correct": "decreases",
+          "correctExplanation": "v = √(GM/r) shows that as r increases, v decreases. Higher orbits have lower orbital speeds.",
+          "distractors": [
+            { "answer": "increases", "explanation": "Speed decreases with increasing radius. v = √(GM/r) shows the inverse relationship." },
+            { "answer": "stays constant", "explanation": "Speed depends on radius. It decreases as the orbital radius increases." }
+          ]
+        },
+        "2": {
+          "correct": "square root",
+          "correctExplanation": "From v = √(GM/r), v ∝ 1/√r. The speed is inversely proportional to the square root of the radius.",
+          "distractors": [
+            { "answer": "cube", "explanation": "The cube root relationship applies to period (T ∝ r^(3/2)), not to speed. Speed follows v ∝ 1/√r." },
+            { "answer": "square", "explanation": "The inverse square relationship applies to gravitational field strength, not to orbital speed. v ∝ 1/√r." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about orbital period.",
+      "sentence": "A satellite in a higher orbit takes {{blank:1}} to complete one orbit because it travels around a {{blank:2}} circumference at a lower speed.",
+      "blanks": {
+        "1": {
+          "correct": "longer",
+          "correctExplanation": "Higher orbits have both a larger circumference and a lower speed, both of which contribute to a longer orbital period.",
+          "distractors": [
+            { "answer": "shorter", "explanation": "Higher orbits have longer periods, not shorter. Both the larger distance and lower speed increase the time." },
+            { "answer": "the same time", "explanation": "The period changes with orbital radius. Higher orbits take longer." }
+          ]
+        },
+        "2": {
+          "correct": "larger",
+          "correctExplanation": "A higher orbit has a larger radius and therefore a larger circumference (C = 2πr), contributing to the longer period.",
+          "distractors": [
+            { "answer": "smaller", "explanation": "Higher orbits have larger circumferences, not smaller. The radius increases, so the path length increases." },
+            { "answer": "the same", "explanation": "Different orbital radii give different circumferences. A higher orbit has a larger circumference." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about specific orbital values.",
+      "sentence": "The ISS orbits at about 408 km altitude with a speed of approximately 7.7 km s⁻¹ and a period of about {{blank:1}} minutes, while a geostationary satellite orbits with a speed of about 3.1 km s⁻¹ and a period of {{blank:2}} hours.",
+      "blanks": {
+        "1": {
+          "correct": "92",
+          "correctExplanation": "The ISS completes approximately 15.5 orbits per day, giving a period of about 92 minutes (about 5500 seconds).",
+          "distractors": [
+            { "answer": "24", "explanation": "24 minutes is too short. The ISS period is about 92 minutes. 24 hours is the geostationary period." },
+            { "answer": "1440", "explanation": "1440 minutes equals 24 hours, which is the geostationary period, not the ISS period." }
+          ]
+        },
+        "2": {
+          "correct": "24",
+          "correctExplanation": "A geostationary satellite has a period of exactly 24 hours to match Earth's rotation period.",
+          "distractors": [
+            { "answer": "1.5", "explanation": "1.5 hours is closer to the ISS period. The geostationary period is 24 hours." },
+            { "answer": "12", "explanation": "12 hours is the period of a GPS satellite, not a geostationary satellite. Geostationary orbits have a 24-hour period." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "mc",
+      "question": "Why does a satellite in a higher orbit travel more slowly than one in a lower orbit?",
+      "correct": "Because the gravitational force is weaker at a greater distance, providing less centripetal acceleration for a given orbit",
+      "correctExplanation": "The gravitational force decreases with distance (inverse square law), so less centripetal acceleration is available. A lower speed is needed to match this reduced centripetal requirement.",
+      "distractors": [
+        { "answer": "Because the satellite loses energy as it moves to a higher orbit", "explanation": "Moving to a higher orbit actually requires energy input. The lower speed is due to the weaker gravitational force at greater distance." },
+        { "answer": "Because air resistance is greater at higher altitudes", "explanation": "Air resistance is negligible at orbital altitudes. The lower speed is due to the inverse square law weakening of gravity." },
+        { "answer": "Because the satellite gains mass as it moves to a higher orbit", "explanation": "The satellite's mass does not change with altitude. The speed change is due to the changing gravitational field strength." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A satellite's orbital radius is tripled. By what factor does its orbital speed change?",
+      "correct": "Speed decreases by a factor of √3 (approximately 1.73)",
+      "correctExplanation": "Since v ∝ 1/√r, tripling r gives v_new = v_old/√3. The speed decreases by a factor of √3 ≈ 1.73.",
+      "distractors": [
+        { "answer": "Speed decreases by a factor of 3", "explanation": "A factor of 3 would apply if v ∝ 1/r. The correct relationship is v ∝ 1/√r, giving a factor of √3." },
+        { "answer": "Speed decreases by a factor of 9", "explanation": "A factor of 9 would apply if v ∝ 1/r². The correct relationship is v ∝ 1/√r." },
+        { "answer": "Speed increases by a factor of √3", "explanation": "Speed decreases, not increases, with larger radius. v ∝ 1/√r." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A satellite's orbital radius is doubled. By what factor does its orbital period change?",
+      "correct": "Period increases by a factor of 2√2 (approximately 2.83)",
+      "correctExplanation": "Since T ∝ r^(3/2), doubling r gives T_new = T_old × 2^(3/2) = T_old × 2√2 ≈ 2.83 × T_old.",
+      "distractors": [
+        { "answer": "Period doubles", "explanation": "T ∝ r^(3/2), not T ∝ r. Doubling r gives a factor of 2^(3/2) = 2√2 ≈ 2.83." },
+        { "answer": "Period increases by a factor of 4", "explanation": "A factor of 4 would apply if T ∝ r². The correct relationship gives 2^(3/2) ≈ 2.83." },
+        { "answer": "Period halves", "explanation": "Period increases with radius, not decreases. T ∝ r^(3/2), so doubling r increases T by a factor of 2√2." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Why does the orbital period increase more rapidly than the orbital radius?",
+      "correct": "Because the period depends on both the larger circumference and the lower speed, and both effects increase the time per orbit",
+      "correctExplanation": "The period combines two effects: the larger circumference (∝ r) and the lower speed (∝ 1/√r). Together, T = 2πr/v ∝ r × √r = r^(3/2).",
+      "distractors": [
+        { "answer": "Because the satellite accelerates as it moves to a higher orbit", "explanation": "The satellite does not accelerate in its new orbit. The period increases because of both larger circumference and lower speed." },
+        { "answer": "Because the gravitational constant G changes with altitude", "explanation": "G is a universal constant that does not change. The period increases due to the combined effects of distance and speed." },
+        { "answer": "The period does not increase more rapidly than the radius", "explanation": "T ∝ r^(3/2), which means T increases faster than r. For example, doubling r increases T by about 2.83 times." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Explain why the Moon has both a lower orbital speed and a longer orbital period than the ISS.",
+      "correct": "The Moon orbits at a much greater radius, where gravity is weaker, giving lower speed and a much larger orbit to traverse",
+      "correctExplanation": "The Moon's orbital radius (~384 000 km) is about 57 times the ISS orbital radius (~6 780 km). The weaker gravity and larger circumference both contribute to its lower speed and longer period.",
+      "distractors": [
+        { "answer": "Because the Moon is much more massive than the ISS", "explanation": "Orbital speed and period are independent of the satellite's mass. The difference is due to the orbital radius." },
+        { "answer": "Because the Moon experiences no gravitational force from Earth", "explanation": "The Moon does experience gravitational force from Earth. It orbits more slowly because it is at a much greater distance." },
+        { "answer": "Because the Moon orbits the Sun, not Earth", "explanation": "The Moon orbits Earth. Its lower speed and longer period are due to its much greater orbital radius." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "How would the orbital speed and period of a satellite change if the planet it orbits had double the mass?",
+      "correct": "The orbital speed would increase by a factor of √2 and the period would decrease by a factor of √2 for the same radius",
+      "correctExplanation": "v = √(GM/r), so doubling M multiplies v by √2. T = 2πr/v, so the larger v reduces T by a factor of √2.",
+      "distractors": [
+        { "answer": "Speed would double and period would halve", "explanation": "v ∝ √M, not v ∝ M. Doubling M increases speed by √2, not by 2." },
+        { "answer": "Speed and period would both remain unchanged", "explanation": "Both depend on the mass of the central body. Doubling M changes both speed and period." },
+        { "answer": "Speed would decrease and period would increase", "explanation": "Increasing the central mass strengthens gravity, increasing speed and decreasing period." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "A satellite can orbit at any speed as long as it is at the correct altitude.",
+      "correct": "False",
+      "correctExplanation": "For a stable circular orbit at a given altitude, only one speed is possible: v = √(GM/r). A satellite at the wrong speed will not maintain a circular orbit.",
+      "distractors": [
+        { "answer": "True", "explanation": "Students may think orbit depends only on altitude. In fact, a specific speed is required for a stable circular orbit at each altitude." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the justification for speed changes.",
+      "sentence": "A satellite in a higher orbit moves more slowly because the gravitational {{blank:1}} is weaker at greater distance, requiring less {{blank:2}} force to maintain the circular orbit.",
+      "blanks": {
+        "1": {
+          "correct": "field",
+          "correctExplanation": "The gravitational field strength decreases with distance (g ∝ 1/r²), weakening the force on the satellite.",
+          "distractors": [
+            { "answer": "constant", "explanation": "The gravitational constant G does not change. It is the gravitational field that weakens with distance." },
+            { "answer": "mass", "explanation": "The mass of the planet does not change. It is the gravitational field strength that decreases with distance." }
+          ]
+        },
+        "2": {
+          "correct": "centripetal",
+          "correctExplanation": "For circular motion, the gravitational force provides the centripetal force. A weaker gravitational force means less centripetal force, requiring a lower orbital speed.",
+          "distractors": [
+            { "answer": "gravitational", "explanation": "While technically correct, the key physics concept is that less centripetal force is available, which determines the required speed." },
+            { "answer": "normal", "explanation": "There is no normal force on an orbiting satellite. The gravitational force provides the centripetal force." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the mathematical relationship.",
+      "sentence": "If a satellite's orbital radius increases by a factor of 4, its orbital speed decreases by a factor of {{blank:1}} and its orbital period increases by a factor of {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "2",
+          "correctExplanation": "v ∝ 1/√r, so if r increases by 4, v decreases by √4 = 2.",
+          "distractors": [
+            { "answer": "4", "explanation": "v ∝ 1/√r, not 1/r. A factor of 4 in radius gives a factor of 2 in speed, not 4." },
+            { "answer": "16", "explanation": "v ∝ 1/√r, not 1/r². A factor of 4 in radius gives a factor of 2 in speed." }
+          ]
+        },
+        "2": {
+          "correct": "8",
+          "correctExplanation": "T ∝ r^(3/2), so if r increases by 4, T increases by 4^(3/2) = (√4)³ = 2³ = 8.",
+          "distractors": [
+            { "answer": "4", "explanation": "T ∝ r^(3/2), not T ∝ r. A factor of 4 in radius gives 4^(3/2) = 8, not 4." },
+            { "answer": "16", "explanation": "T ∝ r^(3/2), not T ∝ r². A factor of 4 in radius gives 4^(3/2) = 8, not 16." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the derivation insight.",
+      "sentence": "The orbital period T = 2πr/v. Since v ∝ 1/√r, substituting gives T ∝ r × {{blank:1}} = r^({{blank:2}}).",
+      "blanks": {
+        "1": {
+          "correct": "√r",
+          "correctExplanation": "Since v ∝ 1/√r, T = 2πr/v ∝ r/(1/√r) = r × √r.",
+          "distractors": [
+            { "answer": "1/√r", "explanation": "Dividing by v means dividing by 1/√r, which gives multiplication by √r." },
+            { "answer": "r", "explanation": "The substitution gives r × √r, not r × r. The speed contribution is √r, not r." }
+          ]
+        },
+        "2": {
+          "correct": "3/2",
+          "correctExplanation": "r × √r = r × r^(1/2) = r^(1 + 1/2) = r^(3/2).",
+          "distractors": [
+            { "answer": "2", "explanation": "r × √r = r^(3/2), not r². The exponent is 1 + 1/2 = 3/2." },
+            { "answer": "1/2", "explanation": "r × √r = r^(3/2), not r^(1/2). The exponent adds: 1 + 1/2 = 3/2." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "mc",
+      "question": "A satellite orbits Earth with a period of 12 hours. Another satellite orbits Earth with a period of 24 hours. What is the ratio of their orbital radii (r₂₄/r₁₂)?",
+      "correct": "r₂₄/r₁₂ = 2^(2/3) ≈ 1.59",
+      "correctExplanation": "T ∝ r^(3/2), so r ∝ T^(2/3). r₂₄/r₁₂ = (24/12)^(2/3) = 2^(2/3) = ∛4 ≈ 1.59.",
+      "distractors": [
+        { "answer": "r₂₄/r₁₂ = 2", "explanation": "Doubling the period does not double the radius. r ∝ T^(2/3), so the ratio is 2^(2/3) ≈ 1.59." },
+        { "answer": "r₂₄/r₁₂ = 4", "explanation": "r ∝ T^(2/3), not T². The ratio is 2^(2/3) ≈ 1.59, not 4." },
+        { "answer": "r₂₄/r₁₂ = √2 ≈ 1.41", "explanation": "r ∝ T^(2/3), not T^(1/2). The ratio is 2^(2/3) ≈ 1.59." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Satellite A orbits at 2RE from Earth's centre and satellite B orbits at 8RE. Calculate the ratio of their orbital speeds (vA/vB).",
+      "correct": "vA/vB = 2",
+      "correctExplanation": "v ∝ 1/√r, so vA/vB = √(rB/rA) = √(8RE/2RE) = √4 = 2. Satellite A moves twice as fast.",
+      "distractors": [
+        { "answer": "vA/vB = 4", "explanation": "v ∝ 1/√r, not 1/r. The speed ratio is √(rB/rA) = √4 = 2, not 4." },
+        { "answer": "vA/vB = √2", "explanation": "√2 would be the ratio if rB/rA = 2. With rB/rA = 4, the ratio is √4 = 2." },
+        { "answer": "vA/vB = 1 (they have the same speed)", "explanation": "Different orbital radii give different speeds. v ∝ 1/√r, so the closer satellite moves faster." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A space agency wants to place a satellite with an orbital period of 6 hours. The ISS has a period of 1.5 hours at an orbital radius of 6.78 × 10⁶ m. What is the required orbital radius?",
+      "correct": "r = 6.78 × 10⁶ × (6/1.5)^(2/3) = 6.78 × 10⁶ × 4^(2/3) ≈ 1.71 × 10⁷ m",
+      "correctExplanation": "r ∝ T^(2/3), so r₂/r₁ = (T₂/T₁)^(2/3) = (4)^(2/3) = ∛16 ≈ 2.52. r₂ = 6.78 × 10⁶ × 2.52 ≈ 1.71 × 10⁷ m.",
+      "distractors": [
+        { "answer": "r = 2.71 × 10⁷ m (four times the ISS radius)", "explanation": "The radius scales as T^(2/3), not T. Multiplying by 4 assumes a linear relationship." },
+        { "answer": "r = 6.78 × 10⁶ m (same as the ISS)", "explanation": "A different period requires a different radius. T ∝ r^(3/2), so a longer period needs a larger radius." },
+        { "answer": "r = 1.08 × 10⁸ m (16 times the ISS radius)", "explanation": "16 times would correspond to T^2, not T^(2/3). The correct factor is 4^(2/3) ≈ 2.52." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Mars has two moons: Phobos orbits at 9.38 × 10⁶ m with a period of 7.66 hours, and Deimos orbits at 2.35 × 10⁷ m. Predict the orbital period of Deimos.",
+      "correct": "T_Deimos = 7.66 × (2.35 × 10⁷ / 9.38 × 10⁶)^(3/2) = 7.66 × 2.5^(3/2) ≈ 30.3 hours",
+      "correctExplanation": "T ∝ r^(3/2). The ratio rD/rP = 2.5, so TD = TP × 2.5^(3/2) = 7.66 × 3.95 ≈ 30.3 hours.",
+      "distractors": [
+        { "answer": "T_Deimos = 19.2 hours (proportional to radius)", "explanation": "T ∝ r^(3/2), not r. The period increases faster than the radius ratio." },
+        { "answer": "T_Deimos = 7.66 hours (same period as Phobos)", "explanation": "Different orbital radii give different periods. Deimos is further out, so its period is longer." },
+        { "answer": "T_Deimos = 47.9 hours (proportional to radius squared)", "explanation": "T ∝ r^(3/2), not r². The correct relationship gives about 30 hours." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An astronomer observes that a planet's moon takes 4 times longer to orbit than another moon. What is the ratio of their orbital radii?",
+      "correct": "The outer moon orbits at 4^(2/3) ≈ 2.52 times the radius of the inner moon",
+      "correctExplanation": "Since T ∝ r^(3/2), r ∝ T^(2/3). A period ratio of 4 gives a radius ratio of 4^(2/3) = (∛4²) ≈ 2.52.",
+      "distractors": [
+        { "answer": "The outer moon orbits at 4 times the radius", "explanation": "r ∝ T^(2/3), not T. A period ratio of 4 gives a radius ratio of about 2.52, not 4." },
+        { "answer": "The outer moon orbits at 2 times the radius", "explanation": "A radius ratio of 2 would give a period ratio of 2^(3/2) ≈ 2.83, not 4." },
+        { "answer": "The outer moon orbits at 16 times the radius", "explanation": "A ratio of 16 corresponds to T^2, not T^(2/3). The correct ratio is about 2.52." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student claims that to make a satellite orbit faster, you should boost it to a higher orbit because it needs more speed to stay in the larger orbit. Identify and explain the error.",
+      "correct": "The student has the relationship reversed: higher orbits require lower speed, not higher speed, because the weaker gravity requires less centripetal force",
+      "correctExplanation": "v = √(GM/r) shows that speed decreases with increasing radius. To orbit faster, the satellite must be in a lower orbit, not higher.",
+      "distractors": [
+        { "answer": "The student is correct; higher orbits have higher speeds", "explanation": "Higher orbits have lower speeds. v = √(GM/r) clearly shows speed decreasing with increasing radius." },
+        { "answer": "The student is partially correct; speed increases then decreases with altitude", "explanation": "Speed decreases monotonically with increasing orbital radius. There is no peak." },
+        { "answer": "The error is that orbital speed cannot be changed", "explanation": "Orbital speed can be changed by changing the orbital altitude. The student's error is about which direction the change occurs." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "GPS satellites orbit at approximately 4.2RE from Earth's centre. The ISS orbits at approximately 1.06RE. What is the approximate ratio of the GPS orbital period to the ISS orbital period?",
+      "correct": "T_GPS/T_ISS = (4.2/1.06)^(3/2) ≈ 7.9",
+      "correctExplanation": "T ∝ r^(3/2). The radius ratio is 4.2/1.06 ≈ 3.96. T_GPS/T_ISS = 3.96^(3/2) ≈ 7.9. This gives approximately 12 hours for GPS (ISS is ~1.5 hours).",
+      "distractors": [
+        { "answer": "T_GPS/T_ISS ≈ 4.0 (proportional to radius)", "explanation": "T ∝ r^(3/2), not r. The period ratio is greater than the radius ratio." },
+        { "answer": "T_GPS/T_ISS ≈ 16 (proportional to radius squared)", "explanation": "T ∝ r^(3/2), not r². The correct ratio is about 7.9." },
+        { "answer": "T_GPS/T_ISS ≈ 1 (both have similar periods)", "explanation": "GPS satellites orbit much further from Earth and have much longer periods than the ISS." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the prediction for a radius change.",
+      "sentence": "If a satellite's orbital radius is increased by a factor of 9, its speed decreases by a factor of {{blank:1}} and its period increases by a factor of {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "3",
+          "correctExplanation": "v ∝ 1/√r. If r increases by 9, v decreases by √9 = 3.",
+          "distractors": [
+            { "answer": "9", "explanation": "v ∝ 1/√r, not 1/r. The speed decreases by √9 = 3, not 9." },
+            { "answer": "81", "explanation": "v ∝ 1/√r, not 1/r². The speed decreases by √9 = 3, not 81." }
+          ]
+        },
+        "2": {
+          "correct": "27",
+          "correctExplanation": "T ∝ r^(3/2). If r increases by 9, T increases by 9^(3/2) = (√9)³ = 3³ = 27.",
+          "distractors": [
+            { "answer": "9", "explanation": "T ∝ r^(3/2), not r. A factor of 9 in radius gives 9^(3/2) = 27, not 9." },
+            { "answer": "3", "explanation": "3 is the speed factor. The period factor is 9^(3/2) = 27." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the application to real satellites.",
+      "sentence": "A geostationary satellite orbits at approximately {{blank:1}} times the ISS orbital radius, and its orbital speed is approximately {{blank:2}} the ISS orbital speed.",
+      "blanks": {
+        "1": {
+          "correct": "6.2",
+          "correctExplanation": "Geostationary radius ≈ 42 200 km; ISS radius ≈ 6 780 km. Ratio = 42 200/6 780 ≈ 6.2.",
+          "distractors": [
+            { "answer": "2", "explanation": "The geostationary orbit is much further than twice the ISS radius. The ratio is approximately 6.2." },
+            { "answer": "36", "explanation": "36 000 km is the altitude above the surface, not the ratio of orbital radii. The ratio is approximately 6.2." }
+          ]
+        },
+        "2": {
+          "correct": "0.40 times",
+          "correctExplanation": "v ∝ 1/√r. v_GEO/v_ISS = 1/√6.2 ≈ 0.40. Geostationary speed (≈ 3.1 km s⁻¹) is about 40% of ISS speed (≈ 7.7 km s⁻¹).",
+          "distractors": [
+            { "answer": "6.2 times", "explanation": "Speed decreases with radius, not increases. v ∝ 1/√r gives about 0.40, not 6.2." },
+            { "answer": "equal to", "explanation": "Geostationary satellites orbit much more slowly than the ISS due to the larger orbital radius." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the justification for period changes.",
+      "sentence": "The orbital period increases faster than the orbital radius because two effects combine: the {{blank:1}} is larger and the orbital {{blank:2}} is slower.",
+      "blanks": {
+        "1": {
+          "correct": "circumference",
+          "correctExplanation": "The circumference of the orbit increases proportionally to r (C = 2πr), contributing to the longer period.",
+          "distractors": [
+            { "answer": "mass", "explanation": "The mass of the satellite does not change. The larger circumference is one reason the period increases faster than the radius." },
+            { "answer": "gravity", "explanation": "Gravity decreases with distance, which affects speed. The larger circumference is the geometric factor that contributes to longer periods." }
+          ]
+        },
+        "2": {
+          "correct": "speed",
+          "correctExplanation": "The orbital speed decreases with radius (v ∝ 1/√r). The combination of larger circumference and lower speed gives T ∝ r^(3/2).",
+          "distractors": [
+            { "answer": "acceleration", "explanation": "While acceleration decreases, the direct reason for the longer period is the lower speed and larger circumference." },
+            { "answer": "direction", "explanation": "The direction of motion does not affect the period. The lower speed is the kinematic factor." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "mc",
+      "question": "A student is asked to justify why increasing orbital radius decreases speed. They write: 'Because the gravitational field is weaker further out, so the satellite cannot go as fast.' Evaluate this justification for a VCAA exam.",
+      "correct": "The justification is partially correct but incomplete; a full answer should link weaker gravity to reduced centripetal force and then to the specific speed requirement via Fg = mv²/r",
+      "correctExplanation": "A complete VCAA answer would state: weaker gravity means less centripetal force, and since Fc = mv²/r, the speed must be lower to match the reduced centripetal force at larger radius.",
+      "distractors": [
+        { "answer": "The justification is completely correct and would receive full marks", "explanation": "While the direction is right, VCAA examiners expect a causal chain linking gravity to centripetal force to speed, not just a general statement." },
+        { "answer": "The justification is completely wrong", "explanation": "The student has the correct idea but needs to develop the causal chain more fully for full marks." },
+        { "answer": "Speed does not depend on gravitational field strength", "explanation": "Speed does depend on gravitational field strength. v = √(GM/r) shows the direct connection." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A proposed space mission requires a satellite to orbit Mars at the same altitude as the ISS orbits Earth (408 km). How would the orbital speed and period compare to the ISS values? Mars has about 0.107 times Earth's mass and a radius of 3390 km.",
+      "correct": "The speed would be lower and the period would be longer because Mars has a much smaller mass, producing a weaker gravitational field",
+      "correctExplanation": "v = √(GM/r). With M_Mars ≈ 0.107M_Earth and r_Mars-orbit ≈ 3798 km (vs 6778 km for ISS), the smaller GM dominates, giving lower speed and longer period.",
+      "distractors": [
+        { "answer": "The speed and period would be identical because the altitude is the same", "explanation": "Orbital speed depends on GM/r, not just altitude. Mars's smaller mass and smaller radius give different values." },
+        { "answer": "The speed would be higher because the orbital radius is smaller", "explanation": "While the radius is smaller, the mass of Mars is much smaller. The effect of smaller M dominates, giving lower speed." },
+        { "answer": "The period would be shorter because the orbit is smaller", "explanation": "While the orbit is smaller, the weaker gravity gives lower speed. The net effect is a longer period despite the smaller orbit." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Kepler's third law states that T² ∝ r³. Show how this is consistent with the proportionality T ∝ r^(3/2) and explain why Kepler's formulation is equivalent.",
+      "correct": "Squaring both sides of T ∝ r^(3/2) gives T² ∝ r³, which is Kepler's third law. Both express the same mathematical relationship",
+      "correctExplanation": "If T ∝ r^(3/2), then T² ∝ (r^(3/2))² = r³. Kepler's T² ∝ r³ is the squared version of the same relationship.",
+      "distractors": [
+        { "answer": "They are different relationships that happen to give similar results", "explanation": "They are mathematically identical. T ∝ r^(3/2) is equivalent to T² ∝ r³ by squaring both sides." },
+        { "answer": "Kepler's law only applies to planets, while T ∝ r^(3/2) applies to satellites", "explanation": "Both apply to any object in a gravitational orbit. They are the same relationship in different forms." },
+        { "answer": "Kepler's law is an approximation while T ∝ r^(3/2) is exact", "explanation": "Both express the same mathematical relationship and have the same validity for circular orbits around a given mass." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An engineer proposes reducing the orbital period of a GPS satellite (currently 12 hours at r ≈ 26 600 km) to 6 hours. By what factor must the orbital radius decrease, and is this practically feasible?",
+      "correct": "r must decrease by a factor of 2^(2/3) ≈ 1.59, to about 16 700 km from Earth's centre (altitude ~10 300 km). This is feasible but would require more satellites for global coverage",
+      "correctExplanation": "r ∝ T^(2/3). Halving T gives r_new = r_old/2^(2/3) = 26 600/1.59 ≈ 16 700 km. This altitude is achievable but changes coverage geometry.",
+      "distractors": [
+        { "answer": "r must halve to about 13 300 km, which is practically feasible", "explanation": "r ∝ T^(2/3), not T. Halving the period requires reducing r by 2^(2/3) ≈ 1.59, not by 2." },
+        { "answer": "r must decrease by a factor of 4, which would put the satellite below Earth's surface", "explanation": "The factor is 2^(2/3) ≈ 1.59, not 4. The resulting altitude of ~10 300 km is well above Earth's surface." },
+        { "answer": "The orbital radius cannot be changed because GPS orbits are fixed by international agreement", "explanation": "While GPS uses specific orbits, the physics question is about what radius would give a 6-hour period, which is calculable." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Two stars in a binary system each orbit their common centre of mass. Star A orbits at radius rA and star B orbits at radius rB, where rA < rB. Both have the same orbital period. How does this relate to the principles governing satellite orbital speed and period?",
+      "correct": "Both stars have the same period because they must stay on opposite sides of the centre of mass. Star B, at larger radius, has greater orbital speed (v = 2πr/T) despite being further from the centre",
+      "correctExplanation": "Unlike the planet-satellite case where speed decreases with radius, in a binary both objects share the same period. The outer object has higher speed because v = 2πr/T with larger r.",
+      "distractors": [
+        { "answer": "Star B orbits more slowly because it is at a greater radius, following v ∝ 1/√r", "explanation": "v ∝ 1/√r applies to objects orbiting a central mass, not to binary components. In a binary, both share the same period, so larger r means larger speed." },
+        { "answer": "Star A has a longer period because it is closer to the centre of mass", "explanation": "Both stars have the same orbital period. They must complete orbits together to maintain the binary system." },
+        { "answer": "The principles governing satellite orbits do not apply to binary stars", "explanation": "The same gravitational principles apply, but the geometry is different because both objects orbit a common centre of mass." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A VCE Physics exam asks: 'Predict what would happen to the orbital speed and period of a satellite if Earth's mass suddenly doubled but the satellite's orbital radius remained the same.' Provide and justify your answer.",
+      "correct": "Speed would increase by √2 because v = √(GM/r) with doubled M. Period would decrease by √2 because T = 2πr/v with increased v",
+      "correctExplanation": "v = √(GM/r) → v_new = √(G×2M/r) = √2 × v_old. T = 2πr/v → T_new = 2πr/(√2 × v_old) = T_old/√2.",
+      "distractors": [
+        { "answer": "Speed would double and period would halve", "explanation": "v ∝ √M, not M. Doubling M increases v by √2 ≈ 1.41, not by 2." },
+        { "answer": "Speed and period would remain unchanged because the radius is the same", "explanation": "Both v and T depend on M. Even at the same radius, changing the central mass changes orbital speed and period." },
+        { "answer": "Speed would decrease because stronger gravity pulls the satellite inward", "explanation": "At the same radius, stronger gravity (from doubled M) provides more centripetal force, supporting a higher orbital speed." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Historically, Kepler discovered T² ∝ r³ from observations before Newton derived it from gravitational theory. Explain the significance of Newton's derivation in terms of what additional insight it provides.",
+      "correct": "Newton's derivation shows that the proportionality constant in T² = (4π²/GM)r³ depends on the central mass M, allowing the masses of planets and stars to be determined from orbital data",
+      "correctExplanation": "Kepler's law describes the pattern; Newton's derivation reveals why it holds and connects the constant to the central body's mass, enabling mass determination.",
+      "distractors": [
+        { "answer": "Newton's derivation adds nothing to Kepler's observational law", "explanation": "Newton's derivation reveals the physical mechanism (gravity) and the dependence on M, which Kepler's empirical law does not." },
+        { "answer": "Newton proved Kepler was wrong about the exponent", "explanation": "Newton confirmed Kepler's T² ∝ r³ relationship and provided the theoretical framework for it." },
+        { "answer": "Newton's derivation only applies to artificial satellites, not natural ones", "explanation": "Newton's derivation applies universally to all gravitationally bound orbits, natural and artificial." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A VCAA exam question presents orbital data for four moons of Jupiter and asks students to verify Kepler's third law. What graphical method should be used, and what should the result show?",
+      "correct": "Plot T² versus r³. If Kepler's third law holds, the graph should be a straight line through the origin with gradient 4π²/(GM_Jupiter)",
+      "correctExplanation": "T² = (4π²/GM)r³ is the equation of a straight line through the origin when T² is plotted against r³. The gradient gives 4π²/(GM).",
+      "distractors": [
+        { "answer": "Plot T versus r. The graph should be a straight line", "explanation": "T ∝ r^(3/2) is not linear. Plotting T versus r gives a curve, not a straight line." },
+        { "answer": "Plot T versus r². The gradient gives G", "explanation": "T² ∝ r³ means the correct axes are T² versus r³, not T versus r²." },
+        { "answer": "No graph is needed; just check that T²/r³ is constant for all moons", "explanation": "While checking T²/r³ works numerically, the graphical method is what VCAA expects for verification questions." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the evaluation of exam responses.",
+      "sentence": "To justify why orbital speed decreases with radius, a complete VCAA response must state that the weaker gravitational force provides less {{blank:1}} force, so a lower {{blank:2}} is needed to maintain the circular orbit.",
+      "blanks": {
+        "1": {
+          "correct": "centripetal",
+          "correctExplanation": "The gravitational force provides the centripetal force for circular orbital motion. Weaker gravity means less centripetal force is available.",
+          "distractors": [
+            { "answer": "normal", "explanation": "There is no normal force on an orbiting satellite. The gravitational force provides the centripetal force." },
+            { "answer": "friction", "explanation": "Friction does not act on orbiting satellites. The centripetal force is provided entirely by gravity." }
+          ]
+        },
+        "2": {
+          "correct": "speed",
+          "correctExplanation": "Fc = mv²/r. With less centripetal force available and larger r, the orbital speed v must decrease to balance the equation.",
+          "distractors": [
+            { "answer": "mass", "explanation": "The mass of the satellite does not change. It is the orbital speed that must decrease to match the reduced centripetal force." },
+            { "answer": "radius", "explanation": "The question asks about the effect at a given (larger) radius. It is the speed that adjusts to match the available centripetal force." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the analysis of Kepler's law verification.",
+      "sentence": "To verify Kepler's third law graphically, plot {{blank:1}} on the y-axis against {{blank:2}} on the x-axis, and check for a straight line through the origin.",
+      "blanks": {
+        "1": {
+          "correct": "T²",
+          "correctExplanation": "Kepler's third law states T² ∝ r³, so T² should be plotted on the y-axis to obtain a linear relationship.",
+          "distractors": [
+            { "answer": "T", "explanation": "Plotting T against r³ would not give a straight line. T² must be used because T² ∝ r³." },
+            { "answer": "T^(3/2)", "explanation": "The relationship is T² ∝ r³. Plotting T² against r³ gives a straight line." }
+          ]
+        },
+        "2": {
+          "correct": "r³",
+          "correctExplanation": "Kepler's third law states T² ∝ r³. Plotting T² versus r³ gives a straight line with gradient 4π²/(GM).",
+          "distractors": [
+            { "answer": "r", "explanation": "Plotting T² against r would give a curve, not a straight line. r³ is needed for linearity." },
+            { "answer": "r²", "explanation": "The correct relationship is T² ∝ r³, not T² ∝ r². Plotting against r² would not give a straight line." }
+          ]
+        }
+      }
+    }
+  ]
+}

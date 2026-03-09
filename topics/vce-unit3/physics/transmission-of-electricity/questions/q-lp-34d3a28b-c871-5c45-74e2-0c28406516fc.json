@@ -1,0 +1,583 @@
+{
+  "_link": {
+    "uuid": "lp-34d3a28b-c871-5c45-74e2-0c28406516fc",
+    "version": 1,
+    "contentHash": "hash-f1a32e59",
+    "title": "I can determine the period and frequency of an AC signal from a voltage-time graph",
+    "generatedAt": "2026-03-08T00:00:00.000Z"
+  },
+  "toLevel2": [
+    {
+      "type": "mc",
+      "question": "Which one of the following best defines the period of an AC signal?",
+      "correct": "The time taken for one complete cycle of the waveform",
+      "correctExplanation": "The period (T) is the duration of one full cycle of the AC waveform, measured in seconds.",
+      "distractors": [
+        { "answer": "The number of complete cycles that occur in one second", "explanation": "This defines frequency (f), not period. Frequency is the number of cycles per second, measured in hertz." },
+        { "answer": "The maximum voltage reached during one cycle of the waveform", "explanation": "This describes the peak voltage (Vp), not the period. The period is a measure of time, not voltage." },
+        { "answer": "The total voltage change from the lowest to the highest point in one cycle", "explanation": "This describes the peak-to-peak voltage (Vp-p). The period measures the time for one cycle, not a voltage span." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What is the SI unit of frequency?",
+      "correct": "hertz (Hz)",
+      "correctExplanation": "Frequency is measured in hertz (Hz), where 1 Hz = 1 cycle per second.",
+      "distractors": [
+        { "answer": "seconds (s)", "explanation": "Seconds is the SI unit of period, not frequency. Frequency is measured in hertz." },
+        { "answer": "volts (V)", "explanation": "Volts is the SI unit of voltage, not frequency." },
+        { "answer": "watts (W)", "explanation": "Watts is the SI unit of power, not frequency." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which one of the following correctly states the relationship between frequency and period?",
+      "correct": "f = 1 / T",
+      "correctExplanation": "Frequency and period are reciprocals of each other: f = 1 / T and T = 1 / f.",
+      "distractors": [
+        { "answer": "f = T", "explanation": "Frequency and period are not equal; they are reciprocals. f = 1 / T." },
+        { "answer": "f = 2π / T", "explanation": "2π / T gives the angular frequency (ω), not the frequency (f). f = 1 / T." },
+        { "answer": "f = T / 2", "explanation": "This has no physical basis. The correct relationship is f = 1 / T." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What is the frequency of the standard Australian mains electricity supply?",
+      "correct": "50 Hz",
+      "correctExplanation": "In Australia, the mains electricity supply operates at a frequency of 50 Hz, meaning the voltage completes 50 full cycles every second.",
+      "distractors": [
+        { "answer": "60 Hz", "explanation": "60 Hz is the mains frequency in countries such as the United States and Canada. Australia uses 50 Hz." },
+        { "answer": "100 Hz", "explanation": "100 Hz is not the mains frequency. The Australian standard is 50 Hz." },
+        { "answer": "240 Hz", "explanation": "240 is associated with the rms voltage (240 V in some references), not the frequency. The frequency is 50 Hz." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An AC waveform has a period of 0.020 s. What is its frequency?",
+      "correct": "50 Hz",
+      "correctExplanation": "f = 1 / T = 1 / 0.020 = 50 Hz.",
+      "distractors": [
+        { "answer": "0.020 Hz", "explanation": "0.020 s is the period, not the frequency. f = 1 / 0.020 = 50 Hz." },
+        { "answer": "20 Hz", "explanation": "This results from confusing 0.020 s with 0.050 s. f = 1 / 0.020 = 50 Hz, not 20 Hz." },
+        { "answer": "500 Hz", "explanation": "This results from using T = 0.0020 s instead of 0.020 s. f = 1 / 0.020 = 50 Hz." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "A higher frequency means more complete cycles of the AC waveform occur each second.",
+      "correct": "True",
+      "correctExplanation": "Frequency measures the number of complete cycles per second. A higher frequency means more cycles are completed in the same time interval.",
+      "distractors": [
+        { "answer": "False", "explanation": "By definition, frequency is the number of cycles per second. More cycles per second means a higher frequency." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "If the period of an AC signal is doubled, its frequency is also doubled.",
+      "correct": "False",
+      "correctExplanation": "Since f = 1 / T, doubling the period halves the frequency. Period and frequency are inversely related.",
+      "distractors": [
+        { "answer": "True", "explanation": "Period and frequency are inversely related (f = 1 / T). Doubling T halves f, it does not double it." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the definitions of period and frequency.",
+      "sentence": "The period T of an AC signal is the time for one complete {{blank:1}}, measured in {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "cycle",
+          "correctExplanation": "The period is defined as the time for one complete cycle of the waveform.",
+          "distractors": [
+            { "answer": "peak", "explanation": "The period is the time for a full cycle, not just to reach one peak." },
+            { "answer": "oscillation pair", "explanation": "There is no standard term 'oscillation pair'. The period is the time for one complete cycle." }
+          ]
+        },
+        "2": {
+          "correct": "seconds",
+          "correctExplanation": "Period is a time measurement and its SI unit is seconds (s).",
+          "distractors": [
+            { "answer": "hertz", "explanation": "Hertz is the unit of frequency, not period. Period is measured in seconds." },
+            { "answer": "volts", "explanation": "Volts is the unit of voltage. Period is a time quantity measured in seconds." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the relationship between frequency and period.",
+      "sentence": "Frequency and period are {{blank:1}} of each other. If the period of an AC signal is 0.010 s, the frequency is {{blank:2}} Hz.",
+      "blanks": {
+        "1": {
+          "correct": "reciprocals",
+          "correctExplanation": "f = 1/T and T = 1/f, so frequency and period are reciprocals.",
+          "distractors": [
+            { "answer": "multiples", "explanation": "Period and frequency are not multiples of each other. They are reciprocals: f = 1/T." },
+            { "answer": "equal", "explanation": "Period and frequency are not equal. They are inversely related: f = 1/T." }
+          ]
+        },
+        "2": {
+          "correct": "100",
+          "correctExplanation": "f = 1/T = 1/0.010 = 100 Hz.",
+          "distractors": [
+            { "answer": "10", "explanation": "This results from using f = T × 1000, not f = 1/T. The correct frequency is 100 Hz." },
+            { "answer": "0.010", "explanation": "0.010 is the period in seconds, not the frequency in hertz. f = 1/0.010 = 100 Hz." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the statement about Australian mains frequency.",
+      "sentence": "The Australian mains electricity supply has a frequency of {{blank:1}} Hz, which corresponds to a period of {{blank:2}} s.",
+      "blanks": {
+        "1": {
+          "correct": "50",
+          "correctExplanation": "The standard Australian mains frequency is 50 Hz.",
+          "distractors": [
+            { "answer": "60", "explanation": "60 Hz is used in countries like the USA. Australia uses 50 Hz." },
+            { "answer": "240", "explanation": "240 is associated with the nominal mains voltage, not the frequency." }
+          ]
+        },
+        "2": {
+          "correct": "0.020",
+          "correctExplanation": "T = 1/f = 1/50 = 0.020 s (or 20 ms).",
+          "distractors": [
+            { "answer": "0.050", "explanation": "This would correspond to a frequency of 20 Hz. For 50 Hz, T = 1/50 = 0.020 s." },
+            { "answer": "50",  "explanation": "50 is the frequency in Hz, not the period. T = 1/50 = 0.020 s." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "mc",
+      "question": "Liam observes a voltage-time graph of an AC signal. The waveform starts at zero, rises to a positive peak, returns through zero to a negative peak, and returns to zero at t = 40 ms. Which one of the following gives the period and frequency of this signal?",
+      "correct": "T = 40 ms and f = 25 Hz",
+      "correctExplanation": "One full cycle (zero → positive peak → zero → negative peak → zero) takes 40 ms. Therefore T = 0.040 s and f = 1/0.040 = 25 Hz.",
+      "distractors": [
+        { "answer": "T = 20 ms and f = 50 Hz", "explanation": "20 ms is the time for half a cycle (zero to positive peak and back to zero). The full cycle includes both the positive and negative halves." },
+        { "answer": "T = 40 ms and f = 40 Hz", "explanation": "While the period is correct, f = 1/0.040 = 25 Hz, not 40 Hz." },
+        { "answer": "T = 80 ms and f = 12.5 Hz", "explanation": "80 ms would be two full cycles. The waveform completes one full cycle in 40 ms." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Zoe reads an oscilloscope with a time base setting of 5.0 ms per division. A sinusoidal waveform completes one full cycle over 4.0 divisions. Which one of the following is the frequency of the signal?",
+      "correct": "50 Hz",
+      "correctExplanation": "T = 4.0 × 5.0 = 20 ms = 0.020 s. f = 1/0.020 = 50 Hz.",
+      "distractors": [
+        { "answer": "200 Hz", "explanation": "This results from using one division (5.0 ms) as the period instead of the full 4.0 divisions." },
+        { "answer": "25 Hz", "explanation": "This results from using T = 8.0 divisions instead of 4.0, doubling the period." },
+        { "answer": "100 Hz", "explanation": "This results from using T = 2.0 divisions instead of 4.0, halving the period." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An AC signal has a frequency of 200 Hz. Which one of the following is the period of this signal?",
+      "correct": "5.0 ms",
+      "correctExplanation": "T = 1/f = 1/200 = 0.0050 s = 5.0 ms.",
+      "distractors": [
+        { "answer": "0.50 ms", "explanation": "This results from using T = 1/2000, dividing by ten times the frequency." },
+        { "answer": "20 ms", "explanation": "20 ms corresponds to a frequency of 50 Hz (T = 1/50), not 200 Hz." },
+        { "answer": "200 ms", "explanation": "This confuses the numerical value of the frequency with the period. T = 1/f, not T = f." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A voltage-time graph shows three complete cycles of an AC waveform occurring in 60 ms. Which one of the following is the frequency of the signal?",
+      "correct": "50 Hz",
+      "correctExplanation": "If three complete cycles occur in 60 ms, then one cycle takes T = 60/3 = 20 ms = 0.020 s. f = 1/0.020 = 50 Hz.",
+      "distractors": [
+        { "answer": "17 Hz", "explanation": "This results from using T = 60 ms for one cycle instead of dividing by 3. T = 60/3 = 20 ms." },
+        { "answer": "150 Hz", "explanation": "This results from multiplying 3 × 50 instead of recognising that 50 Hz is the frequency of one cycle." },
+        { "answer": "180 Hz", "explanation": "This results from 3/T with T in ms (3/0.060 ≠ 180). The correct approach is T = 60/3 = 20 ms, then f = 50 Hz." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "On a voltage-time graph, the time between two consecutive positive peaks of a sinusoidal AC signal is 10 ms. Which one of the following is the frequency?",
+      "correct": "100 Hz",
+      "correctExplanation": "The time between two consecutive positive peaks is one full period. T = 10 ms = 0.010 s. f = 1/0.010 = 100 Hz.",
+      "distractors": [
+        { "answer": "50 Hz", "explanation": "50 Hz would correspond to T = 20 ms. The period here is 10 ms, giving f = 100 Hz." },
+        { "answer": "200 Hz", "explanation": "This results from treating 10 ms as half a period. The time between consecutive positive peaks is one full period." },
+        { "answer": "10 Hz", "explanation": "This confuses the period value (10 ms) with the frequency. f = 1/0.010 = 100 Hz." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Marcus is told that an AC signal has a frequency of 50 Hz. He wants to calculate how many complete cycles occur in 0.10 s. Which one of the following is correct?",
+      "correct": "5 cycles",
+      "correctExplanation": "Number of cycles = f × t = 50 × 0.10 = 5 cycles.",
+      "distractors": [
+        { "answer": "50 cycles", "explanation": "50 cycles would occur in 1.0 s. In 0.10 s, only 50 × 0.10 = 5 cycles occur." },
+        { "answer": "500 cycles", "explanation": "This results from multiplying 50 × 10, incorrectly converting 0.10 s. The answer is 50 × 0.10 = 5." },
+        { "answer": "0.50 cycles", "explanation": "This results from dividing 0.10 by 50 × T, which is incorrect. Number of cycles = f × t = 5." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "On a voltage-time graph, the period can be measured as the time between any two consecutive identical points on the waveform that are moving in the same direction.",
+      "correct": "True",
+      "correctExplanation": "The period is the time for one complete cycle. This can be measured between any two consecutive points that are at the same phase, such as successive positive peaks, successive zero crossings in the same direction, or successive negative peaks.",
+      "distractors": [
+        { "answer": "False", "explanation": "The period can indeed be measured between any two consecutive identical phase points. It need not be measured only from zero crossing to zero crossing or from peak to peak." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the oscilloscope reading calculation.",
+      "sentence": "An oscilloscope has a time base of 10 ms per division. A sinusoidal signal completes one full cycle over {{blank:1}} divisions if the frequency is 50 Hz. The period of this signal is {{blank:2}} ms.",
+      "blanks": {
+        "1": {
+          "correct": "2.0",
+          "correctExplanation": "At 50 Hz, T = 1/50 = 20 ms. Number of divisions = 20/10 = 2.0 divisions.",
+          "distractors": [
+            { "answer": "5.0", "explanation": "5.0 divisions would give T = 50 ms, corresponding to f = 20 Hz, not 50 Hz." },
+            { "answer": "1.0", "explanation": "1.0 division would give T = 10 ms, corresponding to f = 100 Hz, not 50 Hz." }
+          ]
+        },
+        "2": {
+          "correct": "20",
+          "correctExplanation": "T = 1/f = 1/50 = 0.020 s = 20 ms.",
+          "distractors": [
+            { "answer": "50", "explanation": "50 is the frequency in Hz, not the period. T = 1/50 = 20 ms." },
+            { "answer": "10", "explanation": "10 ms is the time base per division, not the period. The period is 20 ms." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the frequency calculation from a voltage-time graph.",
+      "sentence": "A voltage-time graph shows that 5 complete cycles of an AC signal occur in 0.10 s. The period is T = {{blank:1}} s and the frequency is f = {{blank:2}} Hz.",
+      "blanks": {
+        "1": {
+          "correct": "0.020",
+          "correctExplanation": "T = total time / number of cycles = 0.10 / 5 = 0.020 s.",
+          "distractors": [
+            { "answer": "0.10", "explanation": "0.10 s is the total time for all 5 cycles, not the period of one cycle." },
+            { "answer": "0.50", "explanation": "This results from multiplying 0.10 × 5 instead of dividing. T = 0.10/5 = 0.020 s." }
+          ]
+        },
+        "2": {
+          "correct": "50",
+          "correctExplanation": "f = 1/T = 1/0.020 = 50 Hz.",
+          "distractors": [
+            { "answer": "5", "explanation": "5 is the number of cycles, not the frequency. f = 1/T = 1/0.020 = 50 Hz." },
+            { "answer": "10", "explanation": "This results from using f = 1/0.10 = 10, but 0.10 s contains 5 cycles, so T = 0.020 s." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the statement about reading period from a graph.",
+      "sentence": "The period of a sinusoidal AC signal can be measured on a voltage-time graph as the horizontal distance between two consecutive {{blank:1}}. On an oscilloscope, this distance is converted to time using the {{blank:2}} setting.",
+      "blanks": {
+        "1": {
+          "correct": "positive peaks",
+          "correctExplanation": "The period is the time between any two consecutive identical phase points, such as two consecutive positive peaks.",
+          "distractors": [
+            { "answer": "voltage values", "explanation": "The same voltage can occur at multiple points within a cycle. The period must be measured between consecutive identical phase points, such as peaks." },
+            { "answer": "turning points", "explanation": "Consecutive turning points include both positive and negative peaks, which are only half a cycle apart. The period requires full-cycle separation." }
+          ]
+        },
+        "2": {
+          "correct": "time base",
+          "correctExplanation": "The time base setting on an oscilloscope specifies the time per horizontal division, allowing the horizontal distance to be converted into a time measurement.",
+          "distractors": [
+            { "answer": "voltage sensitivity", "explanation": "Voltage sensitivity applies to the vertical axis. The time base setting converts horizontal divisions to time." },
+            { "answer": "frequency dial", "explanation": "Oscilloscopes do not typically have a frequency dial. The time base converts horizontal distance to time, from which frequency is calculated." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "mc",
+      "question": "Priya examines a voltage-time graph of an AC signal. She identifies that the time between a positive peak and the next negative peak is 8.0 ms. Which one of the following is the frequency of the signal?",
+      "correct": "62.5 Hz",
+      "correctExplanation": "The time from a positive peak to the next negative peak is half a period: T/2 = 8.0 ms, so T = 16 ms = 0.016 s. f = 1/0.016 = 62.5 Hz.",
+      "distractors": [
+        { "answer": "125 Hz", "explanation": "This results from using 8.0 ms as the full period. However, peak to trough is only half a cycle, so T = 16 ms." },
+        { "answer": "50 Hz", "explanation": "50 Hz corresponds to T = 20 ms. The period here is 16 ms (twice the half-cycle of 8.0 ms)." },
+        { "answer": "31.3 Hz", "explanation": "This results from using T = 2 × 16 = 32 ms, doubling the period instead of the half-period." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Oliver sets up an oscilloscope with a time base of 2.0 ms per division. He observes a sinusoidal trace that completes exactly 2.5 cycles across 10 divisions. Which one of the following is the frequency of the signal?",
+      "correct": "125 Hz",
+      "correctExplanation": "Total time displayed = 10 × 2.0 = 20 ms. Period T = 20/2.5 = 8.0 ms = 0.0080 s. f = 1/0.0080 = 125 Hz.",
+      "distractors": [
+        { "answer": "50 Hz", "explanation": "This would require T = 20 ms. The waveform here has T = 20/2.5 = 8.0 ms." },
+        { "answer": "250 Hz", "explanation": "This results from using T = 20/5 = 4.0 ms, treating 2.5 cycles as 5 half-cycles incorrectly." },
+        { "answer": "500 Hz", "explanation": "This results from using one division (2.0 ms) as the period. T = 8.0 ms, not 2.0 ms." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A voltage-time graph shows an AC signal that crosses zero (going positive) at t = 5.0 ms and next crosses zero (going positive) at t = 25 ms. Which one of the following is the period?",
+      "correct": "20 ms",
+      "correctExplanation": "The time between two consecutive zero crossings in the same direction (both going positive) is one full period: T = 25 − 5.0 = 20 ms.",
+      "distractors": [
+        { "answer": "10 ms", "explanation": "10 ms would be the time between a zero crossing going positive and the next zero crossing going negative, which is only half a period." },
+        { "answer": "25 ms", "explanation": "25 ms is the time coordinate of the second crossing, not the period. T = 25 − 5.0 = 20 ms." },
+        { "answer": "30 ms", "explanation": "This results from adding the two time values (5.0 + 25 = 30) instead of subtracting. T = 25 − 5.0 = 20 ms." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Amara has an AC generator that produces a signal with f = 400 Hz. She displays it on an oscilloscope with a time base of 0.50 ms per division. How many complete cycles appear across 10 divisions?",
+      "correct": "2.0 cycles",
+      "correctExplanation": "T = 1/400 = 2.5 ms. Total time displayed = 10 × 0.50 = 5.0 ms. Number of cycles = 5.0/2.5 = 2.0.",
+      "distractors": [
+        { "answer": "4.0 cycles", "explanation": "This results from using T = 1.25 ms or doubling the number of cycles. T = 2.5 ms, so 5.0/2.5 = 2.0 cycles." },
+        { "answer": "0.50 cycles", "explanation": "This results from using total time/frequency = 5.0/400 × 100 incorrectly. The correct approach gives 2.0 cycles." },
+        { "answer": "8.0 cycles", "explanation": "This results from using T = 0.50 ms (one division) as the period. T = 1/400 = 2.5 ms." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An oscilloscope trace shows a sinusoidal signal. The first positive peak occurs at t = 3.0 ms and the third positive peak occurs at t = 43 ms. Which one of the following is the frequency?",
+      "correct": "50 Hz",
+      "correctExplanation": "Between the 1st and 3rd positive peaks there are 2 complete cycles. Time for 2 cycles = 43 − 3.0 = 40 ms. T = 40/2 = 20 ms = 0.020 s. f = 1/0.020 = 50 Hz.",
+      "distractors": [
+        { "answer": "75 Hz", "explanation": "This results from using 3 cycles instead of 2 between the 1st and 3rd peaks. There are only 2 full cycles between peak 1 and peak 3." },
+        { "answer": "25 Hz", "explanation": "This results from using T = 40 ms without dividing by 2. There are 2 complete periods in the 40 ms interval." },
+        { "answer": "33 Hz", "explanation": "This results from using 3 cycles in 43 ms. The relevant interval is 43 − 3.0 = 40 ms, containing 2 cycles." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Ethan compares two AC signals on a dual-trace oscilloscope. Signal A has a period of 25 ms and signal B has a frequency of 50 Hz. Which one of the following correctly compares these signals?",
+      "correct": "Signal B has a shorter period and a higher frequency than signal A",
+      "correctExplanation": "Signal A: T = 25 ms, f = 1/0.025 = 40 Hz. Signal B: f = 50 Hz, T = 1/50 = 20 ms. Signal B has a shorter period (20 ms < 25 ms) and higher frequency (50 Hz > 40 Hz).",
+      "distractors": [
+        { "answer": "Both signals have the same frequency of 50 Hz", "explanation": "Signal A has f = 1/0.025 = 40 Hz, not 50 Hz. The signals have different frequencies." },
+        { "answer": "Signal A has a higher frequency because it has a longer period", "explanation": "A longer period corresponds to a lower frequency, not a higher one. Signal A has f = 40 Hz." },
+        { "answer": "Signal A has a shorter period than signal B", "explanation": "Signal A has T = 25 ms and signal B has T = 20 ms. Signal A has the longer period." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student reads a voltage-time graph and determines that the time between the first and fourth zero crossings (all in the same direction, going positive) is 60 ms. Which one of the following is the frequency?",
+      "correct": "50 Hz",
+      "correctExplanation": "Between the 1st and 4th identical zero crossings there are 3 complete cycles. T = 60/3 = 20 ms = 0.020 s. f = 1/0.020 = 50 Hz.",
+      "distractors": [
+        { "answer": "67 Hz", "explanation": "This results from using 4 cycles instead of 3. Between the 1st and 4th crossings there are 3 complete periods." },
+        { "answer": "17 Hz", "explanation": "This results from using 60 ms as the period for one cycle. 60 ms spans 3 cycles, so T = 20 ms." },
+        { "answer": "25 Hz", "explanation": "This results from T = 60/1.5 = 40 ms, incorrectly halving the number of cycles." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the oscilloscope measurement calculation.",
+      "sentence": "An oscilloscope has a time base of 2.0 ms per division. A sinusoidal waveform has consecutive positive peaks separated by 5.0 divisions. The period is {{blank:1}} ms and the frequency is {{blank:2}} Hz.",
+      "blanks": {
+        "1": {
+          "correct": "10",
+          "correctExplanation": "T = 5.0 divisions × 2.0 ms/division = 10 ms.",
+          "distractors": [
+            { "answer": "2.0", "explanation": "2.0 ms is the time per division, not the period. T = 5.0 × 2.0 = 10 ms." },
+            { "answer": "5.0", "explanation": "5.0 is the number of divisions, not the time. Multiply by the time base: 5.0 × 2.0 = 10 ms." }
+          ]
+        },
+        "2": {
+          "correct": "100",
+          "correctExplanation": "f = 1/T = 1/0.010 = 100 Hz.",
+          "distractors": [
+            { "answer": "50", "explanation": "50 Hz corresponds to T = 20 ms. Here T = 10 ms, so f = 100 Hz." },
+            { "answer": "500", "explanation": "This results from using T = 2.0 ms. The full period is 10 ms, giving f = 100 Hz." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the graph reading analysis.",
+      "sentence": "A voltage-time graph shows a sinusoidal AC signal. The signal crosses zero going positive at t = 12 ms. The next time it crosses zero going positive is at t = {{blank:1}} ms if the frequency is 50 Hz. The time between the positive peak and the following negative peak is {{blank:2}} ms.",
+      "blanks": {
+        "1": {
+          "correct": "32",
+          "correctExplanation": "T = 1/50 = 20 ms. The next identical zero crossing occurs one period later: 12 + 20 = 32 ms.",
+          "distractors": [
+            { "answer": "22", "explanation": "This adds 10 ms (half a period), which gives the zero crossing going negative, not the next crossing going positive." },
+            { "answer": "62", "explanation": "This adds 50 ms, which is 2.5 periods. The next identical crossing is one period later at 32 ms." }
+          ]
+        },
+        "2": {
+          "correct": "10",
+          "correctExplanation": "The positive peak to the next negative peak is half a cycle: T/2 = 20/2 = 10 ms.",
+          "distractors": [
+            { "answer": "20", "explanation": "20 ms is the full period. The time from positive peak to negative peak is half the period: 10 ms." },
+            { "answer": "5.0", "explanation": "5.0 ms is a quarter period. The time from positive peak to negative peak is half a period: 10 ms." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the multi-step calculation.",
+      "sentence": "An AC signal displayed on an oscilloscope spans 8.0 divisions for one complete cycle with a time base of 2.5 ms per division. The period is {{blank:1}} ms and the signal completes {{blank:2}} cycles in 0.10 s.",
+      "blanks": {
+        "1": {
+          "correct": "20",
+          "correctExplanation": "T = 8.0 × 2.5 = 20 ms.",
+          "distractors": [
+            { "answer": "3.2", "explanation": "This results from dividing 8.0 by 2.5. The correct operation is multiplication: 8.0 × 2.5 = 20 ms." },
+            { "answer": "10", "explanation": "This would require 4.0 divisions per cycle or a different time base. T = 8.0 × 2.5 = 20 ms." }
+          ]
+        },
+        "2": {
+          "correct": "5",
+          "correctExplanation": "f = 1/0.020 = 50 Hz. In 0.10 s: cycles = f × t = 50 × 0.10 = 5.",
+          "distractors": [
+            { "answer": "50", "explanation": "50 is the frequency in Hz. In 0.10 s, the number of cycles is 50 × 0.10 = 5." },
+            { "answer": "2", "explanation": "This results from 0.10/0.050, using an incorrect period. With T = 0.020 s, cycles = 0.10/0.020 = 5." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "mc",
+      "question": "A technician observes an oscilloscope trace of a signal from a damaged generator. The trace shows a sinusoidal waveform where the time between the 1st and 6th positive peaks is 90 ms. Which one of the following is closest to the frequency?",
+      "correct": "56 Hz",
+      "correctExplanation": "Between the 1st and 6th positive peaks there are 5 complete cycles. T = 90/5 = 18 ms = 0.018 s. f = 1/0.018 ≈ 55.6 Hz ≈ 56 Hz.",
+      "distractors": [
+        { "answer": "67 Hz", "explanation": "This results from using 6 cycles instead of 5. Between the 1st and 6th peaks there are only 5 intervals." },
+        { "answer": "11 Hz", "explanation": "This results from using T = 90 ms as a single period. The 90 ms spans 5 complete cycles." },
+        { "answer": "50 Hz", "explanation": "50 Hz would require T = 20 ms, giving 5 cycles in 100 ms. Here, 5 cycles occur in 90 ms, so the frequency is higher." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Sophia connects two AC generators in series. Generator A produces a 50 Hz signal and generator B produces a 60 Hz signal. She displays the combined output on an oscilloscope. Which one of the following best describes what she observes?",
+      "correct": "A complex waveform that is not sinusoidal, repeating with a beat frequency of 10 Hz",
+      "correctExplanation": "When two sinusoidal signals of different frequencies are combined, the result is a complex waveform showing beats. The beat frequency is |f₁ − f₂| = |50 − 60| = 10 Hz.",
+      "distractors": [
+        { "answer": "A sinusoidal waveform with a frequency of 110 Hz, the sum of the two frequencies", "explanation": "The combined signal is not sinusoidal at a single frequency. Two different frequencies produce a complex waveform with beats." },
+        { "answer": "A sinusoidal waveform with a frequency of 55 Hz, the average of the two frequencies", "explanation": "The combined waveform is not a simple sinusoid. It shows a beat pattern, not a single averaged frequency." },
+        { "answer": "A steady DC voltage equal to the sum of the two peak voltages", "explanation": "Adding two AC signals does not produce DC. The result is a complex oscillating waveform." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "James measures an AC signal on an oscilloscope and determines f = 50 Hz. He then measures the same signal with a digital frequency counter and obtains f = 50.2 Hz. Which one of the following best explains the discrepancy?",
+      "correct": "The oscilloscope measurement has limited precision due to the difficulty of reading exact division positions on the screen",
+      "correctExplanation": "Oscilloscope readings depend on visually estimating the positions of peaks or zero crossings on a screen, which introduces uncertainty. A digital frequency counter uses electronic counting and is typically more precise.",
+      "distractors": [
+        { "answer": "The frequency counter is inaccurate because it cannot measure sinusoidal waveforms correctly", "explanation": "Digital frequency counters are designed to measure sinusoidal and other waveforms accurately. They are generally more precise than oscilloscope readings." },
+        { "answer": "The frequency has changed between the two measurements due to the generator heating up", "explanation": "While generator frequency can vary slightly, 0.2 Hz is more consistent with measurement precision differences than thermal drift." },
+        { "answer": "The oscilloscope is always correct and the frequency counter must be malfunctioning", "explanation": "Oscilloscope readings are subject to visual estimation errors. The digital frequency counter is likely the more precise measurement." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An engineer needs to determine whether an AC supply is operating at exactly 50 Hz. The oscilloscope has a time base accuracy of ±3%. She measures the period as 20 ms. Which one of the following is the best conclusion?",
+      "correct": "The frequency is consistent with 50 Hz, but the ±3% uncertainty means the actual frequency could be anywhere from approximately 48.5 to 51.5 Hz",
+      "correctExplanation": "A ±3% uncertainty on T = 20 ms gives T = 20 ± 0.6 ms. This gives f between 1/0.0206 ≈ 48.5 Hz and 1/0.0194 ≈ 51.5 Hz. The measurement is consistent with 50 Hz but cannot confirm it exactly.",
+      "distractors": [
+        { "answer": "The frequency is exactly 50 Hz because T = 20 ms gives f = 1/0.020 = 50 Hz with no uncertainty", "explanation": "All measurements have uncertainty. With ±3% on the time base, the calculated frequency has a corresponding uncertainty range." },
+        { "answer": "The measurement proves the frequency is not 50 Hz because oscilloscope readings always differ from the true value", "explanation": "Oscilloscope readings can be consistent with the true value within their uncertainty range. This measurement is consistent with 50 Hz." },
+        { "answer": "The ±3% uncertainty applies only to the voltage axis and does not affect the frequency measurement", "explanation": "The ±3% refers to the time base accuracy, which directly affects period measurements and therefore frequency calculations." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Ava displays a 50 Hz signal on an oscilloscope and adjusts the time base to 1.0 ms per division. The screen has 10 divisions. Which one of the following best describes what she sees?",
+      "correct": "Half a cycle of the waveform, because the screen shows only 10 ms of time",
+      "correctExplanation": "Total time on screen = 10 × 1.0 = 10 ms. At 50 Hz, T = 20 ms. Only 10/20 = 0.50 of a cycle is visible, so she sees half a cycle.",
+      "distractors": [
+        { "answer": "Two complete cycles, because T/2 = 10 ms fits twice on the screen", "explanation": "T/2 = 10 ms is the time on screen, which shows half a cycle, not two. Two full cycles would need 40 ms." },
+        { "answer": "Five complete cycles, because 50 Hz means 5 cycles per 10 ms", "explanation": "50 Hz means 50 cycles per second, or 1 cycle per 20 ms. In 10 ms, only 0.5 of a cycle appears." },
+        { "answer": "One complete cycle, because the period equals the screen width", "explanation": "The screen width is 10 ms, but the period is 20 ms. Only half a cycle is displayed." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student analyses two voltage-time graphs. Graph X shows a 50 Hz signal with Vp = 100 V. Graph Y shows a 200 Hz signal with Vp = 100 V. Which one of the following correctly compares the rate of change of voltage at the zero crossing for each signal?",
+      "correct": "Signal Y has a rate of change four times greater than signal X at the zero crossing",
+      "correctExplanation": "The maximum rate of change of V = Vp sin(2πft) is dV/dt = 2πfVp. For equal Vp, the ratio is fY/fX = 200/50 = 4. Signal Y has 4 times the rate of change at zero crossing.",
+      "distractors": [
+        { "answer": "Both signals have the same rate of change because they have equal peak voltages", "explanation": "Equal peak voltages do not mean equal rates of change. Higher frequency increases the rate at which the voltage oscillates." },
+        { "answer": "Signal Y has a rate of change two times greater, proportional to the ratio of periods", "explanation": "The rate of change is proportional to frequency, not the square root of frequency. f ratio = 200/50 = 4, not 2." },
+        { "answer": "Signal X has a greater rate of change because it has a longer period to build up voltage", "explanation": "A longer period means a slower oscillation and a smaller rate of change, not greater." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Kai measures a signal on an oscilloscope and records the time between two points where the waveform crosses zero going in the same direction. His recorded time is 10 ms. His partner Mia measures the same interval and records 10.5 ms. The oscilloscope has 0.50 ms per division. Which one of the following best evaluates the precision of their measurements?",
+      "correct": "Both readings agree within one division (0.50 ms), indicating reasonable measurement consistency",
+      "correctExplanation": "The difference between the readings is 10.5 − 10.0 = 0.5 ms, which equals one division on the oscilloscope. This level of agreement is typical for visual readings on an oscilloscope.",
+      "distractors": [
+        { "answer": "The measurements disagree significantly, indicating a systematic error in one oscilloscope", "explanation": "A 0.5 ms difference is only one division, which is within typical reading precision. This does not indicate systematic error." },
+        { "answer": "The measurements cannot be compared because they used different time base settings", "explanation": "Both used the same oscilloscope with the same time base. Their readings differ by only one division." },
+        { "answer": "Both readings should be discarded because the oscilloscope is too imprecise for frequency measurements", "explanation": "The oscilloscope provides measurements within one division, which is acceptable precision for many applications." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An AC generator rotates at 3000 revolutions per minute. Assuming the generator has a single pair of magnetic poles, which one of the following is the frequency of the output voltage?",
+      "correct": "50 Hz",
+      "correctExplanation": "3000 revolutions per minute = 3000/60 = 50 revolutions per second. With one pole pair, each revolution produces one complete cycle. Therefore f = 50 Hz.",
+      "distractors": [
+        { "answer": "3000 Hz", "explanation": "3000 is the rotation rate in revolutions per minute, not the frequency in Hz. Convert: 3000/60 = 50 Hz." },
+        { "answer": "100 Hz", "explanation": "100 Hz would require 6000 rpm with a single pole pair, or 3000 rpm with two pole pairs." },
+        { "answer": "25 Hz", "explanation": "This results from dividing 3000 by 120, which would apply to a two-pole-pair generator. With one pole pair, f = 3000/60 = 50 Hz." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the analysis of oscilloscope precision.",
+      "sentence": "An oscilloscope has a time base of 5.0 ms per division with ±2% accuracy. A student measures the period as 4.0 divisions. The nominal period is {{blank:1}} ms, and the actual frequency could range from approximately {{blank:2}} Hz to 51 Hz.",
+      "blanks": {
+        "1": {
+          "correct": "20",
+          "correctExplanation": "Nominal T = 4.0 × 5.0 = 20 ms.",
+          "distractors": [
+            { "answer": "4.0", "explanation": "4.0 is the number of divisions, not the time. T = 4.0 × 5.0 = 20 ms." },
+            { "answer": "5.0", "explanation": "5.0 ms is the time per division. The period is 4.0 divisions × 5.0 ms/div = 20 ms." }
+          ]
+        },
+        "2": {
+          "correct": "49",
+          "correctExplanation": "With ±2% accuracy: T ranges from 20 × 0.98 = 19.6 ms to 20 × 1.02 = 20.4 ms. f ranges from 1/0.0204 ≈ 49.0 Hz to 1/0.0196 ≈ 51.0 Hz.",
+          "distractors": [
+            { "answer": "48", "explanation": "48 Hz would correspond to a ±4% uncertainty, not ±2%. With ±2%, the lower bound is approximately 49 Hz." },
+            { "answer": "50", "explanation": "50 Hz is the nominal value. The lower bound with ±2% uncertainty is approximately 49 Hz." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the generator frequency analysis.",
+      "sentence": "A generator with 2 pairs of magnetic poles rotates at 1500 revolutions per minute. Each revolution produces {{blank:1}} complete voltage cycles, so the output frequency is {{blank:2}} Hz.",
+      "blanks": {
+        "1": {
+          "correct": "2",
+          "correctExplanation": "Each pair of poles produces one complete cycle per revolution. With 2 pairs of poles, there are 2 cycles per revolution.",
+          "distractors": [
+            { "answer": "1", "explanation": "One cycle per revolution applies only to a single-pole-pair generator. With 2 pole pairs, each revolution produces 2 cycles." },
+            { "answer": "4", "explanation": "The number of cycles equals the number of pole pairs, not double the number of pole pairs. 2 pole pairs give 2 cycles per revolution." }
+          ]
+        },
+        "2": {
+          "correct": "50",
+          "correctExplanation": "Rotation rate = 1500/60 = 25 revolutions per second. With 2 cycles per revolution: f = 25 × 2 = 50 Hz.",
+          "distractors": [
+            { "answer": "25", "explanation": "25 Hz would be correct for a single pole pair. With 2 pole pairs, f = 25 × 2 = 50 Hz." },
+            { "answer": "1500", "explanation": "1500 is the rotation rate in rpm. Converting: 1500/60 × 2 = 50 Hz." }
+          ]
+        }
+      }
+    }
+  ]
+}

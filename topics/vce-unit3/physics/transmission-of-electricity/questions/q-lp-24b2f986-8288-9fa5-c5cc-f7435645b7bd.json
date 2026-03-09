@@ -1,0 +1,527 @@
+{
+  "_link": {
+    "uuid": "lp-24b2f986-8288-9fa5-c5cc-f7435645b7bd",
+    "version": 1,
+    "contentHash": "hash-5ecbb0cd",
+    "title": "I can describe the typical voltage levels in the Australian electricity grid from generation to household",
+    "generatedAt": "2026-03-07T18:50:00Z"
+  },
+  "toLevel2": [
+    {
+      "type": "mc",
+      "question": "At what voltage range is electricity typically generated at Australian power stations?",
+      "correct": "11–33 kV",
+      "correctExplanation": "Australian generators typically produce electricity at 11–33 kV before it is stepped up for transmission.",
+      "distractors": [
+        { "answer": "230 V", "explanation": "230 V is the household supply voltage, not the generation voltage." },
+        { "answer": "220–500 kV", "explanation": "220–500 kV is the long-distance transmission voltage, not the generation voltage." },
+        { "answer": "415 V", "explanation": "415 V is the three-phase supply voltage for commercial use, not the generation voltage." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What voltage range is used for long-distance transmission of electricity across Australia?",
+      "correct": "220–500 kV",
+      "correctExplanation": "Long-distance transmission lines in Australia operate at 220–500 kV to minimise power losses.",
+      "distractors": [
+        { "answer": "11–33 kV", "explanation": "11–33 kV is the generation voltage, not the transmission voltage." },
+        { "answer": "11–66 kV", "explanation": "11–66 kV is used for regional distribution, not long-distance transmission." },
+        { "answer": "230 V", "explanation": "230 V is the household voltage, far too low for long-distance transmission." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What voltage do Australian households typically receive from the electricity grid?",
+      "correct": "230 V",
+      "correctExplanation": "The standard household supply in Australia is 230 V (single phase), stepped down from higher distribution voltages.",
+      "distractors": [
+        { "answer": "415 V", "explanation": "415 V is the three-phase supply used by larger commercial or industrial premises." },
+        { "answer": "11 kV", "explanation": "11 kV is a distribution voltage used between substations, not at households." },
+        { "answer": "66 kV", "explanation": "66 kV is a regional distribution voltage, far too high for household use." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which one of the following best describes the purpose of stepping up the voltage after generation?",
+      "correct": "To reduce current and minimise power losses during transmission",
+      "correctExplanation": "Higher voltage means lower current for the same power, reducing I²R losses in the transmission lines.",
+      "distractors": [
+        { "answer": "To increase the total power available for consumers", "explanation": "The total power is set by the generators. Stepping up voltage does not increase power." },
+        { "answer": "To make the electricity safer for transmission over long distances", "explanation": "Higher voltages are more dangerous, not safer. The purpose is to reduce losses." },
+        { "answer": "To increase the speed at which electricity travels through the wires", "explanation": "The speed of electrical signals is not significantly affected by voltage." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "How many transformer stages does electricity typically pass through between a power station and a household in Australia?",
+      "correct": "At least three",
+      "correctExplanation": "Electricity is stepped up at the power station, stepped down at regional substations, and stepped down again at local transformers near homes.",
+      "distractors": [
+        { "answer": "One", "explanation": "One transformer cannot bridge the gap from generation voltage to household voltage in a practical system." },
+        { "answer": "None", "explanation": "Without transformers, the transmission losses would be enormous and voltage levels inappropriate." },
+        { "answer": "Exactly two", "explanation": "While two are the minimum, the Australian grid typically uses at least three stages." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "Electricity in Australia is generated at 230 V and transmitted at that voltage directly to households.",
+      "correct": "False",
+      "correctExplanation": "Electricity is generated at 11–33 kV, stepped up to 220–500 kV for transmission, and stepped down through several stages to reach 230 V at households.",
+      "distractors": [
+        { "answer": "True", "explanation": "Students may think the voltage stays constant from generation to use, but it is transformed multiple times." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "Long-distance transmission lines in Australia operate at voltages between 220 kV and 500 kV.",
+      "correct": "True",
+      "correctExplanation": "The Australian long-distance transmission grid operates at 220–500 kV to minimise power losses.",
+      "distractors": [
+        { "answer": "False", "explanation": "Students may confuse transmission voltages with generation or distribution voltages." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the Australian electricity grid.",
+      "sentence": "Electricity is generated at 11–33 kV and stepped {{blank:1}} to 220–500 kV for long-distance transmission.",
+      "blanks": {
+        "1": {
+          "correct": "up",
+          "correctExplanation": "The voltage is increased (stepped up) from generation level to transmission level to reduce losses.",
+          "distractors": [
+            { "answer": "down", "explanation": "Stepping down would reduce the voltage, increasing current and losses." },
+            { "answer": "across", "explanation": "'Stepped across' is not a standard electrical term for voltage transformation." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about household voltage.",
+      "sentence": "Before reaching Australian homes at 230 V, electricity from high-voltage transmission lines passes through several {{blank:1}} transformers.",
+      "blanks": {
+        "1": {
+          "correct": "step-down",
+          "correctExplanation": "The voltage must be reduced from transmission levels to household levels using step-down transformers.",
+          "distractors": [
+            { "answer": "step-up", "explanation": "Step-up transformers increase voltage. To reduce from transmission voltage to 230 V, step-down is needed." },
+            { "answer": "isolation", "explanation": "Isolation transformers maintain the same voltage. Step-down transformers are needed to reduce it." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the voltage sequence in the Australian grid.",
+      "sentence": "From the power station to the home, the voltage goes from 11–33 kV to 220–500 kV for transmission, then down to 11–66 kV for distribution, and finally to {{blank:1}} V for households.",
+      "blanks": {
+        "1": {
+          "correct": "230",
+          "correctExplanation": "Australian household supply is 230 V, the final step-down from distribution voltage.",
+          "distractors": [
+            { "answer": "415", "explanation": "415 V is the three-phase commercial supply, not the standard single-phase household voltage." },
+            { "answer": "110", "explanation": "110 V is used in North America, not Australia." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "mc",
+      "question": "A power station in the Latrobe Valley generates electricity at 25 kV. The voltage is stepped up to 500 kV for transmission to Melbourne. Which one of the following best explains why the voltage is not transmitted at 25 kV?",
+      "correct": "Transmitting at 25 kV would require much higher current, causing unacceptable power losses",
+      "correctExplanation": "At 25 kV the current would be 20 times higher than at 500 kV, and power loss (I²R) would be 400 times greater.",
+      "distractors": [
+        { "answer": "25 kV is too low to push electrons through long transmission wires", "explanation": "Voltage does not push electrons through wire resistance in this way. The issue is current and power loss." },
+        { "answer": "25 kV would cause the wires to overheat and melt", "explanation": "While high currents can cause heating, the primary engineering reason is the enormous power loss." },
+        { "answer": "500 kV is needed to overcome the resistance of the long wires", "explanation": "The voltage is stepped up to reduce current, not to overcome resistance." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Why are multiple step-down transformer stages used between the transmission line and the household, rather than a single transformer?",
+      "correct": "Different users require different voltages, and substations serve as distribution hubs",
+      "correctExplanation": "Factories need 11–66 kV, commercial premises need 415 V, and homes need 230 V. Multiple stages efficiently distribute power at appropriate voltages.",
+      "distractors": [
+        { "answer": "A single transformer from 500 kV to 230 V would be impossibly large", "explanation": "While large ratios are challenging, the main reason is that different loads need different voltages." },
+        { "answer": "Transformers can only change voltage by a factor of 10 at most", "explanation": "There is no such limit on transformer turns ratios, though practical designs use multiple stages." },
+        { "answer": "Multiple transformers are cheaper than a single large one", "explanation": "Cost is not the primary reason. The grid serves different users at different voltages." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which one of the following correctly orders the voltage levels from highest to lowest in the Australian electricity grid?",
+      "correct": "Transmission (500 kV) → Regional distribution (66 kV) → Local distribution (11 kV) → Household (230 V)",
+      "correctExplanation": "This sequence correctly describes the progressive step-down of voltage from transmission to final consumer use.",
+      "distractors": [
+        { "answer": "Generation (500 kV) → Transmission (66 kV) → Distribution (11 kV) → Household (230 V)", "explanation": "Generation occurs at 11–33 kV, not 500 kV. The 500 kV is the transmission voltage." },
+        { "answer": "Household (230 V) → Local (11 kV) → Regional (66 kV) → Transmission (500 kV)", "explanation": "This is the reverse order. Voltage decreases from transmission to household, not increases." },
+        { "answer": "Transmission (500 kV) → Household (230 V) → Distribution (66 kV) → Regional (11 kV)", "explanation": "The voltage is stepped down progressively. The household receives the lowest voltage, at the end." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A factory operating heavy machinery requires 33 kV supply. At what stage of the grid hierarchy does this factory connect?",
+      "correct": "At the regional distribution level, after the first step-down from transmission voltage",
+      "correctExplanation": "Factories requiring 11–66 kV connect at the regional distribution level, before the voltage is stepped down further for local use.",
+      "distractors": [
+        { "answer": "Directly to the transmission line at 500 kV", "explanation": "No factory connects directly at 500 kV. That is the long-distance transmission voltage." },
+        { "answer": "At the household level with a special transformer", "explanation": "33 kV is much higher than household voltage and is delivered from regional substations." },
+        { "answer": "At the generation stage before the step-up transformer", "explanation": "Generators supply to the grid, not directly to factories at generation voltage." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What type of transformer is located on power poles in residential streets in Australia?",
+      "correct": "A step-down transformer converting 11 kV to 230 V",
+      "correctExplanation": "Pole-mounted transformers in residential areas perform the final step-down from local distribution voltage to household voltage.",
+      "distractors": [
+        { "answer": "A step-up transformer converting 230 V to 11 kV", "explanation": "Step-up would increase voltage. Residential pole transformers step down to supply homes." },
+        { "answer": "A step-down transformer converting 500 kV to 230 V", "explanation": "500 kV is transmission voltage. It is stepped down to 11 kV at substations before reaching street poles." },
+        { "answer": "An isolation transformer providing safety from the grid", "explanation": "Pole transformers are step-down transformers, not isolation transformers." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which one of the following best explains why Australian three-phase commercial supply is 415 V rather than 230 V?",
+      "correct": "415 V is the line-to-line voltage of the three-phase system whose line-to-neutral voltage is 230 V",
+      "correctExplanation": "In a three-phase system, the line-to-line voltage is √3 times the line-to-neutral voltage: 230 × √3 ≈ 415 V.",
+      "distractors": [
+        { "answer": "Commercial buildings are supplied by a separate, higher-voltage grid", "explanation": "Commercial and residential supply come from the same distribution system. 415 V is a property of three-phase." },
+        { "answer": "415 V is used because commercial equipment is more robust than household appliances", "explanation": "The voltage is determined by the three-phase system, not by equipment robustness." },
+        { "answer": "A step-up transformer in the building converts 230 V to 415 V", "explanation": "415 V comes directly from the three-phase supply, not from an internal step-up transformer." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "Factories that require high-power supply connect to the grid at a higher voltage than households do.",
+      "correct": "True",
+      "correctExplanation": "Large factories connect at 11–66 kV, while households connect at 230 V, because higher voltage reduces the current needed for large power demands.",
+      "distractors": [
+        { "answer": "False", "explanation": "Students may think all consumers receive the same voltage, but industrial users connect at higher distribution voltages." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the description of the grid voltage stages.",
+      "sentence": "At the power station, a {{blank:1}} transformer increases the voltage from 11–33 kV to 220–500 kV for long-distance {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "step-up",
+          "correctExplanation": "A step-up transformer increases voltage from the generation level to the transmission level.",
+          "distractors": [
+            { "answer": "step-down", "explanation": "Step-down would decrease voltage, which is the opposite of what is needed for efficient transmission." },
+            { "answer": "isolation", "explanation": "Isolation transformers do not change voltage. The voltage must be increased." }
+          ]
+        },
+        "2": {
+          "correct": "transmission",
+          "correctExplanation": "The high voltage is used for long-distance transmission to minimise power losses.",
+          "distractors": [
+            { "answer": "generation", "explanation": "Generation occurs at the power station. Transmission is the transport of electricity over distance." },
+            { "answer": "distribution", "explanation": "Distribution is the lower-voltage stage closer to consumers. Long-distance transport is called transmission." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about regional substations.",
+      "sentence": "Regional substations step down the voltage from 220–500 kV to {{blank:1}} kV for distribution to factories and local substations.",
+      "blanks": {
+        "1": {
+          "correct": "11–66",
+          "correctExplanation": "Regional substations reduce the transmission voltage to 11–66 kV for regional distribution.",
+          "distractors": [
+            { "answer": "230", "explanation": "230 V is the final household voltage, not the regional distribution voltage. The unit would also need to be V, not kV." },
+            { "answer": "220–500", "explanation": "This is the transmission voltage, not the distribution voltage. It is stepped down at regional substations." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the final step-down.",
+      "sentence": "The last transformer before a home steps the voltage down from approximately 11 kV to {{blank:1}} V for household use.",
+      "blanks": {
+        "1": {
+          "correct": "230",
+          "correctExplanation": "Australian homes receive 230 V from the final pole-mounted or pad-mounted transformer.",
+          "distractors": [
+            { "answer": "415", "explanation": "415 V is the three-phase commercial voltage, not the single-phase household voltage." },
+            { "answer": "110", "explanation": "110 V is the household voltage in North America, not Australia." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "mc",
+      "question": "A power station generates 500 MW at 25 kV. The voltage is stepped up to 500 kV for transmission. Which one of the following is closest to the current in the transmission line?",
+      "correct": "1000 A",
+      "correctExplanation": "I = P/V = 500 × 10⁶ / (500 × 10³) = 1000 A.",
+      "distractors": [
+        { "answer": "20 000 A", "explanation": "This is the current at the generator voltage (25 kV), not at the transmission voltage." },
+        { "answer": "100 A", "explanation": "This may result from dividing by 5000 kV instead of 500 kV." },
+        { "answer": "250 A", "explanation": "This may result from an incorrect division of power by voltage." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "In the Latrobe Valley, a power station generates at 22 kV. A step-up transformer with a turns ratio of 1:20 connects to the transmission line. Which one of the following is closest to the transmission voltage?",
+      "correct": "440 kV",
+      "correctExplanation": "V₂ = V₁ × (N₂/N₁) = 22 × 20 = 440 kV.",
+      "distractors": [
+        { "answer": "1.1 kV", "explanation": "This divides instead of multiplying. A step-up transformer increases voltage." },
+        { "answer": "220 kV", "explanation": "This uses a turns ratio of 1:10 instead of 1:20." },
+        { "answer": "44 kV", "explanation": "This uses a turns ratio of 1:2 instead of 1:20." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A substation steps down from 220 kV to 66 kV. If the current on the 220 kV side is 400 A, which one of the following is closest to the current on the 66 kV side (assuming an ideal transformer)?",
+      "correct": "1330 A",
+      "correctExplanation": "For an ideal transformer, V₁I₁ = V₂I₂. I₂ = V₁I₁/V₂ = 220 × 400 / 66 = 1333 A ≈ 1330 A.",
+      "distractors": [
+        { "answer": "120 A", "explanation": "This may result from dividing instead of multiplying. Stepping down voltage increases current." },
+        { "answer": "400 A", "explanation": "The current changes when voltage is transformed. It is not the same on both sides." },
+        { "answer": "3330 A", "explanation": "This may result from using a voltage ratio of 220/66 squared instead of the correct ratio." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A local transformer steps down from 11 kV to 230 V. Which one of the following is closest to the turns ratio N₁:N₂?",
+      "correct": "48:1",
+      "correctExplanation": "N₁/N₂ = V₁/V₂ = 11 000/230 = 47.8 ≈ 48:1.",
+      "distractors": [
+        { "answer": "1:48", "explanation": "This is the inverse ratio. The primary has more turns than the secondary in a step-down transformer." },
+        { "answer": "11:1", "explanation": "This uses kV directly without converting to the same unit. 11 kV / 230 V = 48, not 11." },
+        { "answer": "230:1", "explanation": "This is not the correct ratio. N₁/N₂ = 11000/230 ≈ 48." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A transmission line operates at 330 kV with a current of 600 A. At a regional substation, the voltage is stepped down to 33 kV. If the line resistance before the substation is 5.0 Ω, which one of the following is closest to the power lost in the transmission line?",
+      "correct": "1.8 MW",
+      "correctExplanation": "Ploss = I²R = 600² × 5.0 = 360 000 × 5.0 = 1.8 × 10⁶ W = 1.8 MW.",
+      "distractors": [
+        { "answer": "18 MW", "explanation": "This is ten times too large, possibly from a calculation error." },
+        { "answer": "0.18 MW", "explanation": "This is ten times too small, possibly from using 60 A instead of 600 A." },
+        { "answer": "3.0 MW", "explanation": "This may result from using P = IV instead of P = I²R." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A renewable energy farm generates 50 MW at 690 V (typical for wind turbines). A step-up transformer raises this to 33 kV for connection to the regional grid. Which one of the following is closest to the turns ratio required?",
+      "correct": "1:48",
+      "correctExplanation": "N₂/N₁ = V₂/V₁ = 33 000/690 = 47.8 ≈ 48. Turns ratio is 1:48 (step-up).",
+      "distractors": [
+        { "answer": "48:1", "explanation": "This is a step-down ratio. The wind farm needs a step-up transformer." },
+        { "answer": "1:480", "explanation": "This may result from using 69 V instead of 690 V." },
+        { "answer": "1:4.8", "explanation": "This may result from using 6.9 kV instead of 690 V." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student traces the path of electricity from a coal power station to a kitchen toaster. The generation voltage is 22 kV and the toaster operates at 230 V. If all transformers are ideal, which one of the following is closest to the overall voltage ratio from generation to household?",
+      "correct": "96:1 (step-down overall)",
+      "correctExplanation": "Overall ratio = 22 000/230 = 95.7 ≈ 96:1. Multiple transformers achieve this combined ratio.",
+      "distractors": [
+        { "answer": "1:96 (step-up overall)", "explanation": "The overall transformation is step-down, from 22 kV to 230 V." },
+        { "answer": "22:1 (step-down)", "explanation": "This uses kV and V directly. 22 000 V / 230 V ≈ 96, not 22." },
+        { "answer": "10:1 (step-down)", "explanation": "This significantly underestimates the voltage ratio. The correct ratio is approximately 96." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the calculation for a transmission system.",
+      "sentence": "A power station generates 200 MW at 20 kV. After stepping up to 400 kV, the transmission current is {{blank:1}} A.",
+      "blanks": {
+        "1": {
+          "correct": "500",
+          "correctExplanation": "I = P/V = 200 × 10⁶ / (400 × 10³) = 500 A.",
+          "distractors": [
+            { "answer": "10 000", "explanation": "This is the current at the generator (200 MW / 20 kV), not at the transmission voltage." },
+            { "answer": "50", "explanation": "This may result from dividing by 4000 kV instead of 400 kV." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the transformer calculation.",
+      "sentence": "A substation transformer steps down from 132 kV to 11 kV. The turns ratio N₁:N₂ is {{blank:1}}:1.",
+      "blanks": {
+        "1": {
+          "correct": "12",
+          "correctExplanation": "N₁/N₂ = V₁/V₂ = 132/11 = 12.",
+          "distractors": [
+            { "answer": "121", "explanation": "This may result from dividing 132 000 by 1100 or another error." },
+            { "answer": "132", "explanation": "This uses the primary voltage directly, not the ratio." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about grid structure.",
+      "sentence": "The Australian grid uses {{blank:1}} voltage for long-distance transmission and {{blank:2}} voltage for household supply.",
+      "blanks": {
+        "1": {
+          "correct": "high",
+          "correctExplanation": "High voltage (220–500 kV) is used for long-distance transmission to minimise losses.",
+          "distractors": [
+            { "answer": "low", "explanation": "Low voltage would cause enormous power losses over long distances." },
+            { "answer": "variable", "explanation": "The transmission voltage is maintained at a consistent high level, not varied." }
+          ]
+        },
+        "2": {
+          "correct": "low",
+          "correctExplanation": "Low voltage (230 V) is used for household supply for safety reasons.",
+          "distractors": [
+            { "answer": "high", "explanation": "High voltage would be extremely dangerous in a household setting." },
+            { "answer": "medium", "explanation": "Medium voltage is used for regional distribution, not for household supply." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "mc",
+      "question": "A developing country is planning its first national electricity grid. An engineer proposes using a single voltage level of 33 kV from generation to distribution to save on transformer costs. Evaluate this proposal.",
+      "correct": "The proposal would result in enormous transmission losses because 33 kV is too low for long-distance transmission",
+      "correctExplanation": "At 33 kV, the current would be very high for large power transfers, causing unacceptable I²R losses. Multiple voltage levels with transformers are essential.",
+      "distractors": [
+        { "answer": "The proposal is sound because fewer transformers mean fewer points of failure", "explanation": "While fewer transformers reduce maintenance, the power losses at 33 kV would make the system uneconomical." },
+        { "answer": "The proposal would work well for distances under 500 km", "explanation": "Even moderate distances would have significant losses at 33 kV when transmitting large amounts of power." },
+        { "answer": "The proposal is sound because 33 kV is high enough for all transmission needs", "explanation": "33 kV is insufficient for high-power long-distance transmission. Losses would be hundreds of times higher than at 500 kV." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Australia's transmission grid uses 500 kV while some smaller European countries use 220 kV. Analyse what factor most strongly justifies Australia's higher transmission voltage.",
+      "correct": "Australia's longer transmission distances require higher voltage to keep losses acceptable",
+      "correctExplanation": "Longer lines have higher resistance, requiring higher voltage to reduce current and keep I²R losses manageable.",
+      "distractors": [
+        { "answer": "Australia generates more total power than European countries", "explanation": "Total power affects infrastructure size but does not alone justify higher voltage. Distance is the key factor." },
+        { "answer": "Higher voltage is needed because Australian copper is of lower quality", "explanation": "Wire quality is similar worldwide. The higher voltage is justified by the longer distances." },
+        { "answer": "European standards are outdated and will be upgraded to 500 kV", "explanation": "220 kV is appropriate for shorter European distances. Each country optimises for its geography." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A city council debates whether to bury their local 11 kV distribution cables underground or keep them on overhead poles. Analyse the key physics trade-off.",
+      "correct": "Underground cables are safer and more reliable but have higher capacitance and are more expensive to install and repair",
+      "correctExplanation": "Underground cables avoid weather damage but cost significantly more and have different electrical properties that affect AC transmission.",
+      "distractors": [
+        { "answer": "Underground cables have no disadvantages and should always be used", "explanation": "Underground cables are much more expensive to install and repair, and have higher capacitance effects." },
+        { "answer": "Underground cables have higher resistance because they must be insulated", "explanation": "Insulation does not increase wire resistance. The trade-off is cost and capacitance, not resistance." },
+        { "answer": "Overhead lines are always more efficient because air cooling reduces resistance", "explanation": "While air cooling helps with heat, the efficiency difference is not the main trade-off. Cost dominates." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Solar panels on household rooftops generate DC electricity. This must be converted to 230 V AC before being fed into the grid. Evaluate why this conversion is necessary.",
+      "correct": "The grid operates on synchronised 50 Hz AC, so all sources must match this standard for compatibility",
+      "correctExplanation": "The AC grid requires all connected sources to produce the same frequency and voltage. DC from solar panels must be converted by an inverter.",
+      "distractors": [
+        { "answer": "DC electricity cannot travel through the existing grid wires", "explanation": "DC can travel through wires, but the grid infrastructure is designed for AC operation." },
+        { "answer": "AC is always more efficient than DC for any application", "explanation": "DC has advantages in some applications. The conversion is needed for grid compatibility, not inherent efficiency." },
+        { "answer": "Solar panels produce variable voltage that must be stabilised as AC", "explanation": "While voltage regulation is needed, the fundamental reason is grid compatibility at 230 V, 50 Hz." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An engineer analyses a transmission system where power is generated at 22 kV, transmitted at 500 kV over 300 km, then stepped down to 66 kV, 11 kV, and finally 230 V. Evaluate what would happen if the 500 kV to 66 kV substation failed.",
+      "correct": "All downstream consumers would lose power because there is no alternative path to reduce the voltage to usable levels",
+      "correctExplanation": "Without the substation transformer, the 500 kV cannot be reduced to safe distribution levels, cutting off all downstream supply.",
+      "distractors": [
+        { "answer": "Consumers would receive 500 kV directly, damaging their appliances", "explanation": "Safety systems would prevent 500 kV from reaching consumers. The line would be disconnected." },
+        { "answer": "The system would automatically bypass the substation and continue operating", "explanation": "Without transformer capacity, there is no way to reduce the voltage. Bypass is not possible." },
+        { "answer": "Only factories would lose power; households would continue with emergency supply", "explanation": "All consumers downstream of the failed substation would be affected, not just factories." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A physics student suggests that HVDC (high-voltage direct current) transmission could replace AC for long-distance lines in Australia. Analyse the main advantage and disadvantage of this approach.",
+      "correct": "HVDC has lower transmission losses for very long distances but cannot be easily transformed to different voltage levels",
+      "correctExplanation": "HVDC eliminates reactive losses and skin effect, but requires expensive converter stations because transformers only work with AC.",
+      "distractors": [
+        { "answer": "HVDC is always more efficient than AC regardless of distance", "explanation": "HVDC only becomes more efficient than AC beyond a certain break-even distance due to converter station costs." },
+        { "answer": "HVDC cannot be used at voltages above 100 kV", "explanation": "HVDC systems routinely operate at 500 kV or higher." },
+        { "answer": "HVDC is identical to AC transmission except for the waveform shape", "explanation": "HVDC has fundamental differences including the inability to use transformers directly and different loss characteristics." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Evaluate why the Australian grid uses 230 V for households rather than a higher voltage like 1000 V, which would reduce power losses in household wiring.",
+      "correct": "230 V is a compromise between acceptable wiring losses and safety; 1000 V would present an unacceptable electrocution risk",
+      "correctExplanation": "Higher household voltage would reduce wiring losses but significantly increase the danger of electric shock, which is unacceptable for residential use.",
+      "distractors": [
+        { "answer": "There is no technical benefit to using higher voltage in households", "explanation": "Higher voltage would reduce current and wiring losses, but safety considerations outweigh this benefit." },
+        { "answer": "Household appliances cannot be designed to work above 230 V", "explanation": "Appliances can be designed for any voltage. Industrial equipment routinely operates at much higher voltages." },
+        { "answer": "230 V is the maximum voltage that copper wiring can carry", "explanation": "Copper wiring can carry much higher voltages with appropriate insulation. 230 V is a safety choice." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A new renewable energy hub generates 2000 MW from offshore wind. The nearest connection to the national grid is 200 km away. Evaluate the optimal transmission voltage if the line resistance is 4.0 Ω and losses must be kept below 1%.",
+      "correct": "At least 450 kV, since at this voltage I = 4444 A and Ploss = 79 MW (4%). Even higher voltage would be needed.",
+      "correctExplanation": "1% of 2000 MW = 20 MW. I² = 20×10⁶/4.0 = 5×10⁶, I = 2236 A. V = 2000×10⁶/2236 = 894 kV. Very high voltage (≥900 kV) or HVDC would be needed.",
+      "distractors": [
+        { "answer": "220 kV would be sufficient for this distance and power level", "explanation": "At 220 kV, I = 9091 A and Ploss = 9091² × 4 = 331 MW (16.5%), far exceeding 1%." },
+        { "answer": "Any voltage above 66 kV would keep losses below 1%", "explanation": "At 66 kV the current would be 30 303 A and losses would be 3.67 GW — exceeding the total power generated." },
+        { "answer": "The problem is unsolvable because transmission lines cannot carry 2000 MW", "explanation": "Multiple parallel circuits or ultra-high voltage lines can carry this power level." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the analysis of grid voltage selection.",
+      "sentence": "Higher transmission voltage reduces {{blank:1}} losses but requires better {{blank:2}} on towers and cables to prevent electrical breakdown.",
+      "blanks": {
+        "1": {
+          "correct": "power",
+          "correctExplanation": "Higher voltage reduces current, which reduces I²R power losses in the transmission lines.",
+          "distractors": [
+            { "answer": "voltage", "explanation": "Higher voltage does not reduce voltage losses; it reduces current and hence power losses." },
+            { "answer": "frequency", "explanation": "Transmission voltage does not affect the frequency of the AC supply." }
+          ]
+        },
+        "2": {
+          "correct": "insulation",
+          "correctExplanation": "Higher voltages require better insulation to prevent arcing and electrical breakdown between conductors and to ground.",
+          "distractors": [
+            { "answer": "conductors", "explanation": "While conductor quality matters, the key challenge of higher voltage is insulation, not conductivity." },
+            { "answer": "generators", "explanation": "Generators operate at their own voltage. Transmission voltage is set by transformers, not generators." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the evaluation of the grid hierarchy.",
+      "sentence": "The multi-stage voltage hierarchy exists because different users need different {{blank:1}}, and each stage of transformation introduces only small {{blank:2}} losses.",
+      "blanks": {
+        "1": {
+          "correct": "voltages",
+          "correctExplanation": "Factories, commercial buildings, and homes all require different supply voltages.",
+          "distractors": [
+            { "answer": "frequencies", "explanation": "All users receive the same 50 Hz frequency. It is the voltage that differs." },
+            { "answer": "currents", "explanation": "While different loads draw different currents, the grid provides different voltages, not specified currents." }
+          ]
+        },
+        "2": {
+          "correct": "transformer",
+          "correctExplanation": "Modern transformers are 95–99% efficient, so the energy lost at each transformation stage is small.",
+          "distractors": [
+            { "answer": "transmission", "explanation": "Transmission losses occur in the wires, not at the transformer stages specifically." },
+            { "answer": "generation", "explanation": "Generation losses occur at the power station, not at the voltage transformation stages." }
+          ]
+        }
+      }
+    }
+  ]
+}

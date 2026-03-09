@@ -1,0 +1,64 @@
+{
+  "id": "dc-motors-and-torque",
+  "name": "DC Motors and Torque",
+  "icon": "⚙️",
+  "what": "This subtopic covers the operation of a simple DC motor, including the role of the split ring commutator, the concept of torque, and the qualitative relationship between motor design variables and the torque produced.",
+  "why": "DC motors convert electrical energy into rotational mechanical energy and are found in appliances, vehicles, and industrial machines. Understanding their operation requires linking the force formula, geometry, and the concept of torque.",
+  "items": [
+    {
+      "id": 1,
+      "uuid": "lp-93baaaa0-5e8e-d50b-1005-80058b35f147",
+      "version": 1,
+      "title": "I can explain how a current-carrying loop in a magnetic field produces a turning effect",
+      "code": "4.1",
+      "what": "When a rectangular loop of wire carrying current is placed in a magnetic field, opposite sides of the loop experience forces in opposite directions. These two parallel forces act at a distance from the axis of rotation, creating a turning effect (torque) that causes the loop to rotate.",
+      "why": "This is the fundamental mechanism of a DC motor. The conversion of electrical energy to rotational kinetic energy depends on two equal and opposite forces acting on either side of the loop.",
+      "example": "In a rectangular loop with sides AB and CD parallel to the axis, the right-hand slap rule shows AB is pushed forward and CD is pushed backward. These opposing forces rotate the loop about its axis, just as two hands turning a steering wheel from opposite sides.",
+      "contentHash": "hash-6d789334"
+    },
+    {
+      "id": 2,
+      "uuid": "lp-65f7e014-6179-212c-6321-8eb4cf5a7e40",
+      "version": 1,
+      "title": "I can explain the role of the split ring commutator in a DC motor",
+      "code": "4.2",
+      "what": "The split ring commutator reverses the direction of current through the coil exactly every half turn. This ensures the forces on the sides of the coil always act in the same rotational direction, allowing the motor to spin continuously rather than reversing back and forth.",
+      "why": "Without the commutator, the coil would rotate 90 degrees to a vertical position and stop (or oscillate). The commutator is what makes a practical, continuously rotating motor possible from a DC power supply.",
+      "example": "As the coil passes through the vertical position (where torque is zero), the commutator switches which half of the split ring connects to each brush. This reversal means the side that was being pushed forward now has its current reversed, so it continues to be pushed forward in the new direction.",
+      "contentHash": "hash-b10c4ddb"
+    },
+    {
+      "id": 3,
+      "uuid": "lp-c73648c8-b50b-ad7b-b615-ace301c794f6",
+      "version": 1,
+      "title": "I can define torque and calculate it using τ = rF",
+      "code": "4.3",
+      "what": "Torque (τ) is the turning effect of a force about a pivot point. It equals the force multiplied by the perpendicular distance from the pivot to the line of action of the force: τ = rF. Its SI unit is the newton metre (N m).",
+      "why": "Torque determines how effectively a force causes rotation. The same force can produce more or less torque depending on where it is applied. This concept is essential for analysing motor performance and any rotating system.",
+      "example": "A force of 10 N applied 0.30 m from an axis of rotation produces a torque of τ = 0.30 × 10 = 3.0 N m. Applying the same force only 0.10 m from the axis produces only 1.0 N m of torque.",
+      "contentHash": "hash-4ec5374d"
+    },
+    {
+      "id": 4,
+      "uuid": "lp-6ed1a0f0-e0df-9ece-aac9-4a69446c5eb5",
+      "version": 1,
+      "title": "I can explain why torque in a DC motor varies as the coil rotates, including the position of maximum and zero torque",
+      "code": "4.4",
+      "what": "Torque is maximum when the coil is parallel to the magnetic field because the forces act at the maximum perpendicular distance from the axis. Torque is zero when the coil is perpendicular to the field because the forces act directly through the axis with no lever arm.",
+      "why": "This variation explains why motors rely on angular momentum to carry them through the zero-torque position, and why multi-coil motors (or coils at various angles) are used in practice to produce smoother, more consistent torque.",
+      "example": "At the start of a half-cycle, when the coil plane is parallel to the field, torque is at its maximum. A quarter turn later, when the coil plane is perpendicular to the field, the torque drops to zero and only the spinning momentum keeps the coil moving.",
+      "contentHash": "hash-8e00b3e6"
+    },
+    {
+      "id": 5,
+      "uuid": "lp-530ee058-4a25-5cab-02b8-52d5e8b26df6",
+      "version": 1,
+      "title": "I can describe qualitatively how current, magnetic field strength, and number of loops each affect the torque of a DC motor",
+      "code": "4.5",
+      "what": "Torque increases if the current through the coil is increased, if the external magnetic field is made stronger, or if the number of loops in the coil is increased. Each of these increases the force on the sides of the coil (F = nIlB), which directly increases the torque.",
+      "why": "Motor designers use these relationships to specify motor performance. A motor needing more turning force can be wound with more loops or operated at higher current, at the cost of more electrical energy input.",
+      "example": "Doubling the number of loops in a motor coil from 10 to 20 doubles the force on each side and therefore doubles the torque. Similarly, doubling the current produces double the force and double the torque.",
+      "contentHash": "hash-fb995cba"
+    }
+  ]
+}

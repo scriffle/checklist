@@ -1,0 +1,64 @@
+{
+  "id": "transformer-calculations",
+  "name": "Transformer Calculations",
+  "icon": "🧮",
+  "what": "This subtopic covers the turns ratio formula and how to use it to calculate primary and secondary voltages, currents, and power in ideal transformers. It also covers combining the turns ratio with Ohm's law and power formulas to solve multi-step problems.",
+  "why": "Transformer calculations appear consistently in VCE Physics exams. Being fluent with the turns ratio formula and understanding how voltage, current and power relate across a transformer is essential for analysing both simple charger circuits and large-scale grid systems.",
+  "items": [
+    {
+      "id": 1,
+      "uuid": "lp-ef303475-e931-959f-bc12-e2cca77743df",
+      "version": 1,
+      "title": "I can use the turns ratio formula V1/V2 = N1/N2 to calculate primary or secondary voltage",
+      "code": "6B.4a",
+      "what": "The turns ratio states that the ratio of voltages across the primary and secondary coils equals the ratio of the number of turns: V1/V2 = N1/N2. Rearranging this formula allows you to find any unknown voltage or turns value when the others are given.",
+      "why": "This is the central formula for transformer analysis and is provided on the VCAA formula sheet. It is used in every transformer calculation, from simple one-step problems to complex multi-component transmission system problems.",
+      "example": "A transformer has 1000 turns on the primary and 50 turns on the secondary. With 240 V input: V2 = V1 × (N2/N1) = 240 × (50/1000) = 12 V. This is a step-down transformer reducing mains voltage to 12 V for low-voltage devices.",
+      "contentHash": "hash-923f883b"
+    },
+    {
+      "id": 2,
+      "uuid": "lp-6f235151-f429-6e4b-cdd6-3e43257d6e80",
+      "version": 1,
+      "title": "I can use the turns ratio formula to calculate primary or secondary current in an ideal transformer",
+      "code": "6B.4b",
+      "what": "For an ideal transformer, the turns ratio also relates currents, but inversely: N1/N2 = I2/I1. When voltage is stepped up by a factor, current is stepped down by the same factor. This follows from conservation of power (V1I1 = V2I2).",
+      "why": "The inverse relationship between voltage and current is a key physical insight: stepping up voltage reduces current proportionally. This is precisely why high-voltage transmission is efficient — lower current means less power lost as heat in the wires.",
+      "example": "A step-up transformer increases voltage from 240 V to 4800 V (ratio 1:20). If the primary draws 10 A, the secondary current is I2 = I1 × (N1/N2) = 10 × (1/20) = 0.5 A. Power is conserved: 240 × 10 = 4800 × 0.5 = 2400 W.",
+      "contentHash": "hash-68eb8f3a"
+    },
+    {
+      "id": 3,
+      "uuid": "lp-c34df6a3-7ba0-d45a-35a6-1b8573759239",
+      "version": 1,
+      "title": "I can apply the full turns ratio formula N1/N2 = V1/V2 = I2/I1 to solve transformer problems",
+      "code": "6B.4c",
+      "what": "The complete turns ratio relationship combines both voltage and current in a single expression: N1/N2 = V1/V2 = I2/I1. This shows that voltages scale in the same direction as turns, while currents scale in the opposite direction.",
+      "why": "Using the full combined formula helps to organise all the information in a transformer problem and quickly identify which values are related. It reduces errors when working with multi-step problems involving both voltage and current.",
+      "example": "A transformer has N1/N2 = 1/250 (a step-up transformer). With V1 = 14 V rms input and I1 = 30 mA: V2 = 14 × 250 = 3500 V, and I2 = 30 mA / 250 = 0.12 mA. Power in = 14 × 0.030 = 0.42 W = 3500 × 0.00012 = 0.42 W (confirmed).",
+      "contentHash": "hash-900bc37a"
+    },
+    {
+      "id": 4,
+      "uuid": "lp-a3a7a584-933f-ebb9-9417-fd932322921e",
+      "version": 1,
+      "title": "I can draw and annotate a transformer diagram to organise given information before solving a problem",
+      "code": "6B.5a",
+      "what": "Drawing a labelled transformer diagram with primary and secondary sides and writing known values (V1, V2, I1, I2, N1, N2) in the correct positions helps to avoid confusing primary and secondary quantities before substituting into formulas.",
+      "why": "Transformer exam questions provide information in varied order and sometimes in non-standard ways. A labelled diagram forces you to interpret the question carefully and reduces errors — especially when the turns ratio is expressed as N1:N2 = 1:250 versus N1:N2 = 250:1.",
+      "example": "A phone charger has 2000 turns on the primary and 50 turns on the secondary and delivers I2 = 4.0 A to the phone. Drawing the diagram and labelling N1 = 2000, N2 = 50, I2 = 4.0 A immediately shows I1 = I2 × (N2/N1) = 4.0 × (50/2000) = 0.1 A.",
+      "contentHash": "hash-19a855d7"
+    },
+    {
+      "id": 5,
+      "uuid": "lp-6aae69fc-ef0c-8bf2-9912-73459fcc2b41",
+      "version": 1,
+      "title": "I can combine the turns ratio with Ohm's law and power formulas to solve complex transformer circuit problems",
+      "code": "6B.5b",
+      "what": "Many transformer problems require using multiple formulas in sequence: finding current from power (I = P/V), using Ohm's law across a load resistor (V = IR), and applying the turns ratio to find voltages or currents on the other side of the transformer.",
+      "why": "VCE exam questions often involve multi-step problems where you must move between the primary and secondary circuits and apply several physics principles. Practising these combined problems builds the fluency needed to solve them efficiently under exam conditions.",
+      "example": "A transformer delivers 12 Vrms to a 48 Ω load. Secondary current I2 = 12/48 = 0.25 A. Power output = 12 × 0.25 = 3.0 W. If the primary voltage is 240 V, then I1 = P/V1 = 3.0/240 = 0.0125 A, and turns ratio N1/N2 = V1/V2 = 240/12 = 20.",
+      "contentHash": "hash-ae8e3596"
+    }
+  ]
+}

@@ -1,0 +1,583 @@
+{
+  "_link": {
+    "uuid": "lp-9c9042b0-004c-8a96-3ca2-99494d5cf284",
+    "version": 1,
+    "contentHash": "hash-9fa32b7f",
+    "title": "I can apply the inverse square law to predict how the electric force changes when distance is changed",
+    "generatedAt": "2026-03-05T08:00:00Z"
+  },
+  "toLevel2": [
+    {
+      "type": "mc",
+      "question": "Two charges exert a force F on each other at a distance r. If the distance is doubled to 2r, what is the new force?",
+      "correct": "F/4",
+      "correctExplanation": "By the inverse square law (F ∝ 1/r²), doubling the distance reduces the force by a factor of 2² = 4. The new force is F/4.",
+      "distractors": [
+        { "answer": "F/2", "explanation": "The force depends on 1/r², not 1/r. Doubling the distance reduces the force to 1/4, not 1/2." },
+        { "answer": "2F", "explanation": "Doubling the distance decreases the force, not increases it. F ∝ 1/r², so the force becomes F/4." },
+        { "answer": "4F", "explanation": "Increasing the distance reduces the force. Doubling the distance gives F/(2²) = F/4, not 4F." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Two charges exert a force F on each other at distance r. If the distance is halved to r/2, what is the new force?",
+      "correct": "4F",
+      "correctExplanation": "By the inverse square law, halving the distance increases the force by a factor of (1/½)² = 4. The new force is 4F.",
+      "distractors": [
+        { "answer": "2F", "explanation": "The force depends on 1/r², not 1/r. Halving the distance increases the force by 2² = 4, giving 4F." },
+        { "answer": "F/4", "explanation": "Halving the distance increases the force, not decreases it. The force becomes 4F." },
+        { "answer": "F/2", "explanation": "Decreasing the distance increases the force. Halving r gives F × (r/(r/2))² = F × 4 = 4F." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Two charges exert a force F on each other at distance r. If the distance is tripled to 3r, what is the new force?",
+      "correct": "F/9",
+      "correctExplanation": "By the inverse square law, tripling the distance reduces the force by a factor of 3² = 9. The new force is F/9.",
+      "distractors": [
+        { "answer": "F/3", "explanation": "The force is inversely proportional to r², not r. Tripling the distance reduces the force to F/9, not F/3." },
+        { "answer": "3F", "explanation": "Tripling the distance decreases the force, not increases it. F ∝ 1/r² gives F/9." },
+        { "answer": "9F", "explanation": "Increasing the distance decreases the force. Tripling the distance gives F/9, not 9F." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "The electric force between two charges follows an inverse square law. What does 'inverse square' mean?",
+      "correct": "The force is inversely proportional to the square of the distance",
+      "correctExplanation": "'Inverse square' means F ∝ 1/r². As the distance increases, the force decreases in proportion to the square of the distance.",
+      "distractors": [
+        { "answer": "The force is proportional to the square of the distance", "explanation": "This would mean force increases with distance, which is incorrect. 'Inverse square' means F ∝ 1/r² — force decreases as distance increases." },
+        { "answer": "The force is inversely proportional to the distance", "explanation": "This would be an inverse (first power) law, not an inverse square law. The force depends on 1/r², not 1/r." },
+        { "answer": "The force is proportional to the square of the charge", "explanation": "This describes how force depends on charge, not distance. The inverse square law refers to the 1/r² dependence on distance." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which other fundamental force also follows an inverse square law, similar to the electric force?",
+      "correct": "Gravitational force",
+      "correctExplanation": "Newton's law of gravitation (F = Gm₁m₂/r²) has the same 1/r² distance dependence as Coulomb's law (F = kq₁q₂/r²). Both are inverse square laws.",
+      "distractors": [
+        { "answer": "Friction", "explanation": "Friction does not follow an inverse square law. It depends on the normal force and surface properties, not on distance squared." },
+        { "answer": "Tension", "explanation": "Tension in a string does not follow an inverse square law. Gravity is the force that shares the 1/r² dependence with the electric force." },
+        { "answer": "Air resistance", "explanation": "Air resistance depends on speed, not on distance squared. The gravitational force follows the same inverse square law as the electric force." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the inverse square law.",
+      "sentence": "According to the inverse square law, if the distance between two charges is doubled, the force becomes {{blank:1}} of its original value, which is a factor of {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "one-quarter",
+          "correctExplanation": "F ∝ 1/r², so doubling r gives F/(2²) = F/4, which is one-quarter of the original force.",
+          "distractors": [
+            { "answer": "one-half", "explanation": "One-half would apply if F ∝ 1/r. Since F ∝ 1/r², doubling the distance gives one-quarter." },
+            { "answer": "one-eighth", "explanation": "One-eighth would apply if F ∝ 1/r³. Since F ∝ 1/r², the force becomes one-quarter." }
+          ]
+        },
+        "2": {
+          "correct": "4",
+          "correctExplanation": "The force is reduced by a factor of 2² = 4 when the distance is doubled.",
+          "distractors": [
+            { "answer": "2", "explanation": "The factor is 2² = 4, not just 2. The square of the distance change gives the factor by which the force changes." },
+            { "answer": "8", "explanation": "The factor is 2² = 4, not 2³ = 8. The force follows an inverse square law, not an inverse cube law." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about halving the distance.",
+      "sentence": "When the distance between two charges is halved, the force {{blank:1}} by a factor of {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "increases",
+          "correctExplanation": "Halving the distance brings the charges closer together. Since F ∝ 1/r², the force increases when distance decreases.",
+          "distractors": [
+            { "answer": "decreases", "explanation": "Bringing charges closer together increases the force, not decreases it. F ∝ 1/r² means smaller r gives larger F." },
+            { "answer": "stays the same", "explanation": "The force changes when distance changes. Halving the distance increases the force by a factor of 4." }
+          ]
+        },
+        "2": {
+          "correct": "4",
+          "correctExplanation": "Halving the distance means r becomes r/2. The new force is F × (r/(r/2))² = F × 4. The force increases by a factor of 4.",
+          "distractors": [
+            { "answer": "2", "explanation": "The factor is (1/½)² = 4, not 2. The inverse square law squares the distance change." },
+            { "answer": "16", "explanation": "The factor is (1/½)² = 4. A factor of 16 would apply if the distance were quartered." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the comparison with gravity.",
+      "sentence": "The electric force between charges follows the same {{blank:1}} law as the {{blank:2}} force between masses.",
+      "blanks": {
+        "1": {
+          "correct": "inverse square",
+          "correctExplanation": "Both Coulomb's law and Newton's law of gravitation show F ∝ 1/r², the inverse square law.",
+          "distractors": [
+            { "answer": "direct proportion", "explanation": "Neither force is directly proportional to distance. Both follow an inverse square law (F ∝ 1/r²)." },
+            { "answer": "inverse cube", "explanation": "Both forces follow an inverse square law (F ∝ 1/r²), not an inverse cube law." }
+          ]
+        },
+        "2": {
+          "correct": "gravitational",
+          "correctExplanation": "Newton's law of universal gravitation (F = Gm₁m₂/r²) has the same inverse square distance dependence as Coulomb's law.",
+          "distractors": [
+            { "answer": "magnetic", "explanation": "Magnetic forces do not follow a simple inverse square law between poles. The analogy is with the gravitational force." },
+            { "answer": "nuclear", "explanation": "Nuclear forces act over very short ranges and do not follow an inverse square law. The gravitational force shares the 1/r² dependence." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "tf",
+      "question": "If the distance between two charges is tripled, the electric force between them is reduced to one-third of its original value.",
+      "correct": "False",
+      "correctExplanation": "The force follows an inverse square law (F ∝ 1/r²), not an inverse law. Tripling the distance reduces the force to 1/3² = 1/9 of its original value, not 1/3.",
+      "distractors": [
+        { "answer": "True", "explanation": "This would be correct if force were inversely proportional to distance (F ∝ 1/r). Since F ∝ 1/r², tripling the distance gives F/9, not F/3." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "Halving the distance between two point charges increases the electric force between them by a factor of 4.",
+      "correct": "True",
+      "correctExplanation": "By the inverse square law, halving the distance gives F × (1/½)² = F × 4. The force increases fourfold.",
+      "distractors": [
+        { "answer": "False", "explanation": "F ∝ 1/r², so halving r increases F by (1/½)² = 4. The factor of 4 is correct." }
+      ]
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "mc",
+      "question": "Two charges separated by distance d experience a force of 12 N. What is the force when the distance is increased to 3d?",
+      "correct": "1.3 N",
+      "correctExplanation": "By the inverse square law, F_new = F × (d/3d)² = 12 × (1/3)² = 12 × 1/9 = 1.33 N ≈ 1.3 N.",
+      "distractors": [
+        { "answer": "4.0 N", "explanation": "4.0 N would result from dividing by 3 (inverse law, not inverse square). The correct calculation is 12/9 = 1.3 N." },
+        { "answer": "36 N", "explanation": "This would be 12 × 3, which incorrectly assumes force increases with distance. The force decreases to 12/9 = 1.3 N." },
+        { "answer": "108 N", "explanation": "This multiplies 12 by 9, but the force should be divided by 9 when distance is tripled. The answer is 12/9 = 1.3 N." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Two charges experience a force of 8.0 N at distance r. At what distance is the force 2.0 N?",
+      "correct": "2r",
+      "correctExplanation": "The force decreased by a factor of 4 (from 8.0 to 2.0 N). Since F ∝ 1/r², a factor-of-4 decrease means the distance increased by √4 = 2. The new distance is 2r.",
+      "distractors": [
+        { "answer": "4r", "explanation": "At 4r, the force would be 8.0/16 = 0.5 N. For 2.0 N, the distance factor is √(8.0/2.0) = 2, giving 2r." },
+        { "answer": "r/2", "explanation": "Halving the distance would increase the force to 32 N, not decrease it to 2.0 N. The force decreases at 2r." },
+        { "answer": "r√2", "explanation": "At r√2, the force would be 8.0/2 = 4.0 N. For 2.0 N, the distance must be 2r." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "The force between two charges at 0.10 m is 36 N. What is the force at 0.30 m?",
+      "correct": "4.0 N",
+      "correctExplanation": "The distance increased by a factor of 3 (0.30/0.10 = 3). By the inverse square law, F_new = 36/(3²) = 36/9 = 4.0 N.",
+      "distractors": [
+        { "answer": "12 N", "explanation": "12 N would result from dividing by 3 rather than 3². The inverse square law gives 36/9 = 4.0 N." },
+        { "answer": "324 N", "explanation": "This multiplies by 9 instead of dividing. Increasing distance decreases the force: 36/9 = 4.0 N." },
+        { "answer": "108 N", "explanation": "This multiplies 36 by 3. Increasing the distance by a factor of 3 reduces the force by 9: 36/9 = 4.0 N." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Why does the inverse square law apply to both gravitational and electric forces?",
+      "correct": "Both forces spread out over the surface of a sphere, whose area increases with r²",
+      "correctExplanation": "Both forces can be thought of as radiating outward in all directions. The surface area of a sphere is 4πr², so the force per unit area decreases as 1/r². This geometric argument explains the inverse square dependence.",
+      "distractors": [
+        { "answer": "Both forces involve the same type of particle", "explanation": "Gravitational force involves mass while electric force involves charge — different properties. The inverse square law arises from the geometry of three-dimensional space." },
+        { "answer": "Both forces are caused by the same fundamental interaction", "explanation": "Gravity and electromagnetism are different fundamental forces. They both follow inverse square laws because of the geometry of how fields spread in three-dimensional space." },
+        { "answer": "It is a coincidence with no underlying explanation", "explanation": "The inverse square law is not a coincidence. It arises from the geometric fact that both fields spread over spherical surfaces whose area grows as r²." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Two charges at distance r experience a force of 20 N. The distance is changed and the new force is 5.0 N. What is the new distance?",
+      "correct": "2r",
+      "correctExplanation": "The force decreased by a factor of 4 (20/5.0 = 4). Since F ∝ 1/r², the distance must have increased by √4 = 2. The new distance is 2r.",
+      "distractors": [
+        { "answer": "4r", "explanation": "At 4r the force would be 20/16 = 1.25 N. For 5.0 N, the distance factor is √4 = 2, giving 2r." },
+        { "answer": "r/4", "explanation": "At r/4 the force would be 20 × 16 = 320 N. The new distance that gives 5.0 N is 2r." },
+        { "answer": "r/2", "explanation": "At r/2 the force would be 20 × 4 = 80 N. The decreased force indicates increased distance: 2r." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student claims: 'If the distance between two charges increases by 10%, the force decreases by 10%.' Is this correct?",
+      "correct": "No — the force decreases by approximately 17%, not 10%",
+      "correctExplanation": "If distance becomes 1.1r, force becomes F/(1.1)² = F/1.21 ≈ 0.83F. This is a decrease of about 17%, not 10%, because the force depends on the square of the distance.",
+      "distractors": [
+        { "answer": "Yes — force and distance change by the same percentage", "explanation": "Force depends on 1/r², not 1/r. A 10% increase in distance gives a 1/(1.1)² ≈ 17% decrease in force." },
+        { "answer": "No — the force decreases by 20%", "explanation": "A 10% increase in distance gives F/(1.1)² = F/1.21, which is approximately a 17% decrease, not 20%." },
+        { "answer": "No — the force increases by 10%", "explanation": "Increasing distance decreases force, not increases it. The force decreases by about 17%." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the ratio reasoning for the inverse square law.",
+      "sentence": "If the distance between two charges changes by a factor of n, the force changes by a factor of {{blank:1}}, because the force depends on the {{blank:2}} of the distance.",
+      "blanks": {
+        "1": {
+          "correct": "1/n²",
+          "correctExplanation": "Since F ∝ 1/r², multiplying the distance by n gives F_new = F/n². The force changes by a factor of 1/n².",
+          "distractors": [
+            { "answer": "1/n", "explanation": "This would apply if force were inversely proportional to distance. Since F ∝ 1/r², the factor is 1/n²." },
+            { "answer": "n²", "explanation": "This would mean the force increases with distance. The force decreases as 1/n² when distance is multiplied by n." }
+          ]
+        },
+        "2": {
+          "correct": "inverse square",
+          "correctExplanation": "F ∝ 1/r² means the force is inversely proportional to the square of the distance, hence 'inverse square.'",
+          "distractors": [
+            { "answer": "first power", "explanation": "If the force depended on the first power of distance, it would be F ∝ 1/r. The electric force follows 1/r², an inverse square relationship." },
+            { "answer": "cube", "explanation": "The electric force follows 1/r², not 1/r³. It is an inverse square law." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the worked example.",
+      "sentence": "Two charges at distance r exert a force of 16 N. At distance 4r, the force is 16 ÷ {{blank:1}} = {{blank:2}} N.",
+      "blanks": {
+        "1": {
+          "correct": "16",
+          "correctExplanation": "The distance increased by a factor of 4, so the force is divided by 4² = 16.",
+          "distractors": [
+            { "answer": "4", "explanation": "The inverse square law requires squaring the distance factor. The divisor is 4² = 16, not 4." },
+            { "answer": "8", "explanation": "The divisor is 4² = 16. The factor of 8 does not correspond to any power of 4 in the inverse square law." }
+          ]
+        },
+        "2": {
+          "correct": "1.0",
+          "correctExplanation": "F_new = 16/16 = 1.0 N.",
+          "distractors": [
+            { "answer": "4.0", "explanation": "4.0 N would result from dividing 16 by 4 (not squaring). The correct answer is 16/16 = 1.0 N." },
+            { "answer": "2.0", "explanation": "2.0 N would result from dividing 16 by 8. The correct divisor is 4² = 16, giving 1.0 N." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the reverse problem.",
+      "sentence": "If the force between two charges decreases by a factor of 9, the distance must have {{blank:1}} by a factor of {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "increased",
+          "correctExplanation": "A decrease in force corresponds to an increase in distance, since F ∝ 1/r².",
+          "distractors": [
+            { "answer": "decreased", "explanation": "Decreasing force means the charges moved further apart (distance increased), not closer together." },
+            { "answer": "stayed the same", "explanation": "If the distance stayed the same, the force would not change. A force decrease means distance increased." }
+          ]
+        },
+        "2": {
+          "correct": "3",
+          "correctExplanation": "If force decreased by a factor of 9, then distance increased by √9 = 3. Since F ∝ 1/r², a 9× force decrease requires a 3× distance increase.",
+          "distractors": [
+            { "answer": "9", "explanation": "A 9× distance increase would give a force decrease of 9² = 81. For a 9× force decrease, the distance factor is √9 = 3." },
+            { "answer": "4.5", "explanation": "A factor of 4.5 does not correspond to a factor-of-9 force change. √9 = 3 is the correct distance factor." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "tf",
+      "question": "If the distance between two charges is reduced to one-third, the electric force increases by a factor of 9.",
+      "correct": "True",
+      "correctExplanation": "F ∝ 1/r², so reducing the distance to r/3 gives F_new = F × (r/(r/3))² = F × 9. The force increases ninefold.",
+      "distractors": [
+        { "answer": "False", "explanation": "By the inverse square law, reducing distance to 1/3 multiplies the force by (1/(1/3))² = 3² = 9. The factor of 9 is correct." }
+      ]
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "mc",
+      "question": "Two charges experience a force of 48 N when separated by 0.20 m. What is the force when they are 0.80 m apart?",
+      "correct": "3.0 N",
+      "correctExplanation": "The distance increased by a factor of 4 (0.80/0.20 = 4). F_new = 48/4² = 48/16 = 3.0 N.",
+      "distractors": [
+        { "answer": "12 N", "explanation": "This divides by 4 instead of 4². By the inverse square law, F_new = 48/16 = 3.0 N." },
+        { "answer": "0.75 N", "explanation": "This divides by 64 (4³ instead of 4²). The inverse square law gives F_new = 48/16 = 3.0 N." },
+        { "answer": "192 N", "explanation": "This multiplies by 4 instead of dividing by 16. Increasing distance decreases force: 48/16 = 3.0 N." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "The force between two charges is 100 N. Both the distance and one of the charges are doubled. What is the new force?",
+      "correct": "50 N",
+      "correctExplanation": "Doubling one charge doubles the force (F ∝ q). Doubling the distance reduces the force by a factor of 4 (F ∝ 1/r²). Combined: 100 × 2 × (1/4) = 50 N.",
+      "distractors": [
+        { "answer": "25 N", "explanation": "This divides by 4 only. The doubled charge doubles the force first, then doubling distance divides by 4: 100 × 2/4 = 50 N." },
+        { "answer": "200 N", "explanation": "This doubles for the charge but does not account for the distance change. The combined effect is 100 × 2/4 = 50 N." },
+        { "answer": "100 N", "explanation": "Both changes affect the force. Doubling charge gives ×2 and doubling distance gives ÷4: 100 × 2/4 = 50 N." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Two charges at distance d have a force of F. The distance is changed so the force becomes 16F. What is the new distance?",
+      "correct": "d/4",
+      "correctExplanation": "The force increased by a factor of 16. Since F ∝ 1/r², the distance must have decreased by √16 = 4. The new distance is d/4.",
+      "distractors": [
+        { "answer": "4d", "explanation": "At 4d the force would be F/16, not 16F. To increase the force 16 times, the distance must decrease to d/4." },
+        { "answer": "d/16", "explanation": "At d/16, the force would be 256F. For 16F, the distance is d/√16 = d/4." },
+        { "answer": "d/2", "explanation": "At d/2, the force would be 4F. For 16F, the distance must be d/4." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "The force between two charges is F at distance r. If the distance is reduced to r/5, what is the new force?",
+      "correct": "25F",
+      "correctExplanation": "Reducing the distance to r/5 means the distance decreases by a factor of 5. F_new = F × 5² = 25F.",
+      "distractors": [
+        { "answer": "5F", "explanation": "The force depends on 1/r², not 1/r. Reducing distance by a factor of 5 gives F × 5² = 25F." },
+        { "answer": "F/25", "explanation": "Decreasing distance increases force, not decreases it. The force becomes 25F at r/5." },
+        { "answer": "125F", "explanation": "This uses 5³ instead of 5². The inverse square law gives F × 5² = 25F." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Two charges separated by 0.50 m exert a force of 18 N. At what distance would the force be 2.0 N?",
+      "correct": "1.5 m",
+      "correctExplanation": "The force ratio is 18/2.0 = 9. Since F ∝ 1/r², the distance ratio is √9 = 3. New distance = 0.50 × 3 = 1.5 m.",
+      "distractors": [
+        { "answer": "4.5 m", "explanation": "This multiplies by 9 instead of √9. The distance ratio is √(18/2.0) = 3, giving 0.50 × 3 = 1.5 m." },
+        { "answer": "0.17 m", "explanation": "This divides by √9 instead of multiplying. The force decreased, so the distance must have increased to 1.5 m." },
+        { "answer": "1.0 m", "explanation": "At 1.0 m (2× original distance), the force would be 18/4 = 4.5 N. For 2.0 N, the distance is 1.5 m." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Two charges experience a force of 40 N at separation r. Both charges are tripled and the distance is doubled. What is the new force?",
+      "correct": "90 N",
+      "correctExplanation": "Tripling both charges multiplies the force by 3 × 3 = 9 (F ∝ q₁q₂). Doubling the distance divides by 4 (F ∝ 1/r²). New force = 40 × 9/4 = 90 N.",
+      "distractors": [
+        { "answer": "30 N", "explanation": "This only triples once and divides by 4: 40 × 3/4. Both charges are tripled, giving 40 × 9/4 = 90 N." },
+        { "answer": "360 N", "explanation": "This multiplies by 9 without dividing by 4 for the distance. The combined effect is 40 × 9/4 = 90 N." },
+        { "answer": "10 N", "explanation": "This divides by 4 without accounting for the tripled charges. The combined effect is 40 × 9/4 = 90 N." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student measures the force between two charges at four different distances and plots F vs 1/r². What shape should the graph be?",
+      "correct": "A straight line through the origin",
+      "correctExplanation": "Since F = kq₁q₂/r², plotting F against 1/r² gives F = (kq₁q₂) × (1/r²), which is a linear relationship with gradient kq₁q₂ and intercept zero.",
+      "distractors": [
+        { "answer": "A curve that flattens out", "explanation": "F is directly proportional to 1/r², so the graph is a straight line, not a curve." },
+        { "answer": "A straight line that does not pass through the origin", "explanation": "The equation F = kq₁q₂/r² has no constant term, so the line passes through the origin." },
+        { "answer": "A parabola", "explanation": "F is linearly proportional to 1/r² (not quadratically), so the graph is a straight line through the origin." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the combined change problem.",
+      "sentence": "If one charge is doubled and the distance is tripled, the force changes by a factor of {{blank:1}} (charge effect) divided by {{blank:2}} (distance effect).",
+      "blanks": {
+        "1": {
+          "correct": "2",
+          "correctExplanation": "Doubling one charge doubles the force because F ∝ q₁q₂. The charge factor is 2.",
+          "distractors": [
+            { "answer": "4", "explanation": "Doubling one charge gives a factor of 2, not 4. A factor of 4 would apply if the charge were quadrupled." },
+            { "answer": "3", "explanation": "The charge is doubled, giving a factor of 2. The factor of 3 applies to the distance change." }
+          ]
+        },
+        "2": {
+          "correct": "9",
+          "correctExplanation": "Tripling the distance reduces the force by 3² = 9 due to the inverse square law.",
+          "distractors": [
+            { "answer": "3", "explanation": "The distance factor must be squared: 3² = 9. The force depends on 1/r², not 1/r." },
+            { "answer": "6", "explanation": "The factor is 3² = 9, not 2 × 3 = 6. The inverse square law squares the distance change." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the reverse calculation.",
+      "sentence": "If the electric force between two charges increases by a factor of 25, the distance must have decreased by a factor of {{blank:1}}, meaning the new distance is the original distance divided by {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "5",
+          "correctExplanation": "Since F ∝ 1/r², a 25× force increase requires a distance decrease by √25 = 5.",
+          "distractors": [
+            { "answer": "25", "explanation": "A factor-of-25 distance decrease would give a 625× force increase. For a 25× increase, the distance factor is √25 = 5." },
+            { "answer": "12.5", "explanation": "The distance factor is √25 = 5. The value 12.5 = 25/2 does not arise from the inverse square law." }
+          ]
+        },
+        "2": {
+          "correct": "5",
+          "correctExplanation": "The distance is reduced to 1/5 of the original, so the new distance is the original divided by 5.",
+          "distractors": [
+            { "answer": "25", "explanation": "Dividing by 25 would reduce the distance too much. For a 25× force increase, dividing by 5 is correct." },
+            { "answer": "10", "explanation": "Dividing by 10 would give a force increase of 100, not 25. The correct divisor is 5." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the distance calculation.",
+      "sentence": "Two charges at 0.30 m exert a force of 45 N. For the force to be 5.0 N, the force ratio is {{blank:1}}, so the distance must increase by a factor of {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "9",
+          "correctExplanation": "The force ratio is 45/5.0 = 9. The force decreased by a factor of 9.",
+          "distractors": [
+            { "answer": "3", "explanation": "45/5.0 = 9, not 3. The force decreased by a factor of 9." },
+            { "answer": "40", "explanation": "The ratio is 45/5.0 = 9. The value 40 = 45 − 5 is the difference, not the ratio." }
+          ]
+        },
+        "2": {
+          "correct": "3",
+          "correctExplanation": "Since F ∝ 1/r², a 9× force decrease means the distance increased by √9 = 3. New distance = 0.30 × 3 = 0.90 m.",
+          "distractors": [
+            { "answer": "9", "explanation": "The distance factor is √9 = 3, not 9. A 9× distance increase would give an 81× force decrease." },
+            { "answer": "4.5", "explanation": "The distance factor is √9 = 3. A factor of 4.5 does not correspond to any standard inverse square calculation." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "mc",
+      "question": "A student claims: 'At twice the distance, the force is halved, so the inverse square law is really just an inverse law.' Identify the error in this reasoning.",
+      "correct": "The force is quartered (not halved) at twice the distance; the student confused inverse and inverse square",
+      "correctExplanation": "At twice the distance, F_new = F/(2²) = F/4. The student incorrectly applied F ∝ 1/r instead of the correct F ∝ 1/r². The force is one-quarter, not one-half.",
+      "distractors": [
+        { "answer": "The student is correct — the force is halved at twice the distance", "explanation": "F ∝ 1/r² means the force at 2r is F/4, not F/2. The student's claim is incorrect." },
+        { "answer": "The error is that force does not depend on distance at all", "explanation": "Force does depend on distance. The error is using 1/r instead of 1/r². The force is quartered when distance is doubled." },
+        { "answer": "The force is reduced to one-eighth at twice the distance", "explanation": "One-eighth would apply to an inverse cube law (1/r³). The inverse square law gives F/4 at twice the distance." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Two identical charges are separated by distance d and experience force F. The distance is then changed to d√2. What is the new force?",
+      "correct": "F/2",
+      "correctExplanation": "F_new = F × (d/(d√2))² = F × (1/√2)² = F × 1/2 = F/2. The force is halved when the distance increases by √2.",
+      "distractors": [
+        { "answer": "F/√2", "explanation": "The inverse square law squares the distance ratio: (1/√2)² = 1/2. The force is F/2, not F/√2." },
+        { "answer": "F/4", "explanation": "F/4 would apply at distance 2d. At d√2, the force is F × (1/√2)² = F/2." },
+        { "answer": "2F", "explanation": "Increasing the distance decreases the force. At d√2, the force is F/2, not 2F." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Two charges at distance r have force F. Both charges are halved, and the distance is also halved. What is the new force?",
+      "correct": "F",
+      "correctExplanation": "Halving both charges gives a factor of (½)(½) = ¼ on the force. Halving the distance gives a factor of (1/(½))² = 4. Combined: F × ¼ × 4 = F. The force is unchanged.",
+      "distractors": [
+        { "answer": "F/4", "explanation": "This accounts for halving both charges (×¼) but not the halved distance (×4). The combined effect is F × ¼ × 4 = F." },
+        { "answer": "4F", "explanation": "This accounts for the halved distance (×4) but not the halved charges (×¼). Combined: F × ¼ × 4 = F." },
+        { "answer": "F/16", "explanation": "This squares the charge factor unnecessarily. The combined effect of halving both charges and the distance is F × (½)² × 2² = F." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student measures force F₁ at distance r₁ and force F₂ at distance r₂. They want to verify the inverse square law. Which ratio should equal 1 if the law holds?",
+      "correct": "F₁r₁² / (F₂r₂²)",
+      "correctExplanation": "If F ∝ 1/r², then Fr² = constant. Therefore F₁r₁² = F₂r₂², and the ratio F₁r₁²/(F₂r₂²) = 1.",
+      "distractors": [
+        { "answer": "F₁r₁ / (F₂r₂)", "explanation": "This tests an inverse law (F ∝ 1/r), not an inverse square law. The correct test uses Fr² = constant." },
+        { "answer": "F₁/F₂ × r₁/r₂", "explanation": "This tests whether F ∝ 1/r, not 1/r². For the inverse square law, the test is F₁r₁² = F₂r₂²." },
+        { "answer": "F₁ + r₁² / (F₂ + r₂²)", "explanation": "Adding force and distance squared has no physical meaning. The test for the inverse square law is the ratio F₁r₁²/(F₂r₂²) = 1." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "The force between two charges is 72 N. One charge is tripled, the other is halved, and the distance is doubled. What is the new force?",
+      "correct": "27 N",
+      "correctExplanation": "Charge changes: ×3 × ½ = ×1.5. Distance change: ÷(2²) = ÷4. New force = 72 × 1.5/4 = 72 × 0.375 = 27 N.",
+      "distractors": [
+        { "answer": "54 N", "explanation": "This applies the charge factor (×1.5) but forgets the distance factor (÷4). New force = 72 × 1.5/4 = 27 N." },
+        { "answer": "18 N", "explanation": "This divides by 4 but does not apply the charge factor. New force = 72 × 1.5/4 = 27 N." },
+        { "answer": "108 N", "explanation": "This applies ×3 for one charge and ÷2 for the distance (not ÷4). The correct calculation is 72 × 1.5/4 = 27 N." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A graph of force F versus distance r for two point charges shows a characteristic shape. A student draws F vs r² and gets a curve. They expected a straight line. What graph should they have plotted for a straight line?",
+      "correct": "F vs 1/r²",
+      "correctExplanation": "Since F = kq₁q₂/r² = kq₁q₂ × (1/r²), plotting F against 1/r² gives a straight line through the origin with gradient kq₁q₂.",
+      "distractors": [
+        { "answer": "F vs r²", "explanation": "F vs r² gives a curve because F ∝ 1/r², not F ∝ r². The correct choice is F vs 1/r² for a straight line." },
+        { "answer": "F² vs r", "explanation": "F² vs r does not linearise the inverse square relationship. F vs 1/r² gives a straight line." },
+        { "answer": "1/F vs r", "explanation": "Since F ∝ 1/r², 1/F ∝ r², so 1/F vs r would give a parabola, not a straight line. F vs 1/r² is the correct linearisation." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Two charges at distance d experience force F. The distance is changed to produce a force of F/100. A student says the new distance is 100d. Identify and correct the error.",
+      "correct": "The student used the inverse law instead of the inverse square law; the correct distance is 10d",
+      "correctExplanation": "F ∝ 1/r², so for F/100, the distance must increase by √100 = 10. The new distance is 10d, not 100d. The student forgot to take the square root.",
+      "distractors": [
+        { "answer": "The student is correct — the distance is 100d", "explanation": "At 100d, the force would be F/10000. For F/100, the distance is √100 = 10 times the original: 10d." },
+        { "answer": "The correct distance is 50d", "explanation": "50d would give F/2500. For F/100, the distance factor is √100 = 10, giving 10d." },
+        { "answer": "The correct distance is d/10", "explanation": "d/10 would give 100F (increase), not F/100 (decrease). The distance must increase to 10d." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student proposes that if the inverse square law applies to both gravitational and electric forces, then the electric force between two charged objects should also depend on their masses. Evaluate this claim.",
+      "correct": "Incorrect — the mathematical form is the same (1/r²) but electric force depends on charge, not mass",
+      "correctExplanation": "The inverse square distance dependence is shared, but the source properties are different. Gravitational force depends on mass (F = Gm₁m₂/r²) while electric force depends on charge (F = kq₁q₂/r²). The 1/r² form is common; the sources are not.",
+      "distractors": [
+        { "answer": "Correct — both forces must depend on the same properties", "explanation": "The 1/r² dependence comes from geometry, not from the source properties. Electric force depends on charge; gravitational force depends on mass." },
+        { "answer": "Correct — heavier charged objects always have stronger electric forces", "explanation": "Mass does not affect electric force. A heavy charged object and a light one with the same charge experience the same electric force at the same distance." },
+        { "answer": "Incorrect — neither force actually follows an inverse square law", "explanation": "Both forces do follow inverse square laws. The difference is in what they depend on: charge for electric, mass for gravitational." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the analysis of a non-integer distance change.",
+      "sentence": "If the distance changes from 0.20 m to 0.50 m, the distance ratio is {{blank:1}}, and the force changes by a factor of 1/({{blank:2}}).",
+      "blanks": {
+        "1": {
+          "correct": "2.5",
+          "correctExplanation": "The distance ratio is 0.50/0.20 = 2.5. The distance increased by a factor of 2.5.",
+          "distractors": [
+            { "answer": "0.30", "explanation": "0.30 is the difference (0.50 − 0.20), not the ratio. The ratio is 0.50/0.20 = 2.5." },
+            { "answer": "0.40", "explanation": "The ratio of distances is 0.50/0.20 = 2.5, not 0.40." }
+          ]
+        },
+        "2": {
+          "correct": "6.25",
+          "correctExplanation": "The force factor is (2.5)² = 6.25. The force decreases by a factor of 6.25 when the distance increases by 2.5.",
+          "distractors": [
+            { "answer": "2.5", "explanation": "The factor must be squared for the inverse square law: (2.5)² = 6.25, not 2.5." },
+            { "answer": "5.0", "explanation": "The factor is (2.5)² = 6.25, not 2 × 2.5 = 5.0." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the combined changes problem.",
+      "sentence": "If one charge is quadrupled, the other charge is unchanged, and the distance is doubled, the net effect on force is ×4 (charge) ÷ {{blank:1}} (distance) = a factor of {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "4",
+          "correctExplanation": "Doubling the distance gives a factor of 2² = 4 in the denominator due to the inverse square law.",
+          "distractors": [
+            { "answer": "2", "explanation": "The distance factor must be squared: 2² = 4. The divisor is 4, not 2." },
+            { "answer": "8", "explanation": "The factor is 2² = 4, not 2³ = 8. The inverse square law uses the square of the distance change." }
+          ]
+        },
+        "2": {
+          "correct": "1",
+          "correctExplanation": "The charge effect (×4) and the distance effect (÷4) exactly cancel, leaving the force unchanged: factor = 4/4 = 1.",
+          "distractors": [
+            { "answer": "2", "explanation": "The charge factor is 4 and the distance factor is 4. They cancel: 4/4 = 1, not 2." },
+            { "answer": "16", "explanation": "This multiplies 4 × 4 instead of dividing. The combined factor is 4/4 = 1." }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,503 @@
+{
+  "_link": {
+    "uuid": "lp-c0084dc6-78b2-59e3-e48b-607ebd157cb9",
+    "version": 1,
+    "contentHash": "hash-54555cd3",
+    "title": "I can identify whether a transformer is step-up or step-down by comparing the number of turns on each coil",
+    "generatedAt": "2026-03-08T10:20:00Z"
+  },
+  "toLevel2": [
+    {
+      "type": "mc",
+      "question": "A transformer has 200 turns on the primary coil and 800 turns on the secondary coil. Which one of the following correctly identifies this transformer?",
+      "correct": "Step-up transformer",
+      "correctExplanation": "Since N2 > N1, the secondary voltage is higher than the primary voltage, making this a step-up transformer.",
+      "distractors": [
+        { "answer": "Step-down transformer", "explanation": "A step-down transformer has N2 < N1. Here N2 = 800 > N1 = 200, so voltage is stepped up." },
+        { "answer": "Isolation transformer", "explanation": "An isolation transformer has N1 = N2. Here the turns are unequal, so it changes the voltage." },
+        { "answer": "Variable transformer", "explanation": "This is not determined by fixed turn counts. The transformer with N2 > N1 is a step-up type." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A transformer has 1000 turns on the primary coil and 50 turns on the secondary coil. Which one of the following correctly identifies this transformer?",
+      "correct": "Step-down transformer",
+      "correctExplanation": "Since N2 < N1, the secondary voltage is lower than the primary voltage, making this a step-down transformer.",
+      "distractors": [
+        { "answer": "Step-up transformer", "explanation": "A step-up transformer has N2 > N1. Here N2 = 50 < N1 = 1000, so voltage is stepped down." },
+        { "answer": "Isolation transformer", "explanation": "An isolation transformer has equal turns on both coils. Here the turns are very different." },
+        { "answer": "Inverting transformer", "explanation": "This is not a standard transformer classification. The transformer with N2 < N1 is a step-down type." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which one of the following correctly describes the relationship between turns and voltage in a step-up transformer?",
+      "correct": "The secondary coil has more turns and produces a higher voltage",
+      "correctExplanation": "In a step-up transformer, N2 > N1, and since V1/V2 = N1/N2, the secondary voltage V2 is greater than V1.",
+      "distractors": [
+        { "answer": "The primary coil has more turns and produces a higher voltage", "explanation": "If the primary had more turns, the secondary voltage would be lower, making it a step-down transformer." },
+        { "answer": "The secondary coil has fewer turns and produces a higher voltage", "explanation": "Fewer secondary turns produce a lower voltage. More turns are needed for a higher voltage." },
+        { "answer": "The primary coil has fewer turns and produces a higher voltage", "explanation": "The primary produces the input voltage. The output voltage depends on the secondary turns." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A transformer has N1 = 500 and N2 = 500. Which one of the following best describes this transformer?",
+      "correct": "An isolation transformer with equal input and output voltage",
+      "correctExplanation": "When N1 = N2, V1 = V2. The transformer provides electrical isolation without changing the voltage.",
+      "distractors": [
+        { "answer": "A step-up transformer that doubles the voltage", "explanation": "Equal turns means equal voltage. Doubling would require N2 = 2 × N1." },
+        { "answer": "A step-down transformer that halves the voltage", "explanation": "Equal turns means equal voltage. Halving would require N2 = N1/2." },
+        { "answer": "A non-functional transformer that produces no output", "explanation": "The transformer functions normally. Equal turns gives equal input and output voltage." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which one of the following best describes how to determine if a transformer is step-up or step-down?",
+      "correct": "Compare N1 and N2: if N2 > N1 it is step-up; if N2 < N1 it is step-down",
+      "correctExplanation": "The relative number of turns directly determines whether the voltage increases or decreases from primary to secondary.",
+      "distractors": [
+        { "answer": "Compare N1 and N2: if N2 > N1 it is step-down; if N2 < N1 it is step-up", "explanation": "This reverses the correct relationship. More secondary turns means higher secondary voltage (step-up)." },
+        { "answer": "Measure the wire thickness: thicker secondary wire means step-up transformer", "explanation": "Wire thickness relates to current capacity, not whether the transformer steps voltage up or down." },
+        { "answer": "Check the core material: iron core means step-up and steel core means step-down", "explanation": "The core material does not determine transformer type. The turns ratio determines step-up or step-down." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "A transformer with more turns on the secondary coil than the primary coil is a step-up transformer.",
+      "correct": "True",
+      "correctExplanation": "When N2 > N1, the voltage is stepped up from primary to secondary, so V2 > V1.",
+      "distractors": [
+        { "answer": "False", "explanation": "Students may confuse the direction. More secondary turns means higher secondary voltage, which is step-up by definition." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "In a step-down transformer, the primary coil has fewer turns than the secondary coil.",
+      "correct": "False",
+      "correctExplanation": "In a step-down transformer, the primary coil has more turns than the secondary (N1 > N2), producing a lower output voltage.",
+      "distractors": [
+        { "answer": "True", "explanation": "Students may reverse the relationship. Step-down means N1 > N2: more primary turns, fewer secondary turns." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about step-up transformers.",
+      "sentence": "In a step-up transformer, the {{blank:1}} coil has more turns than the {{blank:2}} coil.",
+      "blanks": {
+        "1": {
+          "correct": "secondary",
+          "correctExplanation": "The secondary coil has more turns in a step-up transformer, producing a higher output voltage.",
+          "distractors": [
+            { "answer": "primary", "explanation": "If the primary had more turns, voltage would be stepped down, not up." },
+            { "answer": "output", "explanation": "The output coil is the secondary coil. While correct in meaning, the standard term is secondary." }
+          ]
+        },
+        "2": {
+          "correct": "primary",
+          "correctExplanation": "The primary coil has fewer turns in a step-up transformer, so the secondary voltage exceeds the primary voltage.",
+          "distractors": [
+            { "answer": "secondary", "explanation": "The secondary has more turns in a step-up transformer, not fewer." },
+            { "answer": "input", "explanation": "The input coil is the primary coil. While correct in meaning, the standard term is primary." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about identifying transformer type.",
+      "sentence": "A transformer with 100 primary turns and 2000 secondary turns is a {{blank:1}} transformer.",
+      "blanks": {
+        "1": {
+          "correct": "step-up",
+          "correctExplanation": "Since N2 (2000) > N1 (100), the secondary voltage is higher than the primary, making this a step-up transformer.",
+          "distractors": [
+            { "answer": "step-down", "explanation": "N2 > N1 means voltage increases from primary to secondary, which is step-up, not step-down." },
+            { "answer": "isolation", "explanation": "An isolation transformer has N1 = N2. Here the turns are very different." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about step-down transformers.",
+      "sentence": "In a step-down transformer, the output voltage is {{blank:1}} than the input voltage because N2 is less than N1.",
+      "blanks": {
+        "1": {
+          "correct": "lower",
+          "correctExplanation": "With fewer secondary turns, the secondary voltage is lower than the primary voltage.",
+          "distractors": [
+            { "answer": "higher", "explanation": "A higher output voltage would mean step-up. Step-down transformers produce lower output voltage." },
+            { "answer": "equal to", "explanation": "Equal voltages occur only when N1 = N2 (isolation transformer). Here N2 < N1." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "mc",
+      "question": "A transformer has a turns ratio of N1:N2 = 5:1. The primary voltage is 250 V. Which one of the following is closest to the secondary voltage, and is this transformer step-up or step-down?",
+      "correct": "50 V; step-down",
+      "correctExplanation": "V2 = V1 × N2/N1 = 250 × 1/5 = 50 V. Since V2 < V1, it is a step-down transformer.",
+      "distractors": [
+        { "answer": "1250 V; step-up", "explanation": "This results from multiplying V1 by N1/N2 = 5 instead of N2/N1 = 1/5, inverting the ratio." },
+        { "answer": "50 V; step-up", "explanation": "The voltage of 50 V is correct but the classification is wrong. Since V2 < V1, it is step-down." },
+        { "answer": "1250 V; step-down", "explanation": "Both the voltage and classification are incorrect. V2 = 50 V and the transformer is step-down." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Raj examines a transformer and counts 300 turns on the primary and 3600 turns on the secondary. Which one of the following correctly describes the turns ratio and the effect on voltage?",
+      "correct": "1:12 step-up; the secondary voltage is 12 times the primary voltage",
+      "correctExplanation": "N1:N2 = 300:3600 = 1:12. Since N2 > N1, V2 = 12 × V1, stepping the voltage up by a factor of 12.",
+      "distractors": [
+        { "answer": "12:1 step-down; the secondary voltage is one-twelfth of the primary", "explanation": "This reverses the ratio. N2 > N1 means step-up, not step-down." },
+        { "answer": "1:12 step-down; the secondary voltage is 12 times the primary voltage", "explanation": "The ratio is correct but the label is wrong. N2 > N1 with higher secondary voltage is step-up." },
+        { "answer": "12:1 step-up; the secondary voltage is 12 times the primary voltage", "explanation": "The ratio should be expressed as N1:N2 = 1:12, not 12:1, for a step-up transformer." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student claims that a transformer with N1 = 400 and N2 = 100 is a step-up transformer because 400 is a larger number. Which one of the following best evaluates this claim?",
+      "correct": "The claim is incorrect; N1 > N2 means the voltage is stepped down, not up",
+      "correctExplanation": "Step-up or step-down refers to what happens to the voltage, not which number is larger. N1 > N2 gives V2 < V1 (step-down).",
+      "distractors": [
+        { "answer": "The claim is correct; the side with more turns always steps up the voltage", "explanation": "Step-up means V2 > V1, which requires N2 > N1. Here N1 is larger, so voltage is stepped down." },
+        { "answer": "The claim is correct; step-up always refers to the coil with the larger number of turns", "explanation": "Step-up refers to the output voltage being higher than the input, not to which coil has more turns." },
+        { "answer": "The claim cannot be evaluated without knowing the actual voltages applied", "explanation": "The turns ratio alone determines whether a transformer is step-up or step-down." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which one of the following correctly describes the relationship between current and turns in a step-up transformer?",
+      "correct": "The secondary current is less than the primary current",
+      "correctExplanation": "In a step-up transformer, voltage increases but current decreases to conserve power: I2 = I1 × N1/N2, and since N1 < N2, I2 < I1.",
+      "distractors": [
+        { "answer": "The secondary current is greater than the primary current", "explanation": "In a step-up transformer, current is stepped down. Current increases only in a step-down transformer." },
+        { "answer": "The secondary current equals the primary current exactly", "explanation": "Current changes inversely with voltage. In a step-up transformer, higher voltage means lower current." },
+        { "answer": "The current relationship cannot be predicted from the turns ratio", "explanation": "The turns ratio directly determines the current ratio: I1/I2 = N2/N1 for an ideal transformer." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A power station uses a step-up transformer to increase voltage from 25 kV to 500 kV for transmission. Which one of the following is closest to the turns ratio N1:N2?",
+      "correct": "1:20",
+      "correctExplanation": "N1/N2 = V1/V2 = 25/500 = 1/20, so the turns ratio is 1:20.",
+      "distractors": [
+        { "answer": "20:1", "explanation": "This would be a step-down transformer. The secondary needs 20 times more turns than the primary for step-up." },
+        { "answer": "1:475", "explanation": "This results from subtracting voltages (500 − 25 = 475) instead of dividing them." },
+        { "answer": "1:200", "explanation": "This results from an error in dividing the voltages. 500/25 = 20, not 200." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A transformer is designed to convert 240 V mains to 12 V for a laptop charger. Which one of the following correctly describes this transformer?",
+      "correct": "Step-down with N1:N2 = 20:1",
+      "correctExplanation": "240/12 = 20, so N1:N2 = 20:1. The voltage decreases, so it is a step-down transformer.",
+      "distractors": [
+        { "answer": "Step-up with N1:N2 = 1:20", "explanation": "1:20 would step the voltage up by a factor of 20. The charger needs to reduce voltage from 240 to 12 V." },
+        { "answer": "Step-down with N1:N2 = 1:20", "explanation": "This ratio would step voltage down by a factor of 20, but the ratio is inverted. N1:N2 = 20:1." },
+        { "answer": "Step-up with N1:N2 = 20:1", "explanation": "A 20:1 ratio with more primary turns steps voltage down, not up." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "In a step-down transformer, the current in the secondary coil is greater than the current in the primary coil.",
+      "correct": "True",
+      "correctExplanation": "In a step-down transformer, voltage decreases but current increases to conserve power: I2 = I1 × N1/N2, and since N1 > N2, I2 > I1.",
+      "distractors": [
+        { "answer": "False", "explanation": "Students may think current always decreases. In step-down transformers, lower voltage means higher current to maintain the same power." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about turns ratio and voltage.",
+      "sentence": "In a step-up transformer, the turns ratio N1:N2 is {{blank:1}} than 1, meaning N2 is greater than N1.",
+      "blanks": {
+        "1": {
+          "correct": "less",
+          "correctExplanation": "If N1:N2 < 1 (e.g., 1:5), then N2 > N1 and the voltage is stepped up.",
+          "distractors": [
+            { "answer": "greater", "explanation": "If N1:N2 > 1, then N1 > N2 and the voltage would be stepped down, not up." },
+            { "answer": "equal", "explanation": "If N1:N2 = 1, the voltage is unchanged. This describes an isolation transformer." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about transformer types.",
+      "sentence": "When a transformer has a turns ratio N1:N2 of 10:1, the secondary voltage is {{blank:1}} of the primary voltage.",
+      "blanks": {
+        "1": {
+          "correct": "one-tenth",
+          "correctExplanation": "V2 = V1 × N2/N1 = V1 × 1/10, so the secondary voltage is one-tenth of the primary.",
+          "distractors": [
+            { "answer": "ten times", "explanation": "Ten times would require N1:N2 = 1:10. Here the ratio is 10:1, giving one-tenth." },
+            { "answer": "one-half", "explanation": "One-half would require N1:N2 = 2:1. The ratio 10:1 gives one-tenth." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about current in transformers.",
+      "sentence": "In a step-up transformer, the voltage increases but the current {{blank:1}} to conserve power.",
+      "blanks": {
+        "1": {
+          "correct": "decreases",
+          "correctExplanation": "Power conservation requires Pin = Pout. If voltage increases, current must decrease to maintain V × I = constant.",
+          "distractors": [
+            { "answer": "increases", "explanation": "If both voltage and current increased, output power would exceed input power, violating energy conservation." },
+            { "answer": "stays the same", "explanation": "If current stayed the same while voltage increased, output power would exceed input power." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "mc",
+      "question": "A transformer with N1 = 600 and N2 = 30 is connected to a 240 V AC supply. A 4.0 Ω resistor is connected across the secondary. Which one of the following is closest to the current in the primary coil?",
+      "correct": "0.15 A",
+      "correctExplanation": "V2 = 240 × 30/600 = 12 V. I2 = V2/R = 12/4.0 = 3.0 A. I1 = I2 × N2/N1 = 3.0 × 30/600 = 0.15 A.",
+      "distractors": [
+        { "answer": "3.0 A", "explanation": "This is the secondary current, not the primary. The primary current is smaller in a step-down transformer." },
+        { "answer": "60 A", "explanation": "This results from inverting the current ratio: I1 = I2 × N1/N2 = 3.0 × 20 = 60, which is incorrect." },
+        { "answer": "0.050 A", "explanation": "This results from dividing V2 by V1 × R or another incorrect formula." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Mia observes a transformer at a substation. The input is 66 kV and the output is 11 kV. The secondary delivers 200 A. Which one of the following is closest to the primary current?",
+      "correct": "33 A",
+      "correctExplanation": "I1 = I2 × V2/V1 = 200 × 11 000/66 000 = 200 × 1/6 = 33.3 A ≈ 33 A.",
+      "distractors": [
+        { "answer": "200 A", "explanation": "This is the secondary current. The primary current is lower because this is a step-down transformer." },
+        { "answer": "1200 A", "explanation": "This results from I2 × V1/V2 = 200 × 6 = 1200, inverting the voltage ratio." },
+        { "answer": "6.0 A", "explanation": "This results from dividing V1/V2 by I2 or another incorrect relationship." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A phone charger uses a transformer to convert 240 V AC to 5.0 V AC. If the primary coil has 4800 turns, which one of the following is closest to the number of turns on the secondary coil?",
+      "correct": "100",
+      "correctExplanation": "N2 = N1 × V2/V1 = 4800 × 5.0/240 = 4800 × 0.0208 = 100 turns.",
+      "distractors": [
+        { "answer": "230 400", "explanation": "This results from N1 × V1/V2 = 4800 × 48, inverting the voltage ratio." },
+        { "answer": "48", "explanation": "This is the turns ratio N1/N2, not the number of secondary turns." },
+        { "answer": "1000", "explanation": "This results from a calculation error in applying the turns ratio formula." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An engineer needs a transformer to step 33 kV down to 415 V for a factory. Which one of the following is closest to the required turns ratio N1:N2?",
+      "correct": "80:1",
+      "correctExplanation": "N1/N2 = V1/V2 = 33 000/415 ≈ 79.5 ≈ 80:1.",
+      "distractors": [
+        { "answer": "1:80", "explanation": "This would step the voltage up by a factor of 80, producing 2.64 MV instead of 415 V." },
+        { "answer": "8:1", "explanation": "This results from an error in the voltage ratio calculation, possibly using 33/4.15 instead of 33 000/415." },
+        { "answer": "800:1", "explanation": "This is ten times too large, possibly from a decimal error in the voltage ratio." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A step-up transformer increases voltage from 230 V to 2300 V. The secondary coil has 5000 turns. Which one of the following is closest to the number of turns on the primary coil?",
+      "correct": "500",
+      "correctExplanation": "N1 = N2 × V1/V2 = 5000 × 230/2300 = 5000 × 0.10 = 500 turns.",
+      "distractors": [
+        { "answer": "50 000", "explanation": "This results from N2 × V2/V1 = 5000 × 10, inverting the voltage ratio." },
+        { "answer": "50", "explanation": "This results from an additional division by 10, giving a value that is too small." },
+        { "answer": "5000", "explanation": "Equal turns would give an isolation transformer. A step-up requires fewer primary turns." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Kai connects a 6.0 V AC supply to the primary of a step-up transformer with N1 = 100 and N2 = 400. He connects a 24 Ω lamp to the secondary. Which one of the following is closest to the power consumed by the lamp?",
+      "correct": "24 W",
+      "correctExplanation": "V2 = 6.0 × 400/100 = 24 V. P = V2²/R = 576/24 = 24 W.",
+      "distractors": [
+        { "answer": "1.5 W", "explanation": "This results from using V1²/R = 36/24 = 1.5, using primary voltage across the secondary load." },
+        { "answer": "96 W", "explanation": "This results from V2 × R = 24 × 4 or another incorrect combination of quantities." },
+        { "answer": "6.0 W", "explanation": "This results from using V1 × I2 or another mixed-quantity calculation." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Sally examines a transformer where the secondary coil has been replaced with one having twice as many turns. Which one of the following best describes how this changes the transformer's behaviour?",
+      "correct": "The secondary voltage doubles and the secondary current halves for the same load",
+      "correctExplanation": "Doubling N2 doubles V2 (from the turns ratio) and halves I2 (from power conservation, assuming the same load power).",
+      "distractors": [
+        { "answer": "The secondary voltage doubles and the secondary current also doubles", "explanation": "Both voltage and current doubling would quadruple the power, violating energy conservation." },
+        { "answer": "The secondary voltage halves because more turns create more resistance", "explanation": "More turns increase the voltage ratio, not resistance. V2 is proportional to N2." },
+        { "answer": "There is no change because the primary determines all output quantities", "explanation": "The secondary turns directly affect the voltage and current ratios through the turns ratio formula." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the calculation about transformer turns.",
+      "sentence": "A step-down transformer converts 240 V to 12 V. The turns ratio N1:N2 is {{blank:1}}.",
+      "blanks": {
+        "1": {
+          "correct": "20:1",
+          "correctExplanation": "N1/N2 = V1/V2 = 240/12 = 20, so the turns ratio is 20:1.",
+          "distractors": [
+            { "answer": "1:20", "explanation": "This would be a step-up transformer with V2 = 20 × V1. The correct step-down ratio is 20:1." },
+            { "answer": "12:1", "explanation": "This does not correspond to the voltage ratio. 240/12 = 20, not 12." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about current in step-down transformers.",
+      "sentence": "A step-down transformer with a turns ratio of 10:1 will produce a secondary current that is {{blank:1}} times the primary current.",
+      "blanks": {
+        "1": {
+          "correct": "10",
+          "correctExplanation": "I2/I1 = N1/N2 = 10/1 = 10. The secondary current is 10 times the primary current.",
+          "distractors": [
+            { "answer": "0.10", "explanation": "This inverts the ratio. In a step-down transformer, current increases on the secondary side." },
+            { "answer": "100", "explanation": "The current ratio equals the turns ratio, not its square. I2/I1 = N1/N2 = 10." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about transformer identification.",
+      "sentence": "If the output voltage of a transformer is higher than the input voltage, the transformer is classified as {{blank:1}}.",
+      "blanks": {
+        "1": {
+          "correct": "step-up",
+          "correctExplanation": "When V2 > V1 (output exceeds input), the transformer steps the voltage up.",
+          "distractors": [
+            { "answer": "step-down", "explanation": "Step-down means V2 < V1. When output exceeds input, it is step-up." },
+            { "answer": "isolation", "explanation": "An isolation transformer has V2 = V1. When V2 > V1, it is a step-up transformer." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "mc",
+      "question": "An electrician finds a transformer with partially obscured labels. She can read N1 = 250 and measures V1 = 240 V input and V2 = 48 V output. Which one of the following is closest to N2?",
+      "correct": "50",
+      "correctExplanation": "N2 = N1 × V2/V1 = 250 × 48/240 = 250 × 0.20 = 50 turns.",
+      "distractors": [
+        { "answer": "1250", "explanation": "This results from N1 × V1/V2 = 250 × 5, inverting the voltage ratio." },
+        { "answer": "5.0", "explanation": "This is the turns ratio N1/N2, not the number of secondary turns." },
+        { "answer": "500", "explanation": "This results from a calculation error, possibly doubling N1 instead of using the voltage ratio." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Bruce designs a power supply that must convert 240 V AC to three different output voltages: 5 V, 12 V, and 48 V. He proposes using a single primary coil with three separate secondary coils. Which one of the following correctly describes the turns ratios needed?",
+      "correct": "N1:N2 = 48:1, N1:N3 = 20:1, N1:N4 = 5:1 for the three outputs respectively",
+      "correctExplanation": "Each secondary coil has a ratio determined by V1/Vout: 240/5 = 48:1, 240/12 = 20:1, 240/48 = 5:1.",
+      "distractors": [
+        { "answer": "All three secondary coils must have the same number of turns as the primary", "explanation": "Equal turns would give 240 V on each secondary. Different voltages require different turns ratios." },
+        { "answer": "A single transformer cannot have multiple secondary coils; three separate transformers are needed", "explanation": "Multi-output transformers with multiple secondary windings are common in power supplies." },
+        { "answer": "N1:N2 = 1:48, N1:N3 = 1:20, N1:N4 = 1:5 for the three outputs respectively", "explanation": "These ratios are inverted. They would step voltage up to 11 520 V, 4800 V, and 1200 V." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student measures a transformer's input as 240 V at 0.50 A and the output as 11.5 V at 9.5 A. Which one of the following best evaluates the transformer's efficiency?",
+      "correct": "Efficiency is approximately 91%, indicating typical real-world losses",
+      "correctExplanation": "Pin = 240 × 0.50 = 120 W. Pout = 11.5 × 9.5 = 109 W. Efficiency = 109/120 × 100 = 90.8% ≈ 91%.",
+      "distractors": [
+        { "answer": "Efficiency is 100% because all transformers conserve power perfectly", "explanation": "Real transformers have losses from eddy currents, hysteresis, and coil resistance. Pin > Pout." },
+        { "answer": "Efficiency is approximately 50%, indicating the transformer is faulty", "explanation": "91% efficiency is typical for a real transformer. 50% would be unusually low." },
+        { "answer": "Efficiency cannot be calculated without knowing the number of turns", "explanation": "Efficiency = Pout/Pin, which only requires knowing V and I on each side, not the turns." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Denise compares two transformer designs for stepping 230 V down to 23 V. Design A has N1 = 1000, N2 = 100. Design B has N1 = 100, N2 = 10. Both have the same turns ratio. Which one of the following best evaluates which design is superior?",
+      "correct": "Design A handles higher power because more turns provide stronger magnetic coupling",
+      "correctExplanation": "More turns generally provide better magnetic coupling with the core and allow higher power handling with lower losses.",
+      "distractors": [
+        { "answer": "Both designs perform identically because they have the same turns ratio", "explanation": "While the voltage ratio is the same, the actual number of turns affects coupling, flux, and power capacity." },
+        { "answer": "Design B is superior because fewer turns means less wire resistance and lower losses", "explanation": "Fewer turns reduce wire resistance but also reduce magnetic coupling, limiting power handling." },
+        { "answer": "Neither design can work because the turns ratio must use prime numbers for efficiency", "explanation": "There is no requirement for prime numbers. The turns ratio determines the voltage ratio regardless of the specific numbers." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An engineer discovers that a substation transformer labelled as 66 kV to 11 kV is actually producing 10.5 kV on the secondary. Which one of the following best explains the discrepancy?",
+      "correct": "Voltage drop due to resistive losses in the coils reduces the actual output below the ideal value",
+      "correctExplanation": "Real transformer coils have resistance, causing an IR voltage drop that reduces the actual secondary voltage below the ideal turns-ratio value.",
+      "distractors": [
+        { "answer": "The transformer must have the wrong number of turns on the secondary coil", "explanation": "A small reduction is expected due to losses. The turns are likely correct; real-world losses cause the discrepancy." },
+        { "answer": "The primary voltage must be lower than 66 kV for the output to be 10.5 kV", "explanation": "While lower input would reduce output, the more likely explanation is internal resistance losses." },
+        { "answer": "The transformer has degraded and lost some of its turns due to thermal damage", "explanation": "Physical loss of turns would cause a permanent and specific voltage change. Resistive losses are the normal cause." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Ishva analyses a transmission system with a step-up transformer (230 V to 110 kV), transmission lines with 20 Ω resistance, and a step-down transformer (110 kV to 230 V). The system delivers 50 kW. Which one of the following is closest to the voltage received by the consumer?",
+      "correct": "229 V",
+      "correctExplanation": "I = 50 000/110 000 = 0.455 A. Vdrop = IR = 0.455 × 20 = 9.1 V. V at step-down input = 110 000 − 9.1 = 109 991 V. V_consumer = 109 991 × (230/110 000) ≈ 229.98 V ≈ 230 V. More precisely ≈ 229 V considering rounding.",
+      "distractors": [
+        { "answer": "221 V", "explanation": "This results from a larger voltage drop calculation, possibly using incorrect current or resistance values." },
+        { "answer": "230 V", "explanation": "This neglects the voltage drop in the transmission lines. The actual voltage is slightly less than 230 V." },
+        { "answer": "120 V", "explanation": "This results from a major calculation error, possibly halving the expected voltage." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A transformer manufacturer offers step-down models with turns ratios of 10:1 and 20:1. Magnus needs to convert 240 V to 6 V for LED lighting. Which one of the following best evaluates the available options?",
+      "correct": "Neither ratio gives exactly 6 V; the 20:1 gives 12 V and the 10:1 gives 24 V",
+      "correctExplanation": "240/20 = 12 V and 240/10 = 24 V. A 40:1 ratio would be needed for 6 V, which is not offered.",
+      "distractors": [
+        { "answer": "The 10:1 ratio gives exactly 6 V when connected to the 240 V supply", "explanation": "240/10 = 24 V, not 6 V. A ratio of 40:1 would be needed." },
+        { "answer": "The 20:1 ratio gives exactly 6 V when connected to the 240 V supply", "explanation": "240/20 = 12 V, not 6 V. A ratio of 40:1 would be needed." },
+        { "answer": "Both ratios can produce 6 V by adjusting the input voltage appropriately", "explanation": "The input is fixed at 240 V mains. Neither standard ratio produces 6 V from this input." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Anna evaluates a claim that connecting two identical 10:1 step-down transformers in series (output of first feeds input of second) would achieve a 100:1 overall ratio. Which one of the following best evaluates this claim?",
+      "correct": "The claim is correct; cascading two 10:1 transformers gives an overall ratio of 100:1",
+      "correctExplanation": "V_final = V_in × (1/10) × (1/10) = V_in/100. Two 10:1 step-down stages multiply to give 100:1 overall.",
+      "distractors": [
+        { "answer": "The claim is incorrect; two 10:1 transformers in series give a 20:1 ratio by addition", "explanation": "Turns ratios multiply when cascaded, not add. 10 × 10 = 100, not 10 + 10 = 20." },
+        { "answer": "The claim is impossible because transformers cannot be connected in series at all", "explanation": "Cascading transformers is a common practice. The output of one can feed the input of another." },
+        { "answer": "The claim is correct only if both transformers have exactly the same number of turns", "explanation": "The cascade works regardless of the actual turn counts, provided each has the correct 10:1 ratio." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the evaluation of transformer application.",
+      "sentence": "At a power substation, a {{blank:1}} transformer reduces the voltage from the high-voltage transmission line to a level suitable for local distribution.",
+      "blanks": {
+        "1": {
+          "correct": "step-down",
+          "correctExplanation": "Substations use step-down transformers to reduce transmission voltage (e.g., 500 kV) to distribution voltage (e.g., 11–66 kV).",
+          "distractors": [
+            { "answer": "step-up", "explanation": "Step-up transformers are used at the power station. Substations use step-down transformers to reduce voltage." },
+            { "answer": "isolation", "explanation": "Isolation transformers maintain voltage. Substations need to reduce voltage for local distribution." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the analysis of transformer efficiency.",
+      "sentence": "A real transformer with Pin = 500 W and Pout = 475 W has an efficiency of {{blank:1}}%.",
+      "blanks": {
+        "1": {
+          "correct": "95",
+          "correctExplanation": "Efficiency = Pout/Pin × 100 = 475/500 × 100 = 95%.",
+          "distractors": [
+            { "answer": "105", "explanation": "Efficiency cannot exceed 100%. The output is less than the input, giving 95%." },
+            { "answer": "25", "explanation": "25 W is the power lost, not the efficiency percentage. Efficiency is 475/500 × 100 = 95%." }
+          ]
+        }
+      }
+    }
+  ]
+}

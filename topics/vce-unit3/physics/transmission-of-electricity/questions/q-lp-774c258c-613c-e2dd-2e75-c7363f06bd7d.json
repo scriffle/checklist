@@ -1,0 +1,583 @@
+{
+  "_link": {
+    "uuid": "lp-774c258c-613c-e2dd-2e75-c7363f06bd7d",
+    "version": 1,
+    "contentHash": "hash-aade2326",
+    "title": "I can calculate electrical energy converted to heat in a wire using E = I²Rt",
+    "generatedAt": "2026-03-09"
+  },
+  "toLevel2": [
+    {
+      "type": "mc",
+      "question": "Which one of the following formulas correctly gives the electrical energy dissipated as heat in a wire?",
+      "correct": "E = I²Rt",
+      "correctExplanation": "The energy dissipated as heat in a wire is E = I²Rt, where I is the current, R is the resistance, and t is the time.",
+      "distractors": [
+        { "answer": "E = IRt", "explanation": "This omits squaring the current. The correct formula has I², not I." },
+        { "answer": "E = V²Rt", "explanation": "This incorrectly uses voltage squared multiplied by resistance. The correct formula is E = I²Rt." },
+        { "answer": "E = I²R/t", "explanation": "Dividing by time would give a rate of change, not total energy. Energy increases with time." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A wire carries a current of 2.0 A and has a resistance of 5.0 Ω. Which one of the following is closest to the energy dissipated as heat over 10 s?",
+      "correct": "200 J",
+      "correctExplanation": "E = I²Rt = (2.0)² × 5.0 × 10 = 4.0 × 5.0 × 10 = 200 J.",
+      "distractors": [
+        { "answer": "100 J", "explanation": "This results from using E = IRt = 2.0 × 5.0 × 10 = 100 J, which omits squaring the current." },
+        { "answer": "20 J", "explanation": "This calculates power P = I²R = 20 W but does not multiply by the time." },
+        { "answer": "500 J", "explanation": "This does not follow from the correct application of E = I²Rt." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "In the formula E = I²Rt, what does the quantity E represent?",
+      "correct": "The electrical energy converted to heat in the wire",
+      "correctExplanation": "E represents the total energy, in joules, that is converted from electrical energy to thermal energy (heat) in the wire.",
+      "distractors": [
+        { "answer": "The electrical power dissipated in the wire", "explanation": "Power is the rate of energy dissipation, P = I²R. Energy is power multiplied by time: E = Pt." },
+        { "answer": "The voltage drop across the wire", "explanation": "Voltage drop is V = IR. E = I²Rt gives the total energy dissipated, not the voltage." },
+        { "answer": "The resistance of the wire", "explanation": "Resistance is a property of the wire measured in ohms. E gives the energy dissipated in joules." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A transmission line with a resistance of 8.0 Ω carries a current of 3.0 A for 100 s. Which one of the following is closest to the energy dissipated as heat?",
+      "correct": "7200 J",
+      "correctExplanation": "E = I²Rt = (3.0)² × 8.0 × 100 = 9.0 × 8.0 × 100 = 7200 J.",
+      "distractors": [
+        { "answer": "2400 J", "explanation": "This results from using E = IRt = 3.0 × 8.0 × 100 = 2400 J, which omits squaring the current." },
+        { "answer": "72 J", "explanation": "This calculates power P = I²R = 72 W but does not multiply by time." },
+        { "answer": "900 J", "explanation": "This results from using E = I²t = 9.0 × 100 = 900 J, which omits the resistance." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which one of the following changes would most increase the energy dissipated as heat in a transmission line over a given time?",
+      "correct": "Doubling the current flowing through the line",
+      "correctExplanation": "Since E = I²Rt, doubling the current quadruples the energy dissipated (because I is squared), which is the largest effect among the options.",
+      "distractors": [
+        { "answer": "Doubling the length of the line", "explanation": "Doubling the length doubles R, which doubles E. Doubling the current quadruples E, a larger increase." },
+        { "answer": "Halving the resistance of the line", "explanation": "Halving R halves E. This is a decrease, not an increase." },
+        { "answer": "Doubling the time of operation", "explanation": "Doubling time doubles E, but doubling current quadruples E, which is a larger increase." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "In the formula E = I²Rt, doubling the current while keeping resistance and time constant will double the energy dissipated as heat.",
+      "correct": "False",
+      "correctExplanation": "Doubling the current quadruples the energy because the current is squared: (2I)² = 4I².",
+      "distractors": [
+        { "answer": "True", "explanation": "The energy does not simply double. Because I is squared in the formula, doubling I increases E by a factor of four." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "The energy dissipated as heat in a wire is directly proportional to the time the current flows, provided the current and resistance remain constant.",
+      "correct": "True",
+      "correctExplanation": "From E = I²Rt, when I and R are constant, E is directly proportional to t.",
+      "distractors": [
+        { "answer": "False", "explanation": "E = I²Rt shows that E increases linearly with t when I and R are constant." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the energy dissipation formula.",
+      "sentence": "The formula for the energy dissipated as heat in a wire is E = {{blank:1}} × R × {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "I²",
+          "correctExplanation": "The energy formula is E = I²Rt. The current must be squared.",
+          "distractors": [
+            { "answer": "I", "explanation": "The current must be squared in the formula. Using I instead of I² underestimates the energy." },
+            { "answer": "V", "explanation": "The formula E = I²Rt uses current, not voltage, multiplied by R and t." }
+          ]
+        },
+        "2": {
+          "correct": "t",
+          "correctExplanation": "Energy is the product of power and time: E = I²Rt, where t is the time in seconds.",
+          "distractors": [
+            { "answer": "V", "explanation": "Voltage does not appear directly in this form of the energy formula." },
+            { "answer": "P", "explanation": "Power P = I²R is already contained within the formula. Including P again would be incorrect." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about an energy calculation.",
+      "sentence": "A current of 5.0 A flows through a wire with resistance 2.0 Ω for 60 s. The energy dissipated is E = (5.0)² × 2.0 × 60 = {{blank:1}} J. This energy appears as {{blank:2}} in the wire.",
+      "blanks": {
+        "1": {
+          "correct": "3000",
+          "correctExplanation": "E = 25 × 2.0 × 60 = 3000 J.",
+          "distractors": [
+            { "answer": "600", "explanation": "This results from using E = IRt = 5.0 × 2.0 × 60 = 600 J, which omits squaring the current." },
+            { "answer": "50", "explanation": "This calculates P = I²R = 50 W but does not multiply by time." }
+          ]
+        },
+        "2": {
+          "correct": "heat",
+          "correctExplanation": "Electrical energy dissipated in a resistance is converted to thermal energy (heat).",
+          "distractors": [
+            { "answer": "light", "explanation": "A plain wire converts electrical energy to heat, not light." },
+            { "answer": "sound", "explanation": "Electrical energy in a resistive wire is converted to heat, not sound." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about converting time units.",
+      "sentence": "A transmission line has a power loss of 200 W. Over 1.0 hour, the time in seconds is {{blank:1}} s, and the total energy dissipated is E = 200 × {{blank:1}} = {{blank:2}} J.",
+      "blanks": {
+        "1": {
+          "correct": "3600",
+          "correctExplanation": "1.0 hour = 60 minutes × 60 seconds = 3600 s.",
+          "distractors": [
+            { "answer": "60", "explanation": "60 is the number of minutes in 1 hour, not the number of seconds." },
+            { "answer": "360", "explanation": "This is an incorrect conversion. 1 hour = 3600 s, not 360 s." }
+          ]
+        },
+        "2": {
+          "correct": "720 000",
+          "correctExplanation": "E = P × t = 200 × 3600 = 720 000 J.",
+          "distractors": [
+            { "answer": "12 000", "explanation": "This results from using t = 60 s (minutes) instead of 3600 s." },
+            { "answer": "72 000", "explanation": "This results from using t = 360 s, an incorrect conversion of 1 hour." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "mc",
+      "question": "A heater element with a resistance of 50 Ω carries a current of 4.0 A for 5.0 minutes. Which one of the following is closest to the energy dissipated as heat?",
+      "correct": "240 kJ",
+      "correctExplanation": "t = 5.0 × 60 = 300 s. E = I²Rt = (4.0)² × 50 × 300 = 16 × 50 × 300 = 240 000 J = 240 kJ.",
+      "distractors": [
+        { "answer": "60 kJ", "explanation": "This results from using E = IRt = 4.0 × 50 × 300 = 60 000 J, which omits squaring the current." },
+        { "answer": "4.0 kJ", "explanation": "This results from using t = 5.0 instead of 300 s: E = 16 × 50 × 5.0 = 4000 J." },
+        { "answer": "0.80 kJ", "explanation": "This calculates power P = I²R = 800 W but does not multiply by time." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A transmission line dissipates 4500 J of energy over 100 s. The resistance of the line is 5.0 Ω. Which one of the following is closest to the current flowing through the line?",
+      "correct": "3.0 A",
+      "correctExplanation": "Rearranging E = I²Rt gives I = √(E/(Rt)) = √(4500/(5.0 × 100)) = √(9.0) = 3.0 A.",
+      "distractors": [
+        { "answer": "9.0 A", "explanation": "This is I² = 9.0, not I. The square root must be taken to find the current." },
+        { "answer": "30 A", "explanation": "This results from omitting the time: I = √(E/R) = √(4500/5.0) = √900 = 30 A." },
+        { "answer": "0.33 A", "explanation": "This does not follow from the correct rearrangement of E = I²Rt." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which one of the following explains why the formula E = I²Rt gives the energy dissipated in the wire rather than the energy delivered to the load?",
+      "correct": "The R in the formula refers to the resistance of the wire itself, so it calculates only the heat produced in the wire",
+      "correctExplanation": "When R is the resistance of the transmission line, E = I²Rt gives the energy wasted as heat in that line, not the useful energy delivered to the load.",
+      "distractors": [
+        { "answer": "The formula uses the total circuit resistance including the load", "explanation": "If R included the load, the formula would give total circuit energy, not just wire losses." },
+        { "answer": "The formula only applies to transformers and not to wires", "explanation": "E = I²Rt applies to any resistive element carrying a current, including transmission line wires." },
+        { "answer": "The formula calculates the voltage drop, not energy", "explanation": "Voltage drop is V = IR. The formula E = I²Rt gives energy in joules." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A 20 Ω transmission line carries 10 A for 1.0 hour. Which one of the following is closest to the energy dissipated as heat?",
+      "correct": "7.2 MJ",
+      "correctExplanation": "t = 1.0 × 3600 = 3600 s. E = (10)² × 20 × 3600 = 100 × 20 × 3600 = 7 200 000 J = 7.2 MJ.",
+      "distractors": [
+        { "answer": "720 kJ", "explanation": "This results from E = IRt = 10 × 20 × 3600 = 720 000 J, which omits squaring the current." },
+        { "answer": "2.0 kJ", "explanation": "This calculates power P = I²R = 2000 W but does not multiply by time." },
+        { "answer": "200 J", "explanation": "This does not follow from the correct application of E = I²Rt with proper time conversion." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student claims that halving the current in a wire will halve the energy dissipated as heat. Which one of the following best evaluates this claim?",
+      "correct": "The claim is incorrect; halving the current reduces the energy to one-quarter because E is proportional to I²",
+      "correctExplanation": "Since E = I²Rt, halving I gives (I/2)²Rt = I²Rt/4. The energy is reduced to one-quarter, not one-half.",
+      "distractors": [
+        { "answer": "The claim is correct; E is directly proportional to I", "explanation": "E is proportional to I², not I. Halving I reduces E by a factor of four." },
+        { "answer": "The claim is incorrect; halving the current has no effect on energy", "explanation": "Reducing the current does reduce the energy dissipated because E depends on I²." },
+        { "answer": "The claim is incorrect; halving the current reduces the energy to one-eighth", "explanation": "Halving I reduces I² by a factor of 4, not 8. E is proportional to I², not I³." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An electric kettle element has a resistance of 30 Ω and carries a current of 8.0 A for 2.0 minutes. Which one of the following is closest to the energy dissipated?",
+      "correct": "230 kJ",
+      "correctExplanation": "t = 2.0 × 60 = 120 s. E = (8.0)² × 30 × 120 = 64 × 30 × 120 = 230 400 J ≈ 230 kJ.",
+      "distractors": [
+        { "answer": "29 kJ", "explanation": "This results from E = IRt = 8.0 × 30 × 120 = 28 800 J ≈ 29 kJ, omitting squaring the current." },
+        { "answer": "1.9 kJ", "explanation": "This calculates power P = I²R = 1920 W but does not multiply by time." },
+        { "answer": "2300 kJ", "explanation": "This results from using t = 20 min = 1200 s instead of 2.0 min = 120 s." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "If the current through a wire is tripled while resistance and time remain constant, the energy dissipated as heat increases by a factor of nine.",
+      "correct": "True",
+      "correctExplanation": "Since E = I²Rt, tripling I gives (3I)² = 9I². The energy increases by a factor of 9.",
+      "distractors": [
+        { "answer": "False", "explanation": "Because I is squared in the formula, tripling the current increases I² by a factor of 3² = 9." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about units in the energy formula.",
+      "sentence": "In the formula E = I²Rt, E is measured in {{blank:1}}, I in amperes, R in ohms, and t in {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "joules",
+          "correctExplanation": "Energy is measured in joules (J) in the SI system.",
+          "distractors": [
+            { "answer": "watts", "explanation": "Watts measure power (rate of energy transfer), not energy." },
+            { "answer": "volts", "explanation": "Volts measure electric potential difference, not energy." }
+          ]
+        },
+        "2": {
+          "correct": "seconds",
+          "correctExplanation": "Time must be in seconds for E to be in joules when using SI units.",
+          "distractors": [
+            { "answer": "minutes", "explanation": "Using minutes instead of seconds gives an answer 60 times too small." },
+            { "answer": "hours", "explanation": "Using hours instead of seconds gives an answer 3600 times too small." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about energy and power.",
+      "sentence": "A wire carries 4.0 A through 10 Ω for 50 s. The power dissipated is P = I²R = {{blank:1}} W. The total energy dissipated is E = P × t = {{blank:2}} J.",
+      "blanks": {
+        "1": {
+          "correct": "160",
+          "correctExplanation": "P = I²R = (4.0)² × 10 = 16 × 10 = 160 W.",
+          "distractors": [
+            { "answer": "40", "explanation": "This uses P = IR = 4.0 × 10 = 40, which is voltage (V = IR), not power." },
+            { "answer": "16", "explanation": "This is I² = 16 only. The resistance must also be included: P = I²R = 160 W." }
+          ]
+        },
+        "2": {
+          "correct": "8000",
+          "correctExplanation": "E = P × t = 160 × 50 = 8000 J.",
+          "distractors": [
+            { "answer": "2000", "explanation": "This results from E = IRt = 40 × 50 = 2000 J, omitting squaring the current." },
+            { "answer": "160", "explanation": "This is the power in watts, not the energy. Energy requires multiplication by time." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about how current and time affect energy dissipation.",
+      "sentence": "Since E = I²Rt, doubling the current causes the energy dissipated to increase by a factor of {{blank:1}}, while doubling the time causes the energy to increase by a factor of {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "four",
+          "correctExplanation": "Doubling I gives (2I)² = 4I², so the energy increases by a factor of four.",
+          "distractors": [
+            { "answer": "two", "explanation": "Because I is squared, doubling I increases I² by a factor of four, not two." },
+            { "answer": "eight", "explanation": "Doubling I increases I² by 4, not 8. The exponent is 2, not 3." }
+          ]
+        },
+        "2": {
+          "correct": "two",
+          "correctExplanation": "E is directly proportional to t, so doubling the time doubles the energy.",
+          "distractors": [
+            { "answer": "four", "explanation": "Time enters the formula linearly, not squared. Doubling t doubles E." },
+            { "answer": "eight", "explanation": "Doubling time doubles energy, not increases it eightfold." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "mc",
+      "question": "A rural transmission line has a resistance of 5.0 Ω and carries a current of 10 A. Which one of the following is closest to the energy dissipated as heat over 2.0 hours?",
+      "correct": "3.6 MJ",
+      "correctExplanation": "t = 2.0 × 3600 = 7200 s. E = (10)² × 5.0 × 7200 = 100 × 5.0 × 7200 = 3 600 000 J = 3.6 MJ.",
+      "distractors": [
+        { "answer": "360 kJ", "explanation": "This results from E = IRt = 10 × 5.0 × 7200 = 360 000 J, which omits squaring the current." },
+        { "answer": "1.0 kJ", "explanation": "This results from using t = 2.0 without converting hours to seconds: E = 100 × 5 × 2 = 1000 J." },
+        { "answer": "500 J", "explanation": "This calculates power P = I²R = 500 W but does not multiply by time." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A heater coil with a resistance of 4.0 Ω dissipates 14 400 J of energy over 100 s. Which one of the following is closest to the current flowing through the coil?",
+      "correct": "6.0 A",
+      "correctExplanation": "I = √(E/(Rt)) = √(14 400/(4.0 × 100)) = √(14 400/400) = √36 = 6.0 A.",
+      "distractors": [
+        { "answer": "36 A", "explanation": "This is I² = 36, not I. The square root must be taken to find the current." },
+        { "answer": "60 A", "explanation": "This results from omitting R: I = √(E/t) = √(14 400/100) = √144 = 12 A, or from omitting t: √(E/R) = √3600 = 60 A." },
+        { "answer": "1.0 A", "explanation": "This does not follow from the correct rearrangement of E = I²Rt." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An engineer compares two transmission lines. Line X has a resistance of 2.0 Ω and carries 20 A. Line Y has a resistance of 8.0 Ω and carries 10 A. Both operate for the same time. Which one of the following correctly compares the energy dissipated?",
+      "correct": "Both lines dissipate the same energy",
+      "correctExplanation": "Line X: I²R = (20)² × 2.0 = 800 W. Line Y: I²R = (10)² × 8.0 = 800 W. Both have the same power loss, so over the same time they dissipate the same energy.",
+      "distractors": [
+        { "answer": "Line Y dissipates more because it has higher resistance", "explanation": "Higher R does not guarantee more dissipation. Line Y has lower current, and I²R = 800 W for both." },
+        { "answer": "Line X dissipates more because it carries more current", "explanation": "Higher current does not guarantee more dissipation. Line X has lower resistance, and both give I²R = 800 W." },
+        { "answer": "Line X dissipates four times more because it carries twice the current", "explanation": "Although doubling I quadruples I², Line X has one-quarter the resistance, so I²R is the same." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A transmission line carries 50 A and has a resistance of 0.40 Ω km⁻¹. The line is 100 km long. Which one of the following is closest to the energy dissipated as heat per second?",
+      "correct": "100 kJ",
+      "correctExplanation": "R_total = 0.40 × 100 = 40 Ω. Energy per second = P = I²R = (50)² × 40 = 2500 × 40 = 100 000 J = 100 kJ.",
+      "distractors": [
+        { "answer": "1.0 kJ", "explanation": "This uses R = 0.40 Ω for 1 km only: P = 2500 × 0.40 = 1000 W = 1.0 kW." },
+        { "answer": "2.0 kJ", "explanation": "This uses P = IRt = 50 × 40 = 2000 W, which omits squaring the current." },
+        { "answer": "4.0 MJ", "explanation": "This results from incorrectly squaring both I and R in the formula." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "During a fault condition, the current in a 10 Ω power line increases from 5.0 A to 15 A for 20 s. Which one of the following is closest to the additional energy dissipated compared to normal operation over this 20 s period?",
+      "correct": "40 kJ",
+      "correctExplanation": "E_normal = (5.0)² × 10 × 20 = 5000 J. E_fault = (15)² × 10 × 20 = 45 000 J. Additional = 45 000 − 5000 = 40 000 J = 40 kJ.",
+      "distractors": [
+        { "answer": "45 kJ", "explanation": "This is the total energy during the fault, not the additional energy above normal operation." },
+        { "answer": "20 kJ", "explanation": "This incorrectly uses ΔI = 10 A: E = (10)² × 10 × 20 = 20 000 J. The difference of currents cannot be used directly." },
+        { "answer": "5.0 kJ", "explanation": "This is the energy dissipated under normal conditions, not the additional energy during the fault." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A factory operates for 10 hours per day. The supply line has a resistance of 0.50 Ω and carries 80 A. Which one of the following is closest to the daily energy wasted as heat in the line?",
+      "correct": "115 MJ",
+      "correctExplanation": "t = 10 × 3600 = 36 000 s. E = (80)² × 0.50 × 36 000 = 6400 × 0.50 × 36 000 = 3200 × 36 000 = 115 200 000 J ≈ 115 MJ.",
+      "distractors": [
+        { "answer": "1.4 MJ", "explanation": "This uses E = IRt = 80 × 0.50 × 36 000 = 1 440 000 J, omitting squaring the current." },
+        { "answer": "3.2 kJ", "explanation": "This calculates power P = I²R = 3200 W only, without multiplying by time." },
+        { "answer": "32 kJ", "explanation": "This uses t = 10 without converting hours to seconds: E = 6400 × 0.50 × 10 = 32 000 J." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student wants to reduce the energy dissipated in a cable by a factor of four. Which one of the following changes alone would achieve this?",
+      "correct": "Halving the current flowing through the cable",
+      "correctExplanation": "Since E = I²Rt, halving I gives (I/2)² = I²/4, reducing the energy by a factor of four.",
+      "distractors": [
+        { "answer": "Halving the resistance of the cable", "explanation": "Halving R reduces E by a factor of two, not four." },
+        { "answer": "Halving the time of operation", "explanation": "Halving t reduces E by a factor of two, not four." },
+        { "answer": "Doubling the cross-sectional area of the cable", "explanation": "Doubling the area halves the resistance, which halves E — not a fourfold reduction." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about an energy calculation with unit conversion.",
+      "sentence": "A wire with resistance 2.0 Ω carries 5.0 A for 200 s. The energy dissipated is E = I²Rt = {{blank:1}} × 2.0 × 200 = {{blank:2}} J.",
+      "blanks": {
+        "1": {
+          "correct": "25",
+          "correctExplanation": "I² = (5.0)² = 25.",
+          "distractors": [
+            { "answer": "5.0", "explanation": "The current must be squared: I² = 25, not I = 5.0." },
+            { "answer": "10", "explanation": "This does not result from squaring 5.0. I² = (5.0)² = 25." }
+          ]
+        },
+        "2": {
+          "correct": "10 000",
+          "correctExplanation": "E = 25 × 2.0 × 200 = 10 000 J.",
+          "distractors": [
+            { "answer": "2000", "explanation": "This results from using IRt = 5.0 × 2.0 × 200 = 2000 J, omitting squaring the current." },
+            { "answer": "50", "explanation": "This is P = I²R = 50 W, the power only, not multiplied by time." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about reducing current and its effect on energy loss.",
+      "sentence": "If the current in a transmission line is reduced from 100 A to 25 A, the current has decreased by a factor of {{blank:1}}. The energy dissipated as heat over a given time decreases by a factor of {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "4",
+          "correctExplanation": "100/25 = 4. The current is reduced by a factor of 4.",
+          "distractors": [
+            { "answer": "75", "explanation": "75 is the difference in current (100 − 25), not the factor by which it decreased." },
+            { "answer": "2", "explanation": "100/25 = 4, not 2." }
+          ]
+        },
+        "2": {
+          "correct": "16",
+          "correctExplanation": "Since E ∝ I², reducing I by a factor of 4 reduces E by a factor of 4² = 16.",
+          "distractors": [
+            { "answer": "4", "explanation": "The energy is proportional to I², not I. A factor of 4 reduction in I gives a factor of 16 reduction in E." },
+            { "answer": "8", "explanation": "The factor is 4² = 16, not 2 × 4 = 8." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about a transmission system.",
+      "sentence": "A power station transmits 1.0 MW at 100 kV. The current is I = P/V = {{blank:1}} A. Through a 10 Ω line for 1.0 hour, the energy dissipated is E = I²Rt = {{blank:2}} kJ.",
+      "blanks": {
+        "1": {
+          "correct": "10",
+          "correctExplanation": "I = P/V = 1 000 000/100 000 = 10 A.",
+          "distractors": [
+            { "answer": "100", "explanation": "This may result from an incorrect unit conversion. I = 1 000 000/100 000 = 10 A." },
+            { "answer": "0.10", "explanation": "This inverts the formula. I = P/V, not V/P." }
+          ]
+        },
+        "2": {
+          "correct": "3600",
+          "correctExplanation": "E = (10)² × 10 × 3600 = 100 × 10 × 3600 = 3 600 000 J = 3600 kJ.",
+          "distractors": [
+            { "answer": "360", "explanation": "This uses E = IRt = 10 × 10 × 3600 = 360 000 J = 360 kJ, omitting squaring the current." },
+            { "answer": "1000", "explanation": "This calculates P = I²R = 1000 W but does not multiply by the full time in seconds." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "mc",
+      "question": "A power station transmits 200 kW at 10 kV through a line with resistance 2.0 Ω. Which one of the following is closest to the energy dissipated as heat in the line over 1.0 hour?",
+      "correct": "2.9 MJ",
+      "correctExplanation": "I = P/V = 200 000/10 000 = 20 A. E = I²Rt = (20)² × 2.0 × 3600 = 400 × 2.0 × 3600 = 2 880 000 J ≈ 2.9 MJ.",
+      "distractors": [
+        { "answer": "144 kJ", "explanation": "This uses E = IRt = 20 × 2.0 × 3600 = 144 000 J, omitting squaring the current." },
+        { "answer": "0.80 kJ", "explanation": "This calculates P = I²R = 800 W only, without multiplying by time." },
+        { "answer": "2.9 kJ", "explanation": "This uses t = 3.6 s instead of 3600 s for 1 hour." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An engineer compares two options for transmitting 100 kW. Option A transmits at 10 kV and Option B transmits at 100 kV. The line resistance is 5.0 Ω. Which one of the following is closest to the ratio of energy dissipated in Option A to Option B over the same time?",
+      "correct": "100",
+      "correctExplanation": "I_A = 100 000/10 000 = 10 A, P_A = (10)² × 5.0 = 500 W. I_B = 100 000/100 000 = 1.0 A, P_B = (1.0)² × 5.0 = 5.0 W. Ratio = 500/5.0 = 100.",
+      "distractors": [
+        { "answer": "10", "explanation": "This is the ratio of transmission voltages, not the ratio of energy losses. Losses scale as V⁻²." },
+        { "answer": "1000", "explanation": "This cubes the voltage ratio instead of squaring it." },
+        { "answer": "50", "explanation": "This does not follow from the correct calculation of the energy ratio." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A wire with resistance 4.0 Ω carries 5.0 A for 3.0 hours. Which one of the following is closest to the energy dissipated as heat?",
+      "correct": "1.1 MJ",
+      "correctExplanation": "t = 3.0 × 3600 = 10 800 s. E = (5.0)² × 4.0 × 10 800 = 25 × 4.0 × 10 800 = 1 080 000 J ≈ 1.1 MJ.",
+      "distractors": [
+        { "answer": "216 kJ", "explanation": "This uses E = IRt = 5.0 × 4.0 × 10 800 = 216 000 J, omitting squaring the current." },
+        { "answer": "100 J", "explanation": "This calculates P = I²R = 100 W only, without multiplying by time." },
+        { "answer": "300 J", "explanation": "This uses t = 3.0 without converting hours to seconds: E = 25 × 4.0 × 3.0 = 300 J." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Two identical parallel transmission lines each carry half the current of a single line. If the single line dissipates energy E in time t, which one of the following is closest to the total energy dissipated in both parallel lines over the same time?",
+      "correct": "E/2",
+      "correctExplanation": "Each parallel line carries I/2 with resistance R. Energy per line = (I/2)²Rt = I²Rt/4. Total for two lines = 2 × I²Rt/4 = I²Rt/2 = E/2.",
+      "distractors": [
+        { "answer": "E", "explanation": "Two lines do not dissipate the same total as one line. Each carries half the current, reducing I² to one-quarter per line." },
+        { "answer": "E/4", "explanation": "This is the energy per line, not the total. With two lines the total is 2 × E/4 = E/2." },
+        { "answer": "2E", "explanation": "Using two lines reduces total losses because each line carries less current. The total is E/2, not 2E." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A city receives 50 MW at 220 kV. During a heatwave, demand increases to 80 MW while the voltage remains at 220 kV. Which one of the following is closest to the factor by which the hourly energy dissipated in the line increases?",
+      "correct": "2.6",
+      "correctExplanation": "Since I = P/V and V is constant, I ∝ P. The ratio of currents is 80/50 = 1.6. Since E ∝ I², the factor = (1.6)² = 2.56 ≈ 2.6.",
+      "distractors": [
+        { "answer": "1.6", "explanation": "This is the ratio of the power demands. Since E ∝ I², the factor must be squared: (1.6)² = 2.56." },
+        { "answer": "6.6", "explanation": "This raises the ratio to the fourth power: (1.6)⁴ ≈ 6.6, which is incorrect." },
+        { "answer": "0.39", "explanation": "This inverts the ratio: (50/80)² = 0.39. The question asks for the increase factor." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A researcher measures that a cable with resistance 20 Ω dissipates 72 kJ over a certain time. She then extends the cable, doubling its length and resistance to 40 Ω. If the same current flows for the same time, which one of the following is closest to the energy dissipated in the extended cable?",
+      "correct": "144 kJ",
+      "correctExplanation": "Doubling R while keeping I and t constant doubles the energy: E_new = I²(2R)t = 2 × I²Rt = 2 × 72 = 144 kJ.",
+      "distractors": [
+        { "answer": "72 kJ", "explanation": "Doubling the resistance doubles the energy dissipated, so it is not unchanged." },
+        { "answer": "288 kJ", "explanation": "Doubling R doubles E, not quadruples it. E is proportional to R, not R²." },
+        { "answer": "36 kJ", "explanation": "Doubling the resistance increases the energy, not decreases it." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A power station transmits 1.0 MW at 50 kV through a line with resistance 5.0 Ω. Which one of the following is closest to the energy dissipated as heat in the line per hour?",
+      "correct": "7.2 MJ",
+      "correctExplanation": "I = P/V = 1 000 000/50 000 = 20 A. P_loss = I²R = 400 × 5.0 = 2000 W. E = 2000 × 3600 = 7 200 000 J = 7.2 MJ.",
+      "distractors": [
+        { "answer": "360 kJ", "explanation": "This uses E = IRt = 20 × 5.0 × 3600 = 360 000 J, omitting squaring the current." },
+        { "answer": "2.0 kJ", "explanation": "This calculates power P = I²R = 2000 W only, without multiplying by time." },
+        { "answer": "7.2 kJ", "explanation": "This uses t = 3.6 s instead of 3600 s for 1 hour." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A town's electricity demand doubles from 5.0 MW to 10 MW. The transmission voltage remains at 110 kV and the line resistance is 2.0 Ω. Which one of the following is closest to the ratio of energy dissipated at peak demand to energy dissipated at normal demand over the same time?",
+      "correct": "4.0",
+      "correctExplanation": "Since I = P/V and V is constant, doubling P doubles I. Since E ∝ I², doubling I quadruples E. The ratio is (2)² = 4.0.",
+      "distractors": [
+        { "answer": "2.0", "explanation": "This uses the ratio of power demands. Since E ∝ I² and I ∝ P, the ratio is (P₂/P₁)² = 4.0." },
+        { "answer": "8.0", "explanation": "This cubes the factor of 2 instead of squaring it." },
+        { "answer": "16", "explanation": "This raises the factor of 2 to the fourth power instead of squaring it." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about power loss and energy in a transmission line.",
+      "sentence": "A transmission line carries 20 A through a resistance of 5.0 Ω. The power dissipated is P = I²R = {{blank:1}} W. Over 1.0 hour the energy dissipated is {{blank:2}} MJ.",
+      "blanks": {
+        "1": {
+          "correct": "2000",
+          "correctExplanation": "P = I²R = (20)² × 5.0 = 400 × 5.0 = 2000 W.",
+          "distractors": [
+            { "answer": "100", "explanation": "This is V = IR = 20 × 5.0 = 100 V, the voltage drop, not the power." },
+            { "answer": "400", "explanation": "This is I² = 400 only, without multiplying by R." }
+          ]
+        },
+        "2": {
+          "correct": "7.2",
+          "correctExplanation": "E = P × t = 2000 × 3600 = 7 200 000 J = 7.2 MJ.",
+          "distractors": [
+            { "answer": "0.36", "explanation": "This uses IRt = 100 × 3600 = 360 000 J = 0.36 MJ, which omits squaring the current." },
+            { "answer": "2.0", "explanation": "This does not follow from the correct calculation of E = P × t." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about comparing transmission options.",
+      "sentence": "Transmitting 500 kW at 250 kV gives a current of {{blank:1}} A. Transmitting the same power at 25 kV gives a current of 20 A. The higher-voltage option dissipates {{blank:2}} the energy of the lower-voltage option.",
+      "blanks": {
+        "1": {
+          "correct": "2.0",
+          "correctExplanation": "I = P/V = 500 000/250 000 = 2.0 A.",
+          "distractors": [
+            { "answer": "20", "explanation": "This is the current at 25 kV, not 250 kV." },
+            { "answer": "200", "explanation": "This results from an incorrect unit conversion." }
+          ]
+        },
+        "2": {
+          "correct": "1/100 of",
+          "correctExplanation": "The current ratio is 2.0/20 = 1/10. Since E ∝ I², the energy ratio is (1/10)² = 1/100.",
+          "distractors": [
+            { "answer": "1/10 of", "explanation": "This uses the current ratio directly without squaring. Since E ∝ I², the ratio is (1/10)² = 1/100." },
+            { "answer": "10 times", "explanation": "The higher-voltage option has less current and therefore less energy loss, not more." }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,517 @@
+{
+  "_link": {
+    "uuid": "lp-4761599f-3cd7-3c57-1b2c-bea269c0bb00",
+    "version": 1,
+    "contentHash": "hash-e11735c1",
+    "title": "I can interpret a graph of Lorentz factor (γ) vs relative speed and explain its implications for energy and mass",
+    "generatedAt": "2026-03-09T23:00:00.000Z"
+  },
+  "toLevel2": [
+    {
+      "type": "MC",
+      "question": "On a graph of Lorentz factor (γ) against speed (v), what is the value of γ when v = 0?",
+      "correct": "1",
+      "correctExplanation": "When v = 0, γ = 1/√(1 − 0) = 1. The Lorentz factor starts at 1 for a stationary object.",
+      "distractors": [
+        { "answer": "0", "explanation": "γ is never zero. At v = 0, the Lorentz factor equals 1, not 0." },
+        { "answer": "∞", "explanation": "γ approaches infinity only as v approaches c. At v = 0, γ = 1." },
+        { "answer": "0.5", "explanation": "γ is always at least 1. It cannot be 0.5 for any speed." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "What happens to the Lorentz factor γ as the speed of an object approaches the speed of light?",
+      "correct": "γ approaches infinity",
+      "correctExplanation": "As v → c, the denominator of γ = 1/√(1 − v²/c²) approaches zero, causing γ to increase without bound.",
+      "distractors": [
+        { "answer": "γ approaches zero", "explanation": "γ increases, not decreases, as speed increases. It approaches infinity, not zero." },
+        { "answer": "γ approaches 1", "explanation": "γ = 1 only when v = 0. As speed increases, γ increases above 1." },
+        { "answer": "γ approaches c", "explanation": "γ is a dimensionless quantity and does not approach a speed. It approaches infinity as v → c." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Which description best matches the shape of the γ vs v graph?",
+      "correct": "The curve starts at 1 when v = 0, increases gradually, then rises steeply as v approaches c.",
+      "correctExplanation": "At low speeds, γ is close to 1 and changes slowly. As v approaches c, γ increases rapidly, producing a steep upward curve.",
+      "distractors": [
+        { "answer": "The curve is a straight line from γ = 1 at v = 0 to γ = ∞ at v = c.", "explanation": "The relationship is non-linear. γ increases slowly at low speeds and steeply near c." },
+        { "answer": "The curve starts at γ = 0 and increases linearly with speed.", "explanation": "γ starts at 1 (not 0) and increases non-linearly, not linearly." },
+        { "answer": "The curve starts at γ = 1, decreases to a minimum, then increases.", "explanation": "γ only increases with speed. There is no minimum below 1." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "At v = 0.1c, γ ≈ 1.005. What does this value imply about relativistic effects at everyday speeds?",
+      "correct": "Relativistic effects are negligible at low speeds because γ is very close to 1.",
+      "correctExplanation": "When γ ≈ 1, time dilation, length contraction, and energy differences from classical predictions are extremely small and undetectable in everyday situations.",
+      "distractors": [
+        { "answer": "Relativistic effects are significant at 0.1c because γ is not exactly 1.", "explanation": "A deviation of 0.5% is negligible for practical purposes. Relativistic effects are only significant when γ is substantially above 1." },
+        { "answer": "Relativistic effects are absent at 0.1c because γ = 1 exactly.", "explanation": "γ = 1.005, not exactly 1. Relativistic effects exist but are negligibly small." },
+        { "answer": "Relativistic effects increase the object's mass significantly at 0.1c.", "explanation": "At γ ≈ 1.005, the relativistic effects on energy are only 0.5%, which is not significant." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "The γ vs v graph shows that γ ≈ 2.29 at v = 0.9c and γ ≈ 7.09 at v = 0.99c. What does this rapid increase demonstrate?",
+      "correct": "Increasingly more energy is needed for each incremental speed gain as v approaches c.",
+      "correctExplanation": "Since total energy is Etot = γmc², the steep rise in γ means the energy required increases dramatically for small speed gains near c.",
+      "distractors": [
+        { "answer": "The object is losing mass as it approaches the speed of light.", "explanation": "The rest mass of the object does not change. The steep rise in γ relates to energy, not mass loss." },
+        { "answer": "The speed of light is changing as the object approaches it.", "explanation": "The speed of light c is constant. The steep rise in γ reflects the increasing energy, not a changing c." },
+        { "answer": "The object's acceleration is becoming more efficient near c.", "explanation": "The opposite is true. Near c, acceleration becomes extremely inefficient — large energy inputs produce tiny speed increases." }
+      ]
+    },
+    {
+      "type": "TF",
+      "question": "The Lorentz factor γ is always greater than or equal to 1 for all possible speeds.",
+      "correct": "True",
+      "correctExplanation": "Since 0 ≤ v < c, the quantity v²/c² is between 0 and 1, so 1 − v²/c² is between 0 and 1, and γ = 1/√(1 − v²/c²) ≥ 1.",
+      "distractors": [
+        { "answer": "False", "explanation": "γ cannot be less than 1. The mathematical formula ensures γ ≥ 1 for all speeds from 0 up to (but not including) c." }
+      ]
+    },
+    {
+      "type": "TF",
+      "question": "The graph of γ vs v is a straight line with a constant gradient.",
+      "correct": "False",
+      "correctExplanation": "The γ vs v curve is non-linear. It is nearly flat at low speeds and rises steeply as v approaches c.",
+      "distractors": [
+        { "answer": "True", "explanation": "The relationship between γ and v is non-linear. The gradient increases dramatically as v approaches c." }
+      ]
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the sentence about the γ vs v graph.",
+      "sentence": "The Lorentz factor γ starts at {{blank:1}} when v = 0 and approaches {{blank:2}} as v approaches c.",
+      "blanks": {
+        "1": {
+          "correct": "1",
+          "correctExplanation": "At v = 0, γ = 1/√(1 − 0) = 1.",
+          "distractors": ["0", "∞"]
+        },
+        "2": {
+          "correct": "infinity",
+          "correctExplanation": "As v → c, the denominator approaches zero and γ → ∞.",
+          "distractors": ["zero", "1"]
+        }
+      }
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the sentence about the implications of the γ vs v graph for energy.",
+      "sentence": "Since total energy is Etot = γmc², the steep rise of γ near c means that {{blank:1}} energy would be required to accelerate a massive object to the speed of {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "infinite",
+          "correctExplanation": "As γ → ∞, Etot → ∞. Infinite energy would be required to reach c.",
+          "distractors": ["zero", "finite"]
+        },
+        "2": {
+          "correct": "light",
+          "correctExplanation": "The speed of light c is the speed at which γ → ∞, making it the universal speed limit for massive objects.",
+          "distractors": ["sound", "escape"]
+        }
+      }
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the sentence about the shape of the γ vs v graph.",
+      "sentence": "At low speeds, the γ vs v graph is nearly {{blank:1}}, indicating that relativistic effects are negligible. Near v = c, the curve rises {{blank:2}}, indicating that relativistic effects dominate.",
+      "blanks": {
+        "1": {
+          "correct": "flat",
+          "correctExplanation": "At low speeds, γ ≈ 1 and changes very little, producing a nearly flat graph.",
+          "distractors": ["steep", "vertical"]
+        },
+        "2": {
+          "correct": "steeply",
+          "correctExplanation": "Near c, γ increases very rapidly, producing a steep curve on the graph.",
+          "distractors": ["gradually", "linearly"]
+        }
+      }
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "MC",
+      "question": "A student reads from the γ vs v graph that γ = 2.29 at v = 0.90c. Which one of the following is closest to the total relativistic energy of a 1.00 kg object at this speed?",
+      "correct": "2.06 × 10¹⁷ J",
+      "correctExplanation": "Etot = γmc² = 2.29 × 1.00 × (3.00 × 10⁸)² = 2.29 × 9.00 × 10¹⁶ = 2.06 × 10¹⁷ J.",
+      "distractors": [
+        { "answer": "9.00 × 10¹⁶ J", "explanation": "This is the rest energy mc² without the Lorentz factor." },
+        { "answer": "4.72 × 10¹⁷ J", "explanation": "This uses γ² instead of γ in the calculation." },
+        { "answer": "6.87 × 10¹⁶ J", "explanation": "This divides mc² by γ instead of multiplying." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "The γ vs v graph shows that γ increases from approximately 1.005 at 0.1c to 22.4 at 0.999c. What does this imply about the kinetic energy required to accelerate from 0.1c to 0.999c compared with 0 to 0.1c?",
+      "correct": "Much more energy is required for 0.1c to 0.999c than for 0 to 0.1c.",
+      "correctExplanation": "The kinetic energy is (γ − 1)mc². From 0 to 0.1c, Ek increases by 0.005mc². From 0.1c to 0.999c, Ek increases by about 21.4mc² — over 4000 times more.",
+      "distractors": [
+        { "answer": "Approximately the same energy is required for both speed ranges.", "explanation": "The non-linear shape of the γ curve means far more energy is needed at higher speeds." },
+        { "answer": "Less energy is required for 0.1c to 0.999c because the object is already moving.", "explanation": "At higher speeds, the steep rise in γ means much more energy is needed, not less." },
+        { "answer": "The energy required depends only on the speed difference, which is similar in both cases.", "explanation": "Energy depends on Δγ, not Δv. The change in γ is vastly larger for the second interval." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "From the γ vs v graph, γ ≈ 1.15 at 0.50c and γ ≈ 1.67 at 0.80c. A student doubles the speed of a proton from 0.40c to 0.80c. Which statement about the total energy is correct?",
+      "correct": "The total energy increases by a factor of approximately γ₀.₈₀/γ₀.₄₀, which is greater than 2.",
+      "correctExplanation": "At 0.40c, γ ≈ 1.09. At 0.80c, γ ≈ 1.67. The ratio is 1.67/1.09 ≈ 1.53. The total energy does not double when speed doubles, because the relationship is non-linear.",
+      "distractors": [
+        { "answer": "The total energy exactly doubles because the speed doubles.", "explanation": "Total energy is Etot = γmc², and γ is non-linear. Doubling speed does not double the total energy." },
+        { "answer": "The total energy quadruples because energy is proportional to v².", "explanation": "This would apply to classical kinetic energy. Relativistic total energy depends on γ, not v²." },
+        { "answer": "The total energy increases by less than 50% because γ changes slowly at low speeds.", "explanation": "The ratio γ₀.₈₀/γ₀.₄₀ ≈ 1.53, so the total energy increases by about 53%, which is more than 50%." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "The γ vs v graph rises steeply near v = c. Which physical consequence does this steep rise directly explain?",
+      "correct": "No massive object can be accelerated to the speed of light because infinite energy would be required.",
+      "correctExplanation": "As γ → ∞, Etot = γmc² → ∞. Achieving v = c for a massive object would require infinite energy, which is impossible.",
+      "distractors": [
+        { "answer": "Photons have infinite energy because they travel at the speed of light.", "explanation": "Photons have finite energy E = hf. The formula Etot = γmc² does not apply to photons because they have zero rest mass." },
+        { "answer": "Objects become infinitely large as they approach the speed of light.", "explanation": "Length contraction causes objects to become shorter, not larger. The steep rise in γ relates to energy, not size." },
+        { "answer": "Time stops completely for any object that reaches 0.99c.", "explanation": "Time does not stop at 0.99c; it is dilated. γ = 7.09 at 0.99c is large but finite." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Using the γ vs v graph, an engineer determines that γ = 7.09 at v = 0.99c. Which one of the following is closest to the relativistic kinetic energy of a proton (m = 1.67 × 10⁻²⁷ kg) at this speed?",
+      "correct": "9.15 × 10⁻¹⁰ J",
+      "correctExplanation": "Ek = (γ − 1)mc² = (7.09 − 1) × 1.67 × 10⁻²⁷ × (3.00 × 10⁸)² = 6.09 × 1.503 × 10⁻¹⁰ = 9.15 × 10⁻¹⁰ J.",
+      "distractors": [
+        { "answer": "1.07 × 10⁻⁹ J", "explanation": "This uses γ instead of (γ − 1), giving the total energy instead of the kinetic energy." },
+        { "answer": "1.50 × 10⁻¹⁰ J", "explanation": "This is the rest energy mc² alone, not the kinetic energy." },
+        { "answer": "7.35 × 10⁻¹¹ J", "explanation": "This uses ½mv² (classical formula) instead of (γ − 1)mc², severely underestimating the kinetic energy." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Why are relativistic effects negligible for a car travelling at 100 km h⁻¹ on a highway?",
+      "correct": "At 100 km h⁻¹, v/c is so small that γ differs from 1 by an unmeasurably tiny amount.",
+      "correctExplanation": "100 km h⁻¹ ≈ 27.8 m s⁻¹, giving v/c ≈ 9.3 × 10⁻⁸. γ ≈ 1 + 4.3 × 10⁻¹⁵, which is indistinguishable from 1.",
+      "distractors": [
+        { "answer": "Relativistic effects do not apply to objects on Earth because Earth is not an inertial frame.", "explanation": "Earth is approximately inertial. The reason is that the speed is negligibly small compared to c." },
+        { "answer": "Classical mechanics is a completely separate theory that operates independently of relativity.", "explanation": "Classical mechanics is the low-speed limit of special relativity. At 100 km h⁻¹, γ ≈ 1 and both give the same results." },
+        { "answer": "The car has too much mass for relativistic effects to apply.", "explanation": "Relativistic effects depend on speed, not mass. The car's speed is negligibly small compared to c." }
+      ]
+    },
+    {
+      "type": "TF",
+      "question": "The gradient of the γ vs v graph is constant across all speeds from 0 to c.",
+      "correct": "False",
+      "correctExplanation": "The gradient increases with speed. At low speeds, the curve is nearly flat (small gradient). Near c, the curve rises steeply (large gradient).",
+      "distractors": [
+        { "answer": "True", "explanation": "The gradient is not constant. It increases dramatically as v approaches c, reflecting the non-linear nature of the Lorentz factor." }
+      ]
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the sentence about reading specific values from the γ vs v graph.",
+      "sentence": "At v = 0.90c, γ ≈ {{blank:1}}. At v = 0.99c, γ ≈ {{blank:2}}. The large increase in γ for a small increase in speed demonstrates the non-linear nature of the relationship.",
+      "blanks": {
+        "1": {
+          "correct": "2.29",
+          "correctExplanation": "γ = 1/√(1 − 0.81) = 1/√0.19 ≈ 2.29.",
+          "distractors": ["1.11", "7.09"]
+        },
+        "2": {
+          "correct": "7.09",
+          "correctExplanation": "γ = 1/√(1 − 0.9801) = 1/√0.0199 ≈ 7.09.",
+          "distractors": ["2.29", "22.4"]
+        }
+      }
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the sentence about the implication of the graph for particle accelerators.",
+      "sentence": "In a particle accelerator, the γ vs v graph shows that at speeds close to c, small increases in speed require {{blank:1}} increases in energy, making it {{blank:2}} to reach the speed of light.",
+      "blanks": {
+        "1": {
+          "correct": "enormous",
+          "correctExplanation": "The steep rise of γ near c means that even tiny speed increases demand very large energy inputs.",
+          "distractors": ["small", "proportional"]
+        },
+        "2": {
+          "correct": "impossible",
+          "correctExplanation": "Since γ → ∞ as v → c, infinite energy would be needed to reach c, making it physically impossible for a massive particle.",
+          "distractors": ["easy", "efficient"]
+        }
+      }
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the sentence about the graph's relevance to everyday speeds.",
+      "sentence": "At speeds much less than c, the γ vs v graph is nearly {{blank:1}}, meaning γ ≈ 1 and classical mechanics gives {{blank:2}} results to special relativity.",
+      "blanks": {
+        "1": {
+          "correct": "flat",
+          "correctExplanation": "At low speeds, γ changes very little from 1, producing a nearly flat section of the graph.",
+          "distractors": ["steep", "vertical"]
+        },
+        "2": {
+          "correct": "identical",
+          "correctExplanation": "When γ ≈ 1, relativistic equations reduce to their classical equivalents, giving effectively identical predictions.",
+          "distractors": ["opposite", "different"]
+        }
+      }
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "MC",
+      "question": "A student reads from the γ vs v graph that γ doubles from 1.15 at 0.50c to 2.29 at 0.90c. If the student then looks at the graph between 0.90c and 0.99c, they find γ triples from 2.29 to 7.09. What does this comparison reveal about the graph?",
+      "correct": "The graph becomes increasingly steep at higher speeds, with ever-larger changes in γ for smaller increases in speed.",
+      "correctExplanation": "Doubling γ required an increase from 0.50c to 0.90c (Δv = 0.40c), while tripling it from 2.29 to 7.09 only required 0.90c to 0.99c (Δv = 0.09c). The rate of increase accelerates near c.",
+      "distractors": [
+        { "answer": "The graph has a constant gradient because γ increases proportionally with speed.", "explanation": "The gradient is not constant. γ increases much faster at higher speeds, indicating a non-linear, steepening curve." },
+        { "answer": "The graph becomes flatter at higher speeds because γ approaches a maximum value.", "explanation": "γ has no maximum; it approaches infinity. The graph becomes steeper, not flatter, at higher speeds." },
+        { "answer": "The graph shows that γ increases linearly, and the tripling is expected from a linear trend.", "explanation": "A linear trend would produce equal increases in γ for equal increases in v. The accelerating increase shows non-linearity." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Using the γ vs v graph, a physicist notes that at v = 0.995c, γ ≈ 10.0, and at v = 0.9995c, γ ≈ 31.6. The speed increased by only 0.0045c, yet γ more than tripled. Which physical quantity is most directly affected by this behaviour?",
+      "correct": "The total relativistic energy, which is directly proportional to γ",
+      "correctExplanation": "Since Etot = γmc², a tripling of γ means the total energy also triples. The steep rise in γ explains why enormous energy inputs yield only tiny speed gains near c.",
+      "distractors": [
+        { "answer": "The rest mass, which increases proportionally with γ", "explanation": "Rest mass is invariant and does not change with speed. Only the total energy increases with γ." },
+        { "answer": "The speed of light, which decreases as γ increases", "explanation": "The speed of light is constant (c = 3.00 × 10⁸ m s⁻¹) and does not change with γ." },
+        { "answer": "The gravitational field, which strengthens as γ increases", "explanation": "The gravitational field is unrelated to the Lorentz factor in special relativity." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A proton is accelerated from rest in a particle accelerator. At three points during acceleration, the γ vs v graph gives: Point A (v = 0.50c, γ = 1.15), Point B (v = 0.80c, γ = 1.67), and Point C (v = 0.99c, γ = 7.09). Between which two consecutive points does the proton's kinetic energy increase the most?",
+      "correct": "Between Point B and Point C",
+      "correctExplanation": "Ek = (γ − 1)mc². From A to B: ΔEk = (1.67 − 1.15)mc² = 0.52mc². From B to C: ΔEk = (7.09 − 1.67)mc² = 5.42mc². The increase is much larger between B and C.",
+      "distractors": [
+        { "answer": "Between Point A and Point B", "explanation": "ΔEk from A to B is 0.52mc², while from B to C it is 5.42mc² — about 10 times larger." },
+        { "answer": "The increase is the same between both pairs because the speed intervals are equal.", "explanation": "The speed intervals are not equal (0.30c vs 0.19c), and even if they were, γ changes non-linearly." },
+        { "answer": "Between rest and Point A, because starting from rest requires the most energy.", "explanation": "From rest to A: ΔEk = 0.15mc², which is much less than the 5.42mc² from B to C." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "The γ vs v graph can be used to explain why the classical kinetic energy formula Ek = ½mv² becomes inaccurate at high speeds. At v = 0.90c, the classical formula gives Ek = 0.405mc². The relativistic formula gives Ek = (γ − 1)mc² = 1.29mc². What is the ratio of relativistic to classical kinetic energy?",
+      "correct": "3.19",
+      "correctExplanation": "Ratio = 1.29mc² / 0.405mc² = 3.19. The relativistic kinetic energy is more than three times the classical value at 0.90c.",
+      "distractors": [
+        { "answer": "1.00", "explanation": "A ratio of 1.00 would mean the formulas agree. At 0.90c, they differ significantly." },
+        { "answer": "0.314", "explanation": "This is the inverse ratio (classical/relativistic), not the correct direction." },
+        { "answer": "2.29", "explanation": "This is the value of γ at 0.90c, not the ratio of kinetic energies." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A student plots both γ and 1/γ against v on the same axes. The 1/γ curve represents how length contraction behaves. Which description is correct for the 1/γ curve?",
+      "correct": "1/γ starts at 1 when v = 0 and decreases, approaching zero as v approaches c.",
+      "correctExplanation": "Since L = L₀/γ, the ratio L/L₀ = 1/γ starts at 1 (no contraction) and decreases to 0 as v → c (complete contraction).",
+      "distractors": [
+        { "answer": "1/γ starts at 0 and increases to 1 as v approaches c.", "explanation": "This is inverted. 1/γ starts at 1 and decreases to 0." },
+        { "answer": "1/γ remains constant at 1 for all speeds.", "explanation": "1/γ decreases with speed because γ increases. It equals 1 only at v = 0." },
+        { "answer": "1/γ starts at 1 and increases to infinity as v approaches c.", "explanation": "1/γ is the inverse of γ. As γ → ∞, 1/γ → 0, not infinity." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "At v = 0.999c, γ ≈ 22.4. At v = 0.9999c, γ ≈ 70.7. A particle accelerator increases a proton's speed from 0.999c to 0.9999c. By what factor does the total energy increase?",
+      "correct": "3.16",
+      "correctExplanation": "The energy ratio is γ₂/γ₁ = 70.7/22.4 = 3.16. The total energy more than triples for this small speed increase.",
+      "distractors": [
+        { "answer": "1.001", "explanation": "This ratio corresponds to the speed change (0.9999/0.999), not the energy change. Energy depends on γ, not v." },
+        { "answer": "48.3", "explanation": "This is the difference in γ values (70.7 − 22.4), not the ratio." },
+        { "answer": "1580", "explanation": "This is the product of the γ values, not the ratio." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "An engineer uses the γ vs v graph to determine how much energy must be supplied to double the Lorentz factor of a proton from γ = 5 to γ = 10. The additional energy required is:",
+      "correct": "5mc²",
+      "correctExplanation": "The energy required is ΔEtot = (γ₂ − γ₁)mc² = (10 − 5)mc² = 5mc².",
+      "distractors": [
+        { "answer": "10mc²", "explanation": "This is the total energy at γ = 10, not the additional energy. The proton already had energy of 5mc²." },
+        { "answer": "50mc²", "explanation": "This is the product γ₁ × γ₂ × mc², which has no physical meaning in this context." },
+        { "answer": "2mc²", "explanation": "Doubling γ does not mean the additional energy is 2mc². The extra energy is (10 − 5)mc² = 5mc²." }
+      ]
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the sentence about using the γ vs v graph for energy calculations.",
+      "sentence": "Reading γ = 3.20 from the graph at v = 0.95c, the total energy of a proton is Etot = {{blank:1}} × mc² and the kinetic energy is Ek = {{blank:2}} × mc².",
+      "blanks": {
+        "1": {
+          "correct": "3.20",
+          "correctExplanation": "Etot = γmc² = 3.20mc².",
+          "distractors": ["2.20", "0.95"]
+        },
+        "2": {
+          "correct": "2.20",
+          "correctExplanation": "Ek = (γ − 1)mc² = (3.20 − 1)mc² = 2.20mc².",
+          "distractors": ["3.20", "0.95"]
+        }
+      }
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the sentence about the gradient of the γ vs v graph.",
+      "sentence": "The gradient of the γ vs v graph is {{blank:1}} at low speeds and {{blank:2}} at speeds close to c, reflecting the non-linear nature of the Lorentz factor.",
+      "blanks": {
+        "1": {
+          "correct": "small",
+          "correctExplanation": "At low speeds, γ changes very little with increasing v, so the gradient is small.",
+          "distractors": ["large", "infinite"]
+        },
+        "2": {
+          "correct": "very large",
+          "correctExplanation": "Near c, small increases in v produce enormous increases in γ, so the gradient is very large.",
+          "distractors": ["very small", "zero"]
+        }
+      }
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the sentence about what the graph implies for massive particles.",
+      "sentence": "The γ vs v graph has a vertical {{blank:1}} at v = c, indicating that γ and total energy approach infinity. This means a massive particle {{blank:2}} reach the speed of light.",
+      "blanks": {
+        "1": {
+          "correct": "asymptote",
+          "correctExplanation": "The line v = c is a vertical asymptote of the γ vs v graph, because γ → ∞ as v → c.",
+          "distractors": ["intercept", "tangent"]
+        },
+        "2": {
+          "correct": "cannot",
+          "correctExplanation": "Infinite energy would be required to reach c, so no massive particle can achieve the speed of light.",
+          "distractors": ["can", "must"]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "MC",
+      "question": "A student is asked to sketch both a γ vs v graph and a total energy vs v graph for the same particle. How do the shapes of these two graphs compare?",
+      "correct": "They have the same shape because Etot = γmc², and mc² is a constant scaling factor.",
+      "correctExplanation": "Since Etot = γmc², the total energy graph is simply the γ graph scaled vertically by the constant factor mc². Both curves have the same shape — starting low, then rising steeply as v → c.",
+      "distractors": [
+        { "answer": "The energy graph is a parabola while the γ graph is exponential.", "explanation": "Neither graph is a parabola or exponential. Both have the same shape, determined by γ = 1/√(1 − v²/c²)." },
+        { "answer": "The graphs have different shapes because energy depends on v² while γ depends on v.", "explanation": "Total relativistic energy depends on γ, not v². Both graphs share the same non-linear shape." },
+        { "answer": "The energy graph is steeper because mass increases with speed.", "explanation": "Rest mass does not increase with speed. The graphs have the same shape because Etot is proportional to γ." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "At the Large Hadron Collider, protons achieve γ ≈ 7000. Using the γ vs v graph, estimate how close the protons' speed is to c.",
+      "correct": "Extremely close: v ≈ 0.99999999c",
+      "correctExplanation": "v/c = √(1 − 1/γ²) = √(1 − 1/49000000) ≈ 0.99999999c. At γ = 7000, the speed is indistinguishable from c to eight decimal places.",
+      "distractors": [
+        { "answer": "Approximately 0.9c, since γ grows slowly", "explanation": "At 0.9c, γ is only 2.29. To reach γ = 7000, the speed must be extremely close to c." },
+        { "answer": "Approximately 0.99c, which is the maximum speed the graph reaches", "explanation": "At 0.99c, γ = 7.09. γ = 7000 requires a speed far closer to c than 0.99c." },
+        { "answer": "Exactly c, since γ = 7000 is effectively infinite", "explanation": "γ = 7000 is very large but finite. The speed is extremely close to c but never reaches it." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A researcher compares two graphs: one of kinetic energy vs speed for a classical particle (Ek = ½mv²) and one for a relativistic particle (Ek = (γ − 1)mc²). Which statement best describes how the two curves compare?",
+      "correct": "At low speeds, both curves nearly overlap. As v increases, the relativistic curve rises much more steeply and diverges upward without bound.",
+      "correctExplanation": "At low speeds, (γ − 1)mc² ≈ ½mv² (Taylor expansion). At higher speeds, the relativistic curve rises steeply toward infinity, while the classical parabola remains finite at v = c.",
+      "distractors": [
+        { "answer": "The classical curve is always above the relativistic curve because ½mv² overestimates energy.", "explanation": "At high speeds, the relativistic energy is far greater than the classical value. The classical curve is below, not above." },
+        { "answer": "The two curves never overlap because they use different formulas.", "explanation": "At low speeds, the relativistic formula reduces to the classical one (Taylor expansion), so the curves nearly overlap." },
+        { "answer": "Both curves approach infinity at v = c, but the relativistic curve reaches it first.", "explanation": "The classical curve gives a finite value at v = c (½mc²). Only the relativistic curve approaches infinity." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A student states: 'The γ vs v graph shows that γ is undefined at v = c, which proves that photons cannot exist.' Evaluate this statement.",
+      "correct": "The graph correctly shows γ is undefined at v = c, but this only applies to massive particles. Photons are massless and do not use the formula Etot = γmc².",
+      "correctExplanation": "γ → ∞ at v = c applies to the relationship between speed and energy for massive particles. Photons have zero rest mass and their energy is given by E = hf, not Etot = γmc².",
+      "distractors": [
+        { "answer": "The statement is correct — γ being undefined at c means nothing can travel at c.", "explanation": "Massless particles like photons always travel at c. The γ formula applies only to massive particles." },
+        { "answer": "The statement is wrong because γ equals exactly 1 at v = c.", "explanation": "γ = 1/√(1 − 1) = 1/0, which is undefined at v = c, not equal to 1." },
+        { "answer": "The statement is correct because the γ formula is universal and applies to all particles.", "explanation": "The formula Etot = γmc² applies only to massive particles. Photons use E = hf." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "The area under a graph of force vs displacement gives work done. Similarly, if one could construct a graph of the energy required per unit speed increase (dE/dv) vs speed, what would the shape of this graph look like?",
+      "correct": "It would increase gradually at low speeds and rise extremely steeply near c, approaching infinity.",
+      "correctExplanation": "Since E = γmc², the derivative dE/dv = mc²γ³v/c². This increases without bound as v → c, meaning each additional increment of speed requires ever more energy.",
+      "distractors": [
+        { "answer": "It would be a horizontal line because the same energy is needed for each unit of speed.", "explanation": "The energy per unit speed increase grows dramatically. It is not constant." },
+        { "answer": "It would decrease as v increases because the object is already in motion.", "explanation": "The energy per unit speed actually increases with speed, not decreases. It becomes harder to accelerate near c." },
+        { "answer": "It would be a parabola reaching a maximum at v = c/2 and then decreasing.", "explanation": "There is no maximum followed by a decrease. The curve rises monotonically to infinity." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A space agency wants to send a probe at γ = 2 (v ≈ 0.866c). The probe has a mass of 1000 kg. Using the γ vs v graph, which one of the following is closest to the kinetic energy required?",
+      "correct": "9.0 × 10¹⁹ J",
+      "correctExplanation": "Ek = (γ − 1)mc² = (2 − 1) × 1000 × (3.00 × 10⁸)² = 1 × 9.00 × 10¹⁹ = 9.0 × 10¹⁹ J.",
+      "distractors": [
+        { "answer": "1.8 × 10²⁰ J", "explanation": "This uses γ = 2 instead of (γ − 1) = 1, giving the total energy rather than the kinetic energy." },
+        { "answer": "3.4 × 10¹⁹ J", "explanation": "This uses ½mv² (classical), which underestimates the relativistic kinetic energy." },
+        { "answer": "4.5 × 10¹⁹ J", "explanation": "This appears to use (γ − 1)/2 instead of (γ − 1), giving half the correct kinetic energy." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Two students debate the γ vs v graph. Student X says: 'The steep part of the curve means the object gains mass.' Student Y says: 'The rest mass stays constant; the curve shows that more energy is needed to increase speed.' Which student is correct according to modern physics?",
+      "correct": "Student Y is correct. Modern physics uses invariant (rest) mass, and the steep curve reflects increasing energy requirements, not mass gain.",
+      "correctExplanation": "The concept of 'relativistic mass' is outdated. The rest mass m is invariant. The γ vs v graph shows that Etot = γmc² increases steeply, meaning more energy is needed for speed increases near c.",
+      "distractors": [
+        { "answer": "Student X is correct because mass increases with speed in special relativity.", "explanation": "Modern physics does not use the concept of variable mass. The rest mass is constant; it is the energy that increases." },
+        { "answer": "Both students are correct because relativistic mass and rest mass are both valid concepts.", "explanation": "Modern physics favours the invariant mass interpretation. 'Relativistic mass' is not used in current physics curricula." },
+        { "answer": "Neither is correct because the graph only shows the mathematical function, not physical quantities.", "explanation": "The graph has direct physical implications for energy and speed. Student Y's interpretation correctly relates γ to energy." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A student claims that if the γ vs v graph were extended beyond v = c, γ would become imaginary. What is the physical significance of this mathematical result?",
+      "correct": "It confirms that speeds greater than c are physically impossible for massive objects, as they would require imaginary (non-physical) values of γ.",
+      "correctExplanation": "For v > c, the expression 1 − v²/c² becomes negative, and √(negative) is imaginary. This mathematical result reinforces the physical impossibility of massive objects exceeding c.",
+      "distractors": [
+        { "answer": "It means that faster-than-light travel is possible but occurs in a different dimension.", "explanation": "Imaginary values of γ do not indicate travel in other dimensions. They indicate that v > c is unphysical for massive particles." },
+        { "answer": "It means that the formula is incorrect and needs to be replaced beyond v = c.", "explanation": "The formula is correct. The imaginary result is meaningful — it tells us that v > c is impossible." },
+        { "answer": "It confirms that photons have imaginary mass because they travel at c.", "explanation": "Photons have zero rest mass, not imaginary mass. The γ formula does not apply to photons." }
+      ]
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the sentence about the relationship between the γ vs v graph and particle accelerator design.",
+      "sentence": "Particle accelerators at high energies primarily increase the {{blank:1}} of particles rather than their speed, because the γ vs v graph shows that speed gains are {{blank:2}} near c.",
+      "blanks": {
+        "1": {
+          "correct": "energy",
+          "correctExplanation": "At speeds close to c, additional energy increases γ (and therefore total energy) without significantly increasing the particle's speed.",
+          "distractors": ["mass", "charge"]
+        },
+        "2": {
+          "correct": "negligible",
+          "correctExplanation": "Near c, the γ vs v graph is extremely steep, meaning large energy inputs produce only tiny speed increases.",
+          "distractors": ["proportional", "linear"]
+        }
+      }
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the sentence about the Taylor expansion of γ at low speeds.",
+      "sentence": "At low speeds, γ ≈ 1 + ½v²/c², so (γ − 1)mc² ≈ {{blank:1}}. This shows that the relativistic kinetic energy reduces to the {{blank:2}} formula at low speeds.",
+      "blanks": {
+        "1": {
+          "correct": "½mv²",
+          "correctExplanation": "(γ − 1)mc² ≈ (½v²/c²)mc² = ½mv², which is the classical kinetic energy formula.",
+          "distractors": ["mc²", "2mv²"]
+        },
+        "2": {
+          "correct": "classical",
+          "correctExplanation": "At low speeds, relativistic kinetic energy matches the classical kinetic energy ½mv², confirming that classical mechanics is the low-speed limit of special relativity.",
+          "distractors": ["quantum", "relativistic"]
+        }
+      }
+    }
+  ]
+}

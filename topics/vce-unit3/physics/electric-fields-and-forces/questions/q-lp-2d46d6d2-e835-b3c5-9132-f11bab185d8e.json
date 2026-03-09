@@ -1,0 +1,511 @@
+{
+  "_link": {
+    "uuid": "lp-2d46d6d2-e835-b3c5-9132-f11bab185d8e",
+    "version": 1,
+    "contentHash": "hash-24a6d92e",
+    "title": "I can predict how the force between two charges changes when one or both charges are changed",
+    "generatedAt": "2026-03-05T08:00:00Z"
+  },
+  "toLevel2": [
+    {
+      "type": "mc",
+      "question": "According to Coulomb's law, what happens to the electric force between two charges if one charge is doubled while the separation stays the same?",
+      "correct": "The force doubles",
+      "correctExplanation": "Since F ∝ q₁q₂, doubling one charge doubles the product q₁q₂ and therefore doubles the force.",
+      "distractors": [
+        { "answer": "The force quadruples", "explanation": "Quadrupling occurs when both charges are doubled; doubling only one charge doubles the force." },
+        { "answer": "The force stays the same", "explanation": "The force depends on the product of the charges; changing one charge changes the force." },
+        { "answer": "The force is halved", "explanation": "Doubling a charge increases the force, not decreases it." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What happens to the electric force between two charges if both charges are doubled at the same separation?",
+      "correct": "The force quadruples",
+      "correctExplanation": "F ∝ q₁q₂, so doubling both charges gives (2q₁)(2q₂) = 4q₁q₂, which is four times the original force.",
+      "distractors": [
+        { "answer": "The force doubles", "explanation": "Doubling both charges multiplies the product by 4, not 2; the force quadruples." },
+        { "answer": "The force stays the same", "explanation": "Changing both charges changes their product, so the force changes." },
+        { "answer": "The force is halved", "explanation": "Increasing both charges increases the force; it does not decrease it." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "The electric force between two charges depends on which property of the charges?",
+      "correct": "The product of their magnitudes",
+      "correctExplanation": "Coulomb's law states F = kq₁q₂/r², so the force depends on the product q₁q₂ of the two charge magnitudes.",
+      "distractors": [
+        { "answer": "The sum of their magnitudes", "explanation": "The force depends on the product q₁q₂, not the sum q₁ + q₂." },
+        { "answer": "The difference of their magnitudes", "explanation": "The force depends on the product of the charges, not their difference." },
+        { "answer": "The larger of the two charges only", "explanation": "Both charges contribute to the force through their product, not just the larger one." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Two charges +q produce a repulsive force F. If the left charge is changed to +3q while the right remains +q and the separation is unchanged, what is the new force?",
+      "correct": "3F",
+      "correctExplanation": "The new force is k(3q)(q)/r² = 3 × kq²/r² = 3F.",
+      "distractors": [
+        { "answer": "9F", "explanation": "9F would result from tripling both charges; tripling only one charge triples the force." },
+        { "answer": "F", "explanation": "Changing one charge from q to 3q changes the product and therefore the force." },
+        { "answer": "F/3", "explanation": "Increasing a charge increases the force; it does not reduce it by a factor of 3." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "If one of two interacting charges is halved while the other remains unchanged, what happens to the force?",
+      "correct": "The force is halved",
+      "correctExplanation": "F ∝ q₁q₂; halving one charge halves the product and therefore halves the force.",
+      "distractors": [
+        { "answer": "The force is quartered", "explanation": "Quartering would require halving both charges; halving one charge halves the force." },
+        { "answer": "The force doubles", "explanation": "Reducing a charge reduces the force, not increases it." },
+        { "answer": "The force stays the same", "explanation": "The force depends on both charges; changing one charge changes the force." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "Doubling one charge while keeping the other charge and the separation the same will double the electric force between them.",
+      "correct": "True",
+      "correctExplanation": "Since F ∝ q₁q₂, doubling one charge doubles the product and hence doubles the force.",
+      "distractors": [
+        { "answer": "False", "explanation": "Students may confuse this with the inverse square distance relationship, but at constant separation, doubling one charge doubles the force." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "If both charges are tripled at the same separation, the force between them triples.",
+      "correct": "False",
+      "correctExplanation": "Tripling both charges gives (3q₁)(3q₂) = 9q₁q₂, so the force increases by a factor of 9, not 3.",
+      "distractors": [
+        { "answer": "True", "explanation": "Students may add the factors rather than multiply; tripling both charges multiplies the force by 3 × 3 = 9." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about Coulomb's law and charge.",
+      "sentence": "The electric force between two charges is directly proportional to the {{blank:1}} of the two charges.",
+      "blanks": {
+        "1": {
+          "correct": "product",
+          "correctExplanation": "Coulomb's law states F = kq₁q₂/r², where the force depends on the product q₁q₂.",
+          "distractors": [
+            { "answer": "sum", "explanation": "The force depends on q₁ × q₂ (the product), not q₁ + q₂ (the sum)." },
+            { "answer": "ratio", "explanation": "The force depends on the product of the charges, not their ratio." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about doubling both charges.",
+      "sentence": "If both charges are doubled at constant separation, the force becomes {{blank:1}} times the original force.",
+      "blanks": {
+        "1": {
+          "correct": "four",
+          "correctExplanation": "Doubling both charges gives (2q₁)(2q₂) = 4q₁q₂, so the force is multiplied by 4.",
+          "distractors": [
+            { "answer": "two", "explanation": "The factor is 2 × 2 = 4, not just 2; both charges contribute multiplicatively." },
+            { "answer": "eight", "explanation": "The factor is 2 × 2 = 4; 8 would apply if one charge were doubled and the other quadrupled." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about halving one charge.",
+      "sentence": "Halving one charge while keeping the other the same causes the electric force to be {{blank:1}}.",
+      "blanks": {
+        "1": {
+          "correct": "halved",
+          "correctExplanation": "Since F ∝ q₁q₂, halving one charge halves the product and therefore halves the force.",
+          "distractors": [
+            { "answer": "quartered", "explanation": "Quartering would require halving both charges; halving only one charge halves the force." },
+            { "answer": "unchanged", "explanation": "The force depends on both charges; changing one charge changes the force." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "mc",
+      "question": "Two charges +q and +q exert a force F on each other. If the left charge is changed to +2q and the right to +3q at the same separation, what is the new force?",
+      "correct": "6F",
+      "correctExplanation": "The new force is k(2q)(3q)/r² = 6kq²/r² = 6F, since the product of charges has increased by a factor of 2 × 3 = 6.",
+      "distractors": [
+        { "answer": "5F", "explanation": "The charges contribute multiplicatively (2 × 3 = 6), not additively (2 + 3 = 5)." },
+        { "answer": "3F", "explanation": "Both changes must be accounted for; the factor is 2 × 3 = 6, not just 3." },
+        { "answer": "9F", "explanation": "9F would result from tripling both charges (3 × 3 = 9); the correct factor here is 2 × 3 = 6." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Why does doubling both charges quadruple the force rather than just double it?",
+      "correct": "Because the force depends on the product q₁q₂, and (2q₁)(2q₂) = 4q₁q₂",
+      "correctExplanation": "Each charge independently doubles the force, and these effects multiply: 2 × 2 = 4.",
+      "distractors": [
+        { "answer": "Because the charges add together, giving 2q + 2q = 4q", "explanation": "The force depends on the product of the charges, not their sum." },
+        { "answer": "Because the separation between the charges is halved when both charges double", "explanation": "Doubling the charges does not change the separation; the quadrupling comes from the product q₁q₂." },
+        { "answer": "Because the constant k in Coulomb's law doubles when both charges double", "explanation": "The constant k is a fundamental constant that never changes; the factor of 4 comes from the charge product." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Two charges exert a force of 12 N on each other. If one charge is tripled and the other is halved, what is the new force?",
+      "correct": "18 N",
+      "correctExplanation": "The factor is 3 × 0.5 = 1.5, so the new force is 12 × 1.5 = 18 N.",
+      "distractors": [
+        { "answer": "6 N", "explanation": "6 N would result from halving the force, but the combined factor is 3 × 0.5 = 1.5, giving 18 N." },
+        { "answer": "36 N", "explanation": "36 N would require tripling the force overall, but the halving of one charge partially offsets the tripling." },
+        { "answer": "12 N", "explanation": "The charges have changed, so the force changes; it does not remain at 12 N." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Explain why changing one charge affects the force on both objects, not just on one of them.",
+      "correct": "Newton's third law requires the forces to be equal and opposite, so both objects experience the same magnitude of force",
+      "correctExplanation": "The electric force between two charges forms a Newton's third law pair. If the force on one charge changes, the force on the other must change by the same amount.",
+      "distractors": [
+        { "answer": "Only the changed charge experiences a different force; the other charge is unaffected", "explanation": "Newton's third law requires both forces to be equal in magnitude; if one changes, both change." },
+        { "answer": "The unchanged charge creates a new field that compensates for the changed charge", "explanation": "The unchanged charge does not compensate; both charges experience the new, different force." },
+        { "answer": "The force on the unchanged charge stays the same because its charge has not changed", "explanation": "The force depends on both charges; even though one hasn't changed, the product q₁q₂ has changed." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Two charges +Q and −Q attract each other with force F. If the positive charge is doubled to +2Q, what is the new force?",
+      "correct": "2F (attractive)",
+      "correctExplanation": "Doubling one charge doubles the product of the charges, doubling the force magnitude. The signs are still opposite, so the force remains attractive.",
+      "distractors": [
+        { "answer": "2F (repulsive)", "explanation": "The charges are still opposite in sign (+2Q and −Q), so the force remains attractive." },
+        { "answer": "4F (attractive)", "explanation": "Only one charge was doubled, giving a factor of 2, not 4." },
+        { "answer": "F (attractive)", "explanation": "Doubling one charge changes the force; it does not remain the same." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student multiplies the individual charge changes: 'One charge is doubled (×2) and the other is tripled (×3), so the force is ×5.' What error has the student made?",
+      "correct": "The student added the factors instead of multiplying them; the correct factor is 2 × 3 = 6",
+      "correctExplanation": "Since force depends on the product q₁q₂, the individual multiplying factors must be multiplied together, not added.",
+      "distractors": [
+        { "answer": "The student should have subtracted the factors: 3 − 2 = 1, so the force is unchanged", "explanation": "Subtraction is not the correct operation; the factors should be multiplied." },
+        { "answer": "The student's answer of ×5 is actually correct", "explanation": "The force depends on the product of charges, so the factor is 2 × 3 = 6, not 2 + 3 = 5." },
+        { "answer": "The student should have squared the sum: (2 + 3)² = 25", "explanation": "There is no squaring involved; the charge factors multiply directly: 2 × 3 = 6." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "If one charge is doubled and the other is halved at the same separation, the force remains unchanged.",
+      "correct": "True",
+      "correctExplanation": "The factor is 2 × 0.5 = 1, so the product q₁q₂ is unchanged and the force stays the same.",
+      "distractors": [
+        { "answer": "False", "explanation": "Students may think both changes increase or decrease the force, but 2 × 0.5 = 1 means the effects cancel exactly." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about charge changes and force.",
+      "sentence": "If one charge is tripled and the other is doubled at the same separation, the force changes by a factor of {{blank:1}}.",
+      "blanks": {
+        "1": {
+          "correct": "six",
+          "correctExplanation": "The factor is 3 × 2 = 6, since the force depends on the product of the charges.",
+          "distractors": [
+            { "answer": "five", "explanation": "The factors must be multiplied (3 × 2 = 6), not added (3 + 2 = 5)." },
+            { "answer": "nine", "explanation": "Nine would result from tripling both charges (3 × 3); here one is tripled and the other doubled." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the statement about the proportionality.",
+      "sentence": "The electric force is directly proportional to q₁ {{blank:1}} q₂, meaning individual charge changes are {{blank:2}} together.",
+      "blanks": {
+        "1": {
+          "correct": "×",
+          "correctExplanation": "Coulomb's law involves the product q₁ × q₂, so the charges are multiplied.",
+          "distractors": [
+            { "answer": "+", "explanation": "The force depends on the product q₁q₂, not the sum q₁ + q₂." },
+            { "answer": "÷", "explanation": "The force depends on the product of both charges, not one divided by the other." }
+          ]
+        },
+        "2": {
+          "correct": "multiplied",
+          "correctExplanation": "Because the force depends on the product of the charges, individual changes are multiplied together to find the overall factor.",
+          "distractors": [
+            { "answer": "added", "explanation": "Charge factors multiply because the force depends on q₁ × q₂, not q₁ + q₂." },
+            { "answer": "subtracted", "explanation": "The force depends on the product of charges; changes are multiplied, not subtracted." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the worked example.",
+      "sentence": "Two charges +q attract a charge −q with force F. If the positive charge becomes +4q while the negative charge stays −q, the new force is {{blank:1}}.",
+      "blanks": {
+        "1": {
+          "correct": "4F",
+          "correctExplanation": "Quadrupling one charge multiplies the product by 4, giving a force of 4F.",
+          "distractors": [
+            { "answer": "16F", "explanation": "16F would result from quadrupling both charges; only one charge is changed here." },
+            { "answer": "2F", "explanation": "The charge was multiplied by 4, not 2; the force factor matches the charge factor." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "mc",
+      "question": "Two charges +q and +q exert a force F at separation r. The left charge is changed to +3q, the right to +2q, and the separation is halved. What is the new force?",
+      "correct": "24F",
+      "correctExplanation": "Charge factor: 3 × 2 = 6. Distance factor: (1/0.5)² = 4. Total: 6 × 4 = 24F.",
+      "distractors": [
+        { "answer": "6F", "explanation": "This accounts for the charge change but not the halved distance, which contributes a factor of 4." },
+        { "answer": "12F", "explanation": "This may arise from using 1/r instead of 1/r² for the distance factor; the correct distance factor is 4." },
+        { "answer": "48F", "explanation": "This overestimates; the charge factor is 6 and the distance factor is 4, giving 6 × 4 = 24F." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Charge A is +4 μC and charge B is +1 μC, separated by 0.2 m. If charge A is reduced to +2 μC and charge B is increased to +3 μC, by what factor does the force change?",
+      "correct": "1.5",
+      "correctExplanation": "Original product: 4 × 1 = 4. New product: 2 × 3 = 6. Factor: 6/4 = 1.5.",
+      "distractors": [
+        { "answer": "0.5", "explanation": "The new product 2 × 3 = 6 is larger than the original 4 × 1 = 4; the force increases by 1.5, not decreases." },
+        { "answer": "2", "explanation": "The ratio of charge products is 6/4 = 1.5, not 2." },
+        { "answer": "6", "explanation": "6 is the new charge product, not the factor of change; the factor is 6/4 = 1.5." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Two charges attract each other with force F. One charge is tripled while the other is changed from +q to −2q. What is the new force magnitude and is it attractive or repulsive?",
+      "correct": "6F, repulsive (if both original charges were positive) — but the force depends on the new signs",
+      "correctExplanation": "The magnitude changes by factor |3 × (−2)|/|1 × 1| = 6, giving 6F. The nature (attractive/repulsive) depends on the final signs of both charges.",
+      "distractors": [
+        { "answer": "6F, always attractive regardless of sign changes", "explanation": "The sign of the force depends on whether the charges are like or unlike; changing a sign can change attractive to repulsive." },
+        { "answer": "5F, repulsive", "explanation": "The factor is 3 × 2 = 6 (multiplied), not 3 + 2 = 5 (added)." },
+        { "answer": "F, unchanged because the changes cancel", "explanation": "Tripling one and doubling the other gives a factor of 6; the changes do not cancel." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "In an experiment, the force between two charges is 8.0 N. One charge is then reduced to one quarter of its original value while the other is doubled. What is the new force?",
+      "correct": "4.0 N",
+      "correctExplanation": "Factor: (1/4) × 2 = 1/2. New force: 8.0 × 0.5 = 4.0 N.",
+      "distractors": [
+        { "answer": "1.0 N", "explanation": "The combined factor is (1/4) × 2 = 1/2, giving 4.0 N, not 1.0 N." },
+        { "answer": "16 N", "explanation": "Reducing one charge to a quarter reduces the force; the combined effect is a halving, not a doubling." },
+        { "answer": "8.0 N", "explanation": "The charge changes do not cancel; (1/4) × 2 = 1/2, so the force halves to 4.0 N." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student is asked to find the charge change needed to triple the force while keeping the separation constant. If one charge cannot be changed, by what factor must the other charge be multiplied?",
+      "correct": "3",
+      "correctExplanation": "Since F ∝ q₁q₂ and q₁ is fixed, tripling the force requires q₂ to be tripled.",
+      "distractors": [
+        { "answer": "√3", "explanation": "√3 would apply if force depended on the square root of charge, but F is directly proportional to each charge." },
+        { "answer": "9", "explanation": "9 would be needed if the force depended on q² for a single charge, but F ∝ q₁q₂ is linear in each charge." },
+        { "answer": "1.5", "explanation": "A factor of 1.5 would only increase the force by 50%, not triple it." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Three changes are made simultaneously: charge A is doubled, charge B is tripled, and the separation is doubled. What is the overall factor of change in the force?",
+      "correct": "1.5",
+      "correctExplanation": "Charge factor: 2 × 3 = 6. Distance factor: 1/2² = 1/4. Overall: 6 × 1/4 = 1.5.",
+      "distractors": [
+        { "answer": "6", "explanation": "This accounts for the charge changes but not the doubled separation, which reduces the force by a factor of 4." },
+        { "answer": "24", "explanation": "24 would apply if the separation were halved; doubling the separation reduces the force." },
+        { "answer": "0.375", "explanation": "This may result from an error in combining the factors; the correct calculation gives 6/4 = 1.5." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Two charges q₁ = +5 μC and q₂ = +5 μC exert force F. If q₁ is changed to +10 μC and q₂ to +2.5 μC, what is the new force?",
+      "correct": "F (unchanged)",
+      "correctExplanation": "Original product: 5 × 5 = 25. New product: 10 × 2.5 = 25. The product is unchanged, so the force is the same.",
+      "distractors": [
+        { "answer": "2F", "explanation": "Although one charge doubled, the other halved; the product 10 × 2.5 = 25 equals the original 5 × 5 = 25." },
+        { "answer": "4F", "explanation": "The product of the new charges equals the original product; the force does not change." },
+        { "answer": "0.5F", "explanation": "The product of charges is unchanged (both equal 25), so the force remains F." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the combined calculation.",
+      "sentence": "If one charge is tripled, the other is halved, and the separation is unchanged, the force changes by a factor of {{blank:1}}.",
+      "blanks": {
+        "1": {
+          "correct": "1.5",
+          "correctExplanation": "The charge factor is 3 × 0.5 = 1.5, and since the separation is unchanged, the overall factor is 1.5.",
+          "distractors": [
+            { "answer": "3.5", "explanation": "The factors must be multiplied (3 × 0.5 = 1.5), not added (3 + 0.5 = 3.5)." },
+            { "answer": "6", "explanation": "6 would require both charges to be tripled and doubled; the combined factor here is 3 × 0.5 = 1.5." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about compensating charge changes.",
+      "sentence": "If one charge is doubled and the other is {{blank:1}}, the product q₁q₂ remains the same and the force is unchanged.",
+      "blanks": {
+        "1": {
+          "correct": "halved",
+          "correctExplanation": "Doubling one charge and halving the other gives a factor of 2 × 0.5 = 1, leaving the product unchanged.",
+          "distractors": [
+            { "answer": "doubled", "explanation": "Doubling both charges would quadruple the force; halving the other charge is needed to keep the product the same." },
+            { "answer": "tripled", "explanation": "Tripling the other charge would give a factor of 6, not 1; halving is needed to compensate." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the worked example.",
+      "sentence": "The force between charges is 20 N. If one charge is quadrupled and the other is unchanged, the new force is {{blank:1}} N.",
+      "blanks": {
+        "1": {
+          "correct": "80",
+          "correctExplanation": "Quadrupling one charge multiplies the force by 4: 20 × 4 = 80 N.",
+          "distractors": [
+            { "answer": "40", "explanation": "The factor is 4 (quadrupled), not 2; the new force is 80 N." },
+            { "answer": "320", "explanation": "320 would require quadrupling both charges (factor 16); only one charge is quadrupled here." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "mc",
+      "question": "A student claims: 'Doubling one charge doubles the force on that charge, but the force on the other charge stays the same since it hasn't changed.' Evaluate this claim.",
+      "correct": "Incorrect — Newton's third law requires both forces to be equal in magnitude; doubling one charge doubles the force on both",
+      "correctExplanation": "The electric force between two charges is a Newton's third law pair. Both charges always experience the same magnitude of force, so if the force on one changes, the force on the other must change by the same amount.",
+      "distractors": [
+        { "answer": "Correct — each charge only feels the field of the other, so only the changed charge is affected", "explanation": "The force on charge B depends on charge A's magnitude, so changing A changes the force B experiences too." },
+        { "answer": "Incorrect — doubling one charge has no effect on either force because the field is unchanged", "explanation": "The field of one charge is unchanged, but the force depends on both the field and the charge in it; doubling one charge doubles the force on both." },
+        { "answer": "Correct — Newton's third law only applies to contact forces, not to electric forces at a distance", "explanation": "Newton's third law applies to all forces, including electric forces between charges at a distance." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Analyse why the force depends on the product q₁q₂ rather than the sum q₁ + q₂. What physical reasoning supports this?",
+      "correct": "Each charge creates a field, and the other charge responds to that field; the interaction involves both contributing multiplicatively",
+      "correctExplanation": "Charge q₁ creates a field E₁ ∝ q₁, and the force on q₂ is F = q₂E₁ ∝ q₁q₂. The multiplicative nature arises because one charge creates the field and the other responds to it.",
+      "distractors": [
+        { "answer": "The product form is just a mathematical convention with no physical meaning", "explanation": "The product q₁q₂ has physical meaning: one charge creates the field, the other responds to it." },
+        { "answer": "The sum would be correct if the charges were in a vacuum instead of air", "explanation": "The medium does not change the functional form; the product q₁q₂ applies in all media." },
+        { "answer": "The force actually depends on the sum, but the product is used as an approximation", "explanation": "Coulomb's law with q₁q₂ is exact for point charges, not an approximation; the sum has no role." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Two charges +Q and +4Q are separated by distance d. The charge +Q is replaced by +nQ such that the force remains unchanged. What must n equal if the charge +4Q is simultaneously changed to +Q?",
+      "correct": "n = 4",
+      "correctExplanation": "Original product: Q × 4Q = 4Q². New product: nQ × Q = nQ². For the force to remain the same, nQ² = 4Q², so n = 4.",
+      "distractors": [
+        { "answer": "n = 1", "explanation": "n = 1 would give a product of Q², which is one quarter of the original 4Q²." },
+        { "answer": "n = 16", "explanation": "n = 16 would give 16Q², four times the original; n = 4 is needed to match the original 4Q²." },
+        { "answer": "n = 2", "explanation": "n = 2 would give 2Q², half the original product; n = 4 is needed." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "In a VCAA-style table question, the original force is F. Charge 1 is halved, charge 2 is quadrupled, and the separation is tripled. Determine the new force.",
+      "correct": "2F/9",
+      "correctExplanation": "Charge factor: 0.5 × 4 = 2. Distance factor: 1/3² = 1/9. Overall: 2/9 × F = 2F/9.",
+      "distractors": [
+        { "answer": "2F/3", "explanation": "This uses 1/3 for distance instead of 1/3²; the inverse square law gives 1/9." },
+        { "answer": "4F/9", "explanation": "The charge factor is 0.5 × 4 = 2, not 4; the correct answer is 2F/9." },
+        { "answer": "F/18", "explanation": "This may arise from multiplying the factors incorrectly; the correct calculation gives 2/9." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Evaluate whether it is possible to change both charges such that the force magnitude remains the same but the force changes from attractive to repulsive.",
+      "correct": "Yes — multiply both charges by factors whose product is 1 but change the sign of one charge",
+      "correctExplanation": "For example, change +q to −q and keep the other charge the same. The product magnitude stays the same (factor 1), but the sign changes, converting attraction to repulsion or vice versa.",
+      "distractors": [
+        { "answer": "No — any sign change automatically changes the force magnitude", "explanation": "The sign of a charge determines the direction of force, not its magnitude; magnitude depends on |q₁q₂|." },
+        { "answer": "Yes — but only by simultaneously changing the separation", "explanation": "Sign changes can convert attraction to repulsion without changing separation or magnitude." },
+        { "answer": "No — Coulomb's law does not distinguish between attractive and repulsive forces", "explanation": "Coulomb's law does distinguish: like charges repel, opposite charges attract." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student reasons: 'Increasing charge q₁ by a factor of 3 and decreasing q₂ by a factor of 3 leaves the force unchanged because the changes cancel.' Is this reasoning valid?",
+      "correct": "Yes — the product q₁q₂ is unchanged because 3 × (1/3) = 1",
+      "correctExplanation": "Multiplying one charge by 3 and the other by 1/3 gives a net factor of 3 × 1/3 = 1 for the product q₁q₂, so the force is unchanged.",
+      "distractors": [
+        { "answer": "No — the changes only cancel if they are additions, not multiplications", "explanation": "Since force depends on the product q₁q₂, multiplicative changes that give a product of 1 do cancel." },
+        { "answer": "No — the force always increases when any charge is increased", "explanation": "The force depends on the product of both charges; increasing one while decreasing the other can leave the product unchanged." },
+        { "answer": "Yes — but only because 3 − 3 = 0, restoring the original force", "explanation": "The correct reasoning is that 3 × (1/3) = 1 (multiplicative), not that 3 − 3 = 0 (additive)." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Compare how force changes with charge in Coulomb's law versus how force changes with mass in Newton's law of gravitation. What is the key similarity?",
+      "correct": "Both laws have force proportional to the product of the two interacting quantities (q₁q₂ or m₁m₂)",
+      "correctExplanation": "F_E = kq₁q₂/r² and F_G = Gm₁m₂/r² share the same mathematical structure: force is proportional to the product of the source quantities.",
+      "distractors": [
+        { "answer": "Both laws have force proportional to the sum of the interacting quantities", "explanation": "Both laws involve the product, not the sum, of the interacting quantities." },
+        { "answer": "Coulomb's law depends on the product of charges but gravity depends on each mass independently", "explanation": "Gravity also depends on the product m₁m₂; both laws have the same mathematical form." },
+        { "answer": "Coulomb's law is linear in charge but gravity is quadratic in mass", "explanation": "Both laws are linear in each quantity and depend on the product; neither is quadratic in a single variable." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Design an experiment to verify that the electric force is proportional to the product q₁q₂. Which approach would best isolate this variable?",
+      "correct": "Keep the separation constant and systematically vary each charge independently, measuring the force for each combination",
+      "correctExplanation": "Fixing the separation eliminates distance effects. Varying q₁ while keeping q₂ fixed verifies F ∝ q₁, then varying q₂ confirms F ∝ q₂, establishing F ∝ q₁q₂.",
+      "distractors": [
+        { "answer": "Vary both charges and the distance simultaneously and fit a curve to all the data", "explanation": "Varying all variables simultaneously makes it difficult to isolate the effect of charge alone." },
+        { "answer": "Use only one pair of charges and vary the separation instead", "explanation": "Varying separation tests the inverse square distance dependence, not the charge proportionality." },
+        { "answer": "Use equal charges at all times to test the relationship F ∝ q²", "explanation": "Using only equal charges cannot distinguish F ∝ q₁q₂ from F ∝ (q₁ + q₂)² or other forms." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the comparison with gravity.",
+      "sentence": "Just as gravitational force depends on the product {{blank:1}}, electric force depends on the product q₁q₂; both follow the same mathematical structure.",
+      "blanks": {
+        "1": {
+          "correct": "m₁m₂",
+          "correctExplanation": "Newton's law of gravitation states F = Gm₁m₂/r², where force depends on the product of the two masses.",
+          "distractors": [
+            { "answer": "m₁ + m₂", "explanation": "Gravitational force depends on the product of the masses, not their sum." },
+            { "answer": "m₁/m₂", "explanation": "Gravitational force depends on the product m₁m₂, not the ratio m₁/m₂." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the statement about Newton's third law and charge changes.",
+      "sentence": "When one charge is changed, the force on {{blank:1}} charges changes by the same factor, because the electric force is a Newton's third law {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "both",
+          "correctExplanation": "Newton's third law requires the forces on both interacting charges to be equal in magnitude.",
+          "distractors": [
+            { "answer": "only the changed", "explanation": "Newton's third law requires the force magnitude to be the same on both charges; changing one affects both." },
+            { "answer": "neither of the", "explanation": "Changing a charge does change the force; Newton's third law ensures both experience the new force equally." }
+          ]
+        },
+        "2": {
+          "correct": "pair",
+          "correctExplanation": "The electric force between two charges forms a Newton's third law action–reaction pair: equal in magnitude, opposite in direction.",
+          "distractors": [
+            { "answer": "exception", "explanation": "Electric forces are not exceptions to Newton's third law; they form proper action–reaction pairs." },
+            { "answer": "violation", "explanation": "Electric forces obey Newton's third law fully; they are action–reaction pairs, not violations." }
+          ]
+        }
+      }
+    }
+  ]
+}

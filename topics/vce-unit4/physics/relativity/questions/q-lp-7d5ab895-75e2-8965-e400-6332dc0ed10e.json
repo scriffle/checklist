@@ -1,0 +1,512 @@
+{
+  "_link": {
+    "uuid": "lp-7d5ab895-75e2-8965-e400-6332dc0ed10e",
+    "version": 1,
+    "contentHash": "hash-0cc0de96",
+    "title": "I can define proper time (t₀) and identify which observer measures it",
+    "generatedAt": "2026-03-09T14:35:00.000Z"
+  },
+  "toLevel2": [
+    {
+      "type": "MC",
+      "question": "What is proper time (t₀)?",
+      "correct": "The time interval measured where both events occur at the same point in space",
+      "correctExplanation": "Proper time is defined as the time interval between two events measured in the reference frame where both events happen at the same spatial location.",
+      "distractors": [
+        { "answer": "The time interval measured where the two events occur at different points in space", "explanation": "When two events occur at different spatial locations, the measured time is the dilated time, not proper time." },
+        { "answer": "The longest time interval that any observer can measure between two events", "explanation": "Proper time is the shortest time interval, not the longest. Dilated time is always longer than proper time." },
+        { "answer": "The time measured by an observer who is moving relative to both events", "explanation": "A moving observer measures dilated time because the events occur at different locations in their frame. Proper time requires both events at the same point." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A clock on a spacecraft ticks twice. Which observer measures the proper time between the two ticks?",
+      "correct": "The crew aboard the spacecraft",
+      "correctExplanation": "The crew is at rest relative to the clock, so both ticks occur at the same location in their frame. This means they measure the proper time.",
+      "distractors": [
+        { "answer": "An observer on Earth watching the spacecraft fly past", "explanation": "The Earth observer sees the clock move between ticks, so the two events occur at different locations in their frame. They measure dilated time." },
+        { "answer": "An observer on a different spacecraft moving in the opposite direction", "explanation": "This observer also sees the clock moving, so the ticks occur at different spatial locations in their frame. They measure dilated time." },
+        { "answer": "All observers measure the same time between the ticks", "explanation": "Different observers in relative motion measure different time intervals. Only the observer at rest relative to the clock measures proper time." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Which one of the following is a key property of proper time?",
+      "correct": "It is the shortest time interval measured for two events",
+      "correctExplanation": "Proper time is always the minimum time interval between two events. All other observers in relative motion measure a longer (dilated) time.",
+      "distractors": [
+        { "answer": "It is the longest time interval measured for two events", "explanation": "The longest measured interval is the dilated time. Proper time is the shortest possible measurement of the time between two events." },
+        { "answer": "It is identical for all observers regardless of their motion", "explanation": "Time intervals differ between observers in relative motion. Only in classical physics is time the same for all observers." },
+        { "answer": "It can only be measured using atomic clocks", "explanation": "Proper time can be measured by any clock that is present at the location of both events. The type of clock is not relevant to the definition." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Mia is standing on a platform as a high-speed train passes. A light on the train flashes twice. Who measures the proper time between the two flashes?",
+      "correct": "A passenger sitting on the train",
+      "correctExplanation": "The passenger is at rest relative to the light, so both flashes occur at the same location in the passenger's frame. This satisfies the definition of proper time.",
+      "distractors": [
+        { "answer": "Mia, standing on the platform", "explanation": "Mia sees the light move between flashes because the train is moving relative to her. The flashes occur at different locations in her frame, so she measures dilated time." },
+        { "answer": "A pilot flying overhead at the same speed as the train", "explanation": "The pilot may have a different velocity direction. Only an observer at rest relative to the light source measures proper time." },
+        { "answer": "Both Mia and the passenger measure proper time", "explanation": "Only the passenger measures proper time. Mia measures a longer, dilated time interval because the light source moves in her frame." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Why is it important to correctly identify which observer measures proper time?",
+      "correct": "It is the critical first step in applying the time dilation formula correctly",
+      "correctExplanation": "The time dilation formula t = γt₀ requires proper time (t₀) as the input. If proper time is misidentified, the formula is applied backwards and gives an incorrect result.",
+      "distractors": [
+        { "answer": "It determines the speed of light in that reference frame", "explanation": "The speed of light is the same in all inertial frames. Identifying proper time is needed for the time dilation formula, not for determining the speed of light." },
+        { "answer": "Proper time can only be measured once, so the observer must be chosen carefully", "explanation": "Proper time can be measured repeatedly by any observer at rest relative to the events. The importance is in correctly applying the formula." },
+        { "answer": "It determines whether special relativity applies to the situation", "explanation": "Special relativity applies to all inertial frames. Identifying proper time is needed for correct calculations, not for determining whether relativity applies." }
+      ]
+    },
+    {
+      "type": "TF",
+      "question": "Proper time is the shortest time interval that any observer can measure between two events.",
+      "correct": "True",
+      "correctExplanation": "Proper time is measured in the frame where both events occur at the same spatial location, and it is always the minimum time interval. All other observers measure a longer (dilated) time.",
+      "distractors": [
+        { "answer": "False", "explanation": "This statement is true. Proper time is always the shortest measured time interval between two events. Dilated time is always longer." }
+      ]
+    },
+    {
+      "type": "TF",
+      "question": "An observer who sees the two events occur at different locations in space measures the proper time.",
+      "correct": "False",
+      "correctExplanation": "Proper time requires both events to occur at the same point in space. If the observer sees the events at different locations, they measure the dilated time, not proper time.",
+      "distractors": [
+        { "answer": "True", "explanation": "This is incorrect. Proper time is defined as the interval measured when both events occur at the same spatial location. Different locations means the observer measures dilated time." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the definition of proper time.",
+      "sentence": "Proper time is the time interval between two events measured in the reference frame where both events occur at the same point in {{blank:1}}.",
+      "blanks": {
+        "1": {
+          "correct": "space",
+          "correctExplanation": "Proper time is defined as the interval measured when both events happen at the same spatial location in the observer's frame.",
+          "distractors": ["time", "velocity"]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the statement about proper time and dilated time.",
+      "sentence": "Proper time is always the {{blank:1}} time interval measured between two events. The symbol for proper time is {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "shortest",
+          "correctExplanation": "Proper time is the minimum time interval. All other observers in relative motion measure a longer, dilated time.",
+          "distractors": ["longest", "average"]
+        },
+        "2": {
+          "correct": "t₀",
+          "correctExplanation": "The standard symbol for proper time in the VCE study design is t₀ (t-nought or t-zero).",
+          "distractors": ["t", "γ"]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Identify who measures proper time in the rocket scenario.",
+      "sentence": "A clock on a rocket ticks twice. The {{blank:1}} measures proper time because both ticks occur at the same {{blank:2}} in their frame.",
+      "blanks": {
+        "1": {
+          "correct": "rocket crew",
+          "correctExplanation": "The crew is at rest relative to the clock, so both ticks happen at the same location in their reference frame.",
+          "distractors": ["Earth observer", "external observer"]
+        },
+        "2": {
+          "correct": "location",
+          "correctExplanation": "Both events (ticks) occur at the position of the clock, which does not move in the crew's frame. This satisfies the definition of proper time.",
+          "distractors": ["speed", "frequency"]
+        }
+      }
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "MC",
+      "question": "A lamp inside a moving train flashes on and then off. Ethan is seated next to the lamp on the train. Sarah is standing on the platform watching the train pass. Which one of the following correctly identifies who measures proper time?",
+      "correct": "Ethan measures proper time because both flashes occur at the same location in his frame",
+      "correctExplanation": "Ethan is at rest relative to the lamp. Both the on-flash and off-flash occur at the same point in his frame, so he measures proper time (t₀).",
+      "distractors": [
+        { "answer": "Sarah measures proper time because she is stationary on the platform", "explanation": "Being stationary on the platform does not determine proper time. Sarah sees the lamp move between flashes, so the events occur at different locations in her frame. She measures dilated time." },
+        { "answer": "Both Ethan and Sarah measure proper time", "explanation": "Only one observer can measure proper time for a given pair of events. Ethan measures proper time; Sarah measures dilated time." },
+        { "answer": "Neither observer measures proper time because the train is moving", "explanation": "Motion is relative. In Ethan's frame, the lamp is at rest and both events occur at the same location. He measures proper time regardless of the train's motion relative to Earth." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A muon is created in the upper atmosphere and decays near Earth's surface. In which reference frame is the muon's lifetime the proper time?",
+      "correct": "The muon's own rest frame",
+      "correctExplanation": "In the muon's rest frame, both creation and decay occur at the same spatial location (the muon itself). This satisfies the definition of proper time.",
+      "distractors": [
+        { "answer": "Earth's reference frame", "explanation": "In Earth's frame, the muon moves between creation and decay, so these events occur at different locations. Earth observers measure dilated time." },
+        { "answer": "A satellite's reference frame", "explanation": "A satellite is in a different frame of reference. Only the muon's rest frame has both events at the same location." },
+        { "answer": "The laboratory reference frame", "explanation": "In the laboratory frame, the muon travels a distance between creation and decay. The events occur at different locations, so the laboratory measures dilated time." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Ava measures the time interval between two events as 4.0 μs. Ben, who is moving relative to Ava, measures the interval between the same two events as 5.0 μs. Which observer measures the proper time?",
+      "correct": "Ava, because she measures the shorter time interval",
+      "correctExplanation": "Proper time is always the shortest time interval between two events. Since 4.0 μs < 5.0 μs, Ava measures the proper time.",
+      "distractors": [
+        { "answer": "Ben, because he measures the longer time interval", "explanation": "The longer interval is the dilated time, not the proper time. Proper time is always the shortest measured interval." },
+        { "answer": "Ava, because she is stationary", "explanation": "Being stationary in a particular frame does not automatically mean measuring proper time. The reason Ava measures proper time is that both events occur at the same location in her frame, giving the shorter interval." },
+        { "answer": "Neither observer measures proper time", "explanation": "One of the two observers must be in the frame where both events occur at the same location. Since Ava measures the shorter interval, she measures proper time." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Two firecrackers explode at the same location on a moving barge. Which observer measures the proper time between the explosions?",
+      "correct": "An observer standing on the barge",
+      "correctExplanation": "Both explosions occur at the same point on the barge. An observer on the barge sees both events at the same spatial location, satisfying the definition of proper time.",
+      "distractors": [
+        { "answer": "An observer on the shore watching the barge pass", "explanation": "The shore observer sees the barge move between explosions, so the events occur at different locations in their frame. They measure dilated time." },
+        { "answer": "An observer in a helicopter above the barge", "explanation": "If the helicopter is not moving with the barge, the observer sees the explosion locations shift. Only an observer at rest relative to the barge measures proper time." },
+        { "answer": "All observers measure proper time for these explosions", "explanation": "Only observers at rest relative to the location of both events measure proper time. Others measure dilated time." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A student incorrectly substitutes dilated time for t₀ in the time dilation formula t = γt₀. What is the consequence of this error?",
+      "correct": "The calculated time interval will be larger than the actual dilated time",
+      "correctExplanation": "If dilated time (which is already larger than t₀) is multiplied by γ again, the result is γ² times the proper time, which is too large and physically incorrect.",
+      "distractors": [
+        { "answer": "The formula will give the proper time as a result", "explanation": "Using dilated time in place of t₀ does not reverse the formula to give proper time. It produces a value that is γ² times the proper time." },
+        { "answer": "The calculated time will be shorter than proper time", "explanation": "Multiplying by γ always increases the value. Using the wrong input makes the result too large, not too small." },
+        { "answer": "The error has no effect because γ equals 1 at all speeds", "explanation": "The Lorentz factor γ equals 1 only when v = 0. At any non-zero speed, γ > 1 and the error produces an incorrect result." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Which one of the following is the best way to determine which observer measures proper time in a given scenario?",
+      "correct": "Identify the observer for whom both events occur at the same spatial location",
+      "correctExplanation": "The defining criterion for proper time is that both events happen at the same point in space in the observer's reference frame.",
+      "distractors": [
+        { "answer": "Identify the observer who is stationary relative to Earth", "explanation": "Being stationary relative to Earth does not determine proper time. The criterion is whether both events occur at the same location in the observer's frame." },
+        { "answer": "Identify the observer who measures the longer time interval", "explanation": "The longer interval is the dilated time. The proper time observer measures the shorter interval." },
+        { "answer": "Identify the observer who is moving at the highest speed", "explanation": "Speed does not determine who measures proper time. The criterion is the spatial coincidence of the two events in the observer's frame." }
+      ]
+    },
+    {
+      "type": "TF",
+      "question": "If two events occur at different locations in an observer's reference frame, that observer measures the dilated time, not the proper time.",
+      "correct": "True",
+      "correctExplanation": "Proper time requires both events to occur at the same spatial location. When events are at different locations, the measured time is the dilated time (t), which is always longer than t₀.",
+      "distractors": [
+        { "answer": "False", "explanation": "This statement is true. The definition of proper time requires both events at the same point in space. Different locations means dilated time." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the explanation of proper time for a muon.",
+      "sentence": "A muon's lifetime is the proper time in the muon's rest frame because both {{blank:1}} and {{blank:2}} occur at the same location — the muon itself.",
+      "blanks": {
+        "1": {
+          "correct": "creation",
+          "correctExplanation": "The muon is created at a specific location. In its own frame, the muon is at rest, so creation happens at the muon's position.",
+          "distractors": ["acceleration", "reflection"]
+        },
+        "2": {
+          "correct": "decay",
+          "correctExplanation": "The muon decays at the same location as it was created in its own frame, because the muon is at rest in its own frame.",
+          "distractors": ["detection", "contraction"]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the statement about applying the time dilation formula.",
+      "sentence": "In the formula t = γt₀, the value t₀ must always be the {{blank:1}} time. If t₀ is incorrectly identified, the formula gives a result that is {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "proper",
+          "correctExplanation": "The formula requires t₀ to be proper time — the interval measured where both events occur at the same location.",
+          "distractors": ["dilated", "contracted"]
+        },
+        "2": {
+          "correct": "physically incorrect",
+          "correctExplanation": "Substituting dilated time for t₀ produces a value of γ²t₀, which over-estimates the actual dilated time and is not physically meaningful.",
+          "distractors": ["exactly correct", "slightly smaller"]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the comparison between proper and dilated time.",
+      "sentence": "Proper time is always {{blank:1}} than dilated time. The observer who is at {{blank:2}} relative to the events measures proper time.",
+      "blanks": {
+        "1": {
+          "correct": "shorter",
+          "correctExplanation": "Proper time is the minimum time interval between two events. Dilated time is always longer because γ > 1 for any non-zero relative speed.",
+          "distractors": ["longer", "equal"]
+        },
+        "2": {
+          "correct": "rest",
+          "correctExplanation": "The observer at rest relative to where the events occur sees both events at the same spatial location and measures proper time.",
+          "distractors": ["high speed", "acceleration"]
+        }
+      }
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "MC",
+      "question": "A spacecraft travels past Earth at 0.8c. A light on the spacecraft flashes on and off. An astronaut aboard measures the flash duration as 2.0 μs. Which one of the following correctly identifies the proper time and the observer who measures it?",
+      "correct": "The astronaut measures proper time t₀ = 2.0 μs because both events occur at the same location in her frame",
+      "correctExplanation": "The astronaut is at rest relative to the light. Both the on-flash and off-flash occur at the same point in her frame, so she measures proper time.",
+      "distractors": [
+        { "answer": "The Earth observer measures proper time t₀ = 2.0 μs because Earth is the stationary frame", "explanation": "Earth is not inherently a 'stationary' frame. The Earth observer sees the light move between flashes, so they measure dilated time, not proper time." },
+        { "answer": "The astronaut measures dilated time because the spacecraft is moving", "explanation": "Motion is relative. In the astronaut's frame, the spacecraft is at rest. Both flashes occur at the same location, so the astronaut measures proper time." },
+        { "answer": "Neither observer measures proper time because the spacecraft is accelerating", "explanation": "The question states the spacecraft travels at a constant 0.8c, which is an inertial frame. The astronaut measures proper time." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Two lightning bolts strike the same point on a railway track. Which observer measures the proper time between the strikes?",
+      "correct": "An observer standing at the strike point on the track",
+      "correctExplanation": "Both strikes occur at the same spatial location. An observer at that location sees both events at the same point in their frame, measuring proper time.",
+      "distractors": [
+        { "answer": "A passenger on a train passing through the strike point", "explanation": "The train passenger is moving relative to the strike point. In their frame, the two strikes occur at different locations, so they measure dilated time." },
+        { "answer": "An observer in a helicopter hovering above", "explanation": "If the helicopter is stationary relative to the track, this observer could measure proper time. However, the observer standing at the strike point is the most direct answer." },
+        { "answer": "No observer can measure proper time for lightning strikes", "explanation": "Any observer at rest relative to the location where both strikes occur measures proper time. The nature of the event does not prevent proper time measurement." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Lucas measures the time between two ticks of a moving clock as 8.0 ns. If the proper time between ticks is 5.0 ns, which one of the following is closest to the Lorentz factor?",
+      "correct": "1.6",
+      "correctExplanation": "Using t = γt₀: γ = t/t₀ = 8.0 ns / 5.0 ns = 1.6.",
+      "distractors": [
+        { "answer": "0.63", "explanation": "This is the reciprocal of 1.6 (i.e. t₀/t). The Lorentz factor is always ≥ 1, so γ = t/t₀ = 1.6." },
+        { "answer": "3.0", "explanation": "This would require t = 15 ns for t₀ = 5.0 ns. The correct ratio is 8.0/5.0 = 1.6." },
+        { "answer": "40", "explanation": "This results from multiplying 8.0 × 5.0 instead of dividing. The Lorentz factor is γ = t/t₀ = 1.6." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A particle is created and then decays after travelling 500 m as measured in the laboratory. In the particle's rest frame, both creation and decay occur at the same location. Which time interval is the proper time?",
+      "correct": "The lifetime measured in the particle's rest frame",
+      "correctExplanation": "In the particle's rest frame, creation and decay happen at the same point. This satisfies the definition of proper time. The laboratory measures dilated time.",
+      "distractors": [
+        { "answer": "The lifetime measured in the laboratory frame", "explanation": "In the laboratory, the particle moves 500 m between creation and decay. The events occur at different locations, so the laboratory measures dilated time." },
+        { "answer": "The average of the laboratory and rest frame lifetimes", "explanation": "Proper time is not an average. It is specifically the interval measured where both events occur at the same spatial location." },
+        { "answer": "The time it takes light to travel 500 m", "explanation": "The time for light to travel 500 m is unrelated to the particle's lifetime. Proper time depends on the reference frame of the events, not on light travel time." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "An atomic clock is placed on a high-speed aircraft and another identical clock remains at the airport. After the flight, the aircraft clock shows less elapsed time. Which clock measured the proper time for the aircraft's journey?",
+      "correct": "The aircraft clock, which recorded less elapsed time",
+      "correctExplanation": "The aircraft clock travels with the aircraft. In its frame, the departure and arrival happen at the same location (the clock itself). It measures proper time, which is always the shorter interval.",
+      "distractors": [
+        { "answer": "The airport clock, because it is on the ground", "explanation": "Being on the ground does not automatically confer proper time. For the events of the aircraft's journey, the aircraft clock is present at both events and measures proper time." },
+        { "answer": "The airport clock, because it recorded more elapsed time", "explanation": "More elapsed time indicates dilated time. Proper time is the shorter interval, measured by the aircraft clock." },
+        { "answer": "Both clocks measure proper time", "explanation": "For the specific events of departure and arrival of the aircraft, only the aircraft clock is present at both events. It measures proper time." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Isla claims: 'The observer who is not moving always measures proper time.' Evaluate her claim.",
+      "correct": "The claim is incorrect because all motion is relative and proper time depends on event location, not absolute motion",
+      "correctExplanation": "There is no absolute rest frame. Proper time is measured by the observer for whom both events occur at the same spatial location, regardless of whether they appear 'stationary' to an external observer.",
+      "distractors": [
+        { "answer": "The claim is correct; stationary observers always measure proper time", "explanation": "There is no absolute concept of 'stationary' in special relativity. Proper time depends on whether both events occur at the same location in the observer's frame." },
+        { "answer": "The claim is correct but only for observers on Earth's surface", "explanation": "Earth is not a special reference frame. The criterion for proper time is the same in all inertial frames." },
+        { "answer": "The claim is incorrect because proper time cannot be measured experimentally", "explanation": "Proper time can be measured experimentally. Atomic clocks on aircraft have confirmed time dilation predictions. The claim is wrong because motion is relative." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A GPS satellite orbits Earth at high speed. Its onboard clock ticks at a different rate than a ground clock. For the event of two consecutive ticks of the satellite clock, which observer measures proper time?",
+      "correct": "An observer travelling with the satellite",
+      "correctExplanation": "Both ticks of the satellite clock occur at the same location in the satellite's frame. An observer with the satellite sees both events at the same point and measures proper time.",
+      "distractors": [
+        { "answer": "An observer on the ground directly below the satellite", "explanation": "The ground observer sees the satellite move between ticks, so the events occur at different locations in their frame. They measure dilated time." },
+        { "answer": "An observer at the GPS control centre", "explanation": "The control centre is on Earth's surface and the satellite moves relative to it. The ticks occur at different locations in the control centre's frame." },
+        { "answer": "No observer measures proper time because the satellite is in orbit", "explanation": "An observer aboard the satellite is at rest relative to the clock and measures proper time for the ticking events." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Apply the concept of proper time to a particle physics scenario.",
+      "sentence": "A pion is created and decays inside a detector. In the pion's {{blank:1}} frame, both events occur at the same location, so the pion's lifetime in this frame is the {{blank:2}} time.",
+      "blanks": {
+        "1": {
+          "correct": "rest",
+          "correctExplanation": "The pion's rest frame is the frame where the pion is stationary. Both creation and decay occur at the same spatial point in this frame.",
+          "distractors": ["laboratory", "detector"]
+        },
+        "2": {
+          "correct": "proper",
+          "correctExplanation": "Since both events occur at the same location in the pion's rest frame, the measured lifetime is the proper time.",
+          "distractors": ["dilated", "contracted"]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the reasoning about proper time identification.",
+      "sentence": "To identify who measures proper time, find the observer for whom both events happen at the same {{blank:1}}. This observer's measurement will be {{blank:2}} than any other observer's measurement.",
+      "blanks": {
+        "1": {
+          "correct": "location",
+          "correctExplanation": "Proper time is defined by both events occurring at the same spatial location in the observer's reference frame.",
+          "distractors": ["speed", "frequency"]
+        },
+        "2": {
+          "correct": "shorter",
+          "correctExplanation": "Proper time is always the minimum time interval between two events. All other observers measure a longer, dilated time.",
+          "distractors": ["longer", "identical"]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the statement about common errors in identifying proper time.",
+      "sentence": "A common mistake is assuming the {{blank:1}} observer always measures proper time. In reality, proper time depends on whether both events occur at the same point in the observer's {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "Earth-based",
+          "correctExplanation": "Students often assume the observer on Earth must measure proper time. However, proper time depends on event location, not on being on Earth.",
+          "distractors": ["fastest-moving", "laboratory"]
+        },
+        "2": {
+          "correct": "reference frame",
+          "correctExplanation": "The criterion for proper time is spatial coincidence of both events within the observer's reference frame.",
+          "distractors": ["velocity", "gravitational field"]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "MC",
+      "question": "A spacecraft passes Earth at 0.6c (γ = 1.25). An experiment onboard lasts 20.0 s as measured by the crew. Which one of the following is closest to the duration measured by an Earth observer?",
+      "correct": "25.0 s",
+      "correctExplanation": "The crew measures proper time (t₀ = 20.0 s) because both the start and end of the experiment occur at the same location in their frame. Earth measures dilated time: t = γt₀ = 1.25 × 20.0 = 25.0 s.",
+      "distractors": [
+        { "answer": "16.0 s", "explanation": "This results from dividing by γ instead of multiplying. Dilated time is always longer than proper time: t = γt₀ = 25.0 s." },
+        { "answer": "20.0 s", "explanation": "This is the proper time measured by the crew. The Earth observer measures a longer, dilated time of 25.0 s." },
+        { "answer": "12.5 s", "explanation": "This results from dividing by 1.6 instead of multiplying by 1.25. The correct calculation gives t = 1.25 × 20.0 = 25.0 s." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "An unstable particle has a proper lifetime of 2.5 × 10⁻⁸ s. In the laboratory, it is observed to live for 5.6 × 10⁻⁸ s. Which one of the following is closest to the speed of the particle?",
+      "correct": "0.89c",
+      "correctExplanation": "γ = t/t₀ = 5.6 × 10⁻⁸ / 2.5 × 10⁻⁸ = 2.24. Using γ = 1/√(1 − v²/c²): v²/c² = 1 − 1/γ² = 1 − 1/5.02 = 1 − 0.199 = 0.801. v = 0.895c ≈ 0.89c.",
+      "distractors": [
+        { "answer": "0.45c", "explanation": "This is approximately half the correct value. With γ = 2.24, v/c = √(1 − 1/γ²) = √(1 − 0.199) ≈ 0.89." },
+        { "answer": "0.55c", "explanation": "At 0.55c, γ ≈ 1.20, which would give a dilated time of only 3.0 × 10⁻⁸ s. The observed 5.6 × 10⁻⁸ s requires a higher speed." },
+        { "answer": "0.99c", "explanation": "At 0.99c, γ ≈ 7.09, which would give a dilated time of 1.77 × 10⁻⁷ s. This is much larger than the observed 5.6 × 10⁻⁸ s." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Two synchronised clocks are placed at the ends of a 100 m long spacecraft. The spacecraft flies past Earth at 0.9c. An onboard scientist measures the time for a light pulse to travel from one clock to the other. Does the scientist measure proper time for this light transit?",
+      "correct": "No, because the two events occur at different locations in the scientist's frame",
+      "correctExplanation": "The emission event occurs at one end and the reception event occurs at the other end of the spacecraft. These are different spatial locations, so the transit time is not proper time.",
+      "distractors": [
+        { "answer": "Yes, because the scientist is at rest relative to the spacecraft", "explanation": "Being at rest relative to the spacecraft is necessary but not sufficient. Proper time requires both events at the same spatial location. Here they occur 100 m apart." },
+        { "answer": "Yes, because the spacecraft is an inertial frame", "explanation": "Being in an inertial frame does not guarantee proper time. The two events (emission and reception) occur at different locations aboard the spacecraft." },
+        { "answer": "No, because proper time can only be measured for particle decays", "explanation": "Proper time applies to any pair of events, not just particle decays. The issue here is that the two events occur at different spatial locations." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A muon has a proper half-life of 1.56 μs and travels at 0.995c (γ = 10.01). An Earth observer measures the muon's half-life as 15.6 μs. A student writes: 'The Earth observer measures proper time because Earth is stationary.' Identify the error.",
+      "correct": "Earth is not measuring proper time; the muon travels between creation and decay in Earth's frame",
+      "correctExplanation": "In Earth's frame, the muon moves from the upper atmosphere to the surface. Creation and decay occur at different spatial locations, so Earth measures dilated time (15.6 μs), not proper time.",
+      "distractors": [
+        { "answer": "The calculation is wrong; the dilated time should be 0.156 μs", "explanation": "The calculation t = γt₀ = 10.01 × 1.56 = 15.6 μs is correct. The error is in identifying Earth as the proper time observer." },
+        { "answer": "Proper time does not apply to muon decay experiments", "explanation": "Proper time applies to all events. The muon's rest frame measures proper time for the muon's lifetime." },
+        { "answer": "The error is that γ should be 1/10.01 for Earth's frame", "explanation": "The Lorentz factor γ = 10.01 is the same in both frames. The error is in labelling Earth's measurement as proper time." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "An astronaut on a spacecraft measures her heartbeat interval as 0.85 s. An Earth-based doctor monitoring her heart remotely measures the interval as 1.06 s. Which one of the following is closest to the speed of the spacecraft?",
+      "correct": "0.60c",
+      "correctExplanation": "The astronaut measures proper time (both heartbeats at the same location). γ = t/t₀ = 1.06/0.85 = 1.247. v/c = √(1 − 1/γ²) = √(1 − 0.643) = √(0.357) ≈ 0.60.",
+      "distractors": [
+        { "answer": "0.20c", "explanation": "At 0.20c, γ ≈ 1.02, giving a dilated time of only 0.87 s. The observed 1.06 s requires a higher speed." },
+        { "answer": "0.80c", "explanation": "At 0.80c, γ ≈ 1.667, giving a dilated time of 1.42 s. This is larger than the observed 1.06 s." },
+        { "answer": "0.95c", "explanation": "At 0.95c, γ ≈ 3.20, giving a dilated time of 2.72 s. This is much larger than the observed 1.06 s." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Consider three observers: A is on a train, B is on the platform, and C is on another train moving in the opposite direction. A light on Train A flashes twice. Who measures proper time between the flashes?",
+      "correct": "Only observer A",
+      "correctExplanation": "Observer A is at rest relative to the light source. Both flashes occur at the same location in A's frame. Observers B and C both see the light move between flashes, so they measure dilated time.",
+      "distractors": [
+        { "answer": "Observers A and B only", "explanation": "Observer B sees the light move as Train A passes. The flashes occur at different locations in B's frame, so B measures dilated time." },
+        { "answer": "Observer B only, because the platform is stationary", "explanation": "There is no absolute stationary frame. Observer B sees the light move, so the flashes are at different locations in B's frame." },
+        { "answer": "All three observers measure proper time", "explanation": "Only observer A is at rest relative to the light. Observers B and C are both in motion relative to the light and measure dilated time." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A particle accelerator measures the lifetime of a kaon as 6.2 × 10⁻⁸ s. The proper lifetime of a kaon is 1.24 × 10⁻⁸ s. Which one of the following is closest to the Lorentz factor?",
+      "correct": "5.0",
+      "correctExplanation": "γ = t/t₀ = 6.2 × 10⁻⁸ / 1.24 × 10⁻⁸ = 5.0. The laboratory measures dilated time, which is γ times the proper lifetime.",
+      "distractors": [
+        { "answer": "0.20", "explanation": "This is the reciprocal (1/5.0). The Lorentz factor is always ≥ 1. γ = t/t₀ = 5.0." },
+        { "answer": "7.7", "explanation": "This does not match the ratio of the given times. γ = 6.2 × 10⁻⁸ / 1.24 × 10⁻⁸ = 5.0." },
+        { "answer": "50", "explanation": "This results from a power-of-ten error. The correct ratio is 6.2/1.24 = 5.0, not 50." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A clock at rest in frame S ticks once per second. Frame S moves at 0.866c (γ = 2.00) relative to frame S'. An observer in S' measures the tick interval as 2.00 s. The observer in S' then argues: 'From my perspective, the S' clock ticks once per second, so S should measure S' ticks as 2.00 s apart too.' Is this argument correct?",
+      "correct": "Yes, time dilation is symmetric between inertial frames",
+      "correctExplanation": "Each frame sees the other's clocks running slowly. From S, a clock at rest in S' ticks every 2.00 s. From S', a clock at rest in S ticks every 2.00 s. This is the symmetry of time dilation.",
+      "distractors": [
+        { "answer": "No, only the moving frame experiences time dilation", "explanation": "There is no absolute moving frame. Both frames are inertial and each sees the other's clocks running slowly. Time dilation is symmetric." },
+        { "answer": "No, only one frame can measure proper time at a time", "explanation": "Each clock's tick interval is proper time in its own rest frame. Both frames can independently measure proper time for their own clocks." },
+        { "answer": "No, the frame with the faster clock measures proper time", "explanation": "Both clocks tick at the same rate in their own rest frames. Each frame sees the other's clock as slower. The effect is symmetric." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the calculation involving proper time and dilated time.",
+      "sentence": "A particle has a proper lifetime of 4.0 × 10⁻⁸ s and moves at a speed where γ = 3.20. The laboratory measures the lifetime as {{blank:1}} × 10⁻⁸ s. The laboratory measures {{blank:2}} time.",
+      "blanks": {
+        "1": {
+          "correct": "12.8",
+          "correctExplanation": "Dilated time: t = γt₀ = 3.20 × 4.0 × 10⁻⁸ = 12.8 × 10⁻⁸ s.",
+          "distractors": ["1.25", "4.0"]
+        },
+        "2": {
+          "correct": "dilated",
+          "correctExplanation": "The laboratory sees the particle move, so creation and decay occur at different locations. The laboratory measures dilated time.",
+          "distractors": ["proper", "contracted"]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the reasoning about proper time in a real-world scenario.",
+      "sentence": "When atomic clocks are flown on aircraft and compared to ground clocks, the {{blank:1}} clock shows less elapsed time. This confirms that the aircraft clock measured {{blank:2}} time for the journey.",
+      "blanks": {
+        "1": {
+          "correct": "aircraft",
+          "correctExplanation": "The aircraft clock travels with the aircraft and is present at both departure and arrival events. It measures proper time, which is the shorter interval.",
+          "distractors": ["ground", "satellite"]
+        },
+        "2": {
+          "correct": "proper",
+          "correctExplanation": "The aircraft clock is at rest relative to the journey events. Both events (departure and arrival) occur at the same location in the clock's frame, so it measures proper time.",
+          "distractors": ["dilated", "contracted"]
+        }
+      }
+    }
+  ]
+}

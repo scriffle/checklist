@@ -1,0 +1,600 @@
+{
+  "_link": {
+    "uuid": "lp-f325a259-25f1-04bf-912f-44a5da4f9476",
+    "version": 1,
+    "contentHash": "hash-94432939",
+    "title": "I can analyse how changing parameters affects the output of an AC generator",
+    "generatedAt": "2026-03-07T00:00:00.000Z"
+  },
+
+  "toLevel2": [
+    {
+      "type": "mc",
+      "question": "The peak emf of an AC generator is proportional to which of the following quantities?",
+      "correct": "The number of turns, the magnetic field strength, the coil area, and the rotation frequency",
+      "correctExplanation": "The peak emf is given by ε_peak = NBAω = NBA(2πf), so it is proportional to the number of turns N, the field B, the area A, and the angular frequency ω (or rotation frequency f).",
+      "distractors": [
+        { "answer": "The magnetic field strength and resistance only", "explanation": "Resistance does not appear in the peak emf formula. The peak emf depends on N, B, A, and ω." },
+        { "answer": "The number of turns and area only", "explanation": "The peak emf also depends on B and ω. All four quantities N, B, A, and ω contribute." },
+        { "answer": "The rotation frequency only", "explanation": "While the rotation frequency affects the peak emf, so do N, B, and A." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "If the number of turns in an AC generator coil is doubled while all other parameters remain unchanged, the peak emf",
+      "correct": "doubles",
+      "correctExplanation": "Since ε_peak = NBAω, doubling N doubles the peak emf. The frequency of the output remains unchanged because it depends on the rotation speed, not on N.",
+      "distractors": [
+        { "answer": "remains the same", "explanation": "The peak emf is directly proportional to N. Doubling N doubles the peak emf." },
+        { "answer": "quadruples", "explanation": "The emf is proportional to N (first power), not N². Doubling N doubles the emf." },
+        { "answer": "halves", "explanation": "Increasing the number of turns increases the emf. Doubling N doubles the emf." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Doubling the rotation speed of an AC generator has what effect on the output?",
+      "correct": "Both the peak emf and the frequency double",
+      "correctExplanation": "The peak emf is ε_peak = NBAω. Doubling ω doubles the peak emf. The output frequency is f = ω/(2π), so doubling ω also doubles f. Rotation speed uniquely affects both amplitude and frequency.",
+      "distractors": [
+        { "answer": "The peak emf doubles but the frequency remains the same", "explanation": "The frequency also depends on rotation speed. Doubling the speed doubles both the peak emf and the frequency." },
+        { "answer": "The peak emf remains the same but the frequency doubles", "explanation": "The peak emf is proportional to ω. Doubling the speed doubles both the emf and the frequency." },
+        { "answer": "Neither the peak emf nor the frequency changes", "explanation": "Both the peak emf and frequency are directly proportional to rotation speed. Doubling the speed doubles both." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "If the magnetic field strength in an AC generator is tripled while all other parameters remain unchanged, the peak emf",
+      "correct": "triples",
+      "correctExplanation": "Since ε_peak = NBAω, tripling B triples the peak emf. The frequency remains unchanged because it depends only on the rotation speed.",
+      "distractors": [
+        { "answer": "remains the same", "explanation": "The peak emf is proportional to B. Tripling B triples the peak emf." },
+        { "answer": "increases ninefold", "explanation": "The emf is proportional to B (first power), not B². Tripling B triples the emf." },
+        { "answer": "triples, and the frequency also triples", "explanation": "The frequency depends on rotation speed, not on field strength. Only the peak emf triples." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which parameter, when changed, affects both the peak emf and the frequency of an AC generator's output?",
+      "correct": "The rotation speed",
+      "correctExplanation": "The rotation speed (angular velocity) appears in both the peak emf formula (ε_peak = NBAω) and the frequency (f = ω/2π). Changing the rotation speed changes both the amplitude and the frequency simultaneously.",
+      "distractors": [
+        { "answer": "The number of turns", "explanation": "Changing N affects only the peak emf, not the frequency. The frequency depends on the rotation speed." },
+        { "answer": "The magnetic field strength", "explanation": "Changing B affects only the peak emf, not the frequency." },
+        { "answer": "The coil area", "explanation": "Changing A affects only the peak emf, not the frequency." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Recall the factors that determine the peak emf of an AC generator.",
+      "sentence": "The peak emf of an AC generator is proportional to the number of turns, the magnetic field strength, the coil {{blank:1}}, and the rotation {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "area",
+          "correctExplanation": "The peak emf is ε_peak = NBAω. The coil area A is one of the four factors.",
+          "distractors": [
+            { "answer": "perimeter", "explanation": "The peak emf depends on the area of the coil, not its perimeter." },
+            { "answer": "resistance", "explanation": "Resistance does not appear in the peak emf formula. It is the area that matters." },
+            { "answer": "thickness", "explanation": "The thickness of the coil does not affect the peak emf. The relevant quantity is the area." }
+          ]
+        },
+        "2": {
+          "correct": "frequency",
+          "correctExplanation": "The peak emf is proportional to ω = 2πf, where f is the rotation frequency.",
+          "distractors": [
+            { "answer": "direction", "explanation": "The direction of rotation does not affect the magnitude of the peak emf." },
+            { "answer": "resistance", "explanation": "Resistance does not affect the peak emf. The rotation frequency determines the rate of flux change." },
+            { "answer": "mass", "explanation": "The mass of the coil does not appear in the emf formula." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Recall the special effect of changing rotation speed on an AC generator's output.",
+      "sentence": "Doubling the rotation speed of an AC generator doubles the peak {{blank:1}} and also doubles the {{blank:2}} of the output.",
+      "blanks": {
+        "1": {
+          "correct": "emf",
+          "correctExplanation": "The peak emf is proportional to ω. Doubling ω doubles the peak emf.",
+          "distractors": [
+            { "answer": "resistance", "explanation": "The resistance of the coil does not depend on rotation speed." },
+            { "answer": "area", "explanation": "The coil area does not change when the rotation speed changes." },
+            { "answer": "flux", "explanation": "The peak flux depends on B and A, not on rotation speed. It is the peak emf that doubles." }
+          ]
+        },
+        "2": {
+          "correct": "frequency",
+          "correctExplanation": "The output frequency equals the rotation frequency. Doubling the rotation speed doubles the frequency (and halves the period).",
+          "distractors": [
+            { "answer": "area", "explanation": "The area of the coil is a fixed property and does not change with rotation speed." },
+            { "answer": "field strength", "explanation": "The magnetic field strength is determined by the magnets, not by the rotation speed." },
+            { "answer": "number of turns", "explanation": "The number of turns is fixed and does not change with rotation speed." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Recall how changing the field strength affects the output of an AC generator.",
+      "sentence": "If the magnetic field strength in an AC generator is doubled, the peak emf {{blank:1}} but the frequency {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "doubles",
+          "correctExplanation": "The peak emf is proportional to B. Doubling B doubles the peak emf.",
+          "distractors": [
+            { "answer": "halves", "explanation": "Increasing B increases the peak emf, not decreases it." },
+            { "answer": "remains the same", "explanation": "The peak emf is proportional to B. Doubling B doubles it." },
+            { "answer": "quadruples", "explanation": "The emf is proportional to B (first power), not B². Doubling B doubles the emf." }
+          ]
+        },
+        "2": {
+          "correct": "remains the same",
+          "correctExplanation": "The frequency depends on the rotation speed, not on the field strength. Changing B does not change the frequency.",
+          "distractors": [
+            { "answer": "doubles", "explanation": "The frequency depends on rotation speed, not field strength. Changing B does not change f." },
+            { "answer": "halves", "explanation": "The frequency is unaffected by changes in field strength." },
+            { "answer": "triples", "explanation": "The frequency depends only on rotation speed and is unaffected by B." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "tf",
+      "question": "Doubling the rotation speed of an AC generator doubles both the peak emf and the frequency of the output.",
+      "correct": "True",
+      "correctExplanation": "The peak emf is ε_peak = NBAω. Doubling ω doubles the peak emf. The frequency f = ω/(2π) also doubles. Rotation speed uniquely affects both amplitude and frequency.",
+      "distractors": [
+        { "answer": "False", "explanation": "The statement is correct. Both the peak emf and frequency are proportional to the rotation speed, so both double when ω doubles." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "Doubling the number of turns in an AC generator coil doubles the frequency of the output.",
+      "correct": "False",
+      "correctExplanation": "The frequency of the output depends on the rotation speed, not on the number of turns. Doubling N doubles the peak emf but has no effect on the frequency.",
+      "distractors": [
+        { "answer": "True", "explanation": "The frequency is determined by f = ω/(2π), which depends only on rotation speed. Changing N affects the peak emf but not the frequency." }
+      ]
+    }
+  ],
+
+  "toLevel3": [
+    {
+      "type": "mc",
+      "question": "An AC generator produces a peak emf of 200 V at a frequency of 50 Hz. If the rotation speed is doubled, the new peak emf and frequency are",
+      "correct": "400 V and 100 Hz",
+      "correctExplanation": "Doubling the rotation speed doubles both the peak emf (200 × 2 = 400 V) and the frequency (50 × 2 = 100 Hz).",
+      "distractors": [
+        { "answer": "400 V and 50 Hz", "explanation": "The frequency also doubles when the rotation speed doubles. The new frequency is 100 Hz." },
+        { "answer": "200 V and 100 Hz", "explanation": "The peak emf also doubles when rotation speed doubles. The new peak emf is 400 V." },
+        { "answer": "800 V and 100 Hz", "explanation": "The peak emf doubles (not quadruples) when ω doubles. The new peak emf is 400 V." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student doubles the magnetic field strength of an AC generator while keeping all other parameters the same. Compared to the original output, the new emf–time graph has",
+      "correct": "twice the amplitude but the same period",
+      "correctExplanation": "Doubling B doubles the peak emf (amplitude). The period depends on rotation speed, not field strength, so it remains unchanged.",
+      "distractors": [
+        { "answer": "the same amplitude but half the period", "explanation": "The amplitude doubles because ε_peak ∝ B. The period is unchanged because it depends on rotation speed, not B." },
+        { "answer": "twice the amplitude and half the period", "explanation": "The amplitude doubles, but the period is unchanged. Only rotation speed affects both amplitude and period." },
+        { "answer": "the same amplitude and the same period", "explanation": "The amplitude doubles because ε_peak ∝ B." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An AC generator operates at 50 Hz with a peak emf of 300 V. If the coil area is halved while all other parameters remain constant, the new output is",
+      "correct": "150 V peak at 50 Hz",
+      "correctExplanation": "Halving A halves the peak emf: 300/2 = 150 V. The frequency remains 50 Hz because it depends on rotation speed, not area.",
+      "distractors": [
+        { "answer": "300 V peak at 25 Hz", "explanation": "Halving A halves the peak emf, not the frequency. The frequency depends on rotation speed." },
+        { "answer": "150 V peak at 25 Hz", "explanation": "The peak emf halves to 150 V, but the frequency remains at 50 Hz." },
+        { "answer": "300 V peak at 50 Hz", "explanation": "The peak emf is proportional to A. Halving A halves the peak emf to 150 V." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student observes that changing the rotation speed of an AC generator affects both the peak emf and the frequency, but changing the magnetic field strength affects only the peak emf. The best explanation for this difference is that",
+      "correct": "rotation speed appears in both the peak emf formula (ε_peak = NBAω) and the frequency formula (f = ω/2π), while B appears only in the emf formula",
+      "correctExplanation": "The peak emf depends on ω through ε_peak = NBAω. The frequency depends on ω through f = ω/(2π). Since B does not appear in the frequency formula, changing B affects only the emf.",
+      "distractors": [
+        { "answer": "the field strength is constant while the rotation speed varies", "explanation": "Both can be varied independently. The difference is in which formulas they appear in: ω appears in both emf and frequency formulas, while B appears only in the emf formula." },
+        { "answer": "the generator has slip rings that prevent field changes from affecting frequency", "explanation": "The slip rings do not affect the relationship between parameters. The frequency depends only on rotation speed, regardless of slip ring design." },
+        { "answer": "Faraday's law only applies to rotation speed changes, not field strength changes", "explanation": "Faraday's law applies to all flux changes. The distinction is mathematical: ω appears in both emf and frequency expressions." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An AC generator produces a sinusoidal emf with a period of 0.020 s. If the rotation speed is halved, the new period is",
+      "correct": "0.040 s",
+      "correctExplanation": "Period T = 1/f. If rotation speed is halved, f is halved, so T doubles: T = 2 × 0.020 = 0.040 s.",
+      "distractors": [
+        { "answer": "0.010 s", "explanation": "Halving the speed halves the frequency, which doubles the period. T = 0.040 s, not 0.010 s." },
+        { "answer": "0.020 s", "explanation": "The period changes when the rotation speed changes. Halving the speed doubles the period to 0.040 s." },
+        { "answer": "0.080 s", "explanation": "The period doubles (not quadruples) when the speed is halved. T = 0.040 s." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which of the following changes to an AC generator would increase the peak emf without changing the frequency of the output?",
+      "correct": "Increasing the number of turns in the coil",
+      "correctExplanation": "Increasing N increases the peak emf (ε_peak = NBAω) without affecting the frequency, which depends only on ω.",
+      "distractors": [
+        { "answer": "Increasing the rotation speed", "explanation": "Increasing the rotation speed increases both the peak emf and the frequency. To keep the frequency unchanged, only N, B, or A should be changed." },
+        { "answer": "Decreasing the rotation speed while increasing the field strength", "explanation": "Decreasing the rotation speed would change the frequency, even if compensated by increasing B." },
+        { "answer": "Reducing the coil area while increasing the rotation speed", "explanation": "Increasing the rotation speed would change the frequency." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Determine the effect of doubling the rotation speed on the period of an AC generator's output.",
+      "sentence": "An AC generator produces output at 50 Hz with a period of 0.020 s. If the rotation speed is doubled, the new frequency is {{blank:1}} Hz and the new period is {{blank:2}} s.",
+      "blanks": {
+        "1": {
+          "correct": "100",
+          "correctExplanation": "Doubling the rotation speed doubles the frequency: 2 × 50 = 100 Hz.",
+          "distractors": [
+            { "answer": "50", "explanation": "The frequency doubles when the rotation speed doubles: f = 100 Hz." },
+            { "answer": "25", "explanation": "The frequency doubles, not halves. f = 100 Hz." },
+            { "answer": "200", "explanation": "The frequency doubles (not quadruples) when speed doubles. f = 100 Hz." }
+          ]
+        },
+        "2": {
+          "correct": "0.010",
+          "correctExplanation": "T = 1/f = 1/100 = 0.010 s. Doubling the frequency halves the period.",
+          "distractors": [
+            { "answer": "0.020", "explanation": "The period changes when the frequency changes. T = 1/100 = 0.010 s." },
+            { "answer": "0.040", "explanation": "The period halves (not doubles) when the speed doubles. T = 0.010 s." },
+            { "answer": "0.005", "explanation": "The period halves (not quarters) when speed doubles. T = 0.010 s." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Describe how changing the number of turns affects the AC generator output.",
+      "sentence": "Tripling the number of turns in an AC generator coil {{blank:1}} the peak emf and {{blank:2}} the frequency.",
+      "blanks": {
+        "1": {
+          "correct": "triples",
+          "correctExplanation": "The peak emf is proportional to N. Tripling N triples the peak emf.",
+          "distractors": [
+            { "answer": "has no effect on", "explanation": "The peak emf is directly proportional to N. Tripling N triples the emf." },
+            { "answer": "halves", "explanation": "Increasing N increases the emf. Tripling N triples it." },
+            { "answer": "increases ninefold", "explanation": "The emf is proportional to N (first power), not N². Tripling N triples the emf." }
+          ]
+        },
+        "2": {
+          "correct": "does not change",
+          "correctExplanation": "The frequency depends on rotation speed (f = ω/2π), not on the number of turns. Changing N does not affect the frequency.",
+          "distractors": [
+            { "answer": "triples", "explanation": "The frequency depends on rotation speed, not N. It remains unchanged." },
+            { "answer": "halves", "explanation": "The frequency is independent of the number of turns." },
+            { "answer": "doubles", "explanation": "The frequency is determined by the rotation speed and is unaffected by N." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Recall which parameter uniquely affects both amplitude and frequency.",
+      "sentence": "Of the four parameters N, B, A, and ω, only the {{blank:1}} affects both the peak emf and the {{blank:2}} of the AC output.",
+      "blanks": {
+        "1": {
+          "correct": "angular velocity (ω)",
+          "correctExplanation": "The angular velocity ω appears in both the peak emf formula (ε_peak = NBAω) and the frequency formula (f = ω/2π). It is the only parameter that affects both.",
+          "distractors": [
+            { "answer": "number of turns (N)", "explanation": "N affects only the peak emf, not the frequency." },
+            { "answer": "magnetic field (B)", "explanation": "B affects only the peak emf, not the frequency." },
+            { "answer": "coil area (A)", "explanation": "A affects only the peak emf, not the frequency." }
+          ]
+        },
+        "2": {
+          "correct": "frequency",
+          "correctExplanation": "The output frequency f = ω/(2π) depends on ω. Changing ω changes both the peak emf and the frequency.",
+          "distractors": [
+            { "answer": "resistance", "explanation": "Resistance is not part of the emf or frequency formulas. The angular velocity affects the frequency." },
+            { "answer": "area", "explanation": "The coil area is a fixed property, not an output characteristic affected by ω." },
+            { "answer": "field strength", "explanation": "The field strength is determined by the magnets and is not affected by ω." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "tf",
+      "question": "Increasing the coil area of an AC generator increases the peak emf but does not change the frequency of the output.",
+      "correct": "True",
+      "correctExplanation": "The peak emf is proportional to A (ε_peak = NBAω), so increasing A increases the peak emf. The frequency f = ω/(2π) depends only on rotation speed and is unaffected by area.",
+      "distractors": [
+        { "answer": "False", "explanation": "The statement is correct. Area affects only the peak emf. The frequency depends on rotation speed, not area." }
+      ]
+    }
+  ],
+
+  "toLevel4": [
+    {
+      "type": "mc",
+      "question": "An AC generator produces a 500 V peak emf at 50 Hz. The rotation speed is tripled. The new peak emf and frequency are",
+      "correct": "1500 V and 150 Hz",
+      "correctExplanation": "Tripling ω triples both the peak emf (500 × 3 = 1500 V) and the frequency (50 × 3 = 150 Hz).",
+      "distractors": [
+        { "answer": "1500 V and 50 Hz", "explanation": "The frequency also triples when the rotation speed triples. f = 150 Hz, not 50 Hz." },
+        { "answer": "500 V and 150 Hz", "explanation": "The peak emf also triples. ε_peak = 1500 V, not 500 V." },
+        { "answer": "4500 V and 150 Hz", "explanation": "The emf triples (not increases ninefold). ε_peak = 3 × 500 = 1500 V." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Kenji has an AC generator producing 100 V peak at 25 Hz. He doubles the number of turns and doubles the rotation speed. The new output is",
+      "correct": "400 V peak at 50 Hz",
+      "correctExplanation": "Doubling N doubles the emf: 100 × 2 = 200 V. Doubling ω doubles the emf again: 200 × 2 = 400 V. Doubling ω also doubles the frequency: 25 × 2 = 50 Hz.",
+      "distractors": [
+        { "answer": "200 V peak at 50 Hz", "explanation": "Both changes increase the emf. Doubling N and doubling ω each double the emf, giving 100 × 2 × 2 = 400 V." },
+        { "answer": "400 V peak at 25 Hz", "explanation": "The frequency doubles when ω doubles: f = 50 Hz, not 25 Hz." },
+        { "answer": "200 V peak at 25 Hz", "explanation": "Doubling N doubles the emf to 200 V, and doubling ω doubles it again to 400 V. The frequency also doubles to 50 Hz." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An AC generator's coil area is halved and its rotation speed is doubled. Compared to the original output, the peak emf is",
+      "correct": "unchanged, because the halving of A cancels the doubling from ω",
+      "correctExplanation": "ε_peak = NBAω. Halving A multiplies by 0.5, doubling ω multiplies by 2. Net effect: 0.5 × 2 = 1 (unchanged). However, the frequency doubles.",
+      "distractors": [
+        { "answer": "doubled, because the rotation speed has a greater effect", "explanation": "Both A and ω appear as first-power factors. Halving A and doubling ω give factors of 0.5 and 2, which cancel to 1." },
+        { "answer": "halved, because the area reduction dominates", "explanation": "Both factors contribute equally (first power). The net effect on emf is 0.5 × 2 = 1 (unchanged)." },
+        { "answer": "quadrupled, because the two changes multiply", "explanation": "The factors are 0.5 (from A) and 2 (from ω), giving 0.5 × 2 = 1, not 4." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Amara observes the emf–time graph of an AC generator. She then increases only the magnetic field strength. Which of the following best describes how the graph changes?",
+      "correct": "The amplitude increases but the period remains the same",
+      "correctExplanation": "Increasing B increases the peak emf (amplitude). The period T = 1/f depends on rotation speed, not B, so it remains unchanged.",
+      "distractors": [
+        { "answer": "Both the amplitude and the period increase", "explanation": "The period does not depend on B. Only the amplitude increases." },
+        { "answer": "The amplitude remains the same but the period decreases", "explanation": "The amplitude increases (ε_peak ∝ B) and the period remains unchanged." },
+        { "answer": "Both the amplitude and the period remain the same", "explanation": "The amplitude increases because ε_peak is proportional to B." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Wei observes the emf–time graph of an AC generator. She then increases only the rotation speed. Which of the following best describes how the graph changes?",
+      "correct": "The amplitude increases and the period decreases",
+      "correctExplanation": "Increasing ω increases both the peak emf (amplitude increases) and the frequency (period decreases). This is the unique dual effect of rotation speed.",
+      "distractors": [
+        { "answer": "The amplitude increases but the period remains the same", "explanation": "Changing the rotation speed changes the frequency (and hence the period) as well as the amplitude." },
+        { "answer": "The amplitude remains the same but the period decreases", "explanation": "The amplitude also increases because ε_peak ∝ ω." },
+        { "answer": "The amplitude increases and the period increases", "explanation": "The period decreases (not increases) when the rotation speed increases, because f increases." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An AC generator produces 240 V peak at 50 Hz. To produce 480 V peak at the same frequency of 50 Hz, the best approach is to",
+      "correct": "double the number of turns (or the field strength or the area) while keeping the rotation speed the same",
+      "correctExplanation": "To double the peak emf without changing the frequency, change a parameter that affects only the emf (N, B, or A). Changing the rotation speed would also change the frequency.",
+      "distractors": [
+        { "answer": "double the rotation speed", "explanation": "Doubling the rotation speed would double both the peak emf and the frequency. The frequency would become 100 Hz, not 50 Hz." },
+        { "answer": "quadruple the rotation speed", "explanation": "Quadrupling the speed would increase the emf fourfold and the frequency to 200 Hz." },
+        { "answer": "halve the rotation speed and quadruple the field strength", "explanation": "Halving the speed would change the frequency to 25 Hz, not maintain it at 50 Hz." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An AC generator has a peak emf of 100 V, a frequency of 50 Hz, and a period of 0.020 s. The rotation speed is halved. The new peak emf, frequency, and period are",
+      "correct": "50 V, 25 Hz, and 0.040 s",
+      "correctExplanation": "Halving ω halves the peak emf (100/2 = 50 V) and halves the frequency (50/2 = 25 Hz). The period doubles: T = 1/25 = 0.040 s.",
+      "distractors": [
+        { "answer": "50 V, 50 Hz, and 0.020 s", "explanation": "The frequency also halves when the speed halves. f = 25 Hz, T = 0.040 s." },
+        { "answer": "100 V, 25 Hz, and 0.040 s", "explanation": "The peak emf also halves. ε_peak = 50 V." },
+        { "answer": "200 V, 25 Hz, and 0.040 s", "explanation": "Halving the speed halves the peak emf. ε_peak = 50 V, not 200 V." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Determine the new output when multiple parameters of an AC generator are changed simultaneously.",
+      "sentence": "An AC generator produces 200 V peak at 50 Hz. The number of turns is tripled and the rotation speed is halved. The new peak emf is {{blank:1}} V and the new frequency is {{blank:2}} Hz.",
+      "blanks": {
+        "1": {
+          "correct": "300",
+          "correctExplanation": "New ε_peak = 200 × 3 (tripling N) × 0.5 (halving ω) = 200 × 1.5 = 300 V.",
+          "distractors": [
+            { "answer": "600", "explanation": "This triples the emf for N but does not account for halving ω. ε = 200 × 3 × 0.5 = 300 V." },
+            { "answer": "100", "explanation": "This halves the emf but does not account for tripling N. ε = 200 × 3 × 0.5 = 300 V." },
+            { "answer": "200", "explanation": "Both changes affect the emf. ε = 200 × 3 × 0.5 = 300 V." }
+          ]
+        },
+        "2": {
+          "correct": "25",
+          "correctExplanation": "Halving the rotation speed halves the frequency: f = 50 × 0.5 = 25 Hz. The number of turns does not affect the frequency.",
+          "distractors": [
+            { "answer": "50", "explanation": "The frequency changes when the rotation speed changes. f = 50 × 0.5 = 25 Hz." },
+            { "answer": "150", "explanation": "The frequency depends only on ω, not N. Tripling N has no effect on frequency. f = 25 Hz." },
+            { "answer": "75", "explanation": "N does not affect frequency. f = 50 × 0.5 = 25 Hz." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Determine how the emf–time graph changes when the rotation speed increases.",
+      "sentence": "When the rotation speed of an AC generator increases, the emf–time graph shows a {{blank:1}} amplitude and a {{blank:2}} period.",
+      "blanks": {
+        "1": {
+          "correct": "larger",
+          "correctExplanation": "Increasing ω increases the peak emf, so the amplitude of the graph increases.",
+          "distractors": [
+            { "answer": "smaller", "explanation": "Increasing rotation speed increases the emf, giving a larger amplitude." },
+            { "answer": "constant", "explanation": "The amplitude changes when the rotation speed changes because ε_peak ∝ ω." },
+            { "answer": "zero", "explanation": "The amplitude is non-zero and increases with rotation speed." }
+          ]
+        },
+        "2": {
+          "correct": "shorter",
+          "correctExplanation": "Increasing ω increases the frequency (f = ω/2π), which decreases the period (T = 1/f). The graph oscillates more rapidly.",
+          "distractors": [
+            { "answer": "longer", "explanation": "Increasing ω increases f, which decreases T. The period gets shorter, not longer." },
+            { "answer": "constant", "explanation": "The period changes when the rotation speed changes. T = 2π/ω." },
+            { "answer": "infinite", "explanation": "The period decreases but does not become infinite. T = 2π/ω." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Calculate the effect of changing the area on peak emf.",
+      "sentence": "An AC generator with coil area 0.040 m² produces a peak emf of 120 V. If the area is increased to 0.080 m² while all other parameters stay the same, the new peak emf is {{blank:1}} V.",
+      "blanks": {
+        "1": {
+          "correct": "240",
+          "correctExplanation": "The area doubles (0.080/0.040 = 2). Since ε_peak ∝ A, the peak emf doubles: 120 × 2 = 240 V.",
+          "distractors": [
+            { "answer": "120", "explanation": "The peak emf is proportional to A. Doubling A doubles the emf to 240 V." },
+            { "answer": "60", "explanation": "The emf increases (not halves) when the area increases." },
+            { "answer": "480", "explanation": "The emf doubles (not quadruples) when A doubles. ε = 240 V." }
+          ]
+        }
+      }
+    }
+  ],
+
+  "toLevel5": [
+    {
+      "type": "mc",
+      "question": "A student claims that doubling the rotation speed of an AC generator has the same effect on the output as doubling the number of turns. Which of the following best evaluates this claim?",
+      "correct": "The claim is incorrect. Both changes double the peak emf, but doubling the rotation speed also doubles the frequency, whereas doubling the turns does not change the frequency.",
+      "correctExplanation": "Doubling ω: ε_peak doubles and f doubles. Doubling N: ε_peak doubles but f is unchanged. The effects on amplitude are the same, but the effects on frequency differ.",
+      "distractors": [
+        { "answer": "The claim is correct, because both changes double all aspects of the output.", "explanation": "The claim is incorrect regarding frequency. Only rotation speed affects the frequency." },
+        { "answer": "The claim is incorrect, because doubling the turns quadruples the emf.", "explanation": "Doubling N doubles (not quadruples) the emf. The key difference is the frequency effect." },
+        { "answer": "The claim is correct for the peak emf but both changes also double the frequency.", "explanation": "Only doubling ω doubles the frequency. Doubling N has no effect on frequency." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An AC generator produces 300 V peak at 50 Hz. An engineer needs the output to be 600 V peak at 50 Hz. A student suggests simply doubling the rotation speed. Evaluate this suggestion.",
+      "correct": "The suggestion is incorrect. Doubling the speed would produce 600 V peak, but the frequency would also double to 100 Hz, not remaining at 50 Hz.",
+      "correctExplanation": "To double the emf without changing frequency, the engineer should double N, B, or A instead of the rotation speed.",
+      "distractors": [
+        { "answer": "The suggestion is correct and will produce exactly the desired output.", "explanation": "Doubling the speed doubles both emf and frequency. The output would be 600 V at 100 Hz, not 600 V at 50 Hz." },
+        { "answer": "The suggestion is incorrect, because doubling the speed would quadruple the peak emf.", "explanation": "Doubling the speed doubles the emf (not quadruples it). The issue is that the frequency also doubles." },
+        { "answer": "The suggestion is correct for the emf but the frequency would halve.", "explanation": "Doubling the speed doubles the frequency, not halves it." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Yuki examines two emf–time graphs from the same AC generator under different conditions. Graph A has a larger amplitude and a shorter period than Graph B. Which change could account for the difference?",
+      "correct": "The rotation speed was increased from B to A",
+      "correctExplanation": "Increasing rotation speed increases both the amplitude (ε_peak ∝ ω) and the frequency (shorter period). This is the only single parameter change that affects both amplitude and period simultaneously.",
+      "distractors": [
+        { "answer": "The number of turns was increased from B to A", "explanation": "Increasing N would increase the amplitude but would not change the period. Both amplitude and period changed, pointing to a rotation speed change." },
+        { "answer": "The magnetic field strength was increased from B to A", "explanation": "Increasing B would increase the amplitude but not change the period. The period change requires a rotation speed change." },
+        { "answer": "The coil area was increased from B to A", "explanation": "Increasing A would increase the amplitude but not affect the period. Both changed, indicating a rotation speed change." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An AC generator produces 400 V peak at 50 Hz. The magnetic field is doubled and the rotation speed is halved. The new output is",
+      "correct": "400 V peak at 25 Hz",
+      "correctExplanation": "ε_peak = NBAω. Doubling B: factor of 2. Halving ω: factor of 0.5. Net effect on emf: 2 × 0.5 = 1 (unchanged at 400 V). Frequency: 50 × 0.5 = 25 Hz.",
+      "distractors": [
+        { "answer": "800 V peak at 25 Hz", "explanation": "The doubling of B and halving of ω cancel each other for the emf: 400 × 2 × 0.5 = 400 V." },
+        { "answer": "200 V peak at 100 Hz", "explanation": "The emf remains at 400 V and the frequency halves to 25 Hz." },
+        { "answer": "400 V peak at 50 Hz", "explanation": "The frequency changes because the rotation speed changed. f = 25 Hz." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Priya wants to design an AC generator that produces exactly 600 V peak at 60 Hz. Her current generator produces 300 V peak at 30 Hz. She considers doubling only the rotation speed. Evaluate whether this achieves her goal.",
+      "correct": "Yes. Doubling ω doubles both the peak emf (300 × 2 = 600 V) and the frequency (30 × 2 = 60 Hz), matching the target exactly.",
+      "correctExplanation": "Since both the target emf and frequency are exactly double the current values, doubling the rotation speed achieves both goals simultaneously.",
+      "distractors": [
+        { "answer": "No. Doubling ω would give 600 V but the frequency would be 30 Hz.", "explanation": "Doubling ω doubles the frequency as well as the emf. f = 2 × 30 = 60 Hz." },
+        { "answer": "No. Doubling ω would give 600 V at 120 Hz.", "explanation": "Doubling ω doubles the frequency from 30 to 60 Hz, not to 120 Hz." },
+        { "answer": "No. Doubling ω would give 1200 V at 60 Hz.", "explanation": "The emf doubles (not quadruples) when ω doubles. ε = 600 V." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An AC generator has N = 100 turns, B = 0.50 T, A = 0.020 m², and f = 50 Hz. The peak emf is closest to",
+      "correct": "310 V",
+      "correctExplanation": "ε_peak = NBAω = NBA(2πf) = 100 × 0.50 × 0.020 × 2π × 50 = 100 × 0.50 × 0.020 × 314.2 = 314 V ≈ 310 V.",
+      "distractors": [
+        { "answer": "50 V", "explanation": "This omits the 2πf factor. ε_peak = NBA(2πf) = 100 × 0.50 × 0.020 × 314.2 ≈ 310 V." },
+        { "answer": "1.0 V", "explanation": "This calculates NBA without the angular velocity. ε_peak = NBA × 2πf ≈ 310 V." },
+        { "answer": "3100 V", "explanation": "This is ten times too large. ε_peak = 100 × 0.50 × 0.020 × 314.2 = 314 V ≈ 310 V." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Ravi compares the outputs of two identical generators, P and Q. Generator P runs at 50 Hz and Generator Q runs at 75 Hz. The ratio of peak emf of Q to peak emf of P is",
+      "correct": "1.5",
+      "correctExplanation": "Since N, B, and A are the same, ε_peak ∝ ω ∝ f. The ratio is f_Q/f_P = 75/50 = 1.5.",
+      "distractors": [
+        { "answer": "2.25", "explanation": "The emf is proportional to f (first power), not f². The ratio is 75/50 = 1.5." },
+        { "answer": "0.67", "explanation": "This is the inverse ratio (P/Q). The ratio Q/P = 75/50 = 1.5." },
+        { "answer": "25", "explanation": "This is the difference in frequencies, not the ratio. ε_Q/ε_P = 75/50 = 1.5." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student examines the effect of simultaneously tripling B and doubling A while keeping ω constant. The peak emf changes by a factor of",
+      "correct": "6",
+      "correctExplanation": "ε_peak = NBAω. Tripling B: factor of 3. Doubling A: factor of 2. Combined: 3 × 2 = 6. The frequency is unchanged because ω is constant.",
+      "distractors": [
+        { "answer": "5", "explanation": "The factors multiply, not add (3 + 2 = 5 is incorrect). The correct factor is 3 × 2 = 6." },
+        { "answer": "3", "explanation": "This accounts only for tripling B. The doubling of A also contributes: 3 × 2 = 6." },
+        { "answer": "9", "explanation": "This squares the factor from B (3² = 9). The emf is proportional to B (first power), giving a factor of 3 × 2 = 6." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Analyse the combined effect of changing multiple AC generator parameters.",
+      "sentence": "An AC generator produces 120 V at 40 Hz. The number of turns is doubled and the area is halved. The new peak emf is {{blank:1}} V and the frequency is {{blank:2}} Hz.",
+      "blanks": {
+        "1": {
+          "correct": "120",
+          "correctExplanation": "Doubling N gives a factor of 2. Halving A gives a factor of 0.5. Net: 2 × 0.5 = 1. The peak emf is unchanged: 120 V.",
+          "distractors": [
+            { "answer": "240", "explanation": "This accounts only for doubling N. Halving A cancels the increase: 120 × 2 × 0.5 = 120 V." },
+            { "answer": "60", "explanation": "This accounts only for halving A. Doubling N cancels the decrease: 120 × 2 × 0.5 = 120 V." },
+            { "answer": "480", "explanation": "The two factors cancel: 2 × 0.5 = 1. The emf remains at 120 V." }
+          ]
+        },
+        "2": {
+          "correct": "40",
+          "correctExplanation": "Neither N nor A affects the frequency. Only the rotation speed determines f. Since ω is unchanged, f remains at 40 Hz.",
+          "distractors": [
+            { "answer": "80", "explanation": "The frequency does not change when N or A changes. f = 40 Hz." },
+            { "answer": "20", "explanation": "The frequency is unaffected by changes in N or A. f = 40 Hz." },
+            { "answer": "160", "explanation": "The frequency depends only on ω and is unchanged at 40 Hz." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Evaluate which parameter change can achieve a specific output requirement.",
+      "sentence": "To double the peak emf of an AC generator while keeping the frequency unchanged, one should double the {{blank:1}} rather than the rotation speed, because changing the rotation speed would also change the {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "magnetic field strength",
+          "correctExplanation": "Doubling B doubles the peak emf without affecting the frequency. Alternatively, N or A could be doubled.",
+          "distractors": [
+            { "answer": "rotation speed", "explanation": "Doubling the rotation speed would double both the emf and the frequency, not just the emf." },
+            { "answer": "resistance", "explanation": "Resistance does not appear in the peak emf formula. Changing it would not double the emf." },
+            { "answer": "temperature", "explanation": "Temperature is not a parameter in the peak emf formula." }
+          ]
+        },
+        "2": {
+          "correct": "frequency",
+          "correctExplanation": "The frequency f = ω/(2π) depends on the rotation speed. Changing ω changes both the emf and the frequency simultaneously.",
+          "distractors": [
+            { "answer": "area", "explanation": "Changing the rotation speed does not change the coil area. It changes the frequency." },
+            { "answer": "number of turns", "explanation": "The number of turns is a fixed property of the coil, not affected by rotation speed." },
+            { "answer": "field strength", "explanation": "The field strength is determined by the magnets, not by the rotation speed." }
+          ]
+        }
+      }
+    }
+  ]
+}

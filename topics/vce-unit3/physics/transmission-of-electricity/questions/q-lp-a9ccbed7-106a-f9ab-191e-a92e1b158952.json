@@ -1,0 +1,583 @@
+{
+  "_link": {
+    "uuid": "lp-a9ccbed7-106a-f9ab-191e-a92e1b158952",
+    "version": 1,
+    "contentHash": "hash-e7dded3e",
+    "title": "I can state that in an ideal transformer, power input equals power output (Pin = Pout)",
+    "generatedAt": "2026-03-09"
+  },
+  "toLevel2": [
+    {
+      "type": "mc",
+      "question": "In an ideal transformer, which one of the following is always true?",
+      "correct": "The power input to the primary coil equals the power output from the secondary coil",
+      "correctExplanation": "In an ideal transformer, no energy is lost, so Pin = Pout. All electrical power supplied to the primary is transferred to the secondary.",
+      "distractors": [
+        { "answer": "The voltage across the primary coil equals the voltage across the secondary coil", "explanation": "The voltages are generally different. A transformer changes voltage according to the turns ratio." },
+        { "answer": "The current in the primary coil equals the current in the secondary coil", "explanation": "The currents are generally different. If voltage changes, current changes inversely to conserve power." },
+        { "answer": "The power output from the secondary coil is always greater than the power input", "explanation": "A transformer cannot create energy. In an ideal transformer Pin = Pout, and in a real one Pout < Pin." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An ideal step-up transformer increases the voltage by a factor of 10. Which one of the following best describes what happens to the current?",
+      "correct": "The current decreases by a factor of 10",
+      "correctExplanation": "Since Pin = Pout and P = VI, if voltage increases by 10, current must decrease by 10 to keep power constant.",
+      "distractors": [
+        { "answer": "The current increases by a factor of 10", "explanation": "Increasing both voltage and current would increase power, violating energy conservation." },
+        { "answer": "The current stays the same", "explanation": "If voltage increases and current stays the same, power would increase, which is impossible in an ideal transformer." },
+        { "answer": "The current decreases by a factor of 100", "explanation": "The current decreases by the same factor as the voltage increases, which is 10, not 100." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An ideal transformer has a primary voltage of 240 V and a primary current of 5.0 A. Which one of the following is closest to the power output?",
+      "correct": "1200 W",
+      "correctExplanation": "Pin = V₁ × I₁ = 240 × 5.0 = 1200 W. Since Pin = Pout for an ideal transformer, Pout = 1200 W.",
+      "distractors": [
+        { "answer": "240 W", "explanation": "This uses only the voltage value. Power requires both voltage and current: P = V × I." },
+        { "answer": "48 W", "explanation": "This calculates V/I = 240/5.0 = 48, which is impedance, not power." },
+        { "answer": "6000 W", "explanation": "This does not follow from the correct calculation of P = V × I." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which one of the following equations correctly represents power conservation in an ideal transformer?",
+      "correct": "V₁I₁ = V₂I₂",
+      "correctExplanation": "Power is P = VI. In an ideal transformer, Pin = Pout, so V₁I₁ = V₂I₂.",
+      "distractors": [
+        { "answer": "V₁I₂ = V₂I₁", "explanation": "This swaps the current subscripts. The correct form pairs each voltage with the current in the same coil." },
+        { "answer": "V₁/I₁ = V₂/I₂", "explanation": "This equates impedances, not powers. Power conservation requires V₁I₁ = V₂I₂." },
+        { "answer": "V₁ + I₁ = V₂ + I₂", "explanation": "Voltage and current have different units and cannot be added. Power is P = VI." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "In an ideal transformer that steps up voltage, which one of the following best explains why the secondary current is less than the primary current?",
+      "correct": "Power is conserved, so if voltage increases the current must decrease to keep V × I constant",
+      "correctExplanation": "Pin = Pout means V₁I₁ = V₂I₂. If V₂ > V₁, then I₂ must be less than I₁.",
+      "distractors": [
+        { "answer": "Energy is lost in the core, which reduces the secondary current", "explanation": "In an ideal transformer there are no energy losses. The current change is due to power conservation." },
+        { "answer": "The secondary coil always has higher resistance, which limits current", "explanation": "The current change is determined by conservation of power, not by coil resistance." },
+        { "answer": "Current is always less in the secondary coil regardless of the voltage change", "explanation": "In a step-down transformer, the secondary current is greater than the primary current." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "An ideal transformer can increase both the voltage and the current at the same time.",
+      "correct": "False",
+      "correctExplanation": "This would violate conservation of energy. If voltage increases, current must decrease to keep Pin = Pout.",
+      "distractors": [
+        { "answer": "True", "explanation": "Increasing both voltage and current would increase power output beyond power input, violating energy conservation." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "In an ideal transformer, Pin = Pout, meaning no energy is lost in the transformation process.",
+      "correct": "True",
+      "correctExplanation": "An ideal transformer has 100% efficiency. All electrical energy input to the primary is transferred to the secondary.",
+      "distractors": [
+        { "answer": "False", "explanation": "By definition, an ideal transformer has no energy losses, so Pin = Pout is correct." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the power conservation equation for an ideal transformer.",
+      "sentence": "In an ideal transformer, the power input equals the power output: V₁ × {{blank:1}} = V₂ × {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "I₁",
+          "correctExplanation": "Power in the primary coil is P = V₁ × I₁.",
+          "distractors": [
+            { "answer": "N₁", "explanation": "N₁ is the number of turns on the primary coil, not the current. Power is P = V × I." },
+            { "answer": "R₁", "explanation": "R₁ is the resistance. Power conservation is expressed as V₁I₁ = V₂I₂." }
+          ]
+        },
+        "2": {
+          "correct": "I₂",
+          "correctExplanation": "Power in the secondary coil is P = V₂ × I₂.",
+          "distractors": [
+            { "answer": "N₂", "explanation": "N₂ is the number of turns on the secondary coil, not the current." },
+            { "answer": "R₂", "explanation": "R₂ is the resistance. Power conservation uses current, not resistance." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about a step-up transformer.",
+      "sentence": "If an ideal transformer steps up the voltage by a factor of 5, the current is stepped {{blank:1}} by a factor of {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "down",
+          "correctExplanation": "In an ideal transformer, if voltage increases, current must decrease to conserve power.",
+          "distractors": [
+            { "answer": "up", "explanation": "Current decreases when voltage increases. Both cannot increase without violating energy conservation." },
+            { "answer": "sideways", "explanation": "Current either increases or decreases. In a step-up transformer, current decreases." }
+          ]
+        },
+        "2": {
+          "correct": "5",
+          "correctExplanation": "The current changes by the same factor as the voltage, but inversely. A factor of 5 increase in voltage gives a factor of 5 decrease in current.",
+          "distractors": [
+            { "answer": "25", "explanation": "The current decreases by the same factor as the voltage increases, which is 5, not 25." },
+            { "answer": "10", "explanation": "The current decrease factor equals the voltage increase factor, which is 5." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about power in an ideal transformer.",
+      "sentence": "The power output of an ideal transformer is always {{blank:1}} the power input. This means the transformer does not {{blank:2}} energy.",
+      "blanks": {
+        "1": {
+          "correct": "equal to",
+          "correctExplanation": "Pin = Pout in an ideal transformer. No energy is lost.",
+          "distractors": [
+            { "answer": "greater than", "explanation": "The output power cannot exceed the input power. Energy cannot be created." },
+            { "answer": "less than", "explanation": "In a real transformer Pout < Pin due to losses, but in an ideal transformer they are equal." }
+          ]
+        },
+        "2": {
+          "correct": "lose",
+          "correctExplanation": "An ideal transformer transfers all power from primary to secondary with no energy lost to heat, sound, or other forms.",
+          "distractors": [
+            { "answer": "transfer", "explanation": "Transformers do transfer energy — that is their purpose. They do not lose energy in the ideal case." },
+            { "answer": "convert", "explanation": "Transformers convert voltage levels, but the key property of an ideal transformer is that it does not lose energy." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "mc",
+      "question": "An ideal transformer has a primary voltage of 240 V and a secondary voltage of 12 V. If the primary current is 0.25 A, which one of the following is closest to the secondary current?",
+      "correct": "5.0 A",
+      "correctExplanation": "Using V₁I₁ = V₂I₂: I₂ = V₁I₁/V₂ = 240 × 0.25/12 = 60/12 = 5.0 A.",
+      "distractors": [
+        { "answer": "0.0125 A", "explanation": "This results from I₂ = V₂I₁/V₁ = 12 × 0.25/240 = 0.0125 A, which inverts the ratio." },
+        { "answer": "0.25 A", "explanation": "The secondary current is not the same as the primary. In a step-down transformer, I₂ > I₁." },
+        { "answer": "20 A", "explanation": "This does not follow from the correct application of V₁I₁ = V₂I₂." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A step-up transformer has a turns ratio N₁:N₂ of 1:20. The secondary current is 0.50 A. Which one of the following is closest to the primary current?",
+      "correct": "10 A",
+      "correctExplanation": "A turns ratio of 1:20 means V₂ = 20V₁. From V₁I₁ = V₂I₂: I₁ = V₂I₂/V₁ = 20 × 0.50 = 10 A.",
+      "distractors": [
+        { "answer": "0.025 A", "explanation": "This results from dividing I₂ by the turns ratio: 0.50/20 = 0.025 A, which inverts the relationship." },
+        { "answer": "0.50 A", "explanation": "The primary and secondary currents are not equal. In a step-up transformer, I₁ > I₂." },
+        { "answer": "100 A", "explanation": "This does not follow from the correct application of power conservation." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which one of the following best explains the relationship between voltage and current in an ideal transformer?",
+      "correct": "Voltage and current change inversely because their product V × I must remain constant to conserve power",
+      "correctExplanation": "Since Pin = Pout, V₁I₁ = V₂I₂. If voltage increases by a factor, current must decrease by the same factor.",
+      "distractors": [
+        { "answer": "Voltage and current always change by the same factor in the same direction", "explanation": "They change by the same factor but in opposite directions. If V increases, I decreases." },
+        { "answer": "Current is always smaller than voltage in a transformer", "explanation": "Current and voltage have different units and cannot be directly compared." },
+        { "answer": "Voltage changes have no effect on the current in a transformer", "explanation": "Voltage and current are directly linked through power conservation: V₁I₁ = V₂I₂." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An ideal transformer has a primary power of 500 W. The secondary voltage is 100 V. Which one of the following is closest to the secondary current?",
+      "correct": "5.0 A",
+      "correctExplanation": "Since Pin = Pout = 500 W, I₂ = Pout/V₂ = 500/100 = 5.0 A.",
+      "distractors": [
+        { "answer": "0.20 A", "explanation": "This calculates V₂/P = 100/500 = 0.20, which inverts the formula for current." },
+        { "answer": "50 A", "explanation": "This does not follow from the correct application of I = P/V." },
+        { "answer": "50 000 A", "explanation": "This multiplies P × V = 500 × 100, which does not give current." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Kayla observes that a transformer increases the voltage from 20 V to 100 V. She claims the transformer amplifies energy. Which one of the following best evaluates her claim?",
+      "correct": "Kayla is incorrect; the transformer conserves power, so the increased voltage is accompanied by a decreased current",
+      "correctExplanation": "An ideal transformer cannot create energy. V₁I₁ = V₂I₂, so the voltage increase is offset by a current decrease.",
+      "distractors": [
+        { "answer": "Kayla is correct; transformers amplify electrical energy like electronic amplifiers", "explanation": "Transformers do not amplify energy. They conserve power while changing voltage and current." },
+        { "answer": "Kayla is incorrect; the transformer decreases the total power output", "explanation": "An ideal transformer does not decrease power. Pin = Pout. Energy is neither created nor destroyed." },
+        { "answer": "Kayla is correct because the secondary voltage is higher than the primary voltage", "explanation": "Higher voltage does not mean more energy. The current decreases to keep power constant." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An ideal transformer supplies 2.0 A at 6.0 V to a device. The primary is connected to a 240 V supply. Which one of the following is closest to the power drawn from the mains supply?",
+      "correct": "12 W",
+      "correctExplanation": "Pout = V₂ × I₂ = 6.0 × 2.0 = 12 W. Since Pin = Pout for an ideal transformer, Pin = 12 W.",
+      "distractors": [
+        { "answer": "480 W", "explanation": "This incorrectly calculates V₁ × I₂ = 240 × 2.0 = 480 W, mixing primary voltage with secondary current." },
+        { "answer": "2880 W", "explanation": "This does not follow from the correct application of P = VI." },
+        { "answer": "120 W", "explanation": "This does not follow from the correct application of P = V₂ × I₂ = 12 W." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "In an ideal step-down transformer, the secondary current is always greater than the primary current.",
+      "correct": "True",
+      "correctExplanation": "A step-down transformer reduces voltage. Since V₁I₁ = V₂I₂ and V₂ < V₁, it follows that I₂ > I₁.",
+      "distractors": [
+        { "answer": "False", "explanation": "Since power is conserved and voltage decreases, current must increase. I₂ > I₁ in a step-down transformer." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about power conservation in a transformer.",
+      "sentence": "An ideal transformer has V₁ = 240 V and I₁ = 2.0 A. The input power is {{blank:1}} W. If V₂ = 24 V, then I₂ = {{blank:2}} A.",
+      "blanks": {
+        "1": {
+          "correct": "480",
+          "correctExplanation": "Pin = V₁ × I₁ = 240 × 2.0 = 480 W.",
+          "distractors": [
+            { "answer": "242", "explanation": "Adding voltage and current (240 + 2) is incorrect. Power is P = V × I." },
+            { "answer": "120", "explanation": "Dividing voltage by current gives impedance, not power." }
+          ]
+        },
+        "2": {
+          "correct": "20",
+          "correctExplanation": "I₂ = Pin/V₂ = 480/24 = 20 A.",
+          "distractors": [
+            { "answer": "0.20", "explanation": "This results from V₂/Pin = 24/480 = 0.05, or another incorrect calculation." },
+            { "answer": "2.0", "explanation": "The secondary current is not the same as the primary. Power conservation requires I₂ = 20 A." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about voltage and current changes.",
+      "sentence": "If an ideal transformer steps the voltage down from 1000 V to 50 V, the voltage has decreased by a factor of {{blank:1}}. The current increases by the same factor of {{blank:2}} to conserve power.",
+      "blanks": {
+        "1": {
+          "correct": "20",
+          "correctExplanation": "The voltage ratio is 1000/50 = 20. The voltage has decreased by a factor of 20.",
+          "distractors": [
+            { "answer": "950", "explanation": "950 is the difference (1000 − 50), not the factor. A factor involves division." },
+            { "answer": "50", "explanation": "50 is the secondary voltage, not the factor by which voltage changed." }
+          ]
+        },
+        "2": {
+          "correct": "20",
+          "correctExplanation": "Since Pin = Pout, the current increases by the same factor that the voltage decreases. The factor is 20.",
+          "distractors": [
+            { "answer": "950", "explanation": "The current factor equals the voltage factor, which is 20, not 950." },
+            { "answer": "2", "explanation": "The current factor equals the voltage factor of 20, not 2." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about real and ideal transformers.",
+      "sentence": "The principle Pin = Pout means that an ideal transformer cannot {{blank:1}} power. In a real transformer, Pout is always slightly {{blank:2}} Pin due to energy losses.",
+      "blanks": {
+        "1": {
+          "correct": "create",
+          "correctExplanation": "A transformer transfers power from primary to secondary but cannot create or destroy energy.",
+          "distractors": [
+            { "answer": "transfer", "explanation": "Transformers do transfer power — that is their purpose. They cannot create power." },
+            { "answer": "change", "explanation": "Transformers do change voltage and current levels. The key point is they cannot create power." }
+          ]
+        },
+        "2": {
+          "correct": "less than",
+          "correctExplanation": "Real transformers have losses (heat, eddy currents, etc.), so the output power is less than the input power.",
+          "distractors": [
+            { "answer": "greater than", "explanation": "Output power cannot exceed input power. Energy losses make Pout < Pin." },
+            { "answer": "equal to", "explanation": "Only in an ideal transformer is Pout = Pin. Real transformers have some losses." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "mc",
+      "question": "A welding transformer steps down 240 V to 8.0 V. The welding current is 150 A. Assuming ideal operation, which one of the following is closest to the current drawn from the 240 V supply?",
+      "correct": "5.0 A",
+      "correctExplanation": "I₁ = V₂I₂/V₁ = 8.0 × 150/240 = 1200/240 = 5.0 A.",
+      "distractors": [
+        { "answer": "150 A", "explanation": "The primary current is not equal to the secondary current. In a step-down transformer, I₁ < I₂." },
+        { "answer": "4500 A", "explanation": "This results from an incorrect calculation." },
+        { "answer": "0.20 A", "explanation": "This does not follow from the correct application of V₁I₁ = V₂I₂." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An ideal transformer steps down 11 kV to 240 V and delivers 5.5 kW to the load. Which one of the following is closest to the primary current?",
+      "correct": "0.50 A",
+      "correctExplanation": "I₁ = P/V₁ = 5500/11 000 = 0.50 A.",
+      "distractors": [
+        { "answer": "23 A", "explanation": "This is the secondary current: I₂ = P/V₂ = 5500/240 ≈ 23 A, not the primary current." },
+        { "answer": "2.0 A", "explanation": "This does not follow from the correct application of I = P/V." },
+        { "answer": "5.5 A", "explanation": "This incorrectly divides P by 1000 instead of by V₁ = 11 000 V." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An ideal transformer has V₁ = 230 V, I₁ = 4.0 A, and V₂ = 46 V. Which one of the following is closest to the secondary current?",
+      "correct": "20 A",
+      "correctExplanation": "I₂ = V₁I₁/V₂ = 230 × 4.0/46 = 920/46 = 20 A.",
+      "distractors": [
+        { "answer": "0.80 A", "explanation": "This results from I₂ = V₂I₁/V₁ = 46 × 4.0/230 = 0.80 A, which inverts the ratio." },
+        { "answer": "4.0 A", "explanation": "The secondary current is not equal to the primary current when the voltages differ." },
+        { "answer": "184 A", "explanation": "This does not follow from the correct application of V₁I₁ = V₂I₂." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A physics teacher uses a demonstration transformer with V₁ = 12 V and V₂ = 120 V. She connects a 60 W globe to the secondary. Assuming ideal operation, which one of the following is closest to the current drawn from the 12 V supply?",
+      "correct": "5.0 A",
+      "correctExplanation": "P = 60 W. I₁ = P/V₁ = 60/12 = 5.0 A.",
+      "distractors": [
+        { "answer": "0.50 A", "explanation": "This is the secondary current: I₂ = P/V₂ = 60/120 = 0.50 A, not the primary current." },
+        { "answer": "60 A", "explanation": "This does not follow from the correct application of I = P/V." },
+        { "answer": "7200 A", "explanation": "This does not follow from the correct application of I = P/V." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "In a real transformer, a student measures Pin = 500 W and Pout = 475 W. Which one of the following is closest to the efficiency of this transformer?",
+      "correct": "95%",
+      "correctExplanation": "Efficiency = Pout/Pin × 100 = 475/500 × 100 = 95%.",
+      "distractors": [
+        { "answer": "105%", "explanation": "This incorrectly calculates Pin/Pout × 100 = 500/475 × 100 ≈ 105%. Efficiency is Pout/Pin." },
+        { "answer": "5.0%", "explanation": "This is the percentage of power lost, not the efficiency." },
+        { "answer": "47.5%", "explanation": "This does not follow from the correct calculation of efficiency." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An ideal transformer is connected to a 240 V supply and delivers 1.2 kW at 60 V. Which one of the following is closest to the secondary current?",
+      "correct": "20 A",
+      "correctExplanation": "I₂ = P/V₂ = 1200/60 = 20 A.",
+      "distractors": [
+        { "answer": "5.0 A", "explanation": "This is the primary current: I₁ = P/V₁ = 1200/240 = 5.0 A, not the secondary current." },
+        { "answer": "0.050 A", "explanation": "This calculates V₂/P = 60/1200 = 0.050, which is not the correct formula for current." },
+        { "answer": "72 A", "explanation": "This does not follow from the correct application of I = P/V." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Two ideal transformers are compared. Transformer A steps up 240 V to 2400 V with a primary current of 10 A. Transformer B steps down 240 V to 24 V with a primary current of 0.50 A. Which one of the following correctly gives the power handled by each transformer?",
+      "correct": "Transformer A: 2400 W; Transformer B: 120 W",
+      "correctExplanation": "P_A = V₁ × I₁ = 240 × 10 = 2400 W. P_B = V₁ × I₁ = 240 × 0.50 = 120 W.",
+      "distractors": [
+        { "answer": "Transformer A: 2400 W; Transformer B: 2400 W", "explanation": "Transformer B has a smaller primary current, so its power is 240 × 0.50 = 120 W, not 2400 W." },
+        { "answer": "Transformer A: 24 000 W; Transformer B: 12 W", "explanation": "These values use the secondary voltages incorrectly. Power is calculated from the primary: P = V₁I₁." },
+        { "answer": "Transformer A: 240 W; Transformer B: 120 W", "explanation": "Transformer A: P = 240 × 10 = 2400 W, not 240 W." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about a step-down transformer calculation.",
+      "sentence": "A step-down transformer has V₁ = 240 V, V₂ = 12 V, and I₂ = 10 A. Since Pin = Pout, the primary current is I₁ = V₂I₂/V₁ = {{blank:1}} A. The power transferred is {{blank:2}} W.",
+      "blanks": {
+        "1": {
+          "correct": "0.50",
+          "correctExplanation": "I₁ = V₂I₂/V₁ = 12 × 10/240 = 120/240 = 0.50 A.",
+          "distractors": [
+            { "answer": "10", "explanation": "This is the secondary current, not the primary. I₁ = V₂I₂/V₁ = 0.50 A." },
+            { "answer": "200", "explanation": "This results from V₁I₂/V₂ = 240 × 10/12 = 200 A, which inverts the ratio." }
+          ]
+        },
+        "2": {
+          "correct": "120",
+          "correctExplanation": "P = V₂ × I₂ = 12 × 10 = 120 W. Also P = V₁ × I₁ = 240 × 0.50 = 120 W.",
+          "distractors": [
+            { "answer": "2400", "explanation": "This calculates V₁ × I₂ = 240 × 10 = 2400, mixing primary voltage with secondary current." },
+            { "answer": "12", "explanation": "This is just the secondary voltage, not the power." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about a step-up transformer.",
+      "sentence": "An ideal step-up transformer increases voltage from 25 V to 500 V. The voltage has increased by a factor of {{blank:1}}. If the primary current is 40 A, the secondary current is {{blank:2}} A.",
+      "blanks": {
+        "1": {
+          "correct": "20",
+          "correctExplanation": "The voltage factor is 500/25 = 20.",
+          "distractors": [
+            { "answer": "475", "explanation": "475 is the difference (500 − 25), not the factor." },
+            { "answer": "2", "explanation": "500/25 = 20, not 2." }
+          ]
+        },
+        "2": {
+          "correct": "2.0",
+          "correctExplanation": "I₂ = V₁I₁/V₂ = 25 × 40/500 = 1000/500 = 2.0 A.",
+          "distractors": [
+            { "answer": "800", "explanation": "This results from V₂I₁/V₁ = 500 × 40/25 = 800 A, which inverts the ratio." },
+            { "answer": "40", "explanation": "The secondary current is not the same as the primary. It must change to conserve power." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about transformer efficiency.",
+      "sentence": "A real transformer with Pin = 1000 W and Pout = 960 W has an efficiency of {{blank:1}}%. The power lost in the transformer is {{blank:2}} W.",
+      "blanks": {
+        "1": {
+          "correct": "96",
+          "correctExplanation": "Efficiency = Pout/Pin × 100 = 960/1000 × 100 = 96%.",
+          "distractors": [
+            { "answer": "104", "explanation": "This results from Pin/Pout × 100 = 1000/960 × 100 ≈ 104%, which inverts the ratio." },
+            { "answer": "4.0", "explanation": "4.0% is the percentage of power lost, not the efficiency." }
+          ]
+        },
+        "2": {
+          "correct": "40",
+          "correctExplanation": "Power lost = Pin − Pout = 1000 − 960 = 40 W.",
+          "distractors": [
+            { "answer": "960", "explanation": "960 W is the output power, not the power lost." },
+            { "answer": "1960", "explanation": "Adding Pin + Pout gives 1960, which has no physical meaning in this context." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "mc",
+      "question": "An ideal transformer steps up 240 V to 100 kV for transmission. The primary current is 500 A. Which one of the following is closest to the secondary current?",
+      "correct": "1.2 A",
+      "correctExplanation": "I₂ = V₁I₁/V₂ = 240 × 500/100 000 = 120 000/100 000 = 1.2 A.",
+      "distractors": [
+        { "answer": "208 kA", "explanation": "This results from V₂I₁/V₁ = 100 000 × 500/240, which inverts the ratio." },
+        { "answer": "500 A", "explanation": "The secondary current is not the same as the primary. With a large voltage increase, the current decreases significantly." },
+        { "answer": "12 A", "explanation": "This does not follow from the correct application of V₁I₁ = V₂I₂." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A factory has two machines. Machine X requires 10 kW at 415 V and Machine Y requires 5.0 kW at 240 V. Both are supplied by separate ideal transformers from an 11 kV line. Which one of the following correctly gives the primary currents for each transformer?",
+      "correct": "Machine X: 0.91 A; Machine Y: 0.45 A",
+      "correctExplanation": "I_X = P/V₁ = 10 000/11 000 = 0.91 A. I_Y = P/V₁ = 5000/11 000 = 0.45 A.",
+      "distractors": [
+        { "answer": "Machine X: 24 A; Machine Y: 21 A", "explanation": "These are the secondary currents (P/V₂), not the primary currents." },
+        { "answer": "Machine X: 0.91 A; Machine Y: 0.91 A", "explanation": "The machines require different powers, so the primary currents differ." },
+        { "answer": "Machine X: 0.45 A; Machine Y: 0.91 A", "explanation": "These are swapped. Machine X draws more power and therefore has the larger primary current." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An ideal transformer system transmits electricity at 66 kV. The step-up transformer at the generator end receives 240 V at 100 A. At the consumer end, a step-down transformer reduces the voltage back to 240 V. Which one of the following is closest to the final current delivered?",
+      "correct": "100 A",
+      "correctExplanation": "Pin = 240 × 100 = 24 000 W. Since both transformers are ideal, Pout = 24 000 W. I_final = P/V = 24 000/240 = 100 A.",
+      "distractors": [
+        { "answer": "0.36 A", "explanation": "This is the current in the 66 kV transmission line: I = 24 000/66 000 ≈ 0.36 A, not the final current." },
+        { "answer": "27 500 A", "explanation": "This does not follow from the correct application of power conservation." },
+        { "answer": "275 A", "explanation": "This does not follow from the correct application of V₁I₁ = V₂I₂." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A real transformer has an efficiency of 98%. The primary voltage is 240 V and the primary current is 10 A. Which one of the following is closest to the power delivered to the load?",
+      "correct": "2350 W",
+      "correctExplanation": "Pin = 240 × 10 = 2400 W. Pout = efficiency × Pin = 0.98 × 2400 = 2352 W ≈ 2350 W.",
+      "distractors": [
+        { "answer": "2400 W", "explanation": "This is the input power. The output is less due to the 2% energy loss." },
+        { "answer": "48 W", "explanation": "This is the power lost (2% of 2400 W), not the power delivered to the load." },
+        { "answer": "2450 W", "explanation": "Output power cannot exceed input power. The real output is 2352 W." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A hospital backup generator produces 50 kW at 400 V. An ideal step-up transformer increases the voltage to 11 kV for distribution. Which one of the following is closest to the current in the 11 kV line?",
+      "correct": "4.5 A",
+      "correctExplanation": "I₂ = P/V₂ = 50 000/11 000 = 4.545 ≈ 4.5 A.",
+      "distractors": [
+        { "answer": "125 A", "explanation": "This is the primary current: I₁ = P/V₁ = 50 000/400 = 125 A, not the secondary current." },
+        { "answer": "550 A", "explanation": "This does not follow from the correct application of I = P/V." },
+        { "answer": "0.036 A", "explanation": "This does not follow from the correct application of I = P/V." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "In an ideal transformer, the primary current is 2.0 A and the secondary current is 40 A. The secondary voltage is 12 V. Which one of the following is closest to the primary voltage?",
+      "correct": "240 V",
+      "correctExplanation": "V₁ = V₂I₂/I₁ = 12 × 40/2.0 = 480/2.0 = 240 V.",
+      "distractors": [
+        { "answer": "0.60 V", "explanation": "This results from V₁ = V₂I₁/I₂ = 12 × 2.0/40 = 0.60 V, which inverts the current ratio." },
+        { "answer": "24 V", "explanation": "This does not follow from the correct application of V₁I₁ = V₂I₂." },
+        { "answer": "960 V", "explanation": "This does not follow from the correct application of V₁I₁ = V₂I₂." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A solar panel system produces 3.0 kW at 48 V. After conversion to AC, an ideal transformer steps the voltage up to 240 V. Which one of the following is closest to the secondary current?",
+      "correct": "12.5 A",
+      "correctExplanation": "I₂ = P/V₂ = 3000/240 = 12.5 A.",
+      "distractors": [
+        { "answer": "62.5 A", "explanation": "This is the primary current: I₁ = P/V₁ = 3000/48 = 62.5 A." },
+        { "answer": "0.20 A", "explanation": "This calculates V₂/P = 240/3000, which is not the correct formula for current." },
+        { "answer": "720 A", "explanation": "This does not follow from the correct application of I = P/V." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An ideal transformer system transmits electricity through three stages: 25 kV to 330 kV to 66 kV to 240 V. The current at the 25 kV stage is 4.0 A. Which one of the following is closest to the final current at 240 V?",
+      "correct": "420 A",
+      "correctExplanation": "P = V₁I₁ = 25 000 × 4.0 = 100 000 W. Since all transformers are ideal, P is conserved. I_final = P/V = 100 000/240 ≈ 417 A ≈ 420 A.",
+      "distractors": [
+        { "answer": "4.0 A", "explanation": "The final current is not equal to the initial current. The voltage has decreased from 25 kV to 240 V." },
+        { "answer": "1.5 A", "explanation": "This is approximately the current at 66 kV: I = 100 000/66 000 ≈ 1.5 A." },
+        { "answer": "0.30 A", "explanation": "This is approximately the current at 330 kV: I = 100 000/330 000 ≈ 0.30 A." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about power conservation across a step-up transformer.",
+      "sentence": "An ideal step-up transformer increases voltage from 12 V to 240 V. If the primary current is 100 A, the output power is P = V₁ × I₁ = {{blank:1}} W and the secondary current is {{blank:2}} A.",
+      "blanks": {
+        "1": {
+          "correct": "1200",
+          "correctExplanation": "P = V₁ × I₁ = 12 × 100 = 1200 W.",
+          "distractors": [
+            { "answer": "24 000", "explanation": "This uses V₂ × I₁ = 240 × 100, mixing secondary voltage with primary current." },
+            { "answer": "252", "explanation": "This adds V₁ + V₂ + I₁ = 352, not a valid calculation. Power is P = V × I." }
+          ]
+        },
+        "2": {
+          "correct": "5.0",
+          "correctExplanation": "I₂ = P/V₂ = 1200/240 = 5.0 A.",
+          "distractors": [
+            { "answer": "100", "explanation": "The secondary current is not the same as the primary. It decreases because the voltage increases." },
+            { "answer": "2000", "explanation": "This does not follow from the correct calculation of I₂ = P/V₂." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about a real transformer.",
+      "sentence": "A real transformer has an efficiency of 90%. With Pin = 2000 W, the useful power output is {{blank:1}} W and the power lost as heat is {{blank:2}} W.",
+      "blanks": {
+        "1": {
+          "correct": "1800",
+          "correctExplanation": "Pout = efficiency × Pin = 0.90 × 2000 = 1800 W.",
+          "distractors": [
+            { "answer": "2200", "explanation": "This adds the loss to the input: 2000 + 200 = 2200. Output cannot exceed input." },
+            { "answer": "180", "explanation": "This divides by 10 instead of multiplying by 0.90." }
+          ]
+        },
+        "2": {
+          "correct": "200",
+          "correctExplanation": "Power lost = Pin − Pout = 2000 − 1800 = 200 W.",
+          "distractors": [
+            { "answer": "1800", "explanation": "1800 W is the output power, not the power lost." },
+            { "answer": "20", "explanation": "This calculates 10% × 200 instead of 10% × 2000." }
+          ]
+        }
+      }
+    }
+  ]
+}

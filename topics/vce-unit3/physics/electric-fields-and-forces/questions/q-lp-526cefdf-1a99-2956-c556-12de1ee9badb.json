@@ -1,0 +1,519 @@
+{
+  "_link": {
+    "uuid": "lp-526cefdf-1a99-2956-c556-12de1ee9badb",
+    "version": 1,
+    "contentHash": "hash-bf0496b1",
+    "title": "I can find the position where the net electric field is zero between two point charges",
+    "generatedAt": "2026-03-05T08:00:00Z"
+  },
+  "toLevel2": [
+    {
+      "type": "mc",
+      "question": "Where is the zero-field point located between two positive charges of different magnitudes?",
+      "correct": "On the line between them, closer to the smaller charge",
+      "correctExplanation": "The smaller charge produces a weaker field, so you must be closer to it for its field to match the stronger field from the larger charge.",
+      "distractors": [
+        { "answer": "Exactly at the midpoint between the two charges", "explanation": "The midpoint is only the zero-field point if the charges are equal; for unequal charges, the point is closer to the smaller charge." },
+        { "answer": "On the line between them, closer to the larger charge", "explanation": "Being closer to the larger charge would make its field even stronger, not equal to the smaller charge's field." },
+        { "answer": "At a point far away from both charges", "explanation": "Far from both charges, both fields are weak but do not generally cancel; the zero point is between them." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What condition must be satisfied at the point where the net electric field is zero between two positive charges?",
+      "correct": "The field magnitudes from each charge must be equal",
+      "correctExplanation": "At the zero-field point, the fields from each charge are equal in magnitude but opposite in direction, so they cancel to give zero net field.",
+      "distractors": [
+        { "answer": "The charges must be equal in magnitude", "explanation": "The charges do not need to be equal; it is the field magnitudes at that point that must be equal." },
+        { "answer": "The distance to each charge must be equal", "explanation": "Equal distances only work for equal charges; for unequal charges, the distances differ." },
+        { "answer": "Both fields must point in the same direction", "explanation": "If both fields pointed the same way, they would add rather than cancel." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which equation is used to find the zero-field point between two point charges Q₁ and Q₂?",
+      "correct": "kQ₁/r₁² = kQ₂/r₂²",
+      "correctExplanation": "Setting the field magnitudes equal gives kQ₁/r₁² = kQ₂/r₂², where r₁ and r₂ are the distances from each charge to the zero-field point.",
+      "distractors": [
+        { "answer": "kQ₁/r₁ = kQ₂/r₂", "explanation": "The electric field depends on 1/r², not 1/r; the equation must use squared distances." },
+        { "answer": "kQ₁r₁² = kQ₂r₂²", "explanation": "The field is inversely proportional to r², so r² appears in the denominator, not the numerator." },
+        { "answer": "Q₁ + Q₂ = 0", "explanation": "This would mean the charges cancel overall, which is a different condition from the fields cancelling at a specific point." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "For two equal positive charges, where is the zero-field point?",
+      "correct": "At the midpoint between them",
+      "correctExplanation": "If both charges are equal, the fields are equal in magnitude at the midpoint and point in opposite directions, cancelling to zero.",
+      "distractors": [
+        { "answer": "There is no zero-field point between equal charges", "explanation": "Equal like charges do have a zero-field point; it is at the midpoint where the fields are equal and opposite." },
+        { "answer": "At a point one quarter of the way from one charge", "explanation": "For equal charges, symmetry places the zero-field point at the midpoint, not at a quarter-distance." },
+        { "answer": "At infinity, far from both charges", "explanation": "The fields cancel at the midpoint, not only at infinity; at infinity both fields approach zero but do not cancel at a specific point." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What additional constraint links r₁ and r₂ when finding the zero-field point between two charges separated by distance d?",
+      "correct": "r₁ + r₂ = d",
+      "correctExplanation": "The zero-field point lies on the line between the charges, so the distances from each charge must add up to the total separation d.",
+      "distractors": [
+        { "answer": "r₁ × r₂ = d", "explanation": "The distances add to give the total separation, not multiply." },
+        { "answer": "r₁ − r₂ = d", "explanation": "The difference of distances does not equal the separation; the sum r₁ + r₂ = d." },
+        { "answer": "r₁² + r₂² = d²", "explanation": "This is the Pythagorean theorem for perpendicular distances; on a straight line, r₁ + r₂ = d." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "The zero-field point between two positive charges of different magnitudes is located closer to the smaller charge.",
+      "correct": "True",
+      "correctExplanation": "The smaller charge produces a weaker field, so you must be closer to it for the field magnitudes to be equal.",
+      "distractors": [
+        { "answer": "False", "explanation": "Students may think the point is closer to the larger charge, but being closer to the smaller charge is needed to balance the fields." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "A zero-field point can exist between two charges only if both charges are positive.",
+      "correct": "False",
+      "correctExplanation": "A zero-field point between the charges exists for two like charges (both positive or both negative). For opposite charges, the zero-field point is outside, not between them.",
+      "distractors": [
+        { "answer": "True", "explanation": "Two negative charges also have a zero-field point between them; the condition is that the charges must be like charges." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the zero-field point.",
+      "sentence": "At the zero-field point, the electric fields from each charge are equal in magnitude but {{blank:1}} in direction.",
+      "blanks": {
+        "1": {
+          "correct": "opposite",
+          "correctExplanation": "The fields must be equal and opposite to cancel, producing a net field of zero.",
+          "distractors": [
+            { "answer": "the same", "explanation": "If the fields pointed the same way, they would add rather than cancel." },
+            { "answer": "perpendicular", "explanation": "On the line between two charges, the fields are along the same line; they must be opposite to cancel." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about finding the zero-field point.",
+      "sentence": "To find the zero-field point, set kQ₁/r₁² equal to kQ₂/r₂² and use the constraint r₁ + r₂ = {{blank:1}}.",
+      "blanks": {
+        "1": {
+          "correct": "d",
+          "correctExplanation": "d is the total separation between the two charges; r₁ and r₂ must sum to this total distance.",
+          "distractors": [
+            { "answer": "Q₁ + Q₂", "explanation": "The charges do not determine the distance constraint; r₁ + r₂ equals the physical separation d." },
+            { "answer": "r₁r₂", "explanation": "The constraint is additive (r₁ + r₂ = d), not multiplicative." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about unequal charges.",
+      "sentence": "For two unequal positive charges, the zero-field point is closer to the {{blank:1}} charge.",
+      "blanks": {
+        "1": {
+          "correct": "smaller",
+          "correctExplanation": "The smaller charge has a weaker field, so you need to be closer to it for the fields to balance.",
+          "distractors": [
+            { "answer": "larger", "explanation": "Being closer to the larger charge would make its already stronger field even stronger; the point is closer to the smaller charge." },
+            { "answer": "negative", "explanation": "The sign of the charge determines field direction, but 'smaller' refers to the magnitude; the point is closer to the charge with the smaller magnitude." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "mc",
+      "question": "Two positive charges Q₁ = Q and Q₂ = 4Q are separated by distance d. At what distance from Q₁ is the zero-field point?",
+      "correct": "d/3",
+      "correctExplanation": "Setting kQ/r₁² = k(4Q)/(d − r₁)² gives (d − r₁)² = 4r₁², so d − r₁ = 2r₁, giving r₁ = d/3.",
+      "distractors": [
+        { "answer": "d/2", "explanation": "d/2 is the midpoint, which only works for equal charges; here Q₂ is four times larger." },
+        { "answer": "2d/3", "explanation": "2d/3 from Q₁ is d/3 from Q₂; the point must be closer to the smaller charge Q₁." },
+        { "answer": "d/5", "explanation": "Solving the equation correctly gives r₁ = d/3, not d/5." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Why must the zero-field point between two positive charges lie between them rather than outside?",
+      "correct": "Between them, the fields point in opposite directions and can cancel; outside, they point in the same direction",
+      "correctExplanation": "Between two positive charges, the field from each charge points away from that charge, producing opposite-direction fields. Outside, both fields point in the same direction away from the pair.",
+      "distractors": [
+        { "answer": "The field is always zero at the midpoint of any two charges", "explanation": "The field at the midpoint is only zero for equal charges; the reason the point is between is due to opposite field directions." },
+        { "answer": "The fields are stronger outside, so they cannot cancel there", "explanation": "The fields can be equal in magnitude outside, but they point in the same direction and therefore add rather than cancel." },
+        { "answer": "Electric field lines cannot exist outside two charges", "explanation": "Electric field lines extend to infinity outside any charge arrangement." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Two positive charges +2Q and +8Q are 40 cm apart. Where is the zero-field point located?",
+      "correct": "13.3 cm from the +2Q charge",
+      "correctExplanation": "Set kQ₁/r₁² = kQ₂/r₂²: 2Q/r₁² = 8Q/(0.40 − r₁)². Simplify: (0.40 − r₁)² = 4r₁², so 0.40 − r₁ = 2r₁, giving r₁ = 0.133 m = 13.3 cm.",
+      "distractors": [
+        { "answer": "20 cm from each charge (midpoint)", "explanation": "The midpoint only works for equal charges; +8Q is four times +2Q, so the zero point is closer to +2Q." },
+        { "answer": "26.7 cm from the +2Q charge", "explanation": "26.7 cm from +2Q is 13.3 cm from +8Q; the point must be closer to the smaller charge, not the larger one." },
+        { "answer": "10 cm from the +8Q charge", "explanation": "The zero point should be closer to the smaller charge +2Q, not closer to +8Q." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Explain why the k constants cancel when setting up the zero-field equation kQ₁/r₁² = kQ₂/r₂².",
+      "correct": "Because k appears on both sides of the equation, it divides out and does not affect the position",
+      "correctExplanation": "Since k is the same constant on both sides, dividing both sides by k gives Q₁/r₁² = Q₂/r₂², simplifying the algebra.",
+      "distractors": [
+        { "answer": "Because k equals zero at the zero-field point", "explanation": "k is a constant (8.99 × 10⁹); it does not change or become zero at any location." },
+        { "answer": "Because the fields at the zero point have no constant k", "explanation": "The fields still involve k, but since it appears equally on both sides, it cancels algebraically." },
+        { "answer": "Because k depends on the distance r and cancels differently at each point", "explanation": "k is a universal constant that does not depend on distance; it cancels because it is the same on both sides." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "For two negative charges of different magnitudes, where would the zero-field point be located?",
+      "correct": "Between them, closer to the charge with the smaller magnitude",
+      "correctExplanation": "Two like charges (whether both positive or both negative) have a zero-field point between them, closer to the smaller-magnitude charge. The analysis is identical to two positive charges.",
+      "distractors": [
+        { "answer": "There is no zero-field point for negative charges", "explanation": "Two negative charges have the same symmetry as two positive charges; a zero-field point exists between them." },
+        { "answer": "Between them, closer to the larger magnitude charge", "explanation": "The point must be closer to the smaller charge so its weaker field can match the stronger field of the larger charge." },
+        { "answer": "Outside both charges on the side of the larger charge", "explanation": "For like charges, the zero-field point is between them, not outside." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What happens to the position of the zero-field point if the separation between two unequal positive charges is doubled?",
+      "correct": "The zero-field point stays at the same fractional position between the charges",
+      "correctExplanation": "The zero-field position depends on the ratio Q₁/Q₂, not on the absolute separation. If both charges stay the same, the ratio r₁/d remains constant.",
+      "distractors": [
+        { "answer": "The zero-field point moves closer to the larger charge", "explanation": "The position depends on the charge ratio, not the separation; doubling d doubles r₁ and r₂ proportionally." },
+        { "answer": "The zero-field point disappears entirely", "explanation": "A zero-field point always exists between two like charges regardless of their separation." },
+        { "answer": "The zero-field point moves to the exact midpoint", "explanation": "The midpoint is only for equal charges; changing the separation does not change the charge ratio." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "For two opposite charges (+Q and −Q), the zero-field point lies between them on the line connecting them.",
+      "correct": "False",
+      "correctExplanation": "For two opposite charges, the fields between them point in the same direction (from + to −), so they add rather than cancel. The zero-field point is outside, beyond the smaller charge.",
+      "distractors": [
+        { "answer": "True", "explanation": "Students may assume all zero-field points are between the charges, but for opposite charges the fields reinforce between them." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the calculation for the zero-field point.",
+      "sentence": "For charges Q and 9Q separated by distance d, setting Q/r₁² = 9Q/(d − r₁)² gives (d − r₁) = {{blank:1}} × r₁, so r₁ = {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "3",
+          "correctExplanation": "Taking the square root of both sides: 9Q/Q = 9, and √9 = 3, so (d − r₁)/r₁ = 3.",
+          "distractors": [
+            { "answer": "9", "explanation": "9 is the charge ratio; the square root of 9 is 3, which gives the distance ratio." },
+            { "answer": "4.5", "explanation": "The correct ratio is √9 = 3, not 9/2 = 4.5." }
+          ]
+        },
+        "2": {
+          "correct": "d/4",
+          "correctExplanation": "From d − r₁ = 3r₁: d = 4r₁, so r₁ = d/4.",
+          "distractors": [
+            { "answer": "d/3", "explanation": "d/3 would be correct for charges in ratio 1:4; for 1:9 the ratio gives d/4." },
+            { "answer": "d/10", "explanation": "From d = 4r₁ we get r₁ = d/4, not d/10." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about opposite charges.",
+      "sentence": "For two opposite charges, the fields between them point in the {{blank:1}} direction, so the zero-field point is {{blank:2}} the two charges.",
+      "blanks": {
+        "1": {
+          "correct": "same",
+          "correctExplanation": "Between opposite charges, both fields point from the positive charge toward the negative charge, reinforcing each other.",
+          "distractors": [
+            { "answer": "opposite", "explanation": "Between like charges the fields are opposite, but between opposite charges they point in the same direction." },
+            { "answer": "perpendicular", "explanation": "The fields along the line between charges are parallel, not perpendicular." }
+          ]
+        },
+        "2": {
+          "correct": "outside",
+          "correctExplanation": "Since the fields add between opposite charges, they can only cancel at a point outside the pair, beyond the smaller charge.",
+          "distractors": [
+            { "answer": "between", "explanation": "Between opposite charges the fields add; the zero-field point must be outside." },
+            { "answer": "above", "explanation": "The zero-field point is along the line joining the charges, outside the pair, not above them." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the algebraic simplification.",
+      "sentence": "When solving for the zero-field point, the constant k cancels because it appears on {{blank:1}} sides of the equation.",
+      "blanks": {
+        "1": {
+          "correct": "both",
+          "correctExplanation": "k is the same constant in both kQ₁/r₁² and kQ₂/r₂², so dividing both sides by k eliminates it.",
+          "distractors": [
+            { "answer": "neither", "explanation": "k appears in both field expressions; it does not vanish on its own." },
+            { "answer": "only one", "explanation": "k appears in the field expression for both charges, so it is on both sides of the equation." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "mc",
+      "question": "Two positive charges +Q₁ = 3.0 × 10⁻⁸ C and +Q₂ = 12.0 × 10⁻⁸ C are 60 cm apart. Calculate the position of the zero-field point from Q₁.",
+      "correct": "20 cm from Q₁",
+      "correctExplanation": "Q₂/Q₁ = 4. √4 = 2. So (d − r₁)/r₁ = 2, giving d = 3r₁, r₁ = 60/3 = 20 cm from Q₁.",
+      "distractors": [
+        { "answer": "30 cm from Q₁ (midpoint)", "explanation": "The midpoint only works for equal charges; Q₂ is 4 times Q₁, so the point is at 20 cm." },
+        { "answer": "40 cm from Q₁", "explanation": "40 cm from Q₁ is 20 cm from Q₂; the point should be closer to the smaller charge Q₁." },
+        { "answer": "15 cm from Q₁", "explanation": "Solving correctly gives r₁ = d/3 = 20 cm, not 15 cm." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student tries to find the zero-field point between +3Q and −Q. Explain why there is no zero-field point between these two charges.",
+      "correct": "Between opposite charges, both fields point from positive to negative, so they add rather than cancel",
+      "correctExplanation": "The field from +3Q points away from it (toward −Q), and the field from −Q points toward it (also toward −Q). Both fields point in the same direction between the charges, so they cannot cancel there.",
+      "distractors": [
+        { "answer": "There is always a zero-field point between any two charges", "explanation": "A zero-field point between the charges only exists for like charges; opposite charges have zero-field points outside." },
+        { "answer": "The charges are too different in magnitude for the fields to cancel", "explanation": "The fields can cancel at some point, but that point is outside the charges, not between them." },
+        { "answer": "Negative charges do not produce electric fields", "explanation": "All charges produce electric fields; negative charges have field lines pointing inward." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Two positive charges +Q and +16Q are separated by 50 cm. At the zero-field point, what is the ratio of the field strength from Q₁ to the field strength from Q₂?",
+      "correct": "1 : 1",
+      "correctExplanation": "At the zero-field point, the fields must be equal in magnitude (and opposite in direction) to cancel. The ratio is always 1:1 at the zero point, by definition.",
+      "distractors": [
+        { "answer": "1 : 16", "explanation": "1:16 is the ratio of the charges, not the fields at the zero point; the fields must be equal at the zero point." },
+        { "answer": "16 : 1", "explanation": "The fields must be equal in magnitude at the zero point, not in the ratio of the charges." },
+        { "answer": "4 : 1", "explanation": "The fields at the zero point are equal (1:1); any other ratio would give a non-zero net field." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "For two positive charges +Q and +16Q separated by 50 cm, find the distance from +Q to the zero-field point.",
+      "correct": "10 cm",
+      "correctExplanation": "√(16Q/Q) = 4. So (d − r₁)/r₁ = 4, giving d = 5r₁, r₁ = 50/5 = 10 cm from the smaller charge.",
+      "distractors": [
+        { "answer": "25 cm", "explanation": "25 cm is the midpoint; for charges in ratio 1:16, the zero point is much closer to the smaller charge." },
+        { "answer": "40 cm", "explanation": "40 cm from +Q is 10 cm from +16Q; the point must be closer to the smaller charge." },
+        { "answer": "12.5 cm", "explanation": "Solving correctly: r₁ = d/(1 + √(Q₂/Q₁)) = 50/(1+4) = 10 cm." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "If a small positive test charge is placed at the zero-field point between two positive charges, what force does it experience?",
+      "correct": "Zero force, because the net electric field is zero",
+      "correctExplanation": "Since F = qE and E = 0 at the zero-field point, the force on any charge placed there is zero.",
+      "distractors": [
+        { "answer": "A force toward the larger charge", "explanation": "At the zero-field point, E = 0, so there is no net force in any direction." },
+        { "answer": "A force toward the smaller charge", "explanation": "At the zero-field point, the fields cancel and the net force is zero." },
+        { "answer": "A repulsive force away from both charges", "explanation": "The forces from each charge cancel at the zero-field point; there is no net force." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student finds the zero-field point at d/3 from charge Q₁. What is the charge ratio Q₂/Q₁?",
+      "correct": "4",
+      "correctExplanation": "If r₁ = d/3, then r₂ = d − d/3 = 2d/3. At the zero point: Q₁/r₁² = Q₂/r₂², so Q₂/Q₁ = r₂²/r₁² = (2d/3)²/(d/3)² = 4.",
+      "distractors": [
+        { "answer": "3", "explanation": "The ratio is r₂²/r₁² = (2)² = 4, not 3." },
+        { "answer": "2", "explanation": "r₂/r₁ = 2, but the charge ratio uses the square of the distance ratio: (r₂/r₁)² = 4." },
+        { "answer": "9", "explanation": "9 would require r₂/r₁ = 3 (i.e., r₁ = d/4); for r₁ = d/3, the ratio is 4." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Explain why the zero-field point is an unstable equilibrium for a positive test charge placed between two positive charges.",
+      "correct": "Any displacement along the line moves the charge closer to one charge and farther from the other, creating a net force away from the zero point",
+      "correctExplanation": "If the test charge moves toward one of the source charges, the field from that charge becomes stronger and the other becomes weaker, producing a net force that pushes it further away from the zero point.",
+      "distractors": [
+        { "answer": "The zero-field point is a stable equilibrium; the charge will return if displaced", "explanation": "Along the line, the equilibrium is unstable; any displacement along the line increases and the charge accelerates away." },
+        { "answer": "The charge will oscillate about the zero point with constant amplitude", "explanation": "There is no restoring force along the line; the charge accelerates away from the zero point." },
+        { "answer": "The equilibrium is neutral; the charge will remain wherever it is displaced to", "explanation": "The force increases with displacement from the zero point; it is an unstable equilibrium, not neutral." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the general formula for the zero-field distance from Q₁.",
+      "sentence": "For two like charges Q₁ and Q₂ separated by distance d, the zero-field point is at r₁ = d / (1 + {{blank:1}}) from Q₁.",
+      "blanks": {
+        "1": {
+          "correct": "√(Q₂/Q₁)",
+          "correctExplanation": "From Q₁/r₁² = Q₂/(d−r₁)², taking square roots gives (d−r₁)/r₁ = √(Q₂/Q₁), so r₁ = d/(1 + √(Q₂/Q₁)).",
+          "distractors": [
+            { "answer": "Q₂/Q₁", "explanation": "The formula requires the square root of the charge ratio, not the ratio itself." },
+            { "answer": "Q₁/Q₂", "explanation": "The ratio must be Q₂/Q₁ (larger over smaller for the charge nearer to the denominator), and a square root is needed." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the verification of the zero-field point.",
+      "sentence": "If the zero-field point for charges Q and 9Q (separated by 40 cm) is at 10 cm from Q, then the field from Q at that point is kQ/(0.10)² and the field from 9Q is 9kQ/({{blank:1}})², which must be equal.",
+      "blanks": {
+        "1": {
+          "correct": "0.30",
+          "correctExplanation": "The distance from 9Q to the zero point is d − r₁ = 0.40 − 0.10 = 0.30 m.",
+          "distractors": [
+            { "answer": "0.40", "explanation": "0.40 m is the total separation, not the distance from 9Q to the zero point; subtract r₁ = 0.10 m." },
+            { "answer": "0.10", "explanation": "0.10 m is the distance from Q, not from 9Q; the distance from 9Q is 0.40 − 0.10 = 0.30 m." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the equilibrium stability.",
+      "sentence": "The zero-field point between two like charges is an {{blank:1}} equilibrium because a displaced test charge experiences a net force {{blank:2}} from the zero point.",
+      "blanks": {
+        "1": {
+          "correct": "unstable",
+          "correctExplanation": "A test charge displaced along the line moves toward one source charge and away from the other, creating a force that pushes it further from the equilibrium.",
+          "distractors": [
+            { "answer": "stable", "explanation": "The equilibrium is unstable along the line because displacement increases the net force away from the zero point." },
+            { "answer": "neutral", "explanation": "The force changes with displacement; the equilibrium is unstable, not neutral." }
+          ]
+        },
+        "2": {
+          "correct": "away",
+          "correctExplanation": "The net force pushes the charge further from the zero point, making the equilibrium unstable.",
+          "distractors": [
+            { "answer": "toward", "explanation": "A restoring force (toward) would indicate stable equilibrium, but the force here is destabilising." },
+            { "answer": "perpendicular to", "explanation": "Along the line between the charges, the force is along the line, not perpendicular." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "mc",
+      "question": "A student argues: 'Since the zero-field point has E = 0, a test charge placed there would never move.' Evaluate this claim, considering stability.",
+      "correct": "The charge would initially be stationary, but any infinitesimal displacement creates a net force that accelerates it away — the equilibrium is unstable along the line",
+      "correctExplanation": "While E = 0 means zero force at that exact point, the slightest perturbation creates a net force directed away from the equilibrium point along the line, so the charge will accelerate away.",
+      "distractors": [
+        { "answer": "Correct — the charge will remain stationary forever because there is no force", "explanation": "In theory E = 0 means zero force, but any perturbation leads to a growing force; real situations always involve perturbations." },
+        { "answer": "Incorrect — the charge will oscillate about the zero point like a spring", "explanation": "The force is not restoring; it pushes the charge further away from the zero point." },
+        { "answer": "Incorrect — the charge will immediately accelerate toward the nearest source charge", "explanation": "At the zero point itself, the force is zero; it is only upon displacement that a net force appears." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Compare finding the zero-field point for two positive charges versus two masses in a gravitational field. What is the key difference?",
+      "correct": "For gravity, the zero-field point exists between two masses because gravity is always attractive; for charges, the point exists between like charges because the fields oppose",
+      "correctExplanation": "Two masses produce gravitational fields that point in opposite directions at points between them (both toward their respective mass), just like two like charges produce opposing fields. The mathematical treatment is analogous.",
+      "distractors": [
+        { "answer": "There is no gravitational analogue because gravity has no zero-field point", "explanation": "Two masses do have a zero-gravitational-field point between them (e.g., the L1 Lagrange point); the concept is analogous." },
+        { "answer": "The gravitational zero-field point is always at the midpoint regardless of mass ratio", "explanation": "Just like the electric case, the gravitational zero-field point is closer to the smaller mass if the masses are unequal." },
+        { "answer": "Gravity cannot have a zero-field point because gravitational fields always add", "explanation": "Between two masses, the gravitational fields point in opposite directions and can cancel at a specific point." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "For charges +Q and −4Q separated by distance d, explain where the zero-field point is located and why.",
+      "correct": "Outside the pair, on the side of +Q at distance d from Q, because between opposite charges the fields reinforce",
+      "correctExplanation": "Between +Q and −4Q, both fields point from + to −, reinforcing. Outside on the +Q side, the field from +Q points away (outward) and the field from −4Q points toward −4Q (inward); they oppose. The zero point is at distance r from Q where kQ/r² = k(4Q)/(r+d)².",
+      "distractors": [
+        { "answer": "Between the charges at d/3 from +Q", "explanation": "Between opposite charges, both fields point in the same direction and add; the zero point must be outside." },
+        { "answer": "Outside the pair, on the side of −4Q", "explanation": "On the −4Q side, both fields point toward −4Q (same direction), so they add. The zero point is on the +Q side." },
+        { "answer": "There is no zero-field point for opposite charges of different magnitudes", "explanation": "A zero-field point does exist; it is located outside the pair on the side of the smaller-magnitude charge." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Analyse how the position of the zero-field point changes as Q₂ increases while Q₁ remains constant (both positive, fixed separation).",
+      "correct": "The zero-field point moves closer to Q₁ because the increasing field from Q₂ must be balanced by being closer to Q₁",
+      "correctExplanation": "As Q₂ increases, its field at any point increases. To maintain equal fields, the point must move closer to Q₁ where Q₁'s field is stronger, compensating for the increased Q₂ field.",
+      "distractors": [
+        { "answer": "The zero-field point moves closer to Q₂ because the stronger field pulls it", "explanation": "The point moves away from the stronger charge to where its field weakens enough to match the weaker charge's field." },
+        { "answer": "The zero-field point stays at the same location because only the charge ratio matters", "explanation": "The charge ratio does change as Q₂ increases, so the zero-field point position changes." },
+        { "answer": "The zero-field point disappears when Q₂ becomes much larger than Q₁", "explanation": "A zero-field point always exists between two like charges regardless of their ratio; it just gets very close to Q₁." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A charge of +Q is at x = 0 and a charge of +4Q is at x = d. A student claims the zero-field point is at x = d/3. Another student claims it is at x = 2d/3. Who is correct and why?",
+      "correct": "The first student is correct; x = d/3 is closer to the smaller charge +Q at x = 0",
+      "correctExplanation": "At x = d/3: distance from Q is d/3, distance from 4Q is 2d/3. kQ/(d/3)² = k(4Q)/(2d/3)² → 9kQ/d² = 9kQ/d². The fields are equal, confirming x = d/3.",
+      "distractors": [
+        { "answer": "The second student is correct; x = 2d/3 is closer to the smaller charge", "explanation": "x = 2d/3 is closer to 4Q at x = d, not closer to Q at x = 0." },
+        { "answer": "Both are correct; there are two zero-field points between like charges", "explanation": "There is only one zero-field point on the line between two like charges." },
+        { "answer": "Neither is correct; the zero-field point is at x = d/2", "explanation": "d/2 is only correct for equal charges; +Q and +4Q give x = d/3." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Evaluate whether the zero-field point approach can be applied to find a point where the gravitational field is zero between Earth and the Moon. What modifications are needed?",
+      "correct": "The same method applies directly, replacing kQ with GM for each body; the zero-field point is closer to the Moon (smaller mass)",
+      "correctExplanation": "The mathematical structure is identical: GM₁/r₁² = GM₂/r₂² with r₁ + r₂ = d. The zero-gravity point (L1 Lagrange point) is closer to the Moon because it has less mass.",
+      "distractors": [
+        { "answer": "The method cannot be applied because gravity is always attractive", "explanation": "The method works precisely because both gravitational fields point in opposite directions between two masses, just like two like electric charges." },
+        { "answer": "The zero-gravity point would be at the midpoint because gravity is universal", "explanation": "The Earth is much more massive than the Moon, so the point is much closer to the Moon, not at the midpoint." },
+        { "answer": "Gravity follows an inverse law (not inverse square), so the method gives different results", "explanation": "Gravity follows an inverse square law just like Coulomb's law; the mathematical method is identical." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Three positive charges +Q, +Q, and +4Q are equally spaced on a line. Predict whether a zero-field point exists between the middle charge and the +4Q charge.",
+      "correct": "Yes, but its position is shifted compared to the two-charge case because the left +Q charge also contributes a field at that region",
+      "correctExplanation": "The presence of the third charge adds a field contribution that must be included. A zero-field point can still exist but the equation becomes more complex and the position shifts.",
+      "distractors": [
+        { "answer": "No, because three charges cannot have a zero-field point anywhere", "explanation": "Three charges can have zero-field points; the additional charge simply modifies the positions." },
+        { "answer": "Yes, and it is at exactly the same position as if only two charges were present", "explanation": "The third charge's field contribution shifts the zero-field point; ignoring it gives an incorrect position." },
+        { "answer": "No, because the middle charge's field cancels the left charge's field", "explanation": "The fields do not cancel neatly; all three contribute at every point, and a zero-field position may exist." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Justify why the formula r₁ = d/(1 + √(Q₂/Q₁)) always gives a position closer to Q₁ when Q₂ > Q₁.",
+      "correct": "When Q₂ > Q₁, √(Q₂/Q₁) > 1, making the denominator > 2, so r₁ < d/2 — closer to Q₁",
+      "correctExplanation": "If Q₂/Q₁ > 1, then √(Q₂/Q₁) > 1, so 1 + √(Q₂/Q₁) > 2, and d divided by a number greater than 2 gives r₁ < d/2.",
+      "distractors": [
+        { "answer": "The formula gives r₁ < d/2 only when Q₂ is exactly twice Q₁", "explanation": "The result r₁ < d/2 holds whenever Q₂ > Q₁, not just when Q₂ = 2Q₁." },
+        { "answer": "The formula actually gives r₁ > d/2 when Q₂ > Q₁", "explanation": "A larger denominator makes r₁ smaller, not larger; r₁ < d/2 when Q₂ > Q₁." },
+        { "answer": "The formula is only valid when Q₁ = Q₂ and gives r₁ = d/2 in that case", "explanation": "The formula works for all charge ratios; it gives r₁ = d/2 when Q₁ = Q₂ as a special case." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about opposite charges and zero-field points.",
+      "sentence": "For opposite charges +Q and −nQ (where n > 1), the zero-field point is outside the pair on the side of the {{blank:1}} charge, at a distance where kQ/r² = k(nQ)/(r + d)².",
+      "blanks": {
+        "1": {
+          "correct": "smaller",
+          "correctExplanation": "The zero-field point is on the side of the smaller-magnitude charge (+Q) because that is where the fields can oppose and cancel.",
+          "distractors": [
+            { "answer": "larger", "explanation": "On the side of the larger charge, both fields point in the same direction; the zero point is on the side of the smaller charge." },
+            { "answer": "negative", "explanation": "The relevant criterion is smaller magnitude, not sign; the zero point is on the side of the smaller-magnitude charge." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the analogy with gravitational fields.",
+      "sentence": "The gravitational equivalent of the electric zero-field point between two like charges is the {{blank:1}} Lagrange point between two massive bodies.",
+      "blanks": {
+        "1": {
+          "correct": "L1",
+          "correctExplanation": "The L1 Lagrange point is the point between two massive bodies where the gravitational fields cancel, directly analogous to the electric zero-field point.",
+          "distractors": [
+            { "answer": "L2", "explanation": "L2 is beyond the smaller body on the far side, not between the two bodies." },
+            { "answer": "L4", "explanation": "L4 is at a 60° angle from the line joining the bodies, forming an equilateral triangle; L1 is the point directly between them." }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "id": "power-transmission-losses",
+  "name": "Power Transmission Losses",
+  "icon": "🔌",
+  "what": "This subtopic covers how to calculate the power lost as heat in transmission line wires using Ploss = I²R, how this loss depends on current and resistance, and how voltage drops occur across the resistance of transmission lines.",
+  "why": "Power losses in transmission lines are a direct economic and environmental cost — wasted energy means more fuel burned and more emissions. Understanding the I²R relationship is the key to explaining why high-voltage transmission is used.",
+  "items": [
+    {
+      "id": 1,
+      "uuid": "lp-d590ae17-f663-81ec-1ba8-e907c772779e",
+      "version": 1,
+      "title": "I can calculate power lost as heat in a wire using Ploss = I²R",
+      "code": "6C.1a",
+      "what": "When current flows through a wire with resistance R, electrical energy is converted to thermal energy. The power dissipated is Ploss = I²R. This applies to any resistive conductor, including transmission lines.",
+      "why": "This formula is the most important in the entire transmission topic. Because power loss depends on the square of the current, halving the current reduces the power loss to one-quarter. This is why reducing transmission line current through higher voltage is so effective.",
+      "example": "A transmission wire has resistance R = 5 Ω and carries a current of 6.5 A. Power lost = I²R = (6.5)² × 5 = 42.25 × 5 = 211 W — over 200 W wasted as heat in the wire alone.",
+      "contentHash": "hash-559338ce"
+    },
+    {
+      "id": 2,
+      "uuid": "lp-774c258c-613c-e2dd-2e75-c7363f06bd7d",
+      "version": 1,
+      "title": "I can calculate electrical energy converted to heat in a wire using E = I²Rt",
+      "code": "6C.1b",
+      "what": "The total energy dissipated in a resistance over a time t is found by multiplying power by time: E = Ploss × t = I²Rt. This gives the energy in joules when I is in amperes, R in ohms, and t in seconds.",
+      "why": "While power tells you the rate of energy loss, total energy tells you the cumulative cost over time. For transmission lines operating continuously, even a small power loss adds up to enormous amounts of energy over hours and days.",
+      "example": "If the 211 W transmission loss in the previous example runs for 1 hour (3600 s), the total energy wasted is E = 211 × 3600 = 759 600 J ≈ 760 kJ — equivalent to the energy content of roughly 0.2 g of petrol.",
+      "contentHash": "hash-aade2326"
+    },
+    {
+      "id": 3,
+      "uuid": "lp-1639befc-2c7f-5ef9-c7dd-8fec4051f839",
+      "version": 1,
+      "title": "I can calculate the voltage drop across a transmission line using V = IR",
+      "code": "6C.3a",
+      "what": "As current flows through the resistance of a transmission line, there is a potential difference (voltage drop) across the wire given by Ohm's law: Vdrop = I × Rwire. The voltage available at the end of the line is the supply voltage minus this drop.",
+      "why": "The voltage drop means that the load at the end of a transmission line receives less voltage than the supply provides. This is a practical problem — if the voltage drop is too large, appliances may not function correctly.",
+      "example": "A 230 V supply connected to wires with total resistance 5 Ω carries a current of 6.5 A. Voltage drop = 6.5 × 5 = 32.5 V. The load receives only 230 - 32.5 = 197.5 V — not enough for standard 230 V appliances.",
+      "contentHash": "hash-36c067a3"
+    },
+    {
+      "id": 4,
+      "uuid": "lp-09775d7c-bf5b-0264-a2fb-426bd344a789",
+      "version": 1,
+      "title": "I can analyse how the power loss in transmission lines changes when the transmission voltage is varied",
+      "code": "6C.2",
+      "what": "For a fixed amount of power being transmitted (P = VI), increasing the transmission voltage V means the current I must decrease (I = P/V). Since Ploss = I²R, a smaller current reduces the power loss by the square of the voltage increase factor.",
+      "why": "This is the fundamental justification for high-voltage power transmission. Increasing voltage by a factor of 10 reduces current by a factor of 10 and power loss by a factor of 100. Even a modest voltage increase produces dramatic reductions in wasted energy.",
+      "example": "Transmitting 300 MW at 500 kV gives I = 600 A and Ploss = 600² × 5 = 1.8 MW (0.6% loss). At 66 kV, I = 4545 A and Ploss = 4545² × 5 = 103 MW (34% loss). Increasing voltage by ~7.5× reduces power loss by ~57×.",
+      "contentHash": "hash-f08b43be"
+    },
+    {
+      "id": 5,
+      "uuid": "lp-ece4be7b-3d8c-910a-e570-93deb37f0e59",
+      "version": 1,
+      "title": "I can express transmission losses as a percentage of the total power transmitted",
+      "code": "6C.2b",
+      "what": "Percentage power loss = (Ploss / Ptransmitted) × 100. This allows comparison of transmission efficiency at different voltages and over different distances. Losses of 2–3% are generally considered economically acceptable for large-scale transmission.",
+      "why": "Expressing losses as a percentage makes it meaningful to compare different scenarios. A 1.8 MW loss in a 300 MW system (0.6%) is very different from a 1.8 MW loss in a 3 MW system (60%). Percentage loss is also what engineers use to evaluate system design.",
+      "example": "A transmission line carries 300 MW at 220 kV. Current = 300 × 10⁶ / 220 × 10³ = 1364 A. Power loss = 1364² × 5 = 9.3 MW. Percentage loss = 9.3 / 300 × 100 = 3.1% — at the boundary of economic acceptability.",
+      "contentHash": "hash-629484f4"
+    }
+  ]
+}

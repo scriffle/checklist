@@ -1,0 +1,517 @@
+{
+  "_link": {
+    "uuid": "lp-33e44aa4-0c10-9533-454a-a299502303ab",
+    "version": 1,
+    "contentHash": "hash-6fd5e356",
+    "title": "I can identify whether a given reference frame is inertial or non-inertial",
+    "generatedAt": "2026-03-09T23:00:00.000Z"
+  },
+  "toLevel2": [
+    {
+      "type": "MC",
+      "question": "A rocket travels in a straight line at a constant speed of 0.5c. The reference frame of this rocket is:",
+      "correct": "inertial, because the rocket is not accelerating",
+      "correctExplanation": "An inertial reference frame is one that is not accelerating. A rocket moving at constant velocity in a straight line satisfies this condition.",
+      "distractors": [
+        { "answer": "non-inertial, because the rocket is moving at a very high speed", "explanation": "High speed alone does not make a frame non-inertial. It is acceleration, not speed, that determines the frame type." },
+        { "answer": "non-inertial, because the rocket is in outer space", "explanation": "Being in space does not determine whether a frame is inertial. Constant velocity motion defines an inertial frame." },
+        { "answer": "inertial, because the rocket's engines are firing", "explanation": "If the engines were firing and the rocket were accelerating, the frame would be non-inertial. In this case, the rocket moves at constant velocity." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Which of the following is a non-inertial reference frame?",
+      "correct": "A car accelerating away from traffic lights",
+      "correctExplanation": "The car is accelerating (speeding up), so its reference frame is non-inertial. A non-inertial frame is one in which the observer is accelerating.",
+      "distractors": [
+        { "answer": "A train travelling at constant speed on a straight track", "explanation": "Constant speed in a straight line means no acceleration, so this is an inertial frame." },
+        { "answer": "A spacecraft drifting through space with engines off", "explanation": "With engines off and no external forces, the spacecraft moves at constant velocity — an inertial frame." },
+        { "answer": "A person standing still on a platform", "explanation": "A stationary observer on a platform (ignoring Earth's rotation) is approximately in an inertial frame." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A satellite orbits Earth in a circular path at constant speed. The reference frame of this satellite is:",
+      "correct": "non-inertial, because it is continuously changing direction",
+      "correctExplanation": "Even though the satellite's speed is constant, it is continuously changing direction. Changing direction is a form of acceleration, making the frame non-inertial.",
+      "distractors": [
+        { "answer": "inertial, because the satellite moves at constant speed", "explanation": "Constant speed is not sufficient for an inertial frame. The satellite is changing direction, which is a form of acceleration." },
+        { "answer": "inertial, because there is no friction in space", "explanation": "The absence of friction does not determine whether a frame is inertial. The satellite's circular motion involves continuous acceleration." },
+        { "answer": "non-inertial, because the satellite is in a vacuum", "explanation": "Being in a vacuum does not make a frame non-inertial. The satellite's frame is non-inertial because it is changing direction." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Which condition must be satisfied for a reference frame to be classified as inertial?",
+      "correct": "The frame must not be accelerating",
+      "correctExplanation": "An inertial reference frame is one in which there is no acceleration — the observer moves at constant velocity (which includes being at rest).",
+      "distractors": [
+        { "answer": "The frame must be stationary", "explanation": "A frame does not need to be stationary. A frame moving at constant velocity is also inertial." },
+        { "answer": "The frame must be on the surface of Earth", "explanation": "Earth's surface is only approximately inertial. The defining condition is the absence of acceleration, not location." },
+        { "answer": "The frame must be moving at a speed less than c", "explanation": "All massive objects move at less than c. The condition for an inertial frame is constant velocity, not a speed restriction." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A bus is braking to stop at a bus stop. The reference frame of this bus is:",
+      "correct": "non-inertial, because the bus is decelerating",
+      "correctExplanation": "Deceleration (slowing down) is a form of acceleration. Since the bus is accelerating, its reference frame is non-inertial.",
+      "distractors": [
+        { "answer": "inertial, because the bus is slowing down, not speeding up", "explanation": "Both speeding up and slowing down are forms of acceleration. A decelerating frame is non-inertial." },
+        { "answer": "inertial, because the bus will soon be at rest", "explanation": "The frame's current state of acceleration determines its classification, not its future state." },
+        { "answer": "non-inertial, because the bus is on Earth's surface", "explanation": "While technically true that Earth's surface is not perfectly inertial, the primary reason is that the bus is decelerating." }
+      ]
+    },
+    {
+      "type": "TF",
+      "question": "A reference frame moving at constant velocity in a straight line is an inertial reference frame.",
+      "correct": "True",
+      "correctExplanation": "An inertial frame is defined as one that is not accelerating. Constant velocity in a straight line means zero acceleration, satisfying the condition.",
+      "distractors": [
+        { "answer": "False", "explanation": "Constant velocity with no change in direction means no acceleration, which is exactly the definition of an inertial frame." }
+      ]
+    },
+    {
+      "type": "TF",
+      "question": "A reference frame that is changing direction at constant speed is an inertial reference frame.",
+      "correct": "False",
+      "correctExplanation": "Changing direction is a form of acceleration, even if the speed remains constant. An accelerating frame is non-inertial.",
+      "distractors": [
+        { "answer": "True", "explanation": "Constant speed does not guarantee an inertial frame. Changing direction means the velocity vector is changing, which constitutes acceleration." }
+      ]
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the sentence about inertial reference frames.",
+      "sentence": "A reference frame is inertial if it moves at {{blank:1}} velocity, meaning it is not {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "constant",
+          "correctExplanation": "An inertial frame has constant velocity — no change in speed or direction.",
+          "distractors": ["increasing", "variable"]
+        },
+        "2": {
+          "correct": "accelerating",
+          "correctExplanation": "The absence of acceleration (including changes in speed or direction) defines an inertial frame.",
+          "distractors": ["moving", "rotating"]
+        }
+      }
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the sentence about non-inertial frames.",
+      "sentence": "A frame is non-inertial if it is accelerating, which includes speeding up, slowing down, or changing {{blank:1}}. A satellite in circular orbit is non-inertial because its {{blank:2}} is always changing.",
+      "blanks": {
+        "1": {
+          "correct": "direction",
+          "correctExplanation": "Changing direction constitutes acceleration even if speed remains constant, making the frame non-inertial.",
+          "distractors": ["mass", "energy"]
+        },
+        "2": {
+          "correct": "direction",
+          "correctExplanation": "In circular orbit, the satellite's velocity direction changes continuously, producing centripetal acceleration.",
+          "distractors": ["speed", "altitude"]
+        }
+      }
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the sentence about why frame identification matters.",
+      "sentence": "Einstein's special relativity applies only to {{blank:1}} reference frames. Before using the equations for time dilation or length contraction, the observer's frame must be confirmed as {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "inertial",
+          "correctExplanation": "Special relativity is formulated for inertial reference frames — those not undergoing acceleration.",
+          "distractors": ["non-inertial", "stationary"]
+        },
+        "2": {
+          "correct": "inertial",
+          "correctExplanation": "The equations of special relativity, such as time dilation and length contraction, are valid only in inertial frames.",
+          "distractors": ["non-inertial", "stationary"]
+        }
+      }
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "MC",
+      "question": "A spacecraft fires its engines and accelerates uniformly from 0.3c to 0.7c. During this period, the spacecraft's reference frame is:",
+      "correct": "non-inertial, because the spacecraft is accelerating",
+      "correctExplanation": "While the engines fire and the spacecraft accelerates, the velocity is changing. An accelerating frame is non-inertial.",
+      "distractors": [
+        { "answer": "inertial, because it is in outer space with no friction", "explanation": "The absence of friction does not determine the frame type. Acceleration from engine thrust makes it non-inertial." },
+        { "answer": "inertial, because it travels in a straight line", "explanation": "Straight-line motion with changing speed is still acceleration, making the frame non-inertial." },
+        { "answer": "non-inertial, because its speed exceeds 0.5c", "explanation": "Speed alone does not determine frame type. The frame is non-inertial because the speed is changing, not because it is high." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Grace is on a merry-go-round spinning at a constant rate. Her reference frame is:",
+      "correct": "non-inertial, because she is continuously changing direction",
+      "correctExplanation": "Even at constant rotational speed, Grace's direction of motion is continuously changing. This centripetal acceleration makes her frame non-inertial.",
+      "distractors": [
+        { "answer": "inertial, because the merry-go-round rotates at a constant rate", "explanation": "Constant rotational speed still involves changing direction, which is acceleration. The frame is non-inertial." },
+        { "answer": "inertial, because the merry-go-round is on Earth's surface", "explanation": "Being on Earth's surface does not determine the frame type. The continuous change of direction makes it non-inertial." },
+        { "answer": "non-inertial, because the merry-go-round is powered by a motor", "explanation": "The motor provides the force, but the reason the frame is non-inertial is the continuous change in direction, not the motor itself." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A probe has been launched into deep space and its engines are now off. It drifts at 0.1c in a straight line, far from any gravitational sources. Which statement best describes the probe's reference frame?",
+      "correct": "It is inertial because the probe moves at constant velocity with no acceleration.",
+      "correctExplanation": "With engines off and negligible gravitational effects, the probe has no acceleration. Constant velocity in a straight line defines an inertial frame.",
+      "distractors": [
+        { "answer": "It is non-inertial because the probe was previously accelerated by its engines.", "explanation": "Past acceleration does not affect the current frame classification. With engines off and constant velocity, the frame is now inertial." },
+        { "answer": "It is non-inertial because the probe is in deep space, which is not a valid reference location.", "explanation": "Deep space is a perfectly valid location for a reference frame. The frame is inertial because there is no acceleration." },
+        { "answer": "It cannot be classified because there is no nearby object to serve as a reference point.", "explanation": "Reference frames do not require nearby objects. The probe's constant velocity makes its frame inertial." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Oliver is in a lift that is accelerating upward. He releases a ball, which appears to fall faster than normal. This observation indicates that Oliver's reference frame is:",
+      "correct": "non-inertial, because the upward acceleration of the lift creates apparent extra gravitational force",
+      "correctExplanation": "The lift's upward acceleration adds to the gravitational acceleration experienced by the ball. The appearance of extra force indicates a non-inertial frame.",
+      "distractors": [
+        { "answer": "inertial, because the ball still falls downward as expected", "explanation": "The ball falls faster than normal, indicating additional acceleration. This is a signature of a non-inertial frame." },
+        { "answer": "inertial, because the lift moves in a straight line", "explanation": "Moving in a straight line while accelerating still produces a non-inertial frame. Constant direction does not guarantee zero acceleration." },
+        { "answer": "non-inertial, because the lift is enclosed and cannot see outside", "explanation": "Whether the lift is enclosed is irrelevant. The frame is non-inertial because the lift is accelerating." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Which of the following scenarios describes an inertial reference frame?",
+      "correct": "A spacecraft coasting through space at 0.9c with its engines off",
+      "correctExplanation": "With engines off, the spacecraft is not accelerating. It moves at constant velocity, defining an inertial reference frame.",
+      "distractors": [
+        { "answer": "A Formula 1 car cornering at high speed on a racetrack", "explanation": "Cornering involves changing direction, which is acceleration. This is a non-inertial frame." },
+        { "answer": "A ball thrown vertically upward while it is in flight", "explanation": "The ball decelerates on the way up and accelerates on the way down due to gravity. Its frame is non-inertial." },
+        { "answer": "A centrifuge spinning at 10 000 revolutions per minute", "explanation": "The centrifuge continuously changes direction, producing large centripetal acceleration. This is non-inertial." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Einstein's special relativity applies only to inertial reference frames. Why can the equations of special relativity not be directly applied in a non-inertial frame?",
+      "correct": "Non-inertial frames involve acceleration, and the postulates of special relativity are formulated for frames with constant velocity.",
+      "correctExplanation": "Einstein's two postulates assume inertial frames. In accelerating frames, additional effects (such as pseudo-forces) arise that are not accounted for by special relativity.",
+      "distractors": [
+        { "answer": "Non-inertial frames always move faster than c, which violates the speed limit.", "explanation": "Non-inertial frames do not necessarily move faster than c. The issue is acceleration, not speed." },
+        { "answer": "The speed of light changes in non-inertial frames, making the equations invalid.", "explanation": "The local speed of light remains c. The issue is that the postulates of special relativity are defined for inertial frames." },
+        { "answer": "Non-inertial frames have infinite mass, which the equations cannot handle.", "explanation": "Non-inertial frames do not have infinite mass. The limitation is that the postulates assume no acceleration." }
+      ]
+    },
+    {
+      "type": "TF",
+      "question": "A train travelling around a curved section of track at constant speed is in an inertial reference frame.",
+      "correct": "False",
+      "correctExplanation": "Although the speed is constant, the train is changing direction on the curve. This change in direction is a form of acceleration, making the frame non-inertial.",
+      "distractors": [
+        { "answer": "True", "explanation": "Constant speed does not guarantee an inertial frame. The changing direction on the curve means the velocity is changing, which constitutes acceleration." }
+      ]
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the sentence about identifying frame types.",
+      "sentence": "To determine if a frame is inertial, check whether the frame is {{blank:1}}. If the speed or {{blank:2}} of the frame is changing, the frame is non-inertial.",
+      "blanks": {
+        "1": {
+          "correct": "accelerating",
+          "correctExplanation": "The key test is whether the frame undergoes any form of acceleration, including changes in speed or direction.",
+          "distractors": ["moving", "stationary"]
+        },
+        "2": {
+          "correct": "direction",
+          "correctExplanation": "A change in direction at constant speed is still acceleration. Both speed changes and direction changes make a frame non-inertial.",
+          "distractors": ["mass", "energy"]
+        }
+      }
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the sentence about a real-world example.",
+      "sentence": "A car driving in a straight line at a constant 100 km h⁻¹ is in an {{blank:1}} frame. If the same car begins to brake, its frame becomes {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "inertial",
+          "correctExplanation": "Constant speed in a straight line means no acceleration, so the frame is inertial.",
+          "distractors": ["non-inertial", "accelerating"]
+        },
+        "2": {
+          "correct": "non-inertial",
+          "correctExplanation": "Braking is deceleration (a form of acceleration), so the frame changes from inertial to non-inertial.",
+          "distractors": ["inertial", "stationary"]
+        }
+      }
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the sentence about the applicability of special relativity.",
+      "sentence": "Special relativity's equations for time dilation and length contraction are valid only in {{blank:1}} frames. To analyse motion in an accelerating frame, {{blank:2}} relativity is needed.",
+      "blanks": {
+        "1": {
+          "correct": "inertial",
+          "correctExplanation": "The postulates and equations of special relativity apply only to inertial reference frames.",
+          "distractors": ["non-inertial", "rotating"]
+        },
+        "2": {
+          "correct": "general",
+          "correctExplanation": "General relativity extends the theory to include accelerating and gravitational frames.",
+          "distractors": ["special", "classical"]
+        }
+      }
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "MC",
+      "question": "A spacecraft accelerates uniformly for 10 minutes, then switches off its engines and coasts at constant velocity. During which phase can the equations of special relativity be applied to the spacecraft's reference frame?",
+      "correct": "Only during the coasting phase, when the spacecraft is not accelerating",
+      "correctExplanation": "Special relativity applies to inertial frames. The spacecraft is only in an inertial frame during the coasting phase when its velocity is constant.",
+      "distractors": [
+        { "answer": "During both phases, because the spacecraft is in space", "explanation": "Being in space does not determine applicability. Special relativity requires an inertial (non-accelerating) frame." },
+        { "answer": "Only during the acceleration phase, because relativistic effects are greatest then", "explanation": "The magnitude of relativistic effects does not determine applicability. Special relativity applies only in inertial frames." },
+        { "answer": "During neither phase, because the spacecraft was previously accelerating", "explanation": "Past acceleration does not disqualify the current frame. Once coasting at constant velocity, the frame is inertial." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A student classifies Earth's surface as a perfect inertial reference frame. Which response best evaluates this classification?",
+      "correct": "Earth's surface is approximately inertial for most purposes, but strictly it is non-inertial due to Earth's rotation and orbital motion.",
+      "correctExplanation": "Earth's surface undergoes centripetal acceleration from its rotation and orbital motion. However, these accelerations are small enough that Earth's surface is treated as approximately inertial in most VCE contexts.",
+      "distractors": [
+        { "answer": "Earth's surface is a perfect inertial frame because it appears stationary to us.", "explanation": "Appearing stationary does not make a frame inertial. Earth's rotation and orbital motion produce small accelerations." },
+        { "answer": "Earth's surface is always non-inertial and can never be used for special relativity calculations.", "explanation": "While not perfectly inertial, Earth's surface is close enough for most practical calculations in special relativity." },
+        { "answer": "Earth's surface is inertial only at the poles, where the rotational effect is zero.", "explanation": "Even at the poles, Earth's orbital motion around the Sun introduces a small centripetal acceleration." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A rollercoaster car is at the top of a loop travelling at constant speed. At this instant, the car's reference frame is:",
+      "correct": "non-inertial, because the car is continuously changing direction in the circular loop",
+      "correctExplanation": "At the top of a loop, the car's direction is changing as it follows the circular path. This centripetal acceleration makes the frame non-inertial.",
+      "distractors": [
+        { "answer": "inertial, because the speed is constant at the top of the loop", "explanation": "Constant speed in a circular path still involves changing direction, which is acceleration." },
+        { "answer": "inertial, because the car is momentarily moving horizontally", "explanation": "Horizontal motion at an instant does not make the frame inertial if the direction is continuously changing." },
+        { "answer": "non-inertial, because the car is upside down at the top of the loop", "explanation": "Being upside down is not the reason. The frame is non-inertial because of the centripetal acceleration due to circular motion." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Two spacecraft, A and B, travel side by side at 0.8c relative to Earth. Spacecraft A fires its engines and accelerates to 0.9c. During the acceleration, which spacecraft is in an inertial frame?",
+      "correct": "Only Spacecraft B, which continues at constant velocity",
+      "correctExplanation": "Spacecraft B maintains constant velocity and is in an inertial frame. Spacecraft A is accelerating, so its frame is non-inertial during the engine burn.",
+      "distractors": [
+        { "answer": "Both spacecraft, because they are both in space", "explanation": "Being in space does not guarantee an inertial frame. Spacecraft A is accelerating, making its frame non-inertial." },
+        { "answer": "Neither spacecraft, because both are moving at relativistic speeds", "explanation": "Relativistic speed does not determine frame type. Spacecraft B at constant velocity is in an inertial frame." },
+        { "answer": "Only Spacecraft A, because it has a higher speed", "explanation": "Higher speed does not make a frame inertial. Spacecraft A is accelerating, making it non-inertial." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A pendulum hangs vertically when a train moves at constant speed on a straight track. When the train enters a curve, the pendulum swings outward. This observation can be used to determine that:",
+      "correct": "the train's frame has changed from inertial to non-inertial",
+      "correctExplanation": "In an inertial frame, the pendulum hangs vertically. The outward swing indicates a centripetal acceleration (change of direction), showing the frame is now non-inertial.",
+      "distractors": [
+        { "answer": "the train has increased its speed on the curve", "explanation": "The outward swing is caused by the change in direction, not necessarily a speed increase." },
+        { "answer": "gravity has temporarily changed direction", "explanation": "Gravity has not changed. The apparent displacement is due to the non-inertial nature of the train's frame on the curve." },
+        { "answer": "the pendulum has gained kinetic energy from the turn", "explanation": "The pendulum swings because of the pseudo-force in the non-inertial frame, not because it gains kinetic energy." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A spacecraft completes one full orbit of a distant planet in a perfectly circular path at constant speed. During the entire orbit, the spacecraft's frame is:",
+      "correct": "non-inertial at every point, because its direction is always changing",
+      "correctExplanation": "In a circular orbit, the direction of motion changes continuously, producing centripetal acceleration at every point. The frame is always non-inertial.",
+      "distractors": [
+        { "answer": "inertial at every point, because the speed is constant throughout", "explanation": "Constant speed in a circular path does not make the frame inertial. The continuously changing direction constitutes acceleration." },
+        { "answer": "inertial at the two points where the spacecraft crosses the equator", "explanation": "No special points in a circular orbit make the frame momentarily inertial. The direction is always changing." },
+        { "answer": "non-inertial only at the points where it changes between northern and southern hemispheres", "explanation": "The frame is non-inertial at all points in the orbit, not just at specific crossings." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Emma is floating in a spacecraft far from any gravitational sources. The engines are off and the spacecraft drifts at constant velocity. Emma releases a ball, and it floats in place. If the engines then fire and the spacecraft accelerates forward, what does Emma observe?",
+      "correct": "The ball appears to accelerate backward relative to the spacecraft because the frame becomes non-inertial.",
+      "correctExplanation": "When the engines fire, the spacecraft accelerates but the ball (which has no force on it) does not. From Emma's non-inertial frame, the ball appears to move backward.",
+      "distractors": [
+        { "answer": "The ball continues to float in place because there is no gravity.", "explanation": "The ball does continue with its original velocity (Newton's first law), but the spacecraft accelerates forward, so the ball appears to fall backward relative to the spacecraft." },
+        { "answer": "The ball accelerates forward with the spacecraft.", "explanation": "The ball has no force applied to it when the engines fire. It maintains its original velocity while the spacecraft accelerates away." },
+        { "answer": "The ball remains stationary because Newton's third law balances the engine thrust.", "explanation": "Newton's third law applies to the engine and exhaust, not to the ball. The ball is unaffected by the engine thrust." }
+      ]
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the sentence about frame classification in a multi-phase journey.",
+      "sentence": "During the acceleration phase, the spacecraft's frame is {{blank:1}}. When it reaches constant velocity and the engines turn off, the frame becomes {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "non-inertial",
+          "correctExplanation": "During acceleration, the frame is non-inertial because the velocity is changing.",
+          "distractors": ["inertial", "undefined"]
+        },
+        "2": {
+          "correct": "inertial",
+          "correctExplanation": "At constant velocity with engines off, the frame is inertial and special relativity can be applied.",
+          "distractors": ["non-inertial", "undefined"]
+        }
+      }
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the sentence about circular motion and frame type.",
+      "sentence": "An object moving in a circle at constant speed is in a {{blank:1}} frame because its {{blank:2}} is continuously changing, even though its speed is constant.",
+      "blanks": {
+        "1": {
+          "correct": "non-inertial",
+          "correctExplanation": "Circular motion involves centripetal acceleration due to the changing direction, making the frame non-inertial.",
+          "distractors": ["inertial", "stationary"]
+        },
+        "2": {
+          "correct": "direction",
+          "correctExplanation": "In circular motion, the velocity direction changes at every point, constituting centripetal acceleration.",
+          "distractors": ["speed", "mass"]
+        }
+      }
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the sentence about Earth as a reference frame.",
+      "sentence": "Earth's surface is {{blank:1}} inertial because its rotation and orbital motion produce small accelerations. For most VCE calculations, it is treated as {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "approximately",
+          "correctExplanation": "Earth's rotation and orbital motion produce very small accelerations, so its surface is only approximately, not perfectly, inertial.",
+          "distractors": ["perfectly", "never"]
+        },
+        "2": {
+          "correct": "inertial",
+          "correctExplanation": "For most practical purposes in VCE Physics, the small accelerations are negligible and Earth's surface is treated as an inertial frame.",
+          "distractors": ["non-inertial", "accelerating"]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "MC",
+      "question": "A physicist claims that any reference frame in free fall in a gravitational field is locally equivalent to an inertial frame. This statement is a key idea from:",
+      "correct": "general relativity, specifically the equivalence principle",
+      "correctExplanation": "Einstein's equivalence principle states that a freely falling frame is locally indistinguishable from an inertial frame in the absence of gravity. This extends special relativity to include gravitational effects.",
+      "distractors": [
+        { "answer": "special relativity, specifically Einstein's first postulate", "explanation": "The first postulate of special relativity addresses the equivalence of inertial frames, not the equivalence of free fall and inertial frames." },
+        { "answer": "Newtonian mechanics, specifically Newton's first law", "explanation": "Newton's first law defines inertial frames but does not address the equivalence of free fall and inertial frames in curved spacetime." },
+        { "answer": "quantum mechanics, specifically the uncertainty principle", "explanation": "The uncertainty principle is unrelated to reference frames and gravity. The equivalence principle belongs to general relativity." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A spacecraft undergoes the following journey: (1) accelerates from rest, (2) coasts at constant velocity, (3) decelerates and turns, (4) coasts back at constant velocity. During which phases is the spacecraft in an inertial frame?",
+      "correct": "Phases 2 and 4 only",
+      "correctExplanation": "Phases 2 and 4 involve constant velocity with no acceleration. Phases 1 and 3 involve acceleration (speeding up, slowing down, and turning), making them non-inertial.",
+      "distractors": [
+        { "answer": "All four phases", "explanation": "Phases 1 and 3 involve acceleration, so the frame is non-inertial during those periods." },
+        { "answer": "Phase 2 only", "explanation": "Phase 4 also involves constant velocity and is inertial. Both coasting phases qualify." },
+        { "answer": "Phases 1 and 3 only", "explanation": "These are the accelerating phases, which are non-inertial. The inertial phases are the coasting phases." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Alex argues that since Earth rotates, no experiment on Earth's surface can validly use the equations of special relativity. Which response best evaluates this argument?",
+      "correct": "The argument is technically correct but practically irrelevant, because Earth's rotational acceleration is negligible for most laboratory experiments.",
+      "correctExplanation": "Earth's surface acceleration due to rotation is about 0.034 m s⁻² at the equator, which is negligible compared to the effects measured in relativity experiments. Earth is treated as approximately inertial.",
+      "distractors": [
+        { "answer": "Alex is correct, and all special relativity experiments must be conducted in space.", "explanation": "The rotational effects are so small that laboratory experiments on Earth are valid to an excellent approximation." },
+        { "answer": "Alex is wrong because Earth does not actually rotate in the reference frame of the experiment.", "explanation": "Earth does rotate, but the acceleration is negligible. Alex's reasoning is technically right but the conclusion is overstated." },
+        { "answer": "Alex is correct only at the equator, where rotational effects are largest.", "explanation": "The rotational effects are negligible everywhere on Earth for typical relativity experiments, not just away from the equator." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "During a particle physics experiment, protons circulate in a ring accelerator at nearly the speed of light. A physicist wants to apply time dilation to calculate the protons' lifetimes. Which consideration about reference frames must be addressed?",
+      "correct": "The protons are in a non-inertial frame due to circular motion, but time dilation can still be applied in the laboratory's inertial frame.",
+      "correctExplanation": "The laboratory frame is approximately inertial. While the protons are in a non-inertial frame (circular motion), the time dilation formula can be applied from the laboratory's perspective to determine how the protons' clocks run.",
+      "distractors": [
+        { "answer": "Time dilation cannot be applied because the protons are in a non-inertial frame.", "explanation": "Time dilation can be calculated from the laboratory's inertial frame. It is the observer's frame that matters for applying the formula." },
+        { "answer": "The protons are in an inertial frame because they travel at constant speed.", "explanation": "The protons change direction continuously in the ring, making their frame non-inertial despite constant speed." },
+        { "answer": "Special relativity cannot be used at all in particle accelerators because the particles are accelerating.", "explanation": "Special relativity is applied from the laboratory's inertial frame. The particles' non-inertial motion does not prevent the lab from using relativistic calculations." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A student claims: 'If two observers are both in inertial frames, they must agree on all measurements.' Evaluate this claim.",
+      "correct": "The claim is incorrect. Observers in different inertial frames can disagree on measurements of time, length, and simultaneity.",
+      "correctExplanation": "Special relativity shows that observers in relative motion disagree on time intervals, lengths, and the simultaneity of events. Being in inertial frames does not require agreement on these measurements.",
+      "distractors": [
+        { "answer": "The claim is correct because the laws of physics are the same in all inertial frames.", "explanation": "The laws of physics are the same, but the measurements of time and length can differ between frames in relative motion." },
+        { "answer": "The claim is correct only if the observers are at rest relative to each other.", "explanation": "Observers at rest relative to each other agree on measurements, but the original claim refers to all inertial frames, not just those at mutual rest." },
+        { "answer": "The claim is incorrect because one of the frames must actually be non-inertial.", "explanation": "Both frames can be genuinely inertial. The disagreement arises from relative motion, not from one frame being non-inertial." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "An astronaut in a windowless spacecraft feels weightless. Without looking outside, can the astronaut determine whether the spacecraft is in free fall near a planet or drifting at constant velocity far from any gravitational source?",
+      "correct": "No — locally, both situations are indistinguishable according to the equivalence principle.",
+      "correctExplanation": "Einstein's equivalence principle states that a freely falling frame is locally indistinguishable from an inertial frame in empty space. The astronaut cannot tell the difference without external information.",
+      "distractors": [
+        { "answer": "Yes — the astronaut can measure the gravitational field strength inside the spacecraft.", "explanation": "In free fall, the local gravitational effects are cancelled. The astronaut measures zero apparent gravity in both cases." },
+        { "answer": "Yes — the speed of light would be different in a gravitational field.", "explanation": "Locally, the speed of light is c in both scenarios. The equivalence principle ensures local physics is identical." },
+        { "answer": "No — but only because the spacecraft has no windows, not because of any physical principle.", "explanation": "The indistinguishability is a fundamental physical principle (the equivalence principle), not merely a practical limitation." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A spacecraft rotates to create artificial gravity for its crew. This rotating frame is non-inertial. A passenger throws a ball straight ahead. In the rotating frame, the ball appears to curve. This apparent deflection is caused by:",
+      "correct": "a pseudo-force (Coriolis effect) that arises in the non-inertial rotating frame",
+      "correctExplanation": "In a non-inertial rotating frame, objects appear to experience forces that do not exist in inertial frames. The Coriolis effect causes the apparent curved path of the ball.",
+      "distractors": [
+        { "answer": "a real gravitational force from the spacecraft's rotation", "explanation": "Rotation does not produce a real gravitational force. The apparent gravity and Coriolis effect are pseudo-forces arising from the non-inertial frame." },
+        { "answer": "air resistance inside the rotating spacecraft", "explanation": "Air resistance would slow the ball but not curve its path in the systematic way observed. The curvature is due to the Coriolis pseudo-force." },
+        { "answer": "the ball exceeding the speed of light relative to the rotating frame", "explanation": "The ball does not approach relativistic speeds. The curvature is a classical effect of the non-inertial rotating frame." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A thought experiment describes two twins: one stays on Earth while the other travels at high speed to a star and returns. The travelling twin ages less. A student asks: 'If motion is relative, why doesn't the Earth twin age less instead?' Which response correctly resolves the paradox?",
+      "correct": "The travelling twin's journey includes acceleration (turnaround), breaking the symmetry. The situations are not equivalent because one twin changes frames.",
+      "correctExplanation": "The travelling twin must accelerate to turn around. This acceleration makes their experience non-inertial, breaking the symmetry between the two twins. Only the Earth twin remains in an inertial frame throughout.",
+      "distractors": [
+        { "answer": "The Earth twin does age less, but by such a small amount that the difference is unmeasurable.", "explanation": "The Earth twin ages more, not less. The travelling twin ages less due to time dilation, and the asymmetry is resolved by the turnaround acceleration." },
+        { "answer": "Both twins age the same because the motion is symmetric and relative.", "explanation": "The motion is not symmetric. The travelling twin undergoes acceleration during the turnaround, breaking the symmetry." },
+        { "answer": "Special relativity cannot resolve this paradox; general relativity is needed.", "explanation": "While general relativity can also address this, the paradox is resolved in special relativity by recognising that the travelling twin changes inertial frames." }
+      ]
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the analysis of the twin paradox and reference frames.",
+      "sentence": "The twin who stays on Earth remains in an {{blank:1}} frame, while the travelling twin must {{blank:2}} to turn around, making their experience non-inertial and breaking the symmetry.",
+      "blanks": {
+        "1": {
+          "correct": "inertial",
+          "correctExplanation": "The Earth twin remains approximately in an inertial frame throughout the experiment.",
+          "distractors": ["non-inertial", "accelerating"]
+        },
+        "2": {
+          "correct": "accelerate",
+          "correctExplanation": "The turnaround requires acceleration (changing direction), which makes the travelling twin's frame non-inertial and breaks the symmetry.",
+          "distractors": ["decelerate", "stop"]
+        }
+      }
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the sentence about pseudo-forces in non-inertial frames.",
+      "sentence": "In non-inertial frames, objects appear to experience forces that do not exist in inertial frames. These are called {{blank:1}} forces. Their presence is an indicator that the reference frame is {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "pseudo",
+          "correctExplanation": "Pseudo-forces (also called fictitious forces) appear in non-inertial frames and have no real source. Examples include the centrifugal force and the Coriolis force.",
+          "distractors": ["gravitational", "electromagnetic"]
+        },
+        "2": {
+          "correct": "non-inertial",
+          "correctExplanation": "The appearance of pseudo-forces is a hallmark of non-inertial frames. If pseudo-forces are observed, the frame is accelerating.",
+          "distractors": ["inertial", "stationary"]
+        }
+      }
+    }
+  ]
+}

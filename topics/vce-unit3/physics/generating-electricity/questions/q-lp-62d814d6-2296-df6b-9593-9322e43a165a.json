@@ -1,0 +1,510 @@
+{
+  "_link": {
+    "uuid": "lp-62d814d6-2296-df6b-9593-9322e43a165a",
+    "version": 1,
+    "contentHash": "hash-367c52f8",
+    "title": "I can calculate the average emf from an AC generator using Faraday's law",
+    "generatedAt": "2026-03-07T00:00:00.000Z"
+  },
+
+  "toLevel2": [
+    {
+      "type": "mc",
+      "question": "Which one of the following is the correct expression of Faraday's law used to calculate the average emf induced in a rotating coil?",
+      "correct": "|ε_avg| = N × |ΔΦ_B| / Δt",
+      "correctExplanation": "Faraday's law states that the magnitude of the average emf equals the number of turns N multiplied by the magnitude of the change in magnetic flux |ΔΦ_B|, divided by the time interval Δt over which the change occurs.",
+      "distractors": [
+        { "answer": "|ε_avg| = |ΔΦ_B| / (N × Δt)", "explanation": "This incorrectly divides by N. The number of turns multiplies the flux change, not divides it. Each turn contributes to the total emf." },
+        { "answer": "|ε_avg| = N × Δt / |ΔΦ_B|", "explanation": "This inverts the relationship. The emf increases with greater flux change and decreases with longer time intervals, not the reverse." },
+        { "answer": "|ε_avg| = N × |ΔΦ_B| × Δt", "explanation": "This multiplies by Δt instead of dividing. A longer time interval for the same flux change produces a smaller average emf, not a larger one." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "In the equation |ε_avg| = N × |ΔΦ_B| / Δt, which one of the following does the symbol N represent?",
+      "correct": "the number of turns in the coil",
+      "correctExplanation": "N represents the number of turns (loops) of wire in the coil. Each turn experiences the same change in magnetic flux, so more turns produce a proportionally greater emf.",
+      "distractors": [
+        { "answer": "the rotational frequency of the coil", "explanation": "The rotational frequency is represented by f, not N. These are distinct quantities in Faraday's law." },
+        { "answer": "the strength of the magnetic field", "explanation": "The magnetic field strength is represented by B. The number of turns N is a separate quantity related to the coil construction." },
+        { "answer": "the area of the coil", "explanation": "The area of the coil is represented by A. N specifically refers to the number of turns of wire wound in the coil." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A coil in an AC generator rotates from the position of maximum magnetic flux to the position of zero magnetic flux. Which one of the following is the angle through which the coil has rotated?",
+      "correct": "90°",
+      "correctExplanation": "Maximum flux occurs when the coil is perpendicular to the magnetic field (0°). Zero flux occurs when the coil is parallel to the field (90°). This is a quarter of a full rotation.",
+      "distractors": [
+        { "answer": "180°", "explanation": "A 180° rotation takes the coil from maximum flux through zero flux and back to maximum flux (in the opposite direction). The coil reaches zero flux at 90°." },
+        { "answer": "270°", "explanation": "A 270° rotation covers three quarters of a full cycle. The first transition from maximum to zero flux occurs at just 90°." },
+        { "answer": "360°", "explanation": "A 360° rotation is one complete cycle. The coil first reaches zero flux after only 90° of rotation." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which one of the following correctly relates the period T and the rotational frequency f of a coil in an AC generator?",
+      "correct": "T = 1/f",
+      "correctExplanation": "The period T is the reciprocal of the frequency f. For example, a coil rotating at 50 Hz completes one full revolution in T = 1/50 = 0.02 s.",
+      "distractors": [
+        { "answer": "T = f", "explanation": "Period and frequency are not equal. Period is measured in seconds and frequency in hertz. They are reciprocals of each other." },
+        { "answer": "T = 2πf", "explanation": "The factor 2π relates angular velocity ω to frequency f (ω = 2πf), but T = 1/f without any factor of 2π." },
+        { "answer": "T = f²", "explanation": "Period is not the square of frequency. The correct relationship is T = 1/f, where T and f are reciprocals." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which one of the following is the SI unit of magnetic flux?",
+      "correct": "weber (Wb)",
+      "correctExplanation": "The SI unit of magnetic flux is the weber (Wb). One weber equals one tesla multiplied by one square metre (1 Wb = 1 T m²).",
+      "distractors": [
+        { "answer": "tesla (T)", "explanation": "The tesla is the SI unit of magnetic field strength (flux density), not magnetic flux. Flux equals field strength multiplied by area." },
+        { "answer": "volt (V)", "explanation": "The volt is the SI unit of emf and potential difference, not magnetic flux. Emf is calculated from the rate of change of flux." },
+        { "answer": "henry (H)", "explanation": "The henry is the SI unit of inductance, not magnetic flux. These are related but distinct electromagnetic quantities." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the following statement about Faraday's law.",
+      "sentence": "Faraday's law states that the magnitude of the average emf equals N multiplied by |ΔΦ_B| divided by {{blank:1}}.",
+      "blanks": {
+        "1": {
+          "correct": "Δt",
+          "correctExplanation": "The average emf is calculated by dividing the product N × |ΔΦ_B| by the time interval Δt over which the flux change occurs.",
+          "distractors": [
+            { "answer": "N", "explanation": "N is the number of turns and appears as a multiplier in the numerator, not as the divisor." },
+            { "answer": "ΔΦ_B", "explanation": "ΔΦ_B is the change in magnetic flux and appears in the numerator, not as the divisor." },
+            { "answer": "f", "explanation": "While frequency f is related to the time interval, Faraday's law explicitly uses Δt (the time interval) as the divisor." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the following statement about the time for a quarter rotation.",
+      "sentence": "The time for a 90° rotation of a coil in an AC generator is one {{blank:1}} of the period.",
+      "blanks": {
+        "1": {
+          "correct": "quarter",
+          "correctExplanation": "A 90° rotation is one quarter of a full 360° revolution, so the time taken is one quarter of the period T. That is, Δt = T/4.",
+          "distractors": [
+            { "answer": "half", "explanation": "A half period corresponds to a 180° rotation, not 90°. A 90° rotation is one quarter of the full cycle." },
+            { "answer": "third", "explanation": "A third of the period corresponds to a 120° rotation, not 90°. A 90° rotation is one quarter of the full cycle." },
+            { "answer": "eighth", "explanation": "An eighth of the period corresponds to a 45° rotation, not 90°. A 90° rotation is one quarter of the full cycle." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the following statement about the period of rotation.",
+      "sentence": "If a coil rotates at a frequency of f hertz, the period of rotation T equals {{blank:1}}.",
+      "blanks": {
+        "1": {
+          "correct": "1/f",
+          "correctExplanation": "The period T is the reciprocal of the frequency f. For example, at f = 50 Hz, T = 1/50 = 0.02 s.",
+          "distractors": [
+            { "answer": "f", "explanation": "Period and frequency are reciprocals, not equal. T = 1/f, not T = f." },
+            { "answer": "2f", "explanation": "This would give a period twice the frequency, which is dimensionally incorrect. T = 1/f." },
+            { "answer": "1/(2f)", "explanation": "This gives half the correct period. The period of a full revolution is T = 1/f, not 1/(2f)." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "tf",
+      "question": "The average emf of an AC generator during a quarter turn can be calculated using Faraday's law: |ε_avg| = N × |ΔΦ_B| / Δt.",
+      "correct": "True",
+      "correctExplanation": "This is a correct statement. Faraday's law relates the average emf to the number of turns, the change in magnetic flux, and the time interval over which the change occurs. It applies directly to calculating the average emf during a quarter turn.",
+      "distractors": [
+        { "answer": "False", "explanation": "Faraday's law is indeed the correct equation for calculating the average emf of an AC generator during a quarter turn. The equation |ε_avg| = N × |ΔΦ_B| / Δt is a standard application of Faraday's law." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "A 90° rotation of a coil in an AC generator from maximum flux to zero flux represents one half of a complete period.",
+      "correct": "False",
+      "correctExplanation": "A 90° rotation is one quarter of a full 360° revolution, not one half. Therefore, the time for this rotation is T/4, not T/2. A half period corresponds to a 180° rotation.",
+      "distractors": [
+        { "answer": "True", "explanation": "A 90° rotation is one quarter (not one half) of a complete 360° revolution. The corresponding time interval is T/4, not T/2." }
+      ]
+    }
+  ],
+
+  "toLevel3": [
+    {
+      "type": "mc",
+      "question": "A coil in an AC generator rotates 90° from the position of maximum magnetic flux to zero magnetic flux. Which one of the following best explains why the magnitude of the change in flux |ΔΦ_B| equals Φ_max for this rotation?",
+      "correct": "The flux decreases from its maximum value Φ_max to zero, so the magnitude of the change is Φ_max − 0 = Φ_max.",
+      "correctExplanation": "At the starting position the flux is at its maximum value Φ_max. After a 90° rotation the flux is zero. The change in flux is therefore Φ_max − 0 = Φ_max in magnitude.",
+      "distractors": [
+        { "answer": "The flux increases from zero to its maximum value during this rotation, giving a change of Φ_max.", "explanation": "The direction is reversed. A rotation from maximum flux moves toward zero flux, not from zero toward maximum." },
+        { "answer": "The average value of the flux over the quarter turn equals Φ_max, so the change also equals Φ_max.", "explanation": "The average flux over a quarter turn is not equal to Φ_max. The change in flux is determined by the initial and final values, not the average." },
+        { "answer": "The rate of change of flux is constant and equal to Φ_max during the quarter turn.", "explanation": "The rate of change of flux is not constant during the rotation; it varies sinusoidally. The change |ΔΦ_B| = Φ_max comes from the difference between initial and final flux values." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "If the rotational frequency of an AC generator is doubled, which one of the following correctly describes the effect on the time for a quarter turn?",
+      "correct": "The time for a quarter turn is halved.",
+      "correctExplanation": "The time for a quarter turn is Δt = T/4 = 1/(4f). Doubling f gives Δt = 1/(4 × 2f) = 1/(8f), which is half the original value.",
+      "distractors": [
+        { "answer": "The time for a quarter turn is doubled.", "explanation": "Increasing the frequency means the coil rotates faster, so the time for any given rotation angle decreases, not increases." },
+        { "answer": "The time for a quarter turn remains unchanged.", "explanation": "The time for a quarter turn depends on frequency through Δt = 1/(4f). Doubling f halves this time." },
+        { "answer": "The time for a quarter turn is reduced to one quarter of its original value.", "explanation": "Doubling f halves Δt, not quarters it. Quartering Δt would require quadrupling the frequency." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which one of the following best explains why increasing the rotational frequency increases the average emf of an AC generator?",
+      "correct": "The same change in flux occurs in a shorter time interval, increasing the rate of change of flux.",
+      "correctExplanation": "The maximum flux Φ_max = BA is independent of frequency. However, a higher frequency means a shorter quarter-turn time Δt, so |ε_avg| = NΦ_max/Δt increases because the same flux change happens more rapidly.",
+      "distractors": [
+        { "answer": "Higher frequency increases the maximum magnetic flux through the coil.", "explanation": "The maximum flux Φ_max = BA depends on field strength and area, not on frequency. Frequency affects the time interval, not the flux." },
+        { "answer": "Higher frequency increases the effective number of turns in the coil.", "explanation": "The number of turns N is a fixed physical property of the coil and does not change with rotation speed." },
+        { "answer": "Higher frequency increases the strength of the magnetic field between the poles.", "explanation": "The magnetic field strength B is determined by the magnets, not by how fast the coil rotates." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which one of the following lists the correct sequence of steps to calculate the average emf from an AC generator during a quarter turn from maximum flux to zero flux?",
+      "correct": "Calculate Φ_max = BA, then Δt = T/4 = 1/(4f), then |ε_avg| = NΦ_max / Δt.",
+      "correctExplanation": "First find the maximum flux from the field strength and area. Then find the quarter-period from the frequency. Finally apply Faraday's law with |ΔΦ_B| = Φ_max.",
+      "distractors": [
+        { "answer": "Calculate Δt = T = 1/f, then Φ_max = BA, then |ε_avg| = NΦ_max / Δt.", "explanation": "This uses the full period T instead of the quarter period T/4. For a 90° rotation, the time interval is T/4, not T." },
+        { "answer": "Calculate Φ_max = BA, then Δt = T/2 = 1/(2f), then |ε_avg| = NΦ_max / Δt.", "explanation": "This uses the half period T/2. A 90° rotation is one quarter of a full revolution, so Δt = T/4, not T/2." },
+        { "answer": "Calculate |ε_avg| = NBAf, then Δt = 1/f, then Φ_max = |ε_avg| × Δt / N.", "explanation": "This reverses the calculation process and uses an incorrect formula. The correct approach starts with known quantities and applies Faraday's law." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which one of the following correctly identifies the factors that determine the maximum magnetic flux through a rotating coil?",
+      "correct": "The magnetic field strength B and the area A of the coil determine the maximum flux via Φ_max = BA.",
+      "correctExplanation": "Maximum flux occurs when the coil is perpendicular to the field, giving Φ_max = BA. Only the field strength and coil area affect this maximum value.",
+      "distractors": [
+        { "answer": "The number of turns N and the frequency f of rotation determine the maximum flux.", "explanation": "Neither the number of turns nor the frequency affect the maximum flux. N affects the total emf and f affects the time interval, but Φ_max = BA depends only on B and A." },
+        { "answer": "The frequency f and the magnetic field strength B determine the maximum flux.", "explanation": "Frequency does not affect the maximum flux. Φ_max = BA depends only on the magnetic field strength and the coil area." },
+        { "answer": "The number of turns N and the area A of the coil determine the maximum flux.", "explanation": "The number of turns does not affect the magnetic flux through a single turn. Φ_max = BA depends on the field strength B and the area A." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "The procedure for calculating average emf is the same for both AC and DC generators. Which one of the following best explains why this is the case?",
+      "correct": "Both types of generator use the same rotating coil in a magnetic field, and Faraday's law applies equally to the coil in both designs.",
+      "correctExplanation": "The emf induced in the coil depends on the rate of change of flux, which is governed by Faraday's law regardless of whether slip rings (AC) or a split ring commutator (DC) is used. The commutator affects the external output but not the emf calculation for the coil.",
+      "distractors": [
+        { "answer": "Both generators produce identical output waveforms, so the same calculation must apply.", "explanation": "AC and DC generators produce different output waveforms. AC produces a sinusoidal waveform while DC produces a rectified waveform. The emf calculation is the same because Faraday's law applies to the coil itself." },
+        { "answer": "The slip rings and split ring commutator produce the same effect on the induced emf.", "explanation": "Slip rings and a split ring commutator have different effects on the external output. However, the emf induced in the coil itself is calculated identically using Faraday's law." },
+        { "answer": "AC and DC generators have identical mechanical components, so the physics must be the same.", "explanation": "The generators differ in their contact mechanism (slip rings vs split ring commutator). The calculation is the same because Faraday's law governs the emf in the rotating coil regardless of the contact mechanism." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "A coil in an AC generator rotates at a frequency of 25 Hz. Determine the period of rotation.",
+      "sentence": "If a coil rotates at 25 Hz, the period T is {{blank:1}} s.",
+      "blanks": {
+        "1": {
+          "correct": "0.04",
+          "correctExplanation": "T = 1/f = 1/25 = 0.04 s. The period is the reciprocal of the frequency.",
+          "distractors": [
+            { "answer": "0.02", "explanation": "This would be the period for a frequency of 50 Hz, not 25 Hz. T = 1/25 = 0.04 s." },
+            { "answer": "0.01", "explanation": "This would be the period for 100 Hz. For 25 Hz, T = 1/25 = 0.04 s." },
+            { "answer": "25", "explanation": "This confuses frequency with period. The period is the reciprocal of frequency: T = 1/f = 1/25 = 0.04 s." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Consider a coil rotating from the position of maximum magnetic flux through a 90° angle to the position of zero flux.",
+      "sentence": "For a coil that rotates 90° from maximum flux to zero flux, the magnitude of the change in flux |ΔΦ_B| equals {{blank:1}}.",
+      "blanks": {
+        "1": {
+          "correct": "Φ_max",
+          "correctExplanation": "The flux starts at its maximum value Φ_max and ends at zero. The magnitude of the change is |Φ_max − 0| = Φ_max.",
+          "distractors": [
+            { "answer": "zero", "explanation": "The change in flux is not zero. The flux decreases from Φ_max to zero, giving |ΔΦ_B| = Φ_max." },
+            { "answer": "Φ_max / 2", "explanation": "The change is not half the maximum flux. The flux goes from Φ_max all the way to zero, so |ΔΦ_B| = Φ_max." },
+            { "answer": "2Φ_max", "explanation": "The change cannot exceed the maximum flux for a 90° rotation. The flux goes from Φ_max to zero, giving |ΔΦ_B| = Φ_max." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Consider the effect of changing the number of turns on the average emf of a generator.",
+      "sentence": "Tripling the number of turns in a generator coil while keeping all other factors constant increases the average emf by a factor of {{blank:1}}.",
+      "blanks": {
+        "1": {
+          "correct": "3",
+          "correctExplanation": "Since |ε_avg| = N × |ΔΦ_B| / Δt, the average emf is directly proportional to N. Tripling N triples the emf.",
+          "distractors": [
+            { "answer": "9", "explanation": "The emf is directly proportional to N, not to N². Tripling N triples the emf, it does not increase it by a factor of 9." },
+            { "answer": "1/3", "explanation": "Increasing N increases the emf, not decreases it. The emf is directly proportional to N." },
+            { "answer": "6", "explanation": "The emf is directly proportional to N. Tripling N gives a factor of 3, not 6." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "tf",
+      "question": "The time for a quarter turn of a coil rotating at 100 Hz is 0.0025 s.",
+      "correct": "True",
+      "correctExplanation": "T = 1/f = 1/100 = 0.01 s. The quarter-turn time is Δt = T/4 = 0.01/4 = 0.0025 s. The statement is correct.",
+      "distractors": [
+        { "answer": "False", "explanation": "The calculation is correct. T = 1/100 = 0.01 s and Δt = T/4 = 0.0025 s." }
+      ]
+    }
+  ],
+
+  "toLevel4": [
+    {
+      "type": "mc",
+      "question": "Amara constructs an AC generator with a 30-turn coil of dimensions 0.10 m × 0.08 m rotating at 50 Hz in a uniform magnetic field of 2.0 T. Which one of the following is closest to the average emf for a quarter turn from maximum flux to zero flux?",
+      "correct": "96 V",
+      "correctExplanation": "A = 0.10 × 0.08 = 0.008 m². Φ_max = BA = 2.0 × 0.008 = 0.016 Wb. Δt = T/4 = 1/(4 × 50) = 0.005 s. |ε_avg| = NΦ_max / Δt = 30 × 0.016 / 0.005 = 96 V.",
+      "distractors": [
+        { "answer": "24 V", "explanation": "This results from using the full period T = 0.02 s instead of the quarter period Δt = 0.005 s. The correct time interval for a 90° rotation is T/4." },
+        { "answer": "48 V", "explanation": "This results from using T/2 = 0.01 s. The correct time interval for a 90° rotation is T/4 = 0.005 s." },
+        { "answer": "192 V", "explanation": "This results from using T/8 = 0.0025 s instead of T/4. A quarter turn (90°) takes T/4, not T/8." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A 50-turn coil in an AC generator has a maximum magnetic flux of 0.024 Wb and rotates at 40 Hz. Which one of the following is closest to the average emf during a quarter turn from maximum flux to zero flux?",
+      "correct": "192 V",
+      "correctExplanation": "Δt = T/4 = 1/(4 × 40) = 0.00625 s. |ε_avg| = NΦ_max / Δt = 50 × 0.024 / 0.00625 = 192 V.",
+      "distractors": [
+        { "answer": "48 V", "explanation": "This results from using the full period T = 0.025 s instead of T/4 = 0.00625 s." },
+        { "answer": "96 V", "explanation": "This results from using T/2 instead of T/4 as the time interval for a quarter turn." },
+        { "answer": "384 V", "explanation": "This results from using T/8 instead of T/4. A 90° rotation takes one quarter of the period." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Dev builds an AC generator with a 40-turn coil of area 0.015 m² rotating in a 1.8 T field at 50 Hz. Which one of the following is closest to the average emf for a quarter turn from maximum flux to zero flux?",
+      "correct": "216 V",
+      "correctExplanation": "Φ_max = BA = 1.8 × 0.015 = 0.027 Wb. Δt = T/4 = 1/(4 × 50) = 0.005 s. |ε_avg| = NΦ_max / Δt = 40 × 0.027 / 0.005 = 216 V.",
+      "distractors": [
+        { "answer": "54 V", "explanation": "This results from using the full period T = 0.02 s instead of the quarter period Δt = 0.005 s." },
+        { "answer": "108 V", "explanation": "This results from using T/2 = 0.01 s instead of T/4 = 0.005 s for the quarter turn." },
+        { "answer": "432 V", "explanation": "This results from using T/8 instead of T/4. A quarter turn takes T/4, not T/8." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An AC generator produces an average emf of 120 V during a quarter turn. The coil has 25 turns and a maximum magnetic flux of 0.012 Wb. Which one of the following is closest to the rotational frequency of the coil?",
+      "correct": "100 Hz",
+      "correctExplanation": "Rearranging: Δt = NΦ_max / |ε_avg| = 25 × 0.012 / 120 = 0.0025 s. Since Δt = T/4, then T = 4 × 0.0025 = 0.01 s, and f = 1/T = 100 Hz.",
+      "distractors": [
+        { "answer": "25 Hz", "explanation": "This results from incorrectly using Δt = T instead of Δt = T/4 when converting back to frequency. The quarter-turn time is T/4, so T = 4Δt." },
+        { "answer": "50 Hz", "explanation": "This results from using Δt = T/2 instead of Δt = T/4. A quarter turn corresponds to T/4, giving f = 100 Hz." },
+        { "answer": "200 Hz", "explanation": "This results from using Δt = T/8 instead of Δt = T/4 when converting to frequency." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Priya's AC generator has a 100-turn coil with dimensions 0.05 m × 0.04 m rotating in a 2.5 T field at 50 Hz. Which one of the following is closest to the average emf during a quarter turn from maximum flux to zero flux?",
+      "correct": "100 V",
+      "correctExplanation": "A = 0.05 × 0.04 = 0.002 m². Φ_max = BA = 2.5 × 0.002 = 0.005 Wb. Δt = T/4 = 1/(4 × 50) = 0.005 s. |ε_avg| = NΦ_max / Δt = 100 × 0.005 / 0.005 = 100 V.",
+      "distractors": [
+        { "answer": "25 V", "explanation": "This results from using the full period T = 0.02 s instead of T/4 = 0.005 s." },
+        { "answer": "50 V", "explanation": "This results from using T/2 = 0.01 s instead of the correct quarter-period Δt = 0.005 s." },
+        { "answer": "200 V", "explanation": "This results from using T/8 = 0.0025 s instead of T/4 = 0.005 s." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A 15-turn coil with dimensions 0.20 m × 0.15 m rotates at 25 Hz in a uniform magnetic field of 1.2 T. Which one of the following is closest to the average emf for a quarter turn from maximum flux to zero flux?",
+      "correct": "54 V",
+      "correctExplanation": "A = 0.20 × 0.15 = 0.03 m². Φ_max = BA = 1.2 × 0.03 = 0.036 Wb. Δt = T/4 = 1/(4 × 25) = 0.01 s. |ε_avg| = NΦ_max / Δt = 15 × 0.036 / 0.01 = 54 V.",
+      "distractors": [
+        { "answer": "13.5 V", "explanation": "This results from using the full period T = 0.04 s instead of the quarter period Δt = 0.01 s." },
+        { "answer": "27 V", "explanation": "This results from using T/2 = 0.02 s instead of T/4 = 0.01 s for the quarter turn." },
+        { "answer": "108 V", "explanation": "This results from using T/8 = 0.005 s instead of T/4 = 0.01 s." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Mei determines that her AC generator produces an average emf of 80 V during a quarter turn. The coil has 20 turns and rotates at 40 Hz. Which one of the following is closest to the maximum magnetic flux through the coil?",
+      "correct": "0.025 Wb",
+      "correctExplanation": "Δt = T/4 = 1/(4 × 40) = 0.00625 s. Rearranging: Φ_max = |ε_avg| × Δt / N = 80 × 0.00625 / 20 = 0.025 Wb.",
+      "distractors": [
+        { "answer": "0.050 Wb", "explanation": "This results from using T/2 instead of T/4, giving a Δt that is too large and therefore an overestimate of Φ_max." },
+        { "answer": "0.0125 Wb", "explanation": "This results from using T/8 instead of T/4, giving a Δt that is too small." },
+        { "answer": "0.100 Wb", "explanation": "This results from using the full period T instead of T/4, giving four times the correct value." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "A 10-turn coil has a maximum flux of 0.030 Wb and rotates at 50 Hz. Calculate the average emf during a quarter turn from maximum flux to zero flux.",
+      "sentence": "The average emf during a quarter turn is {{blank:1}} V.",
+      "blanks": {
+        "1": {
+          "correct": "60",
+          "correctExplanation": "Δt = T/4 = 1/(4 × 50) = 0.005 s. |ε_avg| = NΦ_max / Δt = 10 × 0.030 / 0.005 = 60 V.",
+          "distractors": [
+            { "answer": "15", "explanation": "This results from using the full period T = 0.02 s instead of T/4 = 0.005 s." },
+            { "answer": "30", "explanation": "This results from using T/2 = 0.01 s instead of T/4 = 0.005 s." },
+            { "answer": "120", "explanation": "This results from using T/8 = 0.0025 s instead of T/4 = 0.005 s." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "A generator coil rotates at 200 Hz. Calculate the time for a quarter turn.",
+      "sentence": "The time for a quarter turn of a coil rotating at 200 Hz is {{blank:1}} s.",
+      "blanks": {
+        "1": {
+          "correct": "0.00125",
+          "correctExplanation": "T = 1/f = 1/200 = 0.005 s. Δt = T/4 = 0.005/4 = 0.00125 s.",
+          "distractors": [
+            { "answer": "0.005", "explanation": "This is the full period T = 1/200 = 0.005 s, not the quarter period. Δt = T/4 = 0.00125 s." },
+            { "answer": "0.0025", "explanation": "This is the half period T/2. The quarter-turn time is T/4 = 0.00125 s." },
+            { "answer": "0.05", "explanation": "This is far too large. T = 1/200 = 0.005 s, so Δt = T/4 = 0.00125 s." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Ravi's 50-turn coil produces an average emf of 150 V during a quarter turn of 0.0025 s. Calculate the maximum flux through the coil.",
+      "sentence": "The maximum flux through Ravi's coil is {{blank:1}} Wb.",
+      "blanks": {
+        "1": {
+          "correct": "0.0075",
+          "correctExplanation": "Rearranging Faraday's law: Φ_max = |ε_avg| × Δt / N = 150 × 0.0025 / 50 = 0.0075 Wb.",
+          "distractors": [
+            { "answer": "0.015", "explanation": "This results from an error in the rearrangement, such as dividing by 25 instead of 50. Φ_max = 150 × 0.0025 / 50 = 0.0075 Wb." },
+            { "answer": "0.00375", "explanation": "This results from an arithmetic error. The correct value is 150 × 0.0025 / 50 = 0.375 / 50 = 0.0075 Wb." },
+            { "answer": "0.030", "explanation": "This is four times too large, likely from using the full period instead of the given quarter-turn time." }
+          ]
+        }
+      }
+    }
+  ],
+
+  "toLevel5": [
+    {
+      "type": "mc",
+      "question": "Generator X has a 20-turn coil with area 0.020 m² in a 2.0 T field rotating at 50 Hz. Generator Y has a 40-turn coil with area 0.010 m² in a 1.5 T field rotating at 50 Hz. Which one of the following correctly compares the average emf for a quarter turn from each generator?",
+      "correct": "Generator X produces a greater average emf of 160 V compared with 120 V from Generator Y.",
+      "correctExplanation": "Generator X: Φ_max = 2.0 × 0.020 = 0.04 Wb, |ε_avg| = 20 × 0.04 / 0.005 = 160 V. Generator Y: Φ_max = 1.5 × 0.010 = 0.015 Wb, |ε_avg| = 40 × 0.015 / 0.005 = 120 V. Generator X produces the greater average emf.",
+      "distractors": [
+        { "answer": "Generator Y produces a greater average emf because it has twice as many turns as Generator X.", "explanation": "More turns alone do not guarantee a greater emf. Generator Y has more turns but smaller flux, giving only 120 V compared with 160 V from Generator X." },
+        { "answer": "Both generators produce the same average emf because the products N × B × A are equal for both.", "explanation": "N × B × A for X = 20 × 2.0 × 0.020 = 0.80 and for Y = 40 × 1.5 × 0.010 = 0.60. These products are not equal." },
+        { "answer": "Generator Y produces a greater average emf of 160 V compared with 120 V from Generator X.", "explanation": "The values are assigned to the wrong generators. Generator X produces 160 V and Generator Y produces 120 V." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student calculates the average emf for a 30-turn coil at 50 Hz with Φ_max = 0.024 Wb as follows: ε = 30 × 0.024 / 0.02 = 36 V. Which one of the following correctly identifies the error in this calculation?",
+      "correct": "The student used the full period T = 0.02 s instead of the quarter period Δt = 0.005 s. The correct average emf is 144 V.",
+      "correctExplanation": "At 50 Hz, T = 0.02 s but Δt = T/4 = 0.005 s for a quarter turn. Using the correct Δt: |ε_avg| = 30 × 0.024 / 0.005 = 144 V. The student's error gave an answer four times too small.",
+      "distractors": [
+        { "answer": "The student used the wrong number of turns. The correct average emf is 72 V.", "explanation": "The number of turns (30) was used correctly. The error is in the time interval: T was used instead of T/4." },
+        { "answer": "The student forgot to square the magnetic flux. The correct average emf is approximately 26 V.", "explanation": "Magnetic flux is not squared in Faraday's law. The error is in using the full period instead of the quarter period." },
+        { "answer": "The student should have divided the flux by the number of turns. The correct average emf is 1.2 V.", "explanation": "In Faraday's law, N multiplies the flux change; it does not divide it. The error is in the time interval used." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Kenji measures the average emf of his AC generator during a quarter turn as 180 V. The coil has 30 turns and Φ_max = 0.015 Wb. He concludes that the rotational frequency is 50 Hz. Which one of the following correctly evaluates Kenji's conclusion?",
+      "correct": "Kenji's conclusion is incorrect. The correct frequency is 100 Hz, not 50 Hz.",
+      "correctExplanation": "Rearranging: Δt = NΦ_max / |ε_avg| = 30 × 0.015 / 180 = 0.0025 s. T = 4Δt = 0.01 s, so f = 1/T = 100 Hz. Kenji likely used T = 2Δt (half-period) instead of T = 4Δt, obtaining an incorrect frequency of 50 Hz.",
+      "distractors": [
+        { "answer": "Kenji's conclusion is correct. The rotational frequency is indeed 50 Hz.", "explanation": "At 50 Hz, Δt = 0.005 s, giving |ε_avg| = 30 × 0.015 / 0.005 = 90 V, not 180 V. The correct frequency is 100 Hz." },
+        { "answer": "Kenji's conclusion is incorrect. The correct frequency is 200 Hz.", "explanation": "This would result from using T = Δt instead of T = 4Δt. The quarter-turn time is T/4, so T = 4 × 0.0025 = 0.01 s, giving f = 100 Hz." },
+        { "answer": "Kenji's conclusion is incorrect. The correct frequency is 25 Hz.", "explanation": "This would result from using T = 8Δt. The correct relationship is T = 4Δt, giving f = 100 Hz." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Coil X has 100 turns and area 0.005 m² in a 2.0 T field at 50 Hz. Coil Y has 50 turns and area 0.020 m² in a 1.5 T field at 50 Hz. Which one of the following correctly compares the average emf during a quarter turn?",
+      "correct": "Coil Y produces a greater average emf of 300 V compared with 200 V from Coil X.",
+      "correctExplanation": "Coil X: Φ_max = 2.0 × 0.005 = 0.01 Wb, |ε_avg| = 100 × 0.01 / 0.005 = 200 V. Coil Y: Φ_max = 1.5 × 0.020 = 0.03 Wb, |ε_avg| = 50 × 0.03 / 0.005 = 300 V.",
+      "distractors": [
+        { "answer": "Coil X produces a greater average emf because it has more turns than Coil Y.", "explanation": "Although Coil X has more turns, Coil Y has a much larger flux (0.03 Wb vs 0.01 Wb), giving it the greater average emf of 300 V." },
+        { "answer": "Both coils produce the same average emf of 200 V.", "explanation": "The products NΦ_max differ: 100 × 0.01 = 1.0 for X and 50 × 0.03 = 1.5 for Y. The average emfs are different." },
+        { "answer": "Coil X produces a greater average emf of 300 V compared with 200 V from Coil Y.", "explanation": "The values are assigned to the wrong coils. Coil X produces 200 V and Coil Y produces 300 V." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A 60-turn coil with dimensions 0.10 m × 0.05 m rotates in a 2.0 T field at 40 Hz. Which one of the following is closest to the average emf during a quarter turn from maximum flux to zero flux?",
+      "correct": "96 V",
+      "correctExplanation": "A = 0.10 × 0.05 = 0.005 m². Φ_max = 2.0 × 0.005 = 0.01 Wb. Δt = 1/(4 × 40) = 0.00625 s. |ε_avg| = 60 × 0.01 / 0.00625 = 96 V.",
+      "distractors": [
+        { "answer": "24 V", "explanation": "This results from using the full period T = 0.025 s instead of T/4 = 0.00625 s." },
+        { "answer": "48 V", "explanation": "This results from using T/2 = 0.0125 s instead of T/4 = 0.00625 s." },
+        { "answer": "192 V", "explanation": "This results from using T/8 = 0.003125 s instead of T/4 = 0.00625 s." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An AC generator must produce an average emf of at least 200 V during a quarter turn. The coil has 50 turns, area 0.010 m², and operates in a 2.0 T field. Which one of the following is closest to the minimum rotational frequency required?",
+      "correct": "50 Hz",
+      "correctExplanation": "Φ_max = 2.0 × 0.010 = 0.02 Wb. |ε_avg| = NΦ_max / Δt = NΦ_max × 4f. So 200 = 50 × 0.02 × 4f = 4f, giving f = 50 Hz.",
+      "distractors": [
+        { "answer": "25 Hz", "explanation": "At 25 Hz, |ε_avg| = 50 × 0.02 × 4 × 25 = 100 V, which is below the 200 V requirement." },
+        { "answer": "100 Hz", "explanation": "At 100 Hz the emf would be 400 V. While this exceeds 200 V, the minimum frequency required is only 50 Hz." },
+        { "answer": "200 Hz", "explanation": "This is far more than needed. The minimum frequency to reach 200 V is 50 Hz." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Chen modifies his AC generator by halving the number of turns from 120 to 60 and doubling the coil area from 0.006 m² to 0.012 m², while keeping B = 1.5 T and f = 50 Hz unchanged. Which one of the following correctly describes the effect on the average emf during a quarter turn?",
+      "correct": "The average emf remains unchanged at 216 V because the reduction in turns is exactly compensated by the increase in area.",
+      "correctExplanation": "Original: Φ_max = 1.5 × 0.006 = 0.009 Wb, |ε_avg| = 120 × 0.009 / 0.005 = 216 V. Modified: Φ_max = 1.5 × 0.012 = 0.018 Wb, |ε_avg| = 60 × 0.018 / 0.005 = 216 V. The product N × A is unchanged, so the emf is unchanged.",
+      "distractors": [
+        { "answer": "The average emf doubles to 432 V because doubling the area doubles the flux and therefore the emf.", "explanation": "Doubling the area doubles the flux, but halving the turns halves the emf contribution from N. The two effects cancel exactly." },
+        { "answer": "The average emf halves to 108 V because the number of turns is the dominant factor in determining emf.", "explanation": "N and A contribute equally to the product N × Φ_max = N × BA. Halving N and doubling A leave this product unchanged." },
+        { "answer": "The average emf increases to 324 V because the area has a greater effect on emf than the number of turns.", "explanation": "N and A have equal influence through the product N × BA. The emf remains unchanged when N halves and A doubles." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Two students each design an AC generator to produce an average emf of 150 V during a quarter turn at 50 Hz. Student A uses 25 turns with Φ_max = 0.030 Wb. Student B uses 50 turns with Φ_max = 0.015 Wb. Which one of the following is the best evaluation of their designs?",
+      "correct": "Both designs correctly produce an average emf of 150 V because the product N × Φ_max is the same for both.",
+      "correctExplanation": "Student A: |ε_avg| = 25 × 0.030 / 0.005 = 150 V. Student B: |ε_avg| = 50 × 0.015 / 0.005 = 150 V. Both have N × Φ_max = 0.75, giving identical results.",
+      "distractors": [
+        { "answer": "Only Student A's design is correct because fewer turns with greater flux produces a more stable emf.", "explanation": "Both designs are equally correct. The number of turns and the flux combine as a product N × Φ_max in Faraday's law, and both give 150 V." },
+        { "answer": "Only Student B's design is correct because more turns always produce a more accurate emf output.", "explanation": "Both designs produce exactly 150 V. The number of turns does not affect accuracy; it simply multiplies the flux contribution." },
+        { "answer": "Neither design is correct because the average emf cannot be calculated this way for an AC generator.", "explanation": "Faraday's law applies to AC generators, and both calculations correctly give 150 V." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "A student claims that a 40-turn coil at 25 Hz with Φ_max = 0.020 Wb produces an average emf of 40 V during a quarter turn. Verify this claim.",
+      "sentence": "The correct average emf during a quarter turn is {{blank:1}} V.",
+      "blanks": {
+        "1": {
+          "correct": "80",
+          "correctExplanation": "Δt = T/4 = 1/(4 × 25) = 0.01 s. |ε_avg| = NΦ_max / Δt = 40 × 0.020 / 0.01 = 80 V. The student's claim of 40 V is incorrect.",
+          "distractors": [
+            { "answer": "40", "explanation": "This would be the result if the full period T = 0.04 s were used instead of T/4 = 0.01 s. The correct answer is 80 V." },
+            { "answer": "20", "explanation": "This results from an additional error, such as omitting the number of turns. The correct value is 80 V." },
+            { "answer": "160", "explanation": "This results from using T/8 instead of T/4. The quarter-turn time is T/4 = 0.01 s, giving 80 V." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Generator P has 30 turns at 50 Hz with Φ_max = 0.040 Wb. Generator Q has 60 turns at 50 Hz with Φ_max = 0.020 Wb. Compare the average emf of the two generators.",
+      "sentence": "The ratio of the average emf of Generator P to Generator Q is {{blank:1}}.",
+      "blanks": {
+        "1": {
+          "correct": "1",
+          "correctExplanation": "Generator P: |ε_avg| = 30 × 0.040 / 0.005 = 240 V. Generator Q: |ε_avg| = 60 × 0.020 / 0.005 = 240 V. The ratio is 240/240 = 1. Both generators have the same N × Φ_max product.",
+          "distractors": [
+            { "answer": "2", "explanation": "This assumes Generator P produces twice the emf, perhaps because of the larger Φ_max. However, Generator Q has twice the turns, giving the same overall emf." },
+            { "answer": "0.5", "explanation": "This assumes Generator Q produces twice the emf because of more turns. However, Generator P has twice the flux, giving the same overall emf." },
+            { "answer": "4", "explanation": "This is incorrect. Both generators have N × Φ_max = 1.2, so they produce the same average emf. The ratio is 1." }
+          ]
+        }
+      }
+    }
+  ]
+}

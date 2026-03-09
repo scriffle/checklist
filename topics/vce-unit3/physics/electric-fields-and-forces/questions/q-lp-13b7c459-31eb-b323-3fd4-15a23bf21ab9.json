@@ -1,0 +1,551 @@
+{
+  "_link": {
+    "uuid": "lp-13b7c459-31eb-b323-3fd4-15a23bf21ab9",
+    "version": 1,
+    "contentHash": "hash-136e0c00",
+    "title": "I can state the rules for drawing valid electric field line diagrams",
+    "generatedAt": "2026-03-05T08:00:00Z"
+  },
+  "toLevel2": [
+    {
+      "type": "mc",
+      "question": "Which direction must electric field lines run between charges?",
+      "correct": "From positive charges to negative charges",
+      "correctExplanation": "By convention, electric field lines originate at positive charges and terminate at negative charges.",
+      "distractors": [
+        { "answer": "From negative charges to positive charges", "explanation": "This reverses the convention; field lines always leave positive and arrive at negative charges." },
+        { "answer": "From larger charges to smaller charges always", "explanation": "Field line direction depends on charge sign, not magnitude; lines go from positive to negative." },
+        { "answer": "In either direction depending on the observer", "explanation": "The direction convention is fixed and does not depend on the observer; it is always positive to negative." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Why can electric field lines never cross each other?",
+      "correct": "Crossing would imply the field points in two directions at one point",
+      "correctExplanation": "The electric field is a vector with a unique direction at every point; two directions at one point is physically impossible.",
+      "distractors": [
+        { "answer": "Crossing would mean the field strength becomes infinitely large", "explanation": "Crossing does not relate to infinite field strength; it violates the single-direction requirement." },
+        { "answer": "Crossing would create a magnetic field at that specific point", "explanation": "Crossing field lines do not create magnetic fields; the issue is that two directions cannot exist at one point." },
+        { "answer": "Crossing is allowed near very strong charges but not weak ones", "explanation": "Crossing is never allowed regardless of charge strength; the rule applies universally." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "At what angle must electric field lines meet a conducting surface?",
+      "correct": "90 degrees (perpendicular to the surface)",
+      "correctExplanation": "Field lines must leave and arrive at conducting surfaces at right angles because any tangential component would move charges until eliminated.",
+      "distractors": [
+        { "answer": "45 degrees (at a diagonal to the surface)", "explanation": "A 45-degree angle would imply a tangential field component, which cannot exist on a conductor in equilibrium." },
+        { "answer": "0 degrees (parallel to the conducting surface)", "explanation": "Parallel lines would mean the field is tangent to the surface, which would drive charges along it." },
+        { "answer": "Any angle depending on the charge distribution", "explanation": "The 90-degree rule applies universally to all conducting surfaces in electrostatic equilibrium." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What determines the number of field lines drawn leaving or entering a charge?",
+      "correct": "The magnitude of the charge",
+      "correctExplanation": "The number of field lines is proportional to the charge magnitude; a larger charge has more lines.",
+      "distractors": [
+        { "answer": "The distance to the nearest other charge", "explanation": "Distance does not determine line count; the number of lines depends on charge magnitude." },
+        { "answer": "The type of material the charge is made from", "explanation": "Material composition does not affect field line count; only charge magnitude matters." },
+        { "answer": "The personal preference of the person drawing", "explanation": "While the exact number is a convention, the ratio between charges must reflect their relative magnitudes." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Where do electric field lines originate in a field line diagram?",
+      "correct": "On positive charges or at infinity",
+      "correctExplanation": "Field lines begin on positive charges and can also come from infinity in cases where no nearby positive charge is the source.",
+      "distractors": [
+        { "answer": "On negative charges or at infinity", "explanation": "Negative charges are where field lines terminate, not where they originate." },
+        { "answer": "At the midpoint between any two charges", "explanation": "Field lines do not originate at midpoints; they originate on positive charges." },
+        { "answer": "At any arbitrary point in the diagram", "explanation": "Field lines have specific starting points (positive charges or infinity), not arbitrary locations." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "Electric field lines can cross each other in regions of very strong electric field.",
+      "correct": "False",
+      "correctExplanation": "Electric field lines can never cross regardless of field strength; crossing would imply two field directions at one point, which is impossible.",
+      "distractors": [
+        { "answer": "True", "explanation": "Students may think strong fields create exceptions, but the no-crossing rule applies at all field strengths." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "Electric field lines must leave and arrive at conducting surfaces at 90 degrees.",
+      "correct": "True",
+      "correctExplanation": "Any tangential component at a conductor surface would move charges until it is eliminated, so only the perpendicular component remains.",
+      "distractors": [
+        { "answer": "False", "explanation": "Students may think the angle varies, but in electrostatic equilibrium, field lines are always perpendicular to conductors." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the rule about field line direction.",
+      "sentence": "Electric field lines must run from {{blank:1}} charges to {{blank:2}} charges.",
+      "blanks": {
+        "1": {
+          "correct": "positive",
+          "correctExplanation": "By convention, field lines originate at positive charges.",
+          "distractors": [
+            { "answer": "negative", "explanation": "Field lines leave positive charges; they terminate on negative charges." },
+            { "answer": "neutral", "explanation": "Neutral objects do not produce field lines; lines run between charged objects." }
+          ]
+        },
+        "2": {
+          "correct": "negative",
+          "correctExplanation": "Field lines terminate on negative charges by convention.",
+          "distractors": [
+            { "answer": "positive", "explanation": "Field lines end on negative charges, not positive; they originate from positive." },
+            { "answer": "neutral", "explanation": "Field lines terminate on negative charges, not neutral objects." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the rule about field lines and conductors.",
+      "sentence": "Field lines must meet conducting surfaces at {{blank:1}} degrees because any other angle would imply a tangential field component.",
+      "blanks": {
+        "1": {
+          "correct": "90",
+          "correctExplanation": "Perpendicular arrival ensures no tangential electric field exists on the conductor surface in equilibrium.",
+          "distractors": [
+            { "answer": "45", "explanation": "A 45-degree angle would create a tangential component, driving surface charges and violating equilibrium." },
+            { "answer": "180", "explanation": "180 degrees would mean the field is parallel to the surface, which is not perpendicular." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the rule about crossing field lines.",
+      "sentence": "Field lines can never {{blank:1}} because this would mean the field has two different directions at a single point.",
+      "blanks": {
+        "1": {
+          "correct": "cross",
+          "correctExplanation": "Crossing field lines would require the electric field to point in two directions simultaneously, which is physically impossible.",
+          "distractors": [
+            { "answer": "curve", "explanation": "Field lines can and do curve around charges; curving is normal and does not violate any rule." },
+            { "answer": "end", "explanation": "Field lines do end—they terminate on negative charges; ending is allowed and expected." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "mc",
+      "question": "Why does the no-crossing rule for field lines follow directly from the fact that the electric field is a vector?",
+      "correct": "A vector can only have one direction at each point in space",
+      "correctExplanation": "Since the electric field is a vector, it has a unique direction at every point; two crossing lines would require two directions simultaneously.",
+      "distractors": [
+        { "answer": "Vectors always point in the same direction throughout all of space", "explanation": "Vectors can point in different directions at different points; the key is one direction per point." },
+        { "answer": "Crossing lines would make the vector magnitude become negative", "explanation": "Magnitudes are always positive; the issue with crossing is conflicting directions, not negative magnitudes." },
+        { "answer": "Vectors can only exist along straight lines not along curves", "explanation": "Vector fields can have curved field lines; the no-crossing rule is about unique direction at each point." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student draws field lines leaving a conducting sphere but the lines are tangent to the surface. What is wrong with this diagram?",
+      "correct": "Field lines must leave the surface at 90 degrees, not tangentially",
+      "correctExplanation": "A tangential field component would drive charges along the surface until eliminated; in equilibrium, lines are perpendicular.",
+      "distractors": [
+        { "answer": "Field lines should form closed loops around a conducting sphere", "explanation": "Electric field lines do not form closed loops; they radiate outward from a charged sphere." },
+        { "answer": "Nothing is wrong because field lines can leave at any angle from conductors", "explanation": "The 90-degree rule is fundamental; tangential lines violate electrostatic equilibrium." },
+        { "answer": "The lines should not leave the sphere at all since it is a conductor", "explanation": "A charged conductor does produce external field lines that leave perpendicular to the surface." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Explain the physical reason why field lines must meet conductor surfaces perpendicularly.",
+      "correct": "Charges on the conductor would move until any tangential field component is eliminated",
+      "correctExplanation": "Free charges on the conductor redistribute in response to any tangential field, continuing until only the perpendicular component remains.",
+      "distractors": [
+        { "answer": "The conductor material absorbs all field components except the perpendicular one", "explanation": "Conductors do not absorb field components; charges redistribute to eliminate tangential fields." },
+        { "answer": "The perpendicular rule is an arbitrary convention with no physical basis", "explanation": "The rule has a clear physical basis: charge mobility on conductors eliminates tangential fields." },
+        { "answer": "Field lines always travel in straight lines so they must hit surfaces directly", "explanation": "Field lines can curve; the perpendicular rule is about charge equilibrium, not straight-line travel." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What does the density of field lines at a location in a diagram represent physically?",
+      "correct": "The magnitude of the electric field at that location",
+      "correctExplanation": "Greater line density indicates a stronger field; fewer lines per unit area indicates a weaker field.",
+      "distractors": [
+        { "answer": "The total electric charge present at that location", "explanation": "Charge is located on objects, not at field points; line density represents field strength, not charge." },
+        { "answer": "The speed at which charges would move at that location", "explanation": "Speed depends on acceleration history, not instantaneous field strength; density represents field magnitude." },
+        { "answer": "The electric potential energy stored at that location", "explanation": "Potential energy depends on charge and position; line density represents field strength." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A field line diagram shows lines that are evenly spaced and all pointing in the same direction. What type of field does this represent?",
+      "correct": "A uniform electric field with constant magnitude and direction",
+      "correctExplanation": "Even spacing means constant field strength, and parallel lines mean constant direction—both defining features of a uniform field.",
+      "distractors": [
+        { "answer": "A field that is getting stronger in the direction of the lines", "explanation": "Increasing strength would be shown by converging lines, not evenly spaced ones." },
+        { "answer": "A radial field produced by a single isolated point charge", "explanation": "Point charge fields have lines that spread apart radially; evenly spaced parallel lines indicate uniform fields." },
+        { "answer": "A field that exists only at the locations where the lines are drawn", "explanation": "The field exists everywhere between the lines; the diagram is a representation, not a complete map." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Why must the number of field lines leaving a charge be proportional to the magnitude of that charge?",
+      "correct": "More lines represent a stronger field, which is produced by larger charges",
+      "correctExplanation": "A charge of magnitude 2Q produces a field twice as strong as Q at the same distance, requiring twice as many lines to represent it accurately.",
+      "distractors": [
+        { "answer": "All charges must have the same number of field lines regardless of magnitude", "explanation": "Equal line numbers would misrepresent charges of different magnitudes; the ratio must match charge ratio." },
+        { "answer": "Larger charges are physically bigger so they have room for more field lines", "explanation": "Physical size is irrelevant; line count reflects field strength, which depends on charge magnitude." },
+        { "answer": "Line count is purely aesthetic and has no physical significance in the diagram", "explanation": "The ratio of lines between charges is physically meaningful and must match the charge magnitude ratio." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "The number of field lines leaving a positive charge is proportional to the magnitude of that charge.",
+      "correct": "True",
+      "correctExplanation": "A charge of 2Q has twice as many field lines as a charge of Q, reflecting the proportionally stronger field it produces.",
+      "distractors": [
+        { "answer": "False", "explanation": "Students may think line count is arbitrary, but the ratio must match the charge magnitude ratio." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the explanation of the no-crossing rule.",
+      "sentence": "If two field lines crossed, the electric field would need to point in {{blank:1}} directions simultaneously at that point, which violates the definition of a {{blank:2}} quantity.",
+      "blanks": {
+        "1": {
+          "correct": "two",
+          "correctExplanation": "Two crossing lines at a point imply two different directions for the field, which is physically impossible.",
+          "distractors": [
+            { "answer": "zero", "explanation": "Zero directions would mean no field exists; the problem is having two conflicting directions." },
+            { "answer": "many", "explanation": "While 'many' captures the idea, exactly two lines crossing means exactly two conflicting directions." }
+          ]
+        },
+        "2": {
+          "correct": "vector",
+          "correctExplanation": "A vector quantity has a single, unique direction at each point; two directions would contradict this definition.",
+          "distractors": [
+            { "answer": "scalar", "explanation": "Scalar quantities have no direction; the issue is that vectors must have one unique direction per point." },
+            { "answer": "constant", "explanation": "Constant means unchanging; the problem is about having a unique direction, not about constancy." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the explanation about conductor surfaces.",
+      "sentence": "Free charges on a conductor redistribute until the {{blank:1}} component of the electric field at the surface is eliminated.",
+      "blanks": {
+        "1": {
+          "correct": "tangential",
+          "correctExplanation": "Any tangential field would exert force on surface charges, moving them until only the perpendicular component remains.",
+          "distractors": [
+            { "answer": "perpendicular", "explanation": "The perpendicular component remains in equilibrium; it is the tangential component that is eliminated." },
+            { "answer": "radial", "explanation": "Radial describes direction from a centre point; the relevant distinction at a surface is tangential versus perpendicular." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about field line spacing.",
+      "sentence": "Evenly spaced, parallel field lines represent a {{blank:1}} field, such as the field between oppositely charged parallel {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "uniform",
+          "correctExplanation": "Even spacing and parallel lines indicate constant magnitude and direction, defining a uniform field.",
+          "distractors": [
+            { "answer": "non-uniform", "explanation": "Non-uniform fields have lines that converge or diverge; evenly spaced parallel lines indicate uniformity." },
+            { "answer": "zero", "explanation": "A zero field would have no lines at all; evenly spaced lines indicate a non-zero uniform field." }
+          ]
+        },
+        "2": {
+          "correct": "plates",
+          "correctExplanation": "The classic example of a uniform field is between two oppositely charged parallel plates.",
+          "distractors": [
+            { "answer": "charges", "explanation": "Two point charges produce a non-uniform field; parallel plates produce the uniform field." },
+            { "answer": "magnets", "explanation": "Magnets produce magnetic fields; the electric uniform field example uses charged parallel plates." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "mc",
+      "question": "A student is asked to draw the field lines around an irregularly shaped conductor with a net positive charge. Where will the field lines be most densely concentrated?",
+      "correct": "Near the sharpest points or edges of the conductor surface",
+      "correctExplanation": "Charge concentrates at sharp points on conductors, producing stronger fields and denser field lines there.",
+      "distractors": [
+        { "answer": "Near the flattest regions of the conductor surface", "explanation": "Flat regions have lower charge density and weaker fields; sharp points concentrate charge and field lines." },
+        { "answer": "At the geometric centre of the conductor body", "explanation": "The field inside a conductor is zero; field lines exist only outside the surface." },
+        { "answer": "Uniformly distributed around the entire conductor surface", "explanation": "Irregular shapes produce non-uniform charge distributions with higher density at sharp features." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An uncharged conducting sphere is placed in an initially uniform electric field. How do the field lines change near the sphere?",
+      "correct": "Lines curve to meet the sphere surface perpendicularly from both sides",
+      "correctExplanation": "Induced charges on the sphere redistribute the field so that all lines arrive and leave perpendicular to the conducting surface.",
+      "distractors": [
+        { "answer": "Lines pass straight through the sphere without any distortion at all", "explanation": "A conductor cannot have internal field lines; charge induction distorts the external field." },
+        { "answer": "Lines are completely blocked by the sphere creating a field-free shadow behind it", "explanation": "While the interior is field-free, field lines curve around the sphere and reconnect behind it." },
+        { "answer": "Lines form closed loops around the sphere creating a magnetic-like pattern", "explanation": "Electric field lines do not form closed loops; they curve to meet the surface perpendicularly." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A diagram shows field lines from a +3Q charge and a −Q charge. How should the field lines be distributed?",
+      "correct": "Three times as many lines leave +3Q as arrive at −Q, with extra lines going to infinity",
+      "correctExplanation": "Line count is proportional to charge; +3Q has three times as many lines as −Q, so two-thirds of them extend to infinity.",
+      "distractors": [
+        { "answer": "Equal numbers of lines leave +3Q and arrive at −Q with none going to infinity", "explanation": "Equal line counts would misrepresent the charge ratio; +3Q has three times the lines of −Q." },
+        { "answer": "All lines from +3Q must terminate on −Q because opposite charges attract", "explanation": "Only as many lines can terminate on −Q as its magnitude allows; excess lines go to infinity." },
+        { "answer": "The −Q charge should have three times as many lines as the +3Q charge", "explanation": "This reverses the proportionality; line count is proportional to charge magnitude, so +3Q has more." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student draws a field line diagram where all lines are perfectly straight around two unequal point charges. Is this correct?",
+      "correct": "No, the field lines should curve because the asymmetric charges create a non-uniform field",
+      "correctExplanation": "Unequal charges produce fields that vary in direction throughout space, causing field lines to curve rather than remain straight.",
+      "distractors": [
+        { "answer": "Yes, field lines are always straight regardless of the charge configuration present", "explanation": "Field lines curve around point charges; straight lines only occur in special cases like uniform fields." },
+        { "answer": "Yes, because only the spacing of lines matters and not their curvature", "explanation": "Both spacing and curvature convey physical information; straight lines around point charges are incorrect." },
+        { "answer": "No, because all field lines must form circles around each individual charge", "explanation": "Field lines radiate outward from charges; they do not form circles around them." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Lightning rods have sharp points at their top. Using field line rules, explain why charge accumulates at the sharp point.",
+      "correct": "The small radius of curvature at the tip concentrates charge density and field lines",
+      "correctExplanation": "On a conductor, charge migrates to regions of highest curvature, creating intense fields at the sharp point that can ionise air.",
+      "distractors": [
+        { "answer": "Sharp points attract more charge from the atmosphere than blunt surfaces", "explanation": "The concentration is due to charge redistribution on the conductor, not atmospheric charge being attracted preferentially." },
+        { "answer": "Sharp points have more surface area so they naturally hold more total charge", "explanation": "Sharp points actually have less area; they have higher charge density, not more total charge." },
+        { "answer": "The material at the tip is a better conductor than the rest of the rod", "explanation": "The entire rod is the same material; charge concentration is due to geometry, not material properties." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Two parallel plates have a small hole in one plate. How do the field lines behave near the hole?",
+      "correct": "Some field lines leak through the hole and curve outward beyond the plate",
+      "correctExplanation": "The hole breaks the uniform field geometry, allowing some field lines to extend beyond the plate and curve outward.",
+      "distractors": [
+        { "answer": "The field lines remain perfectly uniform and straight even through the hole", "explanation": "The hole disrupts the plate geometry, causing fringing and leakage of field lines through it." },
+        { "answer": "All field lines avoid the hole entirely and compress into the solid plate region", "explanation": "Some field lines do pass through the hole; they do not all redirect away from it." },
+        { "answer": "The field lines reverse direction at the hole and point back toward the source", "explanation": "Field lines continue in their general direction; they do not reverse at holes." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A Faraday cage is a closed conducting shell. Using field line rules, explain why the interior field is zero.",
+      "correct": "Induced surface charges create fields that exactly cancel the external field inside the cage",
+      "correctExplanation": "Free charges on the conductor redistribute until all internal field contributions cancel, and lines meet the surface perpendicularly.",
+      "distractors": [
+        { "answer": "The metal walls physically block field lines from entering the enclosed space", "explanation": "Fields are not 'blocked' by material; charge redistribution creates cancellation inside." },
+        { "answer": "The cage absorbs all the electromagnetic energy from the external electric field", "explanation": "Energy is not absorbed; the field is cancelled by the arrangement of induced charges." },
+        { "answer": "The interior field is not actually zero but is merely reduced to a very small value", "explanation": "For an ideal conductor in electrostatics, the interior field is exactly zero, not just small." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about charge distribution on conductors.",
+      "sentence": "Charge concentrates at {{blank:1}} points on a conductor surface, producing the most {{blank:2}} field lines there.",
+      "blanks": {
+        "1": {
+          "correct": "sharp",
+          "correctExplanation": "Sharp points have the smallest radius of curvature, causing the highest charge density and strongest fields.",
+          "distractors": [
+            { "answer": "flat", "explanation": "Flat regions have lower charge density; charge preferentially accumulates at sharp features." },
+            { "answer": "central", "explanation": "Central regions of a surface have lower curvature; charge concentrates at high-curvature points." }
+          ]
+        },
+        "2": {
+          "correct": "densely packed",
+          "correctExplanation": "Higher charge density produces a stronger field, represented by more closely spaced field lines.",
+          "distractors": [
+            { "answer": "widely spaced", "explanation": "Widely spaced lines indicate a weaker field; concentrated charge produces densely packed lines." },
+            { "answer": "randomly placed", "explanation": "Field lines follow physical rules and are not randomly placed; they are denser where the field is stronger." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about induced charges.",
+      "sentence": "When a conductor is placed in an external field, induced charges on its surface redistribute until the field {{blank:1}} the conductor is zero.",
+      "blanks": {
+        "1": {
+          "correct": "inside",
+          "correctExplanation": "Free charges move until the induced field exactly cancels the external field throughout the conductor's interior.",
+          "distractors": [
+            { "answer": "outside", "explanation": "The field outside the conductor is modified but not zero; the internal field is what becomes zero." },
+            { "answer": "around", "explanation": "The field around (outside) the conductor still exists; it is the interior field that cancels to zero." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about unequal charges.",
+      "sentence": "For a +2Q and −Q pair, {{blank:1}} of the field lines from +2Q terminate on −Q, and the remaining lines extend to {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "half",
+          "correctExplanation": "Since −Q can only absorb lines proportional to its magnitude, only half of +2Q's lines terminate on −Q.",
+          "distractors": [
+            { "answer": "all", "explanation": "All lines cannot terminate on −Q because its magnitude is only half that of +2Q." },
+            { "answer": "none", "explanation": "Some lines do terminate on −Q; its charge absorbs a number proportional to its magnitude." }
+          ]
+        },
+        "2": {
+          "correct": "infinity",
+          "correctExplanation": "The excess lines that cannot terminate on −Q extend outward to infinity.",
+          "distractors": [
+            { "answer": "zero", "explanation": "Lines do not go to 'zero'; they extend to infinity when there is no nearby charge to terminate them." },
+            { "answer": "the midpoint", "explanation": "Lines do not terminate at the midpoint; they extend away from both charges toward infinity." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "mc",
+      "question": "A student claims that because field lines are just a drawing convention, the rules for drawing them are arbitrary and have no physical basis. Evaluate this claim.",
+      "correct": "The rules are not arbitrary; each reflects a fundamental physical property of the electric field",
+      "correctExplanation": "The no-crossing rule reflects the vector nature of fields, the direction rule reflects the force convention, and the perpendicular rule reflects charge equilibrium.",
+      "distractors": [
+        { "answer": "The student is correct because field lines are a purely mathematical construction", "explanation": "While field lines are a representation, the drawing rules encode real physical constraints of the field." },
+        { "answer": "Only the no-crossing rule has physical basis; all other rules are arbitrary choices", "explanation": "All rules have physical bases: direction from charge convention, perpendicularity from conductor equilibrium." },
+        { "answer": "The rules are valid only in two dimensions and break down in three-dimensional space", "explanation": "The rules apply in all dimensions; they are fundamental properties of the electric field." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Compare the field line rules for electric fields with those for magnetic fields. Which key difference exists?",
+      "correct": "Electric field lines start and end on charges, while magnetic field lines always form closed loops",
+      "correctExplanation": "Electric monopoles exist, giving field lines start and end points; no magnetic monopoles exist, so magnetic lines must close on themselves.",
+      "distractors": [
+        { "answer": "Electric field lines form closed loops while magnetic field lines start and end on poles", "explanation": "This is reversed; electric lines have endpoints on charges, magnetic lines form closed loops." },
+        { "answer": "Electric field lines can cross but magnetic field lines cannot cross each other", "explanation": "Neither type of field line can cross; both are vector fields with unique directions at each point." },
+        { "answer": "There are no differences; both types of field lines follow identical drawing rules", "explanation": "The key difference is that electric lines have endpoints while magnetic lines are always closed." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Analyse why the perpendicular rule for conductors is a consequence of electrostatic equilibrium, not just a drawing convention.",
+      "correct": "If a tangential component existed, free charges would accelerate along the surface until it vanished",
+      "correctExplanation": "Mobile charges on a conductor respond to any tangential field by moving, and this continues until only the perpendicular component remains.",
+      "distractors": [
+        { "answer": "The perpendicular rule is enforced by the rigid crystal structure of metallic conductors", "explanation": "Crystal structure does not determine field line angles; charge mobility and equilibrium do." },
+        { "answer": "External fields are always perpendicular to surfaces regardless of material properties", "explanation": "This is only true for conductors in equilibrium; insulator surfaces can have tangential field components." },
+        { "answer": "The rule applies only during the transient phase and not at equilibrium itself", "explanation": "The rule describes the equilibrium state; during transients, tangential components can temporarily exist." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A researcher proposes that at a point equidistant from two equal and opposite charges, the field should have two directions because both charges contribute equally. Critique this reasoning.",
+      "correct": "Both contributions are vectors that add to give a single resultant direction at that point",
+      "correctExplanation": "Vector addition combines both contributions into one net field; at the midpoint of a dipole, the fields add (both point the same way) to give a single direction.",
+      "distractors": [
+        { "answer": "The researcher is correct and field lines should cross at the equidistant point", "explanation": "Vector addition always yields a single resultant; field lines never cross." },
+        { "answer": "The field is zero at the equidistant point so the question of direction is meaningless", "explanation": "At the midpoint of a dipole, the fields reinforce rather than cancel; the field is non-zero." },
+        { "answer": "Only the closer charge determines the field direction at any given measurement point", "explanation": "Both charges contribute; their vector sum determines the field, not either one alone." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Evaluate the statement: 'The number of field lines in a diagram is physically meaningful.' Is this accurate?",
+      "correct": "The ratio of lines between charges is meaningful, but the absolute number is a drawing convention",
+      "correctExplanation": "Using 8 or 16 lines for a charge is arbitrary, but a charge of 2Q must always have twice the lines of Q to represent the field correctly.",
+      "distractors": [
+        { "answer": "Both the ratio and absolute number of field lines are physically determined quantities", "explanation": "The absolute number is chosen for clarity; only the ratio between different charges is physically constrained." },
+        { "answer": "Neither the ratio nor the absolute number has any physical significance at all", "explanation": "The ratio is physically meaningful as it reflects relative charge magnitudes and field strengths." },
+        { "answer": "The absolute number is meaningful but the ratio between charges is a free choice", "explanation": "This is reversed; the ratio must match charge magnitudes, while the absolute number is a convention." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A complex charge configuration produces a point where the electric field is exactly zero. How should this null point appear in a correct field line diagram?",
+      "correct": "No field lines pass through the null point; nearby lines curve around it",
+      "correctExplanation": "At a null point the field is zero, so no line can pass through it; surrounding lines deflect around the zero-field location.",
+      "distractors": [
+        { "answer": "Many field lines converge and cross at the null point to show cancellation", "explanation": "Lines never cross; a null point has no lines through it, with nearby lines curving away." },
+        { "answer": "A single field line must pass through the null point to connect the surrounding field", "explanation": "The field is zero at the null point, so no line can exist there; it is a gap in the pattern." },
+        { "answer": "The null point should be marked with a special symbol but lines pass through normally", "explanation": "Lines cannot pass through a zero-field point; the null point appears as a void in the line pattern." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Consider the limitations of field line diagrams as a representation of real electric fields. Which is the most significant limitation?",
+      "correct": "Field lines suggest the field exists only along the lines, when it actually exists continuously everywhere",
+      "correctExplanation": "Discrete lines can mislead students into thinking the field is zero between lines; the field is a continuous quantity at every point.",
+      "distractors": [
+        { "answer": "Field line diagrams cannot show the time variation of rapidly changing fields", "explanation": "While true, this is less fundamental than the discrete-versus-continuous misrepresentation." },
+        { "answer": "Field lines can only represent two-dimensional fields not three-dimensional ones", "explanation": "3D field line diagrams exist; the discrete nature is a more fundamental limitation." },
+        { "answer": "Field line diagrams require colour to convey direction so black-and-white versions fail", "explanation": "Arrows indicate direction without colour; the discrete-versus-continuous issue is more significant." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Assess how the field line rules would need to change if magnetic monopoles were discovered to exist.",
+      "correct": "Magnetic field lines would then have start and end points on monopoles, like electric field lines",
+      "correctExplanation": "Currently magnetic lines form closed loops because no monopoles exist; monopoles would provide endpoints, making magnetic field line rules similar to electric ones.",
+      "distractors": [
+        { "answer": "Electric field line rules would change to require closed loops matching magnetic patterns", "explanation": "Electric monopoles (charges) exist; discovering magnetic monopoles would not change electric field rules." },
+        { "answer": "Both electric and magnetic field lines would need to form closed loops in all cases", "explanation": "Electric monopoles guarantee open electric field lines; magnetic monopoles would create open magnetic lines." },
+        { "answer": "No rules would change because monopoles do not affect field line drawing conventions", "explanation": "Monopoles would fundamentally change magnetic field line topology from closed loops to open lines." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the comparison of electric and magnetic field lines.",
+      "sentence": "Electric field lines start on {{blank:1}} charges and end on negative charges, while magnetic field lines form {{blank:2}} loops because magnetic monopoles do not exist.",
+      "blanks": {
+        "1": {
+          "correct": "positive",
+          "correctExplanation": "Electric field lines originate on positive charges by convention.",
+          "distractors": [
+            { "answer": "negative", "explanation": "Field lines start on positive charges and terminate on negative charges, not the reverse." },
+            { "answer": "neutral", "explanation": "Neutral objects do not produce field lines; lines originate from positive charges." }
+          ]
+        },
+        "2": {
+          "correct": "closed",
+          "correctExplanation": "Without magnetic monopoles, magnetic field lines have no start or end points and must form closed loops.",
+          "distractors": [
+            { "answer": "open", "explanation": "Open lines would require start and end points (monopoles); magnetic lines are closed because monopoles do not exist." },
+            { "answer": "straight", "explanation": "Magnetic field lines are typically curved; closed loops is the key distinction from electric field lines." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the analysis of field line limitations.",
+      "sentence": "The main limitation of field line diagrams is that they are {{blank:1}}, which can create the false impression that the field is zero in the spaces {{blank:2}} lines.",
+      "blanks": {
+        "1": {
+          "correct": "discrete",
+          "correctExplanation": "Field lines are drawn as separate lines, while the actual field is a continuous quantity existing everywhere.",
+          "distractors": [
+            { "answer": "continuous", "explanation": "The real field is continuous; the lines are discrete, which is the limitation." },
+            { "answer": "accurate", "explanation": "Field line diagrams have limitations precisely because they are not fully accurate representations." }
+          ]
+        },
+        "2": {
+          "correct": "between",
+          "correctExplanation": "Students may incorrectly think the field is zero in the gaps between drawn lines, but the field exists everywhere.",
+          "distractors": [
+            { "answer": "along", "explanation": "The field is clearly represented along the lines; the problem is the spaces between them." },
+            { "answer": "beyond", "explanation": "The issue is the gaps between lines in the diagram, not the space beyond the entire diagram." }
+          ]
+        }
+      }
+    }
+  ]
+}

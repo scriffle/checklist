@@ -1,0 +1,564 @@
+{
+  "_link": {
+    "uuid": "lp-c5541cf2-7470-2234-dafa-344eb2f90a78",
+    "version": 1,
+    "contentHash": "hash-79bb8b98",
+    "title": "I can explain and sketch the shapes of the flux and emf vs time graphs for a DC generator",
+    "generatedAt": "2026-03-07T00:00:00.000Z"
+  },
+
+  "toLevel2": [
+    {
+      "type": "mc",
+      "question": "Which of the following best describes the shape of the magnetic flux versus time graph for the coil of a DC generator rotating at constant speed in a uniform magnetic field?",
+      "correct": "Sinusoidal, alternating between positive and negative values",
+      "correctExplanation": "As the coil rotates at constant speed, the angle between the area vector and the field changes uniformly, causing the flux to vary as a sinusoidal function of time.",
+      "distractors": [
+        { "answer": "A straight horizontal line at a constant positive value", "explanation": "A constant flux would mean no change in the coil's orientation, which does not occur during continuous rotation." },
+        { "answer": "A linear function that increases steadily with time", "explanation": "A linearly increasing flux would require the coil to continuously increase its alignment with the field, which is not possible during rotation." },
+        { "answer": "A series of positive-only humps with no negative values", "explanation": "This describes the rectified emf output of a DC generator, not the flux through the coil. The flux itself alternates between positive and negative values." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "In a DC generator, the split ring commutator causes the terminal emf to have which of the following shapes when plotted against time?",
+      "correct": "A rectified sinusoidal shape in which all values are positive",
+      "correctExplanation": "The split ring commutator reverses the connection to the external circuit every half revolution, reflecting any negative emf values to positive and producing a rectified sinusoidal output.",
+      "distractors": [
+        { "answer": "A sinusoidal shape that alternates between positive and negative values", "explanation": "This describes the emf output of an AC generator with slip rings. The split ring commutator in a DC generator prevents negative output values." },
+        { "answer": "A constant positive value that does not change with time", "explanation": "The output of a single-coil DC generator is not constant; it varies between zero and the peak emf in a rectified sinusoidal pattern." },
+        { "answer": "A sawtooth waveform that increases linearly then drops suddenly", "explanation": "A sawtooth shape is not produced by electromagnetic induction in a rotating coil. The emf varies sinusoidally before rectification." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "At which point in the rotation of a DC generator coil is the induced emf at its maximum value?",
+      "correct": "When the magnetic flux through the coil is zero",
+      "correctExplanation": "The emf equals the negative rate of change of flux. When the flux is zero (at a zero crossing of the flux–time graph), the gradient of the flux graph is at its steepest, so the emf is at its maximum.",
+      "distractors": [
+        { "answer": "When the magnetic flux through the coil is at its maximum value", "explanation": "When the flux is at its maximum, the flux–time graph has zero gradient (a turning point), so the rate of change of flux is zero and the emf is zero." },
+        { "answer": "When the coil has completed exactly one full revolution", "explanation": "After one full revolution the coil returns to its starting position. The emf at this point depends on the starting orientation, not on having completed a full turn." },
+        { "answer": "When the magnetic flux through the coil is at half its peak value", "explanation": "At half the peak flux, the emf is not at its maximum. The emf is greatest when the flux is zero and the rate of change of flux is at its steepest." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "When the magnetic flux through the rotating coil of a DC generator is at its maximum positive value, the induced emf is",
+      "correct": "zero",
+      "correctExplanation": "At a maximum of the flux–time graph, the gradient is zero. Since the emf equals the negative rate of change of flux, the emf is zero at this instant.",
+      "distractors": [
+        { "answer": "at its maximum positive value", "explanation": "The emf and flux do not peak at the same instant. The emf peaks when the flux is zero, not when the flux is at its maximum." },
+        { "answer": "at half its peak value", "explanation": "At a flux maximum the gradient of the flux–time graph is zero, so the emf is zero, not half its peak." },
+        { "answer": "equal to the peak flux multiplied by the angular velocity", "explanation": "While ε_peak = NBAω, this peak value occurs when the flux is zero, not when the flux is at its maximum." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A DC generator coil starts with its plane parallel to the magnetic field. At this initial instant, the magnetic flux through the coil is",
+      "correct": "zero",
+      "correctExplanation": "When the plane of the coil is parallel to the field, the area vector (normal to the coil) is perpendicular to the field. Since Φ_B = BAcos θ and θ = 90°, the flux is zero.",
+      "distractors": [
+        { "answer": "at its maximum positive value", "explanation": "The flux is maximum when the area vector is parallel to the field, which occurs when the coil plane is perpendicular to the field, not parallel." },
+        { "answer": "at its maximum negative value", "explanation": "The flux magnitude is zero when the coil plane is parallel to the field, as the area vector is perpendicular to the field direction." },
+        { "answer": "at half its maximum value", "explanation": "The flux is zero when the coil plane is parallel to the field, because the angle between the area vector and the field is 90°." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Recall the shape of the flux–time graph for a DC generator coil rotating at constant speed.",
+      "sentence": "The magnetic flux through a coil rotating in a uniform field varies as a {{blank:1}} function of time.",
+      "blanks": {
+        "1": {
+          "correct": "sinusoidal",
+          "correctExplanation": "As the coil rotates at constant angular velocity, the angle between the area vector and the field changes uniformly, producing a sinusoidal variation in flux.",
+          "distractors": [
+            { "answer": "linear", "explanation": "A linear variation would require a constant rate of flux change, which does not occur during uniform circular rotation." },
+            { "answer": "constant", "explanation": "The flux changes continuously as the coil rotates, so it cannot remain constant." },
+            { "answer": "exponential", "explanation": "Exponential variation does not arise from uniform rotation of a coil in a uniform magnetic field." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Recall what the split ring commutator does to the emf output of a DC generator.",
+      "sentence": "In a DC generator, the split ring commutator {{blank:1}} the output emf so that the terminal voltage is always {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "rectifies",
+          "correctExplanation": "The commutator reverses the connection to the external circuit every half revolution, converting the alternating emf into a unidirectional (rectified) output.",
+          "distractors": [
+            { "answer": "amplifies", "explanation": "The commutator does not increase the magnitude of the emf. It changes the sign of the output during alternate half-cycles." },
+            { "answer": "reduces", "explanation": "The commutator does not decrease the magnitude of the emf. Its function is to ensure the output is always the same sign." },
+            { "answer": "stabilises", "explanation": "The output of a single-coil DC generator is not constant. The commutator rectifies the signal but does not make it steady." }
+          ]
+        },
+        "2": {
+          "correct": "positive",
+          "correctExplanation": "By reversing the connection every half turn, the commutator ensures that what would have been negative emf values are reflected to positive, keeping the terminal voltage always positive.",
+          "distractors": [
+            { "answer": "negative", "explanation": "The purpose of the commutator is to make the output positive (or zero), not negative." },
+            { "answer": "zero", "explanation": "The terminal voltage is not always zero. It varies between zero and the peak emf but remains non-negative." },
+            { "answer": "constant", "explanation": "A single-coil DC generator produces a varying (pulsating) output. The commutator makes it unidirectional but not constant." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Recall when the induced emf in a generator reaches its maximum value.",
+      "sentence": "The induced emf is at its maximum when the rate of change of magnetic {{blank:1}} is greatest.",
+      "blanks": {
+        "1": {
+          "correct": "flux",
+          "correctExplanation": "Faraday's law states that the induced emf equals the rate of change of magnetic flux through the coil. The emf is greatest when this rate of change is largest.",
+          "distractors": [
+            { "answer": "field strength", "explanation": "In a generator with a uniform field, the field strength does not change. It is the flux through the coil that changes as the coil rotates." },
+            { "answer": "force", "explanation": "The induced emf is determined by the rate of change of flux, not the magnetic force. Force is relevant to motor operation, not emf generation." },
+            { "answer": "energy", "explanation": "While energy is transferred during induction, the emf is directly related to the rate of change of magnetic flux, not energy." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "tf",
+      "question": "In a DC generator, the magnetic flux through the rotating coil varies sinusoidally with time, taking both positive and negative values.",
+      "correct": "True",
+      "correctExplanation": "The flux through the coil depends on the angle between the area vector and the field. As the coil rotates through 360°, this angle passes through all values, causing the flux to vary sinusoidally between positive and negative maxima.",
+      "distractors": [
+        { "answer": "False", "explanation": "The split ring commutator rectifies the terminal emf, not the flux through the coil. The flux through the coil itself still varies sinusoidally between positive and negative values." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "The terminal emf of a DC generator alternates between positive and negative values, just like an AC generator.",
+      "correct": "False",
+      "correctExplanation": "The split ring commutator in a DC generator reverses the external connections every half revolution, reflecting all negative emf values to positive. The terminal emf is therefore always positive (or zero), unlike an AC generator.",
+      "distractors": [
+        { "answer": "True", "explanation": "This would be true for an AC generator with slip rings. The split ring commutator in a DC generator ensures the output is always the same polarity." }
+      ]
+    }
+  ],
+
+  "toLevel3": [
+    {
+      "type": "mc",
+      "question": "A student is asked to explain why the emf of a DC generator is at its peak when the flux through the coil is zero. Which response best explains this relationship?",
+      "correct": "The emf equals the negative rate of change of flux, and the rate of change is greatest when the sinusoidal flux graph crosses zero.",
+      "correctExplanation": "At a zero crossing of a sinusoidal curve, the gradient is at its steepest. Since ε = −dΦ_B/dt, the emf has its largest magnitude when the flux is changing most rapidly, which occurs at the zero crossings.",
+      "distractors": [
+        { "answer": "The emf is proportional to the total flux through the coil, and flux is greatest at the zero crossing.", "explanation": "The emf depends on the rate of change of flux, not on the flux value itself. At the zero crossing, the flux is zero, not at its greatest." },
+        { "answer": "The commutator reverses the emf precisely at the instant the flux is zero, creating a peak.", "explanation": "The commutator reverses the connection at the point where the emf naturally crosses zero (flux at maximum), not where the flux is zero." },
+        { "answer": "The coil moves fastest through the field when the flux is zero, increasing the emf.", "explanation": "The coil rotates at constant angular velocity. The emf is large at this point because the rate of change of flux is greatest, not because the coil speed varies." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "The flux through a DC generator coil is described by Φ_B = Φ_peak sin(ωt). Which expression best describes the shape of the terminal emf as a function of time?",
+      "correct": "ε_peak |cos(ωt)|",
+      "correctExplanation": "The emf is proportional to −dΦ_B/dt = −Φ_peak ω cos(ωt), which is a cosine function. The split ring commutator rectifies this, taking the absolute value so that all output is positive: ε = ε_peak |cos(ωt)|.",
+      "distractors": [
+        { "answer": "ε_peak sin(ωt)", "explanation": "The emf is the derivative of the flux, not the flux itself. The derivative of sin(ωt) is proportional to cos(ωt), and rectification gives |cos(ωt)|." },
+        { "answer": "ε_peak cos(ωt)", "explanation": "Without the absolute value, this describes the emf of an AC generator. The split ring commutator in a DC generator rectifies the output, making all values positive." },
+        { "answer": "|ε_peak sin(ωt)|", "explanation": "The emf is proportional to the derivative of flux, not to the flux itself. The rectified form of the derivative of sin(ωt) is |cos(ωt)|, not |sin(ωt)|." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A DC generator coil starts with its plane parallel to the magnetic field. As the coil rotates through the first quarter turn, the magnetic flux through the coil",
+      "correct": "increases from zero to its maximum positive value",
+      "correctExplanation": "When the coil plane is parallel to the field, the area vector is perpendicular to the field and the flux is zero. As the coil rotates through 90°, the area vector moves toward alignment with the field, and the flux increases to its maximum.",
+      "distractors": [
+        { "answer": "decreases from its maximum positive value to zero", "explanation": "This would occur if the coil started perpendicular to the field (maximum flux) and rotated to parallel. With the coil starting parallel to the field, the flux starts at zero." },
+        { "answer": "remains constant at zero throughout the quarter turn", "explanation": "The flux changes as the coil rotates. It is only zero at the instant the coil plane is parallel to the field." },
+        { "answer": "increases from its maximum negative value to zero", "explanation": "The flux starts at zero (not at its negative maximum) when the coil plane is parallel to the field." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Compared to the emf–time graph of an AC generator operating at the same rotational frequency, the emf–time graph of a DC generator differs because the DC generator",
+      "correct": "has all negative half-cycles reflected above the time axis to become positive",
+      "correctExplanation": "The split ring commutator reverses the connection to the external circuit every half revolution. This reflects any negative portions of the emf waveform above the axis, producing a rectified sinusoidal output that is always positive.",
+      "distractors": [
+        { "answer": "produces a higher peak emf due to the action of the commutator", "explanation": "The commutator does not change the peak emf. It only changes the sign of the output during alternate half-cycles." },
+        { "answer": "produces a constant emf rather than a varying one", "explanation": "A single-coil DC generator still produces a varying (pulsating) output. The commutator makes it unidirectional, not constant." },
+        { "answer": "oscillates at twice the frequency because the commutator doubles the speed", "explanation": "The commutator does not change the rotation speed. The rectified emf peaks appear twice per revolution because both the original positive and reflected negative peaks are now positive." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Priya examines a flux versus time graph for a DC generator and notices that the flux is momentarily constant at a turning point. At this instant, the induced emf is",
+      "correct": "zero, because the rate of change of flux is zero at a turning point",
+      "correctExplanation": "At a turning point of the flux–time graph, the gradient is zero. Since the emf equals the negative rate of change of flux (ε = −dΦ_B/dt), the emf must be zero when the gradient is zero.",
+      "distractors": [
+        { "answer": "at its maximum value, because the flux has reached its peak", "explanation": "The emf depends on the rate of change of flux, not on the flux value. At a turning point the rate of change is zero, so the emf is zero, not at its maximum." },
+        { "answer": "at half its peak value, because the flux is changing direction", "explanation": "The fact that the flux is about to change direction does not mean the emf is at half its peak. At the turning point itself, the instantaneous rate of change is zero." },
+        { "answer": "undefined, because Faraday's law does not apply at turning points", "explanation": "Faraday's law applies at all instants, including turning points. At a turning point, dΦ_B/dt = 0, so the emf is simply zero." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "The frequency at which the rectified emf peaks occur in a DC generator, compared to the frequency of rotation of the coil, is",
+      "correct": "twice the rotational frequency",
+      "correctExplanation": "Each full revolution produces one positive and one negative peak in the unrectified emf. After rectification by the commutator, both appear as positive peaks. Therefore two emf peaks occur per revolution, giving a peak frequency of 2f.",
+      "distractors": [
+        { "answer": "equal to the rotational frequency", "explanation": "There are two emf peaks per revolution (one from each half-cycle reflected to positive), so the peak frequency is 2f, not f." },
+        { "answer": "half the rotational frequency", "explanation": "Two peaks occur per revolution, not one peak every two revolutions. The peak frequency is 2f, not f/2." },
+        { "answer": "four times the rotational frequency", "explanation": "Only two peaks occur per revolution (one from each half-cycle), not four. The peak frequency is 2f." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Consider the mathematical relationship between the flux and emf graphs for a generator.",
+      "sentence": "The emf in a generator is related to the flux by the equation ε = −dΦ_B/dt, meaning the emf equals the negative {{blank:1}} of the flux–time graph.",
+      "blanks": {
+        "1": {
+          "correct": "gradient",
+          "correctExplanation": "Faraday's law states ε = −dΦ_B/dt, which means the emf at any instant equals the negative of the slope (gradient) of the flux–time graph at that instant.",
+          "distractors": [
+            { "answer": "area", "explanation": "The area under a graph represents an integral, not a derivative. The emf is the derivative (gradient) of the flux–time graph, not its area." },
+            { "answer": "amplitude", "explanation": "The amplitude is the peak value of the graph. The emf at each instant is determined by the gradient of the flux–time graph, not its overall amplitude." },
+            { "answer": "intercept", "explanation": "The intercept is the value where the graph crosses an axis. The emf is determined by the gradient of the flux–time graph at each instant." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Consider the flux and emf values when the coil of a DC generator is perpendicular to the magnetic field.",
+      "sentence": "When the coil of a DC generator is perpendicular to the magnetic field, the flux through the coil is at its {{blank:1}} value and the terminal emf is {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "maximum",
+          "correctExplanation": "When the coil is perpendicular to the field, the area vector is parallel to the field. The flux Φ_B = BAcos θ is maximised when θ = 0° (area vector parallel to field).",
+          "distractors": [
+            { "answer": "zero", "explanation": "The flux is zero when the coil plane is parallel to the field (area vector perpendicular to the field), not when it is perpendicular." },
+            { "answer": "minimum", "explanation": "The flux magnitude is at its largest when the coil is perpendicular to the field. The minimum magnitude (zero) occurs when the coil is parallel to the field." },
+            { "answer": "average", "explanation": "The flux is at its peak, not its average value, when the area vector is aligned with the field." }
+          ]
+        },
+        "2": {
+          "correct": "zero",
+          "correctExplanation": "At the flux maximum, the gradient of the flux–time graph is zero (a turning point). Since ε = −dΦ_B/dt, the emf is zero when the rate of change of flux is zero.",
+          "distractors": [
+            { "answer": "at its peak", "explanation": "The emf peaks when the flux is zero (steepest gradient), not when the flux is at its maximum (zero gradient)." },
+            { "answer": "at half its peak", "explanation": "The emf is exactly zero at a flux turning point, not at some intermediate value." },
+            { "answer": "increasing rapidly", "explanation": "At the flux maximum, the emf is momentarily zero before it begins to increase. It is not already increasing rapidly at this instant." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Consider how the split ring commutator affects the emf output each revolution.",
+      "sentence": "The split ring commutator in a DC generator reverses the connection to the external circuit every {{blank:1}} revolution, producing a rectified output.",
+      "blanks": {
+        "1": {
+          "correct": "half",
+          "correctExplanation": "The two halves of the split ring swap their contact with the brushes every half revolution (180° of rotation), reversing the connection and ensuring the current in the external circuit always flows in the same direction.",
+          "distractors": [
+            { "answer": "full", "explanation": "If the connection reversed only once per full revolution, the output would still alternate. The commutator must reverse every half revolution to maintain unidirectional current." },
+            { "answer": "quarter", "explanation": "Reversing every quarter turn would create an unnecessarily complex waveform. The commutator reverses every half revolution, coinciding with the natural sign change of the emf." },
+            { "answer": "two", "explanation": "Reversing every two revolutions would allow the emf to alternate for most of the cycle. The commutator reverses every half revolution." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "tf",
+      "question": "The emf–time graph for a DC generator can be obtained by reflecting all negative portions of the corresponding AC generator emf–time graph above the horizontal axis.",
+      "correct": "True",
+      "correctExplanation": "The split ring commutator performs the equivalent of taking the absolute value of the emf. Graphically, this corresponds to reflecting all portions of the waveform that fall below the time axis upward to become positive.",
+      "distractors": [
+        { "answer": "False", "explanation": "The rectification performed by the commutator is mathematically equivalent to taking the absolute value of the AC emf, which is the same as reflecting negative portions above the axis." }
+      ]
+    }
+  ],
+
+  "toLevel4": [
+    {
+      "type": "mc",
+      "question": "Kenji sketches the flux–time graph for a DC generator coil rotating at 50 Hz. The period of the sinusoidal flux variation is",
+      "correct": "0.020 s",
+      "correctExplanation": "The flux completes one full sinusoidal cycle per revolution of the coil. At 50 Hz, one revolution takes T = 1/f = 1/50 = 0.020 s.",
+      "distractors": [
+        { "answer": "0.010 s", "explanation": "0.010 s is the period of the rectified emf pattern (T/2), not the flux. The flux completes one full cycle per revolution, with period T = 1/50 = 0.020 s." },
+        { "answer": "0.040 s", "explanation": "This would correspond to a frequency of 25 Hz. At 50 Hz, the period is T = 1/50 = 0.020 s." },
+        { "answer": "50 s", "explanation": "This confuses frequency with period. The period is the reciprocal of frequency: T = 1/f = 1/50 = 0.020 s, not 50 s." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A DC generator coil has a peak flux of 2.0 × 10⁻³ Wb and rotates at 25 Hz. The coil starts with its plane parallel to the field at t = 0. At t = 0.010 s, the magnetic flux through the coil is closest to",
+      "correct": "2.0 × 10⁻³ Wb",
+      "correctExplanation": "At 25 Hz, the period is T = 1/25 = 0.040 s. One quarter period is T/4 = 0.010 s. Starting from zero flux (coil parallel to field), the flux reaches its maximum at one quarter period: Φ_B = Φ_peak sin(2π × 25 × 0.010) = Φ_peak sin(π/2) = 2.0 × 10⁻³ Wb.",
+      "distractors": [
+        { "answer": "0 Wb", "explanation": "The flux is zero at t = 0 (starting position) and at t = T/2 = 0.020 s (half period), not at t = T/4 = 0.010 s." },
+        { "answer": "1.0 × 10⁻³ Wb", "explanation": "This is half the peak flux. At t = T/4 the sinusoidal flux has reached its full peak value, not half of it." },
+        { "answer": "1.4 × 10⁻³ Wb", "explanation": "This value (approximately Φ_peak/√2) would occur at t = T/8. At t = T/4 = 0.010 s, the flux has reached its full peak of 2.0 × 10⁻³ Wb." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Amara observes that the emf output of a DC generator has positive peaks occurring every 0.010 s. The frequency of rotation of the coil is",
+      "correct": "50 Hz",
+      "correctExplanation": "The rectified emf of a DC generator produces two positive peaks per revolution (one from each half-cycle). If peaks occur every 0.010 s, the half-period is 0.010 s, giving T = 0.020 s and f = 1/T = 50 Hz.",
+      "distractors": [
+        { "answer": "100 Hz", "explanation": "This would give T = 0.010 s and peaks every 0.005 s. With peaks every 0.010 s, the half-period is 0.010 s, so T = 0.020 s and f = 50 Hz." },
+        { "answer": "25 Hz", "explanation": "At 25 Hz, T = 0.040 s and peaks would occur every T/2 = 0.020 s, not every 0.010 s." },
+        { "answer": "10 Hz", "explanation": "At 10 Hz, T = 0.100 s and peaks would occur every T/2 = 0.050 s, not every 0.010 s." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Wei examines the emf–time graph of a DC generator and counts 6 complete positive humps in a time interval of 0.060 s. The rotational frequency of the coil is",
+      "correct": "50 Hz",
+      "correctExplanation": "Each positive hump spans a half-period of the rotation: T/2 = 0.060/6 = 0.010 s. Therefore T = 0.020 s and f = 1/0.020 = 50 Hz.",
+      "distractors": [
+        { "answer": "100 Hz", "explanation": "At 100 Hz, each hump would span 0.005 s and there would be 12 humps in 0.060 s, not 6." },
+        { "answer": "6.0 Hz", "explanation": "This incorrectly uses 6 humps ÷ 1 s = 6 Hz. Each hump corresponds to a half revolution, so the hump frequency is 2f, not f." },
+        { "answer": "25 Hz", "explanation": "At 25 Hz, T = 0.040 s and each hump spans 0.020 s. In 0.060 s there would be only 3 humps, not 6." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A DC generator has a peak emf of 12 V. At the instant when the flux through the coil is at half its peak value and increasing, the terminal emf is closest to",
+      "correct": "10 V",
+      "correctExplanation": "If Φ_B = Φ_peak sin(ωt), then when Φ_B = Φ_peak/2, sin(ωt) = 0.5 and ωt = π/6 (30°). The terminal emf is ε_peak|cos(ωt)| = 12 × cos(30°) = 12 × 0.866 = 10.4 V ≈ 10 V.",
+      "distractors": [
+        { "answer": "6.0 V", "explanation": "This results from incorrectly using sin(30°) × 12 = 6 V. The emf depends on cos(ωt), not sin(ωt), because the emf is the derivative of the flux." },
+        { "answer": "12 V", "explanation": "The emf is 12 V only when the flux is zero (cos(ωt) = 1). When the flux is at half its peak, the emf is less than the peak value." },
+        { "answer": "0 V", "explanation": "The emf is zero when the flux is at its maximum or minimum (gradient is zero), not when the flux is at half its peak." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Fatima correctly sketches the emf–time graph for a DC generator and draws the emf reaching zero at regular intervals. These zero points correspond to the instants when the coil plane is",
+      "correct": "perpendicular to the magnetic field",
+      "correctExplanation": "The emf is zero when dΦ_B/dt = 0, which occurs at the turning points of the flux–time graph (flux maxima and minima). The flux is at its extreme values when the coil plane is perpendicular to the field (area vector parallel to the field).",
+      "distractors": [
+        { "answer": "parallel to the magnetic field", "explanation": "When the coil plane is parallel to the field, the flux is zero and changing most rapidly, so the emf is at its peak, not zero." },
+        { "answer": "at 45° to the magnetic field", "explanation": "At 45° the flux is at an intermediate value with a non-zero rate of change, so the emf is not zero." },
+        { "answer": "momentarily stationary", "explanation": "The coil rotates at constant angular velocity and is never stationary. The emf reaches zero due to the flux gradient being zero, not because the coil stops." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Dimitri compares the flux–time and emf–time graphs of a DC generator plotted on the same time axis. He observes that the emf peaks occur at the same instants as the",
+      "correct": "zero crossings of the flux graph",
+      "correctExplanation": "The emf is proportional to the negative gradient of the flux. A sinusoidal function has its steepest gradient at its zero crossings, so the emf is at its maximum when the flux passes through zero.",
+      "distractors": [
+        { "answer": "peaks of the flux graph", "explanation": "At the peaks of the flux graph the gradient is zero, so the emf is zero at these instants, not at its maximum." },
+        { "answer": "midpoints between the flux peaks and zero crossings", "explanation": "The steepest gradient of a sinusoidal curve occurs at the zero crossings, not at intermediate points." },
+        { "answer": "points where the flux is constant", "explanation": "The flux is momentarily constant only at its turning points, where the gradient is zero and the emf is zero." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Consider the periods of the flux and emf graphs for a DC generator rotating at 50 Hz.",
+      "sentence": "A DC generator coil rotates at a frequency of 50 Hz. The period of one complete cycle of the flux–time graph is {{blank:1}} s, while the period of the rectified emf pattern is {{blank:2}} s.",
+      "blanks": {
+        "1": {
+          "correct": "0.020",
+          "correctExplanation": "The flux completes one full sinusoidal cycle per revolution. At 50 Hz, the period is T = 1/f = 1/50 = 0.020 s.",
+          "distractors": [
+            { "answer": "0.010", "explanation": "0.010 s is the period of the rectified emf, not the flux. The flux has a period equal to one full revolution: T = 1/50 = 0.020 s." },
+            { "answer": "0.040", "explanation": "This would correspond to 25 Hz. At 50 Hz the flux period is 0.020 s." },
+            { "answer": "50", "explanation": "This confuses frequency with period. The period is T = 1/f = 0.020 s, not 50 s." }
+          ]
+        },
+        "2": {
+          "correct": "0.010",
+          "correctExplanation": "Rectification reflects the negative half-cycle to positive, so the rectified pattern repeats every half revolution. The rectified emf period is T/2 = 0.020/2 = 0.010 s.",
+          "distractors": [
+            { "answer": "0.020", "explanation": "0.020 s is the period of the flux and the unrectified emf. The rectified emf repeats every half revolution, giving a period of 0.010 s." },
+            { "answer": "0.040", "explanation": "This is twice the flux period. The rectified emf period is shorter than the flux period, at T/2 = 0.010 s." },
+            { "answer": "0.005", "explanation": "This is one quarter of the flux period. The rectified emf repeats every half revolution (T/2 = 0.010 s), not every quarter revolution." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Consider the flux and emf values at the starting position of a DC generator coil.",
+      "sentence": "At t = 0, a DC generator coil has its plane parallel to the field. The flux through the coil is {{blank:1}} and the terminal emf is at its {{blank:2}} value.",
+      "blanks": {
+        "1": {
+          "correct": "zero",
+          "correctExplanation": "When the coil plane is parallel to the field, the area vector is perpendicular to the field direction. The flux Φ_B = BAcos 90° = 0.",
+          "distractors": [
+            { "answer": "maximum", "explanation": "The flux is maximum when the area vector is parallel to the field (coil perpendicular to field), not when the coil plane is parallel to the field." },
+            { "answer": "minimum", "explanation": "The flux magnitude is zero when the coil plane is parallel to the field, which is the smallest possible magnitude." },
+            { "answer": "half its peak", "explanation": "The flux is exactly zero when the coil plane is parallel to the field, not at half its peak value." }
+          ]
+        },
+        "2": {
+          "correct": "peak",
+          "correctExplanation": "When the flux is zero, the flux–time graph is at a zero crossing where the gradient is steepest. Since ε = −dΦ_B/dt, the emf magnitude is at its maximum (peak) value.",
+          "distractors": [
+            { "answer": "zero", "explanation": "The emf is zero when the flux is at its maximum or minimum (gradient is zero), not when the flux is zero." },
+            { "answer": "minimum", "explanation": "The emf magnitude is at its largest when the flux is zero, not at its smallest." },
+            { "answer": "average", "explanation": "The emf is at its instantaneous peak, not its average value, when the flux is zero and changing most rapidly." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Consider what a steep gradient on the flux–time graph indicates about the terminal emf of a DC generator.",
+      "sentence": "On a flux–time graph for a DC generator, a steep gradient corresponds to a {{blank:1}} terminal emf.",
+      "blanks": {
+        "1": {
+          "correct": "large",
+          "correctExplanation": "The terminal emf of a DC generator equals |dΦ_B/dt|, the magnitude of the gradient of the flux–time graph. A steep gradient (large |dΦ_B/dt|) produces a large terminal emf.",
+          "distractors": [
+            { "answer": "zero", "explanation": "A zero emf occurs when the gradient is zero (at turning points of the flux graph), not when the gradient is steep." },
+            { "answer": "small", "explanation": "A steep gradient means a large rate of change of flux, which produces a large emf, not a small one." },
+            { "answer": "negative", "explanation": "The terminal emf of a DC generator is always positive due to rectification by the commutator. A steep gradient produces a large positive terminal emf." }
+          ]
+        }
+      }
+    }
+  ],
+
+  "toLevel5": [
+    {
+      "type": "mc",
+      "question": "A student claims that the emf–time graph of a DC generator is identical to that of an AC generator but shifted vertically upward by one peak emf value. Which of the following best evaluates this claim?",
+      "correct": "The claim is incorrect. The DC generator graph is obtained by reflecting the negative portions of the AC graph above the axis, not by applying a vertical shift.",
+      "correctExplanation": "Rectification reflects negative values to positive (taking the absolute value), which changes the shape of the waveform. A vertical shift would move the entire waveform upward, producing a different shape that still dips below the original zero line at the troughs.",
+      "distractors": [
+        { "answer": "The claim is correct. The commutator adds a constant DC offset equal to the peak emf, shifting the entire graph upward.", "explanation": "The commutator does not add a DC offset. It reverses the connections each half revolution, reflecting negative values to positive rather than shifting the graph." },
+        { "answer": "The claim is correct, but only when the generator has multiple coils that smooth the output.", "explanation": "Multiple coils can smooth the output but do not change the fundamental rectification process. The graph is still obtained by reflection, not by a vertical shift." },
+        { "answer": "The claim is partially correct. The shift equals half the peak emf, not the full peak emf.", "explanation": "No vertical shift is involved. The DC generator graph is the absolute value of the AC generator graph, which is a reflection, not a shift of any magnitude." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Yuki analyses a DC generator and notices that the terminal emf appears to reach its peak value more frequently than the flux reaches its peak. She concludes that the emf oscillates at a higher frequency than the flux. Is Yuki's conclusion valid?",
+      "correct": "Yes. The rectified emf has peaks at twice the frequency of the flux, because both the original positive peak and the reflected negative peak of the emf appear as positive peaks.",
+      "correctExplanation": "The flux varies sinusoidally at frequency f, with one positive and one negative peak per cycle. The unrectified emf also has one positive and one negative peak per cycle. After rectification, both peaks become positive, so positive peaks appear at frequency 2f.",
+      "distractors": [
+        { "answer": "No. The flux and emf must have the same frequency because they arise from the same rotating coil.", "explanation": "While both originate from the same coil rotation, rectification doubles the apparent frequency of the emf peaks. The flux itself is not rectified." },
+        { "answer": "No. The emf frequency appears higher only because of measurement error in reading the graph.", "explanation": "The doubling of peak frequency is a real physical consequence of rectification by the commutator, not a measurement artefact." },
+        { "answer": "Yes, but only because the commutator doubles the physical rotation speed of the coil.", "explanation": "The commutator does not change the rotation speed. It reverses the electrical connections, which reflects negative half-cycles to positive and doubles the peak frequency." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A DC generator operates at a rotational frequency f. A student predicts that the time interval between consecutive peaks in the terminal emf graph equals 1/f. Which of the following best evaluates this prediction?",
+      "correct": "The prediction is incorrect. Consecutive emf peaks in the rectified output are separated by 1/(2f), because two peaks occur per revolution.",
+      "correctExplanation": "Each revolution produces two positive emf peaks in the rectified output (one from each half-cycle). The time between consecutive peaks is therefore T/2 = 1/(2f), not T = 1/f.",
+      "distractors": [
+        { "answer": "The prediction is correct. Each revolution produces exactly one emf peak, so the interval between peaks is 1/f.", "explanation": "The unrectified emf has one positive peak per revolution, but the reflected negative peak adds a second positive peak. The interval between consecutive peaks is 1/(2f)." },
+        { "answer": "The prediction is incorrect. Consecutive peaks are separated by 2/f because the commutator slows the effective output frequency.", "explanation": "The commutator increases the apparent peak frequency, not decreases it. Peaks are separated by 1/(2f), which is shorter than 1/f." },
+        { "answer": "The prediction is correct for all single-coil DC generators but incorrect for multi-coil generators.", "explanation": "For any DC generator, rectification produces two peaks per revolution. The number of coils affects the smoothness of the output but not this fundamental relationship." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Two DC generators, P and Q, have identical coils and magnetic fields. Generator P rotates at twice the frequency of generator Q. Compared to the graphs of generator Q, the emf–time graph of generator P has",
+      "correct": "twice the peak emf and twice the number of peaks per unit time",
+      "correctExplanation": "The peak emf is ε_peak = NBAω = NBA(2πf). Doubling f doubles ε_peak. The number of rectified peaks per unit time is 2f, so doubling f also doubles the number of peaks per second.",
+      "distractors": [
+        { "answer": "the same peak emf but twice the number of peaks per unit time", "explanation": "The peak emf depends on ω = 2πf. Doubling the frequency doubles ω and therefore doubles the peak emf as well." },
+        { "answer": "twice the peak emf but the same number of peaks per unit time", "explanation": "The number of rectified peaks per unit time is 2f. Doubling f doubles both the peak emf and the number of peaks per second." },
+        { "answer": "four times the peak emf and twice the number of peaks per unit time", "explanation": "The peak emf is proportional to f (first power), not f². Doubling f doubles the peak emf, it does not quadruple it." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Anika examines the terminal emf graph of a DC generator and observes that the emf never becomes negative. She states that the rate of change of flux must therefore always be positive. Is Anika's reasoning correct?",
+      "correct": "No. The rate of change of flux alternates between positive and negative values as the coil rotates, but the commutator ensures the terminal emf is always positive regardless of the sign of dΦ_B/dt.",
+      "correctExplanation": "The flux varies sinusoidally, so dΦ_B/dt alternates in sign. The commutator reverses the external connections each half revolution, making the terminal emf positive even when the natural emf (−dΦ_B/dt) would be negative.",
+      "distractors": [
+        { "answer": "Yes. The commutator prevents the flux from decreasing, ensuring dΦ_B/dt is always positive.", "explanation": "The commutator affects only the electrical connections to the external circuit. It does not alter the magnetic flux through the coil, which continues to vary sinusoidally." },
+        { "answer": "Yes. In a DC generator the coil is arranged so that the flux only increases with time.", "explanation": "The flux through a rotating coil necessarily increases and decreases as the coil angle changes. No arrangement can make the flux only increase during continuous rotation." },
+        { "answer": "No. The rate of change of flux is always zero in a DC generator because the commutator cancels any flux changes.", "explanation": "The rate of change of flux is not zero. The coil rotates in the field and the flux changes continuously. The commutator affects the terminal connections, not the flux." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Ravi plots the flux and emf graphs for a DC generator on the same axes. He observes that the emf reaches zero at the same instants the flux reaches its extreme values. Which physical principle best explains this observation?",
+      "correct": "Faraday's law states that the emf equals the negative rate of change of flux. At the extreme values of a sinusoidal function, the gradient is zero, so the emf is zero.",
+      "correctExplanation": "The turning points of the sinusoidal flux–time graph have zero gradient (dΦ_B/dt = 0). Since ε = −dΦ_B/dt, the emf must be zero whenever the flux is at a maximum or minimum.",
+      "distractors": [
+        { "answer": "Lenz's law states that the induced emf opposes the flux, causing the emf to vanish when the flux is at its greatest.", "explanation": "Lenz's law describes the direction of the induced emf, not why it is zero at flux extremes. The emf is zero because the rate of change of flux is zero at turning points." },
+        { "answer": "The commutator reverses the emf at the flux extremes, causing it to pass through zero at those instants.", "explanation": "The commutator reversal occurs when the emf naturally crosses zero (at flux extremes), but the reason the emf is zero there is because dΦ_B/dt = 0, not because of the commutator action." },
+        { "answer": "The coil momentarily stops rotating when the flux reaches its extreme values, causing the emf to drop to zero.", "explanation": "The coil rotates at constant angular velocity and never stops. The emf is zero because the rate of change of flux is zero at turning points of the flux graph." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student sketches the emf–time graph for a DC generator but draws it as a smooth sinusoidal wave that dips below the time axis. Which of the following best identifies the error and its correction?",
+      "correct": "The student has drawn the emf of an AC generator. The negative portions should be reflected above the axis to show the rectified output of the DC generator's commutator.",
+      "correctExplanation": "The split ring commutator rectifies the emf output so that all values are positive. The correct graph has the shape of |cos(ωt)| — a series of positive humps with no negative values.",
+      "distractors": [
+        { "answer": "The student should draw a straight horizontal line at the peak emf value to represent the constant DC output.", "explanation": "A single-coil DC generator does not produce a constant output. The emf varies between zero and its peak value in a rectified sinusoidal pattern." },
+        { "answer": "The student should increase the amplitude of the negative portions to match the positive portions.", "explanation": "The issue is not the amplitude of the negative portions but their existence. In a DC generator output, no negative values should appear." },
+        { "answer": "The student should shift the entire graph upward by one peak emf value to eliminate negative portions.", "explanation": "A vertical shift changes the shape of the waveform differently from rectification. Reflecting negative portions above the axis (taking absolute value) is the correct transformation." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Chen compares the emf–time graphs of a DC generator at two different rotation speeds. At the higher speed, she notices both the peak emf and the frequency of the peaks have increased. She claims these are independent effects. Which of the following best evaluates Chen's claim?",
+      "correct": "The claim is incorrect. Both effects arise from the same cause: increasing the angular velocity ω increases the peak emf (ε_peak = NBAω) and the rotational frequency simultaneously.",
+      "correctExplanation": "The peak emf and the frequency both depend directly on the angular velocity ω. Increasing ω increases ε_peak = NBAω and also increases f = ω/(2π). These are not independent effects but two consequences of the same change.",
+      "distractors": [
+        { "answer": "The claim is correct. The peak emf depends on the magnetic field strength, while the frequency depends on the rotation speed.", "explanation": "The peak emf depends on both the field strength and the angular velocity (ε_peak = NBAω). Changing the rotation speed changes both the peak emf and the frequency." },
+        { "answer": "The claim is correct. The commutator independently controls the frequency of the output while the coil speed controls the peak emf.", "explanation": "The commutator does not independently control frequency. It rectifies the output, but the peak frequency is determined by the rotation speed, which also determines the peak emf." },
+        { "answer": "The claim is incorrect. Only the frequency increases when the speed increases; the peak emf remains constant.", "explanation": "The peak emf is ε_peak = NBAω. Increasing ω increases the peak emf as well as the frequency." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Compare the emf outputs of AC and DC generators and explain the role of the commutator.",
+      "sentence": "The emf–time graph of a DC generator differs from that of an AC generator because the {{blank:1}} reflects all negative emf values to become {{blank:2}}, producing a rectified output.",
+      "blanks": {
+        "1": {
+          "correct": "split ring commutator",
+          "correctExplanation": "The split ring commutator reverses the connections to the external circuit every half revolution, ensuring that what would have been negative emf values are reflected to positive.",
+          "distractors": [
+            { "answer": "slip rings", "explanation": "Slip rings maintain a continuous connection without reversing, which is why AC generators (with slip rings) produce an alternating output." },
+            { "answer": "magnetic field", "explanation": "The magnetic field provides the flux for induction but does not determine whether the output is rectified. The commutator performs the rectification." },
+            { "answer": "coil winding", "explanation": "The coil winding determines the number of turns and area, which affect the magnitude of the emf. Rectification is performed by the commutator." }
+          ]
+        },
+        "2": {
+          "correct": "positive",
+          "correctExplanation": "By reversing the external connections at the instant the emf would change sign, the commutator ensures all output values are positive (or zero), producing a unidirectional current in the external circuit.",
+          "distractors": [
+            { "answer": "zero", "explanation": "The reflected values become positive, not zero. The output varies between zero and the peak emf." },
+            { "answer": "larger", "explanation": "Rectification does not increase the magnitude of the emf. It changes the sign of negative values to positive without altering the amplitude." },
+            { "answer": "constant", "explanation": "The rectified output still varies with time. It is not constant but pulsates between zero and the peak emf." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Analyse the relationship between the periods of the flux and rectified emf graphs for a DC generator.",
+      "sentence": "For a DC generator rotating at frequency f, the flux through the coil completes one full cycle every {{blank:1}} seconds, while the rectified emf pattern repeats every {{blank:2}} seconds.",
+      "blanks": {
+        "1": {
+          "correct": "1/f",
+          "correctExplanation": "The flux completes one full sinusoidal cycle per revolution. The period of rotation is T = 1/f seconds.",
+          "distractors": [
+            { "answer": "1/(2f)", "explanation": "1/(2f) is the period of the rectified emf pattern, not the flux. The flux has a period of T = 1/f." },
+            { "answer": "2/f", "explanation": "This is twice the rotation period. The flux completes one cycle per revolution, not one cycle per two revolutions." },
+            { "answer": "f", "explanation": "The period is the reciprocal of frequency, T = 1/f, not the frequency itself." }
+          ]
+        },
+        "2": {
+          "correct": "1/(2f)",
+          "correctExplanation": "The rectified emf reflects negative half-cycles to positive, so the rectified pattern repeats every half revolution. The period of the rectified emf is T/2 = 1/(2f) seconds.",
+          "distractors": [
+            { "answer": "1/f", "explanation": "1/f is the period of the flux and unrectified emf. The rectified emf repeats more frequently, every T/2 = 1/(2f) seconds." },
+            { "answer": "2/f", "explanation": "This is longer than the flux period. The rectified emf has a shorter period (T/2), not a longer one." },
+            { "answer": "f", "explanation": "The period is 1/(2f) seconds, not f seconds. The period and frequency are reciprocals." }
+          ]
+        }
+      }
+    }
+  ]
+}

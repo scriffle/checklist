@@ -1,0 +1,916 @@
+{
+  "_link": {
+    "uuid": "lp-d04d0b02-b16c-fb30-5caa-e997290e5e0a",
+    "version": 1,
+    "contentHash": "hash-d04d0b02",
+    "title": "I can calculate the orbital speed of a satellite using v = √(GM/r)",
+    "generatedAt": "2026-03-04T21:28:00Z"
+  },
+  "toLevel2": [
+    {
+      "type": "mc",
+      "question": "Which formula gives the orbital speed of a satellite in a circular orbit of radius r around a body of mass M?",
+      "correct": "v = √(GM/r)",
+      "correctExplanation": "The orbital speed is found by equating gravitational force to centripetal force: GMm/r² = mv²/r, which simplifies to v = √(GM/r). This gives the speed of a satellite at orbital radius r from the centre of a body of mass M.",
+      "distractors": [
+        {
+          "answer": "v = √(Gm/r)",
+          "explanation": "This incorrectly uses the mass of the satellite (m) instead of the mass of the central body (M). The orbital speed depends on the mass of the body being orbited, not the satellite's mass."
+        },
+        {
+          "answer": "v = √(GMr)",
+          "explanation": "This has r multiplied rather than divided. The correct formula has r in the denominator: v = √(GM/r). A larger orbital radius gives a slower orbital speed."
+        },
+        {
+          "answer": "v = GM/r",
+          "explanation": "This is missing the square root. The correct formula is v = √(GM/r), which is derived from equating gravitational and centripetal forces."
+        }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "In the formula v = √(GM/r), what does r represent?",
+      "correct": "The distance from the centre of the central body to the satellite",
+      "correctExplanation": "In the orbital speed formula, r is the orbital radius — the distance from the centre of the body being orbited to the satellite. This is not the height above the surface, but the total distance from the centre.",
+      "distractors": [
+        {
+          "answer": "The radius of the satellite",
+          "explanation": "The variable r is not the physical size of the satellite. It is the orbital radius — the distance from the centre of the central body to the satellite."
+        },
+        {
+          "answer": "The height of the satellite above the surface of the central body",
+          "explanation": "The height above the surface is h, not r. The orbital radius r = R + h, where R is the radius of the central body. The formula requires the distance from the centre."
+        },
+        {
+          "answer": "The radius of the central body",
+          "explanation": "The radius of the central body is R, not r. The orbital radius r is the distance from the centre of the central body to the satellite."
+        }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "The orbital speed of a satellite depends on which of the following?",
+      "correct": "The mass of the central body and the orbital radius",
+      "correctExplanation": "From v = √(GM/r), the orbital speed depends on G (a constant), M (the mass of the central body), and r (the orbital radius). It does not depend on the mass of the satellite.",
+      "distractors": [
+        {
+          "answer": "The mass of the satellite and the orbital radius",
+          "explanation": "The mass of the satellite does not appear in the formula v = √(GM/r). Orbital speed is independent of the satellite's mass."
+        },
+        {
+          "answer": "The mass of the satellite only",
+          "explanation": "The orbital speed does not depend on the satellite's mass at all. It depends on the mass of the central body and the orbital radius."
+        },
+        {
+          "answer": "The mass of the central body, the mass of the satellite, and the orbital radius",
+          "explanation": "The mass of the satellite cancels out when deriving the formula. Orbital speed depends only on the central body's mass and the orbital radius."
+        }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What happens to the orbital speed of a satellite if it moves to a larger orbital radius?",
+      "correct": "The orbital speed decreases",
+      "correctExplanation": "From v = √(GM/r), as r increases, GM/r decreases, so v decreases. Satellites in larger orbits travel more slowly than satellites in smaller orbits.",
+      "distractors": [
+        {
+          "answer": "The orbital speed increases",
+          "explanation": "The orbital speed decreases with increasing radius. Since r is in the denominator under the square root, a larger r gives a smaller v."
+        },
+        {
+          "answer": "The orbital speed stays the same",
+          "explanation": "The orbital speed depends on the orbital radius. From v = √(GM/r), a larger radius results in a slower orbital speed."
+        },
+        {
+          "answer": "The orbital speed depends on the satellite's mass, so we cannot determine the effect",
+          "explanation": "The orbital speed does not depend on the satellite's mass. From v = √(GM/r), increasing r decreases v."
+        }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Two satellites, one with mass 100 kg and another with mass 500 kg, orbit Earth at the same altitude. How do their orbital speeds compare?",
+      "correct": "They have the same orbital speed",
+      "correctExplanation": "From v = √(GM/r), the orbital speed depends on M (mass of Earth) and r (orbital radius), but not on the mass of the satellite. Since both satellites orbit at the same radius, they have the same orbital speed.",
+      "distractors": [
+        {
+          "answer": "The 500 kg satellite orbits faster",
+          "explanation": "Orbital speed is independent of the satellite's mass. The formula v = √(GM/r) does not contain the satellite's mass, so both satellites have the same speed."
+        },
+        {
+          "answer": "The 100 kg satellite orbits faster",
+          "explanation": "Orbital speed does not depend on satellite mass. Both satellites at the same altitude have the same orbital speed."
+        },
+        {
+          "answer": "The 500 kg satellite orbits five times faster",
+          "explanation": "Orbital speed is completely independent of the satellite's mass. Both satellites at the same orbital radius travel at the same speed."
+        }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the orbital speed formula.",
+      "sentence": "The orbital speed of a satellite is given by v = √(GM/r), where M is the mass of the {{blank:1}} and r is the {{blank:2}} radius.",
+      "blanks": {
+        "1": {
+          "correct": "central body",
+          "correctExplanation": "In the formula v = √(GM/r), M represents the mass of the body being orbited (the central body), such as a planet or star.",
+          "distractors": [
+            {
+              "answer": "satellite",
+              "explanation": "M is the mass of the central body, not the satellite. The satellite's mass cancels during the derivation and does not affect orbital speed."
+            },
+            {
+              "answer": "gravitational field",
+              "explanation": "A gravitational field does not have a 'mass'. M is the mass of the central body that creates the gravitational field."
+            }
+          ]
+        },
+        "2": {
+          "correct": "orbital",
+          "correctExplanation": "The variable r is the orbital radius — the distance from the centre of the central body to the satellite. It is measured from the centre, not from the surface.",
+          "distractors": [
+            {
+              "answer": "surface",
+              "explanation": "The orbital radius is measured from the centre of the central body, not from its surface. The surface radius is a different quantity."
+            },
+            {
+              "answer": "satellite",
+              "explanation": "The radius r is not the physical radius of the satellite itself. It is the orbital radius — the distance from the centre of the central body to the satellite."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the derivation of the orbital speed formula.",
+      "sentence": "The formula v = √(GM/r) is derived by equating the {{blank:1}} force to the {{blank:2}} force for a satellite in circular orbit.",
+      "blanks": {
+        "1": {
+          "correct": "gravitational",
+          "correctExplanation": "The gravitational force (GMm/r²) provides the centripetal force needed for circular motion. Setting these equal gives the orbital speed formula.",
+          "distractors": [
+            {
+              "answer": "normal",
+              "explanation": "The normal force is not relevant for a satellite in orbit. The gravitational force provides the centripetal force for orbital motion."
+            },
+            {
+              "answer": "friction",
+              "explanation": "Friction is not involved in satellite orbital motion. In space, the gravitational force is what provides the centripetal force."
+            }
+          ]
+        },
+        "2": {
+          "correct": "centripetal",
+          "correctExplanation": "For circular motion, a centripetal force is required. For a satellite, the gravitational force provides this centripetal force: GMm/r² = mv²/r.",
+          "distractors": [
+            {
+              "answer": "centrifugal",
+              "explanation": "Centrifugal force is a fictitious force that appears in rotating reference frames. The real force analysis equates gravitational force with centripetal force."
+            },
+            {
+              "answer": "tangential",
+              "explanation": "A tangential force would change the speed of the satellite. The centripetal force is directed toward the centre and maintains the circular orbit."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about orbital speed and satellite mass.",
+      "sentence": "The orbital speed of a satellite is {{blank:1}} of the satellite's mass. A heavier satellite and a lighter satellite at the same {{blank:2}} travel at the same speed.",
+      "blanks": {
+        "1": {
+          "correct": "independent",
+          "correctExplanation": "The formula v = √(GM/r) does not contain the satellite's mass. The satellite's mass cancels when deriving the formula, so orbital speed is independent of it.",
+          "distractors": [
+            {
+              "answer": "dependent",
+              "explanation": "Orbital speed is not dependent on the satellite's mass. The mass cancels in the derivation, and the formula v = √(GM/r) contains only M and r."
+            },
+            {
+              "answer": "proportional",
+              "explanation": "Orbital speed is not proportional to the satellite's mass. It is independent of the satellite's mass entirely."
+            }
+          ]
+        },
+        "2": {
+          "correct": "altitude",
+          "correctExplanation": "At the same altitude (and therefore the same orbital radius r), all satellites have the same orbital speed regardless of their mass, because v = √(GM/r) depends only on M and r.",
+          "distractors": [
+            {
+              "answer": "mass",
+              "explanation": "'At the same mass' would not make sense in this context. The sentence refers to satellites at the same altitude having the same orbital speed."
+            },
+            {
+              "answer": "temperature",
+              "explanation": "Temperature is irrelevant to orbital speed. Satellites at the same altitude (orbital radius) have the same speed."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "tf",
+      "question": "A satellite in a larger orbit around Earth travels faster than a satellite in a smaller orbit.",
+      "correct": "False",
+      "correctExplanation": "From v = √(GM/r), a larger orbital radius r gives a smaller orbital speed v. Satellites in larger orbits travel more slowly than those in smaller orbits.",
+      "distractors": [
+        {
+          "answer": "True",
+          "explanation": "The opposite is true. From v = √(GM/r), increasing r decreases v. Satellites in larger orbits travel more slowly."
+        }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "The orbital speed of a satellite depends only on the mass of the central body and the orbital radius, not on the mass of the satellite.",
+      "correct": "True",
+      "correctExplanation": "From v = √(GM/r), the only variables are G (a constant), M (mass of the central body), and r (orbital radius). The satellite's mass does not appear in the formula.",
+      "distractors": [
+        {
+          "answer": "False",
+          "explanation": "The satellite's mass cancels in the derivation (GMm/r² = mv²/r → v² = GM/r). Orbital speed truly depends only on M and r."
+        }
+      ]
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "mc",
+      "question": "A satellite orbits Earth at a radius of 7.0 × 10⁶ m from Earth's centre. The mass of Earth is 6.0 × 10²⁴ kg. What is the orbital speed of the satellite?",
+      "correct": "7.6 × 10³ m s⁻¹",
+      "correctExplanation": "Using v = √(GM/r) = √(6.67 × 10⁻¹¹ × 6.0 × 10²⁴ / 7.0 × 10⁶) = √(5.72 × 10⁷) = 7.56 × 10³ m s⁻¹ ≈ 7.6 × 10³ m s⁻¹.",
+      "distractors": [
+        {
+          "answer": "5.7 × 10⁷ m s⁻¹",
+          "explanation": "This is the value inside the square root (GM/r = 5.72 × 10⁷), not the orbital speed. The speed is v = √(5.72 × 10⁷) = 7.6 × 10³ m s⁻¹."
+        },
+        {
+          "answer": "7.6 × 10⁶ m s⁻¹",
+          "explanation": "This has the wrong power of ten. The correct value is v = √(5.72 × 10⁷) = 7.56 × 10³ m s⁻¹, not 10⁶."
+        },
+        {
+          "answer": "3.4 × 10³ m s⁻¹",
+          "explanation": "This would result from an error in the calculation. The correct computation gives v = √(6.67 × 10⁻¹¹ × 6.0 × 10²⁴ / 7.0 × 10⁶) = 7.6 × 10³ m s⁻¹."
+        }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A satellite orbits a planet at a radius of 5.0 × 10⁷ m with an orbital speed of 4.0 × 10³ m s⁻¹. What is the mass of the planet?",
+      "correct": "1.2 × 10²⁵ kg",
+      "correctExplanation": "Rearranging v = √(GM/r): M = v²r/G = (4.0 × 10³)² × 5.0 × 10⁷ / (6.67 × 10⁻¹¹) = 1.6 × 10⁷ × 5.0 × 10⁷ / 6.67 × 10⁻¹¹ = 8.0 × 10¹⁴ / 6.67 × 10⁻¹¹ = 1.2 × 10²⁵ kg.",
+      "distractors": [
+        {
+          "answer": "1.2 × 10¹⁴ kg",
+          "explanation": "This is too small by a factor of 10¹¹. The correct calculation gives M = v²r/G = (16 × 10⁶)(5 × 10⁷)/(6.67 × 10⁻¹¹) = 1.2 × 10²⁵ kg."
+        },
+        {
+          "answer": "8.0 × 10¹⁴ kg",
+          "explanation": "This is v²r = (4.0 × 10³)² × 5.0 × 10⁷ = 8.0 × 10¹⁴, but this value has not yet been divided by G. The mass is M = 8.0 × 10¹⁴ / 6.67 × 10⁻¹¹ = 1.2 × 10²⁵ kg."
+        },
+        {
+          "answer": "3.0 × 10²⁵ kg",
+          "explanation": "This does not follow from the correct calculation. M = v²r/G = (4.0 × 10³)² × 5.0 × 10⁷ / 6.67 × 10⁻¹¹ = 1.2 × 10²⁵ kg."
+        }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A satellite orbits Earth at 300 km above the surface. Earth's radius is 6.4 × 10⁶ m and its mass is 6.0 × 10²⁴ kg. What is the orbital radius to use in the formula v = √(GM/r)?",
+      "correct": "6.7 × 10⁶ m",
+      "correctExplanation": "The orbital radius is measured from the centre of the Earth: r = R + h = 6.4 × 10⁶ + 0.3 × 10⁶ = 6.7 × 10⁶ m. The formula requires the distance from the centre, not the height above the surface.",
+      "distractors": [
+        {
+          "answer": "3.0 × 10⁵ m",
+          "explanation": "This is the height above the surface (300 km = 3.0 × 10⁵ m), not the orbital radius. The orbital radius must include Earth's radius: r = 6.4 × 10⁶ + 3.0 × 10⁵ = 6.7 × 10⁶ m."
+        },
+        {
+          "answer": "6.4 × 10⁶ m",
+          "explanation": "This is Earth's radius, not the orbital radius. The orbital radius is r = R + h = 6.4 × 10⁶ + 3.0 × 10⁵ = 6.7 × 10⁶ m."
+        },
+        {
+          "answer": "6.1 × 10⁶ m",
+          "explanation": "This would result from subtracting the height from Earth's radius. The orbital radius is the sum: r = R + h = 6.4 × 10⁶ + 0.3 × 10⁶ = 6.7 × 10⁶ m."
+        }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "If the orbital radius of a satellite is doubled, by what factor does the orbital speed change?",
+      "correct": "The speed decreases by a factor of √2",
+      "correctExplanation": "From v = √(GM/r), if r is replaced by 2r: v_new = √(GM/2r) = √(GM/r) × 1/√2 = v/√2. The speed decreases by a factor of √2 (approximately 1.41).",
+      "distractors": [
+        {
+          "answer": "The speed halves",
+          "explanation": "Doubling r does not halve v. Since v ∝ 1/√r, doubling r reduces v by a factor of √2 (≈ 1.41), not 2."
+        },
+        {
+          "answer": "The speed doubles",
+          "explanation": "Increasing the orbital radius decreases the speed, not increases it. From v = √(GM/r), doubling r reduces v by a factor of √2."
+        },
+        {
+          "answer": "The speed decreases by a factor of 4",
+          "explanation": "A factor of 4 would apply if v ∝ 1/r², but v ∝ 1/√r. Doubling r decreases v by a factor of √2."
+        }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A satellite orbits Mars at a radius of 3.6 × 10⁶ m from the centre of Mars. The mass of Mars is 6.4 × 10²³ kg. What is the orbital speed?",
+      "correct": "3.4 × 10³ m s⁻¹",
+      "correctExplanation": "v = √(GM/r) = √(6.67 × 10⁻¹¹ × 6.4 × 10²³ / 3.6 × 10⁶) = √(4.27 × 10¹³ / 3.6 × 10⁶) = √(1.19 × 10⁷) = 3.4 × 10³ m s⁻¹.",
+      "distractors": [
+        {
+          "answer": "1.2 × 10⁷ m s⁻¹",
+          "explanation": "This is the value of GM/r (approximately 1.19 × 10⁷), not the orbital speed. The speed is the square root: v = √(1.19 × 10⁷) = 3.4 × 10³ m s⁻¹."
+        },
+        {
+          "answer": "7.6 × 10³ m s⁻¹",
+          "explanation": "This is approximately the orbital speed for a low Earth orbit satellite, not for a satellite orbiting Mars. Mars has a smaller mass, giving a lower orbital speed."
+        },
+        {
+          "answer": "3.4 × 10⁶ m s⁻¹",
+          "explanation": "This has the wrong power of ten. The correct value is 3.4 × 10³ m s⁻¹, not 10⁶."
+        }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Two planets, X and Y, have the same mass. A satellite orbits planet X at radius r and another satellite orbits planet Y at radius 4r. What is the ratio of the orbital speed around X to the orbital speed around Y?",
+      "correct": "2 : 1",
+      "correctExplanation": "Using v = √(GM/r): vX = √(GM/r) and vY = √(GM/4r) = √(GM/r)/2 = vX/2. Therefore vX/vY = 2, giving a ratio of 2 : 1.",
+      "distractors": [
+        {
+          "answer": "4 : 1",
+          "explanation": "This would be correct if v were proportional to 1/r, but v ∝ 1/√r. Since rY = 4rX, vX/vY = √(4) = 2, giving 2 : 1."
+        },
+        {
+          "answer": "1 : 2",
+          "explanation": "This has the ratio inverted. The satellite closer to the planet (smaller r) has the greater speed, so vX > vY and the ratio is 2 : 1."
+        },
+        {
+          "answer": "1 : 1",
+          "explanation": "The speeds are not equal because the orbital radii are different. The satellite at the smaller radius orbits faster: vX/vY = 2."
+        }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the calculation of orbital speed.",
+      "sentence": "For a satellite orbiting Earth (M = 6.0 × 10²⁴ kg) at r = 4.2 × 10⁷ m, the orbital speed is v = √(GM/r) = √(6.67 × 10⁻¹¹ × 6.0 × 10²⁴ / 4.2 × 10⁷) ≈ {{blank:1}} × 10³ m s⁻¹.",
+      "blanks": {
+        "1": {
+          "correct": "3.1",
+          "correctExplanation": "GM/r = (6.67 × 10⁻¹¹ × 6.0 × 10²⁴) / (4.2 × 10⁷) = 4.0 × 10¹⁴ / 4.2 × 10⁷ = 9.52 × 10⁶. v = √(9.52 × 10⁶) ≈ 3.1 × 10³ m s⁻¹.",
+          "distractors": [
+            {
+              "answer": "7.6",
+              "explanation": "The value 7.6 × 10³ m s⁻¹ is the orbital speed for a low Earth orbit (r ≈ 7 × 10⁶ m). At the much larger radius of 4.2 × 10⁷ m, the speed is lower: approximately 3.1 × 10³ m s⁻¹."
+            },
+            {
+              "answer": "9.5",
+              "explanation": "The value 9.52 × 10⁶ is GM/r, not the speed. The speed is the square root: v = √(9.52 × 10⁶) ≈ 3.1 × 10³ m s⁻¹."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about how orbital speed varies with radius.",
+      "sentence": "From v = √(GM/r), the orbital speed is proportional to 1/{{blank:1}}. This means that as the orbital radius increases, the orbital speed {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "√r",
+          "correctExplanation": "From v = √(GM/r) = √(GM) × 1/√r, the speed is proportional to 1/√r. This is an inverse square root relationship between speed and radius.",
+          "distractors": [
+            {
+              "answer": "r",
+              "explanation": "The speed is proportional to 1/√r, not 1/r. The square root changes the nature of the relationship — doubling r reduces v by √2, not by 2."
+            },
+            {
+              "answer": "r²",
+              "explanation": "The speed is proportional to 1/√r, not 1/r². An inverse square relationship would mean v decreases much more rapidly with radius than it actually does."
+            }
+          ]
+        },
+        "2": {
+          "correct": "decreases",
+          "correctExplanation": "Since v ∝ 1/√r, a larger radius means a smaller orbital speed. Satellites farther from the central body orbit more slowly.",
+          "distractors": [
+            {
+              "answer": "increases",
+              "explanation": "The orbital speed decreases with increasing radius, not increases. From v = √(GM/r), larger r means smaller v."
+            },
+            {
+              "answer": "remains constant",
+              "explanation": "The orbital speed is not constant — it decreases as the orbital radius increases, following v ∝ 1/√r."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about finding the orbital radius from orbital speed.",
+      "sentence": "If the orbital speed v is known, the orbital radius can be found by rearranging to r = {{blank:1}}/v².",
+      "blanks": {
+        "1": {
+          "correct": "GM",
+          "correctExplanation": "From v = √(GM/r), squaring gives v² = GM/r, and rearranging gives r = GM/v².",
+          "distractors": [
+            {
+              "answer": "Gm",
+              "explanation": "The variable m is the satellite's mass, which does not appear in the orbital speed formula. The correct rearrangement gives r = GM/v², using the central body's mass M."
+            },
+            {
+              "answer": "v²",
+              "explanation": "This would give r = v²/v² = 1, which is meaningless. The correct rearrangement is r = GM/v²."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "tf",
+      "question": "To calculate the orbital speed of a satellite 400 km above Earth's surface, the value of r in the formula should be 400 km converted to metres.",
+      "correct": "False",
+      "correctExplanation": "The value of r must be the distance from the centre of Earth, not the height above the surface. The orbital radius is r = R_Earth + h = 6.4 × 10⁶ + 4.0 × 10⁵ = 6.8 × 10⁶ m.",
+      "distractors": [
+        {
+          "answer": "True",
+          "explanation": "Using the height above the surface (400 km = 4.0 × 10⁵ m) as r would give an incorrect result. The formula requires r = R_Earth + h, the distance from Earth's centre."
+        }
+      ]
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "mc",
+      "question": "A satellite orbits Earth at 800 km above the surface. Earth's radius is 6.4 × 10⁶ m and its mass is 6.0 × 10²⁴ kg. What is the orbital speed of the satellite?",
+      "correct": "7.5 × 10³ m s⁻¹",
+      "correctExplanation": "The orbital radius is r = 6.4 × 10⁶ + 8.0 × 10⁵ = 7.2 × 10⁶ m. v = √(GM/r) = √(6.67 × 10⁻¹¹ × 6.0 × 10²⁴ / 7.2 × 10⁶) = √(5.56 × 10⁷) = 7.45 × 10³ ≈ 7.5 × 10³ m s⁻¹.",
+      "distractors": [
+        {
+          "answer": "2.2 × 10⁴ m s⁻¹",
+          "explanation": "This is too large. Using the correct orbital radius r = 7.2 × 10⁶ m gives v = √(6.67 × 10⁻¹¹ × 6.0 × 10²⁴ / 7.2 × 10⁶) = 7.5 × 10³ m s⁻¹."
+        },
+        {
+          "answer": "5.6 × 10⁷ m s⁻¹",
+          "explanation": "This is the value of GM/r, not the orbital speed. The speed is the square root: v = √(5.56 × 10⁷) = 7.5 × 10³ m s⁻¹."
+        },
+        {
+          "answer": "7.5 × 10⁶ m s⁻¹",
+          "explanation": "This has the wrong power of ten. The correct orbital speed is 7.5 × 10³ m s⁻¹, not 10⁶."
+        }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A geostationary satellite orbits Earth at approximately 4.2 × 10⁷ m from Earth's centre. A low-Earth orbit satellite orbits at 6.7 × 10⁶ m from Earth's centre. What is the ratio of the geostationary orbital speed to the low-Earth orbital speed?",
+      "correct": "Approximately 0.40",
+      "correctExplanation": "Since v ∝ 1/√r: v_geo/v_LEO = √(r_LEO/r_geo) = √(6.7 × 10⁶ / 4.2 × 10⁷) = √(0.160) = 0.40. The geostationary satellite travels at about 40% the speed of the LEO satellite.",
+      "distractors": [
+        {
+          "answer": "Approximately 6.3",
+          "explanation": "This is the ratio r_geo/r_LEO = 4.2 × 10⁷ / 6.7 × 10⁶ ≈ 6.3. The speed ratio is the inverse square root: v_geo/v_LEO = 1/√6.3 ≈ 0.40."
+        },
+        {
+          "answer": "Approximately 0.16",
+          "explanation": "This is the ratio r_LEO/r_geo = 0.16, not the speed ratio. The speed ratio is √(r_LEO/r_geo) = √0.16 = 0.40."
+        },
+        {
+          "answer": "Approximately 2.5",
+          "explanation": "This would mean the geostationary satellite is faster, which is incorrect. Satellites in larger orbits are slower: v_geo/v_LEO ≈ 0.40."
+        }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A satellite has an orbital speed of 5.0 × 10³ m s⁻¹ around Earth (M = 6.0 × 10²⁴ kg). What is the orbital radius?",
+      "correct": "1.6 × 10⁷ m",
+      "correctExplanation": "Rearranging v = √(GM/r): r = GM/v² = (6.67 × 10⁻¹¹ × 6.0 × 10²⁴) / (5.0 × 10³)² = 4.0 × 10¹⁴ / 2.5 × 10⁷ = 1.6 × 10⁷ m.",
+      "distractors": [
+        {
+          "answer": "4.0 × 10¹⁴ m",
+          "explanation": "This is GM = 6.67 × 10⁻¹¹ × 6.0 × 10²⁴ = 4.0 × 10¹⁴, not the orbital radius. The radius is r = GM/v² = 4.0 × 10¹⁴ / 2.5 × 10⁷ = 1.6 × 10⁷ m."
+        },
+        {
+          "answer": "2.5 × 10⁷ m",
+          "explanation": "This is v² = (5.0 × 10³)² = 2.5 × 10⁷, not the radius. The radius is r = GM/v² = 4.0 × 10¹⁴ / 2.5 × 10⁷ = 1.6 × 10⁷ m."
+        },
+        {
+          "answer": "8.0 × 10⁶ m",
+          "explanation": "This does not match the correct calculation. r = GM/v² = (6.67 × 10⁻¹¹ × 6.0 × 10²⁴) / (5.0 × 10³)² = 1.6 × 10⁷ m."
+        }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Satellite A orbits a planet at radius r with speed v. Satellite B orbits the same planet at radius 9r. What is the orbital speed of Satellite B?",
+      "correct": "v/3",
+      "correctExplanation": "Since v ∝ 1/√r: vB = √(GM/9r) = √(GM/r)/√9 = v/3. At nine times the radius, the speed is one-third of the original.",
+      "distractors": [
+        {
+          "answer": "v/9",
+          "explanation": "This would apply if v ∝ 1/r, but v ∝ 1/√r. At nine times the radius, vB = v/√9 = v/3."
+        },
+        {
+          "answer": "3v",
+          "explanation": "A larger orbital radius gives a slower speed, not a faster one. At nine times the radius, vB = v/3."
+        },
+        {
+          "answer": "9v",
+          "explanation": "Increasing the radius decreases the speed. Since v ∝ 1/√r, multiplying r by 9 divides v by 3, giving v/3."
+        }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A satellite orbits a planet at 2.0 × 10⁷ m with a speed of 6.0 × 10³ m s⁻¹. A second satellite orbits the same planet at 8.0 × 10⁷ m. What is the orbital speed of the second satellite?",
+      "correct": "3.0 × 10³ m s⁻¹",
+      "correctExplanation": "The radius increases by a factor of 4 (8.0 × 10⁷ / 2.0 × 10⁷ = 4). Since v ∝ 1/√r, the speed decreases by a factor of √4 = 2: v₂ = 6.0 × 10³ / 2 = 3.0 × 10³ m s⁻¹.",
+      "distractors": [
+        {
+          "answer": "1.5 × 10³ m s⁻¹",
+          "explanation": "This would be 6.0 × 10³ / 4, which applies if v ∝ 1/r. Since v ∝ 1/√r, the factor is √4 = 2, giving 3.0 × 10³ m s⁻¹."
+        },
+        {
+          "answer": "1.2 × 10⁴ m s⁻¹",
+          "explanation": "This would mean the speed doubles, but a larger radius gives a slower speed. The second satellite at 4 times the radius orbits at half the speed: 3.0 × 10³ m s⁻¹."
+        },
+        {
+          "answer": "2.4 × 10⁴ m s⁻¹",
+          "explanation": "This is much too large. The satellite at a larger radius orbits more slowly. v₂ = 6.0 × 10³ / √4 = 3.0 × 10³ m s⁻¹."
+        }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "The ISS orbits Earth at approximately 408 km above the surface. Earth's radius is 6.4 × 10⁶ m and mass is 6.0 × 10²⁴ kg. What is the approximate orbital speed of the ISS?",
+      "correct": "7.7 × 10³ m s⁻¹",
+      "correctExplanation": "r = 6.4 × 10⁶ + 4.08 × 10⁵ = 6.808 × 10⁶ m. v = √(GM/r) = √(6.67 × 10⁻¹¹ × 6.0 × 10²⁴ / 6.808 × 10⁶) = √(5.88 × 10⁷) = 7.67 × 10³ ≈ 7.7 × 10³ m s⁻¹.",
+      "distractors": [
+        {
+          "answer": "2.8 × 10⁴ m s⁻¹",
+          "explanation": "This is approximately the orbital speed if the height (408 km = 4.08 × 10⁵ m) were used as r instead of the full orbital radius. The correct r is R + h = 6.808 × 10⁶ m."
+        },
+        {
+          "answer": "7.7 × 10⁶ m s⁻¹",
+          "explanation": "This has the wrong power of ten. The correct orbital speed is approximately 7.7 × 10³ m s⁻¹ (about 7.7 km s⁻¹)."
+        },
+        {
+          "answer": "5.9 × 10⁷ m s⁻¹",
+          "explanation": "This is the value of GM/r, not the orbital speed. The speed is the square root: v = √(5.88 × 10⁷) ≈ 7.7 × 10³ m s⁻¹."
+        }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student calculates the orbital speed of a satellite and gets v = 3.5 × 10⁷ m s⁻¹. This exceeds the speed of light (3.0 × 10⁸ m s⁻¹) by only one order of magnitude. The student most likely made which error?",
+      "correct": "Forgot to take the square root of GM/r",
+      "correctExplanation": "A common error is computing GM/r but forgetting the final square root. The typical value of GM/r for Earth satellites is of order 10⁷, but the square root gives v ≈ 10³ to 10⁴ m s⁻¹. An answer of 3.5 × 10⁷ is far too large and likely the unsquare-rooted result.",
+      "distractors": [
+        {
+          "answer": "Used the height above the surface instead of the orbital radius",
+          "explanation": "Using height instead of the full orbital radius would give a speed that is too large, but not by this magnitude. The most likely error is forgetting the square root."
+        },
+        {
+          "answer": "Used the mass of the satellite instead of the mass of Earth",
+          "explanation": "A satellite's mass (hundreds of kg) is much smaller than Earth's mass (6 × 10²⁴ kg), so using it would give a speed far too small, not too large."
+        },
+        {
+          "answer": "Used the wrong units for G",
+          "explanation": "While unit errors can cause problems, the most common error giving a result of this magnitude is forgetting to take the square root of GM/r."
+        }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the step-by-step calculation of orbital speed.",
+      "sentence": "For a satellite orbiting at r = 1.0 × 10⁷ m around Earth (M = 6.0 × 10²⁴ kg): GM/r = {{blank:1}} × 10⁷ m² s⁻², so v = √(GM/r) = {{blank:2}} × 10³ m s⁻¹.",
+      "blanks": {
+        "1": {
+          "correct": "4.0",
+          "correctExplanation": "GM/r = (6.67 × 10⁻¹¹ × 6.0 × 10²⁴) / (1.0 × 10⁷) = 4.0 × 10¹⁴ / 1.0 × 10⁷ = 4.0 × 10⁷ m² s⁻².",
+          "distractors": [
+            {
+              "answer": "6.0",
+              "explanation": "GM = 6.67 × 10⁻¹¹ × 6.0 × 10²⁴ = 4.0 × 10¹⁴, and dividing by r = 1.0 × 10⁷ gives 4.0 × 10⁷, not 6.0 × 10⁷."
+            },
+            {
+              "answer": "6.67",
+              "explanation": "This is the value of G (× 10⁻¹¹). GM/r = 4.0 × 10¹⁴ / 1.0 × 10⁷ = 4.0 × 10⁷."
+            }
+          ]
+        },
+        "2": {
+          "correct": "6.3",
+          "correctExplanation": "v = √(4.0 × 10⁷) = √(40 × 10⁶) = 6.32 × 10³ ≈ 6.3 × 10³ m s⁻¹.",
+          "distractors": [
+            {
+              "answer": "4.0",
+              "explanation": "The value 4.0 × 10⁷ is GM/r, not the speed. The speed is v = √(4.0 × 10⁷) = 6.3 × 10³ m s⁻¹."
+            },
+            {
+              "answer": "2.0",
+              "explanation": "√(4.0 × 10⁷) = √4 × √(10⁷) = 2 × 3162 = 6324 ≈ 6.3 × 10³. The answer 2.0 × 10³ is too small."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the rearrangement to find the central body's mass.",
+      "sentence": "Starting from v = √(GM/r), squaring both sides gives v² = GM/r, and rearranging for M gives M = {{blank:1}}.",
+      "blanks": {
+        "1": {
+          "correct": "v²r/G",
+          "correctExplanation": "From v² = GM/r, multiplying both sides by r gives v²r = GM, then dividing by G gives M = v²r/G.",
+          "distractors": [
+            {
+              "answer": "Gv²/r",
+              "explanation": "This rearrangement is incorrect. From v² = GM/r: M = v²r/G. The r should be in the numerator and G in the denominator."
+            },
+            {
+              "answer": "GM/v²",
+              "explanation": "This rearrangement gives GM/v² = r, which is the formula for the orbital radius, not the mass."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the physical meaning of orbital speed.",
+      "sentence": "A satellite in a circular orbit at radius r travels the circumference 2πr in one orbital {{blank:1}}. Therefore, the orbital speed is also given by v = 2πr/{{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "period",
+          "correctExplanation": "The orbital period T is the time for one complete orbit. During this time, the satellite travels the full circumference of 2πr.",
+          "distractors": [
+            {
+              "answer": "radius",
+              "explanation": "The satellite travels the circumference in one orbital period (time), not one orbital radius."
+            },
+            {
+              "answer": "speed",
+              "explanation": "The satellite completes the circumference in one orbital period (T). Speed is what is being calculated, not what the satellite completes."
+            }
+          ]
+        },
+        "2": {
+          "correct": "T",
+          "correctExplanation": "The orbital speed is the circumference divided by the period: v = 2πr/T. This connects the orbital speed formula v = √(GM/r) with the orbital period.",
+          "distractors": [
+            {
+              "answer": "r",
+              "explanation": "Dividing the circumference by r gives 2π, not the speed. The speed is v = 2πr/T, where T is the orbital period."
+            },
+            {
+              "answer": "M",
+              "explanation": "Dividing the circumference by the central body's mass M does not give a speed. The correct relationship is v = 2πr/T."
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "mc",
+      "question": "A satellite orbits Planet X at 2.0 × 10⁷ m from the planet's centre with an orbital speed of 8.0 × 10³ m s⁻¹. What is the mass of Planet X?",
+      "correct": "1.9 × 10²⁵ kg",
+      "correctExplanation": "M = v²r/G = (8.0 × 10³)² × 2.0 × 10⁷ / 6.67 × 10⁻¹¹ = 6.4 × 10⁷ × 2.0 × 10⁷ / 6.67 × 10⁻¹¹ = 1.28 × 10¹⁵ / 6.67 × 10⁻¹¹ = 1.92 × 10²⁵ ≈ 1.9 × 10²⁵ kg.",
+      "distractors": [
+        {
+          "answer": "1.9 × 10²⁶ kg",
+          "explanation": "This is off by a factor of ten. The correct calculation gives M = 1.28 × 10¹⁵ / 6.67 × 10⁻¹¹ = 1.9 × 10²⁵ kg, not 10²⁶."
+        },
+        {
+          "answer": "1.3 × 10¹⁵ kg",
+          "explanation": "This is v²r = 1.28 × 10¹⁵, which has not been divided by G. The mass is M = v²r/G = 1.28 × 10¹⁵ / 6.67 × 10⁻¹¹ = 1.9 × 10²⁵ kg."
+        },
+        {
+          "answer": "6.4 × 10⁷ kg",
+          "explanation": "This is v² = (8.0 × 10³)² = 6.4 × 10⁷, not the mass. The mass is M = v²r/G = 1.9 × 10²⁵ kg."
+        }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A satellite orbits Earth at a radius of 6.8 × 10⁶ m. Earth's mass is 6.0 × 10²⁴ kg. What is the orbital speed, and how long does one orbit take?",
+      "correct": "v ≈ 7.7 × 10³ m s⁻¹ and T ≈ 5.5 × 10³ s",
+      "correctExplanation": "v = √(GM/r) = √(6.67 × 10⁻¹¹ × 6.0 × 10²⁴ / 6.8 × 10⁶) = √(5.88 × 10⁷) = 7.67 × 10³ m s⁻¹. T = 2πr/v = 2π × 6.8 × 10⁶ / 7.67 × 10³ = 5.57 × 10³ s ≈ 5.5 × 10³ s (about 93 minutes).",
+      "distractors": [
+        {
+          "answer": "v ≈ 7.7 × 10³ m s⁻¹ and T ≈ 5.5 × 10⁶ s",
+          "explanation": "The speed is correct, but the period has the wrong power of ten. T = 2πr/v = 2π × 6.8 × 10⁶ / 7.67 × 10³ ≈ 5.5 × 10³ s, not 10⁶ s."
+        },
+        {
+          "answer": "v ≈ 5.9 × 10⁷ m s⁻¹ and T ≈ 0.72 s",
+          "explanation": "The value 5.9 × 10⁷ is GM/r, not the speed. Forgetting the square root gives a vastly inflated speed and a tiny period. The correct speed is 7.7 × 10³ m s⁻¹."
+        },
+        {
+          "answer": "v ≈ 7.7 × 10³ m s⁻¹ and T ≈ 8.6 × 10⁴ s",
+          "explanation": "The speed is correct, but T ≈ 8.6 × 10⁴ s is approximately 24 hours, which is the period for a geostationary orbit, not a low orbit. For r = 6.8 × 10⁶ m, T ≈ 5.5 × 10³ s."
+        }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An exoplanet orbits its star at a radius of 1.5 × 10¹¹ m with an orbital speed of 3.0 × 10⁴ m s⁻¹. What is the mass of the star?",
+      "correct": "2.0 × 10³⁰ kg",
+      "correctExplanation": "M = v²r/G = (3.0 × 10⁴)² × 1.5 × 10¹¹ / 6.67 × 10⁻¹¹ = 9.0 × 10⁸ × 1.5 × 10¹¹ / 6.67 × 10⁻¹¹ = 1.35 × 10²⁰ / 6.67 × 10⁻¹¹ = 2.02 × 10³⁰ ≈ 2.0 × 10³⁰ kg.",
+      "distractors": [
+        {
+          "answer": "1.35 × 10²⁰ kg",
+          "explanation": "This is v²r = 9.0 × 10⁸ × 1.5 × 10¹¹ = 1.35 × 10²⁰, which has not been divided by G. The mass is M = 1.35 × 10²⁰ / 6.67 × 10⁻¹¹ = 2.0 × 10³⁰ kg."
+        },
+        {
+          "answer": "9.0 × 10⁸ kg",
+          "explanation": "This is just v² = (3.0 × 10⁴)² = 9.0 × 10⁸. The mass is M = v²r/G = 2.0 × 10³⁰ kg."
+        },
+        {
+          "answer": "6.7 × 10¹⁹ kg",
+          "explanation": "This does not correspond to any correct intermediate step. The correct calculation gives M = v²r/G = 2.0 × 10³⁰ kg."
+        }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A satellite needs to be placed in an orbit where its speed is exactly half the orbital speed at radius r₀. At what radius must it orbit?",
+      "correct": "4r₀",
+      "correctExplanation": "From v = √(GM/r): if v₁ = √(GM/r₀) and v₂ = v₁/2, then v₂ = √(GM/r₂). Squaring: v₁²/4 = GM/r₂. Since v₁² = GM/r₀: GM/(4r₀) = GM/r₂, giving r₂ = 4r₀.",
+      "distractors": [
+        {
+          "answer": "2r₀",
+          "explanation": "Doubling the radius reduces speed by a factor of √2, not 2. To halve the speed, since v ∝ 1/√r, the radius must increase by a factor of (1/½)² = 4."
+        },
+        {
+          "answer": "r₀/4",
+          "explanation": "A smaller radius gives a faster speed, not a slower one. To halve the speed, the radius must increase by a factor of 4: r₂ = 4r₀."
+        },
+        {
+          "answer": "r₀/2",
+          "explanation": "Halving the radius would increase the speed by a factor of √2, not decrease it. To halve the speed, the radius must be quadrupled: r₂ = 4r₀."
+        }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A moon orbits a planet at 5.0 × 10⁸ m with a speed of 1.2 × 10³ m s⁻¹. A second moon orbits the same planet at 2.0 × 10⁹ m. What is the orbital speed of the second moon?",
+      "correct": "6.0 × 10² m s⁻¹",
+      "correctExplanation": "The radius increases by a factor of 2.0 × 10⁹ / 5.0 × 10⁸ = 4. Since v ∝ 1/√r, the speed decreases by a factor of √4 = 2: v₂ = 1.2 × 10³ / 2 = 6.0 × 10² m s⁻¹.",
+      "distractors": [
+        {
+          "answer": "3.0 × 10² m s⁻¹",
+          "explanation": "This would be v₁/4 = 1200/4 = 300, which assumes v ∝ 1/r. Since v ∝ 1/√r, the factor is √4 = 2, giving 600 m s⁻¹."
+        },
+        {
+          "answer": "2.4 × 10³ m s⁻¹",
+          "explanation": "This is twice the first speed, but a larger radius gives a slower speed, not a faster one. v₂ = 1200/√4 = 600 m s⁻¹."
+        },
+        {
+          "answer": "4.8 × 10³ m s⁻¹",
+          "explanation": "This is four times the first speed, which is incorrect. A larger radius gives a slower speed: v₂ = 1200/2 = 600 m s⁻¹."
+        }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student measures the orbital speed of a satellite around an unknown planet to be 4.5 × 10³ m s⁻¹ at an orbital radius of 8.0 × 10⁶ m. The student also knows that this planet has a radius of 5.0 × 10⁶ m. What is the gravitational field strength at the surface of the planet?",
+      "correct": "6.5 N kg⁻¹",
+      "correctExplanation": "First find M: M = v²r/G = (4.5 × 10³)² × 8.0 × 10⁶ / 6.67 × 10⁻¹¹ = 2.025 × 10⁷ × 8.0 × 10⁶ / 6.67 × 10⁻¹¹ = 1.62 × 10¹⁴ / 6.67 × 10⁻¹¹ = 2.43 × 10²⁴ kg. Then g = GM/R² = 6.67 × 10⁻¹¹ × 2.43 × 10²⁴ / (5.0 × 10⁶)² = 1.62 × 10¹⁴ / 2.5 × 10¹³ = 6.5 N kg⁻¹.",
+      "distractors": [
+        {
+          "answer": "2.5 N kg⁻¹",
+          "explanation": "This would be GM/r_orbit² = 1.62 × 10¹⁴ / (8.0 × 10⁶)² = 2.5 N kg⁻¹, which is the field strength at the orbital radius, not at the surface."
+        },
+        {
+          "answer": "9.8 N kg⁻¹",
+          "explanation": "This is Earth's surface gravity, not the surface gravity of the unknown planet. The calculation gives g = 6.5 N kg⁻¹."
+        },
+        {
+          "answer": "10.4 N kg⁻¹",
+          "explanation": "This does not correspond to the correct calculation. g = GM/R² = 6.67 × 10⁻¹¹ × 2.43 × 10²⁴ / (5.0 × 10⁶)² = 6.5 N kg⁻¹."
+        }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Jupiter's mass is approximately 318 times Earth's mass. A satellite orbits Jupiter at the same orbital radius as a satellite orbiting Earth. What is the ratio of the satellite's orbital speed around Jupiter to its speed around Earth?",
+      "correct": "√318 ≈ 17.8",
+      "correctExplanation": "Since v = √(GM/r) and r is the same: v_J/v_E = √(M_J/M_E) = √318 ≈ 17.8. The satellite around Jupiter orbits approximately 17.8 times faster at the same radius.",
+      "distractors": [
+        {
+          "answer": "318",
+          "explanation": "The speed ratio is √(M_J/M_E) = √318, not 318. The orbital speed is proportional to √M, not M."
+        },
+        {
+          "answer": "1/318",
+          "explanation": "Jupiter is more massive, so a satellite at the same radius orbits faster around Jupiter, not slower. The ratio is √318 ≈ 17.8."
+        },
+        {
+          "answer": "159",
+          "explanation": "The speed ratio is √(M_J/M_E) = √318 ≈ 17.8, not 318/2 = 159."
+        }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A satellite in a circular orbit around Earth has an orbital speed of 7.5 × 10³ m s⁻¹. What is its orbital radius? (M_Earth = 6.0 × 10²⁴ kg)",
+      "correct": "7.1 × 10⁶ m",
+      "correctExplanation": "r = GM/v² = (6.67 × 10⁻¹¹ × 6.0 × 10²⁴) / (7.5 × 10³)² = 4.0 × 10¹⁴ / 5.625 × 10⁷ = 7.11 × 10⁶ ≈ 7.1 × 10⁶ m.",
+      "distractors": [
+        {
+          "answer": "5.6 × 10⁷ m",
+          "explanation": "This is v² = (7.5 × 10³)² = 5.625 × 10⁷, not the orbital radius. The radius is r = GM/v² = 7.1 × 10⁶ m."
+        },
+        {
+          "answer": "4.0 × 10¹⁴ m",
+          "explanation": "This is GM = 6.67 × 10⁻¹¹ × 6.0 × 10²⁴ = 4.0 × 10¹⁴, not the radius. The radius is r = GM/v² = 7.1 × 10⁶ m."
+        },
+        {
+          "answer": "7.1 × 10³ m",
+          "explanation": "This has the wrong power of ten. The orbital radius is 7.1 × 10⁶ m (about 7100 km from Earth's centre), not 7.1 × 10³ m."
+        }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the multi-step calculation.",
+      "sentence": "A satellite orbits 600 km above Earth's surface (R = 6.4 × 10⁶ m). The orbital radius is r = {{blank:1}} × 10⁶ m, and the orbital speed is v = √(GM/r) ≈ {{blank:2}} × 10³ m s⁻¹.",
+      "blanks": {
+        "1": {
+          "correct": "7.0",
+          "correctExplanation": "r = R + h = 6.4 × 10⁶ + 6.0 × 10⁵ = 7.0 × 10⁶ m. The orbital radius includes both Earth's radius and the satellite's height above the surface.",
+          "distractors": [
+            {
+              "answer": "6.4",
+              "explanation": "This is Earth's radius only. The orbital radius must include the altitude: r = 6.4 × 10⁶ + 0.6 × 10⁶ = 7.0 × 10⁶ m."
+            },
+            {
+              "answer": "0.6",
+              "explanation": "This is the height above the surface only (600 km = 0.6 × 10⁶ m). The orbital radius is r = R + h = 7.0 × 10⁶ m."
+            }
+          ]
+        },
+        "2": {
+          "correct": "7.6",
+          "correctExplanation": "v = √(GM/r) = √(6.67 × 10⁻¹¹ × 6.0 × 10²⁴ / 7.0 × 10⁶) = √(5.72 × 10⁷) = 7.56 × 10³ ≈ 7.6 × 10³ m s⁻¹.",
+          "distractors": [
+            {
+              "answer": "5.7",
+              "explanation": "The value 5.72 × 10⁷ is GM/r, not the speed. The speed is v = √(5.72 × 10⁷) = 7.6 × 10³ m s⁻¹."
+            },
+            {
+              "answer": "3.1",
+              "explanation": "This would be the speed for a much larger orbital radius (about 4.2 × 10⁷ m). At r = 7.0 × 10⁶ m, the speed is approximately 7.6 × 10³ m s⁻¹."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about comparing orbital speeds around different planets.",
+      "sentence": "A planet with {{blank:1}} times the mass of Earth but the same radius would have satellites orbiting at {{blank:2}} times the orbital speed of Earth satellites at the same altitude.",
+      "blanks": {
+        "1": {
+          "correct": "4",
+          "correctExplanation": "This question sets up a planet with 4 times Earth's mass. Since v = √(GM/r) and r is the same, v ∝ √M.",
+          "distractors": [
+            {
+              "answer": "2",
+              "explanation": "If the mass were 2 times Earth's, the speed would increase by √2 ≈ 1.41 times, not 2 times. For 4 times the mass, v increases by √4 = 2."
+            },
+            {
+              "answer": "16",
+              "explanation": "With 16 times the mass, the speed would increase by √16 = 4 times. The question asks for 4 times the mass, giving √4 = 2 times the speed."
+            }
+          ]
+        },
+        "2": {
+          "correct": "2",
+          "correctExplanation": "Since v ∝ √M, a planet with 4 times the mass gives v_new = √4 × v = 2v. Satellites orbit at twice the speed.",
+          "distractors": [
+            {
+              "answer": "4",
+              "explanation": "The speed is proportional to √M, not M. With 4 times the mass, the speed increases by √4 = 2, not 4."
+            },
+            {
+              "answer": "0.5",
+              "explanation": "A more massive planet gives a higher orbital speed, not a lower one. With 4 times the mass, v increases by a factor of 2."
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

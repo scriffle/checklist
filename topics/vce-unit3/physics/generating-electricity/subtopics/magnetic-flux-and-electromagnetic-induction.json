@@ -1,0 +1,97 @@
+{
+  "id": "magnetic-flux-and-electromagnetic-induction",
+  "name": "Magnetic Flux and Electromagnetic Induction",
+  "icon": "🧲",
+  "what": "This subtopic covers the concept of magnetic flux, Faraday's law of electromagnetic induction, and Lenz's law. It includes calculating magnetic flux, using the formula for induced emf, and predicting the direction of induced currents.",
+  "why": "Electromagnetic induction is the physical principle behind virtually all electrical generators except solar panels. Understanding it connects magnetic fields to electrical circuits and underpins how most of the world's electricity is produced.",
+  "items": [
+    {
+      "id": 1,
+      "uuid": "lp-29707cd2-80d7-5127-c976-bc87c487716c",
+      "version": 1,
+      "title": "I can describe situations where electromagnetic induction occurs",
+      "code": "5B.1",
+      "what": "Electromagnetic induction occurs whenever there is relative motion between a conductor and a magnetic field, or when the magnetic field near a conductor is changing. This includes moving a magnet near a coil, moving a coil near a magnet, or changing the current in a nearby electromagnet.",
+      "why": "Recognising when induction occurs is the first step in analysing any generator or transformer system. It explains why a stationary magnet in a stationary coil produces no current.",
+      "example": "Pushing a bar magnet into a coil of wire connected to a galvanometer causes the needle to deflect. Holding the magnet still inside the coil causes no deflection, because there is no change in flux.",
+      "contentHash": "hash-98c64efc"
+    },
+    {
+      "id": 2,
+      "uuid": "lp-cd12cd43-c639-c4a3-99ca-44cd88dfaa31",
+      "version": 1,
+      "title": "I can define magnetic flux and calculate it when the field is perpendicular to the area",
+      "code": "5B.2",
+      "what": "Magnetic flux (symbol Φ_B, unit: weber, Wb) is a measure of the total magnetic field passing through a given area. When the magnetic field is perpendicular to the area, it is calculated using Φ_B = B⊥A, where B⊥ is the magnetic field strength in tesla and A is the area in square metres.",
+      "why": "Magnetic flux is the key quantity in Faraday's law. You cannot calculate induced emf without first knowing how the flux is changing, so this formula is the foundation of all generator calculations.",
+      "example": "A rectangular loop of area 0.4 m² placed perpendicular to a magnetic field of 1.0 T has a magnetic flux of Φ_B = 1.0 × 0.4 = 0.4 Wb.",
+      "contentHash": "hash-d548d5e2"
+    },
+    {
+      "id": 3,
+      "uuid": "lp-d4e5dad4-c37d-d943-71c7-d34a97799228",
+      "version": 1,
+      "title": "I can describe qualitatively how the angle between the field and the area affects magnetic flux",
+      "code": "5B.3",
+      "what": "Magnetic flux is greatest when the magnetic field is perpendicular to the plane of the loop (i.e. parallel to the area's normal vector). Flux decreases as the angle between the field and the normal increases, reaching zero when the field is parallel to the plane of the loop.",
+      "why": "This qualitative understanding is needed to explain why the flux through a rotating coil in a generator varies sinusoidally, which directly determines the shape of the emf output.",
+      "example": "A square coil held face-on to a magnetic field (field perpendicular to the loop) has maximum flux. If the same coil is tilted 90° so its face is parallel to the field, the flux through it is zero.",
+      "contentHash": "hash-6d4a1939"
+    },
+    {
+      "id": 4,
+      "uuid": "lp-94267369-f40c-1324-88ad-38d35c1e9b46",
+      "version": 1,
+      "title": "I can explain electromagnetic induction in terms of changing magnetic flux",
+      "code": "5B.4",
+      "what": "An emf is induced in a conductor whenever the magnetic flux through it is changing. The faster the flux changes, the larger the induced emf. If the flux is constant (even if large), no emf is induced.",
+      "why": "This explanation links the physical observation (moving magnet produces current) to the mathematical framework (changing flux produces emf), forming the conceptual basis for Faraday's law.",
+      "example": "A coil fully inside a uniform magnetic field with no motion has zero induced emf. If the coil is pulled out of the field region, the flux through it decreases and an emf is induced.",
+      "contentHash": "hash-b039bfb8"
+    },
+    {
+      "id": 5,
+      "uuid": "lp-402cbee0-6133-65fb-7f10-2eff81cbe64a",
+      "version": 1,
+      "title": "I can use Faraday's law to calculate the magnitude of induced emf",
+      "code": "5B.5",
+      "what": "Faraday's law states that the induced emf in a coil is equal to the negative rate of change of magnetic flux multiplied by the number of turns: ε = −N × (ΔΦ_B / Δt). The magnitude of the induced emf increases with more turns or a faster rate of flux change.",
+      "why": "Faraday's law is the central equation for all generator calculations in VCE Physics. It allows you to calculate the emf produced by any configuration of changing flux and coil turns.",
+      "example": "A 100-turn coil experiences a flux change of 0.025 Wb in 0.5 s. Using Faraday's law: |ε| = 100 × (0.025 / 0.5) = 5 V.",
+      "contentHash": "hash-335d755f"
+    },
+    {
+      "id": 6,
+      "uuid": "lp-d84e1a6f-231d-f475-cad5-00be6ecbb706",
+      "version": 1,
+      "title": "I can explain the negative sign in Faraday's law using Lenz's law and conservation of energy",
+      "code": "5B.6",
+      "what": "The negative sign in Faraday's law reflects Lenz's law: the induced emf produces a current whose magnetic field opposes the change in flux that caused it. This is required by conservation of energy — if the induced current assisted the flux change, energy would be created from nothing.",
+      "why": "Lenz's law explains the direction of all induced currents and is the physical reasoning behind the mathematics. It is also directly testable in VCE exams as an explanation question.",
+      "example": "A north pole approaching a coil from the left increases the flux to the right. By Lenz's law, the induced current creates a magnetic field pointing to the left, opposing that increase. The coil therefore acts like a north pole facing the approaching magnet, creating a repulsive force.",
+      "contentHash": "hash-40fd80a7"
+    },
+    {
+      "id": 7,
+      "uuid": "lp-c0670ee8-c8c7-2a70-bb2e-b71220949808",
+      "version": 1,
+      "title": "I can use Lenz's law and the right-hand rule to predict the direction of induced current",
+      "code": "5B.7",
+      "what": "To find the direction of induced current: first determine whether the flux through the loop is increasing or decreasing. The induced current must create a magnetic field that opposes that change. Use the right-hand grip rule to find which current direction produces that opposing field.",
+      "why": "Direction questions are common in VCE Physics exams and require applying Lenz's law systematically. A step-by-step approach avoids errors from trying to apply rules mechanically.",
+      "example": "A magnet's north pole is pulled away from a coil (flux to the right is decreasing). The induced current must oppose this decrease by producing flux to the right. Using the right-hand rule, this requires an anticlockwise current when viewed from the right.",
+      "contentHash": "hash-b277d4f5"
+    },
+    {
+      "id": 8,
+      "uuid": "lp-fde58a04-0eea-a68d-f039-be4e8193f7ae",
+      "version": 1,
+      "title": "I can predict the shape of an emf vs time graph from a flux vs time graph",
+      "code": "5B.8",
+      "what": "The induced emf at any moment is proportional to the negative gradient (slope) of the magnetic flux vs time graph. Where flux is at a maximum or minimum (slope = zero), emf is zero. Where flux is changing most rapidly (steepest slope), emf is at its maximum.",
+      "why": "This graphical relationship is directly tested in VCE exams where students must sketch or interpret one graph given the other. It provides a visual way to apply Faraday's law without calculation.",
+      "example": "If a flux vs time graph shows a steady linear increase from 0 to 0.5 Wb over 2 s, the corresponding emf vs time graph shows a constant negative value: ε = −1 × (0.5/2) = −0.25 V (for a single-turn coil).",
+      "contentHash": "hash-2f8f7bb9"
+    }
+  ]
+}

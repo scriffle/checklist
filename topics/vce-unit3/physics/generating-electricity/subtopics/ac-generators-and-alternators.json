@@ -1,0 +1,97 @@
+{
+  "id": "ac-generators-and-alternators",
+  "name": "AC Generators and Alternators",
+  "icon": "🔄",
+  "what": "This subtopic covers AC generators (alternators) with slip rings, including their structure, the sinusoidal AC output they produce, calculations using Faraday's law, the effect of varying parameters, and a comparison with DC generators.",
+  "why": "Virtually all large-scale electricity generation in Australia — from coal power stations to wind turbines — uses AC generators. Understanding how alternators produce sinusoidal AC is essential for understanding the electricity grid.",
+  "items": [
+    {
+      "id": 1,
+      "uuid": "lp-595d026c-78b0-8e49-a231-1870c3e6eeec",
+      "version": 1,
+      "title": "I can describe the structure and operation of an AC generator (alternator)",
+      "code": "5D.1",
+      "what": "An AC generator (alternator) consists of a coil rotating in a magnetic field, with each end of the coil connected to a separate slip ring. Carbon brushes press against the slip rings to transfer current to the external circuit. As the coil rotates, the changing flux induces a sinusoidal AC emf.",
+      "why": "Understanding the structure of an alternator allows you to explain its AC output and to compare it with a DC generator. The slip rings are the key structural difference from a DC generator.",
+      "example": "A wind turbine generator has a coil wound around a rotor that spins inside a fixed magnetic field. The two slip rings rotate with the shaft, each connected to one brush, carrying the alternating current to the external grid connection.",
+      "contentHash": "hash-84a19a54"
+    },
+    {
+      "id": 2,
+      "uuid": "lp-c4b15d60-9434-46fe-7fbc-a35b4535c46b",
+      "version": 1,
+      "title": "I can explain the function of slip rings in an AC generator",
+      "code": "5D.2",
+      "what": "Slip rings maintain a continuous electrical connection between the rotating coil and the stationary external circuit, without reversing the connection. This allows the naturally alternating emf produced in the coil to pass directly to the external circuit as AC.",
+      "why": "Understanding the difference between slip rings (AC output) and a split ring commutator (DC output) is central to comparing AC and DC generators, which is explicitly required by the study design.",
+      "example": "Unlike the split ring commutator, which swaps connections every half turn, each slip ring stays connected to the same end of the coil throughout the rotation. The output therefore alternates in polarity as the coil rotates.",
+      "contentHash": "hash-843650e0"
+    },
+    {
+      "id": 3,
+      "uuid": "lp-42f9bd4d-2f25-055d-cf3f-5f6065db03b3",
+      "version": 1,
+      "title": "I can explain and sketch the flux and emf vs time graphs for an AC generator",
+      "code": "5D.3",
+      "what": "For an AC generator rotating at constant speed, the flux varies sinusoidally with time. The induced emf is given by the negative gradient of the flux graph, so it is also sinusoidal but shifted by a quarter period: emf is maximum when flux is zero (fastest change), and zero when flux is at its maximum (no change).",
+      "why": "These graphs are fundamental to VCE Physics exam questions on alternators. The phase relationship between the flux and emf graphs must be understood and reproducible under exam conditions.",
+      "example": "A coil begins with its face perpendicular to the field (maximum flux). The flux vs time graph starts at its maximum. The emf vs time graph therefore starts at zero, rises to a positive peak after a quarter turn, returns to zero at half a turn, and so on.",
+      "contentHash": "hash-c74d5e7d"
+    },
+    {
+      "id": 4,
+      "uuid": "lp-62d814d6-2296-df6b-9593-9322e43a165a",
+      "version": 1,
+      "title": "I can calculate the average emf from an AC generator using Faraday's law",
+      "code": "5D.4",
+      "what": "Use Faraday's law: |ε_avg| = N × |ΔΦ_B| / Δt. For a 90° rotation from maximum flux to zero flux, ΔΦ_B = Φ_max. The time for 90° is one quarter of the period. The period T = 1/f, where f is the rotational frequency in Hz.",
+      "why": "This calculation appears frequently in VCE exams and requires careful identification of the correct ΔΦ_B and Δt for the specified rotation. It is the same procedure as for a DC generator.",
+      "example": "A 20-turn coil (0.12 m × 0.10 m) rotates at 50 rev/s in a 1.5 T field. Φ_max = 0.018 Wb. Time for 90°: Δt = 0.005 s. |ε_avg| = 20 × 0.018 / 0.005 = 72 V.",
+      "contentHash": "hash-367c52f8"
+    },
+    {
+      "id": 5,
+      "uuid": "lp-f325a259-25f1-04bf-912f-44a5da4f9476",
+      "version": 1,
+      "title": "I can analyse how changing parameters affects the output of an AC generator",
+      "code": "5D.5",
+      "what": "The peak emf of an AC generator is proportional to the number of turns (N), the magnetic field strength (B), the coil area (A), and the rate of rotation (f). Doubling the rotation speed doubles the peak emf and also doubles the frequency (halves the period) of the output.",
+      "why": "The study design explicitly requires analysis of parameter changes both graphically and by calculation. The dual effect of rotation speed on both amplitude and frequency is a common exam point.",
+      "example": "An AC generator produces a 400 V peak output at 50 Hz. If the rotation speed is doubled: peak emf becomes 800 V and frequency becomes 100 Hz (period halves from 0.02 s to 0.01 s).",
+      "contentHash": "hash-94432939"
+    },
+    {
+      "id": 6,
+      "uuid": "lp-aedaadf9-f01e-193a-48a0-dbbec6c8ce27",
+      "version": 1,
+      "title": "I can calculate induced current from an AC generator using Ohm's law",
+      "code": "5D.6",
+      "what": "The induced current in a complete external circuit connected to an AC generator is found using Ohm's law: I = ε / R. For an average emf calculated using Faraday's law, this gives an average current. The current alternates in direction at the same frequency as the emf.",
+      "why": "Completing a full circuit analysis (emf → current → power) is a required skill in VCE Physics. Students must be able to chain Faraday's law and Ohm's law together in a multi-step problem.",
+      "example": "An AC generator produces an average emf of 72 V and is connected to a 6.0 Ω resistor. The average current is I = 72 / 6.0 = 12 A, alternating at the frequency of the generator's rotation.",
+      "contentHash": "hash-688d4c67"
+    },
+    {
+      "id": 7,
+      "uuid": "lp-09703aec-9611-9348-8a69-70ec07522b6d",
+      "version": 1,
+      "title": "I can compare AC generators (alternators) and DC generators in terms of structure and output",
+      "code": "5D.7",
+      "what": "Both AC and DC generators use a rotating coil in a magnetic field and rely on Faraday's law. The key structural difference is the commutator: AC generators use slip rings (which preserve the alternating nature of the emf), while DC generators use a split ring commutator (which rectifies the output to DC). The emf in the coil itself is AC in both cases.",
+      "why": "Comparing the two types is explicitly required in the VCE study design and is a common short-answer or diagram question in exams. The comparison clarifies the role of each type of commutator.",
+      "example": "If you replaced the split ring commutator in a DC generator with slip rings, the output would become sinusoidal AC. Conversely, replacing the slip rings in an alternator with a split ring commutator would convert the output to rectified sinusoidal DC.",
+      "contentHash": "hash-b6a2c043"
+    },
+    {
+      "id": 8,
+      "uuid": "lp-141ce660-7afd-a973-2d5b-a617d1c49d33",
+      "version": 1,
+      "title": "I can explain that an AC generator is a motor run in reverse",
+      "code": "5D.8",
+      "what": "An AC generator and an AC motor have essentially the same structure. In a motor, electrical energy is the input and mechanical energy (rotation) is the output. In a generator, mechanical energy is the input and electrical energy is the output. This reversibility is an expression of the same underlying electromagnetic principles.",
+      "why": "This conceptual understanding is required by the study design and illustrates the deep symmetry in electromagnetism. It also explains regenerative braking in electric vehicles, where motors act as generators.",
+      "example": "A wind turbine generator and an electric fan motor can have very similar internal structures. If you connect the wind turbine generator to a power supply and drive it electrically, the coil would rotate — it would function as a motor.",
+      "contentHash": "hash-a4fa63dc"
+    }
+  ]
+}

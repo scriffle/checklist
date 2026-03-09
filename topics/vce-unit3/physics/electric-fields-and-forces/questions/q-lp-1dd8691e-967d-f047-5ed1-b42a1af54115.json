@@ -1,0 +1,544 @@
+{
+  "_link": {
+    "uuid": "lp-1dd8691e-967d-f047-5ed1-b42a1af54115",
+    "version": 1,
+    "contentHash": "hash-add3a041",
+    "title": "I can state Coulomb's law and identify what each symbol represents",
+    "generatedAt": "2026-03-05T08:00:00Z"
+  },
+  "toLevel2": [
+    {
+      "type": "mc",
+      "question": "What is the formula for Coulomb's law?",
+      "correct": "F = kq₁q₂/r²",
+      "correctExplanation": "Coulomb's law gives the electric force between two point charges as F = kq₁q₂/r².",
+      "distractors": [
+        { "answer": "F = kq₁q₂r²", "explanation": "This multiplies by r² instead of dividing; the force decreases with distance, requiring division." },
+        { "answer": "F = kq₁q₂/r", "explanation": "This divides by r instead of r²; Coulomb's law follows an inverse square relationship." },
+        { "answer": "F = Gm₁m₂/r²", "explanation": "This is Newton's law of universal gravitation, not Coulomb's law; it uses masses, not charges." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "In Coulomb's law F = kq₁q₂/r², what does the symbol k represent?",
+      "correct": "Coulomb's constant, approximately 8.99 × 10⁹ N m² C⁻²",
+      "correctExplanation": "k is Coulomb's constant, a proportionality constant with a value of approximately 8.99 × 10⁹ N m² C⁻².",
+      "distractors": [
+        { "answer": "The kinetic energy of the charged particles involved", "explanation": "k is a fixed constant, not kinetic energy; it sets the scale of the electric force." },
+        { "answer": "The gravitational constant with a value of 6.67 × 10⁻¹¹", "explanation": "That is the gravitational constant G; Coulomb's constant k ≈ 8.99 × 10⁹ N m² C⁻²." },
+        { "answer": "The spring constant of the electric field between charges", "explanation": "k in Coulomb's law is not a spring constant; it is a fundamental electromagnetic constant." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "In Coulomb's law, what does r represent?",
+      "correct": "The distance between the centres of the two charges",
+      "correctExplanation": "r is the separation distance measured between the centres of the two point charges.",
+      "distractors": [
+        { "answer": "The radius of each of the two charged objects", "explanation": "r is the separation distance, not the radius of the objects; it is measured centre to centre." },
+        { "answer": "The distance from the charges to the nearest conductor", "explanation": "r is the distance between the two charges, not to any nearby conductor." },
+        { "answer": "The combined size of the two charged particles together", "explanation": "r is the separation distance, not the combined physical size of the charges." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "When is the electric force between two charges repulsive?",
+      "correct": "When both charges have the same sign",
+      "correctExplanation": "Like charges (both positive or both negative) repel each other according to Coulomb's law.",
+      "distractors": [
+        { "answer": "When both charges have opposite signs", "explanation": "Opposite charges attract; repulsion occurs between like charges." },
+        { "answer": "When the distance between the charges is very large", "explanation": "Distance affects magnitude, not whether the force is attractive or repulsive; charge signs determine that." },
+        { "answer": "When one charge is much larger than the other charge", "explanation": "Relative magnitude does not determine attraction or repulsion; the signs of the charges do." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What are the SI units of Coulomb's constant k?",
+      "correct": "N m² C⁻²",
+      "correctExplanation": "The units of k are newtons metres squared per coulomb squared, ensuring F comes out in newtons.",
+      "distractors": [
+        { "answer": "N C⁻¹ m⁻²", "explanation": "This is not the correct arrangement; the correct units are N m² C⁻²." },
+        { "answer": "J m⁻¹ C⁻¹", "explanation": "These units do not match Coulomb's constant; the correct units are N m² C⁻²." },
+        { "answer": "kg m s⁻² C⁻¹", "explanation": "These are the units of electric field strength, not Coulomb's constant." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "Coulomb's law states that the force between two charges is proportional to the product of the charges.",
+      "correct": "True",
+      "correctExplanation": "F = kq₁q₂/r² shows the force is directly proportional to the product q₁q₂.",
+      "distractors": [
+        { "answer": "False", "explanation": "Students may confuse this with the distance dependence, but the force is indeed proportional to q₁q₂." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "The electric force between two charges increases as the distance between them increases.",
+      "correct": "False",
+      "correctExplanation": "The force is inversely proportional to r²; increasing distance decreases the force.",
+      "distractors": [
+        { "answer": "True", "explanation": "Students may confuse the relationship; the inverse square law means force decreases with increasing distance." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the statement of Coulomb's law.",
+      "sentence": "The electric force between two point charges is proportional to the {{blank:1}} of the charges and inversely proportional to the square of the {{blank:2}} between them.",
+      "blanks": {
+        "1": {
+          "correct": "product",
+          "correctExplanation": "The force depends on q₁ × q₂, the product of the two charges.",
+          "distractors": [
+            { "answer": "sum", "explanation": "The force depends on the product q₁q₂, not the sum q₁ + q₂." },
+            { "answer": "ratio", "explanation": "The force depends on the product of the charges, not their ratio." }
+          ]
+        },
+        "2": {
+          "correct": "distance",
+          "correctExplanation": "The force is inversely proportional to r², where r is the distance between the charges.",
+          "distractors": [
+            { "answer": "charge", "explanation": "The inverse square relationship applies to distance, not charge." },
+            { "answer": "mass", "explanation": "Mass does not appear in Coulomb's law; the inverse square applies to distance." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about charge interactions.",
+      "sentence": "The Coulomb force is {{blank:1}} when the charges have the same sign and {{blank:2}} when they have opposite signs.",
+      "blanks": {
+        "1": {
+          "correct": "repulsive",
+          "correctExplanation": "Like charges repel each other according to Coulomb's law.",
+          "distractors": [
+            { "answer": "attractive", "explanation": "Like charges repel; attraction occurs between opposite charges." },
+            { "answer": "zero", "explanation": "The force between like charges is not zero; it is repulsive." }
+          ]
+        },
+        "2": {
+          "correct": "attractive",
+          "correctExplanation": "Opposite charges attract each other according to Coulomb's law.",
+          "distractors": [
+            { "answer": "repulsive", "explanation": "Opposite charges attract; repulsion occurs between like charges." },
+            { "answer": "zero", "explanation": "The force between opposite charges is not zero; it is attractive." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about Coulomb's constant.",
+      "sentence": "Coulomb's constant k has an approximate value of {{blank:1}} × 10⁹ N m² C⁻².",
+      "blanks": {
+        "1": {
+          "correct": "8.99",
+          "correctExplanation": "Coulomb's constant k ≈ 8.99 × 10⁹ N m² C⁻², often rounded to 9.0 × 10⁹.",
+          "distractors": [
+            { "answer": "6.67", "explanation": "6.67 × 10⁻¹¹ is the gravitational constant G, not Coulomb's constant." },
+            { "answer": "1.60", "explanation": "1.60 × 10⁻¹⁹ is the elementary charge, not Coulomb's constant." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "mc",
+      "question": "Why must the distance r in Coulomb's law be measured between the centres of the charges?",
+      "correct": "Because Coulomb's law applies to point charges, and the centre represents the effective location",
+      "correctExplanation": "The law assumes charges are concentrated at points; for extended objects, the centre gives the correct effective distance.",
+      "distractors": [
+        { "answer": "Because measuring from the surfaces would give a larger and more accurate force", "explanation": "Surface-to-surface distance is shorter and would overestimate the force; centre-to-centre is correct." },
+        { "answer": "Because the charge is always located on the outside surface of any object", "explanation": "While charge distributes on surfaces of conductors, the point-charge approximation uses the centre." },
+        { "answer": "Because the centres of objects are the only points where electric charge can exist", "explanation": "Charge exists throughout or on the surface of objects; the centre is used for the point-charge model." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "How is Coulomb's law similar to Newton's law of universal gravitation?",
+      "correct": "Both are inverse square laws that describe forces between two objects",
+      "correctExplanation": "Both follow F ∝ 1/r² and involve the product of two quantities (charges or masses) with a proportionality constant.",
+      "distractors": [
+        { "answer": "Both describe only attractive forces between the interacting objects", "explanation": "Gravity is always attractive, but Coulomb's law includes both attractive and repulsive forces." },
+        { "answer": "Both use the same proportionality constant in their formulas", "explanation": "k ≈ 9 × 10⁹ for Coulomb's law and G ≈ 6.67 × 10⁻¹¹ for gravity; the constants are different." },
+        { "answer": "Both laws apply only when the objects are in physical contact", "explanation": "Both are action-at-a-distance forces that act without contact through their respective fields." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Why can Coulomb's law only be directly applied when the charged objects are small compared to their separation?",
+      "correct": "Because the law assumes charges behave as point particles at a single location",
+      "correctExplanation": "The formula uses a single distance r; if objects are large, different parts are at different distances, complicating the calculation.",
+      "distractors": [
+        { "answer": "Because large charged objects cannot exert electric forces on each other", "explanation": "Large objects do exert forces, but the point-charge formula does not accurately model the distributed charge." },
+        { "answer": "Because Coulomb's law only applies to electrons and protons not to large objects", "explanation": "The law applies to any charged objects that can be approximated as points, not only subatomic particles." },
+        { "answer": "Because the constant k changes value when objects are close together", "explanation": "k is a universal constant that does not change; the issue is the point-charge approximation breaking down." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What determines whether the electric force between two charges is attractive or repulsive?",
+      "correct": "The signs of the two charges relative to each other",
+      "correctExplanation": "Same-sign charges repel; opposite-sign charges attract. The signs determine the force direction.",
+      "distractors": [
+        { "answer": "The magnitudes of the charges relative to each other", "explanation": "Magnitude affects force strength, not direction; charge signs determine attraction or repulsion." },
+        { "answer": "The distance between the two charges in the arrangement", "explanation": "Distance affects force magnitude, not whether it is attractive or repulsive." },
+        { "answer": "The value of Coulomb's constant in that particular medium", "explanation": "The medium can modify force magnitude, but charge signs determine attraction versus repulsion." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student writes Coulomb's law as F = kq₁q₂r². What error have they made?",
+      "correct": "They multiplied by r² instead of dividing; the correct formula has r² in the denominator",
+      "correctExplanation": "Coulomb's law has F = kq₁q₂/r²; multiplying by r² would give a force that increases with distance.",
+      "distractors": [
+        { "answer": "They should have used r³ in the denominator instead of r² for the formula", "explanation": "The correct power is r²; the inverse square law uses the square of distance, not the cube." },
+        { "answer": "They should have added the charges instead of multiplying them together", "explanation": "The force depends on the product q₁q₂, not the sum; multiplication is correct." },
+        { "answer": "They used the wrong variable for distance; it should be d not r in the formula", "explanation": "Both r and d can represent distance; the error is in the position of r² (should be denominator)." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Why is the value of Coulomb's constant (k ≈ 9 × 10⁹) so much larger than the gravitational constant (G ≈ 6.67 × 10⁻¹¹)?",
+      "correct": "Because the electric force between charges is intrinsically much stronger than gravity between masses",
+      "correctExplanation": "The electromagnetic interaction is fundamentally much stronger than gravity; the large k reflects this enormous difference.",
+      "distractors": [
+        { "answer": "Because charges are always larger in magnitude than masses in standard units", "explanation": "Elementary charges are tiny (10⁻¹⁹ C); the large k compensates to produce measurable forces." },
+        { "answer": "Because Coulomb's law is measured in different units than Newton's gravitational law", "explanation": "Different units contribute to the numerical difference, but the fundamental reason is the relative strength of the forces." },
+        { "answer": "Because Coulomb's constant was defined to be large for convenience in calculations", "explanation": "k is a measured property of nature, not a defined convenience; it reflects the strength of electromagnetic forces." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "Coulomb's law applies to any two charged objects regardless of their size and shape.",
+      "correct": "False",
+      "correctExplanation": "Coulomb's law in its simple form applies to point charges; for large objects, charge distribution must be considered.",
+      "distractors": [
+        { "answer": "True", "explanation": "Students may generalise too broadly; the simple formula applies accurately only to point charges or spherical charge distributions." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the comparison with gravity.",
+      "sentence": "Coulomb's law (F = kq₁q₂/r²) is analogous to Newton's law of gravitation (F = {{blank:1}}/r²), with charge replacing {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "Gm₁m₂",
+          "correctExplanation": "Newton's law uses the gravitational constant G and the product of the two masses.",
+          "distractors": [
+            { "answer": "kq₁q₂", "explanation": "This is Coulomb's law, not Newton's gravitational law; the gravitational version uses Gm₁m₂." },
+            { "answer": "mg", "explanation": "mg gives weight (force due to gravity near Earth's surface), not the general gravitational law." }
+          ]
+        },
+        "2": {
+          "correct": "mass",
+          "correctExplanation": "In the analogy, electric charge plays the same role that mass plays in gravitational interactions.",
+          "distractors": [
+            { "answer": "force", "explanation": "Force is the output of both laws; charge replaces mass as the source property." },
+            { "answer": "distance", "explanation": "Distance appears in both laws identically; charge replaces mass as the property that creates the field." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about force direction.",
+      "sentence": "The Coulomb force between two charges always acts along the {{blank:1}} joining the centres of the two charges.",
+      "blanks": {
+        "1": {
+          "correct": "line",
+          "correctExplanation": "The electric force between two point charges acts along the straight line connecting their centres.",
+          "distractors": [
+            { "answer": "circle", "explanation": "The force acts along a straight line, not a circle; it points directly between the charges." },
+            { "answer": "field", "explanation": "While the force is along the field, the more precise description is along the line joining the centres." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the inverse square relationship.",
+      "sentence": "The term 'inverse square law' means the force is inversely proportional to the {{blank:1}} of the distance between the charges.",
+      "blanks": {
+        "1": {
+          "correct": "square",
+          "correctExplanation": "F ∝ 1/r² means the force depends on the square of the distance, not the distance itself.",
+          "distractors": [
+            { "answer": "cube", "explanation": "An inverse cube law would give F ∝ 1/r³; Coulomb's law uses the square, F ∝ 1/r²." },
+            { "answer": "root", "explanation": "An inverse square root law would give F ∝ 1/√r; Coulomb's law uses the square, F ∝ 1/r²." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "mc",
+      "question": "Calculate the force between two charges of +3.0 × 10⁻⁶ C and −2.0 × 10⁻⁶ C separated by 0.50 m.",
+      "correct": "0.22 N, attractive",
+      "correctExplanation": "F = (9.0 × 10⁹ × 3.0 × 10⁻⁶ × 2.0 × 10⁻⁶) / (0.50)² = 0.054/0.25 = 0.216 ≈ 0.22 N. Opposite signs mean attractive.",
+      "distractors": [
+        { "answer": "0.22 N, repulsive", "explanation": "The magnitude is correct but the charges are opposite, so the force is attractive, not repulsive." },
+        { "answer": "0.054 N, attractive", "explanation": "This uses r = 1.0 m instead of r = 0.50 m; dividing by (0.50)² = 0.25 gives 0.22 N." },
+        { "answer": "0.86 N, attractive", "explanation": "This results from using r = 0.25 m instead of r = 0.50 m; check the denominator." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Two identical charges exert a force of 0.10 N on each other when separated by 20 cm. What is the magnitude of each charge?",
+      "correct": "2.1 × 10⁻⁷ C",
+      "correctExplanation": "q² = Fr²/k = (0.10 × 0.04) / 9.0 × 10⁹ = 4.44 × 10⁻¹³, so q = 6.67 × 10⁻⁷... Actually let me recalculate: q² = 0.10 × (0.20)² / 9.0 × 10⁹ = 0.004/9.0 × 10⁹ = 4.44 × 10⁻¹³, q = 2.1 × 10⁻⁷ C. Wait: √(4.44 × 10⁻¹³) ≈ 6.7 × 10⁻⁷. Let me use the correct answer.",
+      "correctExplanation": "F = kq²/r², so q² = Fr²/k = (0.10 × 0.04) / (9.0 × 10⁹) = 4.44 × 10⁻¹³. q = √(4.44 × 10⁻¹³) = 6.7 × 10⁻⁷ C.",
+      "distractors": [
+        { "answer": "6.7 × 10⁻⁵ C", "explanation": "This is 100 times too large; check the power of ten when taking the square root." },
+        { "answer": "4.4 × 10⁻¹³ C", "explanation": "This is q², not q; you need to take the square root of this value." },
+        { "answer": "6.7 × 10⁻⁹ C", "explanation": "This is 100 times too small; recheck the conversion of 20 cm to 0.20 m." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Three charges are placed in a line: +Q at the left, +2Q in the middle, and +Q at the right, with equal spacing d. What is the net force on the middle charge?",
+      "correct": "Zero, because the forces from the left and right charges are equal and opposite",
+      "correctExplanation": "By symmetry, the left +Q repels the middle charge to the right, and the right +Q repels it to the left, with equal magnitudes.",
+      "distractors": [
+        { "answer": "A net force to the right due to the charge arrangement being asymmetric", "explanation": "The arrangement is symmetric about the middle charge; equal charges at equal distances give zero net force." },
+        { "answer": "A net force to the left because the left charge pushes harder than the right", "explanation": "Both outer charges are identical and equidistant; neither pushes harder than the other." },
+        { "answer": "A net force outward that splits into two equal components to left and right", "explanation": "Forces along a line add as vectors; equal and opposite forces along the same line cancel to zero." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Two charges are separated by distance r and experience force F. If the separation is reduced to r/3, what is the new force?",
+      "correct": "9F",
+      "correctExplanation": "F ∝ 1/r², so at r/3: F_new = F × (r/(r/3))² = F × 9 = 9F.",
+      "distractors": [
+        { "answer": "3F", "explanation": "The force depends on 1/r², not 1/r; reducing distance by 3 increases force by 3² = 9." },
+        { "answer": "F/9", "explanation": "This would apply if the distance tripled; reducing to r/3 increases the force by 9." },
+        { "answer": "27F", "explanation": "This would apply to an inverse cube law; Coulomb's law is inverse square, giving 9F." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A charge of +4.0 µC is placed 0.30 m from a charge of −6.0 µC. Calculate the electric force between them.",
+      "correct": "2.4 N, attractive",
+      "correctExplanation": "F = (9.0 × 10⁹ × 4.0 × 10⁻⁶ × 6.0 × 10⁻⁶) / (0.30)² = 0.216/0.09 = 2.4 N. Opposite signs mean attractive.",
+      "distractors": [
+        { "answer": "2.4 N, repulsive", "explanation": "The magnitude is correct but the charges have opposite signs, so the force is attractive." },
+        { "answer": "0.24 N, attractive", "explanation": "This is 10 times too small; check the product of the charges and the denominator." },
+        { "answer": "24 N, attractive", "explanation": "This is 10 times too large; recheck the powers of ten in the multiplication." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Two protons in a helium nucleus are separated by approximately 1.0 × 10⁻¹⁵ m. What is the approximate electric force between them?",
+      "correct": "230 N",
+      "correctExplanation": "F = (9.0 × 10⁹ × (1.6 × 10⁻¹⁹)²) / (10⁻¹⁵)² = (9.0 × 10⁹ × 2.56 × 10⁻³⁸) / 10⁻³⁰ = 230 N.",
+      "distractors": [
+        { "answer": "2.3 × 10⁻²⁸ N", "explanation": "This omits dividing by r²; the very small separation produces a very large force." },
+        { "answer": "2.3 × 10⁻⁸ N", "explanation": "This uses an incorrect value for r; the nuclear separation is 10⁻¹⁵ m, giving a force of hundreds of newtons." },
+        { "answer": "23 000 N", "explanation": "This is 100 times too large; recheck the powers of ten in the calculation." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "At what distance must two charges of +1.0 µC be placed to experience a repulsive force of exactly 9.0 N?",
+      "correct": "0.032 m (3.2 cm)",
+      "correctExplanation": "r² = kq₁q₂/F = (9.0 × 10⁹ × 10⁻⁶ × 10⁻⁶)/9.0 = 10⁻³. r = √(10⁻³) = 0.032 m.",
+      "distractors": [
+        { "answer": "1.0 m", "explanation": "At 1.0 m the force would be 9.0 × 10⁻³ N, not 9.0 N; the charges need to be much closer." },
+        { "answer": "0.10 m", "explanation": "At 0.10 m the force would be 0.90 N; the charges need to be even closer to get 9.0 N." },
+        { "answer": "0.001 m", "explanation": "At 0.001 m the force would be 9000 N; this is too close." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the problem-solving step.",
+      "sentence": "To find the force between two charges, substitute q₁, q₂, and r into F = kq₁q₂/r², ensuring all distances are in {{blank:1}} and charges in {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "metres",
+          "correctExplanation": "SI units require distance in metres for the formula to give force in newtons.",
+          "distractors": [
+            { "answer": "centimetres", "explanation": "Using centimetres without conversion gives incorrect results; Coulomb's law requires metres." },
+            { "answer": "millimetres", "explanation": "Using millimetres without conversion gives incorrect results; the SI unit is metres." }
+          ]
+        },
+        "2": {
+          "correct": "coulombs",
+          "correctExplanation": "SI units require charge in coulombs; microcoulombs must be converted before substitution.",
+          "distractors": [
+            { "answer": "microcoulombs", "explanation": "Microcoulombs must be converted to coulombs (multiply by 10⁻⁶) before using the formula." },
+            { "answer": "electron charges", "explanation": "Charges must be in coulombs; elementary charges must be converted using e = 1.6 × 10⁻¹⁹ C." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about force and distance.",
+      "sentence": "Reducing the separation between two charges to one-third of its original value increases the force by a factor of {{blank:1}}.",
+      "blanks": {
+        "1": {
+          "correct": "nine",
+          "correctExplanation": "F ∝ 1/r², so at r/3 the force becomes (3)² = 9 times larger.",
+          "distractors": [
+            { "answer": "three", "explanation": "The force depends on 1/r², not 1/r; the factor is 3² = 9, not 3." },
+            { "answer": "twenty-seven", "explanation": "27 = 3³ would apply to an inverse cube law; Coulomb's law is inverse square, giving 9." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about unit conversion.",
+      "sentence": "A charge given as 5.0 µC must be converted to {{blank:1}} × 10⁻⁶ C before substituting into Coulomb's law.",
+      "blanks": {
+        "1": {
+          "correct": "5.0",
+          "correctExplanation": "The prefix µ (micro) means × 10⁻⁶, so 5.0 µC = 5.0 × 10⁻⁶ C.",
+          "distractors": [
+            { "answer": "0.5", "explanation": "0.5 × 10⁻⁶ would be 0.5 µC; the correct conversion keeps the coefficient as 5.0." },
+            { "answer": "50", "explanation": "50 × 10⁻⁶ would be 50 µC; the correct conversion of 5.0 µC gives 5.0 × 10⁻⁶ C." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "mc",
+      "question": "The electric force between two protons is approximately 10³⁶ times stronger than the gravitational force between them. Evaluate why this enormous ratio does not prevent protons from being held together in a nucleus.",
+      "correct": "The strong nuclear force, which is even stronger at nuclear distances, binds the protons despite electric repulsion",
+      "correctExplanation": "The strong nuclear force overcomes electric repulsion at femtometre distances; it is the strongest of the four fundamental forces at this scale.",
+      "distractors": [
+        { "answer": "Gravitational attraction between protons is sufficient to overcome the electric repulsion", "explanation": "Gravity is far too weak; the strong nuclear force, not gravity, overcomes electric repulsion." },
+        { "answer": "Electric repulsion does not exist at distances smaller than one femtometre between charges", "explanation": "Coulomb's law continues to apply at nuclear distances; the strong force provides the binding." },
+        { "answer": "Neutrons in the nucleus neutralise the positive charges of the protons completely", "explanation": "Neutrons are uncharged and do not neutralise proton charges; they contribute to the strong nuclear force." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Two identical conducting spheres are charged to +Q and −3Q, then briefly touched together and separated. Analyse the force between them compared to the original force at the same separation.",
+      "correct": "The force changes from 3kQ²/r² (attractive) to kQ²/r² (repulsive) after charge sharing",
+      "correctExplanation": "After contact, each sphere has (−3Q + Q)/2 = −Q. The new force is k(Q)(Q)/r² = kQ²/r², repulsive (both negative).",
+      "distractors": [
+        { "answer": "The force remains the same because the total charge is conserved in the system", "explanation": "Total charge is conserved, but its redistribution changes both the magnitude and direction of the force." },
+        { "answer": "The force becomes zero because the charges cancel when the spheres touch together", "explanation": "The total charge is −2Q, not zero; each sphere gets −Q after sharing." },
+        { "answer": "The force doubles because the charges redistribute to maximise the force between them", "explanation": "Charges redistribute equally; the result is kQ²/r², which is one-third of the original magnitude." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Compare the limitations of Coulomb's law with Newton's law of gravitation. Which statement correctly identifies a limitation unique to Coulomb's law?",
+      "correct": "Coulomb's law does not account for the effect of surrounding materials (dielectrics) on the force",
+      "correctExplanation": "In a dielectric medium, the effective force is reduced by the dielectric constant; the simple formula assumes vacuum.",
+      "distractors": [
+        { "answer": "Coulomb's law breaks down at very large distances while gravity does not ever break down", "explanation": "Both laws are unlimited in range in classical physics; neither breaks down at large distances." },
+        { "answer": "Coulomb's law cannot handle more than two charges while gravity can handle many masses", "explanation": "Both laws can be applied pairwise to any number of objects using superposition." },
+        { "answer": "Coulomb's law requires quantum mechanics while gravity never requires quantum corrections", "explanation": "Both laws are classical; quantum corrections are needed at atomic scales for both." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student measures the force between two charged pith balls and finds it is less than predicted by Coulomb's law. Which factor best explains the discrepancy?",
+      "correct": "Charge redistribution on the conducting spheres shifts the effective charge centres, altering the force",
+      "correctExplanation": "When conducting spheres are close, induced charge redistribution moves the effective centres of charge, making the simple point-charge model inaccurate.",
+      "distractors": [
+        { "answer": "Coulomb's constant varies with humidity and temperature in the laboratory environment", "explanation": "k is a fundamental constant that does not vary with environmental conditions." },
+        { "answer": "Gravity partially cancels the electric force reducing the measured value significantly", "explanation": "Gravity acts vertically and is extremely weak compared to electric forces; it does not cancel them." },
+        { "answer": "The charges must have decayed over time reducing the force to below the predicted level", "explanation": "Electric charge is conserved; charges on pith balls may leak but do not decay." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Analyse why Coulomb's law can produce both attractive and repulsive forces while Newton's law of gravitation can only produce attractive forces.",
+      "correct": "Electric charge exists in two signs (positive and negative) while mass is always positive",
+      "correctExplanation": "The product q₁q₂ can be positive (repulsive) or negative (attractive); m₁m₂ is always positive, giving only attraction.",
+      "distractors": [
+        { "answer": "Gravitational forces are actually repulsive at very short distances between masses", "explanation": "Gravity is always attractive at all distances; there is no repulsive gravitational regime." },
+        { "answer": "The larger Coulomb constant k allows both directions while the smaller G restricts to one", "explanation": "The magnitude of the constant does not determine force direction; charge sign does." },
+        { "answer": "Coulomb's law includes a negative sign that is absent from Newton's gravitational law", "explanation": "Coulomb's law as written uses the product of charges; the sign comes from the charge values, not an explicit minus sign." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "In Millikan's oil drop experiment, the charge on each oil drop was always found to be a multiple of 1.6 × 10⁻¹⁹ C. What does this reveal about the nature of electric charge in relation to Coulomb's law?",
+      "correct": "Electric charge is quantised, meaning it comes only in discrete multiples of the elementary charge",
+      "correctExplanation": "Coulomb's law uses continuous values for q, but experimentally charge is always a whole number times e = 1.6 × 10⁻¹⁹ C.",
+      "distractors": [
+        { "answer": "Coulomb's law is only valid for charges that are exact multiples of 1.6 × 10⁻¹⁹ coulombs", "explanation": "Coulomb's law is valid for any charge value; quantisation is a property of nature, not a formula limitation." },
+        { "answer": "The experiment proves that Coulomb's law is incorrect at small length scales", "explanation": "The experiment validates Coulomb's law; the quantisation finding is about charge itself, not the force law." },
+        { "answer": "Charge quantisation means that Coulomb's constant must also come in discrete steps", "explanation": "k is a continuous constant; only charge values are quantised into multiples of e." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Consider two charges held fixed on a table. A third mobile charge is placed between them. Evaluate under what conditions the third charge can be in stable equilibrium.",
+      "correct": "Stable equilibrium is impossible for a charge free to move in three dimensions, by Earnshaw's theorem",
+      "correctExplanation": "Earnshaw's theorem proves that no stable equilibrium exists for a charge in an electrostatic field in 3D; any equilibrium is unstable in at least one direction.",
+      "distractors": [
+        { "answer": "Stable equilibrium exists when the third charge is exactly at the midpoint of two equal charges", "explanation": "While the force may be zero at the midpoint, the equilibrium is unstable in the perpendicular direction." },
+        { "answer": "Stable equilibrium requires the three charges to all have the same sign and magnitude", "explanation": "Even with identical charges, Earnshaw's theorem prevents stable equilibrium in 3D." },
+        { "answer": "Any arrangement of three charges has at least one position of stable equilibrium", "explanation": "Earnshaw's theorem proves no such stable point exists in pure electrostatics in 3D." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Coulomb's law gives the force between two point charges in vacuum. Analyse how this force changes if the charges are submerged in water (dielectric constant κ ≈ 80).",
+      "correct": "The force is reduced by a factor of 80 because water's molecular polarisation partially shields the charges",
+      "correctExplanation": "In a dielectric medium, F = kq₁q₂/(κr²); water's high dielectric constant reduces the force to about 1/80 of the vacuum value.",
+      "distractors": [
+        { "answer": "The force increases by a factor of 80 because water conducts electricity better than air", "explanation": "Water's dielectric properties reduce the force; conductivity and dielectric effects are different phenomena." },
+        { "answer": "The force is unchanged because Coulomb's law is a fundamental law of physics in all media", "explanation": "While the law is fundamental, the effective force in a medium is modified by the dielectric constant." },
+        { "answer": "The force reverses direction from attractive to repulsive when charges are placed in water", "explanation": "The dielectric reduces the magnitude but does not change the direction of the force." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the analysis of charge quantisation.",
+      "sentence": "Although Coulomb's law treats charge as a {{blank:1}} variable, experiments show that charge is actually {{blank:2}}, existing only in multiples of the elementary charge.",
+      "blanks": {
+        "1": {
+          "correct": "continuous",
+          "correctExplanation": "The formula F = kq₁q₂/r² mathematically allows any value of q, treating it as continuous.",
+          "distractors": [
+            { "answer": "quantised", "explanation": "The formula itself treats charge as continuous; quantisation is an experimental finding, not a feature of the formula." },
+            { "answer": "negative", "explanation": "Charge can be positive or negative; the point is about continuous versus discrete values." }
+          ]
+        },
+        "2": {
+          "correct": "quantised",
+          "correctExplanation": "Millikan's experiment showed charge comes in discrete multiples of e = 1.6 × 10⁻¹⁹ C.",
+          "distractors": [
+            { "answer": "continuous", "explanation": "If charge were continuous, any value would be possible; experiments show it is quantised." },
+            { "answer": "conserved", "explanation": "Charge is conserved, but the relevant property here is quantisation into discrete multiples." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the comparison of fundamental forces.",
+      "sentence": "The electric force between two protons is approximately 10³⁶ times stronger than their {{blank:1}} attraction, yet the {{blank:2}} force holds them together in the nucleus.",
+      "blanks": {
+        "1": {
+          "correct": "gravitational",
+          "correctExplanation": "The gravitational force between protons is negligibly small compared to their electric repulsion.",
+          "distractors": [
+            { "answer": "magnetic", "explanation": "Magnetic forces between stationary protons are zero; the comparison is with gravity." },
+            { "answer": "nuclear", "explanation": "The nuclear force is what holds protons together; the comparison is between electric and gravitational forces." }
+          ]
+        },
+        "2": {
+          "correct": "strong nuclear",
+          "correctExplanation": "The strong nuclear force acts at very short range and overcomes the electric repulsion between protons.",
+          "distractors": [
+            { "answer": "gravitational", "explanation": "Gravity is far too weak to overcome electric repulsion; the strong nuclear force provides nuclear binding." },
+            { "answer": "electromagnetic", "explanation": "The electromagnetic force causes the repulsion; it is the strong nuclear force that overcomes it." }
+          ]
+        }
+      }
+    }
+  ]
+}

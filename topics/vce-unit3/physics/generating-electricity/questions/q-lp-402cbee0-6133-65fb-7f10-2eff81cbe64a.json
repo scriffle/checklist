@@ -1,0 +1,605 @@
+{
+  "_link": {
+    "uuid": "lp-402cbee0-6133-65fb-7f10-2eff81cbe64a",
+    "version": 1,
+    "contentHash": "hash-335d755f",
+    "title": "I can use Faraday's law to calculate the magnitude of induced emf",
+    "generatedAt": "2026-03-07T00:00:00.000Z"
+  },
+  "toLevel2": [
+    {
+      "type": "mc",
+      "question": "Which one of the following is the correct expression for Faraday's law of electromagnetic induction?",
+      "correct": "ε = −N × (ΔΦ_B / Δt)",
+      "correctExplanation": "Faraday's law states that the induced emf equals the negative of the number of turns multiplied by the rate of change of magnetic flux.",
+      "distractors": [
+        { "answer": "ε = N × Φ_B × t", "explanation": "This multiplies flux by time rather than dividing. The emf depends on the rate of change of flux, not the product of flux and time." },
+        { "answer": "ε = Φ_B / (N × Δt)", "explanation": "This divides by N instead of multiplying. The number of turns multiplies the rate of flux change." },
+        { "answer": "ε = N × Δt / ΔΦ_B", "explanation": "This has the ratio inverted. The emf is proportional to ΔΦ_B / Δt, not Δt / ΔΦ_B." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A coil of 50 turns experiences a change in magnetic flux of 0.10 Wb in 0.20 s. What is the magnitude of the induced emf?",
+      "correct": "25 V",
+      "correctExplanation": "|ε| = N × (ΔΦ_B / Δt) = 50 × (0.10 / 0.20) = 50 × 0.50 = 25 V.",
+      "distractors": [
+        { "answer": "5.0 V", "explanation": "This omits the number of turns. The calculation requires multiplying by N: 50 × 0.50 = 25 V." },
+        { "answer": "0.50 V", "explanation": "This gives only ΔΦ_B / Δt without multiplying by N. The correct answer is 50 × 0.50 = 25 V." },
+        { "answer": "250 V", "explanation": "This may result from an error in the division. ΔΦ_B / Δt = 0.10 / 0.20 = 0.50 V per turn, not 5.0." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A 200-turn coil experiences a flux change of 0.040 Wb in 0.10 s. What is the magnitude of the induced emf?",
+      "correct": "80 V",
+      "correctExplanation": "|ε| = 200 × (0.040 / 0.10) = 200 × 0.40 = 80 V.",
+      "distractors": [
+        { "answer": "0.40 V", "explanation": "This gives only the rate of flux change without multiplying by N. The correct answer is 200 × 0.40 = 80 V." },
+        { "answer": "8.0 V", "explanation": "This uses N = 20 instead of 200. The correct calculation is 200 × 0.40 = 80 V." },
+        { "answer": "800 V", "explanation": "This uses an incorrect rate of flux change. ΔΦ_B / Δt = 0.040 / 0.10 = 0.40, not 4.0." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "According to Faraday's law, which one of the following changes would increase the magnitude of the induced emf?",
+      "correct": "Increasing the rate of change of magnetic flux",
+      "correctExplanation": "The induced emf is proportional to the rate of change of magnetic flux. A faster rate of flux change produces a larger emf.",
+      "distractors": [
+        { "answer": "Decreasing the number of turns in the coil", "explanation": "Fewer turns reduce the emf. The emf is directly proportional to the number of turns." },
+        { "answer": "Increasing the time over which the flux changes", "explanation": "A longer time means a slower rate of flux change, which reduces the emf." },
+        { "answer": "Keeping the magnetic flux constant", "explanation": "If the flux is constant, there is no change and therefore no induced emf." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "In the formula |ε| = N × (ΔΦ_B / Δt), what does the symbol ΔΦ_B represent?",
+      "correct": "The change in magnetic flux through the coil",
+      "correctExplanation": "ΔΦ_B represents the change in magnetic flux, measured in webers (Wb), through the coil over the time interval Δt.",
+      "distractors": [
+        { "answer": "The total magnetic flux through the coil", "explanation": "ΔΦ_B represents the change in flux, not the total flux. It is the difference between the final and initial values." },
+        { "answer": "The magnetic field strength", "explanation": "The magnetic field strength is denoted by B, not ΔΦ_B. ΔΦ_B is the change in magnetic flux." },
+        { "answer": "The area of the coil", "explanation": "The area of the coil is denoted by A. ΔΦ_B is the change in magnetic flux through the coil." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the statement of Faraday's law.",
+      "sentence": "The magnitude of the induced emf equals the number of {{blank:1}} multiplied by the rate of change of magnetic {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "turns",
+          "correctExplanation": "The number of turns (N) in the coil multiplies the rate of change of flux to give the total induced emf.",
+          "distractors": [
+            { "answer": "coils", "explanation": "The correct term is turns, not coils. N refers to the number of turns of wire in the coil." },
+            { "answer": "magnets", "explanation": "The number of magnets is not part of Faraday's law. N is the number of turns in the coil." },
+            { "answer": "electrons", "explanation": "The number of electrons is not part of this formula. N is the number of turns in the coil." }
+          ]
+        },
+        "2": {
+          "correct": "flux",
+          "correctExplanation": "The magnetic flux (Φ_B) through the coil must be changing for an emf to be induced. Its rate of change determines the emf magnitude.",
+          "distractors": [
+            { "answer": "field", "explanation": "While related, the correct term in Faraday's law is flux (Φ_B), not field (B)." },
+            { "answer": "force", "explanation": "Magnetic force is not the relevant quantity. Faraday's law involves the rate of change of magnetic flux." },
+            { "answer": "energy", "explanation": "Energy is not the quantity in Faraday's law. The induced emf depends on the rate of change of magnetic flux." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "A 100-turn coil experiences a flux change of 0.025 Wb in 0.50 s. Complete the calculation of the induced emf.",
+      "sentence": "The rate of flux change is {{blank:1}} Wb s⁻¹ and the magnitude of the induced emf is {{blank:2}} V.",
+      "blanks": {
+        "1": {
+          "correct": "0.050",
+          "correctExplanation": "ΔΦ_B / Δt = 0.025 / 0.50 = 0.050 Wb s⁻¹.",
+          "distractors": [
+            { "answer": "0.025", "explanation": "This is the flux change, not the rate of flux change. Divide by the time: 0.025 / 0.50 = 0.050 Wb s⁻¹." },
+            { "answer": "0.50", "explanation": "This is the time interval, not the rate of flux change." },
+            { "answer": "0.0125", "explanation": "This incorrectly multiplies instead of divides. The rate is 0.025 / 0.50 = 0.050 Wb s⁻¹." }
+          ]
+        },
+        "2": {
+          "correct": "5.0",
+          "correctExplanation": "|ε| = N × (ΔΦ_B / Δt) = 100 × 0.050 = 5.0 V.",
+          "distractors": [
+            { "answer": "0.050", "explanation": "This is the rate of flux change per turn, not the total emf. Multiply by N: 100 × 0.050 = 5.0 V." },
+            { "answer": "50", "explanation": "This may result from an incorrect rate of flux change. The correct calculation gives 100 × 0.050 = 5.0 V." },
+            { "answer": "2.5", "explanation": "This uses an incorrect formula. The correct calculation is 100 × 0.050 = 5.0 V." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the statement about the units in Faraday's law.",
+      "sentence": "In Faraday's law, the unit of magnetic flux is the {{blank:1}} and the unit of induced emf is the {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "weber",
+          "correctExplanation": "The weber (Wb) is the SI unit of magnetic flux. 1 Wb = 1 T m².",
+          "distractors": [
+            { "answer": "tesla", "explanation": "The tesla (T) is the unit of magnetic field strength (flux density), not magnetic flux." },
+            { "answer": "henry", "explanation": "The henry (H) is the unit of inductance, not magnetic flux." },
+            { "answer": "ampere", "explanation": "The ampere (A) is the unit of current, not magnetic flux." }
+          ]
+        },
+        "2": {
+          "correct": "volt",
+          "correctExplanation": "The volt (V) is the SI unit of emf (electromotive force).",
+          "distractors": [
+            { "answer": "ampere", "explanation": "The ampere is the unit of current, not emf." },
+            { "answer": "watt", "explanation": "The watt is the unit of power, not emf." },
+            { "answer": "ohm", "explanation": "The ohm is the unit of resistance, not emf." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "tf",
+      "question": "According to Faraday's law, a coil with more turns produces a larger induced emf for the same rate of flux change.",
+      "correct": "True",
+      "correctExplanation": "The induced emf is directly proportional to the number of turns (N). More turns means a larger emf for the same ΔΦ_B / Δt.",
+      "distractors": [
+        { "answer": "False", "explanation": "This statement is correct. The emf is given by |ε| = N × (ΔΦ_B / Δt), so more turns produce a proportionally larger emf." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "If the magnetic flux through a coil changes by 0.10 Wb in 1.0 s or by 0.10 Wb in 2.0 s, the induced emf is the same in both cases.",
+      "correct": "False",
+      "correctExplanation": "The emf depends on the rate of change of flux (ΔΦ_B / Δt). A faster change (0.10 / 1.0 = 0.10 Wb s⁻¹) produces a larger emf than a slower change (0.10 / 2.0 = 0.050 Wb s⁻¹).",
+      "distractors": [
+        { "answer": "True", "explanation": "The total flux change is the same, but the rate of change differs. The emf is proportional to the rate: 0.10 V per turn vs 0.050 V per turn." }
+      ]
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "mc",
+      "question": "A 150-turn coil experiences a magnetic flux that changes from 0.080 Wb to 0.020 Wb in 0.30 s. What is the magnitude of the induced emf?",
+      "correct": "30 V",
+      "correctExplanation": "ΔΦ_B = 0.080 − 0.020 = 0.060 Wb. |ε| = 150 × (0.060 / 0.30) = 150 × 0.20 = 30 V.",
+      "distractors": [
+        { "answer": "0.20 V", "explanation": "This is the rate of flux change per turn. The total emf requires multiplying by N: 150 × 0.20 = 30 V." },
+        { "answer": "50 V", "explanation": "This may use an incorrect flux change. ΔΦ_B = 0.060 Wb, giving |ε| = 150 × 0.20 = 30 V." },
+        { "answer": "3.0 V", "explanation": "This may use N = 15 instead of 150. The correct calculation is 150 × 0.20 = 30 V." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Jaya measures an induced emf of 12 V in a coil of 60 turns. If the flux change occurs over 0.50 s, what is the change in magnetic flux?",
+      "correct": "0.10 Wb",
+      "correctExplanation": "Rearranging: ΔΦ_B = |ε| × Δt / N = 12 × 0.50 / 60 = 0.10 Wb.",
+      "distractors": [
+        { "answer": "6.0 Wb", "explanation": "This omits dividing by N. The correct calculation includes dividing by 60: 12 × 0.50 / 60 = 0.10 Wb." },
+        { "answer": "0.010 Wb", "explanation": "This may use an incorrect rearrangement. The correct result is 12 × 0.50 / 60 = 0.10 Wb." },
+        { "answer": "1.0 Wb", "explanation": "This may incorrectly use N = 6 instead of 60. The correct result is 0.10 Wb." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A coil of 80 turns has a flux that changes from 0.050 Wb to 0.150 Wb. An induced emf of 40 V is measured. How long did the flux change take?",
+      "correct": "0.20 s",
+      "correctExplanation": "ΔΦ_B = 0.150 − 0.050 = 0.100 Wb. Δt = N × ΔΦ_B / |ε| = 80 × 0.100 / 40 = 0.20 s.",
+      "distractors": [
+        { "answer": "2.0 s", "explanation": "This may use an incorrect rearrangement. The correct calculation gives 80 × 0.100 / 40 = 0.20 s." },
+        { "answer": "0.050 s", "explanation": "This may omit the number of turns in the calculation. The correct result is 0.20 s." },
+        { "answer": "0.50 s", "explanation": "This may use ΔΦ_B = 0.050 instead of 0.100 Wb. The full flux change is 0.100 Wb." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which one of the following explains why the induced emf is larger when the flux through a coil changes more rapidly?",
+      "correct": "A faster rate of flux change means a greater ΔΦ_B / Δt, which directly increases the emf according to Faraday's law.",
+      "correctExplanation": "Faraday's law states |ε| = N × (ΔΦ_B / Δt). A larger ΔΦ_B / Δt directly produces a proportionally larger emf.",
+      "distractors": [
+        { "answer": "A faster flux change increases the number of turns in the coil.", "explanation": "The number of turns is a physical property of the coil and does not change when the flux changes faster." },
+        { "answer": "A faster flux change increases the resistance of the coil.", "explanation": "The resistance of the coil is not affected by the rate of flux change. The emf increases because ΔΦ_B / Δt is larger." },
+        { "answer": "A faster flux change reduces the time, which reduces the emf.", "explanation": "Reducing the time for the same flux change increases ΔΦ_B / Δt, which increases the emf, not reduces it." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Two coils, A and B, experience the same flux change of 0.060 Wb in 0.30 s. Coil A has 100 turns and coil B has 300 turns. What is the ratio of the emf in coil B to the emf in coil A?",
+      "correct": "3:1",
+      "correctExplanation": "Since ΔΦ_B / Δt is the same for both, the emf is proportional to N. Ratio = 300/100 = 3:1.",
+      "distractors": [
+        { "answer": "1:1", "explanation": "The emfs are not equal. Coil B has three times as many turns, so it produces three times the emf." },
+        { "answer": "1:3", "explanation": "This is the inverse of the correct ratio. Coil B has more turns and therefore a larger emf." },
+        { "answer": "9:1", "explanation": "The emf is proportional to N, not N². The ratio is 300/100 = 3:1." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A coil of 250 turns produces an induced emf of 50 V. If the number of turns is increased to 500 while the rate of flux change remains the same, what is the new emf?",
+      "correct": "100 V",
+      "correctExplanation": "The emf is directly proportional to N. Doubling the turns from 250 to 500 doubles the emf from 50 V to 100 V.",
+      "distractors": [
+        { "answer": "50 V", "explanation": "The emf changes when the number of turns changes. It is directly proportional to N." },
+        { "answer": "25 V", "explanation": "The emf increases, not decreases, when turns are added. It doubles to 100 V." },
+        { "answer": "200 V", "explanation": "The turns doubled, not quadrupled. The emf doubles from 50 V to 100 V." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "A 120-turn coil has its flux change from 0.030 Wb to 0.090 Wb in 0.40 s. Complete the calculation.",
+      "sentence": "The change in flux is {{blank:1}} Wb and the magnitude of the induced emf is {{blank:2}} V.",
+      "blanks": {
+        "1": {
+          "correct": "0.060",
+          "correctExplanation": "ΔΦ_B = 0.090 − 0.030 = 0.060 Wb.",
+          "distractors": [
+            { "answer": "0.090", "explanation": "This is the final flux, not the change. The change is 0.090 − 0.030 = 0.060 Wb." },
+            { "answer": "0.030", "explanation": "This is the initial flux, not the change. The change is 0.090 − 0.030 = 0.060 Wb." },
+            { "answer": "0.120", "explanation": "This adds the two flux values instead of subtracting. The change is 0.090 − 0.030 = 0.060 Wb." }
+          ]
+        },
+        "2": {
+          "correct": "18",
+          "correctExplanation": "|ε| = 120 × (0.060 / 0.40) = 120 × 0.15 = 18 V.",
+          "distractors": [
+            { "answer": "0.15", "explanation": "This is the rate of flux change per turn. Multiply by N: 120 × 0.15 = 18 V." },
+            { "answer": "7.2", "explanation": "This may use an incorrect formula. The correct calculation gives 120 × 0.15 = 18 V." },
+            { "answer": "36", "explanation": "This may use an incorrect time value. With Δt = 0.40 s, the emf is 120 × 0.15 = 18 V." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Kai needs to find the number of turns in a coil. The flux changes by 0.050 Wb in 0.25 s and the induced emf is 40 V. Complete the rearrangement.",
+      "sentence": "The rate of flux change is {{blank:1}} Wb s⁻¹ and the number of turns is {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "0.20",
+          "correctExplanation": "ΔΦ_B / Δt = 0.050 / 0.25 = 0.20 Wb s⁻¹.",
+          "distractors": [
+            { "answer": "0.050", "explanation": "This is the flux change, not the rate. Divide by Δt: 0.050 / 0.25 = 0.20 Wb s⁻¹." },
+            { "answer": "5.0", "explanation": "This inverts the ratio (Δt / ΔΦ_B). The correct rate is 0.050 / 0.25 = 0.20 Wb s⁻¹." },
+            { "answer": "0.0125", "explanation": "This multiplies instead of divides. The rate is 0.050 / 0.25 = 0.20 Wb s⁻¹." }
+          ]
+        },
+        "2": {
+          "correct": "200",
+          "correctExplanation": "N = |ε| / (ΔΦ_B / Δt) = 40 / 0.20 = 200 turns.",
+          "distractors": [
+            { "answer": "8.0", "explanation": "This may use an incorrect calculation. N = 40 / 0.20 = 200 turns." },
+            { "answer": "100", "explanation": "This may use an incorrect rate of flux change. With the correct rate of 0.20, N = 200." },
+            { "answer": "2000", "explanation": "This may use an incorrect rate. With 0.20 Wb s⁻¹, N = 40 / 0.20 = 200." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the statement about how the two factors in Faraday's law affect the emf.",
+      "sentence": "Doubling the number of turns {{blank:1}} the emf, and halving the time for the same flux change {{blank:2}} the emf.",
+      "blanks": {
+        "1": {
+          "correct": "doubles",
+          "correctExplanation": "The emf is directly proportional to N. Doubling N doubles the emf.",
+          "distractors": [
+            { "answer": "halves", "explanation": "Doubling the turns increases the emf, not decreases it." },
+            { "answer": "quadruples", "explanation": "The emf is directly proportional to N, not N². Doubling N doubles the emf." },
+            { "answer": "does not change", "explanation": "The emf is directly proportional to N. Changing N changes the emf." }
+          ]
+        },
+        "2": {
+          "correct": "doubles",
+          "correctExplanation": "Halving Δt doubles the rate ΔΦ_B / Δt, which doubles the emf.",
+          "distractors": [
+            { "answer": "halves", "explanation": "Halving the time increases the rate of flux change, which increases the emf." },
+            { "answer": "does not change", "explanation": "The time directly affects the rate of flux change and therefore the emf." },
+            { "answer": "quadruples", "explanation": "Halving the time doubles ΔΦ_B / Δt, which doubles (not quadruples) the emf." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "tf",
+      "question": "If both the number of turns and the rate of flux change are doubled, the induced emf increases by a factor of four.",
+      "correct": "True",
+      "correctExplanation": "The emf is proportional to N × (ΔΦ_B / Δt). Doubling both factors gives 2 × 2 = 4 times the original emf.",
+      "distractors": [
+        { "answer": "False", "explanation": "This statement is correct. The emf depends on both N and ΔΦ_B / Δt. Doubling each gives a factor of 4." }
+      ]
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "mc",
+      "question": "A 300-turn coil is placed in a magnetic field. The flux through the coil changes uniformly from 0.12 Wb to 0.03 Wb in 0.60 s. What is the magnitude of the induced emf?",
+      "correct": "45 V",
+      "correctExplanation": "ΔΦ_B = 0.12 − 0.03 = 0.09 Wb. |ε| = 300 × (0.09 / 0.60) = 300 × 0.15 = 45 V.",
+      "distractors": [
+        { "answer": "0.15 V", "explanation": "This is the rate of flux change per turn. Multiply by N: 300 × 0.15 = 45 V." },
+        { "answer": "15 V", "explanation": "This may use N = 100 instead of 300. The correct calculation is 300 × 0.15 = 45 V." },
+        { "answer": "54 V", "explanation": "This may use ΔΦ_B = 0.12 + 0.06 instead of the difference. The correct ΔΦ_B = 0.09 Wb." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Elara winds a coil with 400 turns in a region where the flux changes by 0.080 Wb. She wants to induce an emf of 64 V. Over what time interval must the flux change occur?",
+      "correct": "0.50 s",
+      "correctExplanation": "Δt = N × ΔΦ_B / |ε| = 400 × 0.080 / 64 = 32 / 64 = 0.50 s.",
+      "distractors": [
+        { "answer": "5.0 s", "explanation": "This may omit N or use an incorrect rearrangement. The correct result is 0.50 s." },
+        { "answer": "0.20 s", "explanation": "This may use ΔΦ_B / |ε| without N. The correct calculation gives 0.50 s." },
+        { "answer": "1.0 s", "explanation": "This may use an incorrect formula. The correct result is 400 × 0.080 / 64 = 0.50 s." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A coil of N turns is placed in a uniform magnetic field of strength B. The coil has area A and is oriented so that the field is perpendicular to the coil face. The field drops to zero in time Δt. Which one of the following gives the magnitude of the induced emf?",
+      "correct": "|ε| = N × B × A / Δt",
+      "correctExplanation": "The initial flux is Φ = BA (perpendicular field). The flux drops to zero, so ΔΦ_B = BA. By Faraday's law: |ε| = N × BA / Δt.",
+      "distractors": [
+        { "answer": "|ε| = B × A / Δt", "explanation": "This omits the number of turns N. The correct expression includes N." },
+        { "answer": "|ε| = N × B / (A × Δt)", "explanation": "Area A should be in the numerator (as part of the flux), not the denominator." },
+        { "answer": "|ε| = N × A / (B × Δt)", "explanation": "Field strength B should be in the numerator (as part of the flux), not the denominator." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A 500-turn coil has an area of 0.020 m² in a magnetic field of 0.60 T perpendicular to the coil face. The coil is removed from the field in 0.25 s. What is the magnitude of the induced emf?",
+      "correct": "24 V",
+      "correctExplanation": "Initial flux = BA = 0.60 × 0.020 = 0.012 Wb. ΔΦ_B = 0.012 Wb (drops to zero). |ε| = 500 × (0.012 / 0.25) = 500 × 0.048 = 24 V.",
+      "distractors": [
+        { "answer": "0.048 V", "explanation": "This is the rate of flux change per turn. Multiply by N: 500 × 0.048 = 24 V." },
+        { "answer": "6.0 V", "explanation": "This may use N = 125 instead of 500, or an incorrect flux. The correct answer is 24 V." },
+        { "answer": "120 V", "explanation": "This may use an incorrect time or flux value. The correct calculation gives 24 V." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Two coils are identical except that coil X has 100 turns and coil Y has 400 turns. Both experience the same flux change in the same time. If the emf induced in coil X is 8.0 V, what is the emf induced in coil Y?",
+      "correct": "32 V",
+      "correctExplanation": "The emf is proportional to N. Coil Y has 4 times the turns of coil X, so its emf is 4 × 8.0 = 32 V.",
+      "distractors": [
+        { "answer": "8.0 V", "explanation": "Coil Y has more turns than coil X, so it produces a larger emf. The correct answer is 32 V." },
+        { "answer": "2.0 V", "explanation": "Coil Y has more turns, so the emf is larger, not smaller." },
+        { "answer": "16 V", "explanation": "Coil Y has 4 times the turns (not 2 times), so the emf is 4 × 8.0 = 32 V." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Marcus measures an emf of 36 V when the flux through his 180-turn coil changes by 0.040 Wb. How long did the flux change take?",
+      "correct": "0.20 s",
+      "correctExplanation": "Δt = N × ΔΦ_B / |ε| = 180 × 0.040 / 36 = 7.2 / 36 = 0.20 s.",
+      "distractors": [
+        { "answer": "2.0 s", "explanation": "This may use an incorrect rearrangement. The correct result is 180 × 0.040 / 36 = 0.20 s." },
+        { "answer": "0.80 s", "explanation": "This may omit the number of turns. The correct result is 0.20 s." },
+        { "answer": "0.022 s", "explanation": "This inverts N and ΔΦ_B in the formula. The correct result is 0.20 s." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A coil with 250 turns and area 0.030 m² is in a field of 0.80 T perpendicular to the coil. The field strength is uniformly reduced to 0.30 T in 0.50 s. What is the magnitude of the induced emf?",
+      "correct": "7.5 V",
+      "correctExplanation": "ΔΦ_B = ΔB × A = (0.80 − 0.30) × 0.030 = 0.50 × 0.030 = 0.015 Wb. |ε| = 250 × (0.015 / 0.50) = 250 × 0.030 = 7.5 V.",
+      "distractors": [
+        { "answer": "0.030 V", "explanation": "This is the rate of flux change per turn. Multiply by N: 250 × 0.030 = 7.5 V." },
+        { "answer": "15 V", "explanation": "This may use the full field strength (0.80) instead of the change (0.50 T). The correct ΔB = 0.50 T." },
+        { "answer": "3.75 V", "explanation": "This may use N = 125 instead of 250. The correct calculation gives 7.5 V." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "A 200-turn coil has area 0.040 m² in a field of 0.50 T (perpendicular). The coil is rotated so that the flux drops to zero in 0.10 s. Complete the calculation.",
+      "sentence": "The initial flux is {{blank:1}} Wb and the magnitude of the induced emf is {{blank:2}} V.",
+      "blanks": {
+        "1": {
+          "correct": "0.020",
+          "correctExplanation": "Φ = B × A = 0.50 × 0.040 = 0.020 Wb.",
+          "distractors": [
+            { "answer": "0.50", "explanation": "This is the field strength, not the flux. Flux = B × A = 0.50 × 0.040 = 0.020 Wb." },
+            { "answer": "0.040", "explanation": "This is the area, not the flux. Flux = B × A = 0.50 × 0.040 = 0.020 Wb." },
+            { "answer": "0.0020", "explanation": "This may use an incorrect multiplication. 0.50 × 0.040 = 0.020 Wb." }
+          ]
+        },
+        "2": {
+          "correct": "40",
+          "correctExplanation": "|ε| = 200 × (0.020 / 0.10) = 200 × 0.20 = 40 V.",
+          "distractors": [
+            { "answer": "0.20", "explanation": "This is the rate of flux change per turn. Multiply by N: 200 × 0.20 = 40 V." },
+            { "answer": "4.0", "explanation": "This may use N = 20 instead of 200. The correct calculation gives 40 V." },
+            { "answer": "400", "explanation": "This may use an incorrect rate of flux change. The correct answer is 200 × 0.20 = 40 V." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Lena wants an emf of 20 V from a 100-turn coil. The flux changes by 0.040 Wb. Complete the calculation to find the required time.",
+      "sentence": "The required time is Δt = N × ΔΦ_B / |ε| = 100 × 0.040 / 20 = {{blank:1}} s. If she doubles the number of turns to 200, the same emf would require a time of {{blank:2}} s.",
+      "blanks": {
+        "1": {
+          "correct": "0.20",
+          "correctExplanation": "Δt = 100 × 0.040 / 20 = 4.0 / 20 = 0.20 s.",
+          "distractors": [
+            { "answer": "0.50", "explanation": "This may use an incorrect calculation. 100 × 0.040 / 20 = 0.20 s." },
+            { "answer": "2.0", "explanation": "This may omit one factor or invert the ratio. The correct result is 0.20 s." },
+            { "answer": "0.020", "explanation": "This may use N = 10 instead of 100. The correct result is 0.20 s." }
+          ]
+        },
+        "2": {
+          "correct": "0.40",
+          "correctExplanation": "With 200 turns: Δt = 200 × 0.040 / 20 = 8.0 / 20 = 0.40 s. More turns allow the same emf with a slower flux change.",
+          "distractors": [
+            { "answer": "0.10", "explanation": "More turns allow a slower flux change, meaning a longer time, not shorter." },
+            { "answer": "0.20", "explanation": "With double the turns, the time also doubles to 0.40 s for the same emf." },
+            { "answer": "0.80", "explanation": "This uses an incorrect calculation. 200 × 0.040 / 20 = 0.40 s." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "A coil in a field of 0.40 T has its area reduced from 0.050 m² to 0.020 m² in 0.15 s. The coil has 60 turns. Complete the calculation.",
+      "sentence": "The change in flux is {{blank:1}} Wb and the induced emf is {{blank:2}} V.",
+      "blanks": {
+        "1": {
+          "correct": "0.012",
+          "correctExplanation": "ΔΦ_B = B × ΔA = 0.40 × (0.050 − 0.020) = 0.40 × 0.030 = 0.012 Wb.",
+          "distractors": [
+            { "answer": "0.030", "explanation": "This is the change in area, not flux. Multiply by B: 0.40 × 0.030 = 0.012 Wb." },
+            { "answer": "0.020", "explanation": "This is the final area. The flux change is 0.40 × 0.030 = 0.012 Wb." },
+            { "answer": "0.028", "explanation": "This may use an incorrect area change. The correct change is 0.030 m², giving 0.012 Wb." }
+          ]
+        },
+        "2": {
+          "correct": "4.8",
+          "correctExplanation": "|ε| = 60 × (0.012 / 0.15) = 60 × 0.080 = 4.8 V.",
+          "distractors": [
+            { "answer": "0.080", "explanation": "This is the rate of flux change per turn. Multiply by N: 60 × 0.080 = 4.8 V." },
+            { "answer": "12", "explanation": "This may use an incorrect time value. With Δt = 0.15 s, the emf is 4.8 V." },
+            { "answer": "48", "explanation": "This may use N = 600 instead of 60. The correct answer is 4.8 V." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "mc",
+      "question": "A 500-turn coil of area 0.025 m² is placed perpendicular to a magnetic field that increases uniformly from 0.20 T to 0.80 T in 0.40 s. What is the magnitude of the induced emf?",
+      "correct": "18.75 V",
+      "correctExplanation": "ΔΦ_B = ΔB × A = (0.80 − 0.20) × 0.025 = 0.60 × 0.025 = 0.015 Wb. |ε| = 500 × (0.015 / 0.40) = 500 × 0.0375 = 18.75 V.",
+      "distractors": [
+        { "answer": "0.0375 V", "explanation": "This is the rate of flux change per turn. Multiply by N: 500 × 0.0375 = 18.75 V." },
+        { "answer": "7.5 V", "explanation": "This may use N = 200 instead of 500. The correct calculation gives 18.75 V." },
+        { "answer": "25 V", "explanation": "This may use ΔB = 0.80 instead of 0.60. The change in field is 0.80 − 0.20 = 0.60 T." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Amira has a 150-turn coil in a magnetic field. The flux through the coil varies linearly from 0.060 Wb at t = 0 to 0.015 Wb at t = 0.30 s, then remains constant at 0.015 Wb. What is the emf during the first 0.30 s and after 0.30 s?",
+      "correct": "22.5 V during the first 0.30 s, then 0 V after 0.30 s",
+      "correctExplanation": "During 0–0.30 s: ΔΦ_B = 0.060 − 0.015 = 0.045 Wb. |ε| = 150 × (0.045 / 0.30) = 150 × 0.15 = 22.5 V. After 0.30 s, flux is constant so emf = 0.",
+      "distractors": [
+        { "answer": "22.5 V at all times", "explanation": "After 0.30 s the flux is constant, so the emf drops to zero." },
+        { "answer": "7.5 V during the first 0.30 s, then 0 V", "explanation": "This may use N = 50 instead of 150. The correct emf during the change is 22.5 V." },
+        { "answer": "0 V at all times because the flux decreases", "explanation": "A decreasing flux still produces an emf. The emf is non-zero during the period of change." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student doubles both the number of turns and the time interval while keeping the flux change the same. By what factor does the induced emf change?",
+      "correct": "The emf remains the same.",
+      "correctExplanation": "Doubling N doubles the emf, but doubling Δt halves the rate ΔΦ_B / Δt. The net factor is 2 × 0.5 = 1; the emf is unchanged.",
+      "distractors": [
+        { "answer": "The emf doubles.", "explanation": "Doubling both N and Δt does not double the emf. The two changes cancel each other." },
+        { "answer": "The emf quadruples.", "explanation": "This does not account for the doubling of Δt, which halves the rate of flux change." },
+        { "answer": "The emf halves.", "explanation": "Doubling N increases the emf while doubling Δt decreases it. They cancel and the emf stays the same." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A coil has 200 turns, area 0.015 m², and is in a field of 0.50 T perpendicular to its face. The coil is rotated through 90° (so the field is now parallel to the coil face) in 0.10 s. What is the magnitude of the induced emf?",
+      "correct": "15 V",
+      "correctExplanation": "Initial flux = 0.50 × 0.015 = 0.0075 Wb. Final flux = 0 (field parallel to coil, θ = 90°). ΔΦ_B = 0.0075 Wb. |ε| = 200 × (0.0075 / 0.10) = 200 × 0.075 = 15 V.",
+      "distractors": [
+        { "answer": "0.075 V", "explanation": "This is the rate of flux change per turn. Multiply by N: 200 × 0.075 = 15 V." },
+        { "answer": "7.5 V", "explanation": "This may use N = 100 instead of 200. The correct answer is 15 V." },
+        { "answer": "1.5 V", "explanation": "This may use N = 20 or an incorrect flux calculation. The correct answer is 15 V." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A coil of 100 turns and area 0.040 m² is in a field that varies with time as B = 0.50 + 0.20t (in tesla), where t is in seconds. What is the magnitude of the induced emf?",
+      "correct": "0.80 V",
+      "correctExplanation": "dB/dt = 0.20 T s⁻¹. dΦ_B/dt = A × dB/dt = 0.040 × 0.20 = 0.0080 Wb s⁻¹. |ε| = N × 0.0080 = 100 × 0.0080 = 0.80 V.",
+      "distractors": [
+        { "answer": "0.0080 V", "explanation": "This is the rate of flux change per turn. Multiply by N: 100 × 0.0080 = 0.80 V." },
+        { "answer": "2.0 V", "explanation": "This may use an incorrect area or rate. The correct calculation gives 0.80 V." },
+        { "answer": "8.0 V", "explanation": "This may use A = 0.40 m² instead of 0.040 m². The correct answer is 0.80 V." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Henrik wants to design a coil that produces exactly 10.0 V when the flux changes by 0.025 Wb in 0.50 s. How many turns must the coil have?",
+      "correct": "200",
+      "correctExplanation": "N = |ε| / (ΔΦ_B / Δt) = 10.0 / (0.025 / 0.50) = 10.0 / 0.050 = 200 turns.",
+      "distractors": [
+        { "answer": "100", "explanation": "100 turns would give only 5.0 V. The correct answer is 200 turns." },
+        { "answer": "400", "explanation": "400 turns would give 20.0 V, which exceeds the target of 10.0 V." },
+        { "answer": "50", "explanation": "50 turns would give only 2.5 V. The correct answer is 200 turns." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A coil of 300 turns and area 0.010 m² is in a perpendicular field of 1.2 T. The field reverses to −1.2 T in 0.20 s. What is the magnitude of the induced emf?",
+      "correct": "36 V",
+      "correctExplanation": "ΔΦ_B = ΔB × A = (1.2 − (−1.2)) × 0.010 = 2.4 × 0.010 = 0.024 Wb. |ε| = 300 × (0.024 / 0.20) = 300 × 0.12 = 36 V.",
+      "distractors": [
+        { "answer": "18 V", "explanation": "This uses ΔB = 1.2 T instead of 2.4 T. The field changes from +1.2 to −1.2, a total change of 2.4 T." },
+        { "answer": "3.6 V", "explanation": "This may use N = 30 instead of 300. The correct answer is 36 V." },
+        { "answer": "72 V", "explanation": "This may use Δt = 0.10 s instead of 0.20 s. The correct answer is 36 V." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A coil of N turns produces an emf of ε when the flux changes by ΔΦ_B in time Δt. The coil is then replaced with one that has 3N turns, the flux change is doubled to 2ΔΦ_B, and the time is tripled to 3Δt. What is the new emf in terms of ε?",
+      "correct": "2ε",
+      "correctExplanation": "New emf = 3N × (2ΔΦ_B / 3Δt) = 3 × 2/3 × N × ΔΦ_B / Δt = 2 × (NΔΦ_B / Δt) = 2ε.",
+      "distractors": [
+        { "answer": "ε", "explanation": "The new emf is not the same. The factor is 3 × 2/3 = 2, giving 2ε." },
+        { "answer": "6ε", "explanation": "This multiplies all three factors without accounting for the division by time. The correct factor is 3 × 2/3 = 2." },
+        { "answer": "3ε", "explanation": "This accounts for only the turns factor. The correct overall factor is 3 × 2/3 = 2." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "A 400-turn coil of area 0.035 m² is perpendicular to a field that drops from 0.80 T to 0.20 T in 0.28 s. Complete the full calculation.",
+      "sentence": "The flux change is {{blank:1}} Wb and the magnitude of the induced emf is {{blank:2}} V.",
+      "blanks": {
+        "1": {
+          "correct": "0.021",
+          "correctExplanation": "ΔΦ_B = ΔB × A = (0.80 − 0.20) × 0.035 = 0.60 × 0.035 = 0.021 Wb.",
+          "distractors": [
+            { "answer": "0.028", "explanation": "This may use the full field value instead of the change. ΔB = 0.60 T, giving 0.60 × 0.035 = 0.021 Wb." },
+            { "answer": "0.035", "explanation": "This is the area, not the flux change. ΔΦ_B = 0.60 × 0.035 = 0.021 Wb." },
+            { "answer": "0.007", "explanation": "This may use ΔB = 0.20 instead of 0.60. The change in field is 0.80 − 0.20 = 0.60 T." }
+          ]
+        },
+        "2": {
+          "correct": "30",
+          "correctExplanation": "|ε| = 400 × (0.021 / 0.28) = 400 × 0.075 = 30 V.",
+          "distractors": [
+            { "answer": "0.075", "explanation": "This is the rate of flux change per turn. Multiply by N: 400 × 0.075 = 30 V." },
+            { "answer": "7.5", "explanation": "This may use N = 100 instead of 400. The correct answer is 30 V." },
+            { "answer": "60", "explanation": "This may use an incorrect time or flux value. The correct answer is 30 V." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "A coil has 250 turns. In one experiment, the flux changes by 0.030 Wb in 0.50 s. In a second experiment, the flux changes by 0.060 Wb in 0.25 s. Complete the comparison.",
+      "sentence": "The emf in experiment 1 is {{blank:1}} V. The emf in experiment 2 is {{blank:2}} V.",
+      "blanks": {
+        "1": {
+          "correct": "15",
+          "correctExplanation": "|ε₁| = 250 × (0.030 / 0.50) = 250 × 0.060 = 15 V.",
+          "distractors": [
+            { "answer": "0.060", "explanation": "This is the rate per turn. Multiply by 250: 250 × 0.060 = 15 V." },
+            { "answer": "7.5", "explanation": "This may use N = 125 instead of 250. The correct answer is 15 V." },
+            { "answer": "30", "explanation": "This may use an incorrect rate. ΔΦ_B / Δt = 0.030 / 0.50 = 0.060 Wb s⁻¹." }
+          ]
+        },
+        "2": {
+          "correct": "60",
+          "correctExplanation": "|ε₂| = 250 × (0.060 / 0.25) = 250 × 0.24 = 60 V.",
+          "distractors": [
+            { "answer": "30", "explanation": "This may use Δt = 0.50 s instead of 0.25 s. With the correct time, the emf is 60 V." },
+            { "answer": "0.24", "explanation": "This is the rate per turn. Multiply by 250: 250 × 0.24 = 60 V." },
+            { "answer": "15", "explanation": "This is the emf from experiment 1, not experiment 2. Experiment 2 has a faster rate of flux change." }
+          ]
+        }
+      }
+    }
+  ]
+}

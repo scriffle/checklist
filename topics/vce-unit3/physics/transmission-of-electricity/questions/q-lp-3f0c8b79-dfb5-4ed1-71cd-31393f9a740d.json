@@ -1,0 +1,583 @@
+{
+  "_link": {
+    "uuid": "lp-3f0c8b79-dfb5-4ed1-71cd-31393f9a740d",
+    "version": 1,
+    "contentHash": "hash-cbc639f4",
+    "title": "I can calculate effective (rms) power using Peff = Vrms × Irms = (1/2) × Vp × Ip",
+    "generatedAt": "2026-03-08T00:00:00.000Z"
+  },
+  "toLevel2": [
+    {
+      "type": "mc",
+      "question": "Which one of the following correctly expresses the effective power in a resistive AC circuit using rms values?",
+      "correct": "Peff = Vrms × Irms",
+      "correctExplanation": "The effective (average) power in a resistive AC circuit is the product of the rms voltage and the rms current.",
+      "distractors": [
+        { "answer": "Peff = Vp × Ip", "explanation": "Vp × Ip gives the peak instantaneous power, not the average power. The effective power is half of this: Peff = ½ × Vp × Ip." },
+        { "answer": "Peff = Vp-p × Ip-p", "explanation": "Peak-to-peak values are not used in power calculations. Effective power uses rms values." },
+        { "answer": "Peff = 2 × Vrms × Irms", "explanation": "There is no factor of 2 in the rms power formula. Peff = Vrms × Irms directly." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which one of the following correctly expresses the effective power in terms of peak values?",
+      "correct": "Peff = ½ × Vp × Ip",
+      "correctExplanation": "Since Vrms = Vp/√2 and Irms = Ip/√2, Peff = Vrms × Irms = (Vp/√2)(Ip/√2) = ½ × Vp × Ip.",
+      "distractors": [
+        { "answer": "Peff = Vp × Ip", "explanation": "This gives the peak power, not the average. The average (effective) power is half the peak power." },
+        { "answer": "Peff = 2 × Vp × Ip", "explanation": "The factor is ½, not 2. Peff = ½ × Vp × Ip." },
+        { "answer": "Peff = Vp × Ip / √2", "explanation": "The correct factor is ½ (= 1/√2 × 1/√2), not 1/√2. Peff = ½ × Vp × Ip." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A resistor connected to an AC supply has Vrms = 20 V and Irms = 0.20 A. What is the effective power dissipated?",
+      "correct": "4.0 W",
+      "correctExplanation": "Peff = Vrms × Irms = 20 × 0.20 = 4.0 W.",
+      "distractors": [
+        { "answer": "8.0 W", "explanation": "This results from doubling the correct answer, possibly using peak values without the ½ factor. Peff = 20 × 0.20 = 4.0 W." },
+        { "answer": "2.0 W", "explanation": "This results from halving unnecessarily. Peff = Vrms × Irms = 4.0 W directly; no additional factor of ½ is needed when using rms values." },
+        { "answer": "100 W", "explanation": "This results from dividing Vrms by Irms (20/0.20 = 100). Power is the product, not the quotient." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An AC circuit has Vp = 28.3 V and Ip = 0.283 A across a resistor. Which one of the following is closest to the effective power?",
+      "correct": "4.0 W",
+      "correctExplanation": "Peff = ½ × Vp × Ip = ½ × 28.3 × 0.283 = ½ × 8.009 ≈ 4.0 W.",
+      "distractors": [
+        { "answer": "8.0 W", "explanation": "8.0 W is the peak power (Vp × Ip). The effective power is half of this: 4.0 W." },
+        { "answer": "5.7 W", "explanation": "This results from dividing the peak power by √2 instead of by 2. Peff = ½ × Vp × Ip." },
+        { "answer": "2.0 W", "explanation": "This results from applying an extra factor of ½. Peff = ½ × 28.3 × 0.283 ≈ 4.0 W." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Why is effective power in an AC circuit equal to half the peak power?",
+      "correct": "Because both Vrms and Irms are each 1/√2 times their peak values, and (1/√2) × (1/√2) = 1/2",
+      "correctExplanation": "Vrms = Vp/√2 and Irms = Ip/√2. Multiplying: Peff = (Vp/√2)(Ip/√2) = VpIp/2 = ½ × peak power.",
+      "distractors": [
+        { "answer": "Because AC voltage is zero for half the cycle, so power is delivered only half the time", "explanation": "AC voltage is zero only at the crossing points, not for half the cycle. Power varies continuously with sin²(ωt), averaging to half the peak." },
+        { "answer": "Because the rms voltage is half the peak voltage", "explanation": "Vrms = Vp/√2 ≈ 0.707 Vp, not Vp/2. The factor of ½ in power comes from (1/√2)² = 1/2." },
+        { "answer": "Because energy is lost to heat during half of each cycle", "explanation": "Energy is converted to heat throughout the entire cycle. The factor of ½ arises from the mathematical averaging of sin²(ωt)." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "The effective power Peff = Vrms × Irms gives the same result as Peff = ½ × Vp × Ip for a purely resistive AC circuit.",
+      "correct": "True",
+      "correctExplanation": "Both expressions are equivalent. Vrms × Irms = (Vp/√2)(Ip/√2) = VpIp/2 = ½ × Vp × Ip.",
+      "distractors": [
+        { "answer": "False", "explanation": "The two forms are mathematically identical for a resistive circuit. They always give the same result." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "The peak power in an AC circuit equals twice the effective (rms) power.",
+      "correct": "True",
+      "correctExplanation": "Peak power = Vp × Ip. Effective power = ½ × Vp × Ip. Therefore peak power = 2 × Peff.",
+      "distractors": [
+        { "answer": "False", "explanation": "Since Peff = ½ × Vp × Ip, rearranging gives Vp × Ip = 2 × Peff. The peak power is indeed twice the effective power." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the effective power formula.",
+      "sentence": "The effective power in a resistive AC circuit is Peff = Vrms × {{blank:1}}, which is also equal to {{blank:2}} × Vp × Ip.",
+      "blanks": {
+        "1": {
+          "correct": "Irms",
+          "correctExplanation": "Effective power is the product of rms voltage and rms current: Peff = Vrms × Irms.",
+          "distractors": [
+            { "answer": "Ip", "explanation": "The peak current (Ip) must not be mixed with Vrms. Use either all rms values or all peak values with the ½ factor." },
+            { "answer": "Ip-p", "explanation": "Peak-to-peak current is not used in power formulas. Peff = Vrms × Irms." }
+          ]
+        },
+        "2": {
+          "correct": "½",
+          "correctExplanation": "Peff = ½ × Vp × Ip because Vrms = Vp/√2 and Irms = Ip/√2, so their product includes a factor of 1/2.",
+          "distractors": [
+            { "answer": "2", "explanation": "The correct factor is ½, not 2. Peff = ½ × Vp × Ip." },
+            { "answer": "√2", "explanation": "The factor √2 relates individual peak and rms values. When multiplied together: (1/√2)(1/√2) = ½." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the worked example.",
+      "sentence": "A 50 Ω resistor is connected to an AC supply with Vrms = 10 V. The rms current is Irms = {{blank:1}} A and the effective power is {{blank:2}} W.",
+      "blanks": {
+        "1": {
+          "correct": "0.20",
+          "correctExplanation": "Irms = Vrms / R = 10 / 50 = 0.20 A.",
+          "distractors": [
+            { "answer": "5.0", "explanation": "This results from multiplying V × R. Current is I = V/R = 10/50 = 0.20 A." },
+            { "answer": "0.14", "explanation": "This results from dividing by 50√2, incorrectly applying an rms conversion. Irms = Vrms/R = 0.20 A." }
+          ]
+        },
+        "2": {
+          "correct": "2.0",
+          "correctExplanation": "Peff = Vrms × Irms = 10 × 0.20 = 2.0 W.",
+          "distractors": [
+            { "answer": "1.0", "explanation": "This results from applying an unnecessary factor of ½. When using rms values directly, Peff = Vrms × Irms = 2.0 W." },
+            { "answer": "4.0", "explanation": "This results from doubling, possibly using peak values without the ½ factor." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the comparison of peak and rms power calculations.",
+      "sentence": "For a resistive AC circuit with Vp = 40 V and Ip = 2.0 A, the peak power is {{blank:1}} W and the effective power is {{blank:2}} W.",
+      "blanks": {
+        "1": {
+          "correct": "80",
+          "correctExplanation": "Peak power = Vp × Ip = 40 × 2.0 = 80 W.",
+          "distractors": [
+            { "answer": "40", "explanation": "This is half the peak power. Peak power = Vp × Ip = 80 W, not 40 W." },
+            { "answer": "20", "explanation": "20 W is one quarter of Vp × Ip. Peak power = 40 × 2.0 = 80 W." }
+          ]
+        },
+        "2": {
+          "correct": "40",
+          "correctExplanation": "Peff = ½ × Vp × Ip = ½ × 80 = 40 W.",
+          "distractors": [
+            { "answer": "80", "explanation": "80 W is the peak power. The effective power is half of this: 40 W." },
+            { "answer": "56.6", "explanation": "This results from dividing the peak power by √2 instead of by 2. Peff = ½ × 80 = 40 W." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "mc",
+      "question": "Liam connects a 200 Ω resistor to a 50 Hz AC supply with Vrms = 100 V. Which one of the following is closest to the effective power dissipated?",
+      "correct": "50 W",
+      "correctExplanation": "Irms = Vrms/R = 100/200 = 0.50 A. Peff = Vrms × Irms = 100 × 0.50 = 50 W. Alternatively, Peff = Vrms²/R = 10000/200 = 50 W.",
+      "distractors": [
+        { "answer": "100 W", "explanation": "This results from using Peff = Vp²/R with Vp ≈ 141 V: 141²/200 ≈ 100 W. Effective power must use rms values." },
+        { "answer": "25 W", "explanation": "This results from applying an extra factor of ½. Peff = Vrms²/R = 50 W directly; no additional halving is needed." },
+        { "answer": "200 W", "explanation": "This results from using P = V²/R with Vp-p ≈ 283 V instead of Vrms." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An AC supply has Vp = 170 V and delivers current to a 100 Ω resistive load. Which one of the following is closest to the effective power?",
+      "correct": "145 W",
+      "correctExplanation": "Vrms = 170/√2 ≈ 120.2 V. Peff = Vrms²/R = (120.2)²/100 ≈ 144.5 W ≈ 145 W. Or: Ip = 170/100 = 1.70 A, Peff = ½ × 170 × 1.70 = 144.5 W.",
+      "distractors": [
+        { "answer": "289 W", "explanation": "This results from using peak values without the ½ factor: Vp²/R = 170²/100 = 289 W. This is the peak power, not the effective power." },
+        { "answer": "170 W", "explanation": "This confuses the numerical value of Vp with the power. Peff = Vrms²/R ≈ 145 W." },
+        { "answer": "72 W", "explanation": "This results from an extra factor of ½ applied to the correct answer. Peff = 145 W, not 72 W." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Sophia measures the effective power dissipated in a 50 Ω resistor as 8.0 W. Which one of the following is closest to the rms voltage across the resistor?",
+      "correct": "20 V",
+      "correctExplanation": "Peff = Vrms²/R. Therefore Vrms = √(Peff × R) = √(8.0 × 50) = √400 = 20 V.",
+      "distractors": [
+        { "answer": "28.3 V", "explanation": "This gives the peak voltage (20 × √2 ≈ 28.3 V). The question asks for the rms voltage, which is 20 V." },
+        { "answer": "0.40 V", "explanation": "This results from Peff/R = 8.0/50 = 0.16, then taking the square root incorrectly. Vrms = √(P × R) = 20 V." },
+        { "answer": "400 V", "explanation": "This is P × R = 400. The rms voltage is √(P × R) = √400 = 20 V." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A 100 Ω resistor is connected to an AC supply. The effective power is 50 W. Which one of the following is closest to the peak current?",
+      "correct": "1.0 A",
+      "correctExplanation": "Peff = Irms² × R, so Irms = √(P/R) = √(50/100) = √0.50 ≈ 0.707 A. Ip = Irms × √2 = 0.707 × 1.414 ≈ 1.0 A.",
+      "distractors": [
+        { "answer": "0.71 A", "explanation": "0.71 A is the rms current. The peak current is Ip = Irms × √2 ≈ 1.0 A." },
+        { "answer": "0.50 A", "explanation": "This results from P/R = 0.50, which is Irms² not Irms. The correct peak current is 1.0 A." },
+        { "answer": "1.41 A", "explanation": "This results from Irms × 2 instead of Irms × √2. Ip = 0.707 × √2 ≈ 1.0 A." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student uses the formula Peff = Vp × Ip to calculate the power in a resistive AC circuit. Which one of the following best describes the error?",
+      "correct": "This formula gives the peak power, which is twice the effective power",
+      "correctExplanation": "Vp × Ip gives the instantaneous peak power. The effective (average) power is Peff = ½ × Vp × Ip, which is half of what the student calculated.",
+      "distractors": [
+        { "answer": "This formula gives the effective power directly, so there is no error", "explanation": "Vp × Ip gives peak power, not effective power. The correct formula using peak values is Peff = ½ × Vp × Ip." },
+        { "answer": "This formula gives a result that is √2 times too large", "explanation": "The result is exactly 2 times too large, not √2. Peff = ½ × Vp × Ip." },
+        { "answer": "This formula gives a result that is half the effective power", "explanation": "Vp × Ip is double the effective power, not half. Peff = ½ × Vp × Ip." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Zoe connects a 500 Ω resistor to the Australian mains supply (Vrms = 230 V). Which one of the following is closest to the effective power dissipated?",
+      "correct": "106 W",
+      "correctExplanation": "Peff = Vrms²/R = (230)²/500 = 52900/500 = 105.8 ≈ 106 W.",
+      "distractors": [
+        { "answer": "212 W", "explanation": "This results from using Vp²/R = (325)²/500 ≈ 211 W, which is the peak power, not the effective power." },
+        { "answer": "53 W", "explanation": "This results from halving the correct answer unnecessarily. Peff = Vrms²/R = 106 W directly." },
+        { "answer": "0.46 W", "explanation": "This results from V/R = 230/500 = 0.46, which gives Irms in amps, not power in watts." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "If the rms voltage across a resistor is doubled while the resistance stays constant, the effective power increases by a factor of four.",
+      "correct": "True",
+      "correctExplanation": "Peff = Vrms²/R. If Vrms doubles, Peff increases by 2² = 4. This is because power depends on the square of the voltage.",
+      "distractors": [
+        { "answer": "False", "explanation": "Since Peff = Vrms²/R, doubling Vrms gives (2Vrms)²/R = 4Vrms²/R = 4 × original power." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the effective power calculation.",
+      "sentence": "A 250 Ω resistor has Vrms = 50 V across it. The rms current is {{blank:1}} A and the effective power is {{blank:2}} W.",
+      "blanks": {
+        "1": {
+          "correct": "0.20",
+          "correctExplanation": "Irms = Vrms/R = 50/250 = 0.20 A.",
+          "distractors": [
+            { "answer": "5.0", "explanation": "This results from R/Vrms = 250/50, which is inverted. Irms = V/R = 0.20 A." },
+            { "answer": "0.14", "explanation": "This results from an unnecessary division by √2. Irms = Vrms/R = 0.20 A." }
+          ]
+        },
+        "2": {
+          "correct": "10",
+          "correctExplanation": "Peff = Vrms × Irms = 50 × 0.20 = 10 W.",
+          "distractors": [
+            { "answer": "5.0", "explanation": "This results from halving unnecessarily. Peff = Vrms × Irms = 10 W." },
+            { "answer": "20", "explanation": "This results from doubling, perhaps using peak power. Peff = 10 W." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the peak-to-rms power conversion.",
+      "sentence": "An AC circuit has Vp = 100 V and Ip = 0.50 A. The peak power is {{blank:1}} W and the effective power is {{blank:2}} W.",
+      "blanks": {
+        "1": {
+          "correct": "50",
+          "correctExplanation": "Peak power = Vp × Ip = 100 × 0.50 = 50 W.",
+          "distractors": [
+            { "answer": "25", "explanation": "25 W is the effective power (½ × 50). The peak power is Vp × Ip = 50 W." },
+            { "answer": "100", "explanation": "This results from an incorrect calculation. Peak power = 100 × 0.50 = 50 W." }
+          ]
+        },
+        "2": {
+          "correct": "25",
+          "correctExplanation": "Peff = ½ × Vp × Ip = ½ × 50 = 25 W.",
+          "distractors": [
+            { "answer": "50", "explanation": "50 W is the peak power. The effective power is half of this: 25 W." },
+            { "answer": "35.4", "explanation": "This results from dividing peak power by √2 instead of by 2. Peff = ½ × 50 = 25 W." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the alternative power formula.",
+      "sentence": "Effective power can also be written as Peff = Irms² × {{blank:1}} or as Peff = Vrms² / {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "R",
+          "correctExplanation": "Substituting Vrms = Irms × R into Peff = Vrms × Irms gives Peff = Irms² × R.",
+          "distractors": [
+            { "answer": "V", "explanation": "The formula is Peff = Irms² × R, where R is the resistance. V is not correct here." },
+            { "answer": "2R", "explanation": "There is no factor of 2 in this formula. Peff = Irms² × R." }
+          ]
+        },
+        "2": {
+          "correct": "R",
+          "correctExplanation": "Substituting Irms = Vrms/R into Peff = Vrms × Irms gives Peff = Vrms²/R.",
+          "distractors": [
+            { "answer": "2R", "explanation": "There is no factor of 2 when using rms values. Peff = Vrms²/R." },
+            { "answer": "I", "explanation": "The formula uses resistance R in the denominator: Peff = Vrms²/R." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "mc",
+      "question": "James connects a 60 Ω resistor to an AC supply with Vp = 84.9 V. Which one of the following is closest to the effective power dissipated?",
+      "correct": "60 W",
+      "correctExplanation": "Vrms = 84.9/√2 ≈ 60.0 V. Peff = Vrms²/R = (60.0)²/60 = 3600/60 = 60 W. Or: Ip = 84.9/60 = 1.415 A, Peff = ½ × 84.9 × 1.415 ≈ 60 W.",
+      "distractors": [
+        { "answer": "120 W", "explanation": "This results from using peak values without the ½ factor: Vp²/R = (84.9)²/60 ≈ 120 W. This is the peak power." },
+        { "answer": "30 W", "explanation": "This results from an extra halving. Peff = Vrms²/R = 60 W; no additional factor of ½ is needed when using rms values." },
+        { "answer": "85 W", "explanation": "This confuses the numerical value of Vp with the power. Peff = 60 W." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Amara has a 1000 W electric heater rated at 230 V rms. Which one of the following is closest to the peak current drawn by the heater?",
+      "correct": "6.1 A",
+      "correctExplanation": "Irms = P/Vrms = 1000/230 ≈ 4.35 A. Ip = Irms × √2 = 4.35 × 1.414 ≈ 6.1 A.",
+      "distractors": [
+        { "answer": "4.3 A", "explanation": "4.3 A is the rms current. The question asks for the peak current, which is Irms × √2 ≈ 6.1 A." },
+        { "answer": "8.7 A", "explanation": "This results from doubling Irms instead of multiplying by √2. Ip = Irms × √2, not 2 × Irms." },
+        { "answer": "3.1 A", "explanation": "This results from dividing Irms by √2 instead of multiplying. Ip = 4.35 × √2 ≈ 6.1 A." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An oscilloscope shows that an AC signal across a 75 Ω resistor has Vp = 30 V. A student calculates the effective power as follows: P = Vp²/R = 900/75 = 12 W. Which one of the following best evaluates the student's calculation?",
+      "correct": "The calculation is incorrect; it gives the peak power. The effective power is 6.0 W.",
+      "correctExplanation": "Using Vp²/R gives peak power. Effective power = ½ × Vp²/R = ½ × 12 = 6.0 W. Alternatively, Vrms = 30/√2 ≈ 21.2 V, Peff = (21.2)²/75 ≈ 6.0 W.",
+      "distractors": [
+        { "answer": "The calculation is correct; 12 W is the effective power", "explanation": "Using peak voltage in P = V²/R gives peak power, not effective power. Peff = Vrms²/R = 6.0 W." },
+        { "answer": "The calculation is incorrect; the effective power is 8.5 W", "explanation": "8.5 W would result from dividing peak power by √2. The correct factor is ½: Peff = 6.0 W." },
+        { "answer": "The calculation is incorrect; the effective power is 24 W", "explanation": "24 W results from doubling instead of halving. Peff = ½ × 12 = 6.0 W." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A 2400 W kettle is connected to the 230 V rms mains supply. Which one of the following is closest to the resistance of the heating element?",
+      "correct": "22 Ω",
+      "correctExplanation": "R = Vrms²/Peff = (230)²/2400 = 52900/2400 ≈ 22.0 Ω.",
+      "distractors": [
+        { "answer": "44 Ω", "explanation": "This results from using Vp² instead of Vrms²: (325)²/2400 ≈ 44 Ω. The rated power already uses rms values." },
+        { "answer": "11 Ω", "explanation": "This results from halving the correct answer, perhaps dividing by 2 unnecessarily." },
+        { "answer": "96 Ω", "explanation": "This results from V/P = 230/2400, giving conductance not resistance." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Two identical resistors, each 100 Ω, are connected in series to an AC supply with Vrms = 40 V. Which one of the following is the effective power dissipated in each resistor?",
+      "correct": "4.0 W",
+      "correctExplanation": "Total resistance = 200 Ω. Irms = 40/200 = 0.20 A. Power in each resistor: P = Irms² × R = (0.20)² × 100 = 4.0 W.",
+      "distractors": [
+        { "answer": "8.0 W", "explanation": "8.0 W is the total power for both resistors. Each resistor dissipates half: 4.0 W." },
+        { "answer": "16 W", "explanation": "This results from using Vrms²/R with the full supply voltage across one resistor: (40)²/100 = 16 W. But the voltage is shared." },
+        { "answer": "2.0 W", "explanation": "This results from halving unnecessarily. Each resistor dissipates Irms² × R = 4.0 W." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Oliver measures the effective power in a 150 Ω resistor as 24 W. Which one of the following is closest to the peak voltage across the resistor?",
+      "correct": "84.9 V",
+      "correctExplanation": "Vrms = √(P × R) = √(24 × 150) = √3600 = 60 V. Vp = Vrms × √2 = 60 × 1.414 ≈ 84.9 V.",
+      "distractors": [
+        { "answer": "60 V", "explanation": "60 V is the rms voltage. The peak voltage is Vp = 60 × √2 ≈ 84.9 V." },
+        { "answer": "120 V", "explanation": "This results from using Vp = 2 × Vrms instead of √2 × Vrms." },
+        { "answer": "42.4 V", "explanation": "This results from Vrms/√2, which would give an even smaller value. Vp = Vrms × √2." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Priya has two heating elements, A and B. Element A has resistance 50 Ω and element B has resistance 200 Ω. Both are connected to the same AC supply. Which one of the following correctly compares their effective power dissipation?",
+      "correct": "Element A dissipates four times the power of element B",
+      "correctExplanation": "Both elements have the same Vrms across them. PA = Vrms²/50 and PB = Vrms²/200. PA/PB = 200/50 = 4. Element A dissipates 4 times more power.",
+      "distractors": [
+        { "answer": "Element B dissipates four times the power of element A", "explanation": "Lower resistance means more current flows and more power is dissipated, not less. PA/PB = 200/50 = 4." },
+        { "answer": "Both elements dissipate the same power because they share the same supply", "explanation": "Equal supply voltage does not mean equal power. P = V²/R, so lower R gives higher power." },
+        { "answer": "Element A dissipates two times the power of element B", "explanation": "The ratio is 200/50 = 4, not 2. Power is inversely proportional to resistance at constant voltage." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the power calculation from oscilloscope readings.",
+      "sentence": "An oscilloscope shows Vp = 50 V across a 125 Ω resistor. The rms voltage is {{blank:1}} V and the effective power is {{blank:2}} W.",
+      "blanks": {
+        "1": {
+          "correct": "35.4",
+          "correctExplanation": "Vrms = Vp/√2 = 50/1.414 ≈ 35.4 V.",
+          "distractors": [
+            { "answer": "50", "explanation": "50 V is the peak voltage. Vrms = Vp/√2 ≈ 35.4 V." },
+            { "answer": "25", "explanation": "This results from Vp/2. Vrms = Vp/√2, not Vp/2." }
+          ]
+        },
+        "2": {
+          "correct": "10",
+          "correctExplanation": "Peff = Vrms²/R = (35.4)²/125 = 1250/125 = 10 W.",
+          "distractors": [
+            { "answer": "20", "explanation": "This results from using Vp²/R = 2500/125 = 20 W, which is peak power." },
+            { "answer": "5.0", "explanation": "This results from halving the effective power unnecessarily. Peff = 10 W." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the multi-step calculation.",
+      "sentence": "An AC supply with Vrms = 230 V is connected to a 529 Ω resistor. The rms current is {{blank:1}} A and the effective power is {{blank:2}} W.",
+      "blanks": {
+        "1": {
+          "correct": "0.435",
+          "correctExplanation": "Irms = Vrms/R = 230/529 ≈ 0.435 A.",
+          "distractors": [
+            { "answer": "0.307", "explanation": "This results from dividing by 529√2 instead of by 529. Irms = Vrms/R = 0.435 A." },
+            { "answer": "2.30", "explanation": "This results from R/Vrms = 529/230, which is inverted." }
+          ]
+        },
+        "2": {
+          "correct": "100",
+          "correctExplanation": "Peff = Vrms × Irms = 230 × 0.435 ≈ 100 W. Or Peff = Vrms²/R = 52900/529 = 100 W.",
+          "distractors": [
+            { "answer": "50", "explanation": "This results from halving unnecessarily. Peff = Vrms²/R = 100 W." },
+            { "answer": "200", "explanation": "This results from using peak power. Peff = 100 W." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the comparison of two methods.",
+      "sentence": "A 200 Ω resistor has Vp = 80 V. Using rms values: Vrms = 56.6 V, Peff = Vrms²/R = {{blank:1}} W. Using peak values: Peff = ½ × Vp²/R = ½ × 6400/200 = {{blank:2}} W. Both methods agree.",
+      "blanks": {
+        "1": {
+          "correct": "16",
+          "correctExplanation": "Peff = (56.6)²/200 = 3204/200 ≈ 16.0 W.",
+          "distractors": [
+            { "answer": "32", "explanation": "This results from using Vp²/R = 6400/200 = 32, which is peak power." },
+            { "answer": "8.0", "explanation": "This results from halving unnecessarily. Peff = Vrms²/R ≈ 16 W." }
+          ]
+        },
+        "2": {
+          "correct": "16",
+          "correctExplanation": "Peff = ½ × 6400/200 = ½ × 32 = 16 W. Both methods give the same result.",
+          "distractors": [
+            { "answer": "32", "explanation": "32 W is Vp²/R without the ½ factor. The effective power is ½ × 32 = 16 W." },
+            { "answer": "22.6", "explanation": "This results from dividing 32 by √2 instead of by 2. Peff = ½ × 32 = 16 W." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "mc",
+      "question": "Ethan connects a 100 Ω resistor to an AC supply with Vrms = 50 V. He then replaces it with a 50 Ω resistor. Which one of the following correctly describes the change in effective power?",
+      "correct": "The power doubles from 25 W to 50 W",
+      "correctExplanation": "P₁ = 50²/100 = 25 W. P₂ = 50²/50 = 50 W. Halving the resistance doubles the power at constant voltage.",
+      "distractors": [
+        { "answer": "The power halves from 50 W to 25 W", "explanation": "Lower resistance increases the current and therefore the power. P = V²/R, so halving R doubles P." },
+        { "answer": "The power quadruples from 25 W to 100 W", "explanation": "The power doubles, not quadruples. Halving R gives P₂ = V²/(R/2) = 2V²/R = 2P₁." },
+        { "answer": "The power stays the same because the supply voltage has not changed", "explanation": "Power depends on both voltage and resistance. P = V²/R, so changing R changes P." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student measures Vp = 100 V and Ip = 2.0 A in an AC circuit with a purely resistive load. She calculates three different power values: P₁ = Vp × Ip = 200 W, P₂ = ½ × Vp × Ip = 100 W, and P₃ = Vrms × Irms = 100 W. Which one of the following best evaluates her results?",
+      "correct": "P₂ and P₃ are both correct and equal; P₁ gives the peak instantaneous power",
+      "correctExplanation": "P₂ = ½ × Vp × Ip = 100 W and P₃ = Vrms × Irms = (100/√2)(2.0/√2) = 100 W. Both give the effective power. P₁ = 200 W is the peak power.",
+      "distractors": [
+        { "answer": "Only P₃ is correct; P₁ and P₂ are both wrong", "explanation": "P₂ = ½ × Vp × Ip is mathematically equivalent to Vrms × Irms and is also correct." },
+        { "answer": "P₁ is the effective power; P₂ and P₃ are incorrect", "explanation": "P₁ = Vp × Ip = 200 W is the peak power. The effective power is P₂ = P₃ = 100 W." },
+        { "answer": "All three are different valid ways to express the effective power", "explanation": "P₁ gives peak power, not effective power. Only P₂ and P₃ give the effective (average) power." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Two resistors are connected in parallel to an AC supply with Vrms = 120 V. Resistor A is 40 Ω and resistor B is 60 Ω. Which one of the following is closest to the total effective power dissipated?",
+      "correct": "600 W",
+      "correctExplanation": "PA = 120²/40 = 360 W. PB = 120²/60 = 240 W. Total = 360 + 240 = 600 W. (Or: Rparallel = 40×60/(40+60) = 24 Ω, P = 120²/24 = 600 W.)",
+      "distractors": [
+        { "answer": "300 W", "explanation": "This results from halving the total. With rms values, P = V²/R gives effective power directly." },
+        { "answer": "144 W", "explanation": "This results from using the series resistance (100 Ω): 120²/100 = 144 W. The resistors are in parallel, not series." },
+        { "answer": "1200 W", "explanation": "This results from doubling, possibly using peak power. The total effective power is 600 W." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Mia measures the power dissipated by a light bulb connected to a 230 V rms supply and obtains 100 W. She increases the supply voltage to 250 V rms. Which one of the following is closest to the new power, assuming the bulb resistance stays constant?",
+      "correct": "118 W",
+      "correctExplanation": "R = V₁²/P₁ = (230)²/100 = 529 Ω. P₂ = V₂²/R = (250)²/529 = 62500/529 ≈ 118 W. Or: P₂/P₁ = (V₂/V₁)² = (250/230)² ≈ 1.182, so P₂ ≈ 118 W.",
+      "distractors": [
+        { "answer": "109 W", "explanation": "This results from assuming power scales linearly with voltage (100 × 250/230 ≈ 109). Power scales with V²." },
+        { "answer": "100 W", "explanation": "The power changes when the voltage changes. P = V²/R, so increasing V increases P." },
+        { "answer": "132 W", "explanation": "This results from an incorrect voltage ratio. P₂ = 100 × (250/230)² ≈ 118 W." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An AC supply delivers an effective power of 500 W to a 50 Ω load. A student claims the peak-to-peak voltage across the load is approximately 447 V. Which one of the following best evaluates this claim?",
+      "correct": "The claim is correct: Vrms = √(500 × 50) ≈ 158 V, Vp ≈ 224 V, Vp-p ≈ 447 V",
+      "correctExplanation": "Vrms = √(P × R) = √25000 ≈ 158 V. Vp = 158 × √2 ≈ 224 V. Vp-p = 2 × 224 ≈ 447 V.",
+      "distractors": [
+        { "answer": "The claim is incorrect; Vp-p = 2 × Vrms = 316 V", "explanation": "Vp-p ≠ 2 × Vrms. The correct path is Vrms → Vp = Vrms × √2, then Vp-p = 2 × Vp." },
+        { "answer": "The claim is incorrect; Vp-p = Vrms × √2 ≈ 224 V", "explanation": "Vrms × √2 gives Vp, not Vp-p. Vp-p = 2 × Vp ≈ 447 V." },
+        { "answer": "The claim is incorrect; Vp-p cannot be determined from power and resistance alone", "explanation": "From P and R, Vrms can be found, then converted to Vp and Vp-p." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A 240 W heater operates at Vrms = 120 V. If the same heater is connected to a 240 V rms supply, which one of the following best describes the outcome?",
+      "correct": "The heater would dissipate 960 W, which is four times its rated power",
+      "correctExplanation": "R = 120²/240 = 60 Ω. At 240 V: P = 240²/60 = 960 W. Doubling the voltage quadruples the power since P ∝ V².",
+      "distractors": [
+        { "answer": "The heater would dissipate 480 W, double its rated power", "explanation": "Power scales with V², not V. Doubling voltage gives 4× power, not 2× power." },
+        { "answer": "The heater would still dissipate 240 W because it is rated for that power", "explanation": "The rated power applies at the rated voltage. At a different voltage, P = V²/R changes." },
+        { "answer": "The heater would dissipate 120 W because higher voltage reduces current", "explanation": "Higher voltage increases current through a fixed resistance, increasing power." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An engineer needs to select a resistor for a circuit. The AC supply has Vrms = 50 V, and the resistor must dissipate no more than 10 W. Which one of the following is the minimum resistance that satisfies this requirement?",
+      "correct": "250 Ω",
+      "correctExplanation": "Peff = Vrms²/R, so R = Vrms²/Peff = 2500/10 = 250 Ω. A resistance of 250 Ω or greater keeps power at or below 10 W.",
+      "distractors": [
+        { "answer": "5.0 Ω", "explanation": "5.0 Ω would give P = 2500/5 = 500 W, far exceeding 10 W." },
+        { "answer": "500 Ω", "explanation": "500 Ω gives P = 2500/500 = 5.0 W. This satisfies the limit but is not the minimum resistance; 250 Ω also satisfies it." },
+        { "answer": "125 Ω", "explanation": "125 Ω gives P = 2500/125 = 20 W, which exceeds the 10 W limit." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Kai connects three identical 300 Ω resistors in parallel across an AC supply with Vrms = 60 V. Which one of the following is closest to the total effective power dissipated?",
+      "correct": "36 W",
+      "correctExplanation": "Each resistor dissipates P = 60²/300 = 12 W. Total = 3 × 12 = 36 W. Or: R_parallel = 300/3 = 100 Ω, P = 60²/100 = 36 W.",
+      "distractors": [
+        { "answer": "12 W", "explanation": "12 W is the power in one resistor. Three in parallel dissipate 3 × 12 = 36 W total." },
+        { "answer": "108 W", "explanation": "This results from an incorrect calculation. Total effective power is 36 W." },
+        { "answer": "4.0 W", "explanation": "This results from using total series resistance (900 Ω): 3600/900 = 4.0 W. The resistors are in parallel." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the analysis of power scaling.",
+      "sentence": "A resistor dissipates 200 W at Vrms = 100 V. If the supply voltage is reduced to 50 V, the new power is {{blank:1}} W because power is proportional to the {{blank:2}} of the voltage.",
+      "blanks": {
+        "1": {
+          "correct": "50",
+          "correctExplanation": "Halving the voltage reduces power by a factor of (½)² = ¼. New power = 200/4 = 50 W.",
+          "distractors": [
+            { "answer": "100", "explanation": "This assumes power halves when voltage halves. Power scales with V², so it quarters." },
+            { "answer": "25", "explanation": "This results from an extra factor of 2. P = 200 × (50/100)² = 200/4 = 50 W." }
+          ]
+        },
+        "2": {
+          "correct": "square",
+          "correctExplanation": "P = V²/R, so power is proportional to the square of the voltage at constant resistance.",
+          "distractors": [
+            { "answer": "cube", "explanation": "Power scales with V², not V³. P = V²/R." },
+            { "answer": "square root", "explanation": "Power scales with V², not √V. Doubling voltage quadruples power." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the peak power analysis.",
+      "sentence": "An AC circuit dissipates an effective power of 500 W. The peak instantaneous power is {{blank:1}} W. If the resistance is 50 Ω, the peak current is Ip = {{blank:2}} A.",
+      "blanks": {
+        "1": {
+          "correct": "1000",
+          "correctExplanation": "Peak power = 2 × effective power = 2 × 500 = 1000 W.",
+          "distractors": [
+            { "answer": "500", "explanation": "500 W is the effective power. Peak power is twice this: 1000 W." },
+            { "answer": "707", "explanation": "This results from multiplying by √2 instead of by 2. Peak power = 2 × Peff." }
+          ]
+        },
+        "2": {
+          "correct": "4.47",
+          "correctExplanation": "Ppeak = Ip² × R, so Ip = √(Ppeak/R) = √(1000/50) = √20 ≈ 4.47 A. Or: Irms = √(500/50) = √10 ≈ 3.16 A, Ip = 3.16 × √2 ≈ 4.47 A.",
+          "distractors": [
+            { "answer": "3.16", "explanation": "3.16 A is the rms current. The peak current is Ip = Irms × √2 ≈ 4.47 A." },
+            { "answer": "10.0", "explanation": "This results from Ppeak/R = 1000/50 = 20, without taking the square root. Ip = √20 ≈ 4.47 A." }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,559 @@
+{
+  "_link": {
+    "uuid": "lp-a83879be-93ba-4ea4-68d8-d3ec08846d8b",
+    "version": 1,
+    "contentHash": "hash-ba23f024",
+    "title": "I can evaluate an electricity distribution system and identify how to improve its efficiency",
+    "generatedAt": "2026-03-08"
+  },
+  "toLevel2": [
+    {
+      "type": "mc",
+      "question": "A power station transmits 100 kW along transmission lines with a total resistance of 5.0 Ω. Which one of the following best describes how to reduce power losses in the lines?",
+      "correct": "Increase the transmission voltage using a step-up transformer",
+      "correctExplanation": "Since P_loss = I²R, reducing the current by stepping up the voltage reduces losses. For a given power P = VI, higher V means lower I.",
+      "distractors": [
+        { "answer": "Decrease the transmission voltage using a step-down transformer", "explanation": "Decreasing voltage increases current for the same power, which increases I²R losses." },
+        { "answer": "Increase the diameter of the transmission wires", "explanation": "Thicker wires reduce R, which helps, but the most effective method is to increase voltage. This is not the best answer." },
+        { "answer": "Transmit the power at a lower frequency", "explanation": "Frequency has negligible effect on resistive losses in transmission lines." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An electricity distribution system transmits power at 240 V through cables with a resistance of 2.0 Ω. The current is 50 A. Which one of the following is closest to the power lost in the cables?",
+      "correct": "5.0 kW",
+      "correctExplanation": "P_loss = I²R = 50² × 2.0 = 5000 W = 5.0 kW.",
+      "distractors": [
+        { "answer": "100 W", "explanation": "This is V²/R using the supply voltage, not a valid approach for cable losses." },
+        { "answer": "12 kW", "explanation": "This results from P = VI = 240 × 50 = 12 kW, which is the total transmitted power, not the loss." },
+        { "answer": "500 W", "explanation": "This results from an error such as forgetting to square the current, giving I × R × some factor." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "In an electricity distribution system, a step-up transformer is placed at the power station and a step-down transformer is placed near the consumer. Which one of the following best explains why this arrangement is used?",
+      "correct": "High voltage reduces the current in the lines, which reduces I²R losses",
+      "correctExplanation": "Stepping up the voltage at the source reduces current for the same power. Lower current means much lower resistive losses in the cables.",
+      "distractors": [
+        { "answer": "High voltage eliminates the resistance of the cables entirely", "explanation": "Transformers do not change the resistance of the cables; they reduce losses by reducing the current." },
+        { "answer": "Step-up transformers increase the total power available for transmission", "explanation": "An ideal transformer conserves power. It changes voltage and current but does not create additional power." },
+        { "answer": "Step-down transformers generate additional current for the consumer", "explanation": "Step-down transformers increase current by reducing voltage, but do not generate extra power." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A factory requires 200 kW of electrical power. The power is transmitted at 10 kV along lines with a total resistance of 4.0 Ω. Which one of the following is closest to the current in the transmission lines?",
+      "correct": "20 A",
+      "correctExplanation": "I = P/V = 200 × 10³ / (10 × 10³) = 20 A.",
+      "distractors": [
+        { "answer": "50 A", "explanation": "This results from an error such as using 4.0 kV instead of 10 kV." },
+        { "answer": "200 A", "explanation": "This results from dividing power by the line resistance: 200 000 / 4.0 × some factor, which is not a valid method." },
+        { "answer": "0.020 A", "explanation": "This results from a unit error, using watts instead of kilowatts or vice versa." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which one of the following changes would most effectively reduce power losses in a long-distance electricity transmission system?",
+      "correct": "Increasing the transmission voltage by a factor of 10",
+      "correctExplanation": "If voltage increases by 10, current decreases by 10 (for the same power). Since P_loss = I²R, losses decrease by a factor of 100.",
+      "distractors": [
+        { "answer": "Halving the length of the transmission lines", "explanation": "Halving the length halves R, reducing losses by a factor of 2. This is far less effective than a factor-of-10 voltage increase." },
+        { "answer": "Doubling the cross-sectional area of the cables", "explanation": "Doubling the area halves R, reducing losses by a factor of 2. Again, less effective than increasing voltage." },
+        { "answer": "Using DC instead of AC for transmission", "explanation": "DC transmission has some advantages but does not inherently reduce resistive losses compared to high-voltage AC." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "In an ideal electricity distribution system, the total power output at the consumer end equals the total power generated at the power station.",
+      "correct": "True",
+      "correctExplanation": "In an ideal system with no resistive losses in cables and ideal transformers, all power generated is delivered to the consumer.",
+      "distractors": [
+        { "answer": "False", "explanation": "In an ideal system, there are no losses. Power is fully conserved from source to consumer." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "Doubling the transmission voltage while keeping the transmitted power constant will reduce power losses in the cables to one quarter of their original value.",
+      "correct": "True",
+      "correctExplanation": "If V doubles, I halves (since P = VI). P_loss = I²R, so halving I gives (I/2)² = I²/4. Losses drop to one quarter.",
+      "distractors": [
+        { "answer": "False", "explanation": "The calculation confirms that doubling voltage quarters the losses: current halves, and I²R is proportional to I², so losses reduce by a factor of 4." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about improving transmission efficiency.",
+      "sentence": "To reduce power losses in transmission cables, the voltage should be stepped {{blank:1}} before transmission, which {{blank:2}} the current in the cables.",
+      "blanks": {
+        "1": {
+          "correct": "up",
+          "correctExplanation": "A step-up transformer increases voltage before transmission to reduce current and losses.",
+          "distractors": [
+            { "answer": "down", "explanation": "Stepping down voltage would increase current and increase losses." },
+            { "answer": "off", "explanation": "Turning off the voltage would stop all power transmission entirely." }
+          ]
+        },
+        "2": {
+          "correct": "reduces",
+          "correctExplanation": "Higher voltage means lower current for the same power (P = VI), so current is reduced.",
+          "distractors": [
+            { "answer": "increases", "explanation": "Higher voltage reduces current for constant power, it does not increase it." },
+            { "answer": "stabilises", "explanation": "The effect is a reduction in current, not merely stabilisation." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about power loss in cables.",
+      "sentence": "The power lost as heat in transmission cables is calculated using P_loss = {{blank:1}}, so reducing the {{blank:2}} is the most effective way to minimise losses.",
+      "blanks": {
+        "1": {
+          "correct": "I²R",
+          "correctExplanation": "Power dissipated in the cables equals the current squared times the cable resistance.",
+          "distractors": [
+            { "answer": "V²/R", "explanation": "V²/R uses the supply voltage, not the voltage drop across the cables, so it does not give the cable loss." },
+            { "answer": "IR", "explanation": "IR gives the voltage drop across the cables, not the power lost." }
+          ]
+        },
+        "2": {
+          "correct": "current",
+          "correctExplanation": "Because current is squared in P_loss = I²R, reducing the current has the greatest effect on reducing losses.",
+          "distractors": [
+            { "answer": "voltage", "explanation": "Reducing the transmission voltage would actually increase the current and increase losses." },
+            { "answer": "frequency", "explanation": "Frequency has negligible effect on resistive losses in transmission cables." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the electricity distribution system.",
+      "sentence": "In a typical distribution system, a {{blank:1}} transformer at the power station increases voltage for transmission, and a {{blank:2}} transformer near the consumer returns the voltage to a usable level.",
+      "blanks": {
+        "1": {
+          "correct": "step-up",
+          "correctExplanation": "A step-up transformer increases voltage at the power station to reduce current during transmission.",
+          "distractors": [
+            { "answer": "step-down", "explanation": "A step-down transformer decreases voltage, which is used at the consumer end, not at the power station." },
+            { "answer": "isolation", "explanation": "An isolation transformer has a 1:1 ratio and does not change voltage, so it would not help reduce losses." }
+          ]
+        },
+        "2": {
+          "correct": "step-down",
+          "correctExplanation": "A step-down transformer reduces the high transmission voltage to a safe, usable level for the consumer.",
+          "distractors": [
+            { "answer": "step-up", "explanation": "A step-up transformer would increase voltage further, not reduce it for consumer use." },
+            { "answer": "variable", "explanation": "A variable transformer is not the standard component used in distribution systems for this purpose." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "mc",
+      "question": "A power station generates 500 kW and transmits it along cables with a total resistance of 2.0 Ω. If the transmission voltage is 50 kV, which one of the following is closest to the power lost in the cables?",
+      "correct": "200 W",
+      "correctExplanation": "I = P/V = 500 000 / 50 000 = 10 A. P_loss = I²R = 10² × 2.0 = 200 W.",
+      "distractors": [
+        { "answer": "20 kW", "explanation": "This results from using I = 100 A, perhaps from a unit error in the voltage." },
+        { "answer": "500 W", "explanation": "This results from an arithmetic error such as using I = 15.8 A instead of 10 A." },
+        { "answer": "2.0 kW", "explanation": "This results from using I²R with I = P/(V/10), a factor-of-ten error in voltage." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Mia compares two transmission options for delivering 80 kW of power over cables with a resistance of 5.0 Ω. Option A transmits at 10 kV and Option B transmits at 40 kV. Which one of the following is closest to the ratio of power losses, P_loss(A) : P_loss(B)?",
+      "correct": "16 : 1",
+      "correctExplanation": "I_A = 80 000/10 000 = 8.0 A, I_B = 80 000/40 000 = 2.0 A. P_A = 64 × 5 = 320 W, P_B = 4 × 5 = 20 W. Ratio = 320/20 = 16:1. Alternatively, (V_B/V_A)² = 4² = 16.",
+      "distractors": [
+        { "answer": "4 : 1", "explanation": "This is the ratio of voltages (or currents), not the ratio of power losses. Losses depend on I², so the ratio is squared." },
+        { "answer": "2 : 1", "explanation": "This does not correspond to any correct relationship between the two options." },
+        { "answer": "8 : 1", "explanation": "This results from squaring the wrong ratio or an arithmetic error in the calculation." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Liam evaluates a transmission system in which 1.0 MW is transmitted at 100 kV over cables with a resistance of 10 Ω. Which one of the following is closest to the voltage drop across the cables?",
+      "correct": "100 V",
+      "correctExplanation": "I = P/V = 1.0 × 10⁶ / (100 × 10³) = 10 A. V_drop = IR = 10 × 10 = 100 V.",
+      "distractors": [
+        { "answer": "1000 V", "explanation": "This results from using I = 100 A, perhaps from a unit error in the transmitted power or voltage." },
+        { "answer": "10 V", "explanation": "This results from using I = 1.0 A, dividing by an extra factor of 10." },
+        { "answer": "10 kV", "explanation": "This is 10% of the transmission voltage, not a calculated voltage drop." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A regional transmission system uses a step-up transformer with a turns ratio of 1:20 at the power station and a step-down transformer with a turns ratio of 20:1 at the town. The generator produces 240 V. Which one of the following is closest to the voltage at the consumer end, assuming ideal transformers and negligible cable resistance?",
+      "correct": "240 V",
+      "correctExplanation": "Step-up: V_line = 240 × 20 = 4800 V. Step-down: V_consumer = 4800 / 20 = 240 V. The voltage is restored to the original.",
+      "distractors": [
+        { "answer": "4800 V", "explanation": "This is the transmission voltage, not the consumer voltage. The step-down transformer reduces it back to 240 V." },
+        { "answer": "12 V", "explanation": "This results from dividing by the turns ratio twice: 240/20/20, which is incorrect." },
+        { "answer": "115 200 V", "explanation": "This results from multiplying by the turns ratio twice: 240 × 20 × 20 × some factor." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An engineer proposes two improvements to a transmission system: (1) double the transmission voltage and (2) halve the cable resistance by using thicker wires. If both changes are made simultaneously, by what factor do the cable losses decrease?",
+      "correct": "8",
+      "correctExplanation": "Doubling voltage halves current, so I² drops by a factor of 4. Halving R drops losses by another factor of 2. Total factor = 4 × 2 = 8.",
+      "distractors": [
+        { "answer": "4", "explanation": "This accounts only for the voltage change (factor of 4 from I²) but ignores the halving of R." },
+        { "answer": "6", "explanation": "This incorrectly adds the factors (4 + 2) instead of multiplying them." },
+        { "answer": "2", "explanation": "This accounts only for the halving of resistance but ignores the effect of doubling voltage." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A rural property receives power through 5.0 km of cable with a total resistance of 8.0 Ω. The property draws 20 A at 240 V. Which one of the following is closest to the voltage at the power station end of the cable?",
+      "correct": "400 V",
+      "correctExplanation": "Voltage drop across cable = IR = 20 × 8.0 = 160 V. Voltage at station = 240 + 160 = 400 V.",
+      "distractors": [
+        { "answer": "240 V", "explanation": "This ignores the voltage drop across the cables entirely." },
+        { "answer": "80 V", "explanation": "This subtracts the drop from 240 V: 240 − 160 = 80 V, giving the wrong direction." },
+        { "answer": "320 V", "explanation": "This results from using half the cable resistance, perhaps considering only one wire instead of the full return path." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "If the transmission voltage in a distribution system is tripled while the transmitted power remains constant, the power lost in the cables decreases by a factor of nine.",
+      "correct": "True",
+      "correctExplanation": "Tripling voltage reduces current by a factor of 3. P_loss = I²R, so losses decrease by 3² = 9.",
+      "distractors": [
+        { "answer": "False", "explanation": "The relationship is correct: tripling voltage reduces losses by a factor of 9 because losses depend on the square of the current." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the evaluation of a transmission system.",
+      "sentence": "A 200 kW system transmitted at 10 kV through cables of resistance 4.0 Ω has a current of {{blank:1}} A, and the power lost in the cables is {{blank:2}} W.",
+      "blanks": {
+        "1": {
+          "correct": "20",
+          "correctExplanation": "I = P/V = 200 000 / 10 000 = 20 A.",
+          "distractors": [
+            { "answer": "50", "explanation": "This results from using V = 4000 V instead of 10 000 V." },
+            { "answer": "200", "explanation": "This results from dividing power by 1000 instead of 10 000." }
+          ]
+        },
+        "2": {
+          "correct": "1600",
+          "correctExplanation": "P_loss = I²R = 20² × 4.0 = 400 × 4.0 = 1600 W.",
+          "distractors": [
+            { "answer": "80", "explanation": "This results from IR = 20 × 4 = 80, which is the voltage drop, not the power loss." },
+            { "answer": "800", "explanation": "This results from I × R × I/2 or similar arithmetic error, giving half the correct value." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about system efficiency.",
+      "sentence": "If a system transmits 500 kW and loses 5.0 kW in the cables, the efficiency of the transmission is {{blank:1}}%.",
+      "blanks": {
+        "1": {
+          "correct": "99",
+          "correctExplanation": "Efficiency = (P_delivered / P_total) × 100 = (495/500) × 100 = 99%.",
+          "distractors": [
+            { "answer": "95", "explanation": "This results from an error in calculating the percentage or misreading the values." },
+            { "answer": "90", "explanation": "This would require 50 kW of losses, not 5.0 kW." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about comparing transmission options.",
+      "sentence": "Transmitting at 100 kV instead of 10 kV reduces the current by a factor of {{blank:1}}, and reduces the power losses by a factor of {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "10",
+          "correctExplanation": "I = P/V, so increasing V by 10 reduces I by 10.",
+          "distractors": [
+            { "answer": "100", "explanation": "This is the square of the voltage ratio, not the current ratio itself." },
+            { "answer": "5", "explanation": "This does not correspond to the ratio of voltages, which is 100/10 = 10." }
+          ]
+        },
+        "2": {
+          "correct": "100",
+          "correctExplanation": "P_loss = I²R. Current is reduced by 10, so losses are reduced by 10² = 100.",
+          "distractors": [
+            { "answer": "10", "explanation": "This is the current ratio, not the power loss ratio. Losses depend on I², so the factor is squared." },
+            { "answer": "1000", "explanation": "This cubes the voltage ratio instead of squaring the current ratio." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "mc",
+      "question": "A power station generates 2.0 MW at 10 kV. A step-up transformer with a turns ratio of 1:25 is used before transmission along cables with a total resistance of 8.0 Ω. Which one of the following is closest to the power lost in the cables?",
+      "correct": "512 W",
+      "correctExplanation": "Transmission voltage = 10 000 × 25 = 250 kV. I = 2.0 × 10⁶ / (250 × 10³) = 8.0 A. P_loss = 8.0² × 8.0 = 512 W.",
+      "distractors": [
+        { "answer": "320 kW", "explanation": "This results from using the generator voltage (10 kV) instead of the stepped-up voltage, giving I = 200 A." },
+        { "answer": "5.12 kW", "explanation": "This results from using a turns ratio of 1:2.5 instead of 1:25, giving I = 80 A." },
+        { "answer": "128 W", "explanation": "This results from using I = 4.0 A, perhaps from a factor-of-two error in the calculation." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Zara compares two distribution systems for delivering 400 kW. System A transmits at 20 kV through cables of resistance 10 Ω. System B transmits at 100 kV through cables of resistance 10 Ω. Which one of the following is closest to the difference in power lost between the two systems?",
+      "correct": "3840 W",
+      "correctExplanation": "System A: I = 400 000/20 000 = 20 A, P_loss = 400 × 10 = 4000 W. System B: I = 400 000/100 000 = 4.0 A, P_loss = 16 × 10 = 160 W. Difference = 4000 − 160 = 3840 W.",
+      "distractors": [
+        { "answer": "4000 W", "explanation": "This is the loss in System A alone, not the difference between the two systems." },
+        { "answer": "160 W", "explanation": "This is the loss in System B alone, not the difference." },
+        { "answer": "2000 W", "explanation": "This results from an arithmetic error such as averaging the two losses." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An electricity distribution system transmits 1.5 MW at 330 kV through cables of total resistance 12 Ω. At the consumer end, a step-down transformer reduces the voltage to 240 V. Which one of the following is closest to the current delivered to the consumer, assuming ideal transformers?",
+      "correct": "6250 A",
+      "correctExplanation": "P_loss = I_line² × R = (1.5 × 10⁶ / 330 000)² × 12 = 4.545² × 12 ≈ 248 W. P_delivered ≈ 1.5 MW (losses negligible). I_consumer = P/V = 1 500 000 / 240 ≈ 6250 A.",
+      "distractors": [
+        { "answer": "4.5 A", "explanation": "This is the current in the transmission lines, not the consumer current." },
+        { "answer": "625 A", "explanation": "This results from a factor-of-ten error in the calculation of consumer current." },
+        { "answer": "62 500 A", "explanation": "This results from using 24 V instead of 240 V for the consumer voltage." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Oliver evaluates a system where a generator produces 50 kW at 500 V. The power is stepped up to 10 kV for transmission through 4.0 Ω of cable resistance, then stepped down to 250 V for the consumer. Which one of the following is closest to the percentage of power lost in the cables?",
+      "correct": "0.20%",
+      "correctExplanation": "I_line = P/V = 50 000/10 000 = 5.0 A. P_loss = I²R = 5.0² × 4.0 = 100 W. Percentage = (100/50 000) × 100 = 0.20%.",
+      "distractors": [
+        { "answer": "20%", "explanation": "This results from using the generator voltage (500 V) instead of the transmission voltage, giving I = 100 A and P_loss = 40 kW." },
+        { "answer": "2.0%", "explanation": "This results from a factor-of-ten error in the percentage calculation." },
+        { "answer": "0.80%", "explanation": "This results from an arithmetic error when calculating the percentage." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A transmission system delivers power from a 10 MW generator through cables of total resistance 5.0 Ω. If the maximum allowable cable loss is 1.0% of the generated power, which one of the following is closest to the minimum transmission voltage required?",
+      "correct": "71 kV",
+      "correctExplanation": "P_loss = 0.01 × 10 × 10⁶ = 100 kW. I_max = √(P_loss/R) = √(100 000/5.0) = √20 000 = 141 A. V_min = P/I = 10 × 10⁶/141 = 70 900 V ≈ 71 kV.",
+      "distractors": [
+        { "answer": "224 kV", "explanation": "This results from using P_loss = I²R incorrectly, perhaps by substituting V²/(R) for I²R." },
+        { "answer": "100 kV", "explanation": "This is a round estimate that does not match the calculation." },
+        { "answer": "22 kV", "explanation": "This results from taking the square root an extra time or using P_loss = 10 kW instead of 100 kW." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Sophie analyses a distribution system with a step-up transformer (1:20) at the generator and a step-down transformer (20:1) near the consumer. The generator produces 240 V and the cables carry 10 A with a total resistance of 8.0 Ω. Which one of the following is closest to the voltage delivered to the consumer?",
+      "correct": "236 V",
+      "correctExplanation": "Transmission voltage = 240 × 20 = 4800 V. Voltage drop = IR = 10 × 8.0 = 80 V. Voltage at step-down input = 4800 − 80 = 4720 V. Consumer voltage = 4720/20 = 236 V.",
+      "distractors": [
+        { "answer": "160 V", "explanation": "This results from subtracting the cable voltage drop directly from the consumer voltage: 240 − 80 = 160 V, ignoring that the drop occurs at the high-voltage side." },
+        { "answer": "240 V", "explanation": "This ignores the voltage drop in the cables entirely." },
+        { "answer": "4800 V", "explanation": "This is the transmission voltage, not the consumer voltage." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An engineer must choose between two designs for a 50 km transmission line delivering 5.0 MW. Design X uses 66 kV transmission and cables with R = 15 Ω. Design Y uses 220 kV transmission and cables with R = 20 Ω. Which one of the following correctly identifies the more efficient design and the power lost in that design?",
+      "correct": "Design Y, with approximately 10 kW lost",
+      "correctExplanation": "Design X: I = 5 × 10⁶/66 000 = 75.8 A, P_loss = 75.8² × 15 = 86 100 W ≈ 86 kW. Design Y: I = 5 × 10⁶/220 000 = 22.7 A, P_loss = 22.7² × 20 = 10 300 W ≈ 10 kW. Design Y is more efficient.",
+      "distractors": [
+        { "answer": "Design X, with approximately 86 kW lost", "explanation": "Design X does lose about 86 kW, but this makes it less efficient than Design Y, not more." },
+        { "answer": "Design Y, with approximately 86 kW lost", "explanation": "86 kW is the loss for Design X, not Design Y. Design Y loses approximately 10 kW." },
+        { "answer": "Design X, with approximately 10 kW lost", "explanation": "10 kW is the loss for Design Y, not Design X. The designs and losses are confused." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the evaluation of a distribution system.",
+      "sentence": "A 100 kW generator is stepped up to 50 kV for transmission. The cable resistance is 8.0 Ω. The transmission current is {{blank:1}} A, and the power lost is {{blank:2}} W.",
+      "blanks": {
+        "1": {
+          "correct": "2.0",
+          "correctExplanation": "I = P/V = 100 000 / 50 000 = 2.0 A.",
+          "distractors": [
+            { "answer": "20", "explanation": "This results from using 5.0 kV instead of 50 kV for the transmission voltage." },
+            { "answer": "0.20", "explanation": "This results from using 500 kV instead of 50 kV." }
+          ]
+        },
+        "2": {
+          "correct": "32",
+          "correctExplanation": "P_loss = I²R = 2.0² × 8.0 = 4.0 × 8.0 = 32 W.",
+          "distractors": [
+            { "answer": "16", "explanation": "This results from using I = 2.0 but R = 4.0, halving the resistance." },
+            { "answer": "3200", "explanation": "This results from using I = 20 A: 400 × 8 = 3200 W." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about system design comparison.",
+      "sentence": "Transmitting 800 kW at 200 kV gives a line current of {{blank:1}} A, and transmitting the same power at 100 kV gives a line current of {{blank:2}} A.",
+      "blanks": {
+        "1": {
+          "correct": "4.0",
+          "correctExplanation": "I = P/V = 800 000 / 200 000 = 4.0 A.",
+          "distractors": [
+            { "answer": "40", "explanation": "This results from using 20 kV instead of 200 kV." },
+            { "answer": "0.40", "explanation": "This results from using 2000 kV instead of 200 kV." }
+          ]
+        },
+        "2": {
+          "correct": "8.0",
+          "correctExplanation": "I = P/V = 800 000 / 100 000 = 8.0 A.",
+          "distractors": [
+            { "answer": "80", "explanation": "This results from using 10 kV instead of 100 kV." },
+            { "answer": "4.0", "explanation": "This is the current for 200 kV transmission, not 100 kV." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about transmission efficiency.",
+      "sentence": "A system transmits 2.0 MW and loses 40 kW in the cables. The efficiency is {{blank:1}}%.",
+      "blanks": {
+        "1": {
+          "correct": "98",
+          "correctExplanation": "Efficiency = (P_delivered / P_generated) × 100 = (1960/2000) × 100 = 98%.",
+          "distractors": [
+            { "answer": "80", "explanation": "This would require losses of 400 kW, not 40 kW." },
+            { "answer": "96", "explanation": "This results from a calculation error in the percentage, perhaps doubling the losses." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "mc",
+      "question": "A power station generates 50 MW at 25 kV. The power is transmitted along cables with a total resistance of 4.0 Ω. An engineer considers two options: Option A transmits at the generator voltage of 25 kV, and Option B uses a 1:10 step-up transformer before transmission. Which one of the following is closest to the power saved by choosing Option B over Option A?",
+      "correct": "15.8 MW",
+      "correctExplanation": "Option A: I = 50 × 10⁶ / 25 000 = 2000 A. P_loss = 2000² × 4.0 = 16 MW. Option B: I = 50 × 10⁶ / 250 000 = 200 A. P_loss = 200² × 4.0 = 160 kW. Saving = 16 000 − 160 = 15 840 kW ≈ 15.8 MW.",
+      "distractors": [
+        { "answer": "16 MW", "explanation": "This is the total loss in Option A, not the saving (the difference). Option B still has 160 kW of loss." },
+        { "answer": "1.6 MW", "explanation": "This results from a factor-of-ten error in the Option A current calculation." },
+        { "answer": "160 kW", "explanation": "This is the loss in Option B, not the power saved by switching from A to B." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A homeowner runs 240 V lighting through 100 m of outdoor cable with a total resistance of 2.0 Ω, drawing 10 A. An engineer proposes installing a 1:10 step-up transformer at the house and a 10:1 step-down transformer at the lights to reduce cable losses. Which one of the following is closest to the power lost in the cables after the modification?",
+      "correct": "2.0 W",
+      "correctExplanation": "After modification: cable carries V = 240 × 10 = 2400 V. I_cable = 10/10 = 1.0 A. P_loss = 1.0² × 2.0 = 2.0 W. (Original loss was 10² × 2.0 = 200 W.)",
+      "distractors": [
+        { "answer": "200 W", "explanation": "This is the original cable loss without the transformers, not the reduced loss." },
+        { "answer": "20 W", "explanation": "This results from dividing the current by the turns ratio but forgetting to square it in P = I²R." },
+        { "answer": "0.20 W", "explanation": "This results from using a turns ratio of 1:100 instead of 1:10, giving I = 0.10 A." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A small generator produces 200 kW. A 1:50 step-up transformer raises the voltage to 12 kV for transmission through cables with a total resistance of 5.0 Ω. At the consumer end, a step-down transformer reduces the voltage back to 240 V. Which one of the following is closest to the power delivered to the consumer?",
+      "correct": "199 kW",
+      "correctExplanation": "I_line = 200 000 / 12 000 = 16.7 A. P_loss = 16.7² × 5.0 = 278.9 × 5.0 = 1394 W ≈ 1.4 kW. P_delivered = 200 − 1.4 = 198.6 ≈ 199 kW.",
+      "distractors": [
+        { "answer": "186 kW", "explanation": "This results from using the generator voltage (240 V) instead of the transmission voltage, giving I = 833 A and enormous losses." },
+        { "answer": "195 kW", "explanation": "This results from an arithmetic error, perhaps using I = 33.3 A from a factor-of-two error." },
+        { "answer": "200 kW", "explanation": "This ignores the cable losses entirely. Even with high-voltage transmission, some losses always occur." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A transmission line delivers 5.0 MW to a town. The line has a resistance of 10 Ω and the transmission voltage is 110 kV. A proposed upgrade would increase the voltage to 330 kV and replace the cables with ones having a resistance of 5.0 Ω. Which one of the following is closest to the factor by which the cable losses decrease?",
+      "correct": "18",
+      "correctExplanation": "Original: I = 5 × 10⁶ / 110 000 = 45.5 A. P_loss = 45.5² × 10 = 20 700 W. Upgraded: I = 5 × 10⁶ / 330 000 = 15.2 A. P_loss = 15.2² × 5.0 = 1155 W. Factor = 20 700/1155 = 17.9 ≈ 18.",
+      "distractors": [
+        { "answer": "6", "explanation": "This results from simply multiplying the voltage ratio (3) by the resistance ratio (2), without squaring the current." },
+        { "answer": "9", "explanation": "This accounts only for the voltage tripling (3² = 9) but ignores the halved resistance." },
+        { "answer": "36", "explanation": "This results from squaring both ratios: (3)² × (2)² = 36, but only the current ratio should be squared." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Ella is designing a transmission system for a 100 kW solar farm. She can choose cables with R = 10 Ω or R = 2.5 Ω (which cost four times as much). Alternatively, she can install a transformer to step up from 1.0 kV to 10 kV. Which one of the following correctly identifies the most cost-effective option that keeps cable losses below 1.0 kW?",
+      "correct": "Use the cheaper cables (R = 10 Ω) with the step-up transformer",
+      "correctExplanation": "With transformer and cheap cables: I = 100 000/10 000 = 10 A. P_loss = 100 × 10 = 1000 W = 1.0 kW. This meets the requirement. Without transformer, expensive cables: I = 100 A. P_loss = 100² × 2.5 = 25 kW, which exceeds 1.0 kW.",
+      "distractors": [
+        { "answer": "Use the expensive cables (R = 2.5 Ω) without a transformer", "explanation": "Without a transformer: I = 100 A. P_loss = 100² × 2.5 = 25 kW, which far exceeds 1.0 kW." },
+        { "answer": "Use the expensive cables (R = 2.5 Ω) with the step-up transformer", "explanation": "This works (P_loss = 250 W) but costs four times as much for cables. The cheaper option already meets the requirement." },
+        { "answer": "Use the cheaper cables (R = 10 Ω) without a transformer", "explanation": "Without a transformer: I = 100 A. P_loss = 100² × 10 = 100 kW, which is the entire generated power." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A 240 V generator supplies 10 kW to a factory 2.0 km away. The cables have a resistance of 0.050 Ω per kilometre per wire. The system uses a 1:100 step-up transformer at the generator and a 100:1 step-down at the factory. Which one of the following is closest to the power lost in the cables?",
+      "correct": "0.035 W",
+      "correctExplanation": "Cable R = 2 wires × 2.0 km × 0.050 = 0.20 Ω. Transmission V = 240 × 100 = 24 000 V. I = 10 000/24 000 = 0.417 A. P_loss = 0.417² × 0.20 = 0.174 × 0.20 = 0.035 W.",
+      "distractors": [
+        { "answer": "3.5 W", "explanation": "This results from using a turns ratio of 1:10 instead of 1:100, giving I = 4.17 A and P_loss = 17.4 × 0.20." },
+        { "answer": "347 W", "explanation": "This results from using the generator voltage (240 V) instead of the stepped-up voltage, giving I = 41.7 A." },
+        { "answer": "0.83 W", "explanation": "This results from an error in squaring the current or using incorrect cable resistance." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A transmission system carries 2.0 MW at 66 kV along cables with a total resistance of 8.0 Ω. The system operates for 8000 hours per year. Which one of the following is closest to the total energy lost in the cables per year?",
+      "correct": "58 MWh",
+      "correctExplanation": "I = 2.0 × 10⁶ / 66 000 = 30.3 A. P_loss = 30.3² × 8.0 = 918 × 8.0 = 7344 W ≈ 7.34 kW. E = P × t = 7.34 × 8000 = 58 700 kWh ≈ 58.7 MWh ≈ 58 MWh.",
+      "distractors": [
+        { "answer": "7.3 MWh", "explanation": "This results from confusing kW with MW or using 1000 hours instead of 8000 hours." },
+        { "answer": "580 MWh", "explanation": "This results from using I = 303 A instead of 30.3 A, a factor-of-ten error in current." },
+        { "answer": "5.8 MWh", "explanation": "This results from using 800 hours instead of 8000 hours." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A rural community receives 500 kW through a single transmission line at 22 kV. The cable resistance is 12 Ω. The community plans to upgrade to 66 kV transmission. Which one of the following is closest to the voltage delivered to the community before the upgrade, assuming a step-down transformer with a turns ratio of 22 000:240 at the consumer end?",
+      "correct": "237 V",
+      "correctExplanation": "I = 500 000/22 000 = 22.7 A. V_drop = IR = 22.7 × 12 = 272.7 V. V_at_secondary_input = 22 000 − 272.7 = 21 727 V. V_consumer = 21 727 × (240/22 000) = 21 727/91.67 = 237 V.",
+      "distractors": [
+        { "answer": "240 V", "explanation": "This ignores the voltage drop in the transmission cables entirely." },
+        { "answer": "227 V", "explanation": "This results from subtracting a rounded voltage drop or using a slightly different cable resistance." },
+        { "answer": "210 V", "explanation": "This results from miscalculating the turns ratio or the voltage drop." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the system evaluation calculation.",
+      "sentence": "A 1.0 MW generator transmits at 100 kV through cables of total resistance 20 Ω. The line current is {{blank:1}} A, and the cable losses represent {{blank:2}}% of the generated power.",
+      "blanks": {
+        "1": {
+          "correct": "10",
+          "correctExplanation": "I = P/V = 1.0 × 10⁶ / (100 × 10³) = 10 A.",
+          "distractors": [
+            { "answer": "100", "explanation": "This results from using 10 kV instead of 100 kV." },
+            { "answer": "1.0", "explanation": "This results from using 1000 kV instead of 100 kV." }
+          ]
+        },
+        "2": {
+          "correct": "0.20",
+          "correctExplanation": "P_loss = 10² × 20 = 2000 W = 2.0 kW. Percentage = 2000/1 000 000 × 100 = 0.20%.",
+          "distractors": [
+            { "answer": "2.0", "explanation": "This results from a factor-of-ten error in the percentage calculation." },
+            { "answer": "20", "explanation": "This results from using P_loss = 200 kW, likely from using the wrong current." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the improvement from upgrading a transmission system.",
+      "sentence": "A system originally transmitting at 10 kV is upgraded to 100 kV. If the cable resistance remains unchanged, the power losses decrease by a factor of {{blank:1}}.",
+      "blanks": {
+        "1": {
+          "correct": "100",
+          "correctExplanation": "Voltage increases by 10, so current decreases by 10. P_loss ∝ I², so losses decrease by 10² = 100.",
+          "distractors": [
+            { "answer": "10", "explanation": "This is the ratio of voltages (or currents), but losses depend on I², so the factor is squared." },
+            { "answer": "1000", "explanation": "This cubes the ratio instead of squaring it." }
+          ]
+        }
+      }
+    }
+  ]
+}

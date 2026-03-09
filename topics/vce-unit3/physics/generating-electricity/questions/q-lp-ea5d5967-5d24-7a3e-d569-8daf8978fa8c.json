@@ -1,0 +1,582 @@
+{
+  "_link": {
+    "uuid": "lp-ea5d5967-5d24-7a3e-d569-8daf8978fa8c",
+    "version": 1,
+    "contentHash": "hash-2469f92e",
+    "title": "I can calculate voltage, current and power for solar panels in series and parallel combinations",
+    "generatedAt": "2026-03-07T00:00:00.000Z"
+  },
+
+  "toLevel2": [
+    {
+      "type": "mc",
+      "question": "When two identical solar panels are connected in series, the total voltage is",
+      "correct": "the sum of the individual panel voltages",
+      "correctExplanation": "In a series connection, the voltages of the individual panels add together. If each panel produces V, the total is 2V.",
+      "distractors": [
+        { "answer": "the same as one panel's voltage", "explanation": "This describes a parallel connection, not series. In series, voltages add." },
+        { "answer": "half of one panel's voltage", "explanation": "The total voltage in series is the sum, not half. V_total = V₁ + V₂." },
+        { "answer": "the product of the individual panel voltages", "explanation": "Voltages are added in series, not multiplied." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "When two identical solar panels are connected in parallel, the total current is",
+      "correct": "the sum of the individual panel currents",
+      "correctExplanation": "In a parallel connection, the currents from the individual panels add together. If each panel produces I, the total is 2I.",
+      "distractors": [
+        { "answer": "the same as one panel's current", "explanation": "This describes a series connection. In parallel, currents add: I_total = I₁ + I₂." },
+        { "answer": "half of one panel's current", "explanation": "The total current in parallel is the sum, not half." },
+        { "answer": "the product of the individual panel currents", "explanation": "Currents are added in parallel, not multiplied." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "The formula used to calculate the total power output of a solar panel system is",
+      "correct": "P = VI",
+      "correctExplanation": "Power equals the product of voltage and current: P = VI. This applies to any circuit configuration.",
+      "distractors": [
+        { "answer": "P = V/I", "explanation": "Power is the product of V and I, not the quotient." },
+        { "answer": "P = V + I", "explanation": "Power is the product of V and I, not the sum." },
+        { "answer": "P = V²I", "explanation": "The correct formula is P = VI. Voltage is not squared." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "When identical solar panels are connected in series, the current through each panel is",
+      "correct": "the same as the current through any other panel in the string",
+      "correctExplanation": "In a series circuit, the same current flows through each component. The current is shared by all panels in the string.",
+      "distractors": [
+        { "answer": "the sum of all panel currents", "explanation": "Currents add in parallel, not series. In series, the current is the same through each panel." },
+        { "answer": "divided equally among the panels", "explanation": "The full current flows through each panel in series. The current is not divided." },
+        { "answer": "doubled for each additional panel", "explanation": "Adding panels in series does not change the current. Only the voltage increases." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "When identical solar panels are connected in parallel, the voltage across each panel is",
+      "correct": "the same as the voltage across any other panel",
+      "correctExplanation": "In a parallel circuit, all components share the same voltage. Each panel operates at the same voltage.",
+      "distractors": [
+        { "answer": "the sum of all panel voltages", "explanation": "Voltages add in series, not parallel. In parallel, the voltage is the same across each panel." },
+        { "answer": "divided equally among the panels", "explanation": "Each panel has the full voltage across it in parallel. The voltage is not divided." },
+        { "answer": "doubled for each additional panel", "explanation": "Adding panels in parallel does not change the voltage. Only the current increases." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Recall the rules for voltage and current in series and parallel circuits.",
+      "sentence": "In a series connection of solar panels, {{blank:1}} add while the current is {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "voltages",
+          "correctExplanation": "In series, the total voltage is the sum of the individual panel voltages: V_total = V₁ + V₂ + ...",
+          "distractors": [
+            { "answer": "currents", "explanation": "Currents add in parallel, not series. In series, voltages add." },
+            { "answer": "powers", "explanation": "While powers do add, the key circuit rule for series is that voltages add." },
+            { "answer": "resistances", "explanation": "While resistances add in series, the question is about solar panel voltage and current." }
+          ]
+        },
+        "2": {
+          "correct": "shared",
+          "correctExplanation": "In a series circuit, the same current flows through each panel. The current is shared (identical through all components).",
+          "distractors": [
+            { "answer": "doubled", "explanation": "The current is the same through each panel in series, not doubled." },
+            { "answer": "halved", "explanation": "The current is the same through each panel, not halved." },
+            { "answer": "zero", "explanation": "Current flows through the series circuit. It is not zero." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Recall the rules for voltage and current in parallel circuits.",
+      "sentence": "In a parallel connection of solar panels, the voltage is {{blank:1}} while {{blank:2}} add.",
+      "blanks": {
+        "1": {
+          "correct": "shared",
+          "correctExplanation": "In a parallel circuit, all panels have the same voltage across them. The voltage is shared (identical across all components).",
+          "distractors": [
+            { "answer": "doubled", "explanation": "The voltage is the same across each panel in parallel, not doubled." },
+            { "answer": "halved", "explanation": "Each panel has the full voltage in parallel, not half." },
+            { "answer": "zero", "explanation": "The voltage is the same as one panel's voltage, not zero." }
+          ]
+        },
+        "2": {
+          "correct": "currents",
+          "correctExplanation": "In parallel, the total current is the sum of the individual panel currents: I_total = I₁ + I₂ + ...",
+          "distractors": [
+            { "answer": "voltages", "explanation": "Voltages add in series, not parallel. In parallel, currents add." },
+            { "answer": "resistances", "explanation": "Resistances combine differently in parallel (reciprocals add). The question is about currents adding." },
+            { "answer": "powers", "explanation": "While powers do add, the key circuit rule for parallel is that currents add." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Recall the formula for calculating power from voltage and current.",
+      "sentence": "The power output of a solar panel system is calculated using P = {{blank:1}}.",
+      "blanks": {
+        "1": {
+          "correct": "VI",
+          "correctExplanation": "Power equals the product of voltage and current: P = VI.",
+          "distractors": [
+            { "answer": "V/I", "explanation": "V/I gives resistance (Ohm's law: R = V/I), not power." },
+            { "answer": "V + I", "explanation": "Power is the product of V and I, not the sum." },
+            { "answer": "V − I", "explanation": "Power is the product of V and I, not the difference." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "tf",
+      "question": "When solar panels are connected in series, the total voltage equals the sum of the individual panel voltages.",
+      "correct": "True",
+      "correctExplanation": "In a series circuit, voltages add. The total voltage is V_total = V₁ + V₂ + ... for all panels in the string.",
+      "distractors": [
+        { "answer": "False", "explanation": "The statement is correct. Voltages add in series: V_total = V₁ + V₂." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "When solar panels are connected in parallel, the total voltage equals the sum of the individual panel voltages.",
+      "correct": "False",
+      "correctExplanation": "In a parallel circuit, the voltage is shared — it is the same across each panel. The total voltage equals one panel's voltage, not the sum.",
+      "distractors": [
+        { "answer": "True", "explanation": "Voltages add in series, not parallel. In parallel, the voltage is the same as a single panel's voltage." }
+      ]
+    }
+  ],
+
+  "toLevel3": [
+    {
+      "type": "mc",
+      "question": "Two identical solar panels, each rated at 200 W with a voltage of 10.0 V and a current of 20.0 A, are connected in series. The total voltage of the combination is",
+      "correct": "20.0 V",
+      "correctExplanation": "In series, voltages add: V_total = 10.0 + 10.0 = 20.0 V.",
+      "distractors": [
+        { "answer": "10.0 V", "explanation": "This is the voltage of a single panel. In series, voltages add: V_total = 10.0 + 10.0 = 20.0 V." },
+        { "answer": "40.0 V", "explanation": "This doubles the voltage twice. Two panels in series give V_total = 10.0 + 10.0 = 20.0 V, not 40.0 V." },
+        { "answer": "5.0 V", "explanation": "The voltage in series is the sum, not the average or half. V_total = 20.0 V." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Three identical solar panels, each rated at 200 W with a voltage of 10.0 V and a current of 20.0 A, are connected in parallel. The total current of the combination is",
+      "correct": "60.0 A",
+      "correctExplanation": "In parallel, currents add: I_total = 20.0 + 20.0 + 20.0 = 60.0 A.",
+      "distractors": [
+        { "answer": "20.0 A", "explanation": "This is the current from a single panel. In parallel, currents add: I_total = 3 × 20.0 = 60.0 A." },
+        { "answer": "6.67 A", "explanation": "The current in parallel is the sum, not divided. I_total = 60.0 A." },
+        { "answer": "30.0 V", "explanation": "This confuses voltage with current. In parallel, the voltage stays at 10.0 V and the currents add to 60.0 A." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Two identical 300 W panels (15.0 V, 20.0 A each) are connected in series. The total power output is",
+      "correct": "600 W",
+      "correctExplanation": "In series: V_total = 15.0 + 15.0 = 30.0 V, I_total = 20.0 A. P = VI = 30.0 × 20.0 = 600 W. Alternatively, P_total = 300 + 300 = 600 W.",
+      "distractors": [
+        { "answer": "300 W", "explanation": "This is the power of a single panel. Two panels in series produce twice the power: P = 600 W." },
+        { "answer": "1200 W", "explanation": "This doubles the power twice. Two panels produce 2 × 300 = 600 W." },
+        { "answer": "900 W", "explanation": "The total power is the sum of individual powers: 300 + 300 = 600 W, not 900 W." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student connects two identical solar panels in parallel. Each panel produces 15.0 V and 20.0 A. The total voltage across the parallel combination is",
+      "correct": "15.0 V",
+      "correctExplanation": "In parallel, the voltage is shared. Each panel has the same voltage, so V_total = 15.0 V.",
+      "distractors": [
+        { "answer": "30.0 V", "explanation": "Voltages add in series, not parallel. In parallel, the voltage remains at 15.0 V." },
+        { "answer": "7.5 V", "explanation": "The voltage is not halved in parallel. Each panel has the full 15.0 V across it." },
+        { "answer": "0 V", "explanation": "The voltage in parallel is not zero. It equals the voltage of a single panel: 15.0 V." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student claims that connecting solar panels in parallel increases both the total voltage and the total current. This claim is",
+      "correct": "incorrect, because parallel connection increases the total current but the voltage remains the same as one panel",
+      "correctExplanation": "In parallel, currents add but the voltage is shared (equal to one panel's voltage). Only the current increases.",
+      "distractors": [
+        { "answer": "correct, because adding more panels always increases both voltage and current", "explanation": "The effect depends on the connection type. Parallel increases current only; series increases voltage only." },
+        { "answer": "incorrect, because parallel connection increases the voltage but not the current", "explanation": "This describes series, not parallel. In parallel, the current increases and the voltage stays the same." },
+        { "answer": "correct, but only if the panels are identical", "explanation": "Even with identical panels, parallel connection increases only the current, not the voltage." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A solar panel system has a total voltage of 30.0 V and a total current of 20.0 A. The total power output is",
+      "correct": "600 W",
+      "correctExplanation": "P = VI = 30.0 × 20.0 = 600 W.",
+      "distractors": [
+        { "answer": "50.0 W", "explanation": "This is the sum V + I. Power is the product: P = VI = 600 W." },
+        { "answer": "1.5 W", "explanation": "This is V/I. Power is the product: P = VI = 600 W." },
+        { "answer": "10.0 W", "explanation": "This is V − I. Power is the product: P = VI = 600 W." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Calculate the total voltage and current for two panels connected in series.",
+      "sentence": "Two identical panels (10.0 V, 20.0 A each) are connected in series. The total voltage is {{blank:1}} V and the total current is {{blank:2}} A.",
+      "blanks": {
+        "1": {
+          "correct": "20.0",
+          "correctExplanation": "In series, voltages add: V_total = 10.0 + 10.0 = 20.0 V.",
+          "distractors": [
+            { "answer": "10.0", "explanation": "This is one panel's voltage. In series, voltages add to give 20.0 V." },
+            { "answer": "40.0", "explanation": "This doubles the voltage twice. V_total = 10.0 + 10.0 = 20.0 V." },
+            { "answer": "5.0", "explanation": "The voltage is not halved. V_total = 10.0 + 10.0 = 20.0 V." }
+          ]
+        },
+        "2": {
+          "correct": "20.0",
+          "correctExplanation": "In series, the current is the same through all panels: I_total = 20.0 A.",
+          "distractors": [
+            { "answer": "40.0", "explanation": "Currents add in parallel, not series. In series, the current remains 20.0 A." },
+            { "answer": "10.0", "explanation": "The current is not halved in series. Each panel carries the same 20.0 A." },
+            { "answer": "200", "explanation": "This is the product V × I for one panel (power). The current remains 20.0 A in series." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Calculate the total voltage and current for two panels connected in parallel.",
+      "sentence": "Two identical panels (10.0 V, 20.0 A each) are connected in parallel. The total voltage is {{blank:1}} V and the total current is {{blank:2}} A.",
+      "blanks": {
+        "1": {
+          "correct": "10.0",
+          "correctExplanation": "In parallel, the voltage is shared: V_total = 10.0 V (same as one panel).",
+          "distractors": [
+            { "answer": "20.0", "explanation": "Voltages add in series, not parallel. In parallel, V_total = 10.0 V." },
+            { "answer": "5.0", "explanation": "The voltage is not halved in parallel. V_total = 10.0 V." },
+            { "answer": "40.0", "explanation": "The voltage does not quadruple. V_total = 10.0 V in parallel." }
+          ]
+        },
+        "2": {
+          "correct": "40.0",
+          "correctExplanation": "In parallel, currents add: I_total = 20.0 + 20.0 = 40.0 A.",
+          "distractors": [
+            { "answer": "20.0", "explanation": "This is one panel's current. In parallel, currents add: I_total = 40.0 A." },
+            { "answer": "10.0", "explanation": "The current is not halved. I_total = 20.0 + 20.0 = 40.0 A." },
+            { "answer": "200", "explanation": "This is the power of one panel (V × I). The total current is 40.0 A." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Calculate the power output of a solar panel combination.",
+      "sentence": "A solar panel system produces a total voltage of 45.0 V and a total current of 20.0 A. The total power output is {{blank:1}} W.",
+      "blanks": {
+        "1": {
+          "correct": "900",
+          "correctExplanation": "P = VI = 45.0 × 20.0 = 900 W.",
+          "distractors": [
+            { "answer": "65.0", "explanation": "This is V + I. Power is the product: P = VI = 900 W." },
+            { "answer": "2.25", "explanation": "This is V/I. Power is the product: P = VI = 900 W." },
+            { "answer": "450", "explanation": "This halves the correct answer. P = 45.0 × 20.0 = 900 W." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "tf",
+      "question": "The total power output of a combination of solar panels (whether series or parallel) is equal to the sum of the individual panel powers.",
+      "correct": "True",
+      "correctExplanation": "The total power is the sum of individual powers regardless of whether the panels are in series or parallel. This can be verified using P = VI for the combination.",
+      "distractors": [
+        { "answer": "False", "explanation": "The total power is indeed the sum of individual powers. In series: P = (V₁+V₂)I = V₁I + V₂I. In parallel: P = V(I₁+I₂) = VI₁ + VI₂." }
+      ]
+    }
+  ],
+
+  "toLevel4": [
+    {
+      "type": "mc",
+      "question": "Haruki connects three identical solar panels in series. Each panel is rated at 300 W with a voltage of 15.0 V and a current of 20.0 A. The total voltage and current of the series string are",
+      "correct": "45.0 V and 20.0 A",
+      "correctExplanation": "In series: V_total = 15.0 + 15.0 + 15.0 = 45.0 V, I_total = 20.0 A (current is shared).",
+      "distractors": [
+        { "answer": "15.0 V and 60.0 A", "explanation": "This describes a parallel connection. In series, voltages add and the current is shared: 45.0 V and 20.0 A." },
+        { "answer": "45.0 V and 60.0 A", "explanation": "The current does not add in series. The current through all panels is the same: 20.0 A." },
+        { "answer": "15.0 V and 20.0 A", "explanation": "This is the output of a single panel. Three in series give V_total = 45.0 V." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Four identical solar panels (each 200 W, 10.0 V, 20.0 A) are connected in parallel. The total power output of the combination is",
+      "correct": "800 W",
+      "correctExplanation": "In parallel: V_total = 10.0 V, I_total = 4 × 20.0 = 80.0 A. P = VI = 10.0 × 80.0 = 800 W. Alternatively, P_total = 4 × 200 = 800 W.",
+      "distractors": [
+        { "answer": "200 W", "explanation": "This is the power of a single panel. Four panels produce 4 × 200 = 800 W." },
+        { "answer": "3200 W", "explanation": "This squares the number of panels (4² × 200). The total power is simply 4 × 200 = 800 W." },
+        { "answer": "50 W", "explanation": "The power is not divided by the number of panels. P_total = 4 × 200 = 800 W." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Amara has two identical 300 W panels (15.0 V, 20.0 A). She connects them in series. The total power output of her system, calculated using P = VI, is",
+      "correct": "600 W",
+      "correctExplanation": "In series: V_total = 30.0 V, I_total = 20.0 A. P = VI = 30.0 × 20.0 = 600 W.",
+      "distractors": [
+        { "answer": "300 W", "explanation": "This is one panel's power. P = 30.0 × 20.0 = 600 W." },
+        { "answer": "900 W", "explanation": "The total power is 2 × 300 = 600 W, not 3 × 300 = 900 W." },
+        { "answer": "1200 W", "explanation": "This doubles the power twice. P = 30.0 × 20.0 = 600 W." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Dimitri wants a solar array that produces at least 40.0 V for his inverter. Each panel produces 10.0 V and 20.0 A. The minimum number of panels he must connect in series is",
+      "correct": "4",
+      "correctExplanation": "In series, voltages add. To reach 40.0 V: 40.0/10.0 = 4 panels are needed.",
+      "distractors": [
+        { "answer": "2", "explanation": "Two panels in series give only 20.0 V, which is below the 40.0 V requirement." },
+        { "answer": "8", "explanation": "Only 4 panels are needed: 4 × 10.0 = 40.0 V. Eight panels would give 80.0 V." },
+        { "answer": "40", "explanation": "This confuses the voltage with the number of panels. Only 4 panels at 10.0 V each are needed." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A solar array consists of two strings connected in parallel. Each string contains three identical panels (15.0 V, 20.0 A each) connected in series. The total voltage and current of the array are",
+      "correct": "45.0 V and 40.0 A",
+      "correctExplanation": "Each series string: V = 3 × 15.0 = 45.0 V, I = 20.0 A. Two strings in parallel: V_total = 45.0 V, I_total = 20.0 + 20.0 = 40.0 A.",
+      "distractors": [
+        { "answer": "90.0 V and 20.0 A", "explanation": "The strings are in parallel, so their voltages are shared (45.0 V), not added. The currents add: I = 40.0 A." },
+        { "answer": "45.0 V and 20.0 A", "explanation": "This is the output of one string only. The two parallel strings share the voltage (45.0 V) but their currents add (40.0 A)." },
+        { "answer": "15.0 V and 120 A", "explanation": "This incorrectly uses the individual panel voltage and adds all six panel currents. The series strings produce 45.0 V each, and the parallel combination gives 40.0 A." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Wei has a solar panel rated at 350 W, 17.5 V, 20.0 A. She connects five of these panels in series. The total voltage and power of the series string are",
+      "correct": "87.5 V and 1750 W",
+      "correctExplanation": "In series: V_total = 5 × 17.5 = 87.5 V, I = 20.0 A. P = 87.5 × 20.0 = 1750 W. Or P = 5 × 350 = 1750 W.",
+      "distractors": [
+        { "answer": "17.5 V and 1750 W", "explanation": "The voltage adds in series: V_total = 5 × 17.5 = 87.5 V, not 17.5 V." },
+        { "answer": "87.5 V and 350 W", "explanation": "This is the voltage of the string but the power of only one panel. P_total = 5 × 350 = 1750 W." },
+        { "answer": "87.5 V and 7000 W", "explanation": "This quadruples the correct power. P_total = 5 × 350 = 1750 W." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A rooftop solar system has a total power output of 6000 W. The system operates at a total voltage of 300 V. The total current delivered by the system is",
+      "correct": "20.0 A",
+      "correctExplanation": "I = P/V = 6000/300 = 20.0 A.",
+      "distractors": [
+        { "answer": "1 800 000 A", "explanation": "This is P × V. The current is found by dividing: I = P/V = 20.0 A." },
+        { "answer": "5700 A", "explanation": "This is P − V. The current is I = P/V = 6000/300 = 20.0 A." },
+        { "answer": "0.050 A", "explanation": "This is V/P. The current is I = P/V = 20.0 A." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Calculate the output of a series–parallel solar array.",
+      "sentence": "A solar array has two strings in parallel, each containing four panels (10.0 V, 20.0 A) in series. Each string has a voltage of {{blank:1}} V. The total current from both strings is {{blank:2}} A.",
+      "blanks": {
+        "1": {
+          "correct": "40.0",
+          "correctExplanation": "Each string: V = 4 × 10.0 = 40.0 V (voltages add in series).",
+          "distractors": [
+            { "answer": "10.0", "explanation": "This is one panel's voltage. Four in series give V = 4 × 10.0 = 40.0 V." },
+            { "answer": "80.0", "explanation": "This adds all eight panel voltages. Each string has only four panels: V = 40.0 V." },
+            { "answer": "2.5", "explanation": "The voltage is not divided among panels. It adds: V = 40.0 V per string." }
+          ]
+        },
+        "2": {
+          "correct": "40.0",
+          "correctExplanation": "Each string carries 20.0 A. Two strings in parallel: I_total = 20.0 + 20.0 = 40.0 A.",
+          "distractors": [
+            { "answer": "20.0", "explanation": "This is the current from one string. Two parallel strings give I_total = 40.0 A." },
+            { "answer": "160", "explanation": "This adds all eight panel currents individually. Each string carries 20.0 A (series), and two parallel strings give 40.0 A." },
+            { "answer": "10.0", "explanation": "The current is not halved. I_total = 20.0 + 20.0 = 40.0 A." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Calculate the current from the total power and voltage of a solar system.",
+      "sentence": "A solar panel system produces 4500 W at a total voltage of 150 V. The total current is {{blank:1}} A.",
+      "blanks": {
+        "1": {
+          "correct": "30.0",
+          "correctExplanation": "I = P/V = 4500/150 = 30.0 A.",
+          "distractors": [
+            { "answer": "675 000", "explanation": "This is P × V. The current is I = P/V = 30.0 A." },
+            { "answer": "0.033", "explanation": "This is V/P. The current is I = P/V = 4500/150 = 30.0 A." },
+            { "answer": "4350", "explanation": "This is P − V. The current is I = P/V = 30.0 A." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Determine how many panels are needed to reach a target voltage.",
+      "sentence": "Each solar panel produces 15.0 V. To achieve a total voltage of 60.0 V, {{blank:1}} panels must be connected in {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "4",
+          "correctExplanation": "Number of panels = V_target / V_panel = 60.0 / 15.0 = 4.",
+          "distractors": [
+            { "answer": "2", "explanation": "Two panels give only 30.0 V. Four panels are needed: 4 × 15.0 = 60.0 V." },
+            { "answer": "6", "explanation": "Six panels give 90.0 V, which exceeds the target. Only 4 are needed." },
+            { "answer": "60", "explanation": "This confuses the target voltage with the number of panels. Only 4 panels are needed." }
+          ]
+        },
+        "2": {
+          "correct": "series",
+          "correctExplanation": "Voltages add in series. Connecting 4 panels in series gives V_total = 4 × 15.0 = 60.0 V.",
+          "distractors": [
+            { "answer": "parallel", "explanation": "In parallel, the voltage remains at 15.0 V regardless of the number of panels. Series is needed to increase voltage." },
+            { "answer": "both series and parallel", "explanation": "Only a series connection is needed to add voltages. Parallel would not increase the voltage." },
+            { "answer": "alternating", "explanation": "There is no 'alternating' connection type for DC panels. Series is needed to increase voltage." }
+          ]
+        }
+      }
+    }
+  ],
+
+  "toLevel5": [
+    {
+      "type": "mc",
+      "question": "A solar installer needs a system that produces at least 60.0 V and at least 60.0 A. Each panel produces 15.0 V and 20.0 A. The minimum configuration that meets both requirements is",
+      "correct": "3 strings in parallel, each containing 4 panels in series (12 panels total)",
+      "correctExplanation": "For voltage: 60.0/15.0 = 4 panels in series per string (V = 60.0 V). For current: 60.0/20.0 = 3 strings in parallel (I = 60.0 A). Total: 4 × 3 = 12 panels.",
+      "distractors": [
+        { "answer": "4 strings in parallel, each containing 3 panels in series (12 panels total)", "explanation": "3 panels in series give only 45.0 V, which is below the 60.0 V requirement. The strings need 4 panels each for 60.0 V." },
+        { "answer": "12 panels all in series (12 panels total)", "explanation": "12 in series gives V = 180 V and I = 20.0 A. The current is below the 60.0 A requirement." },
+        { "answer": "12 panels all in parallel (12 panels total)", "explanation": "12 in parallel gives V = 15.0 V and I = 240 A. The voltage is below the 60.0 V requirement." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Priya has six identical 200 W panels (10.0 V, 20.0 A). She compares two configurations: (A) all six in series, and (B) two strings of three in series, connected in parallel. The total power output of each configuration is",
+      "correct": "1200 W for both configurations",
+      "correctExplanation": "Total power equals the sum of individual powers regardless of configuration: P = 6 × 200 = 1200 W. Config A: V = 60.0 V, I = 20.0 A, P = 1200 W. Config B: V = 30.0 V, I = 40.0 A, P = 1200 W.",
+      "distractors": [
+        { "answer": "1200 W for configuration A but 600 W for configuration B", "explanation": "The total power is the same for both configurations. P = 6 × 200 = 1200 W regardless of series or parallel arrangement." },
+        { "answer": "600 W for configuration A and 1200 W for configuration B", "explanation": "The total power is 1200 W for both. The configuration changes the voltage and current but not the total power." },
+        { "answer": "7200 W for configuration A and 1200 W for configuration B", "explanation": "The total power is simply the sum of individual powers: 6 × 200 = 1200 W for both configurations." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student claims that connecting solar panels in series doubles the power compared to a single panel, while connecting them in parallel does not change the power. Which of the following best evaluates this claim?",
+      "correct": "The first part is correct (two in series give double the power), but the second part is incorrect (two in parallel also give double the power).",
+      "correctExplanation": "Two panels in series: V_total = 2V, I_total = I, P = 2VI = 2P. Two panels in parallel: V_total = V, I_total = 2I, P = V(2I) = 2P. Both configurations double the total power.",
+      "distractors": [
+        { "answer": "Both parts are correct. Parallel connection does not increase power.", "explanation": "Parallel connection does increase total power. The additional current from the second panel means P_total = 2P." },
+        { "answer": "Both parts are incorrect. Neither connection type changes the total power.", "explanation": "Both series and parallel connections double the total power when two identical panels are used." },
+        { "answer": "The first part is incorrect but the second part is correct.", "explanation": "Both series and parallel connections double the total power: P_total = 2 × P_panel." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An array consists of three strings connected in parallel. Each string contains five panels (17.5 V, 20.0 A each) in series. The total voltage, current, and power of the array are",
+      "correct": "87.5 V, 60.0 A, and 5250 W",
+      "correctExplanation": "Each string: V = 5 × 17.5 = 87.5 V, I = 20.0 A. Three strings in parallel: V = 87.5 V, I = 3 × 20.0 = 60.0 A. P = 87.5 × 60.0 = 5250 W. Check: 15 × 350 = 5250 W.",
+      "distractors": [
+        { "answer": "262.5 V, 20.0 A, and 5250 W", "explanation": "The voltage is not tripled because the strings are in parallel (not series). V = 87.5 V." },
+        { "answer": "87.5 V, 60.0 A, and 1750 W", "explanation": "1750 W is the power of one string (5 × 350). The total is 3 × 1750 = 5250 W." },
+        { "answer": "17.5 V, 300 A, and 5250 W", "explanation": "The voltage per string is 87.5 V (five panels in series), not 17.5 V." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Fatima's inverter requires an input voltage between 30.0 V and 50.0 V. Each of her panels produces 10.0 V and 20.0 A. She wants maximum power. The optimal number of panels per series string is",
+      "correct": "4 or 5 panels per string",
+      "correctExplanation": "The string voltage must be between 30.0 V and 50.0 V. At 10.0 V per panel: 3 panels = 30.0 V (borderline), 4 panels = 40.0 V (within range), 5 panels = 50.0 V (borderline). For maximum power with reliable operation, 4 or 5 panels per string are optimal.",
+      "distractors": [
+        { "answer": "2 panels per string", "explanation": "Two panels give only 20.0 V, which is below the 30.0 V minimum." },
+        { "answer": "6 panels per string", "explanation": "Six panels give 60.0 V, which exceeds the 50.0 V maximum." },
+        { "answer": "10 panels per string", "explanation": "Ten panels give 100 V, far exceeding the 50.0 V maximum input voltage." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A solar array produces 48.0 V and 25.0 A. The array feeds an inverter that converts the DC output to 240 V AC. Assuming the inverter is 100% efficient, the AC current output is closest to",
+      "correct": "5.0 A",
+      "correctExplanation": "Input power: P = 48.0 × 25.0 = 1200 W. At 100% efficiency, output power = input power = 1200 W. I_AC = P/V_AC = 1200/240 = 5.0 A.",
+      "distractors": [
+        { "answer": "25.0 A", "explanation": "The AC current is not the same as the DC current. At 240 V AC: I = 1200/240 = 5.0 A." },
+        { "answer": "0.20 A", "explanation": "This results from V_DC/P. The correct calculation is I = P/V_AC = 1200/240 = 5.0 A." },
+        { "answer": "48.0 A", "explanation": "This uses the DC voltage as the current. I_AC = P/V_AC = 1200/240 = 5.0 A." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Ravi compares two identical 6-panel systems. System X has all 6 panels in series. System Y has 2 strings of 3 panels in series, connected in parallel. Each panel produces 15.0 V and 20.0 A. The voltage and current of System Y compared to System X are",
+      "correct": "half the voltage and double the current",
+      "correctExplanation": "System X: V = 6 × 15.0 = 90.0 V, I = 20.0 A. System Y: V = 3 × 15.0 = 45.0 V, I = 2 × 20.0 = 40.0 A. Y has half the voltage (45/90) and double the current (40/20).",
+      "distractors": [
+        { "answer": "the same voltage and the same current", "explanation": "The two configurations have different voltage and current splits. X: 90 V, 20 A. Y: 45 V, 40 A." },
+        { "answer": "double the voltage and half the current", "explanation": "This is the reverse. Y has fewer panels per string (lower V) and more parallel strings (higher I)." },
+        { "answer": "one-third the voltage and triple the current", "explanation": "Y has half the panels per string (3 vs 6), so half the voltage (45 V vs 90 V), and double the strings, so double the current (40 A vs 20 A)." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Chen has ten identical 400 W panels (20.0 V, 20.0 A). His inverter requires an input between 80 V and 120 V with a maximum current of 50 A. Which configuration is best?",
+      "correct": "Two strings of 5 panels in series, connected in parallel (V = 100 V, I = 40.0 A)",
+      "correctExplanation": "5 in series per string: V = 5 × 20.0 = 100 V (within 80–120 V). 2 strings in parallel: I = 2 × 20.0 = 40.0 A (within 50 A limit). P = 100 × 40 = 4000 W = 10 × 400 W. ✓",
+      "distractors": [
+        { "answer": "All 10 panels in series (V = 200 V, I = 20.0 A)", "explanation": "200 V exceeds the inverter's 120 V maximum input voltage." },
+        { "answer": "All 10 panels in parallel (V = 20.0 V, I = 200 A)", "explanation": "20.0 V is below the 80 V minimum, and 200 A exceeds the 50 A maximum." },
+        { "answer": "Five strings of 2 panels in series, connected in parallel (V = 40.0 V, I = 100 A)", "explanation": "40.0 V is below the 80 V minimum and 100 A exceeds the 50 A maximum." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Analyse the voltage and current trade-off between series and parallel configurations for the same total number of panels.",
+      "sentence": "For a fixed number of identical panels, connecting more panels in series {{blank:1}} the voltage and {{blank:2}} the current compared to connecting them in parallel.",
+      "blanks": {
+        "1": {
+          "correct": "increases",
+          "correctExplanation": "More panels in series means more voltages are added together, increasing the total voltage.",
+          "distractors": [
+            { "answer": "decreases", "explanation": "Adding panels in series increases the voltage, not decreases it." },
+            { "answer": "does not change", "explanation": "Series connection adds voltages, so the total voltage increases with more panels." },
+            { "answer": "halves", "explanation": "Series connection adds voltages, increasing the total." }
+          ]
+        },
+        "2": {
+          "correct": "decreases",
+          "correctExplanation": "With more panels in series (and fewer parallel strings), there are fewer paths for current. The total current decreases compared to having more parallel strings.",
+          "distractors": [
+            { "answer": "increases", "explanation": "With more panels in series, there are fewer parallel strings, reducing the total current." },
+            { "answer": "does not change", "explanation": "The current distribution changes. More series panels mean fewer parallel strings and less total current." },
+            { "answer": "doubles", "explanation": "The current decreases with more series panels, because fewer parallel strings are available." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Analyse the power output of a solar array with an inverter.",
+      "sentence": "A solar array produces 60.0 V DC at 30.0 A. The total DC power is {{blank:1}} W. If fed to a 100% efficient inverter producing 240 V AC, the AC current is {{blank:2}} A.",
+      "blanks": {
+        "1": {
+          "correct": "1800",
+          "correctExplanation": "P_DC = V × I = 60.0 × 30.0 = 1800 W.",
+          "distractors": [
+            { "answer": "90.0", "explanation": "This is V + I. Power is the product: P = 60.0 × 30.0 = 1800 W." },
+            { "answer": "2.0", "explanation": "This is V/I. Power is the product: P = 60.0 × 30.0 = 1800 W." },
+            { "answer": "900", "explanation": "This halves the correct answer. P = 60.0 × 30.0 = 1800 W." }
+          ]
+        },
+        "2": {
+          "correct": "7.5",
+          "correctExplanation": "At 100% efficiency, P_AC = P_DC = 1800 W. I_AC = P/V = 1800/240 = 7.5 A.",
+          "distractors": [
+            { "answer": "30.0", "explanation": "The AC current is not the same as the DC current. I_AC = 1800/240 = 7.5 A." },
+            { "answer": "240", "explanation": "This is the AC voltage, not the current. I_AC = P/V = 1800/240 = 7.5 A." },
+            { "answer": "0.13", "explanation": "This is V_AC/P. The correct calculation is I_AC = P/V_AC = 7.5 A." }
+          ]
+        }
+      }
+    }
+  ]
+}

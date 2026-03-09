@@ -1,0 +1,75 @@
+{
+  "id": "efficient-transmission-systems",
+  "name": "Efficient Transmission Systems",
+  "icon": "🏭",
+  "what": "This subtopic covers how transformers are used at both ends of a transmission line to minimise losses, how to analyse a complete transmission system including multiple transformers, and the advantages of high-voltage AC over DC for long-distance transmission.",
+  "why": "This is where all the concepts in the topic come together in real-world contexts. Understanding how the national electricity grid works — from power station to home — and being able to model and evaluate transmission systems is the highest-level skill required by the VCE study design.",
+  "items": [
+    {
+      "id": 1,
+      "uuid": "lp-555e8c92-f615-6f0b-3dab-0dc87c7f512f",
+      "version": 1,
+      "title": "I can explain why power is transmitted at high voltage to reduce transmission losses",
+      "code": "6C.4a",
+      "what": "The amount of power to be transmitted is fixed by consumer demand. By stepping up the voltage using a transformer before transmission, the current in the wires is reduced. Since Ploss = I²R, lower current means much lower power loss in the resistance of the wires.",
+      "why": "This is the core engineering principle behind the electrical grid. High-voltage transmission — typically 220–500 kV in Australia — makes it economically and physically possible to deliver electricity over hundreds of kilometres with acceptable losses.",
+      "example": "A power station generates 100 MW at 11 kV. Before transmission, a step-up transformer raises the voltage to 500 kV. The current in the transmission line falls from I = 100 × 10⁶ / 11 × 10³ ≈ 9090 A to I = 100 × 10⁶ / 500 × 10³ = 200 A — a reduction by a factor of ~45, reducing power loss by a factor of ~2000.",
+      "contentHash": "hash-c00eb51b"
+    },
+    {
+      "id": 2,
+      "uuid": "lp-24b2f986-8288-9fa5-c5cc-f7435645b7bd",
+      "version": 1,
+      "title": "I can describe the typical voltage levels in the Australian electricity grid from generation to household",
+      "code": "6C.4b",
+      "what": "Electricity in Australia is generated at 11–33 kV, stepped up to 220–500 kV for long-distance transmission, stepped down to 11–66 kV for regional distribution and factories, and finally reduced to 415–230 V for homes and small businesses.",
+      "why": "Understanding the real-world structure of the grid provides context for why transformers are needed at multiple stages and why different voltage levels are used for different distances and load sizes. This also appears in exam questions asking students to describe or label a transmission diagram.",
+      "example": "A home in Melbourne is supplied at 230 V. This voltage has passed through at least three transformer stages: from the power station in the Latrobe Valley (stepped up to 500 kV), to a regional substation (stepped down to 66 kV), to a local substation (stepped down to 11 kV), and finally to a pole-mounted transformer on the street (stepped down to 230 V).",
+      "contentHash": "hash-5ecbb0cd"
+    },
+    {
+      "id": 3,
+      "uuid": "lp-48edf3b3-a6e5-25bc-e833-d4e82258d20f",
+      "version": 1,
+      "title": "I can analyse a full transmission system including step-up and step-down transformers and calculate current, voltage and power loss at each stage",
+      "code": "6C.3",
+      "what": "A complete transmission problem requires applying the turns ratio at the step-up transformer to find the transmission line current, using Ploss = I²R to find losses in the wires, and then using the step-down transformer ratio to find the load voltage.",
+      "why": "VCE exam questions on electricity transmission almost always involve a complete system diagram with two transformers and a transmission line resistance. Being able to work systematically through such a problem is a key exam skill.",
+      "example": "A 2.0 Vrms supply, a 1:10 step-up transformer, 4.0 Ω of transmission wire, and a 10:1 step-down transformer supply a lamp. Voltage entering the wires = 20 V. Wire current = 20 / (4.0 + load-referred) ≈ 0.50 A (measured). Wire power loss = 0.50² × 4.0 = 1.0 W.",
+      "contentHash": "hash-f3dfa52f"
+    },
+    {
+      "id": 4,
+      "uuid": "lp-7135a6f6-99e6-4928-ab96-1de7f079f32e",
+      "version": 1,
+      "title": "I can compare power losses in a transmission system with and without transformers",
+      "code": "6C.2c",
+      "what": "Without transformers, a high-power supply at low voltage produces a very large current in the transmission line, leading to enormous I²R losses. Adding step-up and step-down transformers dramatically reduces the current in the wires and therefore the power loss.",
+      "why": "Comparing the two cases with actual numbers is the most effective way to demonstrate why transformers are used in power grids. It is also a common VCE exam question format — calculate losses with and without transformers and comment on the difference.",
+      "example": "A 2.0 V, 4.0 W lamp is supplied through 2 × 2.0 Ω wires without transformers. Wire current = 2.0 A, Ploss = 2² × 4.0 = 16 W — four times the lamp's power. With 1:10 step-up and 10:1 step-down transformers, wire current = 0.2 A, Ploss = 0.2² × 4.0 = 0.16 W — 100 times less.",
+      "contentHash": "hash-2a6208c8"
+    },
+    {
+      "id": 5,
+      "uuid": "lp-d7f9598b-6e6e-089e-20f3-ea5e9b5c3397",
+      "version": 1,
+      "title": "I can explain the advantages of AC over DC for long-distance power transmission",
+      "code": "6C.4c",
+      "what": "AC voltage can be stepped up and down efficiently using transformers, allowing high-voltage transmission to minimise losses. DC voltage cannot be transformed using conventional transformers, making it much harder to step up for transmission and then step down for use.",
+      "why": "This is the main historical and practical reason why AC was adopted as the standard for power grids worldwide. Understanding this advantage helps explain key decisions in electrical infrastructure and is explicitly required by the VCE study design.",
+      "example": "When Tesla and Westinghouse promoted AC in the late 1800s, the key argument was that AC could be stepped up to high voltages using transformers for efficient long-distance transmission, then stepped back down. Edison's DC system could not do this, limiting power stations to within about 1 km of consumers.",
+      "contentHash": "hash-14e23317"
+    },
+    {
+      "id": 6,
+      "uuid": "lp-a83879be-93ba-4ea4-68d8-d3ec08846d8b",
+      "version": 1,
+      "title": "I can evaluate an electricity distribution system and identify how to improve its efficiency",
+      "code": "6C.5",
+      "what": "Evaluating a distribution system involves calculating actual power losses, comparing different design options (different transmission voltages, wire resistances, transformer placements), and recommending the most efficient arrangement with supporting calculations.",
+      "why": "This highest-level skill integrates all the knowledge from the topic and reflects genuine engineering thinking. VCE exam questions at this level often ask students to explain, with calculations, which option is more efficient or to design a better system.",
+      "example": "A homeowner runs 12 Vrms lighting through 200 m of outdoor cable (total R = 3 Ω). The current is I = 12/12 = 1 A. Voltage drop across cable = 1 × 3 = 3 V, so lights receive only 9 V and are dim. One improvement: install the transformer at the entertainment area end rather than the house end, reducing the current in the long cable by stepping up the voltage for the 200 m run.",
+      "contentHash": "hash-ba23f024"
+    }
+  ]
+}

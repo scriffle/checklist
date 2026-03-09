@@ -1,0 +1,583 @@
+{
+  "_link": {
+    "uuid": "lp-4c98678b-2319-73df-3e90-a385714f98a4",
+    "version": 1,
+    "contentHash": "hash-271feacc",
+    "title": "I can explain why real transformers are not perfectly ideal and where energy losses occur",
+    "generatedAt": "2026-03-08T00:00:00.000Z"
+  },
+  "toLevel2": [
+    {
+      "type": "mc",
+      "question": "Which one of the following is a source of energy loss in a real transformer?",
+      "correct": "Resistance heating in the copper windings",
+      "correctExplanation": "The copper wire in the primary and secondary coils has resistance. Current flowing through this resistance generates heat (I²R losses), reducing the efficiency of the transformer.",
+      "distractors": [
+        { "answer": "Energy stored permanently in the magnetic field of the core", "explanation": "The magnetic field in the core is alternating and does not permanently store energy. The losses come from heating effects, not field storage." },
+        { "answer": "Conversion of electrical energy into gravitational potential energy", "explanation": "Transformers do not involve changes in gravitational potential energy. Losses occur as heat and sound." },
+        { "answer": "Destruction of electrons as they pass through the transformer", "explanation": "Electrons are not destroyed in a transformer. They flow through the windings and the small losses are due to resistance and eddy currents." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What are eddy currents in the context of a transformer?",
+      "correct": "Unwanted circulating currents induced in the iron core that produce heat",
+      "correctExplanation": "The changing magnetic flux through the iron core induces currents within the core itself. These eddy currents dissipate energy as heat, reducing transformer efficiency.",
+      "distractors": [
+        { "answer": "The main currents flowing through the primary and secondary windings", "explanation": "The main currents in the windings are the intended operational currents. Eddy currents are unwanted currents induced in the core." },
+        { "answer": "Small currents that flow between the primary and secondary coils through the air", "explanation": "The primary and secondary coils are electrically isolated. Eddy currents circulate within the core material." },
+        { "answer": "Currents that only flow when the transformer is connected to a DC supply", "explanation": "Eddy currents are induced by changing magnetic flux, which requires AC. DC does not produce eddy currents." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which one of the following design features reduces eddy current losses in a transformer?",
+      "correct": "Using a laminated iron core made of thin insulated sheets",
+      "correctExplanation": "Laminating the core into thin sheets separated by insulating layers restricts the paths available for eddy currents, greatly reducing their magnitude and the associated heating.",
+      "distractors": [
+        { "answer": "Using a single solid block of iron for the core to maximise magnetic flux", "explanation": "A solid core allows large eddy currents to circulate, increasing losses. Lamination breaks up these current paths." },
+        { "answer": "Winding the coils with thinner wire to increase resistance", "explanation": "Thinner wire increases I²R losses in the windings. Eddy currents are reduced by laminating the core, not by changing the wire." },
+        { "answer": "Operating the transformer at a higher frequency to speed up the magnetic changes", "explanation": "Higher frequency actually increases eddy current losses. Lamination is the standard method to reduce them." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A high-quality power transformer is typically what percentage efficient?",
+      "correct": "98–99%",
+      "correctExplanation": "Well-designed transformers with laminated cores and thick copper windings typically convert 98–99% of input power to output power, with only 1–2% lost.",
+      "distractors": [
+        { "answer": "50–60%", "explanation": "50–60% efficiency would represent enormous losses. Quality transformers are far more efficient, typically 98–99%." },
+        { "answer": "75–80%", "explanation": "This would be very poor for a transformer. Modern power transformers are 98–99% efficient." },
+        { "answer": "100%", "explanation": "No real transformer is 100% efficient. Some energy is always lost to resistance, eddy currents, and sound." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "The humming sound heard near a large transformer represents which form of energy loss?",
+      "correct": "Sound energy produced by vibrations in the core",
+      "correctExplanation": "The alternating magnetic field causes the iron core to vibrate slightly (magnetostriction), producing an audible hum. This represents a small energy loss.",
+      "distractors": [
+        { "answer": "Electromagnetic radiation emitted at radio frequencies by the windings", "explanation": "While small amounts of electromagnetic radiation may be emitted, the audible hum is due to mechanical vibrations in the core." },
+        { "answer": "Air resistance acting on the rotating parts of the transformer", "explanation": "Transformers have no rotating parts. The hum comes from vibrations of the stationary core." },
+        { "answer": "Electrical sparking between the primary and secondary coils", "explanation": "Sparking would indicate a fault, not normal operation. The hum is from magnetostriction in the core." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "The output power of a real transformer is always slightly less than its input power.",
+      "correct": "True",
+      "correctExplanation": "Real transformers lose a small fraction of energy to resistance heating, eddy currents, and sound. Therefore Pout is always less than Pin.",
+      "distractors": [
+        { "answer": "False", "explanation": "Energy cannot be created. Due to unavoidable losses, the output power of any real transformer is less than the input power." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "Eddy currents in a transformer core can be completely eliminated by using a laminated core.",
+      "correct": "False",
+      "correctExplanation": "Lamination greatly reduces eddy currents but cannot eliminate them entirely. Small eddy currents still circulate within each lamination.",
+      "distractors": [
+        { "answer": "True", "explanation": "Lamination reduces eddy currents significantly but does not eliminate them completely. Each laminated sheet still supports small eddy currents within its thickness." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the statement about transformer losses.",
+      "sentence": "The three main sources of energy loss in a real transformer are resistance heating in the {{blank:1}}, eddy currents in the {{blank:2}}, and energy radiated as sound.",
+      "blanks": {
+        "1": {
+          "correct": "windings",
+          "correctExplanation": "The copper windings (coils) have resistance, and current flowing through them generates I²R heating losses.",
+          "distractors": [
+            { "answer": "core", "explanation": "The core is associated with eddy current losses, not resistance heating of the wire. The windings have the resistance." },
+            { "answer": "insulation", "explanation": "The insulation does not carry current and does not produce I²R heating. The copper windings do." }
+          ]
+        },
+        "2": {
+          "correct": "core",
+          "correctExplanation": "Eddy currents are induced in the iron core by the changing magnetic flux, producing unwanted heating.",
+          "distractors": [
+            { "answer": "windings", "explanation": "Eddy currents circulate in the core, not in the windings. The windings carry the intended current." },
+            { "answer": "air gap", "explanation": "Eddy currents require a conducting material. Air does not conduct and cannot support eddy currents." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the statement about reducing eddy currents.",
+      "sentence": "Eddy currents are reduced by building the core from thin {{blank:1}} sheets separated by insulating layers. This design is called a {{blank:2}} core.",
+      "blanks": {
+        "1": {
+          "correct": "iron",
+          "correctExplanation": "The core is made from thin sheets of soft iron (or silicon steel), which provide the magnetic pathway while limiting eddy current paths.",
+          "distractors": [
+            { "answer": "copper", "explanation": "Copper is used for the windings, not the core. The core is made from iron or silicon steel." },
+            { "answer": "plastic", "explanation": "Plastic is not magnetic and cannot serve as a transformer core. Iron is used for its high magnetic permeability." }
+          ]
+        },
+        "2": {
+          "correct": "laminated",
+          "correctExplanation": "A laminated core consists of many thin insulated sheets stacked together, restricting eddy current flow between layers.",
+          "distractors": [
+            { "answer": "solid", "explanation": "A solid core would allow large eddy currents. The laminated design specifically combats this." },
+            { "answer": "hollow", "explanation": "A hollow core would reduce the amount of magnetic material. Lamination is the technique used to reduce eddy currents." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the practical observation.",
+      "sentence": "A laptop charger feels {{blank:1}} during use because a small percentage of energy is lost as heat in the transformer's {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "warm",
+          "correctExplanation": "The warmth of a charger indicates energy being lost as heat in the internal transformer, primarily from I²R losses in the windings.",
+          "distractors": [
+            { "answer": "cold", "explanation": "The charger warms up due to energy losses. It would only be cold if no energy were being dissipated." },
+            { "answer": "heavy", "explanation": "Weight does not change during operation. The observable effect of energy loss is warmth, not weight change." }
+          ]
+        },
+        "2": {
+          "correct": "windings",
+          "correctExplanation": "The primary source of heat in a small transformer is I²R losses in the copper windings.",
+          "distractors": [
+            { "answer": "plug", "explanation": "The plug connects to the power supply but is not the main source of heating. The transformer windings produce the heat." },
+            { "answer": "cable", "explanation": "While cables have some resistance, the main heat source in a charger is the transformer windings inside." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "mc",
+      "question": "Oliver compares an ideal transformer with a real transformer. Both have the same turns ratio and input voltage. Which one of the following correctly describes the difference?",
+      "correct": "The real transformer delivers less output power because some input energy is lost to heat and sound",
+      "correctExplanation": "An ideal transformer has Pin = Pout. A real transformer has Pout < Pin because energy is lost to winding resistance, eddy currents, and sound vibrations.",
+      "distractors": [
+        { "answer": "The real transformer delivers more output power because the iron core amplifies the magnetic field", "explanation": "The iron core concentrates flux but does not add energy. Real transformers always deliver less power than they receive." },
+        { "answer": "The real transformer has a different turns ratio because the core changes the number of effective turns", "explanation": "The turns ratio is set by the physical number of turns, not by the core. Losses reduce power output, not the turns ratio." },
+        { "answer": "Both deliver the same output power because transformers conserve energy exactly", "explanation": "Only ideal transformers conserve power exactly. Real transformers have unavoidable losses." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A transformer has an input power of 500 W and an efficiency of 98%. Which one of the following is closest to the power lost in the transformer?",
+      "correct": "10 W",
+      "correctExplanation": "Power lost = input power × (1 − efficiency) = 500 × (1 − 0.98) = 500 × 0.02 = 10 W.",
+      "distractors": [
+        { "answer": "490 W", "explanation": "490 W is the output power (500 × 0.98), not the power lost." },
+        { "answer": "2.0 W", "explanation": "This results from misapplying the 98% figure. Power lost = 500 × 0.02 = 10 W." },
+        { "answer": "100 W", "explanation": "This would represent 20% loss, not 2%. Power lost = 500 × 0.02 = 10 W." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which one of the following best explains why laminating the core reduces energy losses?",
+      "correct": "Thin insulated layers limit the size of eddy current loops, reducing the current magnitude and heat produced",
+      "correctExplanation": "By breaking the core into thin sheets with insulating coatings, the available paths for eddy currents are restricted to within each sheet, greatly reducing their magnitude.",
+      "distractors": [
+        { "answer": "Lamination increases the resistance of the core so that less current flows through the windings", "explanation": "Lamination affects eddy currents in the core, not the current in the windings. The winding current is determined by the load." },
+        { "answer": "Lamination removes the iron from the core, preventing any currents from forming", "explanation": "Lamination does not remove iron; it uses thin sheets of iron. Eddy currents are reduced, not eliminated." },
+        { "answer": "Lamination makes the core lighter, which reduces the mechanical vibrations that waste energy", "explanation": "While sound losses exist, lamination primarily targets eddy current losses, not sound." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Sophia measures the input and output power of a transformer as 2000 W and 1960 W respectively. Which one of the following is the efficiency?",
+      "correct": "98.0%",
+      "correctExplanation": "Efficiency = Pout/Pin × 100 = 1960/2000 × 100 = 98.0%.",
+      "distractors": [
+        { "answer": "96.0%", "explanation": "This results from 1960/2040 or a different calculation. Efficiency = 1960/2000 × 100 = 98.0%." },
+        { "answer": "102%", "explanation": "Efficiency cannot exceed 100%. Pout is always less than Pin for a real transformer." },
+        { "answer": "2.0%", "explanation": "2.0% is the percentage of power lost, not the efficiency. Efficiency = 100% − 2.0% = 98.0%." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Liam notices that a power transformer in a substation has fins on its casing. Which one of the following best explains the purpose of these fins?",
+      "correct": "To increase the surface area for dissipating heat produced by energy losses",
+      "correctExplanation": "The fins increase the surface area in contact with the surrounding air, improving convective cooling and preventing the transformer from overheating due to I²R and eddy current losses.",
+      "distractors": [
+        { "answer": "To increase the inductance of the transformer by extending the magnetic field", "explanation": "The fins are for cooling, not for magnetic purposes. They help remove waste heat from the transformer." },
+        { "answer": "To reduce the noise produced by the vibrating core by absorbing sound waves", "explanation": "While fins may slightly dampen sound, their primary purpose is thermal management, not noise reduction." },
+        { "answer": "To act as additional windings that increase the output voltage", "explanation": "Fins are not electrical conductors connected to the circuit. They are cooling structures." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which one of the following correctly ranks the three main energy loss mechanisms in a well-designed transformer from largest to smallest?",
+      "correct": "Winding resistance losses, eddy current losses, sound energy losses",
+      "correctExplanation": "In most transformers, I²R losses in the copper windings are the largest source of loss, followed by eddy current losses in the core, with sound energy being the smallest.",
+      "distractors": [
+        { "answer": "Sound energy losses, eddy current losses, winding resistance losses", "explanation": "Sound losses are typically the smallest, not the largest. Winding resistance is the dominant loss mechanism." },
+        { "answer": "Eddy current losses, sound energy losses, winding resistance losses", "explanation": "Winding resistance losses are typically largest, not smallest. The usual order is winding > eddy > sound." },
+        { "answer": "All three loss mechanisms contribute equally in a well-designed transformer", "explanation": "The three mechanisms do not contribute equally. Winding resistance typically dominates." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "Using thicker copper wire in the windings reduces I²R losses because thicker wire has lower resistance.",
+      "correct": "True",
+      "correctExplanation": "Resistance is inversely proportional to cross-sectional area (R = ρL/A). Thicker wire has a larger cross-section and therefore lower resistance, reducing I²R heating.",
+      "distractors": [
+        { "answer": "False", "explanation": "Thicker wire does have lower resistance (R = ρL/A). Lower resistance means less I²R heating in the windings." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the efficiency calculation.",
+      "sentence": "A transformer has Pin = 1000 W and Pout = 980 W. The power lost is {{blank:1}} W and the efficiency is {{blank:2}}%.",
+      "blanks": {
+        "1": {
+          "correct": "20",
+          "correctExplanation": "Power lost = Pin − Pout = 1000 − 980 = 20 W.",
+          "distractors": [
+            { "answer": "980", "explanation": "980 W is the output power. The loss is 1000 − 980 = 20 W." },
+            { "answer": "2.0", "explanation": "2.0 is the percentage loss (2.0%), not the power in watts. Power lost = 20 W." }
+          ]
+        },
+        "2": {
+          "correct": "98",
+          "correctExplanation": "Efficiency = Pout/Pin × 100 = 980/1000 × 100 = 98%.",
+          "distractors": [
+            { "answer": "2.0", "explanation": "2.0% is the percentage of power lost. Efficiency = 100% − 2.0% = 98%." },
+            { "answer": "80", "explanation": "80% efficiency would mean 200 W lost from 1000 W input. The actual loss is only 20 W." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the description of transformer design.",
+      "sentence": "Large transformers use {{blank:1}} baths or fans for cooling, because the energy losses in the windings and core produce significant {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "oil",
+          "correctExplanation": "Many large transformers are immersed in mineral oil, which absorbs heat from the windings and core and transfers it to the casing for dissipation.",
+          "distractors": [
+            { "answer": "water", "explanation": "While water cooling exists in some specialised designs, mineral oil is the standard coolant for large power transformers." },
+            { "answer": "acid", "explanation": "Acid would corrode the transformer components. Oil is used as an insulating and cooling medium." }
+          ]
+        },
+        "2": {
+          "correct": "heat",
+          "correctExplanation": "The I²R losses in windings and eddy current losses in the core both produce heat that must be removed to prevent damage.",
+          "distractors": [
+            { "answer": "light", "explanation": "Transformers do not produce significant light during normal operation. The waste energy is primarily heat." },
+            { "answer": "magnetism", "explanation": "The magnetic field is part of normal operation, not a waste product. The problematic output is heat." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the comparison of ideal and real transformers.",
+      "sentence": "An ideal transformer has an efficiency of {{blank:1}}%, meaning Pin = Pout. A real transformer has Pout {{blank:2}} Pin because some energy is lost.",
+      "blanks": {
+        "1": {
+          "correct": "100",
+          "correctExplanation": "An ideal transformer converts all input power to output power with no losses, giving 100% efficiency.",
+          "distractors": [
+            { "answer": "98", "explanation": "98% is typical for a good real transformer, not an ideal one. An ideal transformer is defined as 100% efficient." },
+            { "answer": "50", "explanation": "50% would mean half the power is lost. An ideal transformer has zero losses and 100% efficiency." }
+          ]
+        },
+        "2": {
+          "correct": "less than",
+          "correctExplanation": "Due to energy losses, the output power of a real transformer is always less than the input power.",
+          "distractors": [
+            { "answer": "greater than", "explanation": "Output power cannot exceed input power. Energy conservation requires Pout ≤ Pin." },
+            { "answer": "equal to", "explanation": "Pout = Pin only for an ideal transformer. Real transformers always have Pout < Pin." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "mc",
+      "question": "A transformer with 95% efficiency has an input power of 2.0 kW and a turns ratio of 1:10. Which one of the following is closest to the output current if the output voltage is 2300 V?",
+      "correct": "0.83 A",
+      "correctExplanation": "Pout = 0.95 × 2000 = 1900 W. Iout = Pout/Vout = 1900/2300 ≈ 0.826 A ≈ 0.83 A.",
+      "distractors": [
+        { "answer": "0.87 A", "explanation": "This results from using Pin instead of Pout: 2000/2300 ≈ 0.87 A. The output power must account for the 95% efficiency." },
+        { "answer": "8.3 A", "explanation": "This results from using Vout = 230 V instead of 2300 V." },
+        { "answer": "0.083 A", "explanation": "This results from an error of a factor of 10. Iout = 1900/2300 ≈ 0.83 A." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Ethan measures the primary current of a transformer as 5.0 A at 240 V. The secondary delivers 1150 V at 0.95 A. Which one of the following is closest to the efficiency?",
+      "correct": "91%",
+      "correctExplanation": "Pin = 240 × 5.0 = 1200 W. Pout = 1150 × 0.95 = 1092.5 W. Efficiency = 1092.5/1200 × 100 ≈ 91.0%.",
+      "distractors": [
+        { "answer": "96%", "explanation": "This results from using an incorrect power calculation. Efficiency = 1092.5/1200 × 100 ≈ 91%." },
+        { "answer": "100%", "explanation": "No real transformer is 100% efficient. Here the efficiency is 91%." },
+        { "answer": "83%", "explanation": "This results from a different calculation error. Efficiency = 1092.5/1200 × 100 ≈ 91%." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Two transformers, A and B, have the same turns ratio and the same input power. Transformer A has a solid iron core and transformer B has a laminated iron core. Which one of the following best compares their output powers?",
+      "correct": "Transformer B delivers more output power because its laminated core reduces eddy current losses",
+      "correctExplanation": "Lamination reduces eddy currents in the core, decreasing energy losses and allowing more of the input power to reach the output.",
+      "distractors": [
+        { "answer": "Transformer A delivers more output power because a solid core provides a stronger magnetic field", "explanation": "While a solid core may support a slightly stronger field, the large eddy current losses outweigh any field advantage." },
+        { "answer": "Both deliver the same output power because they have the same turns ratio", "explanation": "The turns ratio sets the voltage ratio, but efficiency differences due to core design affect the actual output power." },
+        { "answer": "Transformer B delivers less output power because lamination weakens the magnetic field in the core", "explanation": "Lamination has minimal effect on the net magnetic flux but greatly reduces eddy current losses, improving efficiency." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A real transformer has 500 turns in the primary and 50 turns in the secondary. The primary voltage is 230 V. Which one of the following is the actual secondary voltage?",
+      "correct": "Slightly less than 23 V",
+      "correctExplanation": "The ideal secondary voltage would be V₂ = 230 × 50/500 = 23.0 V. In a real transformer, energy losses mean the actual output voltage is slightly less than the ideal value.",
+      "distractors": [
+        { "answer": "Exactly 23 V", "explanation": "23 V is the ideal value assuming 100% efficiency. A real transformer delivers slightly less due to losses." },
+        { "answer": "Slightly more than 23 V", "explanation": "A real transformer cannot deliver more voltage than the ideal value. Losses always reduce the output." },
+        { "answer": "230 V", "explanation": "230 V is the primary voltage. With a 10:1 turns ratio, the secondary voltage is approximately 23 V." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A 98% efficient transformer delivers 4900 W to a load. Which one of the following is closest to the total power lost in the transformer?",
+      "correct": "100 W",
+      "correctExplanation": "If Pout = 4900 W and efficiency = 0.98, then Pin = 4900/0.98 = 5000 W. Power lost = 5000 − 4900 = 100 W.",
+      "distractors": [
+        { "answer": "98 W", "explanation": "This results from 4900 × 0.02 = 98 W. The correct approach is Pin = Pout/efficiency, then Ploss = Pin − Pout = 100 W." },
+        { "answer": "49 W", "explanation": "This results from an incorrect calculation. Ploss = Pin − Pout = 5000 − 4900 = 100 W." },
+        { "answer": "4900 W", "explanation": "4900 W is the output power, not the power lost." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student suggests that a transformer could be made more efficient by increasing the number of turns. Which one of the following best evaluates this suggestion?",
+      "correct": "Increasing turns may increase winding resistance, potentially increasing I²R losses",
+      "correctExplanation": "More turns means more wire, which increases the total resistance of the windings. This increases I²R losses, potentially reducing efficiency rather than improving it.",
+      "distractors": [
+        { "answer": "Increasing turns always improves efficiency because it strengthens the magnetic field", "explanation": "More turns increase the induced EMF but also add resistance. Efficiency depends on the balance of these effects." },
+        { "answer": "Increasing turns has no effect on efficiency because the turns ratio cancels out", "explanation": "Adding turns to both coils equally would maintain the ratio but still increase winding resistance." },
+        { "answer": "Increasing turns eliminates eddy currents in the core", "explanation": "The number of turns does not affect eddy currents. Eddy currents depend on the core material and construction." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Amara compares two transformers. Transformer X operates at low current and high voltage. Transformer Y operates at high current and low voltage. Both transmit the same power. Which one of the following is correct?",
+      "correct": "Transformer Y has greater I²R losses in its windings because it carries more current",
+      "correctExplanation": "Since Ploss = I²R, the transformer carrying higher current will have greater winding losses, assuming similar winding resistance.",
+      "distractors": [
+        { "answer": "Transformer X has greater losses because high voltage stresses the insulation", "explanation": "Insulation stress is a safety concern, not a power loss mechanism. I²R losses dominate, favouring the lower-current design." },
+        { "answer": "Both have the same I²R losses because they transmit the same power", "explanation": "Equal power does not mean equal current. The higher-current transformer has greater I²R losses." },
+        { "answer": "Transformer Y is more efficient because lower voltage means less energy stored in the magnetic field", "explanation": "The current determines I²R losses. Higher current means greater losses, making Transformer Y less efficient." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the efficiency calculation.",
+      "sentence": "A transformer has Pin = 5000 W and is 97% efficient. The output power is {{blank:1}} W and the power lost is {{blank:2}} W.",
+      "blanks": {
+        "1": {
+          "correct": "4850",
+          "correctExplanation": "Pout = efficiency × Pin = 0.97 × 5000 = 4850 W.",
+          "distractors": [
+            { "answer": "5000", "explanation": "5000 W is the input power. The output is reduced by the efficiency factor: 4850 W." },
+            { "answer": "4700", "explanation": "This results from using 94% efficiency instead of 97%. Pout = 0.97 × 5000 = 4850 W." }
+          ]
+        },
+        "2": {
+          "correct": "150",
+          "correctExplanation": "Ploss = Pin − Pout = 5000 − 4850 = 150 W.",
+          "distractors": [
+            { "answer": "97", "explanation": "97 is the efficiency percentage, not the power lost in watts. Ploss = 150 W." },
+            { "answer": "3.0", "explanation": "3.0 is the percentage of power lost (3%), not the power in watts. Ploss = 150 W." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the analysis of core losses.",
+      "sentence": "Eddy currents in the core are reduced by using {{blank:1}} sheets separated by insulation. This increases the electrical {{blank:2}} of the core in the direction perpendicular to the laminations.",
+      "blanks": {
+        "1": {
+          "correct": "thin",
+          "correctExplanation": "Thinner laminations restrict eddy current paths more effectively, reducing losses.",
+          "distractors": [
+            { "answer": "thick", "explanation": "Thick sheets would allow larger eddy current loops. Thin sheets are used to minimise eddy currents." },
+            { "answer": "curved", "explanation": "The shape of the sheets is flat, not curved. Thinness is the key property for reducing eddy currents." }
+          ]
+        },
+        "2": {
+          "correct": "resistance",
+          "correctExplanation": "The insulating layers between laminations increase the electrical resistance perpendicular to the sheets, blocking eddy current flow between laminations.",
+          "distractors": [
+            { "answer": "conductivity", "explanation": "Lamination decreases conductivity (increases resistance) across the layers to impede eddy currents." },
+            { "answer": "permeability", "explanation": "Lamination has minimal effect on magnetic permeability. It targets the electrical resistance to reduce eddy currents." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the real-world application.",
+      "sentence": "A 96% efficient transformer with a 1:20 turns ratio receives 240 V and 10 A. The output voltage is {{blank:1}} V and the output current is approximately {{blank:2}} A.",
+      "blanks": {
+        "1": {
+          "correct": "4800",
+          "correctExplanation": "For the voltage: V₂ = V₁ × N₂/N₁ = 240 × 20 = 4800 V (voltage transformation is approximately ideal).",
+          "distractors": [
+            { "answer": "4608", "explanation": "This applies the 96% factor to voltage. Efficiency applies to power, not voltage directly. V₂ ≈ 4800 V." },
+            { "answer": "12", "explanation": "This divides by 20 instead of multiplying. A 1:20 step-up gives V₂ = 240 × 20 = 4800 V." }
+          ]
+        },
+        "2": {
+          "correct": "0.48",
+          "correctExplanation": "Pin = 240 × 10 = 2400 W. Pout = 0.96 × 2400 = 2304 W. Iout = Pout/Vout = 2304/4800 = 0.48 A.",
+          "distractors": [
+            { "answer": "0.50", "explanation": "0.50 A would be the ideal current (10/20). Accounting for 96% efficiency: Iout = 0.48 A." },
+            { "answer": "200", "explanation": "This results from multiplying 10 × 20, applying the turns ratio in the wrong direction for current." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "mc",
+      "question": "A transformer engineer must choose between two core designs for a 50 Hz transformer. Design A uses 0.5 mm laminations and Design B uses 0.1 mm laminations. Both use the same grade of silicon steel. Which one of the following best compares the designs?",
+      "correct": "Design B has lower eddy current losses but higher manufacturing cost due to more laminations needed",
+      "correctExplanation": "Thinner laminations reduce eddy current loops more effectively but require more sheets and more insulating layers, increasing manufacturing complexity and cost.",
+      "distractors": [
+        { "answer": "Design A has lower eddy current losses because thicker sheets carry more magnetic flux", "explanation": "Magnetic flux is similar in both designs. Thicker sheets allow larger eddy current loops, increasing losses." },
+        { "answer": "Both designs have identical losses because they use the same grade of steel", "explanation": "The grade of steel affects magnetic properties, but lamination thickness directly affects eddy current magnitude." },
+        { "answer": "Design B has higher eddy current losses because more insulating layers reduce the magnetic flux", "explanation": "Insulating layers are very thin and reduce eddy currents without significantly affecting magnetic flux." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A power station transformer operates at 99.5% efficiency while handling 500 MW. Which one of the following is closest to the power dissipated as heat in the transformer?",
+      "correct": "2.5 MW",
+      "correctExplanation": "Power lost = (1 − 0.995) × 500 = 0.005 × 500 = 2.5 MW. Even at very high efficiency, large power throughput means significant absolute heat dissipation.",
+      "distractors": [
+        { "answer": "0.5 MW", "explanation": "This uses 0.1% loss instead of 0.5%. Power lost = 0.5% × 500 = 2.5 MW." },
+        { "answer": "25 MW", "explanation": "This uses 5% loss instead of 0.5%. At 99.5% efficiency, only 2.5 MW is lost." },
+        { "answer": "250 W", "explanation": "This confuses MW with W. At 500 MW throughput, 0.5% loss = 2.5 MW = 2 500 000 W." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Kai argues that transformer efficiency increases with load (up to the rated capacity). Mia argues that efficiency is constant regardless of load. Which one of the following best evaluates these claims?",
+      "correct": "Kai is generally correct; core losses are roughly constant, so they represent a smaller fraction of total power at higher loads",
+      "correctExplanation": "Core losses (eddy currents, hysteresis) depend on the magnetic flux, which is approximately constant. At higher loads, the useful power increases while core losses stay the same, improving the efficiency percentage.",
+      "distractors": [
+        { "answer": "Mia is correct; efficiency is a fixed property determined only by the core material and winding resistance", "explanation": "Efficiency varies with load because fixed core losses become a smaller fraction of total power as load increases." },
+        { "answer": "Both are wrong; efficiency always decreases with increasing load", "explanation": "At moderate loads, efficiency typically increases. At very high loads, I²R losses may dominate, but the initial trend is improving efficiency." },
+        { "answer": "Both are correct depending on the frequency of the AC supply", "explanation": "The load-dependent efficiency trend is due to the relationship between fixed and variable losses, not the frequency." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student connects a transformer to a DC supply. The transformer does not function as expected. Which one of the following best explains the result?",
+      "correct": "DC produces a constant magnetic flux, so no EMF is induced in the secondary after the initial switch-on transient",
+      "correctExplanation": "Electromagnetic induction requires a changing magnetic flux. DC produces a steady flux (after the initial transient), so no ongoing EMF is induced in the secondary coil.",
+      "distractors": [
+        { "answer": "DC cannot flow through the copper windings of a transformer due to high impedance", "explanation": "Copper wire has low DC resistance. The problem is not current flow but the lack of changing flux to induce a secondary voltage." },
+        { "answer": "DC is blocked by the laminated core because the insulating layers prevent current flow", "explanation": "The current flows through the windings, not through the core. The laminations do not block DC in the windings." },
+        { "answer": "DC destroys the magnetic properties of the iron core permanently", "explanation": "DC may cause some magnetisation but does not destroy the core. The issue is the lack of changing flux for induction." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An engineer measures a transformer and finds Pin = 10 000 W, Pout = 9700 W. She determines that 200 W is lost to winding resistance. Which one of the following is closest to the power lost to eddy currents and other core losses?",
+      "correct": "100 W",
+      "correctExplanation": "Total loss = 10 000 − 9700 = 300 W. Winding loss = 200 W. Core losses (eddy currents + other) = 300 − 200 = 100 W.",
+      "distractors": [
+        { "answer": "300 W", "explanation": "300 W is the total loss. Subtracting the 200 W winding loss gives 100 W for core losses." },
+        { "answer": "200 W", "explanation": "200 W is the winding loss. Core losses = 300 − 200 = 100 W." },
+        { "answer": "500 W", "explanation": "This adds all losses. Core losses = total loss − winding loss = 300 − 200 = 100 W." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Two identical transformers are connected in cascade (the output of the first feeds the input of the second). Each has 98% efficiency. Which one of the following is closest to the overall efficiency?",
+      "correct": "96.0%",
+      "correctExplanation": "Overall efficiency = 0.98 × 0.98 = 0.9604 = 96.04% ≈ 96.0%. Efficiencies multiply for cascaded components.",
+      "distractors": [
+        { "answer": "98%", "explanation": "Each transformer is 98% efficient individually. When cascaded, the overall efficiency is 0.98 × 0.98 ≈ 96.0%." },
+        { "answer": "96%", "explanation": "This is essentially correct — 0.98 × 0.98 = 96.04%, which rounds to 96.0%." },
+        { "answer": "4.0%", "explanation": "4.0% represents the total power lost (approximately), not the efficiency. Efficiency = 96.0%." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A transformer designed for 50 Hz operation is accidentally connected to a 100 Hz supply of the same voltage. Which one of the following best predicts the effect on losses?",
+      "correct": "Eddy current losses increase because they depend on the rate of change of flux",
+      "correctExplanation": "Eddy current losses are proportional to the square of the frequency. Doubling the frequency would significantly increase eddy current losses in the core.",
+      "distractors": [
+        { "answer": "All losses decrease because the faster alternation transfers energy more efficiently", "explanation": "Higher frequency increases eddy current losses due to the faster rate of flux change." },
+        { "answer": "Winding resistance losses increase because higher frequency increases wire resistance", "explanation": "While the skin effect may slightly increase effective resistance at higher frequencies, the dominant effect is increased eddy current losses." },
+        { "answer": "Losses are unchanged because the voltage is the same", "explanation": "Losses depend on frequency as well as voltage. Eddy current losses increase with frequency." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student claims that if a transformer is 99% efficient, the secondary voltage is exactly 99% of the ideal value predicted by the turns ratio. Which one of the following best evaluates this claim?",
+      "correct": "The claim is incorrect; efficiency relates to power (V × I), not to voltage alone",
+      "correctExplanation": "Efficiency = Pout/Pin. The voltage and current both contribute to power. A 1% power loss does not correspond to a 1% voltage reduction because the current also changes.",
+      "distractors": [
+        { "answer": "The claim is correct; the 1% loss comes entirely from a 1% voltage drop", "explanation": "Losses affect power, not voltage directly. A 1% power loss does not mean exactly 1% less voltage." },
+        { "answer": "The claim is correct only for step-up transformers, not step-down", "explanation": "The relationship between efficiency and voltage is the same regardless of whether the transformer steps up or down." },
+        { "answer": "The claim is incorrect; the secondary voltage is always exactly equal to the ideal value regardless of losses", "explanation": "Losses do affect the output slightly, but efficiency describes power ratios, not direct voltage ratios." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the cascaded efficiency analysis.",
+      "sentence": "Three transformers in series each have 97% efficiency. The overall efficiency is (0.97)³ = {{blank:1}}, meaning approximately {{blank:2}}% of the original power reaches the final output.",
+      "blanks": {
+        "1": {
+          "correct": "0.913",
+          "correctExplanation": "(0.97)³ = 0.97 × 0.97 × 0.97 = 0.912673 ≈ 0.913.",
+          "distractors": [
+            { "answer": "0.970", "explanation": "0.970 is the efficiency of a single transformer. Three in cascade give (0.97)³ ≈ 0.913." },
+            { "answer": "0.910", "explanation": "This is very close but rounds to 0.910 rather than the more precise 0.913." }
+          ]
+        },
+        "2": {
+          "correct": "91.3",
+          "correctExplanation": "0.913 × 100 = 91.3%. About 8.7% of the power is lost across the three transformers.",
+          "distractors": [
+            { "answer": "97", "explanation": "97% is the individual efficiency. The cascaded efficiency is 91.3%." },
+            { "answer": "9.0", "explanation": "9.0% is close to the total loss percentage, not the efficiency. The efficiency is 91.3%." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the loss analysis.",
+      "sentence": "A transformer handles 50 MW at 99.2% efficiency. The power dissipated as heat is {{blank:1}} kW. If the transformer operates for 24 hours, the energy wasted is {{blank:2}} MWh.",
+      "blanks": {
+        "1": {
+          "correct": "400",
+          "correctExplanation": "Power lost = (1 − 0.992) × 50 000 = 0.008 × 50 000 = 400 kW.",
+          "distractors": [
+            { "answer": "4000", "explanation": "This uses 8% loss instead of 0.8%. Power lost = 0.008 × 50 000 = 400 kW." },
+            { "answer": "40", "explanation": "This uses 0.08% loss instead of 0.8%. Power lost = 400 kW." }
+          ]
+        },
+        "2": {
+          "correct": "9.6",
+          "correctExplanation": "Energy = power × time = 400 kW × 24 h = 9600 kWh = 9.6 MWh.",
+          "distractors": [
+            { "answer": "96", "explanation": "This uses 4000 kW × 24 = 96 000 kWh = 96 MWh, based on an incorrect power loss." },
+            { "answer": "0.96", "explanation": "This results from 400 × 24 = 9600, then incorrectly converting to 0.96 MWh. 9600 kWh = 9.6 MWh." }
+          ]
+        }
+      }
+    }
+  ]
+}

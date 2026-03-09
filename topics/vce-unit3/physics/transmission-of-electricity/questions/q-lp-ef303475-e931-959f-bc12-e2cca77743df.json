@@ -1,0 +1,583 @@
+{
+  "_link": {
+    "uuid": "lp-ef303475-e931-959f-bc12-e2cca77743df",
+    "version": 1,
+    "contentHash": "hash-923f883b",
+    "title": "I can use the turns ratio formula V1/V2 = N1/N2 to calculate primary or secondary voltage",
+    "generatedAt": "2026-03-09"
+  },
+  "toLevel2": [
+    {
+      "type": "mc",
+      "question": "A transformer has 500 turns on the primary coil and 100 turns on the secondary coil. The primary voltage is 240 V. Which one of the following is closest to the secondary voltage?",
+      "correct": "48 V",
+      "correctExplanation": "Using V₂ = V₁ × N₂/N₁ = 240 × 100/500 = 240 × 0.20 = 48 V.",
+      "distractors": [
+        { "answer": "1200 V", "explanation": "This results from incorrectly using V₂ = V₁ × N₁/N₂ = 240 × 500/100, which inverts the ratio." },
+        { "answer": "2.4 V", "explanation": "This does not follow from the turns ratio formula. The correct calculation gives 48 V." },
+        { "answer": "340 V", "explanation": "Adding the turns to the voltage is incorrect. The turns ratio formula involves multiplication, not addition." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which one of the following correctly states the turns ratio formula for an ideal transformer?",
+      "correct": "V₁/V₂ = N₁/N₂",
+      "correctExplanation": "The turns ratio formula states that the ratio of voltages equals the ratio of turns: V₁/V₂ = N₁/N₂.",
+      "distractors": [
+        { "answer": "V₁/V₂ = N₂/N₁", "explanation": "This inverts the turns ratio. The correct relationship has matching subscripts on each side." },
+        { "answer": "V₁ × V₂ = N₁ × N₂", "explanation": "The turns ratio involves division of voltages and turns, not multiplication." },
+        { "answer": "V₁ + N₁ = V₂ + N₂", "explanation": "The turns ratio relates ratios, not sums. Voltage and turns have different units and cannot be added." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A transformer has 200 primary turns and 2000 secondary turns. The secondary voltage is 110 V. Which one of the following is closest to the primary voltage?",
+      "correct": "11 V",
+      "correctExplanation": "Using V₁ = V₂ × N₁/N₂ = 110 × 200/2000 = 110 × 0.10 = 11 V.",
+      "distractors": [
+        { "answer": "1100 V", "explanation": "This results from using V₁ = V₂ × N₂/N₁ = 110 × 10, which inverts the ratio." },
+        { "answer": "22 V", "explanation": "This does not follow from the correct application of the turns ratio formula." },
+        { "answer": "55 V", "explanation": "Halving the secondary voltage is not the correct approach. The turns ratio must be used." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A step-down transformer has a primary voltage of 240 V and a secondary voltage of 12 V. The primary coil has 1000 turns. Which one of the following is closest to the number of turns on the secondary coil?",
+      "correct": "50",
+      "correctExplanation": "Using N₂ = N₁ × V₂/V₁ = 1000 × 12/240 = 1000 × 0.050 = 50 turns.",
+      "distractors": [
+        { "answer": "20 000", "explanation": "This results from using N₂ = N₁ × V₁/V₂ = 1000 × 240/12, which inverts the voltage ratio." },
+        { "answer": "500", "explanation": "This does not follow from the correct application of the turns ratio formula." },
+        { "answer": "120", "explanation": "This does not follow from the turns ratio formula. The correct calculation gives 50 turns." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A transformer has 400 turns on the primary coil and 1600 turns on the secondary coil. Which one of the following best describes this transformer?",
+      "correct": "It is a step-up transformer because the secondary coil has more turns than the primary coil",
+      "correctExplanation": "Since N₂ > N₁, the turns ratio gives V₂ > V₁, meaning the voltage is increased. This is a step-up transformer.",
+      "distractors": [
+        { "answer": "It is a step-down transformer because the secondary coil has more turns than the primary coil", "explanation": "More secondary turns means a higher secondary voltage, which is a step-up transformer, not step-down." },
+        { "answer": "It is a step-up transformer because the primary coil has more turns than the secondary coil", "explanation": "The primary coil has fewer turns (400) than the secondary (1600), not more." },
+        { "answer": "It is a step-down transformer because the primary coil has fewer turns than the secondary coil", "explanation": "Fewer primary turns and more secondary turns results in a higher output voltage, which is step-up." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "In an ideal transformer, the ratio of the primary voltage to the secondary voltage equals the ratio of the number of primary turns to the number of secondary turns.",
+      "correct": "True",
+      "correctExplanation": "This is the definition of the turns ratio formula: V₁/V₂ = N₁/N₂.",
+      "distractors": [
+        { "answer": "False", "explanation": "The statement correctly describes the turns ratio formula V₁/V₂ = N₁/N₂ for an ideal transformer." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "In a transformer where the secondary coil has more turns than the primary coil, the secondary voltage is lower than the primary voltage.",
+      "correct": "False",
+      "correctExplanation": "If N₂ > N₁, then V₂ = V₁ × N₂/N₁ > V₁. The secondary voltage is higher, not lower.",
+      "distractors": [
+        { "answer": "True", "explanation": "More turns on the secondary means a higher secondary voltage, not lower. This is a step-up transformer." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the turns ratio formula.",
+      "sentence": "The turns ratio formula for a transformer is V₁/V₂ = {{blank:1}}/{{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "N₁",
+          "correctExplanation": "In the turns ratio formula, V₁/V₂ = N₁/N₂, the numerator on the right side is N₁, the number of primary turns.",
+          "distractors": [
+            { "answer": "I₁", "explanation": "I₁ is the primary current, not the number of primary turns." },
+            { "answer": "P₁", "explanation": "P₁ is the primary power, not the number of primary turns." }
+          ]
+        },
+        "2": {
+          "correct": "N₂",
+          "correctExplanation": "In the turns ratio formula, V₁/V₂ = N₁/N₂, the denominator on the right side is N₂, the number of secondary turns.",
+          "distractors": [
+            { "answer": "I₂", "explanation": "I₂ is the secondary current, not the number of secondary turns." },
+            { "answer": "P₂", "explanation": "P₂ is the secondary power, not the number of secondary turns." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about step-up transformers.",
+      "sentence": "A transformer with more turns on the secondary coil than on the primary coil is called a {{blank:1}} transformer and it {{blank:2}} the voltage.",
+      "blanks": {
+        "1": {
+          "correct": "step-up",
+          "correctExplanation": "When N₂ > N₁, the secondary voltage is higher than the primary voltage, so it is called a step-up transformer.",
+          "distractors": [
+            { "answer": "step-down", "explanation": "A step-down transformer has fewer secondary turns than primary turns, producing a lower output voltage." },
+            { "answer": "isolation", "explanation": "An isolation transformer has equal turns on both coils and does not change the voltage." }
+          ]
+        },
+        "2": {
+          "correct": "increases",
+          "correctExplanation": "A step-up transformer increases the voltage because V₂ = V₁ × N₂/N₁ and N₂ > N₁.",
+          "distractors": [
+            { "answer": "decreases", "explanation": "A step-up transformer increases the voltage, not decreases it." },
+            { "answer": "maintains", "explanation": "An isolation transformer maintains the voltage. A step-up transformer increases it." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about transformer coils.",
+      "sentence": "In a step-down transformer, the number of turns on the {{blank:1}} coil is greater than the number of turns on the {{blank:2}} coil.",
+      "blanks": {
+        "1": {
+          "correct": "primary",
+          "correctExplanation": "In a step-down transformer, V₂ < V₁, which means N₁ > N₂. The primary coil has more turns.",
+          "distractors": [
+            { "answer": "secondary", "explanation": "If the secondary had more turns, the voltage would increase, making it a step-up transformer." },
+            { "answer": "output", "explanation": "The output coil is the secondary coil, which has fewer turns in a step-down transformer." }
+          ]
+        },
+        "2": {
+          "correct": "secondary",
+          "correctExplanation": "In a step-down transformer, the secondary coil has fewer turns than the primary, producing a lower output voltage.",
+          "distractors": [
+            { "answer": "primary", "explanation": "The primary coil has more turns in a step-down transformer, not fewer." },
+            { "answer": "input", "explanation": "The input coil is the primary coil. In a step-down transformer, it has more turns than the secondary." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "mc",
+      "question": "Oliver connects a transformer to a 240 V AC supply. The transformer has 1200 turns on the primary coil and 60 turns on the secondary coil. Which one of the following is closest to the secondary voltage?",
+      "correct": "12 V",
+      "correctExplanation": "Using V₂ = V₁ × N₂/N₁ = 240 × 60/1200 = 240 × 0.050 = 12 V.",
+      "distractors": [
+        { "answer": "4800 V", "explanation": "This results from inverting the ratio: V₂ = 240 × 1200/60 = 4800 V. The correct ratio is N₂/N₁, not N₁/N₂." },
+        { "answer": "120 V", "explanation": "This does not follow from the turns ratio formula. The correct calculation gives 12 V." },
+        { "answer": "2.4 V", "explanation": "This does not follow from the correct application of the turns ratio formula." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A step-up transformer is needed to increase a voltage from 25 V to 500 V. The secondary coil has 4000 turns. Which one of the following is closest to the number of turns required on the primary coil?",
+      "correct": "200",
+      "correctExplanation": "Using N₁ = N₂ × V₁/V₂ = 4000 × 25/500 = 4000 × 0.050 = 200 turns.",
+      "distractors": [
+        { "answer": "80 000", "explanation": "This results from N₁ = N₂ × V₂/V₁ = 4000 × 500/25 = 80 000, which inverts the ratio." },
+        { "answer": "2000", "explanation": "This does not follow from the correct application of the turns ratio formula." },
+        { "answer": "500", "explanation": "This does not follow from the correct application of the turns ratio formula. The correct answer is 200." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Mei uses a transformer with 500 primary turns to step down 240 V to 48 V. Which one of the following is closest to the number of turns on the secondary coil?",
+      "correct": "100",
+      "correctExplanation": "Using N₂ = N₁ × V₂/V₁ = 500 × 48/240 = 500 × 0.20 = 100 turns.",
+      "distractors": [
+        { "answer": "2500", "explanation": "This results from inverting the ratio: N₂ = 500 × 240/48 = 2500. The correct ratio is V₂/V₁." },
+        { "answer": "50", "explanation": "This does not follow from the correct application of the turns ratio formula." },
+        { "answer": "450", "explanation": "Subtracting turns is incorrect. The turns ratio formula involves multiplication and division." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A transformer has 800 primary turns and 3200 secondary turns. Which one of the following is closest to the primary voltage if the secondary voltage is 100 V?",
+      "correct": "25 V",
+      "correctExplanation": "Using V₁ = V₂ × N₁/N₂ = 100 × 800/3200 = 100 × 0.25 = 25 V.",
+      "distractors": [
+        { "answer": "400 V", "explanation": "This results from inverting the ratio: V₁ = 100 × 3200/800 = 400 V." },
+        { "answer": "50 V", "explanation": "This does not follow from the correct application of the turns ratio formula." },
+        { "answer": "12.5 V", "explanation": "This does not follow from the correct application of the turns ratio formula. The correct answer is 25 V." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Ben claims that a transformer with 200 primary turns and 50 secondary turns will produce a secondary voltage of 960 V when connected to a 240 V supply. Which one of the following best explains why Ben is incorrect?",
+      "correct": "Ben incorrectly used V₂ = V₁ × N₁/N₂ instead of V₂ = V₁ × N₂/N₁; the correct answer is 60 V",
+      "correctExplanation": "Ben calculated V₂ = 240 × 200/50 = 960 V, but the correct formula gives V₂ = 240 × 50/200 = 60 V. He inverted the turns ratio.",
+      "distractors": [
+        { "answer": "The formula V₁/V₂ = N₁/N₂ cannot be applied to step-down transformers", "explanation": "The turns ratio formula applies to all ideal transformers, whether step-up or step-down." },
+        { "answer": "Ben should have subtracted the turns difference from the voltage to find V₂", "explanation": "The turns ratio formula uses division and multiplication, not subtraction." },
+        { "answer": "Ben's calculation is correct because fewer secondary turns increases the voltage", "explanation": "Fewer secondary turns decreases the voltage. This is a step-down transformer producing 60 V." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Ella designs a transformer for a model railway that uses 15 V. The mains supply is 240 V. If the secondary coil has 75 turns, which one of the following is closest to the number of turns required on the primary coil?",
+      "correct": "1200",
+      "correctExplanation": "Using N₁ = N₂ × V₁/V₂ = 75 × 240/15 = 75 × 16 = 1200 turns.",
+      "distractors": [
+        { "answer": "18 000", "explanation": "This results from N₂ × V₁ = 75 × 240 = 18 000 without dividing by V₂." },
+        { "answer": "1125", "explanation": "This results from an incorrect calculation using N₂ × V₂ = 75 × 15 = 1125." },
+        { "answer": "315", "explanation": "Adding V₁ + N₂ = 240 + 75 = 315 is incorrect. The formula involves multiplication and division." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "A step-up transformer always has more turns on its secondary coil than on its primary coil.",
+      "correct": "True",
+      "correctExplanation": "By definition, a step-up transformer increases voltage. Since V₁/V₂ = N₁/N₂, if V₂ > V₁ then N₂ > N₁.",
+      "distractors": [
+        { "answer": "False", "explanation": "For V₂ > V₁ in the turns ratio formula V₁/V₂ = N₁/N₂, the secondary must have more turns than the primary." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the variables in the turns ratio formula.",
+      "sentence": "In the turns ratio formula V₁/V₂ = N₁/N₂, V₁ represents the {{blank:1}} voltage and N₂ represents the number of turns on the {{blank:2}} coil.",
+      "blanks": {
+        "1": {
+          "correct": "primary",
+          "correctExplanation": "V₁ is the voltage across the primary coil, which is connected to the AC input supply.",
+          "distractors": [
+            { "answer": "secondary", "explanation": "V₂ represents the secondary voltage, not V₁." },
+            { "answer": "output", "explanation": "The output voltage is V₂. V₁ is the input or primary voltage." }
+          ]
+        },
+        "2": {
+          "correct": "secondary",
+          "correctExplanation": "N₂ is the number of turns on the secondary coil, which provides the output voltage.",
+          "distractors": [
+            { "answer": "primary", "explanation": "N₁ represents the primary coil turns, not N₂." },
+            { "answer": "input", "explanation": "The input coil is the primary coil, represented by N₁." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about rearranging the turns ratio formula.",
+      "sentence": "To calculate the secondary voltage of a transformer, rearrange the turns ratio formula to get V₂ = V₁ × {{blank:1}}/{{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "N₂",
+          "correctExplanation": "Rearranging V₁/V₂ = N₁/N₂ gives V₂ = V₁ × N₂/N₁. The numerator is N₂.",
+          "distractors": [
+            { "answer": "N₁", "explanation": "Using N₁ in the numerator would give V₁ × N₁/N₂, which calculates V₁ squared over V₂, not V₂." },
+            { "answer": "V₁", "explanation": "V₁ is already in the formula as a multiplier. The ratio involves turns, not voltages." }
+          ]
+        },
+        "2": {
+          "correct": "N₁",
+          "correctExplanation": "Rearranging V₁/V₂ = N₁/N₂ gives V₂ = V₁ × N₂/N₁. The denominator is N₁.",
+          "distractors": [
+            { "answer": "N₂", "explanation": "Using N₂ in the denominator would invert the ratio and give the wrong voltage." },
+            { "answer": "V₂", "explanation": "V₂ is the quantity being calculated, not part of the ratio on the right side." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the relationship between turns and voltage.",
+      "sentence": "If a transformer has twice as many turns on the secondary as on the primary, the secondary voltage is {{blank:1}} the primary voltage, making it a step-{{blank:2}} transformer.",
+      "blanks": {
+        "1": {
+          "correct": "twice",
+          "correctExplanation": "If N₂ = 2N₁, then V₂ = V₁ × N₂/N₁ = V₁ × 2 = 2V₁. The secondary voltage is twice the primary.",
+          "distractors": [
+            { "answer": "half", "explanation": "Half the primary voltage would require N₂ = N₁/2, not 2N₁." },
+            { "answer": "equal to", "explanation": "Equal voltages would require equal turns. Twice the turns gives twice the voltage." }
+          ]
+        },
+        "2": {
+          "correct": "up",
+          "correctExplanation": "A transformer that increases the voltage is called a step-up transformer.",
+          "distractors": [
+            { "answer": "down", "explanation": "A step-down transformer decreases the voltage. This transformer doubles it." },
+            { "answer": "through", "explanation": "There is no such thing as a step-through transformer." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "mc",
+      "question": "A power station generates electricity at 25 kV. A step-up transformer with 500 primary turns and 10 000 secondary turns is used before transmission. Which one of the following is closest to the transmission line voltage?",
+      "correct": "500 kV",
+      "correctExplanation": "Using V₂ = V₁ × N₂/N₁ = 25 × 10 000/500 = 25 × 20 = 500 kV.",
+      "distractors": [
+        { "answer": "1.25 kV", "explanation": "This results from inverting the ratio: V₂ = 25 × 500/10 000 = 1.25 kV." },
+        { "answer": "250 kV", "explanation": "This would require a turns ratio of 10, not 20. The correct ratio is 10 000/500 = 20." },
+        { "answer": "50 kV", "explanation": "This would require a turns ratio of 2, not 20." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A laptop charger uses a step-down transformer with 2300 primary turns. The primary voltage is 230 V and the secondary voltage is 20 V. Which one of the following is closest to the number of turns on the secondary coil?",
+      "correct": "200",
+      "correctExplanation": "Using N₂ = N₁ × V₂/V₁ = 2300 × 20/230 = 2300 × 0.0870 = 200 turns.",
+      "distractors": [
+        { "answer": "26 450", "explanation": "This results from inverting the ratio: N₂ = 2300 × 230/20 = 26 450." },
+        { "answer": "460", "explanation": "This does not follow from the correct application of the turns ratio formula." },
+        { "answer": "2300", "explanation": "The secondary cannot have the same turns as the primary if the voltages are different." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Sam measures the output voltage of a transformer as 6.0 V. The transformer has 2400 primary turns and 60 secondary turns. Which one of the following is closest to the input voltage?",
+      "correct": "240 V",
+      "correctExplanation": "Using V₁ = V₂ × N₁/N₂ = 6.0 × 2400/60 = 6.0 × 40 = 240 V.",
+      "distractors": [
+        { "answer": "0.15 V", "explanation": "This results from inverting the ratio: V₁ = 6.0 × 60/2400 = 0.15 V." },
+        { "answer": "120 V", "explanation": "This does not follow from the correct application of the turns ratio formula." },
+        { "answer": "480 V", "explanation": "This does not follow from the correct application of the turns ratio formula. The correct answer is 240 V." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A small electronics workshop has two transformers. Transformer A has a turns ratio N₁:N₂ of 20:1 and Transformer B has a turns ratio N₁:N₂ of 1:20. Both are connected to a 240 V supply. Which one of the following correctly gives the secondary voltage of each transformer?",
+      "correct": "Transformer A: 12 V; Transformer B: 4800 V",
+      "correctExplanation": "Transformer A: V₂ = 240 × 1/20 = 12 V (step-down). Transformer B: V₂ = 240 × 20/1 = 4800 V (step-up).",
+      "distractors": [
+        { "answer": "Transformer A: 4800 V; Transformer B: 12 V", "explanation": "This swaps the results. A 20:1 ratio steps down the voltage, and a 1:20 ratio steps it up." },
+        { "answer": "Transformer A: 12 V; Transformer B: 12 V", "explanation": "Transformer B has a 1:20 ratio, which steps up the voltage to 4800 V, not 12 V." },
+        { "answer": "Transformer A: 120 V; Transformer B: 480 V", "explanation": "These values do not follow from the correct application of the turns ratio formula." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Isabella has a transformer with 3000 primary turns and 150 secondary turns connected to a 240 V AC supply. She replaces the secondary coil with one that has 300 turns. Which one of the following is closest to the new secondary voltage?",
+      "correct": "24 V",
+      "correctExplanation": "Using V₂ = V₁ × N₂/N₁ = 240 × 300/3000 = 240 × 0.10 = 24 V.",
+      "distractors": [
+        { "answer": "12 V", "explanation": "This is the voltage with the original 150-turn coil: V₂ = 240 × 150/3000 = 12 V." },
+        { "answer": "480 V", "explanation": "This does not follow from the correct application of the turns ratio formula." },
+        { "answer": "48 V", "explanation": "This does not follow from the correct application of the turns ratio formula. The correct answer is 24 V." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A regional substation uses a step-down transformer to reduce 66 kV to 11 kV. The secondary coil has 500 turns. Which one of the following is closest to the number of turns on the primary coil?",
+      "correct": "3000",
+      "correctExplanation": "Using N₁ = N₂ × V₁/V₂ = 500 × 66/11 = 500 × 6.0 = 3000 turns.",
+      "distractors": [
+        { "answer": "83", "explanation": "This results from inverting the ratio: N₁ = 500 × 11/66 ≈ 83." },
+        { "answer": "6000", "explanation": "This does not follow from the correct application of the turns ratio formula." },
+        { "answer": "500", "explanation": "Equal turns on both coils would give equal voltages, which contradicts the step-down function." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student builds a transformer and measures a primary voltage of 12 V and a secondary voltage of 36 V. The primary coil has 200 turns. Which one of the following is closest to the expected number of secondary turns?",
+      "correct": "600",
+      "correctExplanation": "Using N₂ = N₁ × V₂/V₁ = 200 × 36/12 = 200 × 3.0 = 600 turns.",
+      "distractors": [
+        { "answer": "67", "explanation": "This results from inverting the ratio: N₂ = 200 × 12/36 ≈ 67." },
+        { "answer": "400", "explanation": "This does not follow from the correct application of the turns ratio formula." },
+        { "answer": "2400", "explanation": "This results from multiplying N₁ × V₂ = 200 × 12 = 2400 without dividing by V₁." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about a step-up transformer calculation.",
+      "sentence": "A step-up transformer connected to a 230 V supply has 460 primary turns and 2300 secondary turns. The secondary voltage is {{blank:1}} V and the turns ratio N₁:N₂ is {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "1150",
+          "correctExplanation": "V₂ = V₁ × N₂/N₁ = 230 × 2300/460 = 230 × 5.0 = 1150 V.",
+          "distractors": [
+            { "answer": "46", "explanation": "This results from V₂ = V₁ × N₁/N₂ = 230 × 460/2300 = 46 V, which inverts the ratio." },
+            { "answer": "23", "explanation": "This does not follow from the correct application of the turns ratio formula." }
+          ]
+        },
+        "2": {
+          "correct": "1:5",
+          "correctExplanation": "N₁:N₂ = 460:2300 = 1:5. The secondary has 5 times as many turns as the primary.",
+          "distractors": [
+            { "answer": "5:1", "explanation": "This inverts the ratio. The primary has fewer turns, so the ratio is 1:5." },
+            { "answer": "1:2", "explanation": "460:2300 simplifies to 1:5, not 1:2." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about rearranging the turns ratio formula to find the primary voltage.",
+      "sentence": "To find the primary voltage of a transformer, the turns ratio formula can be rearranged to V₁ = {{blank:1}} × N₁/N₂. For a transformer with 100 primary turns and 2000 secondary turns, N₁/N₂ = {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "V₂",
+          "correctExplanation": "Rearranging V₁/V₂ = N₁/N₂ gives V₁ = V₂ × N₁/N₂.",
+          "distractors": [
+            { "answer": "V₁", "explanation": "V₁ is the quantity being calculated. The formula uses V₂ as the known value." },
+            { "answer": "I₁", "explanation": "Current is not part of the basic turns ratio voltage formula." }
+          ]
+        },
+        "2": {
+          "correct": "1/20",
+          "correctExplanation": "N₁/N₂ = 100/2000 = 1/20 = 0.050.",
+          "distractors": [
+            { "answer": "20", "explanation": "20 is N₂/N₁, not N₁/N₂. The ratio is inverted." },
+            { "answer": "1/100", "explanation": "This does not correctly simplify 100/2000. The correct ratio is 1/20." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about designing a step-down transformer.",
+      "sentence": "A transformer has 400 primary turns. To step down 240 V to 60 V, the secondary coil needs {{blank:1}} turns, giving a turns ratio N₁:N₂ of {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "100",
+          "correctExplanation": "N₂ = N₁ × V₂/V₁ = 400 × 60/240 = 400 × 0.25 = 100 turns.",
+          "distractors": [
+            { "answer": "1600", "explanation": "This results from inverting the ratio: N₂ = 400 × 240/60 = 1600." },
+            { "answer": "400", "explanation": "Equal turns would give equal voltages, not a step-down from 240 V to 60 V." }
+          ]
+        },
+        "2": {
+          "correct": "4:1",
+          "correctExplanation": "N₁:N₂ = 400:100 = 4:1. The primary has four times as many turns as the secondary.",
+          "distractors": [
+            { "answer": "1:4", "explanation": "1:4 would indicate more secondary turns than primary, which is a step-up transformer." },
+            { "answer": "2:1", "explanation": "A 2:1 ratio would give V₂ = 240/2 = 120 V, not 60 V." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "mc",
+      "question": "A power station generates electricity at 20 kV. A step-up transformer with a turns ratio N₁:N₂ of 1:15 raises the voltage for transmission. At the destination, a step-down transformer with a turns ratio N₁:N₂ of 50:1 reduces the voltage. Which one of the following is closest to the final voltage delivered?",
+      "correct": "6.0 kV",
+      "correctExplanation": "After step-up: V = 20 × 15 = 300 kV. After step-down: V = 300/50 = 6.0 kV.",
+      "distractors": [
+        { "answer": "300 kV", "explanation": "This is the transmission voltage after the step-up transformer, before the step-down." },
+        { "answer": "400 V", "explanation": "This does not follow from the correct application of the two turns ratios." },
+        { "answer": "20 kV", "explanation": "The two transformers do not cancel out. The overall ratio is 15/50 = 0.30, giving 6.0 kV." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A factory receives electricity from the grid at 11 kV and uses two sequential step-down transformers. The first has a turns ratio N₁:N₂ of 10:1 and the second has a turns ratio N₁:N₂ of 5:1. Which one of the following is closest to the voltage supplied to the factory equipment?",
+      "correct": "220 V",
+      "correctExplanation": "After first transformer: V = 11 000/10 = 1100 V. After second: V = 1100/5 = 220 V.",
+      "distractors": [
+        { "answer": "1100 V", "explanation": "This is the voltage after only the first transformer. The second transformer further reduces it." },
+        { "answer": "2200 V", "explanation": "This results from applying only the second transformer: 11 000/5 = 2200 V." },
+        { "answer": "22 V", "explanation": "This does not follow from the correct application of the two turns ratios." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student has two identical transformers, each with 200 primary turns and 1000 secondary turns. She connects the secondary of the first transformer to the primary of the second. If the input voltage to the first transformer is 10 V, which one of the following is closest to the output voltage of the second transformer?",
+      "correct": "250 V",
+      "correctExplanation": "First transformer: V₂ = 10 × 1000/200 = 50 V. Second transformer: V₂ = 50 × 1000/200 = 250 V. Each multiplies by 5.",
+      "distractors": [
+        { "answer": "50 V", "explanation": "This is the output of the first transformer only. The second transformer multiplies by 5 again." },
+        { "answer": "2500 V", "explanation": "This results from cubing the ratio (5³ = 125 × 10) rather than squaring it (5² = 25 × 10 = 250)." },
+        { "answer": "100 V", "explanation": "This results from multiplying by the overall turns ratio once (10 × 10) rather than applying each transformer sequentially." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A wind farm generates power at 400 V. A step-up transformer with 100 primary turns and 5000 secondary turns increases the voltage for transmission. Which one of the following is closest to the transmission voltage?",
+      "correct": "20 kV",
+      "correctExplanation": "Using V₂ = V₁ × N₂/N₁ = 400 × 5000/100 = 400 × 50 = 20 000 V = 20 kV.",
+      "distractors": [
+        { "answer": "8.0 V", "explanation": "This results from inverting the ratio: V₂ = 400 × 100/5000 = 8.0 V." },
+        { "answer": "2.0 kV", "explanation": "This would require a turns ratio of 5, not 50." },
+        { "answer": "100 kV", "explanation": "This does not follow from the correct application of the turns ratio formula." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An engineer designs a two-stage transformer system. The first transformer has a turns ratio N₁:N₂ of 20:1. The second transformer has 150 primary turns and 3000 secondary turns. If 240 V is connected to the first transformer, which one of the following is closest to the final output voltage?",
+      "correct": "240 V",
+      "correctExplanation": "After first transformer: V = 240/20 = 12 V. After second: V = 12 × 3000/150 = 12 × 20 = 240 V. The overall ratio is 1:1.",
+      "distractors": [
+        { "answer": "12 V", "explanation": "This is the voltage after the first transformer only. The second transformer steps it back up." },
+        { "answer": "4800 V", "explanation": "This results from applying only the second transformer to 240 V: 240 × 20 = 4800 V." },
+        { "answer": "0.60 V", "explanation": "This results from applying both ratios as step-down: 240/20/20 = 0.60 V." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A mobile phone charger transformer has 2400 primary turns. The charger requires a 5.0 V AC output from the transformer before rectification. Which one of the following is closest to the number of secondary turns needed if the mains supply is 240 V?",
+      "correct": "50",
+      "correctExplanation": "Using N₂ = N₁ × V₂/V₁ = 2400 × 5.0/240 = 2400 × 0.0208 = 50 turns.",
+      "distractors": [
+        { "answer": "115 200", "explanation": "This results from inverting the ratio: N₂ = 2400 × 240/5.0 = 115 200." },
+        { "answer": "480", "explanation": "This does not follow from the correct application of the turns ratio formula." },
+        { "answer": "120", "explanation": "This does not follow from the correct application of the turns ratio formula. The correct answer is 50." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Two students are debating transformer design. Aiden says that if you double both the number of primary turns and the number of secondary turns, the output voltage doubles. Bella says the output voltage stays the same. Which one of the following is correct?",
+      "correct": "Bella is correct; doubling both N₁ and N₂ does not change the turns ratio, so the output voltage is unchanged",
+      "correctExplanation": "V₂ = V₁ × N₂/N₁. If both are doubled: V₂ = V₁ × 2N₂/(2N₁) = V₁ × N₂/N₁. The ratio is unchanged.",
+      "distractors": [
+        { "answer": "Aiden is correct; more turns on both coils means a higher output voltage", "explanation": "The output voltage depends on the ratio N₂/N₁, not on the absolute number of turns." },
+        { "answer": "Neither is correct; the output voltage halves when both are doubled", "explanation": "Doubling both N₁ and N₂ keeps their ratio the same, so the output voltage is unchanged." },
+        { "answer": "Both are partially correct; the voltage increases slightly but does not fully double", "explanation": "The voltage does not change at all because the ratio N₂/N₁ remains the same." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A solar inverter outputs 240 V AC. A step-up transformer with 120 primary turns increases the voltage to 22 kV before the electricity enters the local grid. Which one of the following is closest to the number of secondary turns?",
+      "correct": "11 000",
+      "correctExplanation": "Using N₂ = N₁ × V₂/V₁ = 120 × 22 000/240 = 120 × 91.7 = 11 000 turns.",
+      "distractors": [
+        { "answer": "1.3", "explanation": "This results from inverting the ratio: N₂ = 120 × 240/22 000 ≈ 1.3." },
+        { "answer": "2640", "explanation": "This does not follow from the correct application of the turns ratio formula." },
+        { "answer": "5500", "explanation": "This does not follow from the correct application of the turns ratio formula. The correct answer is 11 000." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about a two-stage transformer system.",
+      "sentence": "A power station generates electricity at 25 kV. A step-up transformer with a turns ratio N₁:N₂ of 1:12 raises the voltage to {{blank:1}} kV for transmission. At the destination, this voltage must be reduced to 240 V, requiring a step-down turns ratio of {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "300",
+          "correctExplanation": "V₂ = 25 × 12 = 300 kV.",
+          "distractors": [
+            { "answer": "37", "explanation": "This does not follow from the correct application of the turns ratio." },
+            { "answer": "2.1", "explanation": "This results from dividing 25 by 12 instead of multiplying." }
+          ]
+        },
+        "2": {
+          "correct": "1250:1",
+          "correctExplanation": "The step-down ratio is 300 000/240 = 1250, so the turns ratio N₁:N₂ is 1250:1.",
+          "distractors": [
+            { "answer": "1:1250", "explanation": "This is inverted. A step-down transformer has more primary turns, so the ratio is 1250:1." },
+            { "answer": "12:1", "explanation": "12:1 is the inverse of the step-up ratio. The step-down ratio from 300 kV to 240 V is 1250:1." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about cascaded transformers.",
+      "sentence": "When two transformers are connected in series, the overall voltage ratio is found by {{blank:1}} the individual turns ratios. If the first transformer has a turns ratio N₁:N₂ of 1:5 and the second has a turns ratio N₁:N₂ of 1:4, the overall step-up ratio is {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "multiplying",
+          "correctExplanation": "The overall voltage multiplication factor is the product of the individual factors: 5 × 4 = 20.",
+          "distractors": [
+            { "answer": "adding", "explanation": "Adding the ratios (5 + 4 = 9) does not give the correct overall ratio." },
+            { "answer": "dividing", "explanation": "Dividing the ratios does not give the correct overall voltage change." }
+          ]
+        },
+        "2": {
+          "correct": "1:20",
+          "correctExplanation": "The first transformer multiplies by 5 and the second by 4, giving an overall factor of 5 × 4 = 20, or a ratio of 1:20.",
+          "distractors": [
+            { "answer": "1:9", "explanation": "This results from adding the ratios (5 + 4 = 9) instead of multiplying them." },
+            { "answer": "20:1", "explanation": "20:1 would be a step-down ratio. Both transformers are step-up, so the overall ratio is 1:20." }
+          ]
+        }
+      }
+    }
+  ]
+}

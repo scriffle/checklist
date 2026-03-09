@@ -1,0 +1,75 @@
+{
+  "id": "hplc-chromatography",
+  "name": "HPLC Chromatography",
+  "icon": "📈",
+  "what": "High-performance liquid chromatography (HPLC) separates the components of a mixture by passing a liquid mobile phase through a column packed with a solid stationary phase. Components interact differently with the stationary phase and elute at different times, called retention times, which are detected to produce a chromatogram.",
+  "why": "HPLC is used extensively in pharmaceutical quality control, environmental monitoring, food science, and forensic analysis to separate, identify, and quantify organic compounds in complex mixtures. It provides quantitative data about concentration through the use of calibration curves.",
+  "items": [
+    {
+      "id": 1,
+      "uuid": "lp-0e9cb262-293d-84c3-fdef-6308be248748",
+      "version": 1,
+      "title": "I can describe the principle of high-performance liquid chromatography",
+      "code": "11D.1",
+      "what": "In HPLC, a sample is injected into a column containing a stationary phase. A liquid mobile phase flows through the column, carrying the sample components. Each component interacts with the stationary phase to a different degree, causing them to travel through the column at different speeds and elute at different times.",
+      "why": "Understanding the principle of separation is essential for predicting the order of elution of different compounds and for interpreting chromatogram data correctly in terms of polarity and intermolecular interactions.",
+      "example": "Using a polar silica stationary phase and a non-polar hexane mobile phase, a polar compound like ethanoic acid interacts strongly with the stationary phase and has a long retention time, while a non-polar compound like hexane interacts weakly and elutes quickly.",
+      "contentHash": "hash-79641b63"
+    },
+    {
+      "id": 2,
+      "uuid": "lp-e37dcefb-c29d-00e8-6514-0cf0b3028ae3",
+      "version": 1,
+      "title": "I can describe the roles of the stationary phase and mobile phase in HPLC",
+      "code": "11D.1b",
+      "what": "The stationary phase remains fixed in the column and interacts with sample components to slow their passage. The mobile phase is the liquid that flows through the column, carrying the sample and competing with the stationary phase for interactions with the sample components.",
+      "why": "Understanding the roles of each phase allows you to predict how changes to the stationary or mobile phase will affect the separation and retention times of different compounds.",
+      "example": "In a reverse-phase HPLC system, the stationary phase is non-polar (e.g. a C18 hydrocarbon chain) and the mobile phase is polar (e.g. water-methanol). Non-polar compounds interact more with the stationary phase and have longer retention times; polar compounds elute first.",
+      "contentHash": "hash-c219b877"
+    },
+    {
+      "id": 3,
+      "uuid": "lp-01e7d503-c771-475a-ac93-6152e3f83d55",
+      "version": 1,
+      "title": "I can use retention times from HPLC data to help identify organic compounds",
+      "code": "11D.3",
+      "what": "A compound always has the same retention time when run under identical conditions (same column, same mobile phase, same temperature). By comparing the retention time of an unknown peak with that of a known standard run under the same conditions, a tentative identification can be made.",
+      "why": "Retention time matching is the primary qualitative identification method in HPLC. However, because different compounds can share the same retention time, it provides an indication of identity rather than a definitive confirmation.",
+      "example": "A pure vitamin C standard run on a specific HPLC column produces a peak at Rt = 3.2 minutes. A multivitamin sample run on the same column under the same conditions also shows a peak at Rt = 3.2 minutes, suggesting vitamin C is present in the multivitamin.",
+      "contentHash": "hash-61c27273"
+    },
+    {
+      "id": 4,
+      "uuid": "lp-ac39200e-ebde-56dc-2e7f-edaaf24bf175",
+      "version": 1,
+      "title": "I can describe the qualitative purity of a substance from given HPLC data",
+      "code": "11D.2",
+      "what": "A pure single-component sample produces only one peak on the chromatogram at the expected retention time. Additional peaks indicate the presence of impurities or contaminants. Peaks at unexpected retention times suggest the presence of unintended substances.",
+      "why": "Assessing purity is a critical application of HPLC in pharmaceutical manufacturing and chemical synthesis. Confirming that a product shows only the expected peak(s) provides evidence that the synthesis was successful and the product is sufficiently pure.",
+      "example": "A pharmaceutical company synthesises aspirin and runs a sample on HPLC. A pure sample should show one peak at the expected retention time for aspirin. If a second peak appears at a different retention time, this indicates an impurity is present, and the batch may not meet purity standards.",
+      "contentHash": "hash-3cdeb166"
+    },
+    {
+      "id": 5,
+      "uuid": "lp-fbc3f985-06b9-9a8a-9a59-530cd5a6826e",
+      "version": 1,
+      "title": "I can construct a calibration curve from given HPLC data",
+      "code": "11D.4",
+      "what": "A calibration curve is constructed by plotting the peak area (y-axis) against the known concentration of a series of standard solutions (x-axis), then drawing a line of best fit through the data points. The curve establishes a linear relationship between concentration and detector response.",
+      "why": "The calibration curve is the tool that converts a raw instrument measurement (peak area) into a meaningful concentration value for an unknown sample. It accounts for the specific instrument conditions used and ensures accurate quantification.",
+      "example": "Standards of phenol at concentrations 0.1, 0.2, 0.3, 0.4, and 0.5 g/L produce peak areas of 103, 198, 304, 410, and 497 respectively. Plotting peak area versus concentration and drawing a line of best fit produces a calibration curve with a linear relationship.",
+      "contentHash": "hash-c9db03c1"
+    },
+    {
+      "id": 6,
+      "uuid": "lp-f36d97d6-e630-294d-4f3e-324d87a849cd",
+      "version": 1,
+      "title": "I can calculate the concentration of an organic compound from a calibration curve and HPLC data",
+      "code": "11D.5",
+      "what": "To find the concentration of an unknown sample, calculate the average peak area from replicate injections, then locate this value on the y-axis of the calibration curve, draw a horizontal line to the line of best fit, and drop a vertical line to the x-axis to read off the concentration. Account for any dilution factors used in sample preparation.",
+      "why": "Quantitative determination of concentration is one of the most important practical applications of HPLC, used in environmental testing, food safety, pharmacokinetics, and quality control to ensure compounds are present at safe and effective levels.",
+      "example": "Three creek water samples produce average peak area of 179 on an HPLC calibrated with phenol standards. Reading across from peak area 179 on the y-axis to the calibration line, then down to the x-axis, gives a concentration of 0.175 g/L in the diluted sample. If the sample was diluted 10-fold, the original creek water concentration is 1.75 g/L.",
+      "contentHash": "hash-06dff4e0"
+    }
+  ]
+}

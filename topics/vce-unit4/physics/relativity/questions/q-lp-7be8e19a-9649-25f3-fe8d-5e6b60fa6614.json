@@ -1,0 +1,517 @@
+{
+  "_link": {
+    "uuid": "lp-7be8e19a-9649-25f3-fe8d-5e6b60fa6614",
+    "version": 1,
+    "contentHash": "hash-779cec80",
+    "title": "I can explain what happens to dilated time as relative speed increases",
+    "generatedAt": "2026-03-09T23:00:00.000Z"
+  },
+  "toLevel2": [
+    {
+      "type": "MC",
+      "question": "As the relative speed between an observer and a clock increases, the dilated time measured by the observer:",
+      "correct": "increases",
+      "correctExplanation": "As speed increases, the Lorentz factor γ increases, and since t = γt₀, the dilated time becomes progressively longer.",
+      "distractors": [
+        { "answer": "decreases", "explanation": "Dilated time increases with speed. A higher γ produces a longer dilated time." },
+        { "answer": "stays the same", "explanation": "Dilated time depends on γ, which increases with speed. It does not remain constant." },
+        { "answer": "first increases then decreases", "explanation": "Dilated time increases monotonically with speed. There is no reversal." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "At v = 0.50c, a 1.00 s proper time interval is dilated to 1.15 s. At v = 0.99c, the same interval is dilated to 7.09 s. What trend does this demonstrate?",
+      "correct": "The dilated time increases rapidly as speed approaches c.",
+      "correctExplanation": "The dilated time grows from 1.15 s to 7.09 s as speed increases from 0.50c to 0.99c. This shows the accelerating effect of the Lorentz factor near c.",
+      "distractors": [
+        { "answer": "The dilated time increases linearly with speed.", "explanation": "The increase is non-linear. The jump from 1.15 s to 7.09 s is much larger than a linear extrapolation would predict." },
+        { "answer": "The dilated time reaches a maximum of 7.09 s at v = 0.99c.", "explanation": "There is no maximum. At higher speeds (e.g. 0.999c), the dilated time would be even larger." },
+        { "answer": "The dilated time decreases as speed increases beyond 0.50c.", "explanation": "The dilated time increases with speed at all values up to c." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "What happens to the dilated time as the relative speed approaches the speed of light?",
+      "correct": "It approaches infinity.",
+      "correctExplanation": "As v → c, γ → ∞, so t = γt₀ → ∞. The dilated time increases without bound.",
+      "distractors": [
+        { "answer": "It approaches zero.", "explanation": "The dilated time increases, not decreases, as speed approaches c." },
+        { "answer": "It approaches the proper time.", "explanation": "As speed increases, dilated time moves further away from proper time, not closer to it." },
+        { "answer": "It approaches a fixed maximum value.", "explanation": "There is no maximum. Dilated time increases without bound as v → c." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "At very low speeds (v ≪ c), the dilated time is:",
+      "correct": "approximately equal to the proper time because γ is approximately 1",
+      "correctExplanation": "At low speeds, γ ≈ 1, so t = γt₀ ≈ t₀. The time dilation effect is negligibly small.",
+      "distractors": [
+        { "answer": "much larger than the proper time because all motion produces time dilation", "explanation": "While technically non-zero, the time dilation at low speeds is negligibly small. γ ≈ 1 means t ≈ t₀." },
+        { "answer": "exactly equal to the proper time at all speeds below 0.5c", "explanation": "Dilated time is never exactly equal to proper time for any non-zero speed. It is only approximately equal at low speeds." },
+        { "answer": "zero because time dilation only begins at relativistic speeds", "explanation": "Dilated time is never zero. It is always at least equal to the proper time (when v = 0)." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Why does the difference between dilated time and proper time grow larger as speed increases?",
+      "correct": "Because the Lorentz factor γ increases with speed, multiplying the proper time by a progressively larger factor.",
+      "correctExplanation": "t = γt₀, and γ = 1/√(1 − v²/c²) increases as v increases. The larger γ produces an increasingly larger dilated time.",
+      "distractors": [
+        { "answer": "Because the proper time itself decreases with speed.", "explanation": "Proper time is an invariant quantity measured in the rest frame. It does not change with the observer's speed." },
+        { "answer": "Because the speed of light decreases at higher relative speeds.", "explanation": "The speed of light is constant for all observers. It does not decrease with relative speed." },
+        { "answer": "Because moving clocks physically wear out faster at higher speeds.", "explanation": "Time dilation is not caused by wear or mechanical effects. It is a fundamental consequence of special relativity." }
+      ]
+    },
+    {
+      "type": "TF",
+      "question": "As relative speed increases from 0 to c, the dilated time increases continuously from t₀ toward infinity.",
+      "correct": "True",
+      "correctExplanation": "γ increases continuously from 1 to ∞ as v goes from 0 to c, so t = γt₀ increases from t₀ to ∞.",
+      "distractors": [
+        { "answer": "False", "explanation": "γ is a monotonically increasing function of v. The dilated time increases continuously without any plateau or decrease." }
+      ]
+    },
+    {
+      "type": "TF",
+      "question": "The dilated time reaches a maximum value and then remains constant as speed continues to increase toward c.",
+      "correct": "False",
+      "correctExplanation": "There is no maximum. As v → c, γ → ∞, and dilated time → ∞. The dilated time continues to increase without bound.",
+      "distractors": [
+        { "answer": "True", "explanation": "The dilated time has no maximum. It increases without limit as speed approaches c." }
+      ]
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the sentence about the trend in dilated time.",
+      "sentence": "As relative speed increases, the Lorentz factor γ {{blank:1}}, causing the dilated time to become progressively {{blank:2}} than the proper time.",
+      "blanks": {
+        "1": {
+          "correct": "increases",
+          "correctExplanation": "γ = 1/√(1 − v²/c²) increases as v increases, approaching infinity as v → c.",
+          "distractors": ["decreases", "stays the same"]
+        },
+        "2": {
+          "correct": "longer",
+          "correctExplanation": "Since t = γt₀ and γ is growing, the dilated time becomes progressively longer compared to the proper time.",
+          "distractors": ["shorter", "closer to"]
+        }
+      }
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the sentence about the behaviour of dilated time at extreme speeds.",
+      "sentence": "As v approaches c, γ approaches {{blank:1}}, and the dilated time t = γt₀ also approaches {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "infinity",
+          "correctExplanation": "As v → c, the denominator of γ approaches zero, causing γ to increase without bound.",
+          "distractors": ["zero", "one"]
+        },
+        "2": {
+          "correct": "infinity",
+          "correctExplanation": "Since t = γt₀ and γ → ∞, the dilated time also approaches infinity.",
+          "distractors": ["zero", "t₀"]
+        }
+      }
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the sentence about checking the reasonableness of calculations.",
+      "sentence": "A student calculates a dilated time that is shorter than the proper time. This answer is {{blank:1}} because dilated time must always be {{blank:2}} than or equal to proper time.",
+      "blanks": {
+        "1": {
+          "correct": "incorrect",
+          "correctExplanation": "Dilated time can never be shorter than proper time. A result t < t₀ indicates a calculation error.",
+          "distractors": ["correct", "possible"]
+        },
+        "2": {
+          "correct": "longer",
+          "correctExplanation": "Since γ ≥ 1, t = γt₀ ≥ t₀. The dilated time is always at least as long as the proper time.",
+          "distractors": ["shorter", "equal to"]
+        }
+      }
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "MC",
+      "question": "A particle with proper lifetime 1.00 × 10⁻⁸ s is accelerated to different speeds. At 0.50c (γ = 1.15), the dilated lifetime is 1.15 × 10⁻⁸ s. At 0.90c (γ = 2.29), the dilated lifetime is 2.29 × 10⁻⁸ s. At 0.99c (γ = 7.09), it is 7.09 × 10⁻⁸ s. Which statement best describes the pattern?",
+      "correct": "The dilated lifetime increases non-linearly, growing more rapidly at higher speeds.",
+      "correctExplanation": "From 0.50c to 0.90c (Δv = 0.40c), the dilated time increases by 1.14 × 10⁻⁸ s. From 0.90c to 0.99c (Δv = 0.09c), it increases by 4.80 × 10⁻⁸ s — a much larger change for a smaller speed increase.",
+      "distractors": [
+        { "answer": "The dilated lifetime increases linearly with speed.", "explanation": "If the increase were linear, equal speed changes would give equal time changes. The data shows otherwise." },
+        { "answer": "The dilated lifetime doubles each time the speed increases by 0.10c.", "explanation": "The data does not show doubling at regular intervals. The increase is non-linear and accelerates near c." },
+        { "answer": "The dilated lifetime approaches a maximum value at 0.99c.", "explanation": "There is no maximum. At speeds closer to c (e.g. 0.999c), the dilated lifetime would be even longer." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A graph of dilated time t vs speed v for a fixed proper time t₀ shows a curve that rises steeply near v = c. This shape is similar to the shape of:",
+      "correct": "the γ vs v graph, because t = γt₀ and t₀ is constant",
+      "correctExplanation": "Since t = γt₀ and t₀ is a constant, the t vs v graph is simply the γ vs v graph scaled by the factor t₀. Both have the same shape.",
+      "distractors": [
+        { "answer": "the v vs t graph, which is a straight line", "explanation": "The t vs v graph is non-linear, not a straight line. It has the same shape as the γ vs v curve." },
+        { "answer": "the kinetic energy vs v graph from classical mechanics, which is a parabola", "explanation": "The dilated time curve rises much more steeply than a parabola near v = c." },
+        { "answer": "a horizontal line because dilated time does not depend on speed", "explanation": "Dilated time depends directly on speed through the Lorentz factor γ." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A spacecraft increases its speed from 0.80c (γ = 1.67) to 0.90c (γ = 2.29). For a 1.00 s proper time interval, by how much does the dilated time increase?",
+      "correct": "0.62 s",
+      "correctExplanation": "At 0.80c: t = 1.67 s. At 0.90c: t = 2.29 s. Increase = 2.29 − 1.67 = 0.62 s.",
+      "distractors": [
+        { "answer": "0.10 s", "explanation": "This is the change in speed (0.10c), not the change in dilated time." },
+        { "answer": "1.67 s", "explanation": "This is the dilated time at 0.80c, not the increase from 0.80c to 0.90c." },
+        { "answer": "3.96 s", "explanation": "This is the sum of the two dilated times, not the difference." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "At v = 0.10c, γ ≈ 1.005. At v = 0.50c, γ ≈ 1.15. At v = 0.90c, γ ≈ 2.29. At v = 0.99c, γ ≈ 7.09. For a proper time of 1.00 s, between which pair of speeds does the dilated time increase the most?",
+      "correct": "Between 0.90c and 0.99c",
+      "correctExplanation": "Δt: 0.10c to 0.50c = 0.145 s; 0.50c to 0.90c = 1.14 s; 0.90c to 0.99c = 4.80 s. The largest increase is between 0.90c and 0.99c.",
+      "distractors": [
+        { "answer": "Between 0.10c and 0.50c", "explanation": "This gives the smallest increase (0.145 s). The steepest rise occurs near c." },
+        { "answer": "Between 0.50c and 0.90c", "explanation": "This gives an increase of 1.14 s, which is smaller than the 4.80 s increase between 0.90c and 0.99c." },
+        { "answer": "The increase is the same between all pairs because the speed intervals are equal.", "explanation": "The speed intervals are not equal, and even if they were, the non-linear nature of γ means the time increases would differ." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A student calculates that at v = 0.999c (γ = 22.4), a 1.00 s proper time interval becomes 22.4 s dilated. They then check v = 0.9999c (γ = 70.7), finding 70.7 s. This comparison illustrates that:",
+      "correct": "very close to c, even tiny speed increases produce enormous increases in dilated time",
+      "correctExplanation": "Increasing speed from 0.999c to 0.9999c (a change of only 0.0009c) increases the dilated time from 22.4 s to 70.7 s — more than tripling it.",
+      "distractors": [
+        { "answer": "the dilated time approaches a maximum of about 70 s near the speed of light", "explanation": "There is no maximum. At v = 0.99999c, γ ≈ 224, and the dilated time would be 224 s." },
+        { "answer": "the dilated time increases by a constant 48 s for each 0.0009c increase in speed", "explanation": "The increase is not constant. It grows more rapidly at each step closer to c." },
+        { "answer": "the relationship between speed and dilated time becomes linear near c", "explanation": "The relationship becomes increasingly non-linear near c, not linear." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A student is asked to sketch a graph of dilated time versus speed for a fixed proper time. Which features should the graph include?",
+      "correct": "Starts at t₀ when v = 0, increases non-linearly, and has a vertical asymptote at v = c.",
+      "correctExplanation": "At v = 0, t = t₀. As v increases, t rises gradually then steeply. At v = c, t → ∞ (vertical asymptote).",
+      "distractors": [
+        { "answer": "Starts at zero when v = 0 and increases linearly to infinity at v = c.", "explanation": "The graph starts at t₀ (not zero), and the increase is non-linear." },
+        { "answer": "Starts at t₀ when v = 0, increases to a maximum, then decreases to zero at v = c.", "explanation": "The dilated time does not decrease. It increases monotonically toward infinity." },
+        { "answer": "A horizontal line at t = t₀ for all speeds, since proper time is constant.", "explanation": "While proper time is constant, dilated time varies with speed and is not constant." }
+      ]
+    },
+    {
+      "type": "TF",
+      "question": "Increasing the speed of a particle from 0.99c to 0.999c produces a larger change in dilated time than increasing from 0.50c to 0.60c.",
+      "correct": "True",
+      "correctExplanation": "From 0.50c to 0.60c: Δγ = 1.25 − 1.15 = 0.10. From 0.99c to 0.999c: Δγ = 22.4 − 7.09 = 15.3. The change near c is much larger.",
+      "distractors": [
+        { "answer": "False", "explanation": "The Lorentz factor increases much more rapidly near c. The change in dilated time is far larger between 0.99c and 0.999c." }
+      ]
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the sentence about the non-linear behaviour of dilated time.",
+      "sentence": "From 0.50c to 0.90c (Δv = 0.40c), γ increases by about 1.14. From 0.90c to 0.99c (Δv = 0.09c), γ increases by about {{blank:1}}. This shows the increase in γ is {{blank:2}} at higher speeds.",
+      "blanks": {
+        "1": {
+          "correct": "4.80",
+          "correctExplanation": "Δγ = 7.09 − 2.29 = 4.80. A much smaller speed change produces a much larger change in γ.",
+          "distractors": ["1.14", "0.09"]
+        },
+        "2": {
+          "correct": "faster",
+          "correctExplanation": "The rate of increase of γ (and therefore dilated time) accelerates as speed approaches c.",
+          "distractors": ["slower", "constant"]
+        }
+      }
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the sentence about the limiting behaviour.",
+      "sentence": "As v → c, γ → ∞ and the dilated time t → {{blank:1}}. This means it would take {{blank:2}} energy to dilate time to infinity, confirming that massive objects cannot reach the speed of light.",
+      "blanks": {
+        "1": {
+          "correct": "infinity",
+          "correctExplanation": "Since t = γt₀ and γ → ∞, the dilated time approaches infinity as v → c.",
+          "distractors": ["zero", "t₀"]
+        },
+        "2": {
+          "correct": "infinite",
+          "correctExplanation": "Reaching v = c would require γ = ∞ and therefore infinite energy, which is impossible.",
+          "distractors": ["zero", "finite"]
+        }
+      }
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the sentence about the reasonableness check.",
+      "sentence": "If a calculation gives a dilated time that is {{blank:1}} than the proper time, the answer must be wrong. The dilated time is always at least {{blank:2}} the proper time.",
+      "blanks": {
+        "1": {
+          "correct": "less",
+          "correctExplanation": "Since γ ≥ 1, t = γt₀ ≥ t₀. A result of t < t₀ indicates an error.",
+          "distractors": ["greater", "equal to"]
+        },
+        "2": {
+          "correct": "equal to",
+          "correctExplanation": "When v = 0, γ = 1 and t = t₀. For any v > 0, t > t₀.",
+          "distractors": ["double", "half of"]
+        }
+      }
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "MC",
+      "question": "A particle with proper lifetime 2.00 × 10⁻⁸ s is accelerated through a series of stages. At each stage, the dilated lifetime is measured. The results are: Stage 1 (0.50c): 2.31 × 10⁻⁸ s; Stage 2 (0.80c): 3.34 × 10⁻⁸ s; Stage 3 (0.95c): 6.40 × 10⁻⁸ s; Stage 4 (0.99c): 14.2 × 10⁻⁸ s. A student plots these values and claims the graph is linear. Which evidence from the data disproves this claim?",
+      "correct": "The increases in dilated time are not proportional to the increases in speed. Each successive stage shows a larger jump in time for a smaller change in speed.",
+      "correctExplanation": "Stage 1→2 (Δv = 0.30c): Δt = 1.03 × 10⁻⁸ s. Stage 3→4 (Δv = 0.04c): Δt = 7.8 × 10⁻⁸ s. The time increase per unit speed increase grows dramatically.",
+      "distractors": [
+        { "answer": "The data cannot disprove linearity because only four points are given.", "explanation": "Four points are sufficient to show non-linearity when the ratios of Δt/Δv vary dramatically." },
+        { "answer": "The graph is actually linear, and the student's claim is correct.", "explanation": "The data clearly shows non-linear behaviour: larger time jumps for smaller speed changes at higher speeds." },
+        { "answer": "The data shows a linear trend up to 0.95c and non-linearity only beyond that.", "explanation": "The non-linearity is present at all stages, though it becomes more pronounced at higher speeds." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Two observers watch the same event. Observer A has a relative speed of 0.60c (γ = 1.25) and Observer B has a relative speed of 0.90c (γ = 2.29). If the proper time is 4.00 s, what is the ratio of B's dilated time to A's dilated time?",
+      "correct": "1.83",
+      "correctExplanation": "t_A = 1.25 × 4.00 = 5.00 s. t_B = 2.29 × 4.00 = 9.16 s. Ratio = 9.16/5.00 = 1.83.",
+      "distractors": [
+        { "answer": "1.50", "explanation": "The ratio is γ_B/γ_A = 2.29/1.25 = 1.83, not 1.50." },
+        { "answer": "2.29", "explanation": "This is γ_B, not the ratio of dilated times. The ratio is γ_B/γ_A." },
+        { "answer": "0.546", "explanation": "This is γ_A/γ_B = 1/1.83, the inverse of the correct ratio." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A student plots γ against v and draws a tangent line at v = 0.90c. They note the tangent is steep. If they draw a tangent at v = 0.99c, it would be:",
+      "correct": "much steeper, because γ changes even more rapidly at higher speeds",
+      "correctExplanation": "The derivative dγ/dv increases with v. At 0.99c, the rate of change of γ is far greater than at 0.90c, so the tangent is much steeper.",
+      "distractors": [
+        { "answer": "less steep, because the curve levels off near c", "explanation": "The curve does not level off. It becomes steeper as v → c." },
+        { "answer": "the same steepness, because the curve has constant gradient", "explanation": "The gradient increases with v. The tangent at 0.99c is much steeper than at 0.90c." },
+        { "answer": "horizontal, because γ reaches its maximum at 0.99c", "explanation": "γ has no maximum. It continues to increase without bound as v → c." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "An astronaut travels at 0.999c (γ = 22.4) and measures her trip as 1.00 year. Earth measures 22.4 years. If she could increase her speed to 0.9999c (γ = 70.7) and still measure 1.00 year, Earth would measure:",
+      "correct": "70.7 years",
+      "correctExplanation": "t = γt₀ = 70.7 × 1.00 = 70.7 years. The higher speed dramatically increases the dilated time.",
+      "distractors": [
+        { "answer": "22.4 years", "explanation": "This is the dilated time at 0.999c, not at 0.9999c." },
+        { "answer": "2.24 years", "explanation": "This divides by 10 instead of using γ = 70.7." },
+        { "answer": "1.00 year", "explanation": "This is the proper time measured by the astronaut, not the dilated time measured by Earth." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A student argues that 'doubling the speed always doubles the dilated time.' Using the data (at 0.45c: γ = 1.11; at 0.90c: γ = 2.29), evaluate this claim for a 1.00 s proper time.",
+      "correct": "The claim is false. Doubling the speed from 0.45c to 0.90c changes the dilated time from 1.11 s to 2.29 s — an increase of 2.06 times, not exactly 2.",
+      "correctExplanation": "Dilated time is proportional to γ, which is a non-linear function of v. Doubling v does not double γ.",
+      "distractors": [
+        { "answer": "The claim is correct because t = γt₀ is directly proportional to v.", "explanation": "t is proportional to γ, not to v. γ is a non-linear function of v." },
+        { "answer": "The claim is approximately correct and the difference is within experimental error.", "explanation": "The ratio 2.29/1.11 = 2.06, which differs from 2.00 by 3%. This is a systematic deviation, not experimental error." },
+        { "answer": "The claim is false because dilated time decreases when speed doubles.", "explanation": "Dilated time increases when speed increases. The claim is wrong about the factor, not the direction." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A particle accelerator increases γ from 10 to 100 for a particle with proper lifetime 5.00 × 10⁻⁸ s. By what factor does the dilated lifetime increase?",
+      "correct": "10",
+      "correctExplanation": "The dilated lifetime ratio is γ₂/γ₁ = 100/10 = 10. The dilated lifetime increases by a factor of 10.",
+      "distractors": [
+        { "answer": "90", "explanation": "This is the difference in γ values, not the ratio." },
+        { "answer": "100", "explanation": "This is the final γ, not the ratio of γ values." },
+        { "answer": "1000", "explanation": "This is the product of the γ values, not the ratio." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "An exam question shows a graph of dilated time versus speed that curves upward steeply near v = c. The student is asked to explain why the graph has this shape. Which explanation would receive full marks?",
+      "correct": "As speed increases, γ = 1/√(1 − v²/c²) increases, slowly at first then rapidly as v → c. Since t = γt₀, the dilated time mirrors this behaviour, rising steeply near c and approaching infinity.",
+      "correctExplanation": "A complete explanation links the shape to the Lorentz factor formula, notes the non-linear increase, and states that t → ∞ as v → c.",
+      "distractors": [
+        { "answer": "The graph is steep because time dilation is very large at high speeds.", "explanation": "This is correct but incomplete. A full explanation should reference the formula for γ and explain why γ increases non-linearly." },
+        { "answer": "The graph curves because the speed of light is very large.", "explanation": "The curve's shape is due to the mathematical form of γ, not simply the magnitude of c." },
+        { "answer": "The graph is exponential because γ grows exponentially with speed.", "explanation": "γ does not grow exponentially. It grows as 1/√(1 − v²/c²), which has a different shape than an exponential." }
+      ]
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the sentence about the rate of change of dilated time.",
+      "sentence": "Between 0.10c and 0.50c, the dilated time increases by a small amount. Between 0.90c and 0.99c, the increase is {{blank:1}} larger, even though the speed change is {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "much",
+          "correctExplanation": "The change in γ from 0.90c to 0.99c is about 4.80, compared to only 0.145 from 0.10c to 0.50c.",
+          "distractors": ["slightly", "equally"]
+        },
+        "2": {
+          "correct": "smaller",
+          "correctExplanation": "The speed change from 0.90c to 0.99c (0.09c) is smaller than from 0.10c to 0.50c (0.40c).",
+          "distractors": ["larger", "the same"]
+        }
+      }
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the sentence about the physical implication of increasing dilated time.",
+      "sentence": "As dilated time approaches infinity near v = c, it implies that a massive particle {{blank:1}} reach c because it would require infinite {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "cannot",
+          "correctExplanation": "Infinite dilated time corresponds to infinite energy, making it impossible for a massive particle to reach c.",
+          "distractors": ["can", "must"]
+        },
+        "2": {
+          "correct": "energy",
+          "correctExplanation": "Since Etot = γmc² and γ → ∞, infinite energy is needed to reach c.",
+          "distractors": ["time", "mass"]
+        }
+      }
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the sentence about using the trend to check calculations.",
+      "sentence": "If a student calculates that increasing speed from 0.90c to 0.95c decreases the dilated time, the answer is {{blank:1}} because the trend of dilated time with speed is always {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "wrong",
+          "correctExplanation": "Dilated time always increases with speed. A decrease would indicate a calculation error.",
+          "distractors": ["correct", "possible"]
+        },
+        "2": {
+          "correct": "increasing",
+          "correctExplanation": "Dilated time is a monotonically increasing function of speed: higher speed always gives a longer dilated time.",
+          "distractors": ["decreasing", "oscillating"]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "MC",
+      "question": "A researcher analyses data from a particle accelerator. At three speeds, the dilated lifetimes of identical particles are measured: v₁ = 0.90c (t₁ = 2.29t₀), v₂ = 0.99c (t₂ = 7.09t₀), v₃ = 0.999c (t₃ = 22.4t₀). The researcher notes that from v₁ to v₂ (Δv = 0.09c), Δt = 4.80t₀; from v₂ to v₃ (Δv = 0.009c), Δt = 15.3t₀. What does this reveal about the relationship between speed and dilated time near c?",
+      "correct": "Near c, a tenfold smaller speed change produces a threefold larger change in dilated time, demonstrating extreme non-linearity.",
+      "correctExplanation": "The speed change decreases by a factor of 10, yet the dilated time change increases by a factor of about 3. This accelerating behaviour is characteristic of the Lorentz factor divergence near c.",
+      "distractors": [
+        { "answer": "The relationship becomes approximately linear near c because the changes are proportional.", "explanation": "A linear relationship would give proportional changes. The data shows the opposite — smaller speed changes give larger time changes." },
+        { "answer": "The data is inconsistent with special relativity because the changes do not follow a regular pattern.", "explanation": "The data is entirely consistent with γ = 1/√(1 − v²/c²), which predicts exactly this non-linear acceleration." },
+        { "answer": "The non-linearity suggests measurement errors at speeds above 0.99c.", "explanation": "The non-linearity is predicted by the theory. It is a feature, not a measurement artefact." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A student is asked: 'If you could travel at 0.999999c, how long would a 1-year proper time appear to Earth observers?' The Lorentz factor is γ ≈ 707. The student answers: 'About 707 years.' They are then asked: 'What would happen if you increased to 0.9999999c (γ ≈ 2236)?' The dilated time would become:",
+      "correct": "approximately 2236 years, demonstrating that adding one more '9' roughly triples γ and the dilated time",
+      "correctExplanation": "Each additional 9 in 0.999...c roughly multiplies γ by √10 ≈ 3.16. From 707 to 2236 is a factor of 3.16, consistent with this pattern.",
+      "distractors": [
+        { "answer": "approximately 708 years, because adding one more 9 barely changes the speed", "explanation": "Although the speed change is tiny, γ increases dramatically. The dilated time more than triples." },
+        { "answer": "approximately 1414 years, because γ doubles with each additional 9", "explanation": "γ does not double with each additional 9. It increases by a factor of approximately √10 ≈ 3.16." },
+        { "answer": "infinity, because the speed is essentially equal to c", "explanation": "While very close to c, this speed still gives a finite γ of 2236, not infinity." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A student argues: 'The trend of increasing dilated time means that at v = 0.5c, time dilation is significant and cannot be ignored.' Evaluate this claim using the data γ(0.5c) = 1.15.",
+      "correct": "At v = 0.5c, the dilated time is 15% longer than proper time. Whether this is 'significant' depends on the precision required. For particle physics it matters; for everyday situations it is negligible.",
+      "correctExplanation": "γ = 1.15 means a 15% deviation from classical predictions. This is measurable in precision experiments but negligible in everyday life.",
+      "distractors": [
+        { "answer": "The claim is correct — 15% is always significant in physics.", "explanation": "Significance depends on context. 15% is large for precision measurements but negligible compared to most everyday uncertainties." },
+        { "answer": "The claim is incorrect — time dilation at 0.5c is negligibly small.", "explanation": "A 15% effect is not negligible in many physics contexts, such as particle accelerators and precision timing." },
+        { "answer": "The claim cannot be evaluated without knowing the proper time value.", "explanation": "The percentage difference (15%) is independent of the proper time value. It is a constant for a given speed." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A science fiction writer describes a character travelling at 0.99999c (γ ≈ 224). The character ages 1 year while 224 years pass on Earth. The writer then has the character accelerate to 0.999999c (γ ≈ 707), making 707 Earth years pass per character year. A physics reviewer notes that:",
+      "correct": "the numbers are approximately correct, but the acceleration itself would present extreme engineering challenges requiring enormous energy",
+      "correctExplanation": "The time dilation values are consistent with special relativity. However, accelerating to such speeds requires enormous energy (γmc² for total energy), which the story should acknowledge.",
+      "distractors": [
+        { "answer": "the numbers are wildly incorrect because time dilation does not produce such large effects", "explanation": "The numbers are correct. At γ = 707, one year for the traveller corresponds to 707 years on Earth." },
+        { "answer": "the scenario violates special relativity because humans cannot experience such extreme time dilation", "explanation": "Special relativity applies equally to all objects. The physics is correct; the engineering challenge is the issue." },
+        { "answer": "the numbers are correct, and no additional commentary is needed", "explanation": "While the numbers are correct, a physics reviewer should note the extreme energy requirements for such speeds." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A student examines the formula γ = 1/√(1 − v²/c²) and notes that as v → c, the term (1 − v²/c²) → 0, causing γ → ∞. They ask: 'Does dilated time actually become infinite, or does it just become very large?' The correct answer is:",
+      "correct": "Dilated time can become arbitrarily large for speeds close enough to c, but reaching exactly c is impossible, so infinite dilated time is never actually achieved.",
+      "correctExplanation": "For any speed v < c, γ is finite and so is the dilated time. However, γ can be made as large as desired by choosing v sufficiently close to c. True infinity requires v = c, which is unattainable for massive objects.",
+      "distractors": [
+        { "answer": "Dilated time reaches a maximum of about 10⁶ times the proper time and cannot increase further.", "explanation": "There is no maximum. Particle accelerators routinely achieve γ values of thousands, and higher values are possible in principle." },
+        { "answer": "Dilated time becomes exactly infinite at v = 0.999999c.", "explanation": "At any v < c, γ is finite. Infinity is a limit, not a value reached at any specific sub-light speed." },
+        { "answer": "Dilated time never becomes infinite because the formula breaks down near v = c.", "explanation": "The formula does not break down. It correctly predicts that γ → ∞ as v → c, and dilated time grows without bound." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "An advanced student derives that near v = c, the relationship between (1 − v/c) and γ is approximately γ ≈ 1/√(2(1 − v/c)). Using this, if v changes from 0.999c (1 − v/c = 0.001) to 0.9999c (1 − v/c = 0.0001), γ changes from approximately 22.4 to approximately 70.7. By what factor does the dilated time increase?",
+      "correct": "3.16, which equals √10",
+      "correctExplanation": "γ₂/γ₁ = √(0.001/0.0001) = √10 ≈ 3.16. Reducing (1 − v/c) by a factor of 10 increases γ by √10.",
+      "distractors": [
+        { "answer": "10, because (1 − v/c) decreased by a factor of 10", "explanation": "γ is proportional to 1/√(1 − v/c), so a factor of 10 decrease in (1 − v/c) gives a √10 increase in γ." },
+        { "answer": "100, because γ is proportional to 1/(1 − v/c)", "explanation": "γ is proportional to 1/√(1 − v/c), not 1/(1 − v/c). The square root reduces the factor." },
+        { "answer": "1.001, because the speed barely changed", "explanation": "The speed change is small in absolute terms, but the effect on γ is large because of the divergent nature of the formula near c." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Two graphs are shown: Graph A plots dilated time t versus speed v, and Graph B plots dilated time t versus Lorentz factor γ, both for the same fixed proper time. Which statement correctly compares the two graphs?",
+      "correct": "Graph A is a steep non-linear curve; Graph B is a straight line through the origin with gradient t₀.",
+      "correctExplanation": "t = γt₀. Plotted against v, the relationship is non-linear because γ is non-linear in v. Plotted against γ, the relationship is linear with gradient t₀.",
+      "distractors": [
+        { "answer": "Both graphs are straight lines because t = γt₀ is a linear equation.", "explanation": "t = γt₀ is linear in γ but non-linear in v. Only Graph B is a straight line." },
+        { "answer": "Both graphs are non-linear curves with different shapes.", "explanation": "Graph B (t vs γ) is a straight line because t is directly proportional to γ." },
+        { "answer": "Graph A is a straight line; Graph B is a non-linear curve.", "explanation": "This reverses the correct descriptions. t vs v is non-linear; t vs γ is linear." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A student says: 'At everyday speeds, the dilated time is so close to the proper time that we can say time dilation doesn't exist.' A more precise statement would be:",
+      "correct": "Time dilation exists at all speeds but is negligibly small at everyday speeds, becoming measurable only at a significant fraction of c.",
+      "correctExplanation": "At everyday speeds, γ ≈ 1 + ½(v/c)², with ½(v/c)² being extremely small (e.g., 10⁻¹² for a car). The effect exists but is unmeasurably small.",
+      "distractors": [
+        { "answer": "The student is correct — time dilation does not occur below a threshold speed.", "explanation": "There is no threshold speed. Time dilation occurs at any non-zero speed, however small." },
+        { "answer": "Time dilation is significant at all speeds, including walking speed.", "explanation": "At walking speed, the time dilation is about 10⁻¹⁶, which is far beyond any measurement capability." },
+        { "answer": "Time dilation only occurs for objects moving faster than 10% of c.", "explanation": "Time dilation occurs at all speeds. It is just very small below about 0.1c." }
+      ]
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the analysis of the scaling behaviour near c.",
+      "sentence": "Near c, γ ≈ 1/√(2(1 − v/c)). If (1 − v/c) decreases by a factor of 100 (e.g., from 0.01 to 0.0001), γ increases by a factor of {{blank:1}}, and the dilated time also increases by a factor of {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "10",
+          "correctExplanation": "γ ∝ 1/√(1 − v/c). If (1 − v/c) decreases by 100, γ increases by √100 = 10.",
+          "distractors": ["100", "50"]
+        },
+        "2": {
+          "correct": "10",
+          "correctExplanation": "Since t = γt₀ and t₀ is fixed, the dilated time increases by the same factor as γ.",
+          "distractors": ["100", "√10"]
+        }
+      }
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the sentence about the qualitative trend as a reasonableness check.",
+      "sentence": "When checking time dilation calculations, the dilated time should always be {{blank:1}} than the proper time, and it should {{blank:2}} as the relative speed increases.",
+      "blanks": {
+        "1": {
+          "correct": "longer",
+          "correctExplanation": "Dilated time t = γt₀ ≥ t₀ because γ ≥ 1.",
+          "distractors": ["shorter", "equal to"]
+        },
+        "2": {
+          "correct": "increase",
+          "correctExplanation": "As speed increases, γ increases, and t = γt₀ increases. A decrease would indicate an error.",
+          "distractors": ["decrease", "stay constant"]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "id": "rms-values-and-power",
+  "name": "RMS Values and Power",
+  "icon": "⚡",
+  "what": "This subtopic covers the root-mean-square (rms) values of AC voltage and current, how they relate to peak values, and how to calculate the effective power delivered by an AC supply to a resistive load.",
+  "why": "The rms value is the most practically useful way to express AC voltage and current because it allows direct comparison with DC values in terms of power delivery. All AC ratings on appliances, power bills, and the mains supply use rms values.",
+  "items": [
+    {
+      "id": 1,
+      "uuid": "lp-7968e828-3e36-af2d-99e6-480fc4bd28dc",
+      "version": 1,
+      "title": "I can explain what rms voltage means and why it is used instead of the average AC voltage",
+      "code": "6A.3a",
+      "what": "The rms (root-mean-square) voltage is the effective value of an AC voltage — the DC voltage that would deliver the same power to a resistive load. The mathematical average of a full AC cycle is zero, because positive and negative halves cancel, so rms is used instead.",
+      "why": "Without rms, we would have no sensible way to describe how much power an AC supply delivers. The rms value gives AC a practical, comparable meaning alongside DC values and is what all appliance ratings use.",
+      "example": "The mains supply is described as 230 V AC. This means 230 Vrms — it delivers the same power to a heater as a 230 V DC supply would. The actual voltage swings between +325 V and -325 V.",
+      "contentHash": "hash-d927c6e0"
+    },
+    {
+      "id": 2,
+      "uuid": "lp-1212eb37-95e1-c713-452e-c40aeb6bc5e7",
+      "version": 1,
+      "title": "I can calculate rms voltage from peak voltage using Vrms = Vp / √2",
+      "code": "6A.3b",
+      "what": "For a sinusoidal AC supply, the rms voltage is always smaller than the peak voltage by a factor of √2 (approximately 1.414). The formula is Vrms = Vp / √2, or equivalently, Vp = Vrms × √2.",
+      "why": "This formula is used in almost every AC calculation in this topic. It allows you to move between the peak value (which appears on oscilloscope traces and in power calculations) and the rms value (which is quoted on appliances and power supplies).",
+      "example": "A power supply is labelled 20 Vrms. The peak voltage is Vp = 20 × √2 = 28.3 V. This is the maximum voltage shown on an oscilloscope connected to this supply.",
+      "contentHash": "hash-d414f6ea"
+    },
+    {
+      "id": 3,
+      "uuid": "lp-71ccdc2a-b99e-2d4f-5d91-e15e45923848",
+      "version": 1,
+      "title": "I can calculate rms current from peak current using Irms = Ip / √2",
+      "code": "6A.3c",
+      "what": "The same relationship applies to current as to voltage: Irms = Ip / √2. In a resistive circuit, the current and voltage waveforms are in phase, so both peak and rms values follow the same mathematical relationship.",
+      "why": "Rms current is needed to calculate the effective power consumed by a device and to compare with DC current ratings. It is essential in transformer and transmission calculations.",
+      "example": "An AC circuit has a peak current of Ip = 5.0 A. The rms current is Irms = 5.0 / √2 = 3.54 A. This is the current that would be measured by an AC ammeter in the circuit.",
+      "contentHash": "hash-c926428f"
+    },
+    {
+      "id": 4,
+      "uuid": "lp-3f0c8b79-dfb5-4ed1-71cd-31393f9a740d",
+      "version": 1,
+      "title": "I can calculate effective (rms) power using Peff = Vrms × Irms = (1/2) × Vp × Ip",
+      "code": "6A.3d",
+      "what": "The effective power dissipated in a resistive AC circuit is found using rms values: Peff = Vrms × Irms. This is equal to half the peak power: Peff = (1/2) × Vp × Ip. Both forms give the same result.",
+      "why": "Power calculations are central to understanding energy use and transmission losses. Using rms values gives the average power actually delivered over time, which is what matters for heating, lighting, and motors.",
+      "example": "A 100 Ω resistor is connected to a supply of Vrms = 20 V. The rms current is Irms = 20 / 100 = 0.20 A. The effective power is Peff = 20 × 0.20 = 4.0 W. Alternatively, Vp = 28.3 V, Ip = 0.283 A, and Peff = (1/2) × 28.3 × 0.283 = 4.0 W.",
+      "contentHash": "hash-cbc639f4"
+    },
+    {
+      "id": 5,
+      "uuid": "lp-2977452b-1607-df02-3e08-a7f240762665",
+      "version": 1,
+      "title": "I can explain that Vrms AC and equal-value DC produce the same power in a resistive component",
+      "code": "6A.3e",
+      "what": "A 230 Vrms AC supply delivers exactly the same average power to a resistive load (such as a heater or light globe) as a 230 V DC supply. This is the defining property of rms values.",
+      "why": "This equivalence is why rms is the standard for quoting AC voltages and currents. It allows direct comparison of AC and DC systems and forms the basis of how all AC appliances are rated.",
+      "example": "A 1000 W electric jug connected to 230 Vrms AC draws the same average power as if it were connected to a 230 V DC supply. The jug heats water at the same rate in both cases.",
+      "contentHash": "hash-da8af007"
+    }
+  ]
+}

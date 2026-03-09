@@ -1,0 +1,575 @@
+{
+  "_link": {
+    "uuid": "lp-19296d7a-b009-577a-3083-3ff1f66e1009",
+    "version": 1,
+    "contentHash": "hash-342b46aa",
+    "title": "I can calculate the induced current from a DC generator using Ohm's law",
+    "generatedAt": "2026-03-07T12:15:00Z"
+  },
+  "toLevel2": [
+    {
+      "type": "mc",
+      "question": "Which formula is used to calculate the induced current from a DC generator when the emf and external resistance are known?",
+      "correct": "I = emf / R",
+      "correctExplanation": "Ohm's law states that the current equals the emf divided by the total resistance of the circuit.",
+      "distractors": [
+        { "answer": "I = R / emf", "explanation": "This inverts the relationship; current equals emf divided by resistance, not resistance divided by emf." },
+        { "answer": "I = emf x R", "explanation": "Multiplying emf by resistance gives the wrong quantity; current is found by dividing emf by resistance." },
+        { "answer": "I = emf - R", "explanation": "Subtraction is not the correct operation; Ohm's law requires division of emf by resistance." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A DC generator produces an emf of 12 V and is connected to a 4.0 ohm external resistor. Which one of the following is closest to the induced current?",
+      "correct": "3.0 A",
+      "correctExplanation": "Using Ohm's law: I = emf / R = 12 / 4.0 = 3.0 A.",
+      "distractors": [
+        { "answer": "48 A", "explanation": "This results from multiplying emf by resistance instead of dividing." },
+        { "answer": "0.33 A", "explanation": "This results from dividing resistance by emf (R / emf) instead of emf / R." },
+        { "answer": "16 A", "explanation": "This results from adding emf and resistance; the correct operation is division." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A DC generator has an average emf of 6.0 V. If the external resistance is doubled from 3.0 ohm to 6.0 ohm, what happens to the current?",
+      "correct": "The current is halved from 2.0 A to 1.0 A",
+      "correctExplanation": "By Ohm's law, current is inversely proportional to resistance. Doubling the resistance halves the current: I = 6.0 / 6.0 = 1.0 A.",
+      "distractors": [
+        { "answer": "The current doubles from 2.0 A to 4.0 A", "explanation": "Doubling resistance decreases current; current is inversely proportional to resistance." },
+        { "answer": "The current remains at 2.0 A regardless of resistance change", "explanation": "Current depends on resistance; changing resistance changes the current." },
+        { "answer": "The current decreases to zero because the circuit cannot handle higher resistance", "explanation": "The circuit still functions at higher resistance; the current decreases but does not reach zero." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A DC generator produces an emf of 3.2 x 10 to the negative 4 V and is connected to a 0.50 ohm resistor. Which one of the following is closest to the induced current?",
+      "correct": "6.4 x 10 to the negative 4 A",
+      "correctExplanation": "I = emf / R = 3.2 x 10 to the negative 4 / 0.50 = 6.4 x 10 to the negative 4 A.",
+      "distractors": [
+        { "answer": "1.6 x 10 to the negative 4 A", "explanation": "This results from multiplying the emf by the resistance instead of dividing." },
+        { "answer": "6.4 x 10 to the negative 2 A", "explanation": "This error arises from incorrect handling of the powers of ten in the calculation." },
+        { "answer": "3.2 x 10 to the negative 4 A", "explanation": "This is the emf value, not the current; the current requires dividing by the resistance." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "For a current to flow from a DC generator, which one of the following conditions must be met in addition to the coil rotating in the magnetic field?",
+      "correct": "There must be a complete external circuit connected to the generator output terminals",
+      "correctExplanation": "An emf is induced whenever the coil rotates, but a current can only flow if there is a complete circuit path through an external load.",
+      "distractors": [
+        { "answer": "The coil must be rotating faster than a minimum threshold speed", "explanation": "Any rotation speed produces an emf; there is no minimum speed required for current to flow." },
+        { "answer": "The magnetic field must be alternating rather than constant between the poles", "explanation": "A constant field is sufficient; the changing flux arises from the coil rotation, not field variation." },
+        { "answer": "The external resistance must be exactly equal to the internal coil resistance", "explanation": "Current flows for any resistance value; matching resistances maximises power transfer but is not required for current." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "The induced current from a DC generator increases when the external resistance decreases, assuming the emf remains constant.",
+      "correct": "True",
+      "correctExplanation": "By Ohm's law, I = emf / R. If the emf is constant and R decreases, the current I increases.",
+      "distractors": [
+        { "answer": "False", "explanation": "Students may confuse direct and inverse proportionality; current is inversely proportional to resistance." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "If a DC generator is not connected to an external circuit, no emf is produced in the coil.",
+      "correct": "False",
+      "correctExplanation": "An emf is always induced when the coil rotates in a magnetic field, regardless of whether an external circuit is connected. Without a circuit, no current flows, but the emf still exists.",
+      "distractors": [
+        { "answer": "True", "explanation": "Students may confuse emf with current; the emf is induced by the changing flux and exists even in an open circuit." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the Ohm's law calculation for a generator.",
+      "sentence": "The induced current equals the {{blank:1}} divided by the total {{blank:2}} of the external circuit.",
+      "blanks": {
+        "1": {
+          "correct": "emf",
+          "correctExplanation": "Ohm's law for a generator circuit states I = emf / R, where emf is the induced electromotive force.",
+          "distractors": [
+            { "answer": "resistance", "explanation": "Dividing resistance by something does not give current; the emf must be in the numerator." },
+            { "answer": "power", "explanation": "Power divided by resistance gives V squared / R, not current; the correct numerator is emf." }
+          ]
+        },
+        "2": {
+          "correct": "resistance",
+          "correctExplanation": "The total resistance in the denominator determines how much current the emf can drive through the circuit.",
+          "distractors": [
+            { "answer": "voltage", "explanation": "Dividing emf by voltage is not Ohm's law; resistance must be in the denominator." },
+            { "answer": "current", "explanation": "Current is the quantity being calculated; it cannot appear in the denominator of its own formula." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the calculation.",
+      "sentence": "A generator with an emf of 24 V connected to a 6.0 ohm resistor produces a current of {{blank:1}} A.",
+      "blanks": {
+        "1": {
+          "correct": "4.0",
+          "correctExplanation": "I = emf / R = 24 / 6.0 = 4.0 A.",
+          "distractors": [
+            { "answer": "144", "explanation": "This results from multiplying 24 by 6.0 instead of dividing." },
+            { "answer": "0.25", "explanation": "This results from dividing resistance by emf (6.0 / 24) instead of emf / R." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about current and resistance.",
+      "sentence": "If the emf of a generator is held constant, increasing the external resistance will {{blank:1}} the induced current because current is {{blank:2}} proportional to resistance.",
+      "blanks": {
+        "1": {
+          "correct": "decrease",
+          "correctExplanation": "By Ohm's law, current equals emf divided by resistance, so increasing resistance decreases current.",
+          "distractors": [
+            { "answer": "increase", "explanation": "Increasing resistance reduces current, not increases it." },
+            { "answer": "not change", "explanation": "Current depends directly on resistance; changing resistance changes the current." }
+          ]
+        },
+        "2": {
+          "correct": "inversely",
+          "correctExplanation": "I = emf / R shows that current and resistance are inversely proportional when emf is constant.",
+          "distractors": [
+            { "answer": "directly", "explanation": "Direct proportionality would mean current increases with resistance, which contradicts Ohm's law." },
+            { "answer": "not", "explanation": "Current is clearly dependent on resistance; it is inversely proportional." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "mc",
+      "question": "Why must the induced emf be calculated first before the current can be determined in a DC generator circuit?",
+      "correct": "The emf is the driving voltage in the circuit; without knowing it, Ohm's law cannot be applied to find the current",
+      "correctExplanation": "The emf, calculated from Faraday's law using the rate of change of flux, provides the voltage needed in Ohm's law (I = emf / R) to determine the current.",
+      "distractors": [
+        { "answer": "The current must always equal the emf in a generator circuit by definition", "explanation": "Current and emf are different quantities with different units; they are related through resistance by Ohm's law." },
+        { "answer": "The resistance of the circuit changes depending on the emf value produced", "explanation": "The external resistance is fixed by the circuit components; it does not change with the emf." },
+        { "answer": "The emf determines the direction of the magnetic field in the generator", "explanation": "The magnetic field is provided by permanent magnets and is independent of the induced emf." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A DC generator produces a peak emf of 8.0 V when connected to a 2.0 ohm external resistor. What is the peak current, and how does this relate to the average current?",
+      "correct": "The peak current is 4.0 A, and the average current is less than the peak because the emf varies sinusoidally",
+      "correctExplanation": "Peak current = 8.0 / 2.0 = 4.0 A. Since the DC output is pulsating (not constant), the average current is less than the peak value.",
+      "distractors": [
+        { "answer": "The peak current is 4.0 A and equals the average current because the output is DC", "explanation": "Pulsating DC is not constant; the emf varies between zero and the peak, so the average is less than the peak." },
+        { "answer": "The peak current is 16 A because current and emf are multiplied in DC circuits", "explanation": "This results from multiplying emf and resistance instead of dividing; I = emf / R = 4.0 A." },
+        { "answer": "The peak current is 0.25 A because the resistance limits the maximum current achievable", "explanation": "0.25 A results from dividing R by emf; the correct calculation is emf / R = 4.0 A." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student calculates the average emf of a DC generator to be 2.4 V using Faraday's law. The generator is connected to two 6.0 ohm resistors in series. Which one of the following is closest to the average current?",
+      "correct": "0.20 A",
+      "correctExplanation": "Total resistance = 6.0 + 6.0 = 12 ohm. I = emf / R = 2.4 / 12 = 0.20 A.",
+      "distractors": [
+        { "answer": "0.40 A", "explanation": "This results from using only one resistor (2.4 / 6.0) instead of the total series resistance." },
+        { "answer": "14.4 A", "explanation": "This results from multiplying emf by resistance rather than dividing." },
+        { "answer": "28.8 A", "explanation": "This results from multiplying emf by total resistance (2.4 x 12) instead of dividing." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Explain why the instantaneous current from a DC generator varies with time even though it is always in the same direction.",
+      "correct": "The emf varies sinusoidally as the coil rotates, so by Ohm's law the current must also vary while remaining positive",
+      "correctExplanation": "The pulsating DC emf produces a pulsating DC current. The split ring commutator ensures both are always positive, but both vary between zero and their peak values.",
+      "distractors": [
+        { "answer": "The resistance of the external circuit fluctuates as current passes through it", "explanation": "The resistance of a standard resistor is constant; the varying current is due to the varying emf." },
+        { "answer": "The commutator periodically blocks current flow at two positions per rotation", "explanation": "While brief gaps may occur, the primary cause of variation is the sinusoidal emf from the rotating coil." },
+        { "answer": "The magnetic field oscillates in strength, causing the emf and current to fluctuate", "explanation": "The magnetic field is constant; the emf variation comes from the changing flux through the rotating coil." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A DC generator with an internal coil resistance of 2.0 ohm produces an emf of 10 V and is connected to an external load of 8.0 ohm. Which one of the following is closest to the current in the circuit?",
+      "correct": "1.0 A",
+      "correctExplanation": "The total circuit resistance is the sum of internal and external: 2.0 + 8.0 = 10 ohm. I = emf / R_total = 10 / 10 = 1.0 A.",
+      "distractors": [
+        { "answer": "1.25 A", "explanation": "This results from using only the external resistance (10 / 8.0) without including the internal resistance." },
+        { "answer": "5.0 A", "explanation": "This results from using only the internal resistance (10 / 2.0) without including the external load." },
+        { "answer": "0.80 A", "explanation": "This results from an arithmetic error; the correct total resistance is 10 ohm, giving 1.0 A." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "How does the power dissipated in the external load of a DC generator relate to the current and resistance?",
+      "correct": "P = I squared times R, where I is the current through the load and R is the load resistance",
+      "correctExplanation": "The power dissipated in a resistor is given by P = I squared R. Since I = emf / R, the power can also be written as emf squared / R.",
+      "distractors": [
+        { "answer": "P = I / R, where power is the current divided by the resistance", "explanation": "Power is not current divided by resistance; the correct relationship is P = I squared R." },
+        { "answer": "P = R / I, where power increases with higher resistance for a given current", "explanation": "This formula is incorrect; power equals I squared times R, not R divided by I." },
+        { "answer": "P = I times R, which is equivalent to the emf of the generator", "explanation": "I times R gives the voltage across the resistor, not the power. Power requires I squared times R." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "When the internal resistance of a DC generator is significant, the voltage across the external load is less than the generated emf.",
+      "correct": "True",
+      "correctExplanation": "The voltage across the external load is V = emf - I times r_internal. The internal resistance causes a voltage drop, so the terminal voltage is less than the emf.",
+      "distractors": [
+        { "answer": "False", "explanation": "Students may assume the full emf appears across the load, but internal resistance reduces the terminal voltage." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the multi-step calculation process.",
+      "sentence": "To find the current from a DC generator, first calculate the {{blank:1}} using Faraday's law, then apply {{blank:2}} to find the current.",
+      "blanks": {
+        "1": {
+          "correct": "emf",
+          "correctExplanation": "Faraday's law gives the emf from the rate of change of magnetic flux: emf = N times delta flux / delta t.",
+          "distractors": [
+            { "answer": "current", "explanation": "Current is the quantity being sought; the emf must be calculated first using Faraday's law." },
+            { "answer": "resistance", "explanation": "Resistance is a property of the circuit components, not calculated from Faraday's law." }
+          ]
+        },
+        "2": {
+          "correct": "Ohm's law",
+          "correctExplanation": "Ohm's law (I = emf / R) uses the emf from Faraday's law and the circuit resistance to determine the current.",
+          "distractors": [
+            { "answer": "Lenz's law", "explanation": "Lenz's law determines the direction of the induced emf, not the magnitude of the current." },
+            { "answer": "Coulomb's law", "explanation": "Coulomb's law describes electrostatic force between charges, not current in a circuit." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the calculation involving internal resistance.",
+      "sentence": "A generator with emf 10 V and internal resistance 2.0 ohm connected to an 8.0 ohm load delivers a current of {{blank:1}} A, and the voltage across the load is {{blank:2}} V.",
+      "blanks": {
+        "1": {
+          "correct": "1.0",
+          "correctExplanation": "Total resistance = 2.0 + 8.0 = 10 ohm. I = 10 / 10 = 1.0 A.",
+          "distractors": [
+            { "answer": "1.25", "explanation": "This results from ignoring the internal resistance: 10 / 8.0 = 1.25 A." },
+            { "answer": "5.0", "explanation": "This results from using only the internal resistance: 10 / 2.0 = 5.0 A." }
+          ]
+        },
+        "2": {
+          "correct": "8.0",
+          "correctExplanation": "V_load = I times R_load = 1.0 times 8.0 = 8.0 V. The remaining 2.0 V is dropped across the internal resistance.",
+          "distractors": [
+            { "answer": "10", "explanation": "10 V is the emf, not the terminal voltage; internal resistance reduces the voltage at the load." },
+            { "answer": "2.0", "explanation": "2.0 V is the voltage drop across the internal resistance, not the load voltage." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about power in a generator circuit.",
+      "sentence": "The power delivered to the external load equals the current {{blank:1}} multiplied by the load resistance, which can be written as P = I squared times {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "squared",
+          "correctExplanation": "Power is P = I squared times R, where the current is raised to the second power.",
+          "distractors": [
+            { "answer": "halved", "explanation": "Halving the current would not give the correct power formula; power depends on I squared." },
+            { "answer": "cubed", "explanation": "The power formula uses the square of the current, not the cube." }
+          ]
+        },
+        "2": {
+          "correct": "R",
+          "correctExplanation": "R is the resistance of the load through which the current flows, and P = I squared R gives the power dissipated in that load.",
+          "distractors": [
+            { "answer": "emf", "explanation": "P = I squared times R, not I squared times emf. The emf appears in V times I = emf times I for total power." },
+            { "answer": "I", "explanation": "Multiplying I squared by I would give I cubed, which is not the power formula." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "mc",
+      "question": "A DC generator coil of 200 turns and area 0.010 m squared rotates in a 0.40 T field. The coil rotates from parallel to perpendicular to the field in 0.050 s. The external resistance is 4.0 ohm. Which one of the following is closest to the average current?",
+      "correct": "4.0 A",
+      "correctExplanation": "Flux change = NBA = 200 times 0.40 times 0.010 = 0.80 Wb. Average emf = 0.80 / 0.050 = 16 V. I = 16 / 4.0 = 4.0 A.",
+      "distractors": [
+        { "answer": "16 A", "explanation": "16 V is the emf, not the current; the current requires dividing the emf by the resistance." },
+        { "answer": "0.80 A", "explanation": "0.80 Wb is the flux change, not the current; further calculations are needed." },
+        { "answer": "0.25 A", "explanation": "This results from dividing the resistance by the emf instead of emf by resistance." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Priya's DC generator produces an average emf of 6.0 V. She connects it to a 12 ohm resistor and measures the current. She then replaces the 12 ohm resistor with a 4.0 ohm resistor. Which one of the following correctly describes the change in current?",
+      "correct": "The current increases from 0.50 A to 1.5 A because the resistance decreased by a factor of three",
+      "correctExplanation": "I_1 = 6.0 / 12 = 0.50 A. I_2 = 6.0 / 4.0 = 1.5 A. Reducing resistance by a factor of 3 triples the current.",
+      "distractors": [
+        { "answer": "The current decreases from 0.50 A to 0.17 A because lower resistance reduces current", "explanation": "Lower resistance increases current, not decreases it; current is inversely proportional to resistance." },
+        { "answer": "The current remains at 0.50 A because the generator maintains constant current output", "explanation": "The generator produces a constant emf, not constant current; current changes with resistance." },
+        { "answer": "The current increases from 0.50 A to 6.0 A because the resistance drops below the emf", "explanation": "I = 6.0 / 4.0 = 1.5 A, not 6.0 A; the calculation requires proper application of Ohm's law." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Max builds a DC generator that produces a peak emf of 20 V. He connects it to a circuit containing a 5.0 ohm resistor and a 15 ohm resistor in series. Which one of the following is closest to the peak current?",
+      "correct": "1.0 A",
+      "correctExplanation": "Total resistance = 5.0 + 15 = 20 ohm. Peak current = 20 / 20 = 1.0 A.",
+      "distractors": [
+        { "answer": "4.0 A", "explanation": "This results from using only the 5.0 ohm resistor instead of the total series resistance." },
+        { "answer": "1.3 A", "explanation": "This results from using only the 15 ohm resistor instead of the total series resistance." },
+        { "answer": "0.050 A", "explanation": "This results from dividing resistance by emf instead of emf by resistance." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A DC generator with an internal resistance of 1.0 ohm produces an emf of 12 V. It is connected to an external lamp rated at 24 W, 12 V. Which one of the following is closest to the actual current through the lamp?",
+      "correct": "1.8 A",
+      "correctExplanation": "The lamp resistance at rated conditions is R = V squared / P = 144 / 24 = 6.0 ohm. Total resistance = 6.0 + 1.0 = 7.0 ohm. I = 12 / 7.0 = 1.7 A, closest to 1.8 A.",
+      "distractors": [
+        { "answer": "2.0 A", "explanation": "This is the rated current at 12 V (P / V = 24 / 12), but ignores the internal resistance that reduces the actual current." },
+        { "answer": "12 A", "explanation": "This results from dividing the emf by the internal resistance alone: 12 / 1.0 = 12 A." },
+        { "answer": "0.50 A", "explanation": "This results from an arithmetic error in calculating the lamp resistance or total circuit resistance." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Asha measures the current from a DC generator to be 2.0 A when connected to a 5.0 ohm resistor. She wants to determine the power delivered to the resistor. Which one of the following is closest to this power?",
+      "correct": "20 W",
+      "correctExplanation": "P = I squared times R = (2.0) squared times 5.0 = 4.0 times 5.0 = 20 W.",
+      "distractors": [
+        { "answer": "10 W", "explanation": "This results from using P = IR instead of P = I squared R." },
+        { "answer": "50 W", "explanation": "This results from using P = I times R squared instead of I squared times R." },
+        { "answer": "2.5 W", "explanation": "This results from dividing the resistance by the current squared instead of multiplying." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A DC generator is connected to two 10 ohm resistors in parallel. The generator emf is 8.0 V. Which one of the following is closest to the total current from the generator?",
+      "correct": "1.6 A",
+      "correctExplanation": "Parallel resistance = (10 times 10) / (10 + 10) = 5.0 ohm. I = 8.0 / 5.0 = 1.6 A.",
+      "distractors": [
+        { "answer": "0.80 A", "explanation": "This is the current through one 10 ohm resistor alone (8.0 / 10), not the total current." },
+        { "answer": "0.40 A", "explanation": "This results from using 20 ohm (series combination) instead of 5.0 ohm (parallel combination)." },
+        { "answer": "160 A", "explanation": "This results from multiplying emf by resistance by 2 instead of correctly combining parallel resistors." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Tom's DC generator produces an average emf of 4.0 V. He connects it to a 2.0 ohm resistor. He then doubles the rotation speed of the coil. Assuming the emf doubles, which one of the following is closest to the new current?",
+      "correct": "4.0 A",
+      "correctExplanation": "Doubled emf = 8.0 V. New current = 8.0 / 2.0 = 4.0 A. The original current was 4.0 / 2.0 = 2.0 A.",
+      "distractors": [
+        { "answer": "2.0 A", "explanation": "This is the original current; doubling the emf doubles the current to 4.0 A." },
+        { "answer": "8.0 A", "explanation": "8.0 V is the new emf, not the current; I = 8.0 / 2.0 = 4.0 A." },
+        { "answer": "1.0 A", "explanation": "This would result from doubling the resistance instead of the emf." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the multi-step generator calculation.",
+      "sentence": "A 100-turn coil of area 0.020 m squared rotates in a 0.50 T field. During a quarter turn in 0.025 s, the average emf is {{blank:1}} V, and the current through a 5.0 ohm load is {{blank:2}} A.",
+      "blanks": {
+        "1": {
+          "correct": "40",
+          "correctExplanation": "Flux change = 100 times 0.50 times 0.020 = 1.0 Wb. emf = 1.0 / 0.025 = 40 V.",
+          "distractors": [
+            { "answer": "1.0", "explanation": "1.0 Wb is the flux change, not the emf; dividing by the time gives 40 V." },
+            { "answer": "0.025", "explanation": "0.025 s is the time interval, not the emf." }
+          ]
+        },
+        "2": {
+          "correct": "8.0",
+          "correctExplanation": "I = emf / R = 40 / 5.0 = 8.0 A.",
+          "distractors": [
+            { "answer": "200", "explanation": "This results from multiplying emf by resistance (40 times 5.0) instead of dividing." },
+            { "answer": "0.13", "explanation": "This results from dividing resistance by emf (5.0 / 40) instead of emf / R." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the power calculation.",
+      "sentence": "A generator delivers 3.0 A to a 4.0 ohm load. The power dissipated in the load is {{blank:1}} W, and the voltage across the load is {{blank:2}} V.",
+      "blanks": {
+        "1": {
+          "correct": "36",
+          "correctExplanation": "P = I squared times R = 9.0 times 4.0 = 36 W.",
+          "distractors": [
+            { "answer": "12", "explanation": "This results from using P = IR instead of P = I squared R." },
+            { "answer": "7.0", "explanation": "This results from adding I and R; power requires multiplication of I squared and R." }
+          ]
+        },
+        "2": {
+          "correct": "12",
+          "correctExplanation": "V = IR = 3.0 times 4.0 = 12 V.",
+          "distractors": [
+            { "answer": "36", "explanation": "36 W is the power, not the voltage; V = IR = 12 V." },
+            { "answer": "1.3", "explanation": "This results from dividing resistance by current instead of multiplying." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the parallel resistance calculation.",
+      "sentence": "Two 10 ohm resistors in parallel have a combined resistance of {{blank:1}} ohm, so a generator with 20 V emf delivers a total current of {{blank:2}} A.",
+      "blanks": {
+        "1": {
+          "correct": "5.0",
+          "correctExplanation": "For two identical resistors in parallel: R_total = R / 2 = 10 / 2 = 5.0 ohm.",
+          "distractors": [
+            { "answer": "20", "explanation": "20 ohm would be the series combination; the parallel combination is 5.0 ohm." },
+            { "answer": "100", "explanation": "This results from multiplying the resistances without dividing by their sum." }
+          ]
+        },
+        "2": {
+          "correct": "4.0",
+          "correctExplanation": "I = emf / R_total = 20 / 5.0 = 4.0 A.",
+          "distractors": [
+            { "answer": "2.0", "explanation": "This is the current through each individual 10 ohm resistor, not the total current." },
+            { "answer": "1.0", "explanation": "This results from using the series resistance (20 ohm) instead of the parallel resistance." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "mc",
+      "question": "A DC generator with negligible internal resistance produces an emf of 12 V and is connected to a 6.0 ohm resistor. The rotation speed is then doubled. Analyse the effect on both the current and the power delivered to the resistor.",
+      "correct": "The current doubles to 4.0 A and the power quadruples to 96 W because power depends on the square of the current",
+      "correctExplanation": "Doubling speed doubles emf to 24 V. New I = 24 / 6.0 = 4.0 A (doubled). New P = 4.0 squared times 6.0 = 96 W (quadrupled from 24 W).",
+      "distractors": [
+        { "answer": "Both current and power double because they are both directly proportional to emf", "explanation": "Current doubles, but power depends on I squared, so it quadruples when current doubles." },
+        { "answer": "The current doubles but the power remains constant because the resistance is unchanged", "explanation": "Power equals I squared R; doubling the current quadruples the power even with constant resistance." },
+        { "answer": "The current and power both quadruple because doubling the speed quadruples the rate of flux change", "explanation": "Doubling speed doubles the emf (and current), not quadruples. Power quadruples because P is proportional to I squared." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An engineer needs a DC generator to deliver maximum power to a fixed external load. The generator has significant internal resistance. Analyse what condition maximises power transfer to the load.",
+      "correct": "Maximum power transfer occurs when the external load resistance equals the internal resistance of the generator",
+      "correctExplanation": "This is the maximum power transfer theorem. When R_load = r_internal, the power delivered to the load is maximised, though the efficiency is only 50 percent.",
+      "distractors": [
+        { "answer": "Maximum power transfer occurs when the load resistance is as large as possible", "explanation": "Very large load resistance reduces current to near zero, delivering minimal power to the load." },
+        { "answer": "Maximum power transfer occurs when the load resistance is zero (a short circuit)", "explanation": "Zero load resistance maximises current but delivers zero power to the load (all power in internal resistance)." },
+        { "answer": "The load resistance has no effect on power transfer as long as the emf remains constant", "explanation": "Load resistance directly affects both current and power distribution between internal and external components." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student measures the current from a DC generator at different rotation speeds and plots current versus rotation speed. Assuming constant external resistance and negligible internal resistance, analyse the expected shape of this graph.",
+      "correct": "A straight line through the origin because both emf and current are directly proportional to rotation speed",
+      "correctExplanation": "The emf is proportional to the rate of flux change, which is proportional to rotation speed. Since I = emf / R and R is constant, current is also proportional to speed.",
+      "distractors": [
+        { "answer": "A curve that levels off at high speeds because the current reaches a maximum value", "explanation": "With constant resistance and no saturation effects, current continues to increase linearly with speed." },
+        { "answer": "A curve that increases exponentially because faster rotation amplifies the electromagnetic effect", "explanation": "The relationship is linear, not exponential; emf and current are directly proportional to speed." },
+        { "answer": "A horizontal line because the current is determined by resistance alone, not rotation speed", "explanation": "Current depends on both emf (which varies with speed) and resistance; it is not independent of speed." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A DC generator with internal resistance 0.50 ohm produces an emf of 6.0 V. It is connected to an external load. Evaluate how much power is lost internally when the load resistance is 2.5 ohm.",
+      "correct": "The internal power loss is 6.0 W because 2.0 A flows through 0.50 ohm internal resistance",
+      "correctExplanation": "Total R = 0.50 + 2.5 = 3.0 ohm. I = 6.0 / 3.0 = 2.0 A. Internal power loss = I squared times r = 4.0 times 0.50 = 2.0 W.",
+      "distractors": [
+        { "answer": "The internal power loss is zero because generators do not have internal resistance losses", "explanation": "All real generators have internal resistance; the power lost is I squared times r_internal." },
+        { "answer": "The internal power loss is 12 W because all the generated power is dissipated internally", "explanation": "Total power = emf times I = 6.0 times 2.0 = 12 W, but most goes to the load (10 W), not internally (2.0 W)." },
+        { "answer": "The internal power loss is 72 W because power depends on emf squared divided by internal resistance", "explanation": "The current must be calculated using total resistance, not just internal resistance." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Analyse why connecting a very low resistance load to a DC generator can damage the generator.",
+      "correct": "Very low resistance allows excessive current to flow, causing overheating of the coil and commutator due to I squared R losses",
+      "correctExplanation": "With very low external resistance, the current approaches emf / r_internal, which can be very large. The resulting I squared R heating in the coil and at the brush contacts can damage the generator.",
+      "distractors": [
+        { "answer": "Low resistance causes the magnetic field to reverse, damaging the permanent magnets", "explanation": "The external resistance does not affect the permanent magnets; the damage is from excessive current heating." },
+        { "answer": "Low resistance causes the emf to increase beyond the generator's rated voltage", "explanation": "The emf is determined by the rate of flux change, not the load resistance; it remains constant." },
+        { "answer": "Low resistance causes the coil to rotate backwards, damaging the mechanical components", "explanation": "The coil rotation direction is determined by the mechanical input; low load resistance does not reverse rotation." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student connects a DC generator to a variable resistor and measures both current and voltage across the load at several resistance settings. They plot terminal voltage versus current. Analyse the expected shape and slope of this graph.",
+      "correct": "A straight line with negative slope equal to the internal resistance, where V = emf minus I times r_internal",
+      "correctExplanation": "As current increases (lower load resistance), more voltage is dropped across the internal resistance, reducing the terminal voltage linearly. The y-intercept is the emf and the slope is negative r_internal.",
+      "distractors": [
+        { "answer": "A horizontal line at the emf value because the terminal voltage does not change with current", "explanation": "Internal resistance causes a voltage drop that increases with current, reducing the terminal voltage." },
+        { "answer": "A curve that increases with current because higher current produces more voltage", "explanation": "The relationship is linear with negative slope; higher current reduces terminal voltage due to internal resistance." },
+        { "answer": "A vertical line because changing load resistance does not affect the operating point", "explanation": "Both current and voltage change as load resistance varies, producing a line with finite negative slope." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A DC generator produces 100 W of electrical power at 10 V emf. A student claims that adding a second identical generator in series would deliver 200 W to the same load. Evaluate this claim.",
+      "correct": "The claim is incorrect: the total emf doubles to 20 V, but the current and power depend on the total resistance, and power quadruples rather than doubles",
+      "correctExplanation": "Doubling emf doubles the current (if resistance is unchanged), and power = emf times I, so power quadruples. However, this assumes the load can handle the increased current and voltage.",
+      "distractors": [
+        { "answer": "The claim is correct because two generators produce exactly twice the power of one", "explanation": "Power depends on emf squared over R; doubling emf quadruples the power, not doubles it." },
+        { "answer": "The claim is incorrect because generators in series cancel each other out", "explanation": "Series generators add their emfs; they do not cancel. The power increases, but not simply by doubling." },
+        { "answer": "The claim is correct provided the generators rotate at exactly the same speed", "explanation": "Even at the same speed, the power does not simply double; it depends on the squared relationship of emf to power." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A DC generator is used to charge a 12 V battery through a 2.0 ohm resistor. The generator produces an emf of 16 V. Analyse the charging current and determine the power delivered to the battery.",
+      "correct": "The charging current is 2.0 A and the power delivered to the battery is 24 W",
+      "correctExplanation": "Net voltage driving current = emf minus battery voltage = 16 - 12 = 4.0 V. I = 4.0 / 2.0 = 2.0 A. Power to battery = V_battery times I = 12 times 2.0 = 24 W.",
+      "distractors": [
+        { "answer": "The charging current is 8.0 A and the power is 96 W", "explanation": "8.0 A results from ignoring the battery voltage: 16 / 2.0 = 8.0. The battery opposes the generator emf." },
+        { "answer": "The charging current is 2.0 A and the power is 32 W", "explanation": "32 W = emf times I = 16 times 2.0, which is the total power. The power to the battery is V_battery times I = 24 W." },
+        { "answer": "No current flows because the battery voltage opposes the generator emf", "explanation": "The generator emf (16 V) exceeds the battery voltage (12 V), so current does flow to charge the battery." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the analysis of the speed-power relationship.",
+      "sentence": "When the rotation speed of a DC generator is doubled, the emf {{blank:1}} and the power delivered to a fixed load {{blank:2}}, assuming negligible internal resistance.",
+      "blanks": {
+        "1": {
+          "correct": "doubles",
+          "correctExplanation": "The emf is proportional to the rate of flux change, which is proportional to rotation speed.",
+          "distractors": [
+            { "answer": "quadruples", "explanation": "The emf is directly proportional to speed, not proportional to speed squared." },
+            { "answer": "remains constant", "explanation": "The emf depends directly on the rate of flux change, which increases with speed." }
+          ]
+        },
+        "2": {
+          "correct": "quadruples",
+          "correctExplanation": "P = emf squared / R. Doubling the emf quadruples the power because power depends on the square of the voltage.",
+          "distractors": [
+            { "answer": "doubles", "explanation": "Power depends on emf squared, not emf; doubling emf quadruples the power." },
+            { "answer": "octuples", "explanation": "Power depends on emf squared, giving a factor of 4, not 8." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the analysis of terminal voltage.",
+      "sentence": "The terminal voltage of a generator equals the emf minus the voltage {{blank:1}} across the internal resistance, which increases with {{blank:2}} current.",
+      "blanks": {
+        "1": {
+          "correct": "drop",
+          "correctExplanation": "The internal resistance causes a voltage drop equal to I times r_internal, reducing the voltage available at the terminals.",
+          "distractors": [
+            { "answer": "gain", "explanation": "Internal resistance cannot create a voltage gain; it always causes a drop." },
+            { "answer": "spike", "explanation": "The voltage across internal resistance is steady (for steady current), not a spike." }
+          ]
+        },
+        "2": {
+          "correct": "increasing",
+          "correctExplanation": "V_drop = I times r_internal, so the voltage drop increases as the current increases, reducing the terminal voltage further.",
+          "distractors": [
+            { "answer": "decreasing", "explanation": "The voltage drop increases, not decreases, with increasing current." },
+            { "answer": "constant", "explanation": "The voltage drop is proportional to current and changes as current changes." }
+          ]
+        }
+      }
+    }
+  ]
+}

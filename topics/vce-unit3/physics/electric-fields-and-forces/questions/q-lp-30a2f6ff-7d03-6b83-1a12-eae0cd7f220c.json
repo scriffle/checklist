@@ -1,0 +1,503 @@
+{
+  "_link": {
+    "uuid": "lp-30a2f6ff-7d03-6b83-1a12-eae0cd7f220c",
+    "version": 1,
+    "contentHash": "hash-6986f110",
+    "title": "I can calculate the electric field strength due to a point charge using E = kQ/r²",
+    "generatedAt": "2026-03-05T08:00:00Z"
+  },
+  "toLevel2": [
+    {
+      "type": "mc",
+      "question": "What is the formula for the electric field strength due to a point charge Q at a distance r?",
+      "correct": "E = kQ/r²",
+      "correctExplanation": "The electric field strength at distance r from a point charge Q is given by E = kQ/r², where k is Coulomb's constant.",
+      "distractors": [
+        { "answer": "E = kQ/r", "explanation": "The field strength follows an inverse square law, depending on 1/r², not 1/r." },
+        { "answer": "E = kQ²/r²", "explanation": "The formula involves Q to the first power, not Q squared." },
+        { "answer": "E = kQr²", "explanation": "Field strength decreases with distance; it is inversely proportional to r², not directly proportional." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What is the value of Coulomb's constant k in the formula E = kQ/r²?",
+      "correct": "8.99 × 10⁹ N m² C⁻²",
+      "correctExplanation": "Coulomb's constant k has the value 8.99 × 10⁹ N m² C⁻² (often rounded to 9.0 × 10⁹).",
+      "distractors": [
+        { "answer": "6.67 × 10⁻¹¹ N m² kg⁻²", "explanation": "This is the gravitational constant G, not Coulomb's constant k." },
+        { "answer": "1.60 × 10⁻¹⁹ C", "explanation": "This is the elementary charge e, not Coulomb's constant." },
+        { "answer": "3.00 × 10⁸ m s⁻¹", "explanation": "This is the speed of light c, not Coulomb's constant." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What are the SI units of electric field strength?",
+      "correct": "N C⁻¹",
+      "correctExplanation": "Electric field strength is measured in newtons per coulomb (N C⁻¹), representing force per unit charge.",
+      "distractors": [
+        { "answer": "C N⁻¹", "explanation": "This is the inverse of the correct unit; electric field is force per charge, not charge per force." },
+        { "answer": "N m⁻¹", "explanation": "Newtons per metre is a unit of spring constant, not electric field strength." },
+        { "answer": "J C⁻¹", "explanation": "Joules per coulomb is the unit of electric potential (voltage), not electric field strength." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "From where is the distance r measured in the formula E = kQ/r²?",
+      "correct": "From the centre of the point charge",
+      "correctExplanation": "The distance r is measured from the centre of the charge to the point where the field is being calculated.",
+      "distractors": [
+        { "answer": "From the surface of the charged object", "explanation": "For a point charge, r is measured from the centre, not from any surface." },
+        { "answer": "From the nearest edge of the field", "explanation": "Electric fields have no defined edge; r is measured from the centre of the charge." },
+        { "answer": "From the midpoint between two charges", "explanation": "The midpoint is used in some problems, but r in E = kQ/r² is measured from the charge itself." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "How does the electric field strength change as you move further from a point charge?",
+      "correct": "It decreases following an inverse square law",
+      "correctExplanation": "E = kQ/r² shows that field strength is inversely proportional to the square of the distance: doubling r reduces E to one quarter.",
+      "distractors": [
+        { "answer": "It increases proportionally with distance", "explanation": "The field strength decreases with distance, not increases; E ∝ 1/r²." },
+        { "answer": "It remains constant at all distances", "explanation": "Only uniform fields (like between parallel plates) are constant; a point charge field decreases with 1/r²." },
+        { "answer": "It decreases linearly with distance", "explanation": "The decrease follows 1/r², not 1/r; it is an inverse square relationship." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "The formula E = kQ/r² gives the electric field strength at distance r from a point charge Q.",
+      "correct": "True",
+      "correctExplanation": "This is the standard formula for electric field strength due to a point charge, where k is Coulomb's constant.",
+      "distractors": [
+        { "answer": "False", "explanation": "Students may confuse this with Coulomb's force law F = kq₁q₂/r², but E = kQ/r² is the correct field strength formula." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "The electric field strength due to a point charge is directly proportional to the square of the distance from the charge.",
+      "correct": "False",
+      "correctExplanation": "The field strength is inversely proportional to the square of the distance (E ∝ 1/r²), not directly proportional.",
+      "distractors": [
+        { "answer": "True", "explanation": "Students may misread the formula; E = kQ/r² means E decreases as r increases, following an inverse square law." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the formula for electric field strength.",
+      "sentence": "The electric field strength due to a point charge is E = k{{blank:1}}/r².",
+      "blanks": {
+        "1": {
+          "correct": "Q",
+          "correctExplanation": "The formula is E = kQ/r², where Q is the magnitude of the point charge creating the field.",
+          "distractors": [
+            { "answer": "r", "explanation": "r is the distance from the charge, which appears in the denominator as r²; Q is in the numerator." },
+            { "answer": "E", "explanation": "E is the quantity being calculated; the source charge Q appears in the numerator." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about what r represents.",
+      "sentence": "In E = kQ/r², the variable r represents the {{blank:1}} from the centre of the point charge to the point of interest.",
+      "blanks": {
+        "1": {
+          "correct": "distance",
+          "correctExplanation": "r is the straight-line distance from the centre of the charge to the location where the field is being evaluated.",
+          "distractors": [
+            { "answer": "force", "explanation": "Force is not what r represents; r is the distance from the charge." },
+            { "answer": "radius", "explanation": "While r can represent a radius, in this context it specifically means the distance from the point charge to the point of interest." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the analogy between electric and gravitational fields.",
+      "sentence": "The formula E = kQ/r² for electric fields is directly analogous to {{blank:1}} = GM/r² for gravitational fields.",
+      "blanks": {
+        "1": {
+          "correct": "g",
+          "correctExplanation": "The gravitational field strength g = GM/r² has the same mathematical form as E = kQ/r², with mass M replacing charge Q and G replacing k.",
+          "distractors": [
+            { "answer": "F", "explanation": "F = GMm/r² is the gravitational force formula with two masses; the field strength formula uses g, not F." },
+            { "answer": "W", "explanation": "W represents work; the gravitational field strength is g = GM/r²." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "mc",
+      "question": "Calculate the electric field strength 2.0 m from a point charge of +3.0 × 10⁻⁶ C. (Use k = 9.0 × 10⁹ N m² C⁻²)",
+      "correct": "6.75 × 10³ N C⁻¹",
+      "correctExplanation": "E = kQ/r² = (9.0 × 10⁹ × 3.0 × 10⁻⁶) / (2.0)² = 27000/4 = 6750 = 6.75 × 10³ N C⁻¹.",
+      "distractors": [
+        { "answer": "2.7 × 10⁴ N C⁻¹", "explanation": "This uses r instead of r² in the denominator; the correct calculation divides by r² = 4, giving 6.75 × 10³." },
+        { "answer": "1.35 × 10⁴ N C⁻¹", "explanation": "This may result from using r = 2.0 instead of r² = 4.0 and an arithmetic error." },
+        { "answer": "6.75 × 10⁶ N C⁻¹", "explanation": "This has the wrong power of ten; check the exponents: 10⁹ × 10⁻⁶ = 10³." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Why does the formula E = kQ/r² apply to point charges but not to uniform fields between parallel plates?",
+      "correct": "A point charge field varies with distance, while the field between parallel plates is constant",
+      "correctExplanation": "E = kQ/r² describes a field that weakens with distance; between parallel plates, E = V/d is constant and does not depend on position.",
+      "distractors": [
+        { "answer": "E = kQ/r² only works for negative charges, not for plates", "explanation": "The formula works for both positive and negative point charges; it does not apply to plates because the field geometry is different." },
+        { "answer": "Parallel plates do not produce an electric field at all", "explanation": "Parallel plates do produce a uniform electric field between them; it is just described by a different formula." },
+        { "answer": "The constant k changes between point charges and parallel plates", "explanation": "Coulomb's constant k does not change; the different formula is due to the different field geometry." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "How does the electric field strength at 1.0 m from a point charge compare to the field strength at 3.0 m from the same charge?",
+      "correct": "The field at 1.0 m is 9 times stronger",
+      "correctExplanation": "E ∝ 1/r². The ratio is (3.0/1.0)² = 9, so the field at 1.0 m is 9 times stronger than at 3.0 m.",
+      "distractors": [
+        { "answer": "The field at 1.0 m is 3 times stronger", "explanation": "The field follows an inverse square law, not an inverse law; the factor is 3² = 9, not 3." },
+        { "answer": "The field at 3.0 m is 9 times stronger", "explanation": "The field is weaker at greater distance, not stronger; the field at 1.0 m is 9 times the field at 3.0 m." },
+        { "answer": "Both fields are equal in strength", "explanation": "The field strength depends on distance; at different distances, the field strengths differ." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A point charge creates an electric field of 400 N C⁻¹ at a certain distance. What is the field strength at double that distance?",
+      "correct": "100 N C⁻¹",
+      "correctExplanation": "Doubling the distance reduces the field by a factor of 2² = 4. So the new field is 400/4 = 100 N C⁻¹.",
+      "distractors": [
+        { "answer": "200 N C⁻¹", "explanation": "This halves the field, using 1/r instead of 1/r²; the correct factor is 1/4." },
+        { "answer": "800 N C⁻¹", "explanation": "Doubling the distance decreases the field; it does not double it." },
+        { "answer": "1600 N C⁻¹", "explanation": "The field decreases with distance; at double the distance, it is one quarter, not quadruple." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What does Q represent in the formula E = kQ/r²?",
+      "correct": "The magnitude of the source charge creating the field",
+      "correctExplanation": "Q is the charge that creates the electric field; E gives the field strength at distance r from this charge.",
+      "distractors": [
+        { "answer": "The test charge placed in the field", "explanation": "A test charge would be used to measure the field, but Q in E = kQ/r² is the source charge that creates it." },
+        { "answer": "The total charge of both interacting charges", "explanation": "E = kQ/r² involves only the source charge, not a sum of charges." },
+        { "answer": "The charge per unit area on a surface", "explanation": "Charge per unit area is surface charge density; Q here is the total point charge." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A charge of +5.0 μC creates an electric field. At what distance from the charge is the field strength 1.8 × 10⁵ N C⁻¹? (Use k = 9.0 × 10⁹ N m² C⁻²)",
+      "correct": "0.50 m",
+      "correctExplanation": "r² = kQ/E = (9.0 × 10⁹ × 5.0 × 10⁻⁶) / (1.8 × 10⁵) = 4.5 × 10⁴ / 1.8 × 10⁵ = 0.25. So r = √0.25 = 0.50 m.",
+      "distractors": [
+        { "answer": "1.0 m", "explanation": "At 1.0 m the field would be 4.5 × 10⁴ N C⁻¹, not 1.8 × 10⁵ N C⁻¹." },
+        { "answer": "0.25 m", "explanation": "At 0.25 m the field would be 7.2 × 10⁵ N C⁻¹, not 1.8 × 10⁵ N C⁻¹." },
+        { "answer": "2.0 m", "explanation": "At 2.0 m the field would be 1.125 × 10⁴ N C⁻¹, not 1.8 × 10⁵ N C⁻¹." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "The formula E = kQ/r² is analogous to the gravitational field formula g = GM/r².",
+      "correct": "True",
+      "correctExplanation": "Both formulas have the same mathematical structure: field strength equals a constant times a source quantity divided by the square of the distance.",
+      "distractors": [
+        { "answer": "False", "explanation": "Students may think the formulas are unrelated, but E = kQ/r² and g = GM/r² share the same inverse square structure." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the calculation.",
+      "sentence": "The electric field 0.50 m from a +4.0 × 10⁻⁶ C charge is E = (9.0 × 10⁹ × 4.0 × 10⁻⁶) / (0.50)² = {{blank:1}} N C⁻¹.",
+      "blanks": {
+        "1": {
+          "correct": "1.44 × 10⁵",
+          "correctExplanation": "E = (9.0 × 10⁹ × 4.0 × 10⁻⁶) / 0.25 = 36000 / 0.25 = 144000 = 1.44 × 10⁵ N C⁻¹.",
+          "distractors": [
+            { "answer": "7.2 × 10⁴", "explanation": "This may result from dividing by r instead of r²; the correct denominator is (0.50)² = 0.25." },
+            { "answer": "3.6 × 10⁴", "explanation": "This results from an error in the calculation; E = 36000/0.25 = 1.44 × 10⁵." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about inverse square dependence.",
+      "sentence": "When the distance from a point charge is tripled, the electric field strength becomes {{blank:1}} of its original value.",
+      "blanks": {
+        "1": {
+          "correct": "one ninth",
+          "correctExplanation": "E ∝ 1/r², so tripling r gives E_new = E/(3²) = E/9, one ninth of the original.",
+          "distractors": [
+            { "answer": "one third", "explanation": "The field follows 1/r², not 1/r; tripling distance gives 1/9, not 1/3." },
+            { "answer": "one sixth", "explanation": "The factor is 1/3² = 1/9; there is no factor of 1/6 in the inverse square law." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the comparison.",
+      "sentence": "In E = kQ/r², the constant k plays the same role as the constant {{blank:1}} in the gravitational field formula g = GM/r².",
+      "blanks": {
+        "1": {
+          "correct": "G",
+          "correctExplanation": "G (the universal gravitational constant) is analogous to k (Coulomb's constant); both are proportionality constants in their respective inverse square laws.",
+          "distractors": [
+            { "answer": "g", "explanation": "g is the gravitational field strength (analogous to E), not the constant; G is the constant analogous to k." },
+            { "answer": "M", "explanation": "M is the source mass (analogous to Q); the constant analogous to k is G." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "mc",
+      "question": "Two point charges, +Q at position A and +4Q at position B, are separated by distance d. At what distance from A along the line AB is the net electric field zero?",
+      "correct": "d/3 from A",
+      "correctExplanation": "At the zero-field point, kQ/x² = k(4Q)/(d−x)². Simplifying: (d−x)² = 4x², so d−x = 2x, giving x = d/3 from the smaller charge A.",
+      "distractors": [
+        { "answer": "d/2 from A", "explanation": "The midpoint would only be correct if the charges were equal; the zero point is closer to the smaller charge." },
+        { "answer": "2d/3 from A", "explanation": "2d/3 from A is d/3 from B, which places the point closer to the larger charge; the zero point must be closer to the smaller charge." },
+        { "answer": "d/4 from A", "explanation": "Solving kQ/x² = k4Q/(d−x)² gives x = d/3, not d/4." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A point charge creates a field of 800 N C⁻¹ at 0.30 m. Calculate the magnitude of the charge. (Use k = 9.0 × 10⁹ N m² C⁻²)",
+      "correct": "8.0 × 10⁻⁹ C",
+      "correctExplanation": "Q = Er²/k = (800 × 0.09) / (9.0 × 10⁹) = 72 / (9.0 × 10⁹) = 8.0 × 10⁻⁹ C.",
+      "distractors": [
+        { "answer": "2.4 × 10⁻⁸ C", "explanation": "This may result from using r instead of r²; Q = Er²/k = 800 × 0.09 / (9.0 × 10⁹) = 8.0 × 10⁻⁹ C." },
+        { "answer": "8.0 × 10⁻⁶ C", "explanation": "Check the exponents carefully: 800 × 0.09 = 72; 72/(9 × 10⁹) = 8.0 × 10⁻⁹, not 10⁻⁶." },
+        { "answer": "2.7 × 10⁻⁹ C", "explanation": "This may result from a calculation error; the correct answer is Q = 72/(9.0 × 10⁹) = 8.0 × 10⁻⁹ C." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "At a point in space, the electric field due to charge A alone is 600 N C⁻¹ to the right and the field due to charge B alone is 200 N C⁻¹ to the left. What is the net electric field at that point?",
+      "correct": "400 N C⁻¹ to the right",
+      "correctExplanation": "The fields are in opposite directions, so the net field is 600 − 200 = 400 N C⁻¹ in the direction of the larger field (to the right).",
+      "distractors": [
+        { "answer": "800 N C⁻¹ to the right", "explanation": "Fields in opposite directions subtract, not add; the net field is 600 − 200 = 400 N C⁻¹." },
+        { "answer": "400 N C⁻¹ to the left", "explanation": "The larger field is to the right, so the net field is to the right." },
+        { "answer": "200 N C⁻¹ to the right", "explanation": "The net field is 600 − 200 = 400 N C⁻¹, not 200 N C⁻¹." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student uses E = kQ/r² and gets E = 4.5 × 10⁵ N C⁻¹ for a charge at 1.0 m. Without recalculating, what is E at 0.50 m from the same charge?",
+      "correct": "1.8 × 10⁶ N C⁻¹",
+      "correctExplanation": "Halving the distance increases the field by a factor of (1.0/0.50)² = 4. So E = 4 × 4.5 × 10⁵ = 1.8 × 10⁶ N C⁻¹.",
+      "distractors": [
+        { "answer": "9.0 × 10⁵ N C⁻¹", "explanation": "This doubles the field, using 1/r instead of 1/r²; halving the distance quadruples the field." },
+        { "answer": "2.25 × 10⁵ N C⁻¹", "explanation": "Halving the distance increases the field, not decreases it." },
+        { "answer": "1.125 × 10⁵ N C⁻¹", "explanation": "This divides by 4 instead of multiplying; closer distance means stronger field." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which graph correctly represents the relationship between electric field strength E and distance r from a point charge?",
+      "correct": "A curve that starts high near the charge and decreases rapidly, approaching zero at large r",
+      "correctExplanation": "E ∝ 1/r² produces a curve that is steep near the charge and flattens out at large distances, never reaching zero but approaching it asymptotically.",
+      "distractors": [
+        { "answer": "A straight line with a negative gradient passing through the origin", "explanation": "A straight line would indicate a linear relationship; E ∝ 1/r² is a curve, not a straight line." },
+        { "answer": "A horizontal line showing constant field strength at all distances", "explanation": "A constant field describes a uniform field between plates, not a point charge field." },
+        { "answer": "A curve that starts at zero and increases with distance", "explanation": "The field is strongest near the charge and decreases with distance; it does not increase." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A point charge of +1.6 × 10⁻¹⁰ C creates an electric field. At what distance is the field strength equal to 9.0 N C⁻¹? (Use k = 9.0 × 10⁹ N m² C⁻²)",
+      "correct": "0.40 m",
+      "correctExplanation": "r² = kQ/E = (9.0 × 10⁹ × 1.6 × 10⁻¹⁰) / 9.0 = 1.44/9.0 = 0.16. So r = √0.16 = 0.40 m.",
+      "distractors": [
+        { "answer": "0.20 m", "explanation": "At 0.20 m the field would be 36 N C⁻¹, four times the target value." },
+        { "answer": "0.80 m", "explanation": "At 0.80 m the field would be 2.25 N C⁻¹, one quarter of the target value." },
+        { "answer": "1.6 m", "explanation": "At 1.6 m the field would be much weaker than 9.0 N C⁻¹." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Two identical positive charges are placed 1.0 m apart. Explain why the electric field at the midpoint is zero.",
+      "correct": "Each charge produces a field of equal magnitude at the midpoint, but in opposite directions, so they cancel",
+      "correctExplanation": "At the midpoint, both charges are equidistant. Their fields have equal magnitude (same Q and same r) but point in opposite directions (away from each respective positive charge), so the net field is zero.",
+      "distractors": [
+        { "answer": "The charges are too far apart to produce any field at the midpoint", "explanation": "Both charges do produce fields at the midpoint; the fields cancel because they are equal and opposite." },
+        { "answer": "Positive charges do not create electric fields, only negative charges do", "explanation": "All charges create electric fields; positive charges produce outward-pointing fields." },
+        { "answer": "The fields add together to double the field strength at the midpoint", "explanation": "The fields point in opposite directions at the midpoint between two like charges, so they cancel rather than add." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the rearrangement of the formula to find charge.",
+      "sentence": "Rearranging E = kQ/r² to find the charge gives Q = {{blank:1}}.",
+      "blanks": {
+        "1": {
+          "correct": "Er²/k",
+          "correctExplanation": "Multiplying both sides by r² and dividing by k gives Q = Er²/k.",
+          "distractors": [
+            { "answer": "Ek/r²", "explanation": "This incorrectly places k in the numerator; the correct rearrangement is Q = Er²/k." },
+            { "answer": "E/(kr²)", "explanation": "This divides by r² instead of multiplying; the correct form is Q = Er²/k." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the calculation of distance.",
+      "sentence": "To find the distance where a charge of 4.0 × 10⁻⁶ C produces a field of 3.6 × 10⁴ N C⁻¹, use r = √(kQ/E) = √((9.0 × 10⁹ × 4.0 × 10⁻⁶) / 3.6 × 10⁴) = {{blank:1}} m.",
+      "blanks": {
+        "1": {
+          "correct": "1.0",
+          "correctExplanation": "kQ/E = (9.0 × 10⁹ × 4.0 × 10⁻⁶) / (3.6 × 10⁴) = 36000/36000 = 1.0. So r = √1.0 = 1.0 m.",
+          "distractors": [
+            { "answer": "0.50", "explanation": "r² = 1.0 gives r = 1.0, not 0.50." },
+            { "answer": "2.0", "explanation": "r = √1.0 = 1.0, not 2.0." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the direction of the field.",
+      "sentence": "The electric field due to a negative point charge points radially {{blank:1}} the charge.",
+      "blanks": {
+        "1": {
+          "correct": "toward",
+          "correctExplanation": "Field lines point toward negative charges, indicating the direction a positive test charge would be attracted.",
+          "distractors": [
+            { "answer": "away from", "explanation": "Field lines point away from positive charges, but toward negative charges." },
+            { "answer": "parallel to", "explanation": "The field is radial (pointing toward or away from the charge), not parallel to any surface." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "mc",
+      "question": "A student calculates the electric field from a charge using E = kQ/r² and obtains a negative value. What does the negative sign indicate?",
+      "correct": "The source charge is negative, so the field points toward the charge rather than away from it",
+      "correctExplanation": "A negative value of E indicates the source charge Q is negative. The magnitude gives the field strength, and the sign indicates the field direction is inward (toward the charge).",
+      "distractors": [
+        { "answer": "The calculation contains an error because E cannot be negative", "explanation": "E can take a negative sign when Q is negative, indicating the field direction; the magnitude |E| is always positive." },
+        { "answer": "The field is zero and the negative indicates it is below zero on a graph", "explanation": "A negative E value means the field is directed inward, not that it is zero." },
+        { "answer": "The distance r was entered incorrectly as a negative number", "explanation": "Distance r is always positive; the negative E comes from using a negative charge Q." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Critically compare E = kQ/r² for electric fields and g = GM/r² for gravitational fields. What is the key physical difference despite the identical mathematical form?",
+      "correct": "Electric fields can be attractive or repulsive (Q positive or negative), but gravitational fields are always attractive (M always positive)",
+      "correctExplanation": "The mathematical structure is identical, but charge can be positive or negative (allowing repulsion), whereas mass is always positive (gravity always attracts).",
+      "distractors": [
+        { "answer": "The two formulas have different mathematical structures and cannot be compared", "explanation": "The formulas have identical mathematical structures: constant × source/r²; they can and should be compared." },
+        { "answer": "Gravitational fields follow an inverse cube law while electric fields follow inverse square", "explanation": "Both follow an inverse square law (1/r²); this is one of their key similarities." },
+        { "answer": "Electric fields only exist between parallel plates, not around point charges", "explanation": "Electric fields exist around point charges (E = kQ/r²) and between parallel plates (E = V/d); both are valid configurations." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A charge of +8.0 μC is at the origin. At what distance from the charge would you need to place a −2.0 μC charge so that it experiences a force of 0.72 N?",
+      "correct": "Use F = kq₁q₂/r² to find r = 0.45 m",
+      "correctExplanation": "r² = k|q₁||q₂|/F = (9.0×10⁹ × 8.0×10⁻⁶ × 2.0×10⁻⁶)/0.72 = 0.144/0.72 = 0.20. r = √0.20 = 0.447 ≈ 0.45 m.",
+      "distractors": [
+        { "answer": "Use E = kQ/r² alone, giving r = 0.32 m", "explanation": "E = kQ/r² gives the field, but you need to also apply F = qE to find the force; the combined result gives r ≈ 0.45 m." },
+        { "answer": "The answer cannot be found because one charge is negative", "explanation": "The magnitude of the force is used; the sign of the charge determines direction, not whether the calculation is possible." },
+        { "answer": "Use F = kq₁q₂/r² to find r = 0.90 m", "explanation": "r² = 0.20 gives r ≈ 0.45 m, not 0.90 m." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Evaluate whether the electric field at a point can ever be exactly zero in a region containing a single point charge.",
+      "correct": "No — a single point charge produces a non-zero field at every finite distance; the field only approaches zero at infinity",
+      "correctExplanation": "E = kQ/r² is non-zero for all finite r. The field decreases with distance but never reaches exactly zero at any finite point.",
+      "distractors": [
+        { "answer": "Yes — the field is zero at the surface of the charge itself", "explanation": "For a true point charge, there is no surface; the formula gives E → ∞ as r → 0." },
+        { "answer": "Yes — the field is zero along a line perpendicular to the charge", "explanation": "A point charge produces a radial field in all directions; there is no direction along which the field is zero." },
+        { "answer": "No — the field is constant everywhere around a point charge", "explanation": "The field is not constant; it varies as 1/r². But it is indeed never zero at any finite distance." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Analyse why E = kQ/r² is sometimes written as E = Q/(4πε₀r²). What is the relationship between k and ε₀?",
+      "correct": "k = 1/(4πε₀), where ε₀ is the permittivity of free space",
+      "correctExplanation": "Coulomb's constant k equals 1/(4πε₀), where ε₀ ≈ 8.85 × 10⁻¹² C² N⁻¹ m⁻² is the permittivity of free space. Both forms of the equation are equivalent.",
+      "distractors": [
+        { "answer": "k = 4πε₀, so the two forms give different field values", "explanation": "k = 1/(4πε₀), not 4πε₀; the two forms of the equation give identical results." },
+        { "answer": "ε₀ is only used in magnetic field calculations, not electric", "explanation": "ε₀ is the electric permittivity of free space and appears directly in electrostatic formulas." },
+        { "answer": "The 4π factor indicates the formula only works in spherical coordinates", "explanation": "The 4π factor arises from the surface area of a sphere but the formula works in any coordinate system." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Two charges +Q and −Q are placed on the x-axis at equal distances from the origin. Determine the direction of the net electric field at the origin.",
+      "correct": "The net field points from the positive charge toward the negative charge (in one direction along the x-axis)",
+      "correctExplanation": "At the origin, the field from +Q points away from +Q, and the field from −Q points toward −Q. Both contributions point in the same direction (from + toward −), so they add to give a net field in that direction.",
+      "distractors": [
+        { "answer": "The net field is zero because the charges are equal and opposite", "explanation": "The fields at the origin from each charge point in the same direction (both toward −Q), so they reinforce rather than cancel." },
+        { "answer": "The net field points perpendicular to the line joining the charges", "explanation": "At the midpoint on the axis, both field contributions are along the axis; there is no perpendicular component." },
+        { "answer": "The net field points from the negative charge toward the positive charge", "explanation": "Fields point away from positive and toward negative; at the midpoint, both contributions point from + to −." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student incorrectly uses E = kQ/r to calculate the field strength (forgetting to square r). If the actual distance is 2.0 m, by what factor will their answer differ from the correct value?",
+      "correct": "Their answer will be too large by a factor of 2.0",
+      "correctExplanation": "Using 1/r instead of 1/r² gives kQ/r = kQ/(2.0) instead of kQ/(2.0)² = kQ/4.0. The incorrect answer is kQ/2.0, which is 2.0 times the correct answer kQ/4.0.",
+      "distractors": [
+        { "answer": "Their answer will be too small by a factor of 2.0", "explanation": "Dividing by r instead of r² gives a larger result, not a smaller one." },
+        { "answer": "Their answer will be too large by a factor of 4.0", "explanation": "The ratio is (kQ/r)/(kQ/r²) = r = 2.0, not r² = 4.0." },
+        { "answer": "Their answer will be correct because r and r² give the same result", "explanation": "r and r² are different; using the wrong power of r changes the answer by a factor of r." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Predict how the electric field at a fixed point would change if the point charge Q were replaced by a uniformly charged sphere of the same total charge Q and radius much smaller than the distance to the point.",
+      "correct": "The field would be the same, because outside a uniformly charged sphere the field is identical to that of a point charge",
+      "correctExplanation": "By the shell theorem (Gauss's law), the electric field outside a uniformly charged sphere is exactly the same as if all the charge were concentrated at the centre.",
+      "distractors": [
+        { "answer": "The field would be weaker because the charge is spread over a larger volume", "explanation": "Outside the sphere, the field is identical to that of a point charge at the centre; spreading charge over a small sphere does not change the external field." },
+        { "answer": "The field would be stronger because a sphere has more surface area", "explanation": "Surface area does not affect the external field; outside the sphere, E = kQ/r² applies just as for a point charge." },
+        { "answer": "The field would be zero because the charges inside the sphere cancel", "explanation": "The charges do not cancel — they are all the same sign; the external field is identical to a point charge." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the key difference between electric and gravitational fields.",
+      "sentence": "Both E = kQ/r² and g = GM/r² follow an inverse square law, but electric fields can be {{blank:1}} or repulsive while gravitational fields are always {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "attractive",
+          "correctExplanation": "Electric fields can produce attractive forces (between opposite charges) or repulsive forces (between like charges).",
+          "distractors": [
+            { "answer": "uniform", "explanation": "Uniform describes the shape of the field (constant everywhere), not whether it attracts or repels." },
+            { "answer": "neutral", "explanation": "A field is not neutral; the force it produces can be attractive or repulsive." }
+          ]
+        },
+        "2": {
+          "correct": "attractive",
+          "correctExplanation": "Gravitational fields are always attractive because mass is always positive; there is no gravitational repulsion.",
+          "distractors": [
+            { "answer": "repulsive", "explanation": "Gravity is always attractive, never repulsive; there is no negative mass." },
+            { "answer": "zero", "explanation": "Gravitational fields are not zero; they are always attractive around any mass." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the analysis of superposition.",
+      "sentence": "When multiple point charges are present, the net electric field at any point is found by taking the {{blank:1}} sum of the individual fields from each charge.",
+      "blanks": {
+        "1": {
+          "correct": "vector",
+          "correctExplanation": "Electric field is a vector, so the fields from multiple charges must be added as vectors, taking both magnitude and direction into account.",
+          "distractors": [
+            { "answer": "scalar", "explanation": "Scalar addition ignores direction; electric fields must be added as vectors because direction matters." },
+            { "answer": "algebraic", "explanation": "Algebraic sum does not fully capture the directional nature; vector addition is required for fields in more than one dimension." }
+          ]
+        }
+      }
+    }
+  ]
+}

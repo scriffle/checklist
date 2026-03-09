@@ -1,0 +1,86 @@
+{
+  "id": "dc-generators",
+  "name": "DC Generators",
+  "icon": "⚙️",
+  "what": "This subtopic covers how DC generators (dynamos) work, including the role of the split ring commutator, the shape of flux and emf graphs during rotation, calculation of induced emf for various angles of rotation, and the effect of varying generator parameters.",
+  "why": "DC generators are a direct application of Faraday's law and Lenz's law to rotating machinery. Understanding them deepens the connection between electromagnetic theory and practical electricity generation, and they are a significant part of the VCE Physics study design.",
+  "items": [
+    {
+      "id": 1,
+      "uuid": "lp-0a54ee78-fd2a-528b-bf9e-5bd682218011",
+      "version": 1,
+      "title": "I can describe the structure and operation of a DC generator",
+      "code": "5C.1",
+      "what": "A DC generator consists of a coil of wire rotating in a magnetic field, with the ends of the coil connected to an external circuit via a split ring commutator and carbon brushes. The rotating coil is called the armature or rotor. As the coil spins, the changing magnetic flux induces an emf.",
+      "why": "Understanding the physical structure allows you to explain how the generator works in terms of Faraday's law, and why the split ring commutator is essential for producing DC output.",
+      "example": "In a simple DC generator, a rectangular coil rotates between the north and south poles of a permanent magnet. The two halves of the split ring contact alternate brushes with each half-rotation, ensuring the output is always positive.",
+      "contentHash": "hash-c19cffd3"
+    },
+    {
+      "id": 2,
+      "uuid": "lp-64c5fc9d-6b32-897c-d2db-2e86c06a51b1",
+      "version": 1,
+      "title": "I can explain the function of the split ring commutator in a DC generator",
+      "code": "5C.2",
+      "what": "The split ring commutator reverses the connection between the rotating coil and the external circuit every half turn. This means that even though the emf in the coil alternates in direction, the output at the brushes is always in the same direction, producing DC.",
+      "why": "Without the commutator, the output of a rotating coil would be AC. The commutator is what distinguishes a DC generator from an AC generator and is therefore a key component to understand.",
+      "example": "When the coil passes through the position where emf would naturally reverse, the split ring switches which end of the coil contacts which brush, flipping the connection and keeping the output positive.",
+      "contentHash": "hash-7ddc8885"
+    },
+    {
+      "id": 3,
+      "uuid": "lp-c5541cf2-7470-2234-dafa-344eb2f90a78",
+      "version": 1,
+      "title": "I can explain and sketch the shapes of the flux and emf vs time graphs for a DC generator",
+      "code": "5C.3",
+      "what": "As a coil rotates at constant speed, the flux through it varies as a sine wave. The emf (given by the negative gradient of the flux graph) therefore varies as a cosine wave. Because the split ring commutator rectifies the output, the emf at the terminals is a sinusoidal DC (all values positive, none negative).",
+      "why": "These graphs are directly examined in VCE Physics. The ability to sketch and interpret them demonstrates understanding of both the physics and the role of the commutator.",
+      "example": "Starting with the coil parallel to the field (maximum flux change, zero flux): flux starts at zero and rises sinusoidally; emf starts at its maximum and falls to zero, then the commutator reflects negative values upward, giving a rectified sinusoidal shape.",
+      "contentHash": "hash-79bb8b98"
+    },
+    {
+      "id": 4,
+      "uuid": "lp-49e7c3df-7a45-745b-d9ab-348ecce25355",
+      "version": 1,
+      "title": "I can calculate the average emf induced in a rotating coil using Faraday's law",
+      "code": "5C.4",
+      "what": "To calculate the average emf when a coil rotates through a specific angle, find the change in flux (ΔΦ_B) between the start and end positions, determine the time taken (Δt), then apply Faraday's law: |ε| = N × |ΔΦ_B| / Δt. The maximum flux is Φ_max = B × A.",
+      "why": "This calculation is one of the most common in VCE Physics exam questions on generators. The key is correctly identifying ΔΦ_B for the specific rotation (90°, 180°, etc.).",
+      "example": "A 10-turn coil of area 0.0016 m² rotates in a 2.0 × 10⁻³ T field. Φ_max = 3.2 × 10⁻⁶ Wb. Rotating 90° from maximum flux in 0.25 s: |ε| = 10 × 3.2 × 10⁻⁶ / 0.25 = 1.28 × 10⁻⁴ V.",
+      "contentHash": "hash-da0da464"
+    },
+    {
+      "id": 5,
+      "uuid": "lp-f56f59c6-5c29-2277-808f-9e7a5d80ba07",
+      "version": 1,
+      "title": "I can use Lenz's law to determine the direction of induced emf and current in a rotating coil",
+      "code": "5C.5",
+      "what": "At any position of a rotating coil, apply Lenz's law: determine whether the flux through the coil is increasing or decreasing as it rotates, then identify the direction of induced current that would oppose that change. Use the right-hand rule to confirm the current direction.",
+      "why": "Direction of induced current is tested in exam questions requiring students to label diagrams or choose between circuit directions. A systematic approach using Lenz's law avoids confusion.",
+      "example": "A coil rotating in a field has its flux decreasing as it rotates from the maximum flux position. By Lenz's law, the induced current opposes this decrease, producing a field in the same direction as the original applied field.",
+      "contentHash": "hash-8333209e"
+    },
+    {
+      "id": 6,
+      "uuid": "lp-1f33e401-797c-15b4-625f-ba8ee6b43a3d",
+      "version": 1,
+      "title": "I can analyse how changes to a DC generator affect the emf output",
+      "code": "5C.6",
+      "what": "The peak emf of a DC generator increases when: the rate of rotation increases, the number of turns in the coil increases, the magnetic field strength increases, or the area of the coil increases. Reversing the direction of rotation reverses the alternating emf in the coil but the commutator means the DC output shape is unchanged.",
+      "why": "Exam questions frequently ask students to predict the effect of changing one parameter. Understanding the proportional relationships allows systematic reasoning rather than memorisation.",
+      "example": "Doubling the rate of rotation doubles the peak emf and also doubles the frequency of the output waveform (the period halves). Tripling the number of turns triples the peak emf with no change in frequency.",
+      "contentHash": "hash-4e299e1e"
+    },
+    {
+      "id": 7,
+      "uuid": "lp-19296d7a-b009-577a-3083-3ff1f66e1009",
+      "version": 1,
+      "title": "I can calculate the induced current from a DC generator using Ohm's law",
+      "code": "5C.7",
+      "what": "Once the induced emf is calculated using Faraday's law, the induced current in a complete external circuit is found using Ohm's law: I = ε / R, where R is the total resistance of the external circuit.",
+      "why": "Combining Faraday's law with Ohm's law allows complete circuit analysis of generator systems. This is a common multi-step calculation in VCE Physics.",
+      "example": "A DC generator produces an average emf of 3.2 × 10⁻⁴ V and is connected to a 0.5 Ω resistor. The average current is I = 3.2 × 10⁻⁴ / 0.5 = 6.4 × 10⁻⁴ A.",
+      "contentHash": "hash-342b46aa"
+    }
+  ]
+}

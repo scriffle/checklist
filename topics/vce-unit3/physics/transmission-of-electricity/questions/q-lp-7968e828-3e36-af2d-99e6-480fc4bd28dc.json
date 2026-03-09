@@ -1,0 +1,503 @@
+{
+  "_link": {
+    "uuid": "lp-7968e828-3e36-af2d-99e6-480fc4bd28dc",
+    "version": 1,
+    "contentHash": "hash-d927c6e0",
+    "title": "I can explain what rms voltage means and why it is used instead of the average AC voltage",
+    "generatedAt": "2026-03-08T10:05:00Z"
+  },
+  "toLevel2": [
+    {
+      "type": "mc",
+      "question": "Which one of the following best describes what the rms value of an AC voltage represents?",
+      "correct": "The equivalent DC voltage that delivers the same power to a resistive load",
+      "correctExplanation": "The rms (root-mean-square) voltage is defined as the DC voltage that would produce the same heating effect in a resistor.",
+      "distractors": [
+        { "answer": "The maximum voltage reached during one complete cycle of the AC waveform", "explanation": "This describes the peak voltage, not the rms voltage. The peak is higher than the rms value." },
+        { "answer": "The simple mathematical average of the voltage over one complete AC cycle", "explanation": "The mathematical average of a sinusoidal AC voltage over a full cycle is zero, which is why rms is used." },
+        { "answer": "The voltage measured at the midpoint between the positive and negative peaks", "explanation": "The midpoint of a sinusoidal AC waveform is zero volts, not the rms value." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Why is the mathematical average of a sinusoidal AC voltage over a full cycle not useful for describing its effective value?",
+      "correct": "The average is zero because the positive and negative halves cancel",
+      "correctExplanation": "A sinusoidal AC waveform is symmetrical about zero, so the positive half-cycle exactly cancels the negative half-cycle.",
+      "distractors": [
+        { "answer": "The average is always equal to the peak voltage of the waveform", "explanation": "The average of a full cycle is zero, not the peak voltage. The peak is the maximum instantaneous value." },
+        { "answer": "The average changes unpredictably with each cycle of the waveform", "explanation": "The average is consistently zero for every complete cycle, not unpredictable." },
+        { "answer": "The average is too difficult to calculate for a sinusoidal waveform", "explanation": "The average is straightforward to calculate — it is simply zero due to symmetry." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "The Australian mains supply is described as 230 V AC. Which one of the following correctly identifies what this 230 V represents?",
+      "correct": "The rms voltage of the supply",
+      "correctExplanation": "Mains voltage ratings always refer to the rms value, which represents the effective voltage for power delivery.",
+      "distractors": [
+        { "answer": "The peak voltage of the supply", "explanation": "The peak voltage of 230 Vrms mains is approximately 325 V, not 230 V." },
+        { "answer": "The peak-to-peak voltage of the supply", "explanation": "The peak-to-peak voltage is approximately 650 V, which is twice the peak voltage." },
+        { "answer": "The average voltage of the supply", "explanation": "The average voltage of a full AC cycle is zero. The 230 V is the rms value." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which one of the following abbreviations does rms stand for?",
+      "correct": "Root-mean-square",
+      "correctExplanation": "Rms stands for root-mean-square, a mathematical averaging method that squares the values, takes the mean, then takes the square root.",
+      "distractors": [
+        { "answer": "Rate of mean signal", "explanation": "This is not a recognised electrical term. Rms stands for root-mean-square." },
+        { "answer": "Relative maximum swing", "explanation": "This is not a recognised electrical term. Rms stands for root-mean-square." },
+        { "answer": "Resistive mean supply", "explanation": "This is not a recognised electrical term. Rms stands for root-mean-square." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A 230 Vrms AC supply is connected to a heater. A 230 V DC supply is also connected to an identical heater. Which one of the following best describes the comparison of power delivered?",
+      "correct": "Both heaters receive the same power",
+      "correctExplanation": "By definition, the rms voltage delivers the same power to a resistive load as a DC voltage of the same numerical value.",
+      "distractors": [
+        { "answer": "The AC supply delivers more power", "explanation": "The rms value is specifically chosen so that AC and DC of the same rated voltage deliver equal power." },
+        { "answer": "The DC supply delivers more power", "explanation": "A 230 V DC supply delivers the same power as a 230 Vrms AC supply to a resistive load." },
+        { "answer": "The comparison cannot be made", "explanation": "The rms concept exists precisely to enable this comparison between AC and DC power delivery." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "The mathematical average of the voltage from a sinusoidal AC supply over a complete cycle is zero.",
+      "correct": "True",
+      "correctExplanation": "The positive half-cycle and the negative half-cycle of a sinusoidal waveform have equal magnitude and cancel out, giving an average of zero.",
+      "distractors": [
+        { "answer": "False", "explanation": "Students may think the average should be positive because voltage 'does work', but mathematically the positive and negative halves sum to zero." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "The rms voltage of an AC supply is always greater than its peak voltage.",
+      "correct": "False",
+      "correctExplanation": "The rms voltage is always less than the peak voltage. For a sinusoidal waveform, Vrms = Vp/\u221a2, so Vrms is approximately 0.707 times the peak.",
+      "distractors": [
+        { "answer": "True", "explanation": "Students may confuse the relationship. The peak voltage is the maximum value, and rms is always smaller: Vrms = Vp/\u221a2." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about rms voltage.",
+      "sentence": "The rms value of an AC voltage is the equivalent {{blank:1}} voltage that would deliver the same power to a resistive load.",
+      "blanks": {
+        "1": {
+          "correct": "DC",
+          "correctExplanation": "The rms voltage is defined as the DC voltage that produces the same power dissipation in a resistor.",
+          "distractors": [
+            { "answer": "AC", "explanation": "The rms value is used to compare AC to DC. It represents the equivalent DC, not another AC value." },
+            { "answer": "peak", "explanation": "The peak voltage is the maximum instantaneous value, not the equivalent DC voltage for power comparison." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about AC averages.",
+      "sentence": "The mathematical average of a sinusoidal AC voltage over a full cycle is {{blank:1}} because the positive and negative halves cancel.",
+      "blanks": {
+        "1": {
+          "correct": "zero",
+          "correctExplanation": "The symmetrical nature of a sine wave means the areas above and below zero are equal, giving a net average of zero.",
+          "distractors": [
+            { "answer": "positive", "explanation": "The average is not positive. The negative half-cycle exactly cancels the positive half-cycle." },
+            { "answer": "negative", "explanation": "The average is not negative. Both halves have equal magnitude and cancel to give zero." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about voltage ratings.",
+      "sentence": "When an appliance is labelled 240 V AC, the 240 V refers to the {{blank:1}} value of the supply voltage.",
+      "blanks": {
+        "1": {
+          "correct": "rms",
+          "correctExplanation": "All standard AC voltage ratings on appliances and power supplies refer to the rms (root-mean-square) value.",
+          "distractors": [
+            { "answer": "peak", "explanation": "Peak voltage is higher than the rated value. The label refers to the rms value, not the peak." },
+            { "answer": "average", "explanation": "The average of a full AC cycle is zero. Appliance ratings use the rms value." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "mc",
+      "question": "An AC supply has a peak voltage of 340 V. Which one of the following is closest to the rms voltage?",
+      "correct": "240 V",
+      "correctExplanation": "Vrms = Vp/\u221a2 = 340/1.414 = 240 V.",
+      "distractors": [
+        { "answer": "170 V", "explanation": "This results from dividing by 2 instead of \u221a2. Vrms = Vp/\u221a2, not Vp/2." },
+        { "answer": "340 V", "explanation": "This is the peak voltage, not the rms voltage. The rms value is always less than the peak." },
+        { "answer": "480 V", "explanation": "This results from multiplying by \u221a2 instead of dividing. Vrms is smaller than Vp, not larger." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which one of the following best explains why rms values are preferred over peak values for rating electrical appliances?",
+      "correct": "Rms values directly indicate the power delivered to a resistive load",
+      "correctExplanation": "The rms value allows direct calculation of average power using P = Vrms \u00d7 Irms, making it practical for appliance ratings.",
+      "distractors": [
+        { "answer": "Rms values are always larger than peak values, giving a safety margin", "explanation": "Rms values are actually smaller than peak values. Vrms = Vp/\u221a2 \u2248 0.707 \u00d7 Vp." },
+        { "answer": "Peak values change with temperature but rms values remain constant", "explanation": "Both peak and rms values are affected by the same factors. The preference is about power representation." },
+        { "answer": "Peak values cannot be measured with standard laboratory instruments", "explanation": "Peak values can be measured with oscilloscopes. Rms is preferred because it relates directly to power." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "The rms voltage of an AC supply is 230 V. Which one of the following is closest to the peak voltage?",
+      "correct": "325 V",
+      "correctExplanation": "Vp = Vrms \u00d7 \u221a2 = 230 \u00d7 1.414 = 325 V.",
+      "distractors": [
+        { "answer": "460 V", "explanation": "This results from doubling the rms value (230 \u00d7 2), which gives the peak-to-peak voltage, not the peak." },
+        { "answer": "163 V", "explanation": "This results from dividing by \u221a2 instead of multiplying. The peak is larger than the rms, not smaller." },
+        { "answer": "230 V", "explanation": "This is the rms value itself. The peak voltage is always larger: Vp = Vrms \u00d7 \u221a2." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An oscilloscope displays an AC waveform with a peak-to-peak voltage of 56 V. Which one of the following is closest to the rms voltage?",
+      "correct": "20 V",
+      "correctExplanation": "Vp = Vp-p/2 = 56/2 = 28 V. Vrms = Vp/\u221a2 = 28/1.414 \u2248 20 V.",
+      "distractors": [
+        { "answer": "28 V", "explanation": "This is the peak voltage, not the rms. The rms requires a further division by \u221a2." },
+        { "answer": "40 V", "explanation": "This results from dividing Vp-p by \u221a2 directly (56/1.414 \u2248 40), forgetting to halve first for the peak." },
+        { "answer": "56 V", "explanation": "This is the peak-to-peak voltage, which is twice the peak and approximately 2\u221a2 times the rms." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Sam claims that a 12 Vrms AC supply will produce more heat in a resistor than a 12 V DC supply. Which one of the following is the correct response?",
+      "correct": "Sam is incorrect; both deliver the same power to a resistor",
+      "correctExplanation": "By definition, the rms voltage produces the same power dissipation in a resistive load as a DC voltage of equal numerical value.",
+      "distractors": [
+        { "answer": "Sam is correct; AC always delivers more power than DC at the same voltage", "explanation": "AC at the same rms voltage delivers the same power as DC to a resistive load, not more." },
+        { "answer": "Sam is correct; the peak voltage of 17 V produces extra heating", "explanation": "Although the peak is higher, the rms value accounts for the variation and gives the same average power as DC." },
+        { "answer": "Sam is incorrect; DC always delivers more power than AC at any voltage", "explanation": "For equal rms and DC voltages, the power delivered to a resistive load is identical." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which one of the following correctly describes the relationship between rms voltage and peak voltage for a sinusoidal AC supply?",
+      "correct": "Vrms = Vp / \u221a2",
+      "correctExplanation": "For a sinusoidal waveform, the rms value is the peak divided by the square root of 2.",
+      "distractors": [
+        { "answer": "Vrms = Vp \u00d7 \u221a2", "explanation": "This would make the rms larger than the peak. The rms is always smaller: Vrms = Vp/\u221a2." },
+        { "answer": "Vrms = Vp / 2", "explanation": "Dividing by 2 gives half the peak, not the rms. The correct divisor is \u221a2 \u2248 1.414." },
+        { "answer": "Vrms = Vp \u00d7 2", "explanation": "This would give the peak-to-peak voltage, not the rms. Vrms is smaller than Vp." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "For a sinusoidal AC supply, the rms voltage is approximately 70.7% of the peak voltage.",
+      "correct": "True",
+      "correctExplanation": "Vrms = Vp/\u221a2 = Vp/1.414 \u2248 0.707 \u00d7 Vp, which is 70.7% of the peak voltage.",
+      "distractors": [
+        { "answer": "False", "explanation": "Students may not recognise that 1/\u221a2 \u2248 0.707. The rms value is indeed approximately 70.7% of the peak." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the rms formula.",
+      "sentence": "The rms voltage is calculated from the peak voltage using the formula Vrms = Vp / {{blank:1}}.",
+      "blanks": {
+        "1": {
+          "correct": "\u221a2",
+          "correctExplanation": "For a sinusoidal waveform, the rms value equals the peak divided by the square root of 2.",
+          "distractors": [
+            { "answer": "2", "explanation": "Dividing by 2 gives half the peak, which is not the rms value. The correct divisor is \u221a2." },
+            { "answer": "\u03c0", "explanation": "The factor \u03c0 does not appear in the rms-to-peak relationship for sinusoidal waveforms." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the peak voltage of Australian mains.",
+      "sentence": "The Australian mains supply has an rms voltage of 230 V, which corresponds to a peak voltage of approximately {{blank:1}} V.",
+      "blanks": {
+        "1": {
+          "correct": "325",
+          "correctExplanation": "Vp = Vrms \u00d7 \u221a2 = 230 \u00d7 1.414 \u2248 325 V.",
+          "distractors": [
+            { "answer": "460", "explanation": "This is the peak-to-peak voltage (2 \u00d7 230), not the peak. The peak is Vrms \u00d7 \u221a2." },
+            { "answer": "163", "explanation": "This results from dividing by \u221a2 instead of multiplying. The peak is larger than the rms." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about AC power calculation.",
+      "sentence": "The effective power delivered by an AC supply to a resistive load is calculated using P = {{blank:1}} \u00d7 Irms.",
+      "blanks": {
+        "1": {
+          "correct": "Vrms",
+          "correctExplanation": "Effective AC power uses rms values: P = Vrms \u00d7 Irms, giving the average power delivered.",
+          "distractors": [
+            { "answer": "Vp", "explanation": "Using peak voltage would overestimate the average power. The rms values must be used." },
+            { "answer": "Vp-p", "explanation": "Peak-to-peak voltage is twice the peak and would greatly overestimate the average power." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "mc",
+      "question": "An AC generator produces a sinusoidal output with a peak voltage of 170 V across a 100 \u03a9 resistor. Which one of the following is closest to the average power dissipated in the resistor?",
+      "correct": "145 W",
+      "correctExplanation": "Vrms = 170/\u221a2 = 120 V. P = Vrms\u00b2/R = (120)\u00b2/100 = 14 400/100 = 144 W \u2248 145 W.",
+      "distractors": [
+        { "answer": "289 W", "explanation": "This results from using Vp\u00b2/R = (170)\u00b2/100 = 289, using peak voltage instead of rms." },
+        { "answer": "1.7 W", "explanation": "This results from calculating Vp/R = 170/100 = 1.7, which gives neither power nor current correctly." },
+        { "answer": "72 W", "explanation": "This results from using Vp/(2R) or another incorrect formula that halves the correct answer." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Jess measures a sinusoidal AC supply using an oscilloscope and observes a peak-to-peak voltage of 100 V. She connects the supply to a 50 \u03a9 resistor. Which one of the following is closest to the average power dissipated?",
+      "correct": "25 W",
+      "correctExplanation": "Vp = 100/2 = 50 V. Vrms = 50/\u221a2 = 35.4 V. P = Vrms\u00b2/R = (35.4)\u00b2/50 = 1253/50 = 25 W.",
+      "distractors": [
+        { "answer": "100 W", "explanation": "This results from using Vp-p\u00b2/R = 10 000/100, incorrectly using peak-to-peak voltage." },
+        { "answer": "50 W", "explanation": "This results from using Vp\u00b2/R = 2500/50 = 50, using peak voltage instead of rms." },
+        { "answer": "200 W", "explanation": "This results from using Vp-p/R = 100/50 = 2 A then P = VI = 200, mixing voltage types." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A laboratory power supply is labelled 50 Hz, 20 Vrms. Which one of the following is closest to the peak-to-peak voltage that would appear on an oscilloscope connected to this supply?",
+      "correct": "57 V",
+      "correctExplanation": "Vp = Vrms \u00d7 \u221a2 = 20 \u00d7 1.414 = 28.3 V. Vp-p = 2 \u00d7 Vp = 2 \u00d7 28.3 = 56.6 V \u2248 57 V.",
+      "distractors": [
+        { "answer": "40 V", "explanation": "This results from calculating 2 \u00d7 Vrms = 40, confusing peak-to-peak with simply doubling rms." },
+        { "answer": "28 V", "explanation": "This is the peak voltage, not the peak-to-peak. The peak-to-peak is twice the peak value." },
+        { "answer": "14 V", "explanation": "This results from dividing Vrms by \u221a2 instead of multiplying, then not doubling for peak-to-peak." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Raj connects a 60 \u03a9 resistor to an AC supply with Vrms = 120 V. Which one of the following is closest to the rms current flowing through the resistor?",
+      "correct": "2.0 A",
+      "correctExplanation": "Irms = Vrms/R = 120/60 = 2.0 A. Ohm's law applies directly with rms values for resistive loads.",
+      "distractors": [
+        { "answer": "2.8 A", "explanation": "This results from using peak voltage (120 \u00d7 \u221a2 = 170) divided by R, mixing peak and rms quantities." },
+        { "answer": "1.4 A", "explanation": "This results from dividing the correct rms current by \u221a2, an unnecessary extra conversion." },
+        { "answer": "0.50 A", "explanation": "This results from calculating R/Vrms = 60/120 = 0.5, inverting Ohm's law." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An electric kettle rated at 2400 W, 240 V AC is operating at its rated conditions. Which one of the following is closest to the peak current drawn by the kettle?",
+      "correct": "14 A",
+      "correctExplanation": "Irms = P/Vrms = 2400/240 = 10 A. Ip = Irms \u00d7 \u221a2 = 10 \u00d7 1.414 = 14.1 A \u2248 14 A.",
+      "distractors": [
+        { "answer": "10 A", "explanation": "This is the rms current, not the peak. The peak current is Irms \u00d7 \u221a2." },
+        { "answer": "7.1 A", "explanation": "This results from dividing Irms by \u221a2 instead of multiplying, giving a value smaller than rms." },
+        { "answer": "20 A", "explanation": "This results from doubling the rms current instead of multiplying by \u221a2 \u2248 1.414." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student claims that the rms voltage of a 50 Hz AC supply and a 1000 Hz AC supply with the same peak voltage must be different. Which one of the following is the correct response?",
+      "correct": "The student is incorrect; rms voltage depends only on peak voltage, not frequency",
+      "correctExplanation": "Vrms = Vp/\u221a2 for any sinusoidal waveform regardless of frequency. Frequency does not affect the rms value.",
+      "distractors": [
+        { "answer": "The student is correct; higher frequency gives a higher rms voltage value", "explanation": "Frequency does not appear in the formula Vrms = Vp/\u221a2. The rms depends only on the peak amplitude." },
+        { "answer": "The student is correct; higher frequency gives a lower rms voltage value", "explanation": "The rms-to-peak ratio is fixed at 1/\u221a2 for all sinusoidal waveforms regardless of frequency." },
+        { "answer": "The student is incorrect; rms voltage depends only on the frequency, not peak voltage", "explanation": "This reverses the correct relationship. Rms voltage depends on peak voltage, not frequency." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An AC supply with Vrms = 12 V is connected to a 6.0 \u03a9 resistor. Which one of the following is closest to the effective power dissipated?",
+      "correct": "24 W",
+      "correctExplanation": "P = Vrms\u00b2/R = (12)\u00b2/6.0 = 144/6.0 = 24 W.",
+      "distractors": [
+        { "answer": "48 W", "explanation": "This results from using Vp\u00b2/R = (17)\u00b2/6.0 \u2248 48, incorrectly using peak voltage in the power formula." },
+        { "answer": "2.0 W", "explanation": "This results from calculating Vrms/R = 12/6.0 = 2.0, which gives the rms current, not the power." },
+        { "answer": "12 W", "explanation": "This results from using Vrms\u00b2/(2R) or another incorrect formula that halves the correct power." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the calculation about rms voltage.",
+      "sentence": "An AC generator has a peak voltage of 100 V. The rms voltage is 100 / \u221a2 = {{blank:1}} V.",
+      "blanks": {
+        "1": {
+          "correct": "70.7",
+          "correctExplanation": "Vrms = Vp/\u221a2 = 100/1.414 = 70.7 V.",
+          "distractors": [
+            { "answer": "50.0", "explanation": "This results from dividing by 2 instead of \u221a2. The correct divisor is \u221a2 \u2248 1.414." },
+            { "answer": "141", "explanation": "This results from multiplying by \u221a2 instead of dividing. Vrms is smaller than Vp." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about power calculations with AC.",
+      "sentence": "To calculate the average power delivered by an AC supply, the {{blank:1}} values of voltage and current must be used, not the peak values.",
+      "blanks": {
+        "1": {
+          "correct": "rms",
+          "correctExplanation": "Average power is P = Vrms \u00d7 Irms. Using peak values would overestimate the average power.",
+          "distractors": [
+            { "answer": "peak", "explanation": "Using peak values gives peak power, not average power. Rms values give the correct average." },
+            { "answer": "average", "explanation": "The average of a full AC cycle is zero. Rms is the correct quantity for power calculations." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about AC power equivalence.",
+      "sentence": "A 50 Vrms AC supply delivers {{blank:1}} average power to a resistor as a 50 V DC supply connected to an identical resistor.",
+      "blanks": {
+        "1": {
+          "correct": "the same",
+          "correctExplanation": "By definition, the rms voltage is the DC-equivalent voltage for power delivery to a resistive load.",
+          "distractors": [
+            { "answer": "more", "explanation": "The rms value is specifically defined so that AC and DC of equal rms/DC voltage deliver equal power." },
+            { "answer": "less", "explanation": "The rms value ensures equal power delivery. The peak voltage is higher but the effective power matches DC." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "mc",
+      "question": "A technician measures the output of an AC generator using both a DC voltmeter (which reads rms) and an oscilloscope (which shows peak-to-peak). The voltmeter reads 100 V and the oscilloscope shows 283 V peak-to-peak. Which one of the following best evaluates whether these readings are consistent?",
+      "correct": "The readings are consistent: Vp-p = 2 \u00d7 Vrms \u00d7 \u221a2 = 283 V",
+      "correctExplanation": "Vp = 100 \u00d7 \u221a2 = 141 V. Vp-p = 2 \u00d7 141 = 283 V. The readings agree.",
+      "distractors": [
+        { "answer": "The readings are inconsistent; the oscilloscope should show 200 V peak-to-peak", "explanation": "This assumes Vp-p = 2 \u00d7 Vrms, forgetting the \u221a2 factor between rms and peak." },
+        { "answer": "The readings are inconsistent; the voltmeter should read 141 V to match", "explanation": "141 V is the peak voltage. The DC voltmeter correctly reads the rms value of 100 V." },
+        { "answer": "The readings cannot be compared because AC and DC use different scales", "explanation": "The rms concept exists precisely to enable comparison between AC and DC measurements." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An electrician must select a circuit breaker for a 230 Vrms 10 Arms circuit. The breaker must withstand the peak current. Which one of the following is closest to the minimum peak current rating required?",
+      "correct": "14 A",
+      "correctExplanation": "Ip = Irms \u00d7 \u221a2 = 10 \u00d7 1.414 = 14.1 A. The breaker must handle at least this peak current.",
+      "distractors": [
+        { "answer": "10 A", "explanation": "This is the rms current. The peak current is higher and the breaker must withstand the peak." },
+        { "answer": "20 A", "explanation": "This results from doubling the rms current. The correct factor is \u221a2, not 2." },
+        { "answer": "7.1 A", "explanation": "This results from dividing by \u221a2 instead of multiplying, giving a value below even the rms current." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Leo argues that since AC voltage reaches its peak for only an instant, most of the time the actual voltage is much lower, so AC should deliver less power than DC of the same peak voltage. Which one of the following best evaluates Leo's reasoning?",
+      "correct": "Leo's reasoning is valid, which is why Vrms = Vp/\u221a2 is less than Vp",
+      "correctExplanation": "The rms value accounts for the time-varying nature of AC and is less than the peak, reflecting the lower effective voltage.",
+      "distractors": [
+        { "answer": "Leo's reasoning is incorrect; AC delivers the same power as DC of equal peak voltage", "explanation": "AC delivers less average power than DC at the same peak voltage. Equal power requires equal rms and DC values." },
+        { "answer": "Leo's reasoning is incorrect; the peak voltage determines power regardless of duration", "explanation": "Power delivery depends on the effective voltage over time, not just the instantaneous peak." },
+        { "answer": "Leo's reasoning is valid, so rms values are unreliable for power calculations", "explanation": "Leo's observation is correct but rms values properly account for it, making them reliable for power calculations." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A physics student suggests that if the mains voltage were expressed as peak voltage instead of rms, household appliances would need different power ratings. Which one of the following best evaluates this claim?",
+      "correct": "The claim is correct; appliance ratings would need to use peak values consistently",
+      "correctExplanation": "If voltage were expressed as peak, power formulas would need to use P = Vp\u00b2/(2R) instead of P = Vrms\u00b2/R. All ratings would change.",
+      "distractors": [
+        { "answer": "The claim is incorrect; the power delivered does not depend on how voltage is expressed", "explanation": "The physical power is the same, but the numerical ratings and formulas would need to change to maintain consistency." },
+        { "answer": "The claim is incorrect; peak and rms voltages are interchangeable in all formulas", "explanation": "Peak and rms are related by \u221a2 and cannot be substituted without adjusting the formulas." },
+        { "answer": "The claim is correct but only for resistive loads, not for any other type of load", "explanation": "The need for consistent voltage conventions applies to all electrical ratings, not just resistive loads." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An engineer compares the insulation requirements for two cables. Cable X carries 230 Vrms AC and Cable Y carries 230 V DC. Which one of the following best describes the insulation consideration?",
+      "correct": "Cable X needs insulation rated for at least 325 V to withstand the peak voltage",
+      "correctExplanation": "The AC cable experiences peak voltages of Vrms \u00d7 \u221a2 = 325 V, so insulation must withstand this higher instantaneous voltage.",
+      "distractors": [
+        { "answer": "Both cables require identical insulation rated for 230 V maximum", "explanation": "The AC cable experiences peak voltages of 325 V, which is higher than the DC cable's constant 230 V." },
+        { "answer": "Cable Y needs higher-rated insulation because DC is more constant", "explanation": "The AC cable has higher peak voltages (325 V) than the DC cable (230 V), requiring better insulation." },
+        { "answer": "Cable X needs insulation rated for 460 V to cover the peak-to-peak swing", "explanation": "Insulation must withstand the voltage between conductor and earth, which is the peak (325 V), not peak-to-peak." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A laboratory experiment compares heating effects. A 50 Vrms AC supply and a variable DC supply are each connected to identical 25 \u03a9 resistors. The DC voltage is adjusted until both resistors produce equal heat. Which one of the following is closest to the required DC voltage?",
+      "correct": "50 V",
+      "correctExplanation": "By definition, the rms voltage delivers the same power as a DC voltage of equal numerical value. The DC must be set to 50 V.",
+      "distractors": [
+        { "answer": "71 V", "explanation": "This is the peak voltage (50 \u00d7 \u221a2 = 71). Equal heating requires DC equal to the rms value, not the peak." },
+        { "answer": "35 V", "explanation": "This results from dividing by \u221a2 instead of recognising that rms directly equals the equivalent DC voltage." },
+        { "answer": "25 V", "explanation": "This is the resistance value, not the required voltage. The DC voltage must equal the rms voltage." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Ava measures the peak-to-peak voltage of a signal generator output as 20 V using an oscilloscope. She then connects the signal to a 200 \u03a9 resistor. Which one of the following is closest to the average power dissipated?",
+      "correct": "0.25 W",
+      "correctExplanation": "Vp = 20/2 = 10 V. Vrms = 10/\u221a2 = 7.07 V. P = Vrms\u00b2/R = 50/200 = 0.25 W.",
+      "distractors": [
+        { "answer": "0.50 W", "explanation": "This results from using Vp\u00b2/R = 100/200 = 0.50, using peak voltage instead of rms." },
+        { "answer": "1.0 W", "explanation": "This results from using Vp-p\u00b2/(4R) or another incorrect formula involving the peak-to-peak value." },
+        { "answer": "2.0 W", "explanation": "This results from using Vp-p/R = 20/200 = 0.1 then further calculation errors." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student argues that since P = V\u00b2/R, and the peak voltage of 230 Vrms mains is 325 V, the peak power delivered to a 100 \u03a9 resistor is 1056 W while the average is only 529 W. Which one of the following best evaluates this analysis?",
+      "correct": "The analysis is correct; peak power is twice the average power for a sinusoidal supply",
+      "correctExplanation": "Peak power = Vp\u00b2/R = (325)\u00b2/100 = 1056 W. Average = Vrms\u00b2/R = (230)\u00b2/100 = 529 W. Ratio is 2:1.",
+      "distractors": [
+        { "answer": "The analysis is incorrect; peak and average power are always equal for AC circuits", "explanation": "Peak power is instantaneous and occurs at the voltage maximum. Average power is lower by a factor of 2." },
+        { "answer": "The analysis is incorrect; peak power is \u221a2 times the average power, not double", "explanation": "Since power depends on V\u00b2, the ratio is (Vp/Vrms)\u00b2 = (\u221a2)\u00b2 = 2, not \u221a2." },
+        { "answer": "The analysis is incorrect; average power should be calculated using peak-to-peak voltage", "explanation": "Average power uses rms voltage, not peak-to-peak. The student's calculation is correct." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the evaluation of voltage measurement.",
+      "sentence": "When an oscilloscope displays 28 V peak and a multimeter reads 20 V on the same AC signal, the instruments are {{blank:1}} because the multimeter reads the {{blank:2}} value.",
+      "blanks": {
+        "1": {
+          "correct": "consistent",
+          "correctExplanation": "28/\u221a2 = 19.8 \u2248 20 V, confirming the multimeter's rms reading matches the oscilloscope's peak reading.",
+          "distractors": [
+            { "answer": "inconsistent", "explanation": "The readings are consistent: 28/\u221a2 \u2248 20 V. The apparent difference is due to different measurement types." },
+            { "answer": "incomparable", "explanation": "The readings can be compared using the relationship Vrms = Vp/\u221a2." }
+          ]
+        },
+        "2": {
+          "correct": "rms",
+          "correctExplanation": "Standard AC multimeters display the rms value of the voltage, not the peak.",
+          "distractors": [
+            { "answer": "peak", "explanation": "Multimeters read rms values. Oscilloscopes show peak (or peak-to-peak) values." },
+            { "answer": "average", "explanation": "Standard multimeters read rms, not the mathematical average (which would be zero for AC)." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the analysis of AC power delivery.",
+      "sentence": "The rms value is preferred over the peak value for appliance ratings because it allows {{blank:1}} comparison with DC for calculating power delivered to a load.",
+      "blanks": {
+        "1": {
+          "correct": "direct",
+          "correctExplanation": "The rms value can be used directly in place of DC voltage in power formulas, giving the correct average power.",
+          "distractors": [
+            { "answer": "indirect", "explanation": "The comparison is direct, not indirect. Equal rms and DC voltages give equal power in resistive loads." },
+            { "answer": "approximate", "explanation": "The comparison is exact, not approximate. Rms is defined to give precisely the same power as the equivalent DC." }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,958 @@
+{
+  "_link": {
+    "uuid": "lp-fa6fde4a-5487-03f5-d9b7-a14c87e72d7d",
+    "version": 1,
+    "contentHash": "hash-fa6fde4a",
+    "title": "I can calculate the orbital radius of a satellite using r = ³√(GMT²/4π²)",
+    "generatedAt": "2026-03-04T21:28:00Z"
+  },
+  "toLevel2": [
+    {
+      "type": "mc",
+      "question": "Which formula gives the orbital radius of a satellite with period T orbiting a body of mass M?",
+      "correct": "r = ³√(GMT²/(4π²))",
+      "correctExplanation": "The orbital radius formula is r = ³√(GMT²/(4π²)), which is derived by rearranging T² = 4π²r³/(GM) to solve for r. The cube root is taken to isolate r from r³.",
+      "distractors": [
+        {
+          "answer": "r = √(GMT²/(4π²))",
+          "explanation": "The formula requires a cube root (³√), not a square root (√). This is because T² = 4π²r³/(GM) involves r³, so the cube root is needed."
+        },
+        {
+          "answer": "r = GMT²/(4π²)",
+          "explanation": "This gives r³, not r. The cube root must be taken: r = ³√(GMT²/(4π²))."
+        },
+        {
+          "answer": "r = ³√(4π²/(GMT²))",
+          "explanation": "This has the ratio inverted. The correct formula is r = ³√(GMT²/(4π²)), with GM and T² in the numerator."
+        }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "In the formula r = ³√(GMT²/(4π²)), what does the result r represent?",
+      "correct": "The distance from the centre of the orbited body to the satellite",
+      "correctExplanation": "The orbital radius r is measured from the centre of the body being orbited. To find the altitude above the surface, subtract the radius of the body: altitude = r − R.",
+      "distractors": [
+        {
+          "answer": "The altitude of the satellite above the surface",
+          "explanation": "r is the distance from the centre, not the altitude above the surface. The altitude equals r minus the body's radius."
+        },
+        {
+          "answer": "The diameter of the satellite's orbit",
+          "explanation": "r is the radius of the orbit, not the diameter. The diameter would be 2r."
+        },
+        {
+          "answer": "The circumference of the satellite's orbit",
+          "explanation": "r is the orbital radius. The circumference is 2πr, which is a different quantity."
+        }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What mathematical operation is needed to solve for r from r³ = GMT²/(4π²)?",
+      "correct": "Take the cube root of both sides",
+      "correctExplanation": "Since r³ = GMT²/(4π²), taking the cube root of both sides gives r = ³√(GMT²/(4π²)). The cube root is the inverse of cubing.",
+      "distractors": [
+        {
+          "answer": "Take the square root of both sides",
+          "explanation": "A square root would give √(r³) = r^(3/2), not r. Since r is cubed, the cube root is needed."
+        },
+        {
+          "answer": "Divide both sides by 3",
+          "explanation": "Dividing by 3 does not undo cubing. The cube root (raising to the power 1/3) is the correct inverse operation."
+        },
+        {
+          "answer": "Square both sides",
+          "explanation": "Squaring would give r⁶, moving further from the answer. The cube root is needed to isolate r from r³."
+        }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A geostationary satellite has a period of 86 400 s. Using r = ³√(GMT²/(4π²)) with M_Earth = 6.0 × 10²⁴ kg, the orbital radius is approximately:",
+      "correct": "4.2 × 10⁷ m",
+      "correctExplanation": "r³ = GMT²/(4π²) = (6.67 × 10⁻¹¹ × 6.0 × 10²⁴ × (86400)²) / 39.48 = (4.0 × 10¹⁴ × 7.46 × 10⁹) / 39.48 = 2.99 × 10²⁴ / 39.48 = 7.56 × 10²². r = (7.56 × 10²²)^(1/3) = 4.23 × 10⁷ ≈ 4.2 × 10⁷ m.",
+      "distractors": [
+        {
+          "answer": "7.6 × 10²² m",
+          "explanation": "This is r³, not r. The cube root must be taken: r = (7.56 × 10²²)^(1/3) = 4.2 × 10⁷ m."
+        },
+        {
+          "answer": "6.4 × 10⁶ m",
+          "explanation": "This is approximately Earth's radius. The geostationary orbital radius is 4.2 × 10⁷ m (about 42 000 km from Earth's centre)."
+        },
+        {
+          "answer": "3.6 × 10⁷ m",
+          "explanation": "This is the altitude above the surface (r − R_Earth), not the orbital radius from the centre. The orbital radius is 4.2 × 10⁷ m."
+        }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "To find the altitude of a satellite above Earth's surface from the orbital radius r, what calculation is needed?",
+      "correct": "Altitude = r − R_Earth, where R_Earth is Earth's radius",
+      "correctExplanation": "The orbital radius r is measured from Earth's centre. To find the altitude above the surface, subtract Earth's radius: altitude = r − R_Earth.",
+      "distractors": [
+        {
+          "answer": "Altitude = r, since r already gives the height above the surface",
+          "explanation": "r is the distance from Earth's centre, not from the surface. The altitude is r − R_Earth."
+        },
+        {
+          "answer": "Altitude = r + R_Earth",
+          "explanation": "Adding R_Earth would give a value larger than r. The altitude is r − R_Earth."
+        },
+        {
+          "answer": "Altitude = r / R_Earth",
+          "explanation": "Dividing gives a dimensionless ratio, not an altitude. The altitude is r − R_Earth."
+        }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the orbital radius formula.",
+      "sentence": "The orbital radius is r = ³√(G{{blank:1}}T²/(4{{blank:2}})).",
+      "blanks": {
+        "1": {
+          "correct": "M",
+          "correctExplanation": "M is the mass of the central body being orbited. The formula is r = ³√(GMT²/(4π²)).",
+          "distractors": [
+            {
+              "answer": "m",
+              "explanation": "m (satellite mass) does not appear in the formula. The orbital radius depends on M (central body mass), not m."
+            },
+            {
+              "answer": "r",
+              "explanation": "r is what we are solving for. It does not appear on the right side. The formula uses M (central body mass)."
+            }
+          ]
+        },
+        "2": {
+          "correct": "π²",
+          "correctExplanation": "The denominator is 4π². The formula is r = ³√(GMT²/(4π²)).",
+          "distractors": [
+            {
+              "answer": "π",
+              "explanation": "The denominator is 4π², not 4π. This comes from (2π)² = 4π² in the period formula."
+            },
+            {
+              "answer": "G",
+              "explanation": "G is in the numerator with M and T². The denominator is 4π²."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the orbital radius result.",
+      "sentence": "The formula r = ³√(GMT²/(4π²)) gives the distance from the {{blank:1}} of the orbited body. The altitude above the surface is found by {{blank:2}} the body's radius.",
+      "blanks": {
+        "1": {
+          "correct": "centre",
+          "correctExplanation": "The orbital radius r is measured from the centre of the body being orbited, not from its surface.",
+          "distractors": [
+            {
+              "answer": "surface",
+              "explanation": "r is measured from the centre, not the surface. To get the altitude above the surface, subtract the body's radius from r."
+            },
+            {
+              "answer": "edge",
+              "explanation": "For a spherical body, 'edge' is not a standard term. The distance r is measured from the centre."
+            }
+          ]
+        },
+        "2": {
+          "correct": "subtracting",
+          "correctExplanation": "Altitude = r − R_body. Since r is from the centre and R is the body's radius, subtracting gives the height above the surface.",
+          "distractors": [
+            {
+              "answer": "adding",
+              "explanation": "Adding the body's radius would give a larger value than r. The altitude is r minus the body's radius."
+            },
+            {
+              "answer": "dividing by",
+              "explanation": "Dividing would give a ratio, not an altitude in metres. The altitude is r minus the body's radius."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the derivation of the orbital radius formula.",
+      "sentence": "Starting from T² = 4π²r³/(GM), rearranging for r³ gives r³ = {{blank:1}}. Taking the cube root gives r = {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "GMT²/(4π²)",
+          "correctExplanation": "Multiplying both sides of T² = 4π²r³/(GM) by GM/(4π²) gives r³ = GMT²/(4π²).",
+          "distractors": [
+            {
+              "answer": "4π²/(GMT²)",
+              "explanation": "This is the inverse. Rearranging T² = 4π²r³/(GM) gives r³ = GMT²/(4π²), not 4π²/(GMT²)."
+            },
+            {
+              "answer": "GMT/(4π²)",
+              "explanation": "The period appears squared (T²), not to the first power. r³ = GMT²/(4π²)."
+            }
+          ]
+        },
+        "2": {
+          "correct": "³√(GMT²/(4π²))",
+          "correctExplanation": "Taking the cube root of r³ = GMT²/(4π²) gives r = ³√(GMT²/(4π²)).",
+          "distractors": [
+            {
+              "answer": "√(GMT²/(4π²))",
+              "explanation": "The square root would not undo the cube. Since r³ is involved, the cube root is needed."
+            },
+            {
+              "answer": "GMT²/(4π²)",
+              "explanation": "This is r³, not r. The cube root must be taken to find r."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "tf",
+      "question": "The orbital radius formula r = ³√(GMT²/(4π²)) gives the altitude of the satellite above the surface of the planet.",
+      "correct": "False",
+      "correctExplanation": "The formula gives the distance from the centre of the planet, not the altitude above the surface. The altitude is found by subtracting the planet's radius: altitude = r − R_planet.",
+      "distractors": [
+        {
+          "answer": "True",
+          "explanation": "The formula gives the distance from the centre, not the altitude. The altitude equals r minus the planet's radius."
+        }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "The orbital radius of a satellite depends on the mass of the central body and the period of the orbit.",
+      "correct": "True",
+      "correctExplanation": "From r = ³√(GMT²/(4π²)), the orbital radius depends on G (a constant), M (central body mass), and T (orbital period). It does not depend on the satellite's mass.",
+      "distractors": [
+        {
+          "answer": "False",
+          "explanation": "The formula r = ³√(GMT²/(4π²)) clearly shows that r depends on M and T. Larger central mass or longer period gives a larger orbital radius."
+        }
+      ]
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "mc",
+      "question": "A satellite orbits Earth (M = 6.0 × 10²⁴ kg) with a period of 5400 s. What is its orbital radius?",
+      "correct": "6.7 × 10⁶ m",
+      "correctExplanation": "r³ = GMT²/(4π²) = (6.67 × 10⁻¹¹ × 6.0 × 10²⁴ × (5400)²) / 39.48 = (4.0 × 10¹⁴ × 2.916 × 10⁷) / 39.48 = 1.166 × 10²² / 39.48 = 2.954 × 10²⁰. r = (2.954 × 10²⁰)^(1/3) = 6.66 × 10⁶ ≈ 6.7 × 10⁶ m.",
+      "distractors": [
+        {
+          "answer": "2.95 × 10²⁰ m",
+          "explanation": "This is r³, not r. The cube root must be taken: r = (2.95 × 10²⁰)^(1/3) = 6.7 × 10⁶ m."
+        },
+        {
+          "answer": "6.7 × 10³ m",
+          "explanation": "This is too small by a factor of 1000. The correct orbital radius is 6.7 × 10⁶ m."
+        },
+        {
+          "answer": "1.72 × 10¹⁰ m",
+          "explanation": "This appears to use the square root instead of the cube root. The cube root of 2.95 × 10²⁰ is 6.7 × 10⁶ m."
+        }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A geostationary satellite has an orbital radius of 4.2 × 10⁷ m. Earth's radius is 6.4 × 10⁶ m. What is the satellite's altitude above Earth's surface?",
+      "correct": "3.56 × 10⁷ m",
+      "correctExplanation": "Altitude = r − R_Earth = 4.2 × 10⁷ − 6.4 × 10⁶ = 4.2 × 10⁷ − 0.64 × 10⁷ = 3.56 × 10⁷ m ≈ 35 600 km.",
+      "distractors": [
+        {
+          "answer": "4.2 × 10⁷ m",
+          "explanation": "This is the orbital radius (distance from Earth's centre), not the altitude above the surface. Altitude = 4.2 × 10⁷ − 6.4 × 10⁶ = 3.56 × 10⁷ m."
+        },
+        {
+          "answer": "4.84 × 10⁷ m",
+          "explanation": "This adds Earth's radius instead of subtracting. Altitude = r − R_Earth = 3.56 × 10⁷ m."
+        },
+        {
+          "answer": "6.4 × 10⁶ m",
+          "explanation": "This is Earth's radius, not the satellite's altitude. The altitude is 4.2 × 10⁷ − 6.4 × 10⁶ = 3.56 × 10⁷ m."
+        }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "If the orbital period of a satellite is doubled, by what factor does the orbital radius change?",
+      "correct": "2^(2/3) ≈ 1.59",
+      "correctExplanation": "From r = ³√(GMT²/(4π²)): r ∝ T^(2/3). Doubling T gives r₂/r₁ = (2T/T)^(2/3) = 2^(2/3) = (³√4) ≈ 1.587.",
+      "distractors": [
+        {
+          "answer": "2",
+          "explanation": "This assumes r ∝ T. Since r ∝ T^(2/3), doubling T increases r by a factor of 2^(2/3) ≈ 1.59."
+        },
+        {
+          "answer": "4",
+          "explanation": "This assumes r ∝ T². Since r ∝ T^(2/3), the factor is 2^(2/3) ≈ 1.59."
+        },
+        {
+          "answer": "8",
+          "explanation": "This assumes r ∝ T³. The correct proportionality is r ∝ T^(2/3), giving a factor of 2^(2/3) ≈ 1.59."
+        }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student calculates r³ = 2.7 × 10²² m³ for a satellite's orbit. To find r, the student should:",
+      "correct": "Calculate (2.7 × 10²²)^(1/3) = ³√(2.7 × 10²²)",
+      "correctExplanation": "Since r³ = 2.7 × 10²², taking the cube root gives r = (2.7 × 10²²)^(1/3). This can be computed as ³√2.7 × ³√(10²²) = 1.39 × 10^(22/3) = 1.39 × 10^7.33 = 3.0 × 10⁷ m.",
+      "distractors": [
+        {
+          "answer": "Calculate √(2.7 × 10²²)",
+          "explanation": "The square root gives r^(3/2), not r. Since we have r³, the cube root is needed."
+        },
+        {
+          "answer": "Divide 2.7 × 10²² by 3",
+          "explanation": "Dividing by 3 does not undo cubing. The cube root is the inverse of cubing: r = (2.7 × 10²²)^(1/3)."
+        },
+        {
+          "answer": "Calculate (2.7 × 10²²)²",
+          "explanation": "Squaring would give r⁶, not r. To go from r³ to r, take the cube root."
+        }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A satellite orbits Mars (M = 6.4 × 10²³ kg) with a period of 2.7 × 10⁴ s. What is its orbital radius?",
+      "correct": "9.2 × 10⁶ m",
+      "correctExplanation": "r³ = GMT²/(4π²) = (6.67 × 10⁻¹¹ × 6.4 × 10²³ × (2.7 × 10⁴)²) / 39.48 = (4.27 × 10¹³ × 7.29 × 10⁸) / 39.48 = 3.11 × 10²² / 39.48 = 7.88 × 10²⁰. r = (7.88 × 10²⁰)^(1/3) = 1.99 × 10^(20/3) = 1.99 × 4.64 × 10⁶ = 9.24 × 10⁶ ≈ 9.2 × 10⁶ m.",
+      "distractors": [
+        {
+          "answer": "7.9 × 10²⁰ m",
+          "explanation": "This is r³, not r. The cube root must be taken: r = (7.88 × 10²⁰)^(1/3) = 9.2 × 10⁶ m."
+        },
+        {
+          "answer": "9.2 × 10³ m",
+          "explanation": "This is too small by a factor of 1000. The correct orbital radius is 9.2 × 10⁶ m."
+        },
+        {
+          "answer": "3.4 × 10⁶ m",
+          "explanation": "This is approximately Mars's radius. The orbital radius at this period is larger: 9.2 × 10⁶ m."
+        }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Two satellites orbit the same planet. Satellite X has a period of T and Satellite Y has a period of 8T. What is the ratio r_Y/r_X?",
+      "correct": "4",
+      "correctExplanation": "From r ∝ T^(2/3): r_Y/r_X = (8T/T)^(2/3) = 8^(2/3) = (³√8)² = 2² = 4. Satellite Y orbits at 4 times the radius of Satellite X.",
+      "distractors": [
+        {
+          "answer": "8",
+          "explanation": "This assumes r ∝ T. Since r ∝ T^(2/3), the ratio is 8^(2/3) = 4."
+        },
+        {
+          "answer": "2",
+          "explanation": "2 = 8^(1/3), not 8^(2/3). The correct ratio is r_Y/r_X = 8^(2/3) = 4."
+        },
+        {
+          "answer": "64",
+          "explanation": "This assumes r ∝ T². The correct proportionality is r ∝ T^(2/3), giving 8^(2/3) = 4."
+        }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the proportionality between r and T.",
+      "sentence": "From r = ³√(GMT²/(4π²)), it follows that r is proportional to T raised to the power of {{blank:1}}. This means a graph of r³ versus T² is a {{blank:2}} line through the origin.",
+      "blanks": {
+        "1": {
+          "correct": "2/3",
+          "correctExplanation": "r = (constant)^(1/3) × T^(2/3). The cube root of T² gives T^(2/3), so r ∝ T^(2/3).",
+          "distractors": [
+            {
+              "answer": "3/2",
+              "explanation": "3/2 is the exponent relating T to r (T ∝ r^(3/2)), not r to T. r ∝ T^(2/3)."
+            },
+            {
+              "answer": "2",
+              "explanation": "T appears squared inside the cube root. After taking the cube root, the exponent is 2/3, not 2."
+            }
+          ]
+        },
+        "2": {
+          "correct": "straight",
+          "correctExplanation": "Since r³ = (GM/(4π²)) × T², plotting r³ against T² gives a straight line through the origin with gradient GM/(4π²).",
+          "distractors": [
+            {
+              "answer": "curved",
+              "explanation": "r³ is directly proportional to T², so the graph of r³ vs T² is a straight line, not a curve."
+            },
+            {
+              "answer": "horizontal",
+              "explanation": "A horizontal line would mean r³ is constant. Since r³ ∝ T², the graph is a straight line with a positive gradient."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the altitude calculation.",
+      "sentence": "A satellite has orbital radius r = 2.0 × 10⁷ m around a planet of radius R = 5.0 × 10⁶ m. The altitude above the surface is {{blank:1}} × 10⁷ − {{blank:2}} × 10⁶ = 1.5 × 10⁷ m.",
+      "blanks": {
+        "1": {
+          "correct": "2.0",
+          "correctExplanation": "The orbital radius r = 2.0 × 10⁷ m is the first term in the subtraction altitude = r − R.",
+          "distractors": [
+            {
+              "answer": "5.0",
+              "explanation": "5.0 × 10⁶ is the planet's radius R, not the orbital radius r. The altitude is r − R = 2.0 × 10⁷ − 5.0 × 10⁶."
+            },
+            {
+              "answer": "1.5",
+              "explanation": "1.5 × 10⁷ is the result (the altitude), not the first term. The calculation is 2.0 × 10⁷ − 5.0 × 10⁶."
+            }
+          ]
+        },
+        "2": {
+          "correct": "5.0",
+          "correctExplanation": "The planet's radius R = 5.0 × 10⁶ m is subtracted from the orbital radius to find the altitude.",
+          "distractors": [
+            {
+              "answer": "2.0",
+              "explanation": "2.0 × 10⁷ is the orbital radius, not the planet's radius. The altitude is 2.0 × 10⁷ − 5.0 × 10⁶."
+            },
+            {
+              "answer": "1.5",
+              "explanation": "1.5 × 10⁷ is the result, not the subtracted term. The planet's radius to subtract is 5.0 × 10⁶."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the cube root calculation.",
+      "sentence": "To find the cube root of 8.0 × 10²¹, note that ³√8.0 = {{blank:1}} and ³√(10²¹) = 10^(21/3) = {{blank:2}}. So r = 2.0 × 10⁷ m.",
+      "blanks": {
+        "1": {
+          "correct": "2.0",
+          "correctExplanation": "The cube root of 8.0 is 2.0, since 2.0³ = 8.0.",
+          "distractors": [
+            {
+              "answer": "2.83",
+              "explanation": "2.83 is the square root of 8, not the cube root. ³√8.0 = 2.0."
+            },
+            {
+              "answer": "4.0",
+              "explanation": "4.0 is not the cube root of 8. ³√8 = 2.0, since 2³ = 8."
+            }
+          ]
+        },
+        "2": {
+          "correct": "10⁷",
+          "correctExplanation": "10^(21/3) = 10⁷. The exponent 21 divided by 3 equals 7.",
+          "distractors": [
+            {
+              "answer": "10¹⁰·⁵",
+              "explanation": "10^10.5 would be 10^(21/2), using a square root. The cube root gives 10^(21/3) = 10⁷."
+            },
+            {
+              "answer": "10²¹",
+              "explanation": "10²¹ is the original value, not the cube root. ³√(10²¹) = 10^(21/3) = 10⁷."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "tf",
+      "question": "If two satellites have the same orbital period around the same planet, they must have the same orbital radius.",
+      "correct": "True",
+      "correctExplanation": "From r = ³√(GMT²/(4π²)), the orbital radius depends only on M (same planet) and T (same period). If both are equal, both satellites have the same orbital radius.",
+      "distractors": [
+        {
+          "answer": "False",
+          "explanation": "The formula r = ³√(GMT²/(4π²)) shows that r is uniquely determined by M and T. Same planet and same period give the same orbital radius."
+        }
+      ]
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "mc",
+      "question": "A satellite orbits Earth (M = 6.0 × 10²⁴ kg) with a period of 7200 s (2 hours). What is its orbital radius?",
+      "correct": "8.1 × 10⁶ m",
+      "correctExplanation": "r³ = GMT²/(4π²) = (6.67 × 10⁻¹¹ × 6.0 × 10²⁴ × (7200)²) / 39.48 = (4.0 × 10¹⁴ × 5.184 × 10⁷) / 39.48 = 2.074 × 10²² / 39.48 = 5.25 × 10²⁰. r = (5.25 × 10²⁰)^(1/3). ³√5.25 ≈ 1.738. 10^(20/3) = 10^6.667 = 4.64 × 10⁶. r ≈ 1.738 × 4.64 × 10⁶ ≈ 8.07 × 10⁶ ≈ 8.1 × 10⁶ m.",
+      "distractors": [
+        {
+          "answer": "5.25 × 10²⁰ m",
+          "explanation": "This is r³, not r. The cube root must be taken: r ≈ 8.1 × 10⁶ m."
+        },
+        {
+          "answer": "2.3 × 10¹⁰ m",
+          "explanation": "This uses the square root instead of the cube root. r = ³√(5.25 × 10²⁰) ≈ 8.1 × 10⁶ m."
+        },
+        {
+          "answer": "6.4 × 10⁶ m",
+          "explanation": "This is Earth's radius. The orbital radius at a 2-hour period is approximately 8.1 × 10⁶ m."
+        }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A weather satellite needs an orbital altitude of 800 km above Earth's surface (R_Earth = 6.4 × 10⁶ m). What is the required orbital radius, and what period would this correspond to?",
+      "correct": "r = 7.2 × 10⁶ m, T ≈ 6.1 × 10³ s",
+      "correctExplanation": "r = 6.4 × 10⁶ + 8.0 × 10⁵ = 7.2 × 10⁶ m. T = 2π√(r³/(GM)) = 2π√((7.2 × 10⁶)³/(6.67 × 10⁻¹¹ × 6.0 × 10²⁴)) = 2π√(3.73 × 10²⁰/4.0 × 10¹⁴) = 2π√(9.33 × 10⁵) = 2π × 966 = 6068 ≈ 6.1 × 10³ s.",
+      "distractors": [
+        {
+          "answer": "r = 8.0 × 10⁵ m, T ≈ 6.1 × 10³ s",
+          "explanation": "8.0 × 10⁵ m is the altitude, not the orbital radius. The orbital radius is r = R_Earth + altitude = 7.2 × 10⁶ m."
+        },
+        {
+          "answer": "r = 7.2 × 10⁶ m, T ≈ 3.73 × 10²⁰ s",
+          "explanation": "3.73 × 10²⁰ is r³, not T. The period is approximately 6.1 × 10³ s."
+        },
+        {
+          "answer": "r = 6.4 × 10⁶ m, T ≈ 5.1 × 10³ s",
+          "explanation": "6.4 × 10⁶ m is Earth's radius, not the orbital radius. The satellite at 800 km altitude has r = 7.2 × 10⁶ m."
+        }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Satellite A orbits a planet with period T₁ at radius r₁. Satellite B orbits the same planet at radius 27r₁. What is the period of Satellite B?",
+      "correct": "140.3T₁",
+      "correctExplanation": "From T ∝ r^(3/2): T₂/T₁ = (27r₁/r₁)^(3/2) = 27^(3/2) = (√27)³ = (3√3)³ ... Alternatively, 27^(3/2) = 27 × √27 = 27 × 5.196 = 140.3. So T₂ ≈ 140T₁.",
+      "distractors": [
+        {
+          "answer": "27T₁",
+          "explanation": "This assumes T ∝ r. Since T ∝ r^(3/2), the factor is 27^(3/2) = 140.3, not 27."
+        },
+        {
+          "answer": "9T₁",
+          "explanation": "This uses 27^(2/3) = 9, which is the radius ratio for a period ratio, not the period ratio for a radius ratio. T₂/T₁ = 27^(3/2) = 140.3."
+        },
+        {
+          "answer": "729T₁",
+          "explanation": "729 = 27³, not 27^(3/2). The correct factor is 27^(3/2) = 140.3."
+        }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student calculates r³ = 2.16 × 10²³ m³ for a satellite orbit but needs r. She enters (2.16 × 10²³)^(1/3) on her calculator. A quick estimate should give approximately:",
+      "correct": "6.0 × 10⁷ m",
+      "correctExplanation": "³√(2.16 × 10²³) = ³√2.16 × ³√(10²³). ³√2.16 ≈ 1.29. ³√(10²³) = 10^(23/3) = 10^7.667 ≈ 4.64 × 10⁷. So r ≈ 1.29 × 4.64 × 10⁷ ≈ 5.99 × 10⁷ ≈ 6.0 × 10⁷ m.",
+      "distractors": [
+        {
+          "answer": "4.6 × 10¹¹ m",
+          "explanation": "This uses the square root. The cube root of 2.16 × 10²³ is approximately 6.0 × 10⁷ m."
+        },
+        {
+          "answer": "7.2 × 10⁷ m",
+          "explanation": "This is not the cube root of 2.16 × 10²³. The correct estimate is approximately 6.0 × 10⁷ m."
+        },
+        {
+          "answer": "2.16 × 10⁷ m",
+          "explanation": "This just changes the exponent. The correct cube root is (2.16)^(1/3) × 10^(23/3) ≈ 6.0 × 10⁷ m."
+        }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A space agency needs to place a satellite at exactly twice the orbital radius of the International Space Station (ISS). If the ISS has a period of 5520 s, what period should the new satellite have?",
+      "correct": "1.56 × 10⁴ s",
+      "correctExplanation": "From T ∝ r^(3/2): T₂ = T₁ × (r₂/r₁)^(3/2) = 5520 × 2^(3/2) = 5520 × 2√2 = 5520 × 2.828 = 15 610 ≈ 1.56 × 10⁴ s.",
+      "distractors": [
+        {
+          "answer": "1.10 × 10⁴ s",
+          "explanation": "This uses a factor of 2 (T ∝ r). The correct factor is 2^(3/2) = 2.83, giving T₂ = 5520 × 2.83 = 1.56 × 10⁴ s."
+        },
+        {
+          "answer": "4.41 × 10⁴ s",
+          "explanation": "This uses a factor of 8 (T ∝ r³). The correct factor is 2^(3/2) = 2.83, giving T₂ = 1.56 × 10⁴ s."
+        },
+        {
+          "answer": "7.80 × 10³ s",
+          "explanation": "This uses a factor of √2 (T ∝ √r). The correct factor is 2^(3/2) = 2.83, giving T₂ = 1.56 × 10⁴ s."
+        }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A low-orbit satellite orbits a planet at r₁ just above the surface. A geostationary satellite orbits the same planet at r₂ = 6.6r₁. What is the ratio of the geostationary period to the low-orbit period?",
+      "correct": "17.0",
+      "correctExplanation": "T₂/T₁ = (r₂/r₁)^(3/2) = (6.6)^(3/2) = 6.6 × √6.6 = 6.6 × 2.569 = 16.96 ≈ 17.0.",
+      "distractors": [
+        {
+          "answer": "6.6",
+          "explanation": "This assumes T ∝ r. Since T ∝ r^(3/2), the ratio is (6.6)^(3/2) = 17.0."
+        },
+        {
+          "answer": "43.6",
+          "explanation": "This uses (6.6)² = 43.6. The correct exponent is 3/2: (6.6)^(3/2) = 17.0."
+        },
+        {
+          "answer": "2.57",
+          "explanation": "This is √6.6, using the exponent 1/2 instead of 3/2. The correct ratio is (6.6)^(3/2) = 17.0."
+        }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Three moons are discovered around an exoplanet. Their periods and orbital radii are measured. A graph of r³ vs T² produces a straight line with gradient k. The mass of the exoplanet is:",
+      "correct": "M = 4π²k/G",
+      "correctExplanation": "From r³ = (GM/(4π²)) × T², the gradient k of r³ vs T² is GM/(4π²). Rearranging: M = 4π²k/G.",
+      "distractors": [
+        {
+          "answer": "M = Gk/(4π²)",
+          "explanation": "The gradient k = GM/(4π²), so M = 4π²k/G, not Gk/(4π²)."
+        },
+        {
+          "answer": "M = k/G",
+          "explanation": "The factor of 4π² is needed. The gradient k = GM/(4π²), so M = 4π²k/G."
+        },
+        {
+          "answer": "M = G/(4π²k)",
+          "explanation": "This inverts the relationship. M = 4π²k/G."
+        }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the step-by-step calculation.",
+      "sentence": "To find r when T = 5.0 × 10³ s and M = 6.0 × 10²⁴ kg: first calculate r³ = GMT²/(4π²) = (4.0 × 10¹⁴ × {{blank:1}})/(39.48) = {{blank:2}}. Then take the cube root to find r.",
+      "blanks": {
+        "1": {
+          "correct": "2.5 × 10⁷",
+          "correctExplanation": "T² = (5.0 × 10³)² = 2.5 × 10⁷. This is the period squared, which appears in the numerator.",
+          "distractors": [
+            {
+              "answer": "5.0 × 10³",
+              "explanation": "This is T, not T². The formula requires T² = (5.0 × 10³)² = 2.5 × 10⁷."
+            },
+            {
+              "answer": "2.5 × 10⁶",
+              "explanation": "The exponent is 7, not 6. (5.0 × 10³)² = 25 × 10⁶ = 2.5 × 10⁷."
+            }
+          ]
+        },
+        "2": {
+          "correct": "2.53 × 10²⁰",
+          "correctExplanation": "GMT² = 4.0 × 10¹⁴ × 2.5 × 10⁷ = 1.0 × 10²². r³ = 1.0 × 10²² / 39.48 = 2.53 × 10²⁰.",
+          "distractors": [
+            {
+              "answer": "1.0 × 10²²",
+              "explanation": "1.0 × 10²² is GMT², before dividing by 4π². r³ = 1.0 × 10²² / 39.48 = 2.53 × 10²⁰."
+            },
+            {
+              "answer": "2.53 × 10¹⁷",
+              "explanation": "This is too small by a factor of 1000. r³ = 1.0 × 10²² / 39.48 = 2.53 × 10²⁰."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about cube root technique.",
+      "sentence": "To evaluate ³√(a × 10ⁿ), compute ³√a separately and use the rule ³√(10ⁿ) = 10^(n/{{blank:1}}). For example, ³√(2.7 × 10²⁰) = {{blank:2}} × 10^(20/3).",
+      "blanks": {
+        "1": {
+          "correct": "3",
+          "correctExplanation": "The cube root of 10ⁿ is 10^(n/3), because (10^(n/3))³ = 10ⁿ. So we divide the exponent by 3.",
+          "distractors": [
+            {
+              "answer": "2",
+              "explanation": "Dividing by 2 gives the square root, not the cube root. For cube root, divide the exponent by 3."
+            },
+            {
+              "answer": "10",
+              "explanation": "The exponent is divided by 3 for a cube root, not by 10."
+            }
+          ]
+        },
+        "2": {
+          "correct": "1.39",
+          "correctExplanation": "³√2.7 ≈ 1.39, since 1.39³ ≈ 2.69 ≈ 2.7.",
+          "distractors": [
+            {
+              "answer": "1.64",
+              "explanation": "1.64 is the square root of 2.7, not the cube root. ³√2.7 ≈ 1.39."
+            },
+            {
+              "answer": "0.9",
+              "explanation": "0.9³ = 0.729, which is much less than 2.7. The cube root of 2.7 is approximately 1.39."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about geostationary orbit altitude.",
+      "sentence": "A geostationary satellite has an orbital radius of 4.2 × 10⁷ m. Earth's radius is 6.4 × 10⁶ m. The altitude above Earth's surface is 4.2 × 10⁷ − 6.4 × 10⁶ = {{blank:1}} × 10⁷ m, or approximately {{blank:2}} km.",
+      "blanks": {
+        "1": {
+          "correct": "3.56",
+          "correctExplanation": "4.2 × 10⁷ − 0.64 × 10⁷ = 3.56 × 10⁷ m.",
+          "distractors": [
+            {
+              "answer": "4.84",
+              "explanation": "This adds instead of subtracting: 4.2 + 0.64 = 4.84. The altitude is r − R = 3.56 × 10⁷ m."
+            },
+            {
+              "answer": "3.6",
+              "explanation": "While close, the precise value is 4.2 − 0.64 = 3.56 × 10⁷ m."
+            }
+          ]
+        },
+        "2": {
+          "correct": "35 600",
+          "correctExplanation": "3.56 × 10⁷ m = 3.56 × 10⁴ km = 35 600 km (approximately 36 000 km).",
+          "distractors": [
+            {
+              "answer": "356",
+              "explanation": "356 km is too small by a factor of 100. 3.56 × 10⁷ m = 35 600 km."
+            },
+            {
+              "answer": "3 560 000",
+              "explanation": "This is 3.56 × 10⁷ m converted to mm or stated in wrong units. The altitude is 35 600 km."
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "mc",
+      "question": "A satellite is in a geostationary orbit (T = 86 400 s) around Earth (M = 6.0 × 10²⁴ kg, R = 6.4 × 10⁶ m). If the same satellite were placed in geostationary orbit around Mars (M = 6.4 × 10²³ kg, rotation period T_Mars = 88 640 s), what would its orbital radius be?",
+      "correct": "2.0 × 10⁷ m",
+      "correctExplanation": "r³ = GMT²/(4π²) = (6.67 × 10⁻¹¹ × 6.4 × 10²³ × (88640)²) / 39.48 = (4.27 × 10¹³ × 7.857 × 10⁹) / 39.48 = 3.353 × 10²³ / 39.48 = 8.49 × 10²¹. r = (8.49 × 10²¹)^(1/3) ≈ 2.04 × 10⁷ ≈ 2.0 × 10⁷ m.",
+      "distractors": [
+        {
+          "answer": "4.2 × 10⁷ m",
+          "explanation": "This is the geostationary radius for Earth. Mars has a different mass and rotation period, giving r ≈ 2.0 × 10⁷ m."
+        },
+        {
+          "answer": "8.5 × 10²¹ m",
+          "explanation": "This is r³, not r. The cube root must be taken: r ≈ 2.0 × 10⁷ m."
+        },
+        {
+          "answer": "3.4 × 10⁶ m",
+          "explanation": "This is approximately Mars's radius. The areostationary orbit is much further out at approximately 2.0 × 10⁷ m."
+        }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An astronomer observes a moon orbiting a distant planet with period 3.0 × 10⁵ s at radius 1.0 × 10⁸ m. A second moon has a period of 1.2 × 10⁶ s. What is the orbital radius of the second moon?",
+      "correct": "2.52 × 10⁸ m",
+      "correctExplanation": "From r ∝ T^(2/3): r₂ = r₁ × (T₂/T₁)^(2/3) = 1.0 × 10⁸ × (1.2 × 10⁶ / 3.0 × 10⁵)^(2/3) = 1.0 × 10⁸ × 4^(2/3) = 1.0 × 10⁸ × (³√4)² = 1.0 × 10⁸ × (1.587)² = 1.0 × 10⁸ × 2.52 = 2.52 × 10⁸ m.",
+      "distractors": [
+        {
+          "answer": "4.0 × 10⁸ m",
+          "explanation": "This uses a factor of 4 (T₂/T₁ = 4), assuming r ∝ T. Since r ∝ T^(2/3), the factor is 4^(2/3) = 2.52."
+        },
+        {
+          "answer": "1.59 × 10⁸ m",
+          "explanation": "This uses 4^(1/3) ≈ 1.59 instead of 4^(2/3) ≈ 2.52. The correct exponent is 2/3."
+        },
+        {
+          "answer": "8.0 × 10⁸ m",
+          "explanation": "This uses a factor of 8 = 4^(3/2). The correct relationship is r ∝ T^(2/3), giving a factor of 4^(2/3) = 2.52."
+        }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student uses r = ³√(GMT²/(4π²)) to calculate the orbital radius and gets r = 2.5 × 10⁷ m. She then uses v = 2πr/T to check the speed and gets v = 3.6 × 10³ m s⁻¹. She also checks using v = √(GM/r) and gets v = 3.6 × 10³ m s⁻¹. This confirms:",
+      "correct": "The orbital radius calculation is consistent because both methods give the same speed",
+      "correctExplanation": "When the same orbital radius yields the same speed from both v = 2πr/T and v = √(GM/r), the radius, period, and central mass are mutually consistent. This provides a useful cross-check for orbital calculations.",
+      "distractors": [
+        {
+          "answer": "The satellite must be in a geostationary orbit",
+          "explanation": "Both speeds agreeing confirms internal consistency of the calculation, not that the orbit is geostationary."
+        },
+        {
+          "answer": "The formulas are approximate and only agree by coincidence",
+          "explanation": "The formulas are derived from the same physics (Fg = Fc). They must agree if the calculation is correct — this is not a coincidence."
+        },
+        {
+          "answer": "The speed formula is more accurate than the radius formula",
+          "explanation": "Both formulas are exact (for circular orbits). Their agreement confirms that the calculation is correct."
+        }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A satellite transfer orbit requires moving from radius r₁ to radius r₂ = 3r₁. At r₁, the circular orbital speed is v₁. What is the circular orbital speed at r₂?",
+      "correct": "v₁/√3",
+      "correctExplanation": "From v = √(GM/r): v₂/v₁ = √(r₁/r₂) = √(r₁/(3r₁)) = √(1/3) = 1/√3. So v₂ = v₁/√3 ≈ 0.577v₁.",
+      "distractors": [
+        {
+          "answer": "v₁/3",
+          "explanation": "This assumes v ∝ 1/r. Since v ∝ 1/√r, the ratio is 1/√3, not 1/3."
+        },
+        {
+          "answer": "3v₁",
+          "explanation": "The speed decreases with increasing radius, not increases. v₂ = v₁/√3."
+        },
+        {
+          "answer": "v₁/9",
+          "explanation": "This assumes v ∝ 1/r². Since v ∝ 1/√r, the ratio is 1/√3."
+        }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A planet has an unknown mass. A satellite orbits it at r = 5.0 × 10⁶ m with T = 8000 s. What is the mass of the planet?",
+      "correct": "1.2 × 10²⁴ kg",
+      "correctExplanation": "M = 4π²r³/(GT²) = 39.48 × (5.0 × 10⁶)³ / (6.67 × 10⁻¹¹ × (8000)²) = 4.935 × 10²¹ / (4.269 × 10⁻³) = 1.16 × 10²⁴ ≈ 1.2 × 10²⁴ kg.",
+      "distractors": [
+        {
+          "answer": "4.94 × 10²¹ kg",
+          "explanation": "This is 4π²r³, the numerator only. Dividing by GT² gives M = 1.2 × 10²⁴ kg."
+        },
+        {
+          "answer": "6.0 × 10²⁴ kg",
+          "explanation": "This is Earth's mass. The orbital data gives M = 1.2 × 10²⁴ kg for this planet."
+        },
+        {
+          "answer": "1.2 × 10²¹ kg",
+          "explanation": "This is too small by a factor of 1000. The correct mass is 1.2 × 10²⁴ kg."
+        }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A Hohmann transfer orbit moves a satellite from radius r₁ to radius r₂ around a planet. The transfer orbit is an ellipse with semi-major axis a = (r₁ + r₂)/2. The period of the transfer orbit is T_transfer = 2π√(a³/(GM)). If r₁ = 7.0 × 10⁶ m and r₂ = 4.2 × 10⁷ m, the transfer time (half the period) for Earth (M = 6.0 × 10²⁴ kg) is:",
+      "correct": "1.9 × 10⁴ s",
+      "correctExplanation": "a = (7.0 × 10⁶ + 4.2 × 10⁷)/2 = 4.9 × 10⁷/2 = 2.45 × 10⁷ m. T = 2π√(a³/(GM)) = 2π√((2.45 × 10⁷)³/(4.0 × 10¹⁴)) = 2π√(1.47 × 10²² / 4.0 × 10¹⁴) = 2π√(3.68 × 10⁷) = 2π × 6066 = 3.81 × 10⁴ s. Transfer time = T/2 = 1.91 × 10⁴ ≈ 1.9 × 10⁴ s.",
+      "distractors": [
+        {
+          "answer": "3.8 × 10⁴ s",
+          "explanation": "This is the full period of the transfer orbit. The transfer time is half the period (the satellite traverses half the ellipse): 3.8 × 10⁴ / 2 = 1.9 × 10⁴ s."
+        },
+        {
+          "answer": "5.1 × 10³ s",
+          "explanation": "This is approximately the period of the inner circular orbit, not the transfer time. The transfer takes 1.9 × 10⁴ s."
+        },
+        {
+          "answer": "8.6 × 10⁴ s",
+          "explanation": "This is approximately the period of the outer circular orbit (geostationary). The transfer time is 1.9 × 10⁴ s."
+        }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A dwarf planet has a moon orbiting at 1.0 × 10⁵ m with a period of 3.0 × 10⁴ s. Another moon has a period of 6.0 × 10⁴ s. Using the orbital radius formula, the second moon's radius is:",
+      "correct": "1.59 × 10⁵ m",
+      "correctExplanation": "r₂ = r₁ × (T₂/T₁)^(2/3) = 1.0 × 10⁵ × (6.0 × 10⁴ / 3.0 × 10⁴)^(2/3) = 1.0 × 10⁵ × 2^(2/3) = 1.0 × 10⁵ × 1.587 = 1.59 × 10⁵ m.",
+      "distractors": [
+        {
+          "answer": "2.0 × 10⁵ m",
+          "explanation": "This assumes r ∝ T (factor of 2). Since r ∝ T^(2/3), the factor is 2^(2/3) = 1.587, giving 1.59 × 10⁵ m."
+        },
+        {
+          "answer": "1.26 × 10⁵ m",
+          "explanation": "This uses 2^(1/3) ≈ 1.26. The correct exponent is 2/3: 2^(2/3) = 1.587."
+        },
+        {
+          "answer": "2.83 × 10⁵ m",
+          "explanation": "This uses 2^(3/2) ≈ 2.83. The correct exponent is 2/3, not 3/2: 2^(2/3) = 1.587."
+        }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A satellite needs to orbit a new exoplanet (M = 3.0 × 10²⁵ kg) with a period that matches the planet's rotation period of 50 000 s. What orbital radius is required for a 'geosynchronous' orbit?",
+      "correct": "4.9 × 10⁷ m",
+      "correctExplanation": "r³ = GMT²/(4π²) = (6.67 × 10⁻¹¹ × 3.0 × 10²⁵ × (5.0 × 10⁴)²) / 39.48 = (2.0 × 10¹⁵ × 2.5 × 10⁹) / 39.48 = 5.0 × 10²⁴ / 39.48 = 1.267 × 10²³. r = (1.267 × 10²³)^(1/3). ³√1.267 ≈ 1.082. 10^(23/3) = 10^7.667 ≈ 4.64 × 10⁷. r ≈ 1.082 × 4.64 × 10⁷ ≈ 5.02 × 10⁷ ≈ 4.9 × 10⁷ m.",
+      "distractors": [
+        {
+          "answer": "1.27 × 10²³ m",
+          "explanation": "This is r³, not r. Taking the cube root gives r ≈ 4.9 × 10⁷ m."
+        },
+        {
+          "answer": "4.2 × 10⁷ m",
+          "explanation": "This is Earth's geostationary radius. The exoplanet has different mass and rotation period, giving r ≈ 4.9 × 10⁷ m."
+        },
+        {
+          "answer": "4.9 × 10⁴ m",
+          "explanation": "This is too small by a factor of 1000. The correct orbital radius is 4.9 × 10⁷ m."
+        }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about verifying orbital calculations.",
+      "sentence": "After calculating r from the period formula, a useful check is to verify that v = 2πr/T gives the same result as v = √(GM/{{blank:1}}). If both agree, the calculation is {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "r",
+          "correctExplanation": "The orbital speed formula v = √(GM/r) uses the same orbital radius. If this speed matches v = 2πr/T, the calculation is internally consistent.",
+          "distractors": [
+            {
+              "answer": "T",
+              "explanation": "The speed formula is v = √(GM/r), not √(GM/T). The radius r, not the period T, appears in the denominator."
+            },
+            {
+              "answer": "m",
+              "explanation": "The satellite mass m does not appear in v = √(GM/r). The central body mass M is used."
+            }
+          ]
+        },
+        "2": {
+          "correct": "consistent",
+          "correctExplanation": "If both speed formulas give the same result using the calculated r, then the radius, period, and central mass are mutually consistent.",
+          "distractors": [
+            {
+              "answer": "approximate",
+              "explanation": "Both formulas are exact for circular orbits. Agreement means the calculation is consistent, not merely approximate."
+            },
+            {
+              "answer": "incorrect",
+              "explanation": "Agreement between two independent methods confirms that the calculation is correct (or at least consistent), not incorrect."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the cube root and proportionality.",
+      "sentence": "Since r³ ∝ T², taking the cube root gives r ∝ T^({{blank:1}}). This means that to increase the orbital radius by a factor of 8, the period must increase by a factor of 8^(3/2) = {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "2/3",
+          "correctExplanation": "Taking the cube root of r³ ∝ T² gives r ∝ T^(2/3). The exponent 2/3 comes from raising both sides to the power 1/3.",
+          "distractors": [
+            {
+              "answer": "3/2",
+              "explanation": "3/2 is the exponent relating T to r (T ∝ r^(3/2)). The exponent relating r to T is 2/3."
+            },
+            {
+              "answer": "1/3",
+              "explanation": "1/3 would be the cube root of T, but r³ ∝ T², so r ∝ T^(2/3)."
+            }
+          ]
+        },
+        "2": {
+          "correct": "22.6",
+          "correctExplanation": "8^(3/2) = 8 × √8 = 8 × 2.83 = 22.6. Alternatively, 8^(3/2) = (√8)³ = (2.83)³ = 22.6.",
+          "distractors": [
+            {
+              "answer": "12",
+              "explanation": "8^(3/2) = 8 × √8 = 8 × 2.83 = 22.6, not 12."
+            },
+            {
+              "answer": "4",
+              "explanation": "4 = 8^(2/3), which is the radius ratio for a period ratio of 8. The period ratio for a radius ratio of 8 is 8^(3/2) = 22.6."
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

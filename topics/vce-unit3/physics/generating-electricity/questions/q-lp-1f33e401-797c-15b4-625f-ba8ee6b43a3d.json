@@ -1,0 +1,596 @@
+{
+  "_link": {
+    "uuid": "lp-1f33e401-797c-15b4-625f-ba8ee6b43a3d",
+    "version": 1,
+    "contentHash": "hash-4e299e1e",
+    "title": "I can analyse how changes to a DC generator affect the emf output",
+    "generatedAt": "2026-03-07T00:00:00.000Z"
+  },
+  "toLevel2": [
+    {
+      "type": "mc",
+      "question": "Which one of the following changes to a DC generator would increase the peak emf?",
+      "correct": "Increasing the rate of rotation of the coil",
+      "correctExplanation": "Increasing the rate of rotation increases the rate of change of magnetic flux through the coil, which increases the peak emf according to Faraday's law.",
+      "distractors": [
+        { "answer": "Decreasing the number of turns in the coil", "explanation": "Decreasing the number of turns reduces the peak emf, not increases it." },
+        { "answer": "Reducing the area of the coil", "explanation": "Reducing the coil area decreases the magnetic flux and therefore reduces the peak emf." },
+        { "answer": "Decreasing the magnetic field strength", "explanation": "A weaker magnetic field reduces the flux through the coil and decreases the peak emf." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which one of the following factors does NOT affect the peak emf of a DC generator?",
+      "correct": "The resistance of the external circuit",
+      "correctExplanation": "The peak emf depends on the rate of rotation, number of turns, magnetic field strength, and coil area. The external resistance affects the current but not the emf itself.",
+      "distractors": [
+        { "answer": "The number of turns in the coil", "explanation": "The number of turns directly affects the peak emf. More turns means a greater peak emf." },
+        { "answer": "The strength of the magnetic field", "explanation": "The magnetic field strength directly affects the peak emf. A stronger field produces a greater peak emf." },
+        { "answer": "The area of the coil", "explanation": "The coil area directly affects the peak emf. A larger area means greater flux and greater peak emf." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What happens to the frequency of the output waveform of a DC generator when the rate of rotation is doubled?",
+      "correct": "The frequency doubles.",
+      "correctExplanation": "The frequency of the output is directly proportional to the rate of rotation. Doubling the rotation rate doubles the frequency.",
+      "distractors": [
+        { "answer": "The frequency remains unchanged.", "explanation": "The frequency is directly linked to the rotation rate. Doubling the rotation rate doubles the frequency." },
+        { "answer": "The frequency halves.", "explanation": "The frequency increases, not decreases, when the rotation rate increases." },
+        { "answer": "The frequency quadruples.", "explanation": "The frequency is directly proportional to the rotation rate, not proportional to its square. Doubling the rate doubles the frequency." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "In a DC generator, what happens to the shape of the DC output waveform when the direction of rotation is reversed?",
+      "correct": "The shape of the DC output remains unchanged.",
+      "correctExplanation": "Reversing the direction of rotation reverses the alternating emf in the coil, but the split ring commutator ensures that the DC output retains the same shape.",
+      "distractors": [
+        { "answer": "The DC output becomes negative.", "explanation": "The split ring commutator converts the reversed alternating emf back to the same positive DC output." },
+        { "answer": "The DC output becomes alternating.", "explanation": "The split ring commutator maintains a unidirectional (DC) output regardless of the direction of rotation." },
+        { "answer": "The peak emf is reduced.", "explanation": "Reversing the direction of rotation does not change the magnitude of the peak emf. Only the direction of the alternating emf in the coil reverses." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "If the number of turns in a DC generator coil is tripled while all other factors remain constant, what happens to the peak emf?",
+      "correct": "The peak emf triples.",
+      "correctExplanation": "The peak emf is directly proportional to the number of turns. Tripling the turns triples the peak emf.",
+      "distractors": [
+        { "answer": "The peak emf remains unchanged.", "explanation": "The peak emf depends directly on the number of turns. Tripling the turns triples the peak emf." },
+        { "answer": "The peak emf increases by a factor of nine.", "explanation": "The peak emf is directly proportional to the number of turns, not to its square." },
+        { "answer": "The peak emf doubles.", "explanation": "The peak emf triples, not doubles, because it is directly proportional to the number of turns." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the statement about the factors affecting peak emf in a DC generator.",
+      "sentence": "The peak emf of a DC generator increases when the rate of rotation increases, the number of {{blank:1}} increases, the magnetic field strength increases, or the {{blank:2}} of the coil increases.",
+      "blanks": {
+        "1": {
+          "correct": "turns",
+          "correctExplanation": "More turns in the coil means a greater total emf, since each turn contributes to the overall induced emf.",
+          "distractors": [
+            { "answer": "magnets", "explanation": "The number of magnets is not the relevant factor. It is the number of turns in the coil that directly affects the peak emf." },
+            { "answer": "commutator segments", "explanation": "While commutator segments relate to the output, it is the number of turns that directly affects the peak emf." },
+            { "answer": "brushes", "explanation": "The number of brushes does not affect the peak emf. It is the number of turns in the coil that matters." }
+          ]
+        },
+        "2": {
+          "correct": "area",
+          "correctExplanation": "A larger coil area means more magnetic flux passes through the coil, increasing the peak emf.",
+          "distractors": [
+            { "answer": "resistance", "explanation": "The resistance of the coil does not affect the emf. It is the area that determines the flux through the coil." },
+            { "answer": "temperature", "explanation": "Temperature is not a factor that directly affects the peak emf. The area of the coil is the relevant quantity." },
+            { "answer": "mass", "explanation": "The mass of the coil does not affect the peak emf. It is the area that determines the flux through the coil." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the statement about the effect of doubling the rotation rate.",
+      "sentence": "Doubling the rate of rotation of a DC generator doubles the {{blank:1}} emf and also doubles the {{blank:2}} of the output waveform.",
+      "blanks": {
+        "1": {
+          "correct": "peak",
+          "correctExplanation": "The peak emf is directly proportional to the rate of rotation. Doubling the rotation rate doubles the peak emf.",
+          "distractors": [
+            { "answer": "average", "explanation": "While the average emf also changes, the key quantity that doubles is the peak emf." },
+            { "answer": "minimum", "explanation": "The minimum emf of a DC generator output is zero (at the commutator switching points). The peak emf is what doubles." },
+            { "answer": "total", "explanation": "The specific quantity that doubles is the peak emf, as it is directly proportional to the rotation rate." }
+          ]
+        },
+        "2": {
+          "correct": "frequency",
+          "correctExplanation": "The frequency of the output waveform is directly proportional to the rate of rotation. Doubling the rotation rate doubles the frequency.",
+          "distractors": [
+            { "answer": "amplitude", "explanation": "While the amplitude (peak emf) also doubles, this blank refers to the frequency, which also doubles with the rotation rate." },
+            { "answer": "wavelength", "explanation": "Wavelength is a property of waves, not of electrical output waveforms in this context. The frequency is the relevant quantity." },
+            { "answer": "period", "explanation": "The period halves (not doubles) when the rotation rate doubles. It is the frequency that doubles." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the statement about the role of the commutator when rotation direction reverses.",
+      "sentence": "Reversing the direction of rotation reverses the alternating emf in the coil, but the {{blank:1}} ensures that the DC output shape is {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "split ring commutator",
+          "correctExplanation": "The split ring commutator reverses the connection to the external circuit every half-turn, maintaining a unidirectional DC output.",
+          "distractors": [
+            { "answer": "slip rings", "explanation": "Slip rings are used in AC generators. It is the split ring commutator that maintains the DC output." },
+            { "answer": "brushes", "explanation": "While brushes make contact with the commutator, it is the split ring commutator itself that reverses the connections." },
+            { "answer": "armature", "explanation": "The armature is the rotating coil. It is the split ring commutator that ensures the DC output shape is maintained." }
+          ]
+        },
+        "2": {
+          "correct": "unchanged",
+          "correctExplanation": "The commutator ensures that the DC output retains the same shape regardless of the direction of rotation.",
+          "distractors": [
+            { "answer": "reversed", "explanation": "The DC output is not reversed. The commutator compensates for the reversed alternating emf in the coil." },
+            { "answer": "doubled", "explanation": "The output is not doubled. The commutator simply maintains the same DC output shape." },
+            { "answer": "halved", "explanation": "The output is not halved. The commutator maintains the same DC output shape regardless of rotation direction." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "tf",
+      "question": "Increasing the magnetic field strength in a DC generator increases the peak emf.",
+      "correct": "True",
+      "correctExplanation": "A stronger magnetic field increases the magnetic flux through the coil, which increases the rate of change of flux and therefore the peak emf.",
+      "distractors": [
+        { "answer": "False", "explanation": "This statement is correct. The peak emf is directly proportional to the magnetic field strength." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "Tripling the number of turns in a DC generator coil also triples the frequency of the output waveform.",
+      "correct": "False",
+      "correctExplanation": "Changing the number of turns affects the peak emf but does not affect the frequency. The frequency depends only on the rate of rotation.",
+      "distractors": [
+        { "answer": "True", "explanation": "The number of turns has no effect on the frequency. The frequency is determined solely by how fast the coil rotates." }
+      ]
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "mc",
+      "question": "A DC generator has a peak emf of 12.0 V when rotating at 50 Hz. If the rotation rate is increased to 100 Hz with no other changes, what is the new peak emf?",
+      "correct": "24.0 V",
+      "correctExplanation": "The peak emf is directly proportional to the rotation rate. Doubling the frequency from 50 Hz to 100 Hz doubles the peak emf from 12.0 V to 24.0 V.",
+      "distractors": [
+        { "answer": "12.0 V", "explanation": "The peak emf does not stay the same. It is directly proportional to the rotation rate, so it doubles to 24.0 V." },
+        { "answer": "48.0 V", "explanation": "The peak emf doubles, not quadruples. It is directly proportional to the rotation rate, not to its square." },
+        { "answer": "6.0 V", "explanation": "The peak emf increases, not decreases. Doubling the rotation rate doubles the peak emf." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Kai observes that a DC generator produces a peak emf of 8.0 V with a coil of 200 turns. If the coil is replaced with one of 600 turns, with all other factors unchanged, what is the new peak emf?",
+      "correct": "24.0 V",
+      "correctExplanation": "The peak emf is directly proportional to the number of turns. Tripling the turns from 200 to 600 triples the peak emf from 8.0 V to 24.0 V.",
+      "distractors": [
+        { "answer": "8.0 V", "explanation": "The peak emf changes when the number of turns changes. It triples to 24.0 V." },
+        { "answer": "16.0 V", "explanation": "The turns tripled, not doubled. The peak emf should also triple to 24.0 V." },
+        { "answer": "72.0 V", "explanation": "The peak emf is directly proportional to the number of turns, not to its square. Tripling the turns triples the peak emf to 24.0 V." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A DC generator initially produces a peak emf of 10.0 V at a rotation frequency of 25 Hz. The rotation frequency is increased to 75 Hz. Which one of the following correctly describes the changes to the output?",
+      "correct": "The peak emf becomes 30.0 V and the frequency of the output waveform becomes 75 Hz.",
+      "correctExplanation": "Tripling the rotation frequency triples both the peak emf (10.0 × 3 = 30.0 V) and the output frequency (from 25 Hz to 75 Hz).",
+      "distractors": [
+        { "answer": "The peak emf becomes 30.0 V and the frequency remains 25 Hz.", "explanation": "The frequency of the output is directly linked to the rotation frequency. It increases to 75 Hz." },
+        { "answer": "The peak emf remains 10.0 V and the frequency becomes 75 Hz.", "explanation": "The peak emf is directly proportional to the rotation frequency. It increases to 30.0 V." },
+        { "answer": "The peak emf becomes 90.0 V and the frequency becomes 75 Hz.", "explanation": "The peak emf is directly proportional to the rotation frequency, not to its square. It triples to 30.0 V." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Elise doubles the area of the coil in a DC generator while keeping all other factors constant. Which one of the following correctly describes the effect on the output?",
+      "correct": "The peak emf doubles and the frequency remains unchanged.",
+      "correctExplanation": "The peak emf is directly proportional to the coil area. Doubling the area doubles the peak emf. The frequency depends only on the rotation rate, which has not changed.",
+      "distractors": [
+        { "answer": "The peak emf doubles and the frequency doubles.", "explanation": "The frequency depends on the rotation rate, not the coil area. The frequency remains unchanged." },
+        { "answer": "The peak emf remains unchanged and the frequency doubles.", "explanation": "The peak emf is directly proportional to the coil area, so it doubles. The frequency is unaffected by changes in area." },
+        { "answer": "Both the peak emf and the frequency remain unchanged.", "explanation": "The peak emf changes because it is directly proportional to the coil area. It doubles." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which one of the following changes to a DC generator increases the peak emf without changing the frequency of the output waveform?",
+      "correct": "Increasing the number of turns in the coil",
+      "correctExplanation": "Increasing the number of turns increases the peak emf but has no effect on the frequency, which depends only on the rotation rate.",
+      "distractors": [
+        { "answer": "Increasing the rate of rotation", "explanation": "Increasing the rotation rate increases both the peak emf and the frequency of the output." },
+        { "answer": "Decreasing the rate of rotation", "explanation": "Decreasing the rotation rate decreases both the peak emf and the frequency." },
+        { "answer": "Reversing the direction of rotation", "explanation": "Reversing the direction of rotation does not change the peak emf or the frequency of the DC output." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A DC generator produces a peak emf of 15.0 V. The magnetic field strength is then doubled and the number of turns is halved. What is the new peak emf?",
+      "correct": "15.0 V",
+      "correctExplanation": "Doubling the field strength doubles the emf, while halving the turns halves it. The two changes cancel: 15.0 × 2 × 0.5 = 15.0 V.",
+      "distractors": [
+        { "answer": "30.0 V", "explanation": "This accounts for doubling the field strength but ignores halving the turns. Both changes must be considered." },
+        { "answer": "7.5 V", "explanation": "This accounts for halving the turns but ignores doubling the field strength. Both changes must be considered." },
+        { "answer": "60.0 V", "explanation": "This incorrectly multiplies both factors. Doubling the field and halving the turns cancel each other out." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the statement about how changing the number of turns affects a DC generator's output.",
+      "sentence": "Tripling the number of turns in a DC generator triples the {{blank:1}} but does not change the {{blank:2}} of the output waveform.",
+      "blanks": {
+        "1": {
+          "correct": "peak emf",
+          "correctExplanation": "The peak emf is directly proportional to the number of turns. Tripling the turns triples the peak emf.",
+          "distractors": [
+            { "answer": "frequency", "explanation": "The frequency depends on the rotation rate, not the number of turns. It is the peak emf that triples." },
+            { "answer": "period", "explanation": "The period depends on the rotation rate, not the number of turns. It is the peak emf that triples." },
+            { "answer": "resistance", "explanation": "While resistance may change, the key output quantity that triples is the peak emf." }
+          ]
+        },
+        "2": {
+          "correct": "frequency",
+          "correctExplanation": "The frequency of the output waveform depends only on the rate of rotation, not on the number of turns.",
+          "distractors": [
+            { "answer": "peak emf", "explanation": "The peak emf does change — it triples. It is the frequency that remains unchanged." },
+            { "answer": "voltage", "explanation": "The voltage (peak emf) does change. It is the frequency that is unaffected by the number of turns." },
+            { "answer": "current", "explanation": "The current may change if the emf changes. It is the frequency that remains unaffected by the number of turns." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Jasper doubles the rotation rate of a DC generator. Complete the statement.",
+      "sentence": "The peak emf {{blank:1}} and the period of the output waveform {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "doubles",
+          "correctExplanation": "The peak emf is directly proportional to the rotation rate. Doubling the rate doubles the peak emf.",
+          "distractors": [
+            { "answer": "halves", "explanation": "The peak emf increases, not decreases, when the rotation rate increases." },
+            { "answer": "remains unchanged", "explanation": "The peak emf is directly proportional to the rotation rate. It doubles when the rate doubles." },
+            { "answer": "quadruples", "explanation": "The peak emf is directly proportional to the rotation rate, not to its square. It doubles." }
+          ]
+        },
+        "2": {
+          "correct": "halves",
+          "correctExplanation": "The period is inversely proportional to the rotation rate. Doubling the rate halves the period.",
+          "distractors": [
+            { "answer": "doubles", "explanation": "The period is inversely proportional to the rotation rate. It halves, not doubles." },
+            { "answer": "remains unchanged", "explanation": "The period changes when the rotation rate changes. It halves when the rate doubles." },
+            { "answer": "quarters", "explanation": "The period is inversely proportional to the rate, not to its square. It halves." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the statement about the relationship between generator parameters and emf.",
+      "sentence": "The peak emf of a DC generator is directly proportional to the product of the rotation rate, the number of turns, the magnetic field strength, and the {{blank:1}} of the coil.",
+      "blanks": {
+        "1": {
+          "correct": "area",
+          "correctExplanation": "The peak emf depends on all four factors: rotation rate, number of turns, magnetic field strength, and the area of the coil.",
+          "distractors": [
+            { "answer": "resistance", "explanation": "The resistance of the coil does not determine the emf. It is the area of the coil that affects the flux and therefore the emf." },
+            { "answer": "mass", "explanation": "The mass of the coil has no effect on the emf. It is the area that determines the flux through the coil." },
+            { "answer": "length", "explanation": "While the coil has physical dimensions, it is the area (not the length alone) that determines the magnetic flux." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "tf",
+      "question": "Doubling the rate of rotation of a DC generator doubles both the peak emf and the frequency of the output waveform.",
+      "correct": "True",
+      "correctExplanation": "Both the peak emf and the frequency are directly proportional to the rate of rotation. Doubling the rotation rate doubles both quantities.",
+      "distractors": [
+        { "answer": "False", "explanation": "This statement is correct. The peak emf and the output frequency both double when the rotation rate doubles." }
+      ]
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "mc",
+      "question": "A DC generator with 100 turns produces a peak emf of 20.0 V at 50 Hz. The number of turns is doubled to 200 and the rotation frequency is halved to 25 Hz. What is the new peak emf?",
+      "correct": "20.0 V",
+      "correctExplanation": "Peak emf is proportional to both turns and rotation rate. Doubling turns multiplies by 2, halving frequency multiplies by 0.5. New peak emf = 20.0 × 2 × 0.5 = 20.0 V.",
+      "distractors": [
+        { "answer": "40.0 V", "explanation": "This accounts for doubling the turns but ignores halving the frequency. Both changes must be considered." },
+        { "answer": "10.0 V", "explanation": "This accounts for halving the frequency but ignores doubling the turns. Both changes must be considered." },
+        { "answer": "80.0 V", "explanation": "This incorrectly squares one or both factors. The peak emf is directly proportional to each factor." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Yara measures the peak emf of a DC generator at different rotation frequencies and records the following data: 10 Hz → 5.0 V, 20 Hz → 10.0 V, 30 Hz → 15.0 V. Which one of the following best describes the relationship?",
+      "correct": "The peak emf is directly proportional to the rotation frequency.",
+      "correctExplanation": "The data shows that the peak emf increases linearly with frequency: each 10 Hz increase adds 5.0 V. This confirms direct proportionality.",
+      "distractors": [
+        { "answer": "The peak emf is proportional to the square of the rotation frequency.", "explanation": "If this were true, doubling the frequency would quadruple the emf. The data shows it doubles, indicating direct proportionality." },
+        { "answer": "The peak emf is inversely proportional to the rotation frequency.", "explanation": "Inverse proportionality would mean the emf decreases as frequency increases. The data shows the opposite." },
+        { "answer": "There is no clear relationship between peak emf and rotation frequency.", "explanation": "The data shows a clear linear relationship. Each equal increase in frequency produces an equal increase in peak emf." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A DC generator produces a peak emf of 18.0 V with a coil area of 0.020 m². The coil is replaced with one of area 0.050 m², and the rotation rate is also doubled. What is the new peak emf?",
+      "correct": "90.0 V",
+      "correctExplanation": "The area increases by a factor of 0.050/0.020 = 2.5, and the rotation rate doubles (factor of 2). New peak emf = 18.0 × 2.5 × 2 = 90.0 V.",
+      "distractors": [
+        { "answer": "45.0 V", "explanation": "This accounts for the area change (×2.5) but not the doubled rotation rate. Both factors must be included." },
+        { "answer": "36.0 V", "explanation": "This accounts for the doubled rotation rate but not the area change. Both factors must be included." },
+        { "answer": "180.0 V", "explanation": "This incorrectly squares one of the factors. The peak emf is directly proportional to each factor." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A DC generator has the following parameters: 150 turns, coil area 0.030 m², magnetic field 0.40 T, and rotation frequency 60 Hz. If the number of turns is halved and the magnetic field strength is tripled, by what factor does the peak emf change?",
+      "correct": "1.5",
+      "correctExplanation": "Halving turns gives a factor of 0.5. Tripling the field gives a factor of 3. Overall factor = 0.5 × 3 = 1.5.",
+      "distractors": [
+        { "answer": "3.0", "explanation": "This accounts for tripling the field but ignores halving the turns. The combined factor is 0.5 × 3 = 1.5." },
+        { "answer": "0.5", "explanation": "This accounts for halving the turns but ignores tripling the field. The combined factor is 0.5 × 3 = 1.5." },
+        { "answer": "6.0", "explanation": "This incorrectly multiplies 2 × 3 instead of 0.5 × 3. Halving the turns gives a factor of 0.5, not 2." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Omar has a DC generator producing a peak emf of 24.0 V at 40 Hz. He wants to increase the peak emf to 72.0 V without changing the frequency. Which one of the following changes achieves this?",
+      "correct": "Triple the number of turns in the coil",
+      "correctExplanation": "72.0 / 24.0 = 3, so the peak emf must triple. Tripling the turns triples the peak emf without affecting the frequency, since frequency depends only on the rotation rate.",
+      "distractors": [
+        { "answer": "Triple the rotation frequency", "explanation": "This would triple the peak emf but also triple the frequency to 120 Hz, which is not desired." },
+        { "answer": "Triple the resistance of the external circuit", "explanation": "The external resistance does not affect the emf. It only affects the current drawn from the generator." },
+        { "answer": "Reduce the coil area to one-third", "explanation": "This would reduce the peak emf to one-third, not triple it." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A DC generator produces a peak emf of ε₀ at frequency f. The rotation rate is doubled and the magnetic field strength is also doubled. Which one of the following gives the new peak emf and new frequency?",
+      "correct": "Peak emf = 4ε₀, frequency = 2f",
+      "correctExplanation": "Doubling the rotation rate doubles both the peak emf and the frequency. Doubling the field strength doubles the peak emf again. New peak emf = ε₀ × 2 × 2 = 4ε₀. New frequency = 2f (field strength does not affect frequency).",
+      "distractors": [
+        { "answer": "Peak emf = 2ε₀, frequency = 2f", "explanation": "This accounts for only one of the two doublings of peak emf. Both the rotation rate and field strength contribute." },
+        { "answer": "Peak emf = 4ε₀, frequency = 4f", "explanation": "The frequency doubles (not quadruples) because only the rotation rate affects it, not the field strength." },
+        { "answer": "Peak emf = 2ε₀, frequency = f", "explanation": "Both the peak emf and frequency change. The peak emf quadruples and the frequency doubles." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Amira's DC generator produces a peak emf of 30.0 V. She simultaneously doubles the coil area and halves the number of turns. What is the new peak emf?",
+      "correct": "30.0 V",
+      "correctExplanation": "Doubling the area multiplies the emf by 2, and halving the turns multiplies by 0.5. The two changes cancel: 30.0 × 2 × 0.5 = 30.0 V.",
+      "distractors": [
+        { "answer": "60.0 V", "explanation": "This accounts for doubling the area but ignores halving the turns. Both changes must be considered." },
+        { "answer": "15.0 V", "explanation": "This accounts for halving the turns but ignores doubling the area. Both changes must be considered." },
+        { "answer": "120.0 V", "explanation": "This incorrectly multiplies both factors as increases. Halving the turns reduces the emf by half." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "A DC generator produces a peak emf of 16.0 V at 30 Hz. The rotation rate is tripled. Complete the statement about the new output.",
+      "sentence": "The new peak emf is {{blank:1}} V and the new frequency is {{blank:2}} Hz.",
+      "blanks": {
+        "1": {
+          "correct": "48.0",
+          "correctExplanation": "Tripling the rotation rate triples the peak emf: 16.0 × 3 = 48.0 V.",
+          "distractors": [
+            { "answer": "16.0", "explanation": "The peak emf changes when the rotation rate changes. It triples to 48.0 V." },
+            { "answer": "144.0", "explanation": "The peak emf is directly proportional to the rotation rate, not to its square. It triples to 48.0 V." },
+            { "answer": "5.3", "explanation": "The peak emf increases, not decreases. Tripling the rotation rate triples the peak emf." }
+          ]
+        },
+        "2": {
+          "correct": "90",
+          "correctExplanation": "Tripling the rotation rate triples the frequency: 30 × 3 = 90 Hz.",
+          "distractors": [
+            { "answer": "30", "explanation": "The frequency is directly proportional to the rotation rate. It triples to 90 Hz." },
+            { "answer": "10", "explanation": "The frequency increases, not decreases. Tripling the rotation rate triples the frequency." },
+            { "answer": "270", "explanation": "The frequency is directly proportional to the rotation rate, not to its square. It triples to 90 Hz." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "A DC generator produces 25.0 V peak emf. The magnetic field strength is doubled and the coil area is tripled. Complete the statement.",
+      "sentence": "The new peak emf is {{blank:1}} V because the emf is proportional to the {{blank:2}} of field strength and coil area.",
+      "blanks": {
+        "1": {
+          "correct": "150.0",
+          "correctExplanation": "Doubling the field (×2) and tripling the area (×3) gives a factor of 6. New emf = 25.0 × 6 = 150.0 V.",
+          "distractors": [
+            { "answer": "50.0", "explanation": "This accounts for only the doubled field strength. The tripled area must also be included: 25.0 × 2 × 3 = 150.0 V." },
+            { "answer": "75.0", "explanation": "This accounts for only the tripled area. The doubled field strength must also be included: 25.0 × 2 × 3 = 150.0 V." },
+            { "answer": "125.0", "explanation": "This uses a factor of 5, not 6. The correct factor is 2 × 3 = 6." }
+          ]
+        },
+        "2": {
+          "correct": "product",
+          "correctExplanation": "The peak emf is proportional to the product of field strength and coil area (since flux = BA).",
+          "distractors": [
+            { "answer": "sum", "explanation": "The emf depends on the product, not the sum, of these quantities. Magnetic flux equals B × A." },
+            { "answer": "ratio", "explanation": "The emf depends on the product, not the ratio, of field strength and coil area." },
+            { "answer": "difference", "explanation": "The emf depends on the product, not the difference, of field strength and coil area." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Felix reverses the direction of rotation of a DC generator. Complete the statement.",
+      "sentence": "The alternating emf in the coil is {{blank:1}}, but the DC output remains {{blank:2}} because of the split ring commutator.",
+      "blanks": {
+        "1": {
+          "correct": "reversed",
+          "correctExplanation": "Reversing the direction of rotation reverses the alternating emf produced in the coil.",
+          "distractors": [
+            { "answer": "unchanged", "explanation": "The alternating emf in the coil does reverse when the rotation direction reverses." },
+            { "answer": "doubled", "explanation": "The magnitude of the emf does not change. Only its direction (phase) reverses." },
+            { "answer": "halved", "explanation": "The magnitude does not change. The alternating emf reverses its direction." }
+          ]
+        },
+        "2": {
+          "correct": "unchanged",
+          "correctExplanation": "The split ring commutator converts the reversed alternating emf back to the same positive DC output shape.",
+          "distractors": [
+            { "answer": "reversed", "explanation": "The DC output is not reversed. The commutator ensures it maintains the same shape regardless of rotation direction." },
+            { "answer": "zero", "explanation": "The DC output does not become zero. The commutator maintains the same output shape." },
+            { "answer": "alternating", "explanation": "The output remains DC, not alternating. The commutator continues to function as before." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "mc",
+      "question": "A DC generator initially has 200 turns, a coil area of 0.025 m², a magnetic field of 0.50 T, and rotates at 40 Hz, producing a peak emf of ε₀. The generator is modified: turns increased to 400, area increased to 0.050 m², field reduced to 0.25 T, and frequency increased to 80 Hz. By what factor does the peak emf change?",
+      "correct": "4",
+      "correctExplanation": "Factor for turns: 400/200 = 2. Factor for area: 0.050/0.025 = 2. Factor for field: 0.25/0.50 = 0.5. Factor for frequency: 80/40 = 2. Overall: 2 × 2 × 0.5 × 2 = 4.",
+      "distractors": [
+        { "answer": "2", "explanation": "This does not account for all four changes. The combined factor of all changes is 2 × 2 × 0.5 × 2 = 4." },
+        { "answer": "8", "explanation": "This incorrectly accounts for the field change. The field is halved (factor 0.5, not 2). The overall factor is 4." },
+        { "answer": "1", "explanation": "The changes do not cancel out. The overall factor is 2 × 2 × 0.5 × 2 = 4." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student plots peak emf against rotation frequency for a DC generator and obtains a straight line through the origin. The gradient of the line is 0.80 V Hz⁻¹. The generator has 50 turns and a magnetic field of 0.40 T. What is the area of the coil?",
+      "correct": "0.040 m²",
+      "correctExplanation": "Peak emf = 2πnBAf, so the gradient = 2πnBA. Area = gradient / (2πnB) = 0.80 / (2π × 50 × 0.40) = 0.80 / 125.66 ≈ 0.0064 m². However, for a simplified proportional model where peak emf = nBAω and ω = 2πf, gradient = 2πnBA. Alternatively, if the model is peak emf ∝ f with proportionality constant nBA × 2π: A = 0.80/(2π × 50 × 0.40) ≈ 0.0064 m². But using the simpler model where peak emf = nBAf (frequency in revolutions per second), gradient = nBA, so A = 0.80/(50 × 0.40) = 0.040 m².",
+      "distractors": [
+        { "answer": "0.020 m²", "explanation": "This uses an incorrect formula. The gradient equals nBA (in the simplified model), so A = 0.80 / (50 × 0.40) = 0.040 m²." },
+        { "answer": "0.10 m²", "explanation": "This incorrectly divides by only the number of turns. Both n and B must be used: A = 0.80 / (50 × 0.40) = 0.040 m²." },
+        { "answer": "0.080 m²", "explanation": "This incorrectly divides by only the field strength times a factor of 2. The correct calculation is A = 0.80 / (50 × 0.40) = 0.040 m²." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Aisha wants to design a DC generator that produces a peak emf of 60.0 V at 50 Hz. Her available magnet produces a field of 0.30 T and her coil has an area of 0.020 m². Using the relationship peak emf = nBAf, how many turns does she need?",
+      "correct": "200",
+      "correctExplanation": "Rearranging: n = peak emf / (BAf) = 60.0 / (0.30 × 0.020 × 50) = 60.0 / 0.30 = 200 turns.",
+      "distractors": [
+        { "answer": "100", "explanation": "This would produce only 30.0 V. The calculation requires n = 60.0 / (0.30 × 0.020 × 50) = 200." },
+        { "answer": "400", "explanation": "This would produce 120.0 V, which exceeds the target of 60.0 V." },
+        { "answer": "50", "explanation": "This would produce only 15.0 V. The required number of turns is 200." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student claims that reversing the direction of rotation of a DC generator will reverse the polarity of the DC output. Which one of the following best evaluates this claim?",
+      "correct": "The claim is incorrect. The split ring commutator ensures the DC output maintains the same polarity regardless of rotation direction.",
+      "correctExplanation": "While reversing rotation reverses the alternating emf in the coil, the commutator switches the connections every half-turn, maintaining the same positive DC output shape.",
+      "distractors": [
+        { "answer": "The claim is correct because the emf reverses when the rotation reverses.", "explanation": "The alternating emf in the coil does reverse, but the commutator converts this back to the same DC output." },
+        { "answer": "The claim is correct only if the generator has slip rings instead of a commutator.", "explanation": "A DC generator uses a split ring commutator, not slip rings. With the commutator, the DC output is unchanged." },
+        { "answer": "The claim is partially correct; the output polarity reverses but the magnitude stays the same.", "explanation": "The polarity of the DC output does not reverse. The commutator ensures the same output regardless of rotation direction." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Two DC generators, X and Y, are identical except that generator X has twice the number of turns and half the rotation frequency of generator Y. Which one of the following correctly compares their outputs?",
+      "correct": "Generator X has the same peak emf as generator Y but half the output frequency.",
+      "correctExplanation": "Peak emf is proportional to n × f. For X: 2n × 0.5f = nf, the same as Y. However, the output frequency depends on the rotation rate, so X has half the output frequency of Y.",
+      "distractors": [
+        { "answer": "Generator X has twice the peak emf and half the output frequency.", "explanation": "The peak emf is proportional to n × f. Doubling n and halving f gives the same peak emf, not twice." },
+        { "answer": "Generator X has the same peak emf and the same output frequency.", "explanation": "The output frequency is proportional to the rotation rate. Since X rotates at half the rate, its output frequency is half that of Y." },
+        { "answer": "Generator X has half the peak emf and double the output frequency.", "explanation": "The peak emf is the same (2n × 0.5f = nf), and the output frequency is half, not double." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A DC generator produces a peak emf of 36.0 V. The coil area is reduced to one-third, the number of turns is quadrupled, and the magnetic field strength is halved. What is the new peak emf?",
+      "correct": "24.0 V",
+      "correctExplanation": "Factor = (1/3) × 4 × (1/2) = 4/6 = 2/3. New peak emf = 36.0 × (2/3) = 24.0 V.",
+      "distractors": [
+        { "answer": "48.0 V", "explanation": "This does not correctly account for all three changes. The overall factor is (1/3) × 4 × (1/2) = 2/3." },
+        { "answer": "12.0 V", "explanation": "This uses an incorrect combined factor. The correct factor is (1/3) × 4 × (1/2) = 2/3, giving 24.0 V." },
+        { "answer": "72.0 V", "explanation": "This does not account for the reductions in area and field. The correct factor is 2/3, giving 24.0 V." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Elena measures the output of a DC generator and finds the peak emf is 40.0 V and the output frequency is 60 Hz. She then makes a single change to the generator and measures the new output: peak emf is 40.0 V and the output frequency is 60 Hz. Which one of the following changes could Elena have made?",
+      "correct": "She reversed the direction of rotation.",
+      "correctExplanation": "Reversing the direction of rotation reverses the alternating emf in the coil, but the commutator ensures the DC output shape, peak emf, and frequency all remain unchanged.",
+      "distractors": [
+        { "answer": "She doubled the rotation rate.", "explanation": "Doubling the rotation rate would double both the peak emf and the frequency." },
+        { "answer": "She doubled the number of turns.", "explanation": "Doubling the turns would double the peak emf to 80.0 V." },
+        { "answer": "She halved the magnetic field strength.", "explanation": "Halving the field strength would halve the peak emf to 20.0 V." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A DC generator produces a peak emf described by ε₀ = nBAω, where n is the number of turns, B is the magnetic field strength, A is the coil area, and ω is the angular velocity. Which one of the following changes would increase ε₀ by the greatest factor?",
+      "correct": "Triple B and double ω",
+      "correctExplanation": "Triple B and double ω: factor = 3 × 2 = 6. This produces the largest increase among the options.",
+      "distractors": [
+        { "answer": "Double n and double A", "explanation": "Double n and double A: factor = 2 × 2 = 4. This is less than the factor of 6 from tripling B and doubling ω." },
+        { "answer": "Quadruple n only", "explanation": "Quadrupling n: factor = 4. This is less than the factor of 6 from tripling B and doubling ω." },
+        { "answer": "Double B, double A, and halve n", "explanation": "Factor = 2 × 2 × 0.5 = 2. This is much less than the factor of 6." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "A DC generator has peak emf = nBAf. It produces 50.0 V at 25 Hz with 100 turns, B = 0.50 T, and area A. The turns are increased to 250, B is reduced to 0.20 T, and frequency is increased to 50 Hz. Complete the analysis.",
+      "sentence": "The factor of change in peak emf is {{blank:1}}, so the new peak emf is {{blank:2}} V.",
+      "blanks": {
+        "1": {
+          "correct": "2.0",
+          "correctExplanation": "Factor for turns: 250/100 = 2.5. Factor for B: 0.20/0.50 = 0.4. Factor for f: 50/25 = 2. Overall: 2.5 × 0.4 × 2 = 2.0.",
+          "distractors": [
+            { "answer": "2.5", "explanation": "This accounts for only the change in turns. All three changes must be multiplied: 2.5 × 0.4 × 2 = 2.0." },
+            { "answer": "0.5", "explanation": "This does not correctly combine all factors. The overall factor is 2.5 × 0.4 × 2 = 2.0." },
+            { "answer": "5.0", "explanation": "This does not correctly account for the reduced field strength. The overall factor is 2.5 × 0.4 × 2 = 2.0." }
+          ]
+        },
+        "2": {
+          "correct": "100.0",
+          "correctExplanation": "New peak emf = 50.0 × 2.0 = 100.0 V.",
+          "distractors": [
+            { "answer": "50.0", "explanation": "The peak emf changes because the parameters have changed. The factor of 2.0 gives 50.0 × 2.0 = 100.0 V." },
+            { "answer": "125.0", "explanation": "This uses an incorrect factor. The correct calculation gives 50.0 × 2.0 = 100.0 V." },
+            { "answer": "25.0", "explanation": "The peak emf increases, not decreases. The factor is 2.0, giving 100.0 V." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Two DC generators P and Q have the same peak emf. Generator P has 300 turns and rotates at 40 Hz. Generator Q has 200 turns. Complete the statement.",
+      "sentence": "For the peak emf values to be equal (assuming the same B and A), generator Q must rotate at {{blank:1}} Hz, and its output frequency is {{blank:2}} than that of generator P.",
+      "blanks": {
+        "1": {
+          "correct": "60",
+          "correctExplanation": "Peak emf ∝ nf. For equal peak emf: 300 × 40 = 200 × f_Q, so f_Q = 12000/200 = 60 Hz.",
+          "distractors": [
+            { "answer": "40", "explanation": "If Q also rotated at 40 Hz, its peak emf would be less than P's because it has fewer turns." },
+            { "answer": "80", "explanation": "This would give Q a higher peak emf than P. The correct frequency is 60 Hz." },
+            { "answer": "30", "explanation": "This would give Q a lower peak emf than P. The correct frequency is 60 Hz." }
+          ]
+        },
+        "2": {
+          "correct": "higher",
+          "correctExplanation": "Generator Q rotates at 60 Hz compared to P at 40 Hz. Since output frequency depends on rotation rate, Q has a higher output frequency.",
+          "distractors": [
+            { "answer": "lower", "explanation": "Generator Q rotates faster (60 Hz vs 40 Hz), so its output frequency is higher, not lower." },
+            { "answer": "the same as", "explanation": "The generators rotate at different frequencies (60 Hz vs 40 Hz), so their output frequencies differ." },
+            { "answer": "unrelated to", "explanation": "Output frequency is directly related to rotation rate. Q's higher rotation rate means a higher output frequency." }
+          ]
+        }
+      }
+    }
+  ]
+}

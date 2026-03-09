@@ -1,0 +1,543 @@
+{
+  "_link": {
+    "uuid": "lp-1260cbe3-326c-cd13-4bc0-e724e94f1009",
+    "version": 1,
+    "contentHash": "hash-65e522bc",
+    "title": "I can use W = qV to find the kinetic energy and speed of a particle accelerated from rest between parallel plates",
+    "generatedAt": "2026-03-05T08:00:00Z"
+  },
+  "toLevel2": [
+    {
+      "type": "mc",
+      "question": "What formula gives the work done on a charge accelerated through a potential difference?",
+      "correct": "W = qV",
+      "correctExplanation": "The work done on a charge q moving through a potential difference V is given by W = qV.",
+      "distractors": [
+        { "answer": "W = mv²", "explanation": "mv² relates to kinetic energy (½mv²), not the work done by a potential difference on a charge." },
+        { "answer": "W = Fd/q", "explanation": "This incorrectly divides by charge; W = qV directly gives work done from charge and voltage." },
+        { "answer": "W = V/q", "explanation": "V/q inverts the relationship; the correct formula multiplies charge by voltage." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "When a charged particle is accelerated from rest through a potential difference, what does all the work done convert into?",
+      "correct": "Kinetic energy of the particle",
+      "correctExplanation": "Starting from rest, W = qV is entirely converted to kinetic energy: qV = ½mv².",
+      "distractors": [
+        { "answer": "Thermal energy of the surrounding plates", "explanation": "The work done by the field goes into the particle's kinetic energy, not into heating the plates." },
+        { "answer": "Potential energy stored in the electric field", "explanation": "The particle loses potential energy which converts to kinetic energy, not additional stored potential energy." },
+        { "answer": "Electromagnetic radiation emitted by the charge", "explanation": "For typical accelerations in this context, radiation losses are negligible; energy goes to kinetic energy." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What is the formula for the exit speed of a particle accelerated from rest through potential difference V?",
+      "correct": "v = √(2qV/m)",
+      "correctExplanation": "Setting qV = ½mv² and solving for v gives v = √(2qV/m).",
+      "distractors": [
+        { "answer": "v = √(qV/2m)", "explanation": "This has the 2 in the wrong position; the correct rearrangement gives v = √(2qV/m)." },
+        { "answer": "v = 2qV/m", "explanation": "This omits the square root; the kinetic energy equation requires taking the square root when solving for v." },
+        { "answer": "v = √(qV/m)", "explanation": "This is missing the factor of 2 from the ½mv² term; the correct formula is v = √(2qV/m)." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A proton is accelerated from rest through a potential difference of 200 V. What is the kinetic energy gained?",
+      "correct": "3.2 × 10⁻¹⁷ J",
+      "correctExplanation": "W = qV = 1.6 × 10⁻¹⁹ × 200 = 3.2 × 10⁻¹⁷ J, which equals the kinetic energy gained.",
+      "distractors": [
+        { "answer": "1.6 × 10⁻¹⁷ J", "explanation": "This uses V = 100 V instead of 200 V; the correct calculation is 1.6 × 10⁻¹⁹ × 200." },
+        { "answer": "3.2 × 10⁻¹⁹ J", "explanation": "This is off by a factor of 100; the power of ten should be 10⁻¹⁷, not 10⁻¹⁹." },
+        { "answer": "3.2 × 10⁻²¹ J", "explanation": "This is off by a factor of 10 000; check the multiplication of the powers of ten." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What assumption is made when using qV = ½mv² to find the exit speed of a particle?",
+      "correct": "The particle starts from rest and no energy is lost",
+      "correctExplanation": "The equation assumes all work done converts to kinetic energy, requiring zero initial speed and no losses.",
+      "distractors": [
+        { "answer": "The particle has a constant speed throughout its motion", "explanation": "The particle accelerates, so its speed is not constant; the assumption is about starting from rest." },
+        { "answer": "The electric field must be non-uniform between the plates", "explanation": "The field can be uniform or non-uniform; the key assumption is starting from rest with no energy losses." },
+        { "answer": "The particle must be an electron and not any other type", "explanation": "The formula applies to any charged particle, not just electrons." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "When a particle is accelerated from rest through a potential difference V, all the work W = qV becomes kinetic energy.",
+      "correct": "True",
+      "correctExplanation": "Starting from rest with no other forces, conservation of energy gives qV = ½mv², so all work becomes kinetic energy.",
+      "distractors": [
+        { "answer": "False", "explanation": "Students may think some energy is lost to other forms, but the ideal case assumes complete conversion to kinetic energy." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "The exit speed of a particle accelerated from rest through a potential difference depends on the particle's mass.",
+      "correct": "True",
+      "correctExplanation": "From v = √(2qV/m), the speed depends on mass; heavier particles exit more slowly for the same charge and voltage.",
+      "distractors": [
+        { "answer": "False", "explanation": "Students may focus on qV = ½mv² and think only kinetic energy matters, but solving for v introduces the mass dependence." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the energy conversion equation.",
+      "sentence": "For a particle accelerated from rest, the work done by the field equals the {{blank:1}} energy gained: qV = ½mv².",
+      "blanks": {
+        "1": {
+          "correct": "kinetic",
+          "correctExplanation": "All work done on a particle starting from rest converts to kinetic energy.",
+          "distractors": [
+            { "answer": "potential", "explanation": "The particle loses potential energy; the work converts to kinetic energy, not more potential energy." },
+            { "answer": "thermal", "explanation": "In the ideal case, energy converts to kinetic energy of the particle, not thermal energy." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the formula for work done.",
+      "sentence": "The work done on a charge q accelerated through a potential difference V is W = {{blank:1}}.",
+      "blanks": {
+        "1": {
+          "correct": "qV",
+          "correctExplanation": "Work equals charge multiplied by potential difference: W = qV.",
+          "distractors": [
+            { "answer": "q/V", "explanation": "Dividing charge by voltage does not give work; the correct operation is multiplication." },
+            { "answer": "V/q", "explanation": "Voltage divided by charge gives the inverse of capacitance-related quantities, not work." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the speed formula.",
+      "sentence": "The exit speed of a particle accelerated from rest through voltage V is v = √(2{{blank:1}}/m).",
+      "blanks": {
+        "1": {
+          "correct": "qV",
+          "correctExplanation": "From qV = ½mv², solving for v gives v = √(2qV/m).",
+          "distractors": [
+            { "answer": "mV", "explanation": "Using mass times voltage is incorrect; the numerator should be charge times voltage." },
+            { "answer": "qE", "explanation": "qE gives force, not energy; the numerator must be qV which represents work done." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "mc",
+      "question": "Why does a heavier particle exit with a lower speed than a lighter particle when both are accelerated from rest through the same potential difference?",
+      "correct": "Both gain the same kinetic energy, but the heavier particle needs less speed to have that energy",
+      "correctExplanation": "Since qV = ½mv², equal kinetic energy with greater mass means lower speed: v = √(2qV/m).",
+      "distractors": [
+        { "answer": "The heavier particle gains less kinetic energy from the same potential difference", "explanation": "Both particles with the same charge gain identical kinetic energy qV; the difference is in speed." },
+        { "answer": "The heavier particle experiences a weaker electric force between the plates", "explanation": "Force depends on charge, not mass; F = qE is the same for equal charges regardless of mass." },
+        { "answer": "The heavier particle loses more energy to friction with the electric field", "explanation": "There is no friction with the field; both particles convert all work to kinetic energy." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An electron and a proton are each accelerated from rest through the same 500 V potential difference. How do their final kinetic energies compare?",
+      "correct": "They gain exactly the same kinetic energy",
+      "correctExplanation": "Both have the same charge magnitude, so KE = qV = 1.6 × 10⁻¹⁹ × 500 = 8.0 × 10⁻¹⁷ J for both.",
+      "distractors": [
+        { "answer": "The electron gains more kinetic energy because it is lighter", "explanation": "Kinetic energy gained is qV, which depends on charge and voltage, not mass." },
+        { "answer": "The proton gains more kinetic energy because it is heavier", "explanation": "Mass does not affect kinetic energy gained; KE = qV depends only on charge and voltage." },
+        { "answer": "Neither gains any kinetic energy because their charges cancel out", "explanation": "Each particle is accelerated separately; their charges do not cancel." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What happens to the exit speed if the potential difference is quadrupled while the particle remains the same?",
+      "correct": "The exit speed doubles",
+      "correctExplanation": "Since v = √(2qV/m), quadrupling V multiplies v by √4 = 2, so the speed doubles.",
+      "distractors": [
+        { "answer": "The exit speed quadruples to four times the original value", "explanation": "Speed depends on the square root of V, not linearly; quadrupling V gives √4 = 2 times the speed." },
+        { "answer": "The exit speed increases by a factor of sixteen from the original", "explanation": "This would require V to increase by 256 times; quadrupling V gives only double the speed." },
+        { "answer": "The exit speed remains unchanged because speed does not depend on voltage", "explanation": "Speed depends on voltage through v = √(2qV/m); increasing V increases the exit speed." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Why is the formula v = √(2qV/m) invalid if the particle does not start from rest?",
+      "correct": "The particle already has kinetic energy that must be added to the work done by the field",
+      "correctExplanation": "If the particle has initial speed v₀, the total KE is ½mv₀² + qV = ½mv², which changes the speed formula.",
+      "distractors": [
+        { "answer": "The formula only works for particles that start and stop between the two plates", "explanation": "The particle does not need to stop; the issue is that initial kinetic energy must be included." },
+        { "answer": "A moving particle cannot gain energy from an electric field at any point", "explanation": "Moving particles can gain energy; the formula just needs to account for existing kinetic energy." },
+        { "answer": "The charge of a moving particle changes due to relativistic effects at all speeds", "explanation": "Charge is invariant; the issue is accounting for initial kinetic energy, not relativistic effects." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "In an electron gun, electrons are accelerated from rest through 5000 V. Which step correctly begins the calculation of exit speed?",
+      "correct": "Calculate kinetic energy first: KE = qV = 1.6 × 10⁻¹⁹ × 5000",
+      "correctExplanation": "The first step is finding the kinetic energy from W = qV, then using KE = ½mv² to find speed.",
+      "distractors": [
+        { "answer": "Calculate the force first: F = qV and then use F = ma to find speed", "explanation": "qV gives energy (work), not force; force requires F = qE with the electric field strength." },
+        { "answer": "Calculate the speed directly: v = qV/m without any intermediate steps", "explanation": "This formula is incorrect; the correct formula involves a square root: v = √(2qV/m)." },
+        { "answer": "Calculate the electric field first: E = qV and then find the acceleration", "explanation": "E = qV is not the field formula; E = V/d gives field from voltage and plate separation." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A particle with charge 2q is accelerated from rest through the same potential difference as a particle with charge q. How do their kinetic energies compare?",
+      "correct": "The particle with charge 2q gains twice the kinetic energy",
+      "correctExplanation": "KE = qV, so doubling the charge doubles the kinetic energy gained for the same voltage.",
+      "distractors": [
+        { "answer": "Both particles gain identical kinetic energy from the same voltage", "explanation": "Kinetic energy depends on charge; KE = qV means double charge gives double energy." },
+        { "answer": "The particle with charge 2q gains four times the kinetic energy", "explanation": "KE is proportional to q, not q²; doubling charge doubles kinetic energy." },
+        { "answer": "The particle with charge q gains more kinetic energy per unit charge", "explanation": "Energy per unit charge is V, which is the same for both; total energy is proportional to charge." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "If the potential difference is doubled, the exit speed of a particle accelerated from rest also doubles.",
+      "correct": "False",
+      "correctExplanation": "Since v = √(2qV/m), doubling V multiplies v by √2 ≈ 1.41, not by 2.",
+      "distractors": [
+        { "answer": "True", "explanation": "Students may assume a linear relationship, but speed depends on the square root of voltage." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the explanation of mass dependence.",
+      "sentence": "A heavier particle exits with a {{blank:1}} speed than a lighter one accelerated through the same voltage because v depends on the {{blank:2}} root of 1/m.",
+      "blanks": {
+        "1": {
+          "correct": "lower",
+          "correctExplanation": "Greater mass means lower speed for the same kinetic energy, since v = √(2qV/m).",
+          "distractors": [
+            { "answer": "higher", "explanation": "Greater mass gives lower speed, not higher; v is inversely related to √m." },
+            { "answer": "equal", "explanation": "Different masses give different speeds for the same kinetic energy." }
+          ]
+        },
+        "2": {
+          "correct": "square",
+          "correctExplanation": "The formula v = √(2qV/m) shows speed depends on the square root of V/m.",
+          "distractors": [
+            { "answer": "cube", "explanation": "The relationship involves a square root, not a cube root." },
+            { "answer": "fourth", "explanation": "The relationship involves a square root, not a fourth root." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the energy equation.",
+      "sentence": "When a particle starts from rest, conservation of energy gives {{blank:1}} = ½mv², where W is the work done by the {{blank:2}} field.",
+      "blanks": {
+        "1": {
+          "correct": "qV",
+          "correctExplanation": "The work done by the electric field equals qV, which converts entirely to kinetic energy.",
+          "distractors": [
+            { "answer": "Fd", "explanation": "While W = Fd is also valid, in this context W = qV directly links voltage to kinetic energy." },
+            { "answer": "mg", "explanation": "mg relates to gravitational force, not the work done by an electric field." }
+          ]
+        },
+        "2": {
+          "correct": "electric",
+          "correctExplanation": "The work is done by the electric field accelerating the charged particle.",
+          "distractors": [
+            { "answer": "magnetic", "explanation": "Magnetic fields do no work on charges because the force is always perpendicular to velocity." },
+            { "answer": "gravitational", "explanation": "Gravitational work involves mass and height, not charge and voltage." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the voltage-speed relationship.",
+      "sentence": "Quadrupling the potential difference causes the exit speed to {{blank:1}} because speed is proportional to the square root of voltage.",
+      "blanks": {
+        "1": {
+          "correct": "double",
+          "correctExplanation": "v ∝ √V, so quadrupling V gives v × √4 = v × 2, doubling the speed.",
+          "distractors": [
+            { "answer": "quadruple", "explanation": "Speed is proportional to √V, not V; quadrupling V gives √4 = 2 times the speed." },
+            { "answer": "halve", "explanation": "Increasing voltage increases speed; quadrupling V doubles the speed, it does not halve it." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "mc",
+      "question": "An electron (mass 9.11 × 10⁻³¹ kg, charge 1.6 × 10⁻¹⁹ C) is accelerated from rest through 2000 V. What is its exit speed?",
+      "correct": "2.65 × 10⁷ m s⁻¹",
+      "correctExplanation": "v = √(2 × 1.6 × 10⁻¹⁹ × 2000 / 9.11 × 10⁻³¹) = √(7.02 × 10¹⁴) = 2.65 × 10⁷ m s⁻¹.",
+      "distractors": [
+        { "answer": "2.65 × 10⁵ m s⁻¹", "explanation": "This is 100 times too small; check the power of ten in the square root calculation." },
+        { "answer": "8.38 × 10⁷ m s⁻¹", "explanation": "This results from using the proton mass instead of the electron mass in the calculation." },
+        { "answer": "1.87 × 10⁷ m s⁻¹", "explanation": "This results from omitting the factor of 2 under the square root: v = √(qV/m) instead of √(2qV/m)." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A doubly ionised helium atom (charge +2e, mass 6.64 × 10⁻²⁷ kg) is accelerated from rest through 1000 V. What kinetic energy does it gain?",
+      "correct": "3.2 × 10⁻¹⁶ J",
+      "correctExplanation": "KE = qV = 2 × 1.6 × 10⁻¹⁹ × 1000 = 3.2 × 10⁻¹⁶ J.",
+      "distractors": [
+        { "answer": "1.6 × 10⁻¹⁶ J", "explanation": "This uses charge e instead of 2e; a doubly ionised atom has twice the elementary charge." },
+        { "answer": "3.2 × 10⁻¹⁹ J", "explanation": "This is off by a factor of 1000; check the multiplication with V = 1000 V." },
+        { "answer": "6.4 × 10⁻¹⁶ J", "explanation": "This doubles the correct answer; the charge is 2e, not 4e." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "In a particle accelerator, protons are accelerated through 50 kV. A technician wants to double the exit speed. What voltage is needed?",
+      "correct": "200 kV",
+      "correctExplanation": "Since v ∝ √V, doubling v requires V to increase by a factor of 4: 4 × 50 = 200 kV.",
+      "distractors": [
+        { "answer": "100 kV", "explanation": "Doubling V only increases speed by √2 ≈ 1.41; to double speed, V must be quadrupled." },
+        { "answer": "250 kV", "explanation": "This is five times the original voltage; doubling speed requires exactly four times the voltage." },
+        { "answer": "400 kV", "explanation": "This is eight times the original voltage; doubling speed requires four times, not eight times." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An alpha particle (mass 6.64 × 10⁻²⁷ kg, charge 3.2 × 10⁻¹⁹ C) and a proton (mass 1.67 × 10⁻²⁷ kg, charge 1.6 × 10⁻¹⁹ C) are both accelerated from rest through 500 V. Which has the greater exit speed?",
+      "correct": "The proton, because it has a larger charge-to-mass ratio",
+      "correctExplanation": "v = √(2qV/m), so the particle with the larger q/m ratio exits faster. The proton's q/m exceeds the alpha's q/m.",
+      "distractors": [
+        { "answer": "The alpha particle, because it has twice the charge of the proton", "explanation": "Double charge but four times the mass gives a lower q/m ratio, so the alpha exits slower." },
+        { "answer": "Both exit at the same speed because they experience the same voltage", "explanation": "Same voltage does not mean same speed; speed depends on the charge-to-mass ratio." },
+        { "answer": "The alpha particle, because heavier particles gain more kinetic energy", "explanation": "The alpha gains more KE (double charge), but its four times greater mass gives it a lower speed." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An electron is accelerated from rest and reaches a speed of 1.0 × 10⁷ m s⁻¹. What potential difference was it accelerated through?",
+      "correct": "284 V",
+      "correctExplanation": "V = mv²/(2q) = (9.11 × 10⁻³¹ × (10⁷)²) / (2 × 1.6 × 10⁻¹⁹) = 9.11 × 10⁻¹⁷ / 3.2 × 10⁻¹⁹ ≈ 284 V.",
+      "distractors": [
+        { "answer": "568 V", "explanation": "This omits the factor of 2 in the denominator; V = mv²/(2q), not mv²/q." },
+        { "answer": "142 V", "explanation": "This incorrectly doubles the denominator; the correct formula is V = mv²/(2q)." },
+        { "answer": "28.4 V", "explanation": "This is off by a factor of 10; recheck the powers of ten in the calculation." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A medical linear accelerator uses 6 MV to accelerate electrons. What is the kinetic energy gained by each electron in electronvolts?",
+      "correct": "6 MeV",
+      "correctExplanation": "One electronvolt is the energy gained by one elementary charge through 1 V, so e × 6 MV = 6 MeV.",
+      "distractors": [
+        { "answer": "6 keV", "explanation": "6 keV would correspond to 6 kV, not 6 MV; the prefix must match." },
+        { "answer": "6 GeV", "explanation": "6 GeV would correspond to 6 GV; 6 MV gives 6 MeV." },
+        { "answer": "3 MeV", "explanation": "There is no factor of ½ when converting voltage to electronvolts; 6 MV gives 6 MeV directly." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Two parallel plates are separated by 5 cm with a potential difference of 1000 V across them. A proton is released from rest at the positive plate. What is its speed when it reaches the negative plate?",
+      "correct": "4.38 × 10⁵ m s⁻¹",
+      "correctExplanation": "v = √(2qV/m) = √(2 × 1.6 × 10⁻¹⁹ × 1000 / 1.67 × 10⁻²⁷) = √(1.916 × 10¹¹) = 4.38 × 10⁵ m s⁻¹. The plate separation is not needed.",
+      "distractors": [
+        { "answer": "4.38 × 10³ m s⁻¹", "explanation": "This is 100 times too small; recheck the power of ten in the square root." },
+        { "answer": "2.19 × 10⁵ m s⁻¹", "explanation": "This results from using V = 500 V or omitting the factor of 2 under the square root." },
+        { "answer": "6.19 × 10⁵ m s⁻¹", "explanation": "This results from a calculation error in the square root; recheck the arithmetic." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about charge-to-mass ratio.",
+      "sentence": "The exit speed of a particle accelerated from rest depends on its {{blank:1}}-to-mass ratio, not on charge or mass alone.",
+      "blanks": {
+        "1": {
+          "correct": "charge",
+          "correctExplanation": "From v = √(2qV/m), the speed depends on the ratio q/m, called the charge-to-mass ratio.",
+          "distractors": [
+            { "answer": "energy", "explanation": "While energy is involved, the ratio that determines speed is charge-to-mass, not energy-to-mass." },
+            { "answer": "voltage", "explanation": "Voltage is a separate variable; the particle property that matters is the charge-to-mass ratio." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the problem-solving sequence.",
+      "sentence": "To find exit speed: first calculate kinetic energy using KE = {{blank:1}}, then solve for speed using v = √(2KE/{{blank:2}}).",
+      "blanks": {
+        "1": {
+          "correct": "qV",
+          "correctExplanation": "The kinetic energy gained equals the work done: KE = qV.",
+          "distractors": [
+            { "answer": "½mv²", "explanation": "½mv² is what you are solving for, not what you start with; the starting formula is KE = qV." },
+            { "answer": "Fd", "explanation": "While Fd also gives work, the direct link to voltage is KE = qV." }
+          ]
+        },
+        "2": {
+          "correct": "m",
+          "correctExplanation": "Rearranging ½mv² = KE gives v = √(2KE/m), so you divide by mass under the square root.",
+          "distractors": [
+            { "answer": "q", "explanation": "Dividing by charge would give voltage, not speed; speed requires dividing by mass." },
+            { "answer": "V", "explanation": "Dividing by voltage does not give speed; the denominator must be mass." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about electronvolts.",
+      "sentence": "One electronvolt (eV) is the kinetic energy gained by a particle with charge {{blank:1}} when accelerated through a potential difference of {{blank:2}} volt.",
+      "blanks": {
+        "1": {
+          "correct": "e",
+          "correctExplanation": "The electronvolt is defined using the elementary charge e = 1.6 × 10⁻¹⁹ C.",
+          "distractors": [
+            { "answer": "2e", "explanation": "2e would define a unit twice as large; the electronvolt uses exactly one elementary charge." },
+            { "answer": "1 C", "explanation": "Using 1 coulomb would give 1 joule per volt, not 1 electronvolt; the eV uses the elementary charge." }
+          ]
+        },
+        "2": {
+          "correct": "one",
+          "correctExplanation": "One electronvolt corresponds to acceleration through exactly one volt: 1 eV = e × 1 V = 1.6 × 10⁻¹⁹ J.",
+          "distractors": [
+            { "answer": "one thousand", "explanation": "One thousand volts would give 1 keV, not 1 eV." },
+            { "answer": "one million", "explanation": "One million volts would give 1 MeV, not 1 eV." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "mc",
+      "question": "In a cyclotron, particles are accelerated multiple times through the same potential difference. After N passes through voltage V, what is the total kinetic energy of a particle with charge q?",
+      "correct": "NqV",
+      "correctExplanation": "Each pass adds qV of kinetic energy, so N passes give a total of NqV.",
+      "distractors": [
+        { "answer": "qV/N", "explanation": "Dividing by N would decrease energy with more passes; each pass adds qV, giving NqV total." },
+        { "answer": "qV", "explanation": "This is the energy from a single pass; N passes give N times as much energy." },
+        { "answer": "N²qV", "explanation": "Energy adds linearly with each pass, not quadratically; N passes give NqV." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An electron accelerated through 1 MV would theoretically reach v = √(2eV/m) = 5.9 × 10⁸ m s⁻¹, which exceeds the speed of light. Evaluate what actually happens.",
+      "correct": "The classical formula fails; relativistic effects limit the speed below c and increase the effective mass",
+      "correctExplanation": "At speeds approaching c, relativistic mechanics must be used; the particle's kinetic energy increases but speed asymptotically approaches c.",
+      "distractors": [
+        { "answer": "The electron does exceed the speed of light because the electric field is sufficiently strong", "explanation": "No particle with mass can exceed or reach the speed of light; relativistic effects prevent this." },
+        { "answer": "The calculation is correct and the electron reaches 5.9 × 10⁸ m s⁻¹ without any issue", "explanation": "This speed exceeds c = 3 × 10⁸ m s⁻¹, which is physically impossible; the classical formula breaks down." },
+        { "answer": "The electron absorbs all the energy as mass increase and exits with zero kinetic energy", "explanation": "The electron does gain mass-energy, but it still exits with significant kinetic energy and high speed." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Compare an electron gun using 5 kV with one using 20 kV. By what factor does the beam speed increase?",
+      "correct": "By a factor of 2, since √(20/5) = √4 = 2",
+      "correctExplanation": "Speed is proportional to √V, so the ratio of speeds is √(20 000/5000) = √4 = 2.",
+      "distractors": [
+        { "answer": "By a factor of 4, since 20/5 = 4", "explanation": "Speed depends on √V, not V directly; the speed ratio is √4 = 2, not 4." },
+        { "answer": "By a factor of √2, since the voltage was only doubled effectively", "explanation": "The voltage quadrupled (5 to 20), not doubled; √4 = 2, not √2." },
+        { "answer": "By a factor of 16, since kinetic energy is proportional to v⁴", "explanation": "Kinetic energy is proportional to v², not v⁴; the speed ratio is √(V₂/V₁) = 2." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A Millikan-type experiment requires suspending a charged oil drop between plates. Evaluate why W = qV is not the appropriate formula for this stationary drop.",
+      "correct": "W = qV describes energy gained during acceleration, but a stationary drop has zero kinetic energy change",
+      "correctExplanation": "W = qV applies to energy conversion during motion; for a stationary drop, force balance (qE = mg) is the relevant equation.",
+      "distractors": [
+        { "answer": "W = qV does apply because the drop is between two charged plates with a potential difference", "explanation": "The formula describes energy transfer during motion; a stationary drop undergoes no energy transfer." },
+        { "answer": "W = qV only applies to electrons and not to larger particles like oil drops", "explanation": "W = qV applies to any charge; the issue is motion versus equilibrium, not particle type." },
+        { "answer": "The formula fails because the oil drop has too much mass for the electric field", "explanation": "The formula is valid for any mass; it is simply not the relevant equation for a stationary force balance." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A research group accelerates gold ions (charge +3e, mass 3.27 × 10⁻²⁵ kg) and protons (charge +e, mass 1.67 × 10⁻²⁷ kg) through 10 kV. Compare their exit speeds.",
+      "correct": "The proton exits about 7.7 times faster due to its much larger charge-to-mass ratio",
+      "correctExplanation": "v ∝ √(q/m). Proton q/m = 9.58 × 10⁷; gold q/m = 1.47 × 10⁶. Ratio of speeds = √(9.58/0.147) × √(10⁷/10⁶) ≈ 7.7.",
+      "distractors": [
+        { "answer": "The gold ion exits faster because it has three times the charge of the proton", "explanation": "Triple charge is offset by 196 times the mass; the gold ion's q/m ratio is much smaller." },
+        { "answer": "Both exit at the same speed because they experience the same voltage", "explanation": "Same voltage gives same energy per unit charge, but different q/m ratios give different speeds." },
+        { "answer": "The proton exits about 3 times faster because the gold ion has triple the charge", "explanation": "The speed ratio depends on √(q/m) for each particle, giving approximately 7.7, not 3." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "In a mass spectrometer, ions are accelerated through a known voltage V and then enter a magnetic field. Why is the accelerating stage using W = qV essential to the measurement?",
+      "correct": "It gives all ions of the same charge the same kinetic energy, so mass differences produce speed differences",
+      "correctExplanation": "Equal KE = qV but different masses means different speeds v = √(2qV/m), which produces different deflection radii in the magnetic field.",
+      "distractors": [
+        { "answer": "It separates ions by charge before they enter the magnetic field region", "explanation": "The accelerating voltage gives energy, not charge separation; separation occurs in the magnetic field." },
+        { "answer": "It slows down heavier ions so they can be more easily deflected by the magnet", "explanation": "All ions are accelerated, not slowed; heavier ions exit more slowly because of their greater mass." },
+        { "answer": "It converts all kinetic energy to potential energy for measurement in the detector", "explanation": "The ions retain kinetic energy; the voltage stage sets up speed differences for magnetic separation." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Analyse the energy transformation chain in a cathode ray tube: power supply → electron beam → screen. Where does W = qV fit?",
+      "correct": "W = qV converts electrical potential energy from the supply into kinetic energy of the electrons",
+      "correctExplanation": "The power supply establishes a voltage; W = qV quantifies the energy each electron gains as it accelerates from cathode to anode.",
+      "distractors": [
+        { "answer": "W = qV describes the light energy produced when electrons hit the phosphor screen", "explanation": "W = qV describes the acceleration stage; the light production involves a different energy conversion." },
+        { "answer": "W = qV measures the total power consumed by the cathode ray tube circuit", "explanation": "Power is energy per time (P = VI); W = qV gives the energy per electron, not total power." },
+        { "answer": "W = qV applies only to the deflection plates and not to the accelerating voltage", "explanation": "W = qV applies to the accelerating voltage that sets the beam speed; deflection plates change direction." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Evaluate whether the plate separation affects the exit speed of a particle accelerated from rest through voltage V between parallel plates.",
+      "correct": "No, exit speed depends only on q, V, and m; plate separation affects force and acceleration time but not final speed",
+      "correctExplanation": "From v = √(2qV/m), plate separation d does not appear; wider plates give less force but longer acceleration time, yielding the same final speed.",
+      "distractors": [
+        { "answer": "Yes, wider separation produces a stronger field which gives a higher exit speed", "explanation": "Wider separation reduces the field (E = V/d), giving less force; but the longer distance compensates exactly." },
+        { "answer": "Yes, narrower separation produces a weaker field which reduces the exit speed", "explanation": "Narrower separation increases the field, but the shorter distance compensates; final speed is unchanged." },
+        { "answer": "The relationship depends on whether the field is uniform or non-uniform between plates", "explanation": "For any field with the same total voltage drop, the energy gained is qV regardless of field uniformity." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the analysis of relativistic limits.",
+      "sentence": "The classical formula v = √(2qV/m) breaks down when the calculated speed approaches the speed of {{blank:1}}, requiring {{blank:2}} mechanics instead.",
+      "blanks": {
+        "1": {
+          "correct": "light",
+          "correctExplanation": "The speed of light (c = 3 × 10⁸ m s⁻¹) is the universal speed limit; classical mechanics fails as speeds approach it.",
+          "distractors": [
+            { "answer": "sound", "explanation": "The speed of sound is not a fundamental limit; the speed of light is the relativistic boundary." },
+            { "answer": "electrons", "explanation": "There is no fixed 'speed of electrons'; the fundamental limit is the speed of light." }
+          ]
+        },
+        "2": {
+          "correct": "relativistic",
+          "correctExplanation": "Relativistic mechanics accounts for mass increase and speed limits near c.",
+          "distractors": [
+            { "answer": "quantum", "explanation": "Quantum mechanics addresses wave-particle duality; relativistic mechanics handles high-speed effects." },
+            { "answer": "classical", "explanation": "Classical mechanics is what breaks down; relativistic mechanics is what replaces it." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the comparison of accelerated particles.",
+      "sentence": "In a mass spectrometer, ions accelerated through the same voltage gain the same {{blank:1}} but different {{blank:2}}, allowing separation by mass.",
+      "blanks": {
+        "1": {
+          "correct": "kinetic energy",
+          "correctExplanation": "All ions with the same charge gain KE = qV, regardless of mass.",
+          "distractors": [
+            { "answer": "speed", "explanation": "Different masses give different speeds for the same kinetic energy; speed is not the same." },
+            { "answer": "momentum", "explanation": "Different masses with different speeds give different momenta; only kinetic energy is equal." }
+          ]
+        },
+        "2": {
+          "correct": "speeds",
+          "correctExplanation": "Since v = √(2qV/m), different masses produce different exit speeds for the same kinetic energy.",
+          "distractors": [
+            { "answer": "charges", "explanation": "Charge is a property of the ion, not something gained during acceleration; speeds differ due to mass." },
+            { "answer": "energies", "explanation": "Kinetic energy is the same (qV); it is the speed that differs due to different masses." }
+          ]
+        }
+      }
+    }
+  ]
+}

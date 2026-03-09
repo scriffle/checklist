@@ -1,0 +1,86 @@
+{
+  "id": "orbiting-satellites",
+  "name": "Orbiting Satellites",
+  "icon": "🛰️",
+  "what": "This subtopic covers the modelling of satellite motion as uniform circular motion, the derivation and application of formulas for orbital speed, orbital period, and orbital radius, the nature of geostationary orbits, and how to calculate the mass of a body from its satellite's motion.",
+  "why": "Satellite motion is a major application of both gravitational fields and circular motion in the VCE Physics course. These concepts underpin the technology of GPS, weather satellites, and space exploration, and orbital calculations feature in almost every exam.",
+  "items": [
+    {
+      "id": 1,
+      "uuid": "lp-ef7716ca-d209-ef1a-74bf-f9a690c7fc55",
+      "version": 1,
+      "title": "I can explain why the gravitational force is the centripetal force for a satellite in circular orbit",
+      "code": "4.1",
+      "what": "For a satellite in a stable circular orbit, gravity is the only force acting on it. This gravitational force is directed toward the centre of the orbit (the centre of the planet), which satisfies the requirement for centripetal force. Setting Fg = Fc gives the basis for all orbital calculations.",
+      "why": "Understanding that gravity provides the centripetal force explains why satellites stay in orbit without any propulsion engines, and it is the conceptual foundation for deriving all orbital formulas.",
+      "example": "The Moon orbits Earth because Earth's gravitational force continuously pulls the Moon toward Earth's centre. The Moon's tangential velocity is large enough that as it falls toward Earth, Earth's surface curves away at the same rate, maintaining a circular path.",
+      "contentHash": "hash-808df41c"
+    },
+    {
+      "id": 2,
+      "uuid": "lp-d04d0b02-b16c-fb30-5caa-e997290e5e0a",
+      "version": 1,
+      "title": "I can calculate the orbital speed of a satellite using v = √(GM/r)",
+      "code": "4.2",
+      "what": "The orbital speed of a satellite at radius r from the centre of a body of mass M is v = √(GM/r). This formula is derived by equating gravitational force with centripetal force. Orbital speed is independent of the mass of the satellite.",
+      "why": "This formula shows that orbital speed depends only on the mass of the central body and the orbital radius — a heavier satellite and a lighter satellite at the same altitude travel at the same speed.",
+      "example": "The ICON satellite orbits at r = 6.97 × 10⁶ m from Earth's centre. Its orbital speed is v = √(6.67 × 10⁻¹¹ × 5.97 × 10²⁴ / 6.97 × 10⁶) = 7.56 × 10³ m s⁻¹ (approximately 7.6 km s⁻¹).",
+      "contentHash": "hash-4a650595"
+    },
+    {
+      "id": 3,
+      "uuid": "lp-d3dd1b89-5db5-10d3-4df3-6aa1007af91f",
+      "version": 1,
+      "title": "I can calculate the orbital period of a satellite using T = √(4π²r³/GM)",
+      "code": "4.3",
+      "what": "The orbital period T of a satellite at radius r is T = √(4π²r³/GM). This is derived from equating gravitational force with centripetal force expressed in terms of period. Like orbital speed, orbital period is independent of the satellite's mass.",
+      "why": "The orbital period formula allows calculation of how long any satellite takes to complete one orbit, which is critical for satellite scheduling, communication windows, and understanding natural orbital systems.",
+      "example": "The ICON satellite at r = 6.97 × 10⁶ m has an orbital period of T = √(4π² × (6.97 × 10⁶)³ / (6.67 × 10⁻¹¹ × 5.97 × 10²⁴)) = 5.79 × 10³ s ≈ 96.5 minutes.",
+      "contentHash": "hash-e2a72731"
+    },
+    {
+      "id": 4,
+      "uuid": "lp-fa6fde4a-5487-03f5-d9b7-a14c87e72d7d",
+      "version": 1,
+      "title": "I can calculate the orbital radius of a satellite using r = ³√(GMT²/4π²)",
+      "code": "4.4",
+      "what": "The orbital radius r of a satellite with period T orbiting a body of mass M is r = ³√(GMT²/4π²). This formula requires taking a cube root. The result gives the distance from the centre of the body, not the altitude above the surface.",
+      "why": "Finding the orbital radius from the period is a common exam calculation, and it is used to determine the altitude required for a geostationary orbit or to verify consistency in orbital data.",
+      "example": "To find the orbital radius of a geostationary satellite (T = 86 400 s): r = ³√(6.67 × 10⁻¹¹ × 5.97 × 10²⁴ × 86 400² / 4π²) = 4.2 × 10⁷ m. Altitude above surface = 4.2 × 10⁷ − 6.37 × 10⁶ ≈ 3.6 × 10⁷ m (36 000 km).",
+      "contentHash": "hash-fa80e194"
+    },
+    {
+      "id": 5,
+      "uuid": "lp-a4e362c8-46d1-f666-c788-b421c23a007d",
+      "version": 1,
+      "title": "I can calculate the mass of a central body from its satellite's orbital data",
+      "code": "4.5",
+      "what": "Rearranging the orbital period formula gives the mass of the central body: M = 4π²r³/(GT²). By observing the orbital radius and period of any satellite, the mass of the body it orbits can be determined.",
+      "why": "This is how astronomers determine the masses of planets, moons, and stars — by observing the motions of their natural satellites. It is also a common multi-step exam question.",
+      "example": "Callisto orbits Jupiter with a period of 1.443 × 10⁶ s and an orbital radius of 1.883 × 10⁹ m. Mass of Jupiter = 4π² × (1.883 × 10⁹)³ / (6.67 × 10⁻¹¹ × (1.443 × 10⁶)²) = 1.90 × 10²⁷ kg.",
+      "contentHash": "hash-941a4b93"
+    },
+    {
+      "id": 6,
+      "uuid": "lp-743884f0-a5f6-165f-dbd4-c513ffff4209",
+      "version": 1,
+      "title": "I can describe the conditions required for a geostationary orbit",
+      "code": "4.6",
+      "what": "A geostationary satellite must orbit directly above the equator, in the same direction as Earth's rotation, and with a period of exactly 24 hours (86 400 s). All geostationary satellites are at an altitude of approximately 36 000 km above Earth's surface.",
+      "why": "Geostationary orbits allow satellites to remain fixed above a single point on Earth's surface, making them ideal for telecommunications, weather monitoring, and broadcasting without needing to track a moving satellite.",
+      "example": "A TV satellite dish points at a fixed position in the sky because the geostationary satellite it communicates with remains stationary relative to Earth's surface. If the satellite were in a lower orbit, it would move across the sky and the dish would need to track it.",
+      "contentHash": "hash-c2eb1ee5"
+    },
+    {
+      "id": 7,
+      "uuid": "lp-296b167f-40d7-0d85-e89f-0d9ed49cf65e",
+      "version": 1,
+      "title": "I can predict and justify changes to orbital speed and period when orbital radius changes",
+      "code": "4.7",
+      "what": "As orbital radius increases, orbital speed decreases (v ∝ 1/√r) and orbital period increases (T ∝ r^(3/2)). A satellite moved to a higher orbit travels more slowly and takes longer to complete each orbit.",
+      "why": "Understanding the relationship between orbital radius, speed, and period is essential for analysing orbital transfers and explaining why satellites at different altitudes behave differently.",
+      "example": "A weather satellite is boosted from an altitude of 850 km to a geostationary orbit at 36 000 km. Its orbital speed decreases from approximately 7.4 km s⁻¹ to approximately 3.1 km s⁻¹, and its period increases from about 102 minutes to 24 hours.",
+      "contentHash": "hash-5676da21"
+    }
+  ]
+}

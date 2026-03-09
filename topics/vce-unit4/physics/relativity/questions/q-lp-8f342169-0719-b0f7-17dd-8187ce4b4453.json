@@ -1,0 +1,517 @@
+{
+  "_link": {
+    "uuid": "lp-8f342169-0719-b0f7-17dd-8187ce4b4453",
+    "version": 1,
+    "contentHash": "hash-9da8f710",
+    "title": "I can explain why particle accelerator drift tubes must account for length contraction",
+    "generatedAt": "2026-03-09T15:05:00.000Z"
+  },
+  "toLevel2": [
+    {
+      "type": "MC",
+      "question": "In a linear accelerator, why must drift tubes become progressively longer along the accelerator?",
+      "correct": "The particles travel faster, so the tubes must be longer to maintain correct voltage timing",
+      "correctExplanation": "As particles accelerate, they spend less time in each tube. The alternating voltage must switch while the particle is inside, so longer tubes are needed to give the voltage time to switch.",
+      "distractors": [
+        { "answer": "The particles become heavier and need longer tubes to contain them", "explanation": "Drift tube length is determined by the voltage timing, not the particle's mass. The tubes are longer because faster particles traverse them more quickly." },
+        { "answer": "The magnetic field strength decreases along the accelerator", "explanation": "Drift tubes in a linac use electric fields, not magnetic fields, to accelerate particles. Tube length relates to voltage timing." },
+        { "answer": "The particles emit radiation that requires longer shielding tubes", "explanation": "Drift tube length is not about shielding. It is about matching the alternating voltage timing to the particle's transit time." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "What happens in a linear accelerator if length contraction is not accounted for in the drift tube design?",
+      "correct": "The alternating voltage switches at the wrong moment, decelerating the particle",
+      "correctExplanation": "If the drift tubes are the wrong length, the voltage polarity changes while the particle is still between tubes, pushing it backwards instead of forwards.",
+      "distractors": [
+        { "answer": "The particle continues to accelerate normally", "explanation": "Without correct tube lengths, the timing of the accelerating voltage is wrong. The particle would be decelerated instead of accelerated." },
+        { "answer": "The particle reaches the speed of light", "explanation": "No massive particle can reach the speed of light regardless of accelerator design. Incorrect tube lengths cause deceleration." },
+        { "answer": "The particle's mass decreases", "explanation": "Rest mass is invariant. Incorrect drift tube lengths affect the voltage timing, not the particle's mass." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "In a particle's reference frame, what happens to the length of a drift tube?",
+      "correct": "The drift tube appears contracted",
+      "correctExplanation": "In the particle's frame, the drift tube is moving at high speed relative to the particle. The tube's length along the direction of motion is contracted by the Lorentz factor.",
+      "distractors": [
+        { "answer": "The drift tube appears longer than its proper length", "explanation": "Moving objects contract along the direction of motion. The drift tube appears shorter, not longer, in the particle's frame." },
+        { "answer": "The drift tube length is unchanged", "explanation": "The drift tube moves relative to the particle, so its length is contracted. Only an observer at rest relative to the tube measures its proper length." },
+        { "answer": "The drift tube appears to have zero length", "explanation": "The tube contracts by the Lorentz factor but does not shrink to zero unless the speed equals c, which is impossible for massive particles." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Which observer measures the proper length of a drift tube in a linear accelerator?",
+      "correct": "A laboratory technician standing next to the accelerator",
+      "correctExplanation": "The drift tube is at rest in the laboratory frame. The technician is also at rest relative to the tube, so they measure the proper length.",
+      "distractors": [
+        { "answer": "The particle travelling through the tube", "explanation": "The particle is moving relative to the drift tube. In the particle's frame, the tube is length-contracted and appears shorter than its proper length." },
+        { "answer": "An observer on a satellite orbiting Earth", "explanation": "A satellite-based observer is in a different frame. The laboratory technician at rest relative to the tube measures its proper length." },
+        { "answer": "All observers measure the same length for the drift tube", "explanation": "Different observers in relative motion measure different lengths. Only the observer at rest relative to the tube measures its proper length." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Why is the design of drift tubes in a linear accelerator a practical application of special relativity?",
+      "correct": "Particles travel at speeds where length contraction significantly affects the tube dimensions",
+      "correctExplanation": "Particles in accelerators reach speeds close to c, where the Lorentz factor is large and length contraction is significant. The tube lengths must account for this to maintain correct timing.",
+      "distractors": [
+        { "answer": "Drift tubes must be made from special relativistic materials", "explanation": "The materials are not special. The design must account for the relativistic effect of length contraction on the timing of voltage switching." },
+        { "answer": "The accelerator must travel at the speed of light to function", "explanation": "The accelerator is stationary. The particles inside it travel at relativistic speeds, requiring drift tube lengths to be designed with length contraction in mind." },
+        { "answer": "Special relativity only applies to circular accelerators, not linear ones", "explanation": "Special relativity applies to any situation involving high speeds, including linear accelerators where particles travel through drift tubes." }
+      ]
+    },
+    {
+      "type": "TF",
+      "question": "In a linear accelerator, drift tubes must be designed to account for length contraction because the particles travel at relativistic speeds.",
+      "correct": "True",
+      "correctExplanation": "At relativistic speeds, the drift tubes appear contracted in the particle's frame. Engineers must design the tube lengths so the alternating voltage timing matches the particle's transit time.",
+      "distractors": [
+        { "answer": "False", "explanation": "This statement is true. Length contraction is a real effect at the speeds achieved in particle accelerators and must be incorporated into drift tube design." }
+      ]
+    },
+    {
+      "type": "TF",
+      "question": "If length contraction were ignored in the design of drift tubes, the particles would still be accelerated correctly.",
+      "correct": "False",
+      "correctExplanation": "Ignoring length contraction leads to incorrect drift tube lengths, causing the alternating voltage to switch at the wrong time. This decelerates the particles instead of accelerating them.",
+      "distractors": [
+        { "answer": "True", "explanation": "This is incorrect. Without accounting for length contraction, the voltage timing would be wrong, causing the particles to be decelerated." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the statement about drift tubes and length contraction.",
+      "sentence": "In a particle's reference frame, the drift tubes appear {{blank:1}} because they are moving at high speed relative to the particle. This is due to {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "shorter",
+          "correctExplanation": "The drift tubes move relative to the particle and are contracted along the direction of motion, making them appear shorter.",
+          "distractors": ["longer", "unchanged"]
+        },
+        "2": {
+          "correct": "length contraction",
+          "correctExplanation": "Length contraction causes objects moving at relativistic speeds to appear shortened along the direction of motion.",
+          "distractors": ["time dilation", "mass increase"]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the explanation of why drift tubes get longer along the accelerator.",
+      "sentence": "As particles accelerate, they move {{blank:1}}, spending less time in each tube. To ensure the voltage switches at the correct moment, each successive drift tube must be {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "faster",
+          "correctExplanation": "Particles gain speed as they pass through each accelerating gap. Higher speed means they traverse each tube more quickly.",
+          "distractors": ["slower", "sideways"]
+        },
+        "2": {
+          "correct": "longer",
+          "correctExplanation": "Longer tubes ensure the particle is shielded inside the tube while the voltage reverses, maintaining the correct timing for acceleration.",
+          "distractors": ["shorter", "wider"]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the statement about who measures proper length of a drift tube.",
+      "sentence": "The proper length of a drift tube is measured in the {{blank:1}} frame because the tube is at {{blank:2}} in that frame.",
+      "blanks": {
+        "1": {
+          "correct": "laboratory",
+          "correctExplanation": "The drift tube is stationary in the laboratory. An observer at rest relative to the tube measures its proper length.",
+          "distractors": ["particle's", "satellite's"]
+        },
+        "2": {
+          "correct": "rest",
+          "correctExplanation": "Proper length is measured in the frame where the object is at rest. The drift tube is at rest in the laboratory frame.",
+          "distractors": ["high speed", "acceleration"]
+        }
+      }
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "MC",
+      "question": "A drift tube in a linear accelerator has a proper length of 50 cm. A proton passes through it at 0.8c (γ = 1.667). Which one of the following is closest to the length of the drift tube as measured in the proton's frame?",
+      "correct": "30 cm",
+      "correctExplanation": "In the proton's frame, the tube is moving and is contracted: L = L₀/γ = 50/1.667 = 30 cm.",
+      "distractors": [
+        { "answer": "50 cm", "explanation": "50 cm is the proper length in the laboratory frame. In the proton's frame, the tube is contracted to 30 cm." },
+        { "answer": "83 cm", "explanation": "This results from multiplying by γ instead of dividing. Length contraction reduces the tube's length: L = L₀/γ = 30 cm." },
+        { "answer": "10 cm", "explanation": "This would require γ = 5, but at 0.8c, γ = 1.667. The contracted length is 50/1.667 = 30 cm." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Sophia explains: 'Drift tubes must get longer because the particles need more time to accelerate.' Is her explanation correct?",
+      "correct": "No; the tubes get longer because faster particles traverse each tube more quickly",
+      "correctExplanation": "Particles accelerate in the gaps between tubes, not inside them. Inside the tubes, particles drift at constant speed. Longer tubes ensure the voltage has time to reverse while the particle is shielded inside.",
+      "distractors": [
+        { "answer": "Yes; particles accelerate inside the drift tubes and need more space", "explanation": "Particles do not accelerate inside drift tubes. They accelerate in the gaps between tubes. The tubes shield the particles while the voltage reverses." },
+        { "answer": "No; the tubes get longer because the electric field weakens", "explanation": "The electric field strength is not the reason for increasing tube lengths. The tubes increase in length to match the transit time of faster particles." },
+        { "answer": "Yes; this is the only reason drift tubes get longer", "explanation": "Sophia's reasoning is incorrect. The tubes get longer to maintain correct voltage timing as particle speed increases." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "In a linear accelerator, what is the function of the drift tubes?",
+      "correct": "To shield particles from the reversed electric field while the voltage switches polarity",
+      "correctExplanation": "While particles are inside the conducting drift tubes, they are shielded from the electric field. This gives the voltage time to reverse so the field accelerates the particle at the next gap.",
+      "distractors": [
+        { "answer": "To accelerate the particles using a static electric field", "explanation": "Acceleration occurs in the gaps between drift tubes, not inside them. Inside the tubes, particles drift at constant speed." },
+        { "answer": "To slow down particles that are moving too fast", "explanation": "Drift tubes do not slow particles. They shield particles from the electric field while the voltage reverses." },
+        { "answer": "To focus the particle beam using magnetic lenses", "explanation": "While some accelerators use magnetic focusing, the primary function of drift tubes is to shield particles during voltage reversal." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A particle accelerator has drift tubes that increase in length along its length. James claims this is solely because of length contraction. Evaluate his claim.",
+      "correct": "Partially correct; increasing speed is the primary reason, and length contraction must also be considered",
+      "correctExplanation": "The main reason tubes get longer is that faster particles need longer tubes to maintain correct timing. At relativistic speeds, length contraction further affects how the particle perceives the tube length, and this must be factored into the design.",
+      "distractors": [
+        { "answer": "Completely correct; length contraction is the only reason", "explanation": "Length contraction is one factor, but the increasing particle speed is the primary reason tubes get longer. Both effects must be considered." },
+        { "answer": "Completely incorrect; length contraction has no effect on tube design", "explanation": "Length contraction does affect the design at relativistic speeds. It must be accounted for to ensure correct voltage timing." },
+        { "answer": "Partially correct; only time dilation affects tube design", "explanation": "Both the increasing speed and length contraction affect tube design. Time dilation is related but length contraction is the direct spatial effect on tube dimensions." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A drift tube has a proper length of 1.2 m. A particle passes through it at 0.866c (γ = 2.00). The tube appears contracted to the particle. Which one of the following is closest to the contracted length?",
+      "correct": "0.60 m",
+      "correctExplanation": "L = L₀/γ = 1.2/2.00 = 0.60 m. The particle sees the tube as half its proper length at this speed.",
+      "distractors": [
+        { "answer": "2.4 m", "explanation": "This results from multiplying by γ instead of dividing. The tube contracts: L = L₀/γ = 0.60 m." },
+        { "answer": "1.2 m", "explanation": "1.2 m is the proper length. In the particle's frame, the tube is contracted to 0.60 m." },
+        { "answer": "0.30 m", "explanation": "This would require γ = 4, but at 0.866c, γ = 2.00. The contracted length is 1.2/2.00 = 0.60 m." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Which one of the following best describes why special relativity is essential for the correct operation of a linear accelerator?",
+      "correct": "Particles travel at speeds where classical physics cannot predict the correct drift tube dimensions",
+      "correctExplanation": "At relativistic speeds, length contraction significantly changes how particles experience the tube dimensions. Classical physics does not account for this, leading to incorrect voltage timing if used alone.",
+      "distractors": [
+        { "answer": "The accelerator itself must travel at relativistic speed to function", "explanation": "The accelerator is stationary. The particles inside reach relativistic speeds, requiring the design to account for length contraction." },
+        { "answer": "Classical physics gives the same predictions as relativity for accelerator design", "explanation": "At the speeds achieved in particle accelerators, classical physics significantly underestimates the effects of length contraction and time dilation." },
+        { "answer": "Special relativity is only needed for the power supply design", "explanation": "Special relativity affects the drift tube dimensions and timing, not just the power supply. The physical layout must account for relativistic effects." }
+      ]
+    },
+    {
+      "type": "TF",
+      "question": "Particles accelerate while inside the drift tubes of a linear accelerator.",
+      "correct": "False",
+      "correctExplanation": "Particles drift at constant speed inside the conducting tubes. Acceleration occurs in the gaps between drift tubes where the electric field acts on the charged particles.",
+      "distractors": [
+        { "answer": "True", "explanation": "This is incorrect. Drift tubes are conducting cylinders that shield particles from the electric field. Acceleration occurs only in the gaps between tubes." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the explanation of drift tube design and length contraction.",
+      "sentence": "Engineers must design drift tubes with {{blank:1}} proper lengths along the accelerator. In the particle's frame, each tube appears {{blank:2}} than its proper length due to length contraction.",
+      "blanks": {
+        "1": {
+          "correct": "increasing",
+          "correctExplanation": "Faster particles traverse each tube more quickly, so each successive tube must be longer to maintain correct voltage timing.",
+          "distractors": ["decreasing", "constant"]
+        },
+        "2": {
+          "correct": "shorter",
+          "correctExplanation": "The drift tube moves relative to the particle, so it is length-contracted and appears shorter than its proper length.",
+          "distractors": ["longer", "identical"]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the statement about what happens if length contraction is ignored.",
+      "sentence": "If length contraction is not considered, the voltage switches at the {{blank:1}} moment. Instead of being accelerated, the particle is {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "wrong",
+          "correctExplanation": "Without accounting for length contraction, the tube dimensions are incorrect and the voltage reverses at the wrong time relative to the particle's position.",
+          "distractors": ["correct", "optimal"]
+        },
+        "2": {
+          "correct": "decelerated",
+          "correctExplanation": "If the voltage switches while the particle is exposed to the field in the wrong direction, the electric force opposes the particle's motion.",
+          "distractors": ["destroyed", "unaffected"]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the statement about what drift tubes do.",
+      "sentence": "Drift tubes {{blank:1}} charged particles from the electric field while the alternating voltage {{blank:2}} polarity.",
+      "blanks": {
+        "1": {
+          "correct": "shield",
+          "correctExplanation": "The conducting drift tubes act as Faraday cages, shielding the particles from the external electric field while they are inside.",
+          "distractors": ["accelerate", "deflect"]
+        },
+        "2": {
+          "correct": "reverses",
+          "correctExplanation": "The alternating voltage switches polarity while the particle is shielded inside the tube, so the field is in the correct direction when the particle reaches the next gap.",
+          "distractors": ["maintains", "doubles"]
+        }
+      }
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "MC",
+      "question": "A proton at 0.95c (γ = 3.203) enters a drift tube with a proper length of 2.4 m. Which one of the following is closest to the time the proton spends inside the tube as measured in the laboratory frame?",
+      "correct": "8.4 ns",
+      "correctExplanation": "In the lab frame, the tube is 2.4 m long and the proton travels at 0.95c = 2.85 × 10⁸ m s⁻¹. Time = L₀/v = 2.4 / (2.85 × 10⁸) = 8.42 × 10⁻⁹ s ≈ 8.4 ns.",
+      "distractors": [
+        { "answer": "2.6 ns", "explanation": "This is the time in the proton's frame, where the tube is contracted: L/v = (2.4/3.203) / (2.85 × 10⁸) ≈ 2.6 ns." },
+        { "answer": "27 ns", "explanation": "This would correspond to a much longer tube or slower particle. The correct lab-frame time is 2.4 / (2.85 × 10⁸) ≈ 8.4 ns." },
+        { "answer": "84 ns", "explanation": "This is ten times too large. The correct calculation gives 2.4 / (2.85 × 10⁸) = 8.4 ns." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A proton at 0.99c (γ = 7.089) passes through a drift tube. In the proton's frame, the tube has a contracted length of 12 cm. Which one of the following is closest to the proper length of the tube?",
+      "correct": "85 cm",
+      "correctExplanation": "L₀ = γL = 7.089 × 12 cm = 85.1 cm ≈ 85 cm. The proper length is the laboratory measurement of the tube.",
+      "distractors": [
+        { "answer": "12 cm", "explanation": "12 cm is the contracted length in the proton's frame. The proper length in the lab is L₀ = γL = 85 cm." },
+        { "answer": "1.7 cm", "explanation": "This results from dividing by γ instead of multiplying. The proper length is larger: L₀ = 7.089 × 12 = 85 cm." },
+        { "answer": "850 cm", "explanation": "This is ten times too large. L₀ = 7.089 × 12 cm = 85 cm, not 850 cm." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Two drift tubes in a linear accelerator have proper lengths of 30 cm and 60 cm. A proton passes through both at 0.866c (γ = 2.00). Which one of the following correctly gives the contracted lengths in the proton's frame?",
+      "correct": "15 cm and 30 cm",
+      "correctExplanation": "Both tubes contract by the same factor: L₁ = 30/2.00 = 15 cm and L₂ = 60/2.00 = 30 cm. The ratio of lengths is preserved.",
+      "distractors": [
+        { "answer": "60 cm and 120 cm", "explanation": "This multiplies by γ instead of dividing. Both tubes contract: L = L₀/γ, giving 15 cm and 30 cm." },
+        { "answer": "30 cm and 60 cm", "explanation": "These are the proper lengths. In the proton's frame, both tubes are contracted to 15 cm and 30 cm." },
+        { "answer": "15 cm and 60 cm", "explanation": "Both tubes must be contracted by the same factor. If the first contracts to 15 cm, the second contracts to 30 cm, not 60 cm." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "An engineer needs to design a drift tube so that a proton at 0.9c (γ = 2.294) experiences a contracted length of 50 cm. Which one of the following is closest to the proper length the tube must have?",
+      "correct": "115 cm",
+      "correctExplanation": "L₀ = γL = 2.294 × 50 cm = 114.7 cm ≈ 115 cm. The tube must be 115 cm in the lab to appear as 50 cm to the proton.",
+      "distractors": [
+        { "answer": "50 cm", "explanation": "50 cm is the desired contracted length. The proper length must be longer: L₀ = γ × 50 = 115 cm." },
+        { "answer": "22 cm", "explanation": "This results from dividing by γ instead of multiplying. The proper length is larger than the contracted length: L₀ = 115 cm." },
+        { "answer": "250 cm", "explanation": "This would require γ = 5, but at 0.9c, γ = 2.294. The proper length is 2.294 × 50 = 115 cm." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "In a linear accelerator, the alternating voltage frequency is 200 MHz. A proton at 0.8c must be inside a drift tube for exactly half a period. Which one of the following is closest to the required proper length of the tube?",
+      "correct": "60 cm",
+      "correctExplanation": "Half-period = 1/(2 × 200 × 10⁶) = 2.5 × 10⁻⁹ s. Distance in lab: L₀ = vt = 0.8 × 3 × 10⁸ × 2.5 × 10⁻⁹ = 0.60 m = 60 cm.",
+      "distractors": [
+        { "answer": "75 cm", "explanation": "This would correspond to using c instead of 0.8c. The proton's speed is 0.8c: L₀ = 0.8 × 3 × 10⁸ × 2.5 × 10⁻⁹ = 60 cm." },
+        { "answer": "36 cm", "explanation": "This would be the contracted length: L = L₀/γ = 60/1.667 = 36 cm. The proper length in the lab is 60 cm." },
+        { "answer": "120 cm", "explanation": "This uses the full period rather than half a period. The particle needs to be inside for half a period: L₀ = 60 cm." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "At the start of a linear accelerator, protons move at 0.1c. At the far end, they reach 0.95c. How does the ratio of drift tube length at the far end to the length at the start compare?",
+      "correct": "The far-end tubes are much longer than the near-start tubes",
+      "correctExplanation": "At 0.1c, the protons are relatively slow and spend more time in each tube. At 0.95c, they are much faster and need much longer tubes to maintain the correct timing with the alternating voltage.",
+      "distractors": [
+        { "answer": "The tubes are all the same length throughout the accelerator", "explanation": "Drift tubes increase in length along the accelerator because faster particles need longer tubes to maintain voltage timing." },
+        { "answer": "The far-end tubes are shorter because the particles are faster", "explanation": "Faster particles require longer tubes, not shorter ones. The tube must be long enough to shield the particle for the correct duration." },
+        { "answer": "The tubes at both ends are the same length because the voltage frequency is constant", "explanation": "Even with a constant frequency, the distance a particle travels in half a period increases with speed, requiring longer tubes." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A particle physicist explains: 'The drift tube must be designed so that, in the particle's own frame, it is long enough to shield the particle for the correct time.' Which physical concept must the physicist use to convert between the lab tube length and the particle's perceived length?",
+      "correct": "Length contraction: L = L₀/γ",
+      "correctExplanation": "The drift tube's proper length L₀ is measured in the lab. The particle perceives a contracted length L = L₀/γ. This relationship must be used to ensure the tube appears the correct length in the particle's frame.",
+      "distractors": [
+        { "answer": "Time dilation: t = γt₀", "explanation": "While time dilation is related, the question specifically asks about converting tube lengths between frames. Length contraction is the direct tool." },
+        { "answer": "Mass-energy equivalence: E = mc²", "explanation": "Mass-energy equivalence relates mass to energy. The conversion between lab and particle frame tube lengths uses length contraction." },
+        { "answer": "Classical kinematics: L = vt", "explanation": "Classical kinematics does not account for relativistic effects. At the speeds in a particle accelerator, length contraction must be used." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the drift tube design calculation.",
+      "sentence": "A proton at 0.995c (γ = 10.01) must see a contracted tube length of 8.5 cm. The engineer must build the tube with a proper length of L₀ = γ × L = {{blank:1}} cm in the laboratory. This is approximately {{blank:2}} times longer than what the proton perceives.",
+      "blanks": {
+        "1": {
+          "correct": "85",
+          "correctExplanation": "L₀ = γ × L = 10.01 × 8.5 = 85.1 cm ≈ 85 cm.",
+          "distractors": ["0.85", "850"]
+        },
+        "2": {
+          "correct": "10",
+          "correctExplanation": "The ratio L₀/L = γ = 10.01 ≈ 10. The lab tube is about 10 times longer than the contracted length.",
+          "distractors": ["2", "100"]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the explanation of why ignoring relativity leads to failure.",
+      "sentence": "If a drift tube is designed using only classical physics, it will be too {{blank:1}} for a relativistic particle. The particle exits the tube before the voltage has {{blank:2}}, and is then decelerated.",
+      "blanks": {
+        "1": {
+          "correct": "short",
+          "correctExplanation": "Classical physics underestimates the length needed because it does not account for the particle's relativistic speed. The tube is too short for the correct timing.",
+          "distractors": ["long", "narrow"]
+        },
+        "2": {
+          "correct": "reversed",
+          "correctExplanation": "The alternating voltage must reverse polarity while the particle is inside the tube. If the tube is too short, the particle emerges before the reversal completes.",
+          "distractors": ["doubled", "stopped"]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the comparison between the lab frame and the particle frame.",
+      "sentence": "In the laboratory frame, the drift tube has its {{blank:1}} length. In the particle's frame, the tube is {{blank:2}} by the Lorentz factor γ.",
+      "blanks": {
+        "1": {
+          "correct": "proper",
+          "correctExplanation": "The drift tube is at rest in the lab, so the lab measures the proper length L₀.",
+          "distractors": ["contracted", "dilated"]
+        },
+        "2": {
+          "correct": "contracted",
+          "correctExplanation": "In the particle's frame, the tube moves at high speed and its length is reduced to L = L₀/γ.",
+          "distractors": ["dilated", "unchanged"]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "MC",
+      "question": "A linear accelerator uses an alternating voltage with a frequency of 100 MHz. A proton enters a drift tube at 0.866c (γ = 2.00). The proton must spend exactly half a voltage cycle inside the tube. Which one of the following is closest to the proper length of this drift tube?",
+      "correct": "1.30 m",
+      "correctExplanation": "Half-period = 1/(2 × 10⁸) = 5.0 × 10⁻⁹ s. In the lab frame, the proton travels L₀ = vt = 0.866 × 3.0 × 10⁸ × 5.0 × 10⁻⁹ = 1.30 m.",
+      "distractors": [
+        { "answer": "0.65 m", "explanation": "This is the contracted length in the proton's frame: L = L₀/γ = 1.30/2.00 = 0.65 m. The proper lab length is 1.30 m." },
+        { "answer": "2.60 m", "explanation": "This uses the full period instead of half a period. The proton must be inside for half a cycle: L₀ = 1.30 m." },
+        { "answer": "1.50 m", "explanation": "This would correspond to a speed of c, not 0.866c. Using the proton's actual speed: L₀ = 0.866 × 3.0 × 10⁸ × 5.0 × 10⁻⁹ = 1.30 m." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "In the proton's frame from the previous question, the drift tube has a contracted length of 0.65 m and the proton is at rest. From the proton's perspective, the tube moves past it. Which one of the following is closest to the time the tube takes to pass the proton in the proton's frame?",
+      "correct": "2.5 ns",
+      "correctExplanation": "In the proton's frame, the tube moves at 0.866c and has length 0.65 m. Time = L/v = 0.65 / (0.866 × 3.0 × 10⁸) = 0.65 / (2.598 × 10⁸) = 2.50 × 10⁻⁹ s = 2.5 ns.",
+      "distractors": [
+        { "answer": "5.0 ns", "explanation": "5.0 ns is the lab-frame transit time. In the proton's frame, the contracted tube passes in less time: 2.5 ns." },
+        { "answer": "10 ns", "explanation": "This is the full voltage period, not the transit time. The correct transit time in the proton's frame is 2.5 ns." },
+        { "answer": "1.25 ns", "explanation": "This is half the correct value. Time = 0.65 / (2.598 × 10⁸) = 2.5 ns." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "An engineer designs a linear accelerator where protons are accelerated from 0.6c to 0.99c. The first drift tube has a proper length of 45 cm (at 0.6c). The final drift tube must accommodate protons at 0.99c using the same voltage frequency. Which one of the following is closest to the proper length of the final drift tube?",
+      "correct": "74 cm",
+      "correctExplanation": "At constant frequency, L₀ = v × T/2. From the first tube: T/2 = L₀₁/v₁ = 0.45/(0.6 × 3.0 × 10⁸) = 2.5 × 10⁻⁹ s. Final tube: L₀₂ = v₂ × T/2 = 0.99 × 3.0 × 10⁸ × 2.5 × 10⁻⁹ = 0.7425 m ≈ 74 cm.",
+      "distractors": [
+        { "answer": "45 cm", "explanation": "This is the first drift tube length at 0.6c. At 0.99c, the proton is faster and needs a longer tube: L₀₂ = 0.99c × T/2 = 74 cm." },
+        { "answer": "10 cm", "explanation": "This would be the contracted length of a 74 cm tube in the proton's frame (74/7.089 ≈ 10 cm). The proper lab length is 74 cm." },
+        { "answer": "530 cm", "explanation": "This would correspond to multiplying by γ. The proper length is simply L₀ = v × T/2 = 74 cm." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A proton at 0.999c (γ = 22.37) passes through a drift tube that is 2.0 m long in the laboratory. Which one of the following is closest to the contracted length of the tube in the proton's frame?",
+      "correct": "8.9 cm",
+      "correctExplanation": "L = L₀/γ = 2.0 / 22.37 = 0.0894 m = 8.94 cm ≈ 8.9 cm. At this extreme speed, the tube appears dramatically shortened.",
+      "distractors": [
+        { "answer": "44.7 m", "explanation": "This results from multiplying by γ instead of dividing. The tube contracts: L = L₀/γ = 8.9 cm." },
+        { "answer": "2.0 m", "explanation": "2.0 m is the proper length in the lab. In the proton's frame, the tube is contracted to 8.9 cm." },
+        { "answer": "89 cm", "explanation": "This is ten times too large. L = 2.0 / 22.37 = 0.089 m = 8.9 cm." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "In a linear accelerator, two adjacent drift tubes have proper lengths of 80 cm and 100 cm. A proton at 0.9c (γ = 2.294) passes through both. In the proton's frame, the gap between the tubes is 5.0 cm (proper length). What is the contracted gap length in the proton's frame?",
+      "correct": "2.2 cm",
+      "correctExplanation": "The gap is stationary in the lab (proper length 5.0 cm). In the proton's frame: L_gap = 5.0/2.294 = 2.18 cm ≈ 2.2 cm. The gap, like the tubes, contracts in the proton's frame.",
+      "distractors": [
+        { "answer": "5.0 cm", "explanation": "5.0 cm is the proper length of the gap. In the proton's frame, it contracts to 5.0/2.294 = 2.2 cm." },
+        { "answer": "11.5 cm", "explanation": "This results from multiplying by γ. The gap contracts in the proton's frame: L = 5.0/2.294 = 2.2 cm." },
+        { "answer": "0.22 cm", "explanation": "This is ten times too small. L = 5.0/2.294 = 2.2 cm, not 0.22 cm." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A drift tube has a proper length of 1.5 m. A proton enters at 0.95c (γ = 3.203) and the alternating voltage has a half-period of 5.26 ns. Which one of the following correctly determines whether the proton exits before or after the voltage reverses?",
+      "correct": "Lab transit time = 5.26 ns, so the proton exits exactly as the voltage reverses",
+      "correctExplanation": "Lab transit time = L₀/v = 1.5 / (0.95 × 3.0 × 10⁸) = 1.5 / (2.85 × 10⁸) = 5.26 × 10⁻⁹ s = 5.26 ns. This matches the half-period exactly.",
+      "distractors": [
+        { "answer": "Lab transit time = 1.64 ns, so the proton exits well before the voltage reverses", "explanation": "1.64 ns would be the transit time in the proton's frame. The lab transit time is 5.26 ns, matching the half-period." },
+        { "answer": "Lab transit time = 16.8 ns, so the proton is inside for more than three half-periods", "explanation": "This is incorrect. The lab transit time is 1.5 / (2.85 × 10⁸) = 5.26 ns, not 16.8 ns." },
+        { "answer": "The transit time cannot be calculated without knowing the voltage", "explanation": "The transit time depends only on the tube length and particle speed: t = L₀/v. It can be calculated without knowing the voltage." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A student argues that drift tube design only needs to consider length contraction, not time dilation. Is this correct?",
+      "correct": "Both effects are consistent; the tube length can be calculated using either frame",
+      "correctExplanation": "In the lab frame, the proper tube length and particle speed give the transit time. In the particle's frame, the contracted tube length and the particle's proper time give the same result. Both approaches are valid and consistent.",
+      "distractors": [
+        { "answer": "Correct; only length contraction matters for tube design", "explanation": "While length contraction directly affects tube dimensions, time dilation is the complementary effect in the other frame. Both are consistent descriptions of the same physics." },
+        { "answer": "Incorrect; only time dilation matters for tube design", "explanation": "Length contraction directly affects how the particle perceives tube dimensions. Both length contraction and time dilation are valid approaches to the same problem." },
+        { "answer": "Incorrect; neither effect matters because the tubes are stationary", "explanation": "The tubes are stationary in the lab, but moving in the particle's frame. The relativistic effects must be considered for correct design." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A linear accelerator operates at 200 MHz. At one point along the accelerator, protons travel at 0.8c. Which one of the following is closest to the proper length of the drift tube at this point?",
+      "correct": "60 cm",
+      "correctExplanation": "Half-period = 1/(2 × 200 × 10⁶) = 2.5 × 10⁻⁹ s. L₀ = vt = 0.8 × 3 × 10⁸ × 2.5 × 10⁻⁹ = 0.60 m = 60 cm.",
+      "distractors": [
+        { "answer": "36 cm", "explanation": "This is the contracted length L₀/γ = 60/1.667 = 36 cm. The proper lab length is 60 cm." },
+        { "answer": "100 cm", "explanation": "This would correspond to using γ × L₀ = 1.667 × 60. The proper length is simply L₀ = vt = 60 cm." },
+        { "answer": "75 cm", "explanation": "This would use c instead of 0.8c. The proton speed is 0.8c: L₀ = 0.8 × 3 × 10⁸ × 2.5 × 10⁻⁹ = 60 cm." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the comparison of classical and relativistic drift tube design.",
+      "sentence": "At 0.99c, a classical calculation gives the tube length as v × T/2 = {{blank:1}} m. This calculation is correct in the lab frame. However, in the proton's frame, the tube appears contracted to {{blank:2}} of its lab length.",
+      "blanks": {
+        "1": {
+          "correct": "1.49",
+          "correctExplanation": "L₀ = v × T/2. If the half-period is 5.0 × 10⁻⁹ s: L₀ = 0.99 × 3.0 × 10⁸ × 5.0 × 10⁻⁹ = 1.485 m ≈ 1.49 m.",
+          "distractors": ["0.21", "10.5"]
+        },
+        "2": {
+          "correct": "1/7.089",
+          "correctExplanation": "At 0.99c, γ = 7.089. The proton sees the tube contracted by this factor: L = L₀/γ = L₀/7.089.",
+          "distractors": ["7.089 times", "half"]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the explanation of how drift tube length scales with speed.",
+      "sentence": "At a constant voltage frequency, the proper length of a drift tube is proportional to the particle's {{blank:1}}. As the proton approaches c, the tube length approaches a maximum of {{blank:2}} × T/2.",
+      "blanks": {
+        "1": {
+          "correct": "speed",
+          "correctExplanation": "L₀ = v × T/2. At constant frequency (constant T), the tube length is directly proportional to the particle speed v.",
+          "distractors": ["mass", "charge"]
+        },
+        "2": {
+          "correct": "c",
+          "correctExplanation": "As v → c, L₀ = v × T/2 → c × T/2. The maximum tube length approaches c multiplied by the half-period.",
+          "distractors": ["γ", "½"]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,551 @@
+{
+  "_link": {
+    "uuid": "lp-1639befc-2c7f-5ef9-c7dd-8fec4051f839",
+    "version": 1,
+    "contentHash": "hash-36c067a3",
+    "title": "I can calculate the voltage drop across a transmission line using V = IR",
+    "generatedAt": "2026-03-07T18:45:00Z"
+  },
+  "toLevel2": [
+    {
+      "type": "mc",
+      "question": "Which one of the following formulas is used to calculate the voltage drop across a transmission line?",
+      "correct": "Vdrop = I × Rwire",
+      "correctExplanation": "The voltage drop across the wire is calculated using Ohm's law: V = IR, where I is the current and R is the wire resistance.",
+      "distractors": [
+        { "answer": "Vdrop = I² × Rwire", "explanation": "I²R gives power loss, not voltage drop." },
+        { "answer": "Vdrop = I / Rwire", "explanation": "Dividing current by resistance does not give voltage. Ohm's law requires multiplication." },
+        { "answer": "Vdrop = Rwire / I", "explanation": "This is the inverse of the correct relationship and does not give voltage." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What happens to the voltage available at the load when current flows through a transmission line with resistance?",
+      "correct": "The load voltage is less than the supply voltage",
+      "correctExplanation": "The wire resistance causes a voltage drop, so the load receives the supply voltage minus the voltage drop across the wires.",
+      "distractors": [
+        { "answer": "The load voltage equals the supply voltage", "explanation": "This would only be true if the wires had zero resistance, which is not the case in practice." },
+        { "answer": "The load voltage is greater than the supply voltage", "explanation": "The load voltage cannot exceed the supply voltage. The wire resistance always reduces it." },
+        { "answer": "The load voltage depends only on the wire resistance", "explanation": "The load voltage depends on both the supply voltage and the voltage drop (Vdrop = IR)." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A transmission line carries a current of 10 A through wires with a total resistance of 3.0 Ω. Which one of the following is closest to the voltage drop across the wires?",
+      "correct": "30 V",
+      "correctExplanation": "Vdrop = IR = 10 × 3.0 = 30 V.",
+      "distractors": [
+        { "answer": "300 V", "explanation": "This may result from using I²R (power loss formula) instead of IR (voltage drop)." },
+        { "answer": "3.3 V", "explanation": "This results from dividing R by I instead of multiplying." },
+        { "answer": "0.30 V", "explanation": "This is far too small and may result from a unit conversion error." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "If the supply voltage is 230 V and the voltage drop across the transmission wires is 20 V, what voltage does the load receive?",
+      "correct": "210 V",
+      "correctExplanation": "Vload = Vsupply − Vdrop = 230 − 20 = 210 V.",
+      "distractors": [
+        { "answer": "250 V", "explanation": "The voltage drop is subtracted, not added to the supply voltage." },
+        { "answer": "230 V", "explanation": "This ignores the voltage drop entirely. The wires reduce the voltage delivered." },
+        { "answer": "20 V", "explanation": "This is the voltage drop itself, not the voltage at the load." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which one of the following best describes what causes voltage drop in a transmission line?",
+      "correct": "Current flowing through the resistance of the wires",
+      "correctExplanation": "By Ohm's law, current through a resistance produces a potential difference across it. This is the voltage drop.",
+      "distractors": [
+        { "answer": "The length of the wires reducing the speed of electrons", "explanation": "Electron speed is not directly related to voltage drop. It is the resistance and current that determine it." },
+        { "answer": "Energy being stored in the magnetic field of the wires", "explanation": "Magnetic field energy storage is a reactive effect, not the cause of resistive voltage drop." },
+        { "answer": "The insulation of the wires absorbing electrical energy", "explanation": "Insulation does not absorb significant energy. The voltage drop is due to wire resistance." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "The voltage drop across a transmission line increases when the current in the line increases.",
+      "correct": "True",
+      "correctExplanation": "Vdrop = IR. If I increases and R remains constant, the voltage drop increases proportionally.",
+      "distractors": [
+        { "answer": "False", "explanation": "Students may think voltage drop is fixed by the wire properties alone, but it also depends on current." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "If the transmission wires had zero resistance, there would be no voltage drop across them.",
+      "correct": "True",
+      "correctExplanation": "Vdrop = IR. If R = 0, then Vdrop = 0 regardless of the current.",
+      "distractors": [
+        { "answer": "False", "explanation": "Students may think voltage always drops over distance, but with zero resistance, no voltage is lost." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about voltage drop.",
+      "sentence": "The voltage drop across a transmission line is calculated using {{blank:1}} law: Vdrop = I × R.",
+      "blanks": {
+        "1": {
+          "correct": "Ohm's",
+          "correctExplanation": "Ohm's law (V = IR) is used to calculate the voltage drop across any resistance, including transmission wires.",
+          "distractors": [
+            { "answer": "Faraday's", "explanation": "Faraday's law relates to electromagnetic induction, not to voltage drops across resistances." },
+            { "answer": "Kirchhoff's", "explanation": "Kirchhoff's voltage law governs the sum of voltages around a loop, but V = IR is Ohm's law." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about load voltage.",
+      "sentence": "The voltage received by the load equals the supply voltage {{blank:1}} the voltage drop across the wires.",
+      "blanks": {
+        "1": {
+          "correct": "minus",
+          "correctExplanation": "The load voltage is reduced by the voltage drop: Vload = Vsupply − Vdrop.",
+          "distractors": [
+            { "answer": "plus", "explanation": "Adding the voltage drop would give a value higher than the supply, which is not possible." },
+            { "answer": "multiplied by", "explanation": "The relationship is subtraction, not multiplication." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the calculation about voltage drop.",
+      "sentence": "A current of 5.0 A flows through wires with total resistance 4.0 Ω. The voltage drop is {{blank:1}} V.",
+      "blanks": {
+        "1": {
+          "correct": "20",
+          "correctExplanation": "Vdrop = IR = 5.0 × 4.0 = 20 V.",
+          "distractors": [
+            { "answer": "100", "explanation": "This results from using I²R (power) instead of IR (voltage)." },
+            { "answer": "1.25", "explanation": "This results from dividing I by R instead of multiplying." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "mc",
+      "question": "A 230 V supply is connected to a load through wires with total resistance 5.0 Ω. The current is 8.0 A. Which one of the following is closest to the voltage at the load?",
+      "correct": "190 V",
+      "correctExplanation": "Vdrop = IR = 8.0 × 5.0 = 40 V. Vload = 230 − 40 = 190 V.",
+      "distractors": [
+        { "answer": "222 V", "explanation": "This may result from using a smaller voltage drop, perhaps forgetting that R is the total wire resistance." },
+        { "answer": "270 V", "explanation": "Adding the drop instead of subtracting gives 270 V, which exceeds the supply voltage." },
+        { "answer": "320 V", "explanation": "This is too large and may result from adding I²R instead of subtracting IR." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Two transmission lines carry the same current. Line A has a total resistance of 2.0 Ω and Line B has a total resistance of 6.0 Ω. Which one of the following best compares their voltage drops?",
+      "correct": "Line B has three times the voltage drop of Line A",
+      "correctExplanation": "Vdrop = IR. Same current, so voltage drop is proportional to resistance: 6.0/2.0 = 3.",
+      "distractors": [
+        { "answer": "Both lines have the same voltage drop since the current is equal", "explanation": "Voltage drop depends on both current and resistance, not current alone." },
+        { "answer": "Line B has nine times the voltage drop of Line A", "explanation": "This applies the squared relationship from power loss, not the linear relationship for voltage drop." },
+        { "answer": "Line A has three times the voltage drop of Line B", "explanation": "Line A has the lower resistance and therefore the lower voltage drop." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Why does the voltage drop in a transmission line become a practical problem for consumers at the end of the line?",
+      "correct": "The reduced voltage may be too low for appliances to operate correctly",
+      "correctExplanation": "Appliances are designed for a specific voltage. If the voltage drop is too large, the supply voltage at the consumer is too low.",
+      "distractors": [
+        { "answer": "The voltage drop causes the frequency of the AC supply to change", "explanation": "Voltage drop does not affect the frequency. Frequency is determined by the generator." },
+        { "answer": "The voltage drop increases the risk of electric shock for consumers", "explanation": "A lower voltage actually reduces shock risk, though the appliance performance suffers." },
+        { "answer": "The voltage drop means more current flows through consumer appliances", "explanation": "For resistive loads, lower voltage actually means less current, not more." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A transmission line has a total resistance of 4.0 Ω. If the current is doubled from 100 A to 200 A, what happens to the voltage drop?",
+      "correct": "The voltage drop doubles from 400 V to 800 V",
+      "correctExplanation": "Vdrop = IR. If I doubles and R is constant, Vdrop doubles: from 100 × 4.0 = 400 V to 200 × 4.0 = 800 V.",
+      "distractors": [
+        { "answer": "The voltage drop quadruples from 400 V to 1600 V", "explanation": "Voltage drop is linearly proportional to current (V = IR), not quadratic. The I² relationship applies to power loss." },
+        { "answer": "The voltage drop stays the same at 400 V", "explanation": "Voltage drop depends on current. Doubling the current doubles the drop." },
+        { "answer": "The voltage drop halves from 400 V to 200 V", "explanation": "Increasing current increases the voltage drop, not decreases it." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which one of the following correctly distinguishes between voltage drop and power loss in a transmission line?",
+      "correct": "Voltage drop is V = IR (linear in I); power loss is P = I²R (quadratic in I)",
+      "correctExplanation": "Voltage drop depends linearly on current, while power loss depends on the square of the current.",
+      "distractors": [
+        { "answer": "Voltage drop and power loss are the same quantity expressed in different units", "explanation": "Voltage drop is in volts and power loss is in watts — they are different quantities with different formulas." },
+        { "answer": "Voltage drop is P = I²R; power loss is V = IR", "explanation": "This reverses the formulas. V = IR gives voltage drop; P = I²R gives power loss." },
+        { "answer": "Voltage drop depends on current squared while power loss is linear in current", "explanation": "This is backwards. Voltage drop is linear (V = IR) and power loss is quadratic (P = I²R)." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A generator supplies 11 kV to a transmission line with total wire resistance 8.0 Ω. The current in the line is 500 A. Which one of the following is closest to the voltage available at the far end?",
+      "correct": "7.0 kV",
+      "correctExplanation": "Vdrop = IR = 500 × 8.0 = 4000 V = 4.0 kV. Vload = 11 − 4.0 = 7.0 kV.",
+      "distractors": [
+        { "answer": "11 kV", "explanation": "This ignores the voltage drop. The wires have significant resistance." },
+        { "answer": "9.0 kV", "explanation": "This may result from a calculation error, perhaps using half the resistance." },
+        { "answer": "3.0 kV", "explanation": "This may result from subtracting I²R/1000 or another incorrect calculation." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "Voltage drop across transmission wires is directly proportional to the current flowing through them.",
+      "correct": "True",
+      "correctExplanation": "Vdrop = IR shows a direct linear proportionality between voltage drop and current when R is constant.",
+      "distractors": [
+        { "answer": "False", "explanation": "Students may confuse the voltage drop (V = IR, linear) with power loss (P = I²R, quadratic). Voltage drop is indeed directly proportional." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the calculation for a transmission system.",
+      "sentence": "A supply voltage of 330 kV feeds a line with R = 10 Ω carrying 300 A. The voltage drop is {{blank:1}} kV, so the load receives {{blank:2}} kV.",
+      "blanks": {
+        "1": {
+          "correct": "3.0",
+          "correctExplanation": "Vdrop = IR = 300 × 10 = 3000 V = 3.0 kV.",
+          "distractors": [
+            { "answer": "0.90", "explanation": "This may result from using I²R/10⁶ or another incorrect calculation." },
+            { "answer": "30", "explanation": "This is ten times too large, possibly from a unit error." }
+          ]
+        },
+        "2": {
+          "correct": "327",
+          "correctExplanation": "Vload = 330 − 3.0 = 327 kV.",
+          "distractors": [
+            { "answer": "333", "explanation": "This adds the voltage drop instead of subtracting it." },
+            { "answer": "300", "explanation": "This subtracts 30 kV instead of 3.0 kV." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about reducing voltage drop.",
+      "sentence": "To reduce the voltage drop in a transmission line, engineers can reduce the {{blank:1}} or reduce the {{blank:2}} of the wires.",
+      "blanks": {
+        "1": {
+          "correct": "current",
+          "correctExplanation": "Vdrop = IR, so reducing either I or R reduces the voltage drop.",
+          "distractors": [
+            { "answer": "voltage", "explanation": "Reducing the supply voltage would not reduce the voltage drop. In fact, it would increase current for the same power." },
+            { "answer": "frequency", "explanation": "Frequency does not appear in the voltage drop formula for resistive losses." }
+          ]
+        },
+        "2": {
+          "correct": "resistance",
+          "correctExplanation": "Reducing R (e.g. by using thicker or shorter wires) reduces the voltage drop.",
+          "distractors": [
+            { "answer": "length", "explanation": "While reducing length does reduce resistance, the direct variable in V = IR is resistance." },
+            { "answer": "insulation", "explanation": "Insulation does not affect the wire resistance or the voltage drop calculation." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the comparison between voltage drop and power loss.",
+      "sentence": "Voltage drop depends {{blank:1}} on current, while power loss depends on the {{blank:2}} of the current.",
+      "blanks": {
+        "1": {
+          "correct": "linearly",
+          "correctExplanation": "V = IR shows voltage drop is directly (linearly) proportional to current.",
+          "distractors": [
+            { "answer": "quadratically", "explanation": "The quadratic relationship applies to power loss (P = I²R), not voltage drop." },
+            { "answer": "inversely", "explanation": "Voltage drop increases with current, it does not decrease." }
+          ]
+        },
+        "2": {
+          "correct": "square",
+          "correctExplanation": "P = I²R shows power loss depends on the square of the current.",
+          "distractors": [
+            { "answer": "cube", "explanation": "Current is squared, not cubed, in the power loss formula." },
+            { "answer": "magnitude", "explanation": "While loss depends on current magnitude, the specific mathematical dependence is a squared relationship." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "mc",
+      "question": "A remote farm receives power from a 230 V supply through wires with a total resistance of 2.5 Ω. The farm draws 20 A. Which one of the following is closest to the voltage at the farm?",
+      "correct": "180 V",
+      "correctExplanation": "Vdrop = IR = 20 × 2.5 = 50 V. Vfarm = 230 − 50 = 180 V.",
+      "distractors": [
+        { "answer": "210 V", "explanation": "This may result from using only half the wire resistance." },
+        { "answer": "230 V", "explanation": "This ignores the voltage drop entirely." },
+        { "answer": "280 V", "explanation": "This adds the voltage drop instead of subtracting it." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A 500 kV transmission line with total resistance 6.0 Ω delivers power to a substation. If the current is 800 A, which one of the following is closest to the voltage at the substation and the percentage voltage drop?",
+      "correct": "495 kV with a 1.0% voltage drop",
+      "correctExplanation": "Vdrop = 800 × 6.0 = 4800 V = 4.8 kV. Vload = 500 − 4.8 = 495.2 kV. Percentage = 4.8/500 × 100 = 0.96% ≈ 1.0%.",
+      "distractors": [
+        { "answer": "476 kV with a 4.8% voltage drop", "explanation": "This may result from an arithmetic error. 4.8 kV from 500 kV is about 1%, not 4.8%." },
+        { "answer": "500 kV with 0% voltage drop", "explanation": "With 6.0 Ω resistance and 800 A current, there is a significant voltage drop." },
+        { "answer": "460 kV with an 8.0% voltage drop", "explanation": "This overestimates the voltage drop. Vdrop = 4.8 kV, not 40 kV." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An industrial facility needs at least 220 V to operate its equipment. The supply is 240 V and the wire resistance is 4.0 Ω. Which one of the following is closest to the maximum current the facility can draw before the voltage drops below 220 V?",
+      "correct": "5.0 A",
+      "correctExplanation": "Maximum Vdrop = 240 − 220 = 20 V. Imax = Vdrop/R = 20/4.0 = 5.0 A.",
+      "distractors": [
+        { "answer": "55 A", "explanation": "This results from dividing 220 by 4.0, which is not the correct calculation." },
+        { "answer": "20 A", "explanation": "This may result from confusing the voltage drop with the current." },
+        { "answer": "60 A", "explanation": "This results from dividing 240 by 4.0, using the supply voltage instead of the allowed drop." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Mei, an electrician, measures 218 V at a house that should receive 230 V. The wire resistance is 1.5 Ω. Which one of the following is closest to the current flowing through the supply line?",
+      "correct": "8.0 A",
+      "correctExplanation": "Vdrop = 230 − 218 = 12 V. I = Vdrop/R = 12/1.5 = 8.0 A.",
+      "distractors": [
+        { "answer": "145 A", "explanation": "This results from dividing 218 by 1.5, using the load voltage instead of the voltage drop." },
+        { "answer": "153 A", "explanation": "This results from dividing 230 by 1.5, using the supply voltage instead of the voltage drop." },
+        { "answer": "12 A", "explanation": "This confuses the voltage drop (12 V) with the current." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A transmission system operates at 66 kV with a line resistance of 15 Ω and carries 500 A. Which one of the following is closest to both the voltage drop and the power loss?",
+      "correct": "Voltage drop = 7.5 kV; power loss = 3.75 MW",
+      "correctExplanation": "Vdrop = IR = 500 × 15 = 7500 V = 7.5 kV. Ploss = I²R = 500² × 15 = 3.75 × 10⁶ W = 3.75 MW.",
+      "distractors": [
+        { "answer": "Voltage drop = 7.5 kV; power loss = 7.5 MW", "explanation": "The voltage drop is correct but the power loss should be I²R = 3.75 MW, not IR × I." },
+        { "answer": "Voltage drop = 3.75 kV; power loss = 3.75 MW", "explanation": "The voltage drop is IR = 7.5 kV, not 3.75 kV." },
+        { "answer": "Voltage drop = 7.5 kV; power loss = 0.50 MW", "explanation": "The power loss is I²R = 3.75 MW, which is much larger than 0.50 MW." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Two towns are connected to the same 11 kV supply. Town A is closer, with total wire resistance 2.0 Ω, and Town B is farther away, with total wire resistance 8.0 Ω. Both draw 200 A. Which one of the following correctly compares the voltage each town receives?",
+      "correct": "Town A receives 10.6 kV; Town B receives 9.4 kV",
+      "correctExplanation": "Town A: Vdrop = 200 × 2.0 = 400 V, Vload = 11 000 − 400 = 10 600 V. Town B: Vdrop = 200 × 8.0 = 1600 V, Vload = 11 000 − 1600 = 9400 V.",
+      "distractors": [
+        { "answer": "Both towns receive 11 kV since they share the same supply", "explanation": "Different wire resistances cause different voltage drops, so the towns receive different voltages." },
+        { "answer": "Town A receives 9.4 kV; Town B receives 10.6 kV", "explanation": "This reverses the towns. The closer town (lower resistance) receives higher voltage." },
+        { "answer": "Town A receives 10.8 kV; Town B receives 10.2 kV", "explanation": "These values use incorrect voltage drops. Vdrop = 400 V and 1600 V respectively." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student calculates that the voltage drop across a transmission line is 5000 V. The supply voltage is 220 kV. Which one of the following is closest to the percentage voltage drop?",
+      "correct": "2.3%",
+      "correctExplanation": "Percentage = (5000/220 000) × 100 = 2.27% ≈ 2.3%.",
+      "distractors": [
+        { "answer": "23%", "explanation": "This is ten times too large, possibly from dividing by 22 000 instead of 220 000." },
+        { "answer": "0.23%", "explanation": "This is ten times too small, possibly from a decimal place error." },
+        { "answer": "5.0%", "explanation": "This may result from dividing by 100 000 instead of 220 000." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the calculation for a domestic supply.",
+      "sentence": "A house draws 40 A through wires with R = 0.50 Ω from a 240 V supply. The voltage drop is {{blank:1}} V, so the house receives {{blank:2}} V.",
+      "blanks": {
+        "1": {
+          "correct": "20",
+          "correctExplanation": "Vdrop = IR = 40 × 0.50 = 20 V.",
+          "distractors": [
+            { "answer": "800", "explanation": "This results from using I²R (power loss) instead of IR (voltage drop)." },
+            { "answer": "80", "explanation": "This may result from using R = 2.0 Ω instead of 0.50 Ω." }
+          ]
+        },
+        "2": {
+          "correct": "220",
+          "correctExplanation": "Vload = 240 − 20 = 220 V.",
+          "distractors": [
+            { "answer": "260", "explanation": "This adds the voltage drop instead of subtracting it." },
+            { "answer": "160", "explanation": "This subtracts 80 V instead of 20 V." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the analysis of a transmission line.",
+      "sentence": "A line carrying 1000 A with R = 5.0 Ω has a voltage drop of {{blank:1}} V and a power loss of {{blank:2}} MW.",
+      "blanks": {
+        "1": {
+          "correct": "5000",
+          "correctExplanation": "Vdrop = IR = 1000 × 5.0 = 5000 V.",
+          "distractors": [
+            { "answer": "500", "explanation": "This may result from using R = 0.50 Ω instead of 5.0 Ω." },
+            { "answer": "50 000", "explanation": "This is ten times too large, possibly from using I² instead of I." }
+          ]
+        },
+        "2": {
+          "correct": "5.0",
+          "correctExplanation": "Ploss = I²R = 1000² × 5.0 = 5.0 × 10⁶ W = 5.0 MW.",
+          "distractors": [
+            { "answer": "0.50", "explanation": "This is ten times too small, possibly from a unit error." },
+            { "answer": "50", "explanation": "This is ten times too large, possibly from squaring incorrectly." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the calculation to find the current.",
+      "sentence": "A 230 V supply delivers power through wires with R = 2.0 Ω. The voltage at the load is measured as 210 V. The current is {{blank:1}} A.",
+      "blanks": {
+        "1": {
+          "correct": "10",
+          "correctExplanation": "Vdrop = 230 − 210 = 20 V. I = Vdrop/R = 20/2.0 = 10 A.",
+          "distractors": [
+            { "answer": "105", "explanation": "This divides 210 by 2.0, using the load voltage instead of the voltage drop." },
+            { "answer": "115", "explanation": "This divides 230 by 2.0, using the supply voltage instead of the voltage drop." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "mc",
+      "question": "A power company receives complaints from residents in a remote area that their appliances are malfunctioning. The supply is 230 V, the wire resistance is 3.0 Ω, and the current during peak demand is 25 A. Evaluate the likely cause of the problem.",
+      "correct": "The voltage drop of 75 V reduces the supply to 155 V, which is too low for 230 V appliances",
+      "correctExplanation": "Vdrop = 25 × 3.0 = 75 V. Vload = 230 − 75 = 155 V. This is well below the 230 V standard and would cause appliance malfunction.",
+      "distractors": [
+        { "answer": "The frequency of the supply has changed due to the long wire run", "explanation": "Wire resistance does not affect frequency. The issue is voltage drop." },
+        { "answer": "The power company is supplying insufficient total power", "explanation": "The total power may be sufficient, but the voltage at the load is too low due to wire losses." },
+        { "answer": "The residents are drawing too little current, causing excess voltage", "explanation": "25 A causes a large voltage drop; this reduces voltage, not increases it." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An engineer must choose between two solutions to reduce voltage drop on a 10 km rural power line. Option A: replace the wire with one of half the resistance. Option B: double the supply voltage using a transformer. Evaluate which option is more effective.",
+      "correct": "Option B is more effective because it halves the current, halving the voltage drop, and also reduces power loss by 75%",
+      "correctExplanation": "Doubling voltage halves current (I = P/V), halving Vdrop = IR and reducing Ploss = I²R to one quarter. Option A only halves Vdrop and Ploss.",
+      "distractors": [
+        { "answer": "Option A is more effective because it directly reduces resistance in the formula", "explanation": "Both options halve the voltage drop, but Option B also reduces power loss more due to the I² factor." },
+        { "answer": "Both options have exactly the same effect on voltage drop and power loss", "explanation": "Both halve the voltage drop, but Option B reduces power loss by 75% while Option A reduces it by only 50%." },
+        { "answer": "Option A is more effective because transformers introduce their own losses", "explanation": "Transformer losses are typically small (1–2%). The reduction in line losses far outweighs transformer losses." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "During peak demand, a substation supplies 33 kV to a distribution network with total resistance 5.0 Ω. The current increases from 200 A to 400 A. Analyse the change in voltage at the end of the network.",
+      "correct": "The voltage drops from 32 kV to 31 kV — a further 1.0 kV reduction",
+      "correctExplanation": "At 200 A: Vdrop = 1.0 kV, Vend = 32 kV. At 400 A: Vdrop = 2.0 kV, Vend = 31 kV. The additional drop is 1.0 kV.",
+      "distractors": [
+        { "answer": "The voltage stays at 32 kV because the supply voltage has not changed", "explanation": "While the supply voltage is constant, the increased current causes a larger voltage drop." },
+        { "answer": "The voltage drops from 32 kV to 29 kV — a 3.0 kV reduction", "explanation": "The voltage drop increases by 1.0 kV (from 1.0 to 2.0 kV), not by 3.0 kV." },
+        { "answer": "The voltage drops from 32 kV to 28 kV — a 4.0 kV reduction", "explanation": "The voltage drop at 400 A is 2.0 kV total, giving 31 kV, not 28 kV." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student claims that voltage drop and power loss are the same thing because both increase with current. Evaluate this claim.",
+      "correct": "The claim is incorrect: voltage drop (V = IR) is linear in I, while power loss (P = I²R) is quadratic in I",
+      "correctExplanation": "Both increase with current, but at different rates. Doubling the current doubles the voltage drop but quadruples the power loss.",
+      "distractors": [
+        { "answer": "The claim is correct: both quantities are calculated using the same formula", "explanation": "V = IR and P = I²R are different formulas giving different quantities with different units." },
+        { "answer": "The claim is incorrect because voltage drop decreases while power loss increases with current", "explanation": "Both increase with current. The difference is in how they increase (linearly vs quadratically)." },
+        { "answer": "The claim is correct because power loss equals voltage drop multiplied by a constant", "explanation": "Power loss = I × Vdrop = I(IR) = I²R. The factor of I is not constant, so the relationship is not simple." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An off-grid solar system supplies 48 V DC to a shed 100 m away. The copper wires have a total resistance of 1.2 Ω and carry 15 A. Evaluate whether the system can provide adequate voltage for 48 V equipment.",
+      "correct": "The voltage drop is 18 V, leaving only 30 V at the shed — inadequate for 48 V equipment",
+      "correctExplanation": "Vdrop = 15 × 1.2 = 18 V. Vload = 48 − 18 = 30 V. This is only 63% of the required voltage.",
+      "distractors": [
+        { "answer": "The voltage drop is 1.8 V, so the shed receives 46.2 V — adequate", "explanation": "This uses R = 0.12 Ω instead of 1.2 Ω. The correct voltage drop is 18 V." },
+        { "answer": "The voltage drop is 18 V, but the equipment will still work at 30 V", "explanation": "Equipment rated for 48 V will not function correctly at only 30 V — a 37.5% reduction." },
+        { "answer": "There is no voltage drop because the system is DC, not AC", "explanation": "Voltage drop occurs with both AC and DC whenever current flows through resistance." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A city plans to extend its 11 kV distribution network to a new suburb 5 km away. The proposed cable has R = 2.0 Ω and the expected peak current is 300 A. Analyse whether the voltage at the suburb will be acceptable (within 5% of 11 kV).",
+      "correct": "Vdrop = 600 V (5.5% of 11 kV), which exceeds the 5% limit — the design needs modification",
+      "correctExplanation": "Vdrop = 300 × 2.0 = 600 V. Percentage = 600/11 000 × 100 = 5.5%, which exceeds 5%.",
+      "distractors": [
+        { "answer": "Vdrop = 600 V (0.55% of 11 kV), which is well within the 5% limit", "explanation": "600/11 000 = 0.0545 = 5.45%, not 0.55%. The percentage is too high." },
+        { "answer": "Vdrop = 60 V (0.55% of 11 kV), which is well within the 5% limit", "explanation": "Vdrop = IR = 300 × 2.0 = 600 V, not 60 V." },
+        { "answer": "Vdrop = 600 V (3.0% of 11 kV), which is within the 5% limit", "explanation": "The correct percentage is 5.5%, not 3.0%." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A transmission engineer notices that voltage drop is 2.0% at average load but increases to 6.0% at peak load (triple the current). Analyse why the voltage drop tripled rather than increased by a smaller factor.",
+      "correct": "Voltage drop is proportional to current (V = IR), so tripling the current triples the voltage drop",
+      "correctExplanation": "Since Vdrop = IR and R is constant, tripling I triples Vdrop. The relationship is linear.",
+      "distractors": [
+        { "answer": "The voltage drop should have increased by a factor of 9 because of the I² relationship", "explanation": "The I² relationship applies to power loss, not voltage drop. Voltage drop is linear in current." },
+        { "answer": "The wire resistance must have increased during peak load due to heating", "explanation": "While resistance does increase slightly with temperature, the primary factor here is the tripled current." },
+        { "answer": "The voltage drop tripled because the supply voltage decreased during peak demand", "explanation": "The supply voltage is assumed constant. The tripling comes from the tripled current." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A homeowner 200 m from a transformer measures only 210 V during evening peak hours instead of the expected 230 V. During the day (low demand), the voltage is 228 V. Evaluate what this pattern reveals about the supply system.",
+      "correct": "The 20 V drop at peak and 2 V drop off-peak show the voltage drop is proportional to current demand",
+      "correctExplanation": "Higher current during peak hours causes a larger IR voltage drop. The varying voltage confirms the V = IR relationship.",
+      "distractors": [
+        { "answer": "The transformer is faulty and delivers different voltages at different times", "explanation": "The transformer output is constant. The voltage variation is due to varying current and wire resistance." },
+        { "answer": "The supply company deliberately reduces voltage during peak hours to save energy", "explanation": "While load management exists, the pattern here is explained by Ohm's law and varying current demand." },
+        { "answer": "The voltage drop only occurs during peak hours because the wires heat up and become resistive", "explanation": "The wires always have resistance. The difference is the current magnitude, not a change in resistance." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the analysis of a rural power supply problem.",
+      "sentence": "A farm receives only 195 V from a 230 V supply, giving a voltage drop of {{blank:1}} V. If the wire resistance is 7.0 Ω, the current is {{blank:2}} A.",
+      "blanks": {
+        "1": {
+          "correct": "35",
+          "correctExplanation": "Vdrop = 230 − 195 = 35 V.",
+          "distractors": [
+            { "answer": "195", "explanation": "195 V is the load voltage, not the voltage drop." },
+            { "answer": "230", "explanation": "230 V is the supply voltage, not the voltage drop." }
+          ]
+        },
+        "2": {
+          "correct": "5.0",
+          "correctExplanation": "I = Vdrop/R = 35/7.0 = 5.0 A.",
+          "distractors": [
+            { "answer": "27.9", "explanation": "This results from dividing the load voltage by the resistance instead of the voltage drop." },
+            { "answer": "32.9", "explanation": "This results from dividing the supply voltage by the resistance." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the evaluation of a transmission upgrade.",
+      "sentence": "A 66 kV line with R = 10 Ω carrying 1000 A has a voltage drop of {{blank:1}}%. Upgrading to 220 kV with the same power and resistance reduces the voltage drop to {{blank:2}}%.",
+      "blanks": {
+        "1": {
+          "correct": "15",
+          "correctExplanation": "Vdrop = 1000 × 10 = 10 000 V = 10 kV. Percentage = 10/66 × 100 = 15.2% ≈ 15%.",
+          "distractors": [
+            { "answer": "1.5", "explanation": "This is ten times too small, possibly from a unit error." },
+            { "answer": "10", "explanation": "This is the voltage drop in kV, not the percentage." }
+          ]
+        },
+        "2": {
+          "correct": "1.4",
+          "correctExplanation": "At 220 kV, I = P/V. Original P = 66 000 × 1000 = 66 MW. New I = 66 × 10⁶ / 220 000 = 300 A. Vdrop = 300 × 10 = 3000 V = 3.0 kV. Percentage = 3.0/220 × 100 = 1.36% ≈ 1.4%.",
+          "distractors": [
+            { "answer": "4.5", "explanation": "This may result from using the wrong current or voltage ratio." },
+            { "answer": "0.14", "explanation": "This is ten times too small." }
+          ]
+        }
+      }
+    }
+  ]
+}

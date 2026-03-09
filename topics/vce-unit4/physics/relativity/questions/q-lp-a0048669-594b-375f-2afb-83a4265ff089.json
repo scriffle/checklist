@@ -1,0 +1,517 @@
+{
+  "_link": {
+    "uuid": "lp-a0048669-594b-375f-2afb-83a4265ff089",
+    "version": 1,
+    "contentHash": "hash-336ccfb2",
+    "title": "I can calculate the speed of an object given its proper length and contracted length",
+    "generatedAt": "2026-03-09T15:35:00.000Z"
+  },
+  "toLevel2": [
+    {
+      "type": "MC",
+      "question": "A spacecraft has a proper length of 100 m. An observer measures its length as 50 m. What is the Lorentz factor γ?",
+      "correct": "2.00",
+      "correctExplanation": "γ = L₀/L = 100/50 = 2.00. The Lorentz factor is determined by the ratio of proper length to contracted length.",
+      "distractors": [
+        { "answer": "0.50", "explanation": "0.50 is L/L₀, the reciprocal of γ. The Lorentz factor is γ = L₀/L = 100/50 = 2.00." },
+        { "answer": "50", "explanation": "50 is the contracted length, not the Lorentz factor. γ = L₀/L = 100/50 = 2.00." },
+        { "answer": "150", "explanation": "This is the sum of the two lengths, which is not relevant. γ = L₀/L = 2.00." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Once the Lorentz factor γ is known, which formula gives the speed of the object?",
+      "correct": "v = c√(1 − 1/γ²)",
+      "correctExplanation": "From γ = 1/√(1 − v²/c²), rearranging gives v²/c² = 1 − 1/γ², so v = c√(1 − 1/γ²).",
+      "distractors": [
+        { "answer": "v = c/γ", "explanation": "c/γ does not correctly give the speed. The correct rearrangement is v = c√(1 − 1/γ²)." },
+        { "answer": "v = cγ", "explanation": "cγ would exceed the speed of light for γ > 1, which is impossible. The correct formula is v = c√(1 − 1/γ²)." },
+        { "answer": "v = c(γ − 1)", "explanation": "This formula does not arise from rearranging the Lorentz factor. The correct expression is v = c√(1 − 1/γ²)." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A rod has a proper length of 80 m and a contracted length of 40 m. Which one of the following is closest to the speed of the rod?",
+      "correct": "0.866c",
+      "correctExplanation": "γ = L₀/L = 80/40 = 2.00. v = c√(1 − 1/4) = c√(3/4) = c√0.75 = 0.866c.",
+      "distractors": [
+        { "answer": "0.500c", "explanation": "At 0.500c, γ = 1.155, which would contract the rod to 69 m, not 40 m. The correct speed is 0.866c." },
+        { "answer": "0.600c", "explanation": "At 0.600c, γ = 1.25, which would contract the rod to 64 m. The correct speed is 0.866c." },
+        { "answer": "0.990c", "explanation": "At 0.990c, γ = 7.089, which would contract the rod to 11.3 m. The correct speed is 0.866c." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "What is the first step in calculating the speed of an object from its proper length and contracted length?",
+      "correct": "Calculate γ = L₀/L",
+      "correctExplanation": "The first step is to find the Lorentz factor by dividing the proper length by the contracted length: γ = L₀/L.",
+      "distractors": [
+        { "answer": "Calculate γ = L/L₀", "explanation": "L/L₀ gives the reciprocal of γ. The Lorentz factor is γ = L₀/L, where L₀ is always the larger value." },
+        { "answer": "Calculate v = L₀ − L", "explanation": "Subtracting lengths does not give the speed. The first step is to find γ = L₀/L." },
+        { "answer": "Calculate γ = L₀ × L", "explanation": "Multiplying the lengths does not give any meaningful quantity. The Lorentz factor is γ = L₀/L." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A train has a proper length of 200 m. A platform observer measures it as 160 m. Which one of the following is closest to γ?",
+      "correct": "1.25",
+      "correctExplanation": "γ = L₀/L = 200/160 = 1.25.",
+      "distractors": [
+        { "answer": "0.80", "explanation": "0.80 is L/L₀, the reciprocal of γ. The Lorentz factor is γ = 200/160 = 1.25." },
+        { "answer": "40", "explanation": "40 is the difference L₀ − L, not the Lorentz factor. γ = L₀/L = 1.25." },
+        { "answer": "1.60", "explanation": "This does not match the ratio 200/160 = 1.25. Be careful to divide properly." }
+      ]
+    },
+    {
+      "type": "TF",
+      "question": "The Lorentz factor can be calculated from length measurements using γ = L₀/L.",
+      "correct": "True",
+      "correctExplanation": "From L = L₀/γ, rearranging gives γ = L₀/L. This is the first step in finding the speed from length measurements.",
+      "distractors": [
+        { "answer": "False", "explanation": "This statement is true. The formula L = L₀/γ rearranges directly to γ = L₀/L." }
+      ]
+    },
+    {
+      "type": "TF",
+      "question": "If the contracted length equals the proper length, the object must be at rest.",
+      "correct": "True",
+      "correctExplanation": "If L = L₀, then γ = L₀/L = 1. This means v = 0 — the object is at rest relative to the observer.",
+      "distractors": [
+        { "answer": "False", "explanation": "This statement is true. γ = 1 only when v = 0. If L = L₀, there is no contraction, meaning the object is not moving relative to the observer." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the two-step process for finding speed from lengths.",
+      "sentence": "Step 1: Calculate γ = {{blank:1}}/L. Step 2: Calculate v = c√(1 − 1/{{blank:2}}).",
+      "blanks": {
+        "1": {
+          "correct": "L₀",
+          "correctExplanation": "The Lorentz factor is the ratio of proper length to contracted length: γ = L₀/L.",
+          "distractors": ["L", "v"]
+        },
+        "2": {
+          "correct": "γ²",
+          "correctExplanation": "The speed formula derived from γ = 1/√(1 − v²/c²) gives v = c√(1 − 1/γ²).",
+          "distractors": ["γ", "c²"]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the calculation for a spacecraft with L₀ = 100 m and L = 50 m.",
+      "sentence": "γ = 100/50 = {{blank:1}}. Speed: v = c√(1 − 1/4) = c√({{blank:2}}) = 0.866c.",
+      "blanks": {
+        "1": {
+          "correct": "2.00",
+          "correctExplanation": "γ = L₀/L = 100/50 = 2.00.",
+          "distractors": ["0.50", "4.00"]
+        },
+        "2": {
+          "correct": "0.75",
+          "correctExplanation": "1 − 1/γ² = 1 − 1/4 = 1 − 0.25 = 0.75. Then v = c√0.75 = 0.866c.",
+          "distractors": ["0.25", "0.50"]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the statement about the relationship between γ and the lengths.",
+      "sentence": "The Lorentz factor γ is always {{blank:1}} than or equal to 1. The proper length is always the {{blank:2}} of the two length measurements.",
+      "blanks": {
+        "1": {
+          "correct": "greater",
+          "correctExplanation": "γ ≥ 1 for all speeds. It equals 1 only when v = 0 and increases without bound as v approaches c.",
+          "distractors": ["less", "equal"]
+        },
+        "2": {
+          "correct": "longer",
+          "correctExplanation": "Proper length L₀ is always greater than or equal to the contracted length L. Length contraction only reduces lengths.",
+          "distractors": ["shorter", "average"]
+        }
+      }
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "MC",
+      "question": "A spacecraft has a proper length of 120 m. A stationary observer measures it as 96 m. Which one of the following is closest to the speed of the spacecraft?",
+      "correct": "0.60c",
+      "correctExplanation": "γ = L₀/L = 120/96 = 1.25. v = c√(1 − 1/1.25²) = c√(1 − 0.64) = c√0.36 = 0.60c.",
+      "distractors": [
+        { "answer": "0.80c", "explanation": "At 0.80c, γ = 1.667, giving L = 120/1.667 = 72 m. The observed 96 m corresponds to a lower speed of 0.60c." },
+        { "answer": "0.20c", "explanation": "At 0.20c, γ ≈ 1.02, giving L ≈ 117.6 m. The observed 96 m requires a higher speed." },
+        { "answer": "0.96c", "explanation": "0.96 is L/L₀, not the speed. The speed is calculated from γ = 1.25, giving v = 0.60c." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A rod at rest is 50.0 m long. When moving, it is measured as 30.0 m. Which one of the following is closest to its speed?",
+      "correct": "0.80c",
+      "correctExplanation": "γ = 50.0/30.0 = 1.667. v = c√(1 − 1/1.667²) = c√(1 − 0.360) = c√0.640 = 0.800c.",
+      "distractors": [
+        { "answer": "0.60c", "explanation": "At 0.60c, γ = 1.25, giving L = 50/1.25 = 40 m. The observed 30 m requires a faster speed of 0.80c." },
+        { "answer": "0.40c", "explanation": "At 0.40c, γ = 1.091, giving L = 45.8 m. The rod must be much faster to contract to 30 m." },
+        { "answer": "0.93c", "explanation": "At 0.93c, γ ≈ 2.72, giving L = 18.4 m. This is too contracted. The correct speed is 0.80c." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Maya measures a passing spaceship as 25 m long. She knows its proper length is 75 m. Which one of the following is closest to the speed of the spaceship?",
+      "correct": "0.94c",
+      "correctExplanation": "γ = 75/25 = 3.00. v = c√(1 − 1/9) = c√(8/9) = c√0.889 = 0.943c ≈ 0.94c.",
+      "distractors": [
+        { "answer": "0.33c", "explanation": "0.33 is L/L₀ = 25/75, the reciprocal of γ. The speed is v = c√(1 − 1/γ²) = 0.94c." },
+        { "answer": "0.75c", "explanation": "At 0.75c, γ = 1.512, giving L = 49.6 m. A greater contraction to 25 m requires a faster speed of 0.94c." },
+        { "answer": "0.87c", "explanation": "At 0.87c, γ ≈ 2.03, giving L = 37 m. The observed 25 m requires γ = 3.00, corresponding to 0.94c." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A particle accelerator beam pipe has a proper length of 500 m. In the frame of a proton, the pipe is 250 m long. Which one of the following is closest to the speed of the proton?",
+      "correct": "0.866c",
+      "correctExplanation": "γ = 500/250 = 2.00. v = c√(1 − 1/4) = c√0.75 = 0.866c.",
+      "distractors": [
+        { "answer": "0.500c", "explanation": "At 0.500c, γ = 1.155, giving L = 433 m. The proton must be much faster to see 250 m." },
+        { "answer": "0.990c", "explanation": "At 0.990c, γ = 7.089, giving L = 70.5 m. This is too fast; the correct speed is 0.866c." },
+        { "answer": "0.750c", "explanation": "At 0.750c, γ = 1.512, giving L = 331 m. The correct speed for L = 250 m is 0.866c." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Liam measures a relativistic train as 180 m long. The train's proper length is 225 m. Which one of the following is closest to the Lorentz factor?",
+      "correct": "1.25",
+      "correctExplanation": "γ = L₀/L = 225/180 = 1.25.",
+      "distractors": [
+        { "answer": "0.80", "explanation": "0.80 is L/L₀ = 180/225, the reciprocal of γ. The Lorentz factor is γ = 225/180 = 1.25." },
+        { "answer": "1.80", "explanation": "This does not correspond to the correct ratio. γ = 225/180 = 1.25." },
+        { "answer": "45", "explanation": "This is the difference L₀ − L, not the Lorentz factor. γ = L₀/L = 1.25." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A spaceship's contracted length is one-fifth of its proper length. Which one of the following is closest to its speed?",
+      "correct": "0.98c",
+      "correctExplanation": "γ = L₀/(L₀/5) = 5. v = c√(1 − 1/25) = c√(24/25) = c√0.96 = 0.980c.",
+      "distractors": [
+        { "answer": "0.20c", "explanation": "0.20 is 1/γ = 1/5, not the speed. The speed is v = c√(1 − 1/25) = 0.98c." },
+        { "answer": "0.80c", "explanation": "At 0.80c, γ = 1.667, giving L = L₀/1.667 = 0.60L₀. One-fifth requires γ = 5, corresponding to 0.98c." },
+        { "answer": "0.50c", "explanation": "At 0.50c, γ = 1.155, which contracts to 0.87L₀. One-fifth requires a much higher speed of 0.98c." }
+      ]
+    },
+    {
+      "type": "TF",
+      "question": "If a rod's contracted length is half its proper length, its speed is 0.866c.",
+      "correct": "True",
+      "correctExplanation": "γ = L₀/(L₀/2) = 2. v = c√(1 − 1/4) = c√0.75 = 0.866c.",
+      "distractors": [
+        { "answer": "False", "explanation": "This statement is true. When L = L₀/2, γ = 2, and v = c√(1 − 0.25) = 0.866c." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the calculation for a 120 m spacecraft measured at 96 m.",
+      "sentence": "γ = 120/96 = {{blank:1}}. v = c√(1 − 1/1.5625) = c√(1 − {{blank:2}}) = 0.60c.",
+      "blanks": {
+        "1": {
+          "correct": "1.25",
+          "correctExplanation": "γ = L₀/L = 120/96 = 1.25.",
+          "distractors": ["0.80", "1.56"]
+        },
+        "2": {
+          "correct": "0.64",
+          "correctExplanation": "1/γ² = 1/1.5625 = 0.64. Then 1 − 0.64 = 0.36, and √0.36 = 0.60.",
+          "distractors": ["0.36", "1.25"]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the algebraic rearrangement of the Lorentz factor.",
+      "sentence": "From γ = 1/√(1 − v²/c²), rearranging: v²/c² = 1 − {{blank:1}}, so v = c × √(1 − 1/γ²). This formula converts a known {{blank:2}} into a speed.",
+      "blanks": {
+        "1": {
+          "correct": "1/γ²",
+          "correctExplanation": "Squaring γ and rearranging: 1/γ² = 1 − v²/c², so v²/c² = 1 − 1/γ².",
+          "distractors": ["γ²", "γ"]
+        },
+        "2": {
+          "correct": "Lorentz factor",
+          "correctExplanation": "Once γ is known (from γ = L₀/L or γ = t/t₀), the formula v = c√(1 − 1/γ²) gives the speed.",
+          "distractors": ["wavelength", "frequency"]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the statement about when the object is at rest.",
+      "sentence": "If L = L₀, then γ = {{blank:1}} and v = c√(1 − 1/1) = c√({{blank:2}}) = 0.",
+      "blanks": {
+        "1": {
+          "correct": "1",
+          "correctExplanation": "When the contracted length equals the proper length, γ = L₀/L = 1, meaning the object is at rest.",
+          "distractors": ["0", "2"]
+        },
+        "2": {
+          "correct": "0",
+          "correctExplanation": "1 − 1/1 = 0. √0 = 0, so v = 0. The object is stationary.",
+          "distractors": ["1", "0.5"]
+        }
+      }
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "MC",
+      "question": "A rocket has a proper length of 60.0 m. An observer measures it as 14.0 m. Which one of the following is closest to the rocket's speed?",
+      "correct": "0.97c",
+      "correctExplanation": "γ = 60.0/14.0 = 4.286. v = c√(1 − 1/18.37) = c√(1 − 0.0545) = c√0.9455 = 0.972c ≈ 0.97c.",
+      "distractors": [
+        { "answer": "0.23c", "explanation": "0.23 is approximately L/L₀ = 14/60. This is not the speed. v = c√(1 − 1/γ²) = 0.97c." },
+        { "answer": "0.77c", "explanation": "At 0.77c, γ ≈ 1.57, giving L = 38.2 m. The observed 14.0 m requires γ = 4.29, corresponding to 0.97c." },
+        { "answer": "0.87c", "explanation": "At 0.87c, γ ≈ 2.03, giving L = 29.6 m. The observed 14.0 m requires a much higher speed of 0.97c." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A muon at rest is 10 km above Earth's surface. In the muon's frame, the distance is 1.0 km. Which one of the following is closest to the muon's speed?",
+      "correct": "0.995c",
+      "correctExplanation": "γ = L₀/L = 10/1.0 = 10.0. v = c√(1 − 1/100) = c√0.99 = 0.995c.",
+      "distractors": [
+        { "answer": "0.10c", "explanation": "0.10 is 1/γ = L/L₀, not the speed. v = c√(1 − 1/100) = 0.995c." },
+        { "answer": "0.90c", "explanation": "At 0.90c, γ = 2.29, giving L = 4.37 km. The observed 1.0 km requires γ = 10, corresponding to 0.995c." },
+        { "answer": "0.95c", "explanation": "At 0.95c, γ = 3.20, giving L = 3.13 km. The 1.0 km contraction requires 0.995c." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A spacecraft has a proper length of 150 m. It passes a space station at a speed where its contracted length is 65.4 m. Which one of the following is closest to its speed?",
+      "correct": "0.90c",
+      "correctExplanation": "γ = 150/65.4 = 2.294. v = c√(1 − 1/5.26) = c√(1 − 0.190) = c√0.810 = 0.900c.",
+      "distractors": [
+        { "answer": "0.44c", "explanation": "0.44 is approximately L/L₀. The speed requires solving v = c√(1 − 1/γ²) = 0.90c." },
+        { "answer": "0.80c", "explanation": "At 0.80c, γ = 1.667, giving L = 90 m. The observed 65.4 m requires γ = 2.294, corresponding to 0.90c." },
+        { "answer": "0.95c", "explanation": "At 0.95c, γ = 3.203, giving L = 46.8 m. This is too short; the correct speed is 0.90c." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A particle accelerator beam pipe has a proper length of 3.0 km. A proton measures the pipe as 424 m. Which one of the following is closest to the proton's speed?",
+      "correct": "0.99c",
+      "correctExplanation": "γ = 3000/424 = 7.08. v = c√(1 − 1/50.1) = c√(1 − 0.020) = c√0.980 = 0.990c.",
+      "distractors": [
+        { "answer": "0.14c", "explanation": "0.14 is approximately L/L₀. The speed is v = c√(1 − 1/γ²) = 0.99c." },
+        { "answer": "0.86c", "explanation": "At 0.86c, γ ≈ 1.96, giving L = 1531 m. The observed 424 m requires γ ≈ 7.1, corresponding to 0.99c." },
+        { "answer": "0.95c", "explanation": "At 0.95c, γ = 3.203, giving L = 937 m. The observed 424 m requires a higher speed of 0.99c." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Two spacecraft have proper lengths of 200 m and 100 m. An observer measures both as the same length: 80 m. Which one of the following is correct?",
+      "correct": "The 200 m spacecraft is moving faster because it requires greater contraction",
+      "correctExplanation": "For the 200 m craft: γ = 200/80 = 2.5, v = 0.917c. For the 100 m craft: γ = 100/80 = 1.25, v = 0.60c. The 200 m spacecraft must be faster.",
+      "distractors": [
+        { "answer": "Both spacecraft are moving at the same speed", "explanation": "Different proper lengths contracted to the same observed length require different Lorentz factors, hence different speeds." },
+        { "answer": "The 100 m spacecraft is moving faster", "explanation": "The 100 m craft needs γ = 1.25, while the 200 m craft needs γ = 2.5. A larger γ means a higher speed." },
+        { "answer": "It is impossible for both to be measured as 80 m", "explanation": "Different objects at different speeds can have different contracted lengths that happen to be equal." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A train's proper length is 300 m. It contracts to 234 m. Which one of the following is closest to its speed?",
+      "correct": "0.63c",
+      "correctExplanation": "γ = 300/234 = 1.282. v = c√(1 − 1/1.643) = c√(1 − 0.609) = c√0.391 = 0.625c ≈ 0.63c.",
+      "distractors": [
+        { "answer": "0.78c", "explanation": "At 0.78c, γ ≈ 1.60, giving L = 188 m. The observed 234 m corresponds to a lower speed of 0.63c." },
+        { "answer": "0.22c", "explanation": "At 0.22c, γ ≈ 1.025, giving L = 293 m. The observed 234 m requires a higher speed of 0.63c." },
+        { "answer": "0.50c", "explanation": "At 0.50c, γ = 1.155, giving L = 260 m. The observed 234 m requires γ = 1.28, corresponding to 0.63c." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A rod has a proper length of 4.00 m. When moving, its contracted length is 1.25 m. Which one of the following is closest to the Lorentz factor?",
+      "correct": "3.20",
+      "correctExplanation": "γ = L₀/L = 4.00/1.25 = 3.20.",
+      "distractors": [
+        { "answer": "0.31", "explanation": "0.31 is L/L₀ = 1.25/4.00, the reciprocal of γ. The Lorentz factor is 3.20." },
+        { "answer": "2.75", "explanation": "This is L₀ − L, not the Lorentz factor. γ = 4.00/1.25 = 3.20." },
+        { "answer": "5.00", "explanation": "This is L₀/L with incorrect values. γ = 4.00/1.25 = 3.20." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the calculation for the rocket with L₀ = 60.0 m and L = 14.0 m.",
+      "sentence": "γ = 60.0/14.0 = {{blank:1}}. Then 1/γ² = {{blank:2}}. Speed: v = c√(1 − 0.0545) = 0.97c.",
+      "blanks": {
+        "1": {
+          "correct": "4.286",
+          "correctExplanation": "γ = L₀/L = 60.0/14.0 = 4.286.",
+          "distractors": ["0.233", "14.0"]
+        },
+        "2": {
+          "correct": "0.0545",
+          "correctExplanation": "1/γ² = 1/4.286² = 1/18.37 = 0.0545.",
+          "distractors": ["4.286", "18.37"]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the speed calculation for a particle with γ = 10.",
+      "sentence": "1/γ² = 1/100 = {{blank:1}}. v = c√(1 − 0.01) = c√({{blank:2}}) = 0.995c.",
+      "blanks": {
+        "1": {
+          "correct": "0.01",
+          "correctExplanation": "1/γ² = 1/10² = 1/100 = 0.01.",
+          "distractors": ["0.10", "100"]
+        },
+        "2": {
+          "correct": "0.99",
+          "correctExplanation": "1 − 0.01 = 0.99. √0.99 = 0.995.",
+          "distractors": ["0.01", "0.10"]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the inverse problem: given the speed, find the contracted length.",
+      "sentence": "A rod has L₀ = 200 m and moves at 0.8c (γ = 1.667). Its contracted length is L = L₀/γ = 200/{{blank:1}} = {{blank:2}} m.",
+      "blanks": {
+        "1": {
+          "correct": "1.667",
+          "correctExplanation": "At 0.8c, γ = 1.667. The contracted length is L₀/γ.",
+          "distractors": ["0.800", "2.000"]
+        },
+        "2": {
+          "correct": "120",
+          "correctExplanation": "L = 200/1.667 = 119.98 ≈ 120 m.",
+          "distractors": ["160", "333"]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "MC",
+      "question": "A spacecraft has a proper length of 85.0 m. An observer measures it as 37.1 m. Which one of the following is closest to the speed of the spacecraft?",
+      "correct": "0.90c",
+      "correctExplanation": "γ = 85.0/37.1 = 2.291. v = c√(1 − 1/5.249) = c√(1 − 0.1905) = c√0.8095 = 0.900c.",
+      "distractors": [
+        { "answer": "0.44c", "explanation": "0.44 is approximately L/L₀ = 37.1/85.0. The speed is found from v = c√(1 − 1/γ²) = 0.90c." },
+        { "answer": "0.80c", "explanation": "At 0.80c, γ = 1.667, giving L = 51.0 m. The observed 37.1 m requires a faster speed of 0.90c." },
+        { "answer": "0.95c", "explanation": "At 0.95c, γ = 3.203, giving L = 26.5 m. The observed 37.1 m corresponds to 0.90c." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A particle accelerator has a straight section with a proper length of 2.0 km. A proton measures the section as 89 m. Which one of the following is closest to the proton's speed?",
+      "correct": "0.999c",
+      "correctExplanation": "γ = 2000/89 = 22.47. v = c√(1 − 1/504.7) = c√(1 − 0.00198) = c√0.998 = 0.999c.",
+      "distractors": [
+        { "answer": "0.045c", "explanation": "0.045 is approximately L/L₀ = 89/2000. The speed is v = c√(1 − 1/γ²) = 0.999c." },
+        { "answer": "0.95c", "explanation": "At 0.95c, γ = 3.203, giving L = 625 m. The observed 89 m requires γ ≈ 22.5, corresponding to 0.999c." },
+        { "answer": "0.99c", "explanation": "At 0.99c, γ = 7.089, giving L = 282 m. The observed 89 m requires a higher speed of 0.999c." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "An observer measures two spacecraft: Spacecraft A contracts from 100 m to 80 m, and Spacecraft B contracts from 200 m to 100 m. Which one of the following correctly compares their speeds?",
+      "correct": "Spacecraft B is faster (0.866c vs 0.60c)",
+      "correctExplanation": "A: γ = 100/80 = 1.25, v = 0.60c. B: γ = 200/100 = 2.00, v = 0.866c. B has a larger γ and therefore a higher speed.",
+      "distractors": [
+        { "answer": "Spacecraft A is faster because it has a smaller proper length", "explanation": "Speed depends on γ = L₀/L, not on the absolute proper length. B has γ = 2.00 > 1.25 = A's γ." },
+        { "answer": "Both have the same speed because both contracted by the same percentage", "explanation": "A contracted to 80% of L₀ (γ = 1.25); B contracted to 50% of L₀ (γ = 2.00). Different percentages mean different speeds." },
+        { "answer": "Spacecraft A is faster (0.866c vs 0.60c)", "explanation": "This reverses the assignments. A has γ = 1.25 (v = 0.60c) and B has γ = 2.00 (v = 0.866c). B is faster." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A metre stick (L₀ = 1.000 m) passes an observer who measures it as 0.100 m. Which one of the following is closest to the speed of the metre stick?",
+      "correct": "0.995c",
+      "correctExplanation": "γ = 1.000/0.100 = 10.0. v = c√(1 − 1/100) = c√0.99 = 0.995c.",
+      "distractors": [
+        { "answer": "0.10c", "explanation": "0.10 is L/L₀, not the speed. v = c√(1 − 1/100) = 0.995c." },
+        { "answer": "0.90c", "explanation": "At 0.90c, γ = 2.294, giving L = 0.436 m. The observed 0.100 m requires γ = 10, giving 0.995c." },
+        { "answer": "0.99c", "explanation": "At 0.99c, γ = 7.089, giving L = 0.141 m. The observed 0.100 m requires γ = 10.0, giving 0.995c." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A spacecraft contracts to exactly one-third of its proper length. Which one of the following is closest to its speed?",
+      "correct": "0.94c",
+      "correctExplanation": "γ = 3.00. v = c√(1 − 1/9) = c√(8/9) = c√0.889 = 0.943c ≈ 0.94c.",
+      "distractors": [
+        { "answer": "0.33c", "explanation": "0.33 = 1/3 = 1/γ, not the speed. v = c√(1 − 1/9) = 0.94c." },
+        { "answer": "0.67c", "explanation": "0.67 = 2/3, which is not the correct calculation. v = c√(1 − 1/γ²) with γ = 3 gives 0.94c." },
+        { "answer": "0.87c", "explanation": "At 0.87c, γ ≈ 2.03, giving L ≈ L₀/2, not L₀/3. For L₀/3, v = 0.94c." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "An observer measures a muon's effective atmospheric path as 660 m (proper length 6600 m in Earth's frame). She calculates the muon's speed and gets 0.995c. Is her calculation correct?",
+      "correct": "Yes; γ = 6600/660 = 10.0 and v = c√(1 − 1/100) = 0.995c",
+      "correctExplanation": "γ = L₀/L = 6600/660 = 10.0. v = c√(1 − 0.01) = c√0.99 = 0.995c. Her calculation is correct.",
+      "distractors": [
+        { "answer": "No; she should have used γ = 660/6600 = 0.10", "explanation": "γ = L₀/L, not L/L₀. The proper length goes in the numerator. γ = 6600/660 = 10.0." },
+        { "answer": "No; length contraction cannot be used to find speed", "explanation": "Length contraction can absolutely be used to find speed through γ = L₀/L followed by v = c√(1 − 1/γ²)." },
+        { "answer": "No; the answer should be 0.10c, not 0.995c", "explanation": "0.10 is 1/γ, not the speed. v = c√(1 − 1/100) = 0.995c." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A rod contracts to 90% of its proper length. Which one of the following is closest to its speed?",
+      "correct": "0.44c",
+      "correctExplanation": "γ = L₀/(0.9L₀) = 1/0.9 = 1.111. v = c√(1 − 1/1.235) = c√(1 − 0.810) = c√0.190 = 0.436c ≈ 0.44c.",
+      "distractors": [
+        { "answer": "0.10c", "explanation": "A 10% contraction (L = 0.9L₀) requires γ = 1.111, giving v = 0.44c, not 0.10c." },
+        { "answer": "0.90c", "explanation": "At 0.90c, γ = 2.294, giving L = 0.436L₀, far more contraction than to 0.9L₀." },
+        { "answer": "0.60c", "explanation": "At 0.60c, γ = 1.25, giving L = 0.80L₀. The 0.9L₀ contraction requires a lower speed of 0.44c." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A spacecraft has a proper length of 250 m. Two observers, A and B, measure it as 200 m and 125 m respectively. Which one of the following is closest to the ratio of B's measured speed to A's measured speed?",
+      "correct": "1.44",
+      "correctExplanation": "Observer A: γ = 250/200 = 1.25, v = 0.60c. Observer B: γ = 250/125 = 2.00, v = 0.866c. Ratio = 0.866/0.60 = 1.44.",
+      "distractors": [
+        { "answer": "1.60", "explanation": "This is the ratio of γ values (2.00/1.25 = 1.60), not the ratio of speeds. The speed ratio is 0.866/0.60 = 1.44." },
+        { "answer": "0.63", "explanation": "This is the ratio of the contracted lengths (125/200 = 0.625). The speed ratio is 0.866/0.60 = 1.44." },
+        { "answer": "2.00", "explanation": "The speed ratio is not 2.0. v_B/v_A = 0.866/0.60 = 1.44." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the multi-step calculation for a rod with L₀ = 4.00 m and L = 1.25 m.",
+      "sentence": "γ = 4.00/1.25 = {{blank:1}}. Then v = c√(1 − 1/10.24) = c√({{blank:2}}) = 0.95c.",
+      "blanks": {
+        "1": {
+          "correct": "3.20",
+          "correctExplanation": "γ = L₀/L = 4.00/1.25 = 3.20.",
+          "distractors": ["0.31", "2.75"]
+        },
+        "2": {
+          "correct": "0.902",
+          "correctExplanation": "1 − 1/3.20² = 1 − 1/10.24 = 1 − 0.0977 = 0.902. √0.902 = 0.950.",
+          "distractors": ["0.098", "3.20"]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the analysis of a muon's speed from length contraction data.",
+      "sentence": "The atmospheric distance in Earth's frame is L₀ = 10 000 m. In the muon's frame it is L = 1000 m. γ = {{blank:1}}. The muon's speed is {{blank:2}}c.",
+      "blanks": {
+        "1": {
+          "correct": "10.0",
+          "correctExplanation": "γ = L₀/L = 10 000/1000 = 10.0.",
+          "distractors": ["0.10", "100"]
+        },
+        "2": {
+          "correct": "0.995",
+          "correctExplanation": "v = c√(1 − 1/100) = c√0.99 = 0.995c.",
+          "distractors": ["0.10", "0.90"]
+        }
+      }
+    }
+  ]
+}

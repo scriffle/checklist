@@ -1,0 +1,519 @@
+{
+  "_link": {
+    "uuid": "lp-be38d626-b733-14c6-dfbe-8df1da7a31a9",
+    "version": 1,
+    "contentHash": "hash-9d7592c1",
+    "title": "I can explain the function of an inverter and why it is needed for household solar panels",
+    "generatedAt": "2026-03-07T00:00:00.000Z"
+  },
+
+  "toLevel2": [
+    {
+      "type": "mc",
+      "question": "Which one of the following best describes the function of an inverter in a household solar panel system?",
+      "correct": "It converts the DC output of the solar panels into AC electricity.",
+      "correctExplanation": "An inverter takes the direct current (DC) produced by solar panels and converts it to alternating current (AC), which is the form of electricity used by Australian households and the electricity grid.",
+      "distractors": [
+        { "answer": "It stores excess solar energy in batteries for later use.", "explanation": "Energy storage is the function of a battery, not an inverter. The inverter converts DC to AC." },
+        { "answer": "It increases the amount of sunlight reaching the solar panels.", "explanation": "Inverters are electrical devices that convert DC to AC. They have no effect on sunlight reaching the panels." },
+        { "answer": "It converts AC electricity from the grid into DC for the solar panels.", "explanation": "This describes the reverse process. An inverter converts the DC output of solar panels into AC, not the other way around." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which one of the following correctly states the voltage and frequency of the AC electricity used by Australian households?",
+      "correct": "230 V at 50 Hz",
+      "correctExplanation": "The Australian electricity grid supplies alternating current at 230 V and 50 Hz. The inverter in a solar system must produce AC that matches these specifications.",
+      "distractors": [
+        { "answer": "120 V at 60 Hz", "explanation": "This is the standard used in North America, not Australia. Australian households use 230 V at 50 Hz." },
+        { "answer": "230 V at 60 Hz", "explanation": "While the voltage is correct, the frequency is not. Australia uses 50 Hz, not 60 Hz." },
+        { "answer": "110 V at 50 Hz", "explanation": "This is not the Australian standard. Australian households use 230 V at 50 Hz." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which one of the following correctly identifies the type of electricity produced by solar panels?",
+      "correct": "direct current (DC)",
+      "correctExplanation": "Photovoltaic cells produce direct current, in which the current flows in one direction only. This DC must be converted to AC by an inverter before it can be used by most household appliances.",
+      "distractors": [
+        { "answer": "alternating current (AC)", "explanation": "Solar panels produce DC, not AC. An inverter is needed specifically because the panels produce DC while the household grid requires AC." },
+        { "answer": "alternating current at 50 Hz", "explanation": "Solar panels do not produce AC at any frequency. They produce DC, which must be converted to 50 Hz AC by an inverter." },
+        { "answer": "pulsating direct current", "explanation": "Solar panels produce steady DC (when illumination is constant), not pulsating DC. Pulsating DC is associated with DC generators." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Why is an inverter necessary in a grid-connected solar panel system?",
+      "correct": "The electricity grid uses AC, but solar panels produce DC, so the output must be converted.",
+      "correctExplanation": "Solar panels produce DC electricity, which is incompatible with the AC electricity grid. The inverter converts the DC to AC so the solar electricity can power household appliances and be exported to the grid.",
+      "distractors": [
+        { "answer": "The inverter increases the efficiency of the solar panels.", "explanation": "The inverter does not improve solar panel efficiency. Its function is to convert DC to AC so the electricity is compatible with the grid." },
+        { "answer": "The grid requires DC, but solar panels produce AC.", "explanation": "This is the reverse of reality. Solar panels produce DC and the grid uses AC. The inverter converts DC to AC." },
+        { "answer": "The inverter protects the solar panels from damage caused by the grid voltage.", "explanation": "While inverters may have protective features, their primary function is to convert DC from the panels into AC for the grid." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which one of the following best describes how an inverter converts DC to AC?",
+      "correct": "It rapidly switches the direction of the DC input to produce an alternating output.",
+      "correctExplanation": "An inverter uses electronic switching to rapidly reverse the direction of the DC input, creating an output that alternates in direction at the required frequency (50 Hz in Australia).",
+      "distractors": [
+        { "answer": "It uses a rotating coil in a magnetic field to generate AC from the DC input.", "explanation": "This describes an AC generator (alternator), not an inverter. An inverter uses electronic switching, not mechanical rotation." },
+        { "answer": "It stores the DC energy and releases it as AC through a chemical reaction.", "explanation": "Chemical reactions are associated with batteries, not inverters. An inverter uses electronic switching to convert DC to AC." },
+        { "answer": "It increases the frequency of the DC until it becomes AC.", "explanation": "DC does not have a frequency. The inverter creates AC by electronically switching the direction of the current at 50 Hz." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the following statement about the function of an inverter.",
+      "sentence": "An inverter converts {{blank:1}} from solar panels into {{blank:2}} for use in household appliances.",
+      "blanks": {
+        "1": {
+          "correct": "DC",
+          "correctExplanation": "Solar panels produce direct current (DC). The inverter takes this DC as its input.",
+          "distractors": [
+            { "answer": "AC", "explanation": "Solar panels produce DC, not AC. The inverter converts DC to AC, not AC to something else." },
+            { "answer": "light energy", "explanation": "The solar panels convert light to DC electricity. The inverter then converts this DC electricity to AC." },
+            { "answer": "heat", "explanation": "The inverter is an electrical device. It converts DC electricity to AC, not heat to electricity." }
+          ]
+        },
+        "2": {
+          "correct": "AC",
+          "correctExplanation": "The inverter produces alternating current (AC) at 230 V, 50 Hz, which is compatible with Australian household appliances and the electricity grid.",
+          "distractors": [
+            { "answer": "DC", "explanation": "The inverter converts DC to AC, not DC to DC. The output must be AC to match the grid." },
+            { "answer": "light energy", "explanation": "The inverter produces AC electricity, not light. Its function is electrical conversion." },
+            { "answer": "stored energy", "explanation": "The inverter does not store energy. It converts DC electricity to AC electricity in real time." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the following statement about the Australian electricity grid.",
+      "sentence": "Australian households use AC electricity at a voltage of 230 V and a frequency of {{blank:1}} Hz.",
+      "blanks": {
+        "1": {
+          "correct": "50",
+          "correctExplanation": "The Australian electricity grid operates at 50 Hz. This means the current changes direction 50 times per second (100 direction changes per second, as each cycle has two direction changes).",
+          "distractors": [
+            { "answer": "60", "explanation": "60 Hz is used in North America, not Australia. The Australian standard is 50 Hz." },
+            { "answer": "100", "explanation": "While there are 100 direction changes per second in 50 Hz AC, the frequency is defined as 50 Hz (50 complete cycles per second)." },
+            { "answer": "230", "explanation": "230 is the voltage, not the frequency. The frequency of the Australian grid is 50 Hz." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the following statement about why an inverter is needed.",
+      "sentence": "Without an inverter, the DC from solar panels cannot directly power most household {{blank:1}} or be fed back into the AC grid.",
+      "blanks": {
+        "1": {
+          "correct": "appliances",
+          "correctExplanation": "Most household appliances (such as refrigerators, washing machines, and air conditioners) require AC electricity. Without an inverter to convert the DC from solar panels, these appliances cannot be powered directly.",
+          "distractors": [
+            { "answer": "batteries", "explanation": "Batteries operate on DC, so they could theoretically be charged directly from solar panels without an inverter. The issue is that household appliances require AC." },
+            { "answer": "solar panels", "explanation": "Solar panels are the source of the DC electricity, not the devices that need to be powered. The inverter is needed for household appliances that use AC." },
+            { "answer": "magnets", "explanation": "Magnets are not electrical devices that need to be powered. The inverter converts DC to AC for household appliances." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "tf",
+      "question": "An inverter is needed in a household solar system because solar panels produce DC, but the electricity grid and most household appliances use AC.",
+      "correct": "True",
+      "correctExplanation": "Solar panels produce DC electricity. The Australian grid and most household appliances require 230 V AC at 50 Hz. The inverter bridges this gap by converting DC to AC.",
+      "distractors": [
+        { "answer": "False", "explanation": "The statement is correct. Solar panels do produce DC, and the grid does use AC. An inverter is essential for converting between the two." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "An inverter converts AC electricity from the grid into DC electricity for the solar panels.",
+      "correct": "False",
+      "correctExplanation": "An inverter converts DC from the solar panels into AC for the grid and household use, not the other way around. The solar panels generate the DC electricity; the inverter converts it to AC.",
+      "distractors": [
+        { "answer": "True", "explanation": "The statement describes the reverse of what an inverter does. An inverter converts DC (from solar panels) to AC (for the grid), not AC to DC." }
+      ]
+    }
+  ],
+
+  "toLevel3": [
+    {
+      "type": "mc",
+      "question": "Which one of the following best explains why most household appliances cannot operate directly on the DC output of solar panels?",
+      "correct": "Most household appliances are designed to operate on 230 V AC at 50 Hz, and the DC from solar panels does not match this requirement.",
+      "correctExplanation": "Australian household appliances are manufactured to work with the AC supply from the grid (230 V, 50 Hz). The DC output of solar panels has a different voltage and does not alternate, making it incompatible without conversion by an inverter.",
+      "distractors": [
+        { "answer": "DC from solar panels carries less energy than AC from the grid.", "explanation": "DC does not inherently carry less energy. The issue is that appliances are designed for AC operation, not that DC has less energy." },
+        { "answer": "DC is dangerous to use in household appliances, while AC is safe.", "explanation": "Both AC and DC can be dangerous at high voltages. The issue is compatibility: appliances are designed for AC, not safety differences." },
+        { "answer": "Solar panels produce electricity at too high a voltage for household use.", "explanation": "The voltage from individual panels is typically lower than 230 V. The issue is that the output is DC rather than AC, regardless of the voltage level." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which one of the following best explains why an inverter is described as performing the opposite function to a rectifier?",
+      "correct": "A rectifier converts AC to DC, while an inverter converts DC to AC. They perform opposite conversions.",
+      "correctExplanation": "A rectifier takes alternating current and converts it to direct current (used in many electronic devices). An inverter performs the reverse process, converting direct current to alternating current. They are complementary devices.",
+      "distractors": [
+        { "answer": "A rectifier increases voltage, while an inverter decreases it.", "explanation": "Voltage conversion is the function of a transformer, not the defining difference between a rectifier and inverter. The key distinction is AC-to-DC versus DC-to-AC." },
+        { "answer": "A rectifier operates on solar energy, while an inverter operates on grid electricity.", "explanation": "Both devices can be used with various electricity sources. The distinction is in the direction of conversion: AC to DC (rectifier) versus DC to AC (inverter)." },
+        { "answer": "A rectifier stores energy, while an inverter releases it.", "explanation": "Neither device stores energy. A rectifier converts AC to DC, and an inverter converts DC to AC." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A household solar system produces 400 V DC from a series string of panels. Which one of the following best describes what the inverter must do to make this electricity usable?",
+      "correct": "Convert the 400 V DC to 230 V AC at 50 Hz to match the grid requirements.",
+      "correctExplanation": "The inverter must both change the voltage from 400 V to 230 V and convert the electricity from DC to AC at the grid frequency of 50 Hz. Both the voltage and the type of current must be adjusted.",
+      "distractors": [
+        { "answer": "Simply reduce the voltage from 400 V to 230 V while keeping the current as DC.", "explanation": "Reducing the voltage alone is not sufficient. The electricity must also be converted from DC to AC to be compatible with the grid and household appliances." },
+        { "answer": "Increase the voltage from 400 V to 1000 V for transmission to the grid.", "explanation": "Household inverters produce 230 V AC for domestic use, not high-voltage transmission. Voltage step-up for transmission is done by transformers at substations." },
+        { "answer": "Convert the 400 V DC to 400 V AC, then use a separate device to adjust the voltage.", "explanation": "A typical grid-connected inverter converts DC to 230 V AC in a single step, producing output that matches the grid voltage and frequency directly." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which one of the following correctly identifies what happens to excess solar electricity produced by a grid-connected household system?",
+      "correct": "The inverter converts the excess DC to AC, which is then exported to the electricity grid.",
+      "correctExplanation": "When a solar system produces more electricity than the household needs, the excess AC (after conversion by the inverter) is fed back into the grid. This is sometimes called 'exporting' to the grid.",
+      "distractors": [
+        { "answer": "The excess DC is sent directly to the grid without conversion.", "explanation": "DC cannot be fed directly into the AC grid. All electricity exported to the grid must first be converted to AC by the inverter." },
+        { "answer": "The excess electricity is automatically stored in the solar panels for later use.", "explanation": "Solar panels do not store energy. Excess electricity is exported to the grid (after conversion to AC) or stored in batteries if present." },
+        { "answer": "The inverter stops the solar panels from producing excess electricity.", "explanation": "The inverter converts DC to AC but does not typically limit panel production. Excess electricity is exported to the grid." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which one of the following best explains why the inverter must produce AC at exactly 50 Hz for a grid-connected solar system?",
+      "correct": "The output frequency must match the grid frequency of 50 Hz so that the solar electricity is synchronised with the grid.",
+      "correctExplanation": "For electricity to be safely exported to the grid, it must match the grid's frequency of 50 Hz. If the frequencies do not match, the system cannot synchronise with the grid and may cause damage or tripping of safety devices.",
+      "distractors": [
+        { "answer": "50 Hz is the only frequency that can power household appliances.", "explanation": "Appliances in other countries operate at 60 Hz. The requirement for 50 Hz is specific to the Australian grid standard, not an inherent appliance limitation." },
+        { "answer": "Higher frequencies would damage the solar panels.", "explanation": "The inverter's output frequency does not affect the solar panels, which produce DC. The 50 Hz requirement is for grid synchronisation." },
+        { "answer": "50 Hz produces the most efficient energy conversion in the inverter.", "explanation": "The 50 Hz requirement is set by the grid standard, not by inverter efficiency. The inverter must match whatever frequency the grid uses." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which one of the following correctly lists the main components in the path of electricity from a rooftop solar panel to a household appliance?",
+      "correct": "solar panel → inverter → household appliance",
+      "correctExplanation": "The solar panel generates DC electricity, the inverter converts it to AC, and then the AC electricity powers the household appliance. The inverter is the essential link between the DC source and the AC appliance.",
+      "distractors": [
+        { "answer": "solar panel → transformer → household appliance", "explanation": "A transformer changes AC voltage levels but cannot convert DC to AC. An inverter is needed first to convert the DC from the panels to AC." },
+        { "answer": "solar panel → battery → household appliance", "explanation": "A battery stores energy but does not convert DC to AC. An inverter is still needed for AC appliances, even if a battery is part of the system." },
+        { "answer": "solar panel → household appliance (directly, no conversion needed)", "explanation": "Most household appliances require AC electricity, while solar panels produce DC. An inverter is needed to convert the DC to AC." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the following statement about how an inverter works.",
+      "sentence": "An inverter converts DC to AC by rapidly {{blank:1}} the direction of the current at the required frequency.",
+      "blanks": {
+        "1": {
+          "correct": "switching",
+          "correctExplanation": "The inverter uses electronic components to rapidly switch the direction of the DC input, creating an alternating current output at 50 Hz (for the Australian grid).",
+          "distractors": [
+            { "answer": "increasing", "explanation": "The inverter does not simply increase the current direction. It reverses (switches) the direction to create AC from DC." },
+            { "answer": "storing", "explanation": "The inverter does not store the current. It actively switches the current direction to produce an AC waveform." },
+            { "answer": "reducing", "explanation": "Reducing the current direction does not produce AC. The inverter switches the direction of the current back and forth." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Consider the role of the inverter in a grid-connected solar system.",
+      "sentence": "The inverter is an essential component because the {{blank:1}} uses AC electricity, while solar panels produce DC.",
+      "blanks": {
+        "1": {
+          "correct": "electricity grid",
+          "correctExplanation": "The Australian electricity grid operates on AC at 230 V, 50 Hz. Since solar panels produce DC, the inverter is essential for converting the output to be compatible with the grid.",
+          "distractors": [
+            { "answer": "solar panel", "explanation": "The solar panel is the device that produces DC electricity. It does not use AC. The grid is what requires AC." },
+            { "answer": "battery", "explanation": "Batteries store and use DC, not AC. The electricity grid is the system that requires AC." },
+            { "answer": "sunlight", "explanation": "Sunlight is the energy source, not an electrical system. The electricity grid is what requires AC." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Consider the voltage conversion performed by a typical household inverter.",
+      "sentence": "A typical string inverter might take {{blank:1}} V DC from a series string of solar panels and convert it to 230 V AC.",
+      "blanks": {
+        "1": {
+          "correct": "400",
+          "correctExplanation": "A series string of solar panels can produce several hundred volts DC (typically 300–600 V). The inverter converts this to 230 V AC at 50 Hz for household use. 400 V is a representative example.",
+          "distractors": [
+            { "answer": "12", "explanation": "12 V is the output of a single small panel or a battery. A series string of panels for a household system typically produces hundreds of volts DC." },
+            { "answer": "230", "explanation": "While 230 V is the output AC voltage, the DC input from a series string of panels is typically higher, around 300–600 V DC." },
+            { "answer": "50", "explanation": "50 is the frequency of the AC output in hertz, not the DC input voltage. The DC input from a string of panels is typically several hundred volts." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "tf",
+      "question": "A rectifier performs the opposite function to an inverter: a rectifier converts AC to DC, while an inverter converts DC to AC.",
+      "correct": "True",
+      "correctExplanation": "A rectifier converts AC to DC, and an inverter converts DC to AC. They perform complementary functions — one is the reverse of the other.",
+      "distractors": [
+        { "answer": "False", "explanation": "The statement is correct. Rectifiers and inverters perform opposite conversions: AC to DC and DC to AC respectively." }
+      ]
+    }
+  ],
+
+  "toLevel4": [
+    {
+      "type": "mc",
+      "question": "Nadia's household solar system has panels that produce a total of 5.0 kW of DC power. The inverter has an efficiency of 95%. Which one of the following is closest to the AC power output of the inverter?",
+      "correct": "4750 W",
+      "correctExplanation": "AC output = DC input × efficiency = 5000 × 0.95 = 4750 W. The inverter converts 95% of the DC input power to AC, with the remaining 5% lost as heat.",
+      "distractors": [
+        { "answer": "5000 W", "explanation": "This assumes 100% efficiency. At 95% efficiency, 5% of the power is lost in the conversion, giving 4750 W." },
+        { "answer": "5263 W", "explanation": "This results from dividing by 0.95 instead of multiplying (5000/0.95 = 5263). The output is less than the input: 5000 × 0.95 = 4750 W." },
+        { "answer": "250 W", "explanation": "This is 5% of the input power (the loss), not the output. The output is 95% of 5000 W = 4750 W." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Tomás has a 6.6 kW solar panel array producing DC at 380 V. The inverter converts this to 230 V AC at 50 Hz. Which one of the following is closest to the DC current flowing into the inverter?",
+      "correct": "17 A",
+      "correctExplanation": "P = VI, so I = P/V = 6600/380 = 17.4 A ≈ 17 A. This is the DC current input to the inverter.",
+      "distractors": [
+        { "answer": "29 A", "explanation": "This results from using the AC output voltage (6600/230 = 28.7 A), which is the AC output current, not the DC input current." },
+        { "answer": "2.5 A", "explanation": "This results from an incorrect calculation. The correct value is I = P/V = 6600/380 = 17 A." },
+        { "answer": "380 A", "explanation": "This confuses voltage with current. The DC current is I = P/V = 6600/380 = 17 A." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Fatima compares two solar systems. System A uses a string inverter for the entire array. System B uses microinverters on each panel. Which one of the following correctly identifies a key advantage of System B?",
+      "correct": "If one panel is shaded in System B, only that panel's output is reduced. In System A, shading one panel can reduce the output of the entire string.",
+      "correctExplanation": "Microinverters convert DC to AC at each individual panel. If one panel is shaded, only that panel's contribution is reduced. With a string inverter, shading one panel can reduce the current through the entire series string.",
+      "distractors": [
+        { "answer": "Microinverters produce DC output, which is more efficient than the AC output of string inverters.", "explanation": "Microinverters produce AC output, just like string inverters. The advantage is that each panel operates independently, not a difference in output type." },
+        { "answer": "Microinverters eliminate the need for solar panels because they generate electricity directly.", "explanation": "Microinverters do not generate electricity. They convert the DC from individual solar panels to AC." },
+        { "answer": "String inverters are always less efficient than microinverters in all conditions.", "explanation": "String inverters can be highly efficient in ideal conditions. The advantage of microinverters is their resilience to partial shading, not universally higher efficiency." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Wei-Lin's solar panels produce 4.0 kW of DC power. The inverter converts this to AC with an efficiency of 96%. The AC electricity powers a household that consumes 3.0 kW. Which one of the following is closest to the power exported to the grid?",
+      "correct": "840 W",
+      "correctExplanation": "AC output = 4000 × 0.96 = 3840 W. Exported power = 3840 − 3000 = 840 W.",
+      "distractors": [
+        { "answer": "1000 W", "explanation": "This ignores the inverter efficiency loss. The AC output is 3840 W (not 4000 W), so the export is 3840 − 3000 = 840 W." },
+        { "answer": "160 W", "explanation": "This is the power lost in the inverter (4000 × 0.04 = 160 W), not the power exported to the grid." },
+        { "answer": "3840 W", "explanation": "This is the total AC output of the inverter, not the exported power. The household consumes 3000 W, leaving 840 W for export." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Amir's inverter specifications state a maximum DC input of 6.0 kW and a maximum AC output of 5.0 kW. He installs 6.6 kW of solar panels. Which one of the following correctly describes the system behaviour at peak production?",
+      "correct": "The inverter limits its output to 5.0 kW AC, and some of the DC power from the panels is not converted.",
+      "correctExplanation": "When the panels produce more than the inverter can handle, the inverter operates at its maximum rated AC output of 5.0 kW. The excess DC power is not converted and is effectively lost (this is called 'clipping').",
+      "distractors": [
+        { "answer": "The inverter automatically increases its capacity to handle the full 6.6 kW.", "explanation": "The inverter cannot exceed its maximum rated capacity. It will limit its output to 5.0 kW AC regardless of the DC input." },
+        { "answer": "The excess power is stored in the inverter for later use.", "explanation": "Inverters do not store energy. The excess DC power beyond the inverter's capacity is clipped and not converted." },
+        { "answer": "The solar panels automatically reduce their output to match the inverter's capacity.", "explanation": "The panels continue to produce as much power as sunlight allows. The inverter limits how much is converted, clipping the excess." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Leila observes that the output of her inverter shows a sinusoidal waveform at 50 Hz. Which one of the following best explains why the inverter produces this specific waveform?",
+      "correct": "The inverter must produce a sinusoidal waveform at 50 Hz to match the grid's AC waveform for safe synchronisation.",
+      "correctExplanation": "The electricity grid operates with a sinusoidal AC waveform at 50 Hz. The inverter must produce the same waveform shape and frequency to synchronise with the grid. A mismatched waveform could damage equipment or trip safety devices.",
+      "distractors": [
+        { "answer": "50 Hz is the natural frequency at which the inverter's electronic components oscillate.", "explanation": "The inverter is electronically controlled to produce 50 Hz. This frequency is a design requirement based on the grid standard, not a natural oscillation." },
+        { "answer": "The solar panels produce DC that naturally has a 50 Hz component.", "explanation": "DC from solar panels does not have any frequency component. The 50 Hz sinusoidal output is created entirely by the inverter's switching electronics." },
+        { "answer": "A sinusoidal waveform is the easiest waveform for the inverter to produce.", "explanation": "Producing a clean sinusoidal waveform is actually more complex than producing a square wave. The sinusoidal shape is required for grid compatibility, not simplicity." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A household uses 8.0 kWh of electricity per day. The solar panels produce 5.0 kWh of DC energy per day, and the inverter has an efficiency of 94%. Which one of the following is closest to the amount of energy that must be imported from the grid?",
+      "correct": "3.3 kWh",
+      "correctExplanation": "AC energy from panels = 5.0 × 0.94 = 4.7 kWh. Energy imported = 8.0 − 4.7 = 3.3 kWh.",
+      "distractors": [
+        { "answer": "3.0 kWh", "explanation": "This ignores inverter losses (8.0 − 5.0 = 3.0). The actual AC output is 5.0 × 0.94 = 4.7 kWh, so the import is 3.3 kWh." },
+        { "answer": "0.30 kWh", "explanation": "This is the energy lost in the inverter (5.0 × 0.06 = 0.30 kWh), not the energy imported from the grid." },
+        { "answer": "4.7 kWh", "explanation": "This is the AC energy produced by the solar system, not the energy imported. The import is 8.0 − 4.7 = 3.3 kWh." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "A solar array produces 3.5 kW of DC power. The inverter has an efficiency of 92%. Calculate the AC output.",
+      "sentence": "The AC output power of the inverter is {{blank:1}} W.",
+      "blanks": {
+        "1": {
+          "correct": "3220",
+          "correctExplanation": "AC output = DC input × efficiency = 3500 × 0.92 = 3220 W.",
+          "distractors": [
+            { "answer": "3500", "explanation": "This assumes 100% efficiency. With 92% efficiency, the output is 3500 × 0.92 = 3220 W." },
+            { "answer": "3804", "explanation": "This results from dividing by efficiency (3500/0.92 = 3804). The output is less than the input: 3500 × 0.92 = 3220 W." },
+            { "answer": "280", "explanation": "This is the power lost in the inverter (3500 × 0.08 = 280 W), not the output power." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "An inverter receives 350 V DC from a solar string and outputs 230 V AC. The DC input power is 4.0 kW. Calculate the DC input current.",
+      "sentence": "The DC current flowing into the inverter is {{blank:1}} A.",
+      "blanks": {
+        "1": {
+          "correct": "11.4",
+          "correctExplanation": "I = P/V = 4000/350 = 11.4 A.",
+          "distractors": [
+            { "answer": "17.4", "explanation": "This results from using the AC output voltage (4000/230 = 17.4 A). The DC input current uses the DC voltage: I = 4000/350 = 11.4 A." },
+            { "answer": "1.4", "explanation": "This results from an incorrect calculation. The correct value is I = P/V = 4000/350 = 11.4 A." },
+            { "answer": "350", "explanation": "350 is the voltage, not the current. The current is I = P/V = 4000/350 = 11.4 A." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "A household solar system exports excess electricity to the grid. The panels produce 6.0 kW DC, the inverter efficiency is 95%, and the household consumes 4.0 kW.",
+      "sentence": "The power exported to the grid is {{blank:1}} W.",
+      "blanks": {
+        "1": {
+          "correct": "1700",
+          "correctExplanation": "AC output = 6000 × 0.95 = 5700 W. Exported = 5700 − 4000 = 1700 W.",
+          "distractors": [
+            { "answer": "2000", "explanation": "This ignores inverter losses (6000 − 4000 = 2000). The actual AC output is 5700 W, so the export is 5700 − 4000 = 1700 W." },
+            { "answer": "5700", "explanation": "This is the total AC output, not the exported power. Subtracting the household consumption: 5700 − 4000 = 1700 W." },
+            { "answer": "300", "explanation": "This is the power lost in the inverter (6000 × 0.05 = 300 W), not the exported power." }
+          ]
+        }
+      }
+    }
+  ],
+
+  "toLevel5": [
+    {
+      "type": "mc",
+      "question": "A student claims: 'An inverter is unnecessary if you use DC appliances in your home.' Which one of the following is the best evaluation of this claim for a grid-connected system?",
+      "correct": "The claim is partially valid for DC appliances within the home, but an inverter is still needed to export excess electricity to the AC grid.",
+      "correctExplanation": "While DC appliances could theoretically run directly from solar panels, most Australian households are grid-connected. To export excess electricity or receive power when solar output is insufficient, an inverter is needed for grid compatibility.",
+      "distractors": [
+        { "answer": "The claim is entirely correct. If all appliances are DC, no inverter is needed under any circumstances.", "explanation": "Even with all DC appliances, a grid-connected system still needs an inverter to export excess power and to receive AC power from the grid when needed." },
+        { "answer": "The claim is entirely incorrect. DC appliances require an inverter to function.", "explanation": "DC appliances can run directly on DC from solar panels. The claim has some validity for a standalone (off-grid) system, but grid connection still requires an inverter." },
+        { "answer": "The claim is incorrect because DC appliances are illegal in Australia.", "explanation": "DC appliances are not illegal. Many devices (phones, laptops) use DC internally. The claim has some validity but is incomplete for grid-connected systems." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Kenji analyses two inverter options for his 6.6 kW solar array. Inverter A has 97% efficiency but costs more. Inverter B has 93% efficiency but is cheaper. Both have the same maximum capacity. Which one of the following correctly compares the annual AC energy output if the panels produce 25 kWh DC per day?",
+      "correct": "Inverter A produces 24.25 kWh per day (8851 kWh per year) and Inverter B produces 23.25 kWh per day (8486 kWh per year), a difference of 365 kWh per year.",
+      "correctExplanation": "Inverter A: 25 × 0.97 = 24.25 kWh/day = 8851 kWh/year. Inverter B: 25 × 0.93 = 23.25 kWh/day = 8486 kWh/year. Difference: 8851 − 8486 = 365 kWh/year.",
+      "distractors": [
+        { "answer": "Both inverters produce the same annual output because the solar panels produce the same DC energy.", "explanation": "The DC input is the same, but different efficiencies give different AC outputs. The 4% difference in efficiency produces 365 kWh/year less from Inverter B." },
+        { "answer": "Inverter B produces more energy because its lower efficiency causes it to operate for longer each day.", "explanation": "Lower efficiency means more energy is lost as heat, not that the inverter operates longer. Inverter A produces more AC energy from the same DC input." },
+        { "answer": "The difference in output is negligible at less than 10 kWh per year.", "explanation": "The difference is substantial: 25 × (0.97 − 0.93) × 365 = 365 kWh/year, which is significant in both energy and cost terms." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Sofia's solar system has panels producing 5.0 kW DC. The inverter (95% efficient) supplies AC to her home (consuming 3.0 kW) and exports the rest to the grid. If the electricity retailer pays $0.05 per exported kWh, which one of the following is closest to the revenue from 6.0 hours of peak production per day?",
+      "correct": "$0.53 per day",
+      "correctExplanation": "AC output = 5000 × 0.95 = 4750 W = 4.75 kW. Exported = 4.75 − 3.0 = 1.75 kW. Energy exported per day = 1.75 × 6.0 = 10.5 kWh. Revenue = 10.5 × $0.05 = $0.525 ≈ $0.53 per day.",
+      "distractors": [
+        { "answer": "$0.60 per day", "explanation": "This ignores inverter efficiency losses. With 95% efficiency, the AC output is 4.75 kW, not 5.0 kW, reducing the export power and revenue." },
+        { "answer": "$1.50 per day", "explanation": "This likely uses the full AC output without subtracting household consumption. Only the excess (exported) power generates revenue." },
+        { "answer": "$0.15 per day", "explanation": "This significantly underestimates the exported energy. The export is 1.75 kW for 6 hours = 10.5 kWh at $0.05/kWh = $0.525." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student argues: 'Since inverters lose some energy as heat, it would be more efficient to connect solar panels directly to the grid without an inverter.' Which one of the following is the best evaluation of this argument?",
+      "correct": "The argument is incorrect because DC electricity cannot be fed into an AC grid. The inverter is essential despite its energy losses.",
+      "correctExplanation": "The AC grid cannot accept DC electricity. Without an inverter, the solar electricity simply cannot be used by the grid or by most appliances. The 3–5% energy loss in the inverter is an unavoidable cost of making the electricity compatible.",
+      "distractors": [
+        { "answer": "The argument is correct. Direct connection would eliminate the 5% energy loss.", "explanation": "DC cannot be connected to an AC grid. The types of electricity are fundamentally incompatible, making the inverter essential." },
+        { "answer": "The argument is correct because the grid can accept both AC and DC.", "explanation": "The Australian electricity grid is an AC system operating at 230 V, 50 Hz. It cannot accept DC input." },
+        { "answer": "The argument is incorrect because inverters are 100% efficient and no energy is lost.", "explanation": "Inverters are not 100% efficient (typically 93–97%). However, the argument is incorrect because DC cannot be fed into an AC grid, not because of efficiency." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An engineer compares two household solar configurations. Configuration 1: 20 panels in a single series string with one string inverter. Configuration 2: 20 panels each with a microinverter. On a partially cloudy day, 5 panels are shaded. Which one of the following best analyses the impact on total power output?",
+      "correct": "Configuration 2 loses output from only the 5 shaded panels, while Configuration 1 may lose significantly more because the shaded panels limit the current through the entire series string.",
+      "correctExplanation": "In Configuration 1, the shaded panels reduce the current through the entire series string because the same current must flow through all panels. In Configuration 2, each panel operates independently, so only the 5 shaded panels have reduced output.",
+      "distractors": [
+        { "answer": "Both configurations lose the same amount of power because the same number of panels are shaded.", "explanation": "In a series configuration, shading one panel reduces the current through all panels, potentially causing a much greater loss than just the shaded panels." },
+        { "answer": "Configuration 1 performs better because the string inverter can compensate for the shaded panels.", "explanation": "A string inverter cannot compensate for reduced current in the series string. The shaded panels limit current for all panels in the string." },
+        { "answer": "Configuration 2 loses output from all 20 panels because microinverters cannot operate independently.", "explanation": "Microinverters are designed to operate independently. Only the 5 shaded panels in Configuration 2 have reduced output." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Marcus considers the energy transformations in a complete household solar system. Which one of the following correctly traces the energy transformations from sunlight to a household appliance?",
+      "correct": "Light energy → electrical energy (DC in panels) → electrical energy (AC via inverter) → useful energy in appliance (light, heat, kinetic, etc.)",
+      "correctExplanation": "Sunlight is converted to DC electrical energy in the photovoltaic cells. The inverter converts this DC to AC (an electrical-to-electrical conversion with some heat loss). The AC electricity then powers appliances, which convert it to the desired form of energy.",
+      "distractors": [
+        { "answer": "Light energy → heat energy → electrical energy (AC) → useful energy in appliance.", "explanation": "Photovoltaic cells convert light directly to electrical energy, not via heat. The light-to-heat-to-electricity path describes a thermal power station, not solar panels." },
+        { "answer": "Light energy → kinetic energy → electrical energy (AC) → useful energy in appliance.", "explanation": "There is no kinetic energy step in a solar panel system. Kinetic energy is involved in generators, not photovoltaic cells." },
+        { "answer": "Light energy → electrical energy (AC in panels) → electrical energy (DC via inverter) → useful energy in appliance.", "explanation": "This reverses the DC and AC. Panels produce DC, and the inverter converts to AC, not the other way around." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Yara's 5.0 kW inverter (96% efficiency) receives DC power from panels producing at full capacity. During a one-hour period, the household consumes 2.5 kWh while the inverter exports 2.3 kWh to the grid. Which one of the following is closest to the DC power produced by the panels?",
+      "correct": "5.0 kW",
+      "correctExplanation": "Total AC output = household consumption + export = 2.5 + 2.3 = 4.8 kWh in one hour = 4.8 kW AC. DC input = AC output / efficiency = 4.8 / 0.96 = 5.0 kW.",
+      "distractors": [
+        { "answer": "4.8 kW", "explanation": "4.8 kW is the AC output. The DC input must account for inverter losses: DC = 4.8/0.96 = 5.0 kW." },
+        { "answer": "5.2 kW", "explanation": "This overestimates the DC input. The correct calculation is DC = AC/efficiency = 4.8/0.96 = 5.0 kW." },
+        { "answer": "2.5 kW", "explanation": "This is only the household consumption. The total AC output (consumption + export) is 4.8 kW, giving DC input of 5.0 kW." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A physics teacher asks: 'Why can a transformer not replace an inverter in a solar panel system?' Which one of the following is the correct response?",
+      "correct": "A transformer can only change the voltage of AC electricity. It cannot convert DC to AC, which is the primary function of an inverter.",
+      "correctExplanation": "Transformers operate on the principle of electromagnetic induction and require an alternating current to function. They can step up or step down AC voltage but cannot convert DC to AC. An inverter is needed first to create AC from the DC output of solar panels.",
+      "distractors": [
+        { "answer": "A transformer produces DC output, while an inverter produces AC output.", "explanation": "Transformers produce AC output (from AC input). They cannot process DC at all. The issue is that transformers require AC input, which solar panels do not provide." },
+        { "answer": "A transformer operates at too high a frequency for household use.", "explanation": "Transformers operate at the frequency of their AC input (50 Hz for grid applications). The issue is that they require AC input and cannot convert DC to AC." },
+        { "answer": "A transformer is too large and heavy for household installation.", "explanation": "Size is not the fundamental issue. The reason is that transformers cannot convert DC to AC — they can only change the voltage of existing AC." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Evaluate the energy losses in an inverter system. An inverter receives 8.0 kW DC and has an efficiency of 94%.",
+      "sentence": "The power lost as heat in the inverter is {{blank:1}} W.",
+      "blanks": {
+        "1": {
+          "correct": "480",
+          "correctExplanation": "Power lost = DC input × (1 − efficiency) = 8000 × 0.06 = 480 W.",
+          "distractors": [
+            { "answer": "7520", "explanation": "This is the AC output (8000 × 0.94 = 7520 W), not the power lost. The loss is 8000 − 7520 = 480 W." },
+            { "answer": "8000", "explanation": "This is the total DC input, not the loss. The loss is 8000 × 0.06 = 480 W." },
+            { "answer": "94", "explanation": "94 is the efficiency percentage, not the power lost. The loss is 8000 × (1 − 0.94) = 480 W." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Compare the total annual energy output of two inverters receiving 30 kWh DC per day. Inverter X has 96% efficiency, Inverter Y has 92% efficiency.",
+      "sentence": "The difference in annual AC energy output between the two inverters is {{blank:1}} kWh.",
+      "blanks": {
+        "1": {
+          "correct": "438",
+          "correctExplanation": "Daily difference = 30 × (0.96 − 0.92) = 30 × 0.04 = 1.2 kWh. Annual difference = 1.2 × 365 = 438 kWh.",
+          "distractors": [
+            { "answer": "1.2", "explanation": "1.2 kWh is the daily difference, not the annual difference. Annual = 1.2 × 365 = 438 kWh." },
+            { "answer": "4.0", "explanation": "4% is the efficiency difference, not the energy difference. The annual difference is 30 × 0.04 × 365 = 438 kWh." },
+            { "answer": "10512", "explanation": "This is the total annual output of Inverter X (30 × 0.96 × 365 = 10512 kWh), not the difference between the two." }
+          ]
+        }
+      }
+    }
+  ]
+}

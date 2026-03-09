@@ -1,0 +1,495 @@
+{
+  "_link": {
+    "uuid": "lp-d7f9598b-6e6e-089e-20f3-ea5e9b5c3397",
+    "version": 1,
+    "contentHash": "hash-14e23317",
+    "title": "I can explain the advantages of AC over DC for long-distance power transmission",
+    "generatedAt": "2026-03-08T10:15:00Z"
+  },
+  "toLevel2": [
+    {
+      "type": "mc",
+      "question": "Which one of the following best describes the main advantage of using AC for long-distance power transmission?",
+      "correct": "AC voltage can be easily changed using transformers",
+      "correctExplanation": "Transformers can step AC voltage up for efficient transmission and step it down for safe use, which is not possible with DC.",
+      "distractors": [
+        { "answer": "AC current travels faster through wires than DC", "explanation": "The speed of electrical signals is similar for AC and DC. The advantage of AC is transformer compatibility." },
+        { "answer": "AC wires have lower resistance than DC wires", "explanation": "Wire resistance is a property of the material and dimensions, not the type of current flowing through it." },
+        { "answer": "AC does not produce any heat in transmission wires", "explanation": "AC still produces I²R heating in wires. The advantage is the ability to reduce current via high-voltage transmission." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which one of the following devices allows AC voltage to be stepped up or down for transmission?",
+      "correct": "A transformer",
+      "correctExplanation": "Transformers use electromagnetic induction to change AC voltage levels, enabling high-voltage transmission.",
+      "distractors": [
+        { "answer": "A capacitor", "explanation": "Capacitors store and release charge but do not step voltage up or down for power transmission." },
+        { "answer": "A resistor", "explanation": "Resistors oppose current flow and dissipate energy as heat. They cannot change voltage levels efficiently." },
+        { "answer": "A diode", "explanation": "Diodes allow current in one direction only. They do not change voltage levels for transmission." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Why is high-voltage transmission more efficient than low-voltage transmission for delivering the same power?",
+      "correct": "Higher voltage means lower current, reducing I²R losses",
+      "correctExplanation": "Since P = VI, higher voltage allows the same power with less current, and power loss (I²R) is greatly reduced.",
+      "distractors": [
+        { "answer": "Higher voltage means the wires have lower resistance overall", "explanation": "Voltage does not change wire resistance. Resistance depends on material, length, and cross-section." },
+        { "answer": "Higher voltage means electrons move with less friction in the wire", "explanation": "There is no 'electron friction' that depends on voltage. Loss reduction comes from lower current." },
+        { "answer": "Higher voltage means the power station generates energy more efficiently", "explanation": "Generator efficiency is independent of transmission voltage. The benefit is reduced transmission losses." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which one of the following is the primary reason DC is not used for standard long-distance power transmission?",
+      "correct": "DC voltage cannot be easily changed using transformers",
+      "correctExplanation": "Transformers require a changing magnetic flux to operate, which only AC provides. DC cannot be stepped up or down by a transformer.",
+      "distractors": [
+        { "answer": "DC cannot flow through copper wires over long distances at all", "explanation": "DC can flow through wires. The issue is the inability to efficiently change voltage levels for transmission." },
+        { "answer": "DC produces more heat in wires than AC at the same current", "explanation": "I²R heating is the same for AC and DC at the same current. The issue is voltage transformation." },
+        { "answer": "DC is more dangerous than AC at all voltage levels for human safety", "explanation": "Both AC and DC are dangerous at high voltages. The transmission issue is about voltage transformation, not safety." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "In Australia, power is generated at about 11 to 33 kV and transmitted at up to 500 kV. Which one of the following best describes why the voltage is increased before transmission?",
+      "correct": "To reduce the current and therefore reduce power losses in the lines",
+      "correctExplanation": "Stepping up to 500 kV dramatically reduces the transmission current, which reduces I²R losses in the long-distance lines.",
+      "distractors": [
+        { "answer": "To increase the total amount of power that the generator produces", "explanation": "The generator output is fixed. Stepping up voltage reduces losses but does not increase generation." },
+        { "answer": "To ensure the voltage is high enough to overcome wire resistance completely", "explanation": "Voltage is not increased to overcome resistance. It is increased to reduce the current for lower losses." },
+        { "answer": "To make the electricity safer for workers who maintain the transmission lines", "explanation": "Higher voltage is actually more dangerous. The purpose is to reduce current and power losses." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "Transformers can be used to step up DC voltage for long-distance transmission.",
+      "correct": "False",
+      "correctExplanation": "Transformers operate by electromagnetic induction, which requires a changing current. DC produces a constant magnetic flux and does not induce a voltage in the secondary coil.",
+      "distractors": [
+        { "answer": "True", "explanation": "Students may not realise that transformers require AC. A constant DC current creates a steady magnetic flux with no change to induce a secondary voltage." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "The main advantage of AC for power transmission is that transformers can change the voltage level efficiently.",
+      "correct": "True",
+      "correctExplanation": "Transformers allow AC voltage to be stepped up for transmission (reducing current and losses) and stepped down for safe consumer use.",
+      "distractors": [
+        { "answer": "False", "explanation": "Students may think the advantage relates to wire properties, but the key advantage is transformer compatibility for voltage changes." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about AC transmission.",
+      "sentence": "AC is preferred for long-distance transmission because {{blank:1}} can efficiently change the voltage level.",
+      "blanks": {
+        "1": {
+          "correct": "transformers",
+          "correctExplanation": "Transformers use electromagnetic induction to step AC voltage up or down, enabling efficient high-voltage transmission.",
+          "distractors": [
+            { "answer": "generators", "explanation": "Generators produce electricity but do not change the voltage level during transmission." },
+            { "answer": "capacitors", "explanation": "Capacitors store charge but cannot efficiently step voltage up or down for power transmission." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about transmission efficiency.",
+      "sentence": "Stepping up the voltage before transmission reduces the {{blank:1}}, which reduces power losses in the wires.",
+      "blanks": {
+        "1": {
+          "correct": "current",
+          "correctExplanation": "Since P = VI, increasing V decreases I for the same power. Lower current means lower I²R losses.",
+          "distractors": [
+            { "answer": "resistance", "explanation": "Resistance is a property of the wire and is not changed by stepping up the voltage." },
+            { "answer": "frequency", "explanation": "Frequency is not changed by a transformer. The key effect is reducing the current." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about DC transmission limitations.",
+      "sentence": "DC cannot be used with transformers because a constant current produces a {{blank:1}} magnetic flux, which cannot induce a voltage.",
+      "blanks": {
+        "1": {
+          "correct": "steady",
+          "correctExplanation": "A constant DC current creates a steady (unchanging) magnetic flux. Electromagnetic induction requires a changing flux.",
+          "distractors": [
+            { "answer": "varying", "explanation": "A varying flux would induce a voltage. DC produces a steady flux, which is why transformers do not work with DC." },
+            { "answer": "reversed", "explanation": "A reversed flux would still induce a voltage. The problem with DC is that the flux does not change at all." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "mc",
+      "question": "A power station generates 100 MW. Which one of the following best explains why the electricity is stepped up to 500 kV before entering the transmission lines?",
+      "correct": "At 500 kV the current is only 200 A, greatly reducing I²R losses in the lines",
+      "correctExplanation": "I = P/V = 100 × 10⁶/500 × 10³ = 200 A. This low current produces much less heating than transmission at lower voltage.",
+      "distractors": [
+        { "answer": "At 500 kV the resistance of the wires drops to near zero, eliminating all losses", "explanation": "Wire resistance is unchanged by voltage. The benefit comes from reduced current, not reduced resistance." },
+        { "answer": "At 500 kV the power output of the generator automatically increases by the step-up factor", "explanation": "The generator output is fixed. Stepping up voltage changes the voltage-current split but not the total power." },
+        { "answer": "At 500 kV the electricity travels faster through the wires, reducing time-based losses", "explanation": "Electrical signals travel at similar speeds regardless of voltage. The benefit is lower current and I²R losses." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which one of the following correctly describes the complete transmission process from power station to consumer?",
+      "correct": "Generate AC → step up voltage → transmit → step down voltage → deliver to consumers",
+      "correctExplanation": "AC is generated, stepped up for efficient transmission, then stepped down in stages for safe consumer use.",
+      "distractors": [
+        { "answer": "Generate DC → convert to AC → transmit → convert back to DC → deliver to consumers", "explanation": "Power stations generate AC directly. There is no DC-to-AC conversion at the generation stage." },
+        { "answer": "Generate AC → transmit at generation voltage → step down at the consumer end only", "explanation": "Transmitting at generation voltage (11–33 kV) would result in much higher losses than stepping up to 500 kV." },
+        { "answer": "Generate AC → step down voltage → transmit → step up voltage → deliver to consumers", "explanation": "This reverses the process. Voltage is stepped up for transmission and down for delivery, not the reverse." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student argues that DC transmission would be just as efficient as AC if thicker wires with lower resistance were used. Which one of the following best evaluates this argument?",
+      "correct": "Thicker wires reduce losses but are far more expensive than simply using transformers with AC",
+      "correctExplanation": "While thicker wires reduce R, this is costly for long distances. Transformers provide a much cheaper solution by reducing current.",
+      "distractors": [
+        { "answer": "The argument is correct; thicker wires would make DC and AC transmission equally efficient", "explanation": "Even with thicker wires, DC still cannot be stepped up to reduce current. AC with transformers is more practical." },
+        { "answer": "Thicker wires would not reduce resistance at all, so the argument is physically incorrect", "explanation": "Thicker wires do have lower resistance. The issue is cost-effectiveness compared to using transformers." },
+        { "answer": "The argument fails because DC produces more heat per ampere than AC in any conductor", "explanation": "I²R heating is the same for AC and DC at the same current. The issue is economic, not physical." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which one of the following correctly explains why the voltage must be stepped down before reaching consumers?",
+      "correct": "High voltages are dangerous and consumer appliances are designed for low voltage",
+      "correctExplanation": "500 kV would be lethal and would destroy household equipment. Voltage is stepped down to 230 V for safety and compatibility.",
+      "distractors": [
+        { "answer": "High voltages cannot flow through the smaller wires used in household wiring", "explanation": "Voltage does not 'flow'. The concern is safety and appliance compatibility, not wire size for voltage." },
+        { "answer": "Stepping down voltage increases the total power available for consumer use", "explanation": "Total power is conserved (minus losses). Stepping down changes the voltage-current ratio, not total power." },
+        { "answer": "Electricity naturally loses voltage over long distances so it must be restored", "explanation": "While voltage drops occur, the step-down is deliberate for safety, not to compensate for drops." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "In modern high-voltage DC (HVDC) transmission, power electronics convert AC to DC for transmission, then back to AC. Which one of the following best describes when HVDC is preferred over AC?",
+      "correct": "For very long distances or undersea cables where AC losses become significant",
+      "correctExplanation": "HVDC avoids capacitive and inductive losses that affect AC over very long distances or in submarine cables.",
+      "distractors": [
+        { "answer": "HVDC is always more efficient than AC for any transmission distance or route", "explanation": "HVDC requires expensive converter stations. It is only preferred for specific long-distance or undersea applications." },
+        { "answer": "HVDC is used only because modern electronics cannot handle high-voltage AC safely", "explanation": "AC transmission at high voltage is standard and safe. HVDC is chosen for specific technical advantages." },
+        { "answer": "HVDC is preferred for short distances because it avoids the need for transformers", "explanation": "For short distances, AC with transformers is simpler and cheaper. HVDC benefits emerge at very long distances." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "If a power station transmits 50 MW at 250 kV through lines with 20 Ω total resistance, which one of the following is closest to the power lost?",
+      "correct": "800 kW",
+      "correctExplanation": "I = P/V = 50 × 10⁶ / (250 × 10³) = 200 A. Ploss = I²R = (200)² × 20 = 800 000 W = 800 kW.",
+      "distractors": [
+        { "answer": "80 kW", "explanation": "This is ten times too small, likely from a calculation error in squaring the current." },
+        { "answer": "8.0 MW", "explanation": "This is ten times too large, likely from an error in applying the power loss formula." },
+        { "answer": "4.0 kW", "explanation": "This results from using I = P/(V²) or another incorrect formula to find the current." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "AC is preferred over DC for standard long-distance transmission because transformers can efficiently step AC voltage up and down.",
+      "correct": "True",
+      "correctExplanation": "The ability to use transformers for voltage conversion is the key advantage of AC. This allows high-voltage, low-current transmission to minimise losses.",
+      "distractors": [
+        { "answer": "False", "explanation": "Students may think DC has advantages for transmission, but without transformer compatibility, DC requires more expensive solutions." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about AC transmission advantages.",
+      "sentence": "The key advantage of AC over DC for power transmission is that AC voltage can be changed using {{blank:1}}, allowing high-voltage, low-current transmission.",
+      "blanks": {
+        "1": {
+          "correct": "transformers",
+          "correctExplanation": "Transformers operate on the principle of electromagnetic induction and require the changing current provided by AC.",
+          "distractors": [
+            { "answer": "resistors", "explanation": "Resistors reduce voltage by dissipating energy as heat, which is highly inefficient for power transmission." },
+            { "answer": "inverters", "explanation": "Inverters convert DC to AC. The advantage of AC is that transformers can change its voltage level directly." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about transmission voltage.",
+      "sentence": "In Australia, electricity is stepped {{blank:1}} to voltages as high as 500 kV before entering long-distance transmission lines.",
+      "blanks": {
+        "1": {
+          "correct": "up",
+          "correctExplanation": "Voltage is stepped up at the power station to reduce current and minimise I²R losses during transmission.",
+          "distractors": [
+            { "answer": "down", "explanation": "Stepping voltage down would increase current and increase transmission losses. Voltage is stepped up." },
+            { "answer": "off", "explanation": "The voltage is not turned off. It is increased (stepped up) for efficient long-distance transmission." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the transmission process.",
+      "sentence": "After long-distance transmission at high voltage, the electricity must be stepped {{blank:1}} to a safe level before reaching consumers.",
+      "blanks": {
+        "1": {
+          "correct": "down",
+          "correctExplanation": "The voltage is stepped down in stages from transmission levels (500 kV) to consumer levels (230 V) for safety.",
+          "distractors": [
+            { "answer": "up", "explanation": "Voltage is already at its highest during transmission. It must be reduced (stepped down) for consumer use." },
+            { "answer": "aside", "explanation": "Voltage is not diverted. It is reduced using step-down transformers for safe delivery to consumers." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "mc",
+      "question": "A remote mining operation requires 2.0 MW of power. An engineer compares transmitting at 11 kV versus 110 kV through lines of total resistance 8.0 Ω. Which one of the following is closest to the power saved by using 110 kV?",
+      "correct": "260 kW",
+      "correctExplanation": "At 11 kV: I = 182 A, Ploss = 265 kW. At 110 kV: I = 18.2 A, Ploss = 2.65 kW. Saving ≈ 262 kW ≈ 260 kW.",
+      "distractors": [
+        { "answer": "26 kW", "explanation": "This is ten times too small, likely from an error in calculating the current at 11 kV." },
+        { "answer": "2.6 kW", "explanation": "This is the loss at 110 kV, not the savings. The saving is the difference between the two losses." },
+        { "answer": "2.0 MW", "explanation": "This equals the total power demand. The saving cannot exceed the total power being transmitted." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Jess analyses a transmission system where 500 kW is transmitted at 10 kV through 5.0 Ω lines. She proposes increasing to 100 kV. Which one of the following is closest to the factor by which the power loss is reduced?",
+      "correct": "100",
+      "correctExplanation": "Voltage increases by factor 10, so current decreases by 10. Ploss ∝ I², so loss decreases by 10² = 100.",
+      "distractors": [
+        { "answer": "10", "explanation": "This is the factor by which voltage increases and current decreases. Power loss decreases by the square of this factor." },
+        { "answer": "50", "explanation": "This does not correspond to any correct application of the power loss relationships." },
+        { "answer": "1000", "explanation": "This would require current to decrease by a factor of about 32. A voltage increase of 10 gives a loss reduction of 100." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Leo argues that because modern power electronics can convert DC to any voltage, the advantage of AC over DC for transmission no longer exists. Which one of the following best evaluates this argument?",
+      "correct": "Power electronics enable HVDC but are expensive; AC with transformers remains simpler and cheaper for most routes",
+      "correctExplanation": "HVDC converter stations cost significantly more than transformers. AC remains the standard choice for most transmission applications.",
+      "distractors": [
+        { "answer": "Leo is entirely correct; all new transmission lines should use DC exclusively", "explanation": "HVDC is cost-effective only for very long distances or submarine cables. AC is still preferred for most routes." },
+        { "answer": "Leo is entirely incorrect; power electronics cannot change DC voltage at all", "explanation": "Modern power electronics can efficiently convert DC voltage levels, but at greater cost than AC transformers." },
+        { "answer": "Leo is correct for short distances but incorrect for distances over 100 km only", "explanation": "The distance threshold for HVDC advantage is typically much longer than 100 km, and depends on many factors." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A transmission system operates at 220 kV. At the consumer end, voltage is stepped down in two stages: first to 11 kV, then to 230 V. Which one of the following is closest to the overall turns ratio from the 220 kV line to the 230 V consumer?",
+      "correct": "957:1",
+      "correctExplanation": "Overall ratio = 220 000/230 ≈ 957. The two transformer stages together achieve this large step-down.",
+      "distractors": [
+        { "answer": "20:1", "explanation": "This is the first stage ratio (220 kV to 11 kV). The overall ratio includes both stages of step-down." },
+        { "answer": "48:1", "explanation": "This is the second stage ratio (11 kV to 230 V). The overall ratio includes both stages." },
+        { "answer": "96:1", "explanation": "This is the product of the two individual ratios divided incorrectly. The overall ratio is V_in/V_out = 957." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A power station generates 50 MW at 25 kV. Compare transmission at 25 kV (no step-up) versus 500 kV through lines with 10 Ω resistance. Which one of the following is closest to the percentage of power lost without step-up?",
+      "correct": "80%",
+      "correctExplanation": "At 25 kV: I = 2000 A. Ploss = (2000)² × 10 = 40 MW. Percentage = 40/50 × 100 = 80%.",
+      "distractors": [
+        { "answer": "8.0%", "explanation": "This is ten times too small. At 25 kV the current is very high, producing enormous losses." },
+        { "answer": "0.20%", "explanation": "This is closer to the loss at 500 kV (I = 100 A, Ploss = 100 kW = 0.20%). The question asks about 25 kV." },
+        { "answer": "40%", "explanation": "This may result from not squaring the current correctly. The actual loss at 25 kV is about 80% of generated power." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which one of the following best describes why electricity distribution uses multiple step-down stages rather than a single step from 500 kV to 230 V?",
+      "correct": "Different consumers need different voltages, and staged reduction improves system flexibility",
+      "correctExplanation": "Factories use 11–66 kV, commercial users need 415 V, and homes need 230 V. Multiple stages serve each group.",
+      "distractors": [
+        { "answer": "A single transformer cannot achieve such a large turns ratio without overheating", "explanation": "While very large ratios are challenging, the main reason for multiple stages is serving different voltage needs." },
+        { "answer": "Multiple stages are required by safety regulations but have no engineering benefit", "explanation": "Multiple stages serve genuine engineering purposes: different consumers require different voltage levels." },
+        { "answer": "Each stage reduces the frequency of the AC, which must be restored before consumer use", "explanation": "Transformers do not change frequency. The frequency remains at 50 Hz through all stages." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Ava compares two transmission scenarios for delivering 1.0 MW over 100 km. Scenario A uses AC at 132 kV. Scenario B uses DC at 132 kV. Both have identical wire resistance. Which one of the following best compares the I²R losses?",
+      "correct": "The I²R losses are similar because both carry the same current for the same power and voltage",
+      "correctExplanation": "At the same voltage and power, I = P/V is the same for AC and DC, so I²R losses are equal.",
+      "distractors": [
+        { "answer": "AC has much higher losses due to additional inductive and capacitive effects in the lines", "explanation": "While AC has some reactive losses, the I²R heating is the same. The question specifically asks about I²R losses." },
+        { "answer": "DC has much higher losses because it cannot benefit from transformer voltage conversion", "explanation": "At the same transmission voltage, I²R losses are equal. The advantage of AC is the ability to reach high voltage cheaply." },
+        { "answer": "AC losses are zero because transformers eliminate all resistance in the transmission lines", "explanation": "Transformers change voltage but do not eliminate wire resistance. I²R losses still occur in AC lines." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about transmission economics.",
+      "sentence": "Using AC with transformers is more {{blank:1}} than using thicker DC cables to achieve the same reduction in transmission losses.",
+      "blanks": {
+        "1": {
+          "correct": "cost-effective",
+          "correctExplanation": "Transformers are relatively cheap and efficient. Reducing wire resistance requires expensive thicker conductors over long distances.",
+          "distractors": [
+            { "answer": "dangerous", "explanation": "High-voltage AC and DC are both dangerous. The advantage of AC with transformers is economic, not safety-related." },
+            { "answer": "complicated", "explanation": "Transformers are simple, reliable devices. The advantage is cost-effectiveness, not simplicity." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about transmission voltage effects.",
+      "sentence": "Increasing the transmission voltage by a factor of 10 reduces the power loss by a factor of {{blank:1}}.",
+      "blanks": {
+        "1": {
+          "correct": "100",
+          "correctExplanation": "Current decreases by factor 10 (I = P/V). Loss decreases by 10² = 100 since Ploss = I²R.",
+          "distractors": [
+            { "answer": "10", "explanation": "This is the factor by which current decreases. Power loss depends on I², so the factor is 100." },
+            { "answer": "1000", "explanation": "This would require cubing the factor. Power loss depends on I², giving 10² = 100." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about AC and DC comparison.",
+      "sentence": "The fundamental advantage of AC is that {{blank:1}} can change its voltage, enabling high-voltage transmission with low current.",
+      "blanks": {
+        "1": {
+          "correct": "transformers",
+          "correctExplanation": "Transformers work only with AC because they require a changing magnetic flux provided by alternating current.",
+          "distractors": [
+            { "answer": "generators", "explanation": "Generators produce electricity at a fixed voltage. Transformers are needed to change the voltage level." },
+            { "answer": "batteries", "explanation": "Batteries provide DC and cannot change voltage levels. Transformers change AC voltage." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "mc",
+      "question": "A government considers two proposals for a 1000 km transmission line carrying 2.0 GW. Proposal A uses AC at 500 kV with transformers. Proposal B uses HVDC at 500 kV with converter stations. Which one of the following best evaluates the key trade-off?",
+      "correct": "HVDC has lower line losses over 1000 km but higher converter station costs than transformer costs",
+      "correctExplanation": "Over very long distances, HVDC avoids reactive losses and uses two conductors instead of three, but converter stations are much more expensive than transformers.",
+      "distractors": [
+        { "answer": "AC is always superior regardless of distance because transformers are more reliable than converters", "explanation": "Transformers are reliable but AC has reactive losses over very long distances that HVDC avoids." },
+        { "answer": "HVDC is always superior because DC has zero transmission losses at any distance", "explanation": "HVDC still has I²R losses. Its advantage is avoiding reactive AC losses and needing fewer conductors." },
+        { "answer": "The proposals are identical in cost and efficiency because both operate at 500 kV", "explanation": "Despite the same voltage, AC and HVDC have different loss mechanisms and infrastructure costs." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An island nation is connected to the mainland by a 200 km undersea cable. Engineers choose HVDC over AC for this link. Which one of the following best explains this decision?",
+      "correct": "Submarine AC cables have very high capacitive losses that make AC impractical over long distances",
+      "correctExplanation": "The high capacitance of insulated submarine cables causes large reactive currents in AC, wasting capacity. HVDC avoids this problem.",
+      "distractors": [
+        { "answer": "AC cannot physically travel through cables submerged in saltwater due to electrolysis", "explanation": "AC cables are fully insulated. Saltwater does not affect the current inside a properly insulated cable." },
+        { "answer": "HVDC is chosen because submarine cables always have zero resistance to DC current", "explanation": "Submarine cables still have resistance. HVDC is chosen to avoid the capacitive losses of AC in long cables." },
+        { "answer": "AC is unsuitable because the water pressure at depth changes the frequency of the signal", "explanation": "Water pressure does not affect AC frequency. The issue is capacitive losses in long insulated cables." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Denise calculates that transmitting 100 MW at 10 kV through 10 Ω lines would lose more power than the generator produces. She proposes using 500 kV instead. Which one of the following best evaluates her analysis?",
+      "correct": "At 10 kV: I = 10 000 A, Ploss = 1000 MW, confirming losses exceed generation; 500 kV resolves this",
+      "correctExplanation": "At 10 kV: I = 10⁴ A, Ploss = (10⁴)² × 10 = 10⁹ W = 1000 MW. At 500 kV: I = 200 A, Ploss = 400 kW, which is manageable.",
+      "distractors": [
+        { "answer": "Her analysis must be wrong because losses can never exceed the power generated", "explanation": "Theoretical calculation of I²R can exceed input power, indicating the system cannot deliver any useful power." },
+        { "answer": "Increasing voltage to 500 kV would still result in losses exceeding generation", "explanation": "At 500 kV: I = 200 A, Ploss = 400 kW, which is only 0.4% of 100 MW — well within acceptable limits." },
+        { "answer": "The solution is to reduce wire resistance to zero, not to increase the voltage", "explanation": "Zero-resistance wires (superconductors) are impractical at scale. Increasing voltage is the standard solution." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A renewable energy company plans a solar farm in a remote desert, 500 km from the nearest city. Which one of the following best justifies the choice of AC transmission for this project?",
+      "correct": "AC with step-up transformers provides efficient transmission at low cost for this distance",
+      "correctExplanation": "At 500 km, AC transmission with transformers is well-established, cost-effective, and efficient enough for this application.",
+      "distractors": [
+        { "answer": "HVDC is never suitable for solar power because solar panels produce AC output directly", "explanation": "Solar panels produce DC. However, AC transmission is still preferred for moderate distances due to lower infrastructure costs." },
+        { "answer": "AC transmission has zero power losses regardless of distance when transformers are used", "explanation": "AC still has I²R losses. Transformers reduce these losses but do not eliminate them." },
+        { "answer": "AC is the only type of electricity that can be generated from solar energy", "explanation": "Solar panels generate DC. Inverters convert it to AC for grid compatibility and transformer use." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Magnus compares the total system efficiency of two 200 km transmission systems. System A: AC at 220 kV with 98% efficient transformers at each end. System B: DC at 220 kV with 96% efficient converters at each end. Line losses are identical at 1.5%. Which one of the following is closest to the ratio of overall efficiencies?",
+      "correct": "System A is more efficient overall due to higher transformer efficiency",
+      "correctExplanation": "System A: 0.98 × 0.985 × 0.98 = 94.6%. System B: 0.96 × 0.985 × 0.96 = 90.8%. Transformer efficiency gives AC the advantage.",
+      "distractors": [
+        { "answer": "Both systems have identical overall efficiency since they operate at the same voltage", "explanation": "The efficiencies of the conversion equipment differ. Transformers (98%) outperform converters (96%) at each end." },
+        { "answer": "System B is more efficient because DC has inherently lower line losses than AC", "explanation": "The question states identical line losses. System B loses more in the converter stations." },
+        { "answer": "Neither system can be evaluated without knowing the exact length of wire used", "explanation": "Line losses are given as 1.5% for both. The comparison depends on conversion equipment efficiency." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Sally evaluates a proposal to replace all AC transmission with DC in a national grid. Which one of the following best identifies the main obstacle?",
+      "correct": "DC requires expensive converter stations at every point where voltage must be changed",
+      "correctExplanation": "A national grid requires many voltage changes (substations). Replacing each transformer with a converter station would be enormously expensive.",
+      "distractors": [
+        { "answer": "DC cannot be transmitted at high voltage under any circumstances using current technology", "explanation": "HVDC technology exists and operates at very high voltages. The issue is the cost of converter stations." },
+        { "answer": "DC transmission has been proven to have higher losses than AC at all voltage levels", "explanation": "DC and AC have comparable I²R losses. The issue is the cost and complexity of voltage conversion for DC." },
+        { "answer": "Replacing AC with DC would require all consumer appliances to be redesigned completely", "explanation": "Converters can produce AC at the consumer end. The obstacle is the cost of replacing transformers throughout the grid." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An engineer must justify the annual cost of transformer maintenance on a 330 kV AC transmission line. The line carries 800 MW and has 15 Ω resistance. Which one of the following best supports the case that transformers are essential?",
+      "correct": "Without step-up transformers, losses at generator voltage would make transmission impractical",
+      "correctExplanation": "At generator voltage (e.g., 25 kV): I = 32 000 A, Ploss = 15.4 GW — far exceeding generated power. Transformers are essential.",
+      "distractors": [
+        { "answer": "Transformer maintenance costs are always negligible compared to fuel costs alone", "explanation": "While maintenance costs are lower than fuel costs, this does not directly justify why transformers are essential." },
+        { "answer": "Transformers improve power quality but are not strictly necessary for transmission", "explanation": "Transformers are absolutely necessary. Without them, losses at low voltage would make transmission impossible." },
+        { "answer": "Transformers are only used to meet regulatory requirements, not for efficiency reasons", "explanation": "Transformers are used because they are physically necessary for efficient transmission, not merely for compliance." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Ishva investigates why some countries use 50 Hz AC and others use 60 Hz. Which one of the following best describes how frequency choice affects transmission efficiency?",
+      "correct": "Frequency has minimal effect on I²R transmission losses but affects transformer and motor design",
+      "correctExplanation": "I²R losses depend on current and resistance, not frequency. However, frequency affects transformer core losses and motor speed.",
+      "distractors": [
+        { "answer": "60 Hz is significantly more efficient for transmission because higher frequency reduces resistance", "explanation": "Frequency does not reduce wire resistance. I²R losses are essentially the same at 50 Hz and 60 Hz." },
+        { "answer": "50 Hz is significantly more efficient because lower frequency means less energy wasted per cycle", "explanation": "The energy loss per cycle is not a meaningful concept for I²R losses. Frequency has minimal effect on transmission efficiency." },
+        { "answer": "Frequency has no effect on any aspect of the electrical system, so the choice is arbitrary", "explanation": "Frequency affects transformer design, motor speed, and some reactive losses, even though I²R losses are similar." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the evaluation of transmission technology.",
+      "sentence": "For most overland transmission routes under 500 km, {{blank:1}} transmission with transformers remains more cost-effective than HVDC alternatives.",
+      "blanks": {
+        "1": {
+          "correct": "AC",
+          "correctExplanation": "AC with transformers is cheaper for moderate distances because transformers cost far less than HVDC converter stations.",
+          "distractors": [
+            { "answer": "DC", "explanation": "HVDC becomes cost-effective only for very long distances or submarine cables where AC reactive losses are significant." },
+            { "answer": "hybrid", "explanation": "Hybrid systems are not standard. For moderate distances, pure AC with transformers is the most cost-effective." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the justification for high-voltage AC transmission.",
+      "sentence": "The combination of AC generators, step-up transformers, high-voltage transmission, and step-down transformers provides the most {{blank:1}} method of delivering electrical power over distances of tens to hundreds of kilometres.",
+      "blanks": {
+        "1": {
+          "correct": "efficient",
+          "correctExplanation": "This system minimises I²R losses through high-voltage transmission while using inexpensive, reliable transformers.",
+          "distractors": [
+            { "answer": "dangerous", "explanation": "While high voltages are dangerous, the system is designed with safety measures. The key attribute is efficiency." },
+            { "answer": "complex", "explanation": "The system is relatively simple using well-established transformer technology. Its key attribute is efficiency." }
+          ]
+        }
+      }
+    }
+  ]
+}

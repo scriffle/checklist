@@ -1,0 +1,510 @@
+{
+  "_link": {
+    "uuid": "lp-aedaadf9-f01e-193a-48a0-dbbec6c8ce27",
+    "version": 1,
+    "contentHash": "hash-688d4c67",
+    "title": "I can calculate induced current from an AC generator using Ohm's law",
+    "generatedAt": "2026-03-07T00:00:00.000Z"
+  },
+
+  "toLevel2": [
+    {
+      "type": "mc",
+      "question": "Which one of the following is the correct equation for calculating the induced current in an external circuit connected to an AC generator?",
+      "correct": "I = ε / R",
+      "correctExplanation": "Ohm's law states that the current I equals the emf ε divided by the total resistance R of the circuit. This applies to calculating the induced current from an AC generator.",
+      "distractors": [
+        { "answer": "I = R / ε", "explanation": "This inverts the relationship. Current equals emf divided by resistance, not resistance divided by emf." },
+        { "answer": "I = ε × R", "explanation": "This multiplies emf by resistance, which gives units of V Ω, not amperes. Current equals emf divided by resistance." },
+        { "answer": "I = ε² / R", "explanation": "This formula relates to power (P = V²/R), not current. Ohm's law for current is I = ε / R." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An AC generator produces an average emf of 72 V and is connected to a 6.0 Ω resistor. Which one of the following is the average current in the circuit?",
+      "correct": "12 A",
+      "correctExplanation": "Using Ohm's law: I = ε / R = 72 / 6.0 = 12 A.",
+      "distractors": [
+        { "answer": "432 A", "explanation": "This results from multiplying emf by resistance (72 × 6.0 = 432). The correct operation is division: I = ε / R = 12 A." },
+        { "answer": "0.083 A", "explanation": "This results from dividing resistance by emf (6.0 / 72 = 0.083). The correct formula is I = ε / R, not R / ε." },
+        { "answer": "78 A", "explanation": "This results from adding emf and resistance (72 + 6 = 78). The correct operation is division: I = ε / R = 12 A." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "When an average emf is used in Ohm's law, which one of the following is obtained?",
+      "correct": "an average current",
+      "correctExplanation": "Applying Ohm's law with the average emf gives the average current. Since the emf from an AC generator varies sinusoidally, the current also varies, and using the average emf yields the average value of the current.",
+      "distractors": [
+        { "answer": "a peak current", "explanation": "Using the average emf in Ohm's law gives the average current, not the peak current. The peak current would require using the peak emf." },
+        { "answer": "an instantaneous current", "explanation": "The instantaneous current requires the instantaneous emf. Using the average emf gives the average current over the specified interval." },
+        { "answer": "the total charge transferred", "explanation": "Ohm's law gives current, not charge. Charge is found from Q = It, which is a separate calculation." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "The current from an AC generator alternates in direction. Which one of the following determines the frequency at which it alternates?",
+      "correct": "the frequency of the generator's rotation",
+      "correctExplanation": "The current alternates at the same frequency as the emf, which is determined by the rotational frequency of the generator coil. One complete rotation produces one complete AC cycle.",
+      "distractors": [
+        { "answer": "the resistance of the external circuit", "explanation": "Resistance affects the magnitude of the current but not its frequency. The frequency is set by the rotation speed of the generator." },
+        { "answer": "the number of turns in the coil", "explanation": "The number of turns affects the magnitude of the emf and current, not the frequency. The frequency depends on the rotation speed." },
+        { "answer": "the strength of the magnetic field", "explanation": "Field strength affects the magnitude of the emf, not the frequency of alternation. The frequency is determined by the rotation speed." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which one of the following is the SI unit of current?",
+      "correct": "ampere (A)",
+      "correctExplanation": "The SI unit of electric current is the ampere (A). Current is calculated from I = ε / R, where ε is in volts and R is in ohms.",
+      "distractors": [
+        { "answer": "volt (V)", "explanation": "The volt is the SI unit of emf and potential difference, not current." },
+        { "answer": "ohm (Ω)", "explanation": "The ohm is the SI unit of electrical resistance, not current." },
+        { "answer": "watt (W)", "explanation": "The watt is the SI unit of power, not current." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the following statement about Ohm's law applied to an AC generator circuit.",
+      "sentence": "The induced current in an AC generator circuit equals the emf divided by the {{blank:1}} of the external circuit.",
+      "blanks": {
+        "1": {
+          "correct": "resistance",
+          "correctExplanation": "Ohm's law states I = ε / R. The current is found by dividing the emf by the resistance of the circuit.",
+          "distractors": [
+            { "answer": "voltage", "explanation": "The emf is already the voltage source. The current is calculated by dividing the emf by the resistance, not by another voltage." },
+            { "answer": "power", "explanation": "Power is not used in Ohm's law for calculating current. The formula is I = ε / R, using resistance." },
+            { "answer": "frequency", "explanation": "Frequency determines how rapidly the current alternates, but the magnitude of the current is found by dividing emf by resistance." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the following statement about the current from an AC generator.",
+      "sentence": "The current from an AC generator alternates in {{blank:1}} at the same frequency as the emf.",
+      "blanks": {
+        "1": {
+          "correct": "direction",
+          "correctExplanation": "In an AC circuit, the current alternates in direction — it flows one way during the positive half of the emf cycle and the opposite way during the negative half, at the same frequency as the generator's emf.",
+          "distractors": [
+            { "answer": "magnitude only", "explanation": "The current alternates in both magnitude and direction in an AC circuit. The direction reversal is the defining characteristic of alternating current." },
+            { "answer": "resistance", "explanation": "Resistance does not alternate. The current alternates in direction because the emf alternates." },
+            { "answer": "power", "explanation": "While power does vary, the current specifically alternates in direction. This is what makes it alternating current." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Calculate the current for the following scenario.",
+      "sentence": "An AC generator with an average emf of 48 V is connected to a 12 Ω resistor. The average current is {{blank:1}} A.",
+      "blanks": {
+        "1": {
+          "correct": "4.0",
+          "correctExplanation": "I = ε / R = 48 / 12 = 4.0 A.",
+          "distractors": [
+            { "answer": "576", "explanation": "This results from multiplying 48 × 12 = 576. The correct operation is division: 48 / 12 = 4.0 A." },
+            { "answer": "0.25", "explanation": "This results from dividing R by ε (12/48 = 0.25). The correct formula is I = ε / R = 48/12 = 4.0 A." },
+            { "answer": "60", "explanation": "This results from adding 48 + 12 = 60. The correct calculation is I = ε / R = 48 / 12 = 4.0 A." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "tf",
+      "question": "The induced current in a circuit connected to an AC generator can be calculated using Ohm's law: I = ε / R.",
+      "correct": "True",
+      "correctExplanation": "This is correct. Ohm's law applies to AC generator circuits. The current equals the emf divided by the resistance of the external circuit.",
+      "distractors": [
+        { "answer": "False", "explanation": "Ohm's law does apply to AC generator circuits. The current is calculated as I = ε / R, where ε is the induced emf and R is the circuit resistance." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "The current from an AC generator flows in a constant direction because the generator produces a steady emf.",
+      "correct": "False",
+      "correctExplanation": "An AC generator produces an emf that alternates in direction. Consequently, the current also alternates in direction at the same frequency as the rotation. This is why it is called alternating current.",
+      "distractors": [
+        { "answer": "True", "explanation": "An AC generator does not produce a steady, unidirectional emf. The emf alternates sinusoidally, and the current alternates in direction accordingly." }
+      ]
+    }
+  ],
+
+  "toLevel3": [
+    {
+      "type": "mc",
+      "question": "Which one of the following best describes the multi-step process for calculating the current delivered by an AC generator to an external resistor?",
+      "correct": "First calculate the average emf using Faraday's law, then use Ohm's law (I = ε / R) to find the average current.",
+      "correctExplanation": "The full circuit analysis requires chaining two equations: Faraday's law gives the emf (|ε_avg| = NΔΦ/Δt), and then Ohm's law gives the current (I = ε / R). This two-step process is a required skill in VCE Physics.",
+      "distractors": [
+        { "answer": "Calculate the current directly from Faraday's law without needing Ohm's law.", "explanation": "Faraday's law gives the emf, not the current. A second step using Ohm's law is needed to find the current." },
+        { "answer": "Calculate the resistance from Faraday's law, then divide it by the emf to find the current.", "explanation": "Faraday's law does not give resistance. The correct sequence is: Faraday's law for emf, then Ohm's law for current." },
+        { "answer": "Calculate the power using P = IV, then divide by the voltage to find the current.", "explanation": "This approach requires knowing the current already (to find power), making it circular. The correct method uses Faraday's law for emf, then Ohm's law for current." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An AC generator is connected to a resistor. If the resistance of the external circuit is doubled while the emf remains unchanged, which one of the following describes the effect on the current?",
+      "correct": "The current is halved.",
+      "correctExplanation": "From I = ε / R, if R is doubled and ε is unchanged, the new current is ε / (2R) = I/2. The current is inversely proportional to resistance.",
+      "distractors": [
+        { "answer": "The current is doubled.", "explanation": "Increasing resistance decreases current, not increases it. Current is inversely proportional to resistance: I = ε / R." },
+        { "answer": "The current remains unchanged.", "explanation": "Current depends on resistance through Ohm's law. Doubling R halves the current." },
+        { "answer": "The current is reduced to one quarter.", "explanation": "The current is inversely proportional to R, not to R². Doubling R halves the current." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which one of the following best explains why using the average emf in Ohm's law gives the average current rather than the peak current?",
+      "correct": "Ohm's law relates the emf to the current linearly, so the average of the emf corresponds directly to the average of the current.",
+      "correctExplanation": "Since I = ε / R with constant R, the relationship between emf and current is linear. Therefore, the average of ε divided by R gives the average of I. Using the peak emf would give the peak current instead.",
+      "distractors": [
+        { "answer": "The peak current is always exactly twice the average current, so dividing by 2 converts between them.", "explanation": "The relationship between peak and average values depends on the waveform shape and is not simply a factor of 2. The point is that average emf gives average current directly." },
+        { "answer": "Ohm's law only applies to average values, not instantaneous or peak values.", "explanation": "Ohm's law applies at every instant: the instantaneous current equals the instantaneous emf divided by R. Using average emf gives average current; using peak emf gives peak current." },
+        { "answer": "The resistance changes when peak values are used, so only average values give correct results.", "explanation": "The resistance of a resistor is constant regardless of whether average or peak values are used. Ohm's law works with any corresponding pair of values." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An AC generator produces a sinusoidal emf with a peak value of ε₀. The generator is connected to a resistance R. Which one of the following correctly expresses the peak current?",
+      "correct": "I₀ = ε₀ / R",
+      "correctExplanation": "Ohm's law applies at every instant, including the peak. The peak current is the peak emf divided by the resistance: I₀ = ε₀ / R.",
+      "distractors": [
+        { "answer": "I₀ = ε₀ × R", "explanation": "Multiplying emf by resistance does not give current. Ohm's law states I = ε / R." },
+        { "answer": "I₀ = R / ε₀", "explanation": "This inverts the formula. The correct relationship is I₀ = ε₀ / R, not R / ε₀." },
+        { "answer": "I₀ = ε₀ / (2R)", "explanation": "There is no factor of 2 in Ohm's law. The peak current is simply ε₀ / R." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which one of the following best explains why the current from an AC generator alternates at the same frequency as the emf?",
+      "correct": "Because I = ε / R and R is constant, the current follows the same time variation as the emf, changing direction whenever the emf changes direction.",
+      "correctExplanation": "With constant resistance, the current is directly proportional to the emf at every instant. When the emf reverses direction (changes sign), the current also reverses direction, maintaining the same frequency.",
+      "distractors": [
+        { "answer": "The resistance alternates at the same frequency, which causes the current to alternate.", "explanation": "The resistance of a resistor is constant and does not alternate. The current alternates because the emf alternates." },
+        { "answer": "The magnetic field in the generator alternates, which independently causes the current to alternate.", "explanation": "The magnetic field is constant. The emf alternates due to the rotation of the coil, and the current follows via Ohm's law." },
+        { "answer": "The current alternates at twice the frequency of the emf because each emf cycle produces two current peaks.", "explanation": "The current alternates at exactly the same frequency as the emf. Each emf cycle produces one positive and one negative current peak, giving the same frequency." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Yara calculates the average emf of her AC generator as 90 V. The generator is connected to a 15 Ω resistor. Which one of the following correctly determines the average power dissipated in the resistor?",
+      "correct": "First find I = 90 / 15 = 6.0 A, then P = I × ε = 6.0 × 90 = 540 W.",
+      "correctExplanation": "The average current is I = ε / R = 90/15 = 6.0 A. The average power can be found from P = εI = 90 × 6.0 = 540 W. This demonstrates the chain: emf → current → power.",
+      "distractors": [
+        { "answer": "P = ε / R = 90 / 15 = 6.0 W.", "explanation": "This calculates the current (6.0 A), not the power. Power requires an additional step such as P = εI or P = I²R." },
+        { "answer": "P = ε × R = 90 × 15 = 1350 W.", "explanation": "Power is not emf multiplied by resistance. The correct approach is P = ε²/R = 90²/15 = 540 W, or equivalently P = εI." },
+        { "answer": "P = ε + R = 90 + 15 = 105 W.", "explanation": "Power cannot be found by adding emf and resistance. The correct approach uses P = εI = 90 × 6.0 = 540 W." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the multi-step calculation for an AC generator circuit.",
+      "sentence": "To find the current from an AC generator, first calculate the emf using {{blank:1}}, then apply Ohm's law to find the current.",
+      "blanks": {
+        "1": {
+          "correct": "Faraday's law",
+          "correctExplanation": "The average emf is calculated using Faraday's law (|ε_avg| = NΔΦ/Δt). This emf is then used in Ohm's law (I = ε/R) to find the current.",
+          "distractors": [
+            { "answer": "Ohm's law", "explanation": "Ohm's law is used in the second step to find the current. The first step requires Faraday's law to find the emf." },
+            { "answer": "Lenz's law", "explanation": "Lenz's law determines the direction of the induced emf, not its magnitude. Faraday's law is used to calculate the emf." },
+            { "answer": "Newton's law", "explanation": "Newton's laws describe mechanical forces and are not used to calculate emf. Faraday's law is the correct equation." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "An AC generator produces an average emf of 60 V and is connected to a 20 Ω resistor.",
+      "sentence": "The average current in the circuit is {{blank:1}} A.",
+      "blanks": {
+        "1": {
+          "correct": "3.0",
+          "correctExplanation": "I = ε / R = 60 / 20 = 3.0 A.",
+          "distractors": [
+            { "answer": "1200", "explanation": "This results from multiplying 60 × 20 = 1200. The correct operation is division: I = 60 / 20 = 3.0 A." },
+            { "answer": "0.33", "explanation": "This results from dividing R by ε (20/60 ≈ 0.33). The correct formula is I = ε / R = 60/20 = 3.0 A." },
+            { "answer": "40", "explanation": "This results from subtracting (60 − 20 = 40). The correct calculation is I = ε / R = 60/20 = 3.0 A." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Consider the relationship between the current and the emf of an AC generator.",
+      "sentence": "The current from an AC generator alternates at the {{blank:1}} frequency as the emf because Ohm's law is a linear relationship.",
+      "blanks": {
+        "1": {
+          "correct": "same",
+          "correctExplanation": "Since I = ε / R with constant R, the current varies in direct proportion to the emf. The current alternates at exactly the same frequency as the emf.",
+          "distractors": [
+            { "answer": "double", "explanation": "The current does not alternate at double the frequency. With a constant resistance, the current follows the emf exactly, at the same frequency." },
+            { "answer": "half", "explanation": "The current frequency matches the emf frequency. There is no halving of frequency when applying Ohm's law." },
+            { "answer": "triple", "explanation": "The current alternates at the same frequency as the emf, not triple. Ohm's law preserves the frequency." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "tf",
+      "question": "If the resistance in an AC generator circuit is halved while the emf remains unchanged, the current doubles.",
+      "correct": "True",
+      "correctExplanation": "From I = ε / R, halving R gives I = ε / (R/2) = 2ε/R = 2I. The current doubles when resistance is halved, assuming the emf is unchanged.",
+      "distractors": [
+        { "answer": "False", "explanation": "The statement is correct. Ohm's law shows that I = ε / R, so halving R doubles the current." }
+      ]
+    }
+  ],
+
+  "toLevel4": [
+    {
+      "type": "mc",
+      "question": "Amira's AC generator has a 20-turn coil with dimensions 0.12 m × 0.10 m rotating at 50 Hz in a 1.5 T field. The generator is connected to a 4.0 Ω resistor. Which one of the following is closest to the average current during a quarter turn from maximum flux to zero flux?",
+      "correct": "18 A",
+      "correctExplanation": "A = 0.12 × 0.10 = 0.012 m². Φ_max = 1.5 × 0.012 = 0.018 Wb. Δt = T/4 = 0.005 s. |ε_avg| = 20 × 0.018 / 0.005 = 72 V. I = 72 / 4.0 = 18 A.",
+      "distractors": [
+        { "answer": "72 A", "explanation": "72 V is the emf, not the current. The current is I = ε / R = 72 / 4.0 = 18 A." },
+        { "answer": "4.5 A", "explanation": "This results from using the full period (Δt = 0.02 s) instead of T/4. The correct emf is 72 V, giving I = 18 A." },
+        { "answer": "288 A", "explanation": "This results from multiplying emf by resistance (72 × 4.0 = 288). The correct operation is division: I = 72 / 4.0 = 18 A." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A 50-turn coil with maximum flux 0.024 Wb rotates at 40 Hz in an AC generator connected to a 24 Ω resistor. Which one of the following is closest to the average current during a quarter turn?",
+      "correct": "8.0 A",
+      "correctExplanation": "Δt = 1/(4 × 40) = 0.00625 s. |ε_avg| = 50 × 0.024 / 0.00625 = 192 V. I = 192 / 24 = 8.0 A.",
+      "distractors": [
+        { "answer": "192 A", "explanation": "192 V is the emf, not the current. The current is I = ε / R = 192 / 24 = 8.0 A." },
+        { "answer": "2.0 A", "explanation": "This results from using the full period instead of T/4 for the emf calculation, giving an emf of 48 V and I = 48/24 = 2.0 A." },
+        { "answer": "4608 A", "explanation": "This results from multiplying emf by resistance. The correct operation is division: I = 192 / 24 = 8.0 A." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Dev's AC generator produces an average emf of 216 V during a quarter turn. It is connected to a 36 Ω resistor. Which one of the following is closest to the average current?",
+      "correct": "6.0 A",
+      "correctExplanation": "I = ε / R = 216 / 36 = 6.0 A.",
+      "distractors": [
+        { "answer": "0.17 A", "explanation": "This results from dividing R by ε (36/216 = 0.167). The correct formula is I = ε / R = 216/36 = 6.0 A." },
+        { "answer": "7776 A", "explanation": "This results from multiplying ε × R = 216 × 36 = 7776. The correct operation is division." },
+        { "answer": "180 A", "explanation": "This results from subtracting R from ε (216 − 36 = 180). The correct calculation is I = ε / R = 6.0 A." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An AC generator is connected to a 10 Ω resistor and produces an average current of 5.0 A during a quarter turn. Which one of the following is closest to the average emf?",
+      "correct": "50 V",
+      "correctExplanation": "Rearranging Ohm's law: ε = IR = 5.0 × 10 = 50 V.",
+      "distractors": [
+        { "answer": "2.0 V", "explanation": "This results from dividing R by I (10/5.0 = 2.0). The correct formula is ε = IR = 5.0 × 10 = 50 V." },
+        { "answer": "0.50 V", "explanation": "This results from dividing I by R (5.0/10 = 0.5). The correct formula is ε = IR = 50 V." },
+        { "answer": "15 V", "explanation": "This results from adding I + R = 5.0 + 10 = 15. The correct calculation is ε = IR = 50 V." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Priya's AC generator has a 100-turn coil with area 0.002 m² in a 2.5 T field at 50 Hz, connected to a 5.0 Ω resistor. Which one of the following is closest to the average current during a quarter turn?",
+      "correct": "20 A",
+      "correctExplanation": "Φ_max = 2.5 × 0.002 = 0.005 Wb. Δt = 0.005 s. |ε_avg| = 100 × 0.005 / 0.005 = 100 V. I = 100 / 5.0 = 20 A.",
+      "distractors": [
+        { "answer": "100 A", "explanation": "100 V is the emf, not the current. The current is I = 100 / 5.0 = 20 A." },
+        { "answer": "5.0 A", "explanation": "This results from using the full period instead of T/4, giving an emf of 25 V and I = 25/5.0 = 5.0 A." },
+        { "answer": "500 A", "explanation": "This results from multiplying ε × R = 100 × 5.0 = 500. The correct operation is division: I = 100/5.0 = 20 A." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An AC generator produces an average emf of 54 V during a quarter turn and is connected to a 9.0 Ω resistor. Which one of the following is closest to the average power dissipated in the resistor?",
+      "correct": "324 W",
+      "correctExplanation": "I = ε / R = 54 / 9.0 = 6.0 A. P = εI = 54 × 6.0 = 324 W. Alternatively, P = ε²/R = 54²/9.0 = 2916/9.0 = 324 W.",
+      "distractors": [
+        { "answer": "6.0 W", "explanation": "6.0 A is the current, not the power. Power requires P = εI = 54 × 6.0 = 324 W." },
+        { "answer": "54 W", "explanation": "54 V is the emf, not the power. Power = εI = 54 × 6.0 = 324 W." },
+        { "answer": "486 W", "explanation": "This results from P = ε × R = 54 × 9.0 = 486, which is not a valid power formula. The correct value is P = ε²/R = 324 W." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Kai's AC generator produces an average emf of 80 V during a quarter turn. He needs an average current of 10 A. Which one of the following is closest to the resistance he should use?",
+      "correct": "8.0 Ω",
+      "correctExplanation": "Rearranging Ohm's law: R = ε / I = 80 / 10 = 8.0 Ω.",
+      "distractors": [
+        { "answer": "800 Ω", "explanation": "This results from multiplying ε × I = 80 × 10 = 800. The correct operation is R = ε / I = 80/10 = 8.0 Ω." },
+        { "answer": "0.125 Ω", "explanation": "This results from dividing I by ε (10/80 = 0.125). The correct formula is R = ε / I = 8.0 Ω." },
+        { "answer": "70 Ω", "explanation": "This results from subtracting I from ε (80 − 10 = 70). The correct calculation is R = ε / I = 8.0 Ω." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "A 30-turn coil with Φ_max = 0.016 Wb rotates at 50 Hz, connected to a 6.0 Ω resistor. Calculate the average current during a quarter turn.",
+      "sentence": "The average emf is 96 V, so the average current is {{blank:1}} A.",
+      "blanks": {
+        "1": {
+          "correct": "16",
+          "correctExplanation": "|ε_avg| = 30 × 0.016 / 0.005 = 96 V. I = ε / R = 96 / 6.0 = 16 A.",
+          "distractors": [
+            { "answer": "96", "explanation": "96 is the emf in volts, not the current. The current is I = 96 / 6.0 = 16 A." },
+            { "answer": "576", "explanation": "This results from multiplying ε × R = 96 × 6.0 = 576. The correct operation is division: I = 96/6.0 = 16 A." },
+            { "answer": "4.0", "explanation": "This results from using the full period for the emf calculation (giving 24 V), then I = 24/6.0 = 4.0 A. The correct emf for a quarter turn is 96 V." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "An AC generator produces an average emf of 150 V and delivers an average current of 6.0 A. Calculate the resistance.",
+      "sentence": "Using Ohm's law, the resistance of the external circuit is {{blank:1}} Ω.",
+      "blanks": {
+        "1": {
+          "correct": "25",
+          "correctExplanation": "R = ε / I = 150 / 6.0 = 25 Ω.",
+          "distractors": [
+            { "answer": "900", "explanation": "This results from multiplying ε × I = 150 × 6.0 = 900. The correct formula is R = ε / I = 25 Ω." },
+            { "answer": "0.040", "explanation": "This results from dividing I by ε (6.0/150 = 0.04). The correct formula is R = ε / I = 150/6.0 = 25 Ω." },
+            { "answer": "156", "explanation": "This results from adding ε + I = 150 + 6 = 156. The correct calculation is R = ε / I = 25 Ω." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "An AC generator connected to a 12 Ω resistor produces an average emf of 60 V during a quarter turn. Calculate the average power.",
+      "sentence": "The average current is 5.0 A, so the average power dissipated in the resistor is {{blank:1}} W.",
+      "blanks": {
+        "1": {
+          "correct": "300",
+          "correctExplanation": "I = ε / R = 60 / 12 = 5.0 A. P = εI = 60 × 5.0 = 300 W.",
+          "distractors": [
+            { "answer": "5.0", "explanation": "5.0 A is the current, not the power. Power = εI = 60 × 5.0 = 300 W." },
+            { "answer": "60", "explanation": "60 V is the emf, not the power. Power = εI = 60 × 5.0 = 300 W." },
+            { "answer": "720", "explanation": "This results from P = ε × R = 60 × 12 = 720, which is not a correct power formula. P = ε²/R = 3600/12 = 300 W." }
+          ]
+        }
+      }
+    }
+  ],
+
+  "toLevel5": [
+    {
+      "type": "mc",
+      "question": "Generator A has 20 turns, area 0.020 m², B = 2.0 T, f = 50 Hz, connected to R = 8.0 Ω. Generator B has 40 turns, area 0.010 m², B = 1.5 T, f = 50 Hz, connected to R = 10 Ω. Which one of the following correctly compares the average current during a quarter turn?",
+      "correct": "Generator A delivers 20 A and Generator B delivers 12 A, so Generator A delivers more current.",
+      "correctExplanation": "Gen A: Φ_max = 2.0 × 0.020 = 0.04 Wb, |ε| = 20 × 0.04 / 0.005 = 160 V, I = 160/8.0 = 20 A. Gen B: Φ_max = 1.5 × 0.010 = 0.015 Wb, |ε| = 40 × 0.015 / 0.005 = 120 V, I = 120/10 = 12 A.",
+      "distractors": [
+        { "answer": "Generator B delivers more current because it has more turns.", "explanation": "More turns increase the emf, but Generator B also has a smaller flux and larger resistance. Generator A delivers 20 A compared to 12 A from Generator B." },
+        { "answer": "Both generators deliver the same current because they rotate at the same frequency.", "explanation": "Frequency alone does not determine the current. The current depends on the emf (from N, Φ, and f) and the resistance." },
+        { "answer": "Generator B delivers 20 A and Generator A delivers 12 A, so Generator B delivers more current.", "explanation": "The values are reversed. Generator A delivers 20 A and Generator B delivers 12 A." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student calculates the average current from an AC generator as follows: 'ε = 30 × 0.024 / 0.02 = 36 V, then I = 36 / 12 = 3.0 A.' The coil has 30 turns, Φ_max = 0.024 Wb, f = 50 Hz, and R = 12 Ω. Which one of the following correctly identifies the error and the correct current?",
+      "correct": "The student used the full period (0.02 s) instead of T/4 (0.005 s). The correct emf is 144 V and the correct current is 12 A.",
+      "correctExplanation": "Δt = T/4 = 0.005 s, not T = 0.02 s. |ε_avg| = 30 × 0.024 / 0.005 = 144 V. I = 144 / 12 = 12 A. The student's current was four times too small.",
+      "distractors": [
+        { "answer": "The student used the wrong resistance. The correct current is 3.0 A.", "explanation": "The resistance value of 12 Ω was used correctly. The error is in the time interval for the emf calculation: T was used instead of T/4." },
+        { "answer": "The student forgot to include the number of turns. The correct current is 0.40 A.", "explanation": "The student did include N = 30. The error is in using the full period instead of the quarter period for the emf calculation." },
+        { "answer": "The student's calculation is entirely correct and the current is 3.0 A.", "explanation": "The calculation has an error in the time interval. At 50 Hz, the quarter-turn time is 0.005 s, not 0.02 s, giving a much larger emf and current." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An AC generator with an average emf of 120 V is connected to two resistors in series: R₁ = 8.0 Ω and R₂ = 4.0 Ω. Which one of the following is closest to the average current in the circuit?",
+      "correct": "10 A",
+      "correctExplanation": "For resistors in series, R_total = R₁ + R₂ = 8.0 + 4.0 = 12 Ω. I = ε / R_total = 120 / 12 = 10 A.",
+      "distractors": [
+        { "answer": "15 A", "explanation": "This results from using only R₁ = 8.0 Ω (I = 120/8.0 = 15). In a series circuit, the total resistance is R₁ + R₂ = 12 Ω." },
+        { "answer": "30 A", "explanation": "This results from using only R₂ = 4.0 Ω (I = 120/4.0 = 30). The total series resistance is 12 Ω." },
+        { "answer": "45 A", "explanation": "This results from adding the individual currents (15 + 30 = 45), which is incorrect for a series circuit where the same current flows through both resistors." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Mei's AC generator has 20 turns, area 0.010 m², B = 2.0 T, rotating at 40 Hz. She connects it to a 4.0 Ω resistor. She then doubles the frequency to 80 Hz. Which one of the following correctly describes the effect on the average current during a quarter turn?",
+      "correct": "The average current doubles from 16 A to 32 A because doubling the frequency doubles the emf.",
+      "correctExplanation": "Φ_max = 2.0 × 0.010 = 0.02 Wb. At 40 Hz: Δt = 1/(4 × 40) = 0.00625 s, |ε| = 20 × 0.02/0.00625 = 64 V, I = 64/4.0 = 16 A. At 80 Hz: Δt = 0.003125 s, |ε| = 20 × 0.02/0.003125 = 128 V, I = 128/4.0 = 32 A. The current doubles from 16 A to 32 A.",
+      "distractors": [
+        { "answer": "The current remains unchanged because the maximum flux does not change.", "explanation": "The maximum flux is unchanged, but the shorter quarter-turn time at higher frequency increases the rate of flux change, doubling the emf and the current." },
+        { "answer": "The current is halved because the time interval for each quarter turn is halved.", "explanation": "A shorter time interval increases the emf (ε = NΦ/Δt), which increases the current. The current doubles, not halves." },
+        { "answer": "The current quadruples because both frequency and emf are doubled.", "explanation": "Only the emf doubles (not the frequency and emf independently). Since I = ε/R, the current doubles." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An engineer needs an AC generator to deliver an average current of 25 A to a 8.0 Ω load during a quarter turn at 50 Hz. The coil has 50 turns and area 0.010 m². Which one of the following is closest to the minimum magnetic field strength required?",
+      "correct": "2.0 T",
+      "correctExplanation": "Required emf: ε = IR = 25 × 8.0 = 200 V. Δt = T/4 = 0.005 s. ε = NΦ_max/Δt = NBA/Δt, so B = εΔt/(NA) = 200 × 0.005/(50 × 0.010) = 1.0/0.50 = 2.0 T.",
+      "distractors": [
+        { "answer": "0.50 T", "explanation": "At B = 0.50 T: Φ_max = 0.005, ε = 50 × 0.005/0.005 = 50 V, I = 50/8.0 = 6.25 A. This is well below the required 25 A." },
+        { "answer": "1.0 T", "explanation": "At B = 1.0 T: Φ_max = 0.01, ε = 50 × 0.01/0.005 = 100 V, I = 100/8.0 = 12.5 A. This is below the required 25 A." },
+        { "answer": "4.0 T", "explanation": "This is more than needed. B = 2.0 T already produces the required 25 A. Using 4.0 T would give 50 A." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Two identical AC generators each produce an average emf of 100 V during a quarter turn. Generator X is connected to a 5.0 Ω resistor and Generator Y is connected to a 20 Ω resistor. Which one of the following correctly compares the average power delivered?",
+      "correct": "Generator X delivers 2000 W and Generator Y delivers 500 W, so Generator X delivers four times more power.",
+      "correctExplanation": "Gen X: I = 100/5.0 = 20 A, P = εI = 100 × 20 = 2000 W. Gen Y: I = 100/20 = 5.0 A, P = εI = 100 × 5.0 = 500 W. The ratio is 2000/500 = 4.",
+      "distractors": [
+        { "answer": "Both generators deliver the same power because they produce the same emf.", "explanation": "Same emf does not mean same power. Power depends on both emf and current. The lower resistance allows more current and therefore more power." },
+        { "answer": "Generator Y delivers more power because a larger resistance dissipates more energy.", "explanation": "For a given emf, a larger resistance reduces the current and therefore the power. P = ε²/R is inversely proportional to R." },
+        { "answer": "Generator X delivers 500 W and Generator Y delivers 2000 W.", "explanation": "The values are reversed. The lower resistance (X) gives higher current and higher power." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Chen's AC generator has 60 turns, area 0.008 m², B = 2.5 T, f = 50 Hz, connected to a 12 Ω resistor. He modifies it by doubling the number of turns to 120 and halving the area to 0.004 m², keeping B, f, and R unchanged. Which one of the following correctly describes the effect on the average current?",
+      "correct": "The average current remains unchanged because the product N × A is the same, so the emf is unchanged.",
+      "correctExplanation": "Original: N × A = 60 × 0.008 = 0.48. Modified: N × A = 120 × 0.004 = 0.48. Since ε = NBA/Δt, the emf is unchanged, and therefore the current I = ε/R is also unchanged.",
+      "distractors": [
+        { "answer": "The current doubles because the number of turns doubles.", "explanation": "Doubling turns doubles one factor, but halving the area halves the flux. The product N × A is unchanged, so the emf and current are unchanged." },
+        { "answer": "The current halves because the area halves.", "explanation": "Halving the area is compensated by doubling the turns. The product N × A determines the emf, and this product is unchanged." },
+        { "answer": "The current increases by a factor of 4 because N² appears in the emf formula.", "explanation": "The emf formula does not contain N². The emf is proportional to N × Φ_max = N × BA, which is linear in both N and A." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student connects an AC generator to a variable resistor and measures the average current for several resistance values. Which one of the following graphs correctly shows the relationship between average current I and resistance R?",
+      "correct": "A hyperbolic curve showing I decreasing as R increases, approaching zero for very large R.",
+      "correctExplanation": "From I = ε/R (with constant ε), the current is inversely proportional to resistance. This produces a hyperbolic (1/x) curve where I decreases as R increases but never reaches zero.",
+      "distractors": [
+        { "answer": "A straight line with positive slope, showing I increasing linearly with R.", "explanation": "Current decreases as resistance increases, not the opposite. The relationship is I = ε/R, which is an inverse proportion." },
+        { "answer": "A horizontal line, showing I is constant regardless of R.", "explanation": "Current depends on resistance through Ohm's law. Changing R changes I. The relationship is I = ε/R." },
+        { "answer": "A straight line with negative slope, showing I decreasing linearly with R.", "explanation": "The relationship is not linear. I = ε/R is an inverse proportion (hyperbolic curve), not a straight line." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "A 40-turn coil with area 0.015 m² in a 1.8 T field rotates at 50 Hz, connected to a 12 Ω resistor. Complete the multi-step calculation.",
+      "sentence": "The average emf during a quarter turn is 216 V, so the average current is {{blank:1}} A.",
+      "blanks": {
+        "1": {
+          "correct": "18",
+          "correctExplanation": "Φ_max = 1.8 × 0.015 = 0.027 Wb. Δt = 0.005 s. |ε| = 40 × 0.027/0.005 = 216 V. I = 216/12 = 18 A.",
+          "distractors": [
+            { "answer": "216", "explanation": "216 is the emf in volts, not the current. The current is I = 216/12 = 18 A." },
+            { "answer": "2592", "explanation": "This results from multiplying ε × R = 216 × 12. The correct operation is division: I = 216/12 = 18 A." },
+            { "answer": "4.5", "explanation": "This results from using the full period for the emf calculation (giving 54 V, then 54/12 = 4.5 A). The correct emf for a quarter turn is 216 V." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "An AC generator delivers an average current of 15 A to a 6.0 Ω resistor during a quarter turn. Determine the average power dissipated.",
+      "sentence": "The average power dissipated in the resistor is {{blank:1}} W.",
+      "blanks": {
+        "1": {
+          "correct": "1350",
+          "correctExplanation": "P = I²R = 15² × 6.0 = 225 × 6.0 = 1350 W. Alternatively, ε = IR = 15 × 6.0 = 90 V, then P = εI = 90 × 15 = 1350 W.",
+          "distractors": [
+            { "answer": "90", "explanation": "90 V is the emf (ε = IR = 15 × 6.0 = 90 V). The power is P = εI = 90 × 15 = 1350 W." },
+            { "answer": "2.5", "explanation": "This results from dividing I by R (15/6.0 = 2.5). The power is P = I²R = 1350 W." },
+            { "answer": "21", "explanation": "This results from adding I + R = 15 + 6 = 21. The power is P = I²R = 225 × 6.0 = 1350 W." }
+          ]
+        }
+      }
+    }
+  ]
+}

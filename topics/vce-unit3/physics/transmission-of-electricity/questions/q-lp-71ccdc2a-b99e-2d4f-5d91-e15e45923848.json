@@ -1,0 +1,543 @@
+{
+  "_link": {
+    "uuid": "lp-71ccdc2a-b99e-2d4f-5d91-e15e45923848",
+    "version": 1,
+    "contentHash": "hash-c926428f",
+    "title": "I can calculate rms current from peak current using Irms = Ip / √2",
+    "generatedAt": "2026-03-09T00:00:00Z"
+  },
+  "toLevel2": [
+    {
+      "type": "mc",
+      "question": "Which one of the following is the correct formula for calculating the rms current from the peak current?",
+      "correct": "Irms = Ip / √2",
+      "correctExplanation": "The rms current is found by dividing the peak current by √2. This gives the equivalent DC current that would deliver the same power to a resistive load.",
+      "distractors": [
+        { "answer": "Irms = Ip × √2", "explanation": "Multiplying by √2 would give a value larger than the peak current, which is incorrect." },
+        { "answer": "Irms = Ip / 2", "explanation": "Dividing by 2 gives half the peak current, not the rms value. The correct divisor is √2." },
+        { "answer": "Irms = 2 × Ip", "explanation": "Doubling the peak current gives the peak-to-peak value, not the rms current." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An AC circuit has a peak current of 10.0 A. Which one of the following is closest to the rms current?",
+      "correct": "7.07 A",
+      "correctExplanation": "Irms = Ip / √2 = 10.0 / 1.414 = 7.07 A.",
+      "distractors": [
+        { "answer": "5.00 A", "explanation": "This is the peak current divided by 2, not by √2." },
+        { "answer": "14.1 A", "explanation": "This is the peak current multiplied by √2, not divided." },
+        { "answer": "10.0 A", "explanation": "This is the peak current itself. The rms value is always less than the peak." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which one of the following best describes what 'rms' stands for in the context of AC current?",
+      "correct": "Root mean square",
+      "correctExplanation": "Rms stands for root mean square. It is a statistical measure that gives the effective value of the AC current.",
+      "distractors": [
+        { "answer": "Rate of mean supply", "explanation": "This is not a recognised electrical term." },
+        { "answer": "Relative maximum signal", "explanation": "This is not a recognised electrical term." },
+        { "answer": "Ratio of measured samples", "explanation": "This is not a recognised electrical term." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An AC supply has a peak current of 4.0 A. Which one of the following is closest to the rms current?",
+      "correct": "2.83 A",
+      "correctExplanation": "Irms = Ip / √2 = 4.0 / 1.414 = 2.83 A.",
+      "distractors": [
+        { "answer": "2.00 A", "explanation": "This is the peak current divided by 2, not by √2." },
+        { "answer": "5.66 A", "explanation": "This is the peak current multiplied by √2, not divided." },
+        { "answer": "4.00 A", "explanation": "This is the peak current. The rms value is always less than the peak." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which one of the following correctly describes the relationship between rms current and peak current for an AC supply?",
+      "correct": "Irms is less than Ip by a factor of √2",
+      "correctExplanation": "The rms current equals the peak current divided by √2, so Irms is always smaller than Ip by this factor.",
+      "distractors": [
+        { "answer": "Irms is greater than Ip by a factor of √2", "explanation": "The rms current is less than the peak current, not greater." },
+        { "answer": "Irms is less than Ip by a factor of 2", "explanation": "The correct factor is √2, not 2." },
+        { "answer": "Irms is always equal to Ip for all circuits", "explanation": "Irms and Ip are only equal for a DC supply. For AC, Irms is always less than Ip." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "The rms current of an AC supply is found by dividing the peak current by √2.",
+      "correct": "True",
+      "correctExplanation": "By definition, Irms = Ip / √2. This gives the effective current equivalent to a DC value for power calculations.",
+      "distractors": [
+        { "answer": "False", "explanation": "The statement is correct. Irms = Ip / √2 is the standard formula." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "The rms current is always greater than the peak current in an AC circuit.",
+      "correct": "False",
+      "correctExplanation": "The rms current is always less than the peak current because Irms = Ip / √2, and dividing by √2 reduces the value.",
+      "distractors": [
+        { "answer": "True", "explanation": "Dividing the peak current by √2 always gives a smaller value, so the rms current is less than the peak." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the statement about the rms current formula.",
+      "sentence": "The formula relating rms current to peak current is Irms = {{blank:1}} / √2.",
+      "blanks": {
+        "1": {
+          "correct": "Ip",
+          "correctExplanation": "The rms current is calculated by dividing the peak current (Ip) by √2.",
+          "distractors": [
+            { "answer": "Irms", "explanation": "Irms is the result of the formula, not the quantity being divided." },
+            { "answer": "Vp", "explanation": "Vp is the peak voltage. The formula for rms current uses peak current, Ip." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the statement about the meaning of rms current.",
+      "sentence": "The rms current is the equivalent {{blank:1}} current that would deliver the same power to a resistive load.",
+      "blanks": {
+        "1": {
+          "correct": "DC",
+          "correctExplanation": "The rms value of an AC current is defined as the DC current that would produce the same heating effect in a resistor.",
+          "distractors": [
+            { "answer": "AC", "explanation": "The rms value is compared to a DC equivalent, not another AC value." },
+            { "answer": "peak", "explanation": "The peak current is the maximum instantaneous value, not the equivalent steady current." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Calculate the rms current for the given AC supply.",
+      "sentence": "An AC circuit has a peak current of 6.0 A. The rms current is closest to {{blank:1}} A.",
+      "blanks": {
+        "1": {
+          "correct": "4.24",
+          "correctExplanation": "Irms = Ip / √2 = 6.0 / 1.414 = 4.24 A.",
+          "distractors": [
+            { "answer": "3.00", "explanation": "This is the peak current divided by 2, not by √2." },
+            { "answer": "8.49", "explanation": "This is the peak current multiplied by √2, not divided." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "mc",
+      "question": "A student measures the peak current of an AC supply to be 8.0 A. Which one of the following is closest to the rms current?",
+      "correct": "5.66 A",
+      "correctExplanation": "Irms = Ip / √2 = 8.0 / 1.414 = 5.66 A.",
+      "distractors": [
+        { "answer": "4.00 A", "explanation": "This is the peak current divided by 2, not by √2." },
+        { "answer": "11.3 A", "explanation": "This is the peak current multiplied by √2, not divided." },
+        { "answer": "8.00 A", "explanation": "This is the peak current. The rms value is always less than the peak." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An AC ammeter reads 7.07 A. Which one of the following is closest to the peak current of the supply?",
+      "correct": "10.0 A",
+      "correctExplanation": "An AC ammeter reads the rms current. Ip = Irms × √2 = 7.07 × 1.414 = 10.0 A.",
+      "distractors": [
+        { "answer": "5.00 A", "explanation": "This is the rms current divided by √2, which gives a value smaller than Irms." },
+        { "answer": "7.07 A", "explanation": "This is the rms current itself, not the peak." },
+        { "answer": "14.1 A", "explanation": "This is twice the rms current, not the peak. The correct multiplier is √2." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which one of the following best explains why rms current is used to rate AC supplies rather than peak current?",
+      "correct": "It gives the equivalent DC current for power calculations",
+      "correctExplanation": "The rms current is the DC current that would deliver the same average power to a resistive load, making it the most useful value for practical applications.",
+      "distractors": [
+        { "answer": "It represents the maximum current flowing through the circuit", "explanation": "The maximum current is the peak current, not the rms current." },
+        { "answer": "It is always exactly half of the peak current in all circuits", "explanation": "The rms current is Ip / √2, not Ip / 2." },
+        { "answer": "It gives the average current value over one complete AC cycle", "explanation": "The average value of a sinusoidal AC current over a full cycle is zero. Rms is not the same as the average." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An electric heater draws a peak current of 12.0 A from a 50 Hz AC supply. Which one of the following is closest to the rms current through the heater?",
+      "correct": "8.49 A",
+      "correctExplanation": "Irms = Ip / √2 = 12.0 / 1.414 = 8.49 A. The frequency does not affect the rms-to-peak ratio.",
+      "distractors": [
+        { "answer": "6.00 A", "explanation": "This is the peak current divided by 2, not by √2." },
+        { "answer": "12.0 A", "explanation": "This is the peak current. The rms value is smaller." },
+        { "answer": "17.0 A", "explanation": "This is the peak current multiplied by √2, not divided." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A laboratory oscilloscope shows that an AC current has a peak value of 3.0 A. Which one of the following is closest to the reading that an AC ammeter would display?",
+      "correct": "2.12 A",
+      "correctExplanation": "An AC ammeter displays the rms current. Irms = 3.0 / √2 = 3.0 / 1.414 = 2.12 A.",
+      "distractors": [
+        { "answer": "1.50 A", "explanation": "This is the peak current divided by 2, not by √2." },
+        { "answer": "3.00 A", "explanation": "An ammeter reads the rms value, not the peak value." },
+        { "answer": "4.24 A", "explanation": "This is the peak current multiplied by √2, not divided." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which one of the following pairs correctly matches the rms current to a peak current of 14.0 A?",
+      "correct": "9.90 A",
+      "correctExplanation": "Irms = Ip / √2 = 14.0 / 1.414 = 9.90 A.",
+      "distractors": [
+        { "answer": "7.00 A", "explanation": "This is the peak current divided by 2, not by √2." },
+        { "answer": "14.0 A", "explanation": "This is the peak current itself. The rms value is smaller." },
+        { "answer": "19.8 A", "explanation": "This is the peak current multiplied by √2, not divided." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "An AC ammeter connected in a circuit displays the rms value of the current, not the peak value.",
+      "correct": "True",
+      "correctExplanation": "Standard AC ammeters are calibrated to read rms values. An oscilloscope would be needed to observe the peak current.",
+      "distractors": [
+        { "answer": "False", "explanation": "AC ammeters are designed to read rms values, which represent the effective current for power calculations." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Calculate the rms current from the given peak current.",
+      "sentence": "An AC supply has a peak current of 2.0 A. The rms current is Irms = 2.0 / {{blank:1}} = {{blank:2}} A.",
+      "blanks": {
+        "1": {
+          "correct": "√2",
+          "correctExplanation": "The formula is Irms = Ip / √2, so the divisor is √2.",
+          "distractors": [
+            { "answer": "2", "explanation": "The correct divisor is √2, not 2." },
+            { "answer": "π", "explanation": "The constant π is not used in the rms current formula." }
+          ]
+        },
+        "2": {
+          "correct": "1.41",
+          "correctExplanation": "Irms = 2.0 / 1.414 = 1.41 A.",
+          "distractors": [
+            { "answer": "1.00", "explanation": "This would result from dividing by 2, not by √2." },
+            { "answer": "2.83", "explanation": "This is 2.0 multiplied by √2, not divided." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Determine the peak current from an ammeter reading.",
+      "sentence": "If an AC ammeter reads 4.00 A, the peak current in the circuit is closest to {{blank:1}} A.",
+      "blanks": {
+        "1": {
+          "correct": "5.66",
+          "correctExplanation": "An ammeter reads the rms value. Ip = Irms × √2 = 4.00 × 1.414 = 5.66 A.",
+          "distractors": [
+            { "answer": "2.83", "explanation": "This is the rms current divided by √2, which is incorrect. The peak current is larger than the rms current." },
+            { "answer": "8.00", "explanation": "This is twice the rms current. The correct multiplier is √2, not 2." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the statement about rms and peak current.",
+      "sentence": "The rms current is {{blank:1}} the peak current because it is divided by {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "less than",
+          "correctExplanation": "Dividing the peak current by √2 always gives a smaller value, so Irms is less than Ip.",
+          "distractors": [
+            { "answer": "greater than", "explanation": "Dividing by √2 reduces the value, so Irms is less than Ip." },
+            { "answer": "equal to", "explanation": "Irms and Ip are only equal for DC. For AC, Irms is always less than Ip." }
+          ]
+        },
+        "2": {
+          "correct": "√2",
+          "correctExplanation": "The formula Irms = Ip / √2 uses √2 as the divisor.",
+          "distractors": [
+            { "answer": "2", "explanation": "The correct divisor is √2 ≈ 1.414, not 2." },
+            { "answer": "π", "explanation": "The constant π is not used in this relationship." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "mc",
+      "question": "A technician measures the peak current through a resistor to be 5.0 A using an oscilloscope. The resistor has a resistance of 20 Ω. Which one of the following is closest to the average power dissipated by the resistor?",
+      "correct": "250 W",
+      "correctExplanation": "Irms = 5.0 / √2 = 3.54 A. P = Irms² × R = (3.54)² × 20 = 12.5 × 20 = 250 W.",
+      "distractors": [
+        { "answer": "500 W", "explanation": "This uses the peak current directly in P = I²R, which overestimates the power." },
+        { "answer": "100 W", "explanation": "This would result from using Ip / 2 instead of Ip / √2." },
+        { "answer": "354 W", "explanation": "This does not correctly apply the rms formula to the power calculation." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An AC generator produces a peak current of 20.0 A through a transmission line of resistance 4.0 Ω. Which one of the following is closest to the rms current in the line?",
+      "correct": "14.1 A",
+      "correctExplanation": "Irms = Ip / √2 = 20.0 / 1.414 = 14.1 A.",
+      "distractors": [
+        { "answer": "10.0 A", "explanation": "This is the peak current divided by 2, not by √2." },
+        { "answer": "20.0 A", "explanation": "This is the peak current. The rms value is always less." },
+        { "answer": "28.3 A", "explanation": "This is the peak current multiplied by √2, not divided." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "The peak current through a 50 Ω resistor is 6.0 A. Which one of the following is closest to the average power dissipated by the resistor?",
+      "correct": "900 W",
+      "correctExplanation": "Irms = 6.0 / √2 = 4.24 A. P = Irms² × R = (4.24)² × 50 = 18.0 × 50 = 900 W.",
+      "distractors": [
+        { "answer": "450 W", "explanation": "This would result from an incorrect rms calculation using Ip / 2." },
+        { "answer": "1800 W", "explanation": "This uses the peak current directly in P = I²R, which overestimates the power." },
+        { "answer": "1270 W", "explanation": "This does not correctly apply the rms formula to the power calculation." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A household appliance is rated at an rms current of 2.50 A. Which one of the following is closest to the peak current drawn by the appliance?",
+      "correct": "3.54 A",
+      "correctExplanation": "Ip = Irms × √2 = 2.50 × 1.414 = 3.54 A.",
+      "distractors": [
+        { "answer": "1.77 A", "explanation": "This is the rms current divided by √2, which gives a smaller value, not the peak." },
+        { "answer": "2.50 A", "explanation": "This is the rms current itself. The peak current is larger." },
+        { "answer": "5.00 A", "explanation": "This is twice the rms current. The correct multiplier is √2, not 2." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An oscilloscope trace shows a sinusoidal current with a peak value of 0.80 A through a 100 Ω resistor. Which one of the following is closest to the rms current?",
+      "correct": "0.566 A",
+      "correctExplanation": "Irms = Ip / √2 = 0.80 / 1.414 = 0.566 A.",
+      "distractors": [
+        { "answer": "0.400 A", "explanation": "This is the peak current divided by 2, not by √2." },
+        { "answer": "0.800 A", "explanation": "This is the peak current. The rms value is always less." },
+        { "answer": "1.130 A", "explanation": "This is the peak current multiplied by √2, not divided." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A transformer supplies a secondary peak current of 15.0 A. Which one of the following is closest to the rms current that an ammeter connected to the secondary coil would read?",
+      "correct": "10.6 A",
+      "correctExplanation": "Irms = Ip / √2 = 15.0 / 1.414 = 10.6 A. An ammeter reads the rms value.",
+      "distractors": [
+        { "answer": "7.50 A", "explanation": "This is the peak current divided by 2, not by √2." },
+        { "answer": "15.0 A", "explanation": "This is the peak current. An ammeter reads rms, not peak." },
+        { "answer": "21.2 A", "explanation": "This is the peak current multiplied by √2, not divided." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An AC supply delivers a peak current of 1.5 A to a circuit. Which one of the following is closest to the rms current?",
+      "correct": "1.06 A",
+      "correctExplanation": "Irms = Ip / √2 = 1.5 / 1.414 = 1.06 A.",
+      "distractors": [
+        { "answer": "0.75 A", "explanation": "This is the peak current divided by 2, not by √2." },
+        { "answer": "1.50 A", "explanation": "This is the peak current itself. The rms value is smaller." },
+        { "answer": "2.12 A", "explanation": "This is the peak current multiplied by √2, not divided." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Calculate the rms current and average power for the given circuit.",
+      "sentence": "A peak current of 10.0 A flows through a 5.0 Ω resistor. The rms current is {{blank:1}} A, and the average power dissipated is {{blank:2}} W.",
+      "blanks": {
+        "1": {
+          "correct": "7.07",
+          "correctExplanation": "Irms = Ip / √2 = 10.0 / 1.414 = 7.07 A.",
+          "distractors": [
+            { "answer": "5.00", "explanation": "This is the peak current divided by 2, not by √2." },
+            { "answer": "14.1", "explanation": "This is the peak current multiplied by √2, not divided." }
+          ]
+        },
+        "2": {
+          "correct": "250",
+          "correctExplanation": "P = Irms² × R = (7.07)² × 5.0 = 50.0 × 5.0 = 250 W.",
+          "distractors": [
+            { "answer": "500", "explanation": "This uses the peak current directly, overestimating the power." },
+            { "answer": "125", "explanation": "This incorrectly halves the correct power value." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Determine the peak current from an ammeter reading.",
+      "sentence": "An ammeter reads an rms current of 6.00 A. The peak current is closest to {{blank:1}} A.",
+      "blanks": {
+        "1": {
+          "correct": "8.49",
+          "correctExplanation": "Ip = Irms × √2 = 6.00 × 1.414 = 8.49 A.",
+          "distractors": [
+            { "answer": "4.24", "explanation": "This is the rms current divided by √2, which gives a smaller value." },
+            { "answer": "12.0", "explanation": "This is twice the rms current. The correct multiplier is √2, not 2." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Calculate the rms current from the given peak current.",
+      "sentence": "An AC supply has a peak current of 7.0 A. The rms current is {{blank:1}} A, found by dividing the peak current by {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "4.95",
+          "correctExplanation": "Irms = 7.0 / √2 = 7.0 / 1.414 = 4.95 A.",
+          "distractors": [
+            { "answer": "3.50", "explanation": "This is the peak current divided by 2, not by √2." },
+            { "answer": "9.90", "explanation": "This is the peak current multiplied by √2, not divided." }
+          ]
+        },
+        "2": {
+          "correct": "√2",
+          "correctExplanation": "The formula Irms = Ip / √2 uses √2 ≈ 1.414 as the divisor.",
+          "distractors": [
+            { "answer": "2", "explanation": "The correct divisor is √2, not 2." },
+            { "answer": "π", "explanation": "The constant π is not used in the rms current formula." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "mc",
+      "question": "Two AC supplies deliver current to identical 10 Ω resistors. Supply A has a peak current of 4.0 A and supply B has a peak current of 8.0 A. Which one of the following is closest to the ratio of power dissipated by resistor B to resistor A?",
+      "correct": "4.0",
+      "correctExplanation": "PA = (4.0/√2)² × 10 = 8.0 × 10 = 80 W. PB = (8.0/√2)² × 10 = 32.0 × 10 = 320 W. PB / PA = 320 / 80 = 4.0. Power scales with the square of the current ratio (8.0/4.0)² = 4.0.",
+      "distractors": [
+        { "answer": "2.0", "explanation": "This is the ratio of the peak currents, not the ratio of powers. Power scales with I²." },
+        { "answer": "8.0", "explanation": "This does not correctly apply the squared relationship between current and power." },
+        { "answer": "16", "explanation": "This squares the current ratio twice, which is incorrect." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An engineer measures the peak current in a 240 V rms AC circuit to be 14.1 A. A colleague claims the rms current is 10.0 A. Which one of the following best evaluates this claim?",
+      "correct": "The claim is correct; 14.1 / √2 equals 10.0 A",
+      "correctExplanation": "Irms = 14.1 / √2 = 14.1 / 1.414 = 9.97 ≈ 10.0 A. The colleague's claim is correct.",
+      "distractors": [
+        { "answer": "The claim is incorrect; the rms current is 7.07 A", "explanation": "7.07 A would result from dividing 14.1 by 2, not by √2." },
+        { "answer": "The claim is incorrect; the rms current is 14.1 A", "explanation": "14.1 A is the peak current, not the rms current." },
+        { "answer": "The claim is incorrect; the rms current is 20.0 A", "explanation": "20.0 A would result from multiplying 14.1 by √2, giving a value larger than the peak." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An AC generator produces a peak current of 100 A. The current is transmitted through power lines with a total resistance of 2.0 Ω. Which one of the following is closest to the power lost as heat in the lines?",
+      "correct": "10 kW",
+      "correctExplanation": "Irms = 100 / √2 = 70.7 A. P = Irms² × R = (70.7)² × 2.0 = 5000 × 2.0 = 10 000 W = 10 kW.",
+      "distractors": [
+        { "answer": "20 kW", "explanation": "This uses the peak current directly in P = I²R, which overestimates the power loss." },
+        { "answer": "5.0 kW", "explanation": "This would result from dividing the correct answer by 2, suggesting an error in the rms calculation." },
+        { "answer": "14 kW", "explanation": "This does not correctly apply the rms formula to the power calculation." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student measures the peak-to-peak current of an AC signal to be 16.0 A. Which one of the following is closest to the rms current?",
+      "correct": "5.66 A",
+      "correctExplanation": "The peak current is half the peak-to-peak: Ip = 16.0 / 2 = 8.0 A. Then Irms = 8.0 / √2 = 5.66 A.",
+      "distractors": [
+        { "answer": "8.00 A", "explanation": "This is the peak current, not the rms current." },
+        { "answer": "11.3 A", "explanation": "This is the peak-to-peak divided by √2 without first halving to find the peak." },
+        { "answer": "4.00 A", "explanation": "This is the peak-to-peak divided by 4, which is not the correct method." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A transformer steps down the current from a peak value of 2.0 A in the primary to a peak value of 10.0 A in the secondary. Which one of the following is closest to the rms current in the secondary?",
+      "correct": "7.07 A",
+      "correctExplanation": "The rms secondary current is Irms = Ip / √2 = 10.0 / 1.414 = 7.07 A.",
+      "distractors": [
+        { "answer": "5.00 A", "explanation": "This is the peak secondary current divided by 2, not by √2." },
+        { "answer": "10.0 A", "explanation": "This is the peak secondary current, not the rms value." },
+        { "answer": "14.1 A", "explanation": "This is the peak secondary current multiplied by √2, not divided." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An AC circuit has a peak current of 5.0 A and a resistance of 8.0 Ω. A student incorrectly uses the peak current instead of the rms current to calculate power. Which one of the following is closest to the percentage by which the student's answer exceeds the correct value?",
+      "correct": "100%",
+      "correctExplanation": "Correct power: P = (Ip/√2)² × R = (Ip²/2) × R = 100 W. Student's answer: P = Ip² × R = 200 W. The error is (200 − 100) / 100 × 100% = 100%.",
+      "distractors": [
+        { "answer": "41%", "explanation": "This confuses the percentage with √2 − 1 = 0.414. The power scales with I², so the error is larger." },
+        { "answer": "50%", "explanation": "This underestimates the error. Since power depends on I², using Ip instead of Irms doubles the power, giving a 100% excess." },
+        { "answer": "200%", "explanation": "The student's answer is twice the correct value, which is an excess of 100%, not 200%." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Two identical light globes are connected to separate AC supplies. Supply P has a peak current of 6.0 A and supply Q has an rms current of 6.0 A. Which one of the following best compares the brightness of the two globes?",
+      "correct": "Globe Q is brighter; it has a higher rms current",
+      "correctExplanation": "Globe P: Irms = 6.0 / √2 = 4.24 A. Globe Q: Irms = 6.0 A. Since Q has a higher rms current, it dissipates more power and glows brighter.",
+      "distractors": [
+        { "answer": "Globe P is brighter; it has a higher peak current", "explanation": "Brightness depends on average power, which uses rms current. Globe P has a lower rms current than Q." },
+        { "answer": "Both globes have the same brightness; both have 6.0 A", "explanation": "Globe P has a peak current of 6.0 A, giving an rms of 4.24 A, which is less than Globe Q's 6.0 A rms." },
+        { "answer": "Globe P is brighter; peak current determines the brightness", "explanation": "Average power and brightness depend on rms current, not peak current." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An AC supply with a peak current of 10.0 A is connected to a device. The device is then connected to a DC supply instead. Which one of the following DC currents would deliver the same power to the device?",
+      "correct": "7.07 A",
+      "correctExplanation": "The rms current of the AC supply is Irms = 10.0 / √2 = 7.07 A. By definition, this is the DC current that delivers the same power.",
+      "distractors": [
+        { "answer": "5.00 A", "explanation": "This is the peak current divided by 2, not by √2." },
+        { "answer": "10.0 A", "explanation": "This is the peak current. The equivalent DC current is less than the AC peak." },
+        { "answer": "14.1 A", "explanation": "This is the peak current multiplied by √2, which is larger than the peak and incorrect." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Calculate the rms current and power loss for the given transmission line.",
+      "sentence": "An AC supply has a peak current of 20.0 A and the current is carried through a line with a resistance of 0.50 Ω. The rms current is {{blank:1}} A and the power lost in the line is {{blank:2}} W.",
+      "blanks": {
+        "1": {
+          "correct": "14.1",
+          "correctExplanation": "Irms = 20.0 / √2 = 20.0 / 1.414 = 14.1 A.",
+          "distractors": [
+            { "answer": "10.0", "explanation": "This is the peak current divided by 2, not by √2." },
+            { "answer": "20.0", "explanation": "This is the peak current. The rms value is smaller." }
+          ]
+        },
+        "2": {
+          "correct": "100",
+          "correctExplanation": "P = Irms² × R = (14.1)² × 0.50 = 200 × 0.50 = 100 W.",
+          "distractors": [
+            { "answer": "200", "explanation": "This uses the peak current directly in P = I²R, which overestimates the power." },
+            { "answer": "50", "explanation": "This halves the correct power, suggesting an error in the calculation." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Determine the peak and rms current from an oscilloscope reading.",
+      "sentence": "A student measures a peak-to-peak current of 12.0 A on an oscilloscope. The peak current is {{blank:1}} A and the rms current is {{blank:2}} A.",
+      "blanks": {
+        "1": {
+          "correct": "6.0",
+          "correctExplanation": "The peak current is half the peak-to-peak value: Ip = 12.0 / 2 = 6.0 A.",
+          "distractors": [
+            { "answer": "12.0", "explanation": "This is the peak-to-peak value, not the peak. The peak is half of peak-to-peak." },
+            { "answer": "3.0", "explanation": "This is the peak-to-peak divided by 4, which is incorrect." }
+          ]
+        },
+        "2": {
+          "correct": "4.24",
+          "correctExplanation": "Irms = Ip / √2 = 6.0 / 1.414 = 4.24 A.",
+          "distractors": [
+            { "answer": "6.00", "explanation": "This is the peak current, not the rms value." },
+            { "answer": "8.49", "explanation": "This is the peak current multiplied by √2, not divided." }
+          ]
+        }
+      }
+    }
+  ]
+}

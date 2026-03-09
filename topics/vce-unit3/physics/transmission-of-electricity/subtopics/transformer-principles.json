@@ -1,0 +1,75 @@
+{
+  "id": "transformer-principles",
+  "name": "Transformer Principles",
+  "icon": "🔄",
+  "what": "This subtopic covers how transformers work through electromagnetic induction, including the role of the primary coil, secondary coil, and soft iron core. It also addresses the distinction between ideal and real transformers and why AC — not DC — is required.",
+  "why": "Transformers are the key technology that makes long-distance electricity transmission efficient. Understanding how they work in terms of electromagnetic induction connects this topic to the broader physics of changing magnetic flux and Faraday's law.",
+  "items": [
+    {
+      "id": 1,
+      "uuid": "lp-a01c7a73-d649-cb19-6cb2-a9e12df34da8",
+      "version": 1,
+      "title": "I can explain how a transformer transfers electrical energy between two separate circuits using electromagnetic induction",
+      "code": "6B.1",
+      "what": "A transformer has two coils (primary and secondary) wound on a soft iron core. An alternating current in the primary coil creates a continuously changing magnetic flux. This changing flux passes through the secondary coil and induces an alternating EMF in it — with no direct electrical connection between the circuits.",
+      "why": "This mechanism allows voltage to be changed between circuits that are electrically isolated from each other. It is the principle behind everything from phone chargers to large power grid substations.",
+      "example": "An electric toothbrush charger uses a transformer: the primary coil in the charger base carries mains AC at 240 V, and the changing magnetic flux through the iron core induces a lower AC voltage of around 12 V in the secondary coil inside the toothbrush — with no direct electrical contact between the two.",
+      "contentHash": "hash-55ac222d"
+    },
+    {
+      "id": 2,
+      "uuid": "lp-6fb67f7b-fb18-d254-9ff7-bcd28e21a5c4",
+      "version": 1,
+      "title": "I can describe the role of the primary coil, secondary coil, and soft iron core in a transformer",
+      "code": "6B.2a",
+      "what": "The primary coil receives the input AC voltage and generates a changing magnetic field. The soft iron core carries this changing magnetic flux efficiently to the secondary coil. The secondary coil experiences the changing flux and has an EMF induced in it, providing the output voltage.",
+      "why": "Each component has a specific function. The soft iron core dramatically improves efficiency by concentrating and directing the magnetic flux, and is what distinguishes a practical transformer from two coils loosely placed near each other.",
+      "example": "In a mains transformer, the primary coil (connected to 240 Vrms AC) and secondary coil are both wound around a continuous square loop of soft iron. The iron core carries nearly all the changing flux from primary to secondary, minimising energy loss.",
+      "contentHash": "hash-aa451c48"
+    },
+    {
+      "id": 3,
+      "uuid": "lp-c0084dc6-78b2-59e3-e48b-607ebd157cb9",
+      "version": 1,
+      "title": "I can identify whether a transformer is step-up or step-down by comparing the number of turns on each coil",
+      "code": "6B.2b",
+      "what": "A step-up transformer has more turns on the secondary coil than the primary (N2 > N1), producing a higher output voltage. A step-down transformer has fewer turns on the secondary (N2 < N1), producing a lower output voltage.",
+      "why": "Knowing whether a transformer steps up or steps down voltage is essential for analysing electricity transmission systems, where voltages are increased for long-distance transmission and then reduced for safe household use.",
+      "example": "A street pole transformer converts 11 000 V from the distribution network down to 230 V for homes. It has far more turns on the primary coil than the secondary — it is a step-down transformer.",
+      "contentHash": "hash-54555cd3"
+    },
+    {
+      "id": 4,
+      "uuid": "lp-5f2f07bb-a1c4-4081-04ba-e231e5c3f37a",
+      "version": 1,
+      "title": "I can explain why a transformer only works with AC input, not DC",
+      "code": "6B.2c",
+      "what": "A transformer requires a continuously changing magnetic flux to induce an EMF in the secondary coil. A steady DC current produces a constant magnetic field (constant flux) with no change, so no EMF is induced. Only alternating current, which continuously changes in magnitude and direction, produces the changing flux needed.",
+      "why": "This is a direct application of Faraday's law: EMF is induced only when flux is changing (ΔΦ/Δt ≠ 0). It also explains why the global adoption of AC for power transmission — rather than DC — was so significant.",
+      "example": "Connecting a 12 V DC battery to the primary coil of a transformer would produce no voltage at the secondary coil output. However, connecting a 12 Vrms AC supply would induce an AC EMF in the secondary coil.",
+      "contentHash": "hash-745d360f"
+    },
+    {
+      "id": 5,
+      "uuid": "lp-a9ccbed7-106a-f9ab-191e-a92e1b158952",
+      "version": 1,
+      "title": "I can state that in an ideal transformer, power input equals power output (Pin = Pout)",
+      "code": "6B.3a",
+      "what": "In an ideal transformer, no energy is lost to heat, sound, or eddy currents. All of the electrical power supplied to the primary coil is transferred to the secondary coil: Pin = V1 × I1 = V2 × I2 = Pout.",
+      "why": "This conservation of power principle is what links the voltage and current changes in a transformer — if voltage is stepped up, current must be stepped down by the same factor to keep power constant. This is a key idea in all transformer calculations.",
+      "example": "An ideal step-up transformer increases voltage from 240 V to 2400 V (a factor of 10). To conserve power, the current in the secondary coil must be one-tenth of the primary current. If the primary draws 10 A, the secondary delivers 1 A.",
+      "contentHash": "hash-e7dded3e"
+    },
+    {
+      "id": 6,
+      "uuid": "lp-4c98678b-2319-73df-3e90-a385714f98a4",
+      "version": 1,
+      "title": "I can explain why real transformers are not perfectly ideal and where energy losses occur",
+      "code": "6B.3b",
+      "what": "Real transformers lose a small amount of energy due to resistance in the copper windings (producing heat), eddy currents in the core, and energy radiated as sound (the humming you can hear). High-quality transformers are typically 98–99% efficient.",
+      "why": "Understanding these losses helps explain design features such as laminated cores (to reduce eddy currents), thick copper wire, and cooling fins or oil baths on large transformers. It also means the output power of a real transformer is always slightly less than the input.",
+      "example": "The power pack you use to charge a laptop feels warm during use. This heat represents the small percentage of input power lost to resistance in the windings — typically 1–2% for a quality transformer.",
+      "contentHash": "hash-271feacc"
+    }
+  ]
+}

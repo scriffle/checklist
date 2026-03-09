@@ -1,0 +1,559 @@
+{
+  "_link": {
+    "uuid": "lp-6aae69fc-ef0c-8bf2-9912-73459fcc2b41",
+    "version": 1,
+    "contentHash": "hash-ae8e3596",
+    "title": "I can combine the turns ratio with Ohm's law and power formulas to solve complex transformer circuit problems",
+    "generatedAt": "2026-03-08"
+  },
+  "toLevel2": [
+    {
+      "type": "mc",
+      "question": "A transformer has a primary voltage of 240 V and a secondary voltage of 12 V. A 48 Ω resistor is connected across the secondary. Which one of the following is closest to the current in the secondary circuit?",
+      "correct": "0.25 A",
+      "correctExplanation": "I₂ = V₂/R = 12/48 = 0.25 A.",
+      "distractors": [
+        { "answer": "5.0 A", "explanation": "This results from using V₁/R = 240/48, applying the primary voltage across the secondary load." },
+        { "answer": "4.0 A", "explanation": "This results from R/V₂ = 48/12 = 4.0, inverting Ohm's law." },
+        { "answer": "0.050 A", "explanation": "This results from dividing I₂ by an extra factor, perhaps I/(N₁/N₂)." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An ideal transformer has N₁ = 500 and N₂ = 100. The primary voltage is 250 V. Which one of the following is closest to the secondary voltage?",
+      "correct": "50 V",
+      "correctExplanation": "V₂ = V₁ × N₂/N₁ = 250 × 100/500 = 50 V.",
+      "distractors": [
+        { "answer": "1250 V", "explanation": "This results from V₁ × N₁/N₂ = 250 × 5, inverting the turns ratio." },
+        { "answer": "2.0 V", "explanation": "This results from N₁/N₂/V₁ or a similar unit error." },
+        { "answer": "500 V", "explanation": "This results from doubling the primary voltage instead of applying the turns ratio." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "The power output of an ideal transformer is 60 W and the secondary voltage is 12 V. Which one of the following is closest to the secondary current?",
+      "correct": "5.0 A",
+      "correctExplanation": "I₂ = P/V₂ = 60/12 = 5.0 A.",
+      "distractors": [
+        { "answer": "720 A", "explanation": "This results from P × V₂ = 60 × 12 = 720, multiplying instead of dividing." },
+        { "answer": "0.20 A", "explanation": "This results from V₂/P = 12/60, inverting the formula." },
+        { "answer": "12 A", "explanation": "This confuses the voltage and current values." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "In an ideal transformer circuit, the primary current is 0.50 A and the primary voltage is 240 V. Which one of the following is closest to the power delivered by the transformer?",
+      "correct": "120 W",
+      "correctExplanation": "P = V₁I₁ = 240 × 0.50 = 120 W.",
+      "distractors": [
+        { "answer": "480 W", "explanation": "This results from V₁/I₁ = 240/0.50 = 480, dividing instead of multiplying." },
+        { "answer": "12 W", "explanation": "This results from a decimal place error in the calculation." },
+        { "answer": "1200 W", "explanation": "This results from using I₁ = 5.0 A instead of 0.50 A." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which one of the following correctly lists the three formulas most commonly combined to solve transformer circuit problems?",
+      "correct": "Turns ratio (V₁/V₂ = N₁/N₂), Ohm's law (V = IR), and power (P = VI)",
+      "correctExplanation": "These three formulas allow you to move between voltage, current, resistance, and power across both sides of a transformer.",
+      "distractors": [
+        { "answer": "Turns ratio (V₁/V₂ = N₁/N₂), Ohm's law (V = IR), and force (F = ma)", "explanation": "Force (F = ma) is not relevant to transformer circuit calculations." },
+        { "answer": "Turns ratio (V₁/V₂ = N₁/N₂), Faraday's law, and kinetic energy (½mv²)", "explanation": "While Faraday's law underlies transformer operation, it is not used directly in circuit calculations." },
+        { "answer": "Coulomb's law, Ohm's law (V = IR), and power (P = VI)", "explanation": "Coulomb's law relates to electrostatic forces, not transformer circuit analysis." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "In an ideal transformer, the power input to the primary coil equals the power output from the secondary coil.",
+      "correct": "True",
+      "correctExplanation": "In an ideal transformer, there are no losses, so V₁I₁ = V₂I₂.",
+      "distractors": [
+        { "answer": "False", "explanation": "An ideal transformer conserves power. V₁I₁ = V₂I₂ by definition of an ideal transformer." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "If the secondary voltage of a transformer is halved, the current through a fixed load resistor connected to the secondary is also halved.",
+      "correct": "True",
+      "correctExplanation": "By Ohm's law, I = V/R. If V halves and R is constant, then I also halves.",
+      "distractors": [
+        { "answer": "False", "explanation": "Ohm's law gives I = V/R. For a fixed R, halving V halves I." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about combining formulas in transformer circuits.",
+      "sentence": "To find the current through a load resistor on the secondary side, first use the {{blank:1}} to find V₂, then use {{blank:2}} to calculate I₂ = V₂/R.",
+      "blanks": {
+        "1": {
+          "correct": "turns ratio",
+          "correctExplanation": "The turns ratio V₁/V₂ = N₁/N₂ is used to find the secondary voltage from the primary voltage.",
+          "distractors": [
+            { "answer": "power formula", "explanation": "The power formula P = VI can be used later but the first step is finding V₂ from the turns ratio." },
+            { "answer": "resistance formula", "explanation": "The resistance formula relates to the load, not to finding the secondary voltage." }
+          ]
+        },
+        "2": {
+          "correct": "Ohm's law",
+          "correctExplanation": "Ohm's law V = IR (rearranged to I = V/R) gives the current through the load resistor.",
+          "distractors": [
+            { "answer": "Faraday's law", "explanation": "Faraday's law describes electromagnetic induction but is not used to calculate current in a load." },
+            { "answer": "Kirchhoff's law", "explanation": "While Kirchhoff's laws apply, the direct calculation here uses Ohm's law." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the calculation for a transformer circuit.",
+      "sentence": "A transformer with V₁ = 240 V and N₁/N₂ = 20 has V₂ = {{blank:1}} V. If a 24 Ω load is connected, I₂ = {{blank:2}} A.",
+      "blanks": {
+        "1": {
+          "correct": "12",
+          "correctExplanation": "V₂ = V₁/(N₁/N₂) = 240/20 = 12 V.",
+          "distractors": [
+            { "answer": "4800", "explanation": "This results from V₁ × (N₁/N₂) = 240 × 20, multiplying instead of dividing." },
+            { "answer": "120", "explanation": "This results from dividing by 2 instead of 20." }
+          ]
+        },
+        "2": {
+          "correct": "0.50",
+          "correctExplanation": "I₂ = V₂/R = 12/24 = 0.50 A.",
+          "distractors": [
+            { "answer": "2.0", "explanation": "This results from R/V₂ = 24/12, inverting Ohm's law." },
+            { "answer": "10", "explanation": "This results from using V₁ instead of V₂: 240/24 = 10 A." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about power in a transformer circuit.",
+      "sentence": "If V₂ = 12 V and I₂ = 0.50 A, the power output is {{blank:1}} W. For an ideal transformer with V₁ = 240 V, the primary current is {{blank:2}} A.",
+      "blanks": {
+        "1": {
+          "correct": "6.0",
+          "correctExplanation": "P = V₂ × I₂ = 12 × 0.50 = 6.0 W.",
+          "distractors": [
+            { "answer": "24", "explanation": "This results from V₂/I₂ = 12/0.50, dividing instead of multiplying." },
+            { "answer": "120", "explanation": "This results from using V₁ instead of V₂: 240 × 0.50 = 120." }
+          ]
+        },
+        "2": {
+          "correct": "0.025",
+          "correctExplanation": "I₁ = P/V₁ = 6.0/240 = 0.025 A.",
+          "distractors": [
+            { "answer": "0.50", "explanation": "This is the secondary current, not the primary current." },
+            { "answer": "10", "explanation": "This results from V₁/V₂ × I₂ = 20 × 0.50 = 10, inverting the current ratio." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "mc",
+      "question": "A step-down transformer has N₁ = 2000 and N₂ = 100. The primary voltage is 240 V and a 6.0 Ω resistor is connected across the secondary. Which one of the following is closest to the power dissipated in the resistor?",
+      "correct": "24 W",
+      "correctExplanation": "V₂ = 240 × 100/2000 = 12 V. I₂ = 12/6.0 = 2.0 A. P = V₂I₂ = 12 × 2.0 = 24 W.",
+      "distractors": [
+        { "answer": "9600 W", "explanation": "This results from using V₁ instead of V₂ across the load: 240²/6.0." },
+        { "answer": "2.4 W", "explanation": "This results from a factor-of-ten error in calculating V₂." },
+        { "answer": "48 W", "explanation": "This results from using V₂ = 24 V instead of 12 V, perhaps from a turns ratio error." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An ideal transformer with V₁ = 240 V delivers 48 W to a secondary load. If the turns ratio N₁:N₂ is 10:1, which one of the following is closest to the current in the secondary circuit?",
+      "correct": "2.0 A",
+      "correctExplanation": "V₂ = 240/10 = 24 V. I₂ = P/V₂ = 48/24 = 2.0 A.",
+      "distractors": [
+        { "answer": "0.20 A", "explanation": "This is the primary current I₁ = P/V₁ = 48/240, not the secondary current." },
+        { "answer": "20 A", "explanation": "This results from using V₂ = 2.4 V instead of 24 V." },
+        { "answer": "4.8 A", "explanation": "This results from using V₂ = 10 V, possibly confusing the turns ratio with the voltage." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Marcus connects a 20 Ω resistor to the secondary of an ideal transformer. The primary voltage is 200 V and the turns ratio is N₁:N₂ = 5:1. Which one of the following is closest to the primary current?",
+      "correct": "0.40 A",
+      "correctExplanation": "V₂ = 200/5 = 40 V. I₂ = 40/20 = 2.0 A. I₁ = I₂ × N₂/N₁ = 2.0/5 = 0.40 A.",
+      "distractors": [
+        { "answer": "2.0 A", "explanation": "This is the secondary current, not the primary current." },
+        { "answer": "10 A", "explanation": "This results from I₂ × N₁/N₂ = 2.0 × 5, inverting the current ratio." },
+        { "answer": "0.080 A", "explanation": "This results from dividing I₂ by N₁/N₂ twice: 2.0/5/5." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A phone charger uses a transformer with V₁ = 240 V and V₂ = 5.0 V. The phone draws 2.0 A. Which one of the following is closest to the resistance of the phone as seen by the charger?",
+      "correct": "2.5 Ω",
+      "correctExplanation": "R_load = V₂/I₂ = 5.0/2.0 = 2.5 Ω.",
+      "distractors": [
+        { "answer": "120 Ω", "explanation": "This results from V₁/I₂ = 240/2.0, using the primary voltage with the secondary current." },
+        { "answer": "10 Ω", "explanation": "This results from V₂ × I₂ = 5.0 × 2.0 = 10, which gives power, not resistance." },
+        { "answer": "0.40 Ω", "explanation": "This results from I₂/V₂ = 2.0/5.0, inverting Ohm's law." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An ideal transformer has V₁ = 240 V, N₁ = 600, and N₂ = 30. A 4.0 Ω resistor is connected to the secondary. Which one of the following is closest to the power drawn from the mains?",
+      "correct": "36 W",
+      "correctExplanation": "V₂ = 240 × 30/600 = 12 V. I₂ = 12/4.0 = 3.0 A. P = V₂I₂ = 12 × 3.0 = 36 W. For an ideal transformer, P₁ = P₂ = 36 W.",
+      "distractors": [
+        { "answer": "14 400 W", "explanation": "This results from V₁²/R = 240²/4.0, using the primary voltage across the secondary load." },
+        { "answer": "3.6 W", "explanation": "This results from a factor-of-ten error in calculating V₂ or I₂." },
+        { "answer": "720 W", "explanation": "This results from using V₂ = 240 V (no transformation), giving I = 60 A." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Nadia's transformer has a turns ratio of 1:8 (step-up) and a primary voltage of 30 V. She connects a 960 Ω resistor to the secondary. Which one of the following is closest to the primary current?",
+      "correct": "2.0 A",
+      "correctExplanation": "V₂ = 30 × 8 = 240 V. I₂ = 240/960 = 0.25 A. I₁ = I₂ × N₂/N₁ = 0.25 × 8 = 2.0 A.",
+      "distractors": [
+        { "answer": "0.25 A", "explanation": "This is the secondary current, not the primary. In a step-up transformer, the primary current is larger." },
+        { "answer": "0.031 A", "explanation": "This results from dividing I₂ by the turns ratio: 0.25/8." },
+        { "answer": "16 A", "explanation": "This results from I₂ × (N₂/N₁)² = 0.25 × 64, squaring the turns ratio." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "When a load resistor is connected to the secondary of an ideal transformer, the power drawn from the primary source equals the power dissipated in the secondary load.",
+      "correct": "True",
+      "correctExplanation": "In an ideal transformer, P₁ = P₂. All power drawn from the source is delivered to the load.",
+      "distractors": [
+        { "answer": "False", "explanation": "This is correct for an ideal transformer, which has no internal losses." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the multi-step transformer calculation.",
+      "sentence": "V₁ = 240 V, N₁:N₂ = 4:1, R_load = 15 Ω. The secondary voltage is {{blank:1}} V, and the secondary current is {{blank:2}} A.",
+      "blanks": {
+        "1": {
+          "correct": "60",
+          "correctExplanation": "V₂ = V₁ × N₂/N₁ = 240 × 1/4 = 60 V.",
+          "distractors": [
+            { "answer": "960", "explanation": "This results from V₁ × N₁/N₂ = 240 × 4, inverting the ratio." },
+            { "answer": "30", "explanation": "This results from dividing by 8 instead of 4." }
+          ]
+        },
+        "2": {
+          "correct": "4.0",
+          "correctExplanation": "I₂ = V₂/R = 60/15 = 4.0 A.",
+          "distractors": [
+            { "answer": "0.25", "explanation": "This results from R/V₂ = 15/60, inverting Ohm's law." },
+            { "answer": "16", "explanation": "This results from using V₁/R = 240/15, applying the primary voltage to the secondary load." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the power calculation for a transformer circuit.",
+      "sentence": "A transformer delivers 20 V to a 10 Ω load. The power in the load is {{blank:1}} W, and if V₁ = 200 V, the primary current is {{blank:2}} A.",
+      "blanks": {
+        "1": {
+          "correct": "40",
+          "correctExplanation": "P = V₂²/R = 20²/10 = 400/10 = 40 W.",
+          "distractors": [
+            { "answer": "200", "explanation": "This results from V₂ × R = 20 × 10 = 200, which is not a power formula." },
+            { "answer": "2.0", "explanation": "This results from V₂/R = 20/10 = 2.0, which is the current, not the power." }
+          ]
+        },
+        "2": {
+          "correct": "0.20",
+          "correctExplanation": "I₁ = P/V₁ = 40/200 = 0.20 A.",
+          "distractors": [
+            { "answer": "2.0", "explanation": "This is the secondary current I₂ = V₂/R, not the primary current." },
+            { "answer": "20", "explanation": "This results from I₂ × N₁/N₂ = 2.0 × 10, inverting the current ratio." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about finding load resistance from transformer data.",
+      "sentence": "A transformer with V₁ = 240 V and turns ratio 20:1 delivers 0.60 A to the load. The load resistance is {{blank:1}} Ω.",
+      "blanks": {
+        "1": {
+          "correct": "20",
+          "correctExplanation": "V₂ = 240/20 = 12 V. R = V₂/I₂ = 12/0.60 = 20 Ω.",
+          "distractors": [
+            { "answer": "400", "explanation": "This results from V₁/I₂ = 240/0.60, using the primary voltage instead of the secondary." },
+            { "answer": "7.2", "explanation": "This results from V₂ × I₂ = 12 × 0.60 = 7.2, which gives power, not resistance." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "mc",
+      "question": "A step-down transformer with N₁ = 1000 and N₂ = 50 has V₁ = 240 V. A 2.0 Ω resistor is connected to the secondary. Which one of the following is closest to the primary current?",
+      "correct": "0.30 A",
+      "correctExplanation": "V₂ = 240 × 50/1000 = 12 V. I₂ = 12/2.0 = 6.0 A. I₁ = I₂ × N₂/N₁ = 6.0 × 50/1000 = 0.30 A.",
+      "distractors": [
+        { "answer": "6.0 A", "explanation": "This is the secondary current, not the primary current." },
+        { "answer": "120 A", "explanation": "This results from I₂ × N₁/N₂ = 6.0 × 20, inverting the current ratio." },
+        { "answer": "0.015 A", "explanation": "This results from dividing I₁ by the turns ratio again: 0.30/20." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Kai connects two 12 Ω resistors in series across the secondary of an ideal transformer. The transformer has V₁ = 240 V and N₁:N₂ = 10:1. Which one of the following is closest to the total power dissipated in the resistors?",
+      "correct": "24 W",
+      "correctExplanation": "V₂ = 240/10 = 24 V. R_total = 12 + 12 = 24 Ω. I₂ = 24/24 = 1.0 A. P = V₂I₂ = 24 × 1.0 = 24 W.",
+      "distractors": [
+        { "answer": "48 W", "explanation": "This results from using R = 12 Ω (one resistor) instead of 24 Ω (two in series)." },
+        { "answer": "2.4 W", "explanation": "This results from a factor-of-ten error in V₂." },
+        { "answer": "2400 W", "explanation": "This results from using V₁ instead of V₂: 240²/24." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An ideal transformer has a turns ratio of 1:5 and is connected to a 240 V supply. The secondary feeds a circuit that draws 0.40 A. Which one of the following is closest to the resistance of the load?",
+      "correct": "3000 Ω",
+      "correctExplanation": "V₂ = 240 × 5 = 1200 V. R = V₂/I₂ = 1200/0.40 = 3000 Ω.",
+      "distractors": [
+        { "answer": "600 Ω", "explanation": "This results from V₁/I₂ = 240/0.40, using the primary voltage." },
+        { "answer": "480 Ω", "explanation": "This results from V₂/I₂ with V₂ incorrectly calculated as 240/5 = 48 V (dividing instead of multiplying for a step-up)." },
+        { "answer": "12 000 Ω", "explanation": "This results from V₂ × N₂/N₁ / I₂, applying the turns ratio an extra time." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A transformer with V₁ = 240 V and turns ratio 20:1 supplies a 3.0 Ω load. The wires connecting the transformer to the load have a total resistance of 1.0 Ω. Which one of the following is closest to the power delivered to the load?",
+      "correct": "27 W",
+      "correctExplanation": "V₂ = 240/20 = 12 V. Total R = 3.0 + 1.0 = 4.0 Ω. I₂ = 12/4.0 = 3.0 A. P_load = I₂² × R_load = 9.0 × 3.0 = 27 W.",
+      "distractors": [
+        { "answer": "36 W", "explanation": "This uses the total circuit power P = I₂² × R_total = 9.0 × 4.0 = 36 W, which includes wire losses." },
+        { "answer": "48 W", "explanation": "This results from V₂²/R_load = 144/3 = 48, ignoring the wire resistance in the current calculation." },
+        { "answer": "9.0 W", "explanation": "This is the power lost in the connecting wires, not the power delivered to the load." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Priya uses an ideal transformer with V₁ = 240 V and N₁:N₂ = 8:1 to power a 60 Ω heating element. She wants to know the current drawn from the mains. Which one of the following is closest to this current?",
+      "correct": "0.063 A",
+      "correctExplanation": "V₂ = 240/8 = 30 V. I₂ = 30/60 = 0.50 A. I₁ = I₂ × N₂/N₁ = 0.50/8 = 0.0625 ≈ 0.063 A.",
+      "distractors": [
+        { "answer": "0.50 A", "explanation": "This is the secondary current, not the primary current." },
+        { "answer": "4.0 A", "explanation": "This results from I₂ × N₁/N₂ = 0.50 × 8, inverting the current ratio." },
+        { "answer": "0.0078 A", "explanation": "This results from dividing I₁ by the turns ratio again: 0.063/8." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student measures V₁ = 240 V, I₁ = 0.15 A, and V₂ = 12 V for a transformer with a load. Which one of the following is closest to the secondary current, assuming the transformer is ideal?",
+      "correct": "3.0 A",
+      "correctExplanation": "P₁ = V₁I₁ = 240 × 0.15 = 36 W. I₂ = P/V₂ = 36/12 = 3.0 A.",
+      "distractors": [
+        { "answer": "0.15 A", "explanation": "This is the primary current. The secondary current is larger because the voltage is stepped down." },
+        { "answer": "0.0075 A", "explanation": "This results from I₁ × V₂/V₁ = 0.15 × 12/240 = 0.0075, applying the ratio in the wrong direction." },
+        { "answer": "30 A", "explanation": "This results from a factor-of-ten error: using V₂ = 1.2 V instead of 12 V." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Leo builds a circuit with an ideal transformer (N₁ = 400, N₂ = 100) connected to a 240 V supply. He connects a 6.0 Ω and an 18 Ω resistor in parallel across the secondary. Which one of the following is closest to the power drawn from the supply?",
+      "correct": "800 W",
+      "correctExplanation": "V₂ = 240 × 100/400 = 60 V. R_parallel = (6.0 × 18)/(6.0 + 18) = 108/24 = 4.5 Ω. I₂ = 60/4.5 = 13.3 A. P = V₂I₂ = 60 × 13.3 = 800 W.",
+      "distractors": [
+        { "answer": "600 W", "explanation": "This results from using only the 6.0 Ω resistor: P = 60²/6.0 = 600 W, ignoring the parallel combination." },
+        { "answer": "200 W", "explanation": "This results from using only the 18 Ω resistor: P = 60²/18 = 200 W." },
+        { "answer": "3200 W", "explanation": "This results from using V₁ = 240 V with the parallel resistance: 240²/4.5 × some factor." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the multi-step transformer problem.",
+      "sentence": "V₁ = 240 V, N₁:N₂ = 12:1, R_load = 5.0 Ω. The secondary current is {{blank:1}} A, and the primary current is {{blank:2}} A.",
+      "blanks": {
+        "1": {
+          "correct": "4.0",
+          "correctExplanation": "V₂ = 240/12 = 20 V. I₂ = V₂/R = 20/5.0 = 4.0 A.",
+          "distractors": [
+            { "answer": "48", "explanation": "This results from V₁/R = 240/5.0, using the primary voltage across the secondary load." },
+            { "answer": "2.0", "explanation": "This results from V₂ = 10 V, using a turns ratio of 24:1 instead of 12:1." }
+          ]
+        },
+        "2": {
+          "correct": "0.33",
+          "correctExplanation": "I₁ = I₂ × N₂/N₁ = 4.0 × 1/12 = 0.333 ≈ 0.33 A.",
+          "distractors": [
+            { "answer": "48", "explanation": "This results from I₂ × N₁/N₂ = 4.0 × 12, inverting the current ratio." },
+            { "answer": "4.0", "explanation": "This is the secondary current, not the primary current." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the power and current calculation.",
+      "sentence": "A transformer with V₂ = 24 V delivers current to a 12 Ω load. The power is {{blank:1}} W. If V₁ = 240 V, the primary current is {{blank:2}} A.",
+      "blanks": {
+        "1": {
+          "correct": "48",
+          "correctExplanation": "P = V₂²/R = 24²/12 = 576/12 = 48 W.",
+          "distractors": [
+            { "answer": "288", "explanation": "This results from V₂ × R = 24 × 12 = 288, which is not a valid power formula." },
+            { "answer": "2.0", "explanation": "This is the current I₂ = V₂/R = 24/12, not the power." }
+          ]
+        },
+        "2": {
+          "correct": "0.20",
+          "correctExplanation": "I₁ = P/V₁ = 48/240 = 0.20 A.",
+          "distractors": [
+            { "answer": "2.0", "explanation": "This is the secondary current I₂ = 24/12, not the primary current." },
+            { "answer": "20", "explanation": "This results from V₁/V₂ × I₂ = 10 × 2 = 20, inverting the current ratio." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about finding the turns ratio from circuit measurements.",
+      "sentence": "A transformer draws 0.10 A from a 240 V supply and delivers 2.0 A to a load. The turns ratio N₁:N₂ is {{blank:1}}.",
+      "blanks": {
+        "1": {
+          "correct": "20:1",
+          "correctExplanation": "N₁/N₂ = I₂/I₁ = 2.0/0.10 = 20. So N₁:N₂ = 20:1.",
+          "distractors": [
+            { "answer": "1:20", "explanation": "This inverts the ratio. Since V₁ > V₂ (step-down), N₁ > N₂." },
+            { "answer": "2:1", "explanation": "This results from a factor-of-ten error in the current ratio." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "mc",
+      "question": "A transformer with N₁ = 2000 and N₂ = 100 is connected to a 240 V supply. Two loads are connected in parallel across the secondary: a 4.0 Ω resistor and an 8.0 Ω resistor. Which one of the following is closest to the total current drawn from the 240 V supply?",
+      "correct": "0.23 A",
+      "correctExplanation": "V₂ = 240 × 100/2000 = 12 V. I_4 = 12/4.0 = 3.0 A. I_8 = 12/8.0 = 1.5 A. I₂_total = 4.5 A. I₁ = I₂ × N₂/N₁ = 4.5 × 100/2000 = 0.225 ≈ 0.23 A.",
+      "distractors": [
+        { "answer": "4.5 A", "explanation": "This is the total secondary current, not the primary current." },
+        { "answer": "0.15 A", "explanation": "This accounts for only one of the two parallel loads (the 8.0 Ω resistor)." },
+        { "answer": "90 A", "explanation": "This results from I₂ × N₁/N₂ = 4.5 × 20, inverting the current ratio." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A 240 V mains supply feeds an ideal transformer with N₁:N₂ = 20:1. The secondary feeds a 3.0 Ω load through connecting wires with a total resistance of 0.60 Ω. Which one of the following is closest to the fraction of the transformer's output power that is delivered to the load?",
+      "correct": "83%",
+      "correctExplanation": "V₂ = 12 V. R_total = 3.0 + 0.60 = 3.6 Ω. I₂ = 12/3.6 = 3.33 A. P_load = I² × R_load = 11.1 × 3.0 = 33.3 W. P_total = I² × R_total = 11.1 × 3.6 = 40 W. Fraction = 33.3/40 = 0.833 = 83%.",
+      "distractors": [
+        { "answer": "80%", "explanation": "This results from R_load/R_total = 3.0/3.6 × something, a simplified but incorrect approach." },
+        { "answer": "100%", "explanation": "This ignores the wire resistance entirely." },
+        { "answer": "20%", "explanation": "This results from R_wire/R_total = 0.60/3.0 or a similar error." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An ideal transformer with V₁ = 240 V and N₁:N₂ = 4:1 delivers power to a variable load. When the load resistance is changed from 12 Ω to 3.0 Ω, which one of the following is closest to the change in primary current?",
+      "correct": "3.8 A increase",
+      "correctExplanation": "V₂ = 240/4 = 60 V. With R = 12 Ω: I₂ = 60/12 = 5.0 A, I₁ = 5.0/4 = 1.25 A. With R = 3.0 Ω: I₂ = 60/3.0 = 20 A, I₁ = 20/4 = 5.0 A. Change = 5.0 − 1.25 = 3.75 ≈ 3.8 A increase.",
+      "distractors": [
+        { "answer": "15 A increase", "explanation": "This is the change in secondary current (20 − 5 = 15 A), not the primary current." },
+        { "answer": "3.8 A decrease", "explanation": "The primary current increases (not decreases) when the load resistance decreases." },
+        { "answer": "0.94 A increase", "explanation": "This results from dividing the correct change by the turns ratio again." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Emma measures the following for a transformer: V₁ = 240 V, I₁ = 0.50 A, V₂ = 48 V, I₂ = 2.4 A. Which one of the following is closest to the efficiency of the transformer?",
+      "correct": "96%",
+      "correctExplanation": "P_in = V₁I₁ = 240 × 0.50 = 120 W. P_out = V₂I₂ = 48 × 2.4 = 115.2 W. Efficiency = 115.2/120 × 100 = 96%.",
+      "distractors": [
+        { "answer": "80%", "explanation": "This does not match the calculation from the given data." },
+        { "answer": "100%", "explanation": "The transformer is not ideal; P_out (115.2 W) is less than P_in (120 W)." },
+        { "answer": "48%", "explanation": "This results from V₂/P_in × 100 = 48/120 × 200 or a similar error." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A step-up transformer with N₁:N₂ = 1:25 is connected to a 10 V supply. The secondary is connected to a load of 5000 Ω in series with a 1000 Ω resistor. Which one of the following is closest to the voltage across the 5000 Ω resistor?",
+      "correct": "208 V",
+      "correctExplanation": "V₂ = 10 × 25 = 250 V. R_total = 5000 + 1000 = 6000 Ω. I₂ = 250/6000 = 0.04167 A. V_5000 = I₂ × 5000 = 0.04167 × 5000 = 208.3 ≈ 208 V.",
+      "distractors": [
+        { "answer": "250 V", "explanation": "This is the full secondary voltage, ignoring the voltage division across the two resistors." },
+        { "answer": "41.7 V", "explanation": "This is the voltage across the 1000 Ω resistor, not the 5000 Ω resistor." },
+        { "answer": "50 V", "explanation": "This results from V₂/5 = 250/5, an incorrect voltage division." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A transformer with V₁ = 240 V has a secondary that supplies 6.0 V to a device drawing 800 mA. The primary coil has a resistance of 5.0 Ω. Which one of the following is closest to the power lost in the primary coil?",
+      "correct": "0.0020 W",
+      "correctExplanation": "P_out = 6.0 × 0.800 = 4.8 W. I₁ = P/V₁ = 4.8/240 = 0.020 A. P_coil = I₁²R = 0.020² × 5.0 = 0.0004 × 5.0 = 0.0020 W.",
+      "distractors": [
+        { "answer": "2.0 W", "explanation": "This results from using I₁ = V₁/R_coil × some factor, which is incorrect." },
+        { "answer": "3.2 W", "explanation": "This results from using I₂ instead of I₁: 0.80² × 5.0 = 3.2 W." },
+        { "answer": "0.50 W", "explanation": "This results from using I₁ ≈ 0.32 A from an incorrect calculation." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An ideal transformer with a turns ratio of 15:1 is connected to 240 V mains. The secondary supplies two identical 8.0 Ω loads connected in parallel. Which one of the following is closest to the total primary current?",
+      "correct": "0.27 A",
+      "correctExplanation": "V₂ = 240/15 = 16 V. R_parallel = 8.0/2 = 4.0 Ω. I₂ = 16/4.0 = 4.0 A. I₁ = I₂/15 = 4.0/15 = 0.267 ≈ 0.27 A.",
+      "distractors": [
+        { "answer": "4.0 A", "explanation": "This is the total secondary current, not the primary current." },
+        { "answer": "2.0 A", "explanation": "This results from using only one 8.0 Ω load: I₂ = 16/8.0 = 2.0 A, then using this as I₁." },
+        { "answer": "0.13 A", "explanation": "This results from using only one load in the calculation: I₁ = 2.0/15." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A transformer with V₁ = 240 V and V₂ = 60 V delivers 120 W to a load. The connecting wires on the secondary side have a resistance of 2.0 Ω. Which one of the following is closest to the voltage across the load?",
+      "correct": "56 V",
+      "correctExplanation": "Total secondary current: P_load ≈ P_out, so we need to find I₂. P_total in secondary = V₂ × I₂. We know V₂ = 60 V. I₂ = V₂/(R_load + R_wire). P_load = I₂² × R_load = 120 W. Also V_wire = I₂ × 2.0, and V_load = 60 − V_wire. Since P_total = V₂ × I₂ and P_wire = I₂² × 2.0, and P_load = 120 W: I₂² × R_load = 120, V_load = I₂ × R_load. Also V_load = 60 − 2I₂. And P_load = V_load × I₂ = (60 − 2I₂) × I₂ = 120. So 60I₂ − 2I₂² = 120. 2I₂² − 60I₂ + 120 = 0. I₂² − 30I₂ + 60 = 0. I₂ = (30 ± √(900 − 240))/2 = (30 ± 25.7)/2. I₂ = 2.15 A or 27.85 A. Taking I₂ = 2.15 A: V_load = 60 − 2(2.15) = 55.7 ≈ 56 V.",
+      "distractors": [
+        { "answer": "60 V", "explanation": "This ignores the voltage drop across the connecting wires." },
+        { "answer": "48 V", "explanation": "This results from subtracting 12 V from 60 V, perhaps from using I₂ = 6.0 A." },
+        { "answer": "120 V", "explanation": "This confuses the power (in watts) with the voltage." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the combined transformer and Ohm's law calculation.",
+      "sentence": "A transformer with V₁ = 240 V and N₁:N₂ = 16:1 supplies a 3.0 Ω load. The secondary voltage is {{blank:1}} V, and the power in the load is {{blank:2}} W.",
+      "blanks": {
+        "1": {
+          "correct": "15",
+          "correctExplanation": "V₂ = V₁ × N₂/N₁ = 240/16 = 15 V.",
+          "distractors": [
+            { "answer": "3840", "explanation": "This results from V₁ × 16 = 3840, multiplying instead of dividing." },
+            { "answer": "7.5", "explanation": "This results from using a turns ratio of 32:1 instead of 16:1." }
+          ]
+        },
+        "2": {
+          "correct": "75",
+          "correctExplanation": "I₂ = V₂/R = 15/3.0 = 5.0 A. P = V₂I₂ = 15 × 5.0 = 75 W.",
+          "distractors": [
+            { "answer": "45", "explanation": "This results from V₂ × R = 15 × 3.0 = 45, which is not a power formula." },
+            { "answer": "5.0", "explanation": "This is the secondary current, not the power." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about a practical transformer circuit.",
+      "sentence": "An ideal transformer with V₁ = 240 V and turns ratio 20:1 drives a 4.0 Ω load. The primary current is {{blank:1}} A.",
+      "blanks": {
+        "1": {
+          "correct": "0.15",
+          "correctExplanation": "V₂ = 240/20 = 12 V. I₂ = 12/4.0 = 3.0 A. I₁ = I₂/20 = 3.0/20 = 0.15 A.",
+          "distractors": [
+            { "answer": "3.0", "explanation": "This is the secondary current, not the primary current." },
+            { "answer": "60", "explanation": "This results from I₂ × N₁/N₂ = 3.0 × 20, inverting the current ratio." }
+          ]
+        }
+      }
+    }
+  ]
+}

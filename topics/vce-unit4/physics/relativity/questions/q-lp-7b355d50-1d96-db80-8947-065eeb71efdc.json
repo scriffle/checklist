@@ -1,0 +1,517 @@
+{
+  "_link": {
+    "uuid": "lp-7b355d50-1d96-db80-8947-065eeb71efdc",
+    "version": 1,
+    "contentHash": "hash-b21d519c",
+    "title": "I can explain why GPS satellite clocks must be corrected for time dilation",
+    "generatedAt": "2026-03-09T23:00:00.000Z"
+  },
+  "toLevel2": [
+    {
+      "type": "MC",
+      "question": "GPS satellite clocks must be corrected because, due to their orbital speed, special relativity predicts they run:",
+      "correct": "slightly slower than clocks on Earth's surface",
+      "correctExplanation": "Due to time dilation, the moving satellite clocks tick more slowly than stationary ground clocks. This effect is approximately 7 microseconds per day.",
+      "distractors": [
+        { "answer": "slightly faster than clocks on Earth's surface", "explanation": "Special relativity predicts that moving clocks run slower, not faster. (General relativity predicts a separate effect that makes satellite clocks tick faster due to weaker gravity.)" },
+        { "answer": "at exactly the same rate as clocks on Earth's surface", "explanation": "The satellite's orbital speed of approximately 4 km s⁻¹ produces a measurable time dilation effect." },
+        { "answer": "much faster than clocks on Earth's surface", "explanation": "Time dilation causes moving clocks to run slower, not faster." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Approximately how much time does a GPS satellite clock lose per day due to the time dilation effect of special relativity?",
+      "correct": "7 microseconds",
+      "correctExplanation": "At an orbital speed of approximately 4 km s⁻¹, the satellite clocks run about 7 μs slow per day due to the time dilation predicted by special relativity.",
+      "distractors": [
+        { "answer": "7 milliseconds", "explanation": "7 milliseconds is 1000 times larger than the actual effect of 7 microseconds per day." },
+        { "answer": "7 nanoseconds", "explanation": "7 nanoseconds is 1000 times smaller than the actual effect of 7 microseconds per day." },
+        { "answer": "7 seconds", "explanation": "7 seconds is millions of times larger than the actual effect. The correction is in microseconds." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Without relativistic corrections, how much position error would GPS accumulate per day due to time dilation alone?",
+      "correct": "Approximately 2 km per day",
+      "correctExplanation": "A 7 μs timing error per day produces a position error of approximately 7 × 10⁻⁶ × 3.00 × 10⁸ = 2100 m ≈ 2 km per day.",
+      "distractors": [
+        { "answer": "Approximately 2 m per day", "explanation": "2 m per day vastly underestimates the error. The correct value is about 2 km per day." },
+        { "answer": "Approximately 200 km per day", "explanation": "This overestimates the error by a factor of 100." },
+        { "answer": "Approximately 20 cm per day", "explanation": "20 cm is far too small. The position error from time dilation alone is about 2 km per day." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Which physical quantity is used in GPS calculations that makes accurate timekeeping essential?",
+      "correct": "The speed of light, used in distance calculations via s = cΔt",
+      "correctExplanation": "GPS receivers calculate distance from satellites using the time delay of radio signals multiplied by the speed of light. Even tiny timing errors produce significant position errors because c is very large.",
+      "distractors": [
+        { "answer": "The gravitational constant, used in orbit calculations", "explanation": "While the gravitational constant is used in orbital mechanics, it is not the reason accurate timekeeping is essential for GPS positioning." },
+        { "answer": "The satellite's mass, used in signal strength calculations", "explanation": "Satellite mass does not directly affect GPS distance calculations. The speed of light and time delay are the critical factors." },
+        { "answer": "The Earth's magnetic field, used in signal navigation", "explanation": "GPS does not use Earth's magnetic field. It uses the speed of electromagnetic signals and precise timing." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "At what approximate speed do GPS satellites orbit Earth?",
+      "correct": "4 km s⁻¹",
+      "correctExplanation": "GPS satellites orbit at approximately 4 km s⁻¹ (about 14 000 km h⁻¹). This speed is fast enough for time dilation to produce measurable effects on the onboard atomic clocks.",
+      "distractors": [
+        { "answer": "4 m s⁻¹", "explanation": "4 m s⁻¹ is walking speed, far too slow for an orbiting satellite." },
+        { "answer": "40 km s⁻¹", "explanation": "This is 10 times the actual orbital speed of GPS satellites." },
+        { "answer": "0.4 km s⁻¹", "explanation": "This is 10 times slower than the actual speed and would not produce a stable orbit at GPS altitude." }
+      ]
+    },
+    {
+      "type": "TF",
+      "question": "GPS is a practical, everyday example of special relativity affecting modern technology.",
+      "correct": "True",
+      "correctExplanation": "GPS satellite clocks require relativistic corrections to maintain accuracy. Without these corrections, GPS positioning would accumulate significant errors.",
+      "distractors": [
+        { "answer": "False", "explanation": "GPS relies on precise timing, and the time dilation predicted by special relativity must be corrected for. It is a direct application of relativity." }
+      ]
+    },
+    {
+      "type": "TF",
+      "question": "The time dilation effect on GPS satellites is too small to affect the accuracy of position measurements.",
+      "correct": "False",
+      "correctExplanation": "Although 7 μs per day seems small, it translates to about 2 km of position error per day. This is far too large for GPS to be useful without correction.",
+      "distractors": [
+        { "answer": "True", "explanation": "The position error from uncorrected time dilation would be about 2 km per day — far too large for navigation, mapping, or location services." }
+      ]
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the sentence about GPS and time dilation.",
+      "sentence": "GPS satellite clocks run {{blank:1}} than ground clocks due to time dilation, losing approximately {{blank:2}} microseconds per day.",
+      "blanks": {
+        "1": {
+          "correct": "slower",
+          "correctExplanation": "Time dilation causes the moving satellite clocks to tick more slowly than stationary clocks on Earth's surface.",
+          "distractors": ["faster", "at the same rate"]
+        },
+        "2": {
+          "correct": "7",
+          "correctExplanation": "The time dilation effect at GPS orbital speeds produces a timing difference of approximately 7 μs per day.",
+          "distractors": ["70", "0.7"]
+        }
+      }
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the sentence about the position error from uncorrected time dilation.",
+      "sentence": "GPS calculates position using s = cΔt. A timing error of 7 μs produces a position error of approximately 7 × 10⁻⁶ × 3.00 × 10⁸ = {{blank:1}} m, or about {{blank:2}} km per day.",
+      "blanks": {
+        "1": {
+          "correct": "2100",
+          "correctExplanation": "s = cΔt = 3.00 × 10⁸ × 7 × 10⁻⁶ = 2100 m.",
+          "distractors": ["210", "21 000"]
+        },
+        "2": {
+          "correct": "2",
+          "correctExplanation": "2100 m ≈ 2 km. This error would accumulate daily without relativistic corrections.",
+          "distractors": ["20", "0.2"]
+        }
+      }
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the sentence about why GPS needs relativistic corrections.",
+      "sentence": "GPS satellites orbit at approximately {{blank:1}} km s⁻¹. Although this is much less than c, the time dilation effect is large enough to cause position errors of about 2 km per {{blank:2}} without correction.",
+      "blanks": {
+        "1": {
+          "correct": "4",
+          "correctExplanation": "GPS satellites orbit at approximately 4 km s⁻¹.",
+          "distractors": ["40", "400"]
+        },
+        "2": {
+          "correct": "day",
+          "correctExplanation": "The timing error of 7 μs accumulates each day, producing about 2 km of position error per day.",
+          "distractors": ["hour", "year"]
+        }
+      }
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "MC",
+      "question": "A GPS satellite orbits at 4.00 km s⁻¹. Which one of the following is closest to the value of v/c for this satellite?",
+      "correct": "1.33 × 10⁻⁵",
+      "correctExplanation": "v/c = 4.00 × 10³ / 3.00 × 10⁸ = 1.33 × 10⁻⁵. This very small ratio explains why γ is only slightly greater than 1.",
+      "distractors": [
+        { "answer": "1.33 × 10⁻²", "explanation": "This overestimates v/c by a factor of 1000." },
+        { "answer": "1.33 × 10⁻⁸", "explanation": "This underestimates v/c by a factor of 1000." },
+        { "answer": "4.00 × 10⁻⁵", "explanation": "This does not correctly divide by c = 3.00 × 10⁸ m s⁻¹." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "The GPS time dilation correction accounts for the special relativistic effect of orbital speed. However, GPS also requires a general relativistic correction. The general relativistic effect causes satellite clocks to:",
+      "correct": "run faster than ground clocks because gravity is weaker at orbital altitude",
+      "correctExplanation": "General relativity predicts that clocks in weaker gravitational fields (higher altitude) tick faster. This effect is about 45 μs per day faster, partially offset by the 7 μs per day slower from special relativity.",
+      "distractors": [
+        { "answer": "run slower than ground clocks because gravity is weaker at orbital altitude", "explanation": "Weaker gravity causes clocks to run faster, not slower. It is the special relativistic velocity effect that makes them run slower." },
+        { "answer": "run at the same rate as ground clocks because gravitational effects cancel velocity effects", "explanation": "The two effects do not cancel perfectly. The net effect is that satellite clocks run about 38 μs per day faster." },
+        { "answer": "run faster because the satellite is moving closer to the speed of light", "explanation": "The general relativistic effect is due to altitude (gravity), not speed. The speed effect from special relativity makes the clock run slower." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A student calculates the position error from a 1 μs timing error in GPS. Which one of the following is closest to this error?",
+      "correct": "300 m",
+      "correctExplanation": "s = cΔt = 3.00 × 10⁸ × 1.00 × 10⁻⁶ = 300 m. A 1 μs error corresponds to a 300 m position error.",
+      "distractors": [
+        { "answer": "30 m", "explanation": "This underestimates the error by a factor of 10." },
+        { "answer": "3 km", "explanation": "This overestimates the error by a factor of 10." },
+        { "answer": "3 m", "explanation": "This underestimates the error by a factor of 100." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "If the GPS system did not apply relativistic corrections, the position errors would increase over time. After one week, which one of the following is closest to the accumulated error from special relativistic time dilation alone?",
+      "correct": "14 km",
+      "correctExplanation": "The error is approximately 2 km per day. After 7 days: 7 × 2 = 14 km.",
+      "distractors": [
+        { "answer": "2 km", "explanation": "This is the error for one day only, not one week." },
+        { "answer": "100 km", "explanation": "This overestimates the weekly accumulation." },
+        { "answer": "1.4 km", "explanation": "This underestimates the error by a factor of 10." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Why is the speed of light c particularly important in understanding why GPS requires relativistic corrections?",
+      "correct": "Because c is so large, even tiny timing errors are multiplied into significant position errors.",
+      "correctExplanation": "GPS uses s = cΔt to calculate distance. Since c = 3.00 × 10⁸ m s⁻¹, a timing error of just 1 μs translates to a 300 m position error.",
+      "distractors": [
+        { "answer": "Because the GPS signals travel faster than c in the ionosphere.", "explanation": "GPS signals do not travel faster than c. They travel at or near c, and their speed is well-characterised." },
+        { "answer": "Because the satellites orbit at a significant fraction of c.", "explanation": "The satellites orbit at 4 km s⁻¹, which is about 1.3 × 10⁻⁵c — a tiny fraction of c." },
+        { "answer": "Because the clocks on satellites use light pulses to keep time.", "explanation": "GPS satellite clocks are atomic clocks, not light clocks. The relevance of c is in the distance calculation." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "An engineer states: 'GPS proves that special relativity is not just a theory — it has real-world consequences.' Which aspect of GPS most directly supports this statement?",
+      "correct": "The measured clock rate differences match the predictions of time dilation.",
+      "correctExplanation": "The atomic clocks on GPS satellites show timing differences that precisely match the predictions of special (and general) relativity. Without corrections, GPS would be unusable.",
+      "distractors": [
+        { "answer": "GPS satellites travel at relativistic speeds close to c.", "explanation": "GPS satellites travel at about 4 km s⁻¹, which is a tiny fraction of c. However, the time dilation effect is still measurable." },
+        { "answer": "GPS signals travel at the speed of light, which proves Einstein's postulate.", "explanation": "While GPS signals do travel at c, this does not directly support the statement about time dilation corrections." },
+        { "answer": "GPS uses Einstein's mass-energy equivalence to generate power.", "explanation": "GPS does not use E = mc² for power generation. The relativistic correction is about time dilation." }
+      ]
+    },
+    {
+      "type": "TF",
+      "question": "The net relativistic correction for GPS satellite clocks combines both special relativistic (velocity) and general relativistic (gravity) effects.",
+      "correct": "True",
+      "correctExplanation": "Special relativity slows satellite clocks by about 7 μs/day, while general relativity speeds them up by about 45 μs/day. The net effect is that satellite clocks run about 38 μs/day fast.",
+      "distractors": [
+        { "answer": "False", "explanation": "Both effects are real and must be corrected for. The GPS system accounts for the combined net effect." }
+      ]
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the sentence about GPS and the speed of light.",
+      "sentence": "GPS calculates distance using the equation s = {{blank:1}}Δt. Because c = 3.00 × 10⁸ m s⁻¹ is very large, even a timing error of 1 μs produces a position error of {{blank:2}} m.",
+      "blanks": {
+        "1": {
+          "correct": "c",
+          "correctExplanation": "GPS signals travel at the speed of light c, so distance = c × time delay.",
+          "distractors": ["v", "γ"]
+        },
+        "2": {
+          "correct": "300",
+          "correctExplanation": "s = 3.00 × 10⁸ × 1.00 × 10⁻⁶ = 300 m.",
+          "distractors": ["30", "3000"]
+        }
+      }
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the sentence about the combined relativistic effects on GPS.",
+      "sentence": "Special relativity causes GPS satellite clocks to run {{blank:1}} by about 7 μs/day, while general relativity causes them to run {{blank:2}} by about 45 μs/day due to weaker gravity at altitude.",
+      "blanks": {
+        "1": {
+          "correct": "slower",
+          "correctExplanation": "The orbital velocity of the satellite produces time dilation, making the moving clock run slower.",
+          "distractors": ["faster", "normally"]
+        },
+        "2": {
+          "correct": "faster",
+          "correctExplanation": "At higher altitude, gravity is weaker, and general relativity predicts that clocks tick faster in weaker gravitational fields.",
+          "distractors": ["slower", "normally"]
+        }
+      }
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the sentence about the practical importance of GPS corrections.",
+      "sentence": "Without relativistic corrections, GPS position errors would grow by approximately {{blank:1}} km per day, making the system {{blank:2}} for navigation within hours.",
+      "blanks": {
+        "1": {
+          "correct": "10",
+          "correctExplanation": "The combined special and general relativistic timing errors produce position errors of about 10 km per day if uncorrected.",
+          "distractors": ["0.1", "100"]
+        },
+        "2": {
+          "correct": "unusable",
+          "correctExplanation": "Errors of 10 km per day would make GPS completely unreliable for navigation, mapping, or location services.",
+          "distractors": ["more accurate", "unchanged"]
+        }
+      }
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "MC",
+      "question": "A GPS satellite has an orbital speed of 3.87 km s⁻¹. Using v/c = 1.29 × 10⁻⁵, the Lorentz factor differs from 1 by approximately ½(v/c)² = 8.33 × 10⁻¹¹. In 86 400 s (one day), which one of the following is closest to the timing error due to special relativistic time dilation?",
+      "correct": "7.20 μs",
+      "correctExplanation": "Δt = ½(v/c)² × 86 400 = 8.33 × 10⁻¹¹ × 86 400 = 7.20 × 10⁻⁶ s = 7.20 μs.",
+      "distractors": [
+        { "answer": "0.720 μs", "explanation": "This underestimates the error by a factor of 10." },
+        { "answer": "72.0 μs", "explanation": "This overestimates the error by a factor of 10." },
+        { "answer": "7.20 ns", "explanation": "This is 1000 times too small. The correct answer is in microseconds, not nanoseconds." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "The net relativistic effect on GPS clocks is approximately +38 μs per day (clocks run fast). A student calculates the position error from this uncorrected timing difference. Which one of the following is closest to the daily position error?",
+      "correct": "11.4 km",
+      "correctExplanation": "s = cΔt = 3.00 × 10⁸ × 38 × 10⁻⁶ = 11 400 m = 11.4 km per day.",
+      "distractors": [
+        { "answer": "1.14 km", "explanation": "This underestimates the error by a factor of 10." },
+        { "answer": "114 km", "explanation": "This overestimates the error by a factor of 10." },
+        { "answer": "11.4 m", "explanation": "This underestimates the error by a factor of 1000." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A GPS engineer needs to correct for time dilation. Which approach correctly compensates for the special relativistic effect?",
+      "correct": "Pre-adjust the satellite clock frequency so that it ticks slightly faster than a ground clock, compensating for the predicted time dilation slowdown.",
+      "correctExplanation": "By setting the satellite clock to tick at a slightly higher frequency before launch, the time dilation effect brings the clock rate into agreement with ground clocks.",
+      "distractors": [
+        { "answer": "Periodically reset the satellite clock to match the ground clock via radio signals.", "explanation": "While correction signals are used, the primary method is pre-adjusting the clock frequency before launch. Periodic resetting alone would introduce gaps in service." },
+        { "answer": "Reduce the satellite's orbital speed to eliminate time dilation entirely.", "explanation": "Reducing orbital speed would change the orbit and is not practical. The correction is applied to the clock, not the orbit." },
+        { "answer": "Use the Doppler effect to cancel the time dilation automatically.", "explanation": "The Doppler effect and time dilation are separate phenomena. The Doppler effect does not cancel time dilation." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "If a new GPS satellite constellation were placed in a lower orbit (faster speed, stronger gravity), how would the special relativistic correction change compared to current GPS satellites?",
+      "correct": "The special relativistic correction would increase because the satellite moves faster, producing greater time dilation.",
+      "correctExplanation": "A lower orbit means a higher orbital speed. Time dilation increases with speed, so the special relativistic correction would be larger.",
+      "distractors": [
+        { "answer": "The correction would decrease because the satellite is closer to Earth.", "explanation": "Proximity to Earth affects the general relativistic correction, not the special relativistic one. Higher speed means more time dilation." },
+        { "answer": "The correction would remain the same because all orbits produce the same time dilation.", "explanation": "Different orbital speeds produce different amounts of time dilation." },
+        { "answer": "The correction would be zero because lower orbits eliminate relativistic effects.", "explanation": "Relativistic effects depend on speed, not altitude. A faster orbit produces greater time dilation." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A student asks: 'If the GPS time dilation effect is only 7 μs per day, why not just ignore it and accept slightly worse GPS accuracy?' Which response best addresses this question?",
+      "correct": "A 7 μs error per day produces about 2 km of position error per day, which would make GPS unusable for most applications within hours.",
+      "correctExplanation": "GPS accuracy requirements are typically within a few metres. A daily error of 2 km (accumulating over time) would render the system useless for navigation, surveying, and emergency services.",
+      "distractors": [
+        { "answer": "The 7 μs error is negligible and can safely be ignored for most users.", "explanation": "7 μs × c = 2100 m per day. This is far larger than acceptable GPS accuracy and cannot be ignored." },
+        { "answer": "The error only matters for military applications, not civilian GPS.", "explanation": "Both civilian and military GPS require metre-level accuracy. A 2 km daily error affects all users." },
+        { "answer": "The error is significant only after several years of accumulated drift.", "explanation": "The error accumulates daily. After just one day, the position error is already 2 km." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "GPS determines position by measuring the time delay between a satellite signal and the receiver. If four satellites are used, at least how many independent time measurements are needed to determine a position in three dimensions?",
+      "correct": "Four — three for spatial coordinates and one to correct for receiver clock error",
+      "correctExplanation": "Three time measurements determine three spatial coordinates. A fourth measurement is needed because the receiver clock is not synchronised to GPS time and introduces an unknown offset.",
+      "distractors": [
+        { "answer": "One — the signal from any single satellite gives the position", "explanation": "A single satellite gives only the distance from that satellite, not a full position." },
+        { "answer": "Two — one for latitude and one for longitude", "explanation": "Two measurements give a circle intersection, not a unique position. Altitude and clock error also need to be determined." },
+        { "answer": "Three — one for each spatial dimension", "explanation": "Three measurements would suffice only if the receiver clock were perfectly synchronised, which it is not." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "The GPS system pre-adjusts satellite clock frequencies before launch. The factory-set frequency is offset from the nominal 10.23 MHz by a fraction that compensates for both special and general relativistic effects. This pre-adjustment demonstrates that:",
+      "correct": "relativistic predictions are precise enough to be built into hardware before launch",
+      "correctExplanation": "The fact that clock frequencies are adjusted before launch and maintain accuracy over years confirms the precision and reliability of relativistic predictions.",
+      "distractors": [
+        { "answer": "relativistic effects are too unpredictable to correct in real time", "explanation": "The effects are highly predictable, which is why they can be compensated before launch. Real-time corrections are also applied." },
+        { "answer": "the clocks cannot be adjusted after launch, so the corrections are approximate", "explanation": "While pre-adjustment is the primary method, satellite clocks can also be updated. The corrections are precise, not approximate." },
+        { "answer": "relativistic effects are only approximate and may not apply in space", "explanation": "Relativistic effects apply everywhere. The success of GPS confirms that the corrections are exact." }
+      ]
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the calculation of position error from a timing discrepancy.",
+      "sentence": "A GPS satellite's clock is 10 μs ahead after one day. The resulting position error is s = c × Δt = 3.00 × 10⁸ × {{blank:1}} × 10⁻⁶ = {{blank:2}} m.",
+      "blanks": {
+        "1": {
+          "correct": "10",
+          "correctExplanation": "The timing error is 10 μs = 10 × 10⁻⁶ s.",
+          "distractors": ["1", "100"]
+        },
+        "2": {
+          "correct": "3000",
+          "correctExplanation": "s = 3.00 × 10⁸ × 10 × 10⁻⁶ = 3000 m = 3 km.",
+          "distractors": ["300", "30 000"]
+        }
+      }
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the sentence about why GPS is a good example of special relativity in action.",
+      "sentence": "GPS demonstrates that special relativity has {{blank:1}} consequences because even at the relatively low speed of 4 km s⁻¹, the time dilation effect is large enough to cause {{blank:2}} errors in position.",
+      "blanks": {
+        "1": {
+          "correct": "practical",
+          "correctExplanation": "GPS is a practical, everyday application where relativistic corrections are essential for the technology to function.",
+          "distractors": ["theoretical", "negligible"]
+        },
+        "2": {
+          "correct": "kilometre-scale",
+          "correctExplanation": "The uncorrected time dilation produces position errors of about 2 km per day — enough to make GPS useless.",
+          "distractors": ["millimetre-scale", "nanometre-scale"]
+        }
+      }
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the sentence about the Lorentz factor for GPS satellites.",
+      "sentence": "At v = 4 km s⁻¹, v/c ≈ 1.3 × 10⁻⁵. The Lorentz factor γ ≈ 1 + ½(v/c)² ≈ 1 + {{blank:1}} × 10⁻¹¹, showing that γ is extremely close to {{blank:2}} but not exactly equal.",
+      "blanks": {
+        "1": {
+          "correct": "8.3",
+          "correctExplanation": "½(v/c)² = ½ × (1.3 × 10⁻⁵)² = ½ × 1.69 × 10⁻¹⁰ ≈ 8.3 × 10⁻¹¹.",
+          "distractors": ["1.3", "83"]
+        },
+        "2": {
+          "correct": "1",
+          "correctExplanation": "At GPS orbital speed, γ differs from 1 by only about 8 × 10⁻¹¹. This tiny difference is nonetheless measurable with atomic clocks.",
+          "distractors": ["0", "2"]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "MC",
+      "question": "A student argues that since general relativistic effects (+45 μs/day) are larger than special relativistic effects (−7 μs/day), special relativity is irrelevant for GPS. Evaluate this argument.",
+      "correct": "The argument is flawed. Both effects must be accounted for. Ignoring the 7 μs special relativistic correction would still produce approximately 2 km of daily position error.",
+      "correctExplanation": "The net correction is the sum of both effects. Ignoring either one would produce significant errors. A 2 km daily error from special relativity alone is unacceptable.",
+      "distractors": [
+        { "answer": "The argument is correct — the special relativistic effect is negligible compared to the general relativistic effect.", "explanation": "7 μs corresponds to 2 km of position error per day, which is not negligible for a system requiring metre-level accuracy." },
+        { "answer": "The argument is correct because the two effects partially cancel, making both corrections unnecessary.", "explanation": "Partial cancellation reduces the net correction but does not eliminate it. Both effects must be accounted for." },
+        { "answer": "The argument is flawed because special relativity is always more important than general relativity.", "explanation": "In this case, the general relativistic effect is numerically larger, but neither is irrelevant." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A future GPS constellation uses satellites in a higher orbit, moving at 3.00 km s⁻¹ instead of 4.00 km s⁻¹. By what factor does the special relativistic timing error change?",
+      "correct": "It decreases by a factor of approximately 0.56",
+      "correctExplanation": "The timing error is proportional to (v/c)². Ratio = (3.00/4.00)² = (0.75)² = 0.5625 ≈ 0.56. The error decreases to about 56% of the original.",
+      "distractors": [
+        { "answer": "It decreases by a factor of 0.75", "explanation": "The error depends on (v/c)², not v/c. The factor is 0.75² = 0.56, not 0.75." },
+        { "answer": "It increases by a factor of 1.33", "explanation": "A slower speed produces less time dilation, not more." },
+        { "answer": "It remains the same because time dilation depends on altitude, not speed", "explanation": "Time dilation from special relativity depends on speed. A lower speed produces less time dilation." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "GPS achieves centimetre-level accuracy in some applications by using carrier-phase measurements and differential corrections. Even at this precision, relativistic corrections remain essential because:",
+      "correct": "the uncorrected relativistic timing errors (38 μs/day) would produce errors thousands of times larger than the target accuracy",
+      "correctExplanation": "38 μs/day corresponds to about 11 km of error. For centimetre-level accuracy, even a nanosecond error (30 cm) matters. The relativistic corrections prevent errors many orders of magnitude larger than the target.",
+      "distractors": [
+        { "answer": "carrier-phase measurements automatically eliminate relativistic effects", "explanation": "Carrier-phase measurements improve precision but do not eliminate the need for relativistic corrections." },
+        { "answer": "differential corrections remove the relativistic timing error entirely", "explanation": "Differential corrections reduce some errors but do not replace the fundamental relativistic clock corrections." },
+        { "answer": "centimetre-level accuracy does not require relativistic corrections because the errors are random", "explanation": "Relativistic timing errors are systematic, not random, and accumulate over time." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A physicist proposes placing atomic clocks on geostationary satellites (orbital speed ≈ 3.07 km s⁻¹) instead of medium-Earth-orbit GPS satellites (≈ 3.87 km s⁻¹). How would the special relativistic correction compare?",
+      "correct": "The correction would be smaller because geostationary satellites move more slowly, producing less time dilation.",
+      "correctExplanation": "Time dilation scales as (v/c)². Since 3.07 < 3.87 km s⁻¹, the geostationary satellites have less time dilation: (3.07/3.87)² ≈ 0.63 of the current correction.",
+      "distractors": [
+        { "answer": "The correction would be larger because geostationary satellites are farther from Earth.", "explanation": "Distance from Earth affects the general relativistic correction, not the special relativistic one. The slower speed gives less time dilation." },
+        { "answer": "The correction would be the same because all satellites experience the same time dilation.", "explanation": "Time dilation depends on speed, which differs between orbit types." },
+        { "answer": "The correction would be zero because geostationary satellites are stationary relative to the ground.", "explanation": "Geostationary satellites are stationary relative to a point on the ground, but they still orbit at 3.07 km s⁻¹ relative to the non-rotating frame. Time dilation still applies." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "An exam question asks: 'Explain why GPS satellite clocks need correction for special relativistic time dilation.' Which response would receive full marks?",
+      "correct": "GPS satellites orbit at ~4 km s⁻¹. Special relativity predicts their clocks run slower than ground clocks by ~7 μs/day due to time dilation. GPS uses s = cΔt, so this timing error causes ~2 km/day position error. Corrections are applied to maintain accuracy.",
+      "correctExplanation": "A complete answer states the satellite speed, identifies time dilation as the cause, quantifies the timing error, connects it to position error via s = cΔt, and notes that corrections are required.",
+      "distractors": [
+        { "answer": "GPS uses relativity because Einstein said time is relative, so the clocks need adjusting.", "explanation": "This is too vague. It does not quantify the effect, identify the mechanism, or explain the consequence for positioning." },
+        { "answer": "Satellite clocks run fast because they are far from Earth, so they need to be slowed down.", "explanation": "This describes the general relativistic effect (gravity), not the special relativistic effect (velocity). The question asks specifically about special relativity." },
+        { "answer": "Time dilation makes GPS signals travel slower, causing position errors.", "explanation": "GPS signals always travel at c. Time dilation affects the satellite clocks, not the signal speed." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A student calculates the special relativistic time dilation for a GPS satellite using the exact formula γ = 1/√(1 − v²/c²) and compares it to the approximate formula γ ≈ 1 + ½(v/c)². At v = 4 km s⁻¹, the two methods agree to within:",
+      "correct": "better than 1 part in 10²⁰, because (v/c)⁴ terms are negligibly small",
+      "correctExplanation": "The next term in the Taylor expansion is ⅜(v/c)⁴ ≈ 10⁻²⁰. This is so small that the approximation is effectively exact for GPS calculations.",
+      "distractors": [
+        { "answer": "about 1%, because the approximation is only a rough estimate", "explanation": "At v/c ≈ 10⁻⁵, the approximation is extraordinarily accurate. The error is of order (v/c)⁴ ≈ 10⁻²⁰." },
+        { "answer": "about 10%, because higher-order terms are significant", "explanation": "Higher-order terms are proportional to (v/c)⁴, which is about 10⁻²⁰ — completely negligible." },
+        { "answer": "the two methods disagree significantly at any speed", "explanation": "The Taylor expansion is an excellent approximation at low speeds. At GPS orbital speeds, the agreement is essentially perfect." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Some internet sources claim that 'GPS does not actually need relativistic corrections because the system self-calibrates.' A physics student should respond by noting that:",
+      "correct": "GPS satellite clock frequencies are pre-adjusted before launch specifically to compensate for relativistic effects, confirming that the corrections are built into the system design.",
+      "correctExplanation": "The satellite clocks are manufactured with a frequency offset of 10.22999999543 MHz instead of 10.23 MHz, precisely accounting for the predicted relativistic effects. This is not self-calibration — it is a deliberate design choice based on relativity.",
+      "distractors": [
+        { "answer": "The claim is correct — GPS works without any relativistic corrections.", "explanation": "GPS satellite clocks are explicitly pre-adjusted for relativistic effects. Without these corrections, the system would rapidly become inaccurate." },
+        { "answer": "GPS only needs corrections in space, not on the ground.", "explanation": "The relativistic effects affect the satellite clocks relative to ground clocks. Both the satellite and ground segments must account for relativity." },
+        { "answer": "Relativistic corrections were included in early GPS but removed in modern systems.", "explanation": "Modern GPS systems continue to include relativistic corrections. They are fundamental to the system's accuracy." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A physics teacher demonstrates GPS time dilation by showing that the pre-launch clock frequency is adjusted by Δf/f ≈ −4.47 × 10⁻¹⁰. This adjustment corresponds to the net relativistic effect of approximately 38.6 μs/day. Which calculation confirms this correspondence?",
+      "correct": "Δt = Δf/f × 86 400 s = 4.47 × 10⁻¹⁰ × 86 400 = 38.6 × 10⁻⁶ s = 38.6 μs",
+      "correctExplanation": "The fractional frequency offset multiplied by the number of seconds in a day gives the daily timing correction: 4.47 × 10⁻¹⁰ × 86 400 = 38.6 μs.",
+      "distractors": [
+        { "answer": "Δt = Δf × 86 400 = 4.47 × 10⁻¹⁰ × 86 400 = 3.86 × 10⁻⁵ Hz", "explanation": "This incorrectly gives a frequency, not a time. The calculation should yield a time in seconds." },
+        { "answer": "Δt = f × Δf = 10.23 × 10⁶ × 4.47 × 10⁻¹⁰ = 4.57 × 10⁻³ s", "explanation": "This calculation has no physical meaning. The correct approach multiplies the fractional offset by the number of seconds in a day." },
+        { "answer": "Δt = 86 400 / Δf = 86 400 / 4.47 × 10⁻¹⁰ = 1.93 × 10¹⁴ s", "explanation": "This inverts the calculation. The correct approach multiplies, not divides." }
+      ]
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the analysis of the combined relativistic effects on GPS.",
+      "sentence": "Special relativity: −7 μs/day (clock runs slow). General relativity: +45 μs/day (clock runs fast). Net effect: +{{blank:1}} μs/day. Without correction, daily position error ≈ {{blank:2}} km.",
+      "blanks": {
+        "1": {
+          "correct": "38",
+          "correctExplanation": "Net = +45 − 7 = +38 μs/day. The satellite clock runs 38 μs fast per day overall.",
+          "distractors": ["52", "7"]
+        },
+        "2": {
+          "correct": "11",
+          "correctExplanation": "s = c × 38 × 10⁻⁶ = 3.00 × 10⁸ × 38 × 10⁻⁶ = 11 400 m ≈ 11 km.",
+          "distractors": ["2", "38"]
+        }
+      }
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the sentence about the pre-launch frequency adjustment.",
+      "sentence": "GPS satellite clocks are set to a frequency {{blank:1}} than the nominal 10.23 MHz before launch, so that the relativistic effects bring the apparent frequency back to {{blank:2}} MHz as observed from the ground.",
+      "blanks": {
+        "1": {
+          "correct": "lower",
+          "correctExplanation": "Since the net relativistic effect makes the clock run fast, the factory-set frequency is slightly lower than 10.23 MHz to compensate.",
+          "distractors": ["higher", "equal to"]
+        },
+        "2": {
+          "correct": "10.23",
+          "correctExplanation": "The adjustment is designed so that the satellite clock, as observed from the ground, ticks at exactly the nominal 10.23 MHz.",
+          "distractors": ["10.00", "11.23"]
+        }
+      }
+    }
+  ]
+}

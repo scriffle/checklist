@@ -1,0 +1,64 @@
+{
+  "id": "scientific-conventions",
+  "name": "Scientific Conventions: Units and Significant Figures",
+  "icon": "📐",
+  "what": "This subtopic covers the SI unit system including base and derived units, how to use prefixes to express different orders of magnitude, and how to apply significant figure conventions when recording and calculating values. It also addresses the use of scientific notation.",
+  "why": "Consistent use of SI units and significant figures allows scientists to communicate measurements clearly and accurately. Without these conventions, it would be impossible to compare results across experiments or interpret the level of confidence in a measurement.",
+  "items": [
+    {
+      "id": 1,
+      "uuid": "lp-32868fb2-a4ee-19a3-2372-7a492ca159ff",
+      "version": 1,
+      "title": "I can identify and use base SI units for common physical quantities",
+      "code": "2.1",
+      "what": "The seven base SI units include the metre (m) for length, kilogram (kg) for mass, second (s) for time, ampere (A) for electric current, and kelvin (K) for temperature. All other units are derived from combinations of these.",
+      "why": "Most physics formulas require quantities to be expressed in SI units before substitution. Using non-SI units (such as grams instead of kilograms) will produce incorrect numerical results.",
+      "example": "A problem asking for force in newtons requires mass in kilograms and acceleration in m s⁻². If mass is given in grams, it must be converted to kilograms first: 250 g = 0.250 kg.",
+      "contentHash": "hash-262a43c1"
+    },
+    {
+      "id": 2,
+      "uuid": "lp-78a139c4-72f6-3833-d59a-e20f57773340",
+      "version": 1,
+      "title": "I can convert measurements using SI prefixes",
+      "code": "2.2",
+      "what": "SI prefixes indicate multiplication factors: pico (10⁻¹²), nano (10⁻⁹), micro (10⁻⁶), milli (10⁻³), kilo (10³), mega (10⁶) and giga (10⁹). Converting between prefixes means multiplying or dividing by the appropriate power of ten.",
+      "why": "Scientific measurements span enormous ranges of scale. Prefixes make values easier to write and read, but they must be removed before substituting into formulas to avoid calculation errors.",
+      "example": "Converting 360 nm to metres: 360 nm = 360 × 10⁻⁹ m = 3.60 × 10⁻⁷ m. Converting 23 MΩ to ohms: 23 × 10⁶ = 2.3 × 10⁷ Ω.",
+      "contentHash": "hash-54b6f8d5"
+    },
+    {
+      "id": 3,
+      "uuid": "lp-4e649763-ee6e-7456-ed34-2ba2932b88c0",
+      "version": 1,
+      "title": "I can determine the number of significant figures in a value",
+      "code": "2.3",
+      "what": "Significant figures include all non-zero digits, zeros between digits, and trailing zeros after a decimal point. Leading zeros are never significant. The number of significant figures indicates how precisely a value is known.",
+      "why": "Expressing a result with too many significant figures implies a level of precision that was not actually achieved. Using too few significant figures loses information about the precision of the measurement.",
+      "example": "The value 0.0302 has three significant figures (the leading zeros are not significant, but the zero between 3 and 2 is). The value 53.00 has four significant figures because the trailing zeros after the decimal place are significant.",
+      "contentHash": "hash-e73d7bcd"
+    },
+    {
+      "id": 4,
+      "uuid": "lp-af413da1-cc95-72e9-adc8-67f90c52cd88",
+      "version": 1,
+      "title": "I can apply significant figure rules when performing calculations",
+      "code": "2.4",
+      "what": "When multiplying or dividing, the answer should have the same number of significant figures as the least precise input value. When adding or subtracting, the answer should have the same number of decimal places as the input with the fewest decimal places.",
+      "why": "These rules ensure the calculated result does not express more confidence than is justified by the input data. Rounding should only be applied to the final answer, not to intermediate steps, to avoid compounding rounding errors.",
+      "example": "For 34.477 × 2.31: the answer is limited to 3 significant figures (from 2.31), giving 79.6. For 34.477 + 2.31: the answer is limited to 2 decimal places (from 2.31), giving 36.79.",
+      "contentHash": "hash-6191a94a"
+    },
+    {
+      "id": 5,
+      "uuid": "lp-a67477c7-8ea2-dbe2-e709-72700d518fd4",
+      "version": 1,
+      "title": "I can write values in correct scientific notation",
+      "code": "2.5",
+      "what": "Scientific notation expresses a number as m × 10ⁿ, where m is a value with an absolute value between 1 and 10, and n is an integer. All digits in m are significant. Scientific notation is used to express very large or very small numbers, and to communicate precision clearly.",
+      "why": "Scientific notation prevents ambiguity about significant figures and makes very large or small numbers easier to read and compare. For example, writing 2.0 × 10¹ m makes it clear there are two significant figures, whereas writing 20 m does not.",
+      "example": "63 700 written to 2 significant figures is 6.4 × 10⁴. The value 0.00034 written in scientific notation is 3.4 × 10⁻⁴. The value 0.0125 to 2 significant figures is 1.3 × 10⁻².",
+      "contentHash": "hash-3e923628"
+    }
+  ]
+}

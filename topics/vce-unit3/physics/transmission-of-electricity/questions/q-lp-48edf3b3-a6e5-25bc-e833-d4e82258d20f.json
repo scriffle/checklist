@@ -1,0 +1,583 @@
+{
+  "_link": {
+    "uuid": "lp-48edf3b3-a6e5-25bc-e833-d4e82258d20f",
+    "version": 1,
+    "contentHash": "hash-f3dfa52f",
+    "title": "I can analyse a full transmission system including step-up and step-down transformers and calculate current, voltage and power loss at each stage",
+    "generatedAt": "2026-03-08T00:00:00.000Z"
+  },
+  "toLevel2": [
+    {
+      "type": "mc",
+      "question": "In a typical electricity transmission system, which one of the following correctly describes the order of components from the power station to the consumer?",
+      "correct": "Generator → step-up transformer → transmission lines → step-down transformer → consumer",
+      "correctExplanation": "The generator produces electricity at a moderate voltage. A step-up transformer increases the voltage for efficient long-distance transmission. A step-down transformer then reduces the voltage before it reaches the consumer.",
+      "distractors": [
+        { "answer": "Generator → step-down transformer → transmission lines → step-up transformer → consumer", "explanation": "This reverses the transformer roles. The step-up transformer comes first to increase voltage for transmission, and the step-down reduces it for consumer use." },
+        { "answer": "Generator → transmission lines → step-up transformer → step-down transformer → consumer", "explanation": "Without a step-up transformer before the transmission lines, the current would be too high and power losses excessive." },
+        { "answer": "Generator → step-up transformer → step-down transformer → transmission lines → consumer", "explanation": "Stepping voltage up and then immediately back down before transmission defeats the purpose. The transformers must be at either end of the transmission lines." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Why is a step-up transformer used at the start of a transmission system?",
+      "correct": "To increase the voltage and thereby reduce the current, which reduces power losses in the transmission lines",
+      "correctExplanation": "Since power is transmitted at P = VI, increasing V allows the same power to be transmitted with a smaller current. Power loss in the wires is Ploss = I²R, so reducing current greatly reduces losses.",
+      "distractors": [
+        { "answer": "To increase the total power output of the generator before transmission begins", "explanation": "A transformer cannot increase total power. An ideal transformer conserves power: Pin = Pout." },
+        { "answer": "To increase the current flowing through the transmission lines for more efficient delivery", "explanation": "Increasing current would increase I²R losses. The step-up transformer reduces current by increasing voltage." },
+        { "answer": "To convert the AC voltage from the generator into DC voltage for the transmission lines", "explanation": "Transformers do not convert AC to DC. They change AC voltage levels using electromagnetic induction." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which one of the following formulas is used to calculate the power lost as heat in the transmission lines?",
+      "correct": "Ploss = I²R",
+      "correctExplanation": "Power loss due to the resistance of the transmission wires is calculated using Ploss = I²R, where I is the current in the wires and R is their total resistance.",
+      "distractors": [
+        { "answer": "Ploss = V²/R", "explanation": "V²/R would use the full supply voltage, not the voltage drop across the wires. Ploss = I²R uses the wire current and resistance correctly." },
+        { "answer": "Ploss = VI", "explanation": "This gives total power delivered, not the loss in the wires specifically." },
+        { "answer": "Ploss = IR", "explanation": "IR gives the voltage drop across the wires, not the power lost. Ploss = I²R." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What is the purpose of the step-down transformer at the consumer end of a transmission system?",
+      "correct": "To reduce the high transmission voltage to a safe level for use by consumers",
+      "correctExplanation": "The high voltage used for efficient transmission is dangerous for household use. The step-down transformer reduces it to a safe level, such as 230 V for Australian households.",
+      "distractors": [
+        { "answer": "To increase the current before it enters the consumer's home for greater power delivery", "explanation": "While the step-down transformer does increase current, its primary purpose is to reduce voltage to a safe level, not to boost current." },
+        { "answer": "To remove the resistance of the transmission lines from the circuit", "explanation": "A transformer does not eliminate wire resistance. It simply changes the voltage and current levels." },
+        { "answer": "To convert the AC voltage back into DC for household appliances", "explanation": "The step-down transformer outputs AC, not DC. It reduces the AC voltage level." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "In a complete transmission system, what happens to the current when the voltage is stepped up by a factor of 10 at the step-up transformer?",
+      "correct": "The current decreases by a factor of 10",
+      "correctExplanation": "For an ideal transformer, Pin = Pout. If voltage increases by a factor of 10, current must decrease by a factor of 10 to conserve power.",
+      "distractors": [
+        { "answer": "The current also increases by a factor of 10", "explanation": "Current and voltage change inversely in a transformer. If voltage goes up, current goes down." },
+        { "answer": "The current stays the same because power is conserved", "explanation": "Power conservation means V₁I₁ = V₂I₂. If V increases, I must decrease proportionally." },
+        { "answer": "The current decreases by a factor of 100", "explanation": "The current decreases by the same factor as the voltage increases. A factor-of-10 voltage increase gives a factor-of-10 current decrease, not 100." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "In a complete transmission system, the power delivered to the consumer is always less than the power generated, due to resistive losses in the transmission lines.",
+      "correct": "True",
+      "correctExplanation": "The transmission lines have resistance, causing I²R power losses as heat. Therefore the power reaching the consumer is always less than what the generator produces.",
+      "distractors": [
+        { "answer": "False", "explanation": "Real transmission lines have resistance and always dissipate some power as heat. No practical system delivers 100% of generated power." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "A step-up transformer increases both the voltage and the total power in a transmission system.",
+      "correct": "False",
+      "correctExplanation": "An ideal transformer conserves power (Pin = Pout). A step-up transformer increases voltage but decreases current proportionally, leaving the total power unchanged.",
+      "distractors": [
+        { "answer": "True", "explanation": "Transformers cannot create power. They change the ratio of voltage to current while keeping power constant (in the ideal case)." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the description of a transmission system.",
+      "sentence": "A step-up transformer at the generator increases the {{blank:1}} and decreases the {{blank:2}} before electricity enters the transmission lines.",
+      "blanks": {
+        "1": {
+          "correct": "voltage",
+          "correctExplanation": "A step-up transformer increases voltage to reduce transmission losses.",
+          "distractors": [
+            { "answer": "current", "explanation": "A step-up transformer increases voltage, not current. Current decreases as voltage increases." },
+            { "answer": "power", "explanation": "A transformer does not increase power. It increases voltage while decreasing current." }
+          ]
+        },
+        "2": {
+          "correct": "current",
+          "correctExplanation": "As voltage is stepped up, current is reduced proportionally to conserve power.",
+          "distractors": [
+            { "answer": "voltage", "explanation": "A step-up transformer increases voltage; it does not decrease it." },
+            { "answer": "resistance", "explanation": "A transformer does not change the resistance of the transmission lines." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the power loss statement.",
+      "sentence": "The power lost in the transmission lines is given by Ploss = {{blank:1}}²R, where I is the {{blank:2}} in the transmission lines and R is their total resistance.",
+      "blanks": {
+        "1": {
+          "correct": "I",
+          "correctExplanation": "Ploss = I²R, where I is the current flowing through the wires.",
+          "distractors": [
+            { "answer": "V", "explanation": "V²/R would use the supply voltage, not the voltage drop across the wires. The correct formula is Ploss = I²R." },
+            { "answer": "P", "explanation": "P² has no physical meaning in this context. Ploss = I²R." }
+          ]
+        },
+        "2": {
+          "correct": "current",
+          "correctExplanation": "I represents the current flowing through the transmission lines.",
+          "distractors": [
+            { "answer": "voltage", "explanation": "I represents current, measured in amperes. Voltage is measured in volts." },
+            { "answer": "resistance", "explanation": "R represents the resistance. I is the current." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the transmission system summary.",
+      "sentence": "At the consumer end, a {{blank:1}} transformer reduces the voltage to a safe level. The total power delivered to the consumer equals the generated power minus the {{blank:2}} in the transmission lines.",
+      "blanks": {
+        "1": {
+          "correct": "step-down",
+          "correctExplanation": "A step-down transformer reduces the high transmission voltage to a lower, safer level for consumers.",
+          "distractors": [
+            { "answer": "step-up", "explanation": "A step-up transformer would increase the voltage further, making it even more dangerous. A step-down is used at the consumer end." },
+            { "answer": "isolation", "explanation": "While isolation transformers exist, the key function at the consumer end is stepping down the voltage." }
+          ]
+        },
+        "2": {
+          "correct": "power loss",
+          "correctExplanation": "The I²R losses in the transmission lines reduce the power available to the consumer.",
+          "distractors": [
+            { "answer": "voltage gain", "explanation": "There is no voltage gain in the lines. The loss is power dissipated as heat in the wire resistance." },
+            { "answer": "frequency change", "explanation": "Frequency does not change during transmission. The loss is power dissipated as heat." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "mc",
+      "question": "A generator produces 10 kW at 500 V. A 1:20 step-up transformer feeds the power into transmission lines. Which one of the following is closest to the current in the transmission lines?",
+      "correct": "1.0 A",
+      "correctExplanation": "After the step-up transformer: V = 500 × 20 = 10 000 V. Assuming an ideal transformer, I = P/V = 10 000/10 000 = 1.0 A.",
+      "distractors": [
+        { "answer": "20 A", "explanation": "20 A is the generator current (10 000/500). After stepping up by 20, current drops to 20/20 = 1.0 A." },
+        { "answer": "200 A", "explanation": "This results from an incorrect application of the turns ratio. I = P/V = 10 000/10 000 = 1.0 A." },
+        { "answer": "0.050 A", "explanation": "This results from dividing 1.0 A by another factor of 20. The transmission current is 1.0 A." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "In a transmission system, the current in the lines is 2.0 A and the total wire resistance is 5.0 Ω. Which one of the following is the power lost in the transmission lines?",
+      "correct": "20 W",
+      "correctExplanation": "Ploss = I²R = (2.0)² × 5.0 = 4.0 × 5.0 = 20 W.",
+      "distractors": [
+        { "answer": "10 W", "explanation": "This results from using I × R = 2.0 × 5.0 = 10, which gives the voltage drop, not the power loss." },
+        { "answer": "50 W", "explanation": "This results from using V²/R incorrectly. Ploss = I²R = 20 W." },
+        { "answer": "4.0 W", "explanation": "This results from I² = 4.0 without multiplying by R. Ploss = 4.0 × 5.0 = 20 W." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A transmission system has a step-up transformer with turns ratio 1:25 and a step-down transformer with turns ratio 25:1. The generator voltage is 400 V. Ignoring losses, which one of the following is the voltage at the consumer?",
+      "correct": "400 V",
+      "correctExplanation": "Step-up: V = 400 × 25 = 10 000 V. Step-down: V = 10 000/25 = 400 V. The consumer receives the same voltage as the generator (ignoring losses).",
+      "distractors": [
+        { "answer": "10 000 V", "explanation": "10 000 V is the transmission line voltage. The step-down transformer reduces this back to 400 V." },
+        { "answer": "16 V", "explanation": "This results from dividing 400 by 25 without first stepping up. The voltage goes up by 25 then back down by 25." },
+        { "answer": "250 000 V", "explanation": "This results from multiplying 400 × 25 × 25, applying both ratios as step-ups." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which one of the following best explains why power loss depends on the square of the current?",
+      "correct": "Because power loss equals I²R, and doubling the current quadruples the I² term",
+      "correctExplanation": "Ploss = I²R. The squared relationship means that any increase in current has a disproportionately large effect on power loss.",
+      "distractors": [
+        { "answer": "Because both the voltage drop and the current contribute linearly, and V = IR doubles when I doubles", "explanation": "While V = IR is true, this describes why Ploss = I × V = I × IR = I²R. The quadratic dependence on I is the key point." },
+        { "answer": "Because resistance increases with the square of the current in most conductors", "explanation": "Resistance is approximately constant for metallic conductors at a given temperature. The I² dependence comes from the formula, not from R changing." },
+        { "answer": "Because the frequency of the AC signal doubles the effective current in the wire", "explanation": "Frequency does not double the current. The I² relationship comes from the power dissipation formula Ploss = I²R." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A generator produces 5.0 kW at 250 V. The power is transmitted through lines with total resistance 2.0 Ω, without any transformer. Which one of the following is closest to the power lost in the lines?",
+      "correct": "800 W",
+      "correctExplanation": "I = P/V = 5000/250 = 20 A. Ploss = I²R = (20)² × 2.0 = 400 × 2.0 = 800 W.",
+      "distractors": [
+        { "answer": "40 W", "explanation": "This results from I × R = 20 × 2.0 = 40, which gives the voltage drop, not the power loss." },
+        { "answer": "200 W", "explanation": "This results from an incorrect calculation. Ploss = (20)² × 2.0 = 800 W." },
+        { "answer": "5000 W", "explanation": "5000 W is the total generated power, not the line loss. Ploss = 800 W." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Priya calculates the voltage drop across transmission lines carrying 5.0 A through 4.0 Ω of wire resistance. Which one of the following is correct?",
+      "correct": "20 V",
+      "correctExplanation": "Vdrop = IR = 5.0 × 4.0 = 20 V. This voltage is 'lost' across the wires and is unavailable at the consumer end.",
+      "distractors": [
+        { "answer": "100 W", "explanation": "100 W is the power loss (I²R = 25 × 4.0), not the voltage drop. Vdrop = IR = 20 V." },
+        { "answer": "0.80 V", "explanation": "This results from I/R instead of I × R. Vdrop = 5.0 × 4.0 = 20 V." },
+        { "answer": "1.25 V", "explanation": "This results from R/I. Vdrop = I × R = 20 V." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "If the voltage drop across the transmission lines is 20 V and the transmission voltage is 10 000 V, then the voltage reaching the step-down transformer is 9980 V.",
+      "correct": "True",
+      "correctExplanation": "The voltage at the end of the transmission lines equals the transmission voltage minus the voltage drop: 10 000 − 20 = 9980 V.",
+      "distractors": [
+        { "answer": "False", "explanation": "The voltage at the step-down transformer input is indeed 10 000 − 20 = 9980 V. The voltage drop reduces what is available." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the transmission system calculation.",
+      "sentence": "A generator produces 20 kW at 1000 V. A 1:10 step-up transformer increases the voltage to {{blank:1}} V. The transmission line current is then {{blank:2}} A.",
+      "blanks": {
+        "1": {
+          "correct": "10 000",
+          "correctExplanation": "V₂ = V₁ × turns ratio = 1000 × 10 = 10 000 V.",
+          "distractors": [
+            { "answer": "100", "explanation": "This results from dividing by 10 (stepping down). A 1:10 step-up multiplies voltage by 10." },
+            { "answer": "20 000", "explanation": "This confuses the power (20 kW) with the voltage calculation. V₂ = 1000 × 10 = 10 000 V." }
+          ]
+        },
+        "2": {
+          "correct": "2.0",
+          "correctExplanation": "I = P/V = 20 000/10 000 = 2.0 A.",
+          "distractors": [
+            { "answer": "20", "explanation": "20 A is the generator current (20 000/1000). After stepping up, I = 2.0 A." },
+            { "answer": "0.20", "explanation": "This results from an extra division by 10. I = P/V = 20 000/10 000 = 2.0 A." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the power loss calculation.",
+      "sentence": "Transmission lines carry a current of 4.0 A and have a total resistance of 10 Ω. The voltage drop across the lines is {{blank:1}} V and the power lost is {{blank:2}} W.",
+      "blanks": {
+        "1": {
+          "correct": "40",
+          "correctExplanation": "Vdrop = IR = 4.0 × 10 = 40 V.",
+          "distractors": [
+            { "answer": "160", "explanation": "This results from I²R = 160 W, which is the power loss, not the voltage drop." },
+            { "answer": "2.5", "explanation": "This results from R/I. Vdrop = I × R = 40 V." }
+          ]
+        },
+        "2": {
+          "correct": "160",
+          "correctExplanation": "Ploss = I²R = (4.0)² × 10 = 16 × 10 = 160 W.",
+          "distractors": [
+            { "answer": "40", "explanation": "40 V is the voltage drop (IR), not the power loss. Ploss = I²R = 160 W." },
+            { "answer": "400", "explanation": "This results from (IR)² = 40² = 1600, then dividing by something. Ploss = I²R = 160 W." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the system analysis.",
+      "sentence": "In a complete transmission system, the power reaching the consumer equals the {{blank:1}} power minus the I²R {{blank:2}} in the transmission lines.",
+      "blanks": {
+        "1": {
+          "correct": "generated",
+          "correctExplanation": "The consumer receives the generated power minus any losses: Pconsumer = Pgenerated − Ploss.",
+          "distractors": [
+            { "answer": "transmitted", "explanation": "While 'transmitted' is close, the total power entering the system comes from the generator. Pconsumer = Pgenerated − Ploss." },
+            { "answer": "transformed", "explanation": "Transformers do not generate power. The original power comes from the generator." }
+          ]
+        },
+        "2": {
+          "correct": "losses",
+          "correctExplanation": "The I²R losses represent power dissipated as heat in the wires.",
+          "distractors": [
+            { "answer": "gains", "explanation": "There are no I²R gains. The term represents power lost, not gained." },
+            { "answer": "transfers", "explanation": "I²R losses are power dissipated as heat, not useful transfers." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "mc",
+      "question": "A generator produces 50 kW at 2500 V. A 1:100 step-up transformer feeds into transmission lines with total resistance 4.0 Ω. Which one of the following is closest to the power lost in the transmission lines?",
+      "correct": "0.16 W",
+      "correctExplanation": "After step-up: V = 250 000 V. I = P/V = 50 000/250 000 = 0.20 A. Ploss = I²R = (0.20)² × 4.0 = 0.16 W.",
+      "distractors": [
+        { "answer": "1600 W", "explanation": "This results from using the pre-transformer current: I = 50 000/2500 = 20 A, Ploss = (20)² × 4.0 = 1600 W. The step-up transformer reduces this dramatically." },
+        { "answer": "80 W", "explanation": "This results from using I = 2.0 A (dividing by only 10 instead of 100). With a 1:100 ratio, I = 0.20 A." },
+        { "answer": "4.0 W", "explanation": "This confuses the wire resistance with the power loss. Ploss = I²R = 0.16 W." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A 10 kW generator at 500 V feeds a 1:20 step-up transformer, then transmission lines with R = 8.0 Ω, then a 20:1 step-down transformer. Which one of the following is closest to the percentage of power lost in the lines?",
+      "correct": "0.80%",
+      "correctExplanation": "After step-up: V = 500 × 20 = 10 000 V. I = 10 000/10 000 = 1.0 A. Ploss = (1.0)² × 8.0 = 8.0 W. Percentage = 8.0/10 000 × 100 = 0.080%.",
+      "distractors": [
+        { "answer": "32%", "explanation": "This results from using the pre-transformer current: I = 20 A, Ploss = 3200 W, 32%. The step-up transformer reduces the current dramatically." },
+        { "answer": "8.0%", "explanation": "This confuses the wire resistance (8 Ω) or the power loss (8 W) with the percentage. The loss is 8 W out of 10 000 W = 0.080%." },
+        { "answer": "0.80%", "explanation": "This results from a factor-of-10 error. The actual percentage is 8/10 000 × 100 = 0.080%." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A generator supplies 100 kW at 25 kV into transmission lines with R = 10 Ω. Which one of the following is closest to the power lost in the lines?",
+      "correct": "160 W",
+      "correctExplanation": "I = P/V = 100 000/25 000 = 4.0 A. Ploss = I²R = (4.0)² × 10 = 160 W.",
+      "distractors": [
+        { "answer": "4000 W", "explanation": "This results from using I = 10 A or an incorrect formula. I = 100 000/25 000 = 4.0 A, Ploss = 160 W." },
+        { "answer": "40 W", "explanation": "This results from I × R = 4.0 × 10 = 40, which is the voltage drop, not the power loss." },
+        { "answer": "1600 W", "explanation": "This results from using I = 40 A or I² = 160 then ×10. With I = 4.0 A, Ploss = 16 × 10 = 160 W." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "James analyses a transmission system: 20 kW generator at 1000 V, 1:50 step-up, lines with R = 5.0 Ω, 50:1 step-down. Which one of the following is closest to the voltage drop across the transmission lines?",
+      "correct": "2.0 V",
+      "correctExplanation": "After step-up: V = 1000 × 50 = 50 000 V. I = 20 000/50 000 = 0.40 A. Vdrop = IR = 0.40 × 5.0 = 2.0 V.",
+      "distractors": [
+        { "answer": "100 V", "explanation": "This results from using the pre-transformer current: I = 20 A, Vdrop = 20 × 5.0 = 100 V. The step-up transformer reduces the current." },
+        { "answer": "0.80 V", "explanation": "This results from an incorrect calculation. I = 0.40 A, Vdrop = 0.40 × 5.0 = 2.0 V." },
+        { "answer": "10 V", "explanation": "This results from using I = 2.0 A. The correct current is 0.40 A." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "In a transmission system, the voltage entering the transmission lines is 100 kV and the voltage drop across the lines is 500 V. Which one of the following is closest to the voltage reaching the step-down transformer?",
+      "correct": "99.5 kV",
+      "correctExplanation": "Voltage at step-down = transmission voltage − voltage drop = 100 000 − 500 = 99 500 V = 99.5 kV.",
+      "distractors": [
+        { "answer": "100 kV", "explanation": "The voltage drop across the lines must be subtracted. The voltage reaching the step-down is 99.5 kV." },
+        { "answer": "100.5 kV", "explanation": "The voltage drop is subtracted, not added. V = 100 − 0.5 = 99.5 kV." },
+        { "answer": "500 V", "explanation": "500 V is the voltage drop, not the voltage reaching the transformer." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A 5.0 kW generator at 250 V uses a 1:100 step-up transformer. Without the transformer, transmission lines (R = 2.0 Ω) would carry 20 A. With the transformer, the current is 0.20 A. Which one of the following correctly compares the power losses?",
+      "correct": "Without transformer: 800 W; with transformer: 0.080 W",
+      "correctExplanation": "Without: Ploss = (20)² × 2.0 = 800 W. With: Ploss = (0.20)² × 2.0 = 0.080 W. The transformer reduces losses by a factor of 10 000.",
+      "distractors": [
+        { "answer": "Without transformer: 40 W; with transformer: 0.40 W", "explanation": "These are voltage drops (IR), not power losses. Ploss = I²R." },
+        { "answer": "Without transformer: 800 W; with transformer: 8.0 W", "explanation": "With transformer: Ploss = (0.20)² × 2.0 = 0.080 W, not 8.0 W." },
+        { "answer": "Without transformer: 400 W; with transformer: 0.040 W", "explanation": "Without: Ploss = 20² × 2.0 = 800 W, not 400 W." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Sophia examines a transmission system where 2.0% of the generated power is lost in the lines. The generator produces 500 kW. Which one of the following is the power delivered to the consumer?",
+      "correct": "490 kW",
+      "correctExplanation": "Power lost = 2.0% × 500 = 10 kW. Power delivered = 500 − 10 = 490 kW.",
+      "distractors": [
+        { "answer": "498 kW", "explanation": "This results from subtracting 2.0 kW instead of 2.0% of 500 kW. Ploss = 0.020 × 500 = 10 kW." },
+        { "answer": "500 kW", "explanation": "Some power is lost in the lines. Power delivered = 500 − 10 = 490 kW." },
+        { "answer": "250 kW", "explanation": "This results from halving the generated power. Only 2.0% is lost, so 490 kW is delivered." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the full system calculation.",
+      "sentence": "A 40 kW generator at 2000 V uses a 1:10 step-up transformer. The transmission line current is {{blank:1}} A. If the line resistance is 5.0 Ω, the power loss is {{blank:2}} W.",
+      "blanks": {
+        "1": {
+          "correct": "2.0",
+          "correctExplanation": "After step-up: V = 2000 × 10 = 20 000 V. I = P/V = 40 000/20 000 = 2.0 A.",
+          "distractors": [
+            { "answer": "20", "explanation": "20 A is the generator current (40 000/2000). After the 1:10 step-up, current drops to 2.0 A." },
+            { "answer": "0.20", "explanation": "This results from dividing by 100 instead of by 10. I = 40 000/20 000 = 2.0 A." }
+          ]
+        },
+        "2": {
+          "correct": "20",
+          "correctExplanation": "Ploss = I²R = (2.0)² × 5.0 = 4.0 × 5.0 = 20 W.",
+          "distractors": [
+            { "answer": "2000", "explanation": "This results from using the pre-transformer current: (20)² × 5.0 = 2000 W." },
+            { "answer": "10", "explanation": "This results from I × R = 2.0 × 5.0 = 10, which is the voltage drop, not the power loss." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the end-to-end analysis.",
+      "sentence": "Transmission lines carry 3.0 A through R = 6.0 Ω. The voltage entering the lines is 50 000 V. The voltage drop is {{blank:1}} V, so the voltage reaching the step-down transformer is {{blank:2}} V.",
+      "blanks": {
+        "1": {
+          "correct": "18",
+          "correctExplanation": "Vdrop = IR = 3.0 × 6.0 = 18 V.",
+          "distractors": [
+            { "answer": "54", "explanation": "This results from I²R = 54 W, which is the power loss, not the voltage drop." },
+            { "answer": "2.0", "explanation": "This results from R/I. Vdrop = I × R = 18 V." }
+          ]
+        },
+        "2": {
+          "correct": "49 982",
+          "correctExplanation": "V = 50 000 − 18 = 49 982 V.",
+          "distractors": [
+            { "answer": "50 018", "explanation": "The voltage drop is subtracted, not added. V = 50 000 − 18 = 49 982 V." },
+            { "answer": "49 946", "explanation": "This subtracts the power loss (54 W) instead of the voltage drop (18 V). V = 50 000 − 18 = 49 982 V." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the efficiency comparison.",
+      "sentence": "A 10 kW system has 200 W of line losses. The percentage of power lost is {{blank:1}}% and the system efficiency is {{blank:2}}%.",
+      "blanks": {
+        "1": {
+          "correct": "2.0",
+          "correctExplanation": "% loss = (200/10 000) × 100 = 2.0%.",
+          "distractors": [
+            { "answer": "20", "explanation": "This results from 200/1000 × 100 = 20%. The total power is 10 000 W, not 1000 W." },
+            { "answer": "0.20", "explanation": "This results from 200/100 000. The correct calculation is 200/10 000 × 100 = 2.0%." }
+          ]
+        },
+        "2": {
+          "correct": "98",
+          "correctExplanation": "Efficiency = (1 − 0.020) × 100 = 98%. Or: (10 000 − 200)/10 000 × 100 = 98%.",
+          "distractors": [
+            { "answer": "80", "explanation": "80% efficiency implies 2000 W of losses, not 200 W." },
+            { "answer": "99.8", "explanation": "This results from (10 000 − 20)/10 000 × 100 = 99.8%, using 20 W instead of 200 W." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "mc",
+      "question": "A power station generates 200 MW at 20 kV. Two engineers propose different transmission voltages. Engineer A suggests 200 kV and Engineer B suggests 400 kV. The line resistance is 8.0 Ω. Which one of the following correctly compares the power losses?",
+      "correct": "Engineer B's system loses one-quarter the power of Engineer A's",
+      "correctExplanation": "Engineer A: I = 200×10⁶/200×10³ = 1000 A, Ploss = (1000)² × 8.0 = 8.0 MW. Engineer B: I = 200×10⁶/400×10³ = 500 A, Ploss = (500)² × 8.0 = 2.0 MW. Ratio: 2.0/8.0 = 1/4.",
+      "distractors": [
+        { "answer": "Engineer B's system loses half the power of Engineer A's", "explanation": "Doubling the voltage halves the current, but power loss scales with I², so it is reduced by a factor of 4, not 2." },
+        { "answer": "Both systems lose the same power because they transmit the same total power", "explanation": "Power loss depends on the current, which is different at different voltages. Higher voltage means lower current and lower I²R loss." },
+        { "answer": "Engineer B's system loses one-eighth the power of Engineer A's", "explanation": "Doubling voltage halves current, reducing I²R loss by a factor of (1/2)² = 1/4, not 1/8." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A 50 kW generator at 1000 V feeds a 1:50 step-up transformer, then 10 Ω transmission lines, then a 50:1 step-down transformer. Which one of the following is closest to the power delivered to the consumer?",
+      "correct": "49.99 kW",
+      "correctExplanation": "After step-up: V = 50 000 V, I = 50 000/50 000 = 1.0 A. Ploss = (1.0)² × 10 = 10 W. Power delivered = 50 000 − 10 = 49 990 W ≈ 49.99 kW.",
+      "distractors": [
+        { "answer": "40 kW", "explanation": "This would require 10 kW of losses. The actual loss is only 10 W thanks to the high transmission voltage." },
+        { "answer": "46 kW", "explanation": "This implies 4 kW lost, which would occur without the step-up transformer: I = 50 A, Ploss = 50² × 2 = 5000 W." },
+        { "answer": "50 kW exactly", "explanation": "There is always some power loss in the wires. Here Ploss = 10 W, so 49.99 kW is delivered." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "In a transmission system, the generated power is 100 kW. The step-up transformer has 95% efficiency and the step-down transformer has 95% efficiency. The line losses are 2.0 kW. Which one of the following is closest to the power delivered to the consumer?",
+      "correct": "88.3 kW",
+      "correctExplanation": "After step-up (95%): 100 × 0.95 = 95 kW. After line losses: 95 − 2.0 = 93 kW. After step-down (95%): 93 × 0.95 = 88.35 ≈ 88.3 kW.",
+      "distractors": [
+        { "answer": "93 kW", "explanation": "This accounts for only the step-up losses and line losses but ignores the step-down transformer losses." },
+        { "answer": "98 kW", "explanation": "This subtracts only the line losses (2.0 kW) and ignores both transformer inefficiencies." },
+        { "answer": "80 kW", "explanation": "This overestimates the losses. The correct sequential calculation gives 88.3 kW." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A transmission system operates with 500 A in the lines and R = 2.0 Ω. The power company wants to reduce line losses by 75%. By what factor must the transmission voltage be increased?",
+      "correct": "2",
+      "correctExplanation": "To reduce I²R by 75%, the new loss must be 25% of the original: (Inew)² = 0.25 × I². So Inew = 0.5 × I. Since I = P/V, halving I requires doubling V.",
+      "distractors": [
+        { "answer": "4", "explanation": "Quadrupling voltage would reduce current by 4 and losses by 16, a 93.75% reduction, not 75%." },
+        { "answer": "√2", "explanation": "Increasing voltage by √2 reduces current by √2 and losses by 2 (50%), not by 75%." },
+        { "answer": "3", "explanation": "Tripling voltage reduces losses by a factor of 9 (88.9% reduction), not 75%." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student analyses a transmission system and obtains a consumer power greater than the generated power. Which one of the following is the most likely source of error?",
+      "correct": "The student used the wrong turns ratio direction, effectively calculating a power gain instead of accounting for losses",
+      "correctExplanation": "Using the turns ratio in reverse (e.g., stepping up instead of stepping down at the consumer end) could lead to an inflated voltage and an impossible power output exceeding the input.",
+      "distractors": [
+        { "answer": "The student correctly applied energy conservation, and consumer power can exceed generated power in efficient systems", "explanation": "Consumer power can never exceed generated power. Energy conservation prohibits this." },
+        { "answer": "The student forgot to include the transmission line resistance, which always increases delivered power", "explanation": "Line resistance causes power loss, reducing delivered power. Forgetting it would give exactly the generated power, not more." },
+        { "answer": "The student used DC formulas instead of AC formulas, which always overestimate power", "explanation": "DC and rms AC formulas give equivalent results for resistive circuits. The error is likely in the turns ratio application." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An engineer designs a transmission system to deliver 1.0 MW to a town 50 km away. The total wire resistance is 20 Ω. She wants line losses below 1.0% of the generated power. Which one of the following is the minimum transmission voltage required?",
+      "correct": "44.7 kV",
+      "correctExplanation": "Maximum Ploss = 1.0% of ~1.0 MW ≈ 10 000 W. I = √(Ploss/R) = √(10 000/20) = √500 ≈ 22.4 A. Minimum V = P/I ≈ 1 000 000/22.4 ≈ 44 700 V ≈ 44.7 kV.",
+      "distractors": [
+        { "answer": "4.47 kV", "explanation": "At 4.47 kV: I = 1 000 000/4470 ≈ 224 A. Ploss = 224² × 20 ≈ 1 003 520 W, which is 100% loss." },
+        { "answer": "14.1 kV", "explanation": "At 14.1 kV: I ≈ 70.9 A. Ploss = (70.9)² × 20 ≈ 100 500 W = 10%. This is ten times the target." },
+        { "answer": "141 kV", "explanation": "At 141 kV: I ≈ 7.09 A. Ploss ≈ 1005 W = 0.10%. This exceeds the requirement; 44.7 kV is the minimum." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A country's power grid operates at 500 kV for long-distance transmission. A proposal suggests upgrading to 1.0 MV. If all other factors remain constant, by what factor would the transmission losses decrease?",
+      "correct": "4",
+      "correctExplanation": "Doubling the voltage halves the current. Since Ploss = I²R, halving I reduces losses by a factor of (1/2)² = 1/4. Losses decrease by a factor of 4.",
+      "distractors": [
+        { "answer": "2", "explanation": "Doubling voltage halves current, but losses scale with I², so they decrease by a factor of 4, not 2." },
+        { "answer": "8", "explanation": "The factor is (Vold/Vnew)² = (1/2)² = 1/4, giving a factor-of-4 reduction, not 8." },
+        { "answer": "16", "explanation": "The factor is (1/2)² = 1/4, not (1/2)⁴. Losses decrease by a factor of 4." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Ava claims that in a real transmission system, the consumer voltage is always lower than the generator voltage (after accounting for transformer ratios) because of voltage drops across the transmission lines. Which one of the following best evaluates her claim?",
+      "correct": "The claim is correct; the voltage drop IR across the wires reduces the voltage available at the consumer end",
+      "correctExplanation": "The transmission lines have resistance, causing a voltage drop V = IR. This means less voltage reaches the step-down transformer, and therefore less reaches the consumer after stepping down.",
+      "distractors": [
+        { "answer": "The claim is incorrect; transformers fully compensate for any voltage losses in the lines", "explanation": "Fixed-ratio transformers cannot compensate for voltage drops. The step-down transformer receives a reduced voltage input." },
+        { "answer": "The claim is incorrect; voltage drops only occur in DC systems, not in AC transmission", "explanation": "Voltage drops occur in both AC and DC systems whenever current flows through a resistance." },
+        { "answer": "The claim is correct only if the line resistance exceeds 100 Ω", "explanation": "Any non-zero resistance causes a voltage drop, regardless of its magnitude." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the full system analysis.",
+      "sentence": "A 100 kW generator at 5 kV uses a 1:20 step-up. The transmission voltage is {{blank:1}} kV and the line current is {{blank:2}} A.",
+      "blanks": {
+        "1": {
+          "correct": "100",
+          "correctExplanation": "V = 5 × 20 = 100 kV.",
+          "distractors": [
+            { "answer": "25", "explanation": "This results from 5 × 5 or a different ratio. With 1:20, V = 5 × 20 = 100 kV." },
+            { "answer": "0.25", "explanation": "This results from dividing by 20 (stepping down). V = 5 × 20 = 100 kV." }
+          ]
+        },
+        "2": {
+          "correct": "1.0",
+          "correctExplanation": "I = P/V = 100 000/100 000 = 1.0 A.",
+          "distractors": [
+            { "answer": "20", "explanation": "20 A is the generator current. After the step-up, I = 1.0 A." },
+            { "answer": "5.0", "explanation": "This results from P/V with V = 20 000. With V = 100 000, I = 1.0 A." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the loss comparison.",
+      "sentence": "Without a transformer, a 10 kW system at 500 V has line current 20 A and Ploss = 2000 W in 5 Ω lines. With a 1:10 step-up, the current drops to {{blank:1}} A and losses drop to {{blank:2}} W.",
+      "blanks": {
+        "1": {
+          "correct": "2.0",
+          "correctExplanation": "After 1:10 step-up: V = 5000 V, I = 10 000/5000 = 2.0 A.",
+          "distractors": [
+            { "answer": "10", "explanation": "This results from dividing 20 by 2 instead of by 10. With a 1:10 step-up, current divides by 10." },
+            { "answer": "0.20", "explanation": "This results from dividing by 100 (applying the ratio twice). I = 20/10 = 2.0 A." }
+          ]
+        },
+        "2": {
+          "correct": "20",
+          "correctExplanation": "Ploss = (2.0)² × 5.0 = 4.0 × 5.0 = 20 W. This is 100 times less than without the transformer.",
+          "distractors": [
+            { "answer": "200", "explanation": "This results from dividing the original loss by 10. Losses scale with I², so they decrease by 10² = 100." },
+            { "answer": "2.0", "explanation": "This results from dividing by 1000. Ploss = (2.0)² × 5.0 = 20 W." }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,495 @@
+{
+  "_link": {
+    "uuid": "lp-5f2f07bb-a1c4-4081-04ba-e231e5c3f37a",
+    "version": 1,
+    "contentHash": "hash-745d360f",
+    "title": "I can explain why a transformer only works with AC input, not DC",
+    "generatedAt": "2026-03-08T10:25:00Z"
+  },
+  "toLevel2": [
+    {
+      "type": "mc",
+      "question": "Which one of the following best describes why a transformer requires AC input to operate?",
+      "correct": "AC produces a changing magnetic flux needed to induce a voltage in the secondary",
+      "correctExplanation": "Electromagnetic induction requires a changing magnetic flux. AC current continuously varies, producing the required changing flux in the iron core.",
+      "distractors": [
+        { "answer": "AC has higher voltage than DC, which is needed to power the transformer coils", "explanation": "AC and DC can both exist at any voltage. The requirement for AC is about changing flux, not voltage magnitude." },
+        { "answer": "AC flows more easily through the iron core than DC does in a transformer", "explanation": "Current flows through the copper coils, not through the iron core. The core carries magnetic flux, not current." },
+        { "answer": "AC generates less heat in the coils than DC does at the same current level", "explanation": "I²R heating is similar for AC and DC at the same current. The requirement is about electromagnetic induction." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What happens when a DC supply is connected to the primary coil of a transformer?",
+      "correct": "No voltage is induced in the secondary coil after the initial switch-on",
+      "correctExplanation": "DC produces a constant magnetic flux after the initial transient. A constant flux does not change, so no voltage is induced in the secondary.",
+      "distractors": [
+        { "answer": "The secondary coil produces the same DC voltage as the primary coil", "explanation": "Transformers cannot pass DC through. A constant flux produces no induced voltage in the secondary." },
+        { "answer": "The transformer immediately overheats and fails due to excessive current", "explanation": "While DC may cause high primary current due to low coil resistance, the key issue is zero secondary output." },
+        { "answer": "The secondary produces a voltage that slowly decreases over several minutes", "explanation": "There is a brief transient at switch-on and switch-off, but no sustained output voltage with DC." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which physical principle explains why transformers require a changing current to operate?",
+      "correct": "Electromagnetic induction",
+      "correctExplanation": "Faraday's law of electromagnetic induction states that an emf is induced only when there is a change in magnetic flux.",
+      "distractors": [
+        { "answer": "Electrostatic attraction", "explanation": "Electrostatic effects involve stationary charges. Transformer operation depends on changing magnetic flux." },
+        { "answer": "Ohm's law", "explanation": "Ohm's law relates voltage, current, and resistance in a circuit but does not explain transformer operation." },
+        { "answer": "Conservation of charge", "explanation": "While charge is conserved, transformer operation is specifically based on electromagnetic induction." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which one of the following correctly describes the magnetic flux in the core of a transformer connected to an AC supply?",
+      "correct": "The flux continuously changes direction at the frequency of the AC supply",
+      "correctExplanation": "AC current alternates direction, causing the magnetic flux in the core to oscillate at the same frequency.",
+      "distractors": [
+        { "answer": "The flux remains constant and steady while the transformer operates", "explanation": "A constant flux would not induce any voltage. AC produces a continuously changing flux." },
+        { "answer": "The flux increases steadily until the core reaches magnetic saturation", "explanation": "With AC, the flux oscillates rather than building up. Steady increase would occur only with DC." },
+        { "answer": "The flux exists only in the primary coil and does not reach the secondary", "explanation": "The iron core links both coils magnetically, carrying the changing flux to the secondary." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which one of the following types of current produces a changing magnetic flux when passed through a coil?",
+      "correct": "Alternating current",
+      "correctExplanation": "Alternating current continuously changes magnitude and direction, producing a continuously changing magnetic flux in a coil.",
+      "distractors": [
+        { "answer": "Direct current", "explanation": "A steady DC produces a constant magnetic flux. Only a changing current produces a changing flux." },
+        { "answer": "Static current", "explanation": "This is not a standard term. Current must be changing (as in AC) to produce a changing flux." },
+        { "answer": "Residual current", "explanation": "Residual current refers to leakage current in safety devices, not to a type that produces changing flux." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "A transformer connected to a DC supply will produce a constant voltage across the secondary coil.",
+      "correct": "False",
+      "correctExplanation": "DC produces a constant magnetic flux, and a constant flux does not induce any voltage in the secondary coil.",
+      "distractors": [
+        { "answer": "True", "explanation": "Students may think transformers work with any input. However, electromagnetic induction requires a changing flux, which DC does not provide." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "Transformers operate using the principle of electromagnetic induction, which requires a changing magnetic flux.",
+      "correct": "True",
+      "correctExplanation": "Faraday's law states that an emf is induced only when magnetic flux through a coil changes. AC provides this changing flux.",
+      "distractors": [
+        { "answer": "False", "explanation": "Students may not connect electromagnetic induction to the requirement for changing flux. This principle is fundamental to transformer operation." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about transformer operation.",
+      "sentence": "A transformer requires {{blank:1}} input because only a changing current produces a changing magnetic flux.",
+      "blanks": {
+        "1": {
+          "correct": "AC",
+          "correctExplanation": "AC (alternating current) continuously varies, producing the changing magnetic flux required for electromagnetic induction.",
+          "distractors": [
+            { "answer": "DC", "explanation": "DC produces a constant magnetic flux. A constant flux does not induce a voltage in the secondary coil." },
+            { "answer": "pulsed", "explanation": "While pulsed DC can induce voltage, standard transformer operation is designed for sinusoidal AC." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about DC and transformers.",
+      "sentence": "When DC is applied to a transformer primary, the magnetic flux in the core is {{blank:1}}, so no voltage is induced in the secondary.",
+      "blanks": {
+        "1": {
+          "correct": "constant",
+          "correctExplanation": "A steady DC current produces a constant (unchanging) magnetic flux. Electromagnetic induction requires a change in flux.",
+          "distractors": [
+            { "answer": "oscillating", "explanation": "An oscillating flux would induce a voltage. DC produces a constant flux, which is why no voltage is induced." },
+            { "answer": "increasing", "explanation": "An increasing flux would induce a voltage. After the initial switch-on transient, DC flux is constant." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the physics of transformers.",
+      "sentence": "The principle that explains why a changing flux induces a voltage in the secondary coil is {{blank:1}}.",
+      "blanks": {
+        "1": {
+          "correct": "electromagnetic induction",
+          "correctExplanation": "Faraday's law of electromagnetic induction states that a changing magnetic flux through a coil induces an electromotive force.",
+          "distractors": [
+            { "answer": "Ohm's law", "explanation": "Ohm's law relates voltage, current, and resistance. It does not explain how changing flux induces a voltage." },
+            { "answer": "conservation of energy", "explanation": "While energy is conserved in a transformer, the mechanism of inducing voltage is electromagnetic induction." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "mc",
+      "question": "Jo connects a battery to the primary coil of a transformer and observes the secondary coil voltage on an oscilloscope. Which one of the following best describes what she observes?",
+      "correct": "A brief voltage spike at switch-on, then zero voltage while the battery remains connected",
+      "correctExplanation": "At the instant of connection, the rising current creates a briefly changing flux, inducing a transient voltage. Once current is steady, flux is constant and voltage drops to zero.",
+      "distractors": [
+        { "answer": "A constant DC voltage proportional to the turns ratio of the transformer", "explanation": "Transformers cannot sustain a DC output. Only the brief transient at switch-on produces a voltage." },
+        { "answer": "A sinusoidal AC voltage because the transformer converts DC to AC automatically", "explanation": "Transformers do not convert DC to AC. They require AC input to function continuously." },
+        { "answer": "No voltage at any time, not even at the moment of connection to the battery", "explanation": "There is a brief transient voltage at switch-on due to the momentarily changing flux." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which one of the following best explains the physical process by which AC in the primary coil induces a voltage in the secondary coil?",
+      "correct": "AC creates a changing magnetic flux in the core, which induces an emf in the secondary",
+      "correctExplanation": "The alternating primary current creates an alternating magnetic flux in the iron core, and by Faraday's law, this changing flux induces an emf in the secondary coil.",
+      "distractors": [
+        { "answer": "AC jumps across the gap between the coils through the iron core material directly", "explanation": "No current flows through the iron core. The coils are electrically separate; they are linked by magnetic flux." },
+        { "answer": "AC vibrates the iron core, which mechanically transfers energy to the secondary coil", "explanation": "While magnetostriction causes slight vibration, energy transfer is electromagnetic, not mechanical." },
+        { "answer": "AC heats the primary coil, and the heat is conducted through the core to the secondary", "explanation": "Energy transfer is through changing magnetic flux, not through heat conduction." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Kai connects a signal generator set to output a square wave (rapidly switching between +5 V and −5 V) to a transformer primary. Which one of the following best describes the secondary output?",
+      "correct": "Voltage spikes occur at each switching instant when the current changes rapidly",
+      "correctExplanation": "The rapid changes in current at each switch produce brief, large changes in flux, inducing voltage spikes at the secondary. Between switches, the voltage is zero.",
+      "distractors": [
+        { "answer": "A steady 5 V DC output because the square wave has a positive average value", "explanation": "The secondary responds only to changes in flux, not to the average value. Between transitions, output is zero." },
+        { "answer": "No output at all because square waves are not sinusoidal AC waveforms", "explanation": "Any changing current produces a changing flux. The transformer responds to the rate of change, not the waveshape." },
+        { "answer": "An identical square wave output scaled by the turns ratio of the transformer", "explanation": "Transformers respond to the rate of change of flux. Square wave inputs produce spike outputs, not identical shapes." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which one of the following correctly links the rate of change of magnetic flux to the induced voltage?",
+      "correct": "A faster rate of change of flux produces a larger induced voltage",
+      "correctExplanation": "By Faraday's law, the induced emf is proportional to the rate of change of magnetic flux. Faster changes mean larger voltages.",
+      "distractors": [
+        { "answer": "A slower rate of change of flux produces a larger induced voltage", "explanation": "This reverses the relationship. Slower flux changes produce smaller, not larger, induced voltages." },
+        { "answer": "The induced voltage is independent of how quickly the flux changes", "explanation": "Faraday's law directly relates induced emf to the rate of flux change." },
+        { "answer": "A constant flux produces the largest possible sustained induced voltage", "explanation": "A constant flux produces zero induced voltage. Only a changing flux induces a voltage." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student suggests that a transformer could work with DC if the DC voltage were high enough. Which one of the following best evaluates this suggestion?",
+      "correct": "The suggestion is incorrect; transformer operation depends on changing flux, not voltage magnitude",
+      "correctExplanation": "No matter how high the DC voltage, the current eventually reaches a steady state, producing a constant flux with zero induced secondary voltage.",
+      "distractors": [
+        { "answer": "The suggestion is correct; high enough DC voltage can overcome the induction requirement", "explanation": "Voltage magnitude is irrelevant. Electromagnetic induction requires a changing flux regardless of voltage." },
+        { "answer": "The suggestion is correct but only for step-down transformers, not for step-up models", "explanation": "Neither step-up nor step-down transformers can operate with DC. Both require a changing flux." },
+        { "answer": "The suggestion is partially correct; DC above 1000 V can operate special transformer types", "explanation": "No conventional transformer operates on DC regardless of voltage. The physics requires changing flux." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Why does a DC current through the primary coil of a transformer produce a practical problem beyond zero secondary output?",
+      "correct": "Without inductive reactance, the low DC resistance of the coil allows a dangerously high current",
+      "correctExplanation": "The primary coil has very low DC resistance. Without the self-induced back-emf that AC provides, DC current can be excessively large, risking overheating.",
+      "distractors": [
+        { "answer": "DC permanently magnetises the core, making it impossible to use with AC afterward", "explanation": "While DC can partially magnetise the core, this is reversible. The main issue is excessive primary current." },
+        { "answer": "DC causes the primary coil to repel the secondary coil, physically separating them", "explanation": "Magnetic forces between coils do not cause physical separation. The issue is excessive current draw." },
+        { "answer": "DC reverses the polarity of the iron core, damaging its magnetic properties permanently", "explanation": "Iron cores can be re-magnetised in any direction. The main issue with DC is low impedance and high current." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "If the DC supply to a transformer primary is rapidly switched on and off, a pulsating voltage can be observed at the secondary.",
+      "correct": "True",
+      "correctExplanation": "Each switch-on and switch-off creates a brief change in flux, inducing voltage spikes. This is effectively a crude form of changing current.",
+      "distractors": [
+        { "answer": "False", "explanation": "Students may think any DC input gives zero output. Rapid switching creates flux changes that induce transient voltages." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the explanation of transformer operation.",
+      "sentence": "AC is required because electromagnetic induction depends on a {{blank:1}} magnetic flux, not a constant one.",
+      "blanks": {
+        "1": {
+          "correct": "changing",
+          "correctExplanation": "Faraday's law states that an emf is induced only when the magnetic flux through a coil is changing.",
+          "distractors": [
+            { "answer": "constant", "explanation": "A constant flux induces zero voltage. The flux must be changing to induce a secondary voltage." },
+            { "answer": "maximum", "explanation": "The magnitude of the flux is less important than whether it is changing. A constant maximum flux induces zero voltage." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about DC and transformers.",
+      "sentence": "A practical danger of connecting DC to a transformer primary is that the low {{blank:1}} of the coil allows excessive current to flow.",
+      "blanks": {
+        "1": {
+          "correct": "resistance",
+          "correctExplanation": "The primary coil is made of thick copper wire with very low DC resistance. Without AC inductive reactance limiting current, DC current can be dangerously high.",
+          "distractors": [
+            { "answer": "inductance", "explanation": "The coil has high inductance, which limits AC current. With DC, inductance does not limit steady-state current." },
+            { "answer": "voltage", "explanation": "Low voltage is not the issue. The low DC resistance of the coil wire causes high current regardless of voltage." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about Faraday's law.",
+      "sentence": "According to Faraday's law, the magnitude of the induced emf is proportional to the {{blank:1}} of change of magnetic flux.",
+      "blanks": {
+        "1": {
+          "correct": "rate",
+          "correctExplanation": "Faraday's law states ε = −N × dΦ/dt. The induced emf depends on how quickly the flux changes.",
+          "distractors": [
+            { "answer": "direction", "explanation": "Direction affects the sign of the induced emf, but the magnitude depends on the rate of change." },
+            { "answer": "total amount", "explanation": "The total flux does not determine the induced emf. It is the rate of change that matters." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "mc",
+      "question": "Mia designs an experiment to demonstrate that transformers require AC. She connects identical lamps to the secondary of two identical transformers. Transformer A is connected to a 12 V AC supply and Transformer B to a 12 V DC supply. Which one of the following best predicts the observations?",
+      "correct": "Lamp A glows steadily; Lamp B does not glow",
+      "correctExplanation": "The AC transformer induces a continuous secondary voltage, powering Lamp A. The DC transformer produces no sustained secondary voltage.",
+      "distractors": [
+        { "answer": "Both lamps glow with equal brightness because both supplies are 12 V", "explanation": "Only AC produces the changing flux needed for transformer operation. The DC lamp receives no power." },
+        { "answer": "Lamp B glows brighter because DC is more efficient than AC for power transfer", "explanation": "DC produces zero sustained output from a transformer. Lamp B does not glow." },
+        { "answer": "Neither lamp glows because 12 V is too low to operate a transformer properly", "explanation": "Transformers operate at any AC voltage. Lamp A will glow; Lamp B will not due to DC input." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An engineer needs to convert 240 V DC from a solar panel array to 48 V DC for battery charging. Which one of the following correctly explains why a standard transformer cannot be used?",
+      "correct": "The DC input produces a constant magnetic flux that cannot induce a secondary voltage",
+      "correctExplanation": "Transformers require changing flux. DC produces constant flux after initial switch-on, giving zero secondary output. A DC-DC converter is needed instead.",
+      "distractors": [
+        { "answer": "Standard transformers can only handle voltages below 100 V from DC sources", "explanation": "The issue is not voltage level. No DC voltage, regardless of magnitude, can operate a standard transformer." },
+        { "answer": "The transformer would convert the DC to AC, which is unsuitable for battery charging", "explanation": "Transformers do not convert DC to AC. They simply produce zero output when given DC input." },
+        { "answer": "DC would flow through the iron core and create a short circuit between the coils", "explanation": "Current flows through the copper coils, not the iron core. The coils are electrically separate." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "In some modern power supplies, DC is first converted to high-frequency AC (e.g., 50 kHz), passed through a small transformer, then rectified back to DC. Which one of the following best explains the advantage of this approach?",
+      "correct": "Higher frequency allows a much smaller transformer for the same power transfer",
+      "correctExplanation": "At higher frequencies, the flux changes faster, so fewer turns and a smaller core can transfer the same power. This makes the power supply compact.",
+      "distractors": [
+        { "answer": "Higher frequency eliminates all energy losses in the transformer core completely", "explanation": "Higher frequency can actually increase some core losses. The advantage is reduced size, not zero losses." },
+        { "answer": "Higher frequency makes the transformer work with DC by oscillating fast enough", "explanation": "The DC is actually converted to AC first. The transformer still requires AC input to operate." },
+        { "answer": "Higher frequency produces higher output voltage without needing more turns", "explanation": "The voltage ratio still depends on the turns ratio. Higher frequency enables a smaller core and fewer turns." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student accidentally connects a 12 V car battery to the primary of a small 12 V AC transformer with a 0.5 Ω coil resistance. Which one of the following is closest to the steady-state primary current?",
+      "correct": "24 A",
+      "correctExplanation": "With DC, only the coil resistance limits current: I = V/R = 12/0.5 = 24 A. This is dangerously high and would overheat the coil.",
+      "distractors": [
+        { "answer": "0.5 A", "explanation": "This confuses resistance with current. I = V/R = 12/0.5 = 24 A, not 0.5 A." },
+        { "answer": "1.0 A", "explanation": "This may be the normal operating current with AC, where inductive reactance limits the current. DC has no such limitation." },
+        { "answer": "12 A", "explanation": "This results from V/R error. With R = 0.5 Ω, I = 12/0.5 = 24 A." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Lila explains to her study group that when AC flows in the primary coil, the self-induced back-emf limits the primary current. Which one of the following best describes why this effect is absent with DC?",
+      "correct": "DC produces constant flux, so there is no self-induced back-emf to oppose the current",
+      "correctExplanation": "Back-emf is produced by changing flux. With DC, the flux is constant (after initial transient), so no back-emf is generated to limit current.",
+      "distractors": [
+        { "answer": "DC has higher voltage than AC, which overcomes the back-emf in the primary coil", "explanation": "DC and AC can have any voltage. The issue is that DC produces no changing flux and therefore no back-emf." },
+        { "answer": "DC flows in one direction only, so the back-emf adds to the applied voltage instead", "explanation": "Back-emf opposes the change in current. With constant DC, there is no change to oppose." },
+        { "answer": "DC bypasses the primary coil and flows directly through the iron core instead", "explanation": "DC flows through the copper coil, not the iron core. The issue is constant flux producing no back-emf." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An audio amplifier uses a transformer to match the amplifier output to a speaker. The amplifier produces AC signals at frequencies from 20 Hz to 20 000 Hz. Which one of the following best explains why this transformer works across the frequency range?",
+      "correct": "All AC frequencies produce a changing flux, which induces a voltage in the secondary",
+      "correctExplanation": "Any frequency of AC produces a changing magnetic flux. The transformer transfers energy at all audio frequencies, though efficiency may vary.",
+      "distractors": [
+        { "answer": "The transformer only works at specific frequencies that match its resonant frequency", "explanation": "Transformers are not resonant devices. They transfer energy at any AC frequency where the flux changes." },
+        { "answer": "Only the high frequencies above 1000 Hz can produce enough flux change for induction", "explanation": "Low frequencies also produce changing flux. The rate of change affects the magnitude but not the existence of induction." },
+        { "answer": "The transformer converts all frequencies to 50 Hz before transferring to the speaker", "explanation": "Transformers do not change frequency. They transfer the signal at whatever frequency is applied." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which one of the following best describes what happens to the energy when DC is applied to a transformer primary?",
+      "correct": "Electrical energy is converted to heat in the primary coil due to resistive losses only",
+      "correctExplanation": "With no energy transfer to the secondary (no changing flux), all input energy is dissipated as I²R heat in the primary coil.",
+      "distractors": [
+        { "answer": "Energy is stored in the magnetic field of the core and transferred to the secondary slowly", "explanation": "Energy is stored initially but with constant flux, no transfer occurs. The stored energy is not transferred to the secondary." },
+        { "answer": "Energy is transferred to the secondary but at a much lower rate than with AC input", "explanation": "With constant DC flux, zero energy is transferred to the secondary. The rate is not lower — it is zero." },
+        { "answer": "Energy is reflected back to the DC source because the transformer cannot accept DC power", "explanation": "The transformer does accept DC power — it simply converts it all to heat in the primary coil." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about transformer requirements.",
+      "sentence": "A standard transformer cannot operate with DC because DC produces a {{blank:1}} magnetic flux that does not induce a voltage in the secondary coil.",
+      "blanks": {
+        "1": {
+          "correct": "constant",
+          "correctExplanation": "After the initial switch-on, DC current reaches a steady state producing a constant (unchanging) magnetic flux.",
+          "distractors": [
+            { "answer": "varying", "explanation": "A varying flux would induce a voltage. The problem with DC is that the flux is constant." },
+            { "answer": "reversed", "explanation": "A reversed flux would involve a change, which would induce a voltage. DC flux is simply constant." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about back-emf.",
+      "sentence": "With AC input, the changing flux generates a back-emf that {{blank:1}} the primary current, preventing overheating.",
+      "blanks": {
+        "1": {
+          "correct": "limits",
+          "correctExplanation": "The self-induced back-emf opposes the applied voltage, limiting the current to safe operating levels.",
+          "distractors": [
+            { "answer": "increases", "explanation": "Back-emf opposes the current, limiting it. It does not increase the current." },
+            { "answer": "eliminates", "explanation": "Back-emf limits the current but does not eliminate it. Some current must flow for the transformer to operate." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about alternative DC voltage conversion.",
+      "sentence": "Since transformers cannot change DC voltage, engineers use {{blank:1}} to convert between different DC voltage levels.",
+      "blanks": {
+        "1": {
+          "correct": "DC-DC converters",
+          "correctExplanation": "DC-DC converters use electronic switching to chop DC into high-frequency AC, transform it, then rectify back to DC.",
+          "distractors": [
+            { "answer": "standard transformers", "explanation": "Standard transformers cannot operate with DC. Specialised electronic converters are required." },
+            { "answer": "voltage dividers", "explanation": "Voltage dividers waste energy as heat and cannot efficiently convert between DC voltage levels at high power." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "mc",
+      "question": "Anna investigates a switched-mode power supply (SMPS) and finds it converts 240 V AC mains to 170 V DC, then chops this DC at 100 kHz into AC, passes it through a tiny transformer, and rectifies the output. Which one of the following best evaluates why the SMPS uses this complex process?",
+      "correct": "The 100 kHz frequency allows a much smaller transformer, making the entire unit compact and light",
+      "correctExplanation": "At 100 kHz, the flux changes 2000 times faster than at 50 Hz, so the transformer core can be dramatically smaller for the same power.",
+      "distractors": [
+        { "answer": "The complex process is unnecessary; a standard 50 Hz transformer would be equally effective", "explanation": "A 50 Hz transformer for the same power would be much larger and heavier. The SMPS design is intentionally compact." },
+        { "answer": "The conversion to DC eliminates all transformer losses, making the SMPS perfectly efficient", "explanation": "No conversion process is lossless. SMPS are efficient but not perfect; the advantage is compact size." },
+        { "answer": "The 100 kHz frequency is required because mains transformers cannot operate at 50 Hz", "explanation": "Mains transformers operate perfectly well at 50 Hz. The high frequency enables miniaturisation." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Bruce connects a function generator to a transformer and tests different waveforms at the same peak voltage. He observes the secondary output on an oscilloscope. Which one of the following correctly predicts the comparative outputs?",
+      "correct": "Sine wave gives smooth output; square wave gives spikes at transitions; DC gives no output",
+      "correctExplanation": "The transformer responds to the rate of change of flux. Sine waves give smooth changing flux; square waves give sharp transitions; DC gives zero change.",
+      "distractors": [
+        { "answer": "All waveforms produce identical secondary outputs because the peak voltage is the same", "explanation": "The transformer responds to the rate of change, not the peak voltage. Different waveforms give different outputs." },
+        { "answer": "Only the sine wave produces output because transformers are designed for sinusoidal AC", "explanation": "Any changing current produces a changing flux. Square waves also produce output, though the waveshape differs." },
+        { "answer": "Square wave gives the largest output because it has the sharpest voltage changes", "explanation": "Square waves produce large spikes at transitions but zero output between them. The average output may be less useful." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Denise explains that early DC power distribution systems (Edison's system) could not use transformers to change voltage. Which one of the following best evaluates the historical significance of this limitation?",
+      "correct": "It forced DC systems to use low voltage, causing high I²R losses that limited transmission range",
+      "correctExplanation": "Without transformers, DC systems could not step up voltage for efficient transmission, resulting in high currents and large power losses over even short distances.",
+      "distractors": [
+        { "answer": "DC systems had no power losses because DC is inherently more efficient than AC", "explanation": "DC has the same I²R losses as AC. Without voltage step-up, DC systems had very high losses." },
+        { "answer": "The limitation was purely economic and had no engineering impact on power transmission", "explanation": "The inability to change DC voltage had profound engineering consequences, limiting transmission to about 1 km." },
+        { "answer": "Edison solved this problem by using superconducting wires to eliminate all DC losses", "explanation": "Superconductors were not available. The DC limitation led to Edison's system being replaced by AC." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An engineer proposes using a transformer with a permanent magnet core instead of an electromagnet core. Which one of the following best evaluates this proposal for AC operation?",
+      "correct": "A permanent magnet adds a DC bias to the flux, reducing the transformer's ability to handle AC symmetrically",
+      "correctExplanation": "The permanent magnet would offset the AC flux, causing the core to saturate asymmetrically and reducing performance.",
+      "distractors": [
+        { "answer": "A permanent magnet core would improve efficiency by maintaining flux without any input power", "explanation": "The permanent magnet's fixed flux does not contribute to induction. It would cause asymmetric saturation problems." },
+        { "answer": "A permanent magnet core would allow the transformer to work with both AC and DC equally well", "explanation": "The permanent magnet does not solve the DC problem. It adds unwanted DC bias to the AC operation." },
+        { "answer": "A permanent magnet core would produce continuous secondary output even without primary input", "explanation": "A constant flux (from the magnet) produces no induced voltage. Only changing flux induces a secondary emf." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Magnus argues that since Faraday's law requires only a changing flux, a transformer should work if you physically rotate the core back and forth rapidly. Which one of the following best evaluates this argument?",
+      "correct": "The argument is theoretically valid but impractical compared to simply using AC current input",
+      "correctExplanation": "Moving the core would change the flux linkage, but mechanical rotation is inefficient and impractical compared to electrical AC operation.",
+      "distractors": [
+        { "answer": "The argument is physically incorrect because the flux depends only on current, not core position", "explanation": "Flux linkage depends on the relative position and orientation of core and coils. Moving the core can change flux." },
+        { "answer": "The argument is correct and this method is widely used in modern transformer designs", "explanation": "While theoretically possible, no practical transformer uses mechanical motion. AC current is far more efficient." },
+        { "answer": "The argument is incorrect because Faraday's law only applies to coils, not to moving cores", "explanation": "Faraday's law applies to any change in magnetic flux through a coil, regardless of what causes the change." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Sally compares the behaviour of an ideal inductor (with no resistance) connected to DC versus AC. Which one of the following correctly describes the steady-state behaviour?",
+      "correct": "With DC the inductor behaves as a short circuit; with AC it limits current through inductive reactance",
+      "correctExplanation": "An ideal inductor has zero DC resistance (short circuit for DC) but has reactance XL = 2πfL that limits AC current.",
+      "distractors": [
+        { "answer": "With DC the inductor blocks all current; with AC it allows unlimited current flow", "explanation": "This is reversed. An ideal inductor allows unlimited DC current but limits AC through inductive reactance." },
+        { "answer": "The inductor behaves identically for both DC and AC because both produce magnetic flux", "explanation": "DC and AC produce different flux behaviours. DC gives constant flux; AC gives changing flux with back-emf." },
+        { "answer": "With DC the inductor stores infinite energy; with AC it dissipates all energy as heat", "explanation": "An ideal inductor stores finite energy with DC and dissipates zero energy with AC." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Ishva evaluates whether a transformer could theoretically work with a linearly increasing DC current (rather than constant DC). Which one of the following best evaluates this scenario?",
+      "correct": "A linearly increasing current produces a constant rate of flux change, inducing a constant secondary voltage",
+      "correctExplanation": "If dI/dt is constant, then dΦ/dt is constant, and by Faraday's law the induced emf is constant. However, current cannot increase indefinitely.",
+      "distractors": [
+        { "answer": "No voltage would be induced because the current is still DC, not AC", "explanation": "The key requirement is changing flux, not AC specifically. A changing DC current does produce changing flux." },
+        { "answer": "The secondary would produce an identical linearly increasing voltage matching the primary", "explanation": "The secondary voltage depends on dΦ/dt, which is constant for linear current increase, giving constant (not increasing) output." },
+        { "answer": "The secondary voltage would oscillate because the core alternates between saturated and unsaturated states", "explanation": "A linearly increasing current would eventually saturate the core, but would not cause oscillation." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student asks why we cannot simply add a vibrator (mechanical switch that rapidly connects and disconnects DC) to make transformers work with DC input. Which one of the following best evaluates this approach?",
+      "correct": "This was historically used but is inefficient and produces pulsating rather than smooth AC output",
+      "correctExplanation": "Vibrator-based power supplies existed in early electronics but were noisy, wore out quickly, and produced poor waveforms compared to AC transformers.",
+      "distractors": [
+        { "answer": "This approach is impossible because interrupted DC cannot produce any magnetic flux", "explanation": "Interrupted DC does produce changing flux. The approach works but is inferior to true AC operation." },
+        { "answer": "This approach produces output identical to AC and is widely used in modern electronics", "explanation": "While the principle is used in SMPS (with electronic switching), mechanical vibrators are obsolete and inefficient." },
+        { "answer": "This approach would destroy the transformer core due to repeated magnetisation cycles", "explanation": "Transformer cores are designed for continuous magnetisation cycles. The issue is efficiency and waveform quality." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the evaluation of transformer physics.",
+      "sentence": "The fundamental requirement for transformer operation is not specifically AC, but rather any {{blank:1}} current that produces a continuously changing magnetic flux.",
+      "blanks": {
+        "1": {
+          "correct": "varying",
+          "correctExplanation": "Any current that changes over time produces a changing flux. AC is the most practical form of varying current for transformer use.",
+          "distractors": [
+            { "answer": "constant", "explanation": "A constant current produces constant flux, which induces zero voltage. The current must vary." },
+            { "answer": "high", "explanation": "The magnitude of the current is not the key factor. What matters is that the current changes over time." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the historical evaluation.",
+      "sentence": "The inability to change DC voltage using transformers was the key factor in the eventual adoption of {{blank:1}} power systems for electricity distribution worldwide.",
+      "blanks": {
+        "1": {
+          "correct": "AC",
+          "correctExplanation": "AC won the 'War of Currents' primarily because transformers enabled efficient high-voltage transmission, which was impossible with DC at the time.",
+          "distractors": [
+            { "answer": "DC", "explanation": "DC lost the initial competition precisely because it could not use transformers for voltage conversion." },
+            { "answer": "hybrid", "explanation": "The world adopted AC systems, not hybrid. Modern HVDC links are exceptions, not the standard." }
+          ]
+        }
+      }
+    }
+  ]
+}

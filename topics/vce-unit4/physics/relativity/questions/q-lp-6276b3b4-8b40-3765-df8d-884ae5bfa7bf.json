@@ -1,0 +1,517 @@
+{
+  "_link": {
+    "uuid": "lp-6276b3b4-8b40-3765-df8d-884ae5bfa7bf",
+    "version": 1,
+    "contentHash": "hash-b9c7d960",
+    "title": "I can define dilated time (t) and explain why it is longer than proper time",
+    "generatedAt": "2026-03-09T23:00:00.000Z"
+  },
+  "toLevel2": [
+    {
+      "type": "MC",
+      "question": "Which of the following best defines dilated time?",
+      "correct": "The time interval measured by an observer who sees the two events occurring at different locations",
+      "correctExplanation": "Dilated time is measured by an observer for whom the two events happen at different points in space. It is always longer than the proper time.",
+      "distractors": [
+        { "answer": "The time interval measured by an observer at rest relative to the events", "explanation": "This describes proper time, not dilated time. Proper time is measured when events occur at the same location." },
+        { "answer": "The time interval measured by a clock that has been physically slowed down", "explanation": "Dilated time is not caused by a physical slowing of the clock. It is a relativistic effect of observing a moving clock." },
+        { "answer": "The shortest possible time interval between two events", "explanation": "The shortest time interval is the proper time. Dilated time is always longer." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "How does the dilated time t compare to the proper time t₀ for the same pair of events?",
+      "correct": "t is always greater than or equal to t₀",
+      "correctExplanation": "Since γ ≥ 1, the dilated time t = γt₀ is always at least as long as the proper time t₀.",
+      "distractors": [
+        { "answer": "t is always less than t₀", "explanation": "Dilated time is longer, not shorter, than proper time." },
+        { "answer": "t can be either greater or less than t₀", "explanation": "Dilated time is always greater than or equal to proper time. It can never be less." },
+        { "answer": "t is always equal to t₀", "explanation": "t = t₀ only when γ = 1 (no relative motion). Otherwise, t > t₀." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A rocket crew measures a light flash lasting 0.100 s. An Earth observer watching the rocket pass at 0.866c measures the same flash lasting 0.200 s. Which time is the dilated time?",
+      "correct": "0.200 s, measured by the Earth observer",
+      "correctExplanation": "The Earth observer sees the light flash events occurring at different locations (the rocket is moving) and measures the longer, dilated time of 0.200 s.",
+      "distractors": [
+        { "answer": "0.100 s, measured by the rocket crew", "explanation": "The rocket crew measures the proper time because the events occur at the same location in their frame." },
+        { "answer": "Both observers measure the dilated time", "explanation": "Only the Earth observer measures the dilated time. The rocket crew measures the proper time." },
+        { "answer": "Neither measurement is dilated because the rocket is in an inertial frame", "explanation": "Being inertial does not prevent time dilation. The Earth observer measures dilated time because the events are at different locations in their frame." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Why is the dilated time always longer than the proper time?",
+      "correct": "Because light must travel a longer path in the frame of the observer who sees the clock moving",
+      "correctExplanation": "In a light clock thought experiment, the observer who sees the clock moving observes light travelling a longer diagonal path. Since the speed of light is constant, more time must pass.",
+      "distractors": [
+        { "answer": "Because the moving clock physically runs slower due to friction", "explanation": "Time dilation is not caused by friction or any physical effect on the clock mechanism. It is a consequence of the constancy of the speed of light." },
+        { "answer": "Because the stationary observer's clock runs faster than normal", "explanation": "Neither clock runs abnormally. The difference arises from the geometry of light paths as observed from different frames." },
+        { "answer": "Because the moving clock loses energy and ticks more slowly", "explanation": "The clock does not lose energy. The longer measured time is a relativistic effect, not an energy-related one." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Which symbol represents the dilated time in the time dilation formula?",
+      "correct": "t",
+      "correctExplanation": "In the formula t = γt₀, the symbol t represents the dilated time (the longer time measured by the observer who sees the events at different locations).",
+      "distractors": [
+        { "answer": "t₀", "explanation": "t₀ represents the proper time, not the dilated time." },
+        { "answer": "γ", "explanation": "γ is the Lorentz factor, a dimensionless quantity, not a time." },
+        { "answer": "c", "explanation": "c is the speed of light, not a time measurement." }
+      ]
+    },
+    {
+      "type": "TF",
+      "question": "Dilated time is the time interval measured by an observer who is at rest relative to the events.",
+      "correct": "False",
+      "correctExplanation": "An observer at rest relative to the events measures proper time. Dilated time is measured by an observer who sees the events at different spatial locations.",
+      "distractors": [
+        { "answer": "True", "explanation": "The observer at rest relative to the events measures proper time, not dilated time. Dilated time is measured by the moving observer." }
+      ]
+    },
+    {
+      "type": "TF",
+      "question": "The dilated time is always longer than the proper time for any non-zero relative speed.",
+      "correct": "True",
+      "correctExplanation": "For v > 0, γ > 1, so t = γt₀ > t₀. The dilated time exceeds the proper time whenever there is relative motion.",
+      "distractors": [
+        { "answer": "False", "explanation": "Since γ > 1 for any non-zero speed, dilated time is always greater than proper time." }
+      ]
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the definition of dilated time.",
+      "sentence": "Dilated time is the time interval measured by an observer who sees the events occurring at {{blank:1}} points in space. It is always {{blank:2}} than the proper time.",
+      "blanks": {
+        "1": {
+          "correct": "different",
+          "correctExplanation": "The observer who measures dilated time sees the two events happening at different spatial locations because the clock is moving relative to them.",
+          "distractors": ["the same", "fixed"]
+        },
+        "2": {
+          "correct": "longer",
+          "correctExplanation": "Dilated time t = γt₀ is always longer than proper time because γ ≥ 1.",
+          "distractors": ["shorter", "equal to"]
+        }
+      }
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the sentence about the light clock explanation.",
+      "sentence": "In a light clock, an observer who sees the clock {{blank:1}} observes light travelling a longer diagonal path. Because the speed of light is {{blank:2}}, this longer path requires more time.",
+      "blanks": {
+        "1": {
+          "correct": "moving",
+          "correctExplanation": "The observer who sees the light clock moving observes the light pulse travelling a diagonal path, which is longer than the vertical path seen by the stationary observer.",
+          "distractors": ["stationary", "accelerating"]
+        },
+        "2": {
+          "correct": "constant",
+          "correctExplanation": "Einstein's second postulate states that the speed of light is the same for all observers. A longer path at the same speed means more time.",
+          "distractors": ["variable", "infinite"]
+        }
+      }
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the sentence about dilated time in an example.",
+      "sentence": "A rocket crew measures a process lasting 0.100 s. An Earth observer measures the same process lasting 0.200 s. The Earth observer's measurement of 0.200 s is the {{blank:1}} time, and the rocket crew's measurement of 0.100 s is the {{blank:2}} time.",
+      "blanks": {
+        "1": {
+          "correct": "dilated",
+          "correctExplanation": "The Earth observer sees the events at different locations and measures the longer, dilated time.",
+          "distractors": ["proper", "contracted"]
+        },
+        "2": {
+          "correct": "proper",
+          "correctExplanation": "The rocket crew sees the events at the same location (inside the rocket) and measures the shorter, proper time.",
+          "distractors": ["dilated", "contracted"]
+        }
+      }
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "MC",
+      "question": "A muon is created in the upper atmosphere and travels toward Earth at 0.995c. An observer on Earth measures the muon's lifetime as 2.20 × 10⁻⁵ s. The muon's proper lifetime is 2.20 × 10⁻⁶ s. The Earth observer's measurement is the dilated time because:",
+      "correct": "the muon is created and decays at different locations in the Earth observer's frame",
+      "correctExplanation": "From Earth's perspective, the muon is created high in the atmosphere and decays near the surface — two different locations. This makes Earth's measurement the dilated time.",
+      "distractors": [
+        { "answer": "the Earth observer is stationary and therefore always measures dilated time", "explanation": "Being stationary does not automatically mean measuring dilated time. The key is whether the events occur at the same or different locations in the observer's frame." },
+        { "answer": "the muon is moving faster than 0.5c, which triggers time dilation", "explanation": "Time dilation occurs at any non-zero relative speed, not just above 0.5c. The reason is the spatial separation of events in Earth's frame." },
+        { "answer": "the muon's clock is faulty due to its high speed", "explanation": "The muon's decay process is not 'faulty.' The different measurements arise from the relativistic relationship between frames." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Two events occur 5.00 × 10⁻⁸ s apart as measured by Observer A (proper time). Observer B, in relative motion, measures the interval as 1.50 × 10⁻⁷ s. Which one of the following is closest to the Lorentz factor?",
+      "correct": "3.00",
+      "correctExplanation": "γ = t/t₀ = 1.50 × 10⁻⁷ / 5.00 × 10⁻⁸ = 3.00.",
+      "distractors": [
+        { "answer": "0.333", "explanation": "This is t₀/t = 1/γ, the inverse of the Lorentz factor." },
+        { "answer": "1.00 × 10⁻⁷", "explanation": "This is the difference t − t₀, not the ratio t/t₀." },
+        { "answer": "9.00", "explanation": "This is γ² = 9, not γ = 3.00." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Emma rides on a fast train. She measures 10.0 minutes between two events that both occur in her carriage. Jake, standing on the platform, measures 12.5 minutes between the same events. Which statement correctly identifies the time measurements?",
+      "correct": "Emma measures proper time (10.0 min); Jake measures dilated time (12.5 min).",
+      "correctExplanation": "Emma sees both events at the same location (her carriage) and measures proper time. Jake sees the events at different locations (the train is moving past) and measures dilated time.",
+      "distractors": [
+        { "answer": "Jake measures proper time (12.5 min); Emma measures dilated time (10.0 min).", "explanation": "This reverses the assignments. Emma is at rest relative to the events and measures proper time." },
+        { "answer": "Both measure proper time because both are in inertial frames.", "explanation": "Being inertial does not mean both measure proper time. Only Emma, for whom the events occur at the same place, measures proper time." },
+        { "answer": "Emma measures dilated time because she is the one moving.", "explanation": "Emma is at rest relative to the events in her carriage. The events occur at different locations in Jake's frame, making his measurement the dilated time." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "The phrase 'moving clocks run slow' is a common summary of time dilation. In precise terms, this means:",
+      "correct": "a clock observed to be moving takes longer between ticks as measured by a stationary observer",
+      "correctExplanation": "The stationary observer measures a longer (dilated) time between ticks of the moving clock. This means the moving clock appears to run slower.",
+      "distractors": [
+        { "answer": "a clock that is moving physically slows down its mechanism", "explanation": "The clock mechanism is not affected. The apparent slowdown is a measurement effect due to relative motion." },
+        { "answer": "only the moving observer notices their own clock running slow", "explanation": "The moving observer sees their own clock running at the normal rate. It is the other observer who measures the moving clock as running slow." },
+        { "answer": "the moving clock shows less time because it is damaged by the motion", "explanation": "Motion does not damage clocks. The effect is a consequence of the constancy of the speed of light." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A spacecraft travels at 0.60c (γ = 1.25). A clock on the spacecraft measures 4.00 hours for a journey. What is the dilated time measured by Earth?",
+      "correct": "5.00 hours",
+      "correctExplanation": "t = γt₀ = 1.25 × 4.00 = 5.00 hours. Earth measures the dilated time because the spacecraft clock is moving relative to Earth.",
+      "distractors": [
+        { "answer": "4.00 hours", "explanation": "This is the proper time on the spacecraft, not the dilated time measured by Earth." },
+        { "answer": "3.20 hours", "explanation": "This divides by γ instead of multiplying. Dilated time is longer, not shorter." },
+        { "answer": "6.25 hours", "explanation": "This uses γ² = 1.5625 instead of γ = 1.25." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "In a light clock thought experiment, a pulse of light bounces vertically between two mirrors inside a spacecraft. Why does the Earth observer measure a longer time for one bounce?",
+      "correct": "Because the light must travel a diagonal path in the Earth frame, covering a longer distance at the same speed c.",
+      "correctExplanation": "From Earth, the spacecraft is moving, so the light travels a diagonal path. Since the speed of light is constant at c, the longer path takes more time.",
+      "distractors": [
+        { "answer": "Because the light slows down when the spacecraft is moving.", "explanation": "Light does not slow down. Its speed is c in all inertial frames." },
+        { "answer": "Because the mirrors are closer together in the moving spacecraft due to length contraction.", "explanation": "Length contraction occurs only in the direction of motion. The mirrors are separated perpendicular to the motion, so their spacing is unchanged." },
+        { "answer": "Because the Earth observer's clock runs faster than normal.", "explanation": "The Earth observer's clock runs at its normal rate. The longer measured time is due to the diagonal light path." }
+      ]
+    },
+    {
+      "type": "TF",
+      "question": "The dilated time is the longest time interval that any inertial observer can measure between two specific events.",
+      "correct": "False",
+      "correctExplanation": "There is no maximum dilated time — an observer moving faster relative to the events would measure an even longer time. The dilated time increases with relative speed.",
+      "distractors": [
+        { "answer": "True", "explanation": "Different observers moving at different speeds relative to the events measure different dilated times. There is no single maximum." }
+      ]
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the sentence about identifying dilated time in a scenario.",
+      "sentence": "When a particle is created and decays while moving through a laboratory, the laboratory measures the {{blank:1}} time because the two events occur at {{blank:2}} locations in the laboratory frame.",
+      "blanks": {
+        "1": {
+          "correct": "dilated",
+          "correctExplanation": "The laboratory sees the particle created at one location and decaying at another, so it measures the dilated time.",
+          "distractors": ["proper", "contracted"]
+        },
+        "2": {
+          "correct": "different",
+          "correctExplanation": "The particle moves through the laboratory, so its creation and decay occur at different spatial positions in the lab frame.",
+          "distractors": ["the same", "identical"]
+        }
+      }
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the sentence about the light clock explanation for dilated time.",
+      "sentence": "In the light clock thought experiment, the diagonal path is {{blank:1}} than the vertical path, and since the speed of light is the {{blank:2}} in both frames, the diagonal path takes more time.",
+      "blanks": {
+        "1": {
+          "correct": "longer",
+          "correctExplanation": "The diagonal path combines vertical and horizontal components, making it longer than the purely vertical path.",
+          "distractors": ["shorter", "equal"]
+        },
+        "2": {
+          "correct": "same",
+          "correctExplanation": "Einstein's second postulate states that the speed of light is c in all inertial frames. A longer path at the same speed requires more time.",
+          "distractors": ["different", "faster"]
+        }
+      }
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the sentence about the relationship between dilated and proper time.",
+      "sentence": "Dilated time is always {{blank:1}} than proper time because the Lorentz factor γ is always greater than or equal to {{blank:2}} for any relative speed.",
+      "blanks": {
+        "1": {
+          "correct": "longer",
+          "correctExplanation": "Since t = γt₀ and γ ≥ 1, dilated time is always at least as long as proper time.",
+          "distractors": ["shorter", "equal to"]
+        },
+        "2": {
+          "correct": "1",
+          "correctExplanation": "The minimum value of γ is 1, which occurs when v = 0. For any v > 0, γ > 1.",
+          "distractors": ["0", "2"]
+        }
+      }
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "MC",
+      "question": "An observer on Earth and an astronaut on a spacecraft both time the same event. The astronaut records 8.00 s (proper time). The Earth observer records 20.0 s (dilated time). A second spacecraft passes at a higher speed. Its crew times the same event as 4.00 s (proper time), and the Earth observer records 28.0 s. What explains the longer dilated time for the second spacecraft?",
+      "correct": "The second spacecraft travels faster, giving a higher Lorentz factor, which produces a longer dilated time despite a shorter proper time.",
+      "correctExplanation": "For the second spacecraft, γ = 28.0/4.00 = 7.00, compared with γ = 20.0/8.00 = 2.50 for the first. The higher γ more than compensates for the shorter proper time.",
+      "distractors": [
+        { "answer": "The second spacecraft's clock is more accurate, so it measures a different time.", "explanation": "Clock accuracy is not the issue. The difference arises from the different relative speeds and the resulting Lorentz factors." },
+        { "answer": "Time dilation only increases with proper time, so the second result must be an error.", "explanation": "Dilated time depends on both proper time and γ. A higher γ can produce a longer dilated time even with a shorter proper time." },
+        { "answer": "The second spacecraft has more mass, which increases the dilated time.", "explanation": "Mass does not affect time dilation. Only relative speed (through γ) determines the dilated time." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A student says: 'If I run really fast past a clock tower, I would see the clock running slower than my watch.' Is this statement consistent with time dilation?",
+      "correct": "Yes — the clock tower is moving relative to the student, so the student measures a dilated (longer) time for the tower clock.",
+      "correctExplanation": "From the student's frame, the clock tower moves past them. The student measures the dilated time for the tower clock's ticks, making it appear to run slower.",
+      "distractors": [
+        { "answer": "No — only the stationary observer (the clock tower) can measure dilated time.", "explanation": "Time dilation is reciprocal. Each observer sees the other's clock running slower. The student's perspective is valid." },
+        { "answer": "No — the student would see the clock running faster because they are the one moving.", "explanation": "There is no absolute motion. From the student's frame, the clock tower is moving, and its clock appears to run slow." },
+        { "answer": "Yes — but only if the student runs faster than 0.1c.", "explanation": "Time dilation occurs at any non-zero speed, though it is only noticeable at speeds approaching c." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Two events are separated by a proper time of 3.00 × 10⁻⁶ s. Observer A moves at 0.60c relative to the events and Observer B moves at 0.90c relative to the events. Which statement correctly compares their dilated time measurements?",
+      "correct": "Observer B measures a longer dilated time because B's higher speed gives a larger Lorentz factor.",
+      "correctExplanation": "γ_A = 1.25, t_A = 3.75 × 10⁻⁶ s. γ_B = 2.29, t_B = 6.87 × 10⁻⁶ s. Observer B measures a longer dilated time.",
+      "distractors": [
+        { "answer": "Observer A measures a longer dilated time because A moves more slowly.", "explanation": "Slower motion gives a smaller γ and a shorter dilated time, not a longer one." },
+        { "answer": "Both observers measure the same dilated time because they observe the same events.", "explanation": "The dilated time depends on relative speed. Different speeds give different γ values and different dilated times." },
+        { "answer": "Neither observer measures dilated time because both are in inertial frames.", "explanation": "Being in inertial frames does not prevent time dilation. Both observers see the events at different locations and measure dilated times." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A spacecraft clock reads 10.0 years for a journey. Earth clocks read 30.0 years. The spacecraft then returns at the same speed. What do the clocks read upon return?",
+      "correct": "Spacecraft: 20.0 years; Earth: 60.0 years",
+      "correctExplanation": "The return journey takes the same time in both frames. Total spacecraft time: 2 × 10.0 = 20.0 years. Total Earth time: 2 × 30.0 = 60.0 years.",
+      "distractors": [
+        { "answer": "Spacecraft: 20.0 years; Earth: 20.0 years, because the outward and return times cancel", "explanation": "Time dilation does not cancel on a return trip. Both legs contribute to the time difference." },
+        { "answer": "Spacecraft: 30.0 years; Earth: 30.0 years, because the total journey is symmetric", "explanation": "The symmetry does not eliminate time dilation. The spacecraft crew always measures proper time." },
+        { "answer": "Spacecraft: 60.0 years; Earth: 20.0 years, because on return the dilation reverses", "explanation": "Time dilation does not reverse on the return. The spacecraft crew still ages less than Earth observers." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A particle physicist measures a pion's dilated lifetime as 5.20 × 10⁻⁸ s. The pion's proper lifetime is 2.60 × 10⁻⁸ s. Which one of the following is closest to the speed of the pion?",
+      "correct": "0.866c",
+      "correctExplanation": "γ = t/t₀ = 5.20/2.60 = 2.00. v/c = √(1 − 1/4) = √(3/4) = 0.866.",
+      "distractors": [
+        { "answer": "0.500c", "explanation": "At 0.500c, γ = 1.15, giving a dilated lifetime of 2.99 × 10⁻⁸ s, not 5.20 × 10⁻⁸ s." },
+        { "answer": "0.750c", "explanation": "At 0.750c, γ = 1.51, giving a dilated lifetime of 3.93 × 10⁻⁸ s, not 5.20 × 10⁻⁸ s." },
+        { "answer": "0.990c", "explanation": "At 0.990c, γ = 7.09, giving a dilated lifetime of 18.4 × 10⁻⁸ s, which is too large." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Oliver claims that dilated time means 'time stretches out like elastic.' Which assessment of this analogy is most accurate?",
+      "correct": "The analogy captures that dilated time is longer, but is misleading because time is not a physical substance that stretches.",
+      "correctExplanation": "Dilated time is indeed longer than proper time, but time dilation is a measurement difference between frames, not a physical stretching of time itself.",
+      "distractors": [
+        { "answer": "The analogy is perfectly accurate because time literally stretches at high speeds.", "explanation": "Time does not physically stretch. The analogy oversimplifies the frame-dependent measurement of time intervals." },
+        { "answer": "The analogy is completely wrong because dilated time is shorter, not longer.", "explanation": "Dilated time is longer than proper time. The analogy correctly captures this aspect but is imprecise in other ways." },
+        { "answer": "The analogy is only valid for speeds above 0.99c.", "explanation": "The analogy's limitations are not speed-dependent. It is an imprecise description at all speeds." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "An unstable particle has proper lifetime t₀. If it travels at a speed where γ = 100, its dilated lifetime in the laboratory is 100t₀. The particle then enters a region with a stronger magnetic field, which curves its path but does not change its speed. Does the dilated lifetime change?",
+      "correct": "No — the dilated lifetime depends on speed, not on the direction of motion.",
+      "correctExplanation": "Time dilation depends on the magnitude of the relative velocity (through γ), not on the direction. A curved path at the same speed gives the same γ and the same dilated lifetime.",
+      "distractors": [
+        { "answer": "Yes — curving the path increases the effective speed, increasing the dilated lifetime.", "explanation": "The speed remains the same when only direction changes. The Lorentz factor is unchanged." },
+        { "answer": "Yes — the magnetic field adds energy, which increases γ and the dilated lifetime.", "explanation": "A magnetic force acts perpendicular to the velocity and does no work, so it does not change the particle's speed or energy." },
+        { "answer": "No — but the dilated lifetime decreases because the particle is now in a non-inertial frame.", "explanation": "While the curved path makes the particle's frame non-inertial, the instantaneous γ remains the same, and the dilated lifetime as measured from the lab is unchanged." }
+      ]
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the sentence about the reciprocal nature of time dilation.",
+      "sentence": "Time dilation is reciprocal: Observer A sees Observer B's clock running {{blank:1}}, and Observer B sees Observer A's clock running {{blank:2}}. Both observations are equally valid.",
+      "blanks": {
+        "1": {
+          "correct": "slow",
+          "correctExplanation": "Each observer measures the other's clock as running slower due to relative motion.",
+          "distractors": ["fast", "normally"]
+        },
+        "2": {
+          "correct": "slow",
+          "correctExplanation": "The reciprocal nature of time dilation means both observers see the other's clock as running slow.",
+          "distractors": ["fast", "normally"]
+        }
+      }
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the sentence about calculating dilated time from distance and speed.",
+      "sentence": "A particle travels 600 m at 0.80c in a laboratory. The dilated time is t = d/v = 600 / (0.80 × 3.00 × 10⁸) = {{blank:1}} × 10⁻⁶ s. The proper time is t₀ = t/γ = 2.50 × 10⁻⁶ / 1.67 = {{blank:2}} × 10⁻⁶ s.",
+      "blanks": {
+        "1": {
+          "correct": "2.50",
+          "correctExplanation": "t = 600 / (2.40 × 10⁸) = 2.50 × 10⁻⁶ s.",
+          "distractors": ["1.50", "5.00"]
+        },
+        "2": {
+          "correct": "1.50",
+          "correctExplanation": "t₀ = 2.50 × 10⁻⁶ / 1.67 = 1.50 × 10⁻⁶ s.",
+          "distractors": ["2.50", "4.18"]
+        }
+      }
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the sentence about the physical explanation for dilated time.",
+      "sentence": "Dilated time is longer because the constancy of the speed of {{blank:1}} requires that a longer light path takes {{blank:2}} time to traverse.",
+      "blanks": {
+        "1": {
+          "correct": "light",
+          "correctExplanation": "The constancy of the speed of light (Einstein's second postulate) is the fundamental reason for time dilation.",
+          "distractors": ["sound", "motion"]
+        },
+        "2": {
+          "correct": "more",
+          "correctExplanation": "At the same speed c, a longer diagonal path takes more time than a shorter vertical path.",
+          "distractors": ["less", "the same"]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "MC",
+      "question": "In a thought experiment, Observer A on Earth and Observer B on a spacecraft each have identical light clocks. A measures B's clock as running slow (dilated). B also measures A's clock as running slow (dilated). A student says this is a contradiction. Which statement best resolves the student's concern?",
+      "correct": "There is no contradiction. Each observer measures the other's clock using their own frame's definition of simultaneity, and these definitions differ.",
+      "correctExplanation": "The relativity of simultaneity means that the two observers do not agree on which events are simultaneous. This allows both to consistently measure the other's clock as running slow.",
+      "distractors": [
+        { "answer": "One observer must be wrong — only the stationary observer's measurement is valid.", "explanation": "There is no absolute 'stationary' observer. Both measurements are equally valid in their respective frames." },
+        { "answer": "The contradiction proves that special relativity is internally inconsistent.", "explanation": "There is no inconsistency. The resolution lies in the relativity of simultaneity, a fundamental aspect of special relativity." },
+        { "answer": "Both clocks actually run at the same rate, and the apparent difference is an optical illusion.", "explanation": "The effect is real, not an illusion. Both observers genuinely measure the other's clock as running slower." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A muon's dilated lifetime in Earth's frame is 2.20 × 10⁻⁵ s. A student claims that from the muon's frame, Earth's clocks also appear to run slow, so Earth should measure a shorter time, not a longer time. Which statement correctly addresses this claim?",
+      "correct": "The muon's frame uses length contraction to explain the same outcome. Earth's clocks appear slow in the muon's frame, but the contracted distance compensates, giving a consistent result.",
+      "correctExplanation": "From the muon's frame, Earth's clocks are dilated (slow), but the distance to Earth is contracted. Both effects are consistent with the muon reaching Earth's surface.",
+      "distractors": [
+        { "answer": "The muon's frame cannot observe Earth's clocks, so the claim is meaningless.", "explanation": "The muon's frame can make measurements about Earth's clocks. The resolution involves length contraction, not inability to observe." },
+        { "answer": "The student is correct — Earth should measure a shorter time from the muon's perspective.", "explanation": "Earth measures the dilated (longer) time. The muon's frame explanation uses length contraction, not reversed time dilation." },
+        { "answer": "Time dilation is not reciprocal for particles, only for macroscopic objects.", "explanation": "Time dilation is reciprocal for all objects. The consistency comes from length contraction providing the complementary explanation." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A spacecraft travelling at 0.99c (γ = 7.09) sends a radio signal back to Earth every 1.00 hour as measured by the spacecraft clock. An Earth observer receives these signals at intervals of 7.09 hours purely due to time dilation. However, the signals also experience a Doppler shift. How does the Doppler effect modify the observed interval?",
+      "correct": "The signals arrive at intervals longer than 7.09 hours when the spacecraft moves away, because the increasing distance adds additional delay to each successive signal.",
+      "correctExplanation": "When the spacecraft moves away, each successive signal must travel a greater distance. This stretches the arrival intervals beyond what time dilation alone predicts.",
+      "distractors": [
+        { "answer": "The Doppler effect cancels the time dilation exactly, so signals arrive every 1.00 hour.", "explanation": "The Doppler effect does not cancel time dilation. For a receding source, the observed interval is even longer." },
+        { "answer": "The signals arrive at intervals of exactly 7.09 hours regardless of direction.", "explanation": "Direction matters. The relativistic Doppler effect modifies the interval depending on whether the spacecraft approaches or recedes." },
+        { "answer": "The signals arrive more frequently because the spacecraft is moving toward the signals it has already sent.", "explanation": "For a receding spacecraft, the signals arrive less frequently, not more. The opposite is true for an approaching spacecraft." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A physicist argues that 'dilated time is not real — it is just what a distant observer calculates.' Evaluate this claim using experimental evidence.",
+      "correct": "The claim is incorrect. Dilated time is confirmed by experiments such as the Hafele-Keating atomic clock experiment and muon lifetime measurements.",
+      "correctExplanation": "Atomic clocks flown on aircraft showed measurable time differences consistent with time dilation. Muon survival rates also match dilated lifetime predictions. The effect is real and measurable.",
+      "distractors": [
+        { "answer": "The claim is correct — dilated time is a mathematical artefact with no physical consequences.", "explanation": "Time dilation has measurable consequences for GPS satellites, particle lifetimes, and atomic clocks. It is not merely mathematical." },
+        { "answer": "The claim is correct for everyday speeds but incorrect for speeds above 0.5c.", "explanation": "Time dilation is real at all speeds where it produces measurable effects, including the speeds of aircraft and satellites." },
+        { "answer": "The claim can neither be confirmed nor refuted because time dilation is too small to measure.", "explanation": "Time dilation has been precisely measured using atomic clocks and particle detectors." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Consider a light clock and a mechanical clock travelling together on a spacecraft. Both keep perfect time at rest. Does time dilation affect both clocks equally?",
+      "correct": "Yes — time dilation affects all processes equally, regardless of the clock mechanism.",
+      "correctExplanation": "Time dilation is a property of spacetime, not of clock mechanisms. All clocks, biological processes, and physical phenomena are affected equally.",
+      "distractors": [
+        { "answer": "No — only light clocks are affected because time dilation depends on the speed of light.", "explanation": "While the light clock thought experiment uses light to derive time dilation, the effect applies to all clocks and processes." },
+        { "answer": "No — mechanical clocks are affected more because they have moving parts.", "explanation": "Moving parts do not increase the time dilation effect. All clocks experience the same dilation." },
+        { "answer": "Yes — but the mechanical clock drifts slightly more due to vibration at high speeds.", "explanation": "Vibration is unrelated to time dilation. Both clocks are affected identically by the relativistic effect." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A student plots dilated time t against γ for a fixed proper time t₀. What is the shape of this graph?",
+      "correct": "A straight line through the origin with gradient t₀",
+      "correctExplanation": "t = γt₀ is linear in γ. With γ on the x-axis and t on the y-axis, the graph is a straight line passing through the origin with gradient t₀.",
+      "distractors": [
+        { "answer": "An exponential curve starting at t₀", "explanation": "The relationship t = γt₀ is linear in γ, not exponential." },
+        { "answer": "A horizontal line at t = t₀ because proper time is constant", "explanation": "While t₀ is constant, t varies linearly with γ. The graph is not horizontal." },
+        { "answer": "A curve that approaches an asymptote at t = 2t₀", "explanation": "There is no asymptote. t increases linearly without bound as γ increases." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "In a particle accelerator, a beam of particles with known proper lifetime t₀ travels at a measured speed v. The laboratory measures their dilated lifetime as t. If the measured dilated lifetime is less than γt₀, which conclusion is most appropriate?",
+      "correct": "There may be an experimental error in the speed measurement, the proper lifetime value, or the timing apparatus.",
+      "correctExplanation": "If the measured dilated time is less than the predicted value, one or more of the input values must be incorrect, since t = γt₀ is exact in special relativity.",
+      "distractors": [
+        { "answer": "Special relativity is incorrect for this type of particle.", "explanation": "Special relativity has been extensively verified. A discrepancy is far more likely due to measurement error than a failure of the theory." },
+        { "answer": "The particle must have been decelerating, which reduces the dilated time.", "explanation": "If the particle decelerates, the effective γ would be lower, but this would be reflected in the speed measurement." },
+        { "answer": "The proper lifetime must increase at high speeds.", "explanation": "Proper lifetime is an invariant property of the particle and does not change with speed." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Astronaut Chen travels to a nearby star at 0.95c (γ = 3.20). She measures her journey as taking 2.00 years. Her twin brother on Earth waits 6.40 years. When Chen returns (also at 0.95c), she has aged 4.00 years while her brother has aged 12.8 years. A student asks: 'Why can't Chen claim she was stationary and her brother aged less?' Which response is correct?",
+      "correct": "Chen's journey involves acceleration (turnaround), making her experience non-inertial. The twin who stays in an inertial frame always ages more.",
+      "correctExplanation": "The symmetry is broken by Chen's turnaround acceleration. Only the Earth twin remains in a single inertial frame throughout, so he ages more.",
+      "distractors": [
+        { "answer": "Chen can make this claim, and her brother would indeed age less from her perspective.", "explanation": "The physical outcome (who ages more) must be the same in all analyses. Chen's acceleration breaks the symmetry." },
+        { "answer": "The twin who was closer to a large mass ages more due to gravitational time dilation.", "explanation": "At speeds of 0.95c, the velocity-based time dilation dominates. The resolution is about acceleration, not gravity." },
+        { "answer": "Both twins age the same because time dilation is reciprocal.", "explanation": "Reciprocity applies to inertial frames. Chen's turnaround breaks the symmetry, and the ages are not equal." }
+      ]
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the sentence about the universality of time dilation.",
+      "sentence": "Time dilation affects all {{blank:1}} equally — clocks, biological aging, and chemical reactions all slow by the same factor γ. This demonstrates that time dilation is a property of {{blank:2}}, not of any particular mechanism.",
+      "blanks": {
+        "1": {
+          "correct": "processes",
+          "correctExplanation": "Time dilation is universal. Every physical process is affected equally by the factor γ.",
+          "distractors": ["clocks", "particles"]
+        },
+        "2": {
+          "correct": "spacetime",
+          "correctExplanation": "Time dilation arises from the structure of spacetime itself, not from any mechanical or physical effect on the clock.",
+          "distractors": ["clocks", "gravity"]
+        }
+      }
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the sentence about reconciling reciprocal time dilation.",
+      "sentence": "Both observers measure the other's clock as running slow because they use different definitions of {{blank:1}}. This is resolved by the relativity of {{blank:2}}, a key concept in special relativity.",
+      "blanks": {
+        "1": {
+          "correct": "simultaneity",
+          "correctExplanation": "Different inertial frames have different definitions of which events are simultaneous, leading to the reciprocal observation.",
+          "distractors": ["time", "distance"]
+        },
+        "2": {
+          "correct": "simultaneity",
+          "correctExplanation": "The relativity of simultaneity explains how both observers can consistently measure the other's clock as running slower.",
+          "distractors": ["mass", "energy"]
+        }
+      }
+    }
+  ]
+}

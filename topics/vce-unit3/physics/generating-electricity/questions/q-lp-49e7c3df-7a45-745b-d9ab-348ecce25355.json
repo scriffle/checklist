@@ -1,0 +1,605 @@
+{
+  "_link": {
+    "uuid": "lp-49e7c3df-7a45-745b-d9ab-348ecce25355",
+    "version": 1,
+    "contentHash": "hash-da0da464",
+    "title": "I can calculate the average emf induced in a rotating coil using Faraday's law",
+    "generatedAt": "2026-03-07T00:00:00.000Z"
+  },
+  "toLevel2": [
+    {
+      "type": "mc",
+      "question": "Which one of the following is the correct formula for calculating the average emf induced in a rotating coil?",
+      "correct": "|ε| = N × |ΔΦ_B| / Δt",
+      "correctExplanation": "The average emf is found by multiplying the number of turns by the magnitude of the change in flux and dividing by the time taken.",
+      "distractors": [
+        { "answer": "|ε| = N × Φ_B × Δt", "explanation": "This multiplies flux by time instead of dividing. The formula requires ΔΦ_B / Δt." },
+        { "answer": "|ε| = Φ_B / (N × Δt)", "explanation": "This divides by N instead of multiplying. The emf is proportional to N." },
+        { "answer": "|ε| = N × Δt / ΔΦ_B", "explanation": "This has the ratio inverted. The emf equals N times the rate of flux change, not N times the inverse." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A coil rotates from a position of maximum flux (Φ_max) to a position of zero flux. What is the magnitude of the change in flux, |ΔΦ_B|?",
+      "correct": "Φ_max",
+      "correctExplanation": "The flux changes from Φ_max to 0, so |ΔΦ_B| = |0 − Φ_max| = Φ_max.",
+      "distractors": [
+        { "answer": "Zero", "explanation": "The flux change is not zero. It changes from Φ_max to 0, a change of Φ_max." },
+        { "answer": "2 × Φ_max", "explanation": "This would be the change from +Φ_max to −Φ_max. From Φ_max to zero, the change is just Φ_max." },
+        { "answer": "Φ_max / 2", "explanation": "The flux drops all the way from Φ_max to zero, not to Φ_max/2." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "The maximum flux through a coil is given by Φ_max = B × A. A coil has an area of 0.0020 m² in a field of 0.50 T. What is Φ_max?",
+      "correct": "1.0 × 10⁻³ Wb",
+      "correctExplanation": "Φ_max = B × A = 0.50 × 0.0020 = 1.0 × 10⁻³ Wb.",
+      "distractors": [
+        { "answer": "0.50 Wb", "explanation": "This is the field strength only. Multiply by the area: 0.50 × 0.0020 = 1.0 × 10⁻³ Wb." },
+        { "answer": "0.0020 Wb", "explanation": "This is the area only. Multiply by B: 0.50 × 0.0020 = 1.0 × 10⁻³ Wb." },
+        { "answer": "250 Wb", "explanation": "This divides instead of multiplying. Φ_max = 0.50 × 0.0020 = 1.0 × 10⁻³ Wb." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A coil rotates through 90° from a position of maximum flux. The rotation corresponds to the flux changing from Φ_max to which value?",
+      "correct": "Zero",
+      "correctExplanation": "At maximum flux, the coil face is perpendicular to the field. After rotating 90°, the coil face is parallel to the field and the flux is zero.",
+      "distractors": [
+        { "answer": "Φ_max / 2", "explanation": "Rotating 90° from the perpendicular position brings the coil parallel to the field, where the flux is zero, not half maximum." },
+        { "answer": "−Φ_max", "explanation": "The flux reaches −Φ_max after rotating 180°, not 90°." },
+        { "answer": "Φ_max (unchanged)", "explanation": "The flux does change when the coil rotates. After 90°, the flux drops to zero." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A coil rotates through 180° from a position of maximum flux (+Φ_max). What is the magnitude of the change in flux?",
+      "correct": "2 × Φ_max",
+      "correctExplanation": "Rotating 180° takes the flux from +Φ_max to −Φ_max. The magnitude of the change is |−Φ_max − Φ_max| = 2Φ_max.",
+      "distractors": [
+        { "answer": "Φ_max", "explanation": "This is the change for a 90° rotation. A 180° rotation changes the flux by 2Φ_max." },
+        { "answer": "Zero", "explanation": "The flux does change during a 180° rotation. It reverses from +Φ_max to −Φ_max." },
+        { "answer": "Φ_max / 2", "explanation": "This underestimates the change. The flux reverses completely, giving a change of 2Φ_max." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the statement about calculating average emf for a rotating coil.",
+      "sentence": "To calculate the average emf, first find the {{blank:1}} in magnetic flux between the start and end positions, then divide by the {{blank:2}} taken for the rotation.",
+      "blanks": {
+        "1": {
+          "correct": "change",
+          "correctExplanation": "The change in magnetic flux (ΔΦ_B) is the difference between the final and initial flux values.",
+          "distractors": [
+            { "answer": "total", "explanation": "The total flux is not used. It is the change in flux that determines the average emf." },
+            { "answer": "maximum", "explanation": "The maximum flux is used to find ΔΦ_B, but the formula requires the change, not the maximum itself." },
+            { "answer": "average", "explanation": "The average flux is not used. The formula uses the change in flux divided by time." }
+          ]
+        },
+        "2": {
+          "correct": "time",
+          "correctExplanation": "Dividing the flux change by the time interval gives the average rate of change, which determines the average emf.",
+          "distractors": [
+            { "answer": "angle", "explanation": "The formula divides by time (Δt), not by angle. The angle determines the flux change." },
+            { "answer": "number of turns", "explanation": "The number of turns multiplies the rate of flux change; it does not appear in the denominator." },
+            { "answer": "area", "explanation": "The coil area is used to calculate Φ_max but does not appear in the denominator of the emf formula." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the statement about maximum flux.",
+      "sentence": "The maximum magnetic flux through a coil is given by Φ_max = {{blank:1}} × {{blank:2}}, where the coil face is perpendicular to the magnetic field.",
+      "blanks": {
+        "1": {
+          "correct": "B",
+          "correctExplanation": "B is the magnetic field strength (in tesla), which is one of the two factors in Φ_max = BA.",
+          "distractors": [
+            { "answer": "N", "explanation": "N is the number of turns and is not part of the Φ_max formula. Φ_max = BA." },
+            { "answer": "ε", "explanation": "ε is the emf, not a factor in the maximum flux formula." },
+            { "answer": "Δt", "explanation": "Δt is the time interval and is not part of the maximum flux formula." }
+          ]
+        },
+        "2": {
+          "correct": "A",
+          "correctExplanation": "A is the area of the coil (in m²). Φ_max = B × A when the coil face is perpendicular to the field.",
+          "distractors": [
+            { "answer": "N", "explanation": "N is the number of turns. The maximum flux per turn is Φ_max = BA." },
+            { "answer": "t", "explanation": "Time is not part of the maximum flux formula. Φ_max = BA." },
+            { "answer": "I", "explanation": "Current is not part of the maximum flux formula. Φ_max = BA." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "A 10-turn coil with Φ_max = 3.2 × 10⁻⁶ Wb rotates 90° from maximum flux in 0.25 s. Complete the calculation.",
+      "sentence": "The change in flux is {{blank:1}} Wb and the average emf is {{blank:2}} V.",
+      "blanks": {
+        "1": {
+          "correct": "3.2 × 10⁻⁶",
+          "correctExplanation": "Rotating 90° from maximum flux to zero flux gives |ΔΦ_B| = Φ_max = 3.2 × 10⁻⁶ Wb.",
+          "distractors": [
+            { "answer": "6.4 × 10⁻⁶", "explanation": "This would be the change for a 180° rotation (2Φ_max). For 90°, the change is Φ_max." },
+            { "answer": "1.6 × 10⁻⁶", "explanation": "This is half the maximum flux. A 90° rotation from maximum flux gives a change equal to the full Φ_max." },
+            { "answer": "0", "explanation": "The flux does change during a 90° rotation. It decreases from Φ_max to zero." }
+          ]
+        },
+        "2": {
+          "correct": "1.28 × 10⁻⁴",
+          "correctExplanation": "|ε| = N × |ΔΦ_B| / Δt = 10 × 3.2 × 10⁻⁶ / 0.25 = 1.28 × 10⁻⁴ V.",
+          "distractors": [
+            { "answer": "1.28 × 10⁻⁵", "explanation": "This may omit the factor of N. Multiply by 10: 10 × 1.28 × 10⁻⁵ = 1.28 × 10⁻⁴ V." },
+            { "answer": "3.2 × 10⁻⁶", "explanation": "This is the flux change, not the emf. Divide by time and multiply by N." },
+            { "answer": "8.0 × 10⁻⁷", "explanation": "This may use an incorrect calculation. The correct answer is 1.28 × 10⁻⁴ V." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "tf",
+      "question": "A coil rotating through 180° from maximum flux to negative maximum flux has a flux change of 2Φ_max.",
+      "correct": "True",
+      "correctExplanation": "The flux changes from +Φ_max to −Φ_max, a total change of |−Φ_max − Φ_max| = 2Φ_max.",
+      "distractors": [
+        { "answer": "False", "explanation": "This statement is correct. The flux reverses from +Φ_max to −Φ_max, giving a change of 2Φ_max." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "The average emf for a coil rotating through 90° from maximum flux is the same as the average emf for rotating through 90° from zero flux.",
+      "correct": "True",
+      "correctExplanation": "In both cases, |ΔΦ_B| = Φ_max (from Φ_max to 0, or from 0 to −Φ_max). For the same time interval, the average emf is the same.",
+      "distractors": [
+        { "answer": "False", "explanation": "The magnitude of the flux change is the same in both cases (Φ_max), so the average emf is equal for the same time interval." }
+      ]
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "mc",
+      "question": "A 50-turn coil of area 0.0040 m² rotates in a field of 0.30 T. It rotates from maximum flux to zero flux in 0.020 s. What is the average induced emf?",
+      "correct": "3.0 V",
+      "correctExplanation": "Φ_max = 0.30 × 0.0040 = 1.2 × 10⁻³ Wb. |ΔΦ_B| = 1.2 × 10⁻³ Wb. |ε| = 50 × 1.2 × 10⁻³ / 0.020 = 3.0 V.",
+      "distractors": [
+        { "answer": "0.060 V", "explanation": "This omits N. Multiply by 50: 50 × 0.060 = 3.0 V." },
+        { "answer": "0.030 V", "explanation": "This may use an incorrect flux change. The correct calculation gives 3.0 V." },
+        { "answer": "6.0 V", "explanation": "This may use 2Φ_max (for a 180° rotation). A 90° rotation gives ΔΦ_B = Φ_max." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A 20-turn coil with area 0.0050 m² rotates in a 0.40 T field. The coil rotates through 180° in 0.10 s. What is the average induced emf?",
+      "correct": "0.80 V",
+      "correctExplanation": "Φ_max = 0.40 × 0.0050 = 2.0 × 10⁻³ Wb. For 180°, |ΔΦ_B| = 2Φ_max = 4.0 × 10⁻³ Wb. |ε| = 20 × 4.0 × 10⁻³ / 0.10 = 0.80 V.",
+      "distractors": [
+        { "answer": "0.40 V", "explanation": "This uses ΔΦ_B = Φ_max instead of 2Φ_max. A 180° rotation gives a flux change of 2Φ_max." },
+        { "answer": "0.040 V", "explanation": "This omits N. Multiply by 20: 20 × 0.040 = 0.80 V." },
+        { "answer": "1.6 V", "explanation": "This may use an incorrect time or flux value. The correct answer is 0.80 V." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Kai's coil has 100 turns, area 0.0030 m², and rotates in a 0.25 T field. The coil rotates 90° from zero flux to negative maximum flux in 0.050 s. What is the average emf?",
+      "correct": "1.5 V",
+      "correctExplanation": "Φ_max = 0.25 × 0.0030 = 7.5 × 10⁻⁴ Wb. From zero to −Φ_max: |ΔΦ_B| = Φ_max = 7.5 × 10⁻⁴ Wb. |ε| = 100 × 7.5 × 10⁻⁴ / 0.050 = 1.5 V.",
+      "distractors": [
+        { "answer": "0.015 V", "explanation": "This omits N. The correct answer is 100 × 0.015 = 1.5 V." },
+        { "answer": "0.75 V", "explanation": "This may use Δt = 0.10 s instead of 0.050 s. The correct answer is 1.5 V." },
+        { "answer": "3.0 V", "explanation": "This may use 2Φ_max for a 90° rotation. The change is Φ_max, not 2Φ_max." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A coil rotates from a position where the flux is +Φ_max to a position where the flux is zero. This represents a rotation of which angle?",
+      "correct": "90°",
+      "correctExplanation": "At maximum flux, the coil is perpendicular to the field. At zero flux, it is parallel. This is a 90° rotation.",
+      "distractors": [
+        { "answer": "180°", "explanation": "A 180° rotation takes the flux from +Φ_max to −Φ_max, not to zero." },
+        { "answer": "45°", "explanation": "At 45°, the flux is Φ_max × cos 45° = 0.707Φ_max, not zero." },
+        { "answer": "360°", "explanation": "A 360° rotation returns the flux to +Φ_max. The rotation from Φ_max to zero is 90°." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which one of the following correctly ranks the magnitude of the flux change for rotations from maximum flux, from smallest to largest?",
+      "correct": "90° rotation (Φ_max) < 180° rotation (2Φ_max) < 360° rotation (0, since the flux returns to its starting value)",
+      "correctExplanation": "For 90°: ΔΦ = Φ_max. For 180°: ΔΦ = 2Φ_max. For 360°: the coil returns to its starting position, so the net ΔΦ = 0. The ranking by magnitude is 360° (0) < 90° (Φ_max) < 180° (2Φ_max).",
+      "distractors": [
+        { "answer": "90° < 180° < 360°, with 360° giving 4Φ_max", "explanation": "A 360° rotation returns the flux to its original value, so the net flux change is zero, not 4Φ_max." },
+        { "answer": "All three give the same flux change of Φ_max", "explanation": "The flux change depends on the angle. 90° gives Φ_max, 180° gives 2Φ_max, and 360° gives zero net change." },
+        { "answer": "180° < 90° < 360°", "explanation": "180° gives a larger flux change (2Φ_max) than 90° (Φ_max). This ranking is incorrect." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A generator coil makes one complete rotation in 0.040 s. What is the time taken for a quarter turn (90°)?",
+      "correct": "0.010 s",
+      "correctExplanation": "A quarter turn takes one-quarter of the period: 0.040 / 4 = 0.010 s.",
+      "distractors": [
+        { "answer": "0.020 s", "explanation": "This is half the period (180°), not a quarter turn." },
+        { "answer": "0.040 s", "explanation": "This is the full period (360°), not a quarter turn." },
+        { "answer": "0.0050 s", "explanation": "This is one-eighth of the period (45°), not a quarter turn." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "A 30-turn coil with area 0.0025 m² rotates in a 0.60 T field from maximum flux to zero flux in 0.015 s. Complete the calculation.",
+      "sentence": "The maximum flux is {{blank:1}} Wb and the average emf is {{blank:2}} V.",
+      "blanks": {
+        "1": {
+          "correct": "1.5 × 10⁻³",
+          "correctExplanation": "Φ_max = B × A = 0.60 × 0.0025 = 1.5 × 10⁻³ Wb.",
+          "distractors": [
+            { "answer": "0.60", "explanation": "This is the field strength only. Multiply by A: 0.60 × 0.0025 = 1.5 × 10⁻³ Wb." },
+            { "answer": "0.0025", "explanation": "This is the area only. Multiply by B: 0.60 × 0.0025 = 1.5 × 10⁻³ Wb." },
+            { "answer": "1.5 × 10⁻¹", "explanation": "This has an incorrect power of ten. 0.60 × 0.0025 = 1.5 × 10⁻³ Wb." }
+          ]
+        },
+        "2": {
+          "correct": "3.0",
+          "correctExplanation": "|ε| = 30 × 1.5 × 10⁻³ / 0.015 = 30 × 0.10 = 3.0 V.",
+          "distractors": [
+            { "answer": "0.10", "explanation": "This is the rate per turn. Multiply by N: 30 × 0.10 = 3.0 V." },
+            { "answer": "1.0", "explanation": "This may use N = 10 instead of 30. The correct answer is 3.0 V." },
+            { "answer": "6.0", "explanation": "This may use 2Φ_max. For a 90° rotation, ΔΦ_B = Φ_max." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "A 40-turn coil with Φ_max = 5.0 × 10⁻⁴ Wb rotates through 180° in 0.025 s. Complete the calculation.",
+      "sentence": "The flux change for 180° is {{blank:1}} Wb and the average emf is {{blank:2}} V.",
+      "blanks": {
+        "1": {
+          "correct": "1.0 × 10⁻³",
+          "correctExplanation": "For 180°, |ΔΦ_B| = 2Φ_max = 2 × 5.0 × 10⁻⁴ = 1.0 × 10⁻³ Wb.",
+          "distractors": [
+            { "answer": "5.0 × 10⁻⁴", "explanation": "This is the flux change for 90°, not 180°. A 180° rotation gives 2Φ_max." },
+            { "answer": "2.0 × 10⁻³", "explanation": "This doubles the correct answer. 2Φ_max = 1.0 × 10⁻³ Wb." },
+            { "answer": "0", "explanation": "The flux change for 180° is not zero. It is 2Φ_max because the flux reverses." }
+          ]
+        },
+        "2": {
+          "correct": "1.6",
+          "correctExplanation": "|ε| = 40 × 1.0 × 10⁻³ / 0.025 = 40 × 0.040 = 1.6 V.",
+          "distractors": [
+            { "answer": "0.80", "explanation": "This may use Φ_max instead of 2Φ_max. For 180°, ΔΦ_B = 2Φ_max." },
+            { "answer": "0.040", "explanation": "This is the rate per turn. Multiply by N: 40 × 0.040 = 1.6 V." },
+            { "answer": "3.2", "explanation": "This may use an incorrect time. The correct answer is 1.6 V." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the statement about the key step in calculating average emf for a rotating coil.",
+      "sentence": "The key step is correctly identifying the {{blank:1}} in flux for the specific {{blank:2}} of rotation.",
+      "blanks": {
+        "1": {
+          "correct": "change",
+          "correctExplanation": "The change in flux (ΔΦ_B) depends on the start and end positions of the coil, which are determined by the angle of rotation.",
+          "distractors": [
+            { "answer": "maximum", "explanation": "While Φ_max is used in the calculation, the key quantity is the change in flux for the specific rotation." },
+            { "answer": "average", "explanation": "The average flux is not used. The change in flux is the relevant quantity." },
+            { "answer": "rate", "explanation": "The rate of flux change is important, but the key first step is identifying the change in flux." }
+          ]
+        },
+        "2": {
+          "correct": "angle",
+          "correctExplanation": "Different angles of rotation (90°, 180°, etc.) produce different flux changes, which is the critical first step.",
+          "distractors": [
+            { "answer": "speed", "explanation": "Speed determines the time, not the flux change. The angle determines the flux change." },
+            { "answer": "direction", "explanation": "While direction matters for the sign of the emf, the angle of rotation determines the magnitude of the flux change." },
+            { "answer": "frequency", "explanation": "Frequency relates to the overall rotation rate. The angle of the specific rotation determines ΔΦ_B." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "tf",
+      "question": "For a coil rotating from +Φ_max to −Φ_max (a 180° rotation), the flux change is twice that of a 90° rotation from Φ_max to zero.",
+      "correct": "True",
+      "correctExplanation": "The 180° rotation gives |ΔΦ_B| = 2Φ_max, and the 90° rotation gives |ΔΦ_B| = Φ_max. The 180° change is indeed twice the 90° change.",
+      "distractors": [
+        { "answer": "False", "explanation": "This statement is correct. 2Φ_max is twice Φ_max." }
+      ]
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "mc",
+      "question": "A 200-turn coil of area 0.0080 m² rotates in a 0.15 T field. The coil rotates from maximum flux through 90° in 0.040 s. What is the average induced emf?",
+      "correct": "6.0 V",
+      "correctExplanation": "Φ_max = 0.15 × 0.0080 = 1.2 × 10⁻³ Wb. For 90°: |ΔΦ_B| = 1.2 × 10⁻³ Wb. |ε| = 200 × 1.2 × 10⁻³ / 0.040 = 6.0 V.",
+      "distractors": [
+        { "answer": "0.030 V", "explanation": "This omits N. Multiply by 200: 200 × 0.030 = 6.0 V." },
+        { "answer": "12 V", "explanation": "This may use 2Φ_max. For a 90° rotation, ΔΦ_B = Φ_max." },
+        { "answer": "3.0 V", "explanation": "This may use Δt = 0.080 s instead of 0.040 s. The correct answer is 6.0 V." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Elena's generator has a 150-turn coil of area 0.012 m² in a 0.20 T field. The coil makes one full rotation in 0.050 s. What is the average emf over a half rotation (180°)?",
+      "correct": "28.8 V",
+      "correctExplanation": "Φ_max = 0.20 × 0.012 = 2.4 × 10⁻³ Wb. For 180°: |ΔΦ_B| = 2 × 2.4 × 10⁻³ = 4.8 × 10⁻³ Wb. Half rotation time = 0.025 s. |ε| = 150 × 4.8 × 10⁻³ / 0.025 = 28.8 V.",
+      "distractors": [
+        { "answer": "14.4 V", "explanation": "This uses Φ_max instead of 2Φ_max for the 180° rotation. The correct flux change is 2Φ_max." },
+        { "answer": "7.2 V", "explanation": "This may use an incorrect time or omit the factor of 2 for the 180° flux change." },
+        { "answer": "0.192 V", "explanation": "This omits N. Multiply by 150 to get the correct answer." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A 80-turn coil of area 0.0060 m² rotates in a 0.50 T field from maximum flux through 90° in 0.030 s. What is the average emf?",
+      "correct": "8.0 V",
+      "correctExplanation": "Φ_max = 0.50 × 0.0060 = 3.0 × 10⁻³ Wb. |ΔΦ_B| = 3.0 × 10⁻³ Wb. |ε| = 80 × 3.0 × 10⁻³ / 0.030 = 8.0 V.",
+      "distractors": [
+        { "answer": "0.10 V", "explanation": "This omits N. Multiply by 80: 80 × 0.10 = 8.0 V." },
+        { "answer": "16 V", "explanation": "This uses 2Φ_max. For a 90° rotation from maximum flux, ΔΦ_B = Φ_max." },
+        { "answer": "4.0 V", "explanation": "This may use Δt = 0.060 s instead of 0.030 s." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A coil with 120 turns and Φ_max = 8.0 × 10⁻⁴ Wb rotates through 180° in time Δt, producing an average emf of 4.8 V. What is Δt?",
+      "correct": "0.040 s",
+      "correctExplanation": "For 180°: |ΔΦ_B| = 2 × 8.0 × 10⁻⁴ = 1.6 × 10⁻³ Wb. Δt = N × |ΔΦ_B| / |ε| = 120 × 1.6 × 10⁻³ / 4.8 = 0.192 / 4.8 = 0.040 s.",
+      "distractors": [
+        { "answer": "0.020 s", "explanation": "This may use Φ_max instead of 2Φ_max for a 180° rotation." },
+        { "answer": "0.080 s", "explanation": "This may use an incorrect formula. The correct result is 0.040 s." },
+        { "answer": "0.16 s", "explanation": "This may omit dividing by the emf. The correct result is 0.040 s." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Two coils, P and Q, rotate in the same field. Coil P has 50 turns and area 0.0040 m². Coil Q has 100 turns and area 0.0020 m². Both rotate through 90° in the same time. Which one of the following correctly compares their average emfs?",
+      "correct": "The average emf is the same for both coils.",
+      "correctExplanation": "For P: NΦ_max = 50 × B × 0.0040 = 0.20B. For Q: NΦ_max = 100 × B × 0.0020 = 0.20B. Since N × Φ_max is the same and Δt is the same, the average emf is equal.",
+      "distractors": [
+        { "answer": "Coil Q has twice the emf because it has more turns.", "explanation": "Coil Q has more turns but a smaller area. The product N × A is the same for both, so the emfs are equal." },
+        { "answer": "Coil P has twice the emf because it has a larger area.", "explanation": "Coil P has a larger area but fewer turns. The product N × A is the same, so the emfs are equal." },
+        { "answer": "Coil Q has four times the emf.", "explanation": "The emf depends on N × A, which is the same for both coils. The emfs are equal." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Omar measures the average emf of a generator over a quarter turn (90°) as 12 V. What is the average emf over a half turn (180°) if the rotation speed is the same?",
+      "correct": "12 V",
+      "correctExplanation": "For 90°: |ΔΦ_B| = Φ_max over time T/4. For 180°: |ΔΦ_B| = 2Φ_max over time T/2. The ratio 2Φ_max/(T/2) = Φ_max/(T/4), so the average emf is the same: 12 V.",
+      "distractors": [
+        { "answer": "24 V", "explanation": "While the flux change doubles for 180°, the time also doubles. The average emf remains the same." },
+        { "answer": "6.0 V", "explanation": "The average emf does not halve. Both the flux change and time double, keeping the average emf unchanged." },
+        { "answer": "0 V", "explanation": "The average emf over a half turn is not zero (the net flux change is non-zero for 180°)." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A 60-turn coil has area 0.010 m² in a 0.40 T field. It completes one full rotation in 0.080 s. What is the average emf over the first quarter turn?",
+      "correct": "12 V",
+      "correctExplanation": "Φ_max = 0.40 × 0.010 = 4.0 × 10⁻³ Wb. Quarter turn time = 0.080/4 = 0.020 s. |ε| = 60 × 4.0 × 10⁻³ / 0.020 = 12 V.",
+      "distractors": [
+        { "answer": "3.0 V", "explanation": "This may use the full period instead of the quarter-turn time. The correct time is 0.020 s." },
+        { "answer": "0.20 V", "explanation": "This omits N. Multiply by 60 to get 12 V." },
+        { "answer": "24 V", "explanation": "This may use 2Φ_max. For a 90° rotation, ΔΦ_B = Φ_max." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "A 250-turn coil (area 0.0050 m², field 0.80 T) rotates through 180° in 0.025 s. Complete the calculation.",
+      "sentence": "Φ_max = {{blank:1}} Wb. For 180°, |ΔΦ_B| = {{blank:2}} Wb. The average emf = 250 × |ΔΦ_B| / 0.025.",
+      "blanks": {
+        "1": {
+          "correct": "4.0 × 10⁻³",
+          "correctExplanation": "Φ_max = B × A = 0.80 × 0.0050 = 4.0 × 10⁻³ Wb.",
+          "distractors": [
+            { "answer": "0.80", "explanation": "This is B only. Multiply by A: 0.80 × 0.0050 = 4.0 × 10⁻³ Wb." },
+            { "answer": "0.0050", "explanation": "This is A only. Multiply by B: 0.80 × 0.0050 = 4.0 × 10⁻³ Wb." },
+            { "answer": "4.0 × 10⁻¹", "explanation": "This has an incorrect power of ten. 0.80 × 0.0050 = 4.0 × 10⁻³ Wb." }
+          ]
+        },
+        "2": {
+          "correct": "8.0 × 10⁻³",
+          "correctExplanation": "For 180°: |ΔΦ_B| = 2Φ_max = 2 × 4.0 × 10⁻³ = 8.0 × 10⁻³ Wb.",
+          "distractors": [
+            { "answer": "4.0 × 10⁻³", "explanation": "This is Φ_max, the change for 90°. For 180°, the change is 2Φ_max." },
+            { "answer": "1.6 × 10⁻²", "explanation": "This doubles the correct answer. 2Φ_max = 8.0 × 10⁻³ Wb." },
+            { "answer": "0", "explanation": "The flux change for 180° is not zero. The flux reverses, giving 2Φ_max." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "A coil with Φ_max = 6.0 × 10⁻³ Wb and 80 turns rotates from zero flux to negative maximum flux in 0.010 s. Complete the calculation.",
+      "sentence": "This is a {{blank:1}}° rotation, so |ΔΦ_B| = Φ_max and the average emf is {{blank:2}} V.",
+      "blanks": {
+        "1": {
+          "correct": "90",
+          "correctExplanation": "Moving from zero flux to −Φ_max is a 90° rotation (from the coil being parallel to the field to being perpendicular again).",
+          "distractors": [
+            { "answer": "180", "explanation": "A 180° rotation takes the flux from +Φ_max to −Φ_max. From zero to −Φ_max is only 90°." },
+            { "answer": "45", "explanation": "A 45° rotation does not take the flux all the way from zero to −Φ_max." },
+            { "answer": "360", "explanation": "A 360° rotation returns the coil to its starting position. This rotation is 90°." }
+          ]
+        },
+        "2": {
+          "correct": "48",
+          "correctExplanation": "|ε| = 80 × 6.0 × 10⁻³ / 0.010 = 80 × 0.60 = 48 V.",
+          "distractors": [
+            { "answer": "0.60", "explanation": "This is the rate per turn. Multiply by N: 80 × 0.60 = 48 V." },
+            { "answer": "96", "explanation": "This may use 2Φ_max. The flux change is Φ_max for this 90° rotation." },
+            { "answer": "4.8", "explanation": "This may use N = 8 instead of 80. The correct answer is 48 V." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "A generator coil makes one complete rotation in 0.050 s. Complete the statement about the time for each fraction of a turn.",
+      "sentence": "The time for a quarter turn is {{blank:1}} s and the time for a half turn is {{blank:2}} s.",
+      "blanks": {
+        "1": {
+          "correct": "0.0125",
+          "correctExplanation": "Quarter turn time = T/4 = 0.050/4 = 0.0125 s.",
+          "distractors": [
+            { "answer": "0.025", "explanation": "This is half the period (T/2), not a quarter (T/4)." },
+            { "answer": "0.050", "explanation": "This is the full period. A quarter turn is 0.050/4 = 0.0125 s." },
+            { "answer": "0.010", "explanation": "This is one-fifth of the period, not one-quarter." }
+          ]
+        },
+        "2": {
+          "correct": "0.025",
+          "correctExplanation": "Half turn time = T/2 = 0.050/2 = 0.025 s.",
+          "distractors": [
+            { "answer": "0.050", "explanation": "This is the full period. A half turn is 0.050/2 = 0.025 s." },
+            { "answer": "0.0125", "explanation": "This is a quarter turn (T/4), not a half turn (T/2)." },
+            { "answer": "0.0250", "explanation": "This is the same as 0.025 s but may cause confusion with the quarter-turn value." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "mc",
+      "question": "A 300-turn coil of area 0.015 m² rotates in a 0.40 T field. The coil completes 5 full rotations per second. What is the average emf over a quarter turn?",
+      "correct": "36 V",
+      "correctExplanation": "Φ_max = 0.40 × 0.015 = 6.0 × 10⁻³ Wb. Period = 1/5 = 0.20 s. Quarter turn = 0.050 s. |ε| = 300 × 6.0 × 10⁻³ / 0.050 = 36 V.",
+      "distractors": [
+        { "answer": "9.0 V", "explanation": "This may use the full period (0.20 s) instead of the quarter-turn time (0.050 s)." },
+        { "answer": "1.8 V", "explanation": "This omits N or uses an incorrect time. The correct answer is 36 V." },
+        { "answer": "72 V", "explanation": "This may use 2Φ_max. For a quarter turn, ΔΦ_B = Φ_max." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A coil starts at a position where the flux is Φ_max cos 30° = 0.866Φ_max and rotates to a position where the flux is zero. What is the magnitude of the flux change?",
+      "correct": "0.866Φ_max",
+      "correctExplanation": "|ΔΦ_B| = |0 − 0.866Φ_max| = 0.866Φ_max.",
+      "distractors": [
+        { "answer": "Φ_max", "explanation": "This would be the change from Φ_max to zero. The starting flux is 0.866Φ_max, not Φ_max." },
+        { "answer": "0.134Φ_max", "explanation": "This is Φ_max − 0.866Φ_max. The change is from 0.866Φ_max to zero, which is 0.866Φ_max." },
+        { "answer": "0.500Φ_max", "explanation": "This uses cos 60° instead of cos 30°. The initial flux is 0.866Φ_max." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Amir's generator has a 500-turn coil (area 0.0020 m², field 1.2 T). The coil rotates at 50 Hz. He calculates the average emf over one complete rotation. What value does he obtain?",
+      "correct": "0 V",
+      "correctExplanation": "Over one complete rotation, the coil returns to its starting position. The net change in flux is zero, so the average emf is zero.",
+      "distractors": [
+        { "answer": "120 V", "explanation": "This may calculate the emf for a half rotation. Over a full rotation, the net flux change is zero." },
+        { "answer": "60 V", "explanation": "This may calculate the emf for a quarter rotation. Over a full rotation, ΔΦ_B = 0." },
+        { "answer": "240 V", "explanation": "Over one complete rotation, the flux returns to its starting value, giving zero net change and zero average emf." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A 100-turn coil with Φ_max = 2.0 × 10⁻³ Wb rotates from the position where flux = +Φ_max cos 60° to the position where flux = 0 in 0.0050 s. What is the average emf?",
+      "correct": "20 V",
+      "correctExplanation": "Initial flux = 2.0 × 10⁻³ × cos 60° = 1.0 × 10⁻³ Wb. Final flux = 0. |ΔΦ_B| = 1.0 × 10⁻³ Wb. |ε| = 100 × 1.0 × 10⁻³ / 0.0050 = 20 V.",
+      "distractors": [
+        { "answer": "40 V", "explanation": "This may use Φ_max instead of Φ_max cos 60°. The initial flux is 1.0 × 10⁻³ Wb." },
+        { "answer": "10 V", "explanation": "This may use Δt = 0.010 s instead of 0.0050 s." },
+        { "answer": "34.6 V", "explanation": "This may use cos 30° instead of cos 60° for the initial flux." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A generator has a 200-turn coil with Φ_max = 5.0 × 10⁻³ Wb. Jasmine calculates the average emf for three different rotations, all taking 0.020 s: (i) 0° to 90°, (ii) 45° to 135°, (iii) 90° to 180°. In which case is the average emf largest?",
+      "correct": "Case (ii): 45° to 135°",
+      "correctExplanation": "(i) ΔΦ_B = Φ_max − 0 = Φ_max. (ii) ΔΦ_B = Φ_max cos 45° − Φ_max cos 135° = 0.707Φ_max − (−0.707Φ_max) = 1.414Φ_max. (iii) ΔΦ_B = 0 − (−Φ_max) = Φ_max. Case (ii) has the largest flux change.",
+      "distractors": [
+        { "answer": "All three produce the same average emf.", "explanation": "The flux changes are different. Case (ii) spans the steepest part of the cosine curve and has the largest ΔΦ_B." },
+        { "answer": "Case (i): 0° to 90°", "explanation": "Case (i) has ΔΦ_B = Φ_max, but case (ii) has ΔΦ_B = 1.414Φ_max, which is larger." },
+        { "answer": "Case (iii): 90° to 180°", "explanation": "Case (iii) also has ΔΦ_B = Φ_max, the same as case (i) and less than case (ii)." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A coil has 150 turns, area 0.0080 m², and rotates in a 0.25 T field at 40 Hz. What is the average emf between the time when the flux is at +Φ_max and the time when the flux first returns to zero?",
+      "correct": "48 V",
+      "correctExplanation": "Φ_max = 0.25 × 0.0080 = 2.0 × 10⁻³ Wb. Period = 1/40 = 0.025 s. Quarter turn = 0.00625 s. |ε| = 150 × 2.0 × 10⁻³ / 0.00625 = 48 V.",
+      "distractors": [
+        { "answer": "12 V", "explanation": "This may use the full period instead of the quarter-turn time. The correct answer uses Δt = T/4." },
+        { "answer": "96 V", "explanation": "This may use 2Φ_max. The flux change from +Φ_max to zero is just Φ_max." },
+        { "answer": "4.8 V", "explanation": "This may use an incorrect time interval or omit the number of turns." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student calculates the average emf for a 90° rotation and a 180° rotation of the same coil at the same rotation speed. She finds the average emf is the same. Which one of the following correctly explains this result?",
+      "correct": "The 180° rotation has twice the flux change but takes twice the time, so the average rate of change is the same.",
+      "correctExplanation": "For 90°: |ε| = NΦ_max / (T/4). For 180°: |ε| = N × 2Φ_max / (T/2) = NΦ_max / (T/4). Both give the same average emf.",
+      "distractors": [
+        { "answer": "It is a coincidence that only works for these specific angles.", "explanation": "This is not a coincidence. The ratio of flux change to time is the same for any symmetrical fraction of a rotation." },
+        { "answer": "The 180° rotation does not have twice the flux change.", "explanation": "The 180° rotation does have twice the flux change (2Φ_max vs Φ_max), but it also takes twice the time." },
+        { "answer": "The average emf is actually different, and the student made an error.", "explanation": "The student's result is correct. The average emf is the same for both rotations at the same speed." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A coil with 400 turns and Φ_max = 3.0 × 10⁻³ Wb starts at a position where the flux is +Φ_max and rotates through 270° in 0.060 s. What is the magnitude of the flux change and the average emf?",
+      "correct": "|ΔΦ_B| = Φ_max and average emf = 20 V",
+      "correctExplanation": "After 270° from +Φ_max (which is 0°), the coil is at 270° where flux = Φ_max cos 270° = 0. So |ΔΦ_B| = Φ_max = 3.0 × 10⁻³ Wb. |ε| = 400 × 3.0 × 10⁻³ / 0.060 = 20 V.",
+      "distractors": [
+        { "answer": "|ΔΦ_B| = 3Φ_max and average emf = 60 V", "explanation": "The flux change is not 3Φ_max. At 270°, cos 270° = 0, so the flux is zero. |ΔΦ_B| = Φ_max." },
+        { "answer": "|ΔΦ_B| = 2Φ_max and average emf = 40 V", "explanation": "At 270°, the flux is zero, not −Φ_max. |ΔΦ_B| = Φ_max." },
+        { "answer": "|ΔΦ_B| = 0 and average emf = 0 V", "explanation": "The flux has changed from Φ_max to zero. |ΔΦ_B| = Φ_max, not zero." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "A 120-turn coil (area 0.0050 m², field 0.60 T) rotates at 25 Hz. Complete the calculation for the average emf over a quarter turn.",
+      "sentence": "Φ_max = {{blank:1}} Wb. The quarter-turn time is {{blank:2}} s. The average emf is 120 × Φ_max / Δt.",
+      "blanks": {
+        "1": {
+          "correct": "3.0 × 10⁻³",
+          "correctExplanation": "Φ_max = B × A = 0.60 × 0.0050 = 3.0 × 10⁻³ Wb.",
+          "distractors": [
+            { "answer": "0.60", "explanation": "This is B only. Multiply by A: 0.60 × 0.0050 = 3.0 × 10⁻³ Wb." },
+            { "answer": "0.0050", "explanation": "This is A only. Multiply by B: 0.60 × 0.0050 = 3.0 × 10⁻³ Wb." },
+            { "answer": "3.0 × 10⁻¹", "explanation": "This has an incorrect power of ten. The correct value is 3.0 × 10⁻³ Wb." }
+          ]
+        },
+        "2": {
+          "correct": "0.010",
+          "correctExplanation": "Period = 1/25 = 0.040 s. Quarter turn = 0.040/4 = 0.010 s.",
+          "distractors": [
+            { "answer": "0.040", "explanation": "This is the full period. A quarter turn is 0.040/4 = 0.010 s." },
+            { "answer": "0.020", "explanation": "This is half the period (T/2), not a quarter (T/4)." },
+            { "answer": "0.025", "explanation": "This may confuse the frequency (25 Hz) with a time. The quarter-turn time is 0.010 s." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "A coil starts at a position where the flux is Φ_max cos 45° and rotates to where the flux is Φ_max cos 135°. Complete the calculation of |ΔΦ_B|.",
+      "sentence": "cos 45° = 0.707 and cos 135° = −0.707. So |ΔΦ_B| = |Φ_max × (−0.707) − Φ_max × 0.707| = {{blank:1}} × Φ_max, which equals {{blank:2}} Φ_max.",
+      "blanks": {
+        "1": {
+          "correct": "1.414",
+          "correctExplanation": "|−0.707 − 0.707| = |−1.414| = 1.414. So |ΔΦ_B| = 1.414Φ_max.",
+          "distractors": [
+            { "answer": "0.707", "explanation": "This is cos 45°, not the difference. |−0.707 − 0.707| = 1.414." },
+            { "answer": "1.000", "explanation": "This is incorrect. |−0.707 − 0.707| = 1.414." },
+            { "answer": "0", "explanation": "The flux values are not equal. They are equal in magnitude but opposite in sign, giving a change of 1.414Φ_max." }
+          ]
+        },
+        "2": {
+          "correct": "√2",
+          "correctExplanation": "1.414 = √2. So |ΔΦ_B| = √2 × Φ_max.",
+          "distractors": [
+            { "answer": "2", "explanation": "2Φ_max would be the change for a 180° rotation from +Φ_max to −Φ_max. √2Φ_max is the change for 90° centred on the zero-flux position." },
+            { "answer": "1", "explanation": "The change is 1.414Φ_max = √2 × Φ_max, not 1 × Φ_max." },
+            { "answer": "√3", "explanation": "√3 ≈ 1.732. The correct factor is √2 ≈ 1.414." }
+          ]
+        }
+      }
+    }
+  ]
+}

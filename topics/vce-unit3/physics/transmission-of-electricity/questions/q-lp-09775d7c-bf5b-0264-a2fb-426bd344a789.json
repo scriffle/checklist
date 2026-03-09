@@ -1,0 +1,543 @@
+{
+  "_link": {
+    "uuid": "lp-09775d7c-bf5b-0264-a2fb-426bd344a789",
+    "version": 1,
+    "contentHash": "hash-f08b43be",
+    "title": "I can analyse how the power loss in transmission lines changes when the transmission voltage is varied",
+    "generatedAt": "2026-03-07T18:30:00Z"
+  },
+  "toLevel2": [
+    {
+      "type": "mc",
+      "question": "Which one of the following formulas is used to calculate power lost as heat in transmission lines?",
+      "correct": "Ploss = I²R",
+      "correctExplanation": "Power loss in transmission lines is calculated using Ploss = I²R, where I is the current and R is the resistance of the wires.",
+      "distractors": [
+        { "answer": "Ploss = V²R", "explanation": "This is not a valid power formula. Students may confuse current and voltage in the power loss equation." },
+        { "answer": "Ploss = IR²", "explanation": "This reverses the squaring — it is current that is squared, not resistance." },
+        { "answer": "Ploss = V/R", "explanation": "V/R gives current by Ohm's law, not power loss in the wires." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "When the transmission voltage is increased while the total power transmitted remains constant, what happens to the current in the transmission lines?",
+      "correct": "The current decreases",
+      "correctExplanation": "Since P = VI, if V increases and P is constant, I must decrease (I = P/V).",
+      "distractors": [
+        { "answer": "The current increases", "explanation": "Students may confuse the relationship, but I = P/V shows current decreases when voltage increases." },
+        { "answer": "The current stays the same", "explanation": "Current must change to maintain constant power when voltage changes." },
+        { "answer": "The current becomes zero", "explanation": "Current decreases but does not become zero — power must still be transmitted." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "If the transmission voltage is doubled while the power transmitted remains constant, by what factor does the power loss in the lines change?",
+      "correct": "It decreases by a factor of 4",
+      "correctExplanation": "Doubling the voltage halves the current (I = P/V). Since Ploss = I²R, halving the current reduces power loss by a factor of 2² = 4.",
+      "distractors": [
+        { "answer": "It decreases by a factor of 2", "explanation": "Students may forget that power loss depends on the square of the current, not just the current itself." },
+        { "answer": "It increases by a factor of 4", "explanation": "Increasing voltage decreases current and therefore decreases power loss, not increases it." },
+        { "answer": "It increases by a factor of 2", "explanation": "Higher transmission voltage reduces power loss; it does not increase it." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which one of the following best describes why high-voltage transmission reduces power loss?",
+      "correct": "Higher voltage means lower current for the same power, and loss depends on current squared",
+      "correctExplanation": "Since P = VI, higher V means lower I. Power loss is I²R, so reducing I dramatically reduces loss.",
+      "distractors": [
+        { "answer": "Higher voltage means higher resistance, which reduces the current in the wires", "explanation": "Voltage does not change the resistance of the wires. Resistance is a property of the wire material and dimensions." },
+        { "answer": "Higher voltage means the electrons move faster and lose less energy to friction", "explanation": "This is not how electrical energy loss works. Loss is due to resistive heating, not friction." },
+        { "answer": "Higher voltage means the power transmitted is greater, so the percentage lost is smaller", "explanation": "The total power transmitted is fixed by the generator output, not by the transmission voltage." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which one of the following relationships correctly links transmission current to transmission voltage for a fixed power output?",
+      "correct": "I = P/V",
+      "correctExplanation": "Rearranging P = VI gives I = P/V, showing current is inversely proportional to voltage at constant power.",
+      "distractors": [
+        { "answer": "I = PV", "explanation": "Multiplying power by voltage does not give current. I = P/V is the correct rearrangement." },
+        { "answer": "I = V/P", "explanation": "This inverts the correct relationship. Increasing voltage should decrease current, not increase it." },
+        { "answer": "I = P²/V", "explanation": "This is not derived from P = VI. The correct relationship is I = P/V." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "Increasing the transmission voltage by a factor of 10 reduces the power loss by a factor of 10.",
+      "correct": "False",
+      "correctExplanation": "Increasing voltage by a factor of 10 reduces current by a factor of 10, and since Ploss = I²R, the power loss decreases by a factor of 10² = 100.",
+      "distractors": [
+        { "answer": "True", "explanation": "Students may forget the squared relationship. The current decreases by a factor of 10, but the power loss decreases by the square of that factor, which is 100." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "For a fixed amount of power being transmitted, increasing the transmission voltage causes the current in the lines to decrease.",
+      "correct": "True",
+      "correctExplanation": "Since P = VI and P is constant, increasing V requires a decrease in I to maintain the same product.",
+      "distractors": [
+        { "answer": "False", "explanation": "Students may think voltage and current always increase together, but at constant power they are inversely related." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about power transmission.",
+      "sentence": "Since power loss is given by Ploss = I²R, reducing the {{blank:1}} in the transmission lines is the most effective way to reduce power loss.",
+      "blanks": {
+        "1": {
+          "correct": "current",
+          "correctExplanation": "Power loss depends on the square of the current, so reducing current is the most effective way to reduce loss.",
+          "distractors": [
+            { "answer": "voltage", "explanation": "Reducing the transmission voltage would increase current and therefore increase power loss." },
+            { "answer": "resistance", "explanation": "While reducing resistance helps, the question refers to the variable in the formula that has the greatest effect due to squaring." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the effect of voltage on power loss.",
+      "sentence": "If the transmission voltage is tripled while the power remains constant, the current decreases by a factor of 3 and the power loss decreases by a factor of {{blank:1}}.",
+      "blanks": {
+        "1": {
+          "correct": "9",
+          "correctExplanation": "Current decreases by a factor of 3, so power loss (I²R) decreases by 3² = 9.",
+          "distractors": [
+            { "answer": "3", "explanation": "This accounts for the decrease in current but forgets that power loss depends on current squared." },
+            { "answer": "6", "explanation": "This may result from doubling instead of squaring the factor." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the relationship between transmitted power, voltage and current.",
+      "sentence": "For a constant transmitted power P, the current in the line is given by I = P/V, so current is {{blank:1}} proportional to the transmission voltage.",
+      "blanks": {
+        "1": {
+          "correct": "inversely",
+          "correctExplanation": "I = P/V shows that as V increases, I decreases — an inverse relationship.",
+          "distractors": [
+            { "answer": "directly", "explanation": "A direct proportion would mean current increases with voltage, which contradicts I = P/V." },
+            { "answer": "exponentially", "explanation": "The relationship is a simple inverse proportion, not an exponential one." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "mc",
+      "question": "A power station generates 200 MW of electrical power. The power is transmitted at 500 kV. Which one of the following is closest to the current in the transmission lines?",
+      "correct": "400 A",
+      "correctExplanation": "I = P/V = 200 × 10⁶ / (500 × 10³) = 400 A.",
+      "distractors": [
+        { "answer": "4000 A", "explanation": "This results from an error in the power-of-ten conversion, such as using 50 kV instead of 500 kV." },
+        { "answer": "40 A", "explanation": "This is 10 times too small, possibly from using 5000 kV rather than 500 kV." },
+        { "answer": "2500 A", "explanation": "This may result from dividing voltage by power instead of power by voltage." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Two transmission systems carry the same 100 MW of power. System A uses 500 kV and System B uses 250 kV. Both have the same line resistance. Which one of the following best describes the comparison of their power losses?",
+      "correct": "System B loses four times as much power as System A",
+      "correctExplanation": "System B has half the voltage, so twice the current. Since Ploss = I²R, four times the power loss.",
+      "distractors": [
+        { "answer": "System B loses twice as much power as System A", "explanation": "This accounts for the doubled current but forgets the squared relationship in Ploss = I²R." },
+        { "answer": "Both systems lose the same amount of power", "explanation": "Different voltages mean different currents, so the power losses are not equal." },
+        { "answer": "System A loses four times as much power as System B", "explanation": "System A has the higher voltage and therefore the lower current and lower power loss." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Why does the power loss formula Ploss = I²R mean that current has a greater effect on power loss than resistance does?",
+      "correct": "Because current is squared, so a small change in current produces a larger change in power loss",
+      "correctExplanation": "The I² term means that doubling the current quadruples the loss, whereas doubling the resistance only doubles the loss.",
+      "distractors": [
+        { "answer": "Because current is always larger than resistance in transmission systems", "explanation": "The relative magnitudes of I and R do not explain why current has a greater effect; the squaring does." },
+        { "answer": "Because resistance does not affect power loss in transmission lines", "explanation": "Resistance does affect power loss (Ploss = I²R), but its effect is linear while current's effect is quadratic." },
+        { "answer": "Because current flows through the entire circuit while resistance is localised", "explanation": "Both current and resistance apply to the same wires. The greater effect of current comes from the squaring." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A transmission line has a resistance of 4.0 Ω and carries a current of 500 A. Which one of the following is closest to the power lost in the line?",
+      "correct": "1.0 MW",
+      "correctExplanation": "Ploss = I²R = 500² × 4.0 = 250 000 × 4.0 = 1.0 × 10⁶ W = 1.0 MW.",
+      "distractors": [
+        { "answer": "2.0 kW", "explanation": "This may result from calculating P = IV = 500 × 4.0 = 2000 W, confusing resistance with voltage." },
+        { "answer": "0.25 MW", "explanation": "This may result from forgetting to square the current." },
+        { "answer": "100 MW", "explanation": "This is far too large and may result from a calculation error in the squaring step." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "If a power station increases its transmission voltage from 100 kV to 400 kV, the power loss in the lines will be reduced to what fraction of the original loss?",
+      "correct": "1/16 of the original loss",
+      "correctExplanation": "Voltage increases by a factor of 4, so current decreases by a factor of 4. Power loss decreases by 4² = 16, so it becomes 1/16 of the original.",
+      "distractors": [
+        { "answer": "1/4 of the original loss", "explanation": "This accounts for the voltage ratio but forgets that power loss depends on current squared." },
+        { "answer": "1/8 of the original loss", "explanation": "This is not the correct squared factor. The voltage ratio is 4, so the loss ratio is 4² = 16." },
+        { "answer": "1/2 of the original loss", "explanation": "This significantly underestimates the reduction. The squared relationship gives 1/16." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An engineer proposes reducing transmission line resistance as an alternative to increasing voltage. Which one of the following best explains why increasing voltage is generally preferred?",
+      "correct": "Reducing resistance requires thicker, heavier and more expensive cables, while increasing voltage is cheaper",
+      "correctExplanation": "Thicker cables reduce resistance but are heavy, expensive and difficult to string. Transformers provide a cost-effective way to raise voltage instead.",
+      "distractors": [
+        { "answer": "Reducing resistance has no effect on power loss in transmission lines", "explanation": "Reducing R does reduce Ploss = I²R, but it is less practical and cost-effective than raising voltage." },
+        { "answer": "It is physically impossible to reduce the resistance of transmission wires", "explanation": "Resistance can be reduced by using thicker wires or better conductors, but this is expensive." },
+        { "answer": "Increasing voltage and reducing resistance have exactly the same effect on power loss", "explanation": "They both reduce loss but through different mechanisms. Voltage has a squared effect on current and hence loss." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "If a transmission system carries the same power at half the original voltage, the power loss increases by a factor of 4.",
+      "correct": "True",
+      "correctExplanation": "Halving the voltage doubles the current. Ploss = I²R, so loss increases by 2² = 4.",
+      "distractors": [
+        { "answer": "False", "explanation": "Students may think halving voltage doubles the loss, forgetting the squared relationship between current and power loss." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the calculation about power transmission.",
+      "sentence": "A power station transmits 50 MW at 250 kV. The current in the lines is {{blank:1}} A.",
+      "blanks": {
+        "1": {
+          "correct": "200",
+          "correctExplanation": "I = P/V = 50 × 10⁶ / (250 × 10³) = 200 A.",
+          "distractors": [
+            { "answer": "2000", "explanation": "This may result from an error in converting kV to V, such as using 25 kV." },
+            { "answer": "500", "explanation": "This may result from dividing the voltage by the power instead of power by voltage." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the explanation about transmission voltage and power loss.",
+      "sentence": "When the transmission voltage is increased by a factor of 5, the current decreases by a factor of 5 and the power loss decreases by a factor of {{blank:1}}.",
+      "blanks": {
+        "1": {
+          "correct": "25",
+          "correctExplanation": "Current decreases by a factor of 5, so Ploss = I²R decreases by 5² = 25.",
+          "distractors": [
+            { "answer": "5", "explanation": "This forgets the squared relationship between current and power loss." },
+            { "answer": "10", "explanation": "This is not the correct squared factor. 5² = 25." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about power transmission losses.",
+      "sentence": "Power loss in a transmission line is calculated using Ploss = {{blank:1}}, showing that loss depends on the {{blank:2}} of the current.",
+      "blanks": {
+        "1": {
+          "correct": "I²R",
+          "correctExplanation": "The power loss formula is Ploss = I²R, where I is current and R is resistance.",
+          "distractors": [
+            { "answer": "V²/R", "explanation": "V²/R gives power dissipated when the full voltage is across the resistance, which is not the case for transmission lines." },
+            { "answer": "IV", "explanation": "IV gives total power, not the power lost as heat in the wires." }
+          ]
+        },
+        "2": {
+          "correct": "square",
+          "correctExplanation": "The I² term means power loss depends on the square of the current.",
+          "distractors": [
+            { "answer": "cube", "explanation": "The current is squared, not cubed, in the power loss formula." },
+            { "answer": "magnitude", "explanation": "While loss depends on the magnitude of current, the specific mathematical relationship is a squared dependence." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "mc",
+      "question": "A power station generates 120 MW and transmits it through lines with a total resistance of 5.0 Ω. At a transmission voltage of 400 kV, which one of the following is closest to the power lost in the transmission lines?",
+      "correct": "0.45 MW",
+      "correctExplanation": "I = P/V = 120 × 10⁶ / (400 × 10³) = 300 A. Ploss = I²R = 300² × 5.0 = 450 000 W = 0.45 MW.",
+      "distractors": [
+        { "answer": "1.8 MW", "explanation": "This may result from using 600 A as the current, perhaps by using 200 kV instead of 400 kV." },
+        { "answer": "4.5 MW", "explanation": "This is ten times too large, possibly from a unit conversion error." },
+        { "answer": "0.15 MW", "explanation": "This may result from forgetting to square the current in the power loss formula." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Priya, an electrical engineer, compares two options for a 200 MW transmission system with line resistance 8.0 Ω. Option 1 uses 200 kV; Option 2 uses 400 kV. Which one of the following is closest to the difference in power loss between the two options?",
+      "correct": "6.0 MW",
+      "correctExplanation": "Option 1: I = 200 × 10⁶ / (200 × 10³) = 1000 A, Ploss = 1000² × 8.0 = 8.0 MW. Option 2: I = 200 × 10⁶ / (400 × 10³) = 500 A, Ploss = 500² × 8.0 = 2.0 MW. Difference = 6.0 MW.",
+      "distractors": [
+        { "answer": "4.0 MW", "explanation": "This may result from calculating only one option correctly or from halving the difference." },
+        { "answer": "2.0 MW", "explanation": "This is the power loss for Option 2 alone, not the difference between the two options." },
+        { "answer": "8.0 MW", "explanation": "This is the power loss for Option 1 alone, not the difference between the two options." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A rural transmission line carries 10 MW of power with a line resistance of 10 Ω. Which one of the following is closest to the transmission voltage needed to keep the power loss at 2.5% of the transmitted power?",
+      "correct": "63 kV",
+      "correctExplanation": "2.5% of 10 MW = 0.25 MW = 250 000 W. Ploss = I²R, so I² = 250 000 / 10 = 25 000, giving I = 158 A. V = P/I = 10 × 10⁶ / 158 = 63.2 kV.",
+      "distractors": [
+        { "answer": "100 kV", "explanation": "At 100 kV, I = 100 A and Ploss = 100² × 10 = 100 kW = 1.0%, which is below the target." },
+        { "answer": "32 kV", "explanation": "At 32 kV, I = 313 A and Ploss = 313² × 10 = 980 kW = 9.8%, well above the target." },
+        { "answer": "200 kV", "explanation": "At 200 kV, I = 50 A and Ploss = 50² × 10 = 25 kW = 0.25%, far below the target." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Marcus is designing a transmission system to carry 50 MW over lines with a total resistance of 10 Ω. He wants to keep power losses below 2.0% of the transmitted power. Which one of the following is closest to the minimum transmission voltage Marcus should use?",
+      "correct": "160 kV",
+      "correctExplanation": "2.0% of 50 MW = 1.0 MW. Ploss = I²R, so I² = 1.0 × 10⁶ / 10 = 100 000, giving I = 316 A. V = P/I = 50 × 10⁶ / 316 = 158 kV ≈ 160 kV.",
+      "distractors": [
+        { "answer": "50 kV", "explanation": "At 50 kV, I = 1000 A and Ploss = 1000² × 10 = 10 MW = 20%, far exceeding the 2.0% target." },
+        { "answer": "100 kV", "explanation": "At 100 kV, I = 500 A and Ploss = 500² × 10 = 2.5 MW = 5.0%, which exceeds the 2.0% target." },
+        { "answer": "500 kV", "explanation": "At 500 kV, Ploss = 0.20%, well below 2.0%. This works but is not the minimum voltage required." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A transmission line carries 80 MW at 400 kV with a line resistance of 6.0 Ω. Which one of the following is closest to the percentage of power lost in the line?",
+      "correct": "0.30%",
+      "correctExplanation": "I = 80 × 10⁶ / (400 × 10³) = 200 A. Ploss = 200² × 6.0 = 240 000 W = 0.24 MW. Percentage = (0.24/80) × 100 = 0.30%.",
+      "distractors": [
+        { "answer": "3.0%", "explanation": "This is ten times too large, possibly from a unit conversion error in the current calculation." },
+        { "answer": "1.2%", "explanation": "This may result from using the wrong current value, perhaps by dividing voltage by power." },
+        { "answer": "0.030%", "explanation": "This is ten times too small, possibly from an error in calculating the current." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A transmission system currently operates at 110 kV. An upgrade to 330 kV is proposed. By what factor will the power loss be reduced?",
+      "correct": "9",
+      "correctExplanation": "The voltage increases by a factor of 330/110 = 3. Current decreases by a factor of 3, and Ploss decreases by 3² = 9.",
+      "distractors": [
+        { "answer": "3", "explanation": "This accounts for the voltage increase factor but forgets the squared relationship in Ploss = I²R." },
+        { "answer": "27", "explanation": "This incorrectly cubes the factor instead of squaring it." },
+        { "answer": "6", "explanation": "This is not the correct squared factor. The voltage ratio is 3, so the loss ratio is 3² = 9." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Anna is investigating how power loss varies with transmission voltage. She keeps the transmitted power at 60 MW and the line resistance at 5.0 Ω. At 300 kV, she calculates a power loss of 200 kW. She then halves the voltage to 150 kV. Which one of the following is closest to the new power loss?",
+      "correct": "800 kW",
+      "correctExplanation": "Halving the voltage doubles the current. Since Ploss = I²R, loss increases by 2² = 4. New loss = 200 × 4 = 800 kW.",
+      "distractors": [
+        { "answer": "400 kW", "explanation": "This doubles the loss instead of quadrupling it, forgetting the squared relationship." },
+        { "answer": "100 kW", "explanation": "This would imply the loss decreased, which contradicts the effect of reducing transmission voltage." },
+        { "answer": "1600 kW", "explanation": "This may result from applying the factor of 4 twice instead of once." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the calculation about a transmission system.",
+      "sentence": "A power station transmits 150 MW at 500 kV through lines with resistance 4.0 Ω. The current is {{blank:1}} A and the power lost in the lines is {{blank:2}} kW.",
+      "blanks": {
+        "1": {
+          "correct": "300",
+          "correctExplanation": "I = P/V = 150 × 10⁶ / (500 × 10³) = 300 A.",
+          "distractors": [
+            { "answer": "3000", "explanation": "This results from using 50 kV instead of 500 kV." },
+            { "answer": "30", "explanation": "This results from using 5000 kV instead of 500 kV." }
+          ]
+        },
+        "2": {
+          "correct": "360",
+          "correctExplanation": "Ploss = I²R = 300² × 4.0 = 360 000 W = 360 kW.",
+          "distractors": [
+            { "answer": "1200", "explanation": "This may result from using P = IR instead of P = I²R." },
+            { "answer": "36", "explanation": "This is ten times too small, possibly from a unit conversion error." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the analysis of a voltage upgrade.",
+      "sentence": "Upgrading a transmission line from 66 kV to 330 kV increases the voltage by a factor of {{blank:1}}, which reduces the power loss by a factor of {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "5",
+          "correctExplanation": "330 kV / 66 kV = 5.",
+          "distractors": [
+            { "answer": "264", "explanation": "This is the difference in voltages, not the ratio." },
+            { "answer": "25", "explanation": "25 is the square of the voltage ratio, which is the factor by which power loss decreases." }
+          ]
+        },
+        "2": {
+          "correct": "25",
+          "correctExplanation": "Current decreases by a factor of 5, so power loss decreases by 5² = 25.",
+          "distractors": [
+            { "answer": "5", "explanation": "This is the voltage ratio, not the power loss reduction factor. Power loss depends on current squared." },
+            { "answer": "10", "explanation": "This is not the correct squared factor. 5² = 25." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about percentage power loss.",
+      "sentence": "If 500 MW is transmitted at 500 kV with a line resistance of 2.0 Ω, the current is 1000 A and the power loss is {{blank:1}} MW, which is {{blank:2}}% of the power transmitted.",
+      "blanks": {
+        "1": {
+          "correct": "2.0",
+          "correctExplanation": "Ploss = I²R = 1000² × 2.0 = 2.0 × 10⁶ W = 2.0 MW.",
+          "distractors": [
+            { "answer": "0.20", "explanation": "This is ten times too small, possibly from a calculation error." },
+            { "answer": "20", "explanation": "This is ten times too large, possibly from using the wrong current value." }
+          ]
+        },
+        "2": {
+          "correct": "0.40",
+          "correctExplanation": "(2.0/500) × 100 = 0.40%.",
+          "distractors": [
+            { "answer": "4.0", "explanation": "This is ten times too large, possibly from a division error." },
+            { "answer": "2.0", "explanation": "This may result from dividing the loss by a wrong total power value." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "mc",
+      "question": "Tara, an energy policy analyst, compares two proposals for a new 500 MW transmission link. Proposal A uses 220 kV with 3.0 Ω line resistance. Proposal B uses 500 kV with 5.0 Ω line resistance (a longer route). Which one of the following best evaluates the power losses?",
+      "correct": "Proposal A loses 15.5 MW; Proposal B loses 5.0 MW; Proposal B is more efficient despite the longer route",
+      "correctExplanation": "A: I = 500e6/220e3 = 2273 A, Ploss = 2273² × 3.0 = 15.5 MW. B: I = 500e6/500e3 = 1000 A, Ploss = 1000² × 5.0 = 5.0 MW. The higher voltage more than compensates for the higher resistance.",
+      "distractors": [
+        { "answer": "Proposal A is more efficient because it has lower resistance", "explanation": "Lower resistance does not guarantee lower loss when the current is much higher due to lower voltage." },
+        { "answer": "Both proposals have the same power loss because the products VR are similar", "explanation": "Power loss depends on I²R, not on the product VR. The calculations show very different losses." },
+        { "answer": "Proposal B loses 25 MW; Proposal A loses 6.8 MW; Proposal A is more efficient", "explanation": "These values are incorrect. The correct calculations show Proposal B has much lower loss." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A regional power grid transmits 300 MW at 220 kV through lines with a total resistance of 4.0 Ω. An engineer proposes two upgrades to reduce losses. Upgrade 1: double the voltage to 440 kV. Upgrade 2: halve the resistance to 2.0 Ω. Which one of the following best evaluates these options?",
+      "correct": "Upgrade 1 reduces loss by 75%; Upgrade 2 reduces loss by 50%; doubling voltage is more effective",
+      "correctExplanation": "Original: I = 1364 A, Ploss = 7.44 MW. Upgrade 1: I = 682 A, Ploss = 1.86 MW (75% reduction). Upgrade 2: same I = 1364 A, Ploss = 3.72 MW (50% reduction).",
+      "distractors": [
+        { "answer": "Both upgrades reduce loss by the same amount since both involve a factor of 2", "explanation": "Doubling voltage reduces I by 2 and Ploss by 4, while halving R reduces Ploss by 2. They are not equivalent." },
+        { "answer": "Upgrade 2 is more effective because it directly targets the R in the formula", "explanation": "While resistance appears in the formula, the squared dependence on current makes voltage changes more effective." },
+        { "answer": "Upgrade 1 reduces loss by 50%; Upgrade 2 reduces loss by 75%; halving resistance is more effective", "explanation": "These percentages are reversed. Doubling voltage reduces loss by 75%, not 50%." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A country is considering upgrading its national grid from 220 kV to 500 kV. Analyse which one of the following is the most significant engineering challenge of this upgrade.",
+      "correct": "Higher voltages require larger clearances and stronger insulation on towers and cables",
+      "correctExplanation": "Higher voltages increase the risk of electrical breakdown (arcing) through air, requiring taller towers, wider spacing and better insulation.",
+      "distractors": [
+        { "answer": "Higher voltages mean thicker wires are needed to carry the larger current", "explanation": "Higher voltage means lower current, so thinner wires could potentially be used, not thicker ones." },
+        { "answer": "Higher voltages are more dangerous because the power transmitted increases", "explanation": "The total power is determined by generation capacity, not by transmission voltage. Voltage does increase safety risks but not via increased power." },
+        { "answer": "Higher voltages cause the wires to heat up more, increasing energy losses", "explanation": "Higher voltage reduces current and therefore reduces resistive heating in the wires." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A solar farm generates 20 MW and is located 50 km from the nearest substation. The transmission lines have a total resistance of 20 Ω. Evaluate what transmission voltage would keep power losses below 1.0% of the generated power.",
+      "correct": "At least 200 kV",
+      "correctExplanation": "1.0% of 20 MW = 200 kW. Ploss = I²R ≤ 200 000 W, so I² ≤ 10 000, giving I ≤ 100 A. V = P/I = 20 × 10⁶ / 100 = 200 kV minimum.",
+      "distractors": [
+        { "answer": "At least 20 kV", "explanation": "At 20 kV, I = 1000 A and Ploss = 1000² × 20 = 20 MW, which is 100% loss — completely impractical." },
+        { "answer": "At least 50 kV", "explanation": "At 50 kV, I = 400 A and Ploss = 400² × 20 = 3.2 MW = 16%, far above 1.0%." },
+        { "answer": "At least 100 kV", "explanation": "At 100 kV, I = 200 A and Ploss = 200² × 20 = 800 kW = 4.0%, still above 1.0%." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Two students debate the most important factor in reducing transmission losses. Kai argues it is reducing resistance by using better conductors. Leah argues it is increasing voltage using transformers. Which one of the following best evaluates their positions?",
+      "correct": "Leah is correct because voltage changes affect current quadratically through Ploss = I²R, while resistance changes have only a linear effect",
+      "correctExplanation": "Increasing voltage reduces current (I = P/V), and since loss depends on I², the effect is quadratic. Reducing R only has a linear effect on loss.",
+      "distractors": [
+        { "answer": "Kai is correct because resistance is the only variable that engineers can control", "explanation": "Engineers can also control voltage using transformers, and this is more effective due to the squared relationship." },
+        { "answer": "Both are equally correct since I²R shows both variables contribute equally", "explanation": "While both appear in the formula, current changes have a squared effect making voltage changes far more impactful." },
+        { "answer": "Neither is correct because power loss is fixed by the power station output", "explanation": "Power loss depends on transmission parameters (voltage, current, resistance) and can be reduced by changing these." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A developing nation has limited funds to improve its electrical grid. The current system transmits 100 MW at 66 kV through lines with 10 Ω resistance. Evaluate the impact of upgrading to 330 kV on the percentage of power lost.",
+      "correct": "Power loss drops from approximately 23% to approximately 0.92%",
+      "correctExplanation": "At 66 kV: I = 1515 A, Ploss = 1515² × 10 = 23.0 MW (23%). At 330 kV: I = 303 A, Ploss = 303² × 10 = 918 kW = 0.92 MW (0.92%).",
+      "distractors": [
+        { "answer": "Power loss drops from approximately 23% to approximately 4.6%", "explanation": "This incorrectly applies a factor of 5 rather than 5² = 25 to the power loss." },
+        { "answer": "Power loss drops from approximately 10% to approximately 2.0%", "explanation": "The original loss at 66 kV is much higher than 10%. Recalculating gives 23%." },
+        { "answer": "Power loss drops from approximately 23% to approximately 4.0%", "explanation": "The squared factor of 25 should reduce 23% to approximately 0.92%, not 4.0%." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An electrical engineer must justify the cost of installing transformers in a new 150 MW transmission system with 6.0 Ω line resistance. Without transformers, the generator voltage is 25 kV. With transformers, the transmission voltage is 500 kV. Analyse the annual energy savings if the system operates continuously.",
+      "correct": "Without transformers, Ploss = 216 MW, exceeding the generated power — the system is unviable. With transformers, Ploss = 0.54 MW, saving over 99.7% of the loss.",
+      "correctExplanation": "At 25 kV: I = 6000 A, Ploss = 6000² × 6.0 = 216 MW — exceeds 150 MW, so no power can be delivered. At 500 kV: I = 300 A, Ploss = 300² × 6.0 = 0.54 MW.",
+      "distractors": [
+        { "answer": "Without transformers, Ploss = 21.6 MW; with transformers, Ploss = 5.4 MW; a moderate improvement", "explanation": "The calculation at 25 kV gives 216 MW, not 21.6 MW. The system cannot function at 25 kV." },
+        { "answer": "Without transformers, Ploss = 36 MW; with transformers, Ploss = 0.54 MW; a significant improvement", "explanation": "The correct loss at 25 kV is 216 MW, not 36 MW. The current at 25 kV is 6000 A, not 2449 A." },
+        { "answer": "Both systems lose less than 5% of the power; transformers are unnecessary for this system", "explanation": "Without transformers, the loss exceeds the total power generated, making the system completely non-functional." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A grid operator observes that during peak demand the power transmitted through a 500 kV line doubles from 200 MW to 400 MW. Analyse the effect on power loss in the transmission lines.",
+      "correct": "The power loss quadruples because the current doubles and loss depends on current squared",
+      "correctExplanation": "Doubling the power at constant voltage doubles the current (I = P/V). Since Ploss = I²R, loss increases by 2² = 4.",
+      "distractors": [
+        { "answer": "The power loss doubles because it is proportional to the power transmitted", "explanation": "Power loss is proportional to the square of the current, not linearly proportional to transmitted power." },
+        { "answer": "The power loss stays the same because the voltage has not changed", "explanation": "Power loss depends on current, not just voltage. The increased power demand increases the current." },
+        { "answer": "The power loss increases by a factor of 8 because both power and current increase", "explanation": "Only the current is squared in the loss formula. The factor is 2² = 4, not 8." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the analysis of transmission system economics.",
+      "sentence": "Transmitting 400 MW at 500 kV gives Ploss = 1.28 MW, while transmitting at 250 kV gives Ploss = {{blank:1}} MW. The higher voltage system saves {{blank:2}} MW of power.",
+      "blanks": {
+        "1": {
+          "correct": "5.12",
+          "correctExplanation": "At 500 kV: I = 800 A. At 250 kV: I = 1600 A. Ploss at 250 kV = 1600² × R. Since Ploss at 500 kV = 800² × R = 1.28 MW, R = 1.28e6/640000 = 2.0 Ω. Ploss at 250 kV = 1600² × 2.0 = 5.12 MW.",
+          "distractors": [
+            { "answer": "2.56", "explanation": "This incorrectly doubles the loss rather than quadrupling it when voltage is halved." },
+            { "answer": "10.24", "explanation": "This may result from incorrectly applying the voltage ratio more than once." }
+          ]
+        },
+        "2": {
+          "correct": "3.84",
+          "correctExplanation": "Savings = 5.12 − 1.28 = 3.84 MW.",
+          "distractors": [
+            { "answer": "1.28", "explanation": "This is the loss at 500 kV, not the difference between the two systems." },
+            { "answer": "5.12", "explanation": "This is the total loss at 250 kV, not the savings from using the higher voltage." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the evaluation of transmission options.",
+      "sentence": "A system transmitting 100 MW at 100 kV through 8.0 Ω lines loses {{blank:1}}% of its power. Upgrading to 500 kV would reduce the loss to {{blank:2}}%.",
+      "blanks": {
+        "1": {
+          "correct": "8.0",
+          "correctExplanation": "I = 100e6/100e3 = 1000 A. Ploss = 1000² × 8.0 = 8.0 MW. Percentage = 8.0/100 × 100 = 8.0%.",
+          "distractors": [
+            { "answer": "80", "explanation": "This is ten times too large, possibly from a unit error." },
+            { "answer": "0.80", "explanation": "This is ten times too small, possibly from using the wrong current." }
+          ]
+        },
+        "2": {
+          "correct": "0.32",
+          "correctExplanation": "Voltage ratio = 5, so loss ratio = 25. New loss = 8.0/25 = 0.32 MW = 0.32%.",
+          "distractors": [
+            { "answer": "1.6", "explanation": "This incorrectly divides by 5 instead of 25, forgetting the squared relationship." },
+            { "answer": "0.080", "explanation": "This divides by 100 instead of 25, perhaps squaring the voltage ratio again." }
+          ]
+        }
+      }
+    }
+  ]
+}

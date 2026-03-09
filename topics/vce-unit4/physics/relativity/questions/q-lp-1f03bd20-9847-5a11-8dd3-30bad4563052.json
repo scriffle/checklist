@@ -1,0 +1,507 @@
+{
+  "_link": {
+    "uuid": "lp-1f03bd20-9847-5a11-8dd3-30bad4563052",
+    "version": 1,
+    "contentHash": "hash-0db7de07",
+    "title": "I can calculate total relativistic energy using Etot = γmc²",
+    "generatedAt": "2026-03-09T23:00:00.000Z"
+  },
+  "toLevel2": [
+    {
+      "type": "MC",
+      "question": "Which formula gives the total relativistic energy of a moving object?",
+      "correct": "Etot = γmc²",
+      "correctExplanation": "The total relativistic energy of an object with mass m moving at speed v is Etot = γmc², where γ is the Lorentz factor.",
+      "distractors": [
+        { "answer": "Etot = ½mv²", "explanation": "This is the classical kinetic energy formula, not the total relativistic energy." },
+        { "answer": "Etot = mc²/γ", "explanation": "Dividing by γ would give a value less than the rest energy, which is incorrect for a moving object." },
+        { "answer": "Etot = γ²mc²", "explanation": "The total relativistic energy uses γ, not γ². Squaring the Lorentz factor gives an incorrect result." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A proton has a Lorentz factor of γ = 2.00. Which one of the following is closest to the total relativistic energy of this proton? The mass of a proton is 1.67 × 10⁻²⁷ kg.",
+      "correct": "3.01 × 10⁻¹⁰ J",
+      "correctExplanation": "Etot = γmc² = 2.00 × 1.67 × 10⁻²⁷ × (3.00 × 10⁸)² = 2.00 × 1.503 × 10⁻¹⁰ = 3.01 × 10⁻¹⁰ J.",
+      "distractors": [
+        { "answer": "1.50 × 10⁻¹⁰ J", "explanation": "This is the rest energy mc² of the proton, without the factor of γ = 2.00." },
+        { "answer": "6.02 × 10⁻¹⁰ J", "explanation": "This incorrectly uses γ² = 4.00 instead of γ = 2.00 in the calculation." },
+        { "answer": "7.52 × 10⁻¹¹ J", "explanation": "This divides mc² by γ instead of multiplying, giving an incorrect result." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "The total relativistic energy Etot of a particle includes which two components?",
+      "correct": "Rest energy and relativistic kinetic energy",
+      "correctExplanation": "Etot = γmc² = mc² + (γ − 1)mc², where mc² is the rest energy and (γ − 1)mc² is the relativistic kinetic energy.",
+      "distractors": [
+        { "answer": "Kinetic energy and gravitational potential energy", "explanation": "Gravitational potential energy is not part of the total relativistic energy expression Etot = γmc²." },
+        { "answer": "Rest energy and classical kinetic energy ½mv²", "explanation": "The kinetic energy component is the relativistic kinetic energy (γ − 1)mc², not the classical ½mv²." },
+        { "answer": "Thermal energy and electromagnetic radiation energy", "explanation": "These forms of energy are not the components of the total relativistic energy of a particle." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "What happens to the total relativistic energy of a particle as its speed approaches the speed of light?",
+      "correct": "It approaches infinity.",
+      "correctExplanation": "As v → c, the Lorentz factor γ → ∞, so Etot = γmc² → ∞. This means an infinite amount of energy would be required to accelerate a massive particle to c.",
+      "distractors": [
+        { "answer": "It approaches mc².", "explanation": "mc² is the rest energy, which is the minimum total energy. As speed increases, total energy increases without bound." },
+        { "answer": "It approaches zero.", "explanation": "The total energy increases with speed. It cannot decrease to zero for a massive particle." },
+        { "answer": "It approaches 2mc².", "explanation": "There is no upper limit of 2mc² on total energy. Etot increases without bound as v → c." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "When a particle is at rest (v = 0), what does the formula Etot = γmc² reduce to?",
+      "correct": "Etot = mc²",
+      "correctExplanation": "When v = 0, the Lorentz factor γ = 1, so Etot = 1 × mc² = mc². The total energy equals the rest energy.",
+      "distractors": [
+        { "answer": "Etot = 0", "explanation": "A particle at rest still has rest energy E₀ = mc². Its total energy is not zero." },
+        { "answer": "Etot = ½mc²", "explanation": "There is no factor of ½ in the rest energy. When γ = 1, Etot = mc² exactly." },
+        { "answer": "Etot = 2mc²", "explanation": "When γ = 1, the total energy is mc², not 2mc². A factor of 2 would require γ = 2." }
+      ]
+    },
+    {
+      "type": "TF",
+      "question": "The total relativistic energy of a particle is always greater than or equal to its rest energy mc².",
+      "correct": "True",
+      "correctExplanation": "Since γ ≥ 1 for all speeds, Etot = γmc² ≥ mc². The minimum total energy occurs when the particle is at rest (γ = 1).",
+      "distractors": [
+        { "answer": "False", "explanation": "The Lorentz factor is always at least 1, so γmc² can never be less than mc²." }
+      ]
+    },
+    {
+      "type": "TF",
+      "question": "The formula Etot = γmc² can be applied to photons to calculate their total energy.",
+      "correct": "False",
+      "correctExplanation": "Photons have zero rest mass and travel at c. The Lorentz factor γ is undefined at v = c. Photon energy is calculated using E = hf, not Etot = γmc².",
+      "distractors": [
+        { "answer": "True", "explanation": "Etot = γmc² applies only to particles with non-zero rest mass. For photons, the formula is E = hf." }
+      ]
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the sentence about the total relativistic energy formula.",
+      "sentence": "The total relativistic energy of a particle is given by Etot = {{blank:1}}mc², where {{blank:2}} is the Lorentz factor.",
+      "blanks": {
+        "1": {
+          "correct": "γ",
+          "correctExplanation": "The Greek letter gamma (γ) represents the Lorentz factor in the total relativistic energy formula.",
+          "distractors": ["½", "2"]
+        },
+        "2": {
+          "correct": "γ",
+          "correctExplanation": "The Lorentz factor γ = 1/√(1 − v²/c²) accounts for relativistic effects at high speeds.",
+          "distractors": ["m", "c"]
+        }
+      }
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the sentence about what total relativistic energy includes.",
+      "sentence": "Total relativistic energy is the sum of the {{blank:1}} energy E₀ = mc² and the relativistic {{blank:2}} energy Ek = (γ − 1)mc².",
+      "blanks": {
+        "1": {
+          "correct": "rest",
+          "correctExplanation": "The rest energy E₀ = mc² is the energy a particle possesses by virtue of its mass, even when stationary.",
+          "distractors": ["thermal", "potential"]
+        },
+        "2": {
+          "correct": "kinetic",
+          "correctExplanation": "The relativistic kinetic energy Ek = (γ − 1)mc² represents the energy due to the particle's motion.",
+          "distractors": ["potential", "thermal"]
+        }
+      }
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the sentence about the behaviour of total energy at extreme speeds.",
+      "sentence": "As a particle's speed approaches c, the Lorentz factor γ approaches {{blank:1}}, and so the total relativistic energy approaches {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "infinity",
+          "correctExplanation": "As v → c, the denominator of γ = 1/√(1 − v²/c²) approaches zero, causing γ to increase without bound.",
+          "distractors": ["zero", "one"]
+        },
+        "2": {
+          "correct": "infinity",
+          "correctExplanation": "Since Etot = γmc² and γ → ∞, the total energy also approaches infinity, meaning infinite energy is required to reach c.",
+          "distractors": ["zero", "mc²"]
+        }
+      }
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "MC",
+      "question": "An electron (m = 9.11 × 10⁻³¹ kg) travels at a speed where γ = 3.00. Which one of the following is closest to the total relativistic energy of this electron?",
+      "correct": "2.46 × 10⁻¹³ J",
+      "correctExplanation": "Etot = γmc² = 3.00 × 9.11 × 10⁻³¹ × (3.00 × 10⁸)² = 3.00 × 8.20 × 10⁻¹⁴ = 2.46 × 10⁻¹³ J.",
+      "distractors": [
+        { "answer": "8.20 × 10⁻¹⁴ J", "explanation": "This is the rest energy mc² of the electron, without the Lorentz factor γ = 3.00." },
+        { "answer": "7.38 × 10⁻¹³ J", "explanation": "This uses γ² = 9.00 instead of γ = 3.00, giving a value that is three times too large." },
+        { "answer": "2.73 × 10⁻¹⁴ J", "explanation": "This divides mc² by γ instead of multiplying, giving an incorrect result." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A proton (m = 1.67 × 10⁻²⁷ kg) moves at 0.80c. The Lorentz factor at this speed is γ = 1.67. Which one of the following is closest to the total relativistic energy of the proton?",
+      "correct": "2.51 × 10⁻¹⁰ J",
+      "correctExplanation": "Etot = γmc² = 1.67 × 1.67 × 10⁻²⁷ × (3.00 × 10⁸)² = 1.67 × 1.503 × 10⁻¹⁰ = 2.51 × 10⁻¹⁰ J.",
+      "distractors": [
+        { "answer": "1.50 × 10⁻¹⁰ J", "explanation": "This is the rest energy mc² of the proton and does not include the Lorentz factor." },
+        { "answer": "4.19 × 10⁻¹⁰ J", "explanation": "This uses γ² instead of γ in the calculation." },
+        { "answer": "1.20 × 10⁻¹⁰ J", "explanation": "This uses an incorrect value for c² or applies γ incorrectly." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Two identical particles are moving at different speeds. Particle A has γ = 2.0 and Particle B has γ = 5.0. What is the ratio of the total relativistic energy of Particle B to that of Particle A?",
+      "correct": "2.5",
+      "correctExplanation": "Since Etot = γmc² and both particles have the same mass, the ratio is γ_B / γ_A = 5.0 / 2.0 = 2.5.",
+      "distractors": [
+        { "answer": "3.0", "explanation": "The ratio is γ_B / γ_A = 5.0 / 2.0 = 2.5, not the difference 5.0 − 2.0 = 3.0." },
+        { "answer": "6.25", "explanation": "This would be the ratio of γ² values (25/4), which is incorrect for total energy ratios." },
+        { "answer": "10.0", "explanation": "This is the product 2.0 × 5.0, not the ratio of the Lorentz factors." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Which one of the following correctly explains why the total relativistic energy of a particle approaches infinity as its speed approaches c?",
+      "correct": "The Lorentz factor γ increases without bound as v approaches c, so Etot = γmc² also increases without bound.",
+      "correctExplanation": "As v → c, γ = 1/√(1 − v²/c²) → ∞. Since Etot is directly proportional to γ, it also approaches infinity.",
+      "distractors": [
+        { "answer": "The mass of the particle becomes infinite at the speed of light, causing mc² to diverge.", "explanation": "Modern physics does not use the concept of relativistic mass. The rest mass m remains constant; it is γ that increases." },
+        { "answer": "The speed of light squared c² becomes larger at relativistic speeds, increasing the energy.", "explanation": "The speed of light c is a constant and does not change with the speed of the particle." },
+        { "answer": "At the speed of light, energy is converted entirely into mass, which requires infinite energy.", "explanation": "This is not the correct explanation. The divergence arises from γ → ∞, not from a conversion of energy into mass." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A neutron (m = 1.67 × 10⁻²⁷ kg) has a total relativistic energy of 4.51 × 10⁻¹⁰ J. Which one of the following is closest to the Lorentz factor of this neutron?",
+      "correct": "3.00",
+      "correctExplanation": "γ = Etot / (mc²) = 4.51 × 10⁻¹⁰ / (1.67 × 10⁻²⁷ × 9.00 × 10¹⁶) = 4.51 × 10⁻¹⁰ / 1.503 × 10⁻¹⁰ = 3.00.",
+      "distractors": [
+        { "answer": "1.50", "explanation": "This is approximately the rest energy in units of 10⁻¹⁰ J, not the Lorentz factor." },
+        { "answer": "9.00", "explanation": "This is γ² = 9.00, not γ. The correct value requires taking Etot/(mc²), not (Etot/(mc²))²." },
+        { "answer": "0.33", "explanation": "This is 1/γ, the inverse of the correct Lorentz factor." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Liam states that the rest energy of a proton is included in the total relativistic energy Etot = γmc². Which equation correctly shows how the rest energy and kinetic energy combine to give the total?",
+      "correct": "Etot = mc² + (γ − 1)mc²",
+      "correctExplanation": "Expanding Etot = γmc² gives mc² + (γ − 1)mc², where mc² is the rest energy and (γ − 1)mc² is the relativistic kinetic energy.",
+      "distractors": [
+        { "answer": "Etot = mc² + ½mv²", "explanation": "The term ½mv² is the classical kinetic energy, not the relativistic kinetic energy (γ − 1)mc²." },
+        { "answer": "Etot = mc² × (γ − 1)", "explanation": "This gives only the relativistic kinetic energy, not the total energy. The rest energy mc² is missing." },
+        { "answer": "Etot = γmc² + mc²", "explanation": "This double-counts the rest energy. γmc² already includes mc², so adding it again is incorrect." }
+      ]
+    },
+    {
+      "type": "TF",
+      "question": "If the Lorentz factor of a particle is γ = 1.00, then the total relativistic energy of the particle equals its rest energy mc².",
+      "correct": "True",
+      "correctExplanation": "When γ = 1.00, the particle is at rest (v = 0), and Etot = 1.00 × mc² = mc². The total energy is purely rest energy with no kinetic energy contribution.",
+      "distractors": [
+        { "answer": "False", "explanation": "When γ = 1, Etot = γmc² = mc². The total energy is exactly equal to the rest energy." }
+      ]
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the calculation of total relativistic energy for a particle.",
+      "sentence": "An electron (m = 9.11 × 10⁻³¹ kg) with γ = 5.00 has total energy Etot = 5.00 × 9.11 × 10⁻³¹ × (3.00 × 10⁸)² = {{blank:1}} × 10⁻¹³ J.",
+      "blanks": {
+        "1": {
+          "correct": "4.10",
+          "correctExplanation": "Etot = 5.00 × 9.11 × 10⁻³¹ × 9.00 × 10¹⁶ = 5.00 × 8.199 × 10⁻¹⁴ = 4.10 × 10⁻¹³ J.",
+          "distractors": ["8.20", "1.64"]
+        }
+      }
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the sentence about rearranging the total energy formula.",
+      "sentence": "To find the Lorentz factor from a known total energy, the formula Etot = γmc² is rearranged to γ = {{blank:1}} / ({{blank:2}}).",
+      "blanks": {
+        "1": {
+          "correct": "Etot",
+          "correctExplanation": "Rearranging Etot = γmc² for γ gives γ = Etot / (mc²).",
+          "distractors": ["mc²", "Ek"]
+        },
+        "2": {
+          "correct": "mc²",
+          "correctExplanation": "The denominator is the rest energy mc², giving the dimensionless Lorentz factor.",
+          "distractors": ["Etot", "γ"]
+        }
+      }
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the sentence about the relationship between total energy and rest energy.",
+      "sentence": "For a particle with γ = 4.00, the total relativistic energy is {{blank:1}} times the rest energy, meaning the relativistic kinetic energy is {{blank:2}} times the rest energy.",
+      "blanks": {
+        "1": {
+          "correct": "4.00",
+          "correctExplanation": "Etot = γmc² = 4.00 × mc², so the total energy is 4.00 times the rest energy.",
+          "distractors": ["3.00", "5.00"]
+        },
+        "2": {
+          "correct": "3.00",
+          "correctExplanation": "Ek = (γ − 1)mc² = (4.00 − 1)mc² = 3.00mc², so the kinetic energy is 3.00 times the rest energy.",
+          "distractors": ["4.00", "2.00"]
+        }
+      }
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "MC",
+      "question": "A proton (m = 1.67 × 10⁻²⁷ kg) is accelerated to a speed of 0.60c, where γ = 1.25. Which one of the following is closest to the total relativistic energy of this proton?",
+      "correct": "1.88 × 10⁻¹⁰ J",
+      "correctExplanation": "Etot = γmc² = 1.25 × 1.67 × 10⁻²⁷ × (3.00 × 10⁸)² = 1.25 × 1.503 × 10⁻¹⁰ = 1.88 × 10⁻¹⁰ J.",
+      "distractors": [
+        { "answer": "1.50 × 10⁻¹⁰ J", "explanation": "This is the rest energy mc² alone, without multiplying by γ = 1.25." },
+        { "answer": "2.35 × 10⁻¹⁰ J", "explanation": "This uses γ² = 1.5625 instead of γ = 1.25 in the calculation." },
+        { "answer": "3.76 × 10⁻¹⁰ J", "explanation": "This incorrectly doubles the result, possibly by using γ = 2.50 instead of 1.25." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "An electron (m = 9.11 × 10⁻³¹ kg) has a total relativistic energy of 3.28 × 10⁻¹³ J. Which one of the following is closest to the speed of this electron? Use c = 3.00 × 10⁸ m s⁻¹.",
+      "correct": "0.97c",
+      "correctExplanation": "γ = Etot/(mc²) = 3.28 × 10⁻¹³ / 8.20 × 10⁻¹⁴ = 4.00. Then v/c = √(1 − 1/γ²) = √(1 − 1/16) = √(15/16) = 0.968, so v ≈ 0.97c.",
+      "distractors": [
+        { "answer": "0.75c", "explanation": "This corresponds to γ ≈ 1.51, which gives a total energy of about 1.24 × 10⁻¹³ J, not 3.28 × 10⁻¹³ J." },
+        { "answer": "0.87c", "explanation": "This corresponds to γ ≈ 2.03, which gives a total energy of about 1.66 × 10⁻¹³ J, not 3.28 × 10⁻¹³ J." },
+        { "answer": "0.50c", "explanation": "This corresponds to γ ≈ 1.15, which gives a much lower total energy than 3.28 × 10⁻¹³ J." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Two particles have the same speed. Particle X has twice the mass of Particle Y. What is the ratio of the total relativistic energy of Particle X to that of Particle Y?",
+      "correct": "2:1",
+      "correctExplanation": "Since both particles travel at the same speed, they have the same γ. Etot = γmc², so E_X/E_Y = (γ × 2m × c²)/(γ × m × c²) = 2.",
+      "distractors": [
+        { "answer": "4:1", "explanation": "This would apply if the energy depended on m², but Etot is directly proportional to m, not m²." },
+        { "answer": "1:1", "explanation": "The particles have the same γ but different masses. Since Etot ∝ m, the energies are not equal." },
+        { "answer": "1:2", "explanation": "This reverses the ratio. The particle with greater mass has the greater total energy." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A proton (m = 1.67 × 10⁻²⁷ kg) has a total relativistic energy that is 7.00 times its rest energy. Which one of the following is closest to the total relativistic energy of this proton?",
+      "correct": "1.05 × 10⁻⁹ J",
+      "correctExplanation": "If Etot = 7.00 × mc², then Etot = 7.00 × 1.503 × 10⁻¹⁰ = 1.052 × 10⁻⁹ J ≈ 1.05 × 10⁻⁹ J.",
+      "distractors": [
+        { "answer": "1.50 × 10⁻¹⁰ J", "explanation": "This is the rest energy mc² alone, without the factor of 7.00." },
+        { "answer": "7.37 × 10⁻⁹ J", "explanation": "This uses γ² = 49 instead of γ = 7.00, giving a result that is 7 times too large." },
+        { "answer": "9.03 × 10⁻¹⁰ J", "explanation": "This uses γ = 6.00 instead of γ = 7.00 in the calculation." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A particle with rest mass m travels at 0.90c (γ = 2.29). Which one of the following is closest to the ratio of the particle's relativistic kinetic energy to its rest energy?",
+      "correct": "1.29",
+      "correctExplanation": "Ek = (γ − 1)mc² = (2.29 − 1)mc² = 1.29mc². The ratio Ek/E₀ = 1.29.",
+      "distractors": [
+        { "answer": "2.29", "explanation": "This is the ratio of total energy to rest energy (γ), not the ratio of kinetic energy to rest energy (γ − 1)." },
+        { "answer": "0.90", "explanation": "This is the speed as a fraction of c, not the ratio of kinetic energy to rest energy." },
+        { "answer": "3.29", "explanation": "This adds γ and 1 instead of subtracting. The kinetic energy ratio is γ − 1, not γ + 1." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Sophie calculates the total relativistic energy of a particle and obtains a value less than mc². Which statement best identifies her error?",
+      "correct": "She has made an error because Etot = γmc² and γ is always greater than or equal to 1.",
+      "correctExplanation": "Since γ ≥ 1 for all speeds, the total relativistic energy Etot = γmc² can never be less than the rest energy mc².",
+      "distractors": [
+        { "answer": "Her calculation is correct if the particle is decelerating, because kinetic energy is negative.", "explanation": "Kinetic energy is always non-negative. A decelerating particle still has positive kinetic energy." },
+        { "answer": "Her result is possible if the particle has lost some rest mass during the process.", "explanation": "The formula Etot = γmc² uses the particle's current rest mass. Even with mass loss, the result for the remaining particle must still satisfy Etot ≥ mc²." },
+        { "answer": "The result is valid for particles moving slower than 0.10c.", "explanation": "Even at very low speeds, γ is slightly greater than 1, so Etot is slightly greater than mc². It is never less than mc²." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A proton (m = 1.67 × 10⁻²⁷ kg) has a total relativistic energy of 6.01 × 10⁻¹⁰ J. Which one of the following is closest to the Lorentz factor of this proton?",
+      "correct": "4.00",
+      "correctExplanation": "γ = Etot/(mc²) = 6.01 × 10⁻¹⁰ / (1.503 × 10⁻¹⁰) = 4.00.",
+      "distractors": [
+        { "answer": "2.00", "explanation": "This gives Etot = 2.00 × 1.503 × 10⁻¹⁰ = 3.01 × 10⁻¹⁰ J, which is too small." },
+        { "answer": "16.0", "explanation": "This is γ² = 16, not γ = 4.00. The Lorentz factor is found by dividing Etot by mc², not by taking the square." },
+        { "answer": "6.00", "explanation": "This gives Etot = 6.00 × 1.503 × 10⁻¹⁰ = 9.02 × 10⁻¹⁰ J, which is too large." }
+      ]
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the calculation to find the total relativistic energy.",
+      "sentence": "A proton (m = 1.67 × 10⁻²⁷ kg) at 0.95c has γ = 3.20. Its total energy is Etot = 3.20 × 1.67 × 10⁻²⁷ × (3.00 × 10⁸)² = {{blank:1}} × 10⁻¹⁰ J.",
+      "blanks": {
+        "1": {
+          "correct": "4.81",
+          "correctExplanation": "Etot = 3.20 × 1.503 × 10⁻¹⁰ = 4.81 × 10⁻¹⁰ J.",
+          "distractors": ["1.50", "9.62"]
+        }
+      }
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the sentence about extracting the Lorentz factor from total energy.",
+      "sentence": "If a proton has rest energy 1.50 × 10⁻¹⁰ J and total energy 1.05 × 10⁻⁹ J, the Lorentz factor is γ = 1.05 × 10⁻⁹ / 1.50 × 10⁻¹⁰ = {{blank:1}}, and the relativistic kinetic energy is {{blank:2}} × 10⁻¹⁰ J.",
+      "blanks": {
+        "1": {
+          "correct": "7.00",
+          "correctExplanation": "γ = Etot / E₀ = 1.05 × 10⁻⁹ / 1.50 × 10⁻¹⁰ = 7.00.",
+          "distractors": ["6.00", "3.50"]
+        },
+        "2": {
+          "correct": "9.00",
+          "correctExplanation": "Ek = Etot − E₀ = 1.05 × 10⁻⁹ − 1.50 × 10⁻¹⁰ = 10.5 × 10⁻¹⁰ − 1.50 × 10⁻¹⁰ = 9.00 × 10⁻¹⁰ J.",
+          "distractors": ["7.00", "10.5"]
+        }
+      }
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the sentence comparing total energy at two different speeds.",
+      "sentence": "A proton at 0.60c (γ = 1.25) has total energy 1.88 × 10⁻¹⁰ J, while the same proton at 0.80c (γ = 1.67) has total energy {{blank:1}} × 10⁻¹⁰ J. The increase in total energy is {{blank:2}} × 10⁻¹¹ J.",
+      "blanks": {
+        "1": {
+          "correct": "2.51",
+          "correctExplanation": "Etot = 1.67 × 1.503 × 10⁻¹⁰ = 2.51 × 10⁻¹⁰ J.",
+          "distractors": ["1.50", "3.01"]
+        },
+        "2": {
+          "correct": "6.3",
+          "correctExplanation": "ΔE = 2.51 × 10⁻¹⁰ − 1.88 × 10⁻¹⁰ = 0.63 × 10⁻¹⁰ = 6.3 × 10⁻¹¹ J.",
+          "distractors": ["3.8", "12.6"]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "MC",
+      "question": "A particle physicist doubles the total relativistic energy of a proton from 3.01 × 10⁻¹⁰ J to 6.01 × 10⁻¹⁰ J. The Lorentz factor changes from γ = 2.00 to γ = 4.00. Which one of the following is closest to the change in speed of the proton, expressed as a fraction of c?",
+      "correct": "0.10c",
+      "correctExplanation": "At γ = 2.00: v = c√(1 − 1/4) = c√(0.75) = 0.866c. At γ = 4.00: v = c√(1 − 1/16) = c√(0.9375) = 0.968c. Change = 0.968c − 0.866c = 0.102c ≈ 0.10c.",
+      "distractors": [
+        { "answer": "0.50c", "explanation": "Doubling the energy does not double the speed. At relativistic speeds, large energy increases produce small speed increases." },
+        { "answer": "0.43c", "explanation": "This is half of 0.866c, which would result from halving the speed rather than calculating the correct speed at γ = 4.00." },
+        { "answer": "0.25c", "explanation": "This overestimates the speed change. The relationship between energy and speed is highly nonlinear at relativistic speeds." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "An accelerator increases the total relativistic energy of a proton (rest energy 1.50 × 10⁻¹⁰ J) from 3.00 × 10⁻¹⁰ J to 1.50 × 10⁻⁹ J. By what factor does the relativistic kinetic energy increase?",
+      "correct": "9.0",
+      "correctExplanation": "Initial Ek = 3.00 × 10⁻¹⁰ − 1.50 × 10⁻¹⁰ = 1.50 × 10⁻¹⁰ J. Final Ek = 1.50 × 10⁻⁹ − 1.50 × 10⁻¹⁰ = 13.5 × 10⁻¹⁰ J. Factor = 13.5 / 1.50 = 9.0.",
+      "distractors": [
+        { "answer": "5.0", "explanation": "This is the ratio of total energies, not kinetic energies. The rest energy must be subtracted before comparing." },
+        { "answer": "10.", "explanation": "This incorrectly divides the final total energy by the initial kinetic energy." },
+        { "answer": "3.0", "explanation": "This underestimates the increase because it does not properly subtract the rest energy." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Particle A (mass 2m) travels at a speed where γ_A = 3.00. Particle B (mass m) travels at a speed where γ_B = 5.00. Which one of the following correctly compares their total relativistic energies?",
+      "correct": "Particle A has a greater total relativistic energy than Particle B, with a ratio of 6:5.",
+      "correctExplanation": "E_A = 3.00 × 2m × c² = 6.00mc². E_B = 5.00 × m × c² = 5.00mc². Ratio = 6.00:5.00 = 6:5. Particle A has greater total energy.",
+      "distractors": [
+        { "answer": "Particle B has a greater total relativistic energy, with a ratio of 5:6.", "explanation": "This reverses the comparison. E_A = 6mc² is greater than E_B = 5mc²." },
+        { "answer": "Both particles have the same total relativistic energy because higher γ compensates for lower mass.", "explanation": "The energies are not equal: 6mc² ≠ 5mc². The compensation is not exact." },
+        { "answer": "Particle B has a greater total relativistic energy, with a ratio of 5:3.", "explanation": "This compares Lorentz factors rather than total energies. The mass difference must be included." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A proton (m = 1.67 × 10⁻²⁷ kg) in a synchrotron has a total relativistic energy of 1.50 × 10⁻⁸ J. Which one of the following is closest to the Lorentz factor of this proton?",
+      "correct": "100",
+      "correctExplanation": "γ = Etot/(mc²) = 1.50 × 10⁻⁸ / (1.503 × 10⁻¹⁰) ≈ 99.8 ≈ 100.",
+      "distractors": [
+        { "answer": "10", "explanation": "This is one order of magnitude too small. γ = 10 gives Etot = 1.50 × 10⁻⁹ J." },
+        { "answer": "1000", "explanation": "This is one order of magnitude too large. γ = 1000 gives Etot = 1.50 × 10⁻⁷ J." },
+        { "answer": "50", "explanation": "This gives Etot = 50 × 1.503 × 10⁻¹⁰ = 7.52 × 10⁻⁹ J, which is half the given value." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "An electron (m = 9.11 × 10⁻³¹ kg) and a proton (m = 1.67 × 10⁻²⁷ kg) each have the same total relativistic energy of 3.01 × 10⁻¹⁰ J. Which statement correctly compares their Lorentz factors?",
+      "correct": "The electron has a much larger Lorentz factor than the proton because its rest mass is much smaller.",
+      "correctExplanation": "γ_e = 3.01 × 10⁻¹⁰ / 8.20 × 10⁻¹⁴ ≈ 3670. γ_p = 3.01 × 10⁻¹⁰ / 1.503 × 10⁻¹⁰ ≈ 2.00. The electron's γ is about 1800 times larger.",
+      "distractors": [
+        { "answer": "Both particles have the same Lorentz factor because they have the same total energy.", "explanation": "γ = Etot/(mc²) depends on mass. Different masses give different γ values for the same total energy." },
+        { "answer": "The proton has a larger Lorentz factor because it has more rest energy.", "explanation": "A larger rest energy means a smaller γ for the same total energy: γ = Etot/(mc²)." },
+        { "answer": "The Lorentz factors cannot be compared without knowing the particles' speeds.", "explanation": "The Lorentz factor can be calculated directly from γ = Etot/(mc²) without needing the speed." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A student plots total relativistic energy Etot against Lorentz factor γ for a proton. Which description best characterises the resulting graph?",
+      "correct": "A straight line through the origin with gradient mc²",
+      "correctExplanation": "Etot = γmc² is a linear relationship with γ on the x-axis and Etot on the y-axis. The gradient is mc² and the line passes through the origin.",
+      "distractors": [
+        { "answer": "A curve that rises steeply and approaches a horizontal asymptote", "explanation": "Etot is linearly proportional to γ. There is no asymptote; the graph is a straight line." },
+        { "answer": "A straight line with a y-intercept equal to mc²", "explanation": "The line passes through the origin because when γ = 0 (hypothetically), Etot = 0. The y-intercept is zero, not mc²." },
+        { "answer": "An exponential curve starting at mc² when γ = 1", "explanation": "The relationship is linear, not exponential. Etot increases proportionally with γ." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "In a particle accelerator, a proton's total relativistic energy is increased from 2mc² to 10mc². Which one of the following is closest to the ratio of the proton's final speed to its initial speed?",
+      "correct": "1.10",
+      "correctExplanation": "At γ = 2: v₁ = c√(1 − 1/4) = 0.866c. At γ = 10: v₂ = c√(1 − 1/100) = 0.995c. Ratio = 0.995/0.866 = 1.149 ≈ 1.10.",
+      "distractors": [
+        { "answer": "5.00", "explanation": "The ratio of energies is 5, but the ratio of speeds is much smaller because the relationship between energy and speed is highly nonlinear at relativistic speeds." },
+        { "answer": "2.24", "explanation": "This is √5, which would apply if speed were proportional to √E as in classical physics. Relativistic mechanics gives a different result." },
+        { "answer": "1.50", "explanation": "This overestimates the speed ratio. Both speeds are close to c, so the ratio is close to 1." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A student claims that doubling a particle's speed will double its total relativistic energy. Evaluate this claim for a proton initially travelling at 0.40c (γ = 1.09).",
+      "correct": "The claim is incorrect. Doubling the speed to 0.80c gives γ = 1.67, so the total energy increases by a factor of about 1.5, not 2.0.",
+      "correctExplanation": "At 0.40c, γ = 1.091. At 0.80c, γ = 1.667. The energy ratio is 1.667/1.091 = 1.53. The claim is false because the relationship between speed and total energy is nonlinear.",
+      "distractors": [
+        { "answer": "The claim is correct because Etot is directly proportional to v.", "explanation": "Etot = γmc² depends on γ, which is a nonlinear function of v. Etot is not proportional to v." },
+        { "answer": "The claim is incorrect. Doubling the speed quadruples the total energy, as in classical physics.", "explanation": "Classical kinetic energy scales as v², but total relativistic energy does not follow this relationship." },
+        { "answer": "The claim is correct at low speeds but incorrect at speeds above 0.90c.", "explanation": "The claim is already incorrect at 0.40c. The nonlinear dependence of γ on v means doubling speed never doubles Etot." }
+      ]
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the analysis of total energy for a high-energy proton.",
+      "sentence": "A proton with γ = 100 has total energy approximately {{blank:1}} times its rest energy, meaning its kinetic energy is approximately {{blank:2}} times its rest energy.",
+      "blanks": {
+        "1": {
+          "correct": "100",
+          "correctExplanation": "Etot = γmc² = 100mc². The total energy is 100 times the rest energy.",
+          "distractors": ["10", "1000"]
+        },
+        "2": {
+          "correct": "99",
+          "correctExplanation": "Ek = (γ − 1)mc² = 99mc². At very high γ, nearly all the total energy is kinetic energy.",
+          "distractors": ["100", "50"]
+        }
+      }
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the sentence about energy and speed at ultra-relativistic speeds.",
+      "sentence": "When a proton's total energy is increased from 10mc² to 100mc², its speed changes from 0.995c to {{blank:1}}, demonstrating that at ultra-relativistic speeds, large energy increases produce only {{blank:2}} speed increases.",
+      "blanks": {
+        "1": {
+          "correct": "0.99995c",
+          "correctExplanation": "At γ = 100: v = c√(1 − 1/10000) = c√(0.9999) ≈ 0.99995c.",
+          "distractors": ["0.999c", "0.990c"]
+        },
+        "2": {
+          "correct": "small",
+          "correctExplanation": "The speed only changed from 0.995c to 0.99995c despite a tenfold energy increase, illustrating the diminishing returns in speed gain at ultra-relativistic speeds.",
+          "distractors": ["large", "proportional"]
+        }
+      }
+    }
+  ]
+}

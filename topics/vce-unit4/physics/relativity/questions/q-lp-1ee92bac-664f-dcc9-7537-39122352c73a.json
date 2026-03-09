@@ -1,0 +1,517 @@
+{
+  "_link": {
+    "uuid": "lp-1ee92bac-664f-dcc9-7537-39122352c73a",
+    "version": 1,
+    "contentHash": "hash-fe74dbba",
+    "title": "I can compare Einstein's special relativity with the predictions of classical physics",
+    "generatedAt": "2026-03-09T23:00:00.000Z"
+  },
+  "toLevel2": [
+    {
+      "type": "MC",
+      "question": "In classical physics, if a spacecraft travels at 0.6c and fires a probe forward at 0.5c, what speed would a stationary observer measure for the probe?",
+      "correct": "1.1c",
+      "correctExplanation": "Classical (Galilean) velocity addition simply adds the two speeds: 0.6c + 0.5c = 1.1c. This prediction exceeds the speed of light.",
+      "distractors": [
+        { "answer": "0.5c", "explanation": "This is only the speed of the probe relative to the spacecraft, not relative to the stationary observer." },
+        { "answer": "0.6c", "explanation": "This is the speed of the spacecraft, not the combined speed of the probe as seen by the observer." },
+        { "answer": "1.0c", "explanation": "This would be the prediction of special relativity for light, not the classical prediction for a probe at these speeds." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Which quantity does classical physics treat as absolute but special relativity treats as relative?",
+      "correct": "The passage of time",
+      "correctExplanation": "Classical physics assumes time passes at the same rate for all observers. Special relativity shows that time is relative and depends on the observer's motion.",
+      "distractors": [
+        { "answer": "The speed of light", "explanation": "Special relativity treats the speed of light as absolute, not relative. It is classical physics that implies the speed of light could vary." },
+        { "answer": "The charge of a particle", "explanation": "Electric charge is invariant in both classical physics and special relativity." },
+        { "answer": "The mass of a photon", "explanation": "Photon rest mass is zero in both frameworks and is not relevant to the classical–relativistic distinction." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "According to special relativity, what does a stationary observer measure for the speed of light emitted from a train moving at 0.5c?",
+      "correct": "c",
+      "correctExplanation": "Einstein's second postulate states that the speed of light in a vacuum is the same for all observers, regardless of the motion of the source.",
+      "distractors": [
+        { "answer": "1.5c", "explanation": "This is the classical prediction using Galilean velocity addition, which is incorrect at relativistic speeds." },
+        { "answer": "0.5c", "explanation": "The speed of the train does not reduce the measured speed of light for a stationary observer." },
+        { "answer": "2.0c", "explanation": "No observer measures light travelling faster than c. This value has no physical basis." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Which statement best describes how classical physics and special relativity differ regarding length?",
+      "correct": "Classical physics says length is the same for all observers; special relativity says length depends on relative motion.",
+      "correctExplanation": "In classical physics, the length of an object is absolute. Special relativity predicts length contraction for objects moving relative to the observer.",
+      "distractors": [
+        { "answer": "Classical physics says length depends on motion; special relativity says length is always the same.", "explanation": "This reverses the two frameworks. It is special relativity that predicts length depends on relative motion." },
+        { "answer": "Both frameworks agree that length is absolute and does not change with motion.", "explanation": "Special relativity predicts that length contracts in the direction of motion, so the two frameworks disagree." },
+        { "answer": "Both frameworks agree that length changes with motion, but by different amounts.", "explanation": "Classical physics does not predict any length change with motion at all." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "At what range of speeds do the predictions of classical physics and special relativity begin to differ significantly?",
+      "correct": "At speeds approaching the speed of light",
+      "correctExplanation": "Relativistic effects become significant at speeds that are a substantial fraction of c. At low speeds, classical and relativistic predictions are nearly identical.",
+      "distractors": [
+        { "answer": "At speeds approaching the speed of sound", "explanation": "The speed of sound is far too low for relativistic effects to be measurable." },
+        { "answer": "At all speeds, no matter how small", "explanation": "Although relativistic effects technically exist at any speed, they are negligible at everyday speeds and the two frameworks give effectively the same results." },
+        { "answer": "Only at speeds exactly equal to c", "explanation": "Significant differences appear well before an object reaches c, not only at that exact value." }
+      ]
+    },
+    {
+      "type": "TF",
+      "question": "Classical physics assumes that velocities add directly using simple addition, regardless of how fast the objects are moving.",
+      "correct": "True",
+      "correctExplanation": "Galilean velocity addition simply sums velocities. This works well at low speeds but fails at speeds approaching c.",
+      "distractors": [
+        { "answer": "False", "explanation": "Classical physics does use simple (Galilean) addition of velocities. It is special relativity that requires a different formula." }
+      ]
+    },
+    {
+      "type": "TF",
+      "question": "According to special relativity, the speed of light in a vacuum changes depending on the motion of the light source.",
+      "correct": "False",
+      "correctExplanation": "Einstein's second postulate states that the speed of light in a vacuum is the same for all observers, regardless of the motion of the source or observer.",
+      "distractors": [
+        { "answer": "True", "explanation": "This describes the classical expectation, not special relativity. Special relativity holds the speed of light as invariant." }
+      ]
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the sentence about classical versus relativistic predictions for velocity.",
+      "sentence": "Classical physics uses {{blank:1}} velocity addition, whereas special relativity shows that no object can exceed the speed of {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "Galilean",
+          "correctExplanation": "The classical method of combining velocities is called Galilean velocity addition, which simply sums the speeds.",
+          "distractors": ["Lorentzian", "relativistic"]
+        },
+        "2": {
+          "correct": "light",
+          "correctExplanation": "Special relativity establishes c, the speed of light in a vacuum, as the universal speed limit.",
+          "distractors": ["sound", "gravity"]
+        }
+      }
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the sentence about what classical physics treats as absolute.",
+      "sentence": "Classical physics assumes that {{blank:1}} and {{blank:2}} are absolute quantities that do not change for different observers.",
+      "blanks": {
+        "1": {
+          "correct": "time",
+          "correctExplanation": "In classical physics, time is considered absolute — all observers measure the same duration between events.",
+          "distractors": ["energy", "momentum"]
+        },
+        "2": {
+          "correct": "length",
+          "correctExplanation": "Classical physics treats length as absolute — all observers measure the same length for a given object.",
+          "distractors": ["speed", "frequency"]
+        }
+      }
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the sentence comparing the two frameworks.",
+      "sentence": "Special relativity replaces the classical assumptions by showing that time and length are {{blank:1}}, while the speed of light is {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "relative",
+          "correctExplanation": "In special relativity, measurements of time and length depend on the relative motion of the observer, making them relative quantities.",
+          "distractors": ["absolute", "constant"]
+        },
+        "2": {
+          "correct": "absolute",
+          "correctExplanation": "The speed of light in a vacuum is the same for all inertial observers, making it an absolute quantity in special relativity.",
+          "distractors": ["relative", "variable"]
+        }
+      }
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "MC",
+      "question": "A rocket travels at 0.8c relative to Earth and launches a missile forward at 0.7c relative to the rocket. Which statement correctly compares the classical and relativistic predictions for the missile's speed as measured from Earth?",
+      "correct": "Classical physics predicts 1.5c; special relativity predicts a speed less than c.",
+      "correctExplanation": "Galilean addition gives 0.8c + 0.7c = 1.5c, which exceeds c. The relativistic velocity addition formula yields a speed less than c, consistent with Einstein's postulates.",
+      "distractors": [
+        { "answer": "Both frameworks predict a speed of exactly 1.5c for the missile.", "explanation": "Special relativity never allows any speed measurement to exceed c. Only the classical prediction gives 1.5c." },
+        { "answer": "Classical physics predicts 0.7c; special relativity predicts 1.5c.", "explanation": "This reverses the predictions. Classical physics adds the speeds directly; it is special relativity that limits the result to below c." },
+        { "answer": "Both frameworks predict a speed of exactly c for the missile.", "explanation": "Classical physics does not impose a speed limit of c. Only the relativistic prediction gives a result less than c." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Which observation provided experimental evidence that the speed of light does not depend on the motion of the source, contradicting classical expectations?",
+      "correct": "The Michelson–Morley experiment",
+      "correctExplanation": "The Michelson–Morley experiment attempted to detect the luminiferous aether by measuring changes in the speed of light. Its null result supported the idea that the speed of light is constant for all observers.",
+      "distractors": [
+        { "answer": "The Rutherford scattering experiment", "explanation": "This experiment revealed the nuclear structure of the atom and is unrelated to the constancy of the speed of light." },
+        { "answer": "The double-slit experiment", "explanation": "The double-slit experiment demonstrates the wave nature of light and matter, not the invariance of the speed of light." },
+        { "answer": "The photoelectric effect experiment", "explanation": "The photoelectric effect demonstrated the particle nature of light but does not test whether the speed of light is constant for all observers." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Sarah observes a spacecraft moving at 0.9c past her laboratory. According to special relativity, compared with a clock on the spacecraft, Sarah's laboratory clock runs:",
+      "correct": "at a faster rate than the spacecraft clock",
+      "correctExplanation": "Due to time dilation, a clock moving relative to an observer runs slower than the observer's own clock. Sarah sees the spacecraft clock ticking more slowly than her laboratory clock.",
+      "distractors": [
+        { "answer": "at a slower rate than the spacecraft clock", "explanation": "From Sarah's frame, it is the moving spacecraft clock that runs slower, not her own clock." },
+        { "answer": "at the same rate as the spacecraft clock", "explanation": "Classical physics would predict equal rates, but special relativity shows that relative motion causes time dilation." },
+        { "answer": "at a rate that cannot be determined", "explanation": "Time dilation is a well-defined prediction of special relativity. The relative rate can be calculated using the Lorentz factor." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Which assumption of classical physics is directly contradicted by Einstein's second postulate of special relativity?",
+      "correct": "The speed of light depends on the velocity of the source or observer.",
+      "correctExplanation": "Einstein's second postulate states that the speed of light in a vacuum is the same for all inertial observers. Classical physics, through Galilean velocity addition, implies the measured speed of light should vary with the motion of the source or observer.",
+      "distractors": [
+        { "answer": "Energy is conserved in all physical processes.", "explanation": "Conservation of energy holds in both classical physics and special relativity. This is not contradicted by Einstein's postulates." },
+        { "answer": "The laws of physics are the same in all inertial frames.", "explanation": "This is actually Einstein's first postulate and is also consistent with classical mechanics (Galilean relativity)." },
+        { "answer": "Forces cause objects to accelerate according to Newton's second law.", "explanation": "While Newton's second law requires modification at relativistic speeds, it is not directly contradicted by the second postulate about the speed of light." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A metre ruler moves past James at 0.95c. Classical physics predicts that the ruler's length, as measured by James, is:",
+      "correct": "exactly 1.00 m, the same as its rest length",
+      "correctExplanation": "Classical physics assumes that length is absolute and does not change with the motion of the object. In contrast, special relativity predicts the ruler would be length-contracted.",
+      "distractors": [
+        { "answer": "shorter than 1.00 m due to length contraction", "explanation": "Length contraction is a prediction of special relativity, not classical physics." },
+        { "answer": "longer than 1.00 m due to length expansion", "explanation": "Neither classical physics nor special relativity predicts an increase in length due to motion." },
+        { "answer": "zero, because the ruler is moving too fast", "explanation": "Classical physics does not predict that an object's length becomes zero at any speed." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "At low speeds, the predictions of special relativity and classical physics are:",
+      "correct": "nearly identical, with negligible differences",
+      "correctExplanation": "At speeds much less than c, the Lorentz factor γ is approximately 1, and relativistic equations reduce to their classical equivalents. The two frameworks give effectively the same results.",
+      "distractors": [
+        { "answer": "completely different for all measured quantities", "explanation": "At low speeds, the differences are negligible. Special relativity reduces to classical physics in the low-speed limit." },
+        { "answer": "identical for time but very different for length", "explanation": "Both time dilation and length contraction are negligible at low speeds. The frameworks agree on both quantities." },
+        { "answer": "different only for electrically charged particles", "explanation": "The agreement at low speeds applies to all objects, not just neutral ones. Charge plays no role in this comparison." }
+      ]
+    },
+    {
+      "type": "TF",
+      "question": "Galilean velocity addition gives accurate predictions at speeds well below the speed of light, but becomes increasingly inaccurate as speeds approach c.",
+      "correct": "True",
+      "correctExplanation": "At low speeds, Galilean addition closely matches the relativistic velocity addition formula. As speeds approach c, the discrepancy grows because Galilean addition does not respect the universal speed limit.",
+      "distractors": [
+        { "answer": "False", "explanation": "Galilean addition is accurate at low speeds. Its inaccuracy at high speeds is why special relativity was needed." }
+      ]
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the sentence comparing velocity addition in the two frameworks.",
+      "sentence": "Galilean velocity addition predicts that a light beam from a moving source would be measured at {{blank:1}} than c, but experiments confirm that all observers measure it at exactly {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "greater",
+          "correctExplanation": "Adding the source's velocity to c using Galilean addition gives a result greater than c.",
+          "distractors": ["less", "equal"]
+        },
+        "2": {
+          "correct": "c",
+          "correctExplanation": "Einstein's second postulate, confirmed by experiment, states that the speed of light in a vacuum is c for all inertial observers.",
+          "distractors": ["2c", "0.5c"]
+        }
+      }
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the sentence about where the two frameworks diverge.",
+      "sentence": "The predictions of classical physics and special relativity diverge significantly at speeds that are a substantial fraction of {{blank:1}}, where relativistic effects such as time {{blank:2}} and length contraction become measurable.",
+      "blanks": {
+        "1": {
+          "correct": "c",
+          "correctExplanation": "Relativistic effects become important at speeds that are a significant fraction of c, the speed of light in a vacuum.",
+          "distractors": ["v", "γ"]
+        },
+        "2": {
+          "correct": "dilation",
+          "correctExplanation": "Time dilation is the relativistic effect in which a moving clock runs slower relative to a stationary observer's clock.",
+          "distractors": ["reversal", "expansion"]
+        }
+      }
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the sentence about the experimental confirmation of special relativity.",
+      "sentence": "The {{blank:1}} experiment found no evidence for a preferred reference frame, supporting Einstein's postulate that the speed of light is {{blank:2}} for all inertial observers.",
+      "blanks": {
+        "1": {
+          "correct": "Michelson–Morley",
+          "correctExplanation": "The Michelson–Morley experiment is the landmark experiment that produced a null result, providing evidence against the existence of a luminiferous aether.",
+          "distractors": ["Rutherford", "Millikan"]
+        },
+        "2": {
+          "correct": "constant",
+          "correctExplanation": "The null result of the experiment supports the idea that the speed of light does not change with the observer's motion, remaining constant at c.",
+          "distractors": ["variable", "relative"]
+        }
+      }
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "MC",
+      "question": "A spacecraft travels at 0.6c relative to Earth and emits a light pulse forward. Using Galilean velocity addition, the predicted speed of the light pulse relative to Earth would be 1.6c. Which principle of special relativity does this classical result violate?",
+      "correct": "The invariance of the speed of light for all inertial observers",
+      "correctExplanation": "Einstein's second postulate states that the speed of light in a vacuum is c for all inertial observers. A prediction of 1.6c violates this invariance.",
+      "distractors": [
+        { "answer": "The conservation of momentum in isolated systems", "explanation": "Momentum conservation holds in both frameworks and is not related to the speed of light exceeding c." },
+        { "answer": "The equivalence of all inertial reference frames", "explanation": "This is Einstein's first postulate, which is also consistent with Galilean relativity. The violated principle concerns the constancy of the speed of light." },
+        { "answer": "The conservation of energy in nuclear reactions", "explanation": "Energy conservation is not violated by the Galilean prediction. The issue is the predicted speed exceeding the universal speed limit." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Priya measures a spacecraft moving at 0.9c to be 50 m long. Classical physics would predict this length to be:",
+      "correct": "50 m, the same as the spacecraft's proper length",
+      "correctExplanation": "In classical physics, there is no length contraction. The measured length would be the same as the proper length regardless of relative speed. The fact that Priya measures 50 m indicates this is the contracted length; classical physics would not predict any contraction at all.",
+      "distractors": [
+        { "answer": "shorter than 50 m due to Galilean contraction", "explanation": "Galilean (classical) physics does not predict any contraction of length with motion." },
+        { "answer": "115 m after correcting for relativistic effects", "explanation": "This value involves a relativistic calculation to find the proper length. Classical physics would predict no length change and would simply give the proper length as the measured length." },
+        { "answer": "zero, because the spacecraft exceeds the speed limit", "explanation": "Classical physics does not impose a speed limit, and it does not predict zero length at any speed." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "In a thought experiment, two spaceships approach each other, each travelling at 0.8c relative to a space station. According to classical physics, the speed of one spaceship as measured by the other would be:",
+      "correct": "1.6c",
+      "correctExplanation": "Galilean velocity addition gives 0.8c + 0.8c = 1.6c. Classical physics places no upper limit on relative speed, so this result, though incorrect, is the expected classical prediction.",
+      "distractors": [
+        { "answer": "0.976c", "explanation": "This is approximately the result from the relativistic velocity addition formula, not from classical physics." },
+        { "answer": "0.8c", "explanation": "This is the speed of one spaceship relative to the station, not relative to the other spaceship." },
+        { "answer": "1.0c", "explanation": "Classical physics does not cap the result at c. Simple addition gives 1.6c." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Which of the following correctly identifies a prediction that classical physics and special relativity agree on?",
+      "correct": "The laws of physics have the same form in all inertial reference frames.",
+      "correctExplanation": "Both Galilean relativity and Einstein's first postulate state that the laws of physics are the same in all inertial frames. This principle is shared by both frameworks.",
+      "distractors": [
+        { "answer": "The speed of light in a vacuum depends on the speed of the source.", "explanation": "This is a classical prediction that special relativity explicitly rejects via Einstein's second postulate." },
+        { "answer": "Time intervals are the same for all observers regardless of motion.", "explanation": "This is a classical assumption. Special relativity shows that time is relative due to time dilation." },
+        { "answer": "There is no upper limit to the speed an object can reach.", "explanation": "Classical physics implies no speed limit, but special relativity establishes c as the universal speed limit." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A proton is accelerated to 0.99c in a particle accelerator. According to classical physics, the kinetic energy of the proton is ½mv². Why does this formula significantly underestimate the proton's actual energy?",
+      "correct": "At relativistic speeds, the Lorentz factor γ becomes much greater than 1, and the relativistic kinetic energy (γ − 1)mc² far exceeds ½mv².",
+      "correctExplanation": "At 0.99c, γ ≈ 7.1. The relativistic kinetic energy is (γ − 1)mc² ≈ 6.1mc², whereas ½mv² ≈ 0.49mc². The classical formula grossly underestimates the energy.",
+      "distractors": [
+        { "answer": "The proton gains additional mass from the magnetic field in the accelerator, which classical physics does not account for.", "explanation": "The magnetic field does not add mass. The underestimate arises from the incorrect classical kinetic energy formula at high speeds." },
+        { "answer": "Classical physics does not include the rest energy mc² of the proton in its kinetic energy calculation.", "explanation": "The classical kinetic energy formula is not expected to include rest energy. The underestimate is due to the Lorentz factor, not the omission of rest energy." },
+        { "answer": "Friction in the accelerator adds thermal energy that classical physics cannot calculate.", "explanation": "Particle accelerators operate in vacuum, and friction is negligible. The discrepancy is due to relativistic effects." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Emily argues that special relativity is unnecessary because classical physics explains everyday motion perfectly well. Which of the following is the best response to Emily's argument?",
+      "correct": "Classical physics works well at low speeds, but it fails to predict experimentally confirmed phenomena at speeds approaching c.",
+      "correctExplanation": "Special relativity is essential for explaining phenomena such as time dilation and length contraction observed at relativistic speeds. Classical physics is a low-speed approximation of the more complete relativistic theory.",
+      "distractors": [
+        { "answer": "Classical physics is incorrect at all speeds and should always be replaced by special relativity.", "explanation": "Classical physics is an excellent approximation at low speeds. It is not incorrect in that regime; it simply becomes inadequate at high speeds." },
+        { "answer": "Special relativity only applies to light, so classical physics is sufficient for all material objects.", "explanation": "Special relativity applies to all objects, not just light. Its effects are observed in particle accelerators and cosmic ray muons." },
+        { "answer": "Emily is correct; special relativity has never been experimentally confirmed.", "explanation": "Special relativity has been confirmed by many experiments, including muon decay observations and particle accelerator data." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "According to classical physics, if an observer on Earth shines a torch towards a spacecraft travelling away at 0.3c, the speed of the light reaching the spacecraft would be:",
+      "correct": "0.7c",
+      "correctExplanation": "Classical Galilean velocity addition subtracts the spacecraft's speed from c: c − 0.3c = 0.7c. This prediction is incorrect; special relativity gives c.",
+      "distractors": [
+        { "answer": "1.0c", "explanation": "This is the correct relativistic result, not the classical prediction. Classical physics would subtract the spacecraft's speed." },
+        { "answer": "1.3c", "explanation": "This would result from adding the speeds, as if the light were moving in the same direction as the spacecraft's velocity. The spacecraft is moving away from the light source." },
+        { "answer": "0.3c", "explanation": "This is just the speed of the spacecraft. Classical subtraction gives 0.7c, not 0.3c." }
+      ]
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the sentence about the classical kinetic energy formula at high speeds.",
+      "sentence": "The classical formula Ek = ½mv² {{blank:1}} the kinetic energy of a particle at relativistic speeds because it does not include the {{blank:2}} factor γ.",
+      "blanks": {
+        "1": {
+          "correct": "underestimates",
+          "correctExplanation": "At speeds close to c, the Lorentz factor γ is much greater than 1, and the relativistic kinetic energy (γ − 1)mc² significantly exceeds the classical ½mv².",
+          "distractors": ["overestimates", "matches"]
+        },
+        "2": {
+          "correct": "Lorentz",
+          "correctExplanation": "The Lorentz factor γ = 1/√(1 − v²/c²) accounts for the increasing energy required as an object approaches c.",
+          "distractors": ["Galilean", "Newtonian"]
+        }
+      }
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the sentence about the key difference between the two frameworks regarding time.",
+      "sentence": "Classical physics predicts that two observers in relative motion will measure {{blank:1}} time intervals between the same events, while special relativity predicts they will measure {{blank:2}} time intervals.",
+      "blanks": {
+        "1": {
+          "correct": "identical",
+          "correctExplanation": "In classical physics, time is absolute, so all observers agree on the time interval between events regardless of their relative motion.",
+          "distractors": ["different", "dilated"]
+        },
+        "2": {
+          "correct": "different",
+          "correctExplanation": "Special relativity shows that time is relative. Due to time dilation, observers in relative motion measure different time intervals between the same pair of events.",
+          "distractors": ["identical", "infinite"]
+        }
+      }
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the sentence about the experimental evidence for special relativity.",
+      "sentence": "Observations of cosmic ray {{blank:1}} reaching Earth's surface provide strong evidence for special relativity, because classical physics predicts that most should {{blank:2}} before reaching the ground.",
+      "blanks": {
+        "1": {
+          "correct": "muons",
+          "correctExplanation": "Muons are subatomic particles created in the upper atmosphere by cosmic rays. Their survival to the surface is explained by relativistic time dilation and length contraction.",
+          "distractors": ["photons", "protons"]
+        },
+        "2": {
+          "correct": "decay",
+          "correctExplanation": "Given the short half-life of muons and the distance they must travel, classical physics predicts most would decay before reaching the surface. Time dilation allows more to survive the journey.",
+          "distractors": ["accelerate", "reflect"]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "MC",
+      "question": "A particle physicist argues that classical mechanics is simply the low-speed limit of special relativity. Which mathematical evidence best supports this claim?",
+      "correct": "As v/c approaches zero, the Lorentz factor γ approaches 1, and all relativistic equations reduce to their classical equivalents.",
+      "correctExplanation": "When v ≪ c, γ = 1/√(1 − v²/c²) ≈ 1. Time dilation gives t ≈ t₀, length contraction gives L ≈ L₀, and relativistic kinetic energy reduces to approximately ½mv².",
+      "distractors": [
+        { "answer": "At low speeds, the speed of light changes to match the Galilean prediction, making both frameworks equivalent.", "explanation": "The speed of light remains constant at c regardless of the speed regime. The frameworks converge because γ → 1, not because c changes." },
+        { "answer": "Classical mechanics uses different constants of nature that happen to match relativistic values at low speeds.", "explanation": "Both frameworks use the same constants. The convergence occurs because the relativistic correction factor approaches unity at low speeds." },
+        { "answer": "At low speeds, mass increases cancel out time dilation, making the classical result exact.", "explanation": "There is no cancellation mechanism between mass and time. The classical limit arises simply because γ → 1 when v ≪ c." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Two identical clocks are synchronised on Earth. Clock A remains on Earth while Clock B is placed on a spacecraft that travels to a distant star at 0.8c and returns. Classical physics and special relativity make different predictions about the clocks when they are reunited. Which statement is correct?",
+      "correct": "Classical physics predicts the clocks remain synchronised; special relativity predicts Clock B shows less elapsed time than Clock A.",
+      "correctExplanation": "In classical physics, time is absolute and both clocks tick at the same rate. Special relativity predicts time dilation: the moving Clock B accumulates less time than the stationary Clock A.",
+      "distractors": [
+        { "answer": "Both frameworks predict that Clock B shows less elapsed time, but they disagree on the exact amount.", "explanation": "Classical physics does not predict any time difference between the clocks. Only special relativity predicts time dilation." },
+        { "answer": "Classical physics predicts Clock B shows less time; special relativity predicts the clocks remain synchronised.", "explanation": "This reverses the predictions. Classical physics assumes absolute time; special relativity predicts the moving clock runs slower." },
+        { "answer": "Both frameworks predict the clocks remain synchronised because they are identical.", "explanation": "Special relativity predicts a real, measurable time difference due to the relative motion of Clock B." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "In a particle accelerator, engineers must increase the energy supplied to a proton by ever-larger amounts to achieve small increases in speed as the proton approaches c. Classical physics would instead predict:",
+      "correct": "a constant relationship between applied energy and speed increase, with no upper speed limit",
+      "correctExplanation": "In classical physics, kinetic energy Ek = ½mv² implies that speed increases proportionally with the square root of energy, with no limit. Relativistic mechanics predicts that as v → c, γ → ∞ and increasingly more energy is needed for diminishing speed gains.",
+      "distractors": [
+        { "answer": "that the proton would reach c after a specific finite amount of energy input and then continue to accelerate beyond c", "explanation": "While classical physics does not impose a speed limit, it does not predict the proton would reach any specific speed after a defined energy input. The relationship is continuous." },
+        { "answer": "the same diminishing returns observed in relativistic mechanics, because classical friction becomes dominant", "explanation": "Classical physics does not predict diminishing returns in speed gain. Particle accelerators operate in vacuum where friction is negligible." },
+        { "answer": "that the proton would spontaneously convert to energy before reaching c according to E = mc²", "explanation": "Spontaneous conversion does not occur in this scenario. E = mc² is a relativistic equation, not a classical one." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Marcus claims that the Michelson–Morley experiment disproved classical physics entirely. Which response most accurately evaluates this claim?",
+      "correct": "The experiment disproved the classical prediction that light speed varies with the observer's motion through a medium, but classical physics remains valid at low speeds.",
+      "correctExplanation": "The null result contradicted the classical expectation that Earth's motion through the aether would produce measurable changes in light speed. However, classical physics remains an excellent approximation at low speeds.",
+      "distractors": [
+        { "answer": "Marcus is correct: the experiment showed that all classical physics predictions are invalid.", "explanation": "Classical physics gives accurate predictions at low speeds. The experiment only contradicted specific classical predictions about light propagation." },
+        { "answer": "The experiment was inconclusive and did not disprove any aspect of classical physics.", "explanation": "The null result was a definitive observation. It contradicted the classical prediction that the speed of light should vary with the observer's motion." },
+        { "answer": "The experiment only applied to electromagnetic waves and has no bearing on classical mechanics.", "explanation": "The constancy of the speed of light is fundamental to special relativity, which modifies all of classical mechanics at high speeds, not just electromagnetic theory." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A textbook states: 'Special relativity does not replace classical physics; it extends it.' Which reasoning best justifies this statement?",
+      "correct": "Special relativity contains classical physics as a limiting case, giving identical predictions when v ≪ c, while also correctly describing phenomena at relativistic speeds.",
+      "correctExplanation": "Any successful new theory must reproduce the results of the theory it supersedes in the domain where the older theory is known to work. Special relativity does this via the low-speed limit γ → 1.",
+      "distractors": [
+        { "answer": "Special relativity uses entirely different laws of physics that coincidentally match classical predictions at certain speeds.", "explanation": "The laws are not different — relativistic mechanics is a generalisation that reduces to classical mechanics. The correspondence is not coincidental but mathematical." },
+        { "answer": "Classical physics and special relativity apply to different types of particles and never overlap.", "explanation": "Both frameworks apply to all particles. They overlap at low speeds, where their predictions agree." },
+        { "answer": "Special relativity adds new constants of nature to classical physics, making it more complete.", "explanation": "Special relativity does not introduce new constants. The speed of light c already existed in Maxwell's equations. The extension involves new relationships between existing quantities." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Consider two reference frames: Frame S (at rest) and Frame S′ (moving at 0.9c relative to S). An event occurs at a known position and time in Frame S. Which statement correctly compares how classical physics and special relativity transform the coordinates of this event into Frame S′?",
+      "correct": "Classical physics uses the Galilean transformation, which preserves time; special relativity uses the Lorentz transformation, which mixes space and time coordinates.",
+      "correctExplanation": "The Galilean transformation keeps time unchanged (t′ = t) and shifts position. The Lorentz transformation couples space and time, so both coordinates change depending on relative velocity.",
+      "distractors": [
+        { "answer": "Both frameworks use the same transformation equations, but special relativity applies a correction factor afterward.", "explanation": "The Lorentz and Galilean transformations are fundamentally different equations, not modified versions of each other." },
+        { "answer": "Classical physics uses the Lorentz transformation at low speeds and the Galilean transformation at high speeds.", "explanation": "This is reversed. Classical physics always uses the Galilean transformation. The Lorentz transformation is the relativistic generalisation." },
+        { "answer": "Special relativity uses the Galilean transformation with an added time dilation factor applied separately.", "explanation": "The Lorentz transformation is a unified set of equations, not the Galilean transformation with a separate correction." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A student plots Lorentz factor γ against speed v. They note that γ ≈ 1 for v up to about 0.1c. Which conclusion about the relationship between classical and relativistic physics is best supported by this observation?",
+      "correct": "Below about 0.1c, classical and relativistic predictions differ by less than 1%, explaining why classical physics is sufficient for everyday phenomena.",
+      "correctExplanation": "When γ ≈ 1, time dilation and length contraction are negligible. At 0.1c, γ ≈ 1.005, giving a difference of only about 0.5% from classical predictions.",
+      "distractors": [
+        { "answer": "Special relativity does not apply at speeds below 0.1c, so classical physics is the only valid framework.", "explanation": "Special relativity applies at all speeds. It simply gives results indistinguishable from classical physics when γ ≈ 1." },
+        { "answer": "The Lorentz factor is defined to equal 1 below 0.1c by convention.", "explanation": "The Lorentz factor is a continuous mathematical function, not a piecewise convention. It is approximately but not exactly 1 at low speeds." },
+        { "answer": "Below 0.1c, time dilation occurs but length contraction does not, so only half of classical physics is valid.", "explanation": "Both effects are equally negligible at low speeds. There is no regime where one occurs without the other." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "In Einstein's 1905 paper, he started from two postulates and derived consequences that contradicted classical predictions. Which statement best describes why this approach was scientifically revolutionary?",
+      "correct": "He showed that accepting the constancy of the speed of light and the equivalence of inertial frames logically requires abandoning absolute time and length.",
+      "correctExplanation": "Einstein demonstrated that two simple, experimentally supported postulates inevitably lead to time dilation, length contraction, and mass-energy equivalence — all of which contradict Newtonian absolutes.",
+      "distractors": [
+        { "answer": "He proved mathematically that Newton's laws are entirely wrong and must be discarded.", "explanation": "Einstein did not discard Newton's laws. He showed they are a limiting case valid at low speeds. The revolution was in extending physics, not rejecting it." },
+        { "answer": "He introduced new experimental evidence that directly measured time dilation for the first time.", "explanation": "Einstein's 1905 paper was theoretical. Direct measurements of time dilation came later. The revolution was in the logical framework derived from the postulates." },
+        { "answer": "He combined electromagnetism and gravity into a single unified theory.", "explanation": "The 1905 paper on special relativity dealt with inertial frames and electromagnetism, not gravity. General relativity, published in 1915, addressed gravity." }
+      ]
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the sentence about the mathematical relationship between the two frameworks.",
+      "sentence": "As the ratio v/c approaches {{blank:1}}, the Lorentz factor γ approaches {{blank:2}}, and all relativistic equations reduce to their classical equivalents.",
+      "blanks": {
+        "1": {
+          "correct": "zero",
+          "correctExplanation": "When v ≪ c, the ratio v/c → 0, and γ = 1/√(1 − v²/c²) → 1, recovering classical predictions.",
+          "distractors": ["one", "infinity"]
+        },
+        "2": {
+          "correct": "1",
+          "correctExplanation": "When γ = 1, time dilation gives t = t₀, length contraction gives L = L₀, and the relativistic kinetic energy reduces to ½mv².",
+          "distractors": ["0", "infinity"]
+        }
+      }
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the sentence about the transformation equations.",
+      "sentence": "Classical physics uses the {{blank:1}} transformation to convert coordinates between frames, while special relativity uses the {{blank:2}} transformation, which couples space and time coordinates.",
+      "blanks": {
+        "1": {
+          "correct": "Galilean",
+          "correctExplanation": "The Galilean transformation is the classical method for converting space and time coordinates between inertial frames, assuming absolute time.",
+          "distractors": ["Lorentz", "Einsteinian"]
+        },
+        "2": {
+          "correct": "Lorentz",
+          "correctExplanation": "The Lorentz transformation replaces the Galilean transformation in special relativity, mixing space and time coordinates to preserve the invariance of the speed of light.",
+          "distractors": ["Galilean", "Newtonian"]
+        }
+      }
+    }
+  ]
+}

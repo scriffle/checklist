@@ -1,0 +1,605 @@
+{
+  "_link": {
+    "uuid": "lp-42f9bd4d-2f25-055d-cf3f-5f6065db03b3",
+    "version": 1,
+    "contentHash": "hash-c74d5e7d",
+    "title": "I can explain and sketch the flux and emf vs time graphs for an AC generator",
+    "generatedAt": "2026-03-07T00:00:00.000Z"
+  },
+  "toLevel2": [
+    {
+      "type": "mc",
+      "question": "For an AC generator rotating at constant speed, the magnetic flux through the coil varies with time as which one of the following?",
+      "correct": "A sinusoidal function",
+      "correctExplanation": "As the coil rotates at constant speed, the angle between the coil and the magnetic field changes uniformly, causing the flux (Φ = BAcos θ) to vary sinusoidally.",
+      "distractors": [
+        { "answer": "A constant value", "explanation": "The flux is not constant. It varies as the coil rotates through the magnetic field." },
+        { "answer": "A linearly increasing function", "explanation": "The flux does not increase linearly. It varies sinusoidally due to the cosine relationship with the angle." },
+        { "answer": "A series of rectangular pulses", "explanation": "The flux varies smoothly and sinusoidally, not in discrete rectangular steps." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "In an AC generator, the induced emf is at its maximum value when the magnetic flux through the coil is at which value?",
+      "correct": "Zero",
+      "correctExplanation": "The emf is the negative rate of change of flux. When the flux is zero, it is changing most rapidly, so the emf is at its maximum.",
+      "distractors": [
+        { "answer": "Maximum", "explanation": "When the flux is at its maximum, it is momentarily not changing (the gradient is zero), so the emf is zero." },
+        { "answer": "Half of its maximum", "explanation": "The emf is not at its maximum when the flux is at half its peak. The maximum emf occurs when the flux is zero." },
+        { "answer": "Minimum (most negative)", "explanation": "When the flux is at its minimum, the gradient is again zero, so the emf is zero, not at its maximum." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "In an AC generator, the induced emf is zero when the magnetic flux through the coil is at which value?",
+      "correct": "Its maximum or minimum value",
+      "correctExplanation": "When the flux is at a peak (maximum or minimum), its rate of change is momentarily zero, so the induced emf is zero.",
+      "distractors": [
+        { "answer": "Zero", "explanation": "When the flux is zero, it is changing most rapidly, and the emf is at its maximum, not zero." },
+        { "answer": "Increasing", "explanation": "While the flux is increasing, the emf is non-zero. The emf is zero only at the instant when the flux reaches its peak." },
+        { "answer": "Halfway between zero and its maximum", "explanation": "At this point, the flux is still changing and the emf is non-zero." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "The flux and emf graphs for an AC generator are both sinusoidal. What is the phase difference between them?",
+      "correct": "A quarter of a period (90°)",
+      "correctExplanation": "The emf is the negative derivative of the flux. The derivative of a cosine function is a sine function, which is shifted by a quarter period (90°).",
+      "distractors": [
+        { "answer": "Zero (in phase)", "explanation": "The flux and emf are not in phase. The emf peaks when the flux is zero, giving a quarter-period shift." },
+        { "answer": "Half a period (180°)", "explanation": "The graphs are not shifted by half a period. The shift is a quarter period (90°)." },
+        { "answer": "One full period (360°)", "explanation": "A full period shift would make them appear in phase. The actual shift is a quarter period." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A coil in an AC generator begins with its face perpendicular to the magnetic field. At t = 0, the flux is at its maximum. What is the value of the induced emf at t = 0?",
+      "correct": "Zero",
+      "correctExplanation": "When the flux is at its maximum, it is momentarily not changing, so the emf is zero. The emf will reach its first peak after a quarter turn.",
+      "distractors": [
+        { "answer": "At its positive maximum", "explanation": "The emf is zero when the flux is at its maximum. The emf reaches its peak after a quarter period." },
+        { "answer": "At its negative maximum", "explanation": "The emf is zero when the flux is at its maximum. It does not start at a negative peak." },
+        { "answer": "At half its maximum value", "explanation": "The emf is exactly zero when the flux is at its peak value." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the statement about the phase relationship between flux and emf in an AC generator.",
+      "sentence": "The induced emf is maximum when the flux is {{blank:1}}, and the induced emf is zero when the flux is at its {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "zero",
+          "correctExplanation": "When the flux is zero, it is changing at the fastest rate, producing the maximum induced emf.",
+          "distractors": [
+            { "answer": "maximum", "explanation": "When the flux is at its maximum, the rate of change is zero, so the emf is zero, not maximum." },
+            { "answer": "increasing", "explanation": "The emf is maximum at a specific instant when the flux is zero, not simply when the flux is increasing." },
+            { "answer": "constant", "explanation": "The flux in an AC generator is never constant during rotation. The emf is maximum when the flux passes through zero." }
+          ]
+        },
+        "2": {
+          "correct": "maximum",
+          "correctExplanation": "When the flux is at a peak (maximum or minimum), the rate of change is momentarily zero, so the emf is zero.",
+          "distractors": [
+            { "answer": "zero", "explanation": "When the flux is zero, the emf is at its maximum, not zero." },
+            { "answer": "average", "explanation": "The emf is zero specifically when the flux is at its peak values, not at some average value." },
+            { "answer": "halfway point", "explanation": "The emf is zero at the peak of the flux graph, not at any halfway point." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the statement about the flux graph for an AC generator.",
+      "sentence": "For an AC generator rotating at constant speed, the flux through the coil varies {{blank:1}} with time. The emf graph has the same {{blank:2}} as the flux graph but is shifted by a quarter period.",
+      "blanks": {
+        "1": {
+          "correct": "sinusoidally",
+          "correctExplanation": "The flux varies as Φ = BAcos(ωt), which is a sinusoidal function of time.",
+          "distractors": [
+            { "answer": "linearly", "explanation": "The flux does not change linearly. It varies sinusoidally due to the cosine relationship with the rotation angle." },
+            { "answer": "exponentially", "explanation": "The flux does not vary exponentially. The cosine dependence on angle produces a sinusoidal variation." },
+            { "answer": "randomly", "explanation": "The flux varies in a predictable sinusoidal pattern, not randomly." }
+          ]
+        },
+        "2": {
+          "correct": "frequency",
+          "correctExplanation": "Both the flux and emf graphs have the same frequency (determined by the rotation rate), but they differ in phase by a quarter period.",
+          "distractors": [
+            { "answer": "amplitude", "explanation": "The flux and emf have different amplitudes (measured in different units: Wb and V). They share the same frequency." },
+            { "answer": "units", "explanation": "Flux is measured in webers and emf in volts. They share the same frequency, not the same units." },
+            { "answer": "phase", "explanation": "The flux and emf are shifted by a quarter period, so they do not have the same phase. They share the same frequency." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the statement about the relationship between the gradient of the flux graph and the emf.",
+      "sentence": "The induced emf at any instant is equal to the negative {{blank:1}} of the flux-time graph. When the gradient is steepest, the emf is at its {{blank:2}} magnitude.",
+      "blanks": {
+        "1": {
+          "correct": "gradient",
+          "correctExplanation": "Faraday's law states that ε = −dΦ/dt, meaning the emf equals the negative gradient (slope) of the flux-time graph.",
+          "distractors": [
+            { "answer": "area", "explanation": "The area under the flux graph does not give the emf. The emf is the negative gradient of the flux graph." },
+            { "answer": "value", "explanation": "The emf is not simply the negative of the flux value. It is the negative rate of change (gradient) of the flux." },
+            { "answer": "intercept", "explanation": "The intercept of the graph is not related to the emf at each instant. The emf is the negative gradient." }
+          ]
+        },
+        "2": {
+          "correct": "maximum",
+          "correctExplanation": "When the flux-time graph has the steepest gradient, the rate of change of flux is greatest, producing the maximum magnitude of emf.",
+          "distractors": [
+            { "answer": "minimum", "explanation": "The steepest gradient means the fastest flux change, which produces the maximum emf, not the minimum." },
+            { "answer": "zero", "explanation": "The emf is zero when the gradient is zero (at the peaks of the flux graph), not when the gradient is steepest." },
+            { "answer": "average", "explanation": "The emf is at its maximum when the gradient is steepest, not at its average value." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "tf",
+      "question": "In an AC generator, the flux and emf graphs are both sinusoidal and reach their peak values at the same instant in time.",
+      "correct": "False",
+      "correctExplanation": "The flux and emf are out of phase by a quarter period. When one is at its peak, the other is at zero.",
+      "distractors": [
+        { "answer": "True", "explanation": "The flux and emf peaks do not occur at the same time. They are shifted by a quarter period: emf peaks when flux is zero, and vice versa." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "If the flux-time graph for an AC generator starts at its maximum at t = 0, the emf-time graph starts at zero at t = 0.",
+      "correct": "True",
+      "correctExplanation": "When the flux is at its maximum, the rate of change of flux is zero, so the emf is zero. The flux and emf graphs are shifted by a quarter period.",
+      "distractors": [
+        { "answer": "False", "explanation": "This statement is correct. Maximum flux corresponds to zero rate of change, and therefore zero emf." }
+      ]
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "mc",
+      "question": "A coil in an AC generator starts with the plane of the coil perpendicular to the magnetic field. After one quarter of a rotation, the coil plane is parallel to the field. Which one of the following correctly describes the flux and emf at this quarter-turn position?",
+      "correct": "The flux is zero and the emf is at its positive peak.",
+      "correctExplanation": "When the coil plane is parallel to the field, no field lines pass through the coil (flux = 0). At this point, the flux is changing most rapidly, so the emf is at its maximum.",
+      "distractors": [
+        { "answer": "The flux is at its maximum and the emf is zero.", "explanation": "This describes the initial position (coil perpendicular to field), not the quarter-turn position." },
+        { "answer": "Both the flux and emf are zero.", "explanation": "While the flux is zero, the emf is not. The emf is at its maximum when the flux passes through zero." },
+        { "answer": "Both the flux and emf are at their maximum.", "explanation": "The flux and emf cannot both be at their maximum at the same time. They are shifted by a quarter period." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Nadia sketches the flux-time graph for an AC generator as Φ = Φ₀ cos(ωt). Which one of the following correctly describes the emf-time graph?",
+      "correct": "ε = Φ₀ω sin(ωt), which is a sine function",
+      "correctExplanation": "The emf is the negative derivative of the flux: ε = −dΦ/dt = Φ₀ω sin(ωt). This is a sine function when the flux is a cosine function.",
+      "distractors": [
+        { "answer": "ε = Φ₀ cos(ωt), which is the same cosine function", "explanation": "The emf is not the same function as the flux. It is the negative derivative, which converts cosine to sine." },
+        { "answer": "ε = −Φ₀ cos(ωt), which is an inverted cosine function", "explanation": "The negative of a cosine is not the derivative of cosine. The derivative of cos is −sin, giving ε = Φ₀ω sin(ωt)." },
+        { "answer": "ε = Φ₀/ω sin(ωt), which is a smaller sine function", "explanation": "The derivative introduces a factor of ω in the numerator, not the denominator." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "At which position during the rotation of an AC generator coil is the flux through the coil changing most rapidly?",
+      "correct": "When the coil plane is parallel to the magnetic field (flux is zero)",
+      "correctExplanation": "When the coil plane is parallel to the field, the flux is passing through zero. The gradient of the flux-time graph is steepest at this point, meaning the flux is changing most rapidly.",
+      "distractors": [
+        { "answer": "When the coil plane is perpendicular to the field (flux is maximum)", "explanation": "At this position, the flux is at a peak and its rate of change is momentarily zero." },
+        { "answer": "When the coil has rotated exactly 45° from perpendicular", "explanation": "At 45°, the flux is changing but not at its maximum rate. The maximum rate occurs when the coil is parallel to the field." },
+        { "answer": "The rate of flux change is the same at all positions.", "explanation": "The rate of flux change varies sinusoidally during rotation. It is not constant." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "For a complete rotation of the coil in an AC generator, how many times does the emf pass through zero?",
+      "correct": "Twice",
+      "correctExplanation": "In one full cycle, the sinusoidal emf passes through zero twice: once at the start/end of the cycle (when flux is at a maximum) and once at the halfway point (when flux is at a minimum).",
+      "distractors": [
+        { "answer": "Once", "explanation": "A full sinusoidal cycle crosses zero twice, not once." },
+        { "answer": "Four times", "explanation": "A single complete sinusoidal cycle passes through zero twice. Four zero crossings would occur over two full rotations." },
+        { "answer": "Never", "explanation": "The emf is a sinusoidal function that regularly passes through zero as part of its cycle." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which one of the following correctly describes the emf-time graph for an AC generator?",
+      "correct": "A sinusoidal curve that alternates between positive and negative peak values.",
+      "correctExplanation": "The AC generator produces a sinusoidal emf that alternates direction, passing through positive and negative peaks symmetrically.",
+      "distractors": [
+        { "answer": "A sinusoidal curve that is always positive.", "explanation": "An AC generator output alternates between positive and negative values. An always-positive output would be from a DC generator with a commutator." },
+        { "answer": "A straight horizontal line at a constant positive value.", "explanation": "The emf is not constant. It varies sinusoidally as the coil rotates." },
+        { "answer": "A series of triangular waves.", "explanation": "The emf varies sinusoidally, not in a triangular pattern." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "The flux through an AC generator coil completes one full cycle (maximum → zero → minimum → zero → maximum) in 0.020 s. What is the frequency of the emf output?",
+      "correct": "50 Hz",
+      "correctExplanation": "The period T = 0.020 s. Frequency f = 1/T = 1/0.020 = 50 Hz. The emf has the same frequency as the flux.",
+      "distractors": [
+        { "answer": "25 Hz", "explanation": "This halves the frequency. The period is 0.020 s, giving f = 1/0.020 = 50 Hz." },
+        { "answer": "100 Hz", "explanation": "This doubles the frequency. The full cycle takes 0.020 s, so f = 50 Hz." },
+        { "answer": "20 Hz", "explanation": "This uses an incorrect reciprocal. f = 1/0.020 = 50 Hz." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "A coil starts perpendicular to the field (maximum flux). Complete the description of the first quarter turn.",
+      "sentence": "During the first quarter turn, the flux {{blank:1}} from its maximum to zero, and the emf {{blank:2}} from zero to its positive peak.",
+      "blanks": {
+        "1": {
+          "correct": "decreases",
+          "correctExplanation": "Starting from maximum flux (coil perpendicular to field), the flux decreases as the coil rotates towards the parallel position.",
+          "distractors": [
+            { "answer": "increases", "explanation": "The flux starts at its maximum and cannot increase further. It decreases during the first quarter turn." },
+            { "answer": "remains constant", "explanation": "The flux changes continuously during rotation. It decreases from maximum to zero in the first quarter turn." },
+            { "answer": "reverses", "explanation": "The flux does not reverse in the first quarter turn. It decreases from maximum to zero." }
+          ]
+        },
+        "2": {
+          "correct": "increases",
+          "correctExplanation": "As the rate of flux change increases (the gradient becomes steeper), the emf increases from zero to its positive peak.",
+          "distractors": [
+            { "answer": "decreases", "explanation": "The emf starts at zero and rises to its peak during the first quarter turn." },
+            { "answer": "remains at zero", "explanation": "The emf does not stay at zero. It increases as the flux changes more rapidly." },
+            { "answer": "jumps to its maximum instantly", "explanation": "The emf increases smoothly and continuously, reaching its peak at the quarter-turn position." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the statement about reading the emf from the flux-time graph.",
+      "sentence": "The induced emf at any instant equals the negative {{blank:1}} of the flux-time graph. Where the flux graph is flat (zero gradient), the emf is {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "gradient",
+          "correctExplanation": "Faraday's law gives ε = −dΦ/dt, which is the negative gradient of the flux-time graph.",
+          "distractors": [
+            { "answer": "area", "explanation": "The area under the curve does not give the emf. It is the gradient (slope) of the flux graph." },
+            { "answer": "amplitude", "explanation": "The amplitude of the flux graph is not the emf. The emf is the negative gradient at each instant." },
+            { "answer": "value", "explanation": "The emf is not simply the negative of the flux value. It is the negative of the rate of change (gradient)." }
+          ]
+        },
+        "2": {
+          "correct": "zero",
+          "correctExplanation": "Where the flux graph is flat (gradient = 0), there is no change in flux, so the induced emf is zero.",
+          "distractors": [
+            { "answer": "maximum", "explanation": "The emf is maximum where the gradient is steepest, not where it is zero." },
+            { "answer": "negative", "explanation": "The emf is zero where the gradient is zero, not negative." },
+            { "answer": "constant", "explanation": "While the emf is instantaneously zero, it is not constant. It changes as the gradient changes." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the description of the full cycle of flux and emf for an AC generator.",
+      "sentence": "In one full rotation, the flux completes one full {{blank:1}} cycle, and the emf also completes one full cycle but shifted by a {{blank:2}} period.",
+      "blanks": {
+        "1": {
+          "correct": "sinusoidal",
+          "correctExplanation": "The flux varies as a sinusoidal (cosine) function over one complete rotation.",
+          "distractors": [
+            { "answer": "linear", "explanation": "The flux does not vary linearly. It follows a sinusoidal pattern." },
+            { "answer": "exponential", "explanation": "The flux does not vary exponentially. It varies sinusoidally." },
+            { "answer": "stepped", "explanation": "The flux changes smoothly and continuously in a sinusoidal pattern, not in steps." }
+          ]
+        },
+        "2": {
+          "correct": "quarter",
+          "correctExplanation": "The emf graph is shifted by a quarter period (90°) relative to the flux graph because the emf is the derivative of the flux.",
+          "distractors": [
+            { "answer": "half", "explanation": "The shift is a quarter period (90°), not half a period (180°)." },
+            { "answer": "full", "explanation": "A full period shift would make the graphs appear in phase. The shift is a quarter period." },
+            { "answer": "eighth", "explanation": "The shift is a quarter period (90°), not an eighth of a period (45°)." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "tf",
+      "question": "In an AC generator, the flux and emf graphs have the same frequency but are out of phase by a quarter period.",
+      "correct": "True",
+      "correctExplanation": "Both graphs are sinusoidal with the same frequency (one cycle per rotation). The emf is the derivative of the flux, which introduces a quarter-period phase shift.",
+      "distractors": [
+        { "answer": "False", "explanation": "This statement is correct. The flux and emf share the same frequency but are shifted by 90° (a quarter period)." }
+      ]
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "mc",
+      "question": "At time t, the flux through an AC generator coil is at a positive peak and beginning to decrease. Which one of the following describes the emf at this instant and immediately after?",
+      "correct": "The emf is zero and about to become positive.",
+      "correctExplanation": "At a positive flux peak, the gradient is zero so the emf is zero. As the flux begins to decrease, the negative rate of change becomes negative, and ε = −dΦ/dt becomes positive.",
+      "distractors": [
+        { "answer": "The emf is at its positive peak.", "explanation": "The emf is zero when the flux is at its peak, not at the emf's peak." },
+        { "answer": "The emf is zero and about to become negative.", "explanation": "As the flux decreases from its positive peak, −dΦ/dt is positive (since dΦ/dt is negative), so the emf becomes positive." },
+        { "answer": "The emf is at its negative peak.", "explanation": "The emf is zero at the flux peak, not at a negative peak." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "The flux through an AC generator coil at time t is described by Φ = 0.040 cos(100πt) Wb. Which one of the following gives the peak emf for a single-turn coil?",
+      "correct": "4.0π V",
+      "correctExplanation": "ε = −dΦ/dt = 0.040 × 100π × sin(100πt) = 4.0π sin(100πt). The peak emf is 4.0π V ≈ 12.6 V.",
+      "distractors": [
+        { "answer": "0.040 V", "explanation": "This is the peak flux, not the peak emf. The peak emf includes the factor of ω = 100π." },
+        { "answer": "40π V", "explanation": "This may use an incorrect amplitude. The peak emf is 0.040 × 100π = 4.0π V." },
+        { "answer": "100π V", "explanation": "This is just the angular frequency, not the peak emf. The peak emf is 0.040 × 100π = 4.0π V." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An AC generator has a period of 0.040 s. At t = 0, the flux is at its positive maximum. At what time does the emf first reach its positive peak?",
+      "correct": "0.010 s",
+      "correctExplanation": "The emf leads the flux by a quarter period. One quarter of 0.040 s is 0.010 s. The emf first reaches its positive peak at t = 0.010 s.",
+      "distractors": [
+        { "answer": "0.020 s", "explanation": "This is half a period. The emf first peaks at a quarter period: 0.040 / 4 = 0.010 s." },
+        { "answer": "0.040 s", "explanation": "This is a full period. The emf first peaks at a quarter period: 0.010 s." },
+        { "answer": "0 s", "explanation": "At t = 0, the flux is at its maximum and the emf is zero, not at its peak." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student examines the flux-time graph for an AC generator and observes that the flux is zero and the gradient is negative at a particular instant. Which one of the following correctly describes the emf at that instant?",
+      "correct": "The emf is at its positive peak.",
+      "correctExplanation": "The emf equals −dΦ/dt. A negative gradient means dΦ/dt is negative, so −dΦ/dt is positive. At the steepest negative gradient (when flux passes through zero from positive to negative), the emf is at its positive maximum.",
+      "distractors": [
+        { "answer": "The emf is zero.", "explanation": "The emf is zero only when the gradient of the flux graph is zero, which occurs at flux peaks." },
+        { "answer": "The emf is at its negative peak.", "explanation": "A negative gradient gives a positive emf (since ε = −dΦ/dt). The emf is at its positive peak." },
+        { "answer": "The emf cannot be determined without more information.", "explanation": "The emf can be determined from the gradient of the flux graph using Faraday's law." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "The flux through an AC generator varies as Φ = Φ₀ cos(ωt). Between t = T/4 and t = T/2 (where T is the period), which one of the following correctly describes the flux and emf?",
+      "correct": "The flux decreases from zero to its negative peak, and the emf decreases from its positive peak to zero.",
+      "correctExplanation": "At t = T/4, cos(π/2) = 0 (flux zero) and sin(π/2) = 1 (emf at positive peak). At t = T/2, cos(π) = −1 (flux at negative peak) and sin(π) = 0 (emf zero).",
+      "distractors": [
+        { "answer": "The flux increases from zero to its positive peak, and the emf increases from zero to its peak.", "explanation": "At t = T/4, the flux is zero and decreasing (becoming negative), not increasing." },
+        { "answer": "Both flux and emf decrease from their peaks to zero.", "explanation": "The flux goes from zero to its negative peak, and the emf goes from its positive peak to zero." },
+        { "answer": "The flux remains at zero while the emf is at its maximum.", "explanation": "The flux is only zero at the instant t = T/4 and then continues to decrease." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "If the rotation speed of an AC generator is doubled, which one of the following correctly describes the effect on the flux and emf graphs?",
+      "correct": "The frequency of both graphs doubles, and the peak emf doubles, but the peak flux is unchanged.",
+      "correctExplanation": "Doubling the speed halves the period (doubles frequency). The peak flux (Φ₀ = BA) is unchanged because B and A are unchanged. The peak emf (= Φ₀ω) doubles because ω doubles.",
+      "distractors": [
+        { "answer": "Both the peak flux and peak emf double.", "explanation": "The peak flux depends on B and A, not the speed. Only the peak emf and frequency change." },
+        { "answer": "The frequency doubles but the peak emf is unchanged.", "explanation": "The peak emf is proportional to ω. Doubling ω doubles the peak emf." },
+        { "answer": "The peak emf doubles but the frequency is unchanged.", "explanation": "The frequency is directly proportional to the rotation speed. Doubling the speed doubles the frequency." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student claims that the emf graph of an AC generator is simply the flux graph shifted upward by a constant. Which one of the following best evaluates this claim?",
+      "correct": "The claim is incorrect. The emf graph is the negative derivative of the flux graph, which produces a quarter-period phase shift, not a vertical shift.",
+      "correctExplanation": "Faraday's law relates the emf to the rate of change of flux, not to the flux plus a constant. The relationship involves differentiation, producing a phase shift.",
+      "distractors": [
+        { "answer": "The claim is correct because the emf is always greater than the flux.", "explanation": "The emf and flux have different units and are related by differentiation, not by a simple vertical offset." },
+        { "answer": "The claim is correct if the constant equals the peak emf.", "explanation": "No vertical shift can produce the quarter-period phase relationship between flux and emf." },
+        { "answer": "The claim is partially correct for the first half of each cycle.", "explanation": "The relationship involves differentiation, which produces a phase shift, not a vertical shift, for all parts of the cycle." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "The flux through an AC generator is Φ = 0.030 cos(50πt) Wb for a single-turn coil. Complete the description of the emf.",
+      "sentence": "The peak emf for a single turn is {{blank:1}} V and the frequency of the output is {{blank:2}} Hz.",
+      "blanks": {
+        "1": {
+          "correct": "1.5π",
+          "correctExplanation": "Peak emf = Φ₀ × ω = 0.030 × 50π = 1.5π V ≈ 4.7 V.",
+          "distractors": [
+            { "answer": "0.030", "explanation": "This is the peak flux, not the peak emf. Multiply by ω: 0.030 × 50π = 1.5π V." },
+            { "answer": "50π", "explanation": "This is the angular frequency, not the peak emf. The peak emf is 0.030 × 50π = 1.5π V." },
+            { "answer": "15π", "explanation": "This may use an incorrect flux amplitude. The peak emf is 0.030 × 50π = 1.5π V." }
+          ]
+        },
+        "2": {
+          "correct": "25",
+          "correctExplanation": "ω = 50π = 2πf, so f = 50π / (2π) = 25 Hz.",
+          "distractors": [
+            { "answer": "50", "explanation": "This confuses ω = 50π with f = 50. The frequency is f = ω / (2π) = 25 Hz." },
+            { "answer": "100", "explanation": "This doubles the frequency. The correct frequency is 25 Hz." },
+            { "answer": "50π", "explanation": "This is the angular frequency in rad s⁻¹, not the frequency in Hz. f = 25 Hz." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "An AC generator has a period of 0.025 s. At t = 0, the flux starts at its maximum. Complete the statement about when key values occur.",
+      "sentence": "The emf first reaches its positive peak at t = {{blank:1}} s and the flux first reaches its negative peak at t = {{blank:2}} s.",
+      "blanks": {
+        "1": {
+          "correct": "0.00625",
+          "correctExplanation": "The emf peaks a quarter period after the flux peak: T/4 = 0.025/4 = 0.00625 s.",
+          "distractors": [
+            { "answer": "0.0125", "explanation": "This is half a period. The emf first peaks at a quarter period: 0.00625 s." },
+            { "answer": "0.025", "explanation": "This is a full period. The emf first peaks at 0.00625 s." },
+            { "answer": "0", "explanation": "At t = 0, the emf is zero (flux is at maximum). The emf peaks at T/4." }
+          ]
+        },
+        "2": {
+          "correct": "0.0125",
+          "correctExplanation": "The flux reaches its negative peak at half a period: T/2 = 0.025/2 = 0.0125 s.",
+          "distractors": [
+            { "answer": "0.025", "explanation": "This is a full period, when the flux returns to its positive peak." },
+            { "answer": "0.00625", "explanation": "At T/4, the flux is at zero, not at its negative peak." },
+            { "answer": "0.01875", "explanation": "At 3T/4, the flux is again at zero. The negative peak occurs at T/2 = 0.0125 s." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the statement about what happens to the graphs when the number of turns in the coil is doubled.",
+      "sentence": "Doubling the number of turns in an AC generator does not change the {{blank:1}} graph but doubles the peak value of the {{blank:2}} graph.",
+      "blanks": {
+        "1": {
+          "correct": "flux",
+          "correctExplanation": "The flux through the coil (Φ = BAcos θ) depends on B, A, and the angle, not on the number of turns. The flux per turn is unchanged.",
+          "distractors": [
+            { "answer": "emf", "explanation": "The emf graph does change when the number of turns changes. The emf is proportional to N." },
+            { "answer": "current", "explanation": "Current depends on both emf and resistance, and the emf changes when turns change." },
+            { "answer": "frequency", "explanation": "While the frequency is unaffected, this blank refers to which graph is unchanged. The flux graph is unchanged." }
+          ]
+        },
+        "2": {
+          "correct": "emf",
+          "correctExplanation": "The induced emf is ε = −NdΦ/dt. Doubling N doubles the peak emf while the flux per turn remains the same.",
+          "distractors": [
+            { "answer": "flux", "explanation": "The flux per turn does not change when the number of turns changes. It is the emf that doubles." },
+            { "answer": "frequency", "explanation": "The frequency depends on the rotation speed, not the number of turns." },
+            { "answer": "resistance", "explanation": "While resistance may change, the key output graph that changes is the emf graph." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "mc",
+      "question": "An AC generator coil starts at an angle of 30° to the perpendicular of the magnetic field (i.e., the flux is Φ₀ cos 30° at t = 0). Which one of the following correctly describes the flux and emf at t = 0?",
+      "correct": "The flux is 0.866Φ₀ and the emf is 0.500ε₀ (where ε₀ is the peak emf).",
+      "correctExplanation": "Φ(0) = Φ₀ cos 30° = 0.866Φ₀. The emf at t = 0 is ε₀ sin 30° = 0.500ε₀, since the emf leads the flux by 90°.",
+      "distractors": [
+        { "answer": "The flux is 0.500Φ₀ and the emf is 0.866ε₀.", "explanation": "cos 30° = 0.866 and sin 30° = 0.500. The flux uses cosine and the emf uses sine." },
+        { "answer": "Both the flux and emf are at 0.866 of their peak values.", "explanation": "The flux and emf have different phase relationships. cos 30° = 0.866 for flux and sin 30° = 0.500 for emf." },
+        { "answer": "The flux is 0.866Φ₀ and the emf is zero.", "explanation": "The emf is zero only when the flux is at its peak (cos θ = 1). At 30°, the emf is sin 30° = 0.500 of its peak." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "The flux-time graph for an AC generator shows a cosine curve with period T. A student draws the emf-time graph by taking the gradient at multiple points. At t = T/8, the flux is Φ₀ cos(π/4) = 0.707Φ₀. Which one of the following gives the emf at t = T/8?",
+      "correct": "0.707ε₀",
+      "correctExplanation": "The emf = ε₀ sin(2πt/T). At t = T/8: sin(2π × T/8 / T) = sin(π/4) = 0.707. So emf = 0.707ε₀.",
+      "distractors": [
+        { "answer": "ε₀", "explanation": "The emf is not at its peak at T/8. It is at sin(π/4) = 0.707 of its peak." },
+        { "answer": "0.500ε₀", "explanation": "sin(π/4) = 0.707, not 0.500." },
+        { "answer": "0", "explanation": "The emf is zero only at t = 0 and t = T/2 (when flux is at its peaks)." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An AC generator with 200 turns has a peak flux of 0.015 Wb per turn and an angular velocity of 100π rad s⁻¹. What are the peak emf and the frequency of the output?",
+      "correct": "Peak emf = 300π V and frequency = 50 Hz",
+      "correctExplanation": "Peak emf = NΦ₀ω = 200 × 0.015 × 100π = 300π V ≈ 942 V. Frequency = ω/(2π) = 100π/(2π) = 50 Hz.",
+      "distractors": [
+        { "answer": "Peak emf = 300π V and frequency = 100 Hz", "explanation": "Frequency = ω/(2π) = 50 Hz, not 100 Hz." },
+        { "answer": "Peak emf = 1.5π V and frequency = 50 Hz", "explanation": "This omits N. Peak emf = 200 × 0.015 × 100π = 300π V." },
+        { "answer": "Peak emf = 3.0 V and frequency = 50 Hz", "explanation": "This omits ω. Peak emf = NΦ₀ω = 300π V." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student is given a flux-time graph for an AC generator that is not a simple cosine curve starting from t = 0, but instead starts at zero flux and increases. Which one of the following describes the emf at t = 0 for this generator?",
+      "correct": "The emf is at its negative peak because the flux is increasing at its fastest rate.",
+      "correctExplanation": "If Φ starts at zero and increases (positive gradient), then ε = −dΦ/dt is negative. At t = 0, the gradient is steepest (for a sine-shaped flux), so the emf is at its negative peak.",
+      "distractors": [
+        { "answer": "The emf is zero because the flux is zero.", "explanation": "The emf depends on the rate of change of flux, not its value. When flux is zero but changing rapidly, the emf is at its peak." },
+        { "answer": "The emf is at its positive peak.", "explanation": "Since the flux is increasing, dΦ/dt is positive, and ε = −dΦ/dt is negative, not positive." },
+        { "answer": "The emf cannot be determined without knowing the peak flux.", "explanation": "The sign and relative magnitude of the emf can be determined from the gradient of the flux graph." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "For an AC generator, which one of the following pairs of graphs correctly shows the relationship when both are plotted against the same time axis? (Assume the coil starts perpendicular to the field.)",
+      "correct": "Flux: cosine curve starting at maximum. Emf: sine curve starting at zero.",
+      "correctExplanation": "With the coil starting perpendicular to the field, Φ = Φ₀cos(ωt) starts at maximum. The emf = ε₀sin(ωt) starts at zero and first rises to a positive peak.",
+      "distractors": [
+        { "answer": "Both: cosine curves starting at maximum.", "explanation": "The flux and emf cannot both be cosine curves. The emf is the derivative of the flux, which introduces a quarter-period phase shift." },
+        { "answer": "Both: sine curves starting at zero.", "explanation": "The flux starts at its maximum (cosine), not at zero (sine)." },
+        { "answer": "Flux: sine curve starting at zero. Emf: cosine curve starting at maximum.", "explanation": "With the coil starting perpendicular to the field, the flux starts at its maximum (cosine curve), not at zero." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An engineer observes that the emf-time graph for an AC generator has a peak of 340 V and a period of 0.020 s. She wants to determine the peak flux per turn. Which one of the following correctly calculates this quantity?",
+      "correct": "Φ₀ = ε₀ / (Nω) = 340 / (N × 100π)",
+      "correctExplanation": "Peak emf = NΦ₀ω, so Φ₀ = ε₀/(Nω). With T = 0.020 s, ω = 2π/T = 100π rad s⁻¹. Thus Φ₀ = 340/(N × 100π).",
+      "distractors": [
+        { "answer": "Φ₀ = ε₀ × Nω", "explanation": "This multiplies instead of divides. Rearranging ε₀ = NΦ₀ω gives Φ₀ = ε₀/(Nω)." },
+        { "answer": "Φ₀ = ε₀ × T / N", "explanation": "This uses the period directly instead of the angular frequency. The correct formula is Φ₀ = ε₀/(Nω)." },
+        { "answer": "Φ₀ = ε₀ / N", "explanation": "This omits the angular frequency factor. The peak flux is ε₀/(Nω), not ε₀/N." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Two AC generators, X and Y, have the same peak flux. Generator X has twice the angular velocity of generator Y. Which one of the following correctly compares their flux and emf graphs?",
+      "correct": "Generator X has the same peak flux, twice the frequency, and twice the peak emf compared to generator Y.",
+      "correctExplanation": "Same Φ₀ means same flux amplitude. Twice ω means twice the frequency and twice the peak emf (since ε₀ = NΦ₀ω).",
+      "distractors": [
+        { "answer": "Generator X has twice the peak flux, twice the frequency, and four times the peak emf.", "explanation": "The peak flux is the same for both generators. The peak emf doubles (not quadruples) with doubled ω." },
+        { "answer": "Generator X has the same peak flux, twice the frequency, and the same peak emf.", "explanation": "The peak emf depends on ω. Doubling ω doubles the peak emf." },
+        { "answer": "Generator X has the same peak flux, the same frequency, and twice the peak emf.", "explanation": "Doubling ω also doubles the frequency, not just the peak emf." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "At a particular instant, the flux through an AC generator coil is −0.010 Wb and is becoming less negative (increasing towards zero). The coil has 500 turns and ω = 100π rad s⁻¹. Which one of the following best describes the emf at this instant?",
+      "correct": "The emf is negative because the flux is increasing (dΦ/dt is positive) and ε = −NdΦ/dt.",
+      "correctExplanation": "The flux is increasing (becoming less negative), so dΦ/dt > 0. By Faraday's law, ε = −NdΦ/dt < 0, meaning the emf is negative.",
+      "distractors": [
+        { "answer": "The emf is positive because the flux is negative.", "explanation": "The sign of the emf depends on the rate of change of flux, not on the value of the flux." },
+        { "answer": "The emf is zero because the flux is not at its peak.", "explanation": "The emf is zero only when the rate of flux change is zero (at flux peaks), not at any arbitrary flux value." },
+        { "answer": "The emf is positive because the flux is increasing.", "explanation": "If dΦ/dt is positive, then ε = −NdΦ/dt is negative, not positive." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "An AC generator has Φ = 0.025 cos(80πt) Wb per turn and 150 turns. Complete the analysis.",
+      "sentence": "The peak emf is {{blank:1}} V and the emf as a function of time is ε = {{blank:2}} sin(80πt) V.",
+      "blanks": {
+        "1": {
+          "correct": "300π",
+          "correctExplanation": "Peak emf = NΦ₀ω = 150 × 0.025 × 80π = 300π V ≈ 942 V.",
+          "distractors": [
+            { "answer": "2.0π", "explanation": "This omits N. Peak emf = 150 × 0.025 × 80π = 300π V." },
+            { "answer": "3000π", "explanation": "This may use an incorrect amplitude. 150 × 0.025 = 3.75, and 3.75 × 80π = 300π V." },
+            { "answer": "12π", "explanation": "This may use an incorrect calculation. The peak emf is 300π V." }
+          ]
+        },
+        "2": {
+          "correct": "300π",
+          "correctExplanation": "The emf function is ε = NΦ₀ω sin(ωt) = 300π sin(80πt) V.",
+          "distractors": [
+            { "answer": "0.025", "explanation": "This is the peak flux per turn, not the peak emf coefficient." },
+            { "answer": "150", "explanation": "This is the number of turns only. The coefficient includes Φ₀ω as well: 150 × 0.025 × 80π = 300π." },
+            { "answer": "80π", "explanation": "This is the angular frequency, not the emf amplitude." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "At t = T/4 for an AC generator where Φ = Φ₀cos(ωt), complete the description of the flux and emf values.",
+      "sentence": "At t = T/4, the flux is {{blank:1}} and the emf is {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "zero",
+          "correctExplanation": "At t = T/4, ωt = π/2, and cos(π/2) = 0. The flux is zero.",
+          "distractors": [
+            { "answer": "Φ₀", "explanation": "Φ₀ is the flux at t = 0. At t = T/4, cos(π/2) = 0." },
+            { "answer": "−Φ₀", "explanation": "−Φ₀ occurs at t = T/2 when cos(π) = −1." },
+            { "answer": "0.707Φ₀", "explanation": "This occurs at t = T/8. At t = T/4, the flux is zero." }
+          ]
+        },
+        "2": {
+          "correct": "ε₀ (at its positive peak)",
+          "correctExplanation": "The emf = ε₀sin(ωt). At t = T/4, sin(π/2) = 1, so the emf is at its positive peak ε₀.",
+          "distractors": [
+            { "answer": "zero", "explanation": "The emf is zero at flux peaks (t = 0 and T/2), not when the flux is zero." },
+            { "answer": "−ε₀ (at its negative peak)", "explanation": "sin(π/2) = +1, so the emf is at its positive peak, not negative." },
+            { "answer": "0.707ε₀", "explanation": "sin(π/2) = 1, not 0.707. The emf is at its full positive peak." }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,575 @@
+{
+  "_link": {
+    "uuid": "lp-7135a6f6-99e6-4928-ab96-1de7f079f32e",
+    "version": 1,
+    "contentHash": "hash-2a6208c8",
+    "title": "I can compare power losses in a transmission system with and without transformers",
+    "generatedAt": "2026-03-08"
+  },
+  "toLevel2": [
+    {
+      "type": "mc",
+      "question": "A 10 W lamp operating at 5.0 V is connected through wires with a total resistance of 2.0 Ω. Without transformers, which one of the following is closest to the power lost in the wires?",
+      "correct": "8.0 W",
+      "correctExplanation": "I = P/V = 10/5.0 = 2.0 A. P_loss = I²R = 2.0² × 2.0 = 8.0 W.",
+      "distractors": [
+        { "answer": "2.0 W", "explanation": "This is IR = 2.0 × 2.0 × some factor, but not I²R." },
+        { "answer": "0.80 W", "explanation": "This results from using I = 0.20 A, as if a transformer had reduced the current." },
+        { "answer": "20 W", "explanation": "This results from P × R = 10 × 2.0, which is not a valid formula for power loss." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A power station generates 100 kW at 1.0 kV. The transmission cables have a total resistance of 5.0 Ω. Without transformers, which one of the following is closest to the power lost in the cables?",
+      "correct": "50 kW",
+      "correctExplanation": "I = P/V = 100 000/1000 = 100 A. P_loss = I²R = 100² × 5.0 = 50 000 W = 50 kW.",
+      "distractors": [
+        { "answer": "500 W", "explanation": "This results from using I = 10 A, as if the voltage were 10 kV instead of 1.0 kV." },
+        { "answer": "5.0 kW", "explanation": "This results from using I² incorrectly or a factor-of-ten error." },
+        { "answer": "100 kW", "explanation": "This equals the total generated power. While losses are high, they are 50 kW, not the full output." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which one of the following best explains why transformers reduce power losses in transmission cables?",
+      "correct": "They increase the voltage, which reduces the current, and losses depend on I²R",
+      "correctExplanation": "Step-up transformers increase voltage, reducing current for the same power. Since P_loss = I²R, lower current dramatically reduces losses.",
+      "distractors": [
+        { "answer": "They reduce the resistance of the cables by changing the voltage", "explanation": "Transformers do not change cable resistance. They reduce losses by reducing the current." },
+        { "answer": "They increase the total power available for transmission", "explanation": "Ideal transformers conserve power. They do not create additional power." },
+        { "answer": "They convert AC to DC, which has lower losses", "explanation": "Transformers do not convert AC to DC. They change AC voltage and current levels." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A 4.0 W lamp at 2.0 V is supplied through wires with a total resistance of 4.0 Ω. With a 1:10 step-up transformer at the source and a 10:1 step-down at the lamp, which one of the following is closest to the power lost in the wires?",
+      "correct": "0.16 W",
+      "correctExplanation": "Without transformers: I = 4.0/2.0 = 2.0 A. With 1:10 step-up: wire current = 2.0/10 = 0.20 A. P_loss = 0.20² × 4.0 = 0.04 × 4.0 = 0.16 W.",
+      "distractors": [
+        { "answer": "16 W", "explanation": "This is the loss without transformers: I²R = 2.0² × 4.0 = 16 W." },
+        { "answer": "1.6 W", "explanation": "This results from dividing the current by the turns ratio but not squaring it in P = I²R." },
+        { "answer": "0.016 W", "explanation": "This results from using a turns ratio of 1:100 instead of 1:10." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A system transmits 500 W through cables of resistance 10 Ω. Without transformers, the current is 50 A and the cable loss is 25 kW. With a 1:100 step-up transformer, which one of the following is closest to the cable loss?",
+      "correct": "2.5 W",
+      "correctExplanation": "With the step-up transformer, current is reduced by 100: I = 50/100 = 0.50 A. P_loss = 0.50² × 10 = 0.25 × 10 = 2.5 W.",
+      "distractors": [
+        { "answer": "250 W", "explanation": "This results from dividing the original loss by 100 instead of by 100² = 10 000." },
+        { "answer": "25 W", "explanation": "This results from dividing the original loss by 1000 instead of 10 000." },
+        { "answer": "0.025 W", "explanation": "This results from dividing by an extra factor of 100." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "Without transformers, transmitting 100 kW at 1.0 kV through cables of resistance 5.0 Ω loses half the generated power as heat in the cables.",
+      "correct": "True",
+      "correctExplanation": "I = 100 000/1000 = 100 A. P_loss = 100² × 5.0 = 50 000 W = 50 kW. This is 50/100 = 50%, or half the generated power.",
+      "distractors": [
+        { "answer": "False", "explanation": "The calculation confirms that 50 kW out of 100 kW is lost, which is indeed half." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "Using a 1:10 step-up transformer reduces transmission cable losses by a factor of 100 compared to no transformer.",
+      "correct": "True",
+      "correctExplanation": "A 1:10 step-up reduces current by a factor of 10. P_loss = I²R, so losses reduce by 10² = 100.",
+      "distractors": [
+        { "answer": "False", "explanation": "The factor is correct: current drops by 10, and since losses go as I², the reduction is 10² = 100." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the comparison of cable losses with and without transformers.",
+      "sentence": "Without transformers, a 10 A current through 5.0 Ω cables loses {{blank:1}} W. With a 1:10 step-up transformer, the current drops to {{blank:2}} A.",
+      "blanks": {
+        "1": {
+          "correct": "500",
+          "correctExplanation": "P_loss = I²R = 10² × 5.0 = 100 × 5.0 = 500 W.",
+          "distractors": [
+            { "answer": "50", "explanation": "This results from IR = 10 × 5.0 = 50, which is the voltage drop, not the power loss." },
+            { "answer": "5000", "explanation": "This results from a factor-of-ten error in squaring the current." }
+          ]
+        },
+        "2": {
+          "correct": "1.0",
+          "correctExplanation": "The 1:10 step-up increases voltage by 10, reducing current by 10: 10/10 = 1.0 A.",
+          "distractors": [
+            { "answer": "100", "explanation": "This results from multiplying the current by the turns ratio instead of dividing." },
+            { "answer": "0.10", "explanation": "This results from dividing by 100 instead of by 10." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the effect of transformers on losses.",
+      "sentence": "Transformers reduce cable losses because they {{blank:1}} the voltage, which {{blank:2}} the current in the cables.",
+      "blanks": {
+        "1": {
+          "correct": "increase",
+          "correctExplanation": "Step-up transformers increase the voltage before transmission.",
+          "distractors": [
+            { "answer": "decrease", "explanation": "Decreasing voltage would increase current and increase losses." },
+            { "answer": "stabilise", "explanation": "The key action is increasing voltage, not merely stabilising it." }
+          ]
+        },
+        "2": {
+          "correct": "decreases",
+          "correctExplanation": "For the same power, higher voltage means lower current (P = VI).",
+          "distractors": [
+            { "answer": "increases", "explanation": "Higher voltage decreases current for constant power, it does not increase it." },
+            { "answer": "eliminates", "explanation": "The current is reduced but not eliminated; some current must flow to transmit power." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the factor of loss reduction.",
+      "sentence": "If a step-up transformer increases voltage by a factor of 20, the cable losses decrease by a factor of {{blank:1}}.",
+      "blanks": {
+        "1": {
+          "correct": "400",
+          "correctExplanation": "Current decreases by 20, and P_loss = I²R, so losses decrease by 20² = 400.",
+          "distractors": [
+            { "answer": "20", "explanation": "This is the factor by which current decreases, but losses depend on I², so the factor is 20² = 400." },
+            { "answer": "40", "explanation": "This results from doubling the turns ratio instead of squaring it." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "mc",
+      "question": "A generator produces 2.0 kW at 100 V. The cables have a total resistance of 4.0 Ω. Which one of the following is closest to the power lost in the cables without transformers?",
+      "correct": "1600 W",
+      "correctExplanation": "I = P/V = 2000/100 = 20 A. P_loss = I²R = 20² × 4.0 = 400 × 4.0 = 1600 W.",
+      "distractors": [
+        { "answer": "80 W", "explanation": "This results from IR × R = 20 × 4 = 80, confusing voltage drop with power." },
+        { "answer": "16 W", "explanation": "This results from using I = 2.0 A instead of 20 A." },
+        { "answer": "8000 W", "explanation": "This results from P × R = 2000 × 4.0, which is not a valid formula." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Using the same system as above (2.0 kW generator, 100 V, 4.0 Ω cables), a 1:20 step-up transformer is added. Which one of the following is closest to the power lost in the cables with the transformer?",
+      "correct": "4.0 W",
+      "correctExplanation": "With step-up: V = 100 × 20 = 2000 V. I = 2000/2000 = 1.0 A. P_loss = 1.0² × 4.0 = 4.0 W.",
+      "distractors": [
+        { "answer": "80 W", "explanation": "This results from dividing the original loss by 20 instead of 20² = 400." },
+        { "answer": "0.20 W", "explanation": "This results from using a turns ratio of 1:200 instead of 1:20." },
+        { "answer": "1600 W", "explanation": "This is the loss without transformers." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A power station generates 500 kW at 5.0 kV. Cables have a resistance of 8.0 Ω. Option A has no transformers. Option B uses a 1:10 step-up. Which one of the following is closest to the ratio of cable losses, P_loss(A) : P_loss(B)?",
+      "correct": "100 : 1",
+      "correctExplanation": "The step-up reduces current by a factor of 10. Since P_loss = I²R, losses decrease by 10² = 100. The ratio is 100:1.",
+      "distractors": [
+        { "answer": "10 : 1", "explanation": "This is the ratio of currents, not the ratio of power losses. Losses depend on I², so the ratio is 10² = 100." },
+        { "answer": "50 : 1", "explanation": "This does not correspond to any correct calculation for these conditions." },
+        { "answer": "1000 : 1", "explanation": "This cubes the ratio instead of squaring it." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Noah compares two systems for delivering 1.0 kW over cables with R = 10 Ω. System X transmits at 100 V (no transformer). System Y transmits at 1000 V (with transformer). Which one of the following is closest to the power lost in System X?",
+      "correct": "1000 W",
+      "correctExplanation": "I_X = 1000/100 = 10 A. P_loss = 10² × 10 = 1000 W. This equals the entire transmitted power.",
+      "distractors": [
+        { "answer": "100 W", "explanation": "This results from IR = 10 × 10 = 100, which is the voltage drop, not the power loss." },
+        { "answer": "10 W", "explanation": "This is the loss in System Y, not System X." },
+        { "answer": "500 W", "explanation": "This results from a factor-of-two error in the calculation." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "In the same comparison as above, which one of the following is closest to the power lost in System Y (1000 V transmission)?",
+      "correct": "10 W",
+      "correctExplanation": "I_Y = 1000/1000 = 1.0 A. P_loss = 1.0² × 10 = 10 W.",
+      "distractors": [
+        { "answer": "1000 W", "explanation": "This is the loss in System X, not System Y." },
+        { "answer": "100 W", "explanation": "This results from using I = 10 A instead of 1.0 A." },
+        { "answer": "1.0 W", "explanation": "This results from using I = 0.10 A, perhaps from a factor-of-ten error." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A remote property requires 5.0 kW. Without transformers, transmission at 250 V through 3.0 Ω cables loses a significant fraction of the power. Which one of the following is closest to the fraction of power lost?",
+      "correct": "24%",
+      "correctExplanation": "I = 5000/250 = 20 A. P_loss = 20² × 3.0 = 1200 W. Fraction = 1200/5000 = 0.24 = 24%.",
+      "distractors": [
+        { "answer": "6.0%", "explanation": "This results from using I = 10 A instead of 20 A, giving P_loss = 300 W." },
+        { "answer": "60%", "explanation": "This results from using I = 50 A or a different voltage." },
+        { "answer": "2.4%", "explanation": "This results from a factor-of-ten error in the percentage calculation." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "Adding a 1:50 step-up transformer to a transmission system reduces cable losses by a factor of 2500 compared to no transformer.",
+      "correct": "True",
+      "correctExplanation": "The step-up reduces current by 50. P_loss = I²R, so losses reduce by 50² = 2500.",
+      "distractors": [
+        { "answer": "False", "explanation": "The calculation is correct: 50² = 2500 is the factor by which losses are reduced." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the comparison of two transmission systems.",
+      "sentence": "Without transformers: I = 40 A, P_loss = 40² × 2.0 = {{blank:1}} W. With a 1:20 step-up: I = 2.0 A, P_loss = 2.0² × 2.0 = {{blank:2}} W.",
+      "blanks": {
+        "1": {
+          "correct": "3200",
+          "correctExplanation": "P_loss = 40² × 2.0 = 1600 × 2.0 = 3200 W.",
+          "distractors": [
+            { "answer": "80", "explanation": "This results from 40 × 2.0 = 80, forgetting to square the current." },
+            { "answer": "320", "explanation": "This results from a factor-of-ten error in squaring the current." }
+          ]
+        },
+        "2": {
+          "correct": "8.0",
+          "correctExplanation": "P_loss = 2.0² × 2.0 = 4.0 × 2.0 = 8.0 W.",
+          "distractors": [
+            { "answer": "4.0", "explanation": "This results from 2.0 × 2.0 = 4.0, forgetting to square the current." },
+            { "answer": "80", "explanation": "This results from using I = 20 A instead of 2.0 A." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the advantage of using transformers.",
+      "sentence": "The ratio of cable losses without transformers to losses with a 1:10 step-up is {{blank:1}}, because the current is reduced by a factor of 10 and losses depend on I {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "100",
+          "correctExplanation": "Current decreases by 10, and P_loss ∝ I², so the ratio is 10² = 100.",
+          "distractors": [
+            { "answer": "10", "explanation": "This is the current ratio, not the loss ratio. Losses are proportional to I²." },
+            { "answer": "1000", "explanation": "This cubes the ratio instead of squaring it." }
+          ]
+        },
+        "2": {
+          "correct": "squared",
+          "correctExplanation": "P_loss = I²R, so power loss is proportional to the square of the current.",
+          "distractors": [
+            { "answer": "directly", "explanation": "Losses depend on I², not I. The squared relationship makes current reduction especially effective." },
+            { "answer": "cubed", "explanation": "The relationship is I², not I³." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about a system without transformers.",
+      "sentence": "A 50 W device at 10 V draws {{blank:1}} A. Through cables of resistance 5.0 Ω, the cable loss is {{blank:2}} W.",
+      "blanks": {
+        "1": {
+          "correct": "5.0",
+          "correctExplanation": "I = P/V = 50/10 = 5.0 A.",
+          "distractors": [
+            { "answer": "0.20", "explanation": "This results from V/P = 10/50, inverting the formula." },
+            { "answer": "500", "explanation": "This results from P × V = 50 × 10 = 500, which gives V²/R type values." }
+          ]
+        },
+        "2": {
+          "correct": "125",
+          "correctExplanation": "P_loss = I²R = 5.0² × 5.0 = 25 × 5.0 = 125 W.",
+          "distractors": [
+            { "answer": "25", "explanation": "This results from I² = 25 alone, without multiplying by R." },
+            { "answer": "250", "explanation": "This results from P × R = 50 × 5 = 250, which is not a valid formula." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "mc",
+      "question": "A generator produces 10 kW at 200 V. Cables have a resistance of 2.0 Ω. Without transformers, the cable loss is 5000 W. A 1:20 step-up transformer is then installed. Which one of the following is closest to the cable loss with the transformer?",
+      "correct": "12.5 W",
+      "correctExplanation": "With transformer: V = 200 × 20 = 4000 V. I = 10 000/4000 = 2.5 A. P_loss = 2.5² × 2.0 = 6.25 × 2.0 = 12.5 W.",
+      "distractors": [
+        { "answer": "250 W", "explanation": "This results from dividing the original loss by 20 instead of 400." },
+        { "answer": "5000 W", "explanation": "This is the loss without transformers." },
+        { "answer": "1.25 W", "explanation": "This results from a factor-of-ten error in the current calculation." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A power station generates 200 kW at 2.0 kV. Cables have a total resistance of 5.0 Ω. Without transformers, which one of the following is closest to the power lost in the cables?",
+      "correct": "50 kW",
+      "correctExplanation": "I = 200 000/2000 = 100 A. P_loss = 100² × 5.0 = 50 000 W = 50 kW.",
+      "distractors": [
+        { "answer": "500 W", "explanation": "This results from using I = 10 A, perhaps from a unit error." },
+        { "answer": "200 kW", "explanation": "This equals the total generated power, not just the cable loss." },
+        { "answer": "5.0 kW", "explanation": "This results from I = 10 A: 100 × 5.0 × some factor." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Using the same system (200 kW, 2.0 kV, 5.0 Ω cables), a 1:50 step-up transformer is installed. Which one of the following is closest to the cable loss with the transformer?",
+      "correct": "20 W",
+      "correctExplanation": "V = 2000 × 50 = 100 kV. I = 200 000/100 000 = 2.0 A. P_loss = 2.0² × 5.0 = 4.0 × 5.0 = 20 W.",
+      "distractors": [
+        { "answer": "1000 W", "explanation": "This results from dividing the original loss by 50 instead of 2500." },
+        { "answer": "0.80 W", "explanation": "This results from using I = 0.40 A, perhaps from an extra division by 5." },
+        { "answer": "2.0 kW", "explanation": "This results from dividing the original loss by 25 instead of 2500." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Aisha compares losses for a 50 kW system with cables of 10 Ω. Without transformers (500 V): P_loss = 100 kW. With a 1:100 step-up transformer, which one of the following is closest to the cable loss?",
+      "correct": "10 W",
+      "correctExplanation": "With step-up: V = 500 × 100 = 50 000 V. I = 50 000/50 000 = 1.0 A. P_loss = 1.0² × 10 = 10 W.",
+      "distractors": [
+        { "answer": "1000 W", "explanation": "This results from dividing the original loss by 100 instead of 10 000." },
+        { "answer": "100 W", "explanation": "This results from dividing by 1000 instead of 10 000." },
+        { "answer": "100 kW", "explanation": "This is the loss without transformers." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Ben's system delivers 1.0 kW at 50 V through cables of 1.0 Ω. He calculates the loss without transformers is 400 W. He installs a 1:5 step-up transformer. Which one of the following is closest to the cable loss with the transformer?",
+      "correct": "16 W",
+      "correctExplanation": "Without: I = 1000/50 = 20 A. P_loss = 400 × 1.0 = 400 W. With 1:5 step-up: V = 250 V. I = 1000/250 = 4.0 A. P_loss = 4.0² × 1.0 = 16 W. Reduction factor = 400/16 = 25 = 5².",
+      "distractors": [
+        { "answer": "80 W", "explanation": "This results from dividing the original loss by 5 instead of 25." },
+        { "answer": "1.6 W", "explanation": "This results from a factor-of-ten error in the current calculation." },
+        { "answer": "400 W", "explanation": "This is the loss without transformers." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A factory draws 20 kW. Without transformers, transmission at 400 V through cables of 2.0 Ω gives a cable loss. With a 1:25 step-up, the cable loss is much smaller. Which one of the following is closest to the difference in cable losses between the two systems?",
+      "correct": "4990 W",
+      "correctExplanation": "Without: I = 20 000/400 = 50 A. P_loss = 50² × 2.0 = 5000 W. With 1:25: V = 10 000 V. I = 20 000/10 000 = 2.0 A. P_loss = 4.0 × 2.0 = 8.0 W. Difference = 5000 − 8 = 4992 ≈ 4990 W.",
+      "distractors": [
+        { "answer": "5000 W", "explanation": "This is the loss without transformers alone, not the difference. The small loss with transformers should be subtracted." },
+        { "answer": "8.0 W", "explanation": "This is the loss with transformers, not the difference between the two systems." },
+        { "answer": "2500 W", "explanation": "This results from a factor-of-two error in the current calculation for the no-transformer case." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student claims that a 1:30 step-up transformer will reduce cable losses by a factor of 30. Which one of the following best explains the error in this claim?",
+      "correct": "The factor is 900, not 30, because losses depend on I² and the current is reduced by 30",
+      "correctExplanation": "A 1:30 step-up reduces current by 30. Since P_loss = I²R, losses are reduced by 30² = 900.",
+      "distractors": [
+        { "answer": "The factor is 30, and the student is correct", "explanation": "The student is wrong because losses depend on the square of the current, giving 30² = 900." },
+        { "answer": "The factor is 60, because both voltage and current change by 30", "explanation": "Only the current ratio matters in P_loss = I²R. The factor is 30² = 900." },
+        { "answer": "The factor is 15, because the transformer only affects one wire", "explanation": "The transformer affects the current in both wires equally. The factor is 30² = 900." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the comparison of cable losses.",
+      "sentence": "Without transformers: I = 100 A, R = 3.0 Ω, P_loss = {{blank:1}} kW. With 1:50 step-up: I = 2.0 A, P_loss = {{blank:2}} W.",
+      "blanks": {
+        "1": {
+          "correct": "30",
+          "correctExplanation": "P_loss = 100² × 3.0 = 10 000 × 3.0 = 30 000 W = 30 kW.",
+          "distractors": [
+            { "answer": "300", "explanation": "This results from 100 × 3.0 × some factor, perhaps I × R × I instead of I²R." },
+            { "answer": "3.0", "explanation": "This results from a factor-of-ten error in squaring the current." }
+          ]
+        },
+        "2": {
+          "correct": "12",
+          "correctExplanation": "P_loss = 2.0² × 3.0 = 4.0 × 3.0 = 12 W.",
+          "distractors": [
+            { "answer": "6.0", "explanation": "This results from 2.0 × 3.0 = 6.0, forgetting to square the current." },
+            { "answer": "120", "explanation": "This results from using I = 20 A instead of 2.0 A." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the factor of improvement.",
+      "sentence": "A system without transformers loses 8.0 kW. With a 1:40 step-up, the loss is reduced to {{blank:1}} W, a factor of {{blank:2}} improvement.",
+      "blanks": {
+        "1": {
+          "correct": "5.0",
+          "correctExplanation": "Factor = 40² = 1600. New loss = 8000/1600 = 5.0 W.",
+          "distractors": [
+            { "answer": "200", "explanation": "This results from dividing by 40 instead of 1600." },
+            { "answer": "0.50", "explanation": "This results from an extra factor-of-ten error." }
+          ]
+        },
+        "2": {
+          "correct": "1600",
+          "correctExplanation": "Factor = turns ratio² = 40² = 1600.",
+          "distractors": [
+            { "answer": "40", "explanation": "This is the turns ratio, not the loss reduction factor. Losses depend on I², so the factor is 40²." },
+            { "answer": "80", "explanation": "This doubles the turns ratio instead of squaring it." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the practicality of transformers.",
+      "sentence": "Without transformers, a 5.0 kW system at 100 V through 4.0 Ω cables loses {{blank:1}} W. This is {{blank:2}}% of the generated power.",
+      "blanks": {
+        "1": {
+          "correct": "10 000",
+          "correctExplanation": "I = 5000/100 = 50 A. P_loss = 50² × 4.0 = 2500 × 4.0 = 10 000 W.",
+          "distractors": [
+            { "answer": "200", "explanation": "This results from I × R = 50 × 4 = 200, the voltage drop, not the power." },
+            { "answer": "1000", "explanation": "This results from a factor-of-ten error in squaring the current." }
+          ]
+        },
+        "2": {
+          "correct": "200",
+          "correctExplanation": "Percentage = (10 000/5000) × 100 = 200%. The losses exceed the generated power, which means the system cannot function as designed.",
+          "distractors": [
+            { "answer": "20", "explanation": "This results from a factor-of-ten error in the percentage calculation." },
+            { "answer": "50", "explanation": "This does not match the calculated values." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "mc",
+      "question": "A generator produces 50 kW at 500 V. Cables have R = 5.0 Ω. Without transformers, the system is impractical. An engineer considers a 1:10 and a 1:100 step-up. Which one of the following correctly states the cable losses for both options?",
+      "correct": "1:10 gives 500 W; 1:100 gives 5.0 W",
+      "correctExplanation": "Without: I = 100 A. 1:10: I = 10 A, P_loss = 100 × 5.0 = 500 W. 1:100: I = 1.0 A, P_loss = 1.0 × 5.0 = 5.0 W.",
+      "distractors": [
+        { "answer": "1:10 gives 5000 W; 1:100 gives 500 W", "explanation": "These values correspond to dividing the original loss by the turns ratio instead of squaring it." },
+        { "answer": "1:10 gives 50 W; 1:100 gives 0.50 W", "explanation": "These values are a factor of ten too small, resulting from an error in squaring." },
+        { "answer": "1:10 gives 500 W; 1:100 gives 0.50 W", "explanation": "The 1:100 value is incorrect; the correct loss is 5.0 W, not 0.50 W." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A rural school requires 2.0 kW delivered at 240 V. The cable from the substation has R = 8.0 Ω. Without a local transformer, power is transmitted at 240 V. With a local arrangement using a 1:10 step-up at the substation and a 10:1 step-down at the school, which one of the following is closest to the reduction in cable loss?",
+      "correct": "550 W",
+      "correctExplanation": "Without: I = 2000/240 = 8.33 A. P_loss = 8.33² × 8.0 = 69.4 × 8.0 = 555 W. With: V_line = 2400 V. I = 2000/2400 = 0.833 A. P_loss = 0.694 × 8.0 = 5.55 W. Reduction = 555 − 5.6 ≈ 550 W.",
+      "distractors": [
+        { "answer": "555 W", "explanation": "This is the total loss without transformers, not the reduction. A small loss still occurs with transformers." },
+        { "answer": "5.6 W", "explanation": "This is the cable loss with transformers, not the reduction." },
+        { "answer": "278 W", "explanation": "This results from averaging the two losses instead of taking the difference." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A transmission system carries 1.0 MW through cables of resistance 10 Ω. An engineer compares three voltage options: 10 kV, 100 kV, and 500 kV. Which one of the following correctly ranks the cable losses from highest to lowest?",
+      "correct": "10 kV (100 kW), 100 kV (1.0 kW), 500 kV (40 W)",
+      "correctExplanation": "At 10 kV: I = 100 A, P = 100 000 W = 100 kW. At 100 kV: I = 10 A, P = 1000 W = 1.0 kW. At 500 kV: I = 2.0 A, P = 40 W.",
+      "distractors": [
+        { "answer": "10 kV (10 kW), 100 kV (100 W), 500 kV (4.0 W)", "explanation": "These values are a factor of ten too small at each level." },
+        { "answer": "10 kV (100 kW), 100 kV (10 kW), 500 kV (2.0 kW)", "explanation": "The 100 kV and 500 kV values result from dividing by the voltage ratio instead of squaring it." },
+        { "answer": "500 kV (100 kW), 100 kV (1.0 kW), 10 kV (40 W)", "explanation": "This reverses the ranking. Higher voltage means lower current and lower losses." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A solar farm generates 500 kW at 1.0 kV. The cables to the grid connection have R = 4.0 Ω. Without transformers, all the power would be lost in the cables. An inverter and transformer step the voltage up to 22 kV. Which one of the following is closest to the cable loss with the step-up?",
+      "correct": "2.1 kW",
+      "correctExplanation": "Without: I = 500 000/1000 = 500 A. P_loss = 500² × 4.0 = 1.0 MW (exceeds generated power). With step-up to 22 kV: I = 500 000/22 000 = 22.7 A. P_loss = 22.7² × 4.0 = 515 × 4.0 = 2061 W ≈ 2.1 kW.",
+      "distractors": [
+        { "answer": "21 kW", "explanation": "This results from using V = 2.2 kV instead of 22 kV, giving I = 227 A." },
+        { "answer": "210 W", "explanation": "This results from a factor-of-ten error in the current calculation." },
+        { "answer": "500 kW", "explanation": "This is the total generated power, not the cable loss with the transformer." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A 12 V supply powers a 24 Ω lamp through cables with a total resistance of 6.0 Ω. Without transformers, the cable loss is significant. With a 1:5 step-up and 5:1 step-down transformer pair, which one of the following is closest to the ratio of cable loss without transformers to cable loss with transformers?",
+      "correct": "25",
+      "correctExplanation": "Without: I = P/V. R_total = 24 + 6 = 30 Ω. I = 12/30 = 0.40 A. P_cable = 0.40² × 6.0 = 0.96 W. With 1:5: I_cable = 0.40/5 = 0.080 A. P_cable = 0.080² × 6.0 = 0.0384 W. Ratio = 0.96/0.0384 = 25 = 5².",
+      "distractors": [
+        { "answer": "5", "explanation": "This is the turns ratio, not the loss ratio. Losses depend on I², so the factor is 5² = 25." },
+        { "answer": "10", "explanation": "This results from doubling the turns ratio instead of squaring it." },
+        { "answer": "125", "explanation": "This cubes the turns ratio instead of squaring it." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A distribution system delivers 100 MW over 200 km of cable with a total resistance of 20 Ω. The system operates at 500 kV. An upgrade to 750 kV is proposed. Which one of the following is closest to the annual energy saving if the system operates 8000 hours per year?",
+      "correct": "3.6 GWh",
+      "correctExplanation": "At 500 kV: I = 10⁸/500 000 = 200 A. P_loss = 200² × 20 = 800 kW. At 750 kV: I = 10⁸/750 000 = 133 A. P_loss = 133² × 20 = 355 kW. Saving = 800 − 355 = 445 kW. Energy = 445 × 8000 = 3 560 000 kWh = 3560 MWh ≈ 3.6 GWh.",
+      "distractors": [
+        { "answer": "6.4 GWh", "explanation": "This is the energy lost at 500 kV alone (800 × 8000 = 6400 MWh), not the saving from the upgrade." },
+        { "answer": "0.36 GWh", "explanation": "This results from a factor-of-ten error in the saving calculation." },
+        { "answer": "2.8 GWh", "explanation": "This is the energy lost at 750 kV (355 × 8000 = 2840 MWh), not the saving." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A mine site needs 2.0 MW delivered through 50 km of cable (R = 25 Ω). Without transformers, transmission at the generator voltage of 2.0 kV would lose power equal to many times the delivered power. With a 1:100 step-up transformer, which one of the following is closest to the cable loss?",
+      "correct": "2.5 kW",
+      "correctExplanation": "With 1:100: V = 2.0 × 100 = 200 kV. I = 2 × 10⁶/200 000 = 10 A. P_loss = 10² × 25 = 2500 W = 2.5 kW.",
+      "distractors": [
+        { "answer": "25 kW", "explanation": "This results from using I = 100 A, perhaps from a factor-of-ten error in the voltage." },
+        { "answer": "25 MW", "explanation": "This is the loss without transformers: I = 1000 A, P = 1000² × 25 = 25 MW." },
+        { "answer": "250 kW", "explanation": "This results from dividing the no-transformer loss by the turns ratio instead of squaring it." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A country town receives 5.0 MW at 66 kV through cables of resistance 15 Ω. The power authority upgrades to 132 kV. Which one of the following is closest to the factor by which cable losses are reduced?",
+      "correct": "4",
+      "correctExplanation": "Voltage doubles, so current halves. P_loss = I²R, so losses decrease by 2² = 4.",
+      "distractors": [
+        { "answer": "2", "explanation": "This is the factor by which current changes, not the factor by which losses change." },
+        { "answer": "8", "explanation": "This cubes the ratio instead of squaring it." },
+        { "answer": "16", "explanation": "This results from squaring the voltage ratio (4) instead of the current ratio (2)." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the comparison of cable losses for different step-up ratios.",
+      "sentence": "A system with I = 200 A (no transformer) through R = 2.0 Ω has P_loss = 80 kW. With a 1:20 step-up, P_loss = {{blank:1}} W. With a 1:100 step-up, P_loss = {{blank:2}} W.",
+      "blanks": {
+        "1": {
+          "correct": "200",
+          "correctExplanation": "I = 200/20 = 10 A. P_loss = 10² × 2.0 = 200 W.",
+          "distractors": [
+            { "answer": "4000", "explanation": "This results from dividing the original loss by 20 instead of 400." },
+            { "answer": "20", "explanation": "This results from dividing by 4000 instead of 400." }
+          ]
+        },
+        "2": {
+          "correct": "8.0",
+          "correctExplanation": "I = 200/100 = 2.0 A. P_loss = 2.0² × 2.0 = 8.0 W.",
+          "distractors": [
+            { "answer": "80", "explanation": "This results from dividing the original loss by 1000 instead of 10 000." },
+            { "answer": "800", "explanation": "This results from dividing by 100 instead of 10 000." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about practical transmission without transformers.",
+      "sentence": "A 100 kW generator at 500 V through 10 Ω cables has I = {{blank:1}} A without transformers, and P_loss = {{blank:2}} kW.",
+      "blanks": {
+        "1": {
+          "correct": "200",
+          "correctExplanation": "I = P/V = 100 000/500 = 200 A.",
+          "distractors": [
+            { "answer": "20", "explanation": "This results from using 5.0 kV instead of 500 V." },
+            { "answer": "2000", "explanation": "This results from using 50 V instead of 500 V." }
+          ]
+        },
+        "2": {
+          "correct": "400",
+          "correctExplanation": "P_loss = 200² × 10 = 40 000 × 10 = 400 000 W = 400 kW. This exceeds the generated power.",
+          "distractors": [
+            { "answer": "40", "explanation": "This results from a factor-of-ten error in squaring the current." },
+            { "answer": "2000", "explanation": "This results from using I = 200 × some extra factor." }
+          ]
+        }
+      }
+    }
+  ]
+}

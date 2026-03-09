@@ -1,0 +1,958 @@
+{
+  "_link": {
+    "uuid": "lp-d3dd1b89-5db5-10d3-4df3-6aa1007af91f",
+    "version": 1,
+    "contentHash": "hash-d3dd1b89",
+    "title": "I can calculate the orbital period of a satellite using T = √(4π²r³/GM)",
+    "generatedAt": "2026-03-04T21:28:00Z"
+  },
+  "toLevel2": [
+    {
+      "type": "mc",
+      "question": "Which formula gives the orbital period of a satellite in a circular orbit of radius r around a body of mass M?",
+      "correct": "T = √(4π²r³/GM)",
+      "correctExplanation": "The orbital period is derived by equating gravitational force to centripetal force expressed in terms of period. The result is T = √(4π²r³/(GM)), sometimes written as T = 2π√(r³/(GM)).",
+      "distractors": [
+        {
+          "answer": "T = √(4π²r²/GM)",
+          "explanation": "The exponent on r is incorrect. The formula has r³ (r cubed), not r². The cubic dependence on r comes from the derivation involving centripetal acceleration."
+        },
+        {
+          "answer": "T = √(GM/4π²r³)",
+          "explanation": "This has the ratio inverted. The correct formula has r³ in the numerator and GM in the denominator: T = √(4π²r³/GM)."
+        },
+        {
+          "answer": "T = 4π²r³/GM",
+          "explanation": "This is T² (the period squared), not T. The correct formula includes the square root: T = √(4π²r³/GM)."
+        }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "In the formula T = √(4π²r³/GM), what does M represent?",
+      "correct": "The mass of the central body being orbited",
+      "correctExplanation": "M is the mass of the body that the satellite orbits around (such as a planet or star). The orbital period depends on this central mass, not on the mass of the satellite.",
+      "distractors": [
+        {
+          "answer": "The mass of the satellite",
+          "explanation": "The satellite's mass does not appear in the orbital period formula — it cancels during the derivation. M is the mass of the central body."
+        },
+        {
+          "answer": "The total mass of the satellite and the central body",
+          "explanation": "M is only the mass of the central body. The satellite's mass cancels in the derivation and does not affect the orbital period."
+        },
+        {
+          "answer": "The mass of the gravitational field",
+          "explanation": "A gravitational field does not have a mass. M is the mass of the body that creates the gravitational field and is being orbited."
+        }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "The orbital period of a satellite is independent of which of the following?",
+      "correct": "The mass of the satellite",
+      "correctExplanation": "The satellite's mass cancels when equating gravitational force to centripetal force. The formula T = √(4π²r³/GM) contains only G, r, and M (the central body's mass), not the satellite's mass.",
+      "distractors": [
+        {
+          "answer": "The mass of the central body",
+          "explanation": "M (the central body's mass) appears directly in the formula T = √(4π²r³/GM). The period depends on this mass."
+        },
+        {
+          "answer": "The orbital radius",
+          "explanation": "The orbital radius r appears in the formula as r³. The period strongly depends on the orbital radius."
+        },
+        {
+          "answer": "The gravitational constant G",
+          "explanation": "G appears in the formula. While it is a constant, the period formula directly involves it."
+        }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What happens to the orbital period when the orbital radius increases?",
+      "correct": "The period increases",
+      "correctExplanation": "From T = √(4π²r³/GM), the period depends on r³ under the square root. A larger r gives a larger value of r³, and therefore a larger T. Satellites in larger orbits take longer to complete one orbit.",
+      "distractors": [
+        {
+          "answer": "The period decreases",
+          "explanation": "A larger orbital radius gives a longer period (T ∝ r^(3/2)), not a shorter one. Satellites farther from the central body take longer to orbit."
+        },
+        {
+          "answer": "The period stays the same",
+          "explanation": "The period depends on the orbital radius. From T ∝ r^(3/2), a larger radius gives a longer period."
+        },
+        {
+          "answer": "The period cannot be determined without knowing the satellite's mass",
+          "explanation": "The satellite's mass does not affect the period. The period is determined by the central body's mass and the orbital radius."
+        }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What is the relationship between orbital period T and orbital radius r?",
+      "correct": "T is proportional to r^(3/2)",
+      "correctExplanation": "From T = √(4π²r³/GM) = (2π/√(GM)) × r^(3/2), the period is proportional to r raised to the power 3/2. This is consistent with Kepler's third law.",
+      "distractors": [
+        {
+          "answer": "T is proportional to r",
+          "explanation": "T is not directly proportional to r. The formula gives T ∝ r^(3/2), meaning the period increases faster than linearly with radius."
+        },
+        {
+          "answer": "T is proportional to r²",
+          "explanation": "The exponent is 3/2, not 2. T = √(4π²r³/GM) gives T ∝ r^(3/2)."
+        },
+        {
+          "answer": "T is proportional to 1/r",
+          "explanation": "An inverse relationship would mean the period decreases with increasing radius. In fact, T ∝ r^(3/2), so the period increases with radius."
+        }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the orbital period formula.",
+      "sentence": "The orbital period formula T = √(4π²r³/GM) shows that T depends on the {{blank:1}} radius and the mass of the {{blank:2}}, but not on the mass of the satellite.",
+      "blanks": {
+        "1": {
+          "correct": "orbital",
+          "correctExplanation": "The variable r in the formula is the orbital radius — the distance from the centre of the central body to the satellite.",
+          "distractors": [
+            {
+              "answer": "surface",
+              "explanation": "The formula uses the orbital radius (distance from the centre), not the surface radius of the planet."
+            },
+            {
+              "answer": "satellite",
+              "explanation": "The radius r is the orbital radius (orbit size), not the physical radius of the satellite itself."
+            }
+          ]
+        },
+        "2": {
+          "correct": "central body",
+          "correctExplanation": "M in the formula is the mass of the body being orbited. The satellite's mass cancels in the derivation.",
+          "distractors": [
+            {
+              "answer": "satellite",
+              "explanation": "The satellite's mass does not appear in the formula. M is the mass of the central body (planet, star, etc.)."
+            },
+            {
+              "answer": "gravitational field",
+              "explanation": "A gravitational field does not have a mass. M is the mass of the central body that creates the field."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the derivation of the period formula.",
+      "sentence": "The formula T = √(4π²r³/GM) is derived by equating the {{blank:1}} force to the centripetal force expressed in terms of {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "gravitational",
+          "correctExplanation": "The gravitational force provides the centripetal force for circular orbital motion. Setting GMm/r² = m(2πr/T)²/r leads to the period formula.",
+          "distractors": [
+            {
+              "answer": "normal",
+              "explanation": "The normal force is not relevant for satellite orbital motion. The gravitational force provides the centripetal force."
+            },
+            {
+              "answer": "friction",
+              "explanation": "Friction is not involved in satellite orbital motion. The gravitational force is equated with the centripetal force."
+            }
+          ]
+        },
+        "2": {
+          "correct": "period",
+          "correctExplanation": "The centripetal acceleration can be expressed as ac = 4π²r/T², where T is the period. This allows the derivation of the period formula from the force balance.",
+          "distractors": [
+            {
+              "answer": "mass",
+              "explanation": "The satellite's mass cancels in the derivation. The centripetal force is expressed in terms of the period T to derive the period formula."
+            },
+            {
+              "answer": "energy",
+              "explanation": "The derivation uses the centripetal force expressed in terms of period (via v = 2πr/T), not in terms of energy."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about how period changes with radius.",
+      "sentence": "A satellite in a larger orbit takes {{blank:1}} to complete one orbit because T is proportional to r raised to the power {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "longer",
+          "correctExplanation": "From T ∝ r^(3/2), a larger orbital radius gives a longer orbital period. Satellites farther from the central body take more time to complete each orbit.",
+          "distractors": [
+            {
+              "answer": "shorter",
+              "explanation": "A larger orbit gives a longer period, not shorter. T ∝ r^(3/2) means the period increases with radius."
+            },
+            {
+              "answer": "the same time",
+              "explanation": "The period depends on the orbital radius. A larger orbit gives a longer period."
+            }
+          ]
+        },
+        "2": {
+          "correct": "3/2",
+          "correctExplanation": "From T = √(4π²r³/GM), T is proportional to r^(3/2). This means if the radius doubles, the period increases by a factor of 2^(3/2) = 2√2 ≈ 2.83.",
+          "distractors": [
+            {
+              "answer": "1",
+              "explanation": "T is not directly proportional to r. The exponent is 3/2, reflecting the r³ inside the square root."
+            },
+            {
+              "answer": "2",
+              "explanation": "The exponent is 3/2, not 2. T = √(r³ × constant), so T ∝ r^(3/2)."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "tf",
+      "question": "A heavier satellite at the same altitude as a lighter satellite takes longer to complete one orbit.",
+      "correct": "False",
+      "correctExplanation": "The orbital period is independent of the satellite's mass. From T = √(4π²r³/GM), only the central body's mass M and the orbital radius r determine the period. Both satellites have the same period.",
+      "distractors": [
+        {
+          "answer": "True",
+          "explanation": "The satellite's mass does not affect the orbital period. Both satellites at the same altitude orbit in the same time, regardless of their mass."
+        }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "The orbital period of a satellite increases as the orbital radius increases.",
+      "correct": "True",
+      "correctExplanation": "From T = √(4π²r³/GM), T ∝ r^(3/2). A larger r gives a larger T. Satellites in larger orbits take longer to complete each orbit.",
+      "distractors": [
+        {
+          "answer": "False",
+          "explanation": "The period does increase with increasing radius. T ∝ r^(3/2), so a larger orbit means a longer period."
+        }
+      ]
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "mc",
+      "question": "A satellite orbits Earth at a radius of 7.0 × 10⁶ m. Earth's mass is 6.0 × 10²⁴ kg. What is the orbital period?",
+      "correct": "5.8 × 10³ s",
+      "correctExplanation": "T = √(4π² × (7.0 × 10⁶)³ / (6.67 × 10⁻¹¹ × 6.0 × 10²⁴)) = √(4 × 9.87 × 3.43 × 10²⁰ / 4.0 × 10¹⁴) = √(1.355 × 10²² / 4.0 × 10¹⁴) = √(3.39 × 10⁷) = 5.82 × 10³ s ≈ 5.8 × 10³ s.",
+      "distractors": [
+        {
+          "answer": "3.4 × 10⁷ s",
+          "explanation": "This is approximately 4π²r³/(GM), which is T², not T. The period is the square root: T = √(3.39 × 10⁷) = 5.8 × 10³ s."
+        },
+        {
+          "answer": "5.8 × 10⁶ s",
+          "explanation": "This has the wrong power of ten. The correct period is approximately 5.8 × 10³ s (about 97 minutes)."
+        },
+        {
+          "answer": "97 minutes",
+          "explanation": "While 97 minutes is approximately correct (5.8 × 10³ s ÷ 60 ≈ 97 min), the answer should be expressed in SI units as 5.8 × 10³ s."
+        }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A geostationary satellite has an orbital period of 24 hours (8.64 × 10⁴ s). If another satellite orbits Earth at half the geostationary radius, what is its orbital period?",
+      "correct": "3.1 × 10⁴ s",
+      "correctExplanation": "Since T ∝ r^(3/2), halving r gives T₂ = T₁ × (1/2)^(3/2) = 8.64 × 10⁴ × (0.5)^(3/2) = 8.64 × 10⁴ × 0.354 = 3.06 × 10⁴ ≈ 3.1 × 10⁴ s.",
+      "distractors": [
+        {
+          "answer": "4.3 × 10⁴ s",
+          "explanation": "This is 8.64 × 10⁴/2, assuming T ∝ r. Since T ∝ r^(3/2), halving r gives T₂ = T₁ × (1/2)^(3/2) = 3.1 × 10⁴ s."
+        },
+        {
+          "answer": "2.2 × 10⁴ s",
+          "explanation": "This is 8.64 × 10⁴/4, assuming T ∝ r². The correct relationship is T ∝ r^(3/2), giving 3.1 × 10⁴ s."
+        },
+        {
+          "answer": "1.7 × 10⁵ s",
+          "explanation": "This would mean the period increases when the radius decreases, which is incorrect. A smaller radius gives a shorter period."
+        }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What is the orbital period of a satellite orbiting at 4.2 × 10⁷ m from Earth's centre? (M_Earth = 6.0 × 10²⁴ kg)",
+      "correct": "8.6 × 10⁴ s",
+      "correctExplanation": "T = √(4π² × (4.2 × 10⁷)³ / (6.67 × 10⁻¹¹ × 6.0 × 10²⁴)) = √(4 × 9.87 × 7.41 × 10²² / 4.0 × 10¹⁴) = √(2.93 × 10²⁴ / 4.0 × 10¹⁴) = √(7.32 × 10⁹) = 8.56 × 10⁴ ≈ 8.6 × 10⁴ s (approximately 24 hours).",
+      "distractors": [
+        {
+          "answer": "7.3 × 10⁹ s",
+          "explanation": "This is T² (the period squared), not T. The period is the square root: T = √(7.32 × 10⁹) = 8.6 × 10⁴ s."
+        },
+        {
+          "answer": "8.6 × 10⁷ s",
+          "explanation": "This has the wrong power of ten. The correct period is 8.6 × 10⁴ s (about 24 hours)."
+        },
+        {
+          "answer": "5.8 × 10³ s",
+          "explanation": "This is the period for a low Earth orbit (r ≈ 7 × 10⁶ m). At the much larger radius of 4.2 × 10⁷ m, the period is much longer: 8.6 × 10⁴ s."
+        }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "If the orbital radius of a satellite is doubled, by what factor does the orbital period change?",
+      "correct": "The period increases by a factor of 2√2 ≈ 2.83",
+      "correctExplanation": "Since T ∝ r^(3/2): T₂/T₁ = (2r/r)^(3/2) = 2^(3/2) = 2 × √2 = 2√2 ≈ 2.83. Doubling the radius increases the period by approximately 2.83 times.",
+      "distractors": [
+        {
+          "answer": "The period doubles",
+          "explanation": "Doubling the radius does not double the period. Since T ∝ r^(3/2), the factor is 2^(3/2) = 2√2 ≈ 2.83."
+        },
+        {
+          "answer": "The period increases by a factor of 4",
+          "explanation": "A factor of 4 would apply if T ∝ r², but T ∝ r^(3/2). The factor is 2^(3/2) = 2√2 ≈ 2.83."
+        },
+        {
+          "answer": "The period increases by a factor of 8",
+          "explanation": "A factor of 8 would apply if T ∝ r³. Since T ∝ r^(3/2) (square root of r³), the factor is 2^(3/2) = 2√2 ≈ 2.83."
+        }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A satellite orbiting 500 km above Earth's surface has a period of approximately 94 minutes. Earth's radius is 6.4 × 10⁶ m. What orbital radius should be used in T = √(4π²r³/GM)?",
+      "correct": "6.9 × 10⁶ m",
+      "correctExplanation": "r = R + h = 6.4 × 10⁶ + 5.0 × 10⁵ = 6.9 × 10⁶ m. The formula requires the distance from the centre of the Earth, not the height above the surface.",
+      "distractors": [
+        {
+          "answer": "5.0 × 10⁵ m",
+          "explanation": "This is the height above the surface. The formula requires the distance from the centre: r = R + h = 6.9 × 10⁶ m."
+        },
+        {
+          "answer": "6.4 × 10⁶ m",
+          "explanation": "This is Earth's radius. The orbital radius includes the height: r = 6.4 × 10⁶ + 5.0 × 10⁵ = 6.9 × 10⁶ m."
+        },
+        {
+          "answer": "5.9 × 10⁶ m",
+          "explanation": "This would be Earth's radius minus the altitude, which is incorrect. The orbital radius is r = R + h = 6.9 × 10⁶ m."
+        }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "The Moon orbits Earth at approximately 3.84 × 10⁸ m from Earth's centre. What is the Moon's orbital period? (M_Earth = 6.0 × 10²⁴ kg)",
+      "correct": "2.4 × 10⁶ s",
+      "correctExplanation": "T = √(4π² × (3.84 × 10⁸)³ / (6.67 × 10⁻¹¹ × 6.0 × 10²⁴)) = √(39.48 × 5.66 × 10²⁵ / 4.0 × 10¹⁴) = √(5.59 × 10¹²) = 2.36 × 10⁶ s ≈ 2.4 × 10⁶ s (approximately 27.3 days).",
+      "distractors": [
+        {
+          "answer": "5.6 × 10¹² s",
+          "explanation": "This is T², not T. The period is the square root: T = √(5.59 × 10¹²) = 2.4 × 10⁶ s."
+        },
+        {
+          "answer": "2.4 × 10³ s",
+          "explanation": "This has the wrong power of ten. The Moon's period is approximately 2.4 × 10⁶ s (about 27 days), not 2.4 × 10³ s."
+        },
+        {
+          "answer": "8.6 × 10⁴ s",
+          "explanation": "This is approximately 24 hours, which is the period for a geostationary orbit, not the Moon's orbit. The Moon's period is about 27 days."
+        }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the period formula.",
+      "sentence": "The formula T = √(4π²r³/GM) can also be written as T = 2π√(r³/{{blank:1}}), which is equivalent because 4π² = (2π){{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "GM",
+          "correctExplanation": "Taking the square root of 4π²r³/GM: T = √(4π²) × √(r³/GM) = 2π × √(r³/GM) = 2π√(r³/GM).",
+          "distractors": [
+            {
+              "answer": "Gm",
+              "explanation": "The variable m (satellite mass) does not appear in the formula. The correct quantity is GM, where M is the central body's mass."
+            },
+            {
+              "answer": "4π²",
+              "explanation": "The 4π² is already factored out as (2π)². The remaining term under the square root is r³/GM."
+            }
+          ]
+        },
+        "2": {
+          "correct": "²",
+          "correctExplanation": "(2π)² = 4π². Factoring √(4π²) = 2π gives T = 2π√(r³/GM).",
+          "distractors": [
+            {
+              "answer": "³",
+              "explanation": "(2π)³ = 8π³, not 4π². The correct relationship is (2π)² = 4π²."
+            },
+            {
+              "answer": "¹",
+              "explanation": "(2π)¹ = 2π, not 4π². The correct relationship is (2π)² = 4π²."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the connection between speed and period.",
+      "sentence": "The orbital speed and period are related by v = 2πr/{{blank:1}}. Substituting the period formula gives v = {{blank:2}}, which is the orbital speed formula.",
+      "blanks": {
+        "1": {
+          "correct": "T",
+          "correctExplanation": "The speed of an object in uniform circular motion is the circumference (2πr) divided by the period T: v = 2πr/T.",
+          "distractors": [
+            {
+              "answer": "r",
+              "explanation": "2πr/r = 2π, which is a dimensionless number, not a speed. The speed is 2πr divided by the period T."
+            },
+            {
+              "answer": "M",
+              "explanation": "Dividing by M would not give a speed. The relationship is v = 2πr/T, where T is the orbital period."
+            }
+          ]
+        },
+        "2": {
+          "correct": "√(GM/r)",
+          "correctExplanation": "Substituting T = 2π√(r³/GM) into v = 2πr/T: v = 2πr / (2π√(r³/GM)) = r/√(r³/GM) = r × √(GM/r³) = √(GM × r²/r³) = √(GM/r).",
+          "distractors": [
+            {
+              "answer": "√(Gm/r)",
+              "explanation": "The variable m (satellite mass) does not appear. The orbital speed formula is v = √(GM/r), where M is the central body's mass."
+            },
+            {
+              "answer": "2πr³/GM",
+              "explanation": "This is not the speed formula. The orbital speed is v = √(GM/r)."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about Kepler's third law.",
+      "sentence": "The formula T² = 4π²r³/GM is a mathematical expression of Kepler's {{blank:1}} law, which states that T² is proportional to r{{blank:2}} for all satellites of the same central body.",
+      "blanks": {
+        "1": {
+          "correct": "third",
+          "correctExplanation": "Kepler's third law states that the square of the orbital period is proportional to the cube of the orbital radius for all objects orbiting the same central body.",
+          "distractors": [
+            {
+              "answer": "first",
+              "explanation": "Kepler's first law describes the shape of orbits (ellipses). The relationship T² ∝ r³ is Kepler's third law."
+            },
+            {
+              "answer": "second",
+              "explanation": "Kepler's second law describes equal areas swept in equal times. The relationship T² ∝ r³ is Kepler's third law."
+            }
+          ]
+        },
+        "2": {
+          "correct": "³",
+          "correctExplanation": "Kepler's third law: T² ∝ r³. The period squared is proportional to the cube of the orbital radius.",
+          "distractors": [
+            {
+              "answer": "²",
+              "explanation": "T² ∝ r³, not r². The cube comes from the derivation of the orbital period formula."
+            },
+            {
+              "answer": "¹",
+              "explanation": "T² ∝ r³, not r¹. The cubic dependence is a key feature of Kepler's third law."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "tf",
+      "question": "If the orbital radius of a satellite triples, the orbital period also triples.",
+      "correct": "False",
+      "correctExplanation": "Since T ∝ r^(3/2), tripling the radius changes the period by a factor of 3^(3/2) = 3√3 ≈ 5.2. The period increases by a factor of about 5.2, not 3.",
+      "distractors": [
+        {
+          "answer": "True",
+          "explanation": "T is not directly proportional to r. Since T ∝ r^(3/2), tripling the radius increases the period by 3^(3/2) = 3√3 ≈ 5.2 times."
+        }
+      ]
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "mc",
+      "question": "A satellite orbits a planet at 1.0 × 10⁷ m from the planet's centre with a period of 2.0 × 10⁴ s. What is the mass of the planet?",
+      "correct": "1.5 × 10²⁴ kg",
+      "correctExplanation": "Rearranging T² = 4π²r³/GM: M = 4π²r³/(GT²) = 39.48 × (1.0 × 10⁷)³ / (6.67 × 10⁻¹¹ × (2.0 × 10⁴)²) = 3.948 × 10²² / (2.668 × 10⁻²) = 1.48 × 10²⁴ ≈ 1.5 × 10²⁴ kg.",
+      "distractors": [
+        {
+          "answer": "5.9 × 10²⁴ kg",
+          "explanation": "This is approximately Earth's mass, but the given orbital parameters do not correspond to Earth. The calculation gives M = 4π²r³/(GT²) = 1.5 × 10²⁴ kg."
+        },
+        {
+          "answer": "4.0 × 10⁸ kg",
+          "explanation": "This is T² = (2.0 × 10⁴)² = 4.0 × 10⁸, not the mass. The mass is M = 4π²r³/(GT²)."
+        },
+        {
+          "answer": "3.95 × 10²² kg",
+          "explanation": "This is 4π²r³, which is the numerator only. The mass requires dividing by GT²."
+        }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A satellite orbits Earth (M = 6.0 × 10²⁴ kg) at 800 km above the surface. Earth's radius is 6.4 × 10⁶ m. What is the orbital period?",
+      "correct": "6.0 × 10³ s",
+      "correctExplanation": "r = 6.4 × 10⁶ + 8.0 × 10⁵ = 7.2 × 10⁶ m. T = √(4π² × (7.2 × 10⁶)³ / (6.67 × 10⁻¹¹ × 6.0 × 10²⁴)) = √(39.48 × 3.73 × 10²⁰ / 4.0 × 10¹⁴) = √(1.47 × 10²² / 4.0 × 10¹⁴) = √(3.68 × 10⁷) = 6.07 × 10³ ≈ 6.0 × 10³ s.",
+      "distractors": [
+        {
+          "answer": "3.7 × 10⁷ s",
+          "explanation": "This is approximately T² (the period squared). The period is the square root: T ≈ 6.0 × 10³ s."
+        },
+        {
+          "answer": "6.0 × 10⁶ s",
+          "explanation": "This has the wrong power of ten. The correct period is approximately 6.0 × 10³ s (about 100 minutes)."
+        },
+        {
+          "answer": "1.9 × 10³ s",
+          "explanation": "This is too short for any Earth orbit. The correct period at 800 km altitude is approximately 6.0 × 10³ s."
+        }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Satellite A has an orbital period of T around a planet. Satellite B orbits the same planet at 4 times the radius. What is the orbital period of Satellite B?",
+      "correct": "8T",
+      "correctExplanation": "Since T ∝ r^(3/2): T_B = T × (4)^(3/2) = T × 4 × √4 = T × 4 × 2 = 8T. At four times the radius, the period is 8 times longer.",
+      "distractors": [
+        {
+          "answer": "4T",
+          "explanation": "This assumes T ∝ r. Since T ∝ r^(3/2), the factor is 4^(3/2) = 8."
+        },
+        {
+          "answer": "16T",
+          "explanation": "This assumes T ∝ r². Since T ∝ r^(3/2), the factor is 4^(3/2) = 8."
+        },
+        {
+          "answer": "2T",
+          "explanation": "This assumes T ∝ √r. Since T ∝ r^(3/2), the factor is 4^(3/2) = 8."
+        }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student calculates T² = 4π²r³/(GM) and gets T² = 3.6 × 10⁷ s². What is the orbital period?",
+      "correct": "6.0 × 10³ s",
+      "correctExplanation": "T = √(T²) = √(3.6 × 10⁷) = √(36 × 10⁶) = 6.0 × 10³ s.",
+      "distractors": [
+        {
+          "answer": "3.6 × 10⁷ s",
+          "explanation": "This is T², not T. The period is the square root: T = √(3.6 × 10⁷) = 6.0 × 10³ s."
+        },
+        {
+          "answer": "1.8 × 10⁷ s",
+          "explanation": "This is T²/2, not √(T²). The period is T = √(3.6 × 10⁷) = 6.0 × 10³ s."
+        },
+        {
+          "answer": "6.0 × 10⁶ s",
+          "explanation": "This has the wrong power of ten. √(3.6 × 10⁷) = √(36 × 10⁶) = 6 × 10³ s."
+        }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A satellite orbits Mars (M = 6.4 × 10²³ kg) at a radius of 3.6 × 10⁶ m. What is its orbital period?",
+      "correct": "6.7 × 10³ s",
+      "correctExplanation": "T = √(4π² × (3.6 × 10⁶)³ / (6.67 × 10⁻¹¹ × 6.4 × 10²³)) = √(39.48 × 4.67 × 10¹⁹ / 4.27 × 10¹³) = √(1.84 × 10²¹ / 4.27 × 10¹³) = √(4.31 × 10⁷) = 6.56 × 10³ ≈ 6.7 × 10³ s.",
+      "distractors": [
+        {
+          "answer": "4.3 × 10⁷ s",
+          "explanation": "This is approximately T². The period is the square root: T = √(4.31 × 10⁷) = 6.7 × 10³ s."
+        },
+        {
+          "answer": "6.7 × 10⁶ s",
+          "explanation": "This has the wrong power of ten. The correct period is 6.7 × 10³ s (about 112 minutes)."
+        },
+        {
+          "answer": "5.8 × 10³ s",
+          "explanation": "This is approximately the period for a low Earth orbit, not a Mars orbit. The Mars orbital period at this radius is 6.7 × 10³ s."
+        }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which of the following correctly expresses T² from the orbital period formula?",
+      "correct": "T² = 4π²r³/(GM)",
+      "correctExplanation": "Squaring T = √(4π²r³/GM) gives T² = 4π²r³/(GM). This is the form most commonly used for calculations and rearrangements.",
+      "distractors": [
+        {
+          "answer": "T² = 4π²r²/(GM)",
+          "explanation": "The exponent on r is 3, not 2. T² = 4π²r³/(GM)."
+        },
+        {
+          "answer": "T² = GM/(4π²r³)",
+          "explanation": "This has the ratio inverted. The correct expression has r³ in the numerator and GM in the denominator: T² = 4π²r³/(GM)."
+        },
+        {
+          "answer": "T² = 2πr³/(GM)",
+          "explanation": "The coefficient is 4π², not 2π. T² = 4π²r³/(GM)."
+        }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A satellite orbits a star at 1.5 × 10¹¹ m with a period of 3.16 × 10⁷ s (approximately 1 year). What is the mass of the star?",
+      "correct": "2.0 × 10³⁰ kg",
+      "correctExplanation": "M = 4π²r³/(GT²) = 39.48 × (1.5 × 10¹¹)³ / (6.67 × 10⁻¹¹ × (3.16 × 10⁷)²) = 39.48 × 3.375 × 10³³ / (6.67 × 10⁻¹¹ × 9.99 × 10¹⁴) = 1.33 × 10³⁵ / 6.66 × 10⁴ = 2.0 × 10³⁰ kg.",
+      "distractors": [
+        {
+          "answer": "6.0 × 10²⁴ kg",
+          "explanation": "This is approximately Earth's mass. The star's mass calculated from the given orbital data is 2.0 × 10³⁰ kg (approximately equal to the Sun's mass)."
+        },
+        {
+          "answer": "2.0 × 10³³ kg",
+          "explanation": "This is too large by a factor of 1000. The correct calculation gives M = 2.0 × 10³⁰ kg."
+        },
+        {
+          "answer": "1.3 × 10³⁵ kg",
+          "explanation": "This is 4π²r³, which is only the numerator. The full calculation requires dividing by GT² to get M = 2.0 × 10³⁰ kg."
+        }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the rearrangement of the period formula.",
+      "sentence": "To find the mass of the central body from orbital data, rearrange T² = 4π²r³/(GM) to give M = {{blank:1}}/(G{{blank:2}}).",
+      "blanks": {
+        "1": {
+          "correct": "4π²r³",
+          "correctExplanation": "From T² = 4π²r³/(GM), multiplying both sides by M gives MT² = 4π²r³/G × 1... actually: T²GM = 4π²r³, so M = 4π²r³/(GT²).",
+          "distractors": [
+            {
+              "answer": "GT²",
+              "explanation": "GT² appears in the denominator, not the numerator. M = 4π²r³/(GT²)."
+            },
+            {
+              "answer": "r³",
+              "explanation": "While r³ is part of the numerator, the full numerator is 4π²r³."
+            }
+          ]
+        },
+        "2": {
+          "correct": "T²",
+          "correctExplanation": "M = 4π²r³/(GT²). The period squared T² appears in the denominator along with G.",
+          "distractors": [
+            {
+              "answer": "r³",
+              "explanation": "r³ is in the numerator, not the denominator with G. M = 4π²r³/(GT²)."
+            },
+            {
+              "answer": "M",
+              "explanation": "M is what we are solving for — it cannot appear in the expression for itself. The denominator is GT²."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the relationship between T and r.",
+      "sentence": "A graph of T² versus r³ for satellites of the same central body is a {{blank:1}} line through the origin, with gradient equal to {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "straight",
+          "correctExplanation": "Since T² = (4π²/GM) × r³, plotting T² against r³ gives a straight line through the origin (y = mx form where m = 4π²/GM).",
+          "distractors": [
+            {
+              "answer": "curved",
+              "explanation": "The graph of T² vs r³ is a straight line, not a curve, because T² is directly proportional to r³."
+            },
+            {
+              "answer": "horizontal",
+              "explanation": "A horizontal line would mean T² is constant regardless of r³. Since T² ∝ r³, the graph has a non-zero positive gradient."
+            }
+          ]
+        },
+        "2": {
+          "correct": "4π²/(GM)",
+          "correctExplanation": "From T² = (4π²/(GM)) × r³, the gradient of T² vs r³ is 4π²/(GM). This can be used to determine the mass M of the central body from the graph.",
+          "distractors": [
+            {
+              "answer": "GM",
+              "explanation": "GM is in the denominator of the gradient. The gradient is 4π²/(GM), and the mass can be found from M = 4π²/(G × gradient)."
+            },
+            {
+              "answer": "2π/GM",
+              "explanation": "The coefficient is 4π²/GM, not 2π/GM. T² = 4π²r³/GM gives a gradient of 4π²/GM."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence comparing periods at different radii.",
+      "sentence": "If a satellite at radius r has period T, then a satellite at radius 8r around the same body has period {{blank:1}}T, because 8^(3/2) = {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "22.6",
+          "correctExplanation": "T ∝ r^(3/2), so the factor is 8^(3/2) = (8)^1 × (8)^(1/2) = 8√8 = 8 × 2.83 = 22.6.",
+          "distractors": [
+            {
+              "answer": "8",
+              "explanation": "The factor is 8^(3/2) = 22.6, not 8. T ∝ r^(3/2), so the exponent is 3/2, not 1."
+            },
+            {
+              "answer": "64",
+              "explanation": "The factor 64 = 8³ would apply if T ∝ r³. Since T ∝ r^(3/2), the factor is 8^(3/2) = 22.6."
+            }
+          ]
+        },
+        "2": {
+          "correct": "22.6",
+          "correctExplanation": "8^(3/2) = (√8)³ = (2.83)³ = 22.6. Alternatively, 8^(3/2) = 8 × √8 = 8 × 2.83 = 22.6.",
+          "distractors": [
+            {
+              "answer": "12",
+              "explanation": "8^(3/2) = 8 × √8 = 8 × 2.83 = 22.6, not 12."
+            },
+            {
+              "answer": "512",
+              "explanation": "512 = 8³, not 8^(3/2). The correct value is 8^(3/2) = 22.6."
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "mc",
+      "question": "A satellite orbits a planet at 2.5 × 10⁷ m with a period of 4.0 × 10⁴ s. Another satellite orbits the same planet at 5.0 × 10⁷ m. What is the period of the second satellite?",
+      "correct": "1.13 × 10⁵ s",
+      "correctExplanation": "Since T ∝ r^(3/2): T₂ = T₁ × (r₂/r₁)^(3/2) = 4.0 × 10⁴ × (5.0/2.5)^(3/2) = 4.0 × 10⁴ × 2^(3/2) = 4.0 × 10⁴ × 2√2 = 4.0 × 10⁴ × 2.83 = 1.13 × 10⁵ s.",
+      "distractors": [
+        {
+          "answer": "8.0 × 10⁴ s",
+          "explanation": "This is T₁ × 2 = 8.0 × 10⁴ s, assuming T ∝ r. Since T ∝ r^(3/2), the factor is 2^(3/2) = 2√2 ≈ 2.83, giving 1.13 × 10⁵ s."
+        },
+        {
+          "answer": "1.6 × 10⁵ s",
+          "explanation": "This is T₁ × 4 = 1.6 × 10⁵ s, assuming T ∝ r². The correct factor is 2^(3/2) = 2.83, giving 1.13 × 10⁵ s."
+        },
+        {
+          "answer": "3.2 × 10⁵ s",
+          "explanation": "This is T₁ × 8 = 3.2 × 10⁵ s, assuming T ∝ r³. The correct relationship is T ∝ r^(3/2), giving 1.13 × 10⁵ s."
+        }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A space agency needs to place a satellite in an orbit with a period exactly 3 times the period of its current orbit at radius r₁. What orbital radius is required?",
+      "correct": "r₁ × 3^(2/3) ≈ 2.08r₁",
+      "correctExplanation": "Since T ∝ r^(3/2): 3T₁ = T₁ × (r₂/r₁)^(3/2), so 3 = (r₂/r₁)^(3/2). Taking the 2/3 power: r₂/r₁ = 3^(2/3) ≈ 2.08. The required radius is approximately 2.08r₁.",
+      "distractors": [
+        {
+          "answer": "3r₁",
+          "explanation": "r₂ = 3r₁ would apply if T ∝ r. Since T ∝ r^(3/2), solving gives r₂ = r₁ × 3^(2/3) ≈ 2.08r₁."
+        },
+        {
+          "answer": "9r₁",
+          "explanation": "r₂ = 9r₁ would apply if T ∝ √r. The correct result is r₂ = r₁ × 3^(2/3) ≈ 2.08r₁."
+        },
+        {
+          "answer": "√3 × r₁ ≈ 1.73r₁",
+          "explanation": "This would apply if T ∝ r. Solving T ∝ r^(3/2): r₂ = r₁ × 3^(2/3) ≈ 2.08r₁."
+        }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An exoplanet orbits its star at 2.0 × 10¹¹ m with a period of 5.0 × 10⁷ s. What is the mass of the star?",
+      "correct": "1.9 × 10³⁰ kg",
+      "correctExplanation": "M = 4π²r³/(GT²) = 39.48 × (2.0 × 10¹¹)³ / (6.67 × 10⁻¹¹ × (5.0 × 10⁷)²) = 39.48 × 8.0 × 10³³ / (6.67 × 10⁻¹¹ × 2.5 × 10¹⁵) = 3.16 × 10³⁵ / 1.67 × 10⁵ = 1.89 × 10³⁰ ≈ 1.9 × 10³⁰ kg.",
+      "distractors": [
+        {
+          "answer": "1.9 × 10³³ kg",
+          "explanation": "This is too large by a factor of 1000. The correct calculation gives M = 4π²r³/(GT²) = 1.9 × 10³⁰ kg."
+        },
+        {
+          "answer": "3.2 × 10³⁵ kg",
+          "explanation": "This is 4π²r³, which is only the numerator. The full calculation divides by GT² to give M = 1.9 × 10³⁰ kg."
+        },
+        {
+          "answer": "6.0 × 10²⁴ kg",
+          "explanation": "This is approximately Earth's mass. The star's mass from the given orbital data is much larger: 1.9 × 10³⁰ kg."
+        }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A GPS satellite orbits Earth at 2.66 × 10⁷ m from the centre with a period of 4.31 × 10⁴ s (about 12 hours). If the orbital radius were increased by 10%, what would the new period be?",
+      "correct": "4.97 × 10⁴ s",
+      "correctExplanation": "New radius = 1.10 × 2.66 × 10⁷. Since T ∝ r^(3/2): T₂ = 4.31 × 10⁴ × (1.10)^(3/2) = 4.31 × 10⁴ × 1.153 = 4.97 × 10⁴ s. A 10% increase in radius gives approximately a 15.3% increase in period.",
+      "distractors": [
+        {
+          "answer": "4.74 × 10⁴ s",
+          "explanation": "This is 4.31 × 10⁴ × 1.10, assuming T ∝ r. Since T ∝ r^(3/2), the factor is 1.10^(3/2) = 1.153, giving 4.97 × 10⁴ s."
+        },
+        {
+          "answer": "5.21 × 10⁴ s",
+          "explanation": "This is 4.31 × 10⁴ × 1.21, assuming T ∝ r². Since T ∝ r^(3/2), the factor is 1.10^(3/2) = 1.153, giving 4.97 × 10⁴ s."
+        },
+        {
+          "answer": "4.31 × 10⁴ s",
+          "explanation": "This is the original period. Increasing the radius by 10% increases the period by a factor of 1.10^(3/2) ≈ 1.153, giving 4.97 × 10⁴ s."
+        }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Two moons orbit a planet. Moon A has a period of 10 days and orbits at radius rA. Moon B has a period of 80 days. What is the orbital radius of Moon B in terms of rA?",
+      "correct": "4rA",
+      "correctExplanation": "Since T ∝ r^(3/2): (T_B/T_A) = (r_B/r_A)^(3/2). So 80/10 = (r_B/r_A)^(3/2), giving 8 = (r_B/r_A)^(3/2). Taking the 2/3 power: r_B/r_A = 8^(2/3) = (∛8)² = 2² = 4.",
+      "distractors": [
+        {
+          "answer": "8rA",
+          "explanation": "This assumes T ∝ r. From T ∝ r^(3/2): r_B/r_A = (T_B/T_A)^(2/3) = 8^(2/3) = 4."
+        },
+        {
+          "answer": "2rA",
+          "explanation": "This does not match the calculation. (T_B/T_A)^(2/3) = 8^(2/3) = 4, so r_B = 4rA."
+        },
+        {
+          "answer": "64rA",
+          "explanation": "This assumes T ∝ √r. The correct relationship T ∝ r^(3/2) gives r_B = 4rA."
+        }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A binary star system has a planet orbiting at 3.0 × 10¹¹ m with a period of 2.0 × 10⁷ s. The total mass of the two stars can be treated as a single central mass. What is this total mass?",
+      "correct": "4.0 × 10³¹ kg",
+      "correctExplanation": "M = 4π²r³/(GT²) = 39.48 × (3.0 × 10¹¹)³ / (6.67 × 10⁻¹¹ × (2.0 × 10⁷)²) = 39.48 × 2.7 × 10³⁴ / (6.67 × 10⁻¹¹ × 4.0 × 10¹⁴) = 1.066 × 10³⁶ / 2.668 × 10⁴ = 4.0 × 10³¹ kg. This is about 20 solar masses, consistent with a binary star system.",
+      "distractors": [
+        {
+          "answer": "4.0 × 10³⁰ kg",
+          "explanation": "This is off by a factor of ten. The correct calculation gives M = 1.066 × 10³⁶ / 2.668 × 10⁴ = 4.0 × 10³¹ kg."
+        },
+        {
+          "answer": "1.1 × 10³⁶ kg",
+          "explanation": "This is 4π²r³ before dividing by GT². The full calculation gives M = 4π²r³/(GT²)."
+        },
+        {
+          "answer": "6.0 × 10²⁴ kg",
+          "explanation": "This is approximately Earth's mass. A binary star system has a much greater total mass."
+        }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student plots T² against r³ for the moons of Jupiter and obtains a straight line with gradient 3.15 × 10⁻¹⁶ s² m⁻³. What is the mass of Jupiter?",
+      "correct": "1.9 × 10²⁷ kg",
+      "correctExplanation": "The gradient of T² vs r³ is 4π²/(GM). So M = 4π²/(G × gradient) = 39.48 / (6.67 × 10⁻¹¹ × 3.15 × 10⁻¹⁶) = 39.48 / 2.10 × 10⁻²⁶ = 1.88 × 10²⁷ ≈ 1.9 × 10²⁷ kg.",
+      "distractors": [
+        {
+          "answer": "3.15 × 10⁻¹⁶ kg",
+          "explanation": "This is the gradient of the graph, not the mass. The mass is M = 4π²/(G × gradient) = 1.9 × 10²⁷ kg."
+        },
+        {
+          "answer": "5.9 × 10²⁶ kg",
+          "explanation": "This does not match the correct calculation. M = 4π²/(G × gradient) = 39.48/(2.10 × 10⁻²⁶) = 1.9 × 10²⁷ kg."
+        },
+        {
+          "answer": "1.9 × 10²⁴ kg",
+          "explanation": "This is too small by a factor of 1000. The correct mass is M = 4π²/(G × gradient) = 1.9 × 10²⁷ kg."
+        }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "The orbital period of the ISS is approximately 92 minutes (5520 s). Using T = √(4π²r³/GM), what is the orbital radius of the ISS? (M_Earth = 6.0 × 10²⁴ kg)",
+      "correct": "6.7 × 10⁶ m",
+      "correctExplanation": "Rearranging: r³ = GMT²/(4π²) = (6.67 × 10⁻¹¹ × 6.0 × 10²⁴ × (5520)²) / 39.48 = (4.0 × 10¹⁴ × 3.047 × 10⁷) / 39.48 = 1.219 × 10²² / 39.48 = 3.087 × 10²⁰. r = (3.087 × 10²⁰)^(1/3) = 6.76 × 10⁶ ≈ 6.7 × 10⁶ m.",
+      "distractors": [
+        {
+          "answer": "3.1 × 10²⁰ m",
+          "explanation": "This is r³, not r. The orbital radius is r = (3.087 × 10²⁰)^(1/3) = 6.7 × 10⁶ m."
+        },
+        {
+          "answer": "4.2 × 10⁷ m",
+          "explanation": "This is the geostationary orbit radius. The ISS orbits much closer to Earth at approximately 6.7 × 10⁶ m from Earth's centre."
+        },
+        {
+          "answer": "6.7 × 10³ m",
+          "explanation": "This has the wrong power of ten. The orbital radius is 6.7 × 10⁶ m (about 6700 km from Earth's centre)."
+        }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the calculation of the mass of a central body.",
+      "sentence": "A moon orbits a planet at r = 4.0 × 10⁸ m with T = 3.0 × 10⁵ s. Using M = 4π²r³/(GT²): r³ = {{blank:1}} × 10²⁵ m³, and M ≈ {{blank:2}} × 10²⁶ kg.",
+      "blanks": {
+        "1": {
+          "correct": "6.4",
+          "correctExplanation": "r³ = (4.0 × 10⁸)³ = 64 × 10²⁴ = 6.4 × 10²⁵ m³.",
+          "distractors": [
+            {
+              "answer": "1.6",
+              "explanation": "r³ = (4.0)³ × (10⁸)³ = 64 × 10²⁴ = 6.4 × 10²⁵, not 1.6 × 10²⁵."
+            },
+            {
+              "answer": "4.0",
+              "explanation": "This is r itself (× 10⁸). r³ = 4.0³ × 10²⁴ = 64 × 10²⁴ = 6.4 × 10²⁵."
+            }
+          ]
+        },
+        "2": {
+          "correct": "4.2",
+          "correctExplanation": "M = 4π²r³/(GT²) = 39.48 × 6.4 × 10²⁵ / (6.67 × 10⁻¹¹ × 9.0 × 10¹⁰) = 2.527 × 10²⁷ / 6.0 × 10⁰ = 4.21 × 10²⁶ ≈ 4.2 × 10²⁶ kg.",
+          "distractors": [
+            {
+              "answer": "2.5",
+              "explanation": "2.5 × 10²⁷ is the value of 4π²r³, not yet divided by GT². M = 2.53 × 10²⁷ / 6.0 = 4.2 × 10²⁶ kg."
+            },
+            {
+              "answer": "6.0",
+              "explanation": "6.0 is the value of GT² (≈ 6.0 × 10⁰). M = 4π²r³/(GT²) = 4.2 × 10²⁶ kg."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about how period scales with both radius and central mass.",
+      "sentence": "If a satellite orbits a planet with 4 times the mass of Earth at the same orbital radius as an Earth satellite, its period is {{blank:1}} the Earth satellite's period, because T ∝ 1/√{{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "half",
+          "correctExplanation": "From T = 2π√(r³/GM), T ∝ 1/√M. With 4 times the mass: T₂ = T₁/√4 = T₁/2. The period is half.",
+          "distractors": [
+            {
+              "answer": "one-quarter",
+              "explanation": "One-quarter would apply if T ∝ 1/M. Since T ∝ 1/√M, the factor is 1/√4 = 1/2."
+            },
+            {
+              "answer": "double",
+              "explanation": "A more massive central body gives a shorter period (faster orbit), not a longer one. T₂ = T₁/√4 = T₁/2."
+            }
+          ]
+        },
+        "2": {
+          "correct": "M",
+          "correctExplanation": "From T = 2π√(r³/GM), T is inversely proportional to √M. A more massive central body means a shorter orbital period at the same radius.",
+          "distractors": [
+            {
+              "answer": "r",
+              "explanation": "T is proportional to r^(3/2), not inversely proportional to √r. T ∝ 1/√M describes how period depends on the central mass."
+            },
+            {
+              "answer": "m",
+              "explanation": "The satellite's mass m does not affect the period. T depends on the central body's mass M: T ∝ 1/√M."
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,495 @@
+{
+  "_link": {
+    "uuid": "lp-7e1b4a51-9723-1e56-4198-c13ab93bf26e",
+    "version": 1,
+    "contentHash": "hash-7e1b4a51",
+    "title": "I can calculate gravitational field strength using g = GM/r²",
+    "generatedAt": "2026-03-04T21:28:00Z"
+  },
+  "toLevel2": [
+    {
+      "type": "mc",
+      "question": "In the formula g = GM/r², what does r represent?",
+      "correct": "The distance from the centre of mass of the body producing the field",
+      "correctExplanation": "In g = GM/r², r is the distance measured from the centre of mass of the body, not from its surface.",
+      "distractors": [
+        { "answer": "The radius of the object experiencing the field", "explanation": "r is the distance from the centre of the mass producing the field, not the size of the object in the field." },
+        { "answer": "The distance from the surface of the body", "explanation": "r is measured from the centre of mass, not the surface. At the surface, r equals the body's radius." },
+        { "answer": "The radius of the orbit only", "explanation": "r can be any distance from the centre of mass, not just an orbital radius." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What are the units of gravitational field strength g?",
+      "correct": "N kg⁻¹",
+      "correctExplanation": "Gravitational field strength is measured in newtons per kilogram (N kg⁻¹), which is equivalent to m s⁻².",
+      "distractors": [
+        { "answer": "N m² kg⁻²", "explanation": "These are the units of the gravitational constant G, not gravitational field strength g." },
+        { "answer": "kg m s⁻²", "explanation": "These are the units of force (newtons). Field strength has units of N kg⁻¹." },
+        { "answer": "J kg⁻¹", "explanation": "J kg⁻¹ are units of gravitational potential, not gravitational field strength." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which formula correctly gives the gravitational field strength at distance r from a mass M?",
+      "correct": "g = GM/r²",
+      "correctExplanation": "g = GM/r² gives the gravitational field strength at distance r from the centre of a mass M.",
+      "distractors": [
+        { "answer": "g = GM/r", "explanation": "The distance must be squared. g = GM/r² is the correct inverse square relationship." },
+        { "answer": "g = Gm/r²", "explanation": "The formula uses the mass M of the body producing the field, not the mass m of the object in the field." },
+        { "answer": "g = GMr²", "explanation": "r² is in the denominator, not the numerator. g decreases with distance, so g = GM/r²." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "To calculate g at a planet's surface, what value of r should be used?",
+      "correct": "The radius of the planet",
+      "correctExplanation": "At the surface, the distance from the centre of mass is equal to the planet's radius. Therefore r = R_planet.",
+      "distractors": [
+        { "answer": "The height above the surface", "explanation": "At the surface, the height above is zero. r is the distance from the centre, which equals the planet's radius." },
+        { "answer": "The diameter of the planet", "explanation": "The diameter is twice the radius. Using the diameter would give g that is four times too small." },
+        { "answer": "The circumference of the planet", "explanation": "The circumference is not used in g = GM/r². The correct value is the radius." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What is the value of the universal gravitational constant G used in g = GM/r²?",
+      "correct": "6.67 × 10⁻¹¹ N m² kg⁻²",
+      "correctExplanation": "G = 6.67 × 10⁻¹¹ N m² kg⁻² is a universal constant used in all gravitational calculations.",
+      "distractors": [
+        { "answer": "9.81 N kg⁻¹", "explanation": "9.81 N kg⁻¹ is the gravitational field strength at Earth's surface (g), not the universal gravitational constant G." },
+        { "answer": "6.67 × 10¹¹ N m² kg⁻²", "explanation": "The exponent is negative (10⁻¹¹), not positive. G is an extremely small number." },
+        { "answer": "6.67 × 10⁻¹¹ m s⁻²", "explanation": "The units of G are N m² kg⁻², not m s⁻²." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the formula for gravitational field strength.",
+      "sentence": "The gravitational field strength at distance r from a mass M is g = {{blank:1}}/r².",
+      "blanks": {
+        "1": {
+          "correct": "GM",
+          "correctExplanation": "g = GM/r², where G is the universal gravitational constant and M is the mass of the body producing the field.",
+          "distractors": [
+            { "answer": "Gm", "explanation": "The formula uses the mass M of the body producing the field, not the mass m of a test object." },
+            { "answer": "M", "explanation": "The gravitational constant G must be included. g = GM/r², not M/r²." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the distance r in the formula.",
+      "sentence": "In g = GM/r², the distance r is measured from the {{blank:1}} of the body producing the gravitational field.",
+      "blanks": {
+        "1": {
+          "correct": "centre of mass",
+          "correctExplanation": "The distance r is always measured from the centre of mass of the body, not from its surface.",
+          "distractors": [
+            { "answer": "surface", "explanation": "r is measured from the centre of mass, not the surface. At the surface, r equals the body's radius." },
+            { "answer": "edge", "explanation": "r is measured from the centre of mass, not the edge. For a sphere, this is the geometric centre." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the relationship between g and r.",
+      "sentence": "According to g = GM/r², the gravitational field strength {{blank:1}} as the distance from the mass increases.",
+      "blanks": {
+        "1": {
+          "correct": "decreases",
+          "correctExplanation": "Since r is in the denominator and is squared, increasing r decreases g. The field weakens with distance.",
+          "distractors": [
+            { "answer": "increases", "explanation": "g decreases with increasing distance because r² is in the denominator." },
+            { "answer": "remains constant", "explanation": "g changes with distance. It decreases as r increases, following the inverse square law." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "tf",
+      "question": "In g = GM/r², the value of g depends on the mass of the object placed in the field.",
+      "correct": "False",
+      "correctExplanation": "g = GM/r² depends only on the mass M of the body producing the field and the distance r. It does not depend on the mass of the object in the field.",
+      "distractors": [
+        { "answer": "True", "explanation": "g depends on M (the source mass) and r (the distance), not on the mass of the object experiencing the field." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "The formula g = GM/r² can be used to calculate the gravitational field strength at any distance from a mass, including at the surface.",
+      "correct": "True",
+      "correctExplanation": "The formula applies at any distance r from the centre of mass, including at the surface (where r equals the body's radius) and at orbital altitudes.",
+      "distractors": [
+        { "answer": "False", "explanation": "The formula is valid at any distance outside the body (r ≥ R). At the surface, r = R, and the formula gives the surface gravity." }
+      ]
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "mc",
+      "question": "Calculate the gravitational field strength at Earth's surface. (M = 5.97 × 10²⁴ kg, R = 6.37 × 10⁶ m)",
+      "correct": "9.81 N kg⁻¹",
+      "correctExplanation": "g = GM/R² = (6.67 × 10⁻¹¹ × 5.97 × 10²⁴)/(6.37 × 10⁶)² = 3.98 × 10¹⁴/4.06 × 10¹³ = 9.81 N kg⁻¹.",
+      "distractors": [
+        { "answer": "6.67 × 10⁻¹¹ N kg⁻¹", "explanation": "This is the value of G, not g. The full calculation gives g = 9.81 N kg⁻¹." },
+        { "answer": "5.97 × 10²⁴ N kg⁻¹", "explanation": "This is Earth's mass, not the field strength. g = GM/R² = 9.81 N kg⁻¹." },
+        { "answer": "98.1 N kg⁻¹", "explanation": "This is ten times too large. g = GM/R² = 9.81 N kg⁻¹." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "The ISS orbits at 408 km above Earth's surface. What value of r should be used to calculate g at this altitude? (Earth's radius = 6.37 × 10⁶ m)",
+      "correct": "6.778 × 10⁶ m",
+      "correctExplanation": "r = Earth's radius + altitude = 6.37 × 10⁶ + 4.08 × 10⁵ = 6.778 × 10⁶ m. The distance is measured from Earth's centre.",
+      "distractors": [
+        { "answer": "4.08 × 10⁵ m", "explanation": "This is the altitude above the surface. r must be measured from Earth's centre: r = 6.37 × 10⁶ + 4.08 × 10⁵." },
+        { "answer": "6.37 × 10⁶ m", "explanation": "This is Earth's radius only. The altitude must be added: r = 6.37 × 10⁶ + 4.08 × 10⁵ = 6.778 × 10⁶ m." },
+        { "answer": "1.274 × 10⁷ m", "explanation": "This appears to be twice Earth's radius. The correct r = RE + altitude = 6.778 × 10⁶ m." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Calculate g at the ISS altitude (r = 6.778 × 10⁶ m from Earth's centre, M = 5.97 × 10²⁴ kg).",
+      "correct": "8.67 N kg⁻¹",
+      "correctExplanation": "g = GM/r² = (6.67 × 10⁻¹¹ × 5.97 × 10²⁴)/(6.778 × 10⁶)² = 3.98 × 10¹⁴/4.594 × 10¹³ = 8.67 N kg⁻¹.",
+      "distractors": [
+        { "answer": "9.81 N kg⁻¹", "explanation": "This is the surface value. At ISS altitude, g is reduced to 8.67 N kg⁻¹." },
+        { "answer": "0 N kg⁻¹", "explanation": "g is not zero at ISS altitude. It is 8.67 N kg⁻¹, about 88% of the surface value." },
+        { "answer": "86.7 N kg⁻¹", "explanation": "This is ten times too large. g = 8.67 N kg⁻¹ at ISS altitude." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A planet has mass 3.0 × 10²³ kg and radius 2.5 × 10⁶ m. What is the surface gravitational field strength?",
+      "correct": "3.2 N kg⁻¹",
+      "correctExplanation": "g = GM/R² = (6.67 × 10⁻¹¹ × 3.0 × 10²³)/(2.5 × 10⁶)² = 2.0 × 10¹³/6.25 × 10¹² = 3.2 N kg⁻¹.",
+      "distractors": [
+        { "answer": "8.0 × 10⁶ N kg⁻¹", "explanation": "This is far too large. Check the calculation: g = 2.0 × 10¹³/6.25 × 10¹² = 3.2 N kg⁻¹." },
+        { "answer": "0.32 N kg⁻¹", "explanation": "This is ten times too small. g = 2.0 × 10¹³/6.25 × 10¹² = 3.2 N kg⁻¹." },
+        { "answer": "32 N kg⁻¹", "explanation": "This is ten times too large. g = 3.2 N kg⁻¹." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "If the mass of a planet is doubled but its radius stays the same, what happens to the surface gravitational field strength?",
+      "correct": "It doubles",
+      "correctExplanation": "g = GM/R². Doubling M gives g_new = G(2M)/R² = 2GM/R² = 2g. The field strength doubles.",
+      "distractors": [
+        { "answer": "It quadruples", "explanation": "Doubling the mass doubles g (since g ∝ M). It does not quadruple." },
+        { "answer": "It halves", "explanation": "Doubling the mass increases g. g is directly proportional to M." },
+        { "answer": "It remains the same", "explanation": "g depends on M. Doubling M doubles the field strength." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "If the radius of a planet is doubled but its mass stays the same, what happens to the surface gravitational field strength?",
+      "correct": "It decreases to one-quarter of the original value",
+      "correctExplanation": "g = GM/R². Doubling R gives g_new = GM/(2R)² = GM/4R² = g/4.",
+      "distractors": [
+        { "answer": "It halves", "explanation": "Doubling R causes g to decrease by R² = 4, not by 2." },
+        { "answer": "It doubles", "explanation": "Doubling the radius decreases the surface g because R is in the denominator squared." },
+        { "answer": "It remains the same", "explanation": "g depends on R². Doubling R reduces the surface field strength to one-quarter." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the calculation of g at a planet's surface.",
+      "sentence": "For a planet with M = 6.0 × 10²⁴ kg and R = 6.4 × 10⁶ m, g = GM/R² = {{blank:1}} N kg⁻¹.",
+      "blanks": {
+        "1": {
+          "correct": "9.77",
+          "correctExplanation": "g = (6.67 × 10⁻¹¹ × 6.0 × 10²⁴)/(6.4 × 10⁶)² = 4.0 × 10¹⁴/4.1 × 10¹³ = 9.77 N kg⁻¹.",
+          "distractors": [
+            { "answer": "97.7", "explanation": "This is ten times too large. g = 4.0 × 10¹⁴/4.1 × 10¹³ ≈ 9.77 N kg⁻¹." },
+            { "answer": "0.977", "explanation": "This is ten times too small. g ≈ 9.77 N kg⁻¹." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about calculating r for an altitude problem.",
+      "sentence": "To find g at 1000 km above Earth's surface, r = Earth's radius + {{blank:1}} = 7.37 × 10⁶ m.",
+      "blanks": {
+        "1": {
+          "correct": "1000 km",
+          "correctExplanation": "r = RE + altitude = 6.37 × 10⁶ + 1.0 × 10⁶ = 7.37 × 10⁶ m.",
+          "distractors": [
+            { "answer": "1000 m", "explanation": "1000 km = 1.0 × 10⁶ m, not 1000 m. The altitude must be converted to metres correctly." },
+            { "answer": "Earth's diameter", "explanation": "The altitude (1000 km) is added to Earth's radius, not its diameter." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about what g depends on.",
+      "sentence": "g = GM/r² shows that the gravitational field strength depends on the {{blank:1}} of the body producing the field and the distance from its centre.",
+      "blanks": {
+        "1": {
+          "correct": "mass",
+          "correctExplanation": "g is directly proportional to M, the mass of the body producing the field. A more massive body produces a stronger field.",
+          "distractors": [
+            { "answer": "volume", "explanation": "g depends on mass, not volume directly. Two objects of different volumes but the same mass and radius have the same surface g." },
+            { "answer": "density", "explanation": "While density affects mass for a given volume, g = GM/r² directly depends on mass and distance." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "tf",
+      "question": "A planet with twice the mass and twice the radius of Earth has the same surface gravitational field strength as Earth.",
+      "correct": "False",
+      "correctExplanation": "g = GM/R². With 2M and 2R: g = G(2M)/(2R)² = 2GM/4R² = GM/2R² = g_Earth/2. The field strength is half of Earth's.",
+      "distractors": [
+        { "answer": "True", "explanation": "Doubling both mass and radius gives g = 2GM/4R² = g/2, which is half of Earth's, not the same." }
+      ]
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "mc",
+      "question": "Calculate g at an altitude of 2000 km above Earth's surface. (M = 5.97 × 10²⁴ kg, RE = 6.37 × 10⁶ m)",
+      "correct": "5.68 N kg⁻¹",
+      "correctExplanation": "r = 6.37 × 10⁶ + 2.0 × 10⁶ = 8.37 × 10⁶ m. g = (6.67 × 10⁻¹¹ × 5.97 × 10²⁴)/(8.37 × 10⁶)² = 3.98 × 10¹⁴/7.0 × 10¹³ = 5.68 N kg⁻¹.",
+      "distractors": [
+        { "answer": "9.81 N kg⁻¹", "explanation": "This is the surface value. At 2000 km altitude, g is significantly reduced." },
+        { "answer": "1.99 N kg⁻¹", "explanation": "This uses r = 2.0 × 10⁶ m (the altitude) instead of the distance from Earth's centre." },
+        { "answer": "56.8 N kg⁻¹", "explanation": "This is ten times too large. g = 5.68 N kg⁻¹ at 2000 km altitude." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "The surface gravitational field strength of Mars is 3.7 N kg⁻¹. Mars has a radius of 3.4 × 10⁶ m. What is the mass of Mars?",
+      "correct": "6.4 × 10²³ kg",
+      "correctExplanation": "Rearranging: M = gR²/G = (3.7 × (3.4 × 10⁶)²)/(6.67 × 10⁻¹¹) = (3.7 × 1.156 × 10¹³)/(6.67 × 10⁻¹¹) = 6.4 × 10²³ kg.",
+      "distractors": [
+        { "answer": "6.4 × 10²⁰ kg", "explanation": "This is three orders of magnitude too small. M = gR²/G = 6.4 × 10²³ kg." },
+        { "answer": "6.4 × 10²⁶ kg", "explanation": "This is three orders of magnitude too large. M = 6.4 × 10²³ kg." },
+        { "answer": "3.7 × 10²⁴ kg", "explanation": "This is not the correct result. M = gR²/G = 6.4 × 10²³ kg." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A moon has a surface g of 1.6 N kg⁻¹ and a mass of 7.3 × 10²² kg. What is the radius of this moon?",
+      "correct": "1.7 × 10⁶ m",
+      "correctExplanation": "R² = GM/g = (6.67 × 10⁻¹¹ × 7.3 × 10²²)/1.6 = 4.87 × 10¹²/1.6 = 3.04 × 10¹². R = √(3.04 × 10¹²) = 1.7 × 10⁶ m.",
+      "distractors": [
+        { "answer": "3.04 × 10¹² m", "explanation": "This is R², not R. The square root must be taken: √(3.04 × 10¹²) = 1.7 × 10⁶ m." },
+        { "answer": "1.7 × 10³ m", "explanation": "This is three orders of magnitude too small. R = 1.7 × 10⁶ m." },
+        { "answer": "1.7 × 10⁹ m", "explanation": "This is three orders of magnitude too large. R = 1.7 × 10⁶ m." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "At what altitude above Earth's surface does g equal 4.9 N kg⁻¹ (half the surface value)? (M = 5.97 × 10²⁴ kg, RE = 6.37 × 10⁶ m)",
+      "correct": "2.64 × 10⁶ m",
+      "correctExplanation": "g = GM/r² → r = √(GM/g) = √(3.98 × 10¹⁴/4.9) = √(8.12 × 10¹³) = 9.01 × 10⁶ m. Altitude = 9.01 × 10⁶ − 6.37 × 10⁶ = 2.64 × 10⁶ m.",
+      "distractors": [
+        { "answer": "6.37 × 10⁶ m", "explanation": "This equals one Earth radius above the surface. At 2RE from centre, g = g_surface/4, not half." },
+        { "answer": "9.01 × 10⁶ m", "explanation": "This is the total distance from Earth's centre. The altitude above the surface is 9.01 − 6.37 = 2.64 × 10⁶ m." },
+        { "answer": "3.19 × 10⁶ m", "explanation": "This is half Earth's radius. The correct altitude where g halves is 2.64 × 10⁶ m." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Planet A has mass 4M and radius 2R compared to Planet B (mass M, radius R). What is the ratio g_A/g_B?",
+      "correct": "1",
+      "correctExplanation": "g_A = G(4M)/(2R)² = 4GM/4R² = GM/R² = g_B. So g_A/g_B = 1.",
+      "distractors": [
+        { "answer": "4", "explanation": "This accounts for the mass factor but not the radius factor. g_A = 4GM/(4R²) = GM/R² = g_B." },
+        { "answer": "2", "explanation": "The mass increase (×4) and radius increase (÷4 via R²) cancel exactly, giving a ratio of 1." },
+        { "answer": "0.25", "explanation": "This only accounts for the radius change. The mass increase and radius decrease cancel, giving 1." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student forgets to square r in the formula and calculates g = GM/r instead of g = GM/r². How does their answer compare to the correct value at Earth's surface?",
+      "correct": "Their answer is too large by a factor of r (about 6.37 × 10⁶)",
+      "correctExplanation": "GM/r = (GM/r²) × r = g × r. Their answer is g × 6.37 × 10⁶, which is enormously too large.",
+      "distractors": [
+        { "answer": "Their answer is too small by a factor of r", "explanation": "Missing the square in the denominator makes the result larger, not smaller." },
+        { "answer": "Their answer is the same", "explanation": "Omitting the square completely changes the result. GM/r ≠ GM/r²." },
+        { "answer": "Their answer is too large by a factor of 2", "explanation": "The error factor is r ≈ 6.37 × 10⁶, not 2. The square is essential." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A satellite orbits a planet at a distance of 3R from the centre (where R is the planet's radius). If the surface g = 20 N kg⁻¹, what is g at the satellite's position?",
+      "correct": "2.2 N kg⁻¹",
+      "correctExplanation": "g at 3R = g_surface × (R/3R)² = 20/9 = 2.2 N kg⁻¹.",
+      "distractors": [
+        { "answer": "6.7 N kg⁻¹", "explanation": "This divides by 3 instead of 3². The inverse square law gives g = 20/9 = 2.2." },
+        { "answer": "60 N kg⁻¹", "explanation": "This multiplies by 3. At a greater distance, g decreases, not increases." },
+        { "answer": "0.74 N kg⁻¹", "explanation": "This divides by 27 (3³). The correct factor is 1/3² = 1/9." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the rearrangement to find the mass of a planet.",
+      "sentence": "Rearranging g = GM/r² to find the mass: M = {{blank:1}}.",
+      "blanks": {
+        "1": {
+          "correct": "gr²/G",
+          "correctExplanation": "From g = GM/r², multiply both sides by r² and divide by G: M = gr²/G.",
+          "distractors": [
+            { "answer": "gG/r²", "explanation": "This places G in the numerator. The correct rearrangement is M = gr²/G." },
+            { "answer": "g/Gr²", "explanation": "This has r² in the denominator. The correct rearrangement is M = gr²/G." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the calculation for g at 2RE from Earth's centre.",
+      "sentence": "At a distance of 2RE from Earth's centre, g = GM/(2RE)² = GM/(4RE²) = {{blank:1}} × g_surface.",
+      "blanks": {
+        "1": {
+          "correct": "1/4",
+          "correctExplanation": "g = GM/(2RE)² = GM/(4RE²) = (1/4)(GM/RE²) = g_surface/4.",
+          "distractors": [
+            { "answer": "1/2", "explanation": "The factor is 1/2² = 1/4, not 1/2. The distance must be squared." },
+            { "answer": "4", "explanation": "The factor is 1/4, not 4. Increasing distance decreases g." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about g at the ISS altitude.",
+      "sentence": "At the ISS altitude (r = 6.778 × 10⁶ m), g = {{blank:1}} N kg⁻¹, which is about 88% of the surface value.",
+      "blanks": {
+        "1": {
+          "correct": "8.67",
+          "correctExplanation": "g = GM/r² = (6.67 × 10⁻¹¹ × 5.97 × 10²⁴)/(6.778 × 10⁶)² ≈ 8.67 N kg⁻¹.",
+          "distractors": [
+            { "answer": "9.81", "explanation": "9.81 is the surface value. At ISS altitude, g is reduced to approximately 8.67 N kg⁻¹." },
+            { "answer": "0.87", "explanation": "0.87 is not the field strength — 8.67 N kg⁻¹ is the correct value." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "mc",
+      "question": "A newly discovered exoplanet has a mass of 8.0 × 10²⁵ kg and radius of 1.2 × 10⁷ m. What is its surface gravitational field strength?",
+      "correct": "37.1 N kg⁻¹",
+      "correctExplanation": "g = GM/R² = (6.67 × 10⁻¹¹ × 8.0 × 10²⁵)/(1.2 × 10⁷)² = 5.336 × 10¹⁵/1.44 × 10¹⁴ = 37.1 N kg⁻¹.",
+      "distractors": [
+        { "answer": "3.71 N kg⁻¹", "explanation": "This is ten times too small. g = 5.336 × 10¹⁵/1.44 × 10¹⁴ = 37.1 N kg⁻¹." },
+        { "answer": "371 N kg⁻¹", "explanation": "This is ten times too large. g = 37.1 N kg⁻¹." },
+        { "answer": "4.44 N kg⁻¹", "explanation": "This uses r instead of r² in the denominator. The correct value is 37.1 N kg⁻¹." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "The gravitational field strength at the surface of a planet is 15 N kg⁻¹. At what distance from the planet's centre is g = 0.6 N kg⁻¹?",
+      "correct": "5R",
+      "correctExplanation": "g_surface/g = (r/R)²: 15/0.6 = 25 = (r/R)². So r/R = 5, giving r = 5R.",
+      "distractors": [
+        { "answer": "25R", "explanation": "25 is the ratio of field strengths, not distances. The distance ratio is √25 = 5." },
+        { "answer": "R/5", "explanation": "Moving closer increases g. To get g that is 25 times weaker, the distance must be 5 times greater." },
+        { "answer": "10R", "explanation": "At 10R, g = g_surface/100 = 0.15 N kg⁻¹. For g = 0.6, the distance is 5R." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Luca measures g at two points: 8.0 N kg⁻¹ at 8.0 × 10⁶ m from a planet's centre, and 2.0 N kg⁻¹ at a further distance. What is this further distance?",
+      "correct": "1.6 × 10⁷ m",
+      "correctExplanation": "g₁/g₂ = (r₂/r₁)²: 8.0/2.0 = 4 = (r₂/r₁)². So r₂ = 2 × 8.0 × 10⁶ = 1.6 × 10⁷ m.",
+      "distractors": [
+        { "answer": "3.2 × 10⁷ m", "explanation": "This uses the field ratio (4) as the distance ratio. The distance ratio is √4 = 2." },
+        { "answer": "4.0 × 10⁶ m", "explanation": "This halves the first distance. A weaker field means greater distance, not less." },
+        { "answer": "2.0 × 10⁶ m", "explanation": "This is much closer. The weaker field requires a greater distance: r₂ = 2 × 8.0 × 10⁶ = 1.6 × 10⁷ m." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Two planets have masses M₁ = 2.0 × 10²⁴ kg and M₂ = 8.0 × 10²⁴ kg, and radii R₁ = 5.0 × 10⁶ m and R₂ = 1.0 × 10⁷ m. Which planet has the stronger surface gravitational field strength?",
+      "correct": "They have the same surface gravitational field strength",
+      "correctExplanation": "g₁ = GM₁/R₁² = (6.67 × 10⁻¹¹ × 2.0 × 10²⁴)/(5.0 × 10⁶)² = 5.34 N kg⁻¹. g₂ = (6.67 × 10⁻¹¹ × 8.0 × 10²⁴)/(1.0 × 10⁷)² = 5.34 N kg⁻¹. Planet 2 has four times the mass but twice the radius, and (2R)² = 4R², so the effects cancel exactly.",
+      "distractors": [
+        { "answer": "Planet 2, because it has more mass", "explanation": "Despite having four times the mass, Planet 2 has twice the radius. Since g ∝ M/R², the factors cancel: 4M/(2R)² = 4M/4R² = M/R²." },
+        { "answer": "Planet 1, because it has a smaller radius", "explanation": "While Planet 1 has a smaller radius (which increases g), it also has less mass (which decreases g). The effects cancel exactly." },
+        { "answer": "Cannot be determined without more information", "explanation": "The surface g can be calculated directly from the given mass and radius for each planet." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student calculates g at a distance of 1.0 × 10⁷ m from a planet of mass 4.0 × 10²⁴ kg. They get g = 2.668 N kg⁻¹. Verify this calculation.",
+      "correct": "The calculation is correct: g = (6.67 × 10⁻¹¹ × 4.0 × 10²⁴)/(1.0 × 10⁷)² = 2.668 N kg⁻¹",
+      "correctExplanation": "g = GM/r² = (6.67 × 10⁻¹¹ × 4.0 × 10²⁴)/(1.0 × 10¹⁴) = 2.668 × 10¹⁴/1.0 × 10¹⁴ = 2.668 N kg⁻¹. The answer is correct.",
+      "distractors": [
+        { "answer": "The answer should be 26.68 N kg⁻¹ because the student divided by r instead of r²", "explanation": "The student correctly used r² = (10⁷)² = 10¹⁴. The answer of 2.668 is correct." },
+        { "answer": "The answer should be 0.2668 N kg⁻¹ because the student forgot to square r", "explanation": "The student's answer of 2.668 correctly uses r² in the denominator." },
+        { "answer": "The answer cannot be checked without knowing the planet's radius", "explanation": "The radius is not needed. g = GM/r² can be calculated for any distance r from the centre." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "At what distance from the centre of a 5.0 × 10²⁴ kg planet is the gravitational field strength exactly 1.0 N kg⁻¹?",
+      "correct": "1.83 × 10⁷ m",
+      "correctExplanation": "r = √(GM/g) = √((6.67 × 10⁻¹¹ × 5.0 × 10²⁴)/1.0) = √(3.335 × 10¹⁴) = 1.83 × 10⁷ m.",
+      "distractors": [
+        { "answer": "3.335 × 10¹⁴ m", "explanation": "This is r², not r. The square root must be taken: r = 1.83 × 10⁷ m." },
+        { "answer": "1.83 × 10⁴ m", "explanation": "This is three orders of magnitude too small. r = 1.83 × 10⁷ m." },
+        { "answer": "5.77 × 10⁷ m", "explanation": "This uses the cube root instead of the square root. r = √(GM/g) = 1.83 × 10⁷ m." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "The gravitational field strength at the surface of the Moon is 1.62 N kg⁻¹. The Moon's mass is 7.35 × 10²² kg. Calculate the Moon's radius.",
+      "correct": "1.74 × 10⁶ m",
+      "correctExplanation": "R = √(GM/g) = √((6.67 × 10⁻¹¹ × 7.35 × 10²²)/1.62) = √(4.9 × 10¹²/1.62) = √(3.02 × 10¹²) = 1.74 × 10⁶ m.",
+      "distractors": [
+        { "answer": "3.02 × 10¹² m", "explanation": "This is R², not R. The square root must be taken: R = 1.74 × 10⁶ m." },
+        { "answer": "1.74 × 10³ m", "explanation": "This is three orders of magnitude too small. The Moon's radius is 1.74 × 10⁶ m." },
+        { "answer": "1.74 × 10⁹ m", "explanation": "This is three orders of magnitude too large. The Moon's radius is 1.74 × 10⁶ m." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A probe is at a distance of 2.0 × 10⁷ m from a planet's centre where g = 5.0 N kg⁻¹. It then moves to 8.0 × 10⁷ m. What is g at the new position?",
+      "correct": "0.31 N kg⁻¹",
+      "correctExplanation": "Distance ratio: 8.0/2.0 = 4. By inverse square law: g = 5.0/4² = 5.0/16 = 0.3125 ≈ 0.31 N kg⁻¹.",
+      "distractors": [
+        { "answer": "1.25 N kg⁻¹", "explanation": "This divides by 4 instead of 4². The inverse square law requires squaring: g = 5.0/16 = 0.31." },
+        { "answer": "20 N kg⁻¹", "explanation": "This multiplies by 4. Increasing distance decreases g: g = 5.0/16 = 0.31 N kg⁻¹." },
+        { "answer": "80 N kg⁻¹", "explanation": "This multiplies by 16. Increasing distance decreases g, not increases it." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the effect of mass and radius on surface g.",
+      "sentence": "If a planet has three times Earth's mass and the same radius, its surface g is {{blank:1}} times Earth's surface g.",
+      "blanks": {
+        "1": {
+          "correct": "3",
+          "correctExplanation": "g = GM/R². With 3M and same R: g = G(3M)/R² = 3GM/R² = 3g_Earth.",
+          "distractors": [
+            { "answer": "9", "explanation": "g is proportional to M, not M². Three times the mass gives three times the surface g." },
+            { "answer": "1/3", "explanation": "Increasing mass increases g. Three times the mass gives three times the surface g." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the rearrangement to find the radius of a planet.",
+      "sentence": "From g = GM/R², rearranging for R gives R = {{blank:1}}.",
+      "blanks": {
+        "1": {
+          "correct": "√(GM/g)",
+          "correctExplanation": "From g = GM/R²: R² = GM/g, so R = √(GM/g).",
+          "distractors": [
+            { "answer": "GM/g", "explanation": "This gives R², not R. The square root must be taken: R = √(GM/g)." },
+            { "answer": "√(g/GM)", "explanation": "This inverts the fraction. From R² = GM/g, so R = √(GM/g)." }
+          ]
+        }
+      }
+    }
+  ]
+}
