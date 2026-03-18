@@ -1477,15 +1477,21 @@ function buildTimeSeriesData(rows, nameMap) {
     events.sort((a, b) => a.timestamp - b.timestamp);
 
     let cumAttempts = 0, cumCorrect = 0, cumActiveMs = 0;
+    const recentWindow = []; // sliding window of last N correct/incorrect results
+    const WINDOW_SIZE = 20;
     const dataPoints = [];
 
     events.forEach(ev => {
       if (ev.eventType === 'quiz-result') {
         cumAttempts++;
         if (ev.correct) cumCorrect++;
+        recentWindow.push(ev.correct ? 1 : 0);
+        if (recentWindow.length > WINDOW_SIZE) recentWindow.shift();
       } else if (ev.eventType === 'session-end') {
         cumActiveMs += ev.activeMs;
       }
+      const windowAcc = recentWindow.length > 0
+        ? recentWindow.reduce((s, v) => s + v, 0) / recentWindow.length : 0;
       // Emit a data point at every event (so both axes update)
       dataPoints.push({
         date: ev.timestamp,
@@ -1494,6 +1500,7 @@ function buildTimeSeriesData(rows, nameMap) {
         cumulativeCorrect: cumCorrect,
         cumulativeActiveMinutes: cumActiveMs / 60000,
         rollingAccuracy: cumAttempts > 0 ? cumCorrect / cumAttempts : 0,
+        windowAccuracy: windowAcc,
       });
     });
 
@@ -1572,29 +1579,71 @@ function quadrantPlugin(medX, medY, labelsArr, descsArr) {
 
       if (medX != null) {
         const xPx = scales.x.getPixelForValue(medX);
-        // Quadrant labels (bold name + lighter descriptor)
-        const cx = [
-          (chartArea.left + xPx) / 2,
-          (xPx + chartArea.right) / 2,
-          (chartArea.left + xPx) / 2,
-          (xPx + chartArea.right) / 2,
+        // Quadrant labels — each clipped to its own quadrant bounds
+        const quads = [
+          { l: chartArea.left, r: xPx, t: yPx, b: chartArea.bottom },
+          { l: xPx, r: chartArea.right, t: yPx, b: chartArea.bottom },
+          { l: chartArea.left, r: xPx, t: chartArea.top, b: yPx },
+          { l: xPx, r: chartArea.right, t: chartArea.top, b: yPx },
         ];
-        const cy = [
-          (yPx + chartArea.bottom) / 2,
-          (yPx + chartArea.bottom) / 2,
-          (chartArea.top + yPx) / 2,
-          (chartArea.top + yPx) / 2,
-        ];
-        ctx.textAlign = 'center';
+
+        // Word-wrap helper: splits text into lines that fit within maxWidth
+        function wrapText(text, maxWidth, font) {
+          ctx.font = font;
+          const words = text.split(/\s+/);
+          const lines = [];
+          let line = '';
+          for (const word of words) {
+            const test = line ? line + ' ' + word : word;
+            if (ctx.measureText(test).width > maxWidth && line) {
+              lines.push(line);
+              line = word;
+            } else {
+              line = test;
+            }
+          }
+          if (line) lines.push(line);
+          return lines;
+        }
+
         for (let i = 0; i < 4; i++) {
-          ctx.font = 'bold 8px -apple-system, BlinkMacSystemFont, sans-serif';
+          const q = quads[i];
+          const qw = q.r - q.l;
+          const qh = q.b - q.t;
+          if (qw < 30 || qh < 20) continue;
+          const cx = (q.l + q.r) / 2;
+          const cy = (q.t + q.b) / 2;
+          const pad = 6; // padding from quadrant edges
+          const maxTextW = qw - pad * 2;
+
+          // Clip to this quadrant only
+          ctx.save();
+          ctx.beginPath();
+          ctx.rect(q.l, q.t, qw, qh);
+          ctx.clip();
+
+          // Bold label
+          ctx.textAlign = 'center';
+          const labelFont = 'bold 8px -apple-system, BlinkMacSystemFont, sans-serif';
+          ctx.font = labelFont;
           ctx.fillStyle = '#94a3b8';
           ctx.textBaseline = 'bottom';
-          ctx.fillText(labels[i], cx[i], cy[i]);
-          ctx.font = '7px -apple-system, BlinkMacSystemFont, sans-serif';
-          ctx.fillStyle = '#b0b8c4';
-          ctx.textBaseline = 'top';
-          ctx.fillText(descs[i], cx[i], cy[i] + 1);
+          ctx.fillText(labels[i], cx, cy);
+
+          // Descriptor — word-wrapped within quadrant width
+          if (qh > 30) {
+            const descFont = '7px -apple-system, BlinkMacSystemFont, sans-serif';
+            const descLines = wrapText(descs[i], maxTextW, descFont);
+            ctx.font = descFont;
+            ctx.fillStyle = '#b0b8c4';
+            ctx.textBaseline = 'top';
+            const lineH = 9;
+            descLines.forEach((line, li) => {
+              ctx.fillText(line, cx, cy + 2 + li * lineH);
+            });
+          }
+
+          ctx.restore();
         }
       } else {
         // Horizontal-only: label the median line
@@ -1615,21 +1664,23 @@ function startEndPlugin() {
     id: 'startEndLabels',
     afterDraw(chart) {
       const { ctx } = chart;
-      // Dataset 1 = start point, Dataset 2 = end point
-      if (chart.data.datasets.length < 3) return;
-      const startMeta = chart.getDatasetMeta(1);
-      const endMeta = chart.getDatasetMeta(2);
+      // Find start/end datasets by label (works regardless of dataset count)
+      const startIdx = chart.data.datasets.findIndex(d => d.label === 'Start');
+      const endIdx = chart.data.datasets.findIndex(d => d.label === 'End');
+      if (startIdx < 0 || endIdx < 0) return;
 
       ctx.save();
       ctx.font = 'bold 9px -apple-system, BlinkMacSystemFont, sans-serif';
       ctx.textAlign = 'center';
       ctx.textBaseline = 'bottom';
 
+      const startMeta = chart.getDatasetMeta(startIdx);
       if (startMeta.data[0]) {
         const { x, y } = startMeta.data[0];
         ctx.fillStyle = '#64748b';
         ctx.fillText('S', x, y - 6);
       }
+      const endMeta = chart.getDatasetMeta(endIdx);
       if (endMeta.data[0]) {
         const { x, y } = endMeta.data[0];
         ctx.fillStyle = '#1e293b';
@@ -1760,7 +1811,14 @@ function renderTimelineCharts(metrics, tsData) {
     // ── Chart 2: Accuracy x Practice Volume ──
     const scatterAttCtx = document.getElementById('timeline-scatter-attempts-' + idx);
     if (scatterAttCtx) {
-      const attCap = 80;
+      // Dynamic X cap: max attempts across ALL students in this render, with 10% padding
+      const allStudentMaxAttempts = metrics.reduce((mx, s) => {
+        const sp = tsData.students[s.name];
+        if (!sp) return mx;
+        const last = sp[sp.length - 1];
+        return last ? Math.max(mx, last.cumulativeAttempts) : mx;
+      }, 0);
+      const attCap = Math.max(80, Math.ceil(allStudentMaxAttempts * 1.1 / 10) * 10);
       timelineChartInstances.push(new Chart(scatterAttCtx.getContext('2d'), {
         type: 'scatter',
         data: {
@@ -1768,7 +1826,7 @@ function renderTimelineCharts(metrics, tsData) {
             {
               label: 'Path',
               data: quizPoints.map(p => ({
-                x: Math.min(p.cumulativeAttempts, attCap),
+                x: p.cumulativeAttempts,
                 y: Math.round(p.rollingAccuracy * 1000) / 10,
               })),
               showLine: true,
@@ -1782,7 +1840,7 @@ function renderTimelineCharts(metrics, tsData) {
             },
             {
               label: 'Start',
-              data: [{ x: Math.min(first.cumulativeAttempts, attCap), y: Math.round(first.rollingAccuracy * 1000) / 10 }],
+              data: [{ x: first.cumulativeAttempts, y: Math.round(first.rollingAccuracy * 1000) / 10 }],
               pointStyle: 'rectRot',
               pointRadius: 5,
               backgroundColor: '#94a3b8',
@@ -1791,7 +1849,7 @@ function renderTimelineCharts(metrics, tsData) {
             },
             {
               label: 'End',
-              data: [{ x: Math.min(last.cumulativeAttempts, attCap), y: Math.round(last.rollingAccuracy * 1000) / 10 }],
+              data: [{ x: last.cumulativeAttempts, y: Math.round(last.rollingAccuracy * 1000) / 10 }],
               pointStyle: 'triangle',
               pointRadius: 6,
               backgroundColor: colour,
@@ -1843,17 +1901,17 @@ function renderTimelineCharts(metrics, tsData) {
           },
         },
         plugins: [
-          quadrantPlugin(Math.min(medians.medianAttempts, attCap), medians.medianAccuracy * 100),
+          quadrantPlugin(medians.medianAttempts, medians.medianAccuracy * 100),
           startEndPlugin(),
         ],
       }));
 
       // Store trajectory data and attach shift-click handler
-      const medAtt = Math.min(medians.medianAttempts, attCap);
+      const medAtt = medians.medianAttempts;
       const medAcc = medians.medianAccuracy * 100;
-      const startX = Math.min(first.cumulativeAttempts, attCap);
+      const startX = first.cumulativeAttempts;
       const startY = Math.round(first.rollingAccuracy * 1000) / 10;
-      const endX = Math.min(last.cumulativeAttempts, attCap);
+      const endX = last.cumulativeAttempts;
       const endY = Math.round(last.rollingAccuracy * 1000) / 10;
       trajectoryStore[idx] = {
         studentName: student.name,
@@ -1866,7 +1924,7 @@ function renderTimelineCharts(metrics, tsData) {
       };
     }
 
-    // ── Chart 3: Accuracy Over Calendar Time ──
+    // ── Chart 3: Accuracy Over Calendar Time (cumulative + rolling window) ──
     const scatterTimeCtx = document.getElementById('timeline-scatter-time-' + idx);
     if (scatterTimeCtx) {
       timelineChartInstances.push(new Chart(scatterTimeCtx.getContext('2d'), {
@@ -1874,17 +1932,33 @@ function renderTimelineCharts(metrics, tsData) {
         data: {
           datasets: [
             {
-              label: 'Path',
+              label: 'Cumulative',
               data: quizPoints.map(p => ({
                 x: p.date.getTime(),
                 y: Math.round(p.rollingAccuracy * 1000) / 10,
               })),
               showLine: true,
-              borderColor: colour + '80',
+              borderColor: colour + '35',
+              backgroundColor: colour + '10',
+              pointRadius: 0,
+              pointHitRadius: 8,
+              borderWidth: 1,
+              borderDash: [3, 3],
+              tension: 0.2,
+              fill: false,
+            },
+            {
+              label: 'Rolling (last 20)',
+              data: quizPoints.map(p => ({
+                x: p.date.getTime(),
+                y: Math.round(p.windowAccuracy * 1000) / 10,
+              })),
+              showLine: true,
+              borderColor: colour,
               backgroundColor: colour + '20',
               pointRadius: 1,
               pointHitRadius: 8,
-              borderWidth: 1.5,
+              borderWidth: 2,
               tension: 0.2,
               fill: false,
             },
@@ -1899,7 +1973,7 @@ function renderTimelineCharts(metrics, tsData) {
             },
             {
               label: 'End',
-              data: [{ x: last.date.getTime(), y: Math.round(last.rollingAccuracy * 1000) / 10 }],
+              data: [{ x: last.date.getTime(), y: Math.round(last.windowAccuracy * 1000) / 10 }],
               pointStyle: 'triangle',
               pointRadius: 6,
               backgroundColor: colour,
@@ -1913,7 +1987,7 @@ function renderTimelineCharts(metrics, tsData) {
           maintainAspectRatio: true,
           animation: false,
           plugins: {
-            legend: { display: false },
+            legend: { display: true, position: 'bottom', labels: { font: { size: 7 }, boxWidth: 10, filter: item => item.datasetIndex < 2 } },
             tooltip: {
               displayColors: false,
               titleFont: { size: 10, weight: 'bold' },
@@ -1922,16 +1996,16 @@ function renderTimelineCharts(metrics, tsData) {
               callbacks: {
                 title: items => {
                   const ds = items[0].datasetIndex;
-                  if (ds === 1) return 'Start';
-                  if (ds === 2) return 'Current';
+                  if (ds === 2) return 'Start';
+                  if (ds === 3) return 'Current';
                   return formatShortDate(quizPoints[items[0].dataIndex].date);
                 },
                 label: ctx => {
-                  const p = ctx.datasetIndex === 1 ? first : ctx.datasetIndex === 2 ? last : quizPoints[ctx.dataIndex];
+                  const p = ctx.datasetIndex === 2 ? first : ctx.datasetIndex === 3 ? last : quizPoints[ctx.dataIndex];
                   return [
-                    'Accuracy: ' + (Math.round(p.rollingAccuracy * 1000) / 10) + '%',
+                    'Cumulative: ' + (Math.round(p.rollingAccuracy * 1000) / 10) + '%',
+                    'Rolling (last 20): ' + (Math.round(p.windowAccuracy * 1000) / 10) + '%',
                     p.cumulativeCorrect + ' of ' + p.cumulativeAttempts + ' correct',
-                    'Attempts so far: ' + p.cumulativeAttempts,
                   ];
                 },
               },
@@ -2289,7 +2363,7 @@ function renderCharts(metrics, benchmarks) {
         <canvas id="timeline-cumul-${idx}"></canvas>
         <h4 title="Rolling accuracy plotted against cumulative attempts. Dashed lines mark the class medians, dividing the chart into four quadrants. Grey diamond = starting position, orange triangle (E) = current position. The trajectory shows whether accuracy is improving, declining, or holding steady as practice increases." style="cursor:help;">Accuracy × Attempts</h4>
         <canvas id="timeline-scatter-attempts-${idx}"></canvas>
-        <h4 title="Rolling accuracy plotted over calendar dates. The horizontal dashed line marks the class median accuracy. Grey diamond = starting position, orange triangle (E) = current position. Look for upward trends (improving) or flattening (plateauing). Gaps between dates indicate periods of inactivity." style="cursor:help;">Accuracy Over Time</h4>
+        <h4 title="Accuracy plotted over calendar dates. The solid line shows rolling accuracy (last 20 questions) — responsive to recent performance. The dashed line shows cumulative accuracy (all-time). The horizontal dashed line marks the class median. Grey diamond = starting position, orange triangle (E) = current position." style="cursor:help;">Accuracy Over Time</h4>
         <canvas id="timeline-scatter-time-${idx}"></canvas>
       </div>
       <div class="comment-wrapper">
@@ -3022,7 +3096,21 @@ function downloadStudentPDF(idx) {
     y += 9;
     doc.setFont('helvetica', 'normal');
     addChart('timeline-cumul-' + idx, 65);
+
+    if (y + 12 > pageH - 10) { doc.addPage(); y = mT; }
+    doc.setFont('helvetica', 'bold');
+    doc.setFontSize(9);
+    doc.text('Accuracy \u00d7 Attempts', pageW / 2, y + 3, { align: 'center' });
+    y += 6;
+    doc.setFont('helvetica', 'normal');
     addChart('timeline-scatter-attempts-' + idx, 65);
+
+    if (y + 12 > pageH - 10) { doc.addPage(); y = mT; }
+    doc.setFont('helvetica', 'bold');
+    doc.setFontSize(9);
+    doc.text('Accuracy Over Time', pageW / 2, y + 3, { align: 'center' });
+    y += 6;
+    doc.setFont('helvetica', 'normal');
     addChart('timeline-scatter-time-' + idx, 65);
   }
 
