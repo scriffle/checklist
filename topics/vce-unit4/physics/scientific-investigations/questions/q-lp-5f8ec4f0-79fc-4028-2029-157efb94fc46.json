@@ -1,0 +1,583 @@
+{
+  "_link": {
+    "uuid": "lp-5f8ec4f0-79fc-4028-2029-157efb94fc46",
+    "version": "1.0",
+    "contentHash": "hash-a56679f4",
+    "title": "I can express and interpret uncertainty in measurements",
+    "generatedAt": "2026-03-10T00:00:00Z"
+  },
+  "toLevel2": [
+    {
+      "type": "MC",
+      "question": "Which of the following correctly describes what uncertainty represents in a measurement?",
+      "correct": "The range within which the true value is expected to lie",
+      "correctExplanation": "Uncertainty defines an interval around the measured value within which the true value is reasonably expected to fall.",
+      "distractors": [
+        { "answer": "The difference between the measured value and zero", "explanation": "The difference from zero is simply the measured value itself, not the uncertainty." },
+        { "answer": "The number of significant figures in the measured value", "explanation": "Significant figures indicate precision of notation, but uncertainty quantifies the range of possible true values." },
+        { "answer": "The percentage error compared to the accepted value", "explanation": "Percentage error compares a result to an accepted value, while uncertainty describes the range around a single measurement." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A measurement is recorded as 25.0 ± 0.5 cm. What does the ±0.5 cm represent?",
+      "correct": "The uncertainty in the measurement",
+      "correctExplanation": "The ±0.5 cm indicates the uncertainty, meaning the true value is expected to lie between 24.5 cm and 25.5 cm.",
+      "distractors": [
+        { "answer": "The resolution of the measuring instrument", "explanation": "Resolution is the smallest detectable change. The uncertainty may equal half the resolution for analogue instruments, but they are not the same quantity." },
+        { "answer": "The systematic error in the instrument", "explanation": "Systematic error is a consistent offset. Uncertainty expressed with ± represents the range around the measured value." },
+        { "answer": "The standard deviation of repeated trials", "explanation": "While standard deviation can inform uncertainty, ±0.5 cm here represents the measurement uncertainty, not necessarily the standard deviation." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A measurement is written as 12.3 ± 0.2 g. What is the range of values within which the true value is expected to lie?",
+      "correct": "12.1 g to 12.5 g",
+      "correctExplanation": "The range is found by subtracting and adding the uncertainty: 12.3 − 0.2 = 12.1 and 12.3 + 0.2 = 12.5.",
+      "distractors": [
+        { "answer": "12.2 g to 12.4 g", "explanation": "This range uses ±0.1, not ±0.2. The correct range extends 0.2 g either side of 12.3 g." },
+        { "answer": "12.0 g to 12.6 g", "explanation": "This range uses ±0.3, not ±0.2. The uncertainty stated is 0.2 g." },
+        { "answer": "12.3 g to 12.5 g", "explanation": "This only adds the uncertainty in one direction. The range must extend both above and below the measured value." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "On a graph, how is uncertainty in a data point typically represented?",
+      "correct": "By drawing uncertainty bars above and below the data point",
+      "correctExplanation": "Uncertainty bars (also called error bars) extend above and below each data point to show the range of possible values.",
+      "distractors": [
+        { "answer": "By using a different colour for uncertain data points", "explanation": "Colour coding does not convey the magnitude of uncertainty. Uncertainty bars show the range quantitatively." },
+        { "answer": "By making the data point symbol larger in proportion to uncertainty", "explanation": "Symbol size is not a standard convention for showing uncertainty. Bars extending from the point are used instead." },
+        { "answer": "By placing a question mark beside each data point on the graph", "explanation": "Question marks do not convey quantitative information about uncertainty. Bars with defined lengths are used." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Which of the following is the standard format for expressing a measurement with its uncertainty?",
+      "correct": "Measured value ± uncertainty",
+      "correctExplanation": "The standard notation uses the ± symbol to indicate the range around the measured value within which the true value is expected to lie.",
+      "distractors": [
+        { "answer": "Measured value × uncertainty", "explanation": "Multiplication is not used to express uncertainty. The ± symbol indicates the range above and below the value." },
+        { "answer": "Measured value / uncertainty", "explanation": "Division does not express the relationship between a value and its uncertainty. The ± format is used." },
+        { "answer": "Measured value + uncertainty only", "explanation": "Uncertainty extends in both directions (above and below), so the ± symbol is required, not just +." }
+      ]
+    },
+    {
+      "type": "TF",
+      "question": "All measurements carry some degree of uncertainty.",
+      "correct": "True",
+      "correctExplanation": "No measurement is perfectly exact. Every measurement has a finite uncertainty due to the limitations of the measuring instrument and the measurement process.",
+      "distractors": [
+        { "answer": "False", "explanation": "All physical measurements have some uncertainty. Even highly precise instruments have a finite resolution that introduces uncertainty." }
+      ]
+    },
+    {
+      "type": "TF",
+      "question": "A measurement of 50 ± 2 mm means the true value could be anywhere from 50 mm to 52 mm.",
+      "correct": "False",
+      "correctExplanation": "The ± symbol means the range extends both above and below the measured value. The true value could be from 48 mm to 52 mm, not just 50 mm to 52 mm.",
+      "distractors": [
+        { "answer": "True", "explanation": "The ± indicates a range in both directions. The lower bound is 50 − 2 = 48 mm, so the range is 48 mm to 52 mm." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the statement about how uncertainty is expressed.",
+      "sentence": "Uncertainty is written in the form: measured value {{blank:1}} uncertainty, indicating the {{blank:2}} within which the true value is expected to lie.",
+      "blanks": {
+        "1": {
+          "correct": "±",
+          "correctExplanation": "The ± symbol is the standard notation for expressing uncertainty, showing the range extends both above and below the measured value.",
+          "distractors": [
+            { "answer": "×", "explanation": "The multiplication symbol is not used to express uncertainty. The ± symbol is the correct notation." },
+            { "answer": "÷", "explanation": "The division symbol does not represent uncertainty. The ± symbol indicates the range around a measurement." }
+          ]
+        },
+        "2": {
+          "correct": "range",
+          "correctExplanation": "The uncertainty defines a range (interval) around the measured value within which the true value is expected to fall.",
+          "distractors": [
+            { "answer": "exact position", "explanation": "Uncertainty describes a range, not an exact position. The true value is somewhere within the interval." },
+            { "answer": "percentage", "explanation": "While percentage uncertainty exists, the basic ± notation defines a range of values, not a percentage." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the statement about why uncertainty is important.",
+      "sentence": "Expressing uncertainty quantifies the {{blank:1}} of a measurement and prevents {{blank:2}} claims about the result.",
+      "blanks": {
+        "1": {
+          "correct": "reliability",
+          "correctExplanation": "Uncertainty indicates how reliable a measurement is by showing the range of possible true values.",
+          "distractors": [
+            { "answer": "magnitude", "explanation": "The magnitude of a measurement is its numerical value. Uncertainty indicates reliability, not magnitude." },
+            { "answer": "complexity", "explanation": "Complexity is not a property of a measurement. Uncertainty describes its reliability." }
+          ]
+        },
+        "2": {
+          "correct": "overconfident",
+          "correctExplanation": "Without stating uncertainty, a result may appear more certain than it actually is, leading to overconfident conclusions.",
+          "distractors": [
+            { "answer": "negative", "explanation": "Uncertainty does not prevent negative claims. It prevents claiming more confidence in a result than the data supports." },
+            { "answer": "theoretical", "explanation": "Uncertainty does not prevent theoretical claims. It prevents overstating the precision of experimental results." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the interpretation of a measurement with uncertainty.",
+      "sentence": "A measurement of 35 ± 1 mm means the true value is expected to lie between {{blank:1}} mm and {{blank:2}} mm.",
+      "blanks": {
+        "1": {
+          "correct": "34",
+          "correctExplanation": "The lower bound is 35 − 1 = 34 mm.",
+          "distractors": [
+            { "answer": "33", "explanation": "33 mm would correspond to an uncertainty of ±2 mm, not ±1 mm." },
+            { "answer": "35", "explanation": "35 mm is the measured value itself, not the lower bound. The lower bound is 35 − 1 = 34 mm." }
+          ]
+        },
+        "2": {
+          "correct": "36",
+          "correctExplanation": "The upper bound is 35 + 1 = 36 mm.",
+          "distractors": [
+            { "answer": "37", "explanation": "37 mm would correspond to an uncertainty of ±2 mm, not ±1 mm." },
+            { "answer": "35", "explanation": "35 mm is the measured value, not the upper bound. The upper bound is 35 + 1 = 36 mm." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "MC",
+      "question": "Priya records a length as 48.2 ± 0.5 mm. Which of the following best explains what this notation communicates about her measurement?",
+      "correct": "The true length is expected to lie between 47.7 mm and 48.7 mm, reflecting the precision of the instrument",
+      "correctExplanation": "The ± notation defines the interval 48.2 − 0.5 to 48.2 + 0.5, communicating the range within which the true value is expected to fall based on the instrument's precision.",
+      "distractors": [
+        { "answer": "The length was measured twice and the two values differed by 0.5 mm from each other", "explanation": "The ± notation represents the uncertainty range, not the difference between two measurements." },
+        { "answer": "The true length is exactly 48.2 mm but the instrument has a systematic error of 0.5 mm", "explanation": "Uncertainty is not the same as systematic error. It represents the range of possible true values, not a fixed offset." },
+        { "answer": "The measurement has a 0.5% probability of being incorrect and a 99.5% chance of being exact", "explanation": "Uncertainty does not represent a probability percentage. It defines a range within which the true value is expected to lie." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Kai measures two objects and records 15.0 ± 0.5 cm and 15.0 ± 2.0 cm. Which of the following best explains the significance of the different uncertainties?",
+      "correct": "The first measurement is more precise because the smaller uncertainty indicates a narrower range of possible true values",
+      "correctExplanation": "A smaller uncertainty means the true value is confined to a narrower range, indicating higher precision in the measurement.",
+      "distractors": [
+        { "answer": "Both measurements are equally reliable because they have the same measured value of 15.0 cm", "explanation": "The measured values are the same but the uncertainties differ. The first measurement is more precise due to its smaller uncertainty." },
+        { "answer": "The second measurement is more reliable because a larger uncertainty accounts for more sources of error", "explanation": "A larger uncertainty means lower precision, not greater reliability. The first measurement provides a tighter constraint on the true value." },
+        { "answer": "The uncertainties are irrelevant because both measurements report the same numerical result", "explanation": "Uncertainty is essential information. Two measurements with the same value but different uncertainties have different levels of precision." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A graph shows data points with vertical uncertainty bars. Which of the following best describes what these bars represent?",
+      "correct": "The range of possible true values for the dependent variable at each data point",
+      "correctExplanation": "Vertical uncertainty bars extend above and below each point, showing the interval within which the true value of the dependent variable is expected to lie.",
+      "distractors": [
+        { "answer": "The standard deviation of the independent variable at each measurement point", "explanation": "Vertical bars represent uncertainty in the dependent variable, not the standard deviation of the independent variable." },
+        { "answer": "The maximum and minimum values obtained when the entire experiment was repeated", "explanation": "Uncertainty bars represent the uncertainty in individual measurements, not the spread of results across full experimental repeats." },
+        { "answer": "The distance between the measured point and the line of best fit on the graph", "explanation": "The distance to the line of best fit is the residual. Uncertainty bars show the measurement uncertainty for each point." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Sofia records a temperature as 22.5 ± 0.5 °C. Her classmate argues that the true value must be exactly 22.5 °C. Which of the following best explains why this argument is incorrect?",
+      "correct": "The ± notation indicates that the true value could be anywhere from 22.0 °C to 23.0 °C, not exactly 22.5 °C",
+      "correctExplanation": "The uncertainty communicates that 22.5 °C is the best estimate, but the true value lies within the range 22.0 to 23.0 °C.",
+      "distractors": [
+        { "answer": "The argument is correct because the measured value is always the true value by definition", "explanation": "No measurement perfectly captures the true value. The uncertainty quantifies how far the true value might be from the measured value." },
+        { "answer": "The argument is incorrect only if the thermometer has a known systematic error of exactly 0.5 °C", "explanation": "The uncertainty represents the range of possible true values regardless of systematic error. It is not conditional on a specific error value." },
+        { "answer": "The argument is correct because temperature measurements are always exact to the displayed digit", "explanation": "All measurements have uncertainty. The displayed value is the best estimate, not the exact true value." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Marcus records two measurements: 10.0 ± 0.1 m and 10.5 ± 0.1 m. Which of the following best explains whether these measurements are consistent with each other?",
+      "correct": "The measurements are not consistent because their uncertainty ranges (9.9–10.1 and 10.4–10.6) do not overlap",
+      "correctExplanation": "Two measurements are considered consistent if their uncertainty ranges overlap. Here the ranges are separated, indicating a real difference between the values.",
+      "distractors": [
+        { "answer": "The measurements are consistent because they have the same uncertainty of ±0.1 m", "explanation": "Having the same uncertainty does not mean the measurements are consistent. Consistency depends on whether the ranges overlap." },
+        { "answer": "The measurements are consistent because both values round to 10 m", "explanation": "Rounding to the same whole number does not establish consistency. The uncertainty ranges must overlap for measurements to be considered consistent." },
+        { "answer": "The measurements cannot be compared because they were taken at different times", "explanation": "Measurements of the same quantity can be compared regardless of when they were taken. Overlapping uncertainty ranges indicate consistency." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A student ignores the uncertainty in a measurement and concludes that the result exactly matches a theoretical prediction. Which of the following best explains the problem with this conclusion?",
+      "correct": "Without considering uncertainty, the student cannot determine whether the result genuinely agrees with the prediction or falls within normal measurement variation",
+      "correctExplanation": "Uncertainty defines the range of the measurement. Without it, there is no way to assess whether the agreement is meaningful or coincidental.",
+      "distractors": [
+        { "answer": "The conclusion is valid because the measured value equals the predicted value numerically", "explanation": "Numerical equality does not confirm agreement. The uncertainty range must be considered to assess whether the match is genuine." },
+        { "answer": "The problem is that uncertainty makes all measurements invalid and unreliable", "explanation": "Uncertainty does not invalidate measurements. It quantifies reliability and is essential for meaningful comparisons." },
+        { "answer": "The conclusion would be correct if the measurement were repeated more than three times", "explanation": "Repeating the measurement does not eliminate the need to consider uncertainty. All comparisons should account for the measurement range." }
+      ]
+    },
+    {
+      "type": "TF",
+      "question": "If two measurements have overlapping uncertainty ranges, they are considered consistent with each other.",
+      "correct": "True",
+      "correctExplanation": "Overlapping uncertainty ranges indicate that the measurements could represent the same true value, making them consistent.",
+      "distractors": [
+        { "answer": "False", "explanation": "Overlapping ranges means the two measurements are compatible. They could both be measuring the same true value." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the explanation of uncertainty and overconfidence.",
+      "sentence": "Ignoring uncertainty can lead to {{blank:1}} conclusions about whether results match {{blank:2}} predictions.",
+      "blanks": {
+        "1": {
+          "correct": "incorrect",
+          "correctExplanation": "Without considering uncertainty, one cannot properly assess whether a result agrees with a prediction, leading to potentially incorrect conclusions.",
+          "distractors": [
+            { "answer": "precise", "explanation": "Ignoring uncertainty does not make conclusions more precise. It makes them unreliable." },
+            { "answer": "detailed", "explanation": "Ignoring uncertainty does not add detail. It removes important information about the reliability of the result." }
+          ]
+        },
+        "2": {
+          "correct": "theoretical",
+          "correctExplanation": "Experimental results are commonly compared to theoretical predictions. Uncertainty is needed to determine whether the match is meaningful.",
+          "distractors": [
+            { "answer": "repeated", "explanation": "Repeated predictions is not a standard term. The comparison is between experimental results and theoretical values." },
+            { "answer": "estimated", "explanation": "The comparison is typically between measured values and theoretical predictions, not estimated predictions." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the description of uncertainty bars on a graph.",
+      "sentence": "On a graph, a vertical uncertainty bar of ±1 mm is drawn {{blank:1}} and {{blank:2}} the data point to show the range of possible values.",
+      "blanks": {
+        "1": {
+          "correct": "above",
+          "correctExplanation": "The uncertainty bar extends above the data point to show the upper limit of the expected range.",
+          "distractors": [
+            { "answer": "to the left of", "explanation": "Vertical uncertainty bars extend vertically (above and below), not horizontally." },
+            { "answer": "beside", "explanation": "Uncertainty bars extend vertically from the data point, not to the side." }
+          ]
+        },
+        "2": {
+          "correct": "below",
+          "correctExplanation": "The uncertainty bar also extends below the data point to show the lower limit of the expected range.",
+          "distractors": [
+            { "answer": "to the right of", "explanation": "Vertical uncertainty bars extend vertically (above and below), not horizontally." },
+            { "answer": "through", "explanation": "The bars extend from the point in both vertical directions, not through the point in an unspecified way." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the comparison of two measurements.",
+      "sentence": "Two measurements are considered {{blank:1}} if their uncertainty ranges {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "consistent",
+          "correctExplanation": "Measurements with overlapping uncertainty ranges are described as consistent because they could represent the same true value.",
+          "distractors": [
+            { "answer": "identical", "explanation": "Consistent does not mean identical. It means the values are compatible within their uncertainties." },
+            { "answer": "precise", "explanation": "Precision describes how tightly grouped measurements are, not whether two measurements agree." }
+          ]
+        },
+        "2": {
+          "correct": "overlap",
+          "correctExplanation": "When the ranges overlap, there exist values within both intervals, suggesting the measurements could come from the same true value.",
+          "distractors": [
+            { "answer": "are equal", "explanation": "The ranges do not need to be exactly equal. Any overlap indicates consistency." },
+            { "answer": "are large", "explanation": "The size of the ranges does not determine consistency. What matters is whether the ranges overlap." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "MC",
+      "question": "Anika measures a voltage as 4.82 ± 0.05 V and a current as 0.50 ± 0.01 A. She calculates resistance using R = V/I = 9.64 Ω. Which of the following correctly identifies what she must do next?",
+      "correct": "She must calculate and report the uncertainty in the resistance using the uncertainties in voltage and current",
+      "correctExplanation": "When a quantity is calculated from measured values, the uncertainties propagate to the result. The uncertainty in resistance must be determined from the uncertainties in voltage and current.",
+      "distractors": [
+        { "answer": "She should report the resistance as exactly 9.64 Ω because the calculation is exact", "explanation": "The inputs have uncertainties that propagate through the calculation. The result cannot be more certain than the inputs." },
+        { "answer": "She should use the larger of the two input uncertainties as the uncertainty in resistance", "explanation": "Uncertainties from multiple inputs must be combined using propagation rules, not simply selecting the largest one." },
+        { "answer": "She should ignore the uncertainties because division cancels out measurement errors", "explanation": "Division does not cancel uncertainties. Both inputs contribute uncertainty to the final result." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Liam measures the extension of a spring as 15.2 ± 0.5 mm. He calculates the percentage uncertainty. Which of the following is the correct percentage uncertainty?",
+      "correct": "3.3%",
+      "correctExplanation": "Percentage uncertainty = (0.5 ÷ 15.2) × 100 = 3.3%. This quantifies the uncertainty relative to the measured value.",
+      "distractors": [
+        { "answer": "0.5%", "explanation": "0.5 mm is the absolute uncertainty. The percentage uncertainty requires dividing by the measured value and multiplying by 100." },
+        { "answer": "33%", "explanation": "This is ten times too large. The correct calculation is (0.5 ÷ 15.2) × 100 = 3.3%, not 33%." },
+        { "answer": "15.2%", "explanation": "15.2 is the measured value, not the percentage uncertainty. The calculation is (uncertainty ÷ value) × 100." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Mei plots data points with uncertainty bars and draws a line of best fit. The line passes through all the uncertainty bars. Which of the following best describes what this indicates?",
+      "correct": "The line of best fit is consistent with the data, as it falls within the expected range of each measurement",
+      "correctExplanation": "If the line passes through all uncertainty bars, every data point agrees with the line within its measurement uncertainty, supporting the relationship shown.",
+      "distractors": [
+        { "answer": "The line of best fit is exact and there is no error in the measurements", "explanation": "Passing through uncertainty bars does not mean there is no error. It means the data is consistent with the line within the stated uncertainties." },
+        { "answer": "The uncertainty bars are too large and should be reduced to improve the fit", "explanation": "The line fitting within the bars is a positive result. It suggests the uncertainties are appropriate, not too large." },
+        { "answer": "The data points should be moved to lie exactly on the line of best fit", "explanation": "Data points are never moved to fit a line. The line is drawn to best represent the trend in the actual data." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Arun records a measurement as 8.4 ± 0.2 cm and his classmate records the same quantity as 8.9 ± 0.3 cm. Are these measurements consistent?",
+      "correct": "Yes, because the ranges 8.2–8.6 and 8.6–9.2 overlap at 8.6 cm",
+      "correctExplanation": "Arun's range is 8.2 to 8.6 cm and his classmate's range is 8.6 to 9.2 cm. The ranges just touch at 8.6 cm, so they are consistent.",
+      "distractors": [
+        { "answer": "No, because the measured values differ by 0.5 cm", "explanation": "Consistency is determined by whether the uncertainty ranges overlap, not by the difference between the central values alone." },
+        { "answer": "No, because the uncertainties are different values", "explanation": "Different uncertainties are common and do not prevent consistency. What matters is whether the ranges overlap." },
+        { "answer": "Yes, because both measurements are between 8 cm and 9 cm", "explanation": "Being in the same integer range does not determine consistency. The uncertainty ranges must overlap for the measurements to be consistent." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Priya measures a mass five times and obtains: 5.2, 5.3, 5.1, 5.4, 5.2 g. She calculates the mean as 5.24 g. Which of the following is an appropriate way to determine the uncertainty?",
+      "correct": "Calculate the range divided by two: (5.4 − 5.1) ÷ 2 = ±0.15 g",
+      "correctExplanation": "For a small number of repeated measurements, the uncertainty can be estimated as half the range: (maximum − minimum) ÷ 2.",
+      "distractors": [
+        { "answer": "Use the largest value as the uncertainty: ±5.4 g", "explanation": "The uncertainty is not the largest measurement. It is the spread of values around the mean." },
+        { "answer": "Subtract the mean from the smallest value: 5.24 − 5.1 = ±0.14 g only", "explanation": "This only considers one side of the distribution. The uncertainty should account for the full spread of the data." },
+        { "answer": "Divide the mean by the number of measurements: 5.24 ÷ 5 = ±1.048 g", "explanation": "Dividing the mean by the count does not give a meaningful uncertainty. The spread of the data must be used." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Sofia compares her experimental result of 9.7 ± 0.3 m s⁻² with the accepted value of gravitational acceleration (9.8 m s⁻²). Which of the following correctly evaluates whether her result is consistent with the accepted value?",
+      "correct": "The result is consistent because 9.8 falls within the range 9.4 to 10.0 m s⁻²",
+      "correctExplanation": "The range of Sofia's measurement is 9.7 ± 0.3 = 9.4 to 10.0 m s⁻². Since 9.8 falls within this range, the result is consistent with the accepted value.",
+      "distractors": [
+        { "answer": "The result is not consistent because 9.7 does not equal 9.8 exactly", "explanation": "Exact numerical agreement is not required. The accepted value only needs to fall within the uncertainty range." },
+        { "answer": "The result is not consistent because the uncertainty is larger than the difference from the accepted value", "explanation": "A larger uncertainty relative to the difference means the accepted value is well within range, supporting consistency." },
+        { "answer": "The result cannot be evaluated without knowing the uncertainty in the accepted value itself", "explanation": "While the accepted value also has uncertainty, Sofia's result can still be assessed by checking if 9.8 lies within her range." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Marcus measures the period of a pendulum and reports 1.45 ± 0.10 s. He then squares this to calculate T². What is the percentage uncertainty in T²?",
+      "correct": "13.8%",
+      "correctExplanation": "Percentage uncertainty in T = (0.10 ÷ 1.45) × 100 = 6.9%. When squaring, the percentage uncertainty doubles: 2 × 6.9% = 13.8%.",
+      "distractors": [
+        { "answer": "6.9%", "explanation": "6.9% is the percentage uncertainty in T. When T is squared, the percentage uncertainty doubles to 13.8%." },
+        { "answer": "0.01%", "explanation": "This is far too small. The percentage uncertainty in T² is found by doubling the percentage uncertainty in T." },
+        { "answer": "20.0%", "explanation": "This does not follow from the correct calculation. The percentage uncertainty in T is 6.9%, which doubles to 13.8% when squaring." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Calculate the percentage uncertainty in a measurement.",
+      "sentence": "A length of 25.0 ± 0.5 mm has a percentage uncertainty of (0.5 ÷ {{blank:1}}) × 100 = {{blank:2}}%.",
+      "blanks": {
+        "1": {
+          "correct": "25.0",
+          "correctExplanation": "Percentage uncertainty is calculated by dividing the absolute uncertainty by the measured value. Here, 0.5 ÷ 25.0.",
+          "distractors": [
+            { "answer": "0.5", "explanation": "0.5 is the absolute uncertainty, not the measured value. The calculation divides uncertainty by the value." },
+            { "answer": "100", "explanation": "100 is the multiplication factor for converting to percentage, not the value to divide by." }
+          ]
+        },
+        "2": {
+          "correct": "2.0",
+          "correctExplanation": "(0.5 ÷ 25.0) × 100 = 2.0%. This is the percentage uncertainty in the measurement.",
+          "distractors": [
+            { "answer": "0.02", "explanation": "0.02 is the fractional uncertainty (0.5 ÷ 25.0), not yet multiplied by 100 to give a percentage." },
+            { "answer": "20", "explanation": "20% would result from dividing 0.5 by 2.5, not 25.0. The correct value is 2.0%." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Determine whether two measurements are consistent.",
+      "sentence": "Measurement A is 7.0 ± 0.3 m and Measurement B is 7.8 ± 0.2 m. The ranges are 6.7–7.3 and 7.6–8.0. These measurements are {{blank:1}} because the ranges do not {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "inconsistent",
+          "correctExplanation": "The ranges 6.7–7.3 and 7.6–8.0 do not overlap, so the measurements are inconsistent.",
+          "distractors": [
+            { "answer": "consistent", "explanation": "Consistency requires overlapping ranges. Here the ranges are separated by a gap from 7.3 to 7.6." },
+            { "answer": "identical", "explanation": "The measurements have different values and different ranges. They are neither identical nor consistent." }
+          ]
+        },
+        "2": {
+          "correct": "overlap",
+          "correctExplanation": "The upper limit of A (7.3) is below the lower limit of B (7.6), so the ranges do not overlap.",
+          "distractors": [
+            { "answer": "match exactly", "explanation": "Ranges do not need to match exactly for consistency. Any overlap would suffice, but here there is no overlap at all." },
+            { "answer": "contain zero", "explanation": "Whether the ranges contain zero is irrelevant. Consistency depends on whether the two ranges overlap each other." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Apply uncertainty propagation to a squared quantity.",
+      "sentence": "If a time measurement has a percentage uncertainty of 4%, then the percentage uncertainty in T² is {{blank:1}}% because the exponent {{blank:2}} the percentage uncertainty.",
+      "blanks": {
+        "1": {
+          "correct": "8",
+          "correctExplanation": "When a quantity is raised to a power, the percentage uncertainty is multiplied by that power. For T², the percentage uncertainty is 2 × 4% = 8%.",
+          "distractors": [
+            { "answer": "4", "explanation": "4% is the uncertainty in T. Squaring T doubles the percentage uncertainty to 8%." },
+            { "answer": "16", "explanation": "16% would result from squaring the percentage, but the rule is to multiply by the exponent, not square it." }
+          ]
+        },
+        "2": {
+          "correct": "doubles",
+          "correctExplanation": "The exponent 2 in T² means the percentage uncertainty is multiplied by 2, doubling it.",
+          "distractors": [
+            { "answer": "halves", "explanation": "The exponent multiplies the percentage uncertainty, not divides it. For squaring, it doubles." },
+            { "answer": "squares", "explanation": "The percentage uncertainty is multiplied by the exponent (2), not squared. Doubling is the correct operation." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "MC",
+      "question": "A student measures the acceleration due to gravity as 9.5 ± 0.4 m s⁻² and claims the result supports the accepted value of 9.8 m s⁻². A classmate argues the result is inaccurate because 9.5 does not equal 9.8. Which of the following best evaluates this disagreement?",
+      "correct": "The student is correct because 9.8 falls within the range 9.1 to 9.9 m s⁻², making the result consistent with the accepted value",
+      "correctExplanation": "The range 9.5 ± 0.4 = 9.1 to 9.9 m s⁻² includes 9.8. The result is consistent with the accepted value within its uncertainty, despite the measured value not being exactly 9.8.",
+      "distractors": [
+        { "answer": "The classmate is correct because the measured value must equal the accepted value exactly to be considered supportive", "explanation": "Exact agreement is not required. The accepted value only needs to fall within the measurement's uncertainty range." },
+        { "answer": "Neither is correct because the uncertainty is too large to draw any meaningful conclusion", "explanation": "The uncertainty range includes the accepted value, which is a meaningful conclusion. The uncertainty does not prevent comparison." },
+        { "answer": "The student is correct only if the measurement is repeated and the mean is closer to 9.8 m s⁻²", "explanation": "A single measurement with uncertainty can be compared to a known value. Repetition may improve precision but is not required for the comparison." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Kai measures two variables and plots them with uncertainty bars. The line of best fit passes through most bars but misses two points entirely. Which of the following best evaluates the implications?",
+      "correct": "The outlying points may indicate additional sources of error or anomalous readings that should be investigated",
+      "correctExplanation": "When data points fall outside their uncertainty bars, this suggests unaccounted errors or anomalous conditions. These points warrant further investigation rather than automatic removal.",
+      "distractors": [
+        { "answer": "The line of best fit is incorrect and must be redrawn to pass through all uncertainty bars", "explanation": "The line of best fit represents the overall trend. It is not required to pass through every uncertainty bar." },
+        { "answer": "The two outlying points should be removed to improve the appearance of the graph", "explanation": "Data points should not be removed solely to improve appearance. They should be investigated and only excluded if a valid reason is identified." },
+        { "answer": "The uncertainty bars must be enlarged until all points are included by the line of best fit", "explanation": "Artificially enlarging uncertainty bars to fit the line would misrepresent the measurement precision." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Priya reports a result as 15.234 ± 0.5 m. Which of the following best evaluates the appropriateness of this notation?",
+      "correct": "The measured value has too many decimal places for the stated uncertainty; it should be reported as 15.2 ± 0.5 m",
+      "correctExplanation": "The uncertainty of ±0.5 limits the meaningful precision to one decimal place. Reporting 15.234 implies precision to three decimal places, which is inconsistent with the uncertainty.",
+      "distractors": [
+        { "answer": "The notation is correct because more decimal places always provide more useful information", "explanation": "Extra decimal places beyond the uncertainty are meaningless and misrepresent the precision of the measurement." },
+        { "answer": "The notation is correct because the uncertainty can have fewer decimal places than the measured value", "explanation": "The measured value should be rounded to match the precision indicated by the uncertainty, not the other way around." },
+        { "answer": "The measured value should be rounded to 15 m to match the one significant figure in the uncertainty", "explanation": "The uncertainty of 0.5 has one decimal place. The measured value should also be reported to one decimal place, giving 15.2 m." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A student claims that a measurement with a small uncertainty is always more accurate than one with a large uncertainty. Which of the following best evaluates this claim?",
+      "correct": "The claim is incorrect because small uncertainty indicates high precision, not necessarily high accuracy",
+      "correctExplanation": "Uncertainty reflects precision (the spread of values). Accuracy depends on closeness to the true value, which can be affected by systematic errors even when uncertainty is small.",
+      "distractors": [
+        { "answer": "The claim is correct because uncertainty directly measures how close a value is to the true value", "explanation": "Uncertainty measures the spread or precision of measurements, not their closeness to the true value. Systematic errors can make precise measurements inaccurate." },
+        { "answer": "The claim is correct for digital instruments but incorrect for analogue instruments", "explanation": "The distinction between precision and accuracy applies to all instruments, regardless of whether they are digital or analogue." },
+        { "answer": "The claim is correct because large uncertainty always indicates the presence of systematic errors", "explanation": "Large uncertainty can result from random errors or low resolution. Systematic errors cause consistent offsets and may not increase the spread." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Sofia measures a length as 20.0 ± 0.5 mm and calculates the area of a square face as (20.0)² = 400 mm². She reports the area as 400 ± 0.25 mm². Which of the following best evaluates her uncertainty calculation?",
+      "correct": "The uncertainty is incorrect; the percentage uncertainty in the area should be double that of the length",
+      "correctExplanation": "Percentage uncertainty in length = (0.5 ÷ 20.0) × 100 = 2.5%. For area (length squared), percentage uncertainty = 2 × 2.5% = 5%. The absolute uncertainty is 0.05 × 400 = 20 mm², not 0.25 mm².",
+      "distractors": [
+        { "answer": "The uncertainty is correct because squaring 0.5 gives 0.25 as the uncertainty in the area", "explanation": "Squaring the absolute uncertainty is not the correct propagation method. The percentage uncertainty is doubled when a quantity is squared." },
+        { "answer": "The uncertainty should be 0.5 mm² because the uncertainty remains unchanged when a value is squared", "explanation": "Uncertainty does change through calculations. When squaring, the percentage uncertainty doubles." },
+        { "answer": "The uncertainty should be 1.0 mm² because both dimensions of the square contribute equally", "explanation": "While both dimensions contribute, the correct method doubles the percentage uncertainty. The resulting absolute uncertainty is 20 mm², not 1.0 mm²." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Marcus conducts an experiment and obtains two results: Trial 1 gives 5.0 ± 0.1 m s⁻¹ and Trial 2 gives 5.8 ± 0.2 m s⁻¹. He averages these to get 5.4 m s⁻¹ and reports the uncertainty as ±0.15 m s⁻¹ (average of 0.1 and 0.2). Which of the following best evaluates his approach?",
+      "correct": "His approach is flawed because the two results are inconsistent (ranges do not overlap) and averaging may mask a systematic issue",
+      "correctExplanation": "Trial 1 range: 4.9–5.1. Trial 2 range: 5.6–6.0. These do not overlap, suggesting a systematic difference between trials. Averaging hides this problem.",
+      "distractors": [
+        { "answer": "His approach is correct because averaging always improves the reliability of experimental results", "explanation": "Averaging is only valid when measurements are consistent. Non-overlapping ranges indicate a systematic issue that averaging cannot resolve." },
+        { "answer": "His approach is correct because the average uncertainty is a standard method for combining measurements", "explanation": "Averaging the uncertainties is not a standard method. The non-overlapping ranges indicate the measurements should be investigated, not simply averaged." },
+        { "answer": "His approach is flawed only because he should use the larger uncertainty of ±0.2 instead of averaging", "explanation": "The primary issue is that the ranges do not overlap. Using the larger uncertainty does not address the systematic difference between the trials." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Anika argues that reporting uncertainty is unnecessary in a school laboratory because the results are not being published. Which of the following best evaluates her argument?",
+      "correct": "The argument is incorrect because uncertainty is essential for evaluating whether results support or refute a hypothesis in any scientific context",
+      "correctExplanation": "Uncertainty is needed to draw valid conclusions from data, regardless of whether the work is published. Without it, comparisons to theoretical values or between measurements are meaningless.",
+      "distractors": [
+        { "answer": "The argument is correct because school experiments do not require the same rigour as professional research", "explanation": "Scientific reasoning requires uncertainty in all contexts. The purpose of school experiments is to develop these skills." },
+        { "answer": "The argument is correct because teachers already know the expected results and do not need uncertainty ranges", "explanation": "The purpose of reporting uncertainty is to demonstrate scientific reasoning, not to inform the teacher of expected values." },
+        { "answer": "The argument is partially correct because uncertainty is only needed for experiments involving calculation", "explanation": "Uncertainty applies to all measurements, not just those involving calculations. Even direct readings require uncertainty to be meaningful." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Liam measures a period as 2.00 ± 0.05 s. He states the relative uncertainty is 2.5% and concludes this is acceptable for his experiment. His teacher asks him to justify why 2.5% is acceptable. Which of the following would be the strongest justification?",
+      "correct": "The 2.5% uncertainty is small enough that it does not prevent meaningful comparison with the theoretical prediction",
+      "correctExplanation": "An uncertainty is acceptable when it is small enough to allow the research question or hypothesis to be addressed. If the expected effect is larger than 2.5%, the measurement is sufficiently precise.",
+      "distractors": [
+        { "answer": "The 2.5% uncertainty is acceptable because it is below the standard threshold of 5% used in all experiments", "explanation": "There is no universal threshold. Acceptability depends on the specific context and what the measurement is being used to determine." },
+        { "answer": "The 2.5% uncertainty is acceptable because it is the smallest achievable with the available equipment", "explanation": "Using the best available equipment does not automatically make the uncertainty acceptable. It must be evaluated against the experimental requirements." },
+        { "answer": "The 2.5% uncertainty is acceptable because percentage uncertainties below 10% are always considered reliable", "explanation": "There is no fixed percentage below which uncertainty is always acceptable. The context of the measurement determines acceptability." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Evaluate the appropriateness of a reported measurement.",
+      "sentence": "Reporting 12.345 ± 0.5 g is {{blank:1}} because the measured value should be rounded to match the {{blank:2}} of the uncertainty.",
+      "blanks": {
+        "1": {
+          "correct": "inappropriate",
+          "correctExplanation": "The uncertainty is given to one decimal place, but the measured value has three decimal places. The value should be rounded to 12.3 g.",
+          "distractors": [
+            { "answer": "appropriate", "explanation": "Extra decimal places beyond the uncertainty are meaningless. The measured value must be rounded to match the uncertainty's precision." },
+            { "answer": "precise", "explanation": "While the number has many digits, the extra decimal places are not meaningful given the uncertainty." }
+          ]
+        },
+        "2": {
+          "correct": "precision",
+          "correctExplanation": "The measured value should be rounded so that its last significant digit aligns with the precision indicated by the uncertainty.",
+          "distractors": [
+            { "answer": "magnitude", "explanation": "Matching the magnitude of the uncertainty is not relevant. The issue is matching the decimal place precision." },
+            { "answer": "units", "explanation": "Both the value and uncertainty already share the same units. The issue is the number of decimal places." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Evaluate the distinction between precision and accuracy in the context of uncertainty.",
+      "sentence": "A measurement with small uncertainty is {{blank:1}}, but it may still be {{blank:2}} if a systematic error is present.",
+      "blanks": {
+        "1": {
+          "correct": "precise",
+          "correctExplanation": "Small uncertainty indicates that repeated measurements cluster tightly, which is the definition of high precision.",
+          "distractors": [
+            { "answer": "accurate", "explanation": "Small uncertainty indicates precision, not accuracy. Accuracy requires closeness to the true value, which systematic errors can prevent." },
+            { "answer": "reliable", "explanation": "Reliability implies both precision and accuracy. Small uncertainty alone confirms only precision." }
+          ]
+        },
+        "2": {
+          "correct": "inaccurate",
+          "correctExplanation": "A systematic error shifts all readings away from the true value, making the measurement inaccurate even if the uncertainty is small.",
+          "distractors": [
+            { "answer": "imprecise", "explanation": "Small uncertainty means the measurement is precise. Systematic error affects accuracy, not precision." },
+            { "answer": "uncertain", "explanation": "Small uncertainty means low uncertainty. The issue with systematic error is inaccuracy, not additional uncertainty." }
+          ]
+        }
+      }
+    }
+  ]
+}

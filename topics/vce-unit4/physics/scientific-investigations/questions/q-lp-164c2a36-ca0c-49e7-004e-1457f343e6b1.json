@@ -1,0 +1,583 @@
+{
+  "_link": {
+    "uuid": "lp-164c2a36-ca0c-49e7-004e-1457f343e6b1",
+    "version": "1.0",
+    "contentHash": "hash-2332e0fd",
+    "title": "I can calculate the gradient of a straight line of best fit correctly",
+    "generatedAt": "2026-03-10T00:00:00Z"
+  },
+  "toLevel2": [
+    {
+      "type": "MC",
+      "question": "Which formula is used to calculate the gradient of a straight line of best fit?",
+      "correct": "gradient = (y₂ − y₁) / (x₂ − x₁)",
+      "correctExplanation": "The gradient is calculated as the change in y divided by the change in x, using two points on the line of best fit.",
+      "distractors": [
+        { "answer": "gradient = (x₂ − x₁) / (y₂ − y₁)", "explanation": "This inverts the formula. The gradient is rise (change in y) over run (change in x), not the reverse." },
+        { "answer": "gradient = (y₂ + y₁) / (x₂ + x₁)", "explanation": "Adding the coordinates gives a ratio of sums, not the rate of change. Subtraction is required." },
+        { "answer": "gradient = (x₂ × y₂) / (x₁ × y₁)", "explanation": "Multiplying and dividing coordinates does not give the gradient. The correct operation is subtraction." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "When calculating the gradient, the two points used should be chosen from which location?",
+      "correct": "From the line of best fit, far apart from each other",
+      "correctExplanation": "Points should be on the line of best fit (not individual data points) and far apart to minimise the effect of reading errors.",
+      "distractors": [
+        { "answer": "From the original data points in the table", "explanation": "Data points may not lie exactly on the line of best fit. Points on the line itself must be used." },
+        { "answer": "From the line of best fit, as close together as possible", "explanation": "Close points amplify reading errors. Points should be chosen far apart to improve accuracy." },
+        { "answer": "From the x-axis and y-axis intercepts only", "explanation": "While intercepts are on the line, the points should be far apart. Intercepts may not always be the best choice." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Why should the two points used to calculate the gradient be chosen far apart on the line?",
+      "correct": "To reduce the effect of reading errors on the calculated gradient",
+      "correctExplanation": "Points far apart produce large values of Δy and Δx, which makes small reading errors proportionally less significant.",
+      "distractors": [
+        { "answer": "To make the gradient calculation more complicated and challenging for the student", "explanation": "The purpose is accuracy, not difficulty. Larger intervals reduce the relative impact of reading errors." },
+        { "answer": "To ensure that both points lie within the range of the original data table values", "explanation": "While points should be within the data range, the reason for spacing them apart is to reduce reading error effects." },
+        { "answer": "To avoid using the y-intercept in the calculation of the gradient", "explanation": "The y-intercept can be used as one of the points. The key is that the points are far apart." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "What are the units of the gradient of a graph?",
+      "correct": "The units of the y-axis divided by the units of the x-axis",
+      "correctExplanation": "Since gradient = Δy/Δx, the units are y-axis units divided by x-axis units.",
+      "distractors": [
+        { "answer": "The units of the x-axis divided by the units of the y-axis", "explanation": "This is inverted. The gradient is Δy/Δx, so the units follow the same order: y-units over x-units." },
+        { "answer": "The gradient is always dimensionless and has no units at all", "explanation": "Gradients carry units unless both axes have the same units and the gradient represents a dimensionless ratio." },
+        { "answer": "The units of the y-axis multiplied by the units of the x-axis", "explanation": "The gradient involves division, not multiplication. The units are y-axis units per x-axis units." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "On a speed versus time graph, a student selects the points (1.0 s, 9.8 m s⁻¹) and (5.0 s, 49.0 m s⁻¹) from the line of best fit. What is the gradient?",
+      "correct": "9.8 m s⁻²",
+      "correctExplanation": "Gradient = (49.0 − 9.8)/(5.0 − 1.0) = 39.2/4.0 = 9.8. Units are (m s⁻¹)/s = m s⁻².",
+      "distractors": [
+        { "answer": "39.2 m s⁻¹", "explanation": "39.2 is the change in y (Δy), not the gradient. The gradient requires dividing by Δx = 4.0 s." },
+        { "answer": "4.0 s", "explanation": "4.0 is the change in x (Δx), not the gradient. The gradient is Δy/Δx = 39.2/4.0 = 9.8." },
+        { "answer": "0.10 s² m⁻¹", "explanation": "This is the reciprocal of the gradient (Δx/Δy). The gradient is Δy/Δx = 9.8 m s⁻²." }
+      ]
+    },
+    {
+      "type": "TF",
+      "question": "When calculating the gradient, you should use two data points from the original data table rather than points on the line of best fit.",
+      "correct": "False",
+      "correctExplanation": "Data points may not lie exactly on the line of best fit. The gradient should be calculated using two points that lie on the line itself.",
+      "distractors": [
+        { "answer": "True", "explanation": "Data points may scatter around the line. Using points directly on the line gives a more accurate gradient." }
+      ]
+    },
+    {
+      "type": "TF",
+      "question": "The gradient of a straight-line graph represents the rate of change of the dependent variable with respect to the independent variable.",
+      "correct": "True",
+      "correctExplanation": "The gradient Δy/Δx gives the rate at which the y-axis variable (dependent) changes per unit change in the x-axis variable (independent).",
+      "distractors": [
+        { "answer": "False", "explanation": "By definition, the gradient is the rate of change of the y-axis variable per unit of the x-axis variable." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the formula for calculating the gradient.",
+      "sentence": "Gradient = (y₂ − y₁) / ({{blank:1}} − {{blank:2}}).",
+      "blanks": {
+        "1": {
+          "correct": "x₂",
+          "correctExplanation": "The denominator is the change in x, calculated as x₂ minus x₁.",
+          "distractors": [
+            { "answer": "y₂", "explanation": "y₂ belongs in the numerator. The denominator uses x-coordinates." },
+            { "answer": "x₁", "explanation": "x₁ is subtracted from x₂ in the denominator, but the first term should be x₂." }
+          ]
+        },
+        "2": {
+          "correct": "x₁",
+          "correctExplanation": "x₁ is subtracted from x₂ to give the change in x (the 'run').",
+          "distractors": [
+            { "answer": "y₁", "explanation": "y₁ belongs in the numerator, not the denominator. The denominator uses x-coordinates." },
+            { "answer": "x₂", "explanation": "x₂ is the first term in the denominator. The second term being subtracted is x₁." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the rule about choosing points for gradient calculation.",
+      "sentence": "The two points should be chosen {{blank:1}} apart on the line to reduce the effect of {{blank:2}} errors.",
+      "blanks": {
+        "1": {
+          "correct": "far",
+          "correctExplanation": "Points far apart produce larger values of Δy and Δx, making small reading errors proportionally less significant.",
+          "distractors": [
+            { "answer": "close", "explanation": "Close points amplify reading errors. Points should be far apart for a more accurate gradient." },
+            { "answer": "equally", "explanation": "While equal spacing is not harmful, the key requirement is that the points are far apart on the line." }
+          ]
+        },
+        "2": {
+          "correct": "reading",
+          "correctExplanation": "Reading errors occur when estimating coordinates from the graph. Larger intervals reduce their relative impact.",
+          "distractors": [
+            { "answer": "systematic", "explanation": "Systematic errors affect all readings equally and are not reduced by choosing points far apart." },
+            { "answer": "calculation", "explanation": "The calculation itself is straightforward. The errors reduced by spacing are reading errors from the graph." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the statement about gradient units.",
+      "sentence": "The units of the gradient are the units of the {{blank:1}} axis divided by the units of the {{blank:2}} axis.",
+      "blanks": {
+        "1": {
+          "correct": "vertical",
+          "correctExplanation": "The gradient is Δy/Δx, so its units are the vertical (y) axis units divided by the horizontal (x) axis units.",
+          "distractors": [
+            { "answer": "horizontal", "explanation": "The horizontal axis units are in the denominator, not the numerator. The vertical axis units are on top." },
+            { "answer": "independent", "explanation": "The independent variable is usually on the horizontal axis. The numerator uses the vertical axis units." }
+          ]
+        },
+        "2": {
+          "correct": "horizontal",
+          "correctExplanation": "The horizontal (x) axis units appear in the denominator of the gradient calculation.",
+          "distractors": [
+            { "answer": "vertical", "explanation": "The vertical axis units are in the numerator. The horizontal axis units are in the denominator." },
+            { "answer": "dependent", "explanation": "The dependent variable is usually on the vertical axis. The denominator uses the horizontal axis units." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "MC",
+      "question": "A student calculates the gradient using two points that are very close together on the line of best fit: (2.0, 4.1) and (2.5, 5.2). Which of the following best explains the problem with this approach?",
+      "correct": "A small reading error in either coordinate has a large proportional effect on the small values of Δy and Δx",
+      "correctExplanation": "With close points, Δy = 1.1 and Δx = 0.5. A reading error of ±0.1 in either coordinate represents a large fraction of these small differences, making the gradient unreliable.",
+      "distractors": [
+        { "answer": "The gradient will always be zero when the points are close together on the line of best fit", "explanation": "Close points do not give a zero gradient unless the line is horizontal. The issue is amplified reading errors." },
+        { "answer": "Close points can only be used if the line passes through the origin of the graph exactly", "explanation": "Whether the line passes through the origin is irrelevant. The issue is that close points amplify reading errors." },
+        { "answer": "The gradient formula does not work for points that are less than one unit apart on the x-axis", "explanation": "The formula works for any separation. The problem is practical: small separations amplify the impact of reading errors." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Kai reads two points from his line of best fit: (0.0 s, 0.0 m) and (8.0 s, 24.0 m). He calculates the gradient as (24.0 − 0.0)/(8.0 − 0.0) = 3.0 m s⁻¹. Which of the following best explains why this gradient represents the velocity?",
+      "correct": "The units of the gradient are m s⁻¹ (metres per second), which are the units of velocity",
+      "correctExplanation": "The gradient has units of the y-axis (m) divided by the x-axis (s), giving m s⁻¹. This matches the units of velocity.",
+      "distractors": [
+        { "answer": "The gradient equals 3.0, and any value close to 3 always represents velocity in physics", "explanation": "The physical meaning depends on the units and the equation, not on the numerical value." },
+        { "answer": "The gradient represents velocity because the line passes through the origin of the graph", "explanation": "Passing through the origin means initial displacement is zero but does not determine whether the gradient is velocity." },
+        { "answer": "The gradient represents velocity only if the student labels it as velocity in the working shown", "explanation": "The physical meaning is determined by the axes and the physics equation, not by how the student labels it." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Priya plots force (N) on the y-axis against acceleration (m s⁻²) on the x-axis. She calculates a gradient of 2.5. What are the units of this gradient?",
+      "correct": "N / (m s⁻²) = kg",
+      "correctExplanation": "The units are y-axis units divided by x-axis units: N ÷ (m s⁻²) = kg m s⁻² ÷ (m s⁻²) = kg.",
+      "distractors": [
+        { "answer": "N × m s⁻² = W", "explanation": "The gradient involves division, not multiplication. The units are N divided by m s⁻², which simplifies to kg." },
+        { "answer": "m s⁻² / N = kg⁻¹", "explanation": "This inverts the units. The gradient is Δy/Δx = N/(m s⁻²) = kg." },
+        { "answer": "The gradient is dimensionless because the units cancel out completely", "explanation": "The units do not cancel. N/(m s⁻²) simplifies to kg, which has dimensions of mass." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A student uses two data points from the original table instead of two points on the line of best fit to calculate the gradient. Which of the following best explains why this is incorrect?",
+      "correct": "Data points may not lie on the line of best fit, so the gradient calculated from them may not represent the overall trend",
+      "correctExplanation": "The line of best fit represents the best estimate of the relationship. Individual data points may scatter above or below it due to random error.",
+      "distractors": [
+        { "answer": "Data points are always less accurate than points estimated from the line of best fit", "explanation": "Individual data points are measured values. The issue is that they may not represent the overall trend as well as the line does." },
+        { "answer": "The gradient formula only works with hypothetical points, not with real measured values", "explanation": "The formula works with any coordinates. The issue is that data points may not lie on the best-fit line." },
+        { "answer": "Using data points gives a steeper gradient than using points on the line of best fit", "explanation": "Data points could give a steeper or shallower gradient depending on their position. The issue is inconsistency with the line." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Sofia reads two points from her line of best fit: (2.0, 6.0) and (10.0, 22.0). She writes: gradient = (10.0 − 2.0)/(22.0 − 6.0) = 0.5. Which of the following identifies her error?",
+      "correct": "She swapped the numerator and denominator; the gradient should be (22.0 − 6.0)/(10.0 − 2.0) = 2.0",
+      "correctExplanation": "The gradient is Δy/Δx, not Δx/Δy. The y-values (6.0 and 22.0) go in the numerator and the x-values (2.0 and 10.0) in the denominator.",
+      "distractors": [
+        { "answer": "She should have used points closer together to improve the accuracy of the gradient calculation", "explanation": "The point spacing is good (far apart). The error is that she divided Δx by Δy instead of Δy by Δx." },
+        { "answer": "She should have added the coordinates instead of subtracting them to find the gradient", "explanation": "Addition does not give the gradient. The correct operation is subtraction: Δy/Δx." },
+        { "answer": "She made a rounding error and the gradient should be exactly 0.50 not 0.5 with the trailing zero", "explanation": "0.5 and 0.50 are numerically the same. The error is in the formula application, not rounding." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Marcus plots extension (mm) on the y-axis against force (N) on the x-axis and calculates a gradient of 4.0 mm N⁻¹. Which of the following best explains why it is useful to convert the gradient to SI units?",
+      "correct": "Converting to SI units (m N⁻¹) allows direct comparison with theoretical values expressed in standard units",
+      "correctExplanation": "SI units ensure consistency when comparing experimental results to accepted values. Converting mm to m gives 4.0 × 10⁻³ m N⁻¹.",
+      "distractors": [
+        { "answer": "The gradient must always be expressed in SI units or the calculation is considered invalid", "explanation": "Non-SI units can be used, but SI units are preferred for comparison and consistency in physics." },
+        { "answer": "Converting to SI units changes the physical meaning of the gradient to a different quantity", "explanation": "Unit conversion does not change the physical meaning. It only changes the numerical value and the unit prefix." },
+        { "answer": "SI units are only required for the x-axis variable, not for the gradient itself", "explanation": "SI units are preferred for all quantities, including the gradient, to ensure consistency." }
+      ]
+    },
+    {
+      "type": "TF",
+      "question": "Using points that are close together on the line of best fit can amplify the effect of reading errors on the gradient.",
+      "correct": "True",
+      "correctExplanation": "When Δy and Δx are small, a given reading error represents a larger fraction of these values, making the calculated gradient less accurate.",
+      "distractors": [
+        { "answer": "False", "explanation": "Close points make small reading errors proportionally larger. Far-apart points reduce this effect." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Explain why certain points are chosen for gradient calculation.",
+      "sentence": "Points on the {{blank:1}} of best fit are used because data points may not lie exactly on the line due to {{blank:2}} error.",
+      "blanks": {
+        "1": {
+          "correct": "line",
+          "correctExplanation": "The line of best fit represents the overall trend. Points on this line give a gradient consistent with that trend.",
+          "distractors": [
+            { "answer": "table", "explanation": "Table values are the original data points, which may scatter around the line of best fit." },
+            { "answer": "axis", "explanation": "Points on the axes may not represent the data range. Points on the line of best fit are used." }
+          ]
+        },
+        "2": {
+          "correct": "random",
+          "correctExplanation": "Random error causes data points to scatter above and below the line of best fit.",
+          "distractors": [
+            { "answer": "systematic", "explanation": "Systematic error shifts all points in one direction. Random error causes scatter around the line." },
+            { "answer": "calculation", "explanation": "Calculation errors are human mistakes. The scatter is caused by random error in the measurements." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the gradient calculation from given points.",
+      "sentence": "For points (2.0, 5.0) and (6.0, 17.0) on a line of best fit, the gradient = (17.0 − 5.0) / (6.0 − 2.0) = {{blank:1}} / {{blank:2}} = 3.0.",
+      "blanks": {
+        "1": {
+          "correct": "12.0",
+          "correctExplanation": "Δy = 17.0 − 5.0 = 12.0. This is the change in the y-axis values.",
+          "distractors": [
+            { "answer": "4.0", "explanation": "4.0 is the change in x (6.0 − 2.0), not the change in y." },
+            { "answer": "22.0", "explanation": "22.0 would be the sum of the y-values (17.0 + 5.0), not the difference." }
+          ]
+        },
+        "2": {
+          "correct": "4.0",
+          "correctExplanation": "Δx = 6.0 − 2.0 = 4.0. This is the change in the x-axis values.",
+          "distractors": [
+            { "answer": "12.0", "explanation": "12.0 is the change in y (17.0 − 5.0), not the change in x." },
+            { "answer": "8.0", "explanation": "8.0 would be the sum of the x-values (6.0 + 2.0), not the difference." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the explanation of the gradient's physical significance.",
+      "sentence": "The gradient represents the rate of {{blank:1}} of the dependent variable with respect to the {{blank:2}} variable.",
+      "blanks": {
+        "1": {
+          "correct": "change",
+          "correctExplanation": "The gradient Δy/Δx is the rate of change — how much the y-variable changes per unit change in x.",
+          "distractors": [
+            { "answer": "measurement", "explanation": "The gradient is not the rate of measurement. It is the rate of change of y with respect to x." },
+            { "answer": "error", "explanation": "The gradient does not represent the rate of error. It represents the rate of change of the dependent variable." }
+          ]
+        },
+        "2": {
+          "correct": "independent",
+          "correctExplanation": "The gradient shows how the dependent variable changes per unit of the independent variable (plotted on the x-axis).",
+          "distractors": [
+            { "answer": "dependent", "explanation": "The dependent variable is on the y-axis. The gradient is the rate of change with respect to the independent variable on the x-axis." },
+            { "answer": "controlled", "explanation": "Controlled variables are held constant. The gradient relates the dependent variable to the independent variable." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "MC",
+      "question": "Anika reads the following points from her line of best fit on a voltage vs current graph: (0.10 A, 0.50 V) and (0.50 A, 2.50 V). What is the gradient and what does it represent?",
+      "correct": "Gradient = (2.50 − 0.50)/(0.50 − 0.10) = 5.0 V A⁻¹ = 5.0 Ω, representing the resistance",
+      "correctExplanation": "Δy = 2.00 V, Δx = 0.40 A. Gradient = 2.00/0.40 = 5.0 V A⁻¹ = 5.0 Ω. For a V vs I graph, the gradient is resistance.",
+      "distractors": [
+        { "answer": "Gradient = (0.50 − 0.10)/(2.50 − 0.50) = 0.20 A V⁻¹, representing the conductance", "explanation": "This inverts Δy and Δx. The correct gradient is Δy/Δx = 5.0 V A⁻¹ for a V vs I graph." },
+        { "answer": "Gradient = 2.50/0.50 = 5.0 V A⁻¹, using only the second data point's coordinates", "explanation": "The gradient must be calculated from two points using differences (Δy/Δx), not from a single point." },
+        { "answer": "Gradient = (2.50 + 0.50)/(0.50 + 0.10) = 5.0, but the units cannot be determined", "explanation": "Addition of coordinates does not give the gradient. Subtraction must be used, and the units are always determinable." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Liam selects two points on his line of best fit: (0.0, 2.4) and (10.0, 2.4). What can he conclude about the gradient?",
+      "correct": "The gradient is zero because the y-values are the same, indicating no change in the dependent variable",
+      "correctExplanation": "Gradient = (2.4 − 2.4)/(10.0 − 0.0) = 0/10.0 = 0. A zero gradient means the dependent variable does not change as the independent variable changes.",
+      "distractors": [
+        { "answer": "The gradient is undefined because the two points have the same y-value and division by zero occurs", "explanation": "Division by zero occurs when the x-values are the same (vertical line), not when the y-values are the same. Here Δx = 10.0, so the gradient is 0." },
+        { "answer": "The gradient is 10.0/2.4 = 4.2 because the run is divided by the rise in this case", "explanation": "The gradient is always Δy/Δx. When Δy = 0, the gradient is zero regardless of Δx." },
+        { "answer": "The gradient cannot be calculated because the line is horizontal and gradients only apply to sloped lines", "explanation": "A horizontal line has a gradient of zero. The gradient formula works for all straight lines except vertical ones." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Mei reads two points from her distance-time graph: (2.0 s, 8.0 m) and (8.0 s, 32.0 m). She calculates the gradient and then converts the units from m s⁻¹ to km h⁻¹. What is the gradient in km h⁻¹?",
+      "correct": "14.4 km h⁻¹",
+      "correctExplanation": "Gradient = (32.0 − 8.0)/(8.0 − 2.0) = 24.0/6.0 = 4.0 m s⁻¹. Converting: 4.0 × 3600/1000 = 14.4 km h⁻¹.",
+      "distractors": [
+        { "answer": "4.0 km h⁻¹", "explanation": "4.0 is the gradient in m s⁻¹. It must be multiplied by 3.6 to convert to km h⁻¹." },
+        { "answer": "1.1 km h⁻¹", "explanation": "This would result from dividing by 3.6 instead of multiplying. The conversion factor is × 3.6." },
+        { "answer": "24.0 km h⁻¹", "explanation": "24.0 is Δy in metres, not the gradient or the converted value." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Arun's line of best fit on a T² vs L graph passes through (0.00 m, 0.00 s²) and (1.20 m, 4.80 s²). He calculates the gradient and uses it to determine g. What value of g does he obtain?",
+      "correct": "g = 4π²/gradient = 4π²/4.0 ≈ 9.9 m s⁻²",
+      "correctExplanation": "Gradient = (4.80 − 0.00)/(1.20 − 0.00) = 4.0 s² m⁻¹. Since gradient = 4π²/g, then g = 4π²/4.0 = 39.48/4.0 ≈ 9.9 m s⁻².",
+      "distractors": [
+        { "answer": "g = gradient × 4π² = 4.0 × 39.48 ≈ 158 m s⁻²", "explanation": "Multiplying instead of dividing gives an incorrect result. Since gradient = 4π²/g, rearranging gives g = 4π²/gradient." },
+        { "answer": "g = gradient/4π² = 4.0/39.48 ≈ 0.10 m s⁻²", "explanation": "This divides gradient by 4π² instead of 4π² by gradient. The correct formula is g = 4π²/gradient." },
+        { "answer": "g = 4.80/1.20 = 4.0 m s⁻²", "explanation": "4.0 is the gradient in s² m⁻¹, not the value of g. Further calculation is needed: g = 4π²/4.0 ≈ 9.9." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Priya calculates a gradient from two points on her line of best fit: (1.0, 3.0) and (9.0, 19.0). Her classmate uses the points (3.0, 7.0) and (7.0, 15.0) from the same line. Which of the following best compares their results?",
+      "correct": "Both should obtain the same gradient of 2.0 because they are reading from the same straight line",
+      "correctExplanation": "Priya: (19.0 − 3.0)/(9.0 − 1.0) = 16.0/8.0 = 2.0. Classmate: (15.0 − 7.0)/(7.0 − 3.0) = 8.0/4.0 = 2.0. A straight line has a constant gradient.",
+      "distractors": [
+        { "answer": "Priya's gradient is more accurate because her points are farther apart than her classmate's", "explanation": "Both get the same gradient (2.0). Priya's is more reliable in practice due to less reading error, but the calculated values are identical." },
+        { "answer": "The classmate's gradient is different because different points always produce different gradients", "explanation": "A straight line has one gradient regardless of which two points are used. Both pairs yield 2.0." },
+        { "answer": "Neither gradient can be trusted because using only two points is insufficient for accuracy", "explanation": "Two points from a straight line are sufficient to calculate the gradient. Using far-apart points improves reliability." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Sofia plots a graph of energy (J) on the y-axis against temperature change (°C) on the x-axis. She calculates a gradient of 840 J °C⁻¹. If the equation is Q = mcΔT and the mass is 2.0 kg, what is the specific heat capacity?",
+      "correct": "c = gradient/m = 840/2.0 = 420 J kg⁻¹ °C⁻¹",
+      "correctExplanation": "With Q on y and ΔT on x, Q = (mc)ΔT gives gradient = mc. Therefore c = gradient/m = 840/2.0 = 420 J kg⁻¹ °C⁻¹.",
+      "distractors": [
+        { "answer": "c = m/gradient = 2.0/840 = 2.4 × 10⁻³ J kg⁻¹ °C⁻¹", "explanation": "This inverts the calculation. Since gradient = mc, c = gradient/m, not m/gradient." },
+        { "answer": "c = gradient × m = 840 × 2.0 = 1680 J kg⁻¹ °C⁻¹", "explanation": "Multiplying gives mc × m = m²c, not c. The correct calculation divides gradient by m." },
+        { "answer": "c = 1/gradient = 1/840 = 1.2 × 10⁻³ J⁻¹ °C", "explanation": "Taking the reciprocal would be needed if ΔT were on the y-axis and Q on the x-axis. Here gradient = mc, so c = gradient/m." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Marcus draws a line of best fit that has a negative gradient. Which of the following correctly interprets this negative gradient?",
+      "correct": "As the x-axis variable increases, the y-axis variable decreases",
+      "correctExplanation": "A negative gradient means the dependent variable decreases as the independent variable increases. This is a valid physical result in many contexts.",
+      "distractors": [
+        { "answer": "A negative gradient indicates an error in the data or in drawing the line of best fit", "explanation": "Negative gradients are physically meaningful in many situations, such as cooling curves or deceleration graphs." },
+        { "answer": "The gradient should be reported as a positive number by taking the absolute value", "explanation": "The sign of the gradient carries physical meaning. A negative gradient indicates a decreasing relationship and should not be made positive." },
+        { "answer": "A negative gradient means the line of best fit should have been curved instead of straight", "explanation": "A negative gradient simply means the line slopes downward. It does not indicate the line should be curved." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Calculate the gradient from two points on a line of best fit.",
+      "sentence": "For points (0.5, 1.2) and (4.5, 9.2) on a line of best fit, gradient = (9.2 − 1.2) / (4.5 − 0.5) = {{blank:1}} / {{blank:2}} = 2.0.",
+      "blanks": {
+        "1": {
+          "correct": "8.0",
+          "correctExplanation": "Δy = 9.2 − 1.2 = 8.0.",
+          "distractors": [
+            { "answer": "4.0", "explanation": "4.0 is Δx (4.5 − 0.5), not Δy." },
+            { "answer": "10.4", "explanation": "10.4 is the sum 9.2 + 1.2, not the difference." }
+          ]
+        },
+        "2": {
+          "correct": "4.0",
+          "correctExplanation": "Δx = 4.5 − 0.5 = 4.0.",
+          "distractors": [
+            { "answer": "8.0", "explanation": "8.0 is Δy (9.2 − 1.2), not Δx." },
+            { "answer": "5.0", "explanation": "5.0 is the sum 4.5 + 0.5, not the difference." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Determine the units of a gradient from axis labels.",
+      "sentence": "For a graph of force (N) against extension (m), the gradient has units of N divided by m, which equals {{blank:1}} and represents the spring constant in units of {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "N m⁻¹",
+          "correctExplanation": "The gradient units are y-axis units (N) divided by x-axis units (m) = N m⁻¹.",
+          "distractors": [
+            { "answer": "N m", "explanation": "N m are units of torque or energy. The gradient units involve division: N/m = N m⁻¹." },
+            { "answer": "m N⁻¹", "explanation": "This inverts the units. The gradient is Δy/Δx = N/m = N m⁻¹." }
+          ]
+        },
+        "2": {
+          "correct": "N m⁻¹",
+          "correctExplanation": "The spring constant k has units of N m⁻¹, which matches the gradient of a force vs extension graph.",
+          "distractors": [
+            { "answer": "kg", "explanation": "Kilograms are units of mass. The spring constant has units of N m⁻¹." },
+            { "answer": "J", "explanation": "Joules are units of energy. The spring constant has units of N m⁻¹." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Apply the gradient calculation to determine a physical quantity.",
+      "sentence": "On a V vs I graph, the gradient = ΔV/ΔI. If ΔV = 6.0 V and ΔI = 0.30 A, the gradient is {{blank:1}} Ω, which represents the {{blank:2}} of the component.",
+      "blanks": {
+        "1": {
+          "correct": "20",
+          "correctExplanation": "Gradient = 6.0/0.30 = 20 V A⁻¹ = 20 Ω.",
+          "distractors": [
+            { "answer": "0.050", "explanation": "0.050 is ΔI/ΔV = 0.30/6.0, the reciprocal of the gradient." },
+            { "answer": "1.8", "explanation": "1.8 would be 6.0 × 0.30, which is multiplication, not division." }
+          ]
+        },
+        "2": {
+          "correct": "resistance",
+          "correctExplanation": "The gradient of a V vs I graph gives resistance (R = V/I), with units of ohms (Ω).",
+          "distractors": [
+            { "answer": "current", "explanation": "Current is the x-axis variable. The gradient represents resistance." },
+            { "answer": "power", "explanation": "Power is V × I, not V/I. The gradient of a V vs I graph is resistance." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "MC",
+      "question": "A student calculates the gradient from points (0, 0) and (5.0, 25.0) on a d vs t graph and obtains 5.0 m s⁻¹. Another student uses points (1.0, 5.0) and (4.0, 20.0) and obtains 5.0 m s⁻¹. A third student uses points (2.0, 9.8) and (2.5, 12.6) and obtains 5.6 m s⁻¹. Which of the following best evaluates the third student's result?",
+      "correct": "The difference is likely due to amplified reading error from using points that are too close together on the graph",
+      "correctExplanation": "The third student's points are only 0.5 apart in x. A small reading error in either coordinate has a large proportional effect on the small Δx, shifting the gradient from the true value of 5.0.",
+      "distractors": [
+        { "answer": "The third student's gradient is more accurate because it is based on a smaller, more precise section of the line", "explanation": "Smaller sections amplify reading errors. The first two students' wider separations give more reliable gradients." },
+        { "answer": "All three results are equally valid because the gradient formula works with any two points on the line", "explanation": "While the formula works for any points, close points amplify errors. The third result is less reliable." },
+        { "answer": "The third student must have made a calculation error because the gradient should always be exactly the same", "explanation": "The discrepancy is more likely from amplified reading error due to close points, not a calculation mistake." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Kai calculates the gradient of his line of best fit and obtains a spring constant of k = 52 N m⁻¹. The accepted value is 50 N m⁻¹. He claims the 4% difference is due to using points too close together. Which of the following best evaluates his claim?",
+      "correct": "The claim is plausible because close points amplify reading errors, which could account for a small percentage discrepancy",
+      "correctExplanation": "Using close points increases the proportional impact of reading errors, which could shift the gradient by a few percent. His explanation is reasonable.",
+      "distractors": [
+        { "answer": "The claim is invalid because the point spacing has no effect on the accuracy of the gradient calculation", "explanation": "Point spacing directly affects the reliability of the gradient. Closer points amplify reading errors." },
+        { "answer": "The claim is valid only if he used points less than 1 cm apart on the printed graph paper", "explanation": "The threshold is not a specific physical distance. Any points that are relatively close on the scale will amplify errors." },
+        { "answer": "The claim is invalid because a 4% difference can only be caused by systematic error in the spring", "explanation": "A 4% difference could result from reading errors, systematic errors, or both. The student's explanation is one plausible cause." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Priya plots a graph with a line of best fit and calculates the gradient using two methods: (A) using points at the extremes of the line, and (B) using points at the middle of the line. She obtains slightly different values. Which of the following best evaluates which method is preferred?",
+      "correct": "Method A is preferred because the wider separation minimises the proportional effect of reading errors",
+      "correctExplanation": "Points at the extremes of the line are the farthest apart, giving the largest Δx and Δy values and minimising the relative impact of reading errors.",
+      "distractors": [
+        { "answer": "Method B is preferred because the middle of the line is where the data is most reliable and accurate", "explanation": "The line of best fit has a constant gradient everywhere. The middle is not inherently more reliable for gradient calculation." },
+        { "answer": "Both methods are equally valid because a straight line has the same gradient at every point along it", "explanation": "While the theoretical gradient is the same everywhere, the practical accuracy differs. Wider separation reduces reading error impact." },
+        { "answer": "Neither method is valid because the gradient should be calculated using a computer program, not by hand", "explanation": "Manual gradient calculation from a graph is a valid and expected skill. Using extreme points is the best hand-calculation approach." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Sofia obtains a gradient from her F vs x graph and determines k = 48 N m⁻¹. She then calculates the percentage uncertainty in her gradient by finding the gradient of the steepest and shallowest lines that fit within the uncertainty bars. The steepest gives k = 52 N m⁻¹ and the shallowest gives k = 44 N m⁻¹. What is the uncertainty in her k value?",
+      "correct": "±4 N m⁻¹, calculated as half the range: (52 − 44)/2 = 4",
+      "correctExplanation": "The uncertainty in the gradient is estimated as half the difference between the steepest and shallowest gradients: (52 − 44)/2 = 4 N m⁻¹.",
+      "distractors": [
+        { "answer": "±8 N m⁻¹, calculated as the full range: 52 − 44 = 8", "explanation": "The full range is 8, but the uncertainty is half the range: 8/2 = 4 N m⁻¹." },
+        { "answer": "±2 N m⁻¹, calculated as the average: (52 + 44)/2 − 48 = 0", "explanation": "This calculation gives zero, not the uncertainty. The correct method is half the range of the extreme gradients." },
+        { "answer": "±52 N m⁻¹, taking the steepest gradient as the maximum uncertainty", "explanation": "The uncertainty is the spread around the best-fit gradient, not the gradient itself." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A student argues that the gradient of a graph can be found by simply dividing any y-value by its corresponding x-value (y/x) rather than using (y₂ − y₁)/(x₂ − x₁). Which of the following best evaluates this argument?",
+      "correct": "The argument is incorrect because y/x gives the gradient only if the line passes through the origin; otherwise Δy/Δx must be used",
+      "correctExplanation": "If the line has a non-zero y-intercept (y = mx + c where c ≠ 0), then y/x does not equal the gradient m. The formula Δy/Δx is always correct.",
+      "distractors": [
+        { "answer": "The argument is correct because y/x and Δy/Δx always give the same result for a straight line", "explanation": "This is only true when the y-intercept is zero. For lines with non-zero intercepts, y/x ≠ gradient." },
+        { "answer": "The argument is correct but only when the x-values are positive and increasing from left to right", "explanation": "The direction of x-values does not determine whether y/x equals the gradient. The y-intercept is what matters." },
+        { "answer": "The argument is incorrect because the gradient should be calculated as x/y, not y/x, in all cases", "explanation": "The gradient is Δy/Δx (rise over run), not Δx/Δy. The issue with y/x is the non-zero intercept, not the order." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Liam plots a graph and his line of best fit has a gradient of −3.2 m s⁻². He reports the gradient as 3.2 m s⁻² because 'gradients should be positive.' Which of the following best evaluates his decision?",
+      "correct": "His decision is incorrect because the negative sign indicates the object is decelerating, and removing it loses physically meaningful information",
+      "correctExplanation": "A negative gradient on a velocity-time graph indicates deceleration. Removing the sign changes the physical interpretation from deceleration to acceleration.",
+      "distractors": [
+        { "answer": "His decision is correct because all physical quantities should be reported as positive values", "explanation": "Many physical quantities can be negative (e.g., deceleration, temperature change). The sign carries physical meaning." },
+        { "answer": "His decision is correct because the magnitude is what matters, not the sign of the gradient", "explanation": "The sign indicates the direction of the relationship. In physics, direction is important information." },
+        { "answer": "His decision is acceptable as long as he notes in his report that the object was decelerating", "explanation": "The gradient itself should include the negative sign. Reporting 3.2 while noting deceleration is inconsistent." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Anika calculates a gradient of 9.6 m s⁻² from a speed-time graph and compares it to the accepted value of g = 9.8 m s⁻². She reports a percentage difference of 2.0%. Her classmate calculates the gradient as 10.2 m s⁻² from the same graph but using different points. Which of the following best evaluates the situation?",
+      "correct": "The different gradients suggest at least one student made a reading error; the line of best fit has only one true gradient",
+      "correctExplanation": "A straight line has a single gradient. Different results from the same line indicate reading errors, likely from one or both students not reading the line accurately.",
+      "distractors": [
+        { "answer": "Both results are equally valid because using different points always gives different gradients", "explanation": "A straight line has one gradient everywhere. Different results indicate reading errors, not a property of the line." },
+        { "answer": "Anika's result is automatically better because it is closer to the accepted value of 9.8", "explanation": "Closeness to the accepted value does not determine which reading is more accurate. Both should give the same gradient from the same line." },
+        { "answer": "The classmate's result is better because it is larger, and larger gradients are always more reliable", "explanation": "Magnitude does not indicate reliability. The discrepancy indicates a reading error by at least one student." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Marcus plots a graph where the line of best fit does not pass through the origin, and the y-intercept is 3.0. He uses the points (0, 3.0) and (10.0, 23.0) to calculate the gradient. His classmate argues he should only use points where both x and y are non-zero. Which of the following best evaluates the classmate's argument?",
+      "correct": "The argument is incorrect; the origin or any point on the line of best fit is valid for gradient calculation",
+      "correctExplanation": "Any two points on the line of best fit can be used. The point (0, 3.0) is on the line (it is the y-intercept) and is perfectly valid.",
+      "distractors": [
+        { "answer": "The argument is correct because using the y-intercept always gives an incorrect gradient value", "explanation": "The y-intercept is a point on the line and gives a correct gradient when paired with any other point on the line." },
+        { "answer": "The argument is correct because the origin point introduces a systematic error in the calculation", "explanation": "The point (0, 3.0) is the y-intercept, not the origin (0, 0). Using a point on the line does not introduce error." },
+        { "answer": "The argument is correct because gradient calculations require both points to have positive x and y values", "explanation": "There is no such requirement. The gradient formula works with any coordinates, including zero and negative values." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Evaluate the reliability of a gradient calculation based on point selection.",
+      "sentence": "A gradient calculated from points 8.0 units apart on the x-axis is more {{blank:1}} than one from points 0.5 units apart because reading errors have a {{blank:2}} proportional effect.",
+      "blanks": {
+        "1": {
+          "correct": "reliable",
+          "correctExplanation": "Wider separation gives larger Δx and Δy values, making reading errors proportionally smaller and the gradient more reliable.",
+          "distractors": [
+            { "answer": "inaccurate", "explanation": "Wider separation improves reliability, not reduces it." },
+            { "answer": "approximate", "explanation": "The gradient from wider points is more precise, not more approximate." }
+          ]
+        },
+        "2": {
+          "correct": "smaller",
+          "correctExplanation": "When Δx and Δy are large, a given reading error represents a smaller fraction of the values, reducing its impact.",
+          "distractors": [
+            { "answer": "larger", "explanation": "Reading errors have a smaller proportional effect when the intervals are larger, not a larger effect." },
+            { "answer": "constant", "explanation": "The proportional effect changes with the interval size. Larger intervals give smaller proportional errors." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Evaluate the method for determining uncertainty in a gradient.",
+      "sentence": "The uncertainty in a gradient is estimated by finding the {{blank:1}} and shallowest lines through the uncertainty bars, then taking {{blank:2}} the difference between their gradients.",
+      "blanks": {
+        "1": {
+          "correct": "steepest",
+          "correctExplanation": "The steepest and shallowest lines that fit through the uncertainty bars represent the extreme possible gradients.",
+          "distractors": [
+            { "answer": "longest", "explanation": "Length of the line is not the criterion. The steepest and shallowest slopes define the gradient range." },
+            { "answer": "thickest", "explanation": "Line thickness is a drawing choice, not related to gradient uncertainty." }
+          ]
+        },
+        "2": {
+          "correct": "half",
+          "correctExplanation": "The uncertainty is half the range between the steepest and shallowest gradients, giving the ± value around the best-fit gradient.",
+          "distractors": [
+            { "answer": "double", "explanation": "Doubling the range would overestimate the uncertainty. The standard method uses half the range." },
+            { "answer": "the full", "explanation": "The full range is the total spread. The uncertainty is ± half of this, centered on the best-fit gradient." }
+          ]
+        }
+      }
+    }
+  ]
+}

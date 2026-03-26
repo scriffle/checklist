@@ -1,0 +1,567 @@
+{
+  "_link": {
+    "uuid": "lp-ab70236b-9347-1cc7-1ce4-dee11ec66e9d",
+    "version": 1,
+    "contentHash": "hash-63299220",
+    "title": "I can explain what happens to contracted length as relative speed increases",
+    "generatedAt": "2026-03-10T10:00:00Z"
+  },
+  "toLevel2": [
+    {
+      "type": "mc",
+      "question": "As the relative speed between two reference frames increases, what happens to the contracted length of an object?",
+      "correct": "The contracted length decreases",
+      "correctExplanation": "As relative speed increases, the Lorentz factor γ increases, and since L = L₀/γ, the contracted length decreases.",
+      "distractors": [
+        { "answer": "The contracted length increases", "explanation": "A larger γ means dividing by a larger number, so the contracted length decreases, not increases." },
+        { "answer": "The contracted length stays the same", "explanation": "Length contraction depends on speed; as speed increases, γ increases and the contracted length decreases." },
+        { "answer": "The contracted length oscillates", "explanation": "Length contraction is a monotonic decrease with increasing speed; there is no oscillation involved." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What value does the contracted length of an object approach as the relative speed approaches the speed of light?",
+      "correct": "Zero",
+      "correctExplanation": "As v → c, the Lorentz factor γ → ∞, so L = L₀/γ → 0. The contracted length approaches zero.",
+      "distractors": [
+        { "answer": "The proper length", "explanation": "As speed increases, the contracted length moves further away from the proper length, not closer to it." },
+        { "answer": "Half the proper length", "explanation": "There is no speed at which the contracted length settles at half the proper length as a limiting value." },
+        { "answer": "Infinity", "explanation": "The Lorentz factor approaches infinity, but since it is in the denominator, the contracted length approaches zero." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "At v = 0.5c, a 100 m rocket has a contracted length of approximately 87 m. At v = 0.99c, the same rocket has a contracted length of approximately which value?",
+      "correct": "14 m",
+      "correctExplanation": "At v = 0.99c, γ ≈ 7.09, so L = 100/7.09 ≈ 14 m. The higher the speed, the greater the contraction.",
+      "distractors": [
+        { "answer": "87 m", "explanation": "This is the contracted length at 0.5c; at 0.99c the Lorentz factor is much larger, giving a much shorter length." },
+        { "answer": "50 m", "explanation": "A contracted length of 50 m would correspond to γ = 2, which occurs at v ≈ 0.866c, not at 0.99c." },
+        { "answer": "99 m", "explanation": "A contracted length close to the proper length occurs only at very low speeds, not at 0.99c." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What happens to the Lorentz factor γ as the relative speed of an object increases?",
+      "correct": "The Lorentz factor increases",
+      "correctExplanation": "As v increases toward c, the denominator √(1 − v²/c²) decreases toward zero, causing γ to increase toward infinity.",
+      "distractors": [
+        { "answer": "The Lorentz factor decreases", "explanation": "The Lorentz factor always increases with speed; it equals 1 at rest and approaches infinity as v approaches c." },
+        { "answer": "The Lorentz factor remains at one", "explanation": "γ = 1 only when v = 0; for any non-zero relative speed, γ is greater than 1." },
+        { "answer": "The Lorentz factor equals zero", "explanation": "The Lorentz factor is always greater than or equal to 1; it can never be zero for any real speed." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "At what speed is the contracted length of an object equal to its proper length?",
+      "correct": "When the relative speed is zero",
+      "correctExplanation": "When v = 0, γ = 1, so L = L₀/1 = L₀. The contracted length equals the proper length only when there is no relative motion.",
+      "distractors": [
+        { "answer": "When the relative speed equals c", "explanation": "At v = c the Lorentz factor is infinite, so the contracted length would approach zero, not the proper length." },
+        { "answer": "When the relative speed is 0.5c", "explanation": "At v = 0.5c, γ ≈ 1.15, so the contracted length is shorter than the proper length." },
+        { "answer": "At any constant relative speed value", "explanation": "Length contraction occurs at any non-zero relative speed; the contracted length equals L₀ only when v = 0." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "As the relative speed between two reference frames increases, the contracted length of an object in the direction of motion decreases.",
+      "correct": "True",
+      "correctExplanation": "Since L = L₀/γ and γ increases with speed, the contracted length decreases as relative speed increases.",
+      "distractors": [
+        { "answer": "False", "explanation": "This statement is correct; a larger Lorentz factor at higher speeds produces a shorter contracted length." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "The contracted length of an object reaches exactly zero when the relative speed equals the speed of light.",
+      "correct": "False",
+      "correctExplanation": "A massive object cannot reach the speed of light. The contracted length approaches zero as v approaches c, but v = c is unattainable for any object with mass.",
+      "distractors": [
+        { "answer": "True", "explanation": "While the mathematical limit gives zero at v = c, no massive object can actually reach the speed of light, so this physical situation cannot occur." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about length contraction and speed.",
+      "sentence": "As relative speed increases, the Lorentz factor γ {{blank:1}}, causing the contracted length to {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "increases",
+          "correctExplanation": "The Lorentz factor γ = 1/√(1 − v²/c²) increases as v increases, approaching infinity as v approaches c.",
+          "distractors": [
+            { "answer": "decreases", "explanation": "The Lorentz factor increases with speed because the denominator √(1 − v²/c²) decreases." },
+            { "answer": "stays at one", "explanation": "γ equals 1 only at rest; for any non-zero speed, γ is greater than 1 and continues to increase." }
+          ]
+        },
+        "2": {
+          "correct": "decrease",
+          "correctExplanation": "Since L = L₀/γ, a larger γ means the contracted length becomes shorter.",
+          "distractors": [
+            { "answer": "increase", "explanation": "The contracted length decreases because dividing by a larger γ produces a smaller result." },
+            { "answer": "remain unchanged", "explanation": "The contracted length depends on γ, which changes with speed; it only equals L₀ when γ = 1." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the limiting behaviour of length contraction.",
+      "sentence": "As the relative speed of an object approaches the speed of light, the contracted length approaches {{blank:1}}.",
+      "blanks": {
+        "1": {
+          "correct": "zero",
+          "correctExplanation": "As v → c, γ → ∞, so L = L₀/γ → 0. The object appears infinitely thin in the direction of motion.",
+          "distractors": [
+            { "answer": "infinity", "explanation": "It is γ that approaches infinity; the contracted length, being L₀ divided by γ, approaches zero." },
+            { "answer": "half the proper length", "explanation": "There is no limiting value of half; the contracted length decreases continuously toward zero." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about length contraction at low speeds.",
+      "sentence": "When the relative speed is much less than the speed of light, the Lorentz factor is approximately {{blank:1}}, and the contracted length is approximately equal to the {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "one",
+          "correctExplanation": "At low speeds v << c, the term v²/c² is negligible, so γ ≈ 1/√1 = 1.",
+          "distractors": [
+            { "answer": "zero", "explanation": "The Lorentz factor is always ≥ 1; it approaches 1 at low speeds, not zero." },
+            { "answer": "infinity", "explanation": "γ approaches infinity only as v approaches c, not at low speeds." }
+          ]
+        },
+        "2": {
+          "correct": "proper length",
+          "correctExplanation": "When γ ≈ 1, L = L₀/γ ≈ L₀, so the contracted length is approximately equal to the proper length.",
+          "distractors": [
+            { "answer": "contracted length", "explanation": "The contracted length cannot be approximately equal to itself as a defining statement; it is approximately equal to the proper length." },
+            { "answer": "dilated time", "explanation": "Length contraction relates to proper length, not to time dilation; these are separate relativistic effects." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "mc",
+      "question": "A spacecraft has a proper length of 120 m. Explain why an Earth observer measures the spacecraft to be 60 m long when it travels at 0.866c.",
+      "correct": "At 0.866c, γ = 2.00, so L = 120/2.00 = 60 m due to length contraction",
+      "correctExplanation": "The Lorentz factor at 0.866c is exactly 2.00. Dividing the proper length by γ gives the contracted length measured by Earth.",
+      "distractors": [
+        { "answer": "The spacecraft physically compresses to half its size due to air resistance", "explanation": "Length contraction is a relativistic effect, not a physical compression caused by external forces." },
+        { "answer": "The observer is twice as far away, making the spacecraft appear half as long", "explanation": "Length contraction is not a perspective or distance effect; it is a real measurement difference between frames." },
+        { "answer": "The spacecraft loses half its mass at high speed, causing it to shrink", "explanation": "Length contraction is unrelated to mass changes; it results from the geometry of spacetime at relativistic speeds." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A 200 m rocket travels past a space station at 0.500c (γ ≈ 1.15). The rocket's speed then increases to 0.900c (γ ≈ 2.29). How does the contracted length change?",
+      "correct": "It decreases from approximately 174 m to approximately 87 m",
+      "correctExplanation": "At 0.500c: L = 200/1.15 ≈ 174 m. At 0.900c: L = 200/2.29 ≈ 87 m. The contracted length decreases as speed increases.",
+      "distractors": [
+        { "answer": "It increases from approximately 87 m to approximately 174 m", "explanation": "Higher speed means a larger Lorentz factor, which produces a shorter contracted length, not a longer one." },
+        { "answer": "It remains at approximately 174 m at both speeds", "explanation": "The Lorentz factor changes from 1.15 to 2.29, so the contracted length must also change significantly." },
+        { "answer": "It decreases from approximately 200 m to approximately 174 m", "explanation": "200 m is the proper length, not the contracted length at 0.500c; the contracted length at 0.500c is about 174 m." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Why does a graph of contracted length versus relative speed show a curve that drops steeply as v approaches c?",
+      "correct": "Because γ increases rapidly near c, causing L = L₀/γ to decrease sharply",
+      "correctExplanation": "The Lorentz factor increases nonlinearly with speed, growing very rapidly as v approaches c, which drives the contracted length toward zero.",
+      "distractors": [
+        { "answer": "Because the proper length of the object physically decreases at high speed", "explanation": "The proper length is measured in the object's rest frame and does not change; only the contracted length changes." },
+        { "answer": "Because measurement instruments become less accurate near the speed of light", "explanation": "The steep drop is a real relativistic prediction, not an instrument error; all observers agree on the measured values." },
+        { "answer": "Because the speed of light creates a barrier that compresses space linearly", "explanation": "The relationship between contracted length and speed is nonlinear; the steep drop results from the Lorentz factor." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Priya claims that at v = 0.99c a 50 m rod appears 25 m long to a stationary observer. Evaluate her claim.",
+      "correct": "Her claim is incorrect; at v = 0.99c, γ ≈ 7.09, so L ≈ 7.1 m, much shorter than 25 m",
+      "correctExplanation": "L = 50/7.09 ≈ 7.1 m. Priya likely used γ = 2 (which corresponds to v ≈ 0.866c), not the correct γ for 0.99c.",
+      "distractors": [
+        { "answer": "Her claim is correct because half the proper length is a good approximation", "explanation": "At 0.99c, γ is about 7, not 2; the contracted length is far less than half the proper length." },
+        { "answer": "Her claim is incorrect; the contracted length should be exactly 50 m", "explanation": "At 0.99c, γ is much greater than 1, so the contracted length must be significantly less than 50 m." },
+        { "answer": "Her claim is incorrect; the contracted length is approximately 49 m", "explanation": "A contracted length of 49 m would require γ ≈ 1.02, which corresponds to a very low speed, not 0.99c." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Explain why length contraction is negligible for everyday objects moving at typical speeds on Earth.",
+      "correct": "Everyday speeds are much less than c, so γ ≈ 1 and L ≈ L₀",
+      "correctExplanation": "At everyday speeds the ratio v²/c² is extremely small, making γ indistinguishable from 1 and the contracted length equal to the proper length.",
+      "distractors": [
+        { "answer": "Length contraction only applies to objects in outer space and not on Earth", "explanation": "Length contraction applies to all objects in relative motion; it is simply undetectable at low speeds." },
+        { "answer": "Earth's gravitational field cancels out length contraction effects", "explanation": "Gravity does not cancel length contraction; the effect is negligible because everyday speeds are far below c." },
+        { "answer": "Everyday objects are too large for length contraction to affect them", "explanation": "Length contraction applies regardless of object size; it is the ratio v/c that determines whether the effect is significant." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A rod has proper length L₀. At what speed does its contracted length equal half its proper length?",
+      "correct": "Approximately 0.866c, where γ = 2",
+      "correctExplanation": "Setting L = L₀/2 gives γ = 2. Solving 1/√(1 − v²/c²) = 2 yields v = c√(1 − 1/4) = c√(3/4) ≈ 0.866c.",
+      "distractors": [
+        { "answer": "Approximately 0.500c, where γ = 1.15", "explanation": "At 0.500c, γ ≈ 1.15, giving L ≈ L₀/1.15 ≈ 0.87L₀, which is not half the proper length." },
+        { "answer": "Approximately 0.990c, where γ = 7.09", "explanation": "At 0.990c, γ ≈ 7.09, giving L ≈ L₀/7.09, which is about one-seventh, not one-half, of the proper length." },
+        { "answer": "Approximately 0.750c, where γ = 1.51", "explanation": "At 0.750c, γ ≈ 1.51, giving L ≈ L₀/1.51 ≈ 0.66L₀, which is not half the proper length." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "If a rocket doubles its speed from 0.45c to 0.90c, the contracted length measured by an external observer is reduced by exactly half.",
+      "correct": "False",
+      "correctExplanation": "Length contraction depends on γ, which is not proportional to speed. At 0.45c, γ ≈ 1.12; at 0.90c, γ ≈ 2.29. The contracted lengths are L₀/1.12 and L₀/2.29, and L₀/2.29 is not half of L₀/1.12.",
+      "distractors": [
+        { "answer": "True", "explanation": "The Lorentz factor is not linearly proportional to speed; doubling the speed does not halve the contracted length." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the relationship between contracted length and the Lorentz factor.",
+      "sentence": "For a 100 m proper-length rocket at v = 0.5c where γ ≈ 1.15, the contracted length is approximately {{blank:1}} m. At v = 0.99c where γ ≈ 7.09, the contracted length decreases to approximately {{blank:2}} m.",
+      "blanks": {
+        "1": {
+          "correct": "87",
+          "correctExplanation": "L = 100/1.15 ≈ 87 m. At moderate speeds the contraction is small but measurable.",
+          "distractors": [
+            { "answer": "50", "explanation": "A contracted length of 50 m would require γ = 2, which corresponds to v ≈ 0.866c, not 0.5c." },
+            { "answer": "100", "explanation": "At v = 0.5c, γ ≈ 1.15, so the contracted length must be less than the 100 m proper length." }
+          ]
+        },
+        "2": {
+          "correct": "14",
+          "correctExplanation": "L = 100/7.09 ≈ 14 m. At speeds very close to c, the contraction is dramatic.",
+          "distractors": [
+            { "answer": "87", "explanation": "87 m is the contracted length at 0.5c; at 0.99c the Lorentz factor is much larger, giving a much shorter length." },
+            { "answer": "1", "explanation": "A contracted length of 1 m would require γ = 100, which corresponds to v ≈ 0.99995c, not 0.99c." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about a graph of contracted length versus relative speed.",
+      "sentence": "A graph of contracted length versus relative speed starts at the {{blank:1}} when v = 0 and curves downward toward {{blank:2}} as v approaches c.",
+      "blanks": {
+        "1": {
+          "correct": "proper length",
+          "correctExplanation": "At v = 0, γ = 1, so L = L₀/1 = L₀. The graph starts at the proper length value.",
+          "distractors": [
+            { "answer": "origin", "explanation": "The graph does not start at zero contracted length; at v = 0 the contracted length equals the proper length." },
+            { "answer": "speed of light", "explanation": "The y-axis shows contracted length, not speed; at v = 0 the graph starts at the proper length value." }
+          ]
+        },
+        "2": {
+          "correct": "zero",
+          "correctExplanation": "As v → c, γ → ∞, so L = L₀/γ → 0. The graph approaches zero contracted length.",
+          "distractors": [
+            { "answer": "infinity", "explanation": "The contracted length approaches zero, not infinity; it is the Lorentz factor that approaches infinity." },
+            { "answer": "the proper length", "explanation": "The graph starts at the proper length and curves away from it; it does not return to L₀ at high speeds." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the physical interpretation of length contraction at high speed.",
+      "sentence": "At v = 0.99c, the contracted length of a 100 m rocket is approximately 14 m. This means an observer at rest measures the rocket to be {{blank:1}} than its proper length.",
+      "blanks": {
+        "1": {
+          "correct": "much shorter",
+          "correctExplanation": "14 m is only 14% of the 100 m proper length, representing a very significant contraction at this high speed.",
+          "distractors": [
+            { "answer": "much longer", "explanation": "Length contraction always shortens the measured length; the contracted length is always less than or equal to the proper length." },
+            { "answer": "slightly shorter", "explanation": "A reduction from 100 m to 14 m is a decrease of 86%, which is a dramatic contraction, not a slight one." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "mc",
+      "question": "A particle accelerator beam tube has a proper length of 3.00 km. A proton travels through it at 0.950c (γ = 3.20). In the proton's reference frame, what is the length of the beam tube?",
+      "correct": "0.938 km",
+      "correctExplanation": "L = L₀/γ = 3.00/3.20 = 0.938 km. The proton measures the tube to be shorter due to length contraction.",
+      "distractors": [
+        { "answer": "9.60 km", "explanation": "This incorrectly multiplies L₀ by γ; the contracted length is L₀ divided by γ, not multiplied." },
+        { "answer": "3.00 km", "explanation": "The proton is moving relative to the tube, so the tube is length-contracted in the proton's frame." },
+        { "answer": "0.312 km", "explanation": "This would correspond to dividing by γ twice; the formula L = L₀/γ requires only one division." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Marcus observes a 150 m spacecraft moving at 0.600c. He then observes the same spacecraft accelerate to 0.800c. By what factor does the contracted length decrease?",
+      "correct": "The contracted length decreases by a factor of approximately 1.33",
+      "correctExplanation": "At 0.600c: γ₁ = 1.25, L₁ = 150/1.25 = 120 m. At 0.800c: γ₂ = 1.667, L₂ = 150/1.667 = 90.0 m. Ratio: 120/90.0 = 1.33.",
+      "distractors": [
+        { "answer": "The contracted length decreases by a factor of exactly 2.00", "explanation": "The ratio of the Lorentz factors is 1.667/1.25 = 1.33, not 2.00; the decrease is not that large." },
+        { "answer": "The contracted length decreases by a factor of approximately 0.75", "explanation": "0.75 would mean the length increased; the contracted length decreases when speed increases." },
+        { "answer": "The contracted length decreases by a factor of approximately 4.00", "explanation": "A factor of 4.00 is far too large; the Lorentz factor ratio for these speeds is only 1.33." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A muon is created 4500 m above Earth's surface and travels at 0.990c (γ ≈ 7.09). What distance does the muon measure to Earth's surface in its own frame?",
+      "correct": "Approximately 635 m",
+      "correctExplanation": "In the muon's frame, Earth's atmosphere is length-contracted: L = 4500/7.09 ≈ 635 m.",
+      "distractors": [
+        { "answer": "Approximately 4500 m", "explanation": "4500 m is the proper length in Earth's frame; in the muon's frame this distance is contracted." },
+        { "answer": "Approximately 31 900 m", "explanation": "This incorrectly multiplies 4500 by γ; the contracted length divides by γ, giving a shorter distance." },
+        { "answer": "Approximately 2250 m", "explanation": "This would require γ = 2, which corresponds to v ≈ 0.866c, not 0.990c where γ ≈ 7.09." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Anika measures a spacecraft passing her at 0.980c (γ = 5.03) to be 18.0 m long. What is the proper length of the spacecraft?",
+      "correct": "90.5 m",
+      "correctExplanation": "L₀ = Lγ = 18.0 × 5.03 = 90.5 m. The proper length is found by multiplying the contracted length by γ.",
+      "distractors": [
+        { "answer": "3.58 m", "explanation": "This incorrectly divides the contracted length by γ again; the proper length is the contracted length multiplied by γ." },
+        { "answer": "18.0 m", "explanation": "18.0 m is the contracted length; the proper length measured in the spacecraft's rest frame is larger." },
+        { "answer": "88.0 m", "explanation": "This does not follow from L₀ = Lγ = 18.0 × 5.03 = 90.5 m; this appears to be an arithmetic error." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Two rockets have proper lengths of 100 m and 200 m. Both travel at 0.866c (γ = 2.00) relative to a space station. What are their contracted lengths as measured from the station?",
+      "correct": "50 m and 100 m respectively",
+      "correctExplanation": "Both are divided by γ = 2: L₁ = 100/2 = 50 m, L₂ = 200/2 = 100 m. The ratio of contracted lengths equals the ratio of proper lengths.",
+      "distractors": [
+        { "answer": "50 m and 50 m respectively", "explanation": "Length contraction reduces each length by the same factor, not to the same absolute value; the 200 m rocket is still longer." },
+        { "answer": "200 m and 400 m respectively", "explanation": "This incorrectly multiplies by γ; contracted lengths are shorter than proper lengths, found by dividing by γ." },
+        { "answer": "86.6 m and 173.2 m respectively", "explanation": "These values would result from multiplying by v/c, not from dividing by γ; the correct formula is L = L₀/γ." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Sofia calculates that a 500 m train travelling at 0.600c (γ = 1.25) has a contracted length of 625 m. Identify her error.",
+      "correct": "She multiplied by γ instead of dividing; the correct answer is 400 m",
+      "correctExplanation": "L = L₀/γ = 500/1.25 = 400 m. Sofia incorrectly computed L = L₀ × γ = 500 × 1.25 = 625 m.",
+      "distractors": [
+        { "answer": "She used the wrong value of γ; the correct Lorentz factor is 1.50", "explanation": "At v = 0.600c, γ = 1/√(1 − 0.36) = 1/√0.64 = 1/0.800 = 1.25, which is correct." },
+        { "answer": "She forgot to square the speed; the correct contracted length is 500 m", "explanation": "The proper length is 500 m; the contracted length must be less than this since the object is moving." },
+        { "answer": "She used length contraction instead of time dilation; the answer should be 625 s", "explanation": "The question asks for a length, so the length contraction formula is correct; she just applied it incorrectly." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A spacecraft at 0.700c (γ = 1.40) is measured by an observer to be 85.7 m long. If it accelerates to 0.950c (γ = 3.20), what contracted length does the same observer measure?",
+      "correct": "37.5 m",
+      "correctExplanation": "First find L₀ = 85.7 × 1.40 = 120 m. Then at 0.950c: L = 120/3.20 = 37.5 m.",
+      "distractors": [
+        { "answer": "85.7 m", "explanation": "This is the contracted length at 0.700c; increasing speed to 0.950c produces a much shorter contracted length." },
+        { "answer": "120 m", "explanation": "120 m is the proper length of the spacecraft; the contracted length at 0.950c is shorter than this." },
+        { "answer": "274 m", "explanation": "This incorrectly multiplies the contracted length by γ₂; the observer measures L = L₀/γ₂ = 120/3.20 = 37.5 m." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the calculation about length contraction at different speeds.",
+      "sentence": "A 250 m rocket at 0.866c has γ = 2.00 and contracted length {{blank:1}} m. At 0.990c with γ ≈ 7.09, its contracted length is approximately {{blank:2}} m.",
+      "blanks": {
+        "1": {
+          "correct": "125",
+          "correctExplanation": "L = 250/2.00 = 125 m. At 0.866c the Lorentz factor is exactly 2.",
+          "distractors": [
+            { "answer": "500", "explanation": "500 m would be L₀ × γ, which is the incorrect operation; contracted length equals L₀ divided by γ." },
+            { "answer": "250", "explanation": "250 m is the proper length; at 0.866c the contracted length is L₀/2 = 125 m." }
+          ]
+        },
+        "2": {
+          "correct": "35.3",
+          "correctExplanation": "L = 250/7.09 ≈ 35.3 m. The much larger Lorentz factor at 0.990c produces a dramatically shorter length.",
+          "distractors": [
+            { "answer": "125", "explanation": "125 m is the contracted length at 0.866c; at 0.990c the contraction is much greater." },
+            { "answer": "1773", "explanation": "This incorrectly multiplies 250 by γ; the contracted length is shorter than the proper length." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the calculation to find the proper length from a contracted measurement.",
+      "sentence": "Kai measures a spacecraft moving at 0.980c (γ = 5.03) to be 40.0 m long. The proper length of the spacecraft is L₀ = 40.0 × {{blank:1}} = {{blank:2}} m.",
+      "blanks": {
+        "1": {
+          "correct": "5.03",
+          "correctExplanation": "To find proper length from contracted length, rearrange L = L₀/γ to L₀ = Lγ, so multiply by γ = 5.03.",
+          "distractors": [
+            { "answer": "0.199", "explanation": "0.199 is 1/γ; multiplying by 1/γ would contract the length further, not recover the proper length." },
+            { "answer": "0.980", "explanation": "0.980 is the speed in units of c, not the Lorentz factor; the formula uses γ, not v/c." }
+          ]
+        },
+        "2": {
+          "correct": "201",
+          "correctExplanation": "L₀ = 40.0 × 5.03 = 201 m. The spacecraft's proper length is much greater than the contracted length at this high speed.",
+          "distractors": [
+            { "answer": "7.95", "explanation": "This would be 40.0 divided by 5.03, which contracts the length further instead of recovering the proper length." },
+            { "answer": "40.0", "explanation": "40.0 m is the contracted length; the proper length is larger by a factor of γ = 5.03." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about comparing length contraction at two speeds.",
+      "sentence": "A rod with proper length 80.0 m has a contracted length of {{blank:1}} m at 0.600c (γ = 1.25) and a contracted length of {{blank:2}} m at 0.800c (γ = 1.667).",
+      "blanks": {
+        "1": {
+          "correct": "64.0",
+          "correctExplanation": "L = 80.0/1.25 = 64.0 m. At 0.600c the contraction is moderate.",
+          "distractors": [
+            { "answer": "100", "explanation": "100 m would be L₀ × γ, which is the incorrect operation; the contracted length is always less than L₀." },
+            { "answer": "80.0", "explanation": "80.0 m is the proper length; at 0.600c the contracted length is shorter: 80.0/1.25 = 64.0 m." }
+          ]
+        },
+        "2": {
+          "correct": "48.0",
+          "correctExplanation": "L = 80.0/1.667 ≈ 48.0 m. The higher speed produces a noticeably shorter contracted length.",
+          "distractors": [
+            { "answer": "64.0", "explanation": "64.0 m is the contracted length at 0.600c; at the higher speed of 0.800c the contraction is greater." },
+            { "answer": "133", "explanation": "133 m would be L₀ × γ, which gives a value larger than the proper length; this is incorrect." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "mc",
+      "question": "A student plots contracted length versus relative speed for a 100 m rod and obtains a straight line from 100 m at v = 0 to 0 m at v = c. Evaluate whether this graph is correct.",
+      "correct": "The graph is incorrect; L = L₀/γ produces a curve that drops steeply near c, not a straight line",
+      "correctExplanation": "The Lorentz factor increases nonlinearly with speed. The contracted length decreases slowly at low speeds and very rapidly near c, producing a concave curve.",
+      "distractors": [
+        { "answer": "The graph is correct; length contraction is directly proportional to speed", "explanation": "Length contraction follows L = L₀/γ, which is a nonlinear relationship; a straight line would misrepresent the physics." },
+        { "answer": "The graph is correct if the speed axis is scaled logarithmically", "explanation": "Even on a logarithmic speed axis, L = L₀/γ does not produce a straight line; the relationship is inherently nonlinear." },
+        { "answer": "The graph is incorrect; it should be a straight line from 0 m at v = 0 to 100 m at v = c", "explanation": "This reverses the relationship entirely; contracted length starts at L₀ when v = 0 and approaches zero as v approaches c." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Liam argues that if you could travel at the speed of light, all distances ahead of you would be contracted to zero. Evaluate this claim.",
+      "correct": "The mathematical limit supports this, but no massive object can reach c, so the scenario is physically impossible",
+      "correctExplanation": "As v → c, L → 0 mathematically. However, special relativity requires infinite energy to accelerate a massive object to c, making the scenario unphysical.",
+      "distractors": [
+        { "answer": "The claim is entirely correct and physically achievable with sufficient energy", "explanation": "No finite amount of energy can accelerate a massive object to c; the claim describes a mathematical limit, not a physical possibility." },
+        { "answer": "The claim is incorrect; distances would contract to half the proper length at c", "explanation": "The limit of L₀/γ as v → c is zero, not L₀/2; half the proper length occurs at v ≈ 0.866c." },
+        { "answer": "The claim is incorrect; length contraction does not apply to distances in space", "explanation": "Length contraction applies to all lengths in the direction of motion, including distances between objects." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Mei states that doubling the speed always halves the contracted length. Evaluate this claim using specific examples.",
+      "correct": "The claim is false; the nonlinear relationship between γ and speed means doubling the speed does not halve the contracted length",
+      "correctExplanation": "At 0.40c: γ ≈ 1.09, L ≈ 0.917L₀. At 0.80c: γ ≈ 1.67, L ≈ 0.600L₀. Halving 0.917L₀ gives 0.459L₀, not 0.600L₀.",
+      "distractors": [
+        { "answer": "The claim is true because L = L₀/γ is a linear relationship with speed", "explanation": "L = L₀/γ is not linear with speed; γ depends on v² in a nonlinear way through the square root." },
+        { "answer": "The claim is true only for speeds below 0.5c where the relationship is approximately linear", "explanation": "Even below 0.5c, the relationship is not linear enough for doubling speed to halve the length." },
+        { "answer": "The claim is true because γ is directly proportional to speed at all speeds", "explanation": "γ is not proportional to v; γ = 1/√(1 − v²/c²) is a nonlinear function that increases more steeply at higher speeds." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A physicist claims that length contraction means a fast-moving rod is physically compressed. Evaluate this interpretation in terms of special relativity.",
+      "correct": "This is incorrect; length contraction is a measurement difference between reference frames, not a physical compression",
+      "correctExplanation": "In the rod's rest frame, no forces act on it and it retains its proper length. Different observers measure different lengths due to the geometry of spacetime.",
+      "distractors": [
+        { "answer": "This is correct; the rod is physically squeezed by relativistic forces acting on it", "explanation": "There are no forces compressing the rod; length contraction is a kinematic effect arising from the structure of spacetime." },
+        { "answer": "This is correct; at high speed, electromagnetic forces within the rod cause compression", "explanation": "While relativistic electrodynamics can model internal forces, length contraction is not caused by forces but by spacetime geometry." },
+        { "answer": "This is partially correct; the rod is compressed in all three dimensions equally", "explanation": "Length contraction occurs only along the direction of motion, not perpendicular to it; this is a key feature of special relativity." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Arun argues that because contracted length approaches zero at v → c, a fast-moving object would eventually become invisible. Evaluate this reasoning.",
+      "correct": "Length contraction alone does not make objects invisible; it changes measured length but photons still reach the observer",
+      "correctExplanation": "While the length in the direction of motion approaches zero, the object still emits or reflects photons. Visual appearance involves relativistic aberration and Doppler effects, not just contraction.",
+      "distractors": [
+        { "answer": "The reasoning is correct; an infinitely thin object cannot reflect light and would be invisible", "explanation": "Even an extremely contracted object still has physical extent perpendicular to motion and can still interact with light." },
+        { "answer": "The reasoning is correct because zero length means the object no longer exists", "explanation": "The proper length in the object's own frame is unchanged; only the measured length in another frame approaches zero." },
+        { "answer": "The reasoning is incorrect because length contraction does not occur at speeds approaching c", "explanation": "Length contraction becomes most significant at speeds approaching c; the premise that L → 0 is correct, but the conclusion about visibility is not." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student claims that time dilation and length contraction give contradictory results when explaining muon survival. Evaluate this claim.",
+      "correct": "The claim is false; both effects give consistent predictions — they are two sides of the same relativistic phenomenon",
+      "correctExplanation": "From Earth's frame, time dilation extends the muon's lifetime. From the muon's frame, length contraction shortens the distance. Both predict the muon reaches Earth's surface.",
+      "distractors": [
+        { "answer": "The claim is true; only time dilation correctly explains muon survival, not length contraction", "explanation": "Both explanations are valid and give the same measurable prediction; they describe the same physics from different frames." },
+        { "answer": "The claim is true; the two effects give different predicted distances of muon travel", "explanation": "Both approaches predict the same observable outcome: the muon reaches Earth's surface. The effects are complementary, not contradictory." },
+        { "answer": "The claim is partially true; the two effects agree only at speeds above 0.99c", "explanation": "Time dilation and length contraction are consistent at all speeds, not just above a particular threshold." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Evaluate whether the statement 'at 0.99c, a 100 m rocket is really only 14 m long' is a correct interpretation of length contraction.",
+      "correct": "The statement is misleading; the contracted length of 14 m is what a stationary observer measures, but the rocket's proper length remains 100 m",
+      "correctExplanation": "Both measurements are equally valid in their respective frames. Saying the rocket 'is really' a particular length implies one frame is more correct, which contradicts the first postulate of special relativity.",
+      "distractors": [
+        { "answer": "The statement is fully correct; 14 m is the only true length of the rocket at 0.99c", "explanation": "Special relativity holds that no reference frame is privileged; the 100 m proper length is equally valid." },
+        { "answer": "The statement is incorrect; the rocket is always exactly 100 m long regardless of speed", "explanation": "While the proper length is 100 m, a stationary observer genuinely measures 14 m; both measurements are real." },
+        { "answer": "The statement is correct because length contraction physically shrinks the rocket to 14 m", "explanation": "Length contraction is not a physical shrinking; it is a difference in measurements between reference frames." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student calculates that at v = 0.999c (γ ≈ 22.4) a 1.00 km tunnel appears 44.6 m long to a moving particle. The student concludes the particle 'sees' a much shorter tunnel. Evaluate the use of the word 'sees' in this context.",
+      "correct": "The word 'sees' is misleading; 44.6 m is the measured contracted length, not what the particle would visually perceive due to relativistic optical effects",
+      "correctExplanation": "Visual perception involves light travel time, aberration, and Doppler shift. The contracted length is a coordinate measurement, not a visual observation.",
+      "distractors": [
+        { "answer": "The use of 'sees' is completely accurate because the particle literally observes 44.6 m", "explanation": "What a particle would 'see' involves relativistic optics; the 44.6 m is a frame-dependent measurement, not a visual image." },
+        { "answer": "The use of 'sees' is wrong because the particle cannot observe anything while moving", "explanation": "A particle can interact with its environment; the issue is that 'sees' conflates measurement with visual perception." },
+        { "answer": "The use of 'sees' is correct because length contraction describes the visual appearance of objects", "explanation": "Length contraction describes coordinate measurements between frames; visual appearance involves additional relativistic optical effects." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the evaluation of a common misconception about length contraction.",
+      "sentence": "Length contraction does not mean an object is physically {{blank:1}}. It means that observers in different reference frames measure different {{blank:2}} for the same object.",
+      "blanks": {
+        "1": {
+          "correct": "compressed",
+          "correctExplanation": "Length contraction is a kinematic effect of spacetime geometry, not a physical force that squeezes or compresses the object.",
+          "distractors": [
+            { "answer": "accelerated", "explanation": "Length contraction does not require acceleration; it depends only on relative velocity between observer and object." },
+            { "answer": "destroyed", "explanation": "The object is not damaged or destroyed; it simply has different measured dimensions in different reference frames." }
+          ]
+        },
+        "2": {
+          "correct": "lengths",
+          "correctExplanation": "Different frames measure different spatial distances along the direction of motion; this is the core of length contraction.",
+          "distractors": [
+            { "answer": "masses", "explanation": "While relativistic momentum involves γ, this sentence describes length contraction, which concerns spatial measurements." },
+            { "answer": "speeds", "explanation": "Both observers agree on the relative speed between them; it is lengths and time intervals that differ between frames." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the evaluation about the consistency of relativistic predictions.",
+      "sentence": "Time dilation and length contraction give {{blank:1}} predictions for observable outcomes because they describe the same relativistic physics from {{blank:2}} reference frames.",
+      "blanks": {
+        "1": {
+          "correct": "consistent",
+          "correctExplanation": "Both effects are derived from the same Lorentz transformations and always produce the same measurable predictions.",
+          "distractors": [
+            { "answer": "contradictory", "explanation": "The effects complement each other; Earth's time dilation and the muon's length contraction both predict muon survival." },
+            { "answer": "approximate", "explanation": "The predictions are exact, not approximate; both effects give precisely the same observable outcomes." }
+          ]
+        },
+        "2": {
+          "correct": "different",
+          "correctExplanation": "Time dilation describes the physics from one frame while length contraction describes it from another; both are valid perspectives.",
+          "distractors": [
+            { "answer": "identical", "explanation": "The frames are different; one observer is at rest while the other moves, which is why different effects dominate in each frame." },
+            { "answer": "accelerating", "explanation": "Special relativity applies to inertial (non-accelerating) frames; the frames involved are moving at constant relative velocity." }
+          ]
+        }
+      }
+    }
+  ]
+}

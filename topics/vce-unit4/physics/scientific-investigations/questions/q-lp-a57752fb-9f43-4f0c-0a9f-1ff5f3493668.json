@@ -1,0 +1,583 @@
+{
+  "_link": {
+    "uuid": "lp-a57752fb-9f43-4f0c-0a9f-1ff5f3493668",
+    "version": "2.5",
+    "contentHash": "hash-dd86a445",
+    "title": "I can add uncertainty bars to a graph and explain what they represent",
+    "generatedAt": "2026-03-10T00:00:00.000Z"
+  },
+  "toLevel2": [
+    {
+      "type": "MC",
+      "question": "What do vertical uncertainty bars on a graph represent?",
+      "correct": "The uncertainty in the dependent variable measurement",
+      "correctExplanation": "Vertical uncertainty bars show the range above and below the data point within which the true value of the dependent variable is expected to lie.",
+      "distractors": [
+        { "answer": "The uncertainty in the independent variable", "explanation": "The independent variable uncertainty is shown by horizontal bars, not vertical ones." },
+        { "answer": "The distance between adjacent data points", "explanation": "Uncertainty bars show measurement uncertainty, not the spacing between data points." },
+        { "answer": "The height of the graph axis in centimetres", "explanation": "Uncertainty bars represent measurement uncertainty, not the physical dimensions of the graph." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "In which directions do uncertainty bars extend from a data point on a graph?",
+      "correct": "Vertically above and below, and horizontally left and right",
+      "correctExplanation": "Vertical uncertainty bars extend above and below the point, and horizontal bars extend left and right, representing the uncertainty in each variable.",
+      "distractors": [
+        { "answer": "Only vertically above the data point", "explanation": "Vertical uncertainty bars extend both above and below the data point, not just above." },
+        { "answer": "Only diagonally from the data point", "explanation": "Uncertainty bars are drawn vertically and horizontally, not diagonally." },
+        { "answer": "In a circle around the data point", "explanation": "Uncertainty bars are straight lines, not circular shapes around data points." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "What determines the length of an uncertainty bar on a graph?",
+      "correct": "The magnitude of the uncertainty in the measurement",
+      "correctExplanation": "The length of the uncertainty bar is proportional to the size of the measurement uncertainty, drawn to scale on the graph axis.",
+      "distractors": [
+        { "answer": "The number of data points on the graph", "explanation": "The number of data points does not affect the length of individual uncertainty bars." },
+        { "answer": "The size of the data point marker symbol", "explanation": "The marker size is a drawing choice; the uncertainty bar length represents the measurement uncertainty." },
+        { "answer": "The total range of all data on the graph", "explanation": "The total data range does not determine the length of individual uncertainty bars." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "What region do vertical and horizontal uncertainty bars together define around a data point?",
+      "correct": "A rectangular region within which the true value is expected to lie",
+      "correctExplanation": "The vertical and horizontal bars together define a rectangular region that represents the combined uncertainty in both variables.",
+      "distractors": [
+        { "answer": "A circular region centred on the data point", "explanation": "The combined uncertainty bars define a rectangle, not a circle." },
+        { "answer": "A triangular region pointing towards the origin", "explanation": "Uncertainty bars define a rectangle, not a triangle." },
+        { "answer": "A single line passing through the data point", "explanation": "The combined bars define a two-dimensional rectangular region, not a single line." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "What feature should be drawn at each end of an uncertainty bar?",
+      "correct": "End caps (small horizontal or vertical lines)",
+      "correctExplanation": "End caps are small lines drawn perpendicular to the uncertainty bar at each end, clearly marking the extent of the uncertainty range.",
+      "distractors": [
+        { "answer": "Arrows pointing outward from the data point", "explanation": "Arrows are not the standard convention; end caps are the correct feature." },
+        { "answer": "Circles at the tips of each uncertainty bar", "explanation": "Circles are not standard; small perpendicular lines (end caps) are the convention." },
+        { "answer": "No additional feature is needed at the ends", "explanation": "End caps are required to clearly mark the extent of the uncertainty bars." }
+      ]
+    },
+    {
+      "type": "TF",
+      "question": "Uncertainty bars make the reliability of each data point visible on the graph.",
+      "correct": "True",
+      "correctExplanation": "Uncertainty bars visually display the measurement uncertainty, allowing the reader to assess the reliability of each data point.",
+      "distractors": [
+        { "answer": "False", "explanation": "Uncertainty bars are specifically designed to show the reliability and precision of each measurement." }
+      ]
+    },
+    {
+      "type": "TF",
+      "question": "A line of best fit does not need to pass through the uncertainty bar region of the data points.",
+      "correct": "False",
+      "correctExplanation": "A valid line of best fit must pass through the uncertainty bar region of every data point.",
+      "distractors": [
+        { "answer": "True", "explanation": "The line of best fit must pass through the uncertainty bar region of every data point to be considered valid." }
+      ]
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the following statement about uncertainty bars.",
+      "sentence": "Uncertainty bars are drawn as lines extending above and below each data point, with {{blank:1}} at each end, and their length represents the {{blank:2}} of the uncertainty.",
+      "blanks": {
+        "1": {
+          "correct": "end caps",
+          "correctExplanation": "End caps are small perpendicular lines at each end of the uncertainty bar that clearly mark the extent of the range.",
+          "distractors": [
+            { "answer": "arrows", "explanation": "Arrows are not the standard convention; end caps are the correct feature." },
+            { "answer": "circles", "explanation": "Circles are not used; end caps are the standard way to mark uncertainty bar ends." }
+          ]
+        },
+        "2": {
+          "correct": "magnitude",
+          "correctExplanation": "The length of the bar corresponds to the magnitude (size) of the measurement uncertainty.",
+          "distractors": [
+            { "answer": "colour", "explanation": "The colour of the bar does not represent uncertainty; its length does." },
+            { "answer": "direction", "explanation": "The direction of the bar shows which variable it represents; the length shows the magnitude." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the following example of uncertainty bar placement.",
+      "sentence": "If the time uncertainty is ±0.2 s, the vertical bar for a point at 2.0 s extends from {{blank:1}} s to {{blank:2}} s.",
+      "blanks": {
+        "1": {
+          "correct": "1.8",
+          "correctExplanation": "2.0 − 0.2 = 1.8 s is the lower bound of the uncertainty bar.",
+          "distractors": [
+            { "answer": "2.0", "explanation": "2.0 s is the measured value, not the lower bound of the uncertainty bar." },
+            { "answer": "0.2", "explanation": "0.2 s is the uncertainty value, not the lower bound of the bar." }
+          ]
+        },
+        "2": {
+          "correct": "2.2",
+          "correctExplanation": "2.0 + 0.2 = 2.2 s is the upper bound of the uncertainty bar.",
+          "distractors": [
+            { "answer": "2.0", "explanation": "2.0 s is the measured value, not the upper bound of the uncertainty bar." },
+            { "answer": "4.0", "explanation": "4.0 s would represent twice the measured value, not the upper bound of the uncertainty bar." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the following statement about uncertainty bar regions.",
+      "sentence": "Vertical and horizontal uncertainty bars together define a {{blank:1}} region within which the {{blank:2}} value is expected to lie.",
+      "blanks": {
+        "1": {
+          "correct": "rectangular",
+          "correctExplanation": "The combined vertical and horizontal bars define a rectangular region around the data point.",
+          "distractors": [
+            { "answer": "circular", "explanation": "The combined bars define a rectangle, not a circle." },
+            { "answer": "triangular", "explanation": "The combined bars define a rectangle, not a triangle." }
+          ]
+        },
+        "2": {
+          "correct": "true",
+          "correctExplanation": "The uncertainty bar region represents the range within which the true value of the measurement is expected to lie.",
+          "distractors": [
+            { "answer": "estimated", "explanation": "While the value is estimated, the bar represents where the true value is expected to be." },
+            { "answer": "maximum", "explanation": "The bar shows the range for the true value, not the maximum possible value." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "MC",
+      "question": "Priya measures the period of a pendulum as 1.45 ± 0.03 s. Which of the following correctly describes the vertical uncertainty bar she should draw?",
+      "correct": "A bar extending from 1.42 s to 1.48 s on the vertical axis, centred on the data point at 1.45 s",
+      "correctExplanation": "The bar extends ±0.03 s from the measured value: 1.45 − 0.03 = 1.42 s to 1.45 + 0.03 = 1.48 s.",
+      "distractors": [
+        { "answer": "A bar extending from 0 s to 1.45 s on the vertical axis to show the full magnitude of the measurement", "explanation": "The bar shows the uncertainty range, not the full magnitude from zero." },
+        { "answer": "A bar extending from 1.45 s to 1.48 s on the vertical axis, only above the data point position", "explanation": "The bar must extend both above and below the data point symmetrically." },
+        { "answer": "A bar of length 0.03 s extending only below the data point to the minimum possible value", "explanation": "The bar must extend ±0.03 s both above and below the measured value." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Which of the following best explains why uncertainty bars are important for evaluating a line of best fit?",
+      "correct": "They define the valid region through which the line must pass for every data point",
+      "correctExplanation": "Uncertainty bars establish the acceptable range for each point. A valid line of best fit must pass through every uncertainty bar region.",
+      "distractors": [
+        { "answer": "They make the graph look more professional and demonstrate that the student calculated uncertainties", "explanation": "The purpose is analytical, not cosmetic; they constrain the valid region for the line." },
+        { "answer": "They replace the need for a line of best fit because the bars already show the relationship between variables", "explanation": "Uncertainty bars do not replace the line of best fit; they help evaluate its validity." },
+        { "answer": "They are purely decorative elements that have no effect on the analysis of the graphed data", "explanation": "Uncertainty bars have a direct analytical role in constraining the line of best fit." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Kai measures the distance a projectile travels as 3.50 ± 0.05 m. The angle of launch is set to 45.0 ± 0.5°. Which of the following correctly identifies the orientation of each uncertainty bar?",
+      "correct": "Vertical bar for distance (±0.05 m) and horizontal bar for angle (±0.5°)",
+      "correctExplanation": "Distance is on the vertical axis (dependent variable) and angle is on the horizontal axis (independent variable), so their bars are oriented accordingly.",
+      "distractors": [
+        { "answer": "Horizontal bar for distance and vertical bar for angle, matching the physical direction", "explanation": "Bar orientation depends on which axis the variable is plotted on, not the physical direction of the measurement." },
+        { "answer": "Only a vertical bar for distance because the independent variable does not have uncertainty", "explanation": "Independent variables can have uncertainty, and horizontal bars should be drawn when it is significant." },
+        { "answer": "A diagonal bar combining both uncertainties into a single line from one corner to the other", "explanation": "Uncertainties are shown separately as vertical and horizontal bars, not as a single diagonal." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Which of the following best explains what it means when uncertainty bars on a graph are large compared to the data spread?",
+      "correct": "The measurements have low precision relative to the range of values, making it difficult to determine the trend",
+      "correctExplanation": "Large uncertainty bars relative to the data spread indicate that measurement precision may be insufficient to clearly identify the underlying relationship.",
+      "distractors": [
+        { "answer": "The measurements are very accurate and the large bars simply reflect the high-quality instruments used", "explanation": "Large bars indicate low precision, not high accuracy." },
+        { "answer": "The graph is drawn incorrectly and the uncertainty bars should be made smaller for visual clarity", "explanation": "Uncertainty bars must accurately reflect the actual measurement uncertainty, not be adjusted for appearance." },
+        { "answer": "The investigation was very successful because large bars mean the data covers a wide range of values", "explanation": "Large uncertainty bars relative to the data spread indicate low precision, not a wide data range." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Anika plots data points with vertical uncertainty bars but no horizontal uncertainty bars. Under which circumstance is this acceptable?",
+      "correct": "When the uncertainty in the independent variable is negligibly small compared to the axis scale",
+      "correctExplanation": "If the independent variable has negligible uncertainty relative to the graph scale, horizontal bars are not required as they would be invisible.",
+      "distractors": [
+        { "answer": "Horizontal uncertainty bars are never required because independent variables are set precisely by definition", "explanation": "Independent variables can have uncertainty; it depends on the measurement method." },
+        { "answer": "Horizontal bars should always be included regardless of whether the uncertainty is significant or not", "explanation": "If the uncertainty is negligible on the graph scale, horizontal bars are not meaningful to include." },
+        { "answer": "Only vertical bars are needed because uncertainty in the independent variable does not affect the data", "explanation": "Independent variable uncertainty can affect the analysis; it is omitted only when negligibly small." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Marcus has five data points, each with a time uncertainty of ±0.1 s. Should all five uncertainty bars be the same length on the graph?",
+      "correct": "Yes, because all measurements have the same absolute uncertainty of ±0.1 s",
+      "correctExplanation": "When the absolute uncertainty is the same for all measurements, all vertical uncertainty bars should be the same length on the graph.",
+      "distractors": [
+        { "answer": "No, the bars should vary in length to make the graph look more realistic and scientifically credible", "explanation": "Bar length is determined by the actual uncertainty, not by aesthetic considerations." },
+        { "answer": "No, each bar should be proportional to the data point value to reflect percentage uncertainty instead", "explanation": "The bars should reflect absolute uncertainty unless percentage uncertainty is being plotted." },
+        { "answer": "Yes, but only if all five data points have exactly the same measured value on the vertical axis", "explanation": "Equal absolute uncertainty produces equal bar lengths regardless of the measured values." }
+      ]
+    },
+    {
+      "type": "TF",
+      "question": "If the uncertainty in the independent variable is negligibly small, horizontal uncertainty bars do not need to be drawn.",
+      "correct": "True",
+      "correctExplanation": "When the independent variable uncertainty is negligible compared to the graph scale, horizontal bars would be invisible and are not required.",
+      "distractors": [
+        { "answer": "False", "explanation": "Horizontal bars are omitted when the independent variable uncertainty is negligibly small relative to the graph scale." }
+      ]
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the following statement about uncertainty bar orientation.",
+      "sentence": "Vertical uncertainty bars represent the uncertainty in the {{blank:1}} variable, while horizontal bars represent the uncertainty in the {{blank:2}} variable.",
+      "blanks": {
+        "1": {
+          "correct": "dependent",
+          "correctExplanation": "The dependent variable is plotted on the vertical axis, so its uncertainty is shown by vertical bars.",
+          "distractors": [
+            { "answer": "independent", "explanation": "The independent variable is on the horizontal axis, so its uncertainty is shown by horizontal bars." },
+            { "answer": "controlled", "explanation": "Controlled variables are held constant and are not plotted on the graph." }
+          ]
+        },
+        "2": {
+          "correct": "independent",
+          "correctExplanation": "The independent variable is plotted on the horizontal axis, so its uncertainty is shown by horizontal bars.",
+          "distractors": [
+            { "answer": "dependent", "explanation": "The dependent variable is on the vertical axis, so its uncertainty is shown by vertical bars." },
+            { "answer": "controlled", "explanation": "Controlled variables are held constant and are not plotted on the graph." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the following statement about the purpose of uncertainty bars.",
+      "sentence": "Uncertainty bars determine whether a line of best fit is {{blank:1}} because the line must pass through the uncertainty bar {{blank:2}} of every data point.",
+      "blanks": {
+        "1": {
+          "correct": "valid",
+          "correctExplanation": "The validity of a line of best fit is determined by whether it passes through all uncertainty bar regions.",
+          "distractors": [
+            { "answer": "colourful", "explanation": "The colour of the line is not related to its validity." },
+            { "answer": "decorative", "explanation": "Lines of best fit serve an analytical purpose, not a decorative one." }
+          ]
+        },
+        "2": {
+          "correct": "region",
+          "correctExplanation": "The uncertainty bar region is the range defined by the bars, within which the line must pass.",
+          "distractors": [
+            { "answer": "colour", "explanation": "The colour of the uncertainty bar does not determine line validity." },
+            { "answer": "label", "explanation": "Uncertainty bars do not have labels; they define a region for the line to pass through." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the following statement about large uncertainty bars.",
+      "sentence": "Large uncertainty bars relative to the data spread indicate that the measurements have low {{blank:1}}, making it more {{blank:2}} to determine the underlying trend.",
+      "blanks": {
+        "1": {
+          "correct": "precision",
+          "correctExplanation": "Large uncertainty bars indicate low precision, meaning the measurements have a wide range of possible values.",
+          "distractors": [
+            { "answer": "accuracy", "explanation": "While accuracy may also be affected, large bars specifically indicate low precision." },
+            { "answer": "quantity", "explanation": "The number of measurements is not directly indicated by the size of uncertainty bars." }
+          ]
+        },
+        "2": {
+          "correct": "difficult",
+          "correctExplanation": "Low precision makes it harder to identify the underlying trend because the range of valid line positions is wider.",
+          "distractors": [
+            { "answer": "simple", "explanation": "Large uncertainties make trend identification more difficult, not simpler." },
+            { "answer": "unnecessary", "explanation": "Determining the trend is never unnecessary; large bars make it harder, not irrelevant." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "MC",
+      "question": "Sofia measures the extension of a spring at different forces. The ruler has a resolution of 1 mm, giving an uncertainty of ±0.5 mm. She records an extension of 25.0 ± 0.5 mm at 2.0 N. How should the vertical uncertainty bar be drawn on the graph?",
+      "correct": "A bar extending from 24.5 mm to 25.5 mm, drawn to scale on the vertical axis with end caps",
+      "correctExplanation": "The bar extends ±0.5 mm from the measured value (24.5 to 25.5 mm), drawn to the same scale as the axis.",
+      "distractors": [
+        { "answer": "A bar of arbitrary length that looks proportional to the size of the data point marker on the graph", "explanation": "The bar length must correspond to the actual uncertainty value drawn to the axis scale." },
+        { "answer": "A bar extending from 0 mm to 25.0 mm to represent the full magnitude of the measured extension", "explanation": "The bar represents the uncertainty range, not the full magnitude of the measurement." },
+        { "answer": "A bar extending from 24.5 mm to 25.5 mm but without end caps to keep the graph clean and simple", "explanation": "End caps are a required feature of uncertainty bars." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Liam calculates the uncertainty in T² (period squared) for a pendulum. If T = 1.40 ± 0.02 s, the uncertainty in T² is approximately ±0.056 s². How should this be represented on a graph of T² versus length?",
+      "correct": "As a vertical uncertainty bar of ±0.056 s² centred on the T² value of 1.96 s²",
+      "correctExplanation": "On a linearised graph of T² versus L, the vertical bar represents the propagated uncertainty in the calculated quantity T².",
+      "distractors": [
+        { "answer": "As a vertical bar of ±0.02 s because the original uncertainty in T should be used, not the propagated value", "explanation": "When plotting T², the propagated uncertainty in T² must be used, not the original uncertainty in T." },
+        { "answer": "Uncertainty bars are not needed on linearised graphs because the transformation removes all uncertainty from the data", "explanation": "Linearisation does not remove uncertainty; it must be propagated through the transformation." },
+        { "answer": "As a horizontal bar because T² is a calculated quantity and calculated values always use horizontal bars", "explanation": "T² is plotted on the vertical axis, so its uncertainty is shown as a vertical bar." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Mei has data where the time uncertainty is ±0.1 s for all measurements. On her graph, the vertical scale is 1 cm per 0.5 s. What is the length of each vertical uncertainty bar on the graph paper?",
+      "correct": "0.4 cm (0.2 cm above and 0.2 cm below the point)",
+      "correctExplanation": "At 1 cm per 0.5 s, the bar is 0.1/0.5 × 1 = 0.2 cm in each direction, giving a total length of 0.4 cm.",
+      "distractors": [
+        { "answer": "1.0 cm (0.5 cm above and 0.5 cm below the point)", "explanation": "This would represent ±0.25 s, not ±0.1 s at the given scale." },
+        { "answer": "0.1 cm (matching the numerical value of the uncertainty directly)", "explanation": "The bar length must be calculated using the axis scale, not by directly using the numerical uncertainty value." },
+        { "answer": "2.0 cm (1.0 cm above and 1.0 cm below the point)", "explanation": "This would represent ±0.5 s, not ±0.1 s at the given scale." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Arun plots data with both vertical and horizontal uncertainty bars. The vertical bars are much longer than the horizontal bars. Which of the following is the most likely explanation?",
+      "correct": "The dependent variable has a larger relative uncertainty than the independent variable",
+      "correctExplanation": "Longer vertical bars indicate greater uncertainty in the dependent variable compared to the independent variable's uncertainty.",
+      "distractors": [
+        { "answer": "The vertical axis scale is different from the horizontal axis scale, making the bars appear unequal", "explanation": "While scale differences can affect appearance, the bars represent actual uncertainties in the respective variables." },
+        { "answer": "The student made an error and the bars should always be the same length on both axes", "explanation": "Vertical and horizontal bars represent different uncertainties and are often different lengths." },
+        { "answer": "The dependent variable was measured more carefully than the independent variable in this investigation", "explanation": "Longer bars indicate larger uncertainty, meaning the dependent variable was measured with less precision." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Priya draws uncertainty bars on her graph and notices that the line of best fit passes through all vertical uncertainty bar regions but misses two horizontal uncertainty bar regions. Is the line valid?",
+      "correct": "No, the line must pass through the rectangular region defined by both vertical and horizontal bars for every data point",
+      "correctExplanation": "The line must pass through the complete uncertainty region (the rectangle defined by both bars) of every data point.",
+      "distractors": [
+        { "answer": "Yes, because only the vertical uncertainty bars matter for validating the line of best fit on a graph", "explanation": "Both vertical and horizontal bars define the valid region; the line must pass through both." },
+        { "answer": "Yes, because passing through all vertical bars is sufficient for the line to be considered valid", "explanation": "The line must pass through the full rectangular region defined by both sets of bars." },
+        { "answer": "No, and the horizontal bars should be removed from the graph to make the line appear valid instead", "explanation": "Removing bars to make a line appear valid is not scientific practice; the line should be adjusted." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Kai has data points where the time uncertainty varies: ±0.05 s for short time measurements and ±0.15 s for longer time measurements. How should the uncertainty bars be drawn?",
+      "correct": "Each data point should have a bar length corresponding to its own specific uncertainty value",
+      "correctExplanation": "When uncertainty varies between measurements, each bar must reflect the actual uncertainty of that specific data point.",
+      "distractors": [
+        { "answer": "All bars should be the same length, using the average uncertainty of ±0.10 s for consistency", "explanation": "Using an average misrepresents the actual uncertainty of individual points." },
+        { "answer": "All bars should use the largest uncertainty of ±0.15 s to be conservative in the analysis", "explanation": "Using the largest uncertainty for all points would overstate the uncertainty of the more precise measurements." },
+        { "answer": "Only the points with the largest uncertainty need bars; the more precise points are already reliable enough", "explanation": "All data points should have uncertainty bars, regardless of their relative size." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Marcus plots voltage versus current for an Ohm's law investigation. The voltage is set using a power supply dial (uncertainty ±0.1 V) and current is measured with a digital ammeter (uncertainty ±0.01 A). On a graph of current versus voltage, which bars are likely larger?",
+      "correct": "The horizontal bars (voltage ±0.1 V) are likely larger on the graph because the voltage uncertainty is larger relative to its scale",
+      "correctExplanation": "With voltage on the horizontal axis and a ±0.1 V uncertainty, the horizontal bars are likely more prominent than the ±0.01 A vertical bars, depending on the axis scales.",
+      "distractors": [
+        { "answer": "The vertical bars are always larger because the dependent variable always has greater uncertainty", "explanation": "The relative bar sizes depend on the actual uncertainties and axis scales, not on which variable is dependent." },
+        { "answer": "Both bars must be the same length because all measurements in a single investigation share the same uncertainty", "explanation": "Different measurements typically have different uncertainties." },
+        { "answer": "Neither bar is needed because digital instruments have zero uncertainty in their measurements", "explanation": "All instruments, including digital ones, have measurement uncertainties." }
+      ]
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the following statement about propagated uncertainty on a linearised graph.",
+      "sentence": "When plotting T² versus L, the vertical uncertainty bars must represent the {{blank:1}} uncertainty in T², not the original uncertainty in {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "propagated",
+          "correctExplanation": "The uncertainty in T² must be calculated from the uncertainty in T using propagation rules.",
+          "distractors": [
+            { "answer": "estimated", "explanation": "The uncertainty must be calculated through propagation, not estimated." },
+            { "answer": "eliminated", "explanation": "Uncertainty is not eliminated by linearisation; it must be propagated." }
+          ]
+        },
+        "2": {
+          "correct": "T",
+          "correctExplanation": "The original uncertainty in T must be propagated to find the uncertainty in T² before drawing bars on the linearised graph.",
+          "distractors": [
+            { "answer": "L", "explanation": "L is the independent variable; the vertical bars represent uncertainty in the dependent variable T²." },
+            { "answer": "g", "explanation": "g is a constant (acceleration due to gravity), not a measured variable with uncertainty bars." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the following statement about calculating bar length on graph paper.",
+      "sentence": "To determine the length of an uncertainty bar on graph paper, divide the {{blank:1}} by the scale of the axis and convert to {{blank:2}} on the paper.",
+      "blanks": {
+        "1": {
+          "correct": "uncertainty",
+          "correctExplanation": "The uncertainty value must be divided by the axis scale to determine the physical length on the graph paper.",
+          "distractors": [
+            { "answer": "data value", "explanation": "The data value determines the position of the point, not the length of the bar." },
+            { "answer": "axis range", "explanation": "The axis range determines the overall scale, not the bar length for a specific point." }
+          ]
+        },
+        "2": {
+          "correct": "centimetres",
+          "correctExplanation": "The calculated length in the variable's units must be converted to centimetres (or the appropriate paper unit) using the axis scale.",
+          "distractors": [
+            { "answer": "kilograms", "explanation": "Kilograms are a mass unit, not a measurement of length on graph paper." },
+            { "answer": "seconds", "explanation": "Seconds are a time unit, not a measurement of physical length on graph paper." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the following statement about varying uncertainty bars.",
+      "sentence": "When the uncertainty {{blank:1}} between data points, each bar must reflect the {{blank:2}} uncertainty of that specific measurement.",
+      "blanks": {
+        "1": {
+          "correct": "varies",
+          "correctExplanation": "When measurement uncertainty differs between data points, each bar must be individually sized.",
+          "distractors": [
+            { "answer": "disappears", "explanation": "Uncertainty does not disappear; it may vary between measurements." },
+            { "answer": "doubles", "explanation": "While uncertainty may increase, 'varies' is the general description." }
+          ]
+        },
+        "2": {
+          "correct": "actual",
+          "correctExplanation": "Each bar must reflect the actual uncertainty of its specific data point, not an average or maximum.",
+          "distractors": [
+            { "answer": "average", "explanation": "Using an average misrepresents the uncertainty of individual points." },
+            { "answer": "minimum", "explanation": "Using the minimum uncertainty would understate the uncertainty of less precise measurements." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "MC",
+      "question": "A student argues that uncertainty bars are unnecessary because 'a good experiment should have no uncertainty.' Evaluate this argument.",
+      "correct": "The argument is incorrect because all measurements have inherent uncertainty, and uncertainty bars are essential for honest data representation",
+      "correctExplanation": "Every measurement has uncertainty due to instrument limitations and measurement conditions. Uncertainty bars are a fundamental part of scientific data presentation.",
+      "distractors": [
+        { "answer": "The argument is correct for digital instruments, which give exact readings with no measurement uncertainty", "explanation": "Digital instruments have uncertainty equal to ±0.5 of the least significant digit; no instrument gives perfectly certain readings." },
+        { "answer": "The argument is valid for controlled laboratory experiments where conditions can be made perfectly stable", "explanation": "Even in controlled conditions, instruments have finite resolution and measurements have inherent uncertainty." },
+        { "answer": "The argument is correct because uncertainty bars only confuse the reader and add unnecessary visual clutter", "explanation": "Uncertainty bars provide essential analytical information and are a required component of scientific graphs." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Evaluate the following scenario: A student's uncertainty bars are so small they are invisible on the graph at the chosen scale. What is the most appropriate response?",
+      "correct": "Note in the caption that uncertainty bars are present but too small to be visible at the graph scale, which indicates high-precision measurements",
+      "correctExplanation": "If bars are smaller than the data point markers, this indicates high precision. A note should explain that bars are present but not visible.",
+      "distractors": [
+        { "answer": "Enlarge the uncertainty bars artificially so they are visible, because all graphs must have visible uncertainty bars", "explanation": "Uncertainty bars must reflect actual measurement uncertainty; enlarging them would misrepresent the data." },
+        { "answer": "Remove the data points and redraw the graph at a much larger scale so the uncertainty bars become visible", "explanation": "Changing the entire graph scale to show tiny bars would compress the data and reduce readability." },
+        { "answer": "Omit the uncertainty bars entirely because invisible bars serve no purpose on the graph at all", "explanation": "The bars should be acknowledged even if invisible; a note explains the high precision of the measurements." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Two students plot the same data. Student A draws uncertainty bars based on the instrument resolution (±0.5 of the smallest division). Student B draws bars based on the range of repeated measurements divided by two. The two approaches give different bar sizes. Evaluate which is more appropriate.",
+      "correct": "The larger of the two values should be used because it provides a more conservative estimate of the true uncertainty",
+      "correctExplanation": "When different methods give different uncertainty estimates, the larger value should be used to ensure the uncertainty is not underestimated.",
+      "distractors": [
+        { "answer": "Student A's approach is always correct because instrument resolution is the only valid source of uncertainty", "explanation": "Both instrument resolution and repeated measurement spread are valid uncertainty sources; the larger should be used." },
+        { "answer": "Student B's approach is always correct because repeated measurements capture all sources of uncertainty", "explanation": "Repeated measurements may not capture all sources, especially systematic effects; both methods should be considered." },
+        { "answer": "The average of the two values should be used to give a balanced estimate of the uncertainty", "explanation": "Averaging could underestimate the uncertainty; the larger value provides a more conservative and appropriate estimate." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A student draws a graph where all uncertainty bars overlap with those of adjacent points. What does this indicate about the investigation?",
+      "correct": "The measurement uncertainty is large relative to the changes in the dependent variable between successive data points",
+      "correctExplanation": "Overlapping bars suggest that the differences between adjacent measurements are smaller than the uncertainties, making it difficult to distinguish the trend from noise.",
+      "distractors": [
+        { "answer": "The investigation is well-designed because overlapping bars confirm that all measurements are consistent", "explanation": "While consistency is desirable, overlapping bars indicate the measurements cannot clearly resolve the expected changes." },
+        { "answer": "The uncertainty bars are drawn too large and should be reduced until they no longer overlap with each other", "explanation": "Bars must reflect actual uncertainty; they should not be reduced to eliminate overlap." },
+        { "answer": "The investigation has produced excellent results because the data points are very close together on the graph", "explanation": "Points being close together with overlapping bars may mean the instrument cannot resolve the expected changes." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Evaluate the practice of drawing the same-sized uncertainty bars for all data points when the actual uncertainties differ between measurements.",
+      "correct": "It misrepresents the data because each point's bar should reflect its actual uncertainty, which may vary across the dataset",
+      "correctExplanation": "Using uniform bar sizes when uncertainties differ gives a false impression of consistent precision across all measurements.",
+      "distractors": [
+        { "answer": "It is acceptable for visual consistency because graphs should have a uniform appearance for presentation", "explanation": "Visual consistency does not justify misrepresenting the actual uncertainty of individual measurements." },
+        { "answer": "It is preferred because varying bar sizes confuse the reader and make the graph harder to interpret", "explanation": "Varying bar sizes accurately represent the data; readers benefit from seeing the actual uncertainty at each point." },
+        { "answer": "It is correct because all measurements taken with the same instrument must have identical uncertainty values", "explanation": "Even with the same instrument, uncertainty can vary due to factors like repeated measurement spread." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A student notices that their line of best fit passes through the vertical uncertainty bars of all points but consistently passes outside the horizontal uncertainty bars of three points. The student removes the horizontal bars from the graph. Evaluate this action.",
+      "correct": "Removing the bars is inappropriate; the student should adjust the line or investigate whether a different model better describes the data",
+      "correctExplanation": "Removing uncertainty bars to make a line appear valid is dishonest. The line should be adjusted, or the student should consider that a different relationship may better fit the data.",
+      "distractors": [
+        { "answer": "Removing the horizontal bars is acceptable because only vertical bars are needed for validating lines of best fit", "explanation": "Both vertical and horizontal bars define the valid region; removing either misrepresents the data." },
+        { "answer": "Removing the bars is correct because horizontal uncertainty bars are optional decorations, not required elements", "explanation": "Horizontal bars are required when the independent variable has significant uncertainty." },
+        { "answer": "The student should also remove the vertical bars to maintain consistency across the entire graph", "explanation": "Removing any uncertainty bars to hide invalidity is inappropriate scientific practice." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Evaluate the impact of drawing uncertainty bars that are 50% larger than the actual uncertainty values. How would this affect the analysis?",
+      "correct": "It would make the valid region for the line of best fit wider, potentially allowing invalid lines to appear valid",
+      "correctExplanation": "Oversized bars expand the acceptable region for the line, meaning a line that does not actually fit the data within its true uncertainties could falsely appear valid.",
+      "distractors": [
+        { "answer": "It would have no effect because the line of best fit is drawn independently of the uncertainty bar sizes", "explanation": "The line validity is directly determined by whether it passes through the uncertainty bars, so their size matters." },
+        { "answer": "It would make the analysis more conservative and therefore more scientifically rigorous in its approach", "explanation": "Overestimating uncertainty is not more rigorous; it misrepresents the measurement precision." },
+        { "answer": "It would only affect the visual appearance of the graph without changing any scientific conclusions drawn", "explanation": "The size of uncertainty bars directly affects which lines of best fit are considered valid." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A student plots a linearised graph of T² versus L and correctly propagates the uncertainty in T to find the uncertainty in T². The resulting vertical bars are much larger than those on the original T versus L graph. The student asks why the linearisation 'made the uncertainty worse.' Evaluate this concern.",
+      "correct": "The absolute uncertainty in T² is larger because squaring amplifies the original uncertainty, but this is mathematically correct and does not indicate a problem",
+      "correctExplanation": "Propagation through T² = T × T produces a larger absolute uncertainty. This is expected and correct; the linearisation has not made the data worse.",
+      "distractors": [
+        { "answer": "The student is correct and should use the original T uncertainty on the T² graph to avoid the amplification effect", "explanation": "Using the original T uncertainty on a T² graph would understate the actual uncertainty in the plotted quantity." },
+        { "answer": "The larger bars indicate a calculation error because linearisation should always reduce the uncertainty in plotted values", "explanation": "Linearisation does not reduce uncertainty; it transforms variables, and propagation increases absolute uncertainty." },
+        { "answer": "The student should abandon linearisation and use only the raw T versus L graph to avoid the larger uncertainty bars", "explanation": "Linearisation is a valid analytical tool; larger bars are expected and do not invalidate the approach." }
+      ]
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the following evaluation of uncertainty bar practices.",
+      "sentence": "Drawing uniform uncertainty bars when the actual uncertainties {{blank:1}} between measurements {{blank:2}} the data by giving a false impression of consistent precision.",
+      "blanks": {
+        "1": {
+          "correct": "differ",
+          "correctExplanation": "When uncertainties differ between measurements, each bar must reflect its actual value.",
+          "distractors": [
+            { "answer": "match", "explanation": "If uncertainties match, uniform bars would be correct, not misrepresentative." },
+            { "answer": "disappear", "explanation": "Uncertainties do not disappear; they are inherent in all measurements." }
+          ]
+        },
+        "2": {
+          "correct": "misrepresents",
+          "correctExplanation": "Using uniform bars when uncertainties vary gives a false impression and misrepresents the actual measurement precision.",
+          "distractors": [
+            { "answer": "improves", "explanation": "Uniform bars when uncertainties vary do not improve the data; they misrepresent it." },
+            { "answer": "validates", "explanation": "Misrepresenting uncertainty does not validate data; it compromises the analysis." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "Cloze",
+      "prompt": "Complete the following evaluation of overlapping uncertainty bars.",
+      "sentence": "Overlapping uncertainty bars between adjacent data points suggest that the measurement {{blank:1}} is insufficient to clearly resolve the {{blank:2}} between successive measurements.",
+      "blanks": {
+        "1": {
+          "correct": "precision",
+          "correctExplanation": "When bars overlap, the instrument precision is insufficient to clearly distinguish between adjacent data values.",
+          "distractors": [
+            { "answer": "accuracy", "explanation": "While accuracy may be affected, the overlap specifically indicates insufficient precision to resolve changes." },
+            { "answer": "quantity", "explanation": "The number of measurements is not what causes uncertainty bars to overlap." }
+          ]
+        },
+        "2": {
+          "correct": "differences",
+          "correctExplanation": "Overlapping bars mean the differences between adjacent measured values are smaller than the measurement uncertainty.",
+          "distractors": [
+            { "answer": "colours", "explanation": "Colour differences are not what uncertainty bars help resolve." },
+            { "answer": "locations", "explanation": "While data point locations differ, the specific issue is that the measured value differences cannot be clearly resolved." }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,583 @@
+{
+  "_link": {
+    "uuid": "lp-e9b5d30a-74dc-89d0-1d8e-481f0819ba91",
+    "version": 1,
+    "contentHash": "hash-af21c642",
+    "title": "I can apply the length contraction formula L = L₀/γ to various situations",
+    "generatedAt": "2026-03-10T10:00:00Z"
+  },
+  "toLevel2": [
+    {
+      "type": "mc",
+      "question": "What does L₀ represent in the length contraction formula L = L₀/γ?",
+      "correct": "The proper length, measured in the object's rest frame",
+      "correctExplanation": "L₀ is the proper length — the length measured by an observer at rest relative to the object. It is always the longest possible measurement of the object.",
+      "distractors": [
+        { "answer": "The contracted length measured by a moving observer", "explanation": "The contracted length is L, not L₀; L₀ is the length measured in the rest frame of the object." },
+        { "answer": "The length of the object at the speed of light", "explanation": "No massive object can reach the speed of light; L₀ is the rest-frame measurement, not a measurement at v = c." },
+        { "answer": "The average of all possible length measurements", "explanation": "L₀ is a specific measurement in one frame (the rest frame), not an average across frames." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What does L represent in the formula L = L₀/γ?",
+      "correct": "The contracted length measured by an observer relative to whom the object is moving",
+      "correctExplanation": "L is the contracted length — always shorter than L₀ because γ ≥ 1.",
+      "distractors": [
+        { "answer": "The proper length measured in the object's own rest frame", "explanation": "The proper length is L₀, not L; L is the shorter contracted length measured by a moving observer." },
+        { "answer": "The length of the object when it is accelerating toward the observer", "explanation": "Length contraction in special relativity applies to objects in uniform relative motion, not specifically accelerating objects." },
+        { "answer": "The length perpendicular to the direction of motion", "explanation": "Length contraction only affects the dimension parallel to motion; perpendicular dimensions are unchanged." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A rocket has a proper length of 200 m and passes Earth at 0.700c (γ = 1.40). What is the contracted length measured by an Earth observer?",
+      "correct": "143 m",
+      "correctExplanation": "L = L₀/γ = 200/1.40 = 143 m. The Earth observer measures the rocket as shorter than its proper length.",
+      "distractors": [
+        { "answer": "280 m", "explanation": "This incorrectly multiplies by γ; the contracted length is L₀ divided by γ, which gives a shorter length." },
+        { "answer": "200 m", "explanation": "200 m is the proper length; the contracted length at 0.700c is shorter at 143 m." },
+        { "answer": "140 m", "explanation": "This is 200 × 0.700, which uses v/c instead of 1/γ; the correct formula gives 200/1.40 = 143 m." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which observer measures the proper length of an object?",
+      "correct": "An observer at rest relative to the object",
+      "correctExplanation": "The proper length is measured by an observer for whom the object is stationary. This is always the longest measurement of the object.",
+      "distractors": [
+        { "answer": "An observer moving at the same speed as light relative to the object", "explanation": "No massive observer can move at the speed of light; the proper length is measured by an observer at rest relative to the object." },
+        { "answer": "Any observer, regardless of their relative motion to the object", "explanation": "Only an observer at rest relative to the object measures the proper length; moving observers measure a shorter contracted length." },
+        { "answer": "An observer at the midpoint between the object and the source of light", "explanation": "The observer's position is irrelevant; what matters is their velocity relative to the object." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "The rearranged form L₀ = Lγ is used when which quantity is the unknown?",
+      "correct": "The proper length, when the contracted length and γ are known",
+      "correctExplanation": "If L (contracted) and γ are given, multiplying them gives the proper length: L₀ = Lγ.",
+      "distractors": [
+        { "answer": "The contracted length, when the proper length and γ are known", "explanation": "To find the contracted length, use L = L₀/γ, not L₀ = Lγ." },
+        { "answer": "The Lorentz factor, when both lengths are known", "explanation": "To find γ, use γ = L₀/L, which is a different rearrangement." },
+        { "answer": "The speed of the object, when the proper length is known", "explanation": "Finding speed requires γ = L₀/L followed by solving γ = 1/√(1 − v²/c²) for v." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "The contracted length L is always less than or equal to the proper length L₀.",
+      "correct": "True",
+      "correctExplanation": "Since γ ≥ 1, dividing L₀ by γ always gives L ≤ L₀. Equality holds only when γ = 1 (v = 0).",
+      "distractors": [
+        { "answer": "False", "explanation": "L = L₀/γ and γ ≥ 1 guarantee that L ≤ L₀ for all physical speeds." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "Length contraction occurs in all three dimensions of a moving object.",
+      "correct": "False",
+      "correctExplanation": "Length contraction occurs only in the direction of relative motion. Dimensions perpendicular to the motion are unchanged.",
+      "distractors": [
+        { "answer": "True", "explanation": "Only the dimension parallel to the direction of motion is contracted; perpendicular dimensions remain the same." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the length contraction formula.",
+      "sentence": "The contracted length is given by L = {{blank:1}} / γ, where L₀ is the {{blank:2}} length.",
+      "blanks": {
+        "1": {
+          "correct": "L₀",
+          "correctExplanation": "L₀ is the proper length, which is divided by the Lorentz factor to give the contracted length.",
+          "distractors": [
+            { "answer": "L", "explanation": "L is the contracted length (the result), not the input; L₀ is divided by γ to obtain L." },
+            { "answer": "γ", "explanation": "γ is the Lorentz factor in the denominator; L₀ is the proper length being divided." }
+          ]
+        },
+        "2": {
+          "correct": "proper",
+          "correctExplanation": "The proper length is measured by an observer at rest relative to the object. It is always the largest measurement of the object.",
+          "distractors": [
+            { "answer": "contracted", "explanation": "The contracted length is L (the result); L₀ is the proper length in the rest frame." },
+            { "answer": "dilated", "explanation": "Dilation applies to time intervals; the rest-frame length is called the proper length." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about which direction length contraction occurs.",
+      "sentence": "Length contraction only occurs along the direction of {{blank:1}} motion. Dimensions {{blank:2}} to the motion are not affected.",
+      "blanks": {
+        "1": {
+          "correct": "relative",
+          "correctExplanation": "Contraction occurs along the axis of relative motion between the object and the observer.",
+          "distractors": [
+            { "answer": "circular", "explanation": "Length contraction in special relativity applies to linear relative motion, not circular motion specifically." },
+            { "answer": "accelerated", "explanation": "Special relativity applies to constant relative velocity; the contraction direction is along the relative motion." }
+          ]
+        },
+        "2": {
+          "correct": "perpendicular",
+          "correctExplanation": "Dimensions perpendicular to the direction of motion remain unchanged under length contraction.",
+          "distractors": [
+            { "answer": "parallel", "explanation": "Parallel dimensions are the ones that are contracted; perpendicular dimensions are unchanged." },
+            { "answer": "diagonal", "explanation": "Perpendicular is the correct term; diagonal components would have partial contraction along the motion axis." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the simple length contraction calculation.",
+      "sentence": "A 100 m spacecraft passes at 0.866c (γ = 2.00). The contracted length is L = 100 / {{blank:1}} = {{blank:2}} m.",
+      "blanks": {
+        "1": {
+          "correct": "2.00",
+          "correctExplanation": "γ = 2.00 at v = 0.866c. The proper length is divided by γ to find the contracted length.",
+          "distractors": [
+            { "answer": "0.866", "explanation": "0.866 is v/c; the formula divides by γ = 2.00, not by v/c." },
+            { "answer": "0.500", "explanation": "0.500 is 1/γ; dividing by 1/γ would multiply by γ, giving an incorrect result." }
+          ]
+        },
+        "2": {
+          "correct": "50.0",
+          "correctExplanation": "L = 100/2.00 = 50.0 m. The spacecraft appears half its proper length at this speed.",
+          "distractors": [
+            { "answer": "200", "explanation": "200 m would be L₀ × γ, which is the incorrect operation; the contracted length is shorter, not longer." },
+            { "answer": "86.6", "explanation": "86.6 m comes from multiplying by v/c; the correct formula uses L₀/γ = 100/2 = 50.0 m." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "mc",
+      "question": "A 150 m spacecraft travels past a space station at 0.800c (γ = 1.667). Calculate the contracted length measured from the station.",
+      "correct": "90.0 m",
+      "correctExplanation": "L = 150/1.667 = 90.0 m. The station observer measures the spacecraft as 60% of its proper length.",
+      "distractors": [
+        { "answer": "250 m", "explanation": "This multiplies by γ; the contracted length is L₀/γ = 150/1.667 = 90.0 m, which is shorter than the proper length." },
+        { "answer": "150 m", "explanation": "150 m is the proper length; at 0.800c the contracted length is noticeably shorter at 90.0 m." },
+        { "answer": "120 m", "explanation": "This uses 150 × 0.800 = 120, which incorrectly uses v/c instead of 1/γ." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An observer measures a spacecraft to be 35.0 m long as it passes at 0.950c (γ = 3.20). What is the proper length of the spacecraft?",
+      "correct": "112 m",
+      "correctExplanation": "L₀ = Lγ = 35.0 × 3.20 = 112 m. The proper length is found by multiplying the contracted length by γ.",
+      "distractors": [
+        { "answer": "10.9 m", "explanation": "This divides by γ again; the proper length is the contracted length multiplied by γ, not divided." },
+        { "answer": "35.0 m", "explanation": "35.0 m is the contracted length; the proper length in the spacecraft's frame is longer at 112 m." },
+        { "answer": "33.3 m", "explanation": "This multiplies by v/c instead of γ; the correct formula is L₀ = Lγ = 35.0 × 3.20 = 112 m." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Explain why a pilot inside a rocket measures its length as L₀ while an observer on Earth measures it as L = L₀/γ.",
+      "correct": "The pilot is at rest relative to the rocket and measures the proper length; the Earth observer sees it moving and measures the contracted length",
+      "correctExplanation": "Each observer makes valid measurements in their own frame. The pilot's frame is the rest frame of the rocket, so the pilot measures L₀.",
+      "distractors": [
+        { "answer": "The pilot's measuring instruments are also contracted, cancelling the effect", "explanation": "The pilot and instruments are in the same frame as the rocket; they measure the full proper length without contraction." },
+        { "answer": "The Earth observer makes an error because light from the rocket is Doppler-shifted", "explanation": "Length contraction is a genuine physical prediction, not an observational error related to Doppler shift." },
+        { "answer": "The rocket physically shrinks when moving, but the pilot cannot detect it from inside", "explanation": "The rocket does not physically shrink; both measurements are valid in their respective frames." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A muon created at 4500 m altitude travels at 0.990c (γ = 7.09). In the muon's frame, what is the distance to Earth's surface?",
+      "correct": "635 m",
+      "correctExplanation": "In the muon's frame, the atmosphere is length-contracted: L = 4500/7.09 = 635 m. This is short enough for the muon to reach the surface.",
+      "distractors": [
+        { "answer": "4500 m", "explanation": "4500 m is the proper distance in Earth's frame; in the muon's frame it is contracted to 635 m." },
+        { "answer": "31 900 m", "explanation": "This multiplies by γ instead of dividing; the contracted distance is shorter, not longer." },
+        { "answer": "2250 m", "explanation": "This divides by 2 instead of by γ = 7.09; the correct contracted distance is 635 m." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A spacecraft of proper length 80.0 m is moving at 0.600c (γ = 1.25). What is its height as measured by an external observer if the spacecraft is 20.0 m tall?",
+      "correct": "20.0 m, because height is perpendicular to the direction of motion",
+      "correctExplanation": "Length contraction only affects the dimension along the direction of motion. The height (perpendicular to motion) remains 20.0 m.",
+      "distractors": [
+        { "answer": "16.0 m, because all dimensions are contracted by γ", "explanation": "Only the length along the direction of motion is contracted; perpendicular dimensions are unchanged." },
+        { "answer": "25.0 m, because the height expands to compensate for the length contraction", "explanation": "Perpendicular dimensions are unchanged, not expanded; there is no compensation effect." },
+        { "answer": "64.0 m, because the height and length swap values at relativistic speeds", "explanation": "Dimensions do not swap; the height remains 20.0 m regardless of the spacecraft's speed." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Priya measures a rod to be 3.00 m long when it is at rest. When it moves past her at a certain speed, she measures it to be 2.00 m. What is the Lorentz factor?",
+      "correct": "γ = 1.50",
+      "correctExplanation": "γ = L₀/L = 3.00/2.00 = 1.50. The Lorentz factor is the ratio of proper length to contracted length.",
+      "distractors": [
+        { "answer": "γ = 0.667", "explanation": "0.667 = L/L₀ = 1/γ; the Lorentz factor is the reciprocal: L₀/L = 1.50." },
+        { "answer": "γ = 1.00", "explanation": "γ = 1 would mean no contraction; the rod clearly contracted from 3.00 m to 2.00 m." },
+        { "answer": "γ = 5.00", "explanation": "γ = 5 would give L = 3.00/5 = 0.600 m, not 2.00 m; the correct value is γ = 1.50." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "If an observer measures a rocket to be 75 m long and the proper length is 150 m, the rocket must be travelling at 0.866c.",
+      "correct": "True",
+      "correctExplanation": "γ = L₀/L = 150/75 = 2.00. At γ = 2, v = c√(1 − 1/4) = c√(3/4) = 0.866c.",
+      "distractors": [
+        { "answer": "False", "explanation": "γ = 150/75 = 2.00, and v = 0.866c is the correct speed for γ = 2.00." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the calculation to find proper length from contracted length.",
+      "sentence": "A spacecraft moving at 0.980c (γ = 5.03) appears 25.0 m long. Its proper length is L₀ = 25.0 × {{blank:1}} = {{blank:2}} m.",
+      "blanks": {
+        "1": {
+          "correct": "5.03",
+          "correctExplanation": "L₀ = Lγ. Multiply the contracted length by the Lorentz factor to recover the proper length.",
+          "distractors": [
+            { "answer": "0.199", "explanation": "0.199 = 1/γ; multiplying by 1/γ would contract the length further instead of finding L₀." },
+            { "answer": "0.980", "explanation": "0.980 is v/c, not γ; the formula uses the Lorentz factor, not the speed ratio." }
+          ]
+        },
+        "2": {
+          "correct": "126",
+          "correctExplanation": "L₀ = 25.0 × 5.03 = 125.8 ≈ 126 m.",
+          "distractors": [
+            { "answer": "4.97", "explanation": "4.97 m results from dividing by γ instead of multiplying; the proper length must be larger than the contracted length." },
+            { "answer": "25.0", "explanation": "25.0 m is the contracted length; the proper length is much larger at approximately 126 m." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the calculation to find the Lorentz factor from two length measurements.",
+      "sentence": "A rod has proper length 5.00 m and contracted length 2.50 m. The Lorentz factor is γ = L₀/L = {{blank:1}}/{{blank:2}} = 2.00.",
+      "blanks": {
+        "1": {
+          "correct": "5.00",
+          "correctExplanation": "L₀ = 5.00 m is the proper length (the numerator in γ = L₀/L).",
+          "distractors": [
+            { "answer": "2.50", "explanation": "2.50 m is the contracted length L, which goes in the denominator, not the numerator." },
+            { "answer": "2.00", "explanation": "2.00 is the result (γ), not the proper length." }
+          ]
+        },
+        "2": {
+          "correct": "2.50",
+          "correctExplanation": "L = 2.50 m is the contracted length (the denominator in γ = L₀/L).",
+          "distractors": [
+            { "answer": "5.00", "explanation": "5.00 m is the proper length in the numerator; L = 2.50 m is the contracted length in the denominator." },
+            { "answer": "1.00", "explanation": "1.00 is not one of the given lengths; the contracted length is 2.50 m." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about length contraction and perpendicular dimensions.",
+      "sentence": "A 50.0 m long, 10.0 m wide rocket passes at 0.866c (γ = 2.00). Its contracted length is {{blank:1}} m, but its width remains {{blank:2}} m.",
+      "blanks": {
+        "1": {
+          "correct": "25.0",
+          "correctExplanation": "L = 50.0/2.00 = 25.0 m. Only the length along the direction of motion is contracted.",
+          "distractors": [
+            { "answer": "50.0", "explanation": "50.0 m is the proper length; at 0.866c the contracted length is 25.0 m." },
+            { "answer": "5.00", "explanation": "This divides by γ twice; only one factor of γ is used: L = L₀/γ = 50.0/2.00 = 25.0 m." }
+          ]
+        },
+        "2": {
+          "correct": "10.0",
+          "correctExplanation": "Width is perpendicular to the direction of motion and is not affected by length contraction.",
+          "distractors": [
+            { "answer": "5.00", "explanation": "Width is unchanged because it is perpendicular to motion; only the parallel dimension is contracted." },
+            { "answer": "20.0", "explanation": "Width does not expand to compensate; perpendicular dimensions are simply unchanged." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "mc",
+      "question": "A particle accelerator beam tube has a proper length of 2.50 km. A proton travelling at 0.990c (γ = 7.09) passes through it. Calculate the length of the beam tube in the proton's frame.",
+      "correct": "353 m",
+      "correctExplanation": "L = 2500/7.09 = 352.6 ≈ 353 m. The proton measures the beam tube as about one-seventh of its lab-frame length.",
+      "distractors": [
+        { "answer": "17.7 km", "explanation": "This multiplies by γ; the contracted length is shorter than the proper length: L = L₀/γ." },
+        { "answer": "2.50 km", "explanation": "2.50 km is the lab-frame proper length; in the proton's frame the tube is contracted to 353 m." },
+        { "answer": "49.7 m", "explanation": "This divides by γ²; only one factor of γ is used in the length contraction formula." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Mei observes a 120 m rocket passing at 0.600c (γ = 1.25). The rocket then accelerates to 0.800c (γ = 1.667). Calculate the contracted length at each speed.",
+      "correct": "96.0 m at 0.600c and 72.0 m at 0.800c",
+      "correctExplanation": "At 0.600c: L = 120/1.25 = 96.0 m. At 0.800c: L = 120/1.667 = 72.0 m.",
+      "distractors": [
+        { "answer": "150 m at 0.600c and 200 m at 0.800c", "explanation": "These multiply by γ; the contracted length is shorter than L₀, obtained by dividing." },
+        { "answer": "72.0 m at 0.600c and 96.0 m at 0.800c", "explanation": "This reverses the speeds; at higher speed the contraction is greater, giving the shorter length at 0.800c." },
+        { "answer": "120 m at both speeds because the rocket does not physically change", "explanation": "While the rocket's proper length is unchanged, the contracted length measured by the observer decreases with speed." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A space station is 500 m long. A pilot flying past at 0.866c (γ = 2.00) measures it. What length does the pilot measure?",
+      "correct": "250 m",
+      "correctExplanation": "L = 500/2.00 = 250 m. The pilot measures the space station as half its proper length because it is moving relative to the pilot.",
+      "distractors": [
+        { "answer": "500 m", "explanation": "500 m is the proper length of the station; the pilot, moving relative to it, measures a contracted length of 250 m." },
+        { "answer": "1000 m", "explanation": "This multiplies by γ; the contracted length is shorter than the proper length." },
+        { "answer": "433 m", "explanation": "This uses L₀ × v/c = 500 × 0.866 = 433; the correct formula is L = L₀/γ = 500/2 = 250 m." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An observer measures a spacecraft to be 45.0 m long. If γ = 2.50, calculate the proper length and the speed of the spacecraft.",
+      "correct": "L₀ = 113 m; v = 0.917c",
+      "correctExplanation": "L₀ = Lγ = 45.0 × 2.50 = 112.5 ≈ 113 m. v/c = √(1 − 1/6.25) = √(5.25/6.25) = √0.840 = 0.917.",
+      "distractors": [
+        { "answer": "L₀ = 18.0 m; v = 0.400c", "explanation": "18.0 m divides by γ instead of multiplying; the proper length must be larger than the contracted length." },
+        { "answer": "L₀ = 113 m; v = 0.500c", "explanation": "While L₀ is correct, v = 0.500c gives γ ≈ 1.15, not 2.50." },
+        { "answer": "L₀ = 45.0 m; v = 0.917c", "explanation": "45.0 m is the contracted length, not the proper length; L₀ = 45.0 × 2.50 = 113 m." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Two rockets of proper lengths 80.0 m and 160 m fly past Earth at 0.900c (γ = 2.294). What are their contracted lengths?",
+      "correct": "34.9 m and 69.7 m",
+      "correctExplanation": "L₁ = 80.0/2.294 = 34.9 m. L₂ = 160/2.294 = 69.7 m. Both are contracted by the same factor.",
+      "distractors": [
+        { "answer": "34.9 m and 34.9 m", "explanation": "Both are divided by the same γ, but their different proper lengths give different contracted lengths." },
+        { "answer": "184 m and 367 m", "explanation": "These multiply by γ; the contracted lengths are shorter, not longer, than the proper lengths." },
+        { "answer": "72.0 m and 144 m", "explanation": "These multiply by v/c = 0.900 instead of dividing by γ = 2.294." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Arun measures a train to be 200 m long at rest. When moving at 0.866c (γ = 2.00), what is the contracted length? If the train then decelerates to 0.500c (γ = 1.15), what is the new contracted length?",
+      "correct": "100 m at 0.866c; 174 m at 0.500c",
+      "correctExplanation": "At 0.866c: L = 200/2.00 = 100 m. At 0.500c: L = 200/1.15 = 174 m. Lower speed gives less contraction.",
+      "distractors": [
+        { "answer": "174 m at 0.866c; 100 m at 0.500c", "explanation": "This reverses the speeds; higher speed (0.866c) gives more contraction (100 m), not less." },
+        { "answer": "100 m at both speeds because length contraction depends only on proper length", "explanation": "Length contraction depends on both proper length and speed; at different speeds the contracted lengths differ." },
+        { "answer": "400 m at 0.866c; 230 m at 0.500c", "explanation": "These multiply by γ instead of dividing; the contracted lengths must be shorter than 200 m." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A spacecraft's contracted length is measured to be 30.0 m at 0.950c (γ = 3.20) and 60.0 m at a second speed. Calculate the Lorentz factor and speed at the second measurement.",
+      "correct": "γ = 1.60; v = 0.781c",
+      "correctExplanation": "L₀ = 30.0 × 3.20 = 96.0 m. At second speed: γ = 96.0/60.0 = 1.60. v/c = √(1 − 1/2.56) = √0.609 = 0.781.",
+      "distractors": [
+        { "answer": "γ = 2.00; v = 0.866c", "explanation": "γ = 2.00 would give L = 96.0/2.00 = 48.0 m, not 60.0 m." },
+        { "answer": "γ = 0.625; v = 0.500c", "explanation": "γ < 1 is impossible; the Lorentz factor must be ≥ 1." },
+        { "answer": "γ = 3.20; v = 0.950c", "explanation": "This is the first measurement; the second has a different contracted length, so γ and v differ." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the multi-step length contraction problem.",
+      "sentence": "A 300 m rocket at 0.800c (γ = 1.667) has contracted length {{blank:1}} m. If it accelerates to 0.950c (γ = 3.20), its contracted length becomes {{blank:2}} m.",
+      "blanks": {
+        "1": {
+          "correct": "180",
+          "correctExplanation": "L = 300/1.667 = 180 m at 0.800c.",
+          "distractors": [
+            { "answer": "500", "explanation": "This multiplies by γ; the contracted length is 300/1.667 = 180 m, which is shorter than 300 m." },
+            { "answer": "240", "explanation": "This uses 300 × 0.800 = 240; the correct formula is L = L₀/γ = 300/1.667 = 180 m." }
+          ]
+        },
+        "2": {
+          "correct": "93.8",
+          "correctExplanation": "L = 300/3.20 = 93.75 ≈ 93.8 m at 0.950c. The higher speed gives much greater contraction.",
+          "distractors": [
+            { "answer": "180", "explanation": "180 m is the contracted length at 0.800c; at the higher speed of 0.950c the contraction is greater." },
+            { "answer": "960", "explanation": "This multiplies by γ; the contracted length is shorter than the proper length." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the calculation to find speed from a length contraction measurement.",
+      "sentence": "A rod with proper length 4.00 m is measured to be 2.00 m. Therefore γ = {{blank:1}} and the speed is v = {{blank:2}}c.",
+      "blanks": {
+        "1": {
+          "correct": "2.00",
+          "correctExplanation": "γ = L₀/L = 4.00/2.00 = 2.00.",
+          "distractors": [
+            { "answer": "0.500", "explanation": "0.500 = L/L₀ = 1/γ; the Lorentz factor is the reciprocal: 2.00." },
+            { "answer": "4.00", "explanation": "4.00 is the proper length in metres, not the dimensionless Lorentz factor." }
+          ]
+        },
+        "2": {
+          "correct": "0.866",
+          "correctExplanation": "v/c = √(1 − 1/γ²) = √(1 − 1/4) = √(3/4) = 0.866.",
+          "distractors": [
+            { "answer": "0.500", "explanation": "At v = 0.500c, γ ≈ 1.15, not 2.00; the correct speed for γ = 2 is 0.866c." },
+            { "answer": "2.00", "explanation": "v = 2.00c exceeds the speed of light; no massive object can reach or exceed c." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the application of length contraction to muon survival.",
+      "sentence": "In the muon's frame, Earth's atmosphere of proper distance 5000 m is contracted to L = 5000 / {{blank:1}} = {{blank:2}} m at v = 0.995c.",
+      "blanks": {
+        "1": {
+          "correct": "10.0",
+          "correctExplanation": "At 0.995c, γ ≈ 10.0. The atmosphere is length-contracted by this factor in the muon's frame.",
+          "distractors": [
+            { "answer": "0.995", "explanation": "0.995 is v/c, not γ; the Lorentz factor at 0.995c is approximately 10.0." },
+            { "answer": "100", "explanation": "γ ≈ 100 corresponds to v ≈ 0.99995c, not 0.995c." }
+          ]
+        },
+        "2": {
+          "correct": "500",
+          "correctExplanation": "L = 5000/10.0 = 500 m. The muon only needs to travel 500 m in its own frame, which it can do within its proper lifetime.",
+          "distractors": [
+            { "answer": "5000", "explanation": "5000 m is the Earth-frame distance; in the muon's frame it is contracted to 500 m." },
+            { "answer": "50 000", "explanation": "This multiplies by γ; the contracted distance is shorter, not longer." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "mc",
+      "question": "A student claims that length contraction means the object physically gets shorter. Evaluate this interpretation in terms of reference frames.",
+      "correct": "The interpretation is misleading; the object retains its proper length in its own frame, and the contraction describes a measurement difference between frames",
+      "correctExplanation": "No forces act on the object. In its own frame it is unchanged. Different observers measure different lengths because of how spacetime works, not because of physical compression.",
+      "distractors": [
+        { "answer": "The interpretation is correct; the object genuinely shrinks due to relativistic forces", "explanation": "There are no forces compressing the object; length contraction is a kinematic effect of spacetime geometry." },
+        { "answer": "The interpretation is correct in the observer's frame and incorrect in the object's frame", "explanation": "The word 'physically gets shorter' implies a material compression, which does not occur in either frame." },
+        { "answer": "The interpretation is incorrect because length contraction is only a theoretical prediction with no experimental basis", "explanation": "Length contraction has been confirmed experimentally through muon survival and particle accelerator design." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Evaluate whether a sphere moving at relativistic speed would still appear spherical to an observer.",
+      "correct": "The sphere would be length-contracted along the direction of motion, making it appear oblate (flattened), though visual observation involves additional relativistic optical effects",
+      "correctExplanation": "The coordinate measurement gives an oblate shape due to contraction along the motion axis. However, what an observer actually 'sees' involves light travel time, aberration, and rotation effects.",
+      "distractors": [
+        { "answer": "The sphere would remain perfectly spherical because length contraction affects all dimensions equally", "explanation": "Length contraction only affects the dimension along the direction of motion; the sphere becomes oblate in coordinate measurements." },
+        { "answer": "The sphere would be elongated along the direction of motion, appearing prolate", "explanation": "Length contraction shortens the dimension along the motion, making it oblate (flattened), not prolate (elongated)." },
+        { "answer": "The sphere would appear as a flat disc perpendicular to the direction of motion", "explanation": "A disc would require the length along motion to be zero; this only approaches zero as v approaches c, not at finite speeds." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Sofia claims that because L = L₀/γ and t = γt₀, length and time are affected oppositely by relative motion. Evaluate this claim.",
+      "correct": "The claim is correct; lengths contract while time intervals dilate, and these opposite effects are complementary aspects of the same Lorentz transformation",
+      "correctExplanation": "Length is divided by γ (contracts) while time is multiplied by γ (dilates). Both effects ensure the speed of light is the same in all frames.",
+      "distractors": [
+        { "answer": "The claim is incorrect; both length and time are affected in the same direction by relative motion", "explanation": "Length contracts (shrinks) while time dilates (stretches); they are affected in opposite directions." },
+        { "answer": "The claim is incorrect; length and time are independent quantities that have no relationship in relativity", "explanation": "In special relativity, space and time are intimately connected through the Lorentz transformations." },
+        { "answer": "The claim is only true for speeds above 0.5c where relativistic effects become significant", "explanation": "The mathematical relationship holds at all speeds; at low speeds both effects are simply very small." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Evaluate whether it is possible for an observer to measure a contracted length that is zero.",
+      "correct": "A zero contracted length would require v = c, which is unattainable for any massive object, so it is physically impossible",
+      "correctExplanation": "As v → c, L → 0 as a mathematical limit. But reaching v = c requires infinite energy, making zero contracted length unachievable for any object with mass.",
+      "distractors": [
+        { "answer": "A zero contracted length is achievable at exactly v = c and has been observed experimentally", "explanation": "No massive object has been accelerated to c; the zero length is a theoretical limit, not an experimental observation." },
+        { "answer": "A zero contracted length is impossible because length contraction has a minimum non-zero value", "explanation": "There is no minimum non-zero contracted length; the limit is zero as v → c, but v = c is unattainable." },
+        { "answer": "A zero contracted length is possible for any massless particle and has been confirmed for photons", "explanation": "Photons have no rest frame, so the concept of contracted length does not apply to them in the usual sense." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student applies L = L₀/γ to calculate the height of a vertically oriented rocket moving horizontally. Evaluate this approach.",
+      "correct": "The approach is incorrect; L = L₀/γ applies only to the dimension along the direction of motion, not to perpendicular dimensions like height",
+      "correctExplanation": "Length contraction only affects the component of length parallel to the velocity. A vertical dimension perpendicular to horizontal motion is unchanged.",
+      "distractors": [
+        { "answer": "The approach is correct; all dimensions of a moving object are contracted equally", "explanation": "Only the dimension along the direction of motion is contracted; perpendicular dimensions are unchanged." },
+        { "answer": "The approach is correct because length contraction is isotropic in special relativity", "explanation": "Length contraction is not isotropic; it is directional, affecting only the parallel component of length." },
+        { "answer": "The approach is partially correct; the height is contracted by √γ instead of γ", "explanation": "Perpendicular dimensions are completely unchanged; there is no partial contraction by any factor." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Evaluate the symmetry of length contraction: if Earth observers measure a passing rocket as contracted, do the rocket observers also measure Earth as contracted?",
+      "correct": "Yes; both observers measure the other's objects as contracted, because each is moving relative to the other — this is consistent with the principle of relativity",
+      "correctExplanation": "The first postulate of special relativity states that all inertial frames are equivalent. Each observer sees the other as moving, so each measures the other's lengths as contracted.",
+      "distractors": [
+        { "answer": "No; only the moving object is contracted, not the stationary one", "explanation": "There is no absolute 'moving' or 'stationary' frame; both observers are equally valid and both measure contraction of the other." },
+        { "answer": "Yes, but only the Earth observer's measurement is physically real", "explanation": "Both measurements are equally real; neither frame is privileged in special relativity." },
+        { "answer": "No; the rocket observer measures Earth as elongated to compensate for the rocket's contraction", "explanation": "There is no elongation; both observers measure the other's objects as contracted along the direction of motion." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Liam applies L = L₀/γ twice, first to find the contracted length and then dividing by γ again to 'double correct' for the high speed. Evaluate his method.",
+      "correct": "His method is incorrect; L = L₀/γ should be applied only once, and dividing by γ twice gives L₀/γ², which is too short",
+      "correctExplanation": "The formula already accounts for the full relativistic effect. Applying it twice effectively uses γ², which overcorrects and gives a contracted length that is far too short.",
+      "distractors": [
+        { "answer": "His method is correct because high speeds require a double application of the Lorentz factor", "explanation": "The formula L = L₀/γ is exact for any speed; applying γ twice is never correct." },
+        { "answer": "His method would be correct if he used √γ each time instead of γ", "explanation": "The correct procedure is a single application of L = L₀/γ; splitting it into two steps with √γ each time gives the same correct result but is unnecessarily complicated." },
+        { "answer": "His method is correct only for speeds above 0.99c where single application underestimates the contraction", "explanation": "L = L₀/γ is exact at all speeds including v > 0.99c; there is no speed where double application is needed." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Evaluate how the length contraction formula L = L₀/γ is related to the postulates of special relativity.",
+      "correct": "It follows mathematically from the two postulates: that the laws of physics are the same in all inertial frames and that the speed of light is constant for all observers",
+      "correctExplanation": "The Lorentz transformations (which give length contraction) are derived directly from Einstein's two postulates. Length contraction is a necessary consequence of these assumptions.",
+      "distractors": [
+        { "answer": "It is an independent assumption added to special relativity that cannot be derived from the postulates", "explanation": "Length contraction is derived from the postulates through the Lorentz transformations; it is not an additional assumption." },
+        { "answer": "It was discovered experimentally before Einstein's postulates and led to the development of special relativity", "explanation": "Length contraction was predicted theoretically; it is a consequence of the postulates, not an experimental precursor." },
+        { "answer": "It follows from the first postulate only and does not require the constancy of the speed of light", "explanation": "Both postulates are needed; the constancy of c is essential for deriving the specific form of the Lorentz factor." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the evaluation of length contraction symmetry.",
+      "sentence": "Both the Earth observer and the rocket pilot measure the other's objects as {{blank:1}}. This symmetry is consistent with the first postulate, which states that no inertial frame is {{blank:2}} over any other.",
+      "blanks": {
+        "1": {
+          "correct": "contracted",
+          "correctExplanation": "Each observer sees the other as moving, so each measures the other's lengths as contracted by the same factor γ.",
+          "distractors": [
+            { "answer": "expanded", "explanation": "Moving objects appear contracted, not expanded; L = L₀/γ gives a length shorter than L₀." },
+            { "answer": "unchanged", "explanation": "At relativistic speeds, the contraction is significant; both observers genuinely measure shorter lengths." }
+          ]
+        },
+        "2": {
+          "correct": "privileged",
+          "correctExplanation": "The first postulate states that the laws of physics are the same in all inertial frames; no frame is special or preferred.",
+          "distractors": [
+            { "answer": "accelerating", "explanation": "While inertial frames are non-accelerating, the relevant property is that none is privileged over the others." },
+            { "answer": "contracted", "explanation": "The postulate concerns the equivalence of frames, not contraction; no frame is privileged or preferred." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the evaluation of when length contraction becomes experimentally detectable.",
+      "sentence": "Length contraction is experimentally significant when v is a substantial fraction of {{blank:1}}. At everyday speeds, the contraction is of the order of {{blank:2}}, far too small to detect.",
+      "blanks": {
+        "1": {
+          "correct": "c",
+          "correctExplanation": "Relativistic effects become measurable when v/c is not negligible, typically above about 0.1c.",
+          "distractors": [
+            { "answer": "the speed of sound", "explanation": "The speed of sound is irrelevant to relativity; the relevant scale is the speed of light." },
+            { "answer": "the escape velocity", "explanation": "Escape velocity is a gravitational concept; relativistic effects depend on the fraction of the speed of light." }
+          ]
+        },
+        "2": {
+          "correct": "10⁻¹⁵",
+          "correctExplanation": "At typical speeds (~30 m s⁻¹), v/c ≈ 10⁻⁷, so v²/c² ≈ 10⁻¹⁴ and γ − 1 ≈ 10⁻¹⁵. This fractional change is unmeasurable.",
+          "distractors": [
+            { "answer": "10⁻³", "explanation": "10⁻³ would correspond to speeds around 0.045c ≈ 1.3 × 10⁷ m s⁻¹, far faster than everyday speeds." },
+            { "answer": "10⁰", "explanation": "10⁰ = 1 would mean contraction comparable to the object's length, which requires v close to c." }
+          ]
+        }
+      }
+    }
+  ]
+}

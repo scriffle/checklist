@@ -1,0 +1,583 @@
+{
+  "_link": {
+    "uuid": "lp-d9b83949-3d21-1edb-c10e-a21d5600d5ef",
+    "version": 1,
+    "contentHash": "hash-8c6e6036",
+    "title": "I can explain why particle accelerator drift tubes must be designed using length contraction",
+    "generatedAt": "2026-03-10T10:00:00Z"
+  },
+  "toLevel2": [
+    {
+      "type": "mc",
+      "question": "In a linear accelerator, what are drift tubes?",
+      "correct": "Cylindrical tubes through which charged particles travel between accelerating gaps",
+      "correctExplanation": "Drift tubes are conducting cylinders that shield the particle from the electric field while it drifts through, timed so the field reverses before the particle exits.",
+      "distractors": [
+        { "answer": "Magnets that bend the path of charged particles in a circular orbit", "explanation": "Bending magnets are used in circular accelerators; drift tubes are specific to linear accelerators." },
+        { "answer": "Detectors that measure the energy of particles after collision events", "explanation": "Detectors are separate components; drift tubes are acceleration structures within the linear accelerator." },
+        { "answer": "Cooling pipes that remove heat from the accelerator components", "explanation": "Cooling systems exist in accelerators but drift tubes are the acceleration structures, not thermal management." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Why must relativistic effects be considered when designing drift tubes in a particle accelerator?",
+      "correct": "Particles travel at speeds close to c, so length contraction changes the effective tube length in the particle's frame",
+      "correctExplanation": "At relativistic speeds, the particle experiences the drift tube as length-contracted. The voltage timing must match this contracted length.",
+      "distractors": [
+        { "answer": "Drift tubes must be made from special relativistic materials that resist contraction", "explanation": "Length contraction is not a physical compression of materials; it is a measurement effect between reference frames." },
+        { "answer": "Relativistic effects cause the electric field inside the tube to weaken significantly", "explanation": "The electric field strength is not directly affected by length contraction; the timing of the alternating voltage is the key issue." },
+        { "answer": "Particles gain mass at high speed and need longer tubes to be contained", "explanation": "The tubes are designed for voltage timing based on the particle's transit time, not to physically contain the particle." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "From the reference frame of a proton travelling at 0.995c through a drift tube, what happens to the length of the drift tube?",
+      "correct": "The drift tube appears length-contracted (shorter) in the proton's frame",
+      "correctExplanation": "In the proton's frame, the drift tube moves past at 0.995c and is length-contracted by the factor γ ≈ 10.",
+      "distractors": [
+        { "answer": "The drift tube appears longer in the proton's frame due to time dilation", "explanation": "Length contraction shortens objects in the direction of motion; time dilation affects time intervals, not lengths." },
+        { "answer": "The drift tube appears the same length because the proton is inside it", "explanation": "Length contraction applies regardless of the particle's position; the tube appears contracted because it moves relative to the proton." },
+        { "answer": "The drift tube appears wider but the same length in the proton's frame", "explanation": "Length contraction affects only the dimension along the direction of motion; the tube appears shorter, not wider." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What would happen if engineers designed drift tube lengths using only classical (non-relativistic) physics?",
+      "correct": "The voltage timing would be incorrect and particles would not be properly accelerated",
+      "correctExplanation": "Using only the lab-frame length would give wrong transit times from the particle's perspective, causing the alternating voltage to switch at the wrong moment.",
+      "distractors": [
+        { "answer": "The accelerator would work normally because classical physics is sufficient at all speeds", "explanation": "At speeds near c, classical physics gives incorrect predictions; relativistic corrections are essential for proper operation." },
+        { "answer": "The particles would travel faster than the speed of light and escape the accelerator", "explanation": "No particle can exceed the speed of light; incorrect design would cause improper acceleration, not superluminal speeds." },
+        { "answer": "The drift tubes would physically shrink and need to be replaced more frequently", "explanation": "Length contraction is a measurement effect, not a physical shrinking; the engineering issue is voltage timing." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "In the example of a proton at 0.995c (γ ≈ 10) passing through a drift tube that is 85.5 cm in the lab, what length does the proton measure the tube to be?",
+      "correct": "Approximately 8.54 cm",
+      "correctExplanation": "L = L₀/γ = 85.5/10.01 ≈ 8.54 cm. The proton measures the tube to be about one-tenth of its lab-frame length.",
+      "distractors": [
+        { "answer": "Approximately 85.5 cm", "explanation": "85.5 cm is the lab-frame (proper) length; in the proton's frame the tube is length-contracted to about 8.54 cm." },
+        { "answer": "Approximately 855 cm", "explanation": "This incorrectly multiplies by γ; length contraction makes the tube shorter, not longer, in the moving frame." },
+        { "answer": "Approximately 0.854 cm", "explanation": "This divides by γ² instead of γ; only one factor of γ is used in the length contraction formula." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "The timing of the alternating voltage in a linear accelerator must account for the length-contracted drift tube as experienced by the particle.",
+      "correct": "True",
+      "correctExplanation": "The particle's transit time through the tube depends on the contracted length in its frame. If the voltage timing ignores this, the particle arrives at the gap when the field is in the wrong direction.",
+      "distractors": [
+        { "answer": "False", "explanation": "If the timing does not account for relativistic effects, the accelerating voltage will not synchronise with the particle, causing improper acceleration." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "Drift tubes in a linear accelerator are all the same length because particles travel at a constant speed throughout the accelerator.",
+      "correct": "False",
+      "correctExplanation": "As particles accelerate, their speed increases and γ changes, so successive drift tubes must have different lengths to maintain correct voltage timing.",
+      "distractors": [
+        { "answer": "True", "explanation": "Particles accelerate as they pass through the gaps, so their speed and γ change along the accelerator, requiring progressively different tube lengths." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about drift tube design.",
+      "sentence": "Engineers must design drift tube lengths using {{blank:1}} rather than classical physics because particles in the accelerator travel at speeds close to the speed of {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "special relativity",
+          "correctExplanation": "At speeds approaching c, classical mechanics gives incorrect predictions; special relativity correctly accounts for length contraction and time dilation.",
+          "distractors": [
+            { "answer": "general relativity", "explanation": "General relativity deals with gravity and curved spacetime; the accelerator design requires special relativity for high-speed effects." },
+            { "answer": "classical mechanics", "explanation": "Classical mechanics fails at relativistic speeds; special relativity must be used for accurate drift tube design." }
+          ]
+        },
+        "2": {
+          "correct": "light",
+          "correctExplanation": "Relativistic effects become significant when particle speeds approach the speed of light (3.00 × 10⁸ m s⁻¹).",
+          "distractors": [
+            { "answer": "sound", "explanation": "The speed of sound (~340 m s⁻¹) is irrelevant to relativistic effects; it is speeds near the speed of light that matter." },
+            { "answer": "the electron", "explanation": "There is no fixed 'speed of the electron'; the relevant speed limit is the speed of light." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about what happens in the particle's reference frame.",
+      "sentence": "In the proton's reference frame, the drift tube is {{blank:1}}, so the proton spends {{blank:2}} time inside the tube than classical physics would predict.",
+      "blanks": {
+        "1": {
+          "correct": "length-contracted",
+          "correctExplanation": "The drift tube moves relative to the proton and is therefore length-contracted in the proton's frame.",
+          "distractors": [
+            { "answer": "time-dilated", "explanation": "Time dilation affects time intervals, not spatial lengths; the tube's length is affected by length contraction." },
+            { "answer": "unchanged", "explanation": "At relativistic speeds, the tube is significantly contracted in the proton's frame; it is not unchanged." }
+          ]
+        },
+        "2": {
+          "correct": "less",
+          "correctExplanation": "A shorter contracted tube means the proton traverses it in less time, requiring the voltage timing to be adjusted accordingly.",
+          "distractors": [
+            { "answer": "more", "explanation": "A contracted tube is shorter, so the transit time is less, not more." },
+            { "answer": "the same", "explanation": "The contracted length is shorter than the lab-frame length, so the transit time is reduced." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the consequence of ignoring relativity in accelerator design.",
+      "sentence": "If drift tubes were designed using only the {{blank:1}} length, the alternating voltage would switch at the wrong time and the particle would be {{blank:2}} instead of accelerated.",
+      "blanks": {
+        "1": {
+          "correct": "lab-frame",
+          "correctExplanation": "The lab-frame length is the proper length of the tube. Using this without accounting for the particle's contracted measurement gives incorrect timing.",
+          "distractors": [
+            { "answer": "contracted", "explanation": "Using the contracted length is the correct approach; using the lab-frame length without correction is the error." },
+            { "answer": "expanded", "explanation": "There is no expanded length in this context; the lab-frame length is the issue if used without relativistic correction." }
+          ]
+        },
+        "2": {
+          "correct": "decelerated",
+          "correctExplanation": "If the voltage timing is wrong, the electric field could be pointing in the wrong direction when the particle exits, decelerating rather than accelerating it.",
+          "distractors": [
+            { "answer": "destroyed", "explanation": "Incorrect timing does not destroy the particle; it causes deceleration or misdirection, not annihilation." },
+            { "answer": "unaffected", "explanation": "The particle would be affected because the electric field direction matters; wrong timing leads to deceleration." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "mc",
+      "question": "Explain why drift tubes in a linear accelerator must get progressively longer along the beam line.",
+      "correct": "As particles accelerate, they travel faster and cover more distance during each half-cycle of the alternating voltage",
+      "correctExplanation": "Each successive gap increases the particle's speed, so it travels further during the time the field reverses. The tubes must lengthen to accommodate this, with relativistic corrections applied.",
+      "distractors": [
+        { "answer": "Longer tubes are needed to contain the increasing electromagnetic radiation from faster particles", "explanation": "Drift tubes shield particles from the electric field; they do not contain radiation." },
+        { "answer": "The tubes must get longer because the particles physically expand at higher speeds due to relativity", "explanation": "Particles do not physically expand; the tube length changes are based on the particle's increasing speed and transit time." },
+        { "answer": "Longer tubes reduce the electric field strength to prevent the particles from exceeding the speed of light", "explanation": "Tube length is about voltage timing synchronisation, not limiting particle speed." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A proton at 0.900c (γ = 2.29) enters a drift tube of lab-frame length 50.0 cm. What length does the proton measure the tube to be?",
+      "correct": "21.8 cm",
+      "correctExplanation": "L = L₀/γ = 50.0/2.29 = 21.8 cm. The proton experiences a much shorter tube due to length contraction.",
+      "distractors": [
+        { "answer": "114 cm", "explanation": "This incorrectly multiplies by γ; the contracted length is shorter than the lab-frame length, not longer." },
+        { "answer": "50.0 cm", "explanation": "50.0 cm is the lab-frame length; the proton is moving relative to the tube and measures it as contracted." },
+        { "answer": "9.52 cm", "explanation": "This would correspond to dividing by γ² = 5.24; only one factor of γ is used in the length contraction formula." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Why is the transit time through a drift tube different when calculated relativistically compared to classically?",
+      "correct": "The particle experiences a shorter contracted tube length, resulting in a shorter transit time than classical predictions",
+      "correctExplanation": "In the particle's frame, L = L₀/γ, so the transit time t = L/v is shorter than the classical prediction t = L₀/v.",
+      "distractors": [
+        { "answer": "Relativistic particles slow down inside drift tubes due to increased mass, making transit time longer", "explanation": "Particles do not slow down inside drift tubes; the tube is field-free and the particle maintains its speed." },
+        { "answer": "Classical and relativistic transit times are identical because the particle speed is the same in both calculations", "explanation": "While the speed is the same, the contracted length is shorter, giving a shorter transit time relativistically." },
+        { "answer": "Relativistic effects increase the tube length, giving a longer transit time than classical predictions", "explanation": "Length contraction decreases the tube length in the particle's frame, not increases it." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Explain the relationship between the Lorentz factor of a particle and the degree of length contraction of the drift tube in its frame.",
+      "correct": "A larger Lorentz factor produces greater length contraction, making the tube appear shorter in the particle's frame",
+      "correctExplanation": "Since L = L₀/γ, a larger γ (corresponding to higher speed) divides the lab length by a larger number, producing a shorter contracted length.",
+      "distractors": [
+        { "answer": "A larger Lorentz factor means less contraction because the particle has more energy to resist contraction", "explanation": "Length contraction is a geometric effect of spacetime, not something the particle resists; larger γ gives more contraction." },
+        { "answer": "The Lorentz factor has no direct relationship to the contracted length of the drift tube", "explanation": "γ appears directly in the length contraction formula L = L₀/γ; it determines the degree of contraction." },
+        { "answer": "A larger Lorentz factor increases the lab-frame length of the drift tube proportionally", "explanation": "The lab-frame length is fixed by the physical construction; γ affects only the contracted length measured by the particle." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A drift tube has a lab-frame length of 1.20 m. A proton with γ = 5.00 passes through it. What is the transit time as measured in the proton's frame?",
+      "correct": "8.00 × 10⁻¹⁰ s",
+      "correctExplanation": "Contracted length: L = 1.20/5.00 = 0.240 m. The proton's speed is close to c, so t ≈ 0.240/(3.00 × 10⁸) = 8.00 × 10⁻¹⁰ s.",
+      "distractors": [
+        { "answer": "4.00 × 10⁻⁹ s", "explanation": "This uses the lab-frame length without applying length contraction; the proton measures a contracted tube." },
+        { "answer": "2.00 × 10⁻⁸ s", "explanation": "This is much too large; at near-light speed, the transit time through a 0.240 m tube is less than a nanosecond." },
+        { "answer": "1.60 × 10⁻¹⁰ s", "explanation": "This divides by γ twice; only one factor of γ is used for length contraction." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Explain why the drift tube length adjustment becomes more significant at higher particle speeds.",
+      "correct": "At higher speeds, γ increases rapidly, making the contracted length much shorter than the lab-frame length",
+      "correctExplanation": "The Lorentz factor increases nonlinearly near c. At 0.99c (γ ≈ 7), the tube appears one-seventh its lab length; at 0.999c (γ ≈ 22), it appears one-twenty-second.",
+      "distractors": [
+        { "answer": "Higher speeds cause the drift tube to physically heat up and expand, requiring longer tubes", "explanation": "Length contraction is a relativistic measurement effect, not a thermal expansion; the correction is due to γ increasing." },
+        { "answer": "At higher speeds, the electric field becomes weaker and longer tubes are needed to compensate", "explanation": "The electric field is independent of particle speed; the tube design accounts for the particle's changing transit time." },
+        { "answer": "The adjustment is actually less significant at higher speeds because the particle spends less time in each tube", "explanation": "The adjustment is more significant because γ grows rapidly near c, dramatically shortening the contracted length." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "In a linear accelerator, the drift tubes near the end of the beam line are longer than those at the beginning because the particles are travelling faster.",
+      "correct": "True",
+      "correctExplanation": "Faster particles cover more distance during each half-cycle of the alternating voltage, so the tubes must be longer to maintain synchronisation.",
+      "distractors": [
+        { "answer": "False", "explanation": "Particles accelerate along the beam line, travelling faster and needing longer tubes; this is a fundamental feature of linear accelerator design." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the calculation for a proton in a drift tube.",
+      "sentence": "A proton at 0.995c (γ ≈ 10) passes through a drift tube of lab-frame length 85.5 cm. In the proton's frame, the tube appears {{blank:1}} cm long, so the timing must be based on {{blank:2}} cm, not 85.5 cm.",
+      "blanks": {
+        "1": {
+          "correct": "8.54",
+          "correctExplanation": "L = 85.5/10.01 ≈ 8.54 cm. The proton measures the tube to be approximately one-tenth of its lab-frame length.",
+          "distractors": [
+            { "answer": "85.5", "explanation": "85.5 cm is the lab-frame length; the proton measures a contracted length of 85.5/10 ≈ 8.54 cm." },
+            { "answer": "855", "explanation": "This incorrectly multiplies by γ; length contraction makes the tube shorter, not ten times longer." }
+          ]
+        },
+        "2": {
+          "correct": "8.54",
+          "correctExplanation": "The voltage timing must use the contracted length as experienced by the particle, not the lab-frame measurement.",
+          "distractors": [
+            { "answer": "85.5", "explanation": "Using the lab-frame length would give incorrect timing; the contracted length is the relevant measurement." },
+            { "answer": "42.8", "explanation": "42.8 cm would correspond to γ = 2, which occurs at v ≈ 0.866c, not at 0.995c." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about why relativistic design matters.",
+      "sentence": "If the drift tube timing were based on the lab-frame length, the alternating voltage would switch too {{blank:1}}, causing the particle to be {{blank:2}} instead of accelerated.",
+      "blanks": {
+        "1": {
+          "correct": "late",
+          "correctExplanation": "The particle exits the contracted tube sooner than classical predictions suggest, so using the longer lab-frame length makes the voltage switch too late.",
+          "distractors": [
+            { "answer": "early", "explanation": "The particle traverses the contracted tube faster than expected classically; the lab-frame prediction overestimates transit time, making the switch too late." },
+            { "answer": "quickly", "explanation": "The issue is timing relative to the particle's position, not the speed of the switch itself." }
+          ]
+        },
+        "2": {
+          "correct": "decelerated",
+          "correctExplanation": "When the voltage switches at the wrong time, the electric field may oppose the particle's motion, decelerating it.",
+          "distractors": [
+            { "answer": "destroyed", "explanation": "Incorrect timing causes deceleration or loss of synchronisation, not destruction of the particle." },
+            { "answer": "unaffected", "explanation": "The particle is strongly affected by the electric field direction; incorrect timing leads to deceleration." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the progression of drift tube lengths.",
+      "sentence": "Drift tubes near the {{blank:1}} of a linear accelerator are longest because the particles have the highest {{blank:2}} and require more distance per voltage half-cycle.",
+      "blanks": {
+        "1": {
+          "correct": "end",
+          "correctExplanation": "Particles are fastest near the end of the accelerator, requiring the longest drift tubes to maintain voltage synchronisation.",
+          "distractors": [
+            { "answer": "beginning", "explanation": "At the beginning, particles are slowest and require the shortest drift tubes." },
+            { "answer": "middle", "explanation": "The longest tubes are at the end where particles reach their highest speeds, not at the middle." }
+          ]
+        },
+        "2": {
+          "correct": "speed",
+          "correctExplanation": "Higher speed means the particle covers more distance during each half-cycle, requiring a longer drift tube.",
+          "distractors": [
+            { "answer": "charge", "explanation": "The particle's charge does not change along the accelerator; it is the increasing speed that requires longer tubes." },
+            { "answer": "mass", "explanation": "While relativistic momentum increases, the tube length is determined by the particle's speed and the voltage timing." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "mc",
+      "question": "A linear accelerator operates at a frequency of 200 MHz. A proton enters a drift tube at 0.800c (γ = 1.667). Calculate the required lab-frame drift tube length if the proton must exit during one half-cycle.",
+      "correct": "0.600 m",
+      "correctExplanation": "Half-period = 1/(2 × 200 × 10⁶) = 2.50 × 10⁻⁹ s. In the lab frame, distance = vt = 0.800 × 3.00 × 10⁸ × 2.50 × 10⁻⁹ = 0.600 m.",
+      "distractors": [
+        { "answer": "0.360 m", "explanation": "This incorrectly divides by γ at the lab-frame stage; the lab-frame length uses lab-frame speed and time directly." },
+        { "answer": "0.750 m", "explanation": "This uses the full period instead of the half-period; the drift tube length corresponds to one half-cycle." },
+        { "answer": "1.00 m", "explanation": "This incorrectly uses v = c; the proton speed is 0.800c, giving 0.600 m." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A proton travelling at 0.950c (γ = 3.20) passes through a drift tube. In the proton's frame, the tube appears to be 15.0 cm long. What is the lab-frame length of this drift tube?",
+      "correct": "48.0 cm",
+      "correctExplanation": "L₀ = Lγ = 15.0 × 3.20 = 48.0 cm. The lab-frame length is the contracted length multiplied by the Lorentz factor.",
+      "distractors": [
+        { "answer": "4.69 cm", "explanation": "This divides by γ again; to recover the lab-frame length, multiply the contracted length by γ." },
+        { "answer": "15.0 cm", "explanation": "15.0 cm is the contracted length in the proton's frame; the lab-frame length is larger by a factor of γ." },
+        { "answer": "47.5 cm", "explanation": "This uses γ = 3.17 instead of 3.20; the correct product is 15.0 × 3.20 = 48.0 cm." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A particle enters a drift tube at 0.600c (γ = 1.25) and exits at 0.800c (γ = 1.667) after the accelerating gap. By what factor does the contracted tube length change between entry and exit?",
+      "correct": "The contracted length decreases by a factor of 1.33",
+      "correctExplanation": "At entry: L₁ = L₀/1.25. At exit: L₂ = L₀/1.667. Ratio = L₁/L₂ = 1.667/1.25 = 1.33. The next tube must be designed for the higher γ.",
+      "distractors": [
+        { "answer": "The contracted length increases by a factor of 1.33", "explanation": "Higher speed means larger γ and shorter contracted length; the length decreases, not increases." },
+        { "answer": "The contracted length remains the same because the lab-frame tube length is fixed", "explanation": "The lab-frame length is fixed but the contracted length changes because γ changes with particle speed." },
+        { "answer": "The contracted length decreases by a factor of 2.00", "explanation": "The ratio of γ values is 1.667/1.25 = 1.33, not 2.00." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "In a synchrotron, protons travel in a circular path at nearly the speed of light. Explain why length contraction affects the design of radio-frequency cavities in a synchrotron differently than drift tubes in a linac.",
+      "correct": "In a synchrotron, particle speed remains nearly constant at c, so γ changes mainly through energy increases rather than speed changes, simplifying the cavity design",
+      "correctExplanation": "Once near c, the particle speed barely changes even as energy increases. The RF cavity timing remains nearly constant, unlike a linac where speed changes substantially.",
+      "distractors": [
+        { "answer": "Length contraction does not apply in circular accelerators because the motion is not linear", "explanation": "Length contraction applies to any relative motion; the circular path does not prevent relativistic effects." },
+        { "answer": "Synchrotron cavities are affected more because the particles travel a longer total distance", "explanation": "The total distance is irrelevant; what matters is the particle speed in each cavity transit, which is nearly constant." },
+        { "answer": "Synchrotron cavities must get progressively longer just like linac drift tubes as particles accelerate", "explanation": "Since speed is nearly constant at c in a synchrotron, cavity lengths do not need to change progressively." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Marcus calculates the transit time of a proton (γ = 8.00) through a 2.00 m lab-frame drift tube. He obtains 8.33 × 10⁻¹⁰ s using the contracted length. Verify his answer.",
+      "correct": "His answer is incorrect; the contracted length is 0.250 m, giving t ≈ 0.250/(3.00 × 10⁸) = 8.33 × 10⁻¹⁰ s, which is correct",
+      "correctExplanation": "L = 2.00/8.00 = 0.250 m. t = 0.250/v. At γ = 8, v ≈ 0.992c ≈ 2.98 × 10⁸ m s⁻¹. t ≈ 0.250/2.98 × 10⁸ ≈ 8.39 × 10⁻¹⁰ s ≈ 8.33 × 10⁻¹⁰ s. His answer is approximately correct.",
+      "distractors": [
+        { "answer": "His answer is incorrect; he should use the lab-frame length of 2.00 m to calculate transit time", "explanation": "In the proton's frame, the contracted length must be used; using 2.00 m would give the lab-frame transit time, not the proton's." },
+        { "answer": "His answer is incorrect; the transit time should be 6.67 × 10⁻⁹ s using the lab-frame length and speed", "explanation": "6.67 × 10⁻⁹ s uses the lab-frame length; the proton-frame transit time uses the contracted length of 0.250 m." },
+        { "answer": "His answer is incorrect; the contracted length is 16.0 m because the tube expands in the proton's frame", "explanation": "Length contraction shortens the tube in the proton's frame to 0.250 m; it does not expand." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A new section of a linear accelerator is being designed for protons at 0.990c (γ ≈ 7.09). If the RF frequency is 400 MHz, calculate the required drift tube lab-frame length for one half-cycle.",
+      "correct": "0.371 m",
+      "correctExplanation": "Half-period = 1/(2 × 400 × 10⁶) = 1.25 × 10⁻⁹ s. Lab-frame length = vt = 0.990 × 3.00 × 10⁸ × 1.25 × 10⁻⁹ = 0.371 m.",
+      "distractors": [
+        { "answer": "0.375 m", "explanation": "This uses v = c instead of 0.990c; while very close, the correct speed gives 0.371 m." },
+        { "answer": "0.0523 m", "explanation": "This incorrectly divides the lab-frame length by γ; the lab-frame length is calculated directly from v and the half-period." },
+        { "answer": "0.743 m", "explanation": "This uses the full period instead of the half-period; the drift tube corresponds to one half-cycle." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Explain why the drift tube design problem is an example of a practical engineering application of special relativity.",
+      "correct": "It demonstrates that ignoring relativistic effects leads to a non-functional device, proving relativity has real engineering consequences",
+      "correctExplanation": "Without relativistic corrections, the accelerator would not synchronise correctly and particles would not gain energy. This is a direct, testable engineering consequence of length contraction.",
+      "distractors": [
+        { "answer": "It is not a practical application because drift tubes can be designed using trial and error without theory", "explanation": "Trial and error would be inefficient and expensive; the theory of relativity provides precise predictions for the correct tube lengths." },
+        { "answer": "It is only a theoretical application because the differences between classical and relativistic designs are unmeasurably small", "explanation": "At γ ≈ 10, the contracted length is one-tenth of the lab length; this is a very large and easily measurable difference." },
+        { "answer": "It demonstrates general relativity, not special relativity, because the particles are accelerating", "explanation": "The length contraction of drift tubes is a special relativistic effect; general relativity involves gravity and curved spacetime." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the drift tube design calculation.",
+      "sentence": "At 0.950c (γ = 3.20), a proton traverses a drift tube with lab-frame length 0.480 m. The contracted length is {{blank:1}} m and the transit time in the proton's frame is approximately {{blank:2}} s.",
+      "blanks": {
+        "1": {
+          "correct": "0.150",
+          "correctExplanation": "L = 0.480/3.20 = 0.150 m. The proton measures the tube as 15.0 cm due to length contraction.",
+          "distractors": [
+            { "answer": "1.536", "explanation": "This multiplies by γ instead of dividing; the contracted length must be shorter than the lab-frame length." },
+            { "answer": "0.480", "explanation": "0.480 m is the lab-frame length; the proton measures a shorter contracted length of 0.150 m." }
+          ]
+        },
+        "2": {
+          "correct": "5.26 × 10⁻¹⁰",
+          "correctExplanation": "t = L/v = 0.150/(0.950 × 3.00 × 10⁸) = 0.150/2.85 × 10⁸ = 5.26 × 10⁻¹⁰ s.",
+          "distractors": [
+            { "answer": "1.68 × 10⁻⁹", "explanation": "This uses the lab-frame length of 0.480 m instead of the contracted length of 0.150 m." },
+            { "answer": "5.00 × 10⁻¹⁰", "explanation": "This uses v = c instead of 0.950c; the proton speed must be accounted for precisely." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about recovering the lab-frame length from the contracted measurement.",
+      "sentence": "A proton at γ = 6.00 measures a drift tube to be 12.0 cm. The lab-frame length is L₀ = {{blank:1}} × {{blank:2}} = 72.0 cm.",
+      "blanks": {
+        "1": {
+          "correct": "12.0",
+          "correctExplanation": "The contracted length measured by the proton is 12.0 cm, which is multiplied by γ to recover the lab-frame length.",
+          "distractors": [
+            { "answer": "72.0", "explanation": "72.0 cm is the answer (lab-frame length); the starting value is the contracted length of 12.0 cm." },
+            { "answer": "6.00", "explanation": "6.00 is the Lorentz factor γ; the contracted length (12.0 cm) is multiplied by γ." }
+          ]
+        },
+        "2": {
+          "correct": "6.00",
+          "correctExplanation": "Multiplying the contracted length by γ = 6.00 gives the lab-frame length: 12.0 × 6.00 = 72.0 cm.",
+          "distractors": [
+            { "answer": "0.167", "explanation": "0.167 is 1/γ; using this would contract the length further instead of recovering the lab-frame length." },
+            { "answer": "3.00", "explanation": "3.00 is not the correct Lorentz factor; γ = 6.00 as stated in the problem." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the comparison between classical and relativistic transit times.",
+      "sentence": "A 1.00 m drift tube with a proton at 0.990c: classical transit time = 1.00/(0.990 × 3.00 × 10⁸) = 3.37 × 10⁻⁹ s. Relativistic contracted length = {{blank:1}} m, giving transit time = {{blank:2}} s.",
+      "blanks": {
+        "1": {
+          "correct": "0.141",
+          "correctExplanation": "L = 1.00/7.09 ≈ 0.141 m. At 0.990c, γ ≈ 7.09, dramatically shortening the tube in the proton's frame.",
+          "distractors": [
+            { "answer": "1.00", "explanation": "1.00 m is the lab-frame length; the contracted length is 1.00/7.09 ≈ 0.141 m." },
+            { "answer": "7.09", "explanation": "7.09 is the Lorentz factor; the contracted length is 1.00 divided by this value." }
+          ]
+        },
+        "2": {
+          "correct": "4.75 × 10⁻¹⁰",
+          "correctExplanation": "t = 0.141/(0.990 × 3.00 × 10⁸) = 0.141/2.97 × 10⁸ ≈ 4.75 × 10⁻¹⁰ s, about 7 times shorter than the classical value.",
+          "distractors": [
+            { "answer": "3.37 × 10⁻⁹", "explanation": "This is the classical transit time using the lab-frame length; the relativistic transit time is much shorter." },
+            { "answer": "4.70 × 10⁻¹⁰", "explanation": "This is close but uses a slightly rounded value; the correct calculation gives approximately 4.75 × 10⁻¹⁰ s." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "mc",
+      "question": "A student argues that since both time dilation and length contraction are consequences of special relativity, either could be used to explain the drift tube design problem. Evaluate this claim.",
+      "correct": "The claim is correct; from the lab frame, the particle's time is dilated, and from the particle's frame, the tube is contracted — both give consistent transit times",
+      "correctExplanation": "In the lab frame, the particle's internal clock runs slowly (time dilation). In the particle's frame, the tube is shorter (length contraction). Both perspectives give the same measurable transit time.",
+      "distractors": [
+        { "answer": "The claim is incorrect; only length contraction is relevant because the drift tube is a spatial object", "explanation": "Both effects are valid descriptions from different frames; time dilation in the lab frame is equally correct." },
+        { "answer": "The claim is incorrect; time dilation and length contraction give contradictory predictions for the transit time", "explanation": "Both effects are derived from the same Lorentz transformations and always give consistent predictions." },
+        { "answer": "The claim is correct only for speeds above 0.99c where both effects become significant", "explanation": "Both effects are always present at any speed; they become more noticeable at higher speeds but are consistent at all speeds." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Evaluate the statement: 'The drift tube problem proves that length contraction is a real physical effect, not merely an optical illusion.'",
+      "correct": "The statement is valid; the accelerator only works when designed using relativistic length contraction, confirming it produces real, measurable consequences",
+      "correctExplanation": "If length contraction were merely an illusion, the accelerator would function with classical tube lengths. Its dependence on relativistic design confirms that contraction has real physical consequences.",
+      "distractors": [
+        { "answer": "The statement is invalid; the accelerator works because of time dilation, not length contraction", "explanation": "Both perspectives are valid; the accelerator's function confirms the reality of both relativistic effects." },
+        { "answer": "The statement is invalid; the drift tube problem can be fully explained using classical mechanics with small corrections", "explanation": "At γ ≈ 10, the correction is a factor of 10, which is not a 'small correction'; classical mechanics fails completely." },
+        { "answer": "The statement is misleading; length contraction is a coordinate effect with no engineering implications", "explanation": "The accelerator's dependence on relativistic design demonstrates that length contraction has direct engineering implications." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A physics teacher claims that at very high γ values (γ > 100), the drift tube design becomes simpler because the particle speed is essentially c. Evaluate this claim.",
+      "correct": "The claim has merit; when v ≈ c, the tube length depends mainly on the RF half-period and c, simplifying the calculation despite very large γ",
+      "correctExplanation": "At γ > 100, v is so close to c that tube length ≈ c/(2f). The speed barely changes with further acceleration, so successive tubes have nearly equal lengths.",
+      "distractors": [
+        { "answer": "The claim is incorrect; higher γ makes the design more complex because the contracted lengths become extremely small", "explanation": "While contracted lengths are small, the lab-frame tube lengths stabilise because v ≈ c, simplifying the progression." },
+        { "answer": "The claim is incorrect; no particle can reach γ > 100 because of energy limitations in current accelerators", "explanation": "Modern accelerators routinely achieve γ values far exceeding 100; the Large Hadron Collider reaches γ ≈ 7000 for protons." },
+        { "answer": "The claim is correct only if general relativity is used instead of special relativity at extreme γ values", "explanation": "Special relativity is fully valid at all γ values; general relativity is needed only when gravitational effects are significant." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Evaluate whether the drift tube design problem provides stronger evidence for special relativity than the muon survival observation.",
+      "correct": "Both provide strong evidence; drift tubes demonstrate an engineering application, while muon survival demonstrates a natural phenomenon — neither is inherently stronger",
+      "correctExplanation": "Muon survival is a natural observation confirming relativity, while drift tube design is a technological application. Both independently confirm the predictions of special relativity.",
+      "distractors": [
+        { "answer": "Drift tubes provide stronger evidence because they involve deliberate engineering, not natural phenomena", "explanation": "The strength of evidence does not depend on whether the phenomenon is natural or engineered; both confirm the same physics." },
+        { "answer": "Muon survival provides stronger evidence because it involves fundamental particles, not macroscopic equipment", "explanation": "Both involve relativistic effects; the scale of the system does not determine the strength of the evidence." },
+        { "answer": "Neither provides strong evidence because special relativity has never been conclusively proven", "explanation": "Special relativity has been confirmed by countless experiments; both examples provide strong supporting evidence." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student designs a linear accelerator assuming all drift tubes have the same length. Evaluate the consequences of this design at the high-energy end of the accelerator.",
+      "correct": "At the high-energy end, particles travel much faster and exit the uniform tubes before the voltage switches, causing loss of synchronisation",
+      "correctExplanation": "Faster particles traverse the same-length tube more quickly, exiting before the voltage reverses. They then experience a decelerating field in the gap, losing energy instead of gaining it.",
+      "distractors": [
+        { "answer": "Uniform tubes would work fine because the RF frequency automatically adjusts to match the particle speed", "explanation": "The RF frequency is fixed; it is the tube length that must change to maintain synchronisation with faster particles." },
+        { "answer": "Uniform tubes would only affect the low-energy end where particles are slower than expected", "explanation": "The problem is most severe at the high-energy end where speed differs most from the design speed of uniform tubes." },
+        { "answer": "Uniform tubes would cause the particles to exceed the speed of light at the high-energy end", "explanation": "No particle can exceed c; the consequence is loss of synchronisation and deceleration, not superluminal motion." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Evaluate the claim: 'A particle accelerator is essentially a device that converts Einstein's equations into a working machine.'",
+      "correct": "The claim is a reasonable simplification; the design fundamentally depends on relativistic predictions for energy, momentum, and length contraction to function correctly",
+      "correctExplanation": "Every aspect of accelerator design — tube lengths, RF timing, magnet strengths, beam focussing — relies on relativistic equations. Without them, the machine would not operate.",
+      "distractors": [
+        { "answer": "The claim is incorrect; particle accelerators rely primarily on classical electromagnetism, not relativity", "explanation": "While electromagnetism drives acceleration, the particle dynamics at relativistic speeds require relativistic corrections." },
+        { "answer": "The claim is an exaggeration; only a small fraction of the accelerator design involves relativistic physics", "explanation": "At speeds above ~0.1c (achieved early in most accelerators), relativistic effects dominate all subsequent design calculations." },
+        { "answer": "The claim is incorrect; accelerators existed before Einstein's theory and do not require it to function", "explanation": "Early low-energy accelerators worked without relativity, but all modern high-energy accelerators require relativistic design." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Anika argues that GPS satellites and particle accelerators both demonstrate that special relativity has practical consequences, but in different ways. Evaluate her reasoning.",
+      "correct": "Her reasoning is sound; GPS requires time dilation corrections for accurate positioning, while accelerators require length contraction for drift tube design — both confirm different aspects of relativity",
+      "correctExplanation": "GPS demonstrates time dilation (satellite clocks run at different rates), while drift tubes demonstrate length contraction. Together they confirm the full framework of special relativity.",
+      "distractors": [
+        { "answer": "Her reasoning is flawed; GPS uses general relativity, so it cannot be compared with the special relativistic drift tube problem", "explanation": "GPS uses both special and general relativity; the special relativistic time dilation component is comparable to the accelerator example." },
+        { "answer": "Her reasoning is flawed; both GPS and accelerators demonstrate only time dilation, not length contraction", "explanation": "Drift tube design specifically requires length contraction; it demonstrates a different aspect of relativity from GPS timing." },
+        { "answer": "Her reasoning is sound, but these are the only two practical applications of special relativity in existence", "explanation": "There are many practical applications including nuclear energy, medical PET scans, and synchrotron radiation sources." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Evaluate why the drift tube problem is particularly useful for teaching special relativity to students.",
+      "correct": "It provides a concrete, engineering-based example where ignoring relativity produces a non-functional device, making the abstract theory tangible",
+      "correctExplanation": "Unlike thought experiments, the accelerator is a real device that fails without relativistic design. This demonstrates that relativity is not merely theoretical but has measurable engineering consequences.",
+      "distractors": [
+        { "answer": "It is not useful for teaching because the calculations are too complex for students to understand", "explanation": "The calculation L = L₀/γ is straightforward; the example effectively connects the formula to a real application." },
+        { "answer": "It is useful only for advanced university students because high school students cannot understand particle accelerators", "explanation": "The basic concept of drift tubes and voltage timing is accessible to VCE students and connects directly to the length contraction formula." },
+        { "answer": "It is not useful because students cannot visit particle accelerators to verify the predictions themselves", "explanation": "The value lies in understanding the application; students do not need to physically visit an accelerator to appreciate the physics." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the evaluation comparing two frames of reference for the drift tube problem.",
+      "sentence": "In the lab frame, the particle's clock runs {{blank:1}} (time dilation). In the particle's frame, the tube is {{blank:2}} (length contraction). Both descriptions predict the same measurable transit time.",
+      "blanks": {
+        "1": {
+          "correct": "slowly",
+          "correctExplanation": "From the lab frame, the moving particle's internal clock runs slowly due to time dilation: t = γt₀.",
+          "distractors": [
+            { "answer": "quickly", "explanation": "Moving clocks run slowly, not quickly, from the perspective of a stationary observer." },
+            { "answer": "normally", "explanation": "At relativistic speeds, the particle's clock runs measurably slower than the lab clock." }
+          ]
+        },
+        "2": {
+          "correct": "shorter",
+          "correctExplanation": "In the particle's frame, the drift tube moves past at high speed and is length-contracted: L = L₀/γ.",
+          "distractors": [
+            { "answer": "longer", "explanation": "Length contraction makes moving objects shorter in the direction of motion, not longer." },
+            { "answer": "unchanged", "explanation": "At relativistic speeds, the tube is significantly contracted in the particle's frame; it is not unchanged." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the evaluation about the scope of relativistic corrections in accelerator design.",
+      "sentence": "Length contraction becomes significant for drift tube design when the particle speed exceeds approximately {{blank:1}}, at which point the Lorentz factor is large enough to cause measurable differences between classical and relativistic {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "0.1c",
+          "correctExplanation": "At 0.1c, γ ≈ 1.005, producing a 0.5% correction. This is the approximate threshold where relativistic effects begin to matter for precision engineering.",
+          "distractors": [
+            { "answer": "0.9c", "explanation": "Relativistic effects become significant well before 0.9c; by 0.1c the corrections are already measurable in precision instruments." },
+            { "answer": "0.001c", "explanation": "At 0.001c, γ ≈ 1.0000005; the correction is negligible at this speed and would not affect drift tube design." }
+          ]
+        },
+        "2": {
+          "correct": "predictions",
+          "correctExplanation": "The classical and relativistic predictions for transit time and required tube length diverge as speed increases.",
+          "distractors": [
+            { "answer": "materials", "explanation": "The drift tube materials are not affected by relativity; it is the predicted tube lengths and timing that differ." },
+            { "answer": "temperatures", "explanation": "Temperature is not directly relevant to the length contraction correction; the predictions for tube length and timing are what differ." }
+          ]
+        }
+      }
+    }
+  ]
+}

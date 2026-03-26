@@ -3086,10 +3086,10 @@ function downloadStudentPDF(idx) {
   // ── Radar chart ──
   addChart('chart-' + idx, 120);
 
-  // ── Timeline charts (if visible) ──
+  // ── Timeline charts (if visible) — always start on a new page ──
   const tlSection = document.getElementById('timeline-section-' + idx);
   if (tlSection && tlSection.style.display !== 'none') {
-    if (y + 12 > pageH - 10) { doc.addPage(); y = mT; }
+    doc.addPage(); y = mT;
     doc.setFont('helvetica', 'bold');
     doc.setFontSize(11);
     doc.text('Progress Over Time', pageW / 2, y + 4, { align: 'center' });

@@ -1,0 +1,583 @@
+{
+  "_link": {
+    "uuid": "lp-4e649763-ee6e-7456-ed34-2ba2932b88c0",
+    "version": 1,
+    "contentHash": "hash-e73d7bcd",
+    "title": "I can determine the number of significant figures in a value",
+    "generatedAt": "2026-03-10T14:40:00.000Z"
+  },
+  "toLevel2": [
+    {
+      "type": "mc",
+      "question": "How many significant figures does the value 0.0045 have?",
+      "correct": "2",
+      "correctExplanation": "The leading zeros (0.00) are not significant; they only indicate the position of the decimal point. The significant digits are 4 and 5.",
+      "distractors": [
+        { "answer": "4", "explanation": "Counting all digits including leading zeros gives 4, but leading zeros are never significant." },
+        { "answer": "3", "explanation": "This may result from counting one of the leading zeros as significant. Leading zeros are never significant." },
+        { "answer": "1", "explanation": "Both 4 and 5 are significant non-zero digits, giving 2 significant figures, not 1." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "How many significant figures does the value 3.060 have?",
+      "correct": "4",
+      "correctExplanation": "All four digits are significant: 3 and 6 are non-zero digits, the zero between them is significant because it is between non-zero digits, and the trailing zero after the decimal point is significant.",
+      "distractors": [
+        { "answer": "3", "explanation": "This incorrectly excludes the trailing zero. Trailing zeros after a decimal point are significant because they indicate measured precision." },
+        { "answer": "2", "explanation": "This counts only the non-zero digits. Both the zero between 3 and 6 and the trailing zero are also significant." },
+        { "answer": "5", "explanation": "The value 3.060 contains only four digits, so it cannot have five significant figures." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which of the following correctly states the rule for leading zeros?",
+      "correct": "Leading zeros are never significant",
+      "correctExplanation": "Leading zeros serve only to position the decimal point and do not represent measured digits. For example, in 0.005, the zeros before 5 are not significant.",
+      "distractors": [
+        { "answer": "Leading zeros are always significant", "explanation": "Leading zeros are never significant. They are placeholders that indicate the magnitude of the number." },
+        { "answer": "Leading zeros are significant only when they appear after a decimal point", "explanation": "Leading zeros are not significant regardless of the decimal point. In 0.005, none of the zeros before 5 are significant." },
+        { "answer": "Leading zeros are significant when there are more than two of them", "explanation": "The number of leading zeros does not affect their significance. Leading zeros are never significant, regardless of how many there are." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "How many significant figures does the value 1200 have?",
+      "correct": "The number of significant figures is ambiguous without further information",
+      "correctExplanation": "The trailing zeros in 1200 could be significant or merely placeholders. Without a decimal point or scientific notation, the number could have 2, 3, or 4 significant figures.",
+      "distractors": [
+        { "answer": "4, because all digits in a number are always significant", "explanation": "Not all digits are always significant. The trailing zeros in 1200 are ambiguous without additional context such as a decimal point or scientific notation." },
+        { "answer": "2, because trailing zeros are never significant in any number", "explanation": "Trailing zeros are significant when they follow a decimal point (e.g., 12.00 has 4 significant figures). The ambiguity exists specifically for integers without a decimal point." },
+        { "answer": "1, because only the first non-zero digit is ever significant in a measurement", "explanation": "Multiple digits can be significant. The value 1200 has at least 2 significant figures (1 and 2), with the zeros being ambiguous." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "How many significant figures does the value 50.0 have?",
+      "correct": "3",
+      "correctExplanation": "The 5 is significant as a non-zero digit, the zero between the 5 and the decimal point is significant, and the trailing zero after the decimal point is significant, giving 3 significant figures.",
+      "distractors": [
+        { "answer": "2", "explanation": "This incorrectly excludes the trailing zero after the decimal point. Trailing zeros after a decimal point are always significant." },
+        { "answer": "1", "explanation": "This counts only the 5. Both zeros are also significant in this value." },
+        { "answer": "4", "explanation": "The value 50.0 contains only three digits, so it cannot have four significant figures." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "In the value 0.0302, the zero between the 3 and the 2 is significant.",
+      "correct": "True",
+      "correctExplanation": "Zeros between non-zero digits (captive zeros) are always significant. The zero between 3 and 2 in 0.0302 is significant, giving three significant figures.",
+      "distractors": [
+        { "answer": "False", "explanation": "This zero is between two non-zero digits and is therefore significant. Only leading zeros are not significant in this value." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "The value 4.00 has two significant figures.",
+      "correct": "False",
+      "correctExplanation": "The value 4.00 has three significant figures. The trailing zeros after the decimal point are significant because they indicate that the measurement was precise to the hundredths place.",
+      "distractors": [
+        { "answer": "True", "explanation": "The trailing zeros after the decimal point in 4.00 are significant, giving three significant figures, not two." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about significant figures.",
+      "sentence": "Leading zeros are {{blank:1}} significant, while trailing zeros after a decimal point are {{blank:2}} significant.",
+      "blanks": {
+        "1": {
+          "correct": "never",
+          "correctExplanation": "Leading zeros serve only as placeholders to indicate the position of the decimal point and do not represent measured precision.",
+          "distractors": [
+            { "answer": "always", "explanation": "Leading zeros are never significant. They are placeholders, not measured digits." },
+            { "answer": "sometimes", "explanation": "Leading zeros are never significant, without exception. They always serve only as position indicators." }
+          ]
+        },
+        "2": {
+          "correct": "always",
+          "correctExplanation": "Trailing zeros after a decimal point indicate that the measurement was precise to that decimal place, so they are always significant.",
+          "distractors": [
+            { "answer": "never", "explanation": "Trailing zeros after a decimal point are always significant because they communicate the precision of the measurement." },
+            { "answer": "sometimes", "explanation": "Trailing zeros after a decimal point are always significant. There is no ambiguity in this case." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the meaning of significant figures.",
+      "sentence": "The number of significant figures in a value indicates how {{blank:1}} the value is known, with more significant figures meaning greater {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "precisely",
+          "correctExplanation": "Significant figures communicate the precision of a measurement, showing how many digits are reliably known.",
+          "distractors": [
+            { "answer": "accurately", "explanation": "Accuracy refers to closeness to the true value, not to the number of reliable digits. Significant figures communicate precision." },
+            { "answer": "approximately", "explanation": "Approximately implies a rough estimate. Significant figures indicate how precisely, not how approximately, a value is known." }
+          ]
+        },
+        "2": {
+          "correct": "precision",
+          "correctExplanation": "More significant figures indicate that the measurement was made with greater precision, meaning the value is known to more decimal places.",
+          "distractors": [
+            { "answer": "accuracy", "explanation": "Accuracy refers to closeness to the true value. Significant figures reflect precision, the degree of detail in the measurement." },
+            { "answer": "magnitude", "explanation": "Magnitude refers to the size of a value, not to how precisely it is known. Significant figures indicate precision." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about counting significant figures.",
+      "sentence": "The value 0.0302 has {{blank:1}} significant figures because the leading zeros are not significant, but the zero between the 3 and the {{blank:2}} is significant.",
+      "blanks": {
+        "1": {
+          "correct": "three",
+          "correctExplanation": "The significant digits are 3, 0, and 2. The leading zeros (0.0) are not significant.",
+          "distractors": [
+            { "answer": "four", "explanation": "Four would include a leading zero as significant, which is incorrect. Leading zeros are never significant." },
+            { "answer": "two", "explanation": "Two would exclude the zero between 3 and 2, which is significant because it is a captive zero between non-zero digits." }
+          ]
+        },
+        "2": {
+          "correct": "2",
+          "correctExplanation": "The zero sits between the digits 3 and 2, making it a captive zero that is significant.",
+          "distractors": [
+            { "answer": "5", "explanation": "There is no digit 5 in the value 0.0302. The captive zero is between 3 and 2." },
+            { "answer": "0", "explanation": "While the zero is between 3 and 2, the question asks about the digit after the captive zero, which is 2." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "mc",
+      "question": "A student records a measurement as 2.50 x 10^{3}. How many significant figures does this value have?",
+      "correct": "3",
+      "correctExplanation": "In scientific notation, all digits in the coefficient are significant. The coefficient 2.50 has three significant figures: 2, 5, and the trailing zero.",
+      "distractors": [
+        { "answer": "2", "explanation": "This excludes the trailing zero in 2.50, which is significant because it appears after the decimal point in the coefficient." },
+        { "answer": "4", "explanation": "The exponent (10^{3}) does not contribute significant figures. Only the digits in the coefficient 2.50 count." },
+        { "answer": "6", "explanation": "The value of the exponent does not add to the count of significant figures. Only the coefficient determines the number." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Why does expressing a result with too many significant figures misrepresent the precision of the measurement?",
+      "correct": "It implies the measurement was more precise than the instrument could actually achieve",
+      "correctExplanation": "Each significant figure claims to be a reliably known digit. Reporting more significant figures than the measurement supports falsely suggests a higher level of precision.",
+      "distractors": [
+        { "answer": "It makes the number too large to be used correctly in calculations with other values", "explanation": "Extra significant figures do not change the magnitude of a number; they incorrectly imply greater precision." },
+        { "answer": "It changes the value of the measurement to a completely different number than what was recorded", "explanation": "Extra significant figures add false precision but do not substantially change the numerical value." },
+        { "answer": "It is only a problem in handwritten work and does not matter when using digital calculators", "explanation": "Significant figure conventions apply regardless of how calculations are performed. Calculator outputs must still be rounded appropriately." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which of the following values has exactly four significant figures?",
+      "correct": "0.003040",
+      "correctExplanation": "The leading zeros (0.00) are not significant. The significant digits are 3, 0, 4, and 0 (the trailing zero after the decimal point). This gives four significant figures.",
+      "distractors": [
+        { "answer": "0.0030", "explanation": "0.0030 has two significant figures: 3 and 0 (trailing zero after decimal). The leading zeros are not significant." },
+        { "answer": "3040", "explanation": "3040 is ambiguous without a decimal point. It could have 3 or 4 significant figures depending on context." },
+        { "answer": "0.00304", "explanation": "0.00304 has three significant figures: 3, 0 (captive), and 4. The leading zeros are not significant." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student measures a length as 12.0 cm. What does the trailing zero indicate about the measurement?",
+      "correct": "The measurement was precise to the nearest 0.1 cm",
+      "correctExplanation": "The trailing zero after the decimal point shows that the tenths digit was measured and found to be zero. This communicates that the precision extends to 0.1 cm.",
+      "distractors": [
+        { "answer": "The measurement was rounded up from a value slightly below 12 cm", "explanation": "The trailing zero does not indicate rounding. It indicates that the measurement was made to the tenths place and the value was exactly 12.0 cm." },
+        { "answer": "The zero was added for appearance and has no scientific meaning", "explanation": "In scientific measurement, trailing zeros after a decimal point are always significant and communicate precision." },
+        { "answer": "The instrument could not measure to the hundredths place and therefore added a zero", "explanation": "The trailing zero indicates the measurement was precise to 0.1 cm, not that the instrument was incapable of finer measurement." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "How can the value 1200 be written in scientific notation to show exactly three significant figures?",
+      "correct": "1.20 x 10^{3}",
+      "correctExplanation": "Writing 1.20 x 10^{3} makes it clear that the coefficient has three significant figures: 1, 2, and the trailing zero after the decimal point.",
+      "distractors": [
+        { "answer": "1.2 x 10^{3}", "explanation": "1.2 x 10^{3} has only two significant figures. The missing trailing zero means the precision to the tens place is not indicated." },
+        { "answer": "1.200 x 10^{3}", "explanation": "1.200 x 10^{3} has four significant figures. The additional trailing zero implies precision to the units place." },
+        { "answer": "12.0 x 10^{2}", "explanation": "While 12.0 x 10^{2} has three significant figures, proper scientific notation requires the coefficient to be between 1 and 10." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student claims that the value 5000 has four significant figures. Under what condition would this claim be correct?",
+      "correct": "If the value were written as 5.000 x 10^{3} or as 5000. with a trailing decimal point",
+      "correctExplanation": "Writing 5.000 x 10^{3} explicitly shows four significant figures in the coefficient. A trailing decimal point (5000.) is another convention indicating all digits are significant.",
+      "distractors": [
+        { "answer": "The claim is always correct because all written digits in any number are automatically significant", "explanation": "Trailing zeros in whole numbers without a decimal point are ambiguous. Not all written digits are automatically significant." },
+        { "answer": "The claim is never correct because the value 5000 can only have one significant figure", "explanation": "5000 could have 1, 2, 3, or 4 significant figures depending on context. Scientific notation removes this ambiguity." },
+        { "answer": "If the value were measured using a digital instrument, then all four digits would be significant", "explanation": "Instrument type alone does not determine significance. The notation used to express the value is what communicates the number of significant figures." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "In scientific notation, all digits in the coefficient are significant.",
+      "correct": "True",
+      "correctExplanation": "Scientific notation resolves ambiguity about significant figures. Every digit in the coefficient, including trailing zeros, is significant.",
+      "distractors": [
+        { "answer": "False", "explanation": "This statement is true. One of the advantages of scientific notation is that every digit in the coefficient is significant, removing any ambiguity." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the significance of trailing zeros.",
+      "sentence": "The value 53.00 has {{blank:1}} significant figures because the trailing zeros after the decimal point indicate that the measurement was precise to the {{blank:2}} place.",
+      "blanks": {
+        "1": {
+          "correct": "four",
+          "correctExplanation": "All four digits (5, 3, 0, 0) are significant. The two trailing zeros after the decimal point are significant.",
+          "distractors": [
+            { "answer": "two", "explanation": "Two would count only the non-zero digits. The trailing zeros after the decimal point are also significant." },
+            { "answer": "three", "explanation": "Three would count only one of the trailing zeros. Both trailing zeros after the decimal point are significant." }
+          ]
+        },
+        "2": {
+          "correct": "hundredths",
+          "correctExplanation": "The two decimal places in 53.00 show that the measurement was precise to the hundredths (0.01) position.",
+          "distractors": [
+            { "answer": "tenths", "explanation": "Tenths would correspond to one decimal place (53.0). Two decimal places indicates hundredths precision." },
+            { "answer": "units", "explanation": "Units precision would be 53 without decimal places. The .00 indicates hundredths precision." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about why significant figures matter.",
+      "sentence": "Expressing a result with too many significant figures implies a level of {{blank:1}} that was not actually achieved by the {{blank:2}} instrument.",
+      "blanks": {
+        "1": {
+          "correct": "precision",
+          "correctExplanation": "Each significant figure claims to be a reliably known digit. Too many significant figures falsely imply greater precision than the measurement provides.",
+          "distractors": [
+            { "answer": "accuracy", "explanation": "Accuracy refers to closeness to the true value. Significant figures communicate precision, not accuracy." },
+            { "answer": "magnitude", "explanation": "Magnitude refers to the size of a value. Significant figures communicate precision, not the size of the measurement." }
+          ]
+        },
+        "2": {
+          "correct": "measuring",
+          "correctExplanation": "The measuring instrument determines the maximum precision achievable. Reporting more digits than the instrument supports misrepresents this precision.",
+          "distractors": [
+            { "answer": "recording", "explanation": "Recording is the act of writing down values. The limiting factor for significant figures is the precision of the measuring instrument." },
+            { "answer": "calculating", "explanation": "While calculations must respect significant figures, the original limit is set by the measuring instrument's precision." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about using scientific notation to clarify significance.",
+      "sentence": "The value 1200 can be written as 1.2 x 10^{3} to indicate {{blank:1}} significant figures, or as 1.200 x 10^{3} to indicate {{blank:2}} significant figures.",
+      "blanks": {
+        "1": {
+          "correct": "two",
+          "correctExplanation": "The coefficient 1.2 contains two digits, both significant, indicating the value is known to two significant figures.",
+          "distractors": [
+            { "answer": "three", "explanation": "1.2 has two significant digits, not three. Three significant figures would require 1.20 x 10^{3}." },
+            { "answer": "four", "explanation": "1.2 has two significant digits. Four significant figures would require 1.200 x 10^{3}." }
+          ]
+        },
+        "2": {
+          "correct": "four",
+          "correctExplanation": "The coefficient 1.200 contains four digits (1, 2, 0, 0), all significant, indicating four significant figures.",
+          "distractors": [
+            { "answer": "three", "explanation": "1.200 has four significant digits, not three. All digits in the coefficient of scientific notation are significant." },
+            { "answer": "two", "explanation": "1.200 has four significant digits, not two. The trailing zeros in the coefficient are significant." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "mc",
+      "question": "Priya measures the mass of an object using a balance that reads to the nearest 0.01 g and records 15.30 g. Her lab partner, Kai, records the same mass as 15.3 g. Which recording is more appropriate?",
+      "correct": "Priya's recording of 15.30 g, because it reflects the precision of the balance",
+      "correctExplanation": "Since the balance reads to 0.01 g, the trailing zero in 15.30 correctly communicates that the hundredths digit was measured and found to be zero.",
+      "distractors": [
+        { "answer": "Kai's recording of 15.3 g, because the trailing zero adds no useful information", "explanation": "The trailing zero communicates that the measurement was precise to 0.01 g. Dropping it implies the balance only measured to 0.1 g." },
+        { "answer": "Both recordings are equally appropriate because they represent the same numerical value", "explanation": "While numerically equal, 15.30 and 15.3 communicate different levels of precision. 15.30 correctly reflects the instrument's capability." },
+        { "answer": "Neither recording is appropriate; the mass should be recorded as 15 g to avoid implying false precision", "explanation": "Recording as 15 g would discard measured information. The balance provided data to 0.01 g, which should be preserved." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A calculator displays 0.0087345612 after a calculation. The measurements used in the calculation each had three significant figures. How should the result be reported?",
+      "correct": "0.00873",
+      "correctExplanation": "The result should be rounded to three significant figures to match the least precise measurement used. Leading zeros are not significant, so 0.00873 has three significant figures.",
+      "distractors": [
+        { "answer": "0.0087345612, because the calculator display shows the exact answer", "explanation": "Calculator outputs should not be reported with more significant figures than the input measurements justify." },
+        { "answer": "0.009, because rounding to one significant figure is always appropriate", "explanation": "Rounding to one significant figure discards valuable precision. The result should be rounded to three significant figures to match the input data." },
+        { "answer": "0.00873456, because the leading zeros reduce the effective precision", "explanation": "Leading zeros do not reduce precision. The result should have three significant figures in total, matching the input precision." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student argues that the value 0.010 has two significant figures. Is this correct?",
+      "correct": "Yes, the significant digits are 1 and the trailing 0; the leading zeros are not significant",
+      "correctExplanation": "The leading zeros (0.0) are placeholders and not significant. The digit 1 and the trailing zero after the decimal point are both significant, giving two significant figures.",
+      "distractors": [
+        { "answer": "No, it has three significant figures because all zeros are significant in this value", "explanation": "Leading zeros are never significant. Only the trailing zero after the decimal point is significant, along with the 1." },
+        { "answer": "No, it has one significant figure because only the digit 1 is non-zero and therefore significant", "explanation": "The trailing zero after the decimal point is significant because it indicates that the measurement was precise to the thousandths place." },
+        { "answer": "Yes, but only if the value was measured with an analogue instrument rather than a digital one", "explanation": "Significant figure rules apply regardless of instrument type. The value 0.010 has two significant figures in any context." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Marcus measures a voltage of 3.4500 V using a high-precision voltmeter. He reports the result as 3.5 V. What is wrong with his reporting?",
+      "correct": "He has discarded significant measured digits, implying lower precision than the voltmeter actually achieved",
+      "correctExplanation": "The voltmeter measured to five significant figures (3.4500), but reporting 3.5 V retains only two. This loses information about the precision of the measurement.",
+      "distractors": [
+        { "answer": "Nothing is wrong; rounding to fewer significant figures is always acceptable in physics", "explanation": "Rounding below the instrument's precision discards measured information. The number of significant figures should reflect the precision of the measurement." },
+        { "answer": "He should report exactly what the calculator shows, which may have more digits than the voltmeter measured", "explanation": "The reported value should match the precision of the measuring instrument, not the calculator display." },
+        { "answer": "He should add more trailing zeros to show that the voltmeter was very precise during the measurement", "explanation": "Adding zeros beyond what the instrument measured would claim false precision. The correct number of significant figures is determined by the instrument." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student writes the speed of light as 300000000 m s^{-1}. How many significant figures does this represent, and how could the ambiguity be resolved?",
+      "correct": "The number of significant figures is ambiguous; writing 3.00 x 10^{8} m s^{-1} would clearly indicate three",
+      "correctExplanation": "Trailing zeros in a whole number without a decimal point are ambiguous. Scientific notation eliminates this ambiguity by making all coefficient digits explicitly significant.",
+      "distractors": [
+        { "answer": "It has nine significant figures because all digits in the number are significant by default", "explanation": "Trailing zeros in whole numbers without a decimal point are ambiguous. They may be significant or merely placeholders." },
+        { "answer": "It has one significant figure because only the leading 3 is a measured digit in this value", "explanation": "The value likely has at least three significant figures (3.00 x 10^{8}), but the exact number is ambiguous without scientific notation." },
+        { "answer": "The ambiguity cannot be resolved because whole numbers can never have a definite number of significant figures", "explanation": "The ambiguity is easily resolved using scientific notation or a trailing decimal point, which clearly indicates the significant figures." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Anika records a temperature as 20.0 degrees C. Her teacher asks her to convert this to kelvin. The correct conversion is T(K) = T(degrees C) + 273.15. Should Anika report the result as 293.15 K or 293 K?",
+      "correct": "293 K, because the original measurement has three significant figures and the result should match",
+      "correctExplanation": "The measurement 20.0 degrees C has three significant figures. Adding 273.15 (an exact conversion factor) gives 293.15, which should be rounded to 293 K to reflect the original precision.",
+      "distractors": [
+        { "answer": "293.15 K, because the conversion factor has five significant figures", "explanation": "The precision of the result is limited by the least precise input measurement. The conversion constant 273.15 is exact, but 20.0 has only three significant figures." },
+        { "answer": "293.2 K, because rounding to one decimal place matches the original measurement format", "explanation": "Significant figures should be matched, not decimal places. The original measurement has three significant figures, so the result should be 293 K." },
+        { "answer": "290 K, because rounding to two significant figures is more conservative and therefore safer", "explanation": "Rounding to two significant figures discards precision that was actually measured. The original three significant figures should be preserved." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student records the following measurements: 5.0 cm, 12.34 cm, and 0.1 cm. Which measurement has the fewest significant figures?",
+      "correct": "0.1 cm, with one significant figure",
+      "correctExplanation": "0.1 cm has one significant figure (only the digit 1). The value 5.0 cm has two significant figures, and 12.34 cm has four.",
+      "distractors": [
+        { "answer": "5.0 cm, with one significant figure", "explanation": "5.0 cm has two significant figures because the trailing zero after the decimal point is significant." },
+        { "answer": "All three measurements have the same number of significant figures", "explanation": "The measurements have 2, 4, and 1 significant figures respectively. They are not equal." },
+        { "answer": "12.34 cm, because it has the most decimal places and therefore the fewest significant figures", "explanation": "More decimal places indicates more significant figures, not fewer. 12.34 has four significant figures, which is the most." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about reporting calculator results.",
+      "sentence": "A calculator displays 14.285714 after dividing two measurements, each with three significant figures. The result should be rounded to {{blank:1}} significant figures and reported as {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "three",
+          "correctExplanation": "The result of a calculation should not have more significant figures than the least precise measurement used in the calculation.",
+          "distractors": [
+            { "answer": "eight", "explanation": "Reporting all eight calculator digits would imply false precision. The result is limited by the three significant figures of the inputs." },
+            { "answer": "two", "explanation": "Two significant figures would unnecessarily discard precision. Both inputs have three significant figures, so the result should also have three." }
+          ]
+        },
+        "2": {
+          "correct": "14.3",
+          "correctExplanation": "Rounding 14.285714 to three significant figures gives 14.3.",
+          "distractors": [
+            { "answer": "14.29", "explanation": "14.29 has four significant figures, which exceeds the precision of the input measurements." },
+            { "answer": "14", "explanation": "14 has only two significant figures, which discards measured precision unnecessarily." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about using scientific notation to communicate precision.",
+      "sentence": "Writing a mass as 4.50 x 10^{2} g instead of 450 g makes it clear that the value has {{blank:1}} significant figures, resolving the {{blank:2}} of the trailing zero.",
+      "blanks": {
+        "1": {
+          "correct": "three",
+          "correctExplanation": "The coefficient 4.50 has three significant figures: 4, 5, and the trailing zero after the decimal point.",
+          "distractors": [
+            { "answer": "two", "explanation": "The coefficient 4.50 has three digits, all significant. The trailing zero is significant because it is after the decimal point." },
+            { "answer": "four", "explanation": "The coefficient 4.50 has three digits, not four. Four significant figures would require 4.500 x 10^{2}." }
+          ]
+        },
+        "2": {
+          "correct": "ambiguity",
+          "correctExplanation": "In the value 450, it is unclear whether the trailing zero is significant. Scientific notation removes this ambiguity.",
+          "distractors": [
+            { "answer": "precision", "explanation": "Scientific notation does not change the precision; it clarifies it by resolving the ambiguity of trailing zeros." },
+            { "answer": "magnitude", "explanation": "The magnitude remains the same in both representations. Scientific notation resolves the ambiguity of significant figures." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about matching significant figures to instrument precision.",
+      "sentence": "A measurement recorded as 25.0 mL from a burette with 0.1 mL graduations correctly shows {{blank:1}} significant figures, matching the {{blank:2}} of the instrument.",
+      "blanks": {
+        "1": {
+          "correct": "three",
+          "correctExplanation": "25.0 has three significant figures: 2, 5, and the trailing zero, which indicates the tenths place was measured.",
+          "distractors": [
+            { "answer": "two", "explanation": "The trailing zero in 25.0 is significant because it appears after the decimal point, giving three significant figures." },
+            { "answer": "four", "explanation": "25.0 has three digits, all significant. Four would require an additional digit such as 25.00." }
+          ]
+        },
+        "2": {
+          "correct": "resolution",
+          "correctExplanation": "The burette's 0.1 mL graduations determine the resolution of the measurement, and the three significant figures in 25.0 correctly reflect this.",
+          "distractors": [
+            { "answer": "accuracy", "explanation": "Accuracy refers to closeness to the true value. The number of significant figures reflects the instrument's resolution, not its accuracy." },
+            { "answer": "calibration", "explanation": "Calibration affects systematic error, not the number of significant figures. The resolution determines how many digits can be meaningfully recorded." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "mc",
+      "question": "A student measures the diameter of a wire as 0.50 mm using a micrometer with 0.01 mm resolution. They then calculate the cross-sectional area using A = pi r^{2} and report 1.96350 x 10^{-1} mm^{2}. Which evaluation of the reported significant figures is correct?",
+      "correct": "The result should have two significant figures (0.20 mm^{2}) because the input measurement has two significant figures",
+      "correctExplanation": "The diameter 0.50 mm has two significant figures. The result of any calculation cannot have more significant figures than the least precise input.",
+      "distractors": [
+        { "answer": "The result is correctly reported because the calculation was performed carefully using the full value of pi", "explanation": "The precision of pi does not limit the result. The limiting factor is the two significant figures in the diameter measurement." },
+        { "answer": "The result should have six significant figures because the calculator displayed six digits after the calculation", "explanation": "Calculator displays do not determine significant figures. The result is limited by the precision of the input measurements." },
+        { "answer": "The result should have one significant figure because squaring the radius halves the number of significant figures", "explanation": "Squaring does not halve the significant figures. The result should match the least precise input, which has two significant figures." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Two students measure the same length. Student A records 15 cm and Student B records 15.0 cm. A third student claims both records convey the same information. Which evaluation is most appropriate?",
+      "correct": "The claim is incorrect because 15 cm has two significant figures while 15.0 cm has three, indicating different measurement precision",
+      "correctExplanation": "The trailing zero in 15.0 indicates the measurement was precise to the tenths place, while 15 only indicates precision to the units place. They convey different levels of precision.",
+      "distractors": [
+        { "answer": "The claim is correct because both values represent the same physical length of fifteen centimetres", "explanation": "While the physical length is the same, the measurements communicate different levels of precision, which is scientifically important." },
+        { "answer": "The claim is correct because the trailing zero in 15.0 is just a formatting choice with no scientific meaning", "explanation": "In scientific measurement, trailing zeros after a decimal point are always meaningful. They indicate that the measurement was precise to that decimal place." },
+        { "answer": "The claim is incorrect because 15.0 cm is more accurate than 15 cm, not just more precise", "explanation": "The difference is in precision (number of significant figures), not accuracy (closeness to true value). Both could be equally accurate." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student is asked how many significant figures the value 0.000100 has. They answer 'six, because there are six digits.' Which evaluation is correct?",
+      "correct": "The answer is wrong; the value has three significant figures because leading zeros are not significant",
+      "correctExplanation": "The leading zeros (0.000) are placeholders and not significant. The significant digits are 1, 0, and 0 (the trailing zeros after the decimal point), giving three significant figures.",
+      "distractors": [
+        { "answer": "The answer is correct because all digits written in a number are always counted as significant", "explanation": "Leading zeros are never significant. They serve only to locate the decimal point and do not represent measured digits." },
+        { "answer": "The answer is wrong; the value has one significant figure because only the digit 1 is non-zero", "explanation": "The two trailing zeros after the 1 are significant because they appear after the decimal point and after a non-zero digit." },
+        { "answer": "The answer is wrong; the value has four significant figures because only the first three zeros are not significant", "explanation": "All four leading zeros are not significant. The value has three significant figures: 1, 0, and 0." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student performs a calculation and obtains 0.0040050. They need to report this to three significant figures. Which value is correct?",
+      "correct": "0.00401",
+      "correctExplanation": "The significant digits in 0.0040050 are 4, 0, 0, 5, and 0 (five significant figures). Rounding to three gives 4, 0, and 1 (rounding the 0 up because the next digit is 5), so 0.00401.",
+      "distractors": [
+        { "answer": "0.004", "explanation": "0.004 has one significant figure, not three. Rounding to three significant figures gives 0.00401." },
+        { "answer": "0.00400", "explanation": "0.00400 has three significant figures (4, 0, 0) but rounds the 0050 portion down. Since the digit after the third significant figure is 5, the convention rounds up to 0.00401." },
+        { "answer": "4.01 x 10^{-3}", "explanation": "This is the same as 0.00401 and would be correct. However, the question asks for the decimal form, and 0.00401 is the direct answer." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student argues that exact numbers (such as 'there are 12 eggs in a dozen') have an infinite number of significant figures. Which evaluation is most appropriate?",
+      "correct": "The argument is correct; exact numbers do not limit the significant figures in a calculation",
+      "correctExplanation": "Exact numbers, such as counting numbers and defined conversion factors, are not measurements and do not have uncertainty. They can be considered to have infinite significant figures.",
+      "distractors": [
+        { "answer": "The argument is incorrect; all numbers used in physics have a finite number of significant figures", "explanation": "Measured values have finite significant figures, but exact numbers (such as defined quantities and counting numbers) are infinitely precise." },
+        { "answer": "The argument is correct only for small counting numbers less than 100", "explanation": "All exact numbers, regardless of their size, have infinite significant figures. This applies to defined constants, counting numbers, and conversion factors." },
+        { "answer": "The argument is incorrect because the number 12 clearly has two significant figures", "explanation": "When 12 is a counting number (exactly 12 items), it is exact and does not limit significant figures. It would have two significant figures only if it were a measurement." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student measures a length as 2.5 cm and a width as 3.14 cm, then calculates the area as 2.5 x 3.14 = 7.85 cm^{2}. They report the area as 7.85 cm^{2}. Which evaluation of the significant figures in the reported area is correct?",
+      "correct": "The area should be reported as 7.9 cm^{2} because the result is limited to two significant figures by the least precise measurement",
+      "correctExplanation": "The length (2.5 cm) has two significant figures and the width (3.14 cm) has three. The result should match the least precise input, giving two significant figures: 7.9 cm^{2}.",
+      "distractors": [
+        { "answer": "7.85 cm^{2} is correct because the multiplication produces three significant figures from three-digit inputs", "explanation": "The product is limited by the measurement with the fewest significant figures (2.5, with two), not by the number of digits in the inputs." },
+        { "answer": "The area should be reported as 8 cm^{2} because rounding to one significant figure is the most conservative approach", "explanation": "One significant figure is overly conservative. The least precise measurement has two significant figures, so the result should also have two." },
+        { "answer": "The area should be reported as 7.850 cm^{2} to show the precision of the width measurement", "explanation": "The result cannot be more precise than the least precise input. The length limits the result to two significant figures." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student evaluates a peer's work and notices that the peer expressed a resistance as '47 kohm' without specifying the number of significant figures. The student argues this is problematic for scientific communication. Which evaluation supports this argument?",
+      "correct": "Without scientific notation or a decimal point, it is unclear whether the value has two, three, four, or five significant figures",
+      "correctExplanation": "The value 47000 ohm (47 kohm) has ambiguous trailing zeros. It could represent 4.7 x 10^{4} (2 sig figs) or 4.7000 x 10^{4} (5 sig figs) depending on the measurement precision.",
+      "distractors": [
+        { "answer": "The argument is wrong because the prefix kilo automatically indicates three significant figures", "explanation": "SI prefixes indicate multiplication factors, not significant figures. The prefix kilo does not determine how many digits are significant." },
+        { "answer": "The argument is wrong because resistance values in electronics are always reported to two significant figures", "explanation": "There is no such rule. The number of significant figures depends on the precision of the measurement, not the type of quantity." },
+        { "answer": "The argument is correct but the problem only matters in formal scientific publications, not in laboratory work", "explanation": "Clear communication of precision matters in all scientific contexts, including laboratory work, not just formal publications." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student writes in their report: 'The speed of sound was measured as 343.21568 m s^{-1} using a stopwatch and a 10 m tape measure.' A reviewer identifies a problem with this reported value. What is the issue?",
+      "correct": "The reported precision far exceeds what a stopwatch and tape measure can achieve, implying a false level of measurement precision",
+      "correctExplanation": "A stopwatch has limited precision due to reaction time, and a 10 m tape measure has limited resolution. Reporting eight significant figures from such instruments is not credible.",
+      "distractors": [
+        { "answer": "The value is wrong because the accepted speed of sound is exactly 343 m s^{-1} with three significant figures", "explanation": "The accepted speed of sound varies with conditions and is not exactly 343. The issue is the false precision claimed by the excessive significant figures." },
+        { "answer": "The issue is that the student should have used more decimal places to show even greater precision", "explanation": "The problem is the opposite: the student has claimed too much precision for the instruments used." },
+        { "answer": "There is no issue because the student simply reported what their calculator displayed after the division", "explanation": "Calculator displays do not determine appropriate significant figures. The student should round to match the precision of their measuring instruments." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence evaluating a common student error.",
+      "sentence": "A student who reports a calculator result of 7.38461538 from measurements with two significant figures should round to {{blank:1}} to avoid implying false {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "7.4",
+          "correctExplanation": "Rounding 7.38461538 to two significant figures gives 7.4, matching the precision of the input measurements.",
+          "distractors": [
+            { "answer": "7.38", "explanation": "7.38 has three significant figures, which exceeds the two significant figures of the input measurements." },
+            { "answer": "7", "explanation": "7 has one significant figure, which unnecessarily discards precision. Two significant figures gives 7.4." }
+          ]
+        },
+        "2": {
+          "correct": "precision",
+          "correctExplanation": "Reporting too many digits implies the measurement was more precise than it actually was.",
+          "distractors": [
+            { "answer": "accuracy", "explanation": "Too many significant figures implies false precision, not false accuracy. Precision and accuracy are distinct concepts." },
+            { "answer": "magnitude", "explanation": "The magnitude is the same regardless of significant figures. The concern is about falsely implying greater precision." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the role of significant figures in scientific communication.",
+      "sentence": "Significant figures serve as a shorthand for communicating the {{blank:1}} of a measurement, allowing other scientists to assess the {{blank:2}} that can be placed in the reported value.",
+      "blanks": {
+        "1": {
+          "correct": "precision",
+          "correctExplanation": "The number of significant figures directly communicates how precisely the measurement was made and how many digits are reliably known.",
+          "distractors": [
+            { "answer": "accuracy", "explanation": "Accuracy refers to closeness to the true value. Significant figures primarily communicate precision, not accuracy." },
+            { "answer": "magnitude", "explanation": "Magnitude refers to the size of a value. Significant figures communicate how precisely the value is known, not how large it is." }
+          ]
+        },
+        "2": {
+          "correct": "confidence",
+          "correctExplanation": "More significant figures indicate higher confidence in the digits reported, as each digit represents a reliably measured value.",
+          "distractors": [
+            { "answer": "importance", "explanation": "Significant figures indicate precision, not the importance of a measurement in a broader context." },
+            { "answer": "complexity", "explanation": "Complexity is not what significant figures communicate. They indicate the confidence in the precision of the reported value." }
+          ]
+        }
+      }
+    }
+  ]
+}

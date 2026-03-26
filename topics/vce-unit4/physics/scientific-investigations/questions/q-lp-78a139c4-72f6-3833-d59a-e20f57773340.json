@@ -1,0 +1,583 @@
+{
+  "_link": {
+    "uuid": "lp-78a139c4-72f6-3833-d59a-e20f57773340",
+    "version": 1,
+    "contentHash": "hash-54b6f8d5",
+    "title": "I can convert measurements using SI prefixes",
+    "generatedAt": "2026-03-10T14:35:00.000Z"
+  },
+  "toLevel2": [
+    {
+      "type": "mc",
+      "question": "What multiplication factor does the SI prefix 'kilo' represent?",
+      "correct": "10^{3}",
+      "correctExplanation": "The prefix kilo means one thousand, or 10^{3}. For example, 1 kilometre = 1000 metres.",
+      "distractors": [
+        { "answer": "10^{6}", "explanation": "10^{6} is the multiplication factor for the prefix mega, not kilo." },
+        { "answer": "10^{-3}", "explanation": "10^{-3} is the multiplication factor for the prefix milli, not kilo." },
+        { "answer": "10^{2}", "explanation": "10^{2} represents one hundred, which corresponds to the prefix hecto, not kilo." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What multiplication factor does the SI prefix 'milli' represent?",
+      "correct": "10^{-3}",
+      "correctExplanation": "The prefix milli means one thousandth, or 10^{-3}. For example, 1 milliamp = 0.001 ampere.",
+      "distractors": [
+        { "answer": "10^{-6}", "explanation": "10^{-6} is the multiplication factor for the prefix micro, not milli." },
+        { "answer": "10^{3}", "explanation": "10^{3} is the multiplication factor for the prefix kilo, not milli." },
+        { "answer": "10^{-2}", "explanation": "10^{-2} represents one hundredth, which corresponds to the prefix centi, not milli." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which SI prefix represents a multiplication factor of 10^{-9}?",
+      "correct": "nano",
+      "correctExplanation": "The prefix nano represents 10^{-9}. For example, 1 nanometre = 10^{-9} m.",
+      "distractors": [
+        { "answer": "micro", "explanation": "Micro represents 10^{-6}, not 10^{-9}." },
+        { "answer": "pico", "explanation": "Pico represents 10^{-12}, not 10^{-9}." },
+        { "answer": "milli", "explanation": "Milli represents 10^{-3}, not 10^{-9}." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "How many metres are in 1 kilometre?",
+      "correct": "1000 m",
+      "correctExplanation": "The prefix kilo means 10^{3}, so 1 km = 1 x 10^{3} m = 1000 m.",
+      "distractors": [
+        { "answer": "100 m", "explanation": "100 would correspond to the prefix hecto (10^{2}), not kilo (10^{3})." },
+        { "answer": "10000 m", "explanation": "10000 corresponds to 10^{4}, not the 10^{3} represented by the prefix kilo." },
+        { "answer": "10 m", "explanation": "10 corresponds to 10^{1}, not the 10^{3} represented by the prefix kilo." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which SI prefix represents a multiplication factor of 10^{6}?",
+      "correct": "mega",
+      "correctExplanation": "The prefix mega represents 10^{6}, or one million. For example, 1 megaohm = 10^{6} ohm.",
+      "distractors": [
+        { "answer": "giga", "explanation": "Giga represents 10^{9}, not 10^{6}." },
+        { "answer": "kilo", "explanation": "Kilo represents 10^{3}, not 10^{6}." },
+        { "answer": "tera", "explanation": "Tera represents 10^{12}, not 10^{6}." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "The SI prefix 'micro' represents a multiplication factor of 10^{-6}.",
+      "correct": "True",
+      "correctExplanation": "Micro means one millionth, or 10^{-6}. For example, 1 micrometre = 10^{-6} m.",
+      "distractors": [
+        { "answer": "False", "explanation": "This statement is true. The prefix micro represents 10^{-6}, which is one millionth of the base unit." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "The SI prefix 'giga' represents a multiplication factor of 10^{12}.",
+      "correct": "False",
+      "correctExplanation": "Giga represents 10^{9}, not 10^{12}. The prefix for 10^{12} is tera.",
+      "distractors": [
+        { "answer": "True", "explanation": "Giga represents 10^{9}, which is one billion. The prefix for 10^{12} is tera, not giga." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about SI prefix conversions.",
+      "sentence": "To convert from millimetres to metres, {{blank:1}} by 1000 because the prefix milli represents {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "divide",
+          "correctExplanation": "Since milli means 10^{-3}, one millimetre is smaller than one metre. To convert a value in mm to m, divide by 1000.",
+          "distractors": [
+            { "answer": "multiply", "explanation": "Multiplying by 1000 would convert metres to millimetres, not millimetres to metres." },
+            { "answer": "subtract", "explanation": "SI prefix conversions involve multiplication or division by powers of ten, not addition or subtraction." }
+          ]
+        },
+        "2": {
+          "correct": "10^{-3}",
+          "correctExplanation": "The prefix milli represents 10^{-3}, meaning one thousandth of the base unit.",
+          "distractors": [
+            { "answer": "10^{-6}", "explanation": "10^{-6} is the prefix micro, not milli. Milli represents 10^{-3}." },
+            { "answer": "10^{3}", "explanation": "10^{3} is the prefix kilo, not milli. Milli represents 10^{-3}." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about converting nanometres to metres.",
+      "sentence": "A wavelength of 500 nm is equal to 500 x {{blank:1}} m, which is {{blank:2}} x 10^{-7} m.",
+      "blanks": {
+        "1": {
+          "correct": "10^{-9}",
+          "correctExplanation": "The prefix nano represents 10^{-9}, so 1 nm = 10^{-9} m. Therefore 500 nm = 500 x 10^{-9} m.",
+          "distractors": [
+            { "answer": "10^{-6}", "explanation": "10^{-6} is the prefix micro, not nano. Nano represents 10^{-9}." },
+            { "answer": "10^{-12}", "explanation": "10^{-12} is the prefix pico, not nano. Nano represents 10^{-9}." }
+          ]
+        },
+        "2": {
+          "correct": "5.00",
+          "correctExplanation": "500 x 10^{-9} = 5.00 x 10^{-7} when expressed in proper scientific notation.",
+          "distractors": [
+            { "answer": "50.0", "explanation": "50.0 x 10^{-7} = 5.00 x 10^{-6}, which is not equal to 500 nm." },
+            { "answer": "0.500", "explanation": "0.500 x 10^{-7} = 5.00 x 10^{-8}, which is not equal to 500 nm." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about why prefixes must be removed before calculations.",
+      "sentence": "SI prefixes must be converted to the base unit before {{blank:1}} into formulas to avoid {{blank:2}} errors in the result.",
+      "blanks": {
+        "1": {
+          "correct": "substituting",
+          "correctExplanation": "Values with prefixes must be expressed in base SI units before being substituted into physics formulas.",
+          "distractors": [
+            { "answer": "recording", "explanation": "Prefixes can be used when recording data for convenience. The conversion is needed specifically before substitution into formulas." },
+            { "answer": "measuring", "explanation": "Measurements can be made in prefixed units. The conversion to base units is needed at the calculation stage, not the measurement stage." }
+          ]
+        },
+        "2": {
+          "correct": "calculation",
+          "correctExplanation": "Using prefixed values in formulas that expect base SI units produces numerically incorrect results.",
+          "distractors": [
+            { "answer": "recording", "explanation": "Recording errors relate to writing data incorrectly, not to unit conversion issues in formulas." },
+            { "answer": "measurement", "explanation": "Measurement errors occur during data collection. Prefix conversion errors occur during calculations." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "mc",
+      "question": "A student converts 4.7 kiloohm to ohm by writing 4.7 x 10^{-3} ohm. What error did they make?",
+      "correct": "They used the wrong power of ten; kilo means 10^{3}, not 10^{-3}",
+      "correctExplanation": "The prefix kilo represents 10^{3}. The correct conversion is 4.7 kohm = 4.7 x 10^{3} ohm = 4700 ohm.",
+      "distractors": [
+        { "answer": "They should have divided by 10^{3} instead of multiplying to convert from kilo to base units", "explanation": "Converting from kilo to base units requires multiplying by 10^{3}. Dividing would give an answer 10^{6} times too small." },
+        { "answer": "They used ohm instead of the correct SI base unit for resistance, which is the volt", "explanation": "The ohm is the correct SI unit for resistance. The volt is the unit for potential difference." },
+        { "answer": "They wrote the prefix symbol incorrectly; kilo should be represented by a capital K, not lowercase", "explanation": "The prefix kilo is correctly represented by a lowercase k. The error was in the power of ten, not the symbol." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which of the following correctly converts 2.5 microfarad to farad?",
+      "correct": "2.5 x 10^{-6} F",
+      "correctExplanation": "The prefix micro represents 10^{-6}, so 2.5 microfarad = 2.5 x 10^{-6} F.",
+      "distractors": [
+        { "answer": "2.5 x 10^{-3} F", "explanation": "10^{-3} corresponds to the prefix milli, not micro. Micro is 10^{-6}." },
+        { "answer": "2.5 x 10^{-9} F", "explanation": "10^{-9} corresponds to the prefix nano, not micro. Micro is 10^{-6}." },
+        { "answer": "2.5 x 10^{6} F", "explanation": "This would mean mega, not micro. Micro is 10^{-6}, which makes the value smaller than 1 F, not larger." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A physics problem gives a distance of 45 km. To use this in a formula requiring metres, what conversion should be performed?",
+      "correct": "Multiply 45 by 10^{3} to obtain 45000 m",
+      "correctExplanation": "The prefix kilo means 10^{3}, so 45 km = 45 x 10^{3} m = 45000 m = 4.5 x 10^{4} m.",
+      "distractors": [
+        { "answer": "Divide 45 by 10^{3} to obtain 0.045 m", "explanation": "Dividing converts in the wrong direction. Kilometres are larger than metres, so the numerical value in metres must be larger." },
+        { "answer": "Multiply 45 by 10^{6} to obtain 45000000 m", "explanation": "10^{6} is the prefix mega, not kilo. The correct factor for kilo is 10^{3}." },
+        { "answer": "Divide 45 by 10^{6} to obtain 0.000045 m", "explanation": "This divides by the wrong factor and in the wrong direction. Kilo to base requires multiplying by 10^{3}." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "How is 3.2 GHz expressed in hertz?",
+      "correct": "3.2 x 10^{9} Hz",
+      "correctExplanation": "The prefix giga represents 10^{9}, so 3.2 GHz = 3.2 x 10^{9} Hz.",
+      "distractors": [
+        { "answer": "3.2 x 10^{6} Hz", "explanation": "10^{6} corresponds to the prefix mega, not giga. Giga is 10^{9}." },
+        { "answer": "3.2 x 10^{12} Hz", "explanation": "10^{12} corresponds to the prefix tera, not giga. Giga is 10^{9}." },
+        { "answer": "3.2 x 10^{3} Hz", "explanation": "10^{3} corresponds to the prefix kilo, not giga. Giga is 10^{9}." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student needs to convert 750 picofarad to farad. Which calculation is correct?",
+      "correct": "750 x 10^{-12} F = 7.50 x 10^{-10} F",
+      "correctExplanation": "The prefix pico represents 10^{-12}, so 750 pF = 750 x 10^{-12} F = 7.50 x 10^{-10} F.",
+      "distractors": [
+        { "answer": "750 x 10^{-9} F = 7.50 x 10^{-7} F", "explanation": "10^{-9} corresponds to the prefix nano, not pico. Pico is 10^{-12}." },
+        { "answer": "750 x 10^{-6} F = 7.50 x 10^{-4} F", "explanation": "10^{-6} corresponds to the prefix micro, not pico. Pico is 10^{-12}." },
+        { "answer": "750 x 10^{12} F = 7.50 x 10^{14} F", "explanation": "This uses a positive exponent, which is the wrong direction. Pico is 10^{-12}, making the value much smaller than 1 F." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A measurement of 0.056 A can be more conveniently expressed using which SI prefix?",
+      "correct": "56 mA",
+      "correctExplanation": "0.056 A = 56 x 10^{-3} A = 56 mA. The milli prefix (10^{-3}) produces a convenient number between 1 and 1000.",
+      "distractors": [
+        { "answer": "56 microA", "explanation": "56 microA = 56 x 10^{-6} A = 5.6 x 10^{-5} A, which is not equal to 0.056 A." },
+        { "answer": "5.6 kA", "explanation": "5.6 kA = 5600 A, which is vastly larger than 0.056 A." },
+        { "answer": "56 nA", "explanation": "56 nA = 56 x 10^{-9} A = 5.6 x 10^{-8} A, which is much smaller than 0.056 A." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "To convert from nanometres to metres, you multiply by 10^{-9}.",
+      "correct": "True",
+      "correctExplanation": "Since nano means 10^{-9}, the value in nanometres is multiplied by 10^{-9} to express it in metres. For example, 500 nm = 500 x 10^{-9} m.",
+      "distractors": [
+        { "answer": "False", "explanation": "This statement is true. Multiplying by 10^{-9} correctly converts from nanometres to metres because the prefix nano represents 10^{-9}." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about converting between prefixed and base units.",
+      "sentence": "A resistance of 47 kohm is converted to ohm by multiplying 47 by {{blank:1}}, giving {{blank:2}} ohm.",
+      "blanks": {
+        "1": {
+          "correct": "10^{3}",
+          "correctExplanation": "The prefix kilo represents 10^{3}, so converting from kohm to ohm requires multiplying by 10^{3}.",
+          "distractors": [
+            { "answer": "10^{-3}", "explanation": "10^{-3} would convert in the wrong direction, making the value smaller instead of larger." },
+            { "answer": "10^{6}", "explanation": "10^{6} corresponds to the prefix mega, not kilo." }
+          ]
+        },
+        "2": {
+          "correct": "47000",
+          "correctExplanation": "47 x 10^{3} = 47000 ohm, or equivalently 4.7 x 10^{4} ohm.",
+          "distractors": [
+            { "answer": "0.047", "explanation": "0.047 results from dividing by 10^{3}, which is the wrong direction for this conversion." },
+            { "answer": "4700", "explanation": "4700 results from multiplying by 100 instead of 1000. The correct factor for kilo is 10^{3}." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the order of SI prefixes.",
+      "sentence": "In increasing order of size, the prefixes pico, nano, {{blank:1}} and milli represent multiplication factors of 10^{-12}, 10^{-9}, 10^{-6} and {{blank:2}} respectively.",
+      "blanks": {
+        "1": {
+          "correct": "micro",
+          "correctExplanation": "Micro represents 10^{-6}, which falls between nano (10^{-9}) and milli (10^{-3}) in the sequence of increasing magnitude.",
+          "distractors": [
+            { "answer": "centi", "explanation": "Centi represents 10^{-2}, which is larger than milli. The prefix between nano and milli is micro (10^{-6})." },
+            { "answer": "kilo", "explanation": "Kilo represents 10^{3}, which is much larger than any of the listed prefixes. The correct prefix is micro (10^{-6})." }
+          ]
+        },
+        "2": {
+          "correct": "10^{-3}",
+          "correctExplanation": "Milli represents 10^{-3}, which is one thousandth of the base unit.",
+          "distractors": [
+            { "answer": "10^{-1}", "explanation": "10^{-1} is the prefix deci, not milli. Milli is 10^{-3}." },
+            { "answer": "10^{-4}", "explanation": "10^{-4} does not correspond to a standard SI prefix. Milli is 10^{-3}." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about converting mega to base units.",
+      "sentence": "A frequency of 102.5 MHz is equal to {{blank:1}} x 10^{6} Hz, which is {{blank:2}} x 10^{8} Hz in scientific notation.",
+      "blanks": {
+        "1": {
+          "correct": "102.5",
+          "correctExplanation": "The prefix mega means 10^{6}, so 102.5 MHz = 102.5 x 10^{6} Hz.",
+          "distractors": [
+            { "answer": "1.025", "explanation": "1.025 x 10^{6} Hz = 1.025 MHz, not 102.5 MHz." },
+            { "answer": "10250", "explanation": "10250 x 10^{6} Hz = 10250 MHz, which is not equal to 102.5 MHz." }
+          ]
+        },
+        "2": {
+          "correct": "1.025",
+          "correctExplanation": "102.5 x 10^{6} = 1.025 x 10^{8} when the coefficient is adjusted to be between 1 and 10.",
+          "distractors": [
+            { "answer": "10.25", "explanation": "10.25 x 10^{8} = 1.025 x 10^{9}, which is not equal to 102.5 MHz." },
+            { "answer": "0.1025", "explanation": "0.1025 x 10^{8} = 1.025 x 10^{7}, which is not equal to 102.5 MHz." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "mc",
+      "question": "Priya measures the wavelength of red light as 650 nm and needs to calculate its frequency using c = f x lambda, where c = 3.00 x 10^{8} m s^{-1}. What value should she use for lambda?",
+      "correct": "6.50 x 10^{-7} m",
+      "correctExplanation": "Converting 650 nm: 650 x 10^{-9} m = 6.50 x 10^{-7} m. This must be in metres to match the units of c in m s^{-1}.",
+      "distractors": [
+        { "answer": "650 nm without conversion because the formula works with any length unit", "explanation": "The speed of light is given in m s^{-1}, so the wavelength must also be in metres for the calculation to produce frequency in Hz." },
+        { "answer": "6.50 x 10^{-4} m", "explanation": "This would be 0.650 mm, which is 10^{3} times too large. The correct conversion from nm uses 10^{-9}, giving 6.50 x 10^{-7} m." },
+        { "answer": "6.50 x 10^{-10} m", "explanation": "This is 10 times too small. 650 nm = 650 x 10^{-9} m = 6.50 x 10^{-7} m, not 6.50 x 10^{-10} m." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Kai measures a capacitance as 220 nF and needs the value in microfarad for a circuit diagram. What is the correct conversion?",
+      "correct": "0.220 microfarad",
+      "correctExplanation": "220 nF = 220 x 10^{-9} F. Since 1 microfarad = 10^{-6} F, dividing 220 x 10^{-9} by 10^{-6} gives 0.220 microfarad.",
+      "distractors": [
+        { "answer": "220000 microfarad", "explanation": "This converts in the wrong direction. Nanofarads are smaller than microfarads, so the numerical value in microfarads should be smaller, not larger." },
+        { "answer": "22.0 microfarad", "explanation": "This is 100 times too large. The correct conversion is 220 x 10^{-3} microfarad = 0.220 microfarad." },
+        { "answer": "2200 microfarad", "explanation": "This is approximately 10000 times too large. Nanofarads are smaller than microfarads by a factor of 10^{3}." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student writes 3.5 x 10^{4} W as 35 kW. Is this correct?",
+      "correct": "Yes, because 35 x 10^{3} W = 3.5 x 10^{4} W",
+      "correctExplanation": "35 kW = 35 x 10^{3} W = 3.5 x 10^{4} W, confirming the student's conversion is correct.",
+      "distractors": [
+        { "answer": "No, it should be 3.5 kW because the prefix kilo means multiply by 10^{3}", "explanation": "3.5 kW = 3.5 x 10^{3} W = 3500 W, which is 10 times smaller than 3.5 x 10^{4} W. The correct answer is 35 kW." },
+        { "answer": "No, it should be 0.035 MW because mega is the correct prefix for this order of magnitude", "explanation": "0.035 MW = 0.035 x 10^{6} W = 3.5 x 10^{4} W. While this is also correct, the question asks about the 35 kW conversion, which is valid." },
+        { "answer": "No, it should be 350 kW because the conversion requires an additional factor of 10", "explanation": "350 kW = 3.5 x 10^{5} W, which is 10 times too large. 35 kW correctly equals 3.5 x 10^{4} W." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A measurement is recorded as 0.000047 F. Which prefixed form is most appropriate?",
+      "correct": "47 microfarad",
+      "correctExplanation": "0.000047 F = 47 x 10^{-6} F = 47 microfarad. This gives a convenient number between 1 and 1000.",
+      "distractors": [
+        { "answer": "47 nanofarad", "explanation": "47 nF = 47 x 10^{-9} F = 0.000000047 F, which is 1000 times smaller than 0.000047 F." },
+        { "answer": "4.7 millifarad", "explanation": "4.7 mF = 4.7 x 10^{-3} F = 0.0047 F, which is 100 times larger than 0.000047 F." },
+        { "answer": "47 picofarad", "explanation": "47 pF = 47 x 10^{-12} F, which is 10^{6} times smaller than 0.000047 F." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Marcus converts 8.2 x 10^{-5} m to micrometres and gets 82 micrometres. Is this correct?",
+      "correct": "Yes, because 82 x 10^{-6} m = 8.2 x 10^{-5} m",
+      "correctExplanation": "82 micrometres = 82 x 10^{-6} m = 8.2 x 10^{-5} m, which matches the original value. The conversion is correct.",
+      "distractors": [
+        { "answer": "No, the correct answer is 8.2 micrometres, not 82 micrometres", "explanation": "8.2 micrometres = 8.2 x 10^{-6} m = 8.2 x 10^{-6} m, which is 10 times smaller than 8.2 x 10^{-5} m." },
+        { "answer": "No, the correct answer is 820 micrometres because micro means 10^{-6}", "explanation": "820 micrometres = 820 x 10^{-6} m = 8.2 x 10^{-4} m, which is 10 times larger than 8.2 x 10^{-5} m." },
+        { "answer": "No, the correct answer is 0.082 micrometres because the decimal must move three places", "explanation": "0.082 micrometres = 0.082 x 10^{-6} m = 8.2 x 10^{-8} m, which is 1000 times too small." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student needs to convert 15 mA to amperes for use in the formula P = IV. Which value should be substituted?",
+      "correct": "0.015 A",
+      "correctExplanation": "15 mA = 15 x 10^{-3} A = 0.015 A. This must be in amperes to match the SI unit system used in the power formula.",
+      "distractors": [
+        { "answer": "15000 A", "explanation": "This multiplies by 10^{3} instead of 10^{-3}. Milliamps are smaller than amperes, not larger." },
+        { "answer": "1.5 A", "explanation": "This divides by 10 instead of 1000. The prefix milli means 10^{-3}, requiring division by 1000." },
+        { "answer": "0.15 A", "explanation": "This divides by 100 instead of 1000. The correct conversion factor for milli is 10^{-3}." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Anika needs to express 2.4 x 10^{11} Hz using an appropriate SI prefix. Which expression is most suitable?",
+      "correct": "240 GHz",
+      "correctExplanation": "2.4 x 10^{11} Hz = 240 x 10^{9} Hz = 240 GHz. The giga prefix (10^{9}) gives a convenient number.",
+      "distractors": [
+        { "answer": "2.4 GHz", "explanation": "2.4 GHz = 2.4 x 10^{9} Hz, which is 100 times smaller than 2.4 x 10^{11} Hz." },
+        { "answer": "24 MHz", "explanation": "24 MHz = 24 x 10^{6} Hz = 2.4 x 10^{7} Hz, which is 10^{4} times too small." },
+        { "answer": "0.24 THz", "explanation": "0.24 THz = 0.24 x 10^{12} Hz = 2.4 x 10^{11} Hz. This is actually correct, but 240 GHz is the more conventional choice as it avoids a decimal coefficient less than 1." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about converting between prefixes.",
+      "sentence": "To convert from nanometres to micrometres, divide by {{blank:1}} because one micrometre equals {{blank:2}} nanometres.",
+      "blanks": {
+        "1": {
+          "correct": "1000",
+          "correctExplanation": "There are 10^{3} = 1000 nanometres in one micrometre (since micro is 10^{-6} and nano is 10^{-9}, the ratio is 10^{3}).",
+          "distractors": [
+            { "answer": "100", "explanation": "The ratio between micro (10^{-6}) and nano (10^{-9}) is 10^{3} = 1000, not 100." },
+            { "answer": "10", "explanation": "The ratio between micro and nano is 10^{3} = 1000, not 10." }
+          ]
+        },
+        "2": {
+          "correct": "1000",
+          "correctExplanation": "1 micrometre = 10^{-6} m and 1 nanometre = 10^{-9} m, so 1 micrometre = 10^{3} nm = 1000 nm.",
+          "distractors": [
+            { "answer": "100", "explanation": "The factor is 10^{3} = 1000, not 10^{2} = 100." },
+            { "answer": "1000000", "explanation": "10^{6} is the ratio between the base unit and micro, not between micro and nano." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about a practical conversion for a physics calculation.",
+      "sentence": "A current of 350 mA must be expressed as {{blank:1}} A before substitution into the formula V = IR, where R is in {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "0.350",
+          "correctExplanation": "350 mA = 350 x 10^{-3} A = 0.350 A.",
+          "distractors": [
+            { "answer": "350000", "explanation": "This multiplies by 10^{3} instead of 10^{-3}. Milliamps are smaller than amps." },
+            { "answer": "3.50", "explanation": "3.50 A would be 3500 mA, which is 10 times too large." }
+          ]
+        },
+        "2": {
+          "correct": "ohm",
+          "correctExplanation": "In V = IR, voltage is in volts, current in amperes, and resistance in ohm, all in standard SI units.",
+          "distractors": [
+            { "answer": "kilohm", "explanation": "If resistance were in kilohm, the current would also need to be in milliamps for consistency, but standard SI usage requires ohm." },
+            { "answer": "milliohm", "explanation": "Standard SI calculations use the base unit ohm, not milliohm." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about choosing an appropriate prefix.",
+      "sentence": "A mass of 0.0000025 kg is best expressed as {{blank:1}} mg or equivalently {{blank:2}} microg, using prefixes that give convenient numerical values.",
+      "blanks": {
+        "1": {
+          "correct": "2.5",
+          "correctExplanation": "0.0000025 kg = 2.5 x 10^{-6} kg = 2.5 x 10^{-3} g = 2.5 mg.",
+          "distractors": [
+            { "answer": "25", "explanation": "25 mg = 25 x 10^{-3} g = 0.000025 kg, which is 10 times too large." },
+            { "answer": "0.25", "explanation": "0.25 mg = 0.25 x 10^{-3} g = 2.5 x 10^{-7} kg, which is 10 times too small." }
+          ]
+        },
+        "2": {
+          "correct": "2500",
+          "correctExplanation": "0.0000025 kg = 2.5 x 10^{-3} g = 2500 x 10^{-6} g = 2500 microg.",
+          "distractors": [
+            { "answer": "250", "explanation": "250 microg = 250 x 10^{-6} g = 2.5 x 10^{-4} g, which is 10 times too small." },
+            { "answer": "25000", "explanation": "25000 microg = 25 mg = 0.000025 kg, which is 10 times too large." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "mc",
+      "question": "A student converts 4.5 x 10^{-2} kg to grams and gets 45 g. They then convert 45 g to milligrams and get 45000 mg. Finally, they convert 45000 mg to micrograms and get 45000000 microg. Which evaluation of these conversions is correct?",
+      "correct": "All three conversions are correct, demonstrating consistent application of the prefix multiplication factors",
+      "correctExplanation": "4.5 x 10^{-2} kg = 45 g (x 10^{3}); 45 g = 45000 mg (x 10^{3}); 45000 mg = 45000000 microg (x 10^{3}). Each step multiplies by 10^{3} to move to the next smaller prefix.",
+      "distractors": [
+        { "answer": "The first conversion is correct but the subsequent ones accumulate rounding errors", "explanation": "There are no rounding errors because each conversion is an exact multiplication by 10^{3}. All three conversions are correct." },
+        { "answer": "The conversions are incorrect because kg should be converted directly to microg without intermediate steps", "explanation": "Both direct and stepwise conversions produce the same result. The stepwise approach is correct and demonstrates understanding of each prefix." },
+        { "answer": "The final answer is wrong because milligrams cannot be converted to micrograms without going through grams first", "explanation": "Conversions can proceed directly between any two prefixes. The stepwise approach is one valid method, and the results are correct." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student measures a voltage as 4700 mV and a current as 0.23 A. They calculate resistance as R = V / I = 4700 / 0.23 = 20435 ohm. Which error did the student make?",
+      "correct": "The voltage was not converted from millivolts to volts before dividing by the current in amperes",
+      "correctExplanation": "4700 mV = 4.700 V. The correct calculation is R = 4.700 / 0.23 = 20.4 ohm. Using 4700 mV without conversion produces a result 1000 times too large.",
+      "distractors": [
+        { "answer": "The current should have been converted to milliamps to match the millivolt unit of the voltage", "explanation": "The correct approach is to convert all values to SI base units, not to convert SI values to prefixed units." },
+        { "answer": "The formula R = V / I is incorrect; resistance should be calculated using R = I / V instead", "explanation": "R = V / I is the correct rearrangement of Ohm's law. The error was in the unit conversion, not the formula." },
+        { "answer": "No error was made; 20435 ohm is the correct resistance for this voltage and current combination", "explanation": "4700 mV = 4.7 V, so R = 4.7 / 0.23 = 20.4 ohm, not 20435 ohm. The millivolt prefix was not accounted for." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student argues that prefix conversions are unnecessary when using a formula because the prefixes cancel out if all values use the same prefix. Which evaluation of this argument is most appropriate?",
+      "correct": "The argument is flawed because prefixes only cancel in specific formulas where the prefixed quantities appear as a ratio with matching dimensions",
+      "correctExplanation": "Prefixes cancel when dividing quantities with the same prefix (e.g., mm/mm in a ratio). However, in formulas involving squares, products, or different physical quantities, the prefixes generally do not cancel correctly.",
+      "distractors": [
+        { "answer": "The argument is entirely correct because matching prefixes always cancel regardless of the formula used", "explanation": "Prefixes do not cancel in formulas involving squares (e.g., E = 0.5mv^{2} with v in km/s gives v^{2} in km^{2}/s^{2}, not m^{2}/s^{2})." },
+        { "answer": "The argument is entirely wrong because prefixes never cancel under any mathematical operation", "explanation": "Prefixes do cancel in some situations, such as when forming a ratio of two quantities with the same prefix and dimensions." },
+        { "answer": "The argument is correct for multiplication but not for division of prefixed quantities", "explanation": "The validity depends on the formula structure, not simply on whether multiplication or division is involved." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student expresses the speed of light as 3.00 x 10^{5} km s^{-1} instead of 3.00 x 10^{8} m s^{-1}. When they use this in a calculation with wavelength in metres, they obtain an incorrect frequency. What is the fundamental issue?",
+      "correct": "Mixing prefixed units (km) with non-prefixed units (m) in the same formula produces dimensional inconsistency",
+      "correctExplanation": "The speed in km s^{-1} and wavelength in metres use different length units. The formula c = f x lambda requires consistent units; mixing km and m gives a frequency that is 10^{3} times too small.",
+      "distractors": [
+        { "answer": "The value 3.00 x 10^{5} km s^{-1} is numerically incorrect as a representation of the speed of light", "explanation": "3.00 x 10^{5} km s^{-1} = 3.00 x 10^{8} m s^{-1}, which is numerically correct. The issue is using km when the other quantity is in m." },
+        { "answer": "The speed of light can only be expressed in m s^{-1} and cannot be written using other units", "explanation": "The speed of light can be expressed in any consistent unit system. The issue is mixing different length units within the same calculation." },
+        { "answer": "The student should have converted the wavelength to kilometres to match the speed unit instead", "explanation": "While this would produce the correct answer, the standard practice is to convert all values to SI base units rather than to prefixed units." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student converts an area of 2.0 cm^{2} to m^{2} by writing 2.0 x 10^{-2} m^{2}. Which evaluation is correct?",
+      "correct": "The conversion is incorrect because the prefix factor must be squared for area: 2.0 cm^{2} = 2.0 x 10^{-4} m^{2}",
+      "correctExplanation": "When converting area, the linear conversion factor (10^{-2} for centi) must be squared: (10^{-2})^{2} = 10^{-4}. So 2.0 cm^{2} = 2.0 x 10^{-4} m^{2}.",
+      "distractors": [
+        { "answer": "The conversion is correct because centi means 10^{-2}, so cm^{2} converts using the same factor", "explanation": "The factor 10^{-2} applies to linear dimensions. For area, the factor must be squared: 10^{-4}." },
+        { "answer": "The conversion is incorrect; the correct answer is 2.0 x 10^{-6} m^{2} because the factor is cubed for area", "explanation": "The factor is squared for area, not cubed. Cubing applies to volume conversions. 2.0 cm^{2} = 2.0 x 10^{-4} m^{2}." },
+        { "answer": "The conversion is correct for area but would be incorrect if the measurement were a volume", "explanation": "The conversion is incorrect for area. The factor 10^{-2} must be squared, giving 10^{-4}, not 10^{-2}." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student converts 5.0 x 10^{3} kg m^{-3} to g cm^{-3} and obtains 5.0 g cm^{-3}. Which evaluation of this conversion is correct?",
+      "correct": "The conversion is correct because the kg-to-g factor (10^{3}) and the m^{-3}-to-cm^{-3} factor (10^{-6}) combine to give 10^{-3}, which cancels the 10^{3}",
+      "correctExplanation": "5.0 x 10^{3} kg m^{-3} x (10^{3} g / kg) x (1 m / 10^{2} cm)^{3} = 5.0 x 10^{3} x 10^{3} x 10^{-6} g cm^{-3} = 5.0 g cm^{-3}.",
+      "distractors": [
+        { "answer": "The conversion is incorrect because density in SI must always be in kg m^{-3} and cannot be converted", "explanation": "Density can be expressed in any consistent unit system. The conversion between kg m^{-3} and g cm^{-3} is straightforward." },
+        { "answer": "The conversion is incorrect because the student forgot to cube the length conversion factor", "explanation": "The student correctly accounted for the cube: (10^{-2})^{3} = 10^{-6} for the m^{3} to cm^{3} conversion." },
+        { "answer": "The conversion is only approximately correct due to rounding in the prefix conversion factors", "explanation": "SI prefix conversions are exact (powers of 10), so there is no rounding involved. The conversion is exactly correct." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A physics problem provides the charge on an electron as 1.6 x 10^{-19} C and asks for the energy gained when it passes through a potential difference of 250 kV. A student calculates E = qV = 1.6 x 10^{-19} x 250 = 4.0 x 10^{-17} J. Which evaluation is correct?",
+      "correct": "The student forgot to convert 250 kV to 250000 V; the correct answer is 4.0 x 10^{-14} J",
+      "correctExplanation": "250 kV = 250 x 10^{3} V = 2.50 x 10^{5} V. The correct calculation is E = 1.6 x 10^{-19} x 2.50 x 10^{5} = 4.0 x 10^{-14} J.",
+      "distractors": [
+        { "answer": "The student's calculation is correct because kilovolts and volts are interchangeable in energy calculations", "explanation": "Kilovolts must be converted to volts before substitution. Using 250 instead of 250000 produces an answer that is 10^{3} times too small." },
+        { "answer": "The student used the wrong formula; energy should be calculated using E = 0.5 mv^{2}, not E = qV", "explanation": "E = qV is the correct formula for the energy gained by a charge moving through a potential difference." },
+        { "answer": "The student's answer is correct but should be expressed in electron volts rather than joules", "explanation": "The answer in joules is incorrect because of the unconverted prefix. In eV, the answer is 250 keV, but the joule calculation must use 250000 V." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student claims that converting 0.5 km^{2} to m^{2} gives 500 m^{2}. Which evaluation of this conversion is correct?",
+      "correct": "The conversion is incorrect; 0.5 km^{2} = 0.5 x (10^{3})^{2} m^{2} = 5.0 x 10^{5} m^{2}",
+      "correctExplanation": "For area, the kilo prefix factor (10^{3}) must be squared: 0.5 km^{2} = 0.5 x 10^{6} m^{2} = 500000 m^{2}, not 500 m^{2}.",
+      "distractors": [
+        { "answer": "The conversion is correct because kilo means 10^{3} and 0.5 x 10^{3} = 500", "explanation": "This applies the linear factor but fails to square it for area. The correct conversion for km^{2} to m^{2} uses (10^{3})^{2} = 10^{6}." },
+        { "answer": "The conversion is incorrect; 0.5 km^{2} = 0.5 x 10^{9} m^{2} because the factor is cubed for area", "explanation": "The factor is squared for area, not cubed. Cubing applies to volume. 0.5 km^{2} = 0.5 x 10^{6} m^{2}." },
+        { "answer": "The conversion cannot be performed because km^{2} is not a valid SI unit for area measurement", "explanation": "km^{2} is a valid unit for area. The conversion to m^{2} is straightforward using the squared prefix factor." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about a common conversion error with squared units.",
+      "sentence": "When converting cm^{2} to m^{2}, students often incorrectly divide by {{blank:1}} instead of the correct factor of {{blank:2}}, because they forget to square the linear conversion factor.",
+      "blanks": {
+        "1": {
+          "correct": "100",
+          "correctExplanation": "Students commonly apply the linear conversion factor (1 m = 100 cm, so divide by 100) without squaring it for area.",
+          "distractors": [
+            { "answer": "1000", "explanation": "Dividing by 1000 is the conversion for milli to base, not centi to base. The common linear error is dividing by 100." },
+            { "answer": "10", "explanation": "10 is not the conversion factor for centi. The linear factor is 100, but it must be squared for area." }
+          ]
+        },
+        "2": {
+          "correct": "10000",
+          "correctExplanation": "For area, the linear factor of 100 must be squared: 100^{2} = 10000. So 1 m^{2} = 10000 cm^{2}.",
+          "distractors": [
+            { "answer": "1000", "explanation": "1000 is the cube root factor, not the square. For area, 100^{2} = 10000." },
+            { "answer": "100000", "explanation": "100000 = 10^{5} is not a correct power of the conversion factor. The correct value is 100^{2} = 10^{4} = 10000." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the importance of consistent unit conversion in multi-step calculations.",
+      "sentence": "When a formula contains both {{blank:1}} and squared terms, all prefixes must be removed before substitution because the prefix factors scale {{blank:2}} with the exponent of each term.",
+      "blanks": {
+        "1": {
+          "correct": "linear",
+          "correctExplanation": "Formulas may contain both linear terms (first power) and squared terms, each of which requires the prefix factor to be raised to the corresponding power.",
+          "distractors": [
+            { "answer": "constant", "explanation": "Constants do not require prefix conversion. The issue is with linear and squared variable terms that carry units." },
+            { "answer": "derived", "explanation": "Derived is not the correct description of the term type. The distinction is between linear (first power) and higher-power terms." }
+          ]
+        },
+        "2": {
+          "correct": "differently",
+          "correctExplanation": "A prefix factor of 10^{-3} in a linear term becomes 10^{-3}, but in a squared term it becomes (10^{-3})^{2} = 10^{-6}. The scaling differs with the exponent.",
+          "distractors": [
+            { "answer": "identically", "explanation": "Prefix factors do not scale identically across terms with different exponents. This is precisely why mixing prefixes in formulas causes errors." },
+            { "answer": "inversely", "explanation": "The scaling is not inversely related to the exponent; it follows the exponent directly. The factor is raised to the power of the term." }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,583 @@
+{
+  "_link": {
+    "uuid": "lp-af413da1-cc95-72e9-adc8-67f90c52cd88",
+    "version": "1.0",
+    "contentHash": "hash-6191a94a",
+    "title": "I can apply significant figure rules when performing calculations",
+    "generatedAt": "2026-03-10T00:00:00Z"
+  },
+  "toLevel2": [
+    {
+      "type": "MC",
+      "question": "When multiplying or dividing measured values, the number of significant figures in the final answer is determined by which input?",
+      "correct": "The input with the fewest significant figures",
+      "correctExplanation": "In multiplication and division, the final answer must have the same number of significant figures as the least precise input value.",
+      "distractors": [
+        { "answer": "The input with the most significant figures", "explanation": "Using the most significant figures would overstate the precision of the result beyond what the data supports." },
+        { "answer": "The input with the fewest decimal places", "explanation": "Decimal places determine precision in addition and subtraction, not in multiplication and division." },
+        { "answer": "The average of all input significant figures", "explanation": "The rule uses the minimum number of significant figures, not an average across all inputs." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "When adding or subtracting measured values, the number of decimal places in the final answer is determined by which input?",
+      "correct": "The input with the fewest decimal places",
+      "correctExplanation": "In addition and subtraction, the final answer is rounded to the same number of decimal places as the input with the fewest decimal places.",
+      "distractors": [
+        { "answer": "The input with the most decimal places", "explanation": "Using the most decimal places would imply greater precision than the least precise input supports." },
+        { "answer": "The input with the fewest significant figures", "explanation": "Significant figures determine precision in multiplication and division, not in addition and subtraction." },
+        { "answer": "The input with the largest numerical value", "explanation": "The magnitude of the value does not determine how many decimal places the answer should have." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Which of the following correctly states when rounding should be applied in a multi-step calculation?",
+      "correct": "Rounding should only be applied to the final answer",
+      "correctExplanation": "Rounding intermediate steps can compound rounding errors. Only the final result should be rounded to the appropriate number of significant figures or decimal places.",
+      "distractors": [
+        { "answer": "Rounding should be applied after each individual step", "explanation": "Rounding at each step introduces cumulative rounding errors that can make the final answer less accurate." },
+        { "answer": "Rounding should be applied to the input values before calculation begins", "explanation": "Rounding inputs before calculating reduces precision unnecessarily and can compound errors through the calculation." },
+        { "answer": "Rounding is never applied in scientific calculations at all", "explanation": "Rounding is necessary to report results with appropriate precision; it is simply deferred to the final step." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A student calculates 34.477 × 2.31. How many significant figures should the final answer have?",
+      "correct": "Three significant figures",
+      "correctExplanation": "The value 2.31 has three significant figures and 34.477 has five. The answer is limited by the input with the fewest significant figures, which is three.",
+      "distractors": [
+        { "answer": "Five significant figures", "explanation": "Five significant figures corresponds to the most precise input (34.477), but the answer must match the least precise." },
+        { "answer": "Two significant figures", "explanation": "Neither input has only two significant figures. The least precise input (2.31) has three." },
+        { "answer": "Four significant figures", "explanation": "Neither input has exactly four significant figures. The limiting input (2.31) has three." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A student calculates 34.477 + 2.31. How many decimal places should the final answer have?",
+      "correct": "Two decimal places",
+      "correctExplanation": "The value 2.31 has two decimal places and 34.477 has three. The answer is limited to two decimal places, matching the input with the fewest.",
+      "distractors": [
+        { "answer": "Three decimal places", "explanation": "Three decimal places corresponds to 34.477, but the answer must match the input with the fewest decimal places." },
+        { "answer": "One decimal place only", "explanation": "Neither input is limited to one decimal place. The least precise input (2.31) has two." },
+        { "answer": "No decimal places at all", "explanation": "Both inputs have decimal places, so the answer should also include decimal places." }
+      ]
+    },
+    {
+      "type": "TF",
+      "question": "When multiplying two values, the final answer should have the same number of decimal places as the input with the fewest decimal places.",
+      "correct": "False",
+      "correctExplanation": "For multiplication and division, the rule is based on significant figures, not decimal places. Decimal places determine precision in addition and subtraction.",
+      "distractors": [
+        { "answer": "True", "explanation": "The decimal places rule applies to addition and subtraction. For multiplication and division, the significant figures rule is used instead." }
+      ]
+    },
+    {
+      "type": "TF",
+      "question": "Rounding should only be applied to the final answer in a multi-step calculation, not to intermediate results.",
+      "correct": "True",
+      "correctExplanation": "Rounding intermediate results can compound rounding errors and reduce the accuracy of the final answer. Only the final result should be rounded.",
+      "distractors": [
+        { "answer": "False", "explanation": "Rounding at intermediate steps introduces cumulative errors. The accepted practice is to round only the final answer." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the statement about the significant figures rule for multiplication.",
+      "sentence": "When multiplying or dividing, the answer should have the same number of {{blank:1}} as the input with the {{blank:2}} significant figures.",
+      "blanks": {
+        "1": {
+          "correct": "significant figures",
+          "correctExplanation": "The multiplication and division rule is based on matching the number of significant figures, not decimal places.",
+          "distractors": [
+            { "answer": "decimal places", "explanation": "Decimal places are used for the addition and subtraction rule, not for multiplication and division." },
+            { "answer": "digits", "explanation": "The rule specifically refers to significant figures, not the total number of digits." }
+          ]
+        },
+        "2": {
+          "correct": "fewest",
+          "correctExplanation": "The final answer is limited by the least precise input, which is the one with the fewest significant figures.",
+          "distractors": [
+            { "answer": "most", "explanation": "Using the input with the most significant figures would overstate the precision beyond what the data supports." },
+            { "answer": "average number of", "explanation": "The rule uses the minimum, not the average, of the significant figures across inputs." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the statement about the decimal places rule for addition.",
+      "sentence": "When adding or subtracting, the answer should have the same number of {{blank:1}} as the input with the fewest {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "decimal places",
+          "correctExplanation": "The addition and subtraction rule is based on matching the number of decimal places, not significant figures.",
+          "distractors": [
+            { "answer": "significant figures", "explanation": "Significant figures are used for the multiplication and division rule, not for addition and subtraction." },
+            { "answer": "trailing zeros", "explanation": "The rule is about decimal places, not specifically about trailing zeros." }
+          ]
+        },
+        "2": {
+          "correct": "decimal places",
+          "correctExplanation": "The answer is rounded to match the input that has the fewest decimal places.",
+          "distractors": [
+            { "answer": "significant figures", "explanation": "For addition and subtraction, precision is determined by decimal places, not significant figures." },
+            { "answer": "digits before the decimal", "explanation": "Digits before the decimal point do not determine the precision rule for addition and subtraction." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the statement about rounding in multi-step calculations.",
+      "sentence": "In a multi-step calculation, rounding should be applied only to the {{blank:1}} answer, not to {{blank:2}} results.",
+      "blanks": {
+        "1": {
+          "correct": "final",
+          "correctExplanation": "Rounding is deferred to the final step to avoid compounding rounding errors through intermediate calculations.",
+          "distractors": [
+            { "answer": "first", "explanation": "Rounding the first step would introduce errors that propagate through subsequent calculations." },
+            { "answer": "largest", "explanation": "The timing of rounding is based on the calculation sequence, not the magnitude of the result." }
+          ]
+        },
+        "2": {
+          "correct": "intermediate",
+          "correctExplanation": "Rounding intermediate results can compound errors and reduce the accuracy of the final answer.",
+          "distractors": [
+            { "answer": "precise", "explanation": "The issue is about when to round (only at the end), not about the precision of the results." },
+            { "answer": "measured", "explanation": "Input measurements should not be rounded before calculation. The rule is about not rounding intermediate steps." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "MC",
+      "question": "Priya calculates 4.52 × 1.3. The unrounded result is 5.876. Which of the following best explains why the answer should be reported as 5.9?",
+      "correct": "The input 1.3 has two significant figures, so the answer must also have two significant figures",
+      "correctExplanation": "In multiplication, the answer is limited by the input with the fewest significant figures. Since 1.3 has two significant figures, the answer 5.876 is rounded to 5.9.",
+      "distractors": [
+        { "answer": "The input 4.52 has three significant figures, so the answer must also have three significant figures", "explanation": "The answer is limited by the least precise input, not the most precise. The value 1.3 has only two significant figures." },
+        { "answer": "The input 1.3 has one decimal place, so the answer must also have one decimal place", "explanation": "The decimal places rule applies to addition and subtraction, not multiplication. Here the significant figures rule applies." },
+        { "answer": "The result should always be rounded to three decimal places regardless of the input precision", "explanation": "There is no universal rule requiring three decimal places. The rounding depends on the significant figures of the inputs." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Kai adds 12.1 and 3.456. The unrounded result is 15.556. Which of the following best explains the correct way to report this answer?",
+      "correct": "The answer should be 15.6 because 12.1 has one decimal place, limiting the result to one decimal place",
+      "correctExplanation": "In addition, the result is rounded to match the input with the fewest decimal places. Since 12.1 has one decimal place, the answer is 15.6.",
+      "distractors": [
+        { "answer": "The answer should be 15.556 because no rounding is needed when inputs have different decimal places", "explanation": "Rounding is required. The answer must match the input with the fewest decimal places, which is one." },
+        { "answer": "The answer should be 16 because 12.1 has three significant figures and limits the result accordingly", "explanation": "Addition uses the decimal places rule, not the significant figures rule. The answer should have one decimal place." },
+        { "answer": "The answer should be 15.56 because the result is rounded to two decimal places by default", "explanation": "There is no default of two decimal places. The rule requires matching the fewest decimal places among the inputs." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Which of the following best explains why the significant figures rule is used for multiplication rather than the decimal places rule?",
+      "correct": "Multiplication changes the magnitude of a value, making significant figures the appropriate measure of precision",
+      "correctExplanation": "When values are multiplied, the decimal point shifts and decimal places lose their meaning. Significant figures track relative precision, which is preserved through multiplication.",
+      "distractors": [
+        { "answer": "Multiplication always produces answers with more decimal places, so decimal places cannot be used", "explanation": "While multiplication can change decimal places, the reason for using significant figures is that they track relative precision." },
+        { "answer": "The decimal places rule would always give fewer figures than the significant figures rule", "explanation": "This is not necessarily true. The choice of rule depends on which measure of precision is meaningful for each operation." },
+        { "answer": "The significant figures rule is simpler to apply and is used for convenience only", "explanation": "The rule is not chosen for convenience but because significant figures correctly represent relative precision in multiplication." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Sofia performs the calculation 8.0 ÷ 3.00. The unrounded result is 2.666... Which of the following correctly reports the answer?",
+      "correct": "2.7",
+      "correctExplanation": "The value 8.0 has two significant figures and 3.00 has three. The answer must have two significant figures, giving 2.7.",
+      "distractors": [
+        { "answer": "2.67", "explanation": "This has three significant figures, matching 3.00, but the answer must match the least precise input (8.0 with two significant figures)." },
+        { "answer": "2.666", "explanation": "Leaving the answer unrounded implies more precision than the input data supports." },
+        { "answer": "2.6", "explanation": "Rounding 2.666... to two significant figures gives 2.7, not 2.6, because the digit after 6 is greater than 5." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Marcus subtracts 1.2 from 45.678. The unrounded result is 44.478. Which of the following best explains why the answer should be 44.5?",
+      "correct": "The input 1.2 has one decimal place, so the answer must be rounded to one decimal place",
+      "correctExplanation": "In subtraction, the answer is limited to the fewest decimal places among the inputs. Since 1.2 has one decimal place, the answer is 44.5.",
+      "distractors": [
+        { "answer": "The input 1.2 has two significant figures, so the answer must have two significant figures", "explanation": "Subtraction uses the decimal places rule, not the significant figures rule. Two significant figures would give 44, which is incorrect." },
+        { "answer": "The answer should retain three decimal places because 45.678 has three decimal places", "explanation": "The answer is limited by the input with the fewest decimal places (1.2), not the most." },
+        { "answer": "The answer should be rounded to the nearest whole number because subtraction reduces precision", "explanation": "Subtraction rounds to the fewest decimal places of the inputs, not automatically to a whole number." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A student rounds intermediate steps in a calculation before reaching the final answer. Which of the following best describes the consequence of this practice?",
+      "correct": "It can compound rounding errors and make the final answer less accurate",
+      "correctExplanation": "Each rounding step introduces a small error. When these errors accumulate through subsequent calculations, the final result may deviate significantly from the true value.",
+      "distractors": [
+        { "answer": "It has no effect on the final answer because rounding errors cancel out over multiple steps", "explanation": "Rounding errors do not reliably cancel. They can accumulate and shift the final answer away from the true value." },
+        { "answer": "It increases the precision of the final answer by simplifying each intermediate calculation", "explanation": "Rounding reduces precision at each step. It does not increase the overall precision of the calculation." },
+        { "answer": "It is the recommended practice because it keeps intermediate values easy to read and manage", "explanation": "Readability of intermediate steps is less important than accuracy. The recommended practice is to round only the final answer." }
+      ]
+    },
+    {
+      "type": "TF",
+      "question": "When adding 5.67 and 0.3, the answer should have one decimal place because 0.3 has the fewest decimal places.",
+      "correct": "True",
+      "correctExplanation": "In addition, the answer is rounded to match the input with the fewest decimal places. Since 0.3 has one decimal place, the answer (5.97) is rounded to 6.0.",
+      "distractors": [
+        { "answer": "False", "explanation": "The decimal places rule for addition requires matching the fewest decimal places. With 0.3 having one decimal place, the answer must also have one." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the explanation of a multiplication calculation.",
+      "sentence": "In the calculation 6.2 × 3.14, the input {{blank:1}} limits the answer to {{blank:2}} significant figures.",
+      "blanks": {
+        "1": {
+          "correct": "6.2",
+          "correctExplanation": "The value 6.2 has two significant figures, which is fewer than the three significant figures in 3.14.",
+          "distractors": [
+            { "answer": "3.14", "explanation": "3.14 has three significant figures, which is more than 6.2. The limiting input is the one with fewer significant figures." },
+            { "answer": "both inputs equally", "explanation": "The inputs have different numbers of significant figures. The one with the fewest (6.2) determines the answer." }
+          ]
+        },
+        "2": {
+          "correct": "two",
+          "correctExplanation": "6.2 has two significant figures, so the final answer must be rounded to two significant figures.",
+          "distractors": [
+            { "answer": "three", "explanation": "Three significant figures corresponds to 3.14, but the answer must match the least precise input." },
+            { "answer": "five", "explanation": "Five would be the total number of digits across both inputs, which is not how the rule works." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the explanation of an addition calculation.",
+      "sentence": "In the calculation 7.891 + 0.02, the input {{blank:1}} limits the answer to {{blank:2}} decimal places.",
+      "blanks": {
+        "1": {
+          "correct": "0.02",
+          "correctExplanation": "The value 0.02 has two decimal places, which is fewer than the three decimal places in 7.891.",
+          "distractors": [
+            { "answer": "7.891", "explanation": "7.891 has three decimal places, which is more than 0.02. The limiting input has the fewest decimal places." },
+            { "answer": "both inputs equally", "explanation": "The inputs have different numbers of decimal places. The one with the fewest (0.02) is the limiting factor." }
+          ]
+        },
+        "2": {
+          "correct": "two",
+          "correctExplanation": "0.02 has two decimal places, so the final answer in the addition must be rounded to two decimal places.",
+          "distractors": [
+            { "answer": "three", "explanation": "Three decimal places corresponds to 7.891, but the answer is limited by the input with the fewest." },
+            { "answer": "one", "explanation": "0.02 has two decimal places, not one. The zero after the decimal point counts as a decimal place." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the rule about why rounding is deferred in calculations.",
+      "sentence": "Rounding intermediate steps can {{blank:1}} rounding errors, reducing the {{blank:2}} of the final answer.",
+      "blanks": {
+        "1": {
+          "correct": "compound",
+          "correctExplanation": "Each intermediate rounding introduces a small error, and these errors accumulate (compound) through subsequent calculations.",
+          "distractors": [
+            { "answer": "eliminate", "explanation": "Rounding does not eliminate errors; it introduces small errors that can build up over multiple steps." },
+            { "answer": "cancel", "explanation": "Rounding errors do not reliably cancel each other. They tend to accumulate unpredictably." }
+          ]
+        },
+        "2": {
+          "correct": "accuracy",
+          "correctExplanation": "Compounded rounding errors move the final result further from the true value, reducing its accuracy.",
+          "distractors": [
+            { "answer": "magnitude", "explanation": "Rounding errors typically affect accuracy rather than substantially changing the order of magnitude of the result." },
+            { "answer": "readability", "explanation": "Readability refers to how easy a number is to interpret, not to the correctness of the calculated result." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "MC",
+      "question": "Anika measures a force of 12.4 N and a displacement of 0.85 m. She calculates work done as W = Fd. What is the correct answer?",
+      "correct": "11 J",
+      "correctExplanation": "12.4 × 0.85 = 10.54. The input 0.85 has two significant figures, so the answer is rounded to two significant figures: 11 J.",
+      "distractors": [
+        { "answer": "10.5 J", "explanation": "This has three significant figures, which exceeds the precision of the least precise input (0.85 with two significant figures)." },
+        { "answer": "10.54 J", "explanation": "The unrounded result has four significant figures, which overstates the precision beyond what the inputs support." },
+        { "answer": "10 J", "explanation": "Rounding 10.54 to two significant figures gives 11, not 10, because the digit after 0 is 5." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Liam adds three mass measurements: 4.56 g, 12.1 g, and 0.789 g. What is the correctly rounded sum?",
+      "correct": "17.4 g",
+      "correctExplanation": "4.56 + 12.1 + 0.789 = 17.449. The input 12.1 has one decimal place, so the answer is rounded to one decimal place: 17.4 g.",
+      "distractors": [
+        { "answer": "17.449 g", "explanation": "The unrounded result has three decimal places, which exceeds the precision of the least precise input (12.1 with one decimal place)." },
+        { "answer": "17.45 g", "explanation": "Two decimal places exceeds the precision of 12.1, which has only one decimal place." },
+        { "answer": "17 g", "explanation": "Rounding to zero decimal places removes precision that the inputs support. The answer should have one decimal place." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Mei divides a distance of 250. m by a time of 12 s. What is the correctly reported speed?",
+      "correct": "21 m s⁻¹",
+      "correctExplanation": "250. ÷ 12 = 20.833... The input 12 has two significant figures, so the answer is rounded to two significant figures: 21 m s⁻¹.",
+      "distractors": [
+        { "answer": "20.8 m s⁻¹", "explanation": "This has three significant figures, but the input 12 has only two. The answer must match the least precise input." },
+        { "answer": "20.833 m s⁻¹", "explanation": "The unrounded result overstates precision beyond the two significant figures in 12 s." },
+        { "answer": "20 m s⁻¹", "explanation": "Rounding 20.833 to two significant figures gives 21, not 20, because the digit after the 0 is 8." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Arun performs the calculation (3.46 + 2.1) × 5.00. Applying the rules correctly, which of the following is the final answer?",
+      "correct": "27.8",
+      "correctExplanation": "First, 3.46 + 2.1 = 5.56, limited to one decimal place (5.6) by the addition rule. However, rounding is deferred: 5.56 × 5.00 = 27.8. The addition limits to one decimal place giving 5.6, and 5.6 × 5.00 = 28.0 with two significant figures from 5.6. Keeping full precision: 5.56 × 5.00 = 27.80, and the intermediate sum has two significant figures (5.6), so the final answer rounds to three significant figures: 27.8.",
+      "distractors": [
+        { "answer": "27.800", "explanation": "This implies five significant figures, which exceeds the precision of the inputs in the calculation." },
+        { "answer": "28", "explanation": "Rounding to two significant figures is too aggressive. The intermediate sum 5.6 combined with 5.00 supports three significant figures." },
+        { "answer": "30", "explanation": "Rounding to one significant figure greatly understates the precision available from the input data." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Priya measures a voltage of 5.0 V and a current of 0.250 A. She calculates resistance using R = V/I. What is the correctly reported answer?",
+      "correct": "20. Ω",
+      "correctExplanation": "5.0 ÷ 0.250 = 20.0. The input 5.0 has two significant figures and 0.250 has three. The answer is limited to two significant figures: 20. Ω (the decimal point indicates two significant figures).",
+      "distractors": [
+        { "answer": "20.0 Ω", "explanation": "This has three significant figures, which exceeds the precision of 5.0 V with only two significant figures." },
+        { "answer": "20 Ω", "explanation": "Without a decimal point, 20 is ambiguous about significant figures. Writing 20. or 2.0 × 10¹ clarifies that there are two." },
+        { "answer": "20.00 Ω", "explanation": "This has four significant figures, which greatly exceeds the precision of the least precise input." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Sofia subtracts 98.6 from 100.00. What is the correctly rounded answer?",
+      "correct": "1.4",
+      "correctExplanation": "100.00 − 98.6 = 1.40. The input 98.6 has one decimal place, so the answer is rounded to one decimal place: 1.4.",
+      "distractors": [
+        { "answer": "1.40", "explanation": "Two decimal places exceeds the precision of 98.6, which has only one decimal place." },
+        { "answer": "1", "explanation": "Rounding to zero decimal places removes precision. The answer should have one decimal place to match 98.6." },
+        { "answer": "1.400", "explanation": "Three decimal places far exceeds the precision of the least precise input (98.6 with one decimal place)." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Marcus calculates the area of a rectangle with sides 3.2 m and 4.15 m. What is the correctly reported area?",
+      "correct": "13 m²",
+      "correctExplanation": "3.2 × 4.15 = 13.28. The input 3.2 has two significant figures, so the answer is rounded to two significant figures: 13 m².",
+      "distractors": [
+        { "answer": "13.3 m²", "explanation": "This has three significant figures, but the input 3.2 limits the answer to two significant figures." },
+        { "answer": "13.28 m²", "explanation": "The unrounded result has four significant figures, which overstates the precision of the inputs." },
+        { "answer": "10 m²", "explanation": "Rounding 13.28 to one significant figure is too aggressive. The answer should have two significant figures." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Apply the significant figures rule to a division calculation.",
+      "sentence": "For 9.80 ÷ 4.0, the limiting input is {{blank:1}} with {{blank:2}} significant figures, so the answer is 2.5.",
+      "blanks": {
+        "1": {
+          "correct": "4.0",
+          "correctExplanation": "The value 4.0 has two significant figures, which is fewer than the three in 9.80.",
+          "distractors": [
+            { "answer": "9.80", "explanation": "9.80 has three significant figures, which is more than 4.0. The limiting input has the fewest significant figures." },
+            { "answer": "both equally", "explanation": "The inputs have different numbers of significant figures. The one with fewer (4.0) is the limiting factor." }
+          ]
+        },
+        "2": {
+          "correct": "two",
+          "correctExplanation": "4.0 has two significant figures (the 4 and the 0 after the decimal), limiting the answer to two significant figures.",
+          "distractors": [
+            { "answer": "one", "explanation": "The zero after the decimal point in 4.0 is significant, giving two significant figures, not one." },
+            { "answer": "three", "explanation": "Three significant figures corresponds to 9.80, not 4.0." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Apply the decimal places rule to an addition calculation.",
+      "sentence": "For 15.8 + 3.256, the answer is {{blank:1}} because the limiting input has {{blank:2}} decimal place(s).",
+      "blanks": {
+        "1": {
+          "correct": "19.1",
+          "correctExplanation": "15.8 + 3.256 = 19.056. The input 15.8 has one decimal place, so the answer is rounded to 19.1.",
+          "distractors": [
+            { "answer": "19.056", "explanation": "This retains three decimal places, which exceeds the precision of 15.8 with only one decimal place." },
+            { "answer": "19.06", "explanation": "Two decimal places exceeds the precision of 15.8, which has only one decimal place." }
+          ]
+        },
+        "2": {
+          "correct": "one",
+          "correctExplanation": "15.8 has one decimal place, which is fewer than the three in 3.256, making it the limiting factor.",
+          "distractors": [
+            { "answer": "three", "explanation": "Three decimal places corresponds to 3.256, but the answer is limited by the input with the fewest." },
+            { "answer": "two", "explanation": "Neither input has exactly two decimal places. 15.8 has one and 3.256 has three." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Apply the rules to a subtraction followed by a division.",
+      "sentence": "A student calculates (50.0 − 48.72) ÷ 2.0. The subtraction gives {{blank:1}} (to one decimal place), and dividing by 2.0 gives a final answer of {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "1.3",
+          "correctExplanation": "50.0 − 48.72 = 1.28. The input 50.0 has one decimal place, so the intermediate result rounds to 1.3.",
+          "distractors": [
+            { "answer": "1.28", "explanation": "1.28 has two decimal places, which exceeds the precision of 50.0 with one decimal place." },
+            { "answer": "1.2", "explanation": "Rounding 1.28 to one decimal place gives 1.3, not 1.2, because the hundredths digit is 8." }
+          ]
+        },
+        "2": {
+          "correct": "0.65",
+          "correctExplanation": "Using the full precision: 1.28 ÷ 2.0 = 0.64, but with the rounded intermediate 1.3 ÷ 2.0 = 0.65. The answer has two significant figures matching the least precise inputs.",
+          "distractors": [
+            { "answer": "0.640", "explanation": "This has three significant figures, which exceeds the precision of the two-significant-figure inputs." },
+            { "answer": "0.6", "explanation": "Rounding to one significant figure understates the precision available from the two-significant-figure inputs." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "MC",
+      "question": "A student calculates velocity as v = 12.345 m ÷ 2.0 s = 6.1725 m s⁻¹ and reports the answer as 6.1725 m s⁻¹. Which of the following best evaluates this result?",
+      "correct": "The result overstates precision because the time has only two significant figures, requiring the answer to be 6.2 m s⁻¹",
+      "correctExplanation": "The input 2.0 has two significant figures, which limits the answer. Reporting 6.1725 implies five significant figures and overstates the confidence in the measurement.",
+      "distractors": [
+        { "answer": "The result is correct because division preserves all digits from the more precise measurement", "explanation": "Division does not preserve all digits. The answer must match the least precise input, which has two significant figures." },
+        { "answer": "The result should be reported as 6.17 to match the decimal places of the distance measurement", "explanation": "Division uses the significant figures rule, not the decimal places rule. The answer should have two significant figures." },
+        { "answer": "The result should be reported as 6 m s⁻¹ because the time measurement is too imprecise for decimals", "explanation": "One significant figure understates the precision. The input 2.0 supports two significant figures, giving 6.2 m s⁻¹." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Kai adds 120.0 g and 0.56 g and reports the answer as 120.56 g. His teacher marks this as incorrect. Which of the following best evaluates the teacher's reasoning?",
+      "correct": "The answer should be 120.6 g because 120.0 has one decimal place and limits the result",
+      "correctExplanation": "In addition, the answer must have the same number of decimal places as the input with the fewest. Since 120.0 has one decimal place, the answer is 120.6 g.",
+      "distractors": [
+        { "answer": "The answer should be 121 g because 120.0 has four significant figures and limits the result", "explanation": "Addition uses the decimal places rule. The value 120.0 has one decimal place, so the answer should be 120.6 g." },
+        { "answer": "The answer should be 120.56 g because both values contribute precision to the sum", "explanation": "The sum cannot be more precise than the least precise input. With 120.0 having one decimal place, the answer is 120.6 g." },
+        { "answer": "The answer should be 120 g because the smaller value is negligible compared to the larger", "explanation": "The addition rule does not ignore smaller values. The answer should have one decimal place, giving 120.6 g." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A student performs a multi-step calculation and rounds each intermediate step. The final answer differs from the answer obtained by rounding only at the end. Which of the following best evaluates the student's approach?",
+      "correct": "The approach is incorrect because intermediate rounding compounds errors, making the final answer less reliable",
+      "correctExplanation": "Rounding at each step introduces errors that accumulate. The accepted practice is to carry full precision through intermediate steps and round only the final result.",
+      "distractors": [
+        { "answer": "The approach is correct because rounding at each step keeps the calculation manageable and clear", "explanation": "Convenience does not justify reduced accuracy. Intermediate rounding can shift the final answer away from the true value." },
+        { "answer": "The approach is acceptable because the difference between the two answers is always negligible", "explanation": "The difference is not always negligible. In calculations with many steps or near-boundary values, the errors can be significant." },
+        { "answer": "The approach is preferred because it ensures each intermediate value has appropriate precision", "explanation": "Appropriate precision in the final answer is achieved by rounding only at the end, not by rounding each intermediate step." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Priya multiplies 2.0 × 3.0 and reports the answer as 6.0. Arun argues the answer should be 6 because the inputs only have two significant figures each. Which of the following best evaluates this disagreement?",
+      "correct": "Priya is correct because 6.0 has two significant figures, matching the precision of both inputs",
+      "correctExplanation": "The value 6.0 has two significant figures (the 6 and the trailing 0), which correctly matches the two significant figures in each input.",
+      "distractors": [
+        { "answer": "Arun is correct because 6 and 6.0 represent the same number of significant figures", "explanation": "The number 6 has one significant figure, while 6.0 has two. The trailing zero after the decimal point is significant." },
+        { "answer": "Both are incorrect because the answer should be 6.00 to match the two decimal places in the inputs", "explanation": "Multiplication uses significant figures, not decimal places. Two significant figures gives 6.0, not 6.00." },
+        { "answer": "Neither notation matters because single-digit answers do not require significant figure consideration", "explanation": "Significant figure rules apply to all results, including single-digit answers. The notation 6.0 correctly shows two significant figures." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Sofia calculates the difference 100.0 − 99.9 = 0.1 and then divides by 2.00, obtaining 0.05. She reports this as 0.050. Which of the following best evaluates her final answer?",
+      "correct": "The answer 0.050 is incorrect because the subtraction result 0.1 has only one significant figure, limiting the division answer to one significant figure: 0.05",
+      "correctExplanation": "The subtraction 100.0 − 99.9 gives 0.1 (one decimal place, one significant figure). Dividing 0.1 by 2.00 gives 0.05 with one significant figure. Writing 0.050 implies two significant figures.",
+      "distractors": [
+        { "answer": "The answer 0.050 is correct because the trailing zero preserves the precision of the input 2.00", "explanation": "The division answer is limited by the least precise input. The subtraction result 0.1 has only one significant figure, limiting the final answer." },
+        { "answer": "The answer should be 0.1 because division by a number close to 1 does not change significant figures", "explanation": "Division by any value requires applying the significant figures rule. Dividing 0.1 by 2.00 changes the value, and the result must respect significant figures." },
+        { "answer": "The answer should be 0.0500 to match the three significant figures present in the input 2.00", "explanation": "The answer is limited by the least precise value in the entire calculation, which is 0.1 from the subtraction step." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Marcus argues that significant figure rules are unnecessary when using a calculator because the calculator displays the exact answer. Which of the following best evaluates his argument?",
+      "correct": "The argument is incorrect because calculator output does not reflect the precision of the measured inputs",
+      "correctExplanation": "A calculator shows the mathematically exact result but cannot account for measurement precision. The significant figure rules ensure the reported answer matches the confidence justified by the data.",
+      "distractors": [
+        { "answer": "The argument is correct because modern calculators account for significant figures automatically", "explanation": "Standard calculators do not track significant figures. They display the full mathematical result regardless of input precision." },
+        { "answer": "The argument is partially correct because calculators are more precise than manual rounding", "explanation": "Calculator precision is mathematical, not experimental. The issue is not calculation precision but reporting precision consistent with the measurements." },
+        { "answer": "The argument is correct for division but incorrect for addition and subtraction", "explanation": "Significant figure rules apply to all operations. Calculator output does not reflect measurement precision for any type of calculation." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Mei measures a temperature rise of 2.5 °C and a mass of 100 g. She calculates energy using Q = mcΔT with c = 4.18 J g⁻¹ °C⁻¹ and reports Q = 1045 J. Which of the following best evaluates her reported answer?",
+      "correct": "The answer should be 1.0 × 10³ J because the temperature has two significant figures, limiting the result",
+      "correctExplanation": "100 × 4.18 × 2.5 = 1045. The input 2.5 has two significant figures, so the answer is limited to two significant figures: 1.0 × 10³ J.",
+      "distractors": [
+        { "answer": "The answer 1045 J is correct because the specific heat has three significant figures", "explanation": "The answer must match the least precise input, not the most precise. The value 2.5 has only two significant figures." },
+        { "answer": "The answer should be 1050 J to round to the nearest ten for convenience", "explanation": "Rounding to the nearest ten is not a significant figure rule. The answer should have two significant figures: 1.0 × 10³ J." },
+        { "answer": "The answer should be 1000 J because 100 g has only one significant figure", "explanation": "If no decimal point is shown, 100 could have one, two, or three significant figures. However, 2.5 clearly has two, which is the limiting factor here." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A student claims that the addition rule and the multiplication rule always give the same number of figures in the answer. Which of the following best evaluates this claim?",
+      "correct": "The claim is incorrect because the two rules use different criteria and can produce answers with different numbers of figures",
+      "correctExplanation": "The addition rule is based on decimal places while the multiplication rule is based on significant figures. These criteria often yield different results for the same input values.",
+      "distractors": [
+        { "answer": "The claim is correct because both rules aim to preserve the same level of precision in the answer", "explanation": "While both rules preserve appropriate precision, they use different measures (decimal places vs significant figures) and can give different results." },
+        { "answer": "The claim is correct for values less than 1 but incorrect for values greater than 10", "explanation": "The magnitude of the values does not determine whether the rules agree. They use fundamentally different criteria regardless of magnitude." },
+        { "answer": "The claim is correct when both inputs have the same number of significant figures as decimal places", "explanation": "Even when significant figures and decimal places coincide for the inputs, the two rules can produce different rounding in the answer." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Evaluate a student's calculation and identify the issue.",
+      "sentence": "A student calculates 2.5 × 3.142 = 7.855 and reports 7.855. The answer should be {{blank:1}} because the input 2.5 has only {{blank:2}} significant figures.",
+      "blanks": {
+        "1": {
+          "correct": "7.9",
+          "correctExplanation": "The input 2.5 has two significant figures, so the answer 7.855 must be rounded to two significant figures: 7.9.",
+          "distractors": [
+            { "answer": "7.86", "explanation": "Three significant figures would match 3.142's precision, but the answer must match the least precise input (2.5 with two)." },
+            { "answer": "8.0", "explanation": "Rounding 7.855 to two significant figures gives 7.9, not 8.0." }
+          ]
+        },
+        "2": {
+          "correct": "two",
+          "correctExplanation": "The value 2.5 has two significant figures (2 and 5), making it the least precise input in the calculation.",
+          "distractors": [
+            { "answer": "one", "explanation": "Both the 2 and the 5 in 2.5 are significant, giving two significant figures, not one." },
+            { "answer": "three", "explanation": "The value 2.5 has only two digits, both significant. Three significant figures would require a value like 2.50." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Evaluate whether a student applied the correct rule to a subtraction.",
+      "sentence": "A student reports 10.456 − 3.2 = 7.3 and claims this has two significant figures. The answer 7.3 is {{blank:1}}, but the reasoning is {{blank:2}} because subtraction uses the decimal places rule.",
+      "blanks": {
+        "1": {
+          "correct": "correct",
+          "correctExplanation": "10.456 − 3.2 = 7.256, rounded to one decimal place gives 7.3. The numerical answer is correct.",
+          "distractors": [
+            { "answer": "incorrect", "explanation": "The answer 7.3 is numerically correct. The issue is only with the student's reasoning about the rule used." },
+            { "answer": "approximate", "explanation": "The answer is correctly rounded according to the decimal places rule, not merely approximate." }
+          ]
+        },
+        "2": {
+          "correct": "incorrect",
+          "correctExplanation": "The student cited significant figures, but subtraction uses the decimal places rule. The answer happens to be right, but the reasoning is wrong.",
+          "distractors": [
+            { "answer": "correct", "explanation": "The student claimed the answer has two significant figures as the basis for rounding, but subtraction uses decimal places, not significant figures." },
+            { "answer": "irrelevant", "explanation": "The reasoning matters because applying the wrong rule in other situations could lead to an incorrect answer." }
+          ]
+        }
+      }
+    }
+  ]
+}

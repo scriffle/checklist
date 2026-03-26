@@ -1,0 +1,583 @@
+{
+  "_link": {
+    "uuid": "lp-dac9c45c-730a-14c1-e69c-0958ce5d0789",
+    "version": 1,
+    "contentHash": "hash-fa941cac",
+    "title": "I can define and calculate the Lorentz factor (γ)",
+    "generatedAt": "2026-03-10T10:00:00Z"
+  },
+  "toLevel2": [
+    {
+      "type": "mc",
+      "question": "What is the formula for the Lorentz factor γ?",
+      "correct": "γ = 1 / √(1 − v²/c²)",
+      "correctExplanation": "The Lorentz factor is defined as γ = 1/√(1 − v²/c²), where v is the relative speed and c is the speed of light.",
+      "distractors": [
+        { "answer": "γ = √(1 − v²/c²)", "explanation": "This is the reciprocal of the Lorentz factor (1/γ), not γ itself; the correct formula has this expression in the denominator." },
+        { "answer": "γ = 1 / (1 − v²/c²)", "explanation": "This omits the square root in the denominator; the correct formula includes √(1 − v²/c²)." },
+        { "answer": "γ = v² / c²", "explanation": "This gives a dimensionless ratio but is not the Lorentz factor; the correct formula involves a square root." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What is the minimum possible value of the Lorentz factor γ?",
+      "correct": "γ = 1, when the relative speed is zero",
+      "correctExplanation": "When v = 0, γ = 1/√(1 − 0) = 1/1 = 1. The Lorentz factor is always greater than or equal to 1.",
+      "distractors": [
+        { "answer": "γ = 0, when the relative speed is zero", "explanation": "When v = 0, γ = 1, not 0; the Lorentz factor can never be less than 1." },
+        { "answer": "γ = 0.5, when the relative speed is 0.5c", "explanation": "At v = 0.5c, γ ≈ 1.15; the Lorentz factor is always ≥ 1 and can never be 0.5." },
+        { "answer": "γ = −1, when objects move in the opposite direction", "explanation": "The Lorentz factor is always positive and ≥ 1; direction of motion does not affect its value." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What happens to the Lorentz factor as the relative speed v approaches the speed of light c?",
+      "correct": "The Lorentz factor approaches infinity",
+      "correctExplanation": "As v → c, the term 1 − v²/c² → 0, so γ = 1/√(near zero) → ∞.",
+      "distractors": [
+        { "answer": "The Lorentz factor approaches zero", "explanation": "As v → c, the denominator approaches zero, making γ approach infinity, not zero." },
+        { "answer": "The Lorentz factor approaches one", "explanation": "γ = 1 only when v = 0; as speed increases, γ increases without bound." },
+        { "answer": "The Lorentz factor approaches the speed of light", "explanation": "γ is a dimensionless number, not a speed; it approaches infinity as v approaches c." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Calculate the Lorentz factor for a rocket travelling at 0.866c.",
+      "correct": "γ = 2.00",
+      "correctExplanation": "γ = 1/√(1 − 0.866²) = 1/√(1 − 0.750) = 1/√0.250 = 1/0.500 = 2.00.",
+      "distractors": [
+        { "answer": "γ = 0.500", "explanation": "0.500 is 1/γ, the reciprocal; the Lorentz factor itself is 2.00." },
+        { "answer": "γ = 1.15", "explanation": "γ = 1.15 corresponds to v ≈ 0.500c, not 0.866c." },
+        { "answer": "γ = 0.866", "explanation": "0.866 is v/c, the speed ratio, not the Lorentz factor." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "In which relativistic equations does the Lorentz factor γ appear?",
+      "correct": "Time dilation, length contraction, and relativistic energy equations",
+      "correctExplanation": "γ appears in t = γt₀ (time dilation), L = L₀/γ (length contraction), and E = γmc² (total relativistic energy).",
+      "distractors": [
+        { "answer": "Only in the time dilation equation and no other formulas", "explanation": "γ appears in multiple relativistic equations including length contraction and energy, not just time dilation." },
+        { "answer": "Only in E = mc² for calculating rest energy of objects", "explanation": "E₀ = mc² does not contain γ; it is E_tot = γmc² and other equations where γ appears." },
+        { "answer": "Only in equations describing objects moving at exactly the speed of light", "explanation": "γ applies to all non-zero speeds, not only at c; it is undefined at v = c for massive objects." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "The Lorentz factor γ is always greater than or equal to 1 for any relative speed between 0 and c.",
+      "correct": "True",
+      "correctExplanation": "Since 0 ≤ v < c, the term v²/c² is between 0 and 1, so 1 − v²/c² is between 0 and 1, making γ ≥ 1.",
+      "distractors": [
+        { "answer": "False", "explanation": "For any physical speed (0 ≤ v < c), γ is always ≥ 1; it equals 1 at rest and increases with speed." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "The Lorentz factor for an object at rest relative to the observer is γ = 0.",
+      "correct": "False",
+      "correctExplanation": "When v = 0, γ = 1/√(1 − 0) = 1, not 0. A Lorentz factor of 1 means no relativistic effects are observed.",
+      "distractors": [
+        { "answer": "True", "explanation": "At v = 0, γ = 1/√1 = 1; the minimum value of γ is 1, never 0." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the definition of the Lorentz factor.",
+      "sentence": "The Lorentz factor is defined as γ = 1 / √(1 − {{blank:1}} / {{blank:2}}).",
+      "blanks": {
+        "1": {
+          "correct": "v²",
+          "correctExplanation": "The numerator inside the square root contains v², where v is the relative speed of the object.",
+          "distractors": [
+            { "answer": "v", "explanation": "The speed must be squared; using v alone gives an incorrect formula." },
+            { "answer": "c²", "explanation": "c² belongs in the denominator of the fraction inside the square root, not the numerator." }
+          ]
+        },
+        "2": {
+          "correct": "c²",
+          "correctExplanation": "c² is the square of the speed of light. The ratio v²/c² determines how close the speed is to the speed of light.",
+          "distractors": [
+            { "answer": "v²", "explanation": "v²/v² = 1 always, which would make the denominator zero; c² is the correct denominator." },
+            { "answer": "c", "explanation": "The speed of light must also be squared; the ratio is v²/c², not v²/c." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the range of the Lorentz factor.",
+      "sentence": "The Lorentz factor γ has a minimum value of {{blank:1}} when the relative speed is zero, and approaches {{blank:2}} as the speed approaches c.",
+      "blanks": {
+        "1": {
+          "correct": "1",
+          "correctExplanation": "At v = 0: γ = 1/√(1 − 0) = 1/1 = 1. This is the smallest possible value of γ.",
+          "distractors": [
+            { "answer": "0", "explanation": "γ = 1 at v = 0, not 0; the Lorentz factor is always at least 1." },
+            { "answer": "0.5", "explanation": "γ can never be less than 1; at v = 0, γ equals exactly 1." }
+          ]
+        },
+        "2": {
+          "correct": "infinity",
+          "correctExplanation": "As v → c, the denominator √(1 − v²/c²) → 0, so γ → ∞.",
+          "distractors": [
+            { "answer": "zero", "explanation": "γ approaches infinity as v → c because the denominator approaches zero." },
+            { "answer": "the speed of light", "explanation": "γ is dimensionless and does not approach a speed; it approaches infinity." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the Lorentz factor calculation for v = 0.866c.",
+      "sentence": "γ = 1/√(1 − 0.866²) = 1/√(1 − {{blank:1}}) = 1/√0.250 = 1/0.500 = {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "0.750",
+          "correctExplanation": "0.866² = 0.750. This is the value of v²/c² that is subtracted from 1.",
+          "distractors": [
+            { "answer": "0.866", "explanation": "0.866 is v/c before squaring; v²/c² = 0.866² = 0.750." },
+            { "answer": "0.500", "explanation": "0.500 is √0.250 (the denominator of γ), not 0.866²." }
+          ]
+        },
+        "2": {
+          "correct": "2.00",
+          "correctExplanation": "γ = 1/0.500 = 2.00. At 0.866c, the Lorentz factor is exactly 2.",
+          "distractors": [
+            { "answer": "0.500", "explanation": "0.500 is 1/γ, the reciprocal of the Lorentz factor; γ = 2.00." },
+            { "answer": "1.15", "explanation": "γ = 1.15 corresponds to v ≈ 0.500c, not 0.866c." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "mc",
+      "question": "Calculate the Lorentz factor for a particle moving at 0.600c.",
+      "correct": "γ = 1.25",
+      "correctExplanation": "γ = 1/√(1 − 0.600²) = 1/√(1 − 0.360) = 1/√0.640 = 1/0.800 = 1.25.",
+      "distractors": [
+        { "answer": "γ = 0.800", "explanation": "0.800 is 1/γ = √(1 − v²/c²); the Lorentz factor is the reciprocal: 1/0.800 = 1.25." },
+        { "answer": "γ = 1.67", "explanation": "γ = 1.67 corresponds to v ≈ 0.800c, not 0.600c." },
+        { "answer": "γ = 0.600", "explanation": "0.600 is v/c, the speed ratio, not the Lorentz factor; γ must be ≥ 1." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Explain why the Lorentz factor increases more steeply as v approaches c compared to lower speeds.",
+      "correct": "Because the term (1 − v²/c²) in the denominator approaches zero rapidly near c, causing the reciprocal to grow rapidly",
+      "correctExplanation": "The function 1/√(1 − x) for x near 1 is very steep. Small increases in v near c produce large increases in v²/c², dramatically decreasing the denominator.",
+      "distractors": [
+        { "answer": "Because the speed of light acts as a barrier that compresses the Lorentz factor nonlinearly", "explanation": "The steep increase is a mathematical property of the formula, not a physical 'barrier' compressing values." },
+        { "answer": "Because relativistic mass increases cause γ to grow exponentially near the speed of light", "explanation": "γ does not grow exponentially; it grows as 1/√(1 − v²/c²), which is steep but not exponential." },
+        { "answer": "Because measurement uncertainty increases at high speeds, artificially inflating the calculated γ value", "explanation": "The steep increase is a real physical prediction, not a measurement artefact." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A proton has a Lorentz factor of γ = 3.00. What is its speed as a fraction of c?",
+      "correct": "v = 0.943c",
+      "correctExplanation": "From γ = 1/√(1 − v²/c²), rearranging: v/c = √(1 − 1/γ²) = √(1 − 1/9) = √(8/9) = 0.943.",
+      "distractors": [
+        { "answer": "v = 0.333c", "explanation": "0.333 = 1/γ, not v/c; the relationship between γ and v is nonlinear." },
+        { "answer": "v = 3.00c", "explanation": "No object can travel faster than the speed of light; γ = 3 corresponds to v = 0.943c, not 3c." },
+        { "answer": "v = 0.866c", "explanation": "v = 0.866c gives γ = 2.00, not 3.00; γ = 3 corresponds to a higher speed." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Explain why γ is described as a dimensionless quantity.",
+      "correct": "Because v²/c² is a ratio of two speeds squared, the units cancel, leaving γ as a pure number",
+      "correctExplanation": "The ratio v²/c² has units (m s⁻¹)²/(m s⁻¹)² = 1 (dimensionless). Therefore γ = 1/√(1 − dimensionless) is also dimensionless.",
+      "distractors": [
+        { "answer": "Because γ is measured in seconds, which are considered dimensionless in relativity", "explanation": "Seconds are not dimensionless; γ is dimensionless because v²/c² is a ratio of like quantities." },
+        { "answer": "Because the Lorentz factor is an approximation that drops physical units for simplicity", "explanation": "γ is exact, not an approximation; it is dimensionless because the speed ratio v/c is dimensionless." },
+        { "answer": "Because dimensionless means the quantity can only take the value 1 or 0", "explanation": "Dimensionless means no physical units; the value can be any real number ≥ 1." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Compare the Lorentz factor at v = 0.100c and v = 0.900c. What does this comparison reveal about relativistic effects?",
+      "correct": "At 0.100c, γ ≈ 1.005, while at 0.900c, γ ≈ 2.29. Relativistic effects are negligible at low speeds but very significant at high speeds",
+      "correctExplanation": "At 0.100c, γ is barely above 1 (0.5% deviation). At 0.900c, γ = 2.29 means time dilation, length contraction, and energy are more than doubled.",
+      "distractors": [
+        { "answer": "At 0.100c, γ = 0.100, while at 0.900c, γ = 0.900, showing a linear relationship", "explanation": "γ is never equal to v/c; it is always ≥ 1 and has a nonlinear relationship with speed." },
+        { "answer": "At 0.100c, γ ≈ 1.005, while at 0.900c, γ ≈ 1.50, showing modest relativistic effects even at high speed", "explanation": "At 0.900c, γ ≈ 2.29, not 1.50; the effects are more than modest at this speed." },
+        { "answer": "Both values give γ ≈ 1.00 because relativistic effects only matter above 0.950c", "explanation": "At 0.900c, γ = 2.29, which is far from 1; relativistic effects are already very significant at this speed." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Calculate the Lorentz factor for a muon travelling at 0.995c.",
+      "correct": "γ ≈ 10.0",
+      "correctExplanation": "γ = 1/√(1 − 0.995²) = 1/√(1 − 0.990) = 1/√0.010 = 1/0.100 ≈ 10.0.",
+      "distractors": [
+        { "answer": "γ ≈ 1.00", "explanation": "γ = 1 only at rest; at 0.995c the Lorentz factor is approximately 10, indicating very strong relativistic effects." },
+        { "answer": "γ ≈ 100", "explanation": "γ ≈ 100 corresponds to v ≈ 0.99995c, not 0.995c; the correct value at 0.995c is about 10." },
+        { "answer": "γ ≈ 0.100", "explanation": "γ is always ≥ 1; a value of 0.100 is not physically possible for the Lorentz factor." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "The Lorentz factor for an object moving at 0.500c is approximately 1.15.",
+      "correct": "True",
+      "correctExplanation": "γ = 1/√(1 − 0.25) = 1/√0.75 = 1/0.866 = 1.155 ≈ 1.15.",
+      "distractors": [
+        { "answer": "False", "explanation": "The calculation confirms γ = 1/√0.75 ≈ 1.155, which rounds to 1.15." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the Lorentz factor calculation for v = 0.600c.",
+      "sentence": "γ = 1/√(1 − 0.600²) = 1/√(1 − {{blank:1}}) = 1/√0.640 = 1/{{blank:2}} = 1.25.",
+      "blanks": {
+        "1": {
+          "correct": "0.360",
+          "correctExplanation": "0.600² = 0.360. This is v²/c² which is subtracted from 1.",
+          "distractors": [
+            { "answer": "0.600", "explanation": "The speed must be squared: 0.600² = 0.360, not 0.600." },
+            { "answer": "0.640", "explanation": "0.640 is the result of 1 − 0.360, not v²/c² itself." }
+          ]
+        },
+        "2": {
+          "correct": "0.800",
+          "correctExplanation": "√0.640 = 0.800. This is the denominator of the Lorentz factor expression.",
+          "distractors": [
+            { "answer": "0.640", "explanation": "0.640 is inside the square root; √0.640 = 0.800 is the denominator." },
+            { "answer": "1.25", "explanation": "1.25 is the final answer (γ), not the intermediate denominator √0.640 = 0.800." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the physical significance of γ.",
+      "sentence": "A Lorentz factor of γ = 2 means that a moving clock ticks {{blank:1}} as fast and a moving length is {{blank:2}} its proper length, compared to the rest frame.",
+      "blanks": {
+        "1": {
+          "correct": "half",
+          "correctExplanation": "With γ = 2, the proper time t₀ becomes t = 2t₀ in the observer's frame, meaning the moving clock appears to tick at half the rate.",
+          "distractors": [
+            { "answer": "twice", "explanation": "A moving clock runs slower, not faster; at γ = 2, the clock takes twice as long between ticks." },
+            { "answer": "the same", "explanation": "At γ = 2, relativistic effects are significant; the clock runs at half the rate, not the same rate." }
+          ]
+        },
+        "2": {
+          "correct": "half",
+          "correctExplanation": "With γ = 2, L = L₀/2. The moving object appears half as long in the direction of motion.",
+          "distractors": [
+            { "answer": "twice", "explanation": "Length contraction shortens the object; at γ = 2, the length is halved, not doubled." },
+            { "answer": "the same as", "explanation": "At γ = 2, the contracted length is half the proper length, not the same." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the reverse calculation to find speed from γ.",
+      "sentence": "If γ = 5.00, then v/c = √(1 − 1/γ²) = √(1 − 1/{{blank:1}}) = √(1 − 0.0400) = √0.960 = {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "25.0",
+          "correctExplanation": "γ² = 5.00² = 25.0. The reciprocal 1/25.0 = 0.0400 is subtracted from 1.",
+          "distractors": [
+            { "answer": "5.00", "explanation": "5.00 is γ, not γ²; the formula requires squaring the Lorentz factor." },
+            { "answer": "10.0", "explanation": "10.0 is 2γ, not γ²; the correct value is 5.00² = 25.0." }
+          ]
+        },
+        "2": {
+          "correct": "0.980",
+          "correctExplanation": "√0.960 = 0.980. So v = 0.980c when γ = 5.00.",
+          "distractors": [
+            { "answer": "0.200", "explanation": "0.200 = 1/γ, not the speed; the correct speed is √(1 − 1/γ²) = 0.980c." },
+            { "answer": "0.960", "explanation": "0.960 is the value inside the square root; the speed is √0.960 = 0.980c." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "mc",
+      "question": "Calculate the Lorentz factor for a proton travelling at 2.85 × 10⁸ m s⁻¹.",
+      "correct": "γ = 3.20",
+      "correctExplanation": "v/c = 2.85 × 10⁸ / 3.00 × 10⁸ = 0.950. γ = 1/√(1 − 0.950²) = 1/√(1 − 0.9025) = 1/√0.0975 = 1/0.3122 = 3.20.",
+      "distractors": [
+        { "answer": "γ = 0.950", "explanation": "0.950 is v/c; the Lorentz factor is always ≥ 1 and equals 3.20 at this speed." },
+        { "answer": "γ = 1.05", "explanation": "γ = 1.05 corresponds to v ≈ 0.31c; at v = 0.950c the Lorentz factor is much larger." },
+        { "answer": "γ = 10.3", "explanation": "γ ≈ 10 corresponds to v ≈ 0.995c, not 0.950c; the correct value at 0.950c is 3.20." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A spacecraft has γ = 4.00. Calculate its speed in m s⁻¹.",
+      "correct": "2.90 × 10⁸ m s⁻¹",
+      "correctExplanation": "v/c = √(1 − 1/16) = √(15/16) = √0.9375 = 0.968. v = 0.968 × 3.00 × 10⁸ = 2.90 × 10⁸ m s⁻¹.",
+      "distractors": [
+        { "answer": "1.20 × 10⁹ m s⁻¹", "explanation": "This exceeds the speed of light; no massive object can travel faster than 3.00 × 10⁸ m s⁻¹." },
+        { "answer": "7.50 × 10⁷ m s⁻¹", "explanation": "This is c/4 = 0.250c, which gives γ ≈ 1.03, not 4.00." },
+        { "answer": "3.00 × 10⁸ m s⁻¹", "explanation": "3.00 × 10⁸ m s⁻¹ is the speed of light; γ = 4 corresponds to 0.968c, not exactly c." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Sofia measures a particle's Lorentz factor to be γ = 7.09. At what speed is the particle travelling?",
+      "correct": "0.990c",
+      "correctExplanation": "v/c = √(1 − 1/7.09²) = √(1 − 1/50.3) = √(1 − 0.0199) = √0.980 = 0.990.",
+      "distractors": [
+        { "answer": "0.141c", "explanation": "0.141 = 1/7.09, which is 1/γ, not v/c; the correct speed is much higher at 0.990c." },
+        { "answer": "0.709c", "explanation": "0.709 is γ/10; the relationship between γ and v is nonlinear and gives 0.990c." },
+        { "answer": "0.950c", "explanation": "v = 0.950c gives γ ≈ 3.20, not 7.09; a larger γ requires a higher speed." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A muon travels at 0.9800c. Calculate γ and determine how many times longer its lifetime appears to an Earth observer compared to its rest-frame lifetime.",
+      "correct": "γ = 5.03; the lifetime appears 5.03 times longer",
+      "correctExplanation": "γ = 1/√(1 − 0.9800²) = 1/√(1 − 0.9604) = 1/√0.0396 = 1/0.199 = 5.03. The dilated lifetime is t = 5.03t₀.",
+      "distractors": [
+        { "answer": "γ = 50.3; the lifetime appears 50.3 times longer", "explanation": "This squares γ incorrectly; at 0.9800c, γ = 5.03, not 50.3." },
+        { "answer": "γ = 1.02; the lifetime appears 1.02 times longer", "explanation": "γ = 1.02 corresponds to v ≈ 0.20c, not 0.9800c; the correct value is 5.03." },
+        { "answer": "γ = 0.199; the lifetime appears 0.199 times longer", "explanation": "0.199 is 1/γ; the Lorentz factor is 5.03, which means the lifetime is 5.03 times longer." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Kai claims that γ = 1.50 at v = 0.750c. Verify his calculation.",
+      "correct": "Kai is incorrect; γ = 1/√(1 − 0.5625) = 1/√0.4375 = 1/0.661 = 1.51",
+      "correctExplanation": "0.750² = 0.5625. 1 − 0.5625 = 0.4375. √0.4375 = 0.661. 1/0.661 = 1.51. Kai's answer of 1.50 is close but not exact.",
+      "distractors": [
+        { "answer": "Kai is correct; γ = 1.50 exactly at v = 0.750c", "explanation": "The precise calculation gives γ = 1.512, which rounds to 1.51; 1.50 is not quite right." },
+        { "answer": "Kai is incorrect; γ = 0.750 at v = 0.750c because γ always equals v/c", "explanation": "γ never equals v/c; at v = 0.750c, γ = 1.51, which is greater than 1." },
+        { "answer": "Kai is incorrect; γ = 2.00 at v = 0.750c", "explanation": "γ = 2.00 corresponds to v = 0.866c, not 0.750c." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Two spacecraft travel at different speeds relative to a space station: Spacecraft A at 0.600c and Spacecraft B at 0.900c. Calculate the ratio γ_B / γ_A.",
+      "correct": "1.83",
+      "correctExplanation": "γ_A = 1.25, γ_B = 2.294. Ratio = 2.294/1.25 = 1.83.",
+      "distractors": [
+        { "answer": "1.50", "explanation": "This is the speed ratio 0.900/0.600 = 1.50; the γ ratio is different due to the nonlinear relationship." },
+        { "answer": "0.546", "explanation": "This is γ_A/γ_B, the inverse ratio; the question asks for γ_B/γ_A = 1.83." },
+        { "answer": "2.25", "explanation": "This is (0.900/0.600)² = 2.25; the γ ratio does not follow a simple power law." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An electron is accelerated to γ = 20.0. Calculate its speed as a fraction of c.",
+      "correct": "0.9988c",
+      "correctExplanation": "v/c = √(1 − 1/400) = √(1 − 0.0025) = √0.9975 = 0.9988.",
+      "distractors": [
+        { "answer": "0.950c", "explanation": "v = 0.950c gives γ ≈ 3.20, not 20.0; γ = 20 requires a much higher speed." },
+        { "answer": "0.0500c", "explanation": "0.0500 = 1/γ; this is the reciprocal, not the speed. The actual speed is 0.9988c." },
+        { "answer": "20.0c", "explanation": "No object can exceed c; γ = 20 corresponds to v = 0.9988c, which is less than c." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the calculation of γ for v = 0.800c.",
+      "sentence": "γ = 1/√(1 − 0.800²) = 1/√(1 − 0.640) = 1/√{{blank:1}} = 1/0.600 = {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "0.360",
+          "correctExplanation": "1 − 0.640 = 0.360. This is the value under the square root.",
+          "distractors": [
+            { "answer": "0.640", "explanation": "0.640 is v²/c², not 1 − v²/c²; the square root contains 1 − 0.640 = 0.360." },
+            { "answer": "0.200", "explanation": "0.200 would give γ = 1/√0.200 = 2.24, not the correct value of 1.667." }
+          ]
+        },
+        "2": {
+          "correct": "1.667",
+          "correctExplanation": "1/0.600 = 1.667. This is the Lorentz factor at 0.800c.",
+          "distractors": [
+            { "answer": "0.600", "explanation": "0.600 is 1/γ; the Lorentz factor is the reciprocal: 1/0.600 = 1.667." },
+            { "answer": "2.00", "explanation": "γ = 2.00 corresponds to v = 0.866c, not 0.800c." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the speed calculation from a known Lorentz factor.",
+      "sentence": "For γ = 10.0: v/c = √(1 − 1/γ²) = √(1 − 1/{{blank:1}}) = √(1 − 0.0100) = √0.990 = {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "100",
+          "correctExplanation": "γ² = 10.0² = 100. The reciprocal 1/100 = 0.0100 is subtracted from 1.",
+          "distractors": [
+            { "answer": "10.0", "explanation": "10.0 is γ, not γ²; the formula requires the square of the Lorentz factor." },
+            { "answer": "20.0", "explanation": "20.0 is 2γ, not γ²; 10.0² = 100." }
+          ]
+        },
+        "2": {
+          "correct": "0.995",
+          "correctExplanation": "√0.990 = 0.995. So v = 0.995c when γ = 10.0.",
+          "distractors": [
+            { "answer": "0.990", "explanation": "0.990 is inside the square root; the speed is √0.990 = 0.995c." },
+            { "answer": "0.100", "explanation": "0.100 = 1/γ; the actual speed is much higher at 0.995c." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the comparison of Lorentz factors at two speeds.",
+      "sentence": "At v = 0.500c, γ = {{blank:1}}. At v = 0.990c, γ = {{blank:2}}. The Lorentz factor increases by a factor of approximately 6.2 between these speeds.",
+      "blanks": {
+        "1": {
+          "correct": "1.15",
+          "correctExplanation": "γ = 1/√(1 − 0.250) = 1/√0.750 = 1/0.866 = 1.155 ≈ 1.15.",
+          "distractors": [
+            { "answer": "0.500", "explanation": "0.500 is v/c, not γ; the Lorentz factor at 0.500c is 1.15." },
+            { "answer": "2.00", "explanation": "γ = 2.00 corresponds to v = 0.866c, not 0.500c." }
+          ]
+        },
+        "2": {
+          "correct": "7.09",
+          "correctExplanation": "γ = 1/√(1 − 0.980) = 1/√0.020 = 1/0.141 = 7.09.",
+          "distractors": [
+            { "answer": "0.990", "explanation": "0.990 is v/c, not γ; the Lorentz factor at 0.990c is 7.09." },
+            { "answer": "100", "explanation": "γ ≈ 100 corresponds to v ≈ 0.99995c, not 0.990c." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "mc",
+      "question": "A student plots γ versus v/c on a graph. Evaluate the expected shape of this graph.",
+      "correct": "The graph starts at γ = 1 when v = 0, increases slowly at low speeds, and rises steeply toward infinity as v approaches c",
+      "correctExplanation": "The function γ = 1/√(1 − x²) for x = v/c is nearly flat near x = 0 and has a vertical asymptote at x = 1, producing the characteristic hockey-stick shape.",
+      "distractors": [
+        { "answer": "The graph is a straight line from γ = 1 at v = 0 to γ = ∞ at v = c", "explanation": "The relationship is nonlinear; γ increases slowly at low speeds and very rapidly near c, not linearly." },
+        { "answer": "The graph is a parabola that peaks at v = 0.5c and decreases toward v = c", "explanation": "γ increases monotonically with speed and never decreases; it does not have a peak." },
+        { "answer": "The graph is an exponential curve that begins increasing rapidly from v = 0", "explanation": "γ increases very slowly at low speeds; the rapid increase occurs only near v = c, unlike a simple exponential." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Evaluate the claim: 'At everyday speeds, the Lorentz factor is so close to 1 that classical physics gives exactly the same predictions as special relativity.'",
+      "correct": "The claim is approximately but not exactly correct; γ is always slightly above 1 for any non-zero speed, but the difference is unmeasurably small at everyday speeds",
+      "correctExplanation": "At 100 km h⁻¹ ≈ 28 m s⁻¹, γ − 1 ≈ 4 × 10⁻¹⁵. This difference exists but is far too small to measure, making classical physics practically indistinguishable from relativity.",
+      "distractors": [
+        { "answer": "The claim is exactly correct; at low speeds γ = 1 with no deviation whatsoever", "explanation": "γ is exactly 1 only when v = 0; for any non-zero speed, γ is slightly greater than 1, though the difference may be unmeasurable." },
+        { "answer": "The claim is incorrect; the Lorentz factor produces measurable differences even at walking speeds", "explanation": "At walking speed (~1.5 m s⁻¹), γ − 1 ≈ 10⁻¹⁷, which is completely unmeasurable with any current technology." },
+        { "answer": "The claim is incorrect; special relativity does not apply to objects moving at low speeds", "explanation": "Special relativity applies at all speeds; it simply reduces to classical predictions when v << c because γ ≈ 1." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student calculates γ = 0.75 for a certain speed. Evaluate this result.",
+      "correct": "The result must be incorrect because γ is always greater than or equal to 1",
+      "correctExplanation": "Since 1 − v²/c² is between 0 and 1, √(1 − v²/c²) is between 0 and 1, and its reciprocal γ is always ≥ 1. A value less than 1 indicates an error.",
+      "distractors": [
+        { "answer": "The result could be correct if the object is moving in the negative direction", "explanation": "The Lorentz factor depends on the magnitude of speed, not direction; γ ≥ 1 regardless of direction." },
+        { "answer": "The result is correct and indicates that relativistic effects are very small at this speed", "explanation": "A γ less than 1 is physically impossible; the student must have made a calculation error." },
+        { "answer": "The result is correct if the object is decelerating rapidly", "explanation": "Acceleration does not make γ < 1; the instantaneous γ depends only on the instantaneous speed." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Evaluate why c is often described as a 'cosmic speed limit' based on the behaviour of the Lorentz factor.",
+      "correct": "As v → c, γ → ∞, meaning infinite energy would be required to accelerate a massive object to c, making it physically unattainable",
+      "correctExplanation": "Since E_k = (γ − 1)mc² and γ → ∞ as v → c, infinite kinetic energy would be needed. This is why c is the ultimate speed limit for massive objects.",
+      "distractors": [
+        { "answer": "Because γ reaches a maximum value of 100 at v = c, creating a natural ceiling", "explanation": "γ does not have a maximum; it approaches infinity as v approaches c, with no finite ceiling." },
+        { "answer": "Because the Lorentz factor becomes imaginary for speeds above c, which has no physical meaning", "explanation": "While γ is technically imaginary for v > c, the fundamental reason c is a limit is that infinite energy is needed to reach it." },
+        { "answer": "Because γ equals exactly 1 at the speed of light, cancelling all relativistic effects", "explanation": "γ does not equal 1 at v = c; it approaches infinity, indicating maximum relativistic effects." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Marcus claims that doubling the speed always doubles the Lorentz factor. Evaluate this claim for v₁ = 0.40c and v₂ = 0.80c.",
+      "correct": "The claim is false; at 0.40c, γ ≈ 1.09, and at 0.80c, γ ≈ 1.67. The ratio is 1.53, not 2.00",
+      "correctExplanation": "γ depends nonlinearly on v through the formula 1/√(1 − v²/c²). Doubling the speed does not double γ.",
+      "distractors": [
+        { "answer": "The claim is true; γ is directly proportional to speed", "explanation": "γ is not proportional to v; the relationship is highly nonlinear, as the calculations show." },
+        { "answer": "The claim is approximately true for speeds below 0.5c where the relationship is nearly linear", "explanation": "Even below 0.5c, the relationship is not linear enough for doubling speed to double γ." },
+        { "answer": "The claim is true only when v exceeds 0.9c", "explanation": "The claim is false at all speeds; γ and v have a nonlinear relationship everywhere." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Evaluate whether the Lorentz factor has physical meaning on its own, or whether it is simply a mathematical convenience.",
+      "correct": "γ has direct physical meaning: it is the factor by which time intervals are stretched, lengths are contracted, and energy exceeds rest energy",
+      "correctExplanation": "γ is not just a mathematical shorthand. It directly equals t/t₀, L₀/L, and E_tot/E₀, giving it clear physical interpretations.",
+      "distractors": [
+        { "answer": "γ is purely a mathematical convenience with no physical meaning of its own", "explanation": "γ directly quantifies measurable physical effects: time dilation by factor γ, length contraction by factor 1/γ, and energy scaling." },
+        { "answer": "γ has physical meaning only in time dilation and is merely a mathematical tool elsewhere", "explanation": "γ has equal physical significance in time dilation, length contraction, and energy, not just one equation." },
+        { "answer": "γ represents the actual physical compression of matter at high speeds", "explanation": "γ describes measurement differences between frames, not physical compression; it is a kinematic quantity." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student suggests using the approximation γ ≈ 1 + v²/(2c²) for low speeds. Evaluate the accuracy of this approximation at v = 0.100c.",
+      "correct": "At 0.100c, the approximation gives γ ≈ 1.005, which matches the exact value to three significant figures",
+      "correctExplanation": "Exact: γ = 1/√(1 − 0.01) = 1.00504. Approximation: 1 + 0.01/2 = 1.005. The agreement is excellent at low speeds.",
+      "distractors": [
+        { "answer": "The approximation is useless because it always underestimates γ by a large amount", "explanation": "At low speeds, the approximation is very accurate; the error is negligible at 0.100c." },
+        { "answer": "The approximation gives γ = 1.05, which is ten times too large", "explanation": "The approximation gives 1 + 0.005 = 1.005, not 1.05; at v = 0.100c, v²/(2c²) = 0.005." },
+        { "answer": "The approximation is valid only at v = 0 and fails completely at any non-zero speed", "explanation": "The approximation is excellent for v << c; it fails only at speeds where v²/c² is no longer small." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Evaluate why the Lorentz factor is sometimes called the 'time dilation factor' in popular science writing.",
+      "correct": "Because in the time dilation equation t = γt₀, γ directly gives the factor by which the observed time interval exceeds the proper time",
+      "correctExplanation": "The dilated time is γ times the proper time, so γ quantifies exactly how much longer an event appears to last in a moving frame. This is its most intuitive interpretation.",
+      "distractors": [
+        { "answer": "Because γ was originally derived only for time dilation and later found to apply to length and energy", "explanation": "γ was derived from the full Lorentz transformations, which apply to both time and space simultaneously." },
+        { "answer": "Because γ is only meaningful in time dilation problems and cannot be applied to length or energy", "explanation": "γ applies equally to time dilation, length contraction, and relativistic energy; it is not limited to one application." },
+        { "answer": "Because the term was coined by journalists who did not understand the full mathematical significance", "explanation": "The name 'time dilation factor' reflects a genuine and correct physical interpretation, not a misunderstanding." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the evaluation of a common error in Lorentz factor calculations.",
+      "sentence": "A common error is forgetting to {{blank:1}} the speed when calculating v²/c². At v = 0.600c, using v/c = 0.600 instead of v²/c² = 0.360 gives an incorrect Lorentz factor of {{blank:2}} instead of the correct value of 1.25.",
+      "blanks": {
+        "1": {
+          "correct": "square",
+          "correctExplanation": "The formula contains v²/c², not v/c. Forgetting to square the speed ratio is a common calculation error.",
+          "distractors": [
+            { "answer": "halve", "explanation": "There is no halving step in the Lorentz factor formula; the speed must be squared." },
+            { "answer": "convert", "explanation": "While units must be consistent, the specific error here is forgetting to square v/c." }
+          ]
+        },
+        "2": {
+          "correct": "1.58",
+          "correctExplanation": "Using 0.600 instead of 0.360: γ = 1/√(1 − 0.600) = 1/√0.400 = 1/0.632 = 1.58, which is incorrect.",
+          "distractors": [
+            { "answer": "0.632", "explanation": "0.632 is √0.400 = 1/γ from the incorrect calculation; the incorrect γ would be 1.58." },
+            { "answer": "1.25", "explanation": "1.25 is the correct answer using v²/c² = 0.360; the error of not squaring gives a different, incorrect value." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the evaluation of the significance of the Lorentz factor in modern physics.",
+      "sentence": "The Lorentz factor appears in every relativistic equation because it describes how {{blank:1}} and {{blank:2}} measurements differ between reference frames in relative motion.",
+      "blanks": {
+        "1": {
+          "correct": "time",
+          "correctExplanation": "Time intervals are affected by relative motion through time dilation: t = γt₀.",
+          "distractors": [
+            { "answer": "mass", "explanation": "While relativistic momentum involves γ, the fundamental quantities affected are time and space, not mass in the modern interpretation." },
+            { "answer": "charge", "explanation": "Electric charge is Lorentz invariant and does not change between reference frames." }
+          ]
+        },
+        "2": {
+          "correct": "space",
+          "correctExplanation": "Spatial measurements are affected through length contraction: L = L₀/γ.",
+          "distractors": [
+            { "answer": "temperature", "explanation": "Temperature is not directly related to the Lorentz factor; the fundamental quantities are time and space." },
+            { "answer": "force", "explanation": "While relativistic force involves γ, the primary quantities affected are time and spatial measurements." }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,583 @@
+{
+  "_link": {
+    "uuid": "lp-a67477c7-8ea2-dbe2-e709-72700d518fd4",
+    "version": "1.0",
+    "contentHash": "hash-3e923628",
+    "title": "I can write values in correct scientific notation",
+    "generatedAt": "2026-03-10T00:00:00Z"
+  },
+  "toLevel2": [
+    {
+      "type": "MC",
+      "question": "In scientific notation, a number is written in the form m × 10ⁿ. Which of the following correctly describes the value of m?",
+      "correct": "m has an absolute value between 1 and 10",
+      "correctExplanation": "In scientific notation the coefficient m must satisfy 1 ≤ |m| < 10, with n being an integer exponent.",
+      "distractors": [
+        { "answer": "m has an absolute value between 0 and 1", "explanation": "If |m| were less than 1 the number would not be in standard scientific notation form." },
+        { "answer": "m must always be a whole number value", "explanation": "The coefficient m can include decimal places; it does not need to be a whole number." },
+        { "answer": "m can take any positive or negative value", "explanation": "The coefficient m is restricted to 1 ≤ |m| < 10 in standard scientific notation." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Which of the following is 4500 written in scientific notation?",
+      "correct": "4.5 × 10³",
+      "correctExplanation": "4500 = 4.5 × 10³ because the decimal point moves three places to the left to give a coefficient between 1 and 10.",
+      "distractors": [
+        { "answer": "45 × 10²", "explanation": "Although numerically equal, 45 × 10² is not in scientific notation because the coefficient is not between 1 and 10." },
+        { "answer": "0.45 × 10⁴", "explanation": "The coefficient 0.45 is less than 1, so this is not in correct scientific notation form." },
+        { "answer": "4.5 × 10⁴", "explanation": "4.5 × 10⁴ equals 45 000, not 4500. The exponent should be 3, not 4." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "What is the value of the exponent n when 0.0072 is written in scientific notation?",
+      "correct": "n = −3",
+      "correctExplanation": "0.0072 = 7.2 × 10⁻³. The decimal moves three places to the right to give a coefficient of 7.2.",
+      "distractors": [
+        { "answer": "n = −2", "explanation": "An exponent of −2 would give 7.2 × 10⁻² = 0.072, which is ten times too large." },
+        { "answer": "n = −4", "explanation": "An exponent of −4 would give 7.2 × 10⁻⁴ = 0.00072, which is ten times too small." },
+        { "answer": "n = +3", "explanation": "A positive exponent of 3 would give 7.2 × 10³ = 7200, not 0.0072." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Which of the following correctly expresses 360 000 in scientific notation?",
+      "correct": "3.6 × 10⁵",
+      "correctExplanation": "360 000 = 3.6 × 10⁵ because the decimal moves five places to the left.",
+      "distractors": [
+        { "answer": "36 × 10⁴", "explanation": "The coefficient 36 is greater than 10, so this is not in correct scientific notation." },
+        { "answer": "3.6 × 10⁶", "explanation": "3.6 × 10⁶ = 3 600 000, which is ten times too large." },
+        { "answer": "3.6 × 10⁴", "explanation": "3.6 × 10⁴ = 36 000, which is ten times too small." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "In scientific notation, the exponent n must be which type of number?",
+      "correct": "An integer",
+      "correctExplanation": "The exponent n in scientific notation is always an integer (positive, negative, or zero).",
+      "distractors": [
+        { "answer": "A positive whole number only", "explanation": "The exponent can also be negative or zero, not just positive." },
+        { "answer": "A decimal number", "explanation": "The exponent must be a whole number (integer), not a decimal." },
+        { "answer": "A number between 1 and 10", "explanation": "It is the coefficient m that lies between 1 and 10, not the exponent." }
+      ]
+    },
+    {
+      "type": "TF",
+      "question": "The number 52 × 10³ is written in correct scientific notation.",
+      "correct": "False",
+      "correctExplanation": "In scientific notation the coefficient must have an absolute value between 1 and 10. Since 52 is greater than 10, this is not correct scientific notation. The correct form is 5.2 × 10⁴.",
+      "distractors": [
+        { "answer": "True", "explanation": "The coefficient 52 exceeds 10, so this does not meet the requirement for scientific notation." }
+      ]
+    },
+    {
+      "type": "TF",
+      "question": "The number 8.1 × 10⁻² is written in correct scientific notation.",
+      "correct": "True",
+      "correctExplanation": "The coefficient 8.1 is between 1 and 10, and the exponent −2 is an integer. This satisfies both requirements for scientific notation.",
+      "distractors": [
+        { "answer": "False", "explanation": "A negative exponent is permitted in scientific notation. The coefficient 8.1 is between 1 and 10, so this is valid." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the statement about scientific notation.",
+      "sentence": "In scientific notation a number is written as m × 10ⁿ, where m has an absolute value between {{blank:1}} and {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "1",
+          "correctExplanation": "The coefficient m must be at least 1 in absolute value.",
+          "distractors": [
+            { "answer": "0", "explanation": "A coefficient of 0 would make the entire expression equal to zero, which is not valid scientific notation." },
+            { "answer": "0.1", "explanation": "The lower bound for the coefficient in scientific notation is 1, not 0.1." }
+          ]
+        },
+        "2": {
+          "correct": "10",
+          "correctExplanation": "The coefficient m must be less than 10 in absolute value, so the upper bound is 10.",
+          "distractors": [
+            { "answer": "100", "explanation": "If the coefficient could reach 100 it would not be in standard scientific notation form." },
+            { "answer": "9", "explanation": "The upper bound is 10 (exclusive), not 9. Values such as 9.5 are permitted." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the purpose of scientific notation.",
+      "sentence": "Scientific notation is used to express very {{blank:1}} or very {{blank:2}} numbers clearly.",
+      "blanks": {
+        "1": {
+          "correct": "large",
+          "correctExplanation": "Scientific notation with positive exponents is used to express very large numbers concisely.",
+          "distractors": [
+            { "answer": "precise", "explanation": "While scientific notation can communicate precision, its primary purpose is to handle numbers of extreme magnitude." },
+            { "answer": "complex", "explanation": "Scientific notation simplifies numbers rather than addressing mathematical complexity." }
+          ]
+        },
+        "2": {
+          "correct": "small",
+          "correctExplanation": "Scientific notation with negative exponents is used to express very small numbers concisely.",
+          "distractors": [
+            { "answer": "round", "explanation": "Rounding is a separate concept from expressing numbers in scientific notation." },
+            { "answer": "exact", "explanation": "Exactness relates to measurement precision, not the purpose of scientific notation." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the statement about significant figures in scientific notation.",
+      "sentence": "In scientific notation, all digits in the {{blank:1}} m are considered {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "coefficient",
+          "correctExplanation": "The value m in the expression m × 10ⁿ is called the coefficient.",
+          "distractors": [
+            { "answer": "exponent", "explanation": "The exponent is n, the power of 10. It is the coefficient m whose digits are all significant." },
+            { "answer": "base", "explanation": "The base in scientific notation is always 10. The coefficient m contains the significant digits." }
+          ]
+        },
+        "2": {
+          "correct": "significant",
+          "correctExplanation": "Every digit written in the coefficient of a number in scientific notation is a significant figure.",
+          "distractors": [
+            { "answer": "approximate", "explanation": "The digits in the coefficient represent the measured value and are all counted as significant figures." },
+            { "answer": "estimated", "explanation": "While the last digit may be uncertain, all digits in the coefficient are classified as significant." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "MC",
+      "question": "A student writes the value 0.000 56 as 5.6 × 10⁻⁴. Which of the following best explains why this is correct?",
+      "correct": "The decimal point was moved four places to the right, giving a coefficient between 1 and 10",
+      "correctExplanation": "Moving the decimal four places to the right converts 0.000 56 to 5.6, and each rightward shift corresponds to multiplying by 10⁻¹, giving 10⁻⁴.",
+      "distractors": [
+        { "answer": "The decimal point was moved four places to the left, giving a coefficient between 1 and 10", "explanation": "Moving the decimal to the left would increase the value, not decrease it. The decimal must move to the right for numbers less than 1." },
+        { "answer": "The decimal point was moved three places to the right, giving a coefficient between 1 and 10", "explanation": "Moving only three places would give 0.56, which is less than 1 and not a valid coefficient." },
+        { "answer": "The number of zeros after the decimal determines the exponent directly without adjusting the coefficient", "explanation": "The exponent depends on how many places the decimal must move to produce a coefficient between 1 and 10, not simply the number of leading zeros." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Kai writes 2.0 × 10¹ m instead of 20 m. Which of the following best explains why the scientific notation form is preferred?",
+      "correct": "It makes clear that there are exactly two significant figures in the measurement",
+      "correctExplanation": "Writing 20 m is ambiguous because it is unclear whether the zero is significant. The notation 2.0 × 10¹ m explicitly shows two significant figures.",
+      "distractors": [
+        { "answer": "It reduces the number of significant figures from three to two in the measurement", "explanation": "The number 20 has at most two digits; scientific notation clarifies how many are significant rather than reducing them." },
+        { "answer": "It converts the measurement into different SI base units for consistency", "explanation": "Scientific notation changes the way a number is expressed, not the units. The unit remains metres in both cases." },
+        { "answer": "It rounds the value to the nearest order of magnitude for easier comparison", "explanation": "Scientific notation preserves the value and its precision; it does not round to the nearest power of 10." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Which of the following explains why 0.45 × 10³ is not in correct scientific notation?",
+      "correct": "The coefficient 0.45 is less than 1",
+      "correctExplanation": "In scientific notation the coefficient must satisfy 1 ≤ |m| < 10. Since 0.45 is less than 1, the expression must be rewritten as 4.5 × 10².",
+      "distractors": [
+        { "answer": "The exponent 3 is too large for this value", "explanation": "The exponent can be any integer; the issue is that the coefficient does not fall between 1 and 10." },
+        { "answer": "The coefficient should be a whole number", "explanation": "The coefficient in scientific notation may include decimal places. The requirement is that it lies between 1 and 10." },
+        { "answer": "The coefficient 0.45 has too many significant figures", "explanation": "The number of significant figures is not the issue. The problem is that the coefficient is outside the range 1 to 10." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Sofia measures a length as 0.005 30 m. She writes this in scientific notation as 5.30 × 10⁻³ m. How many significant figures does this value have?",
+      "correct": "Three significant figures",
+      "correctExplanation": "The coefficient 5.30 contains three digits (5, 3, and the trailing 0), all of which are significant in scientific notation.",
+      "distractors": [
+        { "answer": "Two significant figures", "explanation": "The trailing zero in 5.30 is significant because it is written explicitly in the coefficient of the scientific notation." },
+        { "answer": "Four significant figures", "explanation": "Only the digits in the coefficient are counted. The coefficient 5.30 has three significant figures, not four." },
+        { "answer": "One significant figure only", "explanation": "All digits in the coefficient of a number in scientific notation are significant, giving three significant figures here." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A student converts 7 200 000 to scientific notation and writes 7.2 × 10⁶. What assumption has the student made about the trailing zeros?",
+      "correct": "The trailing zeros are not significant and the value has two significant figures",
+      "correctExplanation": "By writing 7.2 × 10⁶ the student has indicated that only the 7 and 2 are significant, treating the trailing zeros as placeholders.",
+      "distractors": [
+        { "answer": "The trailing zeros are all significant and the value has seven significant figures", "explanation": "If all zeros were significant the student would need to write 7.200 000 × 10⁶ to show seven significant figures." },
+        { "answer": "The trailing zeros increase the exponent but do not affect the coefficient in any way", "explanation": "Trailing zeros affect the coefficient if they are significant. Here the student chose to exclude them from the coefficient." },
+        { "answer": "The trailing zeros indicate the measurement was rounded to the nearest whole number", "explanation": "Trailing zeros can indicate precision but the student's notation specifically implies only two significant figures." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Which of the following best explains why scientific notation uses powers of 10 rather than powers of another number?",
+      "correct": "The decimal number system is base 10, making powers of 10 a natural way to express magnitude",
+      "correctExplanation": "Since standard numerical representation uses base 10, expressing magnitude shifts as powers of 10 aligns directly with moving the decimal point.",
+      "distractors": [
+        { "answer": "Powers of 10 are the only values that produce integer exponents for all measurements", "explanation": "Any base can produce integer exponents for certain values. Base 10 is used because it matches the decimal system." },
+        { "answer": "Powers of 10 ensure that the coefficient always has exactly one significant figure", "explanation": "The coefficient can have multiple significant figures. The choice of base 10 relates to the decimal system, not the number of significant figures." },
+        { "answer": "Powers of 10 are required by international convention but have no mathematical advantage", "explanation": "While conventions exist, the choice of base 10 has a clear mathematical advantage: it corresponds to the decimal number system." }
+      ]
+    },
+    {
+      "type": "TF",
+      "question": "Writing 2.50 × 10² rather than 250 communicates that the value has exactly three significant figures.",
+      "correct": "True",
+      "correctExplanation": "In the notation 2.50 × 10², the coefficient 2.50 explicitly shows three significant figures (2, 5, and 0). Writing 250 leaves the significance of the trailing zero ambiguous.",
+      "distractors": [
+        { "answer": "False", "explanation": "Scientific notation removes ambiguity about significant figures. The trailing zero in 2.50 is clearly significant." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the explanation of converting a small number to scientific notation.",
+      "sentence": "To convert 0.000 34 to scientific notation, move the decimal point four places to the {{blank:1}}, giving a coefficient of {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "right",
+          "correctExplanation": "For numbers less than 1, the decimal point must move to the right to produce a coefficient between 1 and 10.",
+          "distractors": [
+            { "answer": "left", "explanation": "Moving the decimal to the left would make the coefficient even smaller, not between 1 and 10." },
+            { "answer": "nearest whole number", "explanation": "The direction of decimal movement is either left or right, not to the nearest whole number." }
+          ]
+        },
+        "2": {
+          "correct": "3.4",
+          "correctExplanation": "Moving the decimal four places to the right in 0.000 34 gives 3.4, which lies between 1 and 10.",
+          "distractors": [
+            { "answer": "34", "explanation": "A coefficient of 34 would mean the decimal moved five places, and 34 is outside the range 1 to 10." },
+            { "answer": "0.34", "explanation": "A coefficient of 0.34 would mean the decimal moved only three places and is less than 1." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the explanation of why scientific notation communicates precision.",
+      "sentence": "Writing 5.0 × 10³ instead of 5000 removes {{blank:1}} about whether the trailing {{blank:2}} are significant.",
+      "blanks": {
+        "1": {
+          "correct": "ambiguity",
+          "correctExplanation": "The notation 5000 is ambiguous because it is unclear how many of the zeros are significant. Scientific notation resolves this.",
+          "distractors": [
+            { "answer": "accuracy", "explanation": "Accuracy relates to closeness to the true value, not to the clarity of how many figures are significant." },
+            { "answer": "uncertainty", "explanation": "Uncertainty refers to the range of possible values in a measurement, not ambiguity in how a number is written." }
+          ]
+        },
+        "2": {
+          "correct": "zeros",
+          "correctExplanation": "Trailing zeros in whole numbers like 5000 are the source of ambiguity, as they may or may not be significant.",
+          "distractors": [
+            { "answer": "digits", "explanation": "Not all digits cause ambiguity. It is specifically the trailing zeros whose significance is unclear." },
+            { "answer": "figures", "explanation": "The ambiguity is specifically about trailing zeros, not all figures in the number." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the statement about the exponent in scientific notation.",
+      "sentence": "When a number greater than 10 is written in scientific notation, the exponent n is {{blank:1}}. When a number less than 1 is written in scientific notation, the exponent n is {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "positive",
+          "correctExplanation": "Numbers greater than 10 require a positive exponent because the decimal shifts to the left, increasing the power of 10.",
+          "distractors": [
+            { "answer": "negative", "explanation": "A negative exponent indicates a number less than 1, not greater than 10." },
+            { "answer": "zero", "explanation": "An exponent of zero would mean the number lies between 1 and 10, not greater than 10." }
+          ]
+        },
+        "2": {
+          "correct": "negative",
+          "correctExplanation": "Numbers less than 1 require a negative exponent because the decimal shifts to the right, decreasing the power of 10.",
+          "distractors": [
+            { "answer": "positive", "explanation": "A positive exponent indicates a number greater than 10, not less than 1." },
+            { "answer": "zero", "explanation": "An exponent of zero gives a value between 1 and 10, not less than 1." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "MC",
+      "question": "Priya measures a mass of 0.003 045 kg. Which of the following correctly expresses this value in scientific notation?",
+      "correct": "3.045 × 10⁻³ kg",
+      "correctExplanation": "Moving the decimal three places to the right gives the coefficient 3.045, which is between 1 and 10. The exponent is −3.",
+      "distractors": [
+        { "answer": "30.45 × 10⁻⁴ kg", "explanation": "The coefficient 30.45 is greater than 10, so this is not in correct scientific notation." },
+        { "answer": "3.045 × 10⁻⁴ kg", "explanation": "An exponent of −4 would give 0.000 3045 kg, which is ten times too small." },
+        { "answer": "3.045 × 10⁻² kg", "explanation": "An exponent of −2 would give 0.030 45 kg, which is ten times too large." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Marcus records a distance of 186 400 m and needs to express it in scientific notation to four significant figures. Which of the following is correct?",
+      "correct": "1.864 × 10⁵ m",
+      "correctExplanation": "Moving the decimal five places to the left gives 1.8640, and rounding to four significant figures gives 1.864 × 10⁵ m.",
+      "distractors": [
+        { "answer": "1.8640 × 10⁵ m", "explanation": "The coefficient 1.8640 has five significant figures, not four. The trailing zero must be removed." },
+        { "answer": "18.64 × 10⁴ m", "explanation": "The coefficient 18.64 is greater than 10, so this is not in correct scientific notation form." },
+        { "answer": "1.864 × 10⁶ m", "explanation": "An exponent of 6 gives 1 864 000 m, which is ten times too large." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Anika measures the wavelength of a laser as 0.000 000 632 m. What is this value in scientific notation?",
+      "correct": "6.32 × 10⁻⁷ m",
+      "correctExplanation": "Moving the decimal seven places to the right produces the coefficient 6.32. The exponent is −7.",
+      "distractors": [
+        { "answer": "6.32 × 10⁻⁶ m", "explanation": "An exponent of −6 gives 0.000 006 32 m, which is ten times too large." },
+        { "answer": "6.32 × 10⁻⁸ m", "explanation": "An exponent of −8 gives 0.000 000 063 2 m, which is ten times too small." },
+        { "answer": "63.2 × 10⁻⁸ m", "explanation": "The coefficient 63.2 exceeds 10, so this is not in correct scientific notation." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A student writes 63 700 in scientific notation to two significant figures. Which of the following is correct?",
+      "correct": "6.4 × 10⁴",
+      "correctExplanation": "To two significant figures, 63 700 rounds to 64 000. In scientific notation this is 6.4 × 10⁴.",
+      "distractors": [
+        { "answer": "6.37 × 10⁴", "explanation": "The coefficient 6.37 has three significant figures, not two as required." },
+        { "answer": "6.3 × 10⁴", "explanation": "Rounding 63 700 to two significant figures gives 64 000, not 63 000. The correct coefficient is 6.4." },
+        { "answer": "6.4 × 10³", "explanation": "An exponent of 3 gives 6400, not 64 000. The correct exponent is 4." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Liam measures a current of 0.0125 A and converts it to scientific notation with two significant figures. Which of the following is correct?",
+      "correct": "1.3 × 10⁻² A",
+      "correctExplanation": "0.0125 in scientific notation is 1.25 × 10⁻² A. Rounding to two significant figures gives 1.3 × 10⁻² A.",
+      "distractors": [
+        { "answer": "1.25 × 10⁻² A", "explanation": "The coefficient 1.25 has three significant figures. Rounding to two gives 1.3." },
+        { "answer": "1.2 × 10⁻² A", "explanation": "Rounding 1.25 to two significant figures gives 1.3, not 1.2, because the digit after 2 is 5." },
+        { "answer": "1.3 × 10⁻³ A", "explanation": "An exponent of −3 gives 0.001 3 A, which is ten times too small." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Mei records a temperature change of 2 950 000 K in a plasma experiment. She writes this as 2.95 × 10⁶ K. How many significant figures has she reported?",
+      "correct": "Three",
+      "correctExplanation": "The coefficient 2.95 contains three digits (2, 9, 5), all of which are significant in scientific notation.",
+      "distractors": [
+        { "answer": "Two", "explanation": "All three digits in the coefficient 2.95 are significant, not just the first two." },
+        { "answer": "Seven", "explanation": "Only the digits in the coefficient are counted as significant, not the implied zeros in the original number." },
+        { "answer": "Six", "explanation": "The exponent indicates magnitude but does not contribute to the count of significant figures." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Arun converts 0.040 60 m to scientific notation. Which of the following correctly preserves all significant figures?",
+      "correct": "4.060 × 10⁻² m",
+      "correctExplanation": "The value 0.040 60 has four significant figures (4, 0, 6, 0). Writing 4.060 × 10⁻² preserves all four.",
+      "distractors": [
+        { "answer": "4.06 × 10⁻² m", "explanation": "This coefficient has only three significant figures, dropping the trailing zero that was significant in the original value." },
+        { "answer": "4.0600 × 10⁻² m", "explanation": "This coefficient has five significant figures, which adds a digit not present in the original measurement." },
+        { "answer": "4.060 × 10⁻³ m", "explanation": "An exponent of −3 gives 0.004 060 m, which is ten times too small." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Apply the conversion to express a measurement in scientific notation.",
+      "sentence": "The speed of light is approximately 300 000 000 m s⁻¹. In scientific notation to three significant figures this is {{blank:1}} × 10{{blank:2}} m s⁻¹.",
+      "blanks": {
+        "1": {
+          "correct": "3.00",
+          "correctExplanation": "The coefficient must be between 1 and 10 and show three significant figures, giving 3.00.",
+          "distractors": [
+            { "answer": "3.0", "explanation": "The coefficient 3.0 has only two significant figures, not three as required." },
+            { "answer": "30.0", "explanation": "A coefficient of 30.0 is greater than 10 and is not valid in scientific notation." }
+          ]
+        },
+        "2": {
+          "correct": "⁸",
+          "correctExplanation": "300 000 000 has eight zeros after the 3, so the decimal moves eight places to the left, giving an exponent of 8.",
+          "distractors": [
+            { "answer": "⁹", "explanation": "An exponent of 9 would give 3.00 × 10⁹ = 3 000 000 000, which is ten times too large." },
+            { "answer": "⁷", "explanation": "An exponent of 7 would give 3.00 × 10⁷ = 30 000 000, which is ten times too small." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Convert the given measurement to scientific notation.",
+      "sentence": "A student measures a thickness of 0.000 508 m. In scientific notation this is {{blank:1}} × 10⁻{{blank:2}} m.",
+      "blanks": {
+        "1": {
+          "correct": "5.08",
+          "correctExplanation": "Moving the decimal four places to the right converts 0.000 508 to 5.08, a coefficient between 1 and 10.",
+          "distractors": [
+            { "answer": "50.8", "explanation": "A coefficient of 50.8 exceeds 10 and would require a different exponent to be valid." },
+            { "answer": "0.508", "explanation": "A coefficient of 0.508 is less than 1, which is not valid in scientific notation." }
+          ]
+        },
+        "2": {
+          "correct": "4",
+          "correctExplanation": "The decimal moves four places to the right, so the exponent is −4.",
+          "distractors": [
+            { "answer": "3", "explanation": "An exponent of −3 would give 5.08 × 10⁻³ = 0.005 08, which is ten times too large." },
+            { "answer": "5", "explanation": "An exponent of −5 would give 5.08 × 10⁻⁵ = 0.000 050 8, which is ten times too small." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Apply rounding and scientific notation to a given value.",
+      "sentence": "The value 0.004 73 rounded to two significant figures in scientific notation is {{blank:1}} × 10{{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "4.7",
+          "correctExplanation": "0.004 73 in scientific notation is 4.73 × 10⁻³. Rounding to two significant figures gives a coefficient of 4.7.",
+          "distractors": [
+            { "answer": "4.73", "explanation": "The coefficient 4.73 has three significant figures, not two as required." },
+            { "answer": "4.8", "explanation": "Rounding 4.73 to two significant figures gives 4.7, not 4.8, because the third digit is 3." }
+          ]
+        },
+        "2": {
+          "correct": "⁻³",
+          "correctExplanation": "The decimal moves three places to the right to convert 0.004 73 to 4.73, so the exponent is −3.",
+          "distractors": [
+            { "answer": "⁻²", "explanation": "An exponent of −2 would give 0.047, which is ten times too large." },
+            { "answer": "⁻⁴", "explanation": "An exponent of −4 would give 0.000 47, which is ten times too small." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "MC",
+      "question": "A student records a measurement as 5 × 10³ m and a second student records the same measurement as 5.00 × 10³ m. Which of the following best evaluates the difference between these two expressions?",
+      "correct": "The second expression communicates greater precision by indicating three significant figures rather than one",
+      "correctExplanation": "5 × 10³ has one significant figure while 5.00 × 10³ has three. The trailing zeros in the coefficient explicitly indicate higher precision.",
+      "distractors": [
+        { "answer": "Both expressions communicate the same number of significant figures since the value is identical", "explanation": "Although the numerical value is the same, the number of significant figures differs. The trailing zeros in 5.00 are significant." },
+        { "answer": "The first expression is more accurate because it avoids unnecessary trailing zeros in the coefficient", "explanation": "Trailing zeros in scientific notation indicate measured precision, not unnecessary detail. Removing them reduces the information conveyed." },
+        { "answer": "The second expression is incorrect because trailing zeros should never appear in the coefficient", "explanation": "Trailing zeros in the coefficient of scientific notation are significant and are correctly used to show precision." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Kai measures a resistance as 4700 Ω using an instrument with a precision of ±50 Ω. He writes the value as 4.700 × 10³ Ω. Which of the following best evaluates his use of scientific notation?",
+      "correct": "The notation implies four significant figures, which overstates the precision of the instrument",
+      "correctExplanation": "With a precision of ±50 Ω, only the first two digits are reliable. Writing 4.700 × 10³ implies four significant figures, which is inconsistent with the instrument's precision.",
+      "distractors": [
+        { "answer": "The notation is correct because 4700 always has four significant figures when converted", "explanation": "The number of significant figures reported should reflect the instrument's precision, not just the digits in the original number." },
+        { "answer": "The notation is acceptable because scientific notation always preserves every digit of a value", "explanation": "Scientific notation should reflect measured precision. Including digits beyond the instrument's capability misrepresents the measurement." },
+        { "answer": "The notation is incorrect because the exponent should be 4 instead of 3 for this value", "explanation": "The exponent 3 is correct for 4700. The issue is with the number of significant figures in the coefficient, not the exponent." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Sofia writes 0.030 as 3.0 × 10⁻² and Arun writes it as 3 × 10⁻². Which of the following best evaluates which notation is more appropriate?",
+      "correct": "Sofia's notation is more appropriate because the trailing zero in 0.030 is significant and should be preserved",
+      "correctExplanation": "The trailing zero in 0.030 indicates that the measurement has two significant figures. Sofia's notation preserves this, while Arun's implies only one.",
+      "distractors": [
+        { "answer": "Arun's notation is more appropriate because it simplifies the coefficient and avoids redundant zeros", "explanation": "The trailing zero in 0.030 is not redundant; it communicates that the measurement has two significant figures." },
+        { "answer": "Both notations are equally appropriate since they represent the same numerical quantity exactly", "explanation": "While numerically equal, the two notations communicate different levels of precision. Significant figures matter in scientific measurements." },
+        { "answer": "Neither notation is appropriate because 0.030 cannot be meaningfully expressed in scientific notation", "explanation": "Any decimal number can be expressed in scientific notation. Sofia's form correctly represents the value and its precision." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A student argues that scientific notation is unnecessary for the value 45, because the number is neither very large nor very small. Which of the following best evaluates this argument?",
+      "correct": "The argument overlooks that scientific notation can clarify significant figures even for moderate-sized numbers",
+      "correctExplanation": "Scientific notation is not only for extreme magnitudes. Writing 4.5 × 10¹ makes the number of significant figures unambiguous, which can be important in calculations.",
+      "distractors": [
+        { "answer": "The argument is correct because scientific notation is only required for numbers with more than four digits", "explanation": "There is no minimum number of digits for using scientific notation. Its purpose includes clarifying significant figures for any value." },
+        { "answer": "The argument is correct because expressing 45 in scientific notation would change its significant figures", "explanation": "Converting to scientific notation does not change significant figures; it makes the existing count explicit." },
+        { "answer": "The argument is invalid because all measurements must be recorded in scientific notation by international rule", "explanation": "There is no rule requiring all measurements to use scientific notation. However, it remains useful for communicating precision." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Mei records a calculated result as 2.345 678 × 10⁴. The input measurements each had three significant figures. Which of the following best evaluates her reported result?",
+      "correct": "The result overstates precision and should be rounded to three significant figures as 2.35 × 10⁴",
+      "correctExplanation": "A calculated result should not have more significant figures than the least precise input. With three-significant-figure inputs, the result should be 2.35 × 10⁴.",
+      "distractors": [
+        { "answer": "The result is correct because scientific notation permits any number of digits in the coefficient", "explanation": "While the notation permits any number of digits, the rules for significant figures require rounding to match the precision of the inputs." },
+        { "answer": "The result should be truncated to 2.345 × 10⁴ to reduce the number of decimal places shown", "explanation": "Simply truncating is not the correct approach. The result must be rounded to match the significant figures of the input data." },
+        { "answer": "The result should be written as 23 456.78 without scientific notation to show all digits clearly", "explanation": "Abandoning scientific notation does not resolve the significant figures issue and may introduce ambiguity." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Priya writes 1.0 × 10⁰ to represent the number 1.0. A classmate argues this is unnecessary. Which of the following best evaluates the use of 10⁰ in this context?",
+      "correct": "The notation is valid and clarifies that the value has two significant figures, even though 10⁰ equals 1",
+      "correctExplanation": "While 10⁰ = 1 and the notation may seem redundant, it explicitly communicates that the value has two significant figures, which writing just '1.0' also achieves.",
+      "distractors": [
+        { "answer": "The notation is invalid because 10⁰ is undefined in mathematics and cannot be used in notation", "explanation": "10⁰ is well-defined and equals 1. The notation is mathematically valid." },
+        { "answer": "The notation is required because values between 1 and 10 must always include the 10⁰ factor", "explanation": "Values between 1 and 10 can be written with or without the 10⁰ factor. It is not mandatory." },
+        { "answer": "The notation is incorrect because the exponent must always be non-zero in scientific notation", "explanation": "An exponent of zero is permitted in scientific notation. It indicates the number is between 1 and 10." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "A laboratory report states a measurement as 8.0 × 10² g. A reviewer argues it should be written as 800 g for clarity. Which of the following best evaluates the reviewer's suggestion?",
+      "correct": "The suggestion would introduce ambiguity about whether the trailing zeros in 800 are significant",
+      "correctExplanation": "Writing 800 g makes it unclear whether the value has one, two, or three significant figures. The scientific notation 8.0 × 10² g clearly indicates two significant figures.",
+      "distractors": [
+        { "answer": "The suggestion is valid because standard form is always clearer than scientific notation for values under 1000", "explanation": "Standard form can introduce ambiguity about significant figures for values with trailing zeros, regardless of magnitude." },
+        { "answer": "The suggestion is valid because both representations convey exactly the same level of precision", "explanation": "The two representations differ in how clearly they communicate significant figures. The notation 800 is ambiguous." },
+        { "answer": "The suggestion would change the measurement from two significant figures to three automatically", "explanation": "Writing 800 does not automatically give three significant figures; it creates ambiguity rather than a definite count." }
+      ]
+    },
+    {
+      "type": "MC",
+      "question": "Liam converts 0.001 00 to scientific notation and writes 1.0 × 10⁻³. His teacher marks this as incorrect. Which of the following best explains the teacher's reasoning?",
+      "correct": "The original value has three significant figures but 1.0 × 10⁻³ only shows two",
+      "correctExplanation": "0.001 00 has three significant figures (1, 0, 0). Writing 1.0 × 10⁻³ drops the final zero and shows only two significant figures. The correct form is 1.00 × 10⁻³.",
+      "distractors": [
+        { "answer": "The exponent should be −2 instead of −3 for this value in scientific notation", "explanation": "The exponent −3 is correct. The issue is the number of significant figures in the coefficient." },
+        { "answer": "The coefficient should be 10.0 to preserve all three significant figures properly", "explanation": "A coefficient of 10.0 is not between 1 and 10 and would not be valid scientific notation." },
+        { "answer": "Trailing zeros in 0.001 00 are never significant and need not be preserved at all", "explanation": "Trailing zeros after a decimal point are always significant. They must be preserved in the coefficient." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Evaluate the appropriateness of a student's use of scientific notation.",
+      "sentence": "A student writes 6.0 × 10² for a measurement of 600 taken with an instrument precise to ±10. This is {{blank:1}} because the instrument supports {{blank:2}} significant figures.",
+      "blanks": {
+        "1": {
+          "correct": "appropriate",
+          "correctExplanation": "With precision of ±10, the measurement is reliable to two significant figures. The notation 6.0 × 10² correctly shows two significant figures.",
+          "distractors": [
+            { "answer": "inappropriate", "explanation": "The notation correctly reflects two significant figures, consistent with the instrument precision of ±10." },
+            { "answer": "ambiguous", "explanation": "Scientific notation removes ambiguity. Writing 6.0 × 10² clearly indicates two significant figures." }
+          ]
+        },
+        "2": {
+          "correct": "two",
+          "correctExplanation": "A precision of ±10 on a value of 600 means the tens digit is the last reliable digit, giving two significant figures.",
+          "distractors": [
+            { "answer": "three", "explanation": "Three significant figures would require precision to the ones digit (±1), not ±10." },
+            { "answer": "one", "explanation": "One significant figure would correspond to precision of ±100, not ±10." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Evaluate a conversion and identify the error.",
+      "sentence": "A student writes 0.002 50 as 2.5 × 10⁻³. The error is that the trailing {{blank:1}} in the original value has been {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "zero",
+          "correctExplanation": "The original value 0.002 50 has a trailing zero after the 5 that is significant and must be preserved.",
+          "distractors": [
+            { "answer": "decimal point", "explanation": "The decimal point is part of the notation but is not the element that was lost in the conversion." },
+            { "answer": "digit", "explanation": "While technically a digit, the specific element lost is the trailing zero that indicates precision." }
+          ]
+        },
+        "2": {
+          "correct": "dropped",
+          "correctExplanation": "The student wrote 2.5 instead of 2.50, dropping the significant trailing zero and reducing the number of significant figures from three to two.",
+          "distractors": [
+            { "answer": "rounded", "explanation": "The zero was not rounded away; it was omitted entirely from the coefficient." },
+            { "answer": "doubled", "explanation": "The trailing zero was removed, not duplicated. The student's coefficient has fewer digits than required." }
+          ]
+        }
+      }
+    }
+  ]
+}
