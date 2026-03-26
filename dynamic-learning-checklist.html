@@ -1047,6 +1047,16 @@ body {
     flex-shrink: 0;
 }
 
+/* No questions available label */
+.no-questions-label {
+    display: none;
+    font-size: 10px;
+    font-style: italic;
+    color: #c0392b;
+    opacity: 0.7;
+    white-space: nowrap;
+}
+
 /* No quiz badge */
 .no-quiz-badge {
     font-size: 10px;
@@ -9484,6 +9494,38 @@ function renderLearningContent() {
     }).join('');
     
     setupLearningContentListeners();
+    checkQuestionsAvailability();
+}
+
+/**
+ * Async check which learning items have questions available.
+ * Shows "no questions available" label for items without question files.
+ */
+async function checkQuestionsAvailability() {
+    const labels = document.querySelectorAll('.no-questions-label[data-uuid]');
+
+    for (const label of labels) {
+        const uuid = label.getAttribute('data-uuid');
+        if (!uuid) {
+            label.style.display = 'inline';
+            continue;
+        }
+
+        // Check cache first to avoid redundant fetches
+        if (questionsCache[uuid] === null) {
+            label.style.display = 'inline';
+            continue;
+        }
+        if (questionsCache[uuid]) {
+            continue; // questions exist, label stays hidden
+        }
+
+        // Not cached yet — fetch and update
+        const data = await loadQuestionsForItem(uuid);
+        if (!data) {
+            label.style.display = 'inline';
+        }
+    }
 }
 
 function renderSubtopicExplanation(subtopic) {
@@ -9660,6 +9702,7 @@ function renderLearningItem(item, subtopic) {
                     ${lastChangeText ? `<span class="learning-item-updated">${lastChangeText}</span>` : ''}
                 </div>
                 <div class="learning-item-right">
+                    <span class="no-questions-label" data-uuid="${item.uuid || ''}">no questions available</span>
                     ${controlsHtml}
                 </div>
             </div>
