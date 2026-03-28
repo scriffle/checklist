@@ -1,0 +1,583 @@
+{
+  "_link": {
+    "uuid": "lp-8e02f689-7bb9-4745-04ee-615340d8eb7c",
+    "version": 1,
+    "contentHash": "hash-9ead3c05",
+    "title": "I can calculate the mass of a substance deposited at an electrode given the current and time",
+    "generatedAt": "2026-03-28T10:00:00Z"
+  },
+  "toLevel2": [
+    {
+      "type": "mc",
+      "question": "What is the first step when calculating the mass of a substance deposited at an electrode?",
+      "correct": "Calculate the charge using Q = It",
+      "correctExplanation": "The four-step method begins by finding the total charge passed through the cell, using Q = It where I is current in amperes and t is time in seconds.",
+      "distractors": [
+        { "answer": "Find the moles of metal using n = m/M", "explanation": "Finding moles of metal from mass is actually the reverse process; the forward calculation starts with charge." },
+        { "answer": "Determine moles of electrons using n = Q/F", "explanation": "Finding moles of electrons is the second step; you must first calculate the charge Q before dividing by Faraday's constant." },
+        { "answer": "Look up the molar mass of the metal", "explanation": "Molar mass is needed in the final step, but the calculation must begin with finding the charge from current and time." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "In the formula Q = It, what does Q represent?",
+      "correct": "Charge in coulombs",
+      "correctExplanation": "Q represents the total electric charge in coulombs (C), calculated by multiplying current (in amperes) by time (in seconds).",
+      "distractors": [
+        { "answer": "Current in amperes", "explanation": "Current is represented by I, not Q; Q is the product of current and time." },
+        { "answer": "Energy in joules", "explanation": "Q in this equation represents charge, not energy; energy calculations use different formulas." },
+        { "answer": "Time in seconds", "explanation": "Time is represented by t, not Q; Q is the charge calculated from current multiplied by time." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which formula is used to find the moles of electrons from the total charge?",
+      "correct": "n(e⁻) = Q / F",
+      "correctExplanation": "Dividing the total charge (Q) by Faraday's constant (F = 96 485 C mol⁻¹) gives the number of moles of electrons transferred.",
+      "distractors": [
+        { "answer": "n(e⁻) = Q × F", "explanation": "Multiplying Q by F would give an enormously large number with incorrect units; the correct operation is division." },
+        { "answer": "n(e⁻) = F / Q", "explanation": "Dividing F by Q inverts the relationship; the charge must be in the numerator to find moles of electrons." },
+        { "answer": "n(e⁻) = Q / R", "explanation": "R is the gas constant, not Faraday's constant; the correct divisor is F = 96 485 C mol⁻¹." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What is the correct unit for electric charge in electrolysis calculations?",
+      "correct": "Coulombs (C)",
+      "correctExplanation": "Electric charge is measured in coulombs (C), where 1 coulomb equals the charge transferred by a current of 1 ampere flowing for 1 second.",
+      "distractors": [
+        { "answer": "Amperes (A)", "explanation": "Amperes measure electric current (rate of charge flow), not charge itself; charge is measured in coulombs." },
+        { "answer": "Volts (V)", "explanation": "Volts measure electric potential difference, not charge; the unit of charge is the coulomb." },
+        { "answer": "Joules (J)", "explanation": "Joules measure energy, not electric charge; the correct unit for charge is the coulomb." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which formula gives the mass of a substance from its number of moles and molar mass?",
+      "correct": "m = n × M",
+      "correctExplanation": "Mass equals the number of moles multiplied by the molar mass. This is the final step in the Faraday's law calculation.",
+      "distractors": [
+        { "answer": "m = n / M", "explanation": "Dividing moles by molar mass inverts the relationship and gives incorrect units; mass equals moles multiplied by molar mass." },
+        { "answer": "m = M / n", "explanation": "Dividing molar mass by moles does not give mass; the correct formula multiplies moles by molar mass." },
+        { "answer": "m = n × F", "explanation": "Multiplying moles by Faraday's constant gives charge in coulombs, not mass; the molar mass M must be used." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "The half-equation ratio is needed to convert moles of electrons into moles of the deposited substance.",
+      "correct": "True",
+      "correctExplanation": "The half-equation shows how many moles of electrons are required to produce one mole of the metal, so this ratio is essential for converting between the two quantities.",
+      "distractors": [
+        { "answer": "False", "explanation": "Students may think that one mole of electrons always produces one mole of metal, but the ratio depends on the ionic charge shown in the half-equation." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "In the formula Q = It, time must be expressed in minutes.",
+      "correct": "False",
+      "correctExplanation": "Time must be in seconds when using Q = It, since the ampere is defined as one coulomb per second. Using minutes gives an answer 60 times too small.",
+      "distractors": [
+        { "answer": "True", "explanation": "Students often forget to convert minutes to seconds before substituting into Q = It, which is a common source of error in calculations." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the passage about the four-step method for calculating mass deposited.",
+      "sentence": "To calculate the mass deposited at an electrode, first find the {{blank:1}} using Q = It, then find the moles of {{blank:2}} using n = Q / F.",
+      "blanks": {
+        "1": {
+          "correct": "charge",
+          "correctExplanation": "The first step is to calculate the total electric charge (Q) by multiplying current by time.",
+          "distractors": [
+            { "answer": "current", "explanation": "Current (I) is given in the question; the first step calculates charge (Q) from current and time." },
+            { "answer": "voltage", "explanation": "Voltage is not part of the four-step Faraday's law calculation; the first quantity calculated is charge." }
+          ]
+        },
+        "2": {
+          "correct": "electrons",
+          "correctExplanation": "Dividing charge by Faraday's constant gives the moles of electrons transferred in the electrolysis.",
+          "distractors": [
+            { "answer": "atoms", "explanation": "Moles of metal atoms are found in a later step using the half-equation ratio, not directly from Q / F." },
+            { "answer": "ions", "explanation": "Q / F gives moles of electrons, not moles of ions; ions are on the other side of the half-equation." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the passage about the relationship between mass, moles, and molar mass.",
+      "sentence": "The formula m = n × M links the {{blank:1}} of a substance to its moles and {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "mass",
+          "correctExplanation": "The formula m = n × M calculates the mass (m) of a substance from its moles and molar mass.",
+          "distractors": [
+            { "answer": "charge", "explanation": "Charge is calculated using Q = n(e⁻) × F, not m = n × M; this formula relates to mass." },
+            { "answer": "volume", "explanation": "Volume is not part of this formula; m = n × M specifically relates mass to moles and molar mass." }
+          ]
+        },
+        "2": {
+          "correct": "molar mass",
+          "correctExplanation": "Molar mass (M) is the mass per mole of a substance, measured in g mol⁻¹, and is multiplied by moles to find mass.",
+          "distractors": [
+            { "answer": "atomic number", "explanation": "Atomic number is the number of protons, not the mass per mole; molar mass is the correct quantity." },
+            { "answer": "density", "explanation": "Density relates mass to volume; the formula m = n × M uses molar mass, not density." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the passage about Faraday's constant.",
+      "sentence": "Faraday's constant has a value of approximately {{blank:1}} C mol⁻¹ and represents the charge carried by one mole of {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "96 485",
+          "correctExplanation": "Faraday's constant is 96 485 coulombs per mole, representing the total charge of one mole of electrons.",
+          "distractors": [
+            { "answer": "9648.5", "explanation": "This is ten times too small; Faraday's constant is 96 485 C mol⁻¹, not 9648.5 C mol⁻¹." },
+            { "answer": "964 850", "explanation": "This is ten times too large; Faraday's constant is 96 485 C mol⁻¹, not 964 850 C mol⁻¹." }
+          ]
+        },
+        "2": {
+          "correct": "electrons",
+          "correctExplanation": "Faraday's constant represents the magnitude of charge carried by one mole of electrons (approximately 6.022 × 10²³ electrons).",
+          "distractors": [
+            { "answer": "protons", "explanation": "While protons carry the same magnitude of charge, Faraday's constant is defined for electrons in electrolysis." },
+            { "answer": "atoms", "explanation": "Atoms are electrically neutral and carry no net charge; Faraday's constant relates to charged particles (electrons)." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "mc",
+      "question": "Why is the balanced half-equation needed when calculating the mass of metal deposited?",
+      "correct": "It shows the mole ratio of electrons to the metal ion",
+      "correctExplanation": "The half-equation reveals how many electrons are required to reduce one metal ion, which is essential for converting moles of electrons into moles of metal.",
+      "distractors": [
+        { "answer": "It provides the voltage required for the cell", "explanation": "Voltage is related to electrode potentials, not the mass calculation; the half-equation is needed for the stoichiometric ratio." },
+        { "answer": "It determines the current needed for electrolysis", "explanation": "Current is an input value, not determined by the half-equation; the half-equation provides the electron-to-metal ratio." },
+        { "answer": "It shows the temperature of the electrolyte", "explanation": "Temperature does not appear in the half-equation; its purpose in this context is to show the electron-to-metal mole ratio." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student calculates Q = 4800 C and divides by F = 96 485 C mol⁻¹. What quantity has the student found?",
+      "correct": "The moles of electrons transferred",
+      "correctExplanation": "Dividing charge (Q) by Faraday's constant (F) gives the number of moles of electrons that flowed through the cell during electrolysis.",
+      "distractors": [
+        { "answer": "The mass of electrons transferred", "explanation": "Q / F gives moles, not mass; electrons have negligible mass compared to deposited metals." },
+        { "answer": "The charge carried per electron", "explanation": "The charge per electron is a constant (1.602 × 10⁻¹⁹ C); Q / F gives total moles of electrons." },
+        { "answer": "The number of individual electrons", "explanation": "Q / F gives moles of electrons, not the number of individual electrons; multiply by Avogadro's number for the count." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "For the half-equation Cu²⁺(aq) + 2e⁻ → Cu(s), what is the mole ratio of electrons to copper?",
+      "correct": "2 : 1",
+      "correctExplanation": "The half-equation shows that 2 moles of electrons are needed to reduce 1 mole of Cu²⁺ ions to 1 mole of copper metal.",
+      "distractors": [
+        { "answer": "1 : 2", "explanation": "This reverses the ratio; 2 electrons are consumed per copper atom, not 1 electron per 2 copper atoms." },
+        { "answer": "1 : 1", "explanation": "This would apply to a monovalent ion like Ag⁺; Cu²⁺ requires 2 electrons per ion, giving a 2 : 1 ratio." },
+        { "answer": "3 : 1", "explanation": "A 3 : 1 ratio applies to trivalent ions like Al³⁺ or Cr³⁺; Cu²⁺ requires only 2 electrons per ion." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which step in the four-step method converts the quantity of electrons into the quantity of deposited metal?",
+      "correct": "Using the half-equation mole ratio",
+      "correctExplanation": "The half-equation mole ratio (step 3) links the moles of electrons to the moles of metal by showing how many electrons reduce one metal ion.",
+      "distractors": [
+        { "answer": "Multiplying by Faraday's constant", "explanation": "Multiplying by Faraday's constant converts moles of electrons to charge, not moles of electrons to moles of metal." },
+        { "answer": "Dividing charge by current", "explanation": "Dividing charge by current gives time (t = Q / I), not moles of metal; the half-equation ratio is needed." },
+        { "answer": "Multiplying moles by the charge", "explanation": "Multiplying moles by charge mixes units incorrectly; the mole ratio from the half-equation performs this conversion." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "If a student forgets to convert time from minutes to seconds before using Q = It, how will the calculated mass be affected?",
+      "correct": "The mass will be 60 times too small",
+      "correctExplanation": "Using minutes instead of seconds makes Q sixty times smaller than the correct value, and since every subsequent step depends on Q, the final mass is also 60 times too small.",
+      "distractors": [
+        { "answer": "The mass will be 60 times too large", "explanation": "Failing to convert gives a smaller Q (not larger), because the numerical value in minutes is smaller than in seconds." },
+        { "answer": "The mass will not be affected", "explanation": "The time unit directly affects Q; using minutes instead of seconds produces a significantly incorrect answer." },
+        { "answer": "The mass will be 96 485 times too small", "explanation": "The factor of 96 485 relates to Faraday's constant, not the time conversion; the error from minutes is a factor of 60." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What does the molar mass of the deposited metal allow a student to calculate in the final step?",
+      "correct": "The mass of metal in grams from its moles",
+      "correctExplanation": "Multiplying the moles of metal by its molar mass (M, in g mol⁻¹) converts the amount in moles into a mass in grams.",
+      "distractors": [
+        { "answer": "The charge needed to deposit the metal", "explanation": "Charge is found earlier using Q = n(e⁻) × F; the molar mass is used only in the final mass calculation." },
+        { "answer": "The moles of electrons from the charge", "explanation": "Moles of electrons are found by dividing charge by Faraday's constant; molar mass is not involved in that step." },
+        { "answer": "The current required for electrolysis", "explanation": "Current is an experimental input, not calculated from molar mass; molar mass converts moles of metal to grams." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "For the half-equation Ag⁺(aq) + e⁻ → Ag(s), the moles of silver deposited equals the moles of electrons transferred.",
+      "correct": "True",
+      "correctExplanation": "The half-equation shows a 1 : 1 ratio between electrons and silver atoms, so one mole of electrons deposits exactly one mole of silver.",
+      "distractors": [
+        { "answer": "False", "explanation": "Students may assume all metals require 2 or more electrons, but Ag⁺ has a +1 charge and requires only one electron per ion." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the passage about the second step of the Faraday's law calculation.",
+      "sentence": "After calculating Q using Q = It, the next step is to determine the moles of electrons by dividing Q by {{blank:1}}, which has the symbol {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "Faraday's constant",
+          "correctExplanation": "Faraday's constant (F = 96 485 C mol⁻¹) is used to convert charge into moles of electrons.",
+          "distractors": [
+            { "answer": "the molar mass", "explanation": "Molar mass converts moles to grams in the final step; Faraday's constant converts charge to moles of electrons." },
+            { "answer": "the gas constant", "explanation": "The gas constant (R) is used in gas law calculations, not electrolysis; Faraday's constant is the correct divisor." }
+          ]
+        },
+        "2": {
+          "correct": "F",
+          "correctExplanation": "Faraday's constant is universally represented by the symbol F in electrochemistry equations.",
+          "distractors": [
+            { "answer": "R", "explanation": "R is the symbol for the universal gas constant; Faraday's constant uses the symbol F." },
+            { "answer": "M", "explanation": "M represents molar mass; the symbol for Faraday's constant is F." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the passage about aluminium production.",
+      "sentence": "For the half-equation Al³⁺ + 3e⁻ → Al, producing one mole of aluminium requires {{blank:1}} moles of electrons, so the charge needed is {{blank:2}} times Faraday's constant.",
+      "blanks": {
+        "1": {
+          "correct": "three",
+          "correctExplanation": "Al³⁺ has a 3+ charge, so three electrons are needed to reduce each aluminium ion to aluminium metal.",
+          "distractors": [
+            { "answer": "one", "explanation": "One electron would only partially reduce Al³⁺; three electrons are required to match the 3+ ionic charge." },
+            { "answer": "two", "explanation": "Two electrons apply to ions like Cu²⁺; aluminium has a 3+ charge and requires three electrons." }
+          ]
+        },
+        "2": {
+          "correct": "three",
+          "correctExplanation": "Since 3 moles of electrons are needed, the total charge is Q = 3 × F = 3 × 96 485 = 289 455 C.",
+          "distractors": [
+            { "answer": "one", "explanation": "One times F would only provide enough electrons for a monovalent ion like Ag⁺, not Al³⁺." },
+            { "answer": "two", "explanation": "Two times F provides only 2 moles of electrons, which is insufficient for Al³⁺ requiring 3 moles." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the passage about the final step in a Faraday's law calculation.",
+      "sentence": "The final step in finding the mass deposited is to {{blank:1}} the moles of metal by the {{blank:2}} of that metal.",
+      "blanks": {
+        "1": {
+          "correct": "multiply",
+          "correctExplanation": "Mass equals moles multiplied by molar mass (m = n × M), so multiplication is the correct operation.",
+          "distractors": [
+            { "answer": "divide", "explanation": "Dividing moles by molar mass would give an incorrect result; the formula m = n × M requires multiplication." },
+            { "answer": "subtract", "explanation": "Subtraction has no role in the m = n × M relationship; the correct operation is multiplication." }
+          ]
+        },
+        "2": {
+          "correct": "molar mass",
+          "correctExplanation": "Molar mass (in g mol⁻¹) converts moles into grams, completing the four-step calculation.",
+          "distractors": [
+            { "answer": "atomic number", "explanation": "Atomic number is the number of protons and has different units; molar mass (g mol⁻¹) is needed to find mass." },
+            { "answer": "ionic charge", "explanation": "Ionic charge determines the electron ratio but is not used in the final mass calculation; molar mass is needed." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "mc",
+      "question": "A current of 3.0 A flows for 20 minutes through a CuSO₄(aq) solution. Using Cu²⁺(aq) + 2e⁻ → Cu(s), what mass of copper is deposited? (M(Cu) = 63.55 g mol⁻¹, F = 96 485 C mol⁻¹)",
+      "correct": "1.2 g",
+      "correctExplanation": "Q = 3.0 × 1200 = 3600 C; n(e⁻) = 3600 / 96 485 = 0.0373 mol; n(Cu) = 0.0373 / 2 = 0.0187 mol; m = 0.0187 × 63.55 = 1.2 g.",
+      "distractors": [
+        { "answer": "2.4 g", "explanation": "This results from using n(Cu) = n(e⁻) without dividing by 2; Cu²⁺ requires 2 electrons per ion." },
+        { "answer": "0.020 g", "explanation": "This results from forgetting to convert 20 minutes to 1200 seconds, making Q sixty times too small." },
+        { "answer": "3.6 g", "explanation": "This results from using a 1:1 ratio and also multiplying by 3 for the current instead of using it correctly in Q = It." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Silver is electroplated from AgNO₃(aq) using Ag⁺(aq) + e⁻ → Ag(s). A current of 2.0 A flows for 15 minutes. What mass of silver is deposited? (M(Ag) = 107.87 g mol⁻¹, F = 96 485 C mol⁻¹)",
+      "correct": "2.0 g",
+      "correctExplanation": "Q = 2.0 × 900 = 1800 C; n(e⁻) = 1800 / 96 485 = 0.0187 mol; n(Ag) = 0.0187 mol (1:1 ratio); m = 0.0187 × 107.87 = 2.0 g.",
+      "distractors": [
+        { "answer": "1.0 g", "explanation": "This results from incorrectly dividing n(e⁻) by 2 as if silver were Ag²⁺; silver ions have a +1 charge." },
+        { "answer": "4.0 g", "explanation": "This results from incorrectly multiplying n(e⁻) by 2 before finding mass, doubling the correct answer." },
+        { "answer": "0.034 g", "explanation": "This results from using 15 (minutes) instead of 900 (seconds) for time in Q = It." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Chromium is electroplated using Cr³⁺(aq) + 3e⁻ → Cr(s). If 9650 C of charge passes through the cell, what mass of chromium is deposited? (M(Cr) = 52.00 g mol⁻¹, F = 96 485 C mol⁻¹)",
+      "correct": "1.7 g",
+      "correctExplanation": "n(e⁻) = 9650 / 96 485 = 0.100 mol; n(Cr) = 0.100 / 3 = 0.0333 mol; m = 0.0333 × 52.00 = 1.7 g.",
+      "distractors": [
+        { "answer": "5.2 g", "explanation": "This results from using a 1:1 ratio instead of dividing n(e⁻) by 3; Cr³⁺ requires 3 electrons per ion." },
+        { "answer": "2.6 g", "explanation": "This results from dividing n(e⁻) by 2 instead of 3, confusing the Cr³⁺ ratio with that of a 2+ ion." },
+        { "answer": "0.87 g", "explanation": "This results from dividing n(e⁻) by 6 instead of 3, perhaps doubling the required electron ratio." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Zinc is deposited from ZnSO₄(aq) using Zn²⁺(aq) + 2e⁻ → Zn(s). A current of 5.0 A flows for 10 minutes. What mass of zinc is deposited? (M(Zn) = 65.38 g mol⁻¹, F = 96 485 C mol⁻¹)",
+      "correct": "1.0 g",
+      "correctExplanation": "Q = 5.0 × 600 = 3000 C; n(e⁻) = 3000 / 96 485 = 0.0311 mol; n(Zn) = 0.0311 / 2 = 0.0155 mol; m = 0.0155 × 65.38 = 1.0 g.",
+      "distractors": [
+        { "answer": "2.0 g", "explanation": "This results from using a 1:1 electron-to-zinc ratio instead of dividing by 2." },
+        { "answer": "0.51 g", "explanation": "This results from dividing by 4 instead of 2, perhaps confusing the Zn²⁺ ratio with a higher-charged ion." },
+        { "answer": "0.017 g", "explanation": "This results from forgetting to convert 10 minutes to 600 seconds before calculating Q." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Gold is electroplated using Au³⁺(aq) + 3e⁻ → Au(s). A current of 1.5 A flows for 1.0 hour. What mass of gold is deposited? (M(Au) = 196.97 g mol⁻¹, F = 96 485 C mol⁻¹)",
+      "correct": "3.7 g",
+      "correctExplanation": "Q = 1.5 × 3600 = 5400 C; n(e⁻) = 5400 / 96 485 = 0.0560 mol; n(Au) = 0.0560 / 3 = 0.0187 mol; m = 0.0187 × 196.97 = 3.7 g.",
+      "distractors": [
+        { "answer": "11 g", "explanation": "This results from using a 1:1 ratio instead of dividing by 3; Au³⁺ requires 3 electrons per ion." },
+        { "answer": "5.5 g", "explanation": "This results from dividing n(e⁻) by 2 instead of 3, confusing the gold ion charge with Cu²⁺." },
+        { "answer": "1.8 g", "explanation": "This results from dividing n(e⁻) by 6 instead of 3, doubling the correct electron ratio." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Tin is deposited from SnSO₄(aq) using Sn²⁺(aq) + 2e⁻ → Sn(s). A current of 6.0 A flows for 25 minutes. What mass of tin is deposited? (M(Sn) = 118.71 g mol⁻¹, F = 96 485 C mol⁻¹)",
+      "correct": "5.5 g",
+      "correctExplanation": "Q = 6.0 × 1500 = 9000 C; n(e⁻) = 9000 / 96 485 = 0.0933 mol; n(Sn) = 0.0933 / 2 = 0.0466 mol; m = 0.0466 × 118.71 = 5.5 g.",
+      "distractors": [
+        { "answer": "11 g", "explanation": "This results from using a 1:1 ratio, not dividing n(e⁻) by 2; Sn²⁺ requires 2 electrons per ion." },
+        { "answer": "3.7 g", "explanation": "This results from dividing n(e⁻) by 3 instead of 2, confusing the tin ion charge with a 3+ ion." },
+        { "answer": "0.092 g", "explanation": "This results from forgetting to convert 25 minutes to 1500 seconds, making Q sixty times too small." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A nickel-plating bath uses Ni²⁺(aq) + 2e⁻ → Ni(s). If a current of 8.0 A runs for 30 minutes, what mass of nickel is deposited? (M(Ni) = 58.69 g mol⁻¹, F = 96 485 C mol⁻¹)",
+      "correct": "4.4 g",
+      "correctExplanation": "Q = 8.0 × 1800 = 14 400 C; n(e⁻) = 14 400 / 96 485 = 0.149 mol; n(Ni) = 0.149 / 2 = 0.0746 mol; m = 0.0746 × 58.69 = 4.4 g.",
+      "distractors": [
+        { "answer": "8.8 g", "explanation": "This results from using a 1:1 ratio instead of dividing by 2; Ni²⁺ requires 2 electrons per ion." },
+        { "answer": "2.9 g", "explanation": "This results from dividing n(e⁻) by 3 instead of 2, using the wrong electron-to-metal ratio." },
+        { "answer": "0.073 g", "explanation": "This results from forgetting to convert 30 minutes to 1800 seconds in the Q = It calculation." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the calculation for copper deposition.",
+      "sentence": "A current of 4.0 A flows through a CuSO₄ solution for 25 minutes. The charge is Q = 4.0 × {{blank:1}} = 6000 C, and the moles of electrons are n(e⁻) = 6000 / 96 485 = {{blank:2}} mol.",
+      "blanks": {
+        "1": {
+          "correct": "1500",
+          "correctExplanation": "25 minutes must be converted to seconds: 25 × 60 = 1500 s, which is then substituted into Q = It.",
+          "distractors": [
+            { "answer": "25", "explanation": "Using 25 (minutes) directly without converting to seconds would give Q = 100 C, which is 60 times too small." },
+            { "answer": "150", "explanation": "This results from multiplying 25 by 6 instead of 60; the correct conversion factor is 60 seconds per minute." }
+          ]
+        },
+        "2": {
+          "correct": "0.0622",
+          "correctExplanation": "n(e⁻) = 6000 / 96 485 = 0.0622 mol of electrons transferred during the electrolysis.",
+          "distractors": [
+            { "answer": "0.622", "explanation": "This is ten times too large, resulting from a decimal place error when dividing by Faraday's constant." },
+            { "answer": "6.22", "explanation": "This is one hundred times too large, resulting from a significant error in the division by 96 485." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the calculation for copper mass from moles of electrons.",
+      "sentence": "For Cu²⁺(aq) + 2e⁻ → Cu(s), if 0.100 mol of electrons are transferred, the moles of copper deposited are {{blank:1}} mol and the mass of copper is {{blank:2}} g. (M(Cu) = 63.55 g mol⁻¹)",
+      "blanks": {
+        "1": {
+          "correct": "0.0500",
+          "correctExplanation": "The half-equation shows a 2:1 electron-to-copper ratio, so n(Cu) = 0.100 / 2 = 0.0500 mol.",
+          "distractors": [
+            { "answer": "0.100", "explanation": "This uses a 1:1 ratio, but Cu²⁺ requires 2 electrons per ion, so the moles of copper are halved." },
+            { "answer": "0.200", "explanation": "This incorrectly multiplies n(e⁻) by 2 instead of dividing; the moles of metal are always fewer than or equal to the moles of electrons." }
+          ]
+        },
+        "2": {
+          "correct": "3.18",
+          "correctExplanation": "m = n × M = 0.0500 × 63.55 = 3.18 g of copper deposited.",
+          "distractors": [
+            { "answer": "6.36", "explanation": "This results from using 0.100 mol (undivided) instead of 0.0500 mol, doubling the correct mass." },
+            { "answer": "0.318", "explanation": "This is ten times too small due to a decimal place error in the multiplication step." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the passage about electroplating silver.",
+      "sentence": "When electroplating silver using Ag⁺(aq) + e⁻ → Ag(s), the mole ratio of electrons to silver is {{blank:1}}, so every mole of electrons deposits one mole of silver with a mass of {{blank:2}} g.",
+      "blanks": {
+        "1": {
+          "correct": "1 : 1",
+          "correctExplanation": "The half-equation shows one electron reduces one Ag⁺ ion, giving a 1 : 1 mole ratio.",
+          "distractors": [
+            { "answer": "2 : 1", "explanation": "A 2:1 ratio applies to divalent ions like Cu²⁺; silver has a +1 charge and requires only one electron." },
+            { "answer": "3 : 1", "explanation": "A 3:1 ratio applies to trivalent ions like Al³⁺ or Cr³⁺; silver requires only one electron per ion." }
+          ]
+        },
+        "2": {
+          "correct": "107.87",
+          "correctExplanation": "The molar mass of silver is 107.87 g mol⁻¹, so one mole of silver has a mass of 107.87 g.",
+          "distractors": [
+            { "answer": "63.55", "explanation": "63.55 g mol⁻¹ is the molar mass of copper, not silver; silver's molar mass is 107.87 g mol⁻¹." },
+            { "answer": "196.97", "explanation": "196.97 g mol⁻¹ is the molar mass of gold, not silver; silver's molar mass is 107.87 g mol⁻¹." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "mc",
+      "question": "Two electrolytic cells are connected in series so the same current flows through both. Cell A deposits copper from Cu²⁺(aq) + 2e⁻ → Cu(s) and Cell B deposits silver from Ag⁺(aq) + e⁻ → Ag(s). If 3.18 g of copper is deposited in Cell A, what mass of silver is deposited in Cell B? (M(Cu) = 63.55 g mol⁻¹, M(Ag) = 107.87 g mol⁻¹)",
+      "correct": "10.8 g",
+      "correctExplanation": "n(Cu) = 3.18 / 63.55 = 0.0500 mol; n(e⁻) = 0.0500 × 2 = 0.100 mol (same charge through both cells); n(Ag) = 0.100 mol (1:1 ratio); m(Ag) = 0.100 × 107.87 = 10.8 g.",
+      "distractors": [
+        { "answer": "5.39 g", "explanation": "This results from assuming equal moles of metal deposit in both cells (n(Ag) = n(Cu) = 0.0500 mol), ignoring the different electron-to-metal ratios." },
+        { "answer": "21.6 g", "explanation": "This results from incorrectly using 4 electrons for silver, doubling the moles of electrons before finding n(Ag)." },
+        { "answer": "3.18 g", "explanation": "This assumes equal mass deposits in both cells, ignoring both the different mole ratios and different molar masses." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student claims that doubling the current while halving the electrolysis time will deposit the same mass of metal. Evaluate this claim.",
+      "correct": "Correct, because Q = It remains the same",
+      "correctExplanation": "If current doubles (2I) and time halves (t/2), then Q = 2I × t/2 = It, which is unchanged. The same charge transfers the same moles of electrons, depositing the same mass.",
+      "distractors": [
+        { "answer": "Incorrect, because higher current deposits more mass", "explanation": "Higher current alone would increase mass, but the simultaneous halving of time exactly compensates, keeping Q constant." },
+        { "answer": "Incorrect, because halving the time reduces the mass", "explanation": "Halving time alone reduces mass, but doubling current exactly compensates; the product It determines mass, not either factor alone." },
+        { "answer": "Correct, but only if electrode area is doubled too", "explanation": "Electrode area does not appear in Faraday's law calculations; mass depends only on total charge, not electrode dimensions." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Experiment 1 uses 2.0 A for 30 minutes through CuSO₄(aq). Experiment 2 uses 4.0 A for 20 minutes through the same solution. Which experiment deposits more copper?",
+      "correct": "Experiment 2, because it delivers 4800 C compared to 3600 C",
+      "correctExplanation": "Exp 1: Q = 2.0 × 1800 = 3600 C. Exp 2: Q = 4.0 × 1200 = 4800 C. A larger charge means more electrons transferred and more copper deposited.",
+      "distractors": [
+        { "answer": "Experiment 1, because it runs for a longer time", "explanation": "Longer time does not guarantee more charge if the current is lower; total charge Q = It determines mass, and 3600 C < 4800 C." },
+        { "answer": "Both deposit the same mass of copper", "explanation": "The charges are different (3600 C vs 4800 C), so different masses are deposited; the products 2×30 and 4×20 are not equal when time is in seconds." },
+        { "answer": "Cannot be determined without the electrode area", "explanation": "Electrode area does not affect the total mass deposited in Faraday's law; only Q = It and the half-equation ratio matter." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student's working for copper deposition reads: Q = 5.0 × 1800 = 9000 C; n(e⁻) = 9000 / 96 485 = 0.0933 mol; n(Cu) = 0.0933 mol; m = 0.0933 × 63.55 = 5.9 g. Identify the error.",
+      "correct": "The student used a 1:1 ratio instead of dividing n(e⁻) by 2",
+      "correctExplanation": "Cu²⁺ + 2e⁻ → Cu requires dividing n(e⁻) by 2 to find n(Cu). The student set n(Cu) = n(e⁻), giving an answer twice the correct value of 3.0 g.",
+      "distractors": [
+        { "answer": "The student used the wrong molar mass for copper", "explanation": "63.55 g mol⁻¹ is the correct molar mass for copper; the error is in the mole ratio step, not the molar mass." },
+        { "answer": "The student made an error converting time to seconds", "explanation": "1800 seconds is correct for 30 minutes (30 × 60 = 1800); the time conversion is not the source of error." },
+        { "answer": "The student divided by the wrong value of Faraday's constant", "explanation": "96 485 C mol⁻¹ is the correct value of F; the error lies in skipping the half-equation ratio step." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student wants to double the mass of nickel deposited from Ni²⁺(aq) without changing the current. Which change would achieve this?",
+      "correct": "Double the electrolysis time",
+      "correctExplanation": "Since Q = It and current is fixed, doubling time doubles Q, which doubles n(e⁻), n(Ni), and therefore the mass of nickel.",
+      "distractors": [
+        { "answer": "Halve the electrolysis time", "explanation": "Halving time would halve the charge and therefore halve the mass, giving the opposite of the desired result." },
+        { "answer": "Double the NiSO₄ concentration", "explanation": "Concentration does not affect the mass deposited for a given charge; mass depends on Q = It and the mole ratio." },
+        { "answer": "Use larger electrodes", "explanation": "Electrode size does not change the total charge or moles of electrons; mass deposited depends on Q, not electrode area." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Two students both electrolyse CuSO₄(aq) using Cu²⁺ + 2e⁻ → Cu. Student A uses 2.0 A for 60 minutes. Student B uses 6.0 A for 20 minutes. Compare the masses of copper deposited.",
+      "correct": "Both deposit the same mass of copper",
+      "correctExplanation": "Student A: Q = 2.0 × 3600 = 7200 C. Student B: Q = 6.0 × 1200 = 7200 C. Equal charge means equal moles of electrons and equal mass deposited.",
+      "distractors": [
+        { "answer": "Student A deposits more because the time is longer", "explanation": "Longer time alone does not mean more charge; Q = It depends on both current and time, and both give 7200 C." },
+        { "answer": "Student B deposits more because the current is higher", "explanation": "Higher current alone does not mean more charge; the shorter time compensates, giving the same Q = 7200 C." },
+        { "answer": "Student B deposits three times as much as Student A", "explanation": "Although Student B's current is three times larger, the time is one-third as long, so the total charge is identical." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student calculates that 0.50 g of copper should deposit from a cell running at 10.0 A for 5.0 seconds (Cu²⁺ + 2e⁻ → Cu, M(Cu) = 63.55 g mol⁻¹, F = 96 485 C mol⁻¹). Assess this answer.",
+      "correct": "The answer is too large; the correct mass is about 0.016 g",
+      "correctExplanation": "Q = 10.0 × 5.0 = 50 C; n(e⁻) = 50 / 96 485 = 0.000518 mol; n(Cu) = 0.000259 mol; m = 0.000259 × 63.55 = 0.016 g. The student's answer is about 30 times too large.",
+      "distractors": [
+        { "answer": "The answer of 0.50 g is correct for those conditions", "explanation": "The correct mass is only 0.016 g; 0.50 g greatly overestimates the mass for just 50 C of charge." },
+        { "answer": "The answer is too small; more copper would deposit", "explanation": "At only 50 C of charge, very little copper deposits; 0.50 g is already far too large, not too small." },
+        { "answer": "The answer cannot be assessed without the cell voltage", "explanation": "Faraday's law calculations require only current, time, and the half-equation; voltage is not needed to find mass." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A report claims that passing 2.0 A through molten NaCl for 1.0 hour deposits 0.86 g of sodium (Na⁺ + e⁻ → Na, M(Na) = 22.99 g mol⁻¹, F = 96 485 C mol⁻¹). Evaluate this claim.",
+      "correct": "The claim is too low; the correct mass is approximately 1.7 g",
+      "correctExplanation": "Q = 2.0 × 3600 = 7200 C; n(e⁻) = 7200 / 96 485 = 0.0746 mol; n(Na) = 0.0746 mol (1:1); m = 0.0746 × 22.99 = 1.7 g. The reported 0.86 g is about half the correct value.",
+      "distractors": [
+        { "answer": "The claim of 0.86 g is accurate for those conditions", "explanation": "The correct calculation gives 1.7 g, which is about double the reported value; the claim significantly underestimates the mass." },
+        { "answer": "The claim is too high; less sodium would deposit", "explanation": "The calculated mass is 1.7 g, which is larger than 0.86 g; the claim is an underestimate, not an overestimate." },
+        { "answer": "The claim cannot be verified without the cell voltage", "explanation": "Faraday's law only requires current, time, and the half-equation to calculate mass; voltage is not needed." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the passage comparing electrolytic cells connected in series.",
+      "sentence": "In the four-step calculation, if the charge is kept constant but the metal ion has a higher ionic charge, fewer moles of metal are deposited because more {{blank:1}} are needed per atom of metal. However, if that metal also has a larger {{blank:2}}, each mole contributes more grams to the final mass.",
+      "blanks": {
+        "1": {
+          "correct": "electrons",
+          "correctExplanation": "A higher ionic charge means more electrons are consumed to reduce each ion, leaving fewer moles of metal for the same total charge.",
+          "distractors": [
+            { "answer": "coulombs", "explanation": "Coulombs measure total charge, not the per-atom requirement; the ratio involves electrons, not coulombs directly." },
+            { "answer": "protons", "explanation": "Protons are in the nucleus and are not transferred during electrolysis; electrons are the particles transferred." }
+          ]
+        },
+        "2": {
+          "correct": "molar mass",
+          "correctExplanation": "A larger molar mass means each mole of metal weighs more, which can partially or fully offset having fewer moles.",
+          "distractors": [
+            { "answer": "atomic number", "explanation": "Atomic number indicates proton count, not mass per mole; molar mass determines the grams per mole of metal." },
+            { "answer": "ionic radius", "explanation": "Ionic radius affects physical properties but does not determine the mass of metal deposited per mole." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the passage comparing copper and silver deposition in series cells.",
+      "sentence": "When series-connected cells carry the same charge, a cell depositing Ag from Ag⁺ produces {{blank:1}} moles of metal than a cell depositing Cu from Cu²⁺, because silver requires {{blank:2}} electron(s) per ion.",
+      "blanks": {
+        "1": {
+          "correct": "more",
+          "correctExplanation": "Ag⁺ needs only 1 electron per ion while Cu²⁺ needs 2, so for the same total electrons, more moles of silver are produced.",
+          "distractors": [
+            { "answer": "fewer", "explanation": "Silver needs fewer electrons per ion (1 vs 2), so it produces more moles of metal, not fewer, for the same charge." },
+            { "answer": "the same", "explanation": "The different ionic charges (1+ vs 2+) mean different moles of metal are produced from the same number of electrons." }
+          ]
+        },
+        "2": {
+          "correct": "only one",
+          "correctExplanation": "The half-equation Ag⁺ + e⁻ → Ag shows that each silver ion requires just one electron to be reduced to silver metal.",
+          "distractors": [
+            { "answer": "two", "explanation": "Two electrons per ion applies to Cu²⁺, Zn²⁺, and Ni²⁺; Ag⁺ has a +1 charge and needs only one electron." },
+            { "answer": "three", "explanation": "Three electrons per ion applies to Al³⁺, Cr³⁺, and Au³⁺; Ag⁺ has a +1 charge and needs only one electron." }
+          ]
+        }
+      }
+    }
+  ]
+}

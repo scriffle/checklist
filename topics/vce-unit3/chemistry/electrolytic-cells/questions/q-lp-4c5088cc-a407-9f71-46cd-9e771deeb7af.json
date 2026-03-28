@@ -1,0 +1,567 @@
+{
+  "_link": {
+    "uuid": "lp-4c5088cc-a407-9f71-46cd-9e771deeb7af",
+    "version": 1,
+    "contentHash": "hash-edebc8bb",
+    "title": "I can calculate the quantity of charge using Q = n(e-) x F and convert between charge, current and time using Q = It",
+    "generatedAt": "2026-03-28T08:20:00Z"
+  },
+  "toLevel2": [
+    {
+      "type": "mc",
+      "question": "What is the formula used to calculate the quantity of charge from moles of electrons?",
+      "correct": "Q = n(e⁻) × F",
+      "correctExplanation": "The charge in coulombs equals the moles of electrons multiplied by Faraday's constant (96 485 C mol⁻¹).",
+      "distractors": [
+        { "answer": "Q = n(e⁻) / F", "explanation": "Dividing by Faraday's constant would give a very small number; the correct operation is multiplication." },
+        { "answer": "Q = n(e⁻) × R", "explanation": "R is the gas constant used in gas law calculations, not in charge calculations; Faraday's constant F is used." },
+        { "answer": "Q = n(e⁻) + F", "explanation": "Adding moles and Faraday's constant is meaningless; the relationship is multiplicative, not additive." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "In the equation Q = It, what does I represent?",
+      "correct": "Current in amperes",
+      "correctExplanation": "I is the symbol for electric current, measured in amperes (A).",
+      "distractors": [
+        { "answer": "Charge in coulombs", "explanation": "Charge is represented by Q, not I; I represents the current flowing through the circuit." },
+        { "answer": "Time in seconds", "explanation": "Time is represented by t, not I; I represents the current in amperes." },
+        { "answer": "Voltage in volts", "explanation": "Voltage is represented by V or E, not I; I specifically represents current." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "If 0.050 mol of electrons is transferred, what is the charge in coulombs? (F = 96 485 C mol⁻¹)",
+      "correct": "4824 C",
+      "correctExplanation": "Q = n(e⁻) × F = 0.050 × 96 485 = 4824 C.",
+      "distractors": [
+        { "answer": "48.24 C", "explanation": "This is 100 times too small, likely from using 0.00050 mol instead of 0.050 mol." },
+        { "answer": "1 929 700 C", "explanation": "This results from dividing F by n instead of multiplying; Q = n × F, not F/n." },
+        { "answer": "9649 C", "explanation": "This results from using 0.10 mol instead of 0.050 mol; check the moles of electrons given." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "How is Q = It rearranged to find the time required for electrolysis?",
+      "correct": "t = Q / I",
+      "correctExplanation": "Dividing both sides of Q = It by I gives t = Q/I, allowing time to be calculated from charge and current.",
+      "distractors": [
+        { "answer": "t = Q × I", "explanation": "Multiplying Q by I would give Q²/t, not time; the correct rearrangement divides Q by I." },
+        { "answer": "t = I / Q", "explanation": "This inverts the relationship; dividing current by charge does not give time." },
+        { "answer": "t = Q − I", "explanation": "Subtraction is not the correct operation; Q = It is a multiplicative relationship." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What is the approximate value of Faraday's constant?",
+      "correct": "96 485 C mol⁻¹",
+      "correctExplanation": "Faraday's constant equals the charge carried by one mole of electrons, approximately 96 485 coulombs per mole.",
+      "distractors": [
+        { "answer": "9648 C mol⁻¹", "explanation": "This is approximately ten times too small; Faraday's constant is about 96 485 C mol⁻¹." },
+        { "answer": "96 485 J mol⁻¹", "explanation": "The unit is coulombs per mole, not joules per mole; Faraday's constant measures charge." },
+        { "answer": "8.314 C mol⁻¹", "explanation": "8.314 is the gas constant R in J mol⁻¹ K⁻¹; Faraday's constant is much larger at 96 485 C mol⁻¹." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "The equation Q = It can be rearranged to find either the current or the time if the other two quantities are known.",
+      "correct": "True",
+      "correctExplanation": "Q = It can be rearranged to I = Q/t or t = Q/I, allowing any one variable to be found from the other two.",
+      "distractors": [
+        { "answer": "False", "explanation": "Students may think Q = It can only be used in one direction, but algebraic rearrangement allows finding any variable." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "One mole of electrons carries a charge of approximately 96 485 coulombs.",
+      "correct": "True",
+      "correctExplanation": "Faraday's constant (96 485 C mol⁻¹) is defined as the charge carried by one mole of electrons.",
+      "distractors": [
+        { "answer": "False", "explanation": "Students may confuse Faraday's constant with other constants, but 96 485 C mol⁻¹ is the correct value." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about calculating charge.",
+      "sentence": "To find the total charge transferred, multiply the moles of {{blank:1}} by {{blank:2}} constant.",
+      "blanks": {
+        "1": {
+          "correct": "electrons",
+          "correctExplanation": "The charge is calculated from the number of moles of electrons transferred during electrolysis.",
+          "distractors": [
+            { "answer": "atoms", "explanation": "Moles of atoms are used to find mass; moles of electrons are used to find charge." },
+            { "answer": "ions", "explanation": "While ions carry charge, Faraday's law uses moles of electrons multiplied by F to find total charge." }
+          ]
+        },
+        "2": {
+          "correct": "Faraday's",
+          "correctExplanation": "Faraday's constant (96 485 C mol⁻¹) converts moles of electrons to charge in coulombs.",
+          "distractors": [
+            { "answer": "Avogadro's", "explanation": "Avogadro's constant converts moles to number of particles, not to charge in coulombs." },
+            { "answer": "Boltzmann's", "explanation": "Boltzmann's constant relates temperature to energy, not moles of electrons to charge." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the relationship between charge, current and time.",
+      "sentence": "In Q = It, charge is measured in {{blank:1}} when current is in amperes and time is in {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "coulombs",
+          "correctExplanation": "One coulomb equals one ampere-second (1 C = 1 A × 1 s).",
+          "distractors": [
+            { "answer": "joules", "explanation": "Joules measure energy, not charge; charge is measured in coulombs." },
+            { "answer": "volts", "explanation": "Volts measure electrical potential difference, not charge; charge is measured in coulombs." }
+          ]
+        },
+        "2": {
+          "correct": "seconds",
+          "correctExplanation": "The equation Q = It requires time in seconds for the charge to be in coulombs.",
+          "distractors": [
+            { "answer": "minutes", "explanation": "Minutes must be converted to seconds before use in Q = It; the equation requires SI units." },
+            { "answer": "hours", "explanation": "Hours must be converted to seconds (×3600) before substituting into Q = It." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the rearrangement of Q = It.",
+      "sentence": "To find the current, rearrange Q = It to give I = {{blank:1}}.",
+      "blanks": {
+        "1": {
+          "correct": "Q / t",
+          "correctExplanation": "Dividing both sides of Q = It by t isolates I, giving I = Q/t.",
+          "distractors": [
+            { "answer": "Q × t", "explanation": "Multiplying Q by t does not isolate I; the correct rearrangement is I = Q/t." },
+            { "answer": "t / Q", "explanation": "This inverts the relationship; the correct rearrangement is I = Q/t, not t/Q." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "mc",
+      "question": "Why are two separate equations (Q = n(e⁻) × F and Q = It) needed in Faraday's law calculations?",
+      "correct": "One links charge to chemistry; the other links charge to electrical measurements",
+      "correctExplanation": "Q = n(e⁻) × F connects charge to moles of electrons (chemistry), while Q = It connects charge to current and time (electrical quantities).",
+      "distractors": [
+        { "answer": "They are used for different types of electrolytic cells only", "explanation": "Both equations apply to all electrolytic cells; they address different aspects of the same calculation." },
+        { "answer": "One is used for the anode and the other is used for the cathode", "explanation": "Both equations apply to any electrode; they connect chemical and electrical quantities, not specific electrodes." },
+        { "answer": "One calculates mass directly and the other calculates volume", "explanation": "Neither equation directly gives mass or volume; they both calculate charge, which is then used in further steps." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A charge of 19 300 C is passed through a cell. How many moles of electrons does this represent? (F = 96 485 C mol⁻¹)",
+      "correct": "0.200 mol",
+      "correctExplanation": "n(e⁻) = Q/F = 19 300/96 485 = 0.200 mol of electrons.",
+      "distractors": [
+        { "answer": "1.86 × 10⁹ mol", "explanation": "This results from multiplying Q × F instead of dividing; n(e⁻) = Q/F." },
+        { "answer": "5.00 mol", "explanation": "This results from dividing by an incorrect value; using the correct F gives 0.200 mol." },
+        { "answer": "0.0200 mol", "explanation": "This is ten times too small; 19 300/96 485 = 0.200, not 0.0200." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Explain why Q = It gives charge in coulombs only when time is in seconds.",
+      "correct": "An ampere is defined as one coulomb per second",
+      "correctExplanation": "Since 1 A = 1 C/s, multiplying amperes by seconds gives coulombs. Using minutes would give ampere-minutes, not coulombs.",
+      "distractors": [
+        { "answer": "Coulombs are only valid when measured over one-second intervals", "explanation": "Coulombs measure total charge regardless of time interval; the issue is unit consistency in the equation." },
+        { "answer": "Faraday's constant is defined in terms of seconds, not minutes", "explanation": "Faraday's constant has units of C/mol, not involving seconds; the issue is the definition of the ampere." },
+        { "answer": "The equation was originally derived using seconds and cannot be adapted", "explanation": "The equation works with any consistent units, but ampere × seconds = coulombs is the standard SI form." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "If a current of 3.0 A flows for 1200 s, what is the total charge passed?",
+      "correct": "3600 C",
+      "correctExplanation": "Q = It = 3.0 × 1200 = 3600 C.",
+      "distractors": [
+        { "answer": "400 C", "explanation": "This results from dividing 1200 by 3.0 instead of multiplying; Q = I × t." },
+        { "answer": "0.0025 C", "explanation": "This results from dividing I by t; the correct calculation multiplies current by time." },
+        { "answer": "3603 C", "explanation": "This results from adding I and t instead of multiplying; Q = I × t, not I + t." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student needs to find the current used in an electrolysis experiment. They know Q = 4825 C and t = 965 s. Which rearrangement is correct?",
+      "correct": "I = Q/t = 4825/965 = 5.0 A",
+      "correctExplanation": "Rearranging Q = It gives I = Q/t. Substituting: I = 4825/965 = 5.0 A.",
+      "distractors": [
+        { "answer": "I = t/Q = 965/4825 = 0.20 A", "explanation": "This inverts the division; the correct rearrangement is I = Q/t, not t/Q." },
+        { "answer": "I = Q × t = 4 655 625 A", "explanation": "Multiplying Q by t does not give current; the correct operation is I = Q/t." },
+        { "answer": "I = Q − t = 3860 A", "explanation": "Subtraction is not the correct operation; Q = It requires division to isolate I." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What does Faraday's constant represent physically?",
+      "correct": "The total charge carried by one mole of electrons",
+      "correctExplanation": "F = 96 485 C mol⁻¹ is the charge of Avogadro's number of electrons (6.022 × 10²³ × 1.602 × 10⁻¹⁹ C).",
+      "distractors": [
+        { "answer": "The mass of one mole of electrons in grams", "explanation": "Electron mass is negligible (5.49 × 10⁻⁴ g/mol); Faraday's constant measures charge, not mass." },
+        { "answer": "The number of electrons in one coulomb of charge", "explanation": "This inverts the relationship; F is the charge per mole, not the number per coulomb." },
+        { "answer": "The energy released when one mole of electrons flows", "explanation": "Energy depends on voltage; Faraday's constant measures charge only, independent of energy." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "To find moles of electrons from charge, the equation n(e⁻) = Q/F is used.",
+      "correct": "True",
+      "correctExplanation": "Rearranging Q = n(e⁻) × F gives n(e⁻) = Q/F, allowing moles of electrons to be found from the charge.",
+      "distractors": [
+        { "answer": "False", "explanation": "Students may think Q must always be calculated first, but the equation can be rearranged to find any variable." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about connecting the two equations.",
+      "sentence": "The quantity {{blank:1}} is the common variable that links Q = n(e⁻) × F to Q = It.",
+      "blanks": {
+        "1": {
+          "correct": "Q",
+          "correctExplanation": "Charge (Q) appears in both equations, allowing moles of electrons to be connected to current and time.",
+          "distractors": [
+            { "answer": "F", "explanation": "Faraday's constant appears only in Q = n(e⁻) × F; Q is the variable shared by both equations." },
+            { "answer": "I", "explanation": "Current (I) appears only in Q = It; Q is the quantity common to both equations." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the worked calculation.",
+      "sentence": "If 0.10 mol of electrons is transferred at 5.0 A, the time required is t = Q/I = {{blank:1}}/5.0 = {{blank:2}} s.",
+      "blanks": {
+        "1": {
+          "correct": "9650",
+          "correctExplanation": "Q = n(e⁻) × F = 0.10 × 96 485 ≈ 9650 C.",
+          "distractors": [
+            { "answer": "965", "explanation": "This is ten times too small; 0.10 × 96 485 ≈ 9650, not 965." },
+            { "answer": "96 485", "explanation": "This uses 1.0 mol instead of 0.10 mol; the correct charge is 0.10 × 96 485 ≈ 9650 C." }
+          ]
+        },
+        "2": {
+          "correct": "1930",
+          "correctExplanation": "t = 9650/5.0 = 1930 s, which is approximately 32 minutes.",
+          "distractors": [
+            { "answer": "193", "explanation": "This is ten times too small; 9650 ÷ 5.0 = 1930, not 193." },
+            { "answer": "48 250", "explanation": "This results from multiplying Q × I instead of dividing; t = Q/I." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the unit of charge.",
+      "sentence": "One coulomb is equivalent to the charge transferred by a current of one {{blank:1}} flowing for one {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "ampere",
+          "correctExplanation": "By definition, 1 C = 1 A × 1 s, so one ampere flowing for one second transfers one coulomb.",
+          "distractors": [
+            { "answer": "volt", "explanation": "A volt measures potential difference, not current; the ampere is the unit of current." },
+            { "answer": "ohm", "explanation": "An ohm measures resistance, not current; one coulomb is one ampere-second." }
+          ]
+        },
+        "2": {
+          "correct": "second",
+          "correctExplanation": "The coulomb is defined as the charge transferred by one ampere in one second.",
+          "distractors": [
+            { "answer": "minute", "explanation": "One ampere for one minute gives 60 coulombs, not one; the definition uses seconds." },
+            { "answer": "hour", "explanation": "One ampere for one hour gives 3600 coulombs; the definition of one coulomb uses one second." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "mc",
+      "question": "A current of 8.0 A passes through a solution for 45 minutes. Calculate the moles of electrons transferred. (F = 96 485 C mol⁻¹)",
+      "correct": "0.22 mol",
+      "correctExplanation": "t = 45 × 60 = 2700 s; Q = 8.0 × 2700 = 21 600 C; n(e⁻) = 21 600/96 485 = 0.224 ≈ 0.22 mol.",
+      "distractors": [
+        { "answer": "0.0037 mol", "explanation": "This results from using 45 s instead of converting 45 minutes to 2700 s before calculating." },
+        { "answer": "360 mol", "explanation": "This results from dividing Q by the time instead of by Faraday's constant." },
+        { "answer": "13.4 mol", "explanation": "This results from multiplying Q × F instead of dividing; n(e⁻) = Q/F." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An experiment requires 0.500 mol of electrons to be transferred. If the current is 10.0 A, how long will the electrolysis take?",
+      "correct": "4824 s (approximately 80 minutes)",
+      "correctExplanation": "Q = 0.500 × 96 485 = 48 243 C; t = Q/I = 48 243/10.0 = 4824 s ≈ 80.4 minutes.",
+      "distractors": [
+        { "answer": "50 s (less than one minute)", "explanation": "This results from using n(e⁻)/I directly without first calculating Q via Faraday's constant." },
+        { "answer": "9 648 500 s (over 100 days)", "explanation": "This results from multiplying Q × I instead of dividing; t = Q/I, not Q × I." },
+        { "answer": "482 s (approximately 8 minutes)", "explanation": "This is ten times too small, likely from using 0.0500 mol instead of 0.500 mol." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A charge of 57 900 C is delivered at a constant current over 2.0 hours. What is the current?",
+      "correct": "8.0 A",
+      "correctExplanation": "t = 2.0 × 3600 = 7200 s; I = Q/t = 57 900/7200 = 8.04 ≈ 8.0 A.",
+      "distractors": [
+        { "answer": "482.5 A", "explanation": "This results from using 2.0 hours as 120 minutes but not converting to seconds; t must be in seconds." },
+        { "answer": "28 950 A", "explanation": "This results from dividing Q by 2.0 (hours) instead of 7200 (seconds); time must be in seconds." },
+        { "answer": "0.12 A", "explanation": "This results from dividing t by Q instead of Q by t; I = Q/t, not t/Q." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "In an electroplating experiment, 1.50 A flows for 20.0 minutes. A student calculates Q = 1.50 × 20.0 = 30.0 C. Identify and correct the error.",
+      "correct": "Time was not converted; Q = 1.50 × 1200 = 1800 C",
+      "correctExplanation": "20.0 min = 1200 s. The student used minutes directly: Q = 1.50 × 1200 = 1800 C is correct.",
+      "distractors": [
+        { "answer": "Current should be divided by time; Q = 1.50/20.0 = 0.075 C", "explanation": "Q = It requires multiplication, not division; the error was using minutes instead of seconds." },
+        { "answer": "The calculation is correct; Q = 30.0 C is the right answer", "explanation": "Using minutes in Q = It gives the wrong unit; 20.0 min must be converted to 1200 s first." },
+        { "answer": "Faraday's constant was not applied; Q = 30.0 × 96 485 C", "explanation": "Q = It does not involve Faraday's constant; the error is purely a time unit conversion issue." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Two electrolysis experiments pass the same total charge. Experiment A uses 2.0 A for 4000 s. Experiment B uses 4.0 A for 2000 s. What can be concluded?",
+      "correct": "Both transfer the same charge (8000 C) and produce equal amounts of product",
+      "correctExplanation": "Q_A = 2.0 × 4000 = 8000 C and Q_B = 4.0 × 2000 = 8000 C. Equal charge means equal moles of electrons and equal product.",
+      "distractors": [
+        { "answer": "Experiment B produces more product because the current is higher", "explanation": "Product depends on total charge, not current alone; both experiments transfer 8000 C." },
+        { "answer": "Experiment A produces more product because it runs for longer", "explanation": "Longer time does not mean more product if current is lower; total charge determines product amount." },
+        { "answer": "The experiments cannot be compared without knowing the electrode materials", "explanation": "Since charge is equal, moles of electrons are equal regardless of electrode material; product amounts are the same." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A factory needs to pass 0.300 mol of electrons through a cell in exactly 1.00 hour. What current is required? (F = 96 485 C mol⁻¹)",
+      "correct": "8.04 A",
+      "correctExplanation": "Q = 0.300 × 96 485 = 28 946 C; t = 3600 s; I = 28 946/3600 = 8.04 A.",
+      "distractors": [
+        { "answer": "28 946 A", "explanation": "This uses t = 1 (the number of hours) instead of 3600 s; time must be converted to seconds." },
+        { "answer": "0.300 A", "explanation": "This incorrectly uses n(e⁻) as the current; the charge must first be calculated using Q = nF." },
+        { "answer": "482.4 A", "explanation": "This uses t = 60 s (one minute) instead of 3600 s (one hour); the full hour must be converted." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "During electrolysis, 0.150 mol of electrons is transferred. If the current was 2.50 A, how long did the process take?",
+      "correct": "5790 s (approximately 96.5 minutes)",
+      "correctExplanation": "Q = 0.150 × 96 485 = 14 473 C; t = Q/I = 14 473/2.50 = 5789 ≈ 5790 s.",
+      "distractors": [
+        { "answer": "0.060 s (a fraction of a second)", "explanation": "This results from using n(e⁻)/I without calculating Q first; the charge must be found using Q = nF." },
+        { "answer": "96.5 s (about 1.6 minutes)", "explanation": "This is 60 times too small, likely from an error in time conversion at the final step." },
+        { "answer": "36 181 s (over 10 hours)", "explanation": "This results from multiplying Q × I instead of dividing; t = Q/I." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the calculation steps.",
+      "sentence": "For 0.20 mol of electrons: Q = 0.20 × {{blank:1}} = {{blank:2}} C.",
+      "blanks": {
+        "1": {
+          "correct": "96 485",
+          "correctExplanation": "Faraday's constant (96 485 C mol⁻¹) is multiplied by moles of electrons to give charge.",
+          "distractors": [
+            { "answer": "6.022 × 10²³", "explanation": "Avogadro's number converts moles to particles; Faraday's constant converts moles of electrons to charge." },
+            { "answer": "8.314", "explanation": "8.314 is the gas constant R; the correct constant for charge calculations is F = 96 485." }
+          ]
+        },
+        "2": {
+          "correct": "19 297",
+          "correctExplanation": "Q = 0.20 × 96 485 = 19 297 C.",
+          "distractors": [
+            { "answer": "1930", "explanation": "This is approximately ten times too small, resulting from using 0.020 mol instead of 0.20 mol." },
+            { "answer": "482 425", "explanation": "This results from dividing F by n instead of multiplying; Q = n × F." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about finding current.",
+      "sentence": "If Q = 14 400 C and t = 1800 s, then I = {{blank:1}} / {{blank:2}} = 8.0 A.",
+      "blanks": {
+        "1": {
+          "correct": "14 400",
+          "correctExplanation": "The charge (Q = 14 400 C) is the numerator when rearranging Q = It to I = Q/t.",
+          "distractors": [
+            { "answer": "1800", "explanation": "1800 is the time value; the charge (14 400 C) must be in the numerator." },
+            { "answer": "96 485", "explanation": "Faraday's constant is not used in this step; Q/t directly gives the current." }
+          ]
+        },
+        "2": {
+          "correct": "1800",
+          "correctExplanation": "The time (t = 1800 s) is the denominator when calculating I = Q/t.",
+          "distractors": [
+            { "answer": "14 400", "explanation": "14 400 is the charge value; the time (1800 s) must be in the denominator." },
+            { "answer": "96 485", "explanation": "Faraday's constant divides charge to give moles, not current; current uses I = Q/t." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the two key equations.",
+      "sentence": "Q = n(e⁻) × F converts between {{blank:1}} and charge, while Q = It converts between charge and {{blank:2}} quantities.",
+      "blanks": {
+        "1": {
+          "correct": "moles of electrons",
+          "correctExplanation": "Q = n(e⁻) × F links the chemical quantity (moles of electrons) to the electrical quantity (charge).",
+          "distractors": [
+            { "answer": "mass of product", "explanation": "Mass is found in a separate step using m = nM; Q = nF directly links moles of electrons to charge." },
+            { "answer": "volume of gas", "explanation": "Volume requires the molar volume; Q = nF specifically connects moles of electrons to charge." }
+          ]
+        },
+        "2": {
+          "correct": "electrical",
+          "correctExplanation": "Q = It connects charge to current and time, which are electrical measurements made with instruments.",
+          "distractors": [
+            { "answer": "chemical", "explanation": "Chemical quantities are linked by Q = nF; Q = It links charge to electrical quantities (current and time)." },
+            { "answer": "thermal", "explanation": "Thermal quantities relate to heat; Q = It connects charge to current and time." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "mc",
+      "question": "A student claims that doubling the current while halving the time will always produce the same amount of product. Evaluate this claim.",
+      "correct": "The claim is correct because total charge Q = It remains unchanged",
+      "correctExplanation": "If I doubles and t halves, Q = (2I)(t/2) = It, so the charge and therefore the moles of electrons and product are the same.",
+      "distractors": [
+        { "answer": "The claim is incorrect because higher current always produces more product", "explanation": "Product depends on total charge, not current alone; if Q is constant, product is constant." },
+        { "answer": "The claim is incorrect because shorter time means fewer electrons are transferred", "explanation": "Fewer seconds at higher current gives the same total charge; electrons transferred depends on Q, not t alone." },
+        { "answer": "The claim is only true for specific metals with 2+ charge ions", "explanation": "The relationship Q = It is independent of the metal being deposited; it applies universally." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Compare the information provided by Q = n(e⁻) × F and Q = It. Why are both equations necessary rather than a single combined equation?",
+      "correct": "They bridge different measurement domains: chemical amounts and electrical instruments",
+      "correctExplanation": "n(e⁻)F connects to chemistry (moles, half-equations) while It connects to laboratory instruments (ammeter, stopwatch). Both are needed to link theory to experiment.",
+      "distractors": [
+        { "answer": "A single combined equation would be too mathematically complex to use", "explanation": "The equations can easily be combined (n(e⁻) = It/F), but keeping them separate clarifies the conceptual steps." },
+        { "answer": "The two equations apply to different types of electrolytic cells only", "explanation": "Both equations apply to all electrolytic cells; they address different aspects of the same process." },
+        { "answer": "Only one equation is needed; the other is redundant and never used", "explanation": "Both equations are essential; one links to chemistry and the other to measurable electrical quantities." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An engineer needs to deposit a specific mass of copper. They can choose between 5.0 A for a long time or 50.0 A for a shorter time. What factors beyond total charge should influence the decision?",
+      "correct": "Higher current may cause overheating, uneven deposition, or energy losses from resistance",
+      "correctExplanation": "While total charge determines mass deposited, practical factors like heat generation (I²R losses), deposit quality, and equipment ratings matter at high currents.",
+      "distractors": [
+        { "answer": "There are no other factors; only total charge matters for the final product", "explanation": "In practice, current magnitude affects deposit quality, energy efficiency, and equipment safety." },
+        { "answer": "Higher current always produces a purer deposit with fewer impurities", "explanation": "Very high currents can actually produce rougher, less uniform deposits due to rapid, uncontrolled deposition." },
+        { "answer": "Lower current requires a fundamentally different chemical reaction to occur", "explanation": "The same reaction occurs regardless of current; only the rate and practical factors differ." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student measures a charge of 9650 C but calculates n(e⁻) = 9650 × 96 485 = 9.31 × 10⁸ mol. Analyse the error.",
+      "correct": "The student multiplied by F instead of dividing; n(e⁻) = Q/F = 0.100 mol",
+      "correctExplanation": "To find moles from charge, divide by F: n(e⁻) = 9650/96 485 = 0.100 mol. Multiplying gives an absurdly large answer.",
+      "distractors": [
+        { "answer": "The student used the wrong value of Faraday's constant for this calculation", "explanation": "The value of F is correct; the error is in the operation (multiplication instead of division)." },
+        { "answer": "The calculation is correct; 9.31 × 10⁸ mol of electrons were actually transferred", "explanation": "This would require impossibly large currents; the answer of 0.100 mol from Q/F is reasonable." },
+        { "answer": "The student should have subtracted F from Q to find the moles of electrons", "explanation": "Subtraction is not the correct operation; the rearrangement of Q = nF gives n = Q/F (division)." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "In industry, electrolysis cells are often connected in series. If three cells are connected in series with a 10.0 A supply, what charge passes through each cell in 1.0 hour?",
+      "correct": "36 000 C through each cell, because the same current flows through all cells in series",
+      "correctExplanation": "In a series circuit, the same current flows through each cell. Q = 10.0 × 3600 = 36 000 C per cell.",
+      "distractors": [
+        { "answer": "12 000 C per cell, because the total charge is divided equally among three cells", "explanation": "In series, current is the same through each cell; charge is not divided among cells as it would be in parallel." },
+        { "answer": "108 000 C per cell, because the charge is multiplied by the number of cells", "explanation": "Each cell receives the same Q = It; charge is not multiplied by the number of cells in series." },
+        { "answer": "36 000 C total shared among the three cells based on their resistance values", "explanation": "In series, each cell receives the full current; the 36 000 C passes through every cell completely." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Evaluate whether it is possible to determine the number of moles of electrons transferred if only the current and the mass of product are known (without knowing time).",
+      "correct": "Yes, because moles of electrons can be found from mass using the half-equation, bypassing Q = It",
+      "correctExplanation": "Mass → moles of metal → moles of electrons via the half-equation ratio. Time is only needed if charge must be found via Q = It.",
+      "distractors": [
+        { "answer": "No, because both equations must always be used in every Faraday's law problem", "explanation": "If mass is given, the chemical pathway (mass → moles → electrons) can be used without needing Q = It." },
+        { "answer": "No, because current alone cannot determine any chemical quantity in electrolysis", "explanation": "While current alone is insufficient, combined with mass and the half-equation, moles of electrons can be found." },
+        { "answer": "Yes, but only if Faraday's constant is not needed for the specific calculation", "explanation": "The chemical pathway doesn't require F; it uses molar mass and stoichiometry to find moles of electrons." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A researcher uses a very small current of 0.001 A for 100 hours to deposit a thin film. Another uses 100 A for 0.001 hours. Compare the charge transferred.",
+      "correct": "Both transfer 360 C, demonstrating that Q depends on the product of I and t",
+      "correctExplanation": "Q₁ = 0.001 × (100 × 3600) = 360 C; Q₂ = 100 × (0.001 × 3600) = 360 C. Both give 360 C because Q = It depends on the product of current and time.",
+      "distractors": [
+        { "answer": "The high-current experiment transfers far more charge overall", "explanation": "Both experiments transfer 360 C; the product of I and t is the same." },
+        { "answer": "The long-duration experiment transfers more charge due to longer running time", "explanation": "Longer time at lower current gives the same total charge as shorter time at higher current." },
+        { "answer": "The charges cannot be compared because different currents are used", "explanation": "Q = It applies regardless of the magnitude of current; both experiments give equal charge." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Critically assess this statement: 'Faraday's constant is just an arbitrary number used to make the equations work.'",
+      "correct": "Incorrect; F has physical meaning as the charge of one mole of electrons (Nₐ × e)",
+      "correctExplanation": "F = 6.022 × 10²³ × 1.602 × 10⁻¹⁹ = 96 485 C mol⁻¹. It is derived from fundamental constants, not arbitrary.",
+      "distractors": [
+        { "answer": "Correct; F was chosen to simplify calculations and has no physical basis", "explanation": "F is derived from Avogadro's number and the elementary charge; it has clear physical meaning." },
+        { "answer": "Incorrect; F is the charge of a single electron, not one mole of electrons", "explanation": "The charge of one electron is 1.602 × 10⁻¹⁹ C; F is Avogadro's number times this value." },
+        { "answer": "Correct; F changes depending on the metal being deposited in the electrolytic cell", "explanation": "F is a universal constant; it does not change with the metal or reaction." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the analysis of equivalent experiments.",
+      "sentence": "If Q = It is constant, then doubling the {{blank:1}} while halving the {{blank:2}} produces the same amount of product.",
+      "blanks": {
+        "1": {
+          "correct": "current",
+          "correctExplanation": "Doubling I and halving t keeps Q = It unchanged, so the same charge and product result.",
+          "distractors": [
+            { "answer": "voltage", "explanation": "Voltage is not part of Q = It; current and time determine charge." },
+            { "answer": "temperature", "explanation": "Temperature is not a variable in Q = It; current and time determine the charge transferred." }
+          ]
+        },
+        "2": {
+          "correct": "time",
+          "correctExplanation": "Halving the time compensates for doubling the current, keeping the total charge constant.",
+          "distractors": [
+            { "answer": "charge", "explanation": "Charge is the result of I × t; it is current and time that are adjusted to keep charge constant." },
+            { "answer": "resistance", "explanation": "Resistance does not appear in Q = It; time is the variable that compensates for changed current." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the evaluation of Faraday's constant.",
+      "sentence": "Faraday's constant is derived from two fundamental constants: {{blank:1}} number and the {{blank:2}} charge.",
+      "blanks": {
+        "1": {
+          "correct": "Avogadro's",
+          "correctExplanation": "Avogadro's number (6.022 × 10²³) gives the number of electrons in one mole.",
+          "distractors": [
+            { "answer": "Planck's", "explanation": "Planck's constant relates to energy and frequency of photons, not to the number of particles in a mole." },
+            { "answer": "Boltzmann's", "explanation": "Boltzmann's constant relates temperature to kinetic energy, not to moles of particles." }
+          ]
+        },
+        "2": {
+          "correct": "elementary",
+          "correctExplanation": "The elementary charge (1.602 × 10⁻¹⁹ C) is the charge on a single electron; F = Nₐ × e.",
+          "distractors": [
+            { "answer": "molar", "explanation": "Molar charge would be circular; the elementary charge is the fundamental per-particle value." },
+            { "answer": "standard", "explanation": "Standard charge is not a defined physical quantity; the elementary charge (e) is the correct term." }
+          ]
+        }
+      }
+    }
+  ]
+}

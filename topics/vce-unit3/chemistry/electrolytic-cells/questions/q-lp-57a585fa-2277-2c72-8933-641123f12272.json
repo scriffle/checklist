@@ -1,0 +1,535 @@
+{
+  "_link": {
+    "uuid": "lp-57a585fa-2277-2c72-8933-641123f12272",
+    "version": 1,
+    "contentHash": "hash-c9c981ae",
+    "title": "I can calculate the current or time required to produce a given mass of product at an electrode",
+    "generatedAt": "2026-03-28T08:30:00Z"
+  },
+  "toLevel2": [
+    {
+      "type": "mc",
+      "question": "When calculating the time required to deposit a known mass of metal, what is the first step?",
+      "correct": "Calculate moles of metal from the given mass",
+      "correctExplanation": "The four-step reverse process begins with n = m/M to find moles of metal from the given mass.",
+      "distractors": [
+        { "answer": "Calculate the charge using Q = It directly", "explanation": "Q = It cannot be used first because neither Q nor t is known yet; the calculation starts from mass." },
+        { "answer": "Rearrange Q = It to find the current value", "explanation": "Current cannot be found until Q is known; the process must start from the mass of product." },
+        { "answer": "Multiply the mass by Faraday's constant", "explanation": "Mass is not directly multiplied by F; it must first be converted to moles using molar mass." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What is the correct order of steps to find the time required to deposit a given mass of metal?",
+      "correct": "Mass → moles of metal → moles of electrons → charge → time",
+      "correctExplanation": "This four-step process converts mass to moles, uses the half-equation ratio, calculates charge with Q = nF, then finds time with t = Q/I.",
+      "distractors": [
+        { "answer": "Mass → charge → moles of electrons → moles of metal → time", "explanation": "Charge cannot be found directly from mass; moles must be calculated first using the half-equation." },
+        { "answer": "Time → charge → moles of electrons → moles of metal → mass", "explanation": "This is the forward process for finding mass; the reverse starts from mass to find time." },
+        { "answer": "Mass → time → charge → moles of electrons → moles of metal", "explanation": "Time cannot be found directly from mass; all intermediate steps are needed." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which equation is used to find the current once the charge Q is known?",
+      "correct": "I = Q / t",
+      "correctExplanation": "Rearranging Q = It gives I = Q/t, allowing current to be calculated from charge and time.",
+      "distractors": [
+        { "answer": "I = Q × t", "explanation": "Multiplying charge by time does not give current; the correct rearrangement is I = Q/t." },
+        { "answer": "I = Q × F", "explanation": "Faraday's constant converts moles to charge, not charge to current; I = Q/t is correct." },
+        { "answer": "I = t / Q", "explanation": "This inverts the relationship; dividing time by charge gives the reciprocal of current." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "In the reverse calculation, what links moles of metal to moles of electrons?",
+      "correct": "The ratio from the balanced half-equation",
+      "correctExplanation": "The half-equation shows how many electrons are needed per metal atom, providing the mole ratio.",
+      "distractors": [
+        { "answer": "The value of Faraday's constant only", "explanation": "Faraday's constant converts moles of electrons to charge; the half-equation gives the electron-to-metal ratio." },
+        { "answer": "The molar mass of the metal being deposited", "explanation": "Molar mass converts mass to moles of metal; the half-equation ratio links moles of metal to moles of electrons." },
+        { "answer": "The current flowing through the electrolytic cell", "explanation": "Current relates to charge and time via Q = It; the half-equation provides the stoichiometric ratio." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which formula converts moles of electrons to charge in coulombs?",
+      "correct": "Q = n(e⁻) × F",
+      "correctExplanation": "Multiplying moles of electrons by Faraday's constant (96 485 C mol⁻¹) gives the total charge.",
+      "distractors": [
+        { "answer": "Q = n(e⁻) / F", "explanation": "Dividing by F would give a very small number; the correct operation is multiplication." },
+        { "answer": "Q = n(e⁻) × M", "explanation": "M is molar mass used for mass calculations, not charge; Faraday's constant F is used for charge." },
+        { "answer": "Q = n(e⁻) + F", "explanation": "Adding moles and a constant is meaningless; the relationship is multiplicative." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "To find the current required to deposit a known mass, you must first calculate the total charge needed.",
+      "correct": "True",
+      "correctExplanation": "The reverse calculation proceeds: mass → moles → charge (via n(e⁻) × F), then I = Q/t. Charge must be found before current.",
+      "distractors": [
+        { "answer": "False", "explanation": "Students may think current can be found directly from mass, but charge must be calculated as an intermediate step." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "The four-step reverse process uses the same equations as the forward process, applied in a different order.",
+      "correct": "True",
+      "correctExplanation": "The same equations (n = m/M, half-equation ratio, Q = nF, Q = It) are used, but starting from mass instead of current and time.",
+      "distractors": [
+        { "answer": "False", "explanation": "Students may think reverse calculations require different equations, but the same relationships are applied in reverse order." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the reverse calculation.",
+      "sentence": "When mass is given and time is unknown, the calculation begins by finding moles of metal using n = {{blank:1}} / {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "m",
+          "correctExplanation": "m represents the mass of the metal product, which is divided by molar mass to find moles.",
+          "distractors": [
+            { "answer": "Q", "explanation": "Q represents charge; mass (m) is divided by molar mass to find moles of metal." },
+            { "answer": "I", "explanation": "I represents current; the moles calculation uses mass divided by molar mass." }
+          ]
+        },
+        "2": {
+          "correct": "M",
+          "correctExplanation": "M is the molar mass of the metal, used to convert mass in grams to moles.",
+          "distractors": [
+            { "answer": "F", "explanation": "F is Faraday's constant used later to find charge; molar mass M converts mass to moles." },
+            { "answer": "t", "explanation": "t is time; moles of metal are found using mass divided by molar mass, not time." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the final step.",
+      "sentence": "After calculating the charge Q, the time is found by rearranging Q = It to give t = {{blank:1}}.",
+      "blanks": {
+        "1": {
+          "correct": "Q / I",
+          "correctExplanation": "Dividing charge by current gives the time required for electrolysis.",
+          "distractors": [
+            { "answer": "Q × I", "explanation": "Multiplying charge by current does not give time; the correct rearrangement divides Q by I." },
+            { "answer": "I / Q", "explanation": "This inverts the relationship; time equals charge divided by current, not current divided by charge." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about finding current.",
+      "sentence": "If the time is known and the mass of product is given, the current can be found using I = {{blank:1}} after calculating charge from the {{blank:2}} of product.",
+      "blanks": {
+        "1": {
+          "correct": "Q / t",
+          "correctExplanation": "Once charge is calculated from the mass (via moles and Faraday's law), I = Q/t gives the current.",
+          "distractors": [
+            { "answer": "Q × t", "explanation": "Multiplying Q by t gives Q², not current; the correct formula is I = Q/t." },
+            { "answer": "m / t", "explanation": "Mass divided by time gives a rate of mass change, not current; charge must be calculated first." }
+          ]
+        },
+        "2": {
+          "correct": "mass",
+          "correctExplanation": "The mass of product is converted to moles, then to moles of electrons, then to charge using Q = nF.",
+          "distractors": [
+            { "answer": "volume", "explanation": "Volume is used for gases; mass is the starting point for the reverse calculation of deposited metals." },
+            { "answer": "temperature", "explanation": "Temperature is not part of Faraday's law calculations; mass is the starting quantity." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "mc",
+      "question": "Why is the reverse Faraday's law calculation important for industrial applications?",
+      "correct": "It allows engineers to determine the current or time needed for a target production amount",
+      "correctExplanation": "Knowing how much product is needed, engineers work backwards to find the electrical requirements for the process.",
+      "distractors": [
+        { "answer": "It is only used in laboratory experiments and has no industrial relevance", "explanation": "Industrial processes rely on reverse calculations to plan production rates, energy use, and costs." },
+        { "answer": "It determines the type of metal that will be deposited at the electrode", "explanation": "The metal type is determined by the electrolyte; the reverse calculation finds current or time for a target mass." },
+        { "answer": "It calculates the voltage needed to start the electrolysis reaction", "explanation": "Voltage depends on electrode potentials; Faraday's law calculations determine charge, current, or time." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student needs to find the time to deposit 6.355 g of copper using Cu²⁺ + 2e⁻ → Cu. They correctly find n(Cu) = 0.1000 mol. What should they calculate next?",
+      "correct": "n(e⁻) = 2 × 0.1000 = 0.2000 mol",
+      "correctExplanation": "The half-equation shows 2 moles of electrons per mole of Cu, so n(e⁻) = 2 × n(Cu).",
+      "distractors": [
+        { "answer": "Q = 0.1000 × 96 485 = 9649 C", "explanation": "This uses moles of copper, not moles of electrons; the half-equation ratio must be applied first." },
+        { "answer": "t = 0.1000 / I to find the time directly", "explanation": "Time cannot be found from moles of metal directly; moles of electrons and then charge must be calculated first." },
+        { "answer": "n(e⁻) = 0.1000 / 2 = 0.0500 mol", "explanation": "The ratio is 2:1 (electrons:Cu), so n(e⁻) = 2 × n(Cu), not n(Cu)/2." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Explain why the stoichiometric ratio from the half-equation is essential in the reverse calculation.",
+      "correct": "It converts moles of metal to the correct number of moles of electrons needed",
+      "correctExplanation": "Different metals require different numbers of electrons per atom (e.g., Cu²⁺ needs 2, Al³⁺ needs 3), affecting the charge required.",
+      "distractors": [
+        { "answer": "It determines the molar mass of the metal being deposited", "explanation": "Molar mass is a fixed property; the half-equation provides the electron-to-metal ratio, not the molar mass." },
+        { "answer": "It cancels out during the calculation and has no practical effect", "explanation": "The ratio directly affects the moles of electrons and therefore the charge; it does not cancel out." },
+        { "answer": "It sets the voltage required for the electrolysis to proceed", "explanation": "Voltage depends on electrode potentials; the stoichiometric ratio determines the moles of electrons needed." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "If a student skips the half-equation step and directly uses n(e⁻) = n(metal), how would this affect the calculated time for depositing silver from Ag⁺ + e⁻ → Ag?",
+      "correct": "The answer would be correct because the ratio is 1:1 for silver",
+      "correctExplanation": "For Ag⁺ + e⁻ → Ag, one mole of electrons deposits one mole of silver, so n(e⁻) = n(Ag) happens to be correct.",
+      "distractors": [
+        { "answer": "The time would be twice too long because two electrons are needed", "explanation": "Silver ions have a 1+ charge; only one electron is needed per Ag⁺ ion, so the 1:1 ratio applies." },
+        { "answer": "The answer would always be wrong regardless of the metal involved", "explanation": "For metals with 1+ ions (like Ag⁺), the 1:1 assumption happens to be correct." },
+        { "answer": "The time would be three times too short because Ag needs 3 electrons", "explanation": "Silver ions are Ag⁺ (1+ charge), requiring only 1 electron, not 3." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Why does depositing the same mass of aluminium require more charge than depositing the same mass of copper?",
+      "correct": "Aluminium needs 3 electrons per atom and has a lower molar mass, giving more moles per gram",
+      "correctExplanation": "Al (M=26.98, 3e⁻) needs more moles of electrons per gram than Cu (M=63.55, 2e⁻), requiring more charge.",
+      "distractors": [
+        { "answer": "Aluminium is less dense than copper so more atoms are needed", "explanation": "Density is not relevant; the calculation depends on molar mass and the electron-to-metal ratio." },
+        { "answer": "Copper is a better conductor so it requires less charge overall", "explanation": "Conductivity does not affect the stoichiometric charge requirement; the half-equation ratio determines this." },
+        { "answer": "Aluminium and copper require exactly the same charge for equal masses", "explanation": "Different molar masses and electron ratios mean different amounts of charge per gram of product." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A factory needs to produce 1.00 kg of sodium metal. What quantity must be calculated before determining the required current?",
+      "correct": "The total charge needed, found from moles of Na and Faraday's constant",
+      "correctExplanation": "Mass → n(Na) → n(e⁻) → Q = n(e⁻) × F gives the total charge, which is needed before I = Q/t can be applied.",
+      "distractors": [
+        { "answer": "The voltage of the power supply used to drive the reaction", "explanation": "Voltage determines whether electrolysis occurs but not the current needed for a specific mass." },
+        { "answer": "The temperature of the molten sodium chloride electrolyte", "explanation": "Temperature affects the state of the electrolyte but not the stoichiometric charge calculation." },
+        { "answer": "The resistance of the external circuit connecting the electrodes", "explanation": "Resistance affects voltage requirements, not the charge needed to produce a specific mass of sodium." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "The reverse calculation can be used to find either current or time, but not both from the same set of data.",
+      "correct": "True",
+      "correctExplanation": "From mass, you can find Q. But I = Q/t requires knowing one of I or t to find the other; both cannot be unknown.",
+      "distractors": [
+        { "answer": "False", "explanation": "Students may not realise that Q = It has two unknowns; one of I or t must be provided to solve for the other." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the reverse process.",
+      "sentence": "The reverse Faraday's law calculation starts with {{blank:1}} and works backwards to find {{blank:2}} or time.",
+      "blanks": {
+        "1": {
+          "correct": "mass",
+          "correctExplanation": "The reverse process begins with the known mass of product and works through moles, charge, then to current or time.",
+          "distractors": [
+            { "answer": "charge", "explanation": "Charge is an intermediate step; the reverse calculation starts from the mass of product." },
+            { "answer": "current", "explanation": "Current is what we are trying to find; the process starts from mass of product." }
+          ]
+        },
+        "2": {
+          "correct": "current",
+          "correctExplanation": "Once charge is known, I = Q/t gives the current needed (if time is known) or t = Q/I gives the time (if current is known).",
+          "distractors": [
+            { "answer": "mass", "explanation": "Mass is the starting point of the reverse calculation, not what is being found." },
+            { "answer": "voltage", "explanation": "Voltage is not determined by Faraday's law; the reverse calculation finds current or time." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the calculation step.",
+      "sentence": "For the half-equation Al³⁺ + 3e⁻ → Al, if n(Al) = 0.50 mol, then n(e⁻) = {{blank:1}} mol.",
+      "blanks": {
+        "1": {
+          "correct": "1.50",
+          "correctExplanation": "The ratio is 3 electrons per aluminium atom: n(e⁻) = 3 × 0.50 = 1.50 mol.",
+          "distractors": [
+            { "answer": "0.50", "explanation": "This assumes a 1:1 ratio, but Al³⁺ requires 3 electrons, giving n(e⁻) = 3 × 0.50." },
+            { "answer": "0.167", "explanation": "This divides by 3 instead of multiplying; the half-equation shows 3 electrons are needed per Al atom." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about finding time.",
+      "sentence": "To deposit 3.0 g of silver (M = 107.87) at 2.0 A: n(Ag) = 0.0278 mol; n(e⁻) = 0.0278 mol; Q = {{blank:1}} C; t = {{blank:2}} s.",
+      "blanks": {
+        "1": {
+          "correct": "2682",
+          "correctExplanation": "Q = 0.0278 × 96 485 = 2682 C. The 1:1 electron ratio for Ag⁺ means n(e⁻) = n(Ag).",
+          "distractors": [
+            { "answer": "26.82", "explanation": "This is 100 times too small; Q = 0.0278 × 96 485 = 2682 C, not 26.82." },
+            { "answer": "5364", "explanation": "This doubles the charge, likely from incorrectly using a 2:1 electron ratio; Ag⁺ needs only 1 electron." }
+          ]
+        },
+        "2": {
+          "correct": "1341",
+          "correctExplanation": "t = Q/I = 2682/2.0 = 1341 s, approximately 22 minutes.",
+          "distractors": [
+            { "answer": "5364", "explanation": "This results from multiplying Q × I instead of dividing; t = Q/I." },
+            { "answer": "134", "explanation": "This is ten times too small; t = 2682/2.0 = 1341 s." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "mc",
+      "question": "Calculate the time required to deposit 5.00 g of nickel from Ni²⁺ + 2e⁻ → Ni using a current of 3.00 A. (Ni = 58.69 g mol⁻¹, F = 96 485 C mol⁻¹)",
+      "correct": "5480 s (approximately 91 minutes)",
+      "correctExplanation": "n(Ni) = 5.00/58.69 = 0.0852 mol; n(e⁻) = 2 × 0.0852 = 0.1704 mol; Q = 0.1704 × 96 485 = 16 441 C; t = 16 441/3.00 = 5480 s.",
+      "distractors": [
+        { "answer": "2740 s (approximately 46 minutes)", "explanation": "This uses a 1:1 electron ratio instead of the correct 2:1; Ni²⁺ requires 2 electrons per atom." },
+        { "answer": "91.3 s (about 1.5 minutes)", "explanation": "This results from using minutes in an intermediate step or a decimal place error; the correct answer is 5480 s." },
+        { "answer": "16 441 s (about 4.6 hours)", "explanation": "This uses Q as the time; t = Q/I = 16 441/3.00 = 5480 s, not 16 441 s." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What current is needed to deposit 10.0 g of silver from AgNO₃ solution in exactly 30.0 minutes? (Ag = 107.87 g mol⁻¹, F = 96 485 C mol⁻¹)",
+      "correct": "4.97 A",
+      "correctExplanation": "n(Ag) = 10.0/107.87 = 0.0927 mol; n(e⁻) = 0.0927 mol (1:1); Q = 0.0927 × 96 485 = 8944 C; t = 1800 s; I = 8944/1800 = 4.97 A.",
+      "distractors": [
+        { "answer": "9.94 A", "explanation": "This incorrectly uses a 2:1 electron ratio; Ag⁺ requires only 1 electron per ion." },
+        { "answer": "298 A", "explanation": "This uses 30.0 seconds instead of converting 30.0 minutes to 1800 s." },
+        { "answer": "0.083 A", "explanation": "This results from dividing time by charge instead of charge by time; I = Q/t." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A factory must produce 10.0 kg of aluminium in 24.0 hours using the half-equation Al³⁺ + 3e⁻ → Al. What current is required? (Al = 26.98 g mol⁻¹, F = 96 485 C mol⁻¹)",
+      "correct": "1240 A",
+      "correctExplanation": "n(Al) = 10 000/26.98 = 370.6 mol; n(e⁻) = 3 × 370.6 = 1112 mol; Q = 1112 × 96 485 = 1.073 × 10⁸ C; t = 86 400 s; I = 1.073 × 10⁸/86 400 = 1242 ≈ 1240 A.",
+      "distractors": [
+        { "answer": "414 A", "explanation": "This uses a 1:1 electron ratio instead of 3:1; Al³⁺ requires 3 electrons per ion." },
+        { "answer": "29 800 A", "explanation": "This uses 24.0 hours as 3600 s (one hour) instead of 86 400 s; the full 24 hours must be converted." },
+        { "answer": "1.24 A", "explanation": "This is 1000 times too small, likely from using grams instead of converting 10.0 kg to 10 000 g." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student calculates the time to deposit 1.00 g of copper (Cu²⁺ + 2e⁻ → Cu) at 0.500 A and gets t = 48.1 s. What error did they make?",
+      "correct": "They forgot to multiply moles of electrons by Faraday's constant to get charge",
+      "correctExplanation": "n(Cu) = 1.00/63.55 = 0.01574; n(e⁻) = 0.03148; skipping Q = nF and dividing n(e⁻) by I gives ~0.063 s. Actually 48.1 s suggests using n(e⁻)/I × some factor. The student likely divided n(Cu) by I without converting to charge.",
+      "distractors": [
+        { "answer": "They used the wrong molar mass for copper in the calculation", "explanation": "The molar mass of copper is well-known (63.55); the likely error is in the charge calculation step." },
+        { "answer": "They forgot to convert minutes to seconds in the final step", "explanation": "The answer of 48.1 s is already far too small; the error is earlier in the calculation, not in time conversion." },
+        { "answer": "They used the correct method; 48.1 s is the right answer", "explanation": "The correct time is approximately 6040 s (about 101 minutes); 48.1 s is far too small." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Compare the time required to deposit 1.00 g of Ag (Ag⁺, M = 107.87) and 1.00 g of Cu (Cu²⁺, M = 63.55) at the same current. Which takes longer and why?",
+      "correct": "Copper takes longer because it requires more moles of electrons per gram",
+      "correctExplanation": "Per gram: Cu needs (1/63.55) × 2 = 0.0315 mol e⁻; Ag needs (1/107.87) × 1 = 0.00927 mol e⁻. Copper needs ~3.4× more electrons.",
+      "distractors": [
+        { "answer": "Silver takes longer because it has a higher molar mass", "explanation": "Higher molar mass means fewer moles per gram; combined with the 1:1 ratio, silver actually needs fewer electrons." },
+        { "answer": "Both take the same time because the mass is identical", "explanation": "Equal mass does not mean equal moles or equal electrons; different M and electron ratios give different times." },
+        { "answer": "Silver takes longer because noble metals are harder to deposit", "explanation": "Deposition difficulty is not relevant to Faraday's law; the calculation depends on moles and electron ratios." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An electroplating company wants to deposit 0.500 g of gold (Au³⁺ + 3e⁻ → Au, M = 196.97) in 10.0 minutes. What current is needed? (F = 96 485 C mol⁻¹)",
+      "correct": "1.23 A",
+      "correctExplanation": "n(Au) = 0.500/196.97 = 0.002538 mol; n(e⁻) = 3 × 0.002538 = 0.007615 mol; Q = 0.007615 × 96 485 = 734.7 C; t = 600 s; I = 734.7/600 = 1.22 ≈ 1.23 A.",
+      "distractors": [
+        { "answer": "0.410 A", "explanation": "This uses a 1:1 electron ratio instead of 3:1; Au³⁺ requires 3 electrons per ion." },
+        { "answer": "73.5 A", "explanation": "This uses 10.0 seconds instead of converting 10.0 minutes to 600 seconds." },
+        { "answer": "12.3 A", "explanation": "This is ten times too large, likely from an error in the moles calculation or decimal placement." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A zinc electroplating bath operates at 15.0 A. How long will it take to deposit 20.0 g of zinc? (Zn²⁺ + 2e⁻ → Zn, M = 65.38 g mol⁻¹, F = 96 485 C mol⁻¹)",
+      "correct": "3940 s (approximately 66 minutes)",
+      "correctExplanation": "n(Zn) = 20.0/65.38 = 0.3060 mol; n(e⁻) = 0.6119 mol; Q = 0.6119 × 96 485 = 59 040 C; t = 59 040/15.0 = 3936 ≈ 3940 s.",
+      "distractors": [
+        { "answer": "1970 s (approximately 33 minutes)", "explanation": "This uses a 1:1 electron ratio instead of 2:1; Zn²⁺ requires 2 electrons per ion." },
+        { "answer": "65.6 s (about 1 minute)", "explanation": "This likely results from not using Faraday's constant, dividing moles directly by current." },
+        { "answer": "59 040 s (about 16 hours)", "explanation": "This uses Q as the time value; the correct step is t = Q/I = 59 040/15.0 = 3936 s." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the industrial calculation.",
+      "sentence": "To produce 1.00 kg of sodium (Na⁺ + e⁻ → Na, M = 22.99) at 500 A: n(Na) = {{blank:1}} mol; Q = n(e⁻) × F; t = Q/I.",
+      "blanks": {
+        "1": {
+          "correct": "43.5",
+          "correctExplanation": "n(Na) = 1000/22.99 = 43.5 mol. Since the ratio is 1:1, n(e⁻) = 43.5 mol also.",
+          "distractors": [
+            { "answer": "22.99", "explanation": "22.99 is the molar mass of sodium, not the moles; n = 1000/22.99 = 43.5 mol." },
+            { "answer": "0.0435", "explanation": "This uses 1.00 g instead of 1.00 kg (1000 g); n = 1000/22.99 = 43.5 mol." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about checking answers.",
+      "sentence": "A reasonable check is that depositing a few grams of metal at a few amperes typically takes {{blank:1}} rather than seconds or days.",
+      "blanks": {
+        "1": {
+          "correct": "minutes to hours",
+          "correctExplanation": "For typical laboratory quantities (1-10 g) and currents (1-10 A), electrolysis times are usually in the range of minutes to hours.",
+          "distractors": [
+            { "answer": "milliseconds to seconds", "explanation": "Such short times would require impossibly high currents for gram quantities; typical times are minutes to hours." },
+            { "answer": "days to weeks", "explanation": "At typical laboratory currents, gram quantities deposit in minutes to hours, not days." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the comparison.",
+      "sentence": "Depositing 1 g of Al (3e⁻ per atom, M = 26.98) requires {{blank:1}} charge than depositing 1 g of Ag (1e⁻ per atom, M = 107.87).",
+      "blanks": {
+        "1": {
+          "correct": "more",
+          "correctExplanation": "Al: (1/26.98) × 3 = 0.111 mol e⁻; Ag: (1/107.87) × 1 = 0.00927 mol e⁻. Aluminium needs about 12× more charge per gram.",
+          "distractors": [
+            { "answer": "less", "explanation": "Aluminium has a lower molar mass and higher electron requirement, meaning more charge per gram is needed." },
+            { "answer": "equal", "explanation": "Different molar masses and electron ratios mean different charge requirements per gram of product." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "mc",
+      "question": "A company electroplates items with chromium (Cr³⁺ + 3e⁻ → Cr) and nickel (Ni²⁺ + 2e⁻ → Ni). For equal masses of coating, which requires more electrical energy and why?",
+      "correct": "Chromium requires more because it has a higher electron-to-mass ratio",
+      "correctExplanation": "Per gram: Cr needs (3/52.00) = 0.0577 mol e⁻; Ni needs (2/58.69) = 0.0341 mol e⁻. Chromium needs ~1.7× more electrons per gram.",
+      "distractors": [
+        { "answer": "Nickel requires more because it has a higher molar mass", "explanation": "Higher molar mass means fewer moles per gram; nickel's 2:1 ratio gives less charge per gram than chromium's 3:1." },
+        { "answer": "Both require the same energy because equal masses are deposited", "explanation": "Different electron ratios and molar masses mean different charge requirements for equal masses." },
+        { "answer": "Chromium requires less because Cr³⁺ is easier to reduce than Ni²⁺", "explanation": "Ease of reduction relates to voltage, not charge; more electrons per atom means more charge." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An exam gives this data: 'A current of 5.0 A deposited 3.18 g of copper in time t.' A student uses Cu⁺ + e⁻ → Cu instead of Cu²⁺ + 2e⁻ → Cu. Analyse the effect on their calculated time.",
+      "correct": "Their time will be half the correct value because they used half the electrons needed",
+      "correctExplanation": "Using 1e⁻ instead of 2e⁻ per Cu gives half the moles of electrons, half the charge, and therefore half the time.",
+      "distractors": [
+        { "answer": "Their time will be double the correct value due to using the wrong ratio", "explanation": "Using fewer electrons gives less charge and shorter time, not longer." },
+        { "answer": "The error has no effect because the mass of copper deposited is unchanged", "explanation": "The mass is the same, but the wrong electron ratio leads to an incorrect moles of electrons and time." },
+        { "answer": "Their time will be correct because Cu⁺ is the actual species in solution", "explanation": "In CuSO₄ solution, copper exists as Cu²⁺, not Cu⁺; the 2e⁻ ratio must be used." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Compare the approaches of two students solving for current. Student A converts mass to moles to charge then to current in four steps. Student B combines all equations into one formula: I = (m × z × F)/(M × t). Evaluate both approaches.",
+      "correct": "Both are valid; the stepwise approach reduces errors while the combined formula is faster",
+      "correctExplanation": "The combined formula is algebraically equivalent but the stepwise approach allows checking each intermediate value for reasonableness.",
+      "distractors": [
+        { "answer": "Only the stepwise approach is correct; combined formulas always give wrong answers", "explanation": "The combined formula is a valid algebraic rearrangement of the same equations used in the stepwise method." },
+        { "answer": "Only the combined formula is correct because it avoids rounding errors", "explanation": "Both methods can manage rounding appropriately; neither is inherently more accurate." },
+        { "answer": "Neither approach works for finding current from mass; a different method is needed", "explanation": "Both approaches correctly find current from mass using Faraday's law relationships." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An industrial aluminium smelter operates at 200 000 A. Assess the implications of even a 1% error in the calculated current for a 24-hour production run.",
+      "correct": "A 1% error represents 2000 A, causing significant over- or under-production of aluminium",
+      "correctExplanation": "At 200 000 A, 1% = 2000 A. Over 24 hours this affects charge by 2000 × 86 400 = 1.73 × 10⁸ C, changing production by roughly 16 kg of Al.",
+      "distractors": [
+        { "answer": "A 1% error is negligible and would have no measurable effect on production", "explanation": "At industrial scale, 1% of 200 000 A is 2000 A, leading to significant production differences." },
+        { "answer": "A 1% error would cause the electrolytic cell to stop operating entirely", "explanation": "The cell continues operating; the error affects the quantity produced, not whether the cell functions." },
+        { "answer": "A 1% error only affects the purity of the aluminium, not the quantity", "explanation": "Current affects the rate and amount of deposition; purity depends on electrolyte composition." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A question asks for the time to produce 5.00 g of chromium from Cr³⁺ at 2.00 A. A student gets 13 900 s. Without recalculating, assess whether this answer is reasonable.",
+      "correct": "Reasonable; a few grams at 2 A typically takes several hours, and 13 900 s ≈ 3.9 hours",
+      "correctExplanation": "For a 3e⁻ metal at low current, several hours is expected. Quick check: Q ≈ (5/52 × 3) × 96 500 ≈ 27 900 C; t ≈ 27 900/2 ≈ 14 000 s. The answer is reasonable.",
+      "distractors": [
+        { "answer": "Unreasonable; electrolysis should only take a few seconds for small masses", "explanation": "At 2 A, depositing grams of a 3e⁻ metal takes hours, not seconds; 13 900 s is plausible." },
+        { "answer": "Unreasonable; electrolysis should take several days for chromium deposition", "explanation": "Several days would require much lower current; at 2 A, a few grams takes hours." },
+        { "answer": "Cannot be assessed without performing the full calculation from scratch", "explanation": "Estimation and reasonableness checks can assess plausibility without a complete recalculation." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Evaluate why exam questions sometimes give current in milliamps (mA). How should a student handle this?",
+      "correct": "Convert mA to A by dividing by 1000 before substituting into Q = It",
+      "correctExplanation": "1 mA = 0.001 A. The equation Q = It requires current in amperes, so milliamps must be converted.",
+      "distractors": [
+        { "answer": "Use milliamps directly in Q = It because the equation works with any current unit", "explanation": "Q = It gives coulombs only when I is in amperes; using mA gives millicoulombs, requiring correction." },
+        { "answer": "Multiply mA by 1000 to convert to amperes before using Q = It", "explanation": "Multiplying by 1000 converts A to mA; to convert mA to A, divide by 1000." },
+        { "answer": "Milliamps cannot be used in Faraday's law calculations at all under any conditions", "explanation": "Milliamps can be used after conversion to amperes; the conversion is straightforward (÷1000)." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student is asked to find the current needed to deposit 50.0 g of tin from Sn²⁺ in 2.00 hours. They find I = 11.4 A. Their friend gets I = 22.8 A. One used Sn²⁺ + 2e⁻ → Sn and the other used Sn⁴⁺ + 4e⁻ → Sn. Analyse this discrepancy.",
+      "correct": "The correct answer depends on which tin ion is specified; the question must state the oxidation state",
+      "correctExplanation": "Sn²⁺ needs 2e⁻ (giving 11.4 A) while Sn⁴⁺ needs 4e⁻ (giving 22.8 A). The oxidation state in the question determines which is correct.",
+      "distractors": [
+        { "answer": "Both answers are wrong because tin cannot be electroplated from aqueous solutions", "explanation": "Tin can be electroplated from aqueous solutions; the discrepancy arises from different half-equations." },
+        { "answer": "The lower current is always correct because electrolysis favours the lowest electron ratio", "explanation": "Electrolysis uses the actual ion present in solution, not necessarily the lowest charge state." },
+        { "answer": "The higher current is always correct because higher oxidation states are more stable", "explanation": "Stability does not determine the answer; the actual ion present in the electrolyte determines the ratio." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "In a copper refining cell, the anode dissolves while copper deposits on the cathode. If 500 g of pure copper is needed, analyse whether the current or the time is the more practical variable to control industrially.",
+      "correct": "Current is held constant and time is adjusted because current control is more precise",
+      "correctExplanation": "Industrial power supplies maintain stable current. Time is easily monitored and adjusted to achieve the target mass, making it the controlled variable.",
+      "distractors": [
+        { "answer": "Time is held constant and current is varied because changing time is impractical", "explanation": "Both can be varied, but constant current with variable time is standard practice for precise control." },
+        { "answer": "Neither variable matters because the mass deposited depends only on the electrolyte", "explanation": "Mass deposited depends directly on charge (Q = It); both current and time are critical." },
+        { "answer": "Both must be simultaneously varied using a computer algorithm for optimal results", "explanation": "Holding current constant and varying time is sufficient and simpler than simultaneous control." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the analysis of charge requirements per gram.",
+      "sentence": "The charge needed per gram of metal equals {{blank:1}} × F / M, where z is the number of electrons from the half-equation.",
+      "blanks": {
+        "1": {
+          "correct": "z",
+          "correctExplanation": "z (the number of electrons per ion) multiplied by F/M gives the charge per gram: Q/g = zF/M.",
+          "distractors": [
+            { "answer": "M", "explanation": "M is the molar mass in the denominator; z (electron count) belongs in the numerator." },
+            { "answer": "I", "explanation": "Current is not part of the charge-per-gram relationship; z represents the electron count from the half-equation." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the evaluation of different metals.",
+      "sentence": "For equal masses, a metal with a {{blank:1}} molar mass and {{blank:2}} electron requirement needs the most charge to deposit.",
+      "blanks": {
+        "1": {
+          "correct": "low",
+          "correctExplanation": "Lower molar mass means more moles per gram, and therefore more electrons needed per gram.",
+          "distractors": [
+            { "answer": "high", "explanation": "Higher molar mass gives fewer moles per gram, requiring less charge per gram, not more." },
+            { "answer": "zero", "explanation": "Molar mass cannot be zero; low molar mass increases the moles per gram." }
+          ]
+        },
+        "2": {
+          "correct": "high",
+          "correctExplanation": "More electrons per ion (higher z) means more charge per mole of metal deposited.",
+          "distractors": [
+            { "answer": "low", "explanation": "Fewer electrons per ion means less charge; high electron requirement increases total charge needed." },
+            { "answer": "zero", "explanation": "Zero electrons would mean no reduction occurs; a high electron requirement increases the charge needed." }
+          ]
+        }
+      }
+    }
+  ]
+}

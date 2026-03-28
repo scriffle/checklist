@@ -1,0 +1,511 @@
+{
+  "_link": {
+    "uuid": "lp-314a610c-dd16-8024-4c1a-1588d16b4611",
+    "version": 1,
+    "contentHash": "hash-c9164c63",
+    "title": "I can calculate the reaction quotient Q, including units, for a given equilibrium system",
+    "generatedAt": "2026-03-27T12:00:00Z"
+  },
+  "toLevel2": [
+    {
+      "type": "mc",
+      "question": "What does the reaction quotient Q represent?",
+      "correct": "The ratio of product to reactant concentrations at any point in time",
+      "correctExplanation": "Q is calculated using the same expression as K but with concentrations measured at any moment, not just at equilibrium.",
+      "distractors": [
+        { "answer": "The ratio of product to reactant concentrations only at equilibrium", "explanation": "This describes K, not Q; Q can be calculated at any point during the reaction." },
+        { "answer": "The total number of moles of products formed during the reaction", "explanation": "Q is a ratio of concentrations raised to powers, not a count of moles." },
+        { "answer": "The rate at which products are being formed from the reactants", "explanation": "Q describes the current concentration ratio, not the speed of reaction." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "For the reaction aA + bB ⇌ cC + dD, which expression correctly represents Q?",
+      "correct": "[C]ᶜ[D]ᵈ / ([A]ᵃ[B]ᵇ)",
+      "correctExplanation": "Q is products over reactants, each raised to the power of their stoichiometric coefficient.",
+      "distractors": [
+        { "answer": "[A]ᵃ[B]ᵇ / ([C]ᶜ[D]ᵈ)", "explanation": "This is the inverse of Q; the products must be in the numerator and reactants in the denominator." },
+        { "answer": "(c[C] + d[D]) / (a[A] + b[B])", "explanation": "The expression uses multiplication and powers, not addition and multiplication by coefficients." },
+        { "answer": "[C][D] / ([A][B])", "explanation": "This omits the stoichiometric coefficients as powers, which are essential in the expression." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "How are the units of Q determined for a given reaction?",
+      "correct": "By applying the stoichiometric coefficients as powers to the concentration units (M)",
+      "correctExplanation": "The units of Q depend on the stoichiometry: each concentration term contributes M raised to its coefficient power.",
+      "distractors": [
+        { "answer": "Q is always unitless regardless of the reaction stoichiometry involved", "explanation": "Q can have units when the total powers of concentration in the numerator and denominator differ." },
+        { "answer": "The units are always expressed in moles per litre for all reactions", "explanation": "The units depend on the stoichiometry and may be M, M⁻¹, M², or other combinations." },
+        { "answer": "Q has the same units as the rate constant for that particular reaction", "explanation": "Q units depend on equilibrium expression stoichiometry, not on rate constant units." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "For the reaction N₂(g) + 2O₂(g) ⇌ 2NO₂(g), what is the expression for Q?",
+      "correct": "[NO₂]² / ([N₂][O₂]²)",
+      "correctExplanation": "Products (NO₂ squared) over reactants (N₂ times O₂ squared), with coefficients as powers.",
+      "distractors": [
+        { "answer": "[N₂][O₂]² / [NO₂]²", "explanation": "This is the inverse of Q; products must be in the numerator." },
+        { "answer": "[NO₂] / ([N₂][O₂])", "explanation": "This omits the stoichiometric coefficients as powers; both NO₂ and O₂ have coefficient 2." },
+        { "answer": "2[NO₂] / ([N₂] + 2[O₂])", "explanation": "Coefficients are used as powers on concentrations, not as multipliers, and the expression uses multiplication not addition." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What is the key difference between Q and K?",
+      "correct": "Q can be calculated at any time; K is the value of Q specifically at equilibrium",
+      "correctExplanation": "Q uses concentrations at any moment, while K is the specific value of Q when the system has reached equilibrium.",
+      "distractors": [
+        { "answer": "Q uses moles while K uses concentrations for the calculation", "explanation": "Both Q and K use molar concentrations in their expressions." },
+        { "answer": "K is for reversible reactions and Q is for irreversible reactions only", "explanation": "Both Q and K apply to reversible reactions; Q simply applies at any time, not just equilibrium." },
+        { "answer": "Q measures rate while K measures the extent of the reaction", "explanation": "Both Q and K measure concentration ratios; neither directly measures rate." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "The reaction quotient Q uses the same mathematical expression as the equilibrium constant K.",
+      "correct": "True",
+      "correctExplanation": "Q and K use the same expression (products over reactants raised to stoichiometric powers), but Q is evaluated at any time while K is at equilibrium.",
+      "distractors": [
+        { "answer": "False", "explanation": "Students may think Q and K use different formulas, but they use the same expression evaluated at different times." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "The units of Q are always mol L⁻¹ regardless of the reaction.",
+      "correct": "False",
+      "correctExplanation": "The units of Q depend on the stoichiometry; they are determined by the powers of concentration in the expression and vary between reactions.",
+      "distractors": [
+        { "answer": "True", "explanation": "Students may assume Q always has the same units, but the units depend on the sum of powers of concentration in the expression." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about Q.",
+      "sentence": "The reaction quotient Q is calculated using concentrations measured at {{blank:1}} point in time during a reaction.",
+      "blanks": {
+        "1": {
+          "correct": "any",
+          "correctExplanation": "Unlike K which is measured at equilibrium, Q can be calculated using concentrations at any moment.",
+          "distractors": [
+            { "answer": "the equilibrium", "explanation": "This describes K, not Q; Q applies at any time, not just at equilibrium." },
+            { "answer": "the initial", "explanation": "While Q can be calculated at the start, it can also be calculated at any other time." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the Q expression.",
+      "sentence": "In the Q expression, the concentrations of {{blank:1}} are placed in the numerator and {{blank:2}} in the denominator.",
+      "blanks": {
+        "1": {
+          "correct": "products",
+          "correctExplanation": "Products appear in the numerator of the Q expression, following the convention of products over reactants.",
+          "distractors": [
+            { "answer": "reactants", "explanation": "Reactants go in the denominator, not the numerator." },
+            { "answer": "catalysts", "explanation": "Catalysts do not appear in the Q expression at all." }
+          ]
+        },
+        "2": {
+          "correct": "reactants",
+          "correctExplanation": "Reactants appear in the denominator of the Q expression.",
+          "distractors": [
+            { "answer": "products", "explanation": "Products go in the numerator, not the denominator." },
+            { "answer": "solvents", "explanation": "Pure solvents do not appear in the Q expression for homogeneous aqueous systems." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about stoichiometric coefficients.",
+      "sentence": "In the Q expression, stoichiometric coefficients from the balanced equation become {{blank:1}} on the concentration terms.",
+      "blanks": {
+        "1": {
+          "correct": "powers",
+          "correctExplanation": "The stoichiometric coefficients are used as exponents (powers) on the concentration terms in the expression.",
+          "distractors": [
+            { "answer": "multipliers", "explanation": "Coefficients become exponents, not simple multipliers; [A]² is not the same as 2[A]." },
+            { "answer": "subscripts", "explanation": "Subscripts refer to chemical formulas, not to how coefficients appear in equilibrium expressions." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "mc",
+      "question": "For the reaction 2SO₂(g) + O₂(g) ⇌ 2SO₃(g), what are the units of Q?",
+      "correct": "M⁻¹ (inverse moles per litre)",
+      "correctExplanation": "Q = [SO₃]²/([SO₂]²[O₂]) gives M²/(M² × M) = M²/M³ = M⁻¹.",
+      "distractors": [
+        { "answer": "M (moles per litre)", "explanation": "The powers are 2 in the numerator and 3 in the denominator (2+1), giving M⁻¹ not M." },
+        { "answer": "Q is unitless for this reaction", "explanation": "The sum of powers differs between numerator (2) and denominator (3), so Q has units of M⁻¹." },
+        { "answer": "M² (moles per litre squared)", "explanation": "This would require the numerator powers to exceed denominator powers by 2, which is not the case here." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "For A(g) ⇌ B(g), the concentrations at a given moment are [A] = 0.20 M and [B] = 0.60 M. What is Q?",
+      "correct": "3.0",
+      "correctExplanation": "Q = [B]/[A] = 0.60/0.20 = 3.0 (unitless since the powers on M cancel).",
+      "distractors": [
+        { "answer": "0.33", "explanation": "This is [A]/[B], which is the inverse of Q; products go in the numerator." },
+        { "answer": "0.80", "explanation": "This appears to be the sum of concentrations, not the ratio; Q is a ratio of products to reactants." },
+        { "answer": "0.40", "explanation": "This is the difference of concentrations; Q is calculated by dividing products by reactants." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Why is it important to include units when calculating Q?",
+      "correct": "The units of Q depend on stoichiometry and are needed for proper comparison with K",
+      "correctExplanation": "Since Q must be compared to K, both must have the same units for a valid comparison; the units come from the stoichiometry.",
+      "distractors": [
+        { "answer": "Units are optional and only included for presentation purposes in reports", "explanation": "Units are essential because Q and K must have matching units for comparison to be meaningful." },
+        { "answer": "Including units converts Q from a ratio to an absolute amount of product", "explanation": "Q remains a ratio regardless of units; units ensure consistency with K." },
+        { "answer": "Units are needed because Q is always measured in moles, not in concentrations", "explanation": "Q is calculated from concentrations (mol/L), not moles alone." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "For H₂(g) + I₂(g) ⇌ 2HI(g), the sum of powers in the numerator equals the sum of powers in the denominator. What does this mean for the units of Q?",
+      "correct": "Q is unitless for this reaction",
+      "correctExplanation": "Q = [HI]²/([H₂][I₂]) gives M²/(M × M) = M²/M² = no units, so Q is dimensionless.",
+      "distractors": [
+        { "answer": "Q has units of M² for this reaction", "explanation": "The M² in the numerator and M² in the denominator cancel, giving no units." },
+        { "answer": "Q has units of M⁻² for this reaction", "explanation": "The powers are equal (2 on each side), so the units cancel completely." },
+        { "answer": "Q always has units regardless of the stoichiometry", "explanation": "When the sum of powers is equal on both sides, the units cancel and Q is unitless." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "For N₂(g) + 2O₂(g) ⇌ 2NO₂(g), if [N₂] = 0.05 M, [O₂] = 0.10 M, and [NO₂] = 0.0001 M, what is Q?",
+      "correct": "2 × 10⁻⁵ M⁻¹",
+      "correctExplanation": "Q = (0.0001)²/((0.05)(0.10)²) = 1 × 10⁻⁸/(5 × 10⁻⁴) = 2 × 10⁻⁵ M⁻¹.",
+      "distractors": [
+        { "answer": "2 × 10⁻⁷ M⁻¹", "explanation": "This results from a calculation error; careful application of the powers and division gives 2 × 10⁻⁵." },
+        { "answer": "5 × 10⁴ M", "explanation": "This is the inverse of the correct answer; products must be in the numerator, not reactants." },
+        { "answer": "0.0001 M⁻¹", "explanation": "This uses only [NO₂] without applying the full expression with all species and powers." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "When Q equals K, what can be concluded about the system?",
+      "correct": "The system is at equilibrium",
+      "correctExplanation": "When the current concentration ratio (Q) equals the equilibrium ratio (K), the system has reached equilibrium.",
+      "distractors": [
+        { "answer": "The forward reaction is favoured and will continue to proceed forward", "explanation": "When Q = K, the system is at equilibrium and neither direction is favoured." },
+        { "answer": "The reverse reaction is favoured and products will convert to reactants", "explanation": "When Q = K, the system is balanced; the reverse reaction is not preferentially favoured." },
+        { "answer": "The reaction has stopped completely and no changes are occurring", "explanation": "At equilibrium (Q = K), the reaction continues but at equal forward and reverse rates, not stopped." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "If the stoichiometric coefficients in a balanced equation are all equal on both sides, Q will be unitless.",
+      "correct": "True",
+      "correctExplanation": "When the sum of powers in the numerator equals the sum in the denominator, the concentration units cancel, making Q unitless.",
+      "distractors": [
+        { "answer": "False", "explanation": "Students may not realise that equal total powers on both sides means the M units cancel completely." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about units of Q.",
+      "sentence": "For the reaction N₂(g) + 2O₂(g) ⇌ 2NO₂(g), the units of Q are M² / M³ = {{blank:1}}.",
+      "blanks": {
+        "1": {
+          "correct": "M⁻¹",
+          "correctExplanation": "The numerator has M² and the denominator has M³ (M¹ × M²), giving M²/M³ = M⁻¹.",
+          "distractors": [
+            { "answer": "M", "explanation": "M²/M³ simplifies to M⁻¹, not M." },
+            { "answer": "M²", "explanation": "The denominator's M³ reduces the numerator's M², giving M⁻¹." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about Q and K.",
+      "sentence": "When Q equals K, the system is at {{blank:1}} and no net change occurs in concentrations.",
+      "blanks": {
+        "1": {
+          "correct": "equilibrium",
+          "correctExplanation": "Q = K means the current concentration ratio matches the equilibrium ratio, indicating the system is at equilibrium.",
+          "distractors": [
+            { "answer": "completion", "explanation": "Q = K means equilibrium, not completion; both reactants and products are present." },
+            { "answer": "rest", "explanation": "The system is not at rest; forward and reverse reactions continue at equal rates." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the calculation step.",
+      "sentence": "To find the units of Q, apply {{blank:1}} laws to the units of concentration (M) based on the stoichiometric coefficients.",
+      "blanks": {
+        "1": {
+          "correct": "index",
+          "correctExplanation": "Index laws (laws of exponents) are used to combine the powers of M from the numerator and denominator.",
+          "distractors": [
+            { "answer": "rate", "explanation": "Rate laws relate to reaction kinetics, not to determining units of Q." },
+            { "answer": "conservation", "explanation": "Conservation laws apply to mass and energy, not to determining the units of an equilibrium expression." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "mc",
+      "question": "For the reaction Fe³⁺(aq) + SCN⁻(aq) ⇌ FeSCN²⁺(aq) with K = 789, if [Fe³⁺] = 0.002 M, [SCN⁻] = 0.015 M, and [FeSCN²⁺] = 0.010 M, calculate Q and determine the direction of the reaction.",
+      "correct": "Q = 333; since Q < K, the forward reaction is favoured",
+      "correctExplanation": "Q = 0.010/(0.002 × 0.015) = 0.010/0.00003 = 333. Since 333 < 789, the system must produce more products to reach equilibrium.",
+      "distractors": [
+        { "answer": "Q = 333; since Q > K, the reverse reaction is favoured", "explanation": "Q = 333 is less than K = 789, so the forward reaction is favoured, not the reverse." },
+        { "answer": "Q = 0.003; since Q < K, the forward reaction is favoured", "explanation": "The calculation is incorrect; Q = [FeSCN²⁺]/([Fe³⁺][SCN⁻]) = 0.010/(0.002 × 0.015) = 333, not 0.003." },
+        { "answer": "Q = 789; the system is already at equilibrium currently", "explanation": "Q = 333, not 789; the system is not yet at equilibrium." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "For the reaction PCl₅(g) ⇌ PCl₃(g) + Cl₂(g), what are the units of Q?",
+      "correct": "M (mol L⁻¹)",
+      "correctExplanation": "Q = [PCl₃][Cl₂]/[PCl₅] gives (M × M)/M = M²/M = M.",
+      "distractors": [
+        { "answer": "Q is unitless for this reaction", "explanation": "The numerator has M² and the denominator has M¹, so units do not cancel; Q has units of M." },
+        { "answer": "M⁻¹ (inverse moles per litre)", "explanation": "M²/M = M, not M⁻¹; the numerator has more powers than the denominator." },
+        { "answer": "M² (moles per litre squared)", "explanation": "M²/M simplifies to M, not M²." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student calculates Q for a reaction and gets a value of 50, while K = 50. What should they conclude?",
+      "correct": "The system is at equilibrium; no net change will occur",
+      "correctExplanation": "When Q = K, the system has reached equilibrium and there is no net driving force in either direction.",
+      "distractors": [
+        { "answer": "The forward reaction is favoured because Q matches K exactly", "explanation": "Q = K means equilibrium; neither forward nor reverse reaction is favoured." },
+        { "answer": "There must be an error because Q can never exactly equal K in practice", "explanation": "Q can equal K; this is the definition of equilibrium." },
+        { "answer": "The reverse reaction is favoured to bring Q below K in the system", "explanation": "Q = K means the system is at equilibrium; no net shift occurs." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "For 2NO₂(g) ⇌ N₂O₄(g), if [NO₂] = 0.40 M and [N₂O₄] = 0.10 M, calculate Q.",
+      "correct": "0.625 M⁻¹",
+      "correctExplanation": "Q = [N₂O₄]/[NO₂]² = 0.10/(0.40)² = 0.10/0.16 = 0.625 M⁻¹.",
+      "distractors": [
+        { "answer": "1.6 M",  "explanation": "This is the inverse (0.16/0.10); products must be in the numerator." },
+        { "answer": "0.25 M⁻¹", "explanation": "This results from dividing 0.10 by 0.40 without squaring; the coefficient 2 must be applied as a power." },
+        { "answer": "4.0 M⁻¹", "explanation": "This uses the wrong arrangement of terms in the expression." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "For the reaction CO(g) + 2H₂(g) ⇌ CH₃OH(g), if [CO] = 0.10 M, [H₂] = 0.20 M, and [CH₃OH] = 0.050 M, calculate Q and determine its units.",
+      "correct": "Q = 12.5 M⁻²",
+      "correctExplanation": "Q = [CH₃OH]/([CO][H₂]²) = 0.050/(0.10 × 0.04) = 0.050/0.004 = 12.5. Units: M/(M × M²) = M/M³ = M⁻².",
+      "distractors": [
+        { "answer": "Q = 12.5 M²", "explanation": "The units should be M⁻², not M²; the denominator has more powers than the numerator." },
+        { "answer": "Q = 2.5 M⁻²", "explanation": "The H₂ concentration must be squared: (0.20)² = 0.04, not 0.20 × 2." },
+        { "answer": "Q = 0.08 M²", "explanation": "This inverts the expression; products belong in the numerator." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student forgets to raise [O₂] to the power of 2 when calculating Q for N₂(g) + 2O₂(g) ⇌ 2NO₂(g). How would this error affect their Q value?",
+      "correct": "Q would be larger than the correct value because the denominator is too small",
+      "correctExplanation": "Omitting the power on [O₂] makes the denominator smaller (since [O₂] < [O₂]² for values > 1 M, but for typical values < 1 M, [O₂]² < [O₂]), giving a larger denominator when the power is included, so omitting it makes Q too large.",
+      "distractors": [
+        { "answer": "Q would be smaller because the numerator would also be affected", "explanation": "The numerator is not affected by the error in the denominator; only the O₂ term changes." },
+        { "answer": "Q would be unchanged because powers do not affect the final calculated value", "explanation": "Powers significantly affect the calculated value; omitting them gives an incorrect result." },
+        { "answer": "Q would have different units but the same numerical value as the correct answer", "explanation": "Both the numerical value and units would change when powers are omitted." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "For the reaction 2A(g) ⇌ B(g), if [A] = 0.30 M and [B] = 0.45 M at a particular moment, what is Q?",
+      "correct": "5.0 M⁻¹",
+      "correctExplanation": "Q = [B]/[A]² = 0.45/(0.30)² = 0.45/0.09 = 5.0. Units: M/M² = M⁻¹.",
+      "distractors": [
+        { "answer": "1.5 M⁻¹", "explanation": "This divides 0.45 by 0.30 without squaring; the coefficient 2 on A must be used as a power." },
+        { "answer": "0.20 M", "explanation": "This appears to invert the expression and incorrectly handles the power." },
+        { "answer": "5.0 (unitless)", "explanation": "The units are M/M² = M⁻¹, not unitless." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the calculation of Q.",
+      "sentence": "For 2SO₂(g) + O₂(g) ⇌ 2SO₃(g) with [SO₂] = 0.10, [O₂] = 0.20, [SO₃] = 0.30, Q = [SO₃]²/([SO₂]²[O₂]) = {{blank:1}}.",
+      "blanks": {
+        "1": {
+          "correct": "45 M⁻¹",
+          "correctExplanation": "Q = (0.30)²/((0.10)² × 0.20) = 0.09/0.002 = 45. Units: M²/(M² × M) = M⁻¹.",
+          "distractors": [
+            { "answer": "0.022 M", "explanation": "This inverts the expression, placing reactants in the numerator." },
+            { "answer": "45 M", "explanation": "The units are M²/M³ = M⁻¹, not M." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about Q and reaction direction.",
+      "sentence": "If Q is less than K, the system must produce more {{blank:1}} to reach equilibrium, so the forward reaction is favoured.",
+      "blanks": {
+        "1": {
+          "correct": "products",
+          "correctExplanation": "Q < K means the product-to-reactant ratio is too low, so more products must form to increase Q to equal K.",
+          "distractors": [
+            { "answer": "reactants", "explanation": "Producing more reactants would decrease Q further, moving away from equilibrium." },
+            { "answer": "catalysts", "explanation": "Catalysts are not produced by the reaction and are not related to the Q vs K comparison." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the unit analysis.",
+      "sentence": "For a reaction where the total powers in the numerator are 2 and in the denominator are 3, the units of Q are {{blank:1}}.",
+      "blanks": {
+        "1": {
+          "correct": "M⁻¹",
+          "correctExplanation": "M²/M³ = M^(2-3) = M⁻¹.",
+          "distractors": [
+            { "answer": "M", "explanation": "M²/M³ = M⁻¹, not M; the denominator has more powers." },
+            { "answer": "M⁵", "explanation": "The powers are subtracted (2-3 = -1), not added (2+3 = 5)." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "mc",
+      "question": "For the reaction 2SO₂(g) + O₂(g) ⇌ 2SO₃(g) with K = 100 M⁻¹, if Q = 250 M⁻¹, analyse the system's state and predict its behaviour.",
+      "correct": "Q > K, so the reverse reaction is favoured; the system has too much product relative to equilibrium",
+      "correctExplanation": "Since Q (250) exceeds K (100), the product-to-reactant ratio is too high and the system must shift left to reduce Q to K.",
+      "distractors": [
+        { "answer": "Q > K, so the forward reaction is favoured to produce even more product in the system", "explanation": "When Q > K, there is already too much product; the reverse reaction is favoured to reduce Q." },
+        { "answer": "Q and K cannot be compared because they have different units in this case here", "explanation": "Q and K must have the same units for a given reaction; both are M⁻¹ here and can be compared." },
+        { "answer": "The system is at equilibrium because both Q and K are positive values greater than one", "explanation": "Being positive is not sufficient for equilibrium; Q must equal K, which it does not (250 ≠ 100)." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student calculates Q for a reaction and obtains Q = 5.0 × 10³ M⁻¹ while K = 5.0 × 10³ M. They conclude the system is at equilibrium. Evaluate this conclusion.",
+      "correct": "The conclusion is incorrect; Q and K have different units, indicating a calculation error",
+      "correctExplanation": "Q and K for the same reaction must have the same units. Different units (M⁻¹ vs M) suggest an error in the Q calculation.",
+      "distractors": [
+        { "answer": "The conclusion is correct because the numerical values match even with different units", "explanation": "Units matter; 5000 M⁻¹ ≠ 5000 M, so the system may not be at equilibrium and the calculation must be checked." },
+        { "answer": "The conclusion is correct because Q and K always have different units by definition", "explanation": "Q and K for the same reaction always have identical units; different units indicate an error." },
+        { "answer": "The conclusion cannot be evaluated because Q and K are fundamentally different quantities", "explanation": "Q and K use the same expression and must have the same units; they can and should be compared." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "For the reaction A(g) ⇌ 2B(g), K = 4.0 M. If the reaction is rewritten as ½A(g) ⇌ B(g), how does Q for the second equation relate to Q for the first?",
+      "correct": "Q for the second equation is the square root of Q for the first equation",
+      "correctExplanation": "Halving all coefficients means all powers are halved, so Q_new = √Q_original. Similarly K_new = √K_original = √4.0 = 2.0 M^(1/2).",
+      "distractors": [
+        { "answer": "Q for the second equation is half of Q for the first equation calculated", "explanation": "Halving coefficients takes the square root of Q, not half of Q, because coefficients are powers." },
+        { "answer": "Q for the second equation is identical to Q for the first equation always", "explanation": "Changing the coefficients changes the expression and therefore the value and units of Q." },
+        { "answer": "Q for the second equation is the square of Q for the first equation calculated", "explanation": "Halving coefficients gives the square root, not the square, of the original Q." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A system initially has Q = 0 for the reaction A(g) ⇌ B(g) + C(g). What does Q = 0 signify and what will happen?",
+      "correct": "No products are present initially; the forward reaction will proceed to generate products",
+      "correctExplanation": "Q = 0 means the numerator is zero (no products), so Q < K for any positive K, and the forward reaction is strongly favoured.",
+      "distractors": [
+        { "answer": "The system is at equilibrium with no products; no reaction will occur at all", "explanation": "Q = 0 ≠ K (for any positive K), so the system is not at equilibrium; the forward reaction will proceed." },
+        { "answer": "Q = 0 is impossible because the expression cannot equal zero under any conditions", "explanation": "Q = 0 when no products are present, which is the case at the very start before any reaction occurs." },
+        { "answer": "The reverse reaction is favoured because Q is less than any positive K value", "explanation": "When Q < K, the forward reaction is favoured, not the reverse." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Compare the information provided by calculating Q at three time points during a reaction: t₁ (early), t₂ (middle), and t₃ (equilibrium). What pattern would you expect?",
+      "correct": "Q increases over time from a low value toward K as products accumulate",
+      "correctExplanation": "Starting with mostly reactants (low Q), products form and Q increases until it equals K at equilibrium (assuming the reaction starts with reactants only).",
+      "distractors": [
+        { "answer": "Q remains constant at all three time points until equilibrium is reached instantly", "explanation": "Q changes continuously as concentrations change; it is not constant before equilibrium." },
+        { "answer": "Q decreases over time as reactants are consumed during the reaction progression", "explanation": "Q increases as products form, because products are in the numerator of the expression." },
+        { "answer": "Q oscillates above and below K before settling at equilibrium at the final time", "explanation": "Q changes monotonically toward K; it does not oscillate above and below." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "For the reaction N₂(g) + 3H₂(g) ⇌ 2NH₃(g), determine the units of Q.",
+      "correct": "M⁻²",
+      "correctExplanation": "Q = [NH₃]²/([N₂][H₂]³) gives M²/(M × M³) = M²/M⁴ = M⁻².",
+      "distractors": [
+        { "answer": "M²", "explanation": "The numerator has M² and denominator has M⁴, giving M²/M⁴ = M⁻², not M²." },
+        { "answer": "M⁻¹", "explanation": "The denominator has M⁴ (1+3), not M³; M²/M⁴ = M⁻², not M⁻¹." },
+        { "answer": "Unitless", "explanation": "The powers are 2 in the numerator and 4 in the denominator, so they do not cancel." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student is given concentrations for a reaction at two different temperatures and calculates Q at each. At Temperature 1, Q = K₁. At Temperature 2, Q₂ ≠ K₂. What is the most likely explanation?",
+      "correct": "At Temperature 1 the system is at equilibrium; at Temperature 2 the concentrations have not yet reached the new equilibrium",
+      "correctExplanation": "Q = K means equilibrium at Temperature 1. At Temperature 2, K changes with temperature, and the given concentrations do not yet satisfy the new K.",
+      "distractors": [
+        { "answer": "The student made a calculation error at Temperature 2 because Q must always equal K", "explanation": "Q only equals K at equilibrium; if the system is not at equilibrium, Q ≠ K is correct." },
+        { "answer": "Temperature changes do not affect K, so both Q values should equal the same K", "explanation": "Temperature does change K; different temperatures have different K values." },
+        { "answer": "Q cannot be calculated at different temperatures because the expression changes with temperature", "explanation": "The Q expression remains the same; only the K value and concentrations change with temperature." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "For 2A(g) + B(g) ⇌ 3C(g), with [A] = 0.10 M, [B] = 0.20 M, [C] = 0.30 M, and K = 200 M, calculate Q and determine the reaction direction.",
+      "correct": "Q = 13.5 M; since Q < K, the forward reaction is favoured",
+      "correctExplanation": "Q = [C]³/([A]²[B]) = (0.30)³/((0.10)² × 0.20) = 0.027/0.002 = 13.5 M. Since 13.5 < 200, forward is favoured.",
+      "distractors": [
+        { "answer": "Q = 13.5 M; since Q > K, the reverse reaction is favoured", "explanation": "Q = 13.5 is less than K = 200, so the forward reaction is favoured, not the reverse." },
+        { "answer": "Q = 0.074 M⁻¹; since Q < K, the forward reaction is favoured", "explanation": "This inverts the expression; products (C) go in the numerator." },
+        { "answer": "Q = 13.5 M⁻¹; since Q < K, the forward reaction is favoured", "explanation": "The units are M (M³/M³ × M = M³/M² = M), not M⁻¹." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the analysis of Q behaviour over time.",
+      "sentence": "As a reaction progresses from pure reactants toward equilibrium, Q {{blank:1}} from zero until it equals {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "increases",
+          "correctExplanation": "As products form, the numerator of Q increases, causing Q to increase toward K.",
+          "distractors": [
+            { "answer": "decreases", "explanation": "Q increases as products form; it does not decrease when starting from reactants only." },
+            { "answer": "oscillates", "explanation": "Q changes monotonically toward K; it does not oscillate." }
+          ]
+        },
+        "2": {
+          "correct": "K",
+          "correctExplanation": "At equilibrium, Q equals K, and no further net change in concentrations occurs.",
+          "distractors": [
+            { "answer": "zero", "explanation": "Q approaches K at equilibrium, not zero; Q = 0 only when no products are present." },
+            { "answer": "infinity", "explanation": "Q approaches K, a finite value; it does not increase without limit." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the unit analysis for the Haber process.",
+      "sentence": "For N₂(g) + 3H₂(g) ⇌ 2NH₃(g), the units of Q are M²/M⁴ = {{blank:1}}.",
+      "blanks": {
+        "1": {
+          "correct": "M⁻²",
+          "correctExplanation": "M² in the numerator divided by M⁴ in the denominator gives M^(2-4) = M⁻².",
+          "distractors": [
+            { "answer": "M²", "explanation": "The denominator M⁴ exceeds the numerator M², giving a negative exponent M⁻²." },
+            { "answer": "M⁶", "explanation": "The powers are subtracted (2-4 = -2), not added (2+4 = 6)." }
+          ]
+        }
+      }
+    }
+  ]
+}

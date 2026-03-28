@@ -1,0 +1,683 @@
+{
+  "_link": {
+    "uuid": "lp-2870dd65-fd1d-b95e-50d0-f1aff28c8339",
+    "version": 1,
+    "contentHash": "hash-0abc7e2b",
+    "title": "I can apply appropriate significant figures and unit conversions in Faraday's law calculations",
+    "generatedAt": "2026-03-28T08:00:00Z"
+  },
+  "toLevel2": [
+    {
+      "type": "mc",
+      "question": "What unit must time be expressed in before substituting into Q = It?",
+      "correct": "Seconds",
+      "correctExplanation": "The equation Q = It requires time in seconds to give charge in coulombs when current is in amperes.",
+      "distractors": [
+        { "answer": "Minutes", "explanation": "Minutes must be converted to seconds before use in Q = It; using minutes gives an answer 60 times too small." },
+        { "answer": "Hours", "explanation": "Hours must be converted to seconds (multiply by 3600) before substituting into Q = It." },
+        { "answer": "Milliseconds", "explanation": "Milliseconds must be converted to seconds (divide by 1000) before using Q = It." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A current of 2.50 A is applied for 5.0 minutes. How many significant figures should the final answer have?",
+      "correct": "2 significant figures",
+      "correctExplanation": "The least precise value is 5.0 minutes (2 significant figures), so the final answer must be rounded to 2 significant figures.",
+      "distractors": [
+        { "answer": "3 significant figures", "explanation": "Although 2.50 A has 3 significant figures, the answer is limited by the least precise value, which is 5.0 (2 sig figs)." },
+        { "answer": "1 significant figure", "explanation": "Neither given value has only 1 significant figure; 5.0 has 2 significant figures, not 1." },
+        { "answer": "4 significant figures", "explanation": "Neither given value has 4 significant figures; the answer cannot be more precise than the least precise input." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "How many seconds are in 12.5 minutes?",
+      "correct": "750 seconds",
+      "correctExplanation": "To convert minutes to seconds, multiply by 60: 12.5 × 60 = 750 seconds.",
+      "distractors": [
+        { "answer": "125 seconds", "explanation": "This results from dividing by 10 instead of multiplying by 60; the correct conversion factor is 60 s per minute." },
+        { "answer": "7500 seconds", "explanation": "This results from multiplying by 600 instead of 60; there are 60 seconds in one minute, not 600." },
+        { "answer": "1250 seconds", "explanation": "This results from multiplying by 100 instead of 60; the correct conversion uses 60 seconds per minute." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "The value 0.0350 mol has how many significant figures?",
+      "correct": "3 significant figures",
+      "correctExplanation": "Leading zeros are not significant; the digits 3, 5, and the trailing 0 are all significant, giving 3 significant figures.",
+      "distractors": [
+        { "answer": "4 significant figures", "explanation": "Leading zeros before 3 are not significant; only the digits 3, 5, and the trailing 0 count." },
+        { "answer": "2 significant figures", "explanation": "The trailing zero after 5 is significant because it follows the decimal point, so there are 3, not 2." },
+        { "answer": "5 significant figures", "explanation": "Leading zeros are placeholders and are never counted as significant figures in a measurement." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What is the value of Faraday's constant used in electrolysis calculations?",
+      "correct": "96 485 C mol⁻¹",
+      "correctExplanation": "Faraday's constant represents the charge carried by one mole of electrons and equals 96 485 coulombs per mole.",
+      "distractors": [
+        { "answer": "96 485 J mol⁻¹", "explanation": "The unit is coulombs per mole, not joules per mole; Faraday's constant measures charge, not energy." },
+        { "answer": "9648.5 C mol⁻¹", "explanation": "This is ten times too small; Faraday's constant is 96 485 C mol⁻¹, not 9648.5 C mol⁻¹." },
+        { "answer": "96 485 A mol⁻¹", "explanation": "The unit is coulombs per mole, not amperes per mole; amperes measure current, not charge." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "When a time of 5 minutes is given in an electrolysis problem, it should be used directly in Q = It without conversion.",
+      "correct": "False",
+      "correctExplanation": "Time must always be converted to seconds before substituting into Q = It, since the equation requires SI units (amperes and seconds) to give charge in coulombs.",
+      "distractors": [
+        { "answer": "True", "explanation": "Students may forget the unit conversion step and substitute minutes directly, leading to an answer that is 60 times too small." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "A final answer should be rounded to match the number of significant figures of the least precise value used in the calculation.",
+      "correct": "True",
+      "correctExplanation": "In multiplication and division, the result must have no more significant figures than the least precise input value.",
+      "distractors": [
+        { "answer": "False", "explanation": "Students may think they should keep all calculator digits or match the most precise value, but the least precise value limits the answer." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about unit conversion in Faraday's law.",
+      "sentence": "Before using Q = It, time given in minutes must be multiplied by {{blank:1}} to convert to seconds.",
+      "blanks": {
+        "1": {
+          "correct": "60",
+          "correctExplanation": "There are 60 seconds in one minute, so multiplying minutes by 60 gives the time in seconds.",
+          "distractors": [
+            { "answer": "100", "explanation": "100 is the conversion factor for centimetres to metres, not minutes to seconds; there are 60 seconds in a minute." },
+            { "answer": "3600", "explanation": "3600 converts hours to seconds, not minutes to seconds; minutes to seconds requires multiplying by 60." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about significant figures.",
+      "sentence": "Leading zeros in a decimal number such as 0.0042 are {{blank:1}} significant.",
+      "blanks": {
+        "1": {
+          "correct": "not",
+          "correctExplanation": "Leading zeros serve only as placeholders to show the position of the decimal point and are never counted as significant figures.",
+          "distractors": [
+            { "answer": "always", "explanation": "Leading zeros are never significant; only non-zero digits and certain trailing zeros count as significant figures." },
+            { "answer": "sometimes", "explanation": "Leading zeros are never significant regardless of context; the rule has no exceptions for leading zeros." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about charge calculation.",
+      "sentence": "In the equation Q = It, Q represents {{blank:1}} measured in {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "charge",
+          "correctExplanation": "Q is the symbol for electric charge, which equals the product of current and time.",
+          "distractors": [
+            { "answer": "current", "explanation": "Current is represented by I, not Q; Q represents the total charge transferred." },
+            { "answer": "energy", "explanation": "Energy is measured in joules; Q represents charge, which is measured in coulombs." }
+          ]
+        },
+        "2": {
+          "correct": "coulombs",
+          "correctExplanation": "When current in amperes is multiplied by time in seconds, the resulting charge is in coulombs.",
+          "distractors": [
+            { "answer": "amperes", "explanation": "Amperes measure current (I), not charge; charge is measured in coulombs." },
+            { "answer": "volts", "explanation": "Volts measure electrical potential, not charge; charge is measured in coulombs." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "mc",
+      "question": "Why must time be converted to seconds before using Q = It in Faraday's law calculations?",
+      "correct": "The equation requires SI units to give charge in coulombs",
+      "correctExplanation": "Q = It gives charge in coulombs only when current is in amperes and time is in seconds, which are both SI base units.",
+      "distractors": [
+        { "answer": "The equation only works with small numbers for time", "explanation": "The equation works with any magnitude; the requirement is for consistent SI units, not small numbers." },
+        { "answer": "Faraday's constant is measured in seconds per mole", "explanation": "Faraday's constant is measured in coulombs per mole, not seconds per mole; the time conversion ensures consistent units." },
+        { "answer": "Converting to seconds always increases calculation accuracy", "explanation": "The conversion is about using correct units, not about accuracy; using minutes would give the wrong answer entirely." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student calculates a mass of 3.456 g from data with the least precise value having 2 significant figures. What should they report?",
+      "correct": "3.5 g",
+      "correctExplanation": "The answer must be rounded to 2 significant figures to match the least precise input, giving 3.5 g.",
+      "distractors": [
+        { "answer": "3.456 g", "explanation": "Reporting all calculator digits ignores significant figure rules; the answer must match the least precise input." },
+        { "answer": "3.46 g", "explanation": "This has 3 significant figures, which exceeds the precision of the least precise value in the calculation." },
+        { "answer": "3.0 g", "explanation": "This rounds too aggressively to 2 significant figures; 3.456 rounded to 2 significant figures is 3.5, not 3.0." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which statement best explains why significant figures matter in Faraday's law calculations?",
+      "correct": "They ensure the answer reflects the precision of the measured data",
+      "correctExplanation": "Significant figures communicate the reliability of measurements; reporting excess digits implies false precision.",
+      "distractors": [
+        { "answer": "They make the calculation easier to perform on a calculator", "explanation": "Significant figures are about precision of reporting, not about computational convenience." },
+        { "answer": "They are required to balance the chemical equation correctly", "explanation": "Balancing equations involves stoichiometric coefficients, not significant figures; these are separate concepts." },
+        { "answer": "They determine which equation should be used for the problem", "explanation": "Equation selection depends on what quantities are given, not on the number of significant figures." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student uses 15 minutes directly in Q = It without converting to seconds. How does this affect the calculated charge?",
+      "correct": "The charge is 60 times smaller than the correct value",
+      "correctExplanation": "Using 15 instead of 900 (15 × 60) means dividing the correct charge by 60, giving a value 60 times too small.",
+      "distractors": [
+        { "answer": "The charge is 60 times larger than the correct value", "explanation": "Using minutes gives a smaller number than seconds, so the charge would be too small, not too large." },
+        { "answer": "The charge is unaffected because units cancel out", "explanation": "Units do not cancel; Q = It requires seconds, and using minutes gives an incorrect result." },
+        { "answer": "The charge is 3600 times smaller than the correct value", "explanation": "The factor of 3600 applies to hours-to-seconds conversion; minutes to seconds involves a factor of 60." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "When multiplying 2.5 A by 600 s, how many significant figures should the answer Q have?",
+      "correct": "2 significant figures",
+      "correctExplanation": "2.5 has 2 significant figures and 600 has at least 1 (ambiguous, but typically 1-3); the answer is limited by the least precise value.",
+      "distractors": [
+        { "answer": "4 significant figures", "explanation": "Neither value has 4 significant figures; the answer cannot exceed the precision of the inputs." },
+        { "answer": "3 significant figures", "explanation": "2.5 has only 2 significant figures, which limits the answer to 2, not 3." },
+        { "answer": "1 significant figure", "explanation": "2.5 clearly has 2 significant figures; the answer should have 2, not 1." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Why does the significant figure rule differ for multiplication/division compared to addition/subtraction?",
+      "correct": "Multiplication/division uses significant figures; addition/subtraction uses decimal places",
+      "correctExplanation": "In multiplication and division, precision is tracked by significant figures, while in addition and subtraction, precision is tracked by decimal places.",
+      "distractors": [
+        { "answer": "There is no difference; the same rule applies to all mathematical operations", "explanation": "Different rules apply: significant figures for multiplication/division, decimal places for addition/subtraction." },
+        { "answer": "Addition/subtraction uses significant figures; multiplication/division uses decimal places", "explanation": "This reverses the correct rules; multiplication/division uses significant figures and addition/subtraction uses decimal places." },
+        { "answer": "Significant figure rules only apply to division operations and not other operations", "explanation": "Significant figure rules apply to both multiplication and division, and decimal place rules apply to addition and subtraction." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "The trailing zero in the value 2.50 A is significant and indicates greater precision than 2.5 A.",
+      "correct": "True",
+      "correctExplanation": "A trailing zero after the decimal point is significant; 2.50 A has 3 significant figures while 2.5 A has only 2, indicating different precision levels.",
+      "distractors": [
+        { "answer": "False", "explanation": "Students may think all trailing zeros are insignificant, but trailing zeros after a decimal point indicate measured precision." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about significant figure rules.",
+      "sentence": "In multiplication and division, the answer is rounded to the same number of {{blank:1}} as the least precise input value.",
+      "blanks": {
+        "1": {
+          "correct": "significant figures",
+          "correctExplanation": "For multiplication and division, significant figures determine the precision of the final answer.",
+          "distractors": [
+            { "answer": "decimal places", "explanation": "Decimal places govern addition and subtraction rounding, not multiplication and division." },
+            { "answer": "whole numbers", "explanation": "Whole numbers are not a rounding criterion; significant figures determine precision in multiplication and division." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about unit conversion consequences.",
+      "sentence": "If time is given in hours, it must be multiplied by {{blank:1}} to convert to the correct unit for Q = It.",
+      "blanks": {
+        "1": {
+          "correct": "3600",
+          "correctExplanation": "One hour contains 3600 seconds (60 minutes × 60 seconds), which is the required unit for Q = It.",
+          "distractors": [
+            { "answer": "60", "explanation": "Multiplying by 60 converts hours to minutes, not to seconds; a further multiplication by 60 is needed." },
+            { "answer": "360", "explanation": "360 is not the correct conversion factor; there are 3600 seconds in one hour, not 360." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about precision in Faraday's law.",
+      "sentence": "Reporting a calculated mass as 5.678 g when the data only justifies {{blank:1}} significant figures implies a false level of {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "2",
+          "correctExplanation": "If the least precise input has 2 significant figures, the answer should only be reported to 2 significant figures.",
+          "distractors": [
+            { "answer": "4", "explanation": "Reporting to 4 significant figures would only be justified if all input values had at least 4 significant figures." },
+            { "answer": "6", "explanation": "6 significant figures would require extremely precise measurements not typical in standard electrolysis problems." }
+          ]
+        },
+        "2": {
+          "correct": "precision",
+          "correctExplanation": "Extra digits suggest the measurement is more precise than it actually is, which is misleading.",
+          "distractors": [
+            { "answer": "accuracy", "explanation": "While related, precision refers to the number of meaningful digits; the issue here is overstating the precision of the result." },
+            { "answer": "reliability", "explanation": "Reliability relates to reproducibility; the specific issue of excess digits is about overstated precision." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "mc",
+      "question": "A current of 4.0 A flows for 2.5 hours through a copper sulfate solution. What is the charge in coulombs, reported to the correct number of significant figures?",
+      "correct": "36 000 C (2 significant figures)",
+      "correctExplanation": "Time = 2.5 × 3600 = 9000 s. Q = 4.0 × 9000 = 36 000 C. Both inputs have 2 significant figures, so the answer is 36 000 C (2 sig figs).",
+      "distractors": [
+        { "answer": "10.0 C (3 significant figures)", "explanation": "This results from using hours directly in Q = It without converting to seconds; time must be in seconds." },
+        { "answer": "36 000 C (5 significant figures)", "explanation": "Reporting 5 significant figures exceeds the precision of the inputs, which each have only 2 significant figures." },
+        { "answer": "36 000 C (3 significant figures)", "explanation": "Both 4.0 and 2.5 have 2 significant figures, not 3; the answer should be reported to 2 significant figures." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An electrolysis experiment produces 1.274 g of copper. The current was 1.5 A and time was 35 minutes. How should the student determine the number of significant figures for the moles of copper?",
+      "correct": "Use 2 significant figures, limited by the current of 1.5 A",
+      "correctExplanation": "The current 1.5 A has 2 significant figures, which is the least precise value and limits all subsequent calculated values.",
+      "distractors": [
+        { "answer": "Use 4 significant figures, matching the mass of 1.274 g", "explanation": "The mass has 4 significant figures, but the final answer must match the least precise input, which is 1.5 A (2 sig figs)." },
+        { "answer": "Use 2 significant figures, limited by the time of 35 minutes", "explanation": "While 35 also has 2 significant figures, the student should identify all inputs; 1.5 A equally limits the precision." },
+        { "answer": "Use 5 significant figures from the Faraday constant value", "explanation": "The Faraday constant is a known constant with high precision; it does not limit the answer's significant figures." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student calculates Q = 3.20 A × 1800 s and reports Q = 5760.0 C. What error has the student made?",
+      "correct": "Reported too many significant figures for the given data",
+      "correctExplanation": "3.20 A has 3 significant figures; the answer should be 5760 C (3 sig figs), not 5760.0 C (5 sig figs).",
+      "distractors": [
+        { "answer": "Failed to convert the time from minutes to seconds", "explanation": "The time is already in seconds (1800 s); the error is in significant figure reporting, not unit conversion." },
+        { "answer": "Used the wrong value for Faraday's constant in the calculation", "explanation": "Faraday's constant is not used in Q = It; the error is reporting too many significant figures." },
+        { "answer": "Multiplied current by time incorrectly to get the wrong numerical value", "explanation": "The multiplication 3.20 × 1800 = 5760 is correct; the error is adding the false trailing decimal zero." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "In an industrial process, 150.0 A flows for 8.0 hours to deposit aluminium. What is the correct time value in seconds to use in Q = It?",
+      "correct": "28 800 s",
+      "correctExplanation": "8.0 hours × 3600 s/hour = 28 800 s. The time must be converted from hours to seconds for use in Q = It.",
+      "distractors": [
+        { "answer": "480 s", "explanation": "This results from multiplying 8.0 by 60, converting hours to minutes instead of seconds; a further ×60 is needed." },
+        { "answer": "8.0 s", "explanation": "This uses the hours value directly without conversion; time must be converted to seconds for Q = It." },
+        { "answer": "288 000 s", "explanation": "This is ten times too large, possibly from using 36 000 instead of 3600 as the conversion factor." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student measures a current as 0.500 A and time as 20 minutes. They calculate Q = 0.500 × 20 = 10.0 C. Identify the error and the correct charge.",
+      "correct": "Time was not converted; Q = 0.500 × 1200 = 600 C",
+      "correctExplanation": "20 minutes = 1200 seconds. Q = 0.500 × 1200 = 600 C. The student used minutes directly instead of converting.",
+      "distractors": [
+        { "answer": "The current should be 500 A; Q = 500 × 20 = 10 000 C", "explanation": "0.500 A is the correct current; it should not be converted to 500. The error is in the time unit." },
+        { "answer": "Faraday's constant was not applied; Q = 10.0 × 96 485 C", "explanation": "Q = It does not involve Faraday's constant; the error is using minutes instead of seconds." },
+        { "answer": "Time was not converted; Q = 0.500 × 12 000 = 6000 C", "explanation": "20 minutes equals 1200 seconds (20 × 60), not 12 000 seconds; this uses the wrong conversion factor." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "During electroplating, a current of 2.00 A is applied for exactly 30.0 minutes. The molar mass of silver is 107.87 g mol⁻¹. A student reports the mass of silver deposited as 2.01234 g. What is wrong with this answer?",
+      "correct": "Too many significant figures; the answer should have 3 significant figures",
+      "correctExplanation": "The least precise measured values (2.00 A and 30.0 min) each have 3 significant figures, so the answer should be reported as 2.01 g.",
+      "distractors": [
+        { "answer": "The student forgot to convert minutes to seconds before calculating", "explanation": "The numerical value may be correct if conversion was done; the stated error is in the significant figure reporting." },
+        { "answer": "Too few significant figures; the answer should have 5 significant figures", "explanation": "The inputs limit the answer to 3 significant figures; reporting 5 would overstate the precision." },
+        { "answer": "The molar mass should have been rounded to 108 before calculating", "explanation": "Known constants like molar mass should not be rounded before calculation; they do not limit significant figures." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student adds electrode potentials: E°(cathode) = 0.34 V and E°(anode) = −0.8 V. They report E°cell = 1.14 V. What is the correct answer?",
+      "correct": "1.1 V, rounded to 1 decimal place",
+      "correctExplanation": "In addition/subtraction, the answer is limited by the fewest decimal places. −0.8 V has 1 decimal place, so the answer is 1.1 V.",
+      "distractors": [
+        { "answer": "1.14 V, rounded to 2 decimal places", "explanation": "The answer cannot have more decimal places than the least precise value (−0.8 V has 1 decimal place)." },
+        { "answer": "1.140 V, rounded to 3 decimal places", "explanation": "This exceeds the precision of both inputs; −0.8 V limits the answer to 1 decimal place." },
+        { "answer": "1 V, rounded to 0 decimal places", "explanation": "−0.8 V has 1 decimal place, so the answer should also have 1 decimal place, giving 1.1 V." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about a calculation error.",
+      "sentence": "Using 45 minutes directly in Q = It instead of converting to {{blank:1}} seconds produces a charge that is {{blank:2}} times too small.",
+      "blanks": {
+        "1": {
+          "correct": "2700",
+          "correctExplanation": "45 minutes × 60 seconds/minute = 2700 seconds is the correct conversion.",
+          "distractors": [
+            { "answer": "4500", "explanation": "4500 would result from multiplying by 100 instead of 60; there are 60 seconds per minute." },
+            { "answer": "270", "explanation": "270 results from multiplying by 6 instead of 60; the correct conversion factor is 60 seconds per minute." }
+          ]
+        },
+        "2": {
+          "correct": "60",
+          "correctExplanation": "Since 1 minute = 60 seconds, using minutes gives a value 60 times smaller than the correct charge.",
+          "distractors": [
+            { "answer": "45", "explanation": "The factor relates to the conversion between minutes and seconds (60), not the number of minutes given." },
+            { "answer": "3600", "explanation": "3600 is the conversion factor from hours to seconds; minutes to seconds involves a factor of 60." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about significant figures in a calculation.",
+      "sentence": "If a current of 5.00 A and a time of 10 minutes are given, the final answer should have {{blank:1}} significant figures because the time value is the {{blank:2}} precise.",
+      "blanks": {
+        "1": {
+          "correct": "2",
+          "correctExplanation": "10 minutes has 2 significant figures (the least precise input), so the answer is limited to 2 significant figures.",
+          "distractors": [
+            { "answer": "3", "explanation": "3 significant figures matches the current (5.00 A), but the answer is limited by the least precise value, which is 10 (2 sig figs)." },
+            { "answer": "1", "explanation": "10 has 2 significant figures (the 1 and 0 are both significant); the answer should have 2, not 1." }
+          ]
+        },
+        "2": {
+          "correct": "least",
+          "correctExplanation": "The rule states that the answer must match the number of significant figures of the least precise input.",
+          "distractors": [
+            { "answer": "most", "explanation": "Using the most precise value would overstate the reliability of the answer; the least precise value sets the limit." },
+            { "answer": "equally", "explanation": "The values are not equally precise; 5.00 has 3 significant figures while 10 has 2." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about Faraday's law calculation steps.",
+      "sentence": "After calculating moles of electrons, the charge is found using Q = n(e⁻) × {{blank:1}}, where the constant has units of {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "F",
+          "correctExplanation": "F represents Faraday's constant (96 485 C mol⁻¹), which converts moles of electrons to charge in coulombs.",
+          "distractors": [
+            { "answer": "R", "explanation": "R is the universal gas constant used in gas law calculations, not in Faraday's law charge calculations." },
+            { "answer": "I", "explanation": "I represents current in amperes; Faraday's constant F is used to convert moles of electrons to charge." }
+          ]
+        },
+        "2": {
+          "correct": "C mol⁻¹",
+          "correctExplanation": "Faraday's constant has units of coulombs per mole, converting moles of electrons to total charge.",
+          "distractors": [
+            { "answer": "A mol⁻¹", "explanation": "Amperes per mole would give current, not charge; Faraday's constant is in coulombs per mole." },
+            { "answer": "V mol⁻¹", "explanation": "Volts per mole relates to energy per charge per mole; Faraday's constant is in coulombs per mole." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "mc",
+      "question": "A current of 4.0 A flows for 2.5 hours through a copper sulfate solution. What is the charge in coulombs, reported to the correct number of significant figures?",
+      "correct": "36 000 C",
+      "correctExplanation": "Time = 2.5 × 3600 = 9000 s. Q = 4.0 × 9000 = 36 000 C. Both inputs have 2 significant figures.",
+      "distractors": [
+        { "answer": "10.0 C", "explanation": "This results from using hours directly in Q = It without converting to seconds; time must be in seconds." },
+        { "answer": "36 000.0 C", "explanation": "Adding a decimal zero implies 6 significant figures, which exceeds the 2 significant figures justified by the data." },
+        { "answer": "600 C", "explanation": "This results from converting hours to minutes but not to seconds; time must be fully converted to seconds." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An electrolysis experiment uses 1.5 A for 35 minutes to deposit copper. The half-equation is Cu²⁺ + 2e⁻ → Cu. What mass of copper is deposited, to the correct significant figures? (Cu = 63.55 g mol⁻¹, F = 96 485 C mol⁻¹)",
+      "correct": "1.0 g",
+      "correctExplanation": "t = 35 × 60 = 2100 s; Q = 1.5 × 2100 = 3150 C; n(e⁻) = 3150/96485 = 0.03265 mol; n(Cu) = 0.03265/2 = 0.01632 mol; m = 0.01632 × 63.55 = 1.037 g ≈ 1.0 g (2 sig figs from 1.5 A).",
+      "distractors": [
+        { "answer": "1.037 g", "explanation": "This reports 4 significant figures, exceeding the precision of the current (1.5 A has only 2 significant figures)." },
+        { "answer": "0.017 g", "explanation": "This results from using minutes instead of seconds in Q = It, giving a charge 60 times too small." },
+        { "answer": "1.0 × 10⁻² g", "explanation": "This is 100 times too small, likely from an error in the stoichiometric ratio or unit conversion." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student converts 1 hour 45 minutes to seconds for a Faraday's law calculation. Which conversion is correct?",
+      "correct": "6300 s",
+      "correctExplanation": "1 hour 45 min = 105 min. 105 × 60 = 6300 s. Both the hours and minutes must be converted to seconds.",
+      "distractors": [
+        { "answer": "6045 s", "explanation": "This incorrectly adds 3600 + 45 × 60 + 45, double-counting the minutes; the correct total is 105 × 60 = 6300 s." },
+        { "answer": "105 s", "explanation": "105 is the number of minutes, not seconds; minutes must be multiplied by 60 to convert to seconds." },
+        { "answer": "10 500 s", "explanation": "This results from multiplying 105 by 100 instead of 60; the correct conversion factor is 60 seconds per minute." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "During aluminium production, 200.0 A flows for 24.0 hours. Al³⁺ + 3e⁻ → Al. What mass of aluminium is produced? (Al = 26.98 g mol⁻¹, F = 96 485 C mol⁻¹)",
+      "correct": "1610 g",
+      "correctExplanation": "t = 24.0 × 3600 = 86 400 s; Q = 200.0 × 86 400 = 1.728 × 10⁷ C; n(e⁻) = 1.728 × 10⁷/96 485 = 179.1 mol; n(Al) = 179.1/3 = 59.70 mol; m = 59.70 × 26.98 = 1611 g ≈ 1610 g (3 sf from 24.0 hours).",
+      "distractors": [
+        { "answer": "0.447 g", "explanation": "This results from using hours directly instead of converting to seconds, giving a charge 3600 times too small." },
+        { "answer": "4830 g", "explanation": "This results from using 1 mole of electrons per mole of Al instead of the correct 3:1 ratio from the half-equation." },
+        { "answer": "16 100 g", "explanation": "This is ten times too large, likely from a decimal place error during the moles calculation step." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A lab report states: 'A current of 0.75 A was passed for 1200 s, depositing 0.29802 g of metal.' What feedback should the teacher give about significant figures?",
+      "correct": "The mass should be reported as 0.30 g to match 2 significant figures",
+      "correctExplanation": "The current 0.75 A has 2 significant figures, limiting the reported mass to 2 significant figures: 0.30 g.",
+      "distractors": [
+        { "answer": "The mass is correctly reported with appropriate significant figures", "explanation": "0.29802 has 5 significant figures, which exceeds the 2 significant figures of the current measurement." },
+        { "answer": "The mass should be reported as 0.3 g to match 1 significant figure", "explanation": "0.75 A has 2 significant figures, not 1; the trailing zero in 0.30 correctly indicates 2 significant figures." },
+        { "answer": "The mass should be reported as 0.298 g to match 3 significant figures", "explanation": "0.75 A has 2 significant figures, not 3; the answer is limited to 2 significant figures." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "In a Faraday's law problem, the given data includes: I = 3.00 A, t = 15 min, M(Zn) = 65.38 g mol⁻¹, and F = 96 485 C mol⁻¹. Which value limits the significant figures of the final answer?",
+      "correct": "The time of 15 min (2 significant figures)",
+      "correctExplanation": "15 min has 2 significant figures, which is fewer than 3.00 A (3 sf). Constants like M and F do not limit the answer.",
+      "distractors": [
+        { "answer": "The current of 3.00 A (3 significant figures)", "explanation": "While 3.00 A has 3 significant figures, 15 min has only 2, making the time the limiting value." },
+        { "answer": "The molar mass of 65.38 g mol⁻¹ (4 significant figures)", "explanation": "Molar mass is a known constant and does not limit the significant figures of the experimental answer." },
+        { "answer": "Faraday's constant of 96 485 C mol⁻¹ (5 significant figures)", "explanation": "Faraday's constant is a defined value and does not limit the precision of the calculated answer." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student calculates n(e⁻) = Q/F = 4825/96485 and writes 0.05001... mol. They then multiply by M(Cu) = 63.55 and report 3.179 g. The original data was I = 2.5 A and t = 1930 s. How should the final mass be reported?",
+      "correct": "3.2 g",
+      "correctExplanation": "2.5 A has 2 significant figures (the limiting value), so all subsequent results including the final mass must be reported to 2 significant figures.",
+      "distractors": [
+        { "answer": "3.179 g", "explanation": "This reports 4 significant figures, but the current (2.5 A) limits the answer to only 2 significant figures." },
+        { "answer": "3.18 g", "explanation": "This reports 3 significant figures, which still exceeds the precision allowed by the 2-significant-figure current." },
+        { "answer": "3.0 g", "explanation": "Rounding 3.179 to 2 significant figures gives 3.2, not 3.0; the second significant digit rounds up." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about a multi-step Faraday's law calculation.",
+      "sentence": "When performing a multi-step calculation, intermediate values should be kept to {{blank:1}} significant figures and only the {{blank:2}} answer should be rounded.",
+      "blanks": {
+        "1": {
+          "correct": "extra",
+          "correctExplanation": "Keeping extra significant figures in intermediate steps prevents rounding errors from accumulating through the calculation.",
+          "distractors": [
+            { "answer": "fewer", "explanation": "Using fewer significant figures in intermediate steps would introduce premature rounding errors." },
+            { "answer": "equal", "explanation": "Using the final number of significant figures at every step risks accumulating rounding errors throughout the calculation." }
+          ]
+        },
+        "2": {
+          "correct": "final",
+          "correctExplanation": "Only the final answer is rounded to the appropriate number of significant figures to avoid propagating rounding errors.",
+          "distractors": [
+            { "answer": "first", "explanation": "Rounding the first intermediate answer would propagate errors through all subsequent steps." },
+            { "answer": "middle", "explanation": "Rounding at any intermediate step rather than the final step risks introducing rounding errors." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about electrode potential addition.",
+      "sentence": "When calculating E°cell by adding electrode potentials, the answer is rounded to the fewest {{blank:1}} of any input value.",
+      "blanks": {
+        "1": {
+          "correct": "decimal places",
+          "correctExplanation": "Addition and subtraction rules require rounding to the fewest decimal places, not significant figures.",
+          "distractors": [
+            { "answer": "significant figures", "explanation": "Significant figures govern multiplication and division; addition and subtraction use decimal places." },
+            { "answer": "digits", "explanation": "Total digits is not the correct criterion; the number of decimal places determines rounding in addition and subtraction." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about identifying significant figures.",
+      "sentence": "In the measurement 0.00820 g, the leading zeros are {{blank:1}} and the trailing zero after 2 is {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "not significant",
+          "correctExplanation": "Leading zeros before the first non-zero digit are placeholders and do not count as significant figures.",
+          "distractors": [
+            { "answer": "significant", "explanation": "Leading zeros are never significant; they only indicate the position of the decimal point." },
+            { "answer": "sometimes significant", "explanation": "Leading zeros are always non-significant regardless of context; there is no ambiguity." }
+          ]
+        },
+        "2": {
+          "correct": "significant",
+          "correctExplanation": "A trailing zero after the decimal point indicates that the measurement was precise to that digit.",
+          "distractors": [
+            { "answer": "not significant", "explanation": "Trailing zeros after the decimal point are always significant; they indicate measured precision." },
+            { "answer": "sometimes significant", "explanation": "Trailing zeros after a decimal point are always significant; this rule has no exceptions." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "mc",
+      "question": "Two students perform the same electrolysis experiment. Student A reports the deposited mass as 2.456789 g and Student B reports 2.5 g. The current was 2.5 A and time was 1200 s. Evaluate which student has applied significant figure conventions correctly.",
+      "correct": "Student B is correct because the current limits the answer to 2 significant figures",
+      "correctExplanation": "The current 2.5 A has 2 significant figures, which is the limiting factor. Student B correctly rounds to 2 significant figures.",
+      "distractors": [
+        { "answer": "Student A is correct because more decimal places increase the accuracy of the result", "explanation": "Extra decimal places imply false precision; the answer cannot be more precise than the least precise input." },
+        { "answer": "Both students are correct because significant figures are a matter of personal preference", "explanation": "Significant figure rules are scientific conventions, not personal preferences; they reflect measurement precision." },
+        { "answer": "Neither student is correct because the answer should always have 4 significant figures", "explanation": "The number of significant figures depends on the input data, not a fixed rule of always reporting 4." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student argues that converting 30 minutes to 1800 seconds changes the number of significant figures from 2 to 4, improving the precision of the answer. Evaluate this claim.",
+      "correct": "The claim is incorrect; the precision remains at 2 significant figures after conversion",
+      "correctExplanation": "Unit conversion does not change precision. 30 min (2 sf) becomes 1800 s (still 2 sf) because the conversion factor 60 is exact.",
+      "distractors": [
+        { "answer": "The claim is correct because 1800 has four digits and therefore four significant figures", "explanation": "The number of digits does not equal significant figures; trailing zeros in 1800 without a decimal are ambiguous but carry the original 2 sf." },
+        { "answer": "The claim is correct because multiplying by 60 always adds significant figures to the result", "explanation": "Exact conversion factors do not add or remove significant figures; the original measurement's precision is preserved." },
+        { "answer": "The claim is incorrect because conversion always reduces significant figures by one", "explanation": "Conversion by an exact factor preserves significant figures; it neither adds nor removes them." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Compare the effect on the final mass calculation of two errors: (1) using minutes instead of seconds, and (2) reporting one extra significant figure. Which error has a greater impact on the usefulness of the result?",
+      "correct": "The unit error has greater impact because it changes the numerical value by a factor of 60",
+      "correctExplanation": "A unit error produces a fundamentally wrong answer (off by a factor of 60), while an extra significant figure only overstates precision slightly.",
+      "distractors": [
+        { "answer": "The significant figure error has greater impact because it misleads about measurement quality", "explanation": "While misleading, an extra significant figure is minor compared to a factor-of-60 error in the actual value." },
+        { "answer": "Both errors have equal impact because both violate calculation rules", "explanation": "The magnitude of impact differs greatly; a unit error changes the value by 60×, while a sig fig error only affects rounding." },
+        { "answer": "Neither error has any real impact because the examiner will know what was intended", "explanation": "In VCE exams, both errors lose marks; the unit error produces a completely wrong numerical answer." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A Faraday's law problem provides: I = 10.0 A, t = 5.00 min, M(Ag) = 107.87 g mol⁻¹, F = 96 485 C mol⁻¹. A student rounds intermediate values at each step. Another student keeps full calculator precision until the final step. How do their final answers compare?",
+      "correct": "Premature rounding introduces cumulative error, making the answer less reliable",
+      "correctExplanation": "Each rounding step introduces a small error that propagates, so the student who rounds only at the end produces a more accurate final answer.",
+      "distractors": [
+        { "answer": "Both approaches give identical final answers because rounding at any point is equivalent", "explanation": "Rounding at intermediate steps can shift subsequent calculations, leading to a different final digit." },
+        { "answer": "Premature rounding always improves the answer by simplifying the arithmetic involved", "explanation": "Simpler arithmetic does not improve accuracy; premature rounding degrades the reliability of the result." },
+        { "answer": "The full-precision approach is wrong because every step must be independently rounded", "explanation": "Best practice is to round only the final answer to avoid accumulating rounding errors through the calculation." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "An exam question gives a time of '600 seconds.' A student argues this could be 1, 2, or 3 significant figures depending on context. Assess this argument in terms of measurement communication.",
+      "correct": "The argument is valid; trailing zeros without a decimal point create ambiguity about precision",
+      "correctExplanation": "600 could mean 1 sf (6 × 10²), 2 sf, or 3 sf. Scientific notation (e.g., 6.00 × 10²) or a decimal point removes ambiguity.",
+      "distractors": [
+        { "answer": "The argument is invalid because 600 always has exactly 3 significant figures in chemistry", "explanation": "Without a decimal point, trailing zeros in 600 are ambiguous; scientific notation is needed for clarity." },
+        { "answer": "The argument is invalid because 600 always has exactly 1 significant figure in all contexts", "explanation": "The number of significant figures in 600 is ambiguous; it could be 1, 2, or 3 depending on the measurement." },
+        { "answer": "The argument is irrelevant because significant figures do not apply to time measurements", "explanation": "Significant figures apply to all measured quantities including time; the ambiguity of 600 is a real communication issue." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A VCE exam question asks for the mass of zinc deposited using I = 3.0 A and t = 25 min. A student writes the answer as 3.04842 g. Analyse why this would likely lose marks despite being numerically close to correct.",
+      "correct": "It demonstrates a failure to apply significant figure conventions expected at VCE level",
+      "correctExplanation": "VCE marking criteria expect answers rounded to appropriate significant figures. Reporting excess digits shows lack of understanding of measurement precision.",
+      "distractors": [
+        { "answer": "It would not lose marks because the numerical value is essentially correct", "explanation": "VCE exams award marks for correct significant figures; excess precision is penalised as a procedural error." },
+        { "answer": "It loses marks only because the number is too long to fit in the answer space", "explanation": "The issue is scientific convention, not space; significant figures reflect understanding of measurement precision." },
+        { "answer": "It loses marks because the student should have used scientific notation instead", "explanation": "Scientific notation is not required for all answers; the issue is rounding to the correct number of significant figures." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "In an experiment, a student measures current as 2.0 ± 0.1 A and time as 300 ± 5 s. The charge Q = 600 C has an uncertainty of approximately ±35 C. How does this uncertainty analysis relate to significant figure rules?",
+      "correct": "Significant figure rules provide a simplified estimate of the same precision that uncertainty analysis quantifies",
+      "correctExplanation": "Both approaches address measurement precision; significant figures give a quick approximation while uncertainty analysis provides a rigorous quantification.",
+      "distractors": [
+        { "answer": "Significant figure rules and uncertainty analysis are completely unrelated concepts in chemistry", "explanation": "Both address how precisely a result can be known; significant figures are a simpler version of the same principle." },
+        { "answer": "Uncertainty analysis replaces significant figures entirely, making them unnecessary", "explanation": "Both tools are used in chemistry; significant figures remain the standard expectation in VCE calculations." },
+        { "answer": "Significant figure rules are more precise than full uncertainty analysis in all situations", "explanation": "Uncertainty analysis is more rigorous; significant figures are a convenient approximation of precision." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A textbook problem gives all values to 4 significant figures. A student correctly calculates the answer to 4 significant figures but the teacher marks it wrong because the student forgot to convert hours to seconds. The student protests that their significant figures are correct. Evaluate this situation.",
+      "correct": "Correct significant figures cannot compensate for a fundamental unit conversion error",
+      "correctExplanation": "A unit error produces an entirely wrong numerical result; correct significant figure handling is meaningless if the underlying calculation is wrong.",
+      "distractors": [
+        { "answer": "The student deserves full marks because correct significant figures show competent calculation skills", "explanation": "Significant figures are one aspect of calculation; a unit error produces a fundamentally incorrect numerical answer." },
+        { "answer": "The teacher should award partial marks for correct significant figures only", "explanation": "While partial marks may be given in some marking schemes, the unit error makes the answer scientifically wrong regardless." },
+        { "answer": "The significant figure error is actually worse than the unit conversion error overall", "explanation": "A unit error changes the value by a factor of 3600 (hours to seconds); this is far more consequential than a rounding issue." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the analysis of precision in Faraday's law calculations.",
+      "sentence": "Unit conversion using an exact factor such as 60 s/min does not change the number of significant figures because exact values have {{blank:1}} significant figures.",
+      "blanks": {
+        "1": {
+          "correct": "unlimited",
+          "correctExplanation": "Exact conversion factors (like 60 seconds per minute) are defined values with infinite precision and do not limit significant figures.",
+          "distractors": [
+            { "answer": "two", "explanation": "The number 60 as a conversion factor is exact, not a measurement; it has unlimited, not two, significant figures." },
+            { "answer": "zero", "explanation": "Zero significant figures would mean no precision at all; exact values have unlimited precision by definition." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the evaluation of common exam errors.",
+      "sentence": "The two most common calculation errors in VCE Faraday's law questions are failing to convert {{blank:1}} to seconds and reporting answers with incorrect {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "time units",
+          "correctExplanation": "Students frequently substitute minutes or hours directly into Q = It without converting to the required unit of seconds.",
+          "distractors": [
+            { "answer": "mass units", "explanation": "Mass is typically given in grams and used directly with molar mass; time unit conversion is the more common error." },
+            { "answer": "charge units", "explanation": "Charge is calculated from Q = It and does not usually require unit conversion; time is the value students most often forget to convert." }
+          ]
+        },
+        "2": {
+          "correct": "significant figures",
+          "correctExplanation": "Students commonly report all calculator digits instead of rounding to match the precision of the least precise input value.",
+          "distractors": [
+            { "answer": "chemical formulas", "explanation": "Chemical formula errors are separate from calculation errors; significant figures are the other major calculation issue." },
+            { "answer": "decimal points", "explanation": "While decimal errors occur, the systematic error of ignoring significant figure rules is the more commonly penalised mistake." }
+          ]
+        }
+      }
+    }
+  ]
+}
