@@ -10702,8 +10702,13 @@ function normalizeQuestion(q) {
     // --- Cloze normalization ---
     if (q.type === 'cloze') {
 
-        // Normalize prompt text
-        if (!q.prompt) {
+        // If stem contains {{blank:N}} markers, it IS the cloze sentence, not the prompt
+        if (!q.sentence && q.stem && /\{\{blank:[^}]+\}\}/.test(q.stem)) {
+            q.sentence = q.stem;
+            if (!q.prompt) {
+                q.prompt = 'Complete the sentence:';
+            }
+        } else if (!q.prompt) {
             q.prompt = q.stem || q.question || 'Complete the sentence:';
         }
 
