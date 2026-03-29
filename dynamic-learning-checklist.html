@@ -1216,18 +1216,18 @@ body {
     align-items: center;
     justify-content: center;
     background: var(--color-bg-card);
-    opacity: 0.4;
+    opacity: 1;
     transition: all var(--transition-fast);
     position: relative;
 }
 
 .level-notch:hover {
-    opacity: 0.7;
+    opacity: 1;
     transform: scale(1.1);
 }
 
 .level-notch.filled {
-    opacity: 0.7;
+    opacity: 1;
 }
 
 .level-notch.active {
@@ -1239,6 +1239,17 @@ body {
 .level-notch.locked {
     cursor: not-allowed;
     opacity: 0.3;
+}
+
+/* Yellow pulsing halo on the next available notch */
+.level-notch.next-available {
+    animation: notchHaloPulse 2s ease-in-out infinite;
+}
+
+@keyframes notchHaloPulse {
+    0%   { box-shadow: 0 0 4px 1px rgba(250, 204, 21, 0.3); }
+    50%  { box-shadow: 0 0 14px 5px rgba(250, 204, 21, 0.7); }
+    100% { box-shadow: 0 0 4px 1px rgba(250, 204, 21, 0.3); }
 }
 
 /* Direct lock - failed quiz 3 times on this level */
@@ -1277,11 +1288,11 @@ body {
     line-height: 1;
 }
 
-.level-notch[data-level="1"] { background: var(--level-1-light); }
-.level-notch[data-level="2"] { background: var(--level-2-light); }
-.level-notch[data-level="3"] { background: var(--level-3-light); }
-.level-notch[data-level="4"] { background: var(--level-4-light); }
-.level-notch[data-level="5"] { background: var(--level-5-light); }
+.level-notch[data-level="1"] { background: var(--level-1); }
+.level-notch[data-level="2"] { background: var(--level-2); }
+.level-notch[data-level="3"] { background: var(--level-3); }
+.level-notch[data-level="4"] { background: var(--level-4); }
+.level-notch[data-level="5"] { background: var(--level-5); }
 
 .level-notch.filled[data-level="1"],
 .level-notch.active[data-level="1"] { background: var(--level-1); color: white; }
@@ -6322,13 +6333,15 @@ const CLASS_CODE_LOOKUP = {
     'vce-unit1/business-management': ['11BusBCO'],
     'vce-unit1/health-and-human-development': ['11HHDMOK'],
     'vce-unit1/economics': ['11EcoKAD'],
+    'vce-unit2/psychology': ['11PsyPBU'],
     'vce-unit3/biology': ['12BioTSH'],
     'vce-unit3/physics': ['12PhyJIM', '12PhyEVA'],
     'vce-unit3/chemistry': ['12CheDMH'],
     'vce-unit3/psychology': ['12PsyPBU'],
     'vce-unit3/business-management': ['12BusBCO'],
     'vce-unit3/health-and-human-development': ['12HHDCAH'],
-    'vce-unit3/economics': ['12EcoBCO']
+    'vce-unit3/economics': ['12EcoBCO'],
+    'vce-unit4/psychology': ['12PsyPBU']
 };
 
 function updateClassBadge() {
@@ -9661,8 +9674,9 @@ function renderLearningItem(item, subtopic) {
                 // Check for cascade lock (a lower level is blocking this one)
                 const isCascadeLocked = !isSequenceLocked && level > data.level && !isDirectlyLocked && isAnyLevelLockedBelow(itemKey, data.level, level);
                 const isLocked = isDirectlyLocked || isCascadeLocked;
+                const isNextAvailable = level === data.level + 1 && !isLocked && !isSequenceLocked;
                 const lockType = isSequenceLocked ? 'sequence' : (isDirectlyLocked ? 'direct' : (isCascadeLocked ? 'cascade' : ''));
-                return `<button class="level-notch ${isFilled ? 'filled' : ''} ${isActive ? 'active' : ''} ${isLocked ? 'locked' : ''} ${isCascadeLocked ? 'cascade-locked' : ''} ${isSequenceLocked ? 'sequence-locked' : ''}"
+                return `<button class="level-notch ${isFilled ? 'filled' : ''} ${isActive ? 'active' : ''} ${isLocked ? 'locked' : ''} ${isCascadeLocked ? 'cascade-locked' : ''} ${isSequenceLocked ? 'sequence-locked' : ''} ${isNextAvailable ? 'next-available' : ''}"
                     data-level="${level}"
                     data-label="${levelNames[level - 1]}"
                     data-lock-type="${lockType}"
@@ -10230,6 +10244,11 @@ function applyLevelChange(itemKey, level) {
                 // Recalculate sequence lock: only the next level up is reachable
                 const isSeqLocked = notchLevel > level + 1;
                 notch.classList.toggle('sequence-locked', isSeqLocked);
+                // Update next-available halo
+                const isDirectLocked = !isSeqLocked && notchLevel > level && isLevelLocked(itemKey, notchLevel);
+                const isCascLocked = !isSeqLocked && notchLevel > level && !isDirectLocked && isAnyLevelLockedBelow(itemKey, level, notchLevel);
+                const isNextAvail = notchLevel === level + 1 && !isSeqLocked && !isDirectLocked && !isCascLocked;
+                notch.classList.toggle('next-available', isNextAvail);
                 if (isSeqLocked) {
                     notch.dataset.lockType = 'sequence';
                 } else if (notch.dataset.lockType === 'sequence') {
