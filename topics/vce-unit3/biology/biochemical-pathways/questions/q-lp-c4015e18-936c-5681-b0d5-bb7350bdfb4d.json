@@ -1,0 +1,584 @@
+{
+  "_link": {
+    "uuid": "lp-c4015e18-936c-5681-b0d5-bb7350bdfb4d",
+    "version": 1,
+    "contentHash": "hash-e43114e2",
+    "title": "I can tabulate the inputs, outputs, location and ATP yield of each stage of aerobic cellular respiration",
+    "code": "5C.5",
+    "generatedAt": "2026-03-28T10:50:00Z"
+  },
+  "toLevel2": [
+    {
+      "type": "mc",
+      "question": "In which part of the cell does glycolysis occur?",
+      "correct": "The cytosol",
+      "correctExplanation": "Glycolysis takes place in the cytosol (the liquid portion of the cytoplasm), outside of any organelle. It is the first stage of cellular respiration.",
+      "distractors": [
+        { "answer": "The mitochondrial matrix", "explanation": "The mitochondrial matrix is where the Krebs Cycle occurs, not glycolysis. Glycolysis takes place in the cytosol." },
+        { "answer": "The cristae of the mitochondria", "explanation": "The cristae house the electron transport chain. Glycolysis occurs in the cytosol before any mitochondrial stages." },
+        { "answer": "The cell membrane surface", "explanation": "Glycolysis occurs in the cytosol, not on the cell membrane. The cell membrane is involved in transport, not glucose metabolism." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What is the ATP yield of the Krebs Cycle per glucose molecule?",
+      "correct": "2 ATP",
+      "correctExplanation": "The Krebs Cycle produces 2 ATP per glucose (1 ATP per turn, and it turns twice per glucose because each glucose yields two acetyl CoA molecules).",
+      "distractors": [
+        { "answer": "28 ATP", "explanation": "28 ATP is the approximate yield of the electron transport chain, not the Krebs Cycle. The Krebs Cycle produces only 2 ATP per glucose." },
+        { "answer": "36 ATP", "explanation": "36 ATP is close to the total yield of all stages combined. The Krebs Cycle alone produces only 2 ATP per glucose." },
+        { "answer": "0 ATP", "explanation": "The Krebs Cycle does produce ATP — 2 per glucose via substrate-level phosphorylation. Its main products are NADH and FADH₂." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Which inputs are required for the electron transport chain?",
+      "correct": "NADH, FADH₂ and O₂",
+      "correctExplanation": "The ETC uses electrons from NADH and FADH₂ (produced in earlier stages) and requires oxygen as the final electron acceptor to form water.",
+      "distractors": [
+        { "answer": "Glucose, water and CO₂", "explanation": "Glucose is the input for glycolysis, not the ETC. The ETC requires the electron carriers NADH and FADH₂, along with oxygen." },
+        { "answer": "Acetyl CoA, NAD⁺ and FAD⁺", "explanation": "These are inputs for the Krebs Cycle. The ETC receives electrons from the reduced forms NADH and FADH₂, plus oxygen." },
+        { "answer": "ATP, pyruvate and water", "explanation": "ATP is a product of the ETC, not an input. The ETC requires NADH, FADH₂ and O₂ as its inputs." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "What are the outputs of glycolysis from one glucose molecule?",
+      "correct": "2 pyruvate, 2 ATP and 2 NADH",
+      "correctExplanation": "Glycolysis splits one 6-carbon glucose into two 3-carbon pyruvate molecules, with a net gain of 2 ATP and 2 NADH.",
+      "distractors": [
+        { "answer": "2 acetyl CoA, 2 ATP and 2 FADH₂", "explanation": "Acetyl CoA is produced from pyruvate in the link reaction, not during glycolysis. Glycolysis produces pyruvate, ATP and NADH." },
+        { "answer": "2 pyruvate, 28 ATP and 2 CO₂", "explanation": "28 ATP is the yield of the ETC, and CO₂ is released in the Krebs Cycle. Glycolysis produces 2 pyruvate, 2 ATP and 2 NADH." },
+        { "answer": "1 pyruvate, 4 ATP and 4 NADH", "explanation": "Glycolysis produces two pyruvate molecules from one glucose, not one. The net yield is 2 ATP and 2 NADH." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Where in the mitochondria does the Krebs Cycle take place?",
+      "correct": "In the matrix",
+      "correctExplanation": "The Krebs Cycle occurs in the mitochondrial matrix, the fluid-filled interior space enclosed by the inner mitochondrial membrane.",
+      "distractors": [
+        { "answer": "On the cristae", "explanation": "The cristae are folds of the inner membrane where the electron transport chain is located. The Krebs Cycle takes place in the matrix." },
+        { "answer": "In the intermembrane space", "explanation": "The intermembrane space is where H⁺ ions accumulate during the ETC. The Krebs Cycle occurs in the matrix." },
+        { "answer": "On the outer membrane", "explanation": "The outer membrane is a boundary structure. The Krebs Cycle takes place in the matrix, inside the inner membrane." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "The electron transport chain is located on the cristae of the mitochondria and produces the most ATP of any stage.",
+      "correct": "True",
+      "correctExplanation": "The ETC is embedded in the cristae (folds of the inner mitochondrial membrane) and produces up to 28 ATP per glucose, which is far more than glycolysis (2 ATP) or the Krebs Cycle (2 ATP).",
+      "distractors": [
+        { "answer": "False", "explanation": "The ETC is indeed located on the cristae and produces up to 28 ATP per glucose, making it the highest ATP-yielding stage of aerobic respiration." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "The main outputs of the Krebs Cycle are glucose and oxygen.",
+      "correct": "False",
+      "correctExplanation": "The Krebs Cycle outputs CO₂, NADH, FADH₂ and 2 ATP (per glucose). Glucose is the initial input to glycolysis, and oxygen is used in the ETC, not produced by the Krebs Cycle.",
+      "distractors": [
+        { "answer": "True", "explanation": "Glucose and oxygen are not outputs of the Krebs Cycle. Its outputs are CO₂, NADH, FADH₂ and ATP." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the inputs to the Krebs Cycle.",
+      "sentence": "The Krebs Cycle takes place in the {{blank:1}} and its key inputs include acetyl CoA, {{blank:2}} and FAD⁺.",
+      "blanks": {
+        "1": {
+          "correct": "matrix",
+          "correctExplanation": "The Krebs Cycle occurs in the mitochondrial matrix, the fluid-filled space inside the inner mitochondrial membrane.",
+          "distractors": [
+            { "answer": "cristae", "explanation": "The cristae are the site of the electron transport chain. The Krebs Cycle takes place in the matrix of the mitochondria." },
+            { "answer": "cytosol", "explanation": "The cytosol is where glycolysis occurs. The Krebs Cycle takes place inside the mitochondria, in the matrix." }
+          ]
+        },
+        "2": {
+          "correct": "NAD⁺",
+          "correctExplanation": "NAD⁺ is an oxidised electron carrier that accepts electrons during the Krebs Cycle to become NADH, which then carries electrons to the ETC.",
+          "distractors": [
+            { "answer": "glucose", "explanation": "Glucose is the input for glycolysis, not the Krebs Cycle. The Krebs Cycle uses acetyl CoA, NAD⁺ and FAD⁺ as inputs." },
+            { "answer": "oxygen", "explanation": "Oxygen is used in the electron transport chain as the final electron acceptor, not as an input to the Krebs Cycle." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the outputs of the electron transport chain.",
+      "sentence": "The electron transport chain produces up to {{blank:1}} ATP per glucose and also produces {{blank:2}} as a byproduct when oxygen accepts electrons.",
+      "blanks": {
+        "1": {
+          "correct": "28",
+          "correctExplanation": "The ETC produces up to 28 ATP per glucose through oxidative phosphorylation, making it by far the most productive stage of aerobic respiration.",
+          "distractors": [
+            { "answer": "2", "explanation": "2 ATP is the yield of glycolysis or the Krebs Cycle. The electron transport chain produces up to 28 ATP per glucose." },
+            { "answer": "4", "explanation": "4 ATP is the combined yield of glycolysis and the Krebs Cycle. The ETC produces up to 28 ATP per glucose." }
+          ]
+        },
+        "2": {
+          "correct": "water",
+          "correctExplanation": "At the end of the ETC, oxygen accepts electrons and combines with H⁺ ions to form water (H₂O), which is a waste product of aerobic respiration.",
+          "distractors": [
+            { "answer": "carbon dioxide", "explanation": "CO₂ is released during the Krebs Cycle and link reaction, not the ETC. The ETC produces water when oxygen accepts electrons." },
+            { "answer": "glucose", "explanation": "Glucose is broken down during cellular respiration, not produced. The ETC produces water as its byproduct." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about glycolysis.",
+      "sentence": "Glycolysis occurs in the {{blank:1}} and produces a net gain of {{blank:2}} ATP per glucose molecule.",
+      "blanks": {
+        "1": {
+          "correct": "cytosol",
+          "correctExplanation": "Glycolysis takes place in the cytosol, the liquid portion of the cytoplasm, and does not require any membrane-bound organelle.",
+          "distractors": [
+            { "answer": "matrix", "explanation": "The matrix is inside the mitochondria where the Krebs Cycle occurs. Glycolysis takes place in the cytosol." },
+            { "answer": "nucleus", "explanation": "The nucleus contains DNA and is the site of transcription. Glycolysis is a metabolic pathway that occurs in the cytosol." }
+          ]
+        },
+        "2": {
+          "correct": "2",
+          "correctExplanation": "Glycolysis has a net yield of 2 ATP per glucose molecule through substrate-level phosphorylation.",
+          "distractors": [
+            { "answer": "28", "explanation": "28 ATP is the yield of the electron transport chain. Glycolysis produces only a net gain of 2 ATP per glucose." },
+            { "answer": "36", "explanation": "36 ATP is close to the total yield from all stages combined. Glycolysis alone produces a net gain of only 2 ATP." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel3": [
+    {
+      "type": "mc",
+      "question": "A student creates a table of aerobic respiration but lists the location of the Krebs Cycle as the cristae. Explain why this is incorrect and identify the correct location.",
+      "correct": "The cristae house the electron transport chain, not the Krebs Cycle; the Krebs Cycle occurs in the matrix of the mitochondria",
+      "correctExplanation": "The Krebs Cycle enzymes are dissolved in the fluid of the mitochondrial matrix. The cristae are folds of the inner membrane that provide surface area for the ETC protein complexes and ATP synthase.",
+      "distractors": [
+        { "answer": "The cristae and the matrix are the same structure, so the student's answer is actually correct", "explanation": "The cristae and matrix are distinct structures. The cristae are membrane folds; the matrix is the fluid-filled interior. The Krebs Cycle occurs only in the matrix." },
+        { "answer": "The Krebs Cycle occurs in the cytosol, not in the mitochondria at all", "explanation": "Glycolysis occurs in the cytosol, but the Krebs Cycle takes place in the mitochondrial matrix after pyruvate is transported into the organelle." },
+        { "answer": "The Krebs Cycle occurs on the outer mitochondrial membrane, which is distinct from both the cristae and the matrix", "explanation": "The outer membrane is a barrier structure. The Krebs Cycle enzymes are located in the matrix, the compartment enclosed by the inner membrane." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Why is it important to distinguish between the inputs of the Krebs Cycle and the inputs of the electron transport chain when constructing a table?",
+      "correct": "The Krebs Cycle uses acetyl CoA, NAD⁺ and FAD⁺, while the ETC uses NADH, FADH₂ and O₂ — confusing these leads to incorrect descriptions of each stage",
+      "correctExplanation": "The outputs of the Krebs Cycle (NADH, FADH₂) become the inputs of the ETC. Mixing them up in a table would misrepresent the flow of materials and energy through the pathway.",
+      "distractors": [
+        { "answer": "Both stages use exactly the same inputs, so distinguishing them is unnecessary for a correct table", "explanation": "The two stages have different inputs. The Krebs Cycle uses acetyl CoA and oxidised carriers; the ETC uses reduced carriers and oxygen." },
+        { "answer": "The Krebs Cycle and ETC occur in the same location, so their inputs are always combined in a single row of the table", "explanation": "The Krebs Cycle (matrix) and ETC (cristae) occur in different locations within the mitochondria, so they should be separate rows." },
+        { "answer": "Only the ETC has inputs; the Krebs Cycle runs without any substrates because it is a cycle that regenerates itself", "explanation": "The Krebs Cycle requires inputs (acetyl CoA, NAD⁺, FAD⁺) each turn. Being cyclic means it regenerates oxaloacetate, not that it needs no substrates." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "If a table shows the total ATP yield of aerobic respiration as 32 ATP per glucose, how is this total distributed across the three stages?",
+      "correct": "Glycolysis contributes 2 ATP, the Krebs Cycle contributes 2 ATP, and the electron transport chain contributes up to 28 ATP",
+      "correctExplanation": "The total of approximately 32 ATP comes from substrate-level phosphorylation in glycolysis (2) and the Krebs Cycle (2), plus oxidative phosphorylation in the ETC (up to 28).",
+      "distractors": [
+        { "answer": "Each stage contributes approximately 10-11 ATP, distributed evenly across all three stages", "explanation": "ATP production is not evenly distributed. The ETC produces the vast majority (~28 ATP), while glycolysis and the Krebs Cycle each produce only 2 ATP." },
+        { "answer": "Glycolysis contributes 28 ATP, the Krebs Cycle contributes 2 ATP, and the ETC contributes 2 ATP", "explanation": "This reverses the roles of glycolysis and the ETC. Glycolysis produces only 2 ATP; the ETC produces up to 28 ATP." },
+        { "answer": "The Krebs Cycle produces all 32 ATP because it is the only stage that occurs in the mitochondria", "explanation": "Both the Krebs Cycle and ETC occur in the mitochondria, but the ETC produces the most ATP. The Krebs Cycle produces only 2 ATP directly." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A table lists water as an output of the Krebs Cycle. Is this correct?",
+      "correct": "No, water is an output of the electron transport chain where oxygen combines with H⁺ ions and electrons; the Krebs Cycle outputs CO₂, NADH, FADH₂ and ATP",
+      "correctExplanation": "Water is formed at the end of the ETC when oxygen accepts electrons and H⁺ ions. The Krebs Cycle releases carbon dioxide and produces the electron carriers NADH and FADH₂, plus a small amount of ATP.",
+      "distractors": [
+        { "answer": "Yes, water is a major output of the Krebs Cycle because it is formed when CO₂ dissolves in the matrix fluid", "explanation": "CO₂ dissolving does not produce water as an output of the Krebs Cycle. Water formation occurs in the ETC." },
+        { "answer": "Yes, the Krebs Cycle produces water and oxygen as its two main outputs", "explanation": "The Krebs Cycle does not produce oxygen. Its main outputs are CO₂, NADH, FADH₂ and ATP. Water is produced by the ETC." },
+        { "answer": "No, water is not an output of any stage of cellular respiration", "explanation": "Water is indeed an output of aerobic respiration — specifically the ETC, where oxygen serves as the final electron acceptor and combines with H⁺ to form H₂O." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Why is oxygen listed as an input for the electron transport chain but not for glycolysis or the Krebs Cycle?",
+      "correct": "Oxygen is only used at the end of the ETC as the final electron acceptor; glycolysis and the Krebs Cycle do not directly consume oxygen in their reactions",
+      "correctExplanation": "Oxygen's specific role is to accept electrons at complex IV of the ETC. Glycolysis occurs in the cytosol without oxygen, and the Krebs Cycle uses acetyl CoA and electron carriers, not molecular oxygen.",
+      "distractors": [
+        { "answer": "Oxygen is actually required as an input for all three stages but is only listed for the ETC to simplify the table", "explanation": "Oxygen is genuinely not consumed during glycolysis or the Krebs Cycle. It is used exclusively in the ETC as the final electron acceptor." },
+        { "answer": "The Krebs Cycle produces its own oxygen internally, so it does not need an external supply", "explanation": "The Krebs Cycle does not produce oxygen. Oxygen is only involved in the ETC, and the Krebs Cycle relies on NAD⁺ and FAD⁺ as electron acceptors." },
+        { "answer": "Oxygen is used in glycolysis to split glucose, but this is too small an amount to list in the table", "explanation": "Glycolysis does not use oxygen at all. It is an anaerobic process that splits glucose using enzymes and ATP in the cytosol." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student confuses NADH (an output of the Krebs Cycle) with NAD⁺ (an input). Explain the functional difference between these two forms in the context of aerobic respiration.",
+      "correct": "NAD⁺ is the oxidised form that accepts electrons during the Krebs Cycle, while NADH is the reduced form that carries those electrons to the ETC for ATP production",
+      "correctExplanation": "NAD⁺ picks up electrons and H⁺ during reactions in the Krebs Cycle, becoming NADH. This NADH then delivers its electrons to the ETC, where their energy is used to produce ATP. After donating electrons, NAD⁺ is regenerated.",
+      "distractors": [
+        { "answer": "NAD⁺ and NADH are identical molecules that perform the same function in all stages of respiration", "explanation": "NAD⁺ (oxidised) and NADH (reduced) are different forms of the same coenzyme. NAD⁺ accepts electrons; NADH donates them. Their roles are distinct." },
+        { "answer": "NADH is a waste product that is excreted from the cell, while NAD⁺ is recycled within the mitochondria", "explanation": "NADH is not a waste product. It is a valuable electron carrier that delivers energy to the ETC. Both forms are recycled within the cell." },
+        { "answer": "NAD⁺ carries electrons to the Krebs Cycle from the ETC, while NADH returns empty to the ETC", "explanation": "The flow is the opposite: NAD⁺ accepts electrons in the Krebs Cycle to become NADH, which then donates electrons to the ETC, regenerating NAD⁺." }
+      ]
+    },
+    {
+      "type": "tf",
+      "question": "FADH₂ is produced during the Krebs Cycle and carries electrons to the electron transport chain, where it contributes to ATP production.",
+      "correct": "True",
+      "correctExplanation": "FADH₂ is produced when FAD⁺ accepts electrons during the Krebs Cycle. It then donates these electrons to complex II of the ETC, contributing to the proton gradient that drives ATP synthase.",
+      "distractors": [
+        { "answer": "False", "explanation": "FADH₂ is indeed produced in the Krebs Cycle and does carry electrons to the ETC. It enters at complex II and contributes to ATP production." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the table entry for the electron transport chain.",
+      "sentence": "The electron transport chain is located on the {{blank:1}} and requires NADH, FADH₂ and {{blank:2}} as inputs.",
+      "blanks": {
+        "1": {
+          "correct": "cristae",
+          "correctExplanation": "The ETC protein complexes and ATP synthase are embedded in the cristae, which are folds of the inner mitochondrial membrane that increase the surface area for these reactions.",
+          "distractors": [
+            { "answer": "matrix", "explanation": "The matrix is the fluid interior of the mitochondria where the Krebs Cycle occurs. The ETC is located on the cristae (inner membrane folds)." },
+            { "answer": "cytosol", "explanation": "The cytosol is where glycolysis occurs. The ETC is located within the mitochondria, specifically on the cristae." }
+          ]
+        },
+        "2": {
+          "correct": "O₂",
+          "correctExplanation": "Oxygen is the final electron acceptor in the ETC. Without it, electrons cannot be removed from the chain, and ATP production via oxidative phosphorylation stops.",
+          "distractors": [
+            { "answer": "CO₂", "explanation": "CO₂ is an output of the Krebs Cycle, not an input to the ETC. Oxygen is required as the final electron acceptor." },
+            { "answer": "glucose", "explanation": "Glucose is the input to glycolysis at the start of cellular respiration. The ETC requires NADH, FADH₂ and O₂." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the table entry for the Krebs Cycle.",
+      "sentence": "The Krebs Cycle outputs include CO₂, {{blank:1}}, FADH₂ and {{blank:2}} ATP per glucose molecule.",
+      "blanks": {
+        "1": {
+          "correct": "NADH",
+          "correctExplanation": "NADH is a major output of the Krebs Cycle, produced when NAD⁺ accepts electrons from the oxidation of organic intermediates. It carries these electrons to the ETC.",
+          "distractors": [
+            { "answer": "NAD⁺", "explanation": "NAD⁺ is an input to the Krebs Cycle (the oxidised form). NADH is the output (the reduced form carrying electrons)." },
+            { "answer": "oxygen", "explanation": "Oxygen is not an output of the Krebs Cycle. It is used only in the ETC. The Krebs Cycle outputs NADH, FADH₂, CO₂ and ATP." }
+          ]
+        },
+        "2": {
+          "correct": "2",
+          "correctExplanation": "The Krebs Cycle produces 2 ATP per glucose through substrate-level phosphorylation (1 ATP per turn, 2 turns per glucose).",
+          "distractors": [
+            { "answer": "28", "explanation": "28 ATP is the yield of the electron transport chain. The Krebs Cycle produces only 2 ATP per glucose." },
+            { "answer": "0", "explanation": "The Krebs Cycle does produce ATP — 2 per glucose via substrate-level phosphorylation. While its main role is generating electron carriers, it also produces some ATP directly." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence comparing ATP yields across stages.",
+      "sentence": "Glycolysis and the Krebs Cycle each produce {{blank:1}} ATP per glucose, while the electron transport chain produces up to {{blank:2}} ATP, accounting for the majority of total ATP yield.",
+      "blanks": {
+        "1": {
+          "correct": "2",
+          "correctExplanation": "Both glycolysis and the Krebs Cycle produce 2 ATP per glucose via substrate-level phosphorylation, contributing 4 ATP combined out of the ~32 total.",
+          "distractors": [
+            { "answer": "14", "explanation": "Neither glycolysis nor the Krebs Cycle produces 14 ATP. Each produces 2 ATP per glucose, with the ETC producing the majority." },
+            { "answer": "10", "explanation": "Neither stage produces 10 ATP. Glycolysis and the Krebs Cycle each yield 2 ATP per glucose." }
+          ]
+        },
+        "2": {
+          "correct": "28",
+          "correctExplanation": "The ETC produces up to 28 ATP per glucose through oxidative phosphorylation, driven by the proton gradient created as electrons from NADH and FADH₂ pass through the chain.",
+          "distractors": [
+            { "answer": "4", "explanation": "4 ATP is the combined yield of glycolysis and the Krebs Cycle. The ETC produces up to 28 ATP per glucose." },
+            { "answer": "8", "explanation": "8 ATP is not the yield of any single stage. The ETC produces up to 28 ATP, making it the most productive stage." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel4": [
+    {
+      "type": "mc",
+      "question": "A student's table lists '2 NADH' as an output of glycolysis but omits NADH from the ETC inputs. Explain how this omission would lead to an incorrect understanding of ATP production.",
+      "correct": "The 2 NADH from glycolysis carry electrons to the ETC, where they contribute to ATP production; omitting them from ETC inputs underestimates the total ATP yield",
+      "correctExplanation": "NADH from glycolysis must be shuttled into the mitochondria to donate electrons to the ETC. If a student does not connect glycolysis NADH to ETC inputs, they miss that these electrons drive additional ATP synthesis.",
+      "distractors": [
+        { "answer": "NADH from glycolysis is a waste product that is excreted, so omitting it from the ETC has no effect on ATP calculations", "explanation": "NADH is not a waste product. It carries electrons that are used by the ETC to produce ATP. Omitting it leads to an undercount of total ATP." },
+        { "answer": "NADH from glycolysis is converted to glucose in the ETC, so omitting it means less glucose is available for the next round of glycolysis", "explanation": "NADH is not converted to glucose. It donates electrons to the ETC, which uses their energy to produce ATP." },
+        { "answer": "The omission has no effect because NADH from glycolysis cannot enter the mitochondria under any circumstances", "explanation": "NADH electrons from glycolysis are transferred into the mitochondria via shuttle systems (malate-aspartate or glycerol-3-phosphate shuttle), contributing to ETC ATP production." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Why does the electron transport chain produce significantly more ATP (up to 28) than glycolysis (2 ATP) or the Krebs Cycle (2 ATP)?",
+      "correct": "The ETC uses the energy from many NADH and FADH₂ molecules to pump H⁺ ions, creating a large proton gradient that drives extensive ATP synthesis by ATP synthase",
+      "correctExplanation": "Multiple NADH and FADH₂ molecules from glycolysis, the link reaction and the Krebs Cycle all feed electrons into the ETC. The cumulative proton gradient drives ATP synthase to produce far more ATP than substrate-level phosphorylation in earlier stages.",
+      "distractors": [
+        { "answer": "The ETC directly breaks down glucose molecules that were not fully processed by glycolysis, extracting all remaining energy at once", "explanation": "The ETC does not process glucose. It uses electrons from NADH and FADH₂, which were reduced during the earlier stages of respiration." },
+        { "answer": "The ETC contains 28 separate enzymes, each of which independently produces exactly 1 ATP per glucose", "explanation": "The ETC contains protein complexes that pump H⁺ ions, not individual ATP-producing enzymes. ATP synthase is the single enzyme that produces ATP using the proton gradient." },
+        { "answer": "Glycolysis and the Krebs Cycle donate their ATP to the ETC, which then multiplies it by a factor of seven", "explanation": "ATP cannot be multiplied. The ETC produces new ATP independently using the energy from electron carriers, not by amplifying ATP from other stages." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "If a poison specifically inhibited the enzymes in the mitochondrial matrix but left the cristae intact, which stages of aerobic respiration would be directly affected?",
+      "correct": "The Krebs Cycle would be directly inhibited since its enzymes are in the matrix, while glycolysis and the ETC would be indirectly affected",
+      "correctExplanation": "The Krebs Cycle enzymes are dissolved in the matrix. Inhibiting them would stop NADH and FADH₂ production, indirectly stalling the ETC (on the cristae) due to lack of electron donors. Glycolysis (cytosol) would continue briefly but NADH accumulation would eventually slow it.",
+      "distractors": [
+        { "answer": "Only the electron transport chain would be affected because all three stages occur in the matrix", "explanation": "The ETC is on the cristae, not in the matrix. Only the Krebs Cycle is directly in the matrix. Glycolysis is in the cytosol." },
+        { "answer": "No stages would be affected because cellular respiration does not occur in the matrix", "explanation": "The Krebs Cycle definitely occurs in the matrix. Poisoning matrix enzymes would directly inhibit this stage." },
+        { "answer": "Glycolysis would be directly inhibited because it relies on matrix enzymes to convert glucose to pyruvate", "explanation": "Glycolysis occurs in the cytosol using cytosolic enzymes. It does not depend on matrix enzymes and would not be directly affected." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Compare the role of substrate-level phosphorylation in glycolysis and the Krebs Cycle with oxidative phosphorylation in the ETC.",
+      "correct": "Substrate-level phosphorylation directly transfers a phosphate group to ADP in an enzyme-catalysed reaction, while oxidative phosphorylation uses the energy of a H⁺ gradient to drive ATP synthase",
+      "correctExplanation": "In glycolysis and the Krebs Cycle, specific enzymes transfer phosphate groups directly from substrates to ADP (substrate-level). In the ETC, the proton gradient generated by electron transfer powers ATP synthase to add phosphate to ADP (oxidative).",
+      "distractors": [
+        { "answer": "Both processes are identical; the terms are just different names for the same mechanism of ATP production in different locations", "explanation": "These are fundamentally different mechanisms. Substrate-level phosphorylation is a direct transfer; oxidative phosphorylation uses a chemiosmotic gradient." },
+        { "answer": "Substrate-level phosphorylation uses oxygen to produce ATP, while oxidative phosphorylation does not require oxygen", "explanation": "This is the opposite. Substrate-level phosphorylation does not require oxygen; oxidative phosphorylation depends on oxygen as the final electron acceptor." },
+        { "answer": "Oxidative phosphorylation occurs during glycolysis while substrate-level phosphorylation occurs exclusively in the ETC", "explanation": "This reverses the two. Substrate-level phosphorylation occurs in glycolysis and the Krebs Cycle; oxidative phosphorylation occurs in the ETC." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "In a completed table of aerobic respiration, the total NADH produced per glucose is 10 (2 from glycolysis, 2 from the link reaction, 6 from the Krebs Cycle). Explain why this large NADH production is significant for total ATP yield.",
+      "correct": "Each NADH delivers electrons to the ETC that drive the production of approximately 2.5 ATP, so 10 NADH contribute about 25 ATP to the total yield",
+      "correctExplanation": "NADH is the main link between the carbon-processing stages and ATP production. The 10 NADH molecules collectively deliver enough electron energy to the ETC to generate the majority of ATP during aerobic respiration.",
+      "distractors": [
+        { "answer": "NADH has no effect on ATP yield because it is simply recycled back to NAD⁺ without contributing any energy to the process", "explanation": "NADH carries high-energy electrons to the ETC, where their energy drives proton pumping and ATP synthesis. The recycling of NADH to NAD⁺ releases this energy." },
+        { "answer": "Each NADH is directly converted into one ATP molecule, so 10 NADH produces exactly 10 ATP total", "explanation": "NADH is not directly converted to ATP. It donates electrons to the ETC, which uses their energy to pump H⁺ ions. Each NADH contributes approximately 2.5 ATP." },
+        { "answer": "The NADH produced is used entirely to power glycolysis and does not contribute to the ETC at all", "explanation": "While glycolysis requires NAD⁺, the NADH produced is not used to power glycolysis. It carries electrons to the ETC for ATP production." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A table correctly shows that the Krebs Cycle produces FADH₂. At which complex does FADH₂ donate its electrons when it enters the electron transport chain?",
+      "correct": "Complex II (succinate dehydrogenase)",
+      "correctExplanation": "FADH₂ donates electrons to complex II of the ETC. This complex is also an enzyme of the Krebs Cycle (succinate dehydrogenase), making it unique as both a Krebs Cycle and ETC component.",
+      "distractors": [
+        { "answer": "Complex I (NADH dehydrogenase)", "explanation": "Complex I accepts electrons from NADH, not FADH₂. FADH₂ enters the ETC at complex II." },
+        { "answer": "Complex IV (cytochrome c oxidase)", "explanation": "Complex IV is the final complex where electrons are passed to oxygen. FADH₂ donates its electrons much earlier, at complex II." },
+        { "answer": "ATP synthase (complex V)", "explanation": "ATP synthase uses the H⁺ gradient to produce ATP and does not accept electrons directly. FADH₂ donates electrons to complex II." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Why is CO₂ listed as an output of the Krebs Cycle but not of glycolysis in a correctly completed table?",
+      "correct": "Glycolysis does not remove any carbon atoms as CO₂; all six carbons remain in the two pyruvate molecules until the link reaction and Krebs Cycle",
+      "correctExplanation": "Glycolysis rearranges the 6 carbons of glucose into two 3-carbon pyruvates without any decarboxylation. Carbon is only released as CO₂ during the link reaction (2 CO₂) and the Krebs Cycle (4 CO₂).",
+      "distractors": [
+        { "answer": "Glycolysis does produce CO₂ but in amounts too small to include in the table", "explanation": "Glycolysis produces zero CO₂. No decarboxylation reactions occur during glycolysis; all carbons are retained in pyruvate." },
+        { "answer": "CO₂ is only produced in the ETC, not in the Krebs Cycle or glycolysis", "explanation": "The ETC does not produce CO₂. CO₂ is released during the link reaction and the Krebs Cycle, where carbon atoms are removed from organic molecules." },
+        { "answer": "Glycolysis converts all six carbon atoms directly to CO₂, but this occurs so quickly it is not measured", "explanation": "Glycolysis does not release any carbon as CO₂. All six carbons from glucose are retained in the two pyruvate molecules produced." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the flow of materials between stages.",
+      "sentence": "The {{blank:1}} produced by the Krebs Cycle become the key inputs to the electron transport chain, linking carbon oxidation in the matrix to ATP production on the {{blank:2}}.",
+      "blanks": {
+        "1": {
+          "correct": "electron carriers",
+          "correctExplanation": "NADH and FADH₂ are the electron carriers produced by the Krebs Cycle that shuttle high-energy electrons to the ETC, connecting the two stages.",
+          "distractors": [
+            { "answer": "glucose molecules", "explanation": "Glucose is the input to glycolysis, not a product of the Krebs Cycle. The Krebs Cycle produces electron carriers (NADH and FADH₂) that feed the ETC." },
+            { "answer": "oxygen molecules", "explanation": "Oxygen is an input to the ETC from the external environment, not a product of the Krebs Cycle." }
+          ]
+        },
+        "2": {
+          "correct": "cristae",
+          "correctExplanation": "The cristae are the folds of the inner mitochondrial membrane where the ETC protein complexes and ATP synthase are embedded, the site of oxidative phosphorylation.",
+          "distractors": [
+            { "answer": "ribosomes", "explanation": "Ribosomes are sites of protein synthesis. The ETC and ATP synthase are located on the cristae of the mitochondria." },
+            { "answer": "cell membrane", "explanation": "The ETC in eukaryotic cells is on the inner mitochondrial membrane (cristae), not the cell membrane." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about substrate-level vs oxidative phosphorylation.",
+      "sentence": "Glycolysis and the Krebs Cycle produce ATP by {{blank:1}} phosphorylation, while the ETC produces ATP by {{blank:2}} phosphorylation using the proton gradient.",
+      "blanks": {
+        "1": {
+          "correct": "substrate-level",
+          "correctExplanation": "In substrate-level phosphorylation, a phosphate group is transferred directly from a substrate molecule to ADP by an enzyme, producing ATP without a proton gradient.",
+          "distractors": [
+            { "answer": "oxidative", "explanation": "Oxidative phosphorylation uses the proton gradient in the ETC. Glycolysis and the Krebs Cycle use substrate-level phosphorylation to produce ATP." },
+            { "answer": "photo", "explanation": "Photophosphorylation occurs in the light-dependent reactions of photosynthesis. Glycolysis and the Krebs Cycle use substrate-level phosphorylation." }
+          ]
+        },
+        "2": {
+          "correct": "oxidative",
+          "correctExplanation": "Oxidative phosphorylation in the ETC uses the energy of the H⁺ gradient, generated by electron transfer through protein complexes, to power ATP synthase.",
+          "distractors": [
+            { "answer": "substrate-level", "explanation": "Substrate-level phosphorylation occurs in glycolysis and the Krebs Cycle. The ETC uses oxidative phosphorylation driven by the proton gradient." },
+            { "answer": "anaerobic", "explanation": "Anaerobic phosphorylation is not a standard term. The ETC uses oxidative phosphorylation, which requires oxygen." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about tracking carbon atoms through respiration.",
+      "sentence": "Of the 6 carbon atoms in glucose, {{blank:1}} are released as CO₂ during the link reaction and {{blank:2}} are released during the Krebs Cycle.",
+      "blanks": {
+        "1": {
+          "correct": "2",
+          "correctExplanation": "The link reaction converts 2 pyruvate molecules to 2 acetyl CoA, removing one carbon from each pyruvate as CO₂, so 2 carbons are released.",
+          "distractors": [
+            { "answer": "6", "explanation": "Only 2 carbons are removed during the link reaction (one per pyruvate). The remaining 4 carbons enter the Krebs Cycle as acetyl CoA." },
+            { "answer": "0", "explanation": "The link reaction does release CO₂. Each pyruvate loses one carbon as CO₂ when converted to acetyl CoA, totalling 2 CO₂ per glucose." }
+          ]
+        },
+        "2": {
+          "correct": "4",
+          "correctExplanation": "The Krebs Cycle releases 2 CO₂ per turn, and it turns twice per glucose (once for each acetyl CoA), releasing a total of 4 carbon atoms as CO₂.",
+          "distractors": [
+            { "answer": "6", "explanation": "Only 4 carbons are released during the Krebs Cycle. The other 2 were already released during the link reaction." },
+            { "answer": "1", "explanation": "The Krebs Cycle releases 2 CO₂ per turn and runs twice per glucose, so 4 carbons are released, not 1." }
+          ]
+        }
+      }
+    }
+  ],
+  "toLevel5": [
+    {
+      "type": "mc",
+      "question": "A researcher measures the ATP yield in cells using the glycerol-3-phosphate shuttle versus the malate-aspartate shuttle to transport cytosolic NADH electrons into the mitochondria. Predict the difference in total ATP yield per glucose.",
+      "correct": "The glycerol-3-phosphate shuttle yields approximately 1.5 ATP per cytosolic NADH (entering as FADH₂), while the malate-aspartate shuttle yields approximately 2.5 ATP (entering as NADH), giving a difference of about 2 ATP per glucose",
+      "correctExplanation": "The glycerol-3-phosphate shuttle transfers electrons to FAD⁺, producing mitochondrial FADH₂ (entering at complex II). The malate-aspartate shuttle transfers electrons to NAD⁺, producing mitochondrial NADH (entering at complex I). Since NADH yields more ATP than FADH₂, the shuttle choice affects total yield by about 1 ATP per cytosolic NADH, or 2 ATP per glucose.",
+      "distractors": [
+        { "answer": "Both shuttles produce identical ATP yields because all electron carriers enter the ETC at the same complex", "explanation": "NADH enters at complex I and FADH₂ enters at complex II, so they drive different numbers of proton pumps and produce different amounts of ATP." },
+        { "answer": "The glycerol-3-phosphate shuttle produces more ATP because FADH₂ carries more energy than NADH per molecule", "explanation": "NADH actually yields more ATP (~2.5) than FADH₂ (~1.5) because it enters the ETC earlier and drives more proton pumps." },
+        { "answer": "Neither shuttle affects ATP yield because cytosolic NADH is always degraded before reaching the mitochondria", "explanation": "Cytosolic NADH electrons are successfully transferred to the mitochondria via these shuttles. The electrons are not lost; they are relayed to mitochondrial carriers." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A student constructs a table showing that glycolysis has a net yield of 2 ATP but uses 2 ATP in its early steps. Explain the significance of this ATP investment and how it relates to the overall energy yield.",
+      "correct": "Glycolysis uses 2 ATP to phosphorylate glucose, destabilising it for cleavage; the payoff phase then produces 4 ATP, giving a net gain of 2 ATP plus 2 NADH that contribute further ATP via the ETC",
+      "correctExplanation": "The 2 ATP invested in the preparatory phase activate glucose by adding phosphate groups, which makes it unstable enough to split. The payoff phase recovers this investment and generates additional ATP and NADH, making the overall process energetically favourable.",
+      "distractors": [
+        { "answer": "The 2 ATP invested are permanently lost and never recovered, meaning glycolysis actually produces 0 net ATP", "explanation": "The 2 ATP are recovered plus 2 more are produced in the payoff phase, giving a net gain of 2 ATP. The investment is fully repaid." },
+        { "answer": "The 2 ATP are invested to transport glucose into the mitochondria, where it is then broken down by the Krebs Cycle", "explanation": "Glycolysis occurs in the cytosol, not the mitochondria. The ATP is used to phosphorylate glucose within the cytosol, not to transport it." },
+        { "answer": "The 2 ATP investment is only required in anaerobic conditions; under aerobic conditions, glycolysis produces 4 ATP without any investment", "explanation": "The 2 ATP investment phase is required regardless of oxygen availability. Glycolysis always invests 2 ATP and produces 4, giving a net gain of 2." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "Consider a mutation that doubles the number of cristae in a cell's mitochondria. Predict the effect on the cell's maximum rate of oxidative phosphorylation, assuming unlimited substrates.",
+      "correct": "The maximum rate of oxidative phosphorylation would increase because more surface area allows more ETC complexes and ATP synthase molecules to be embedded",
+      "correctExplanation": "Doubling the cristae doubles the inner membrane surface area, enabling the cell to house twice as many ETC protein complexes and ATP synthase enzymes. With unlimited substrates, this would approximately double the maximum rate of ATP production.",
+      "distractors": [
+        { "answer": "The rate would decrease because more cristae would reduce the matrix volume, eliminating space for the Krebs Cycle", "explanation": "While more cristae do reduce matrix volume somewhat, the question specifies unlimited substrates. The increase in ETC capacity would outweigh any spatial constraint on the Krebs Cycle." },
+        { "answer": "The rate would be unchanged because the number of cristae has no relationship to ATP production capacity", "explanation": "Cristae directly determine how many ETC complexes and ATP synthase molecules can be housed. More cristae means more capacity for oxidative phosphorylation." },
+        { "answer": "The rate would decrease because excess cristae would block the flow of electrons through the chain", "explanation": "Additional cristae provide more membrane surface, not blockages. Each additional ETC complex operates independently, increasing total capacity." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "In a table comparing aerobic respiration stages, the Krebs Cycle shows both NAD⁺ as an input and NADH as an output. A student asks why the same molecule appears on both sides. Construct a detailed explanation.",
+      "correct": "NAD⁺ is the oxidised form that accepts electrons and H⁺ during Krebs Cycle oxidation reactions, becoming NADH; this represents a redox reaction where the coenzyme shuttles between its two forms",
+      "correctExplanation": "NAD⁺/NADH is a coenzyme that cycles between oxidised (NAD⁺) and reduced (NADH) forms. In the Krebs Cycle, NAD⁺ accepts electrons from organic intermediates, becoming NADH. After donating electrons to the ETC, NADH is reoxidised to NAD⁺, which returns to the Krebs Cycle.",
+      "distractors": [
+        { "answer": "It is a table error; NAD⁺ should only appear as an output and NADH should only appear as an input to the Krebs Cycle", "explanation": "NAD⁺ is correctly listed as an input (it accepts electrons) and NADH as an output (it carries electrons away). This is the correct representation of the redox cycle." },
+        { "answer": "NAD⁺ and NADH are completely different molecules that happen to have similar names; they serve unrelated functions", "explanation": "NAD⁺ and NADH are the oxidised and reduced forms of the same coenzyme, nicotinamide adenine dinucleotide. They are directly interconvertible." },
+        { "answer": "The Krebs Cycle destroys NAD⁺ molecules and creates entirely new NADH molecules from scratch using raw materials in the matrix", "explanation": "The Krebs Cycle does not synthesise new NADH. It reduces existing NAD⁺ by adding electrons and H⁺, converting it to NADH." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "If the theoretical maximum is 30-32 ATP per glucose, but a cell actually produces only about 25 ATP under normal conditions, identify and explain the sources of this discrepancy.",
+      "correct": "Proton leakage across the inner membrane, the energy cost of transporting ATP/ADP/Pi across membranes, and the shuttle system used for cytosolic NADH all reduce actual yield below the theoretical maximum",
+      "correctExplanation": "The inner membrane is not perfectly impermeable, so some H⁺ ions leak without driving ATP synthase. Transporting ATP out and ADP/Pi into the matrix costs energy. The glycerol-3-phosphate shuttle reduces yield from cytosolic NADH. Together these factors account for the gap.",
+      "distractors": [
+        { "answer": "The discrepancy is entirely due to measurement errors in laboratory equipment; cells always produce exactly 32 ATP per glucose", "explanation": "The difference is real and reflects biological inefficiencies. No cell achieves the theoretical maximum due to proton leaks and transport costs." },
+        { "answer": "Cells deliberately destroy 7 ATP molecules per glucose as a regulatory mechanism to prevent ATP overproduction", "explanation": "Cells do not actively destroy ATP. The lower yield results from thermodynamic inefficiencies and membrane transport costs, not deliberate destruction." },
+        { "answer": "The missing ATP is consumed by the Krebs Cycle, which requires 7 ATP per glucose to power its own reactions", "explanation": "The Krebs Cycle does not consume ATP. The discrepancy is due to proton leakage, transport costs and shuttle efficiency, not Krebs Cycle ATP consumption." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A drug selectively inhibits ATP synthase but does not affect the electron transport chain complexes I-IV. Predict the consequences for the proton gradient and electron flow.",
+      "correct": "The H⁺ gradient would increase as protons continue to be pumped but cannot flow through ATP synthase, eventually slowing electron flow because the high gradient creates backpressure on the proton pumps",
+      "correctExplanation": "Without ATP synthase to relieve the gradient, H⁺ ions accumulate in the intermembrane space. The increasing gradient opposes further proton pumping, which slows electron flow through complexes I, III and IV. The ETC essentially stalls due to the excessive backpressure.",
+      "distractors": [
+        { "answer": "Electron flow would increase dramatically because without ATP synthase consuming the gradient, more energy is available to drive the ETC forward", "explanation": "The proton gradient creates backpressure that opposes pumping. Without a release valve (ATP synthase), the gradient builds up and slows the ETC." },
+        { "answer": "The proton gradient would collapse immediately because ATP synthase is the only structure that maintains it", "explanation": "ATP synthase does not maintain the gradient — it dissipates it. The ETC builds the gradient by pumping H⁺. Without ATP synthase, the gradient would increase, not collapse." },
+        { "answer": "Nothing would change because ATP synthase is not connected to the electron transport chain in any way", "explanation": "ATP synthase and the ETC are coupled through the proton gradient. The gradient created by the ETC drives ATP synthase, and the rate of the ETC is influenced by the gradient level." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "In the context of cellular respiration, explain why the Krebs Cycle is considered amphibolic (both catabolic and anabolic) rather than purely catabolic.",
+      "correct": "The Krebs Cycle breaks down acetyl CoA (catabolism) but its intermediates also serve as precursors for biosynthesis of amino acids, fatty acids and other molecules (anabolism)",
+      "correctExplanation": "While the Krebs Cycle oxidises acetyl CoA and releases CO₂ (catabolic), intermediates like oxaloacetate, alpha-ketoglutarate and succinyl-CoA are drawn off for amino acid synthesis, gluconeogenesis and other biosynthetic pathways (anabolic).",
+      "distractors": [
+        { "answer": "The Krebs Cycle is amphibolic because it can run in both forward and reverse directions depending on whether the cell needs ATP or glucose", "explanation": "The Krebs Cycle does not simply reverse to make glucose. Its amphibolic nature refers to intermediates serving both degradation and biosynthesis, not directional reversal." },
+        { "answer": "The Krebs Cycle is amphibolic because it simultaneously performs photosynthesis and respiration in the same organelle", "explanation": "Photosynthesis occurs in chloroplasts, not mitochondria. The amphibolic nature refers to the Krebs Cycle serving both catabolic and anabolic metabolic functions." },
+        { "answer": "The Krebs Cycle is purely catabolic and the term amphibolic is incorrect because it only breaks down molecules", "explanation": "The Krebs Cycle is correctly described as amphibolic. While its primary role is catabolic, its intermediates are essential precursors for many biosynthetic (anabolic) pathways." }
+      ]
+    },
+    {
+      "type": "mc",
+      "question": "A cell biologist measures that active cardiac muscle cells have significantly more cristae per mitochondrion than skin cells. Use the table data to explain this observation.",
+      "correct": "Cardiac cells have a much higher ATP demand for continuous contraction, so more cristae provide more surface area for ETC complexes and ATP synthase, maximising the rate of oxidative phosphorylation",
+      "correctExplanation": "The ETC produces up to 28 ATP per glucose and is located on the cristae. More cristae means more ETC complexes and ATP synthase molecules, increasing the maximum rate of ATP production to meet the heart's constant energy needs.",
+      "distractors": [
+        { "answer": "More cristae are needed because cardiac cells perform glycolysis on the cristae rather than in the cytosol", "explanation": "Glycolysis always occurs in the cytosol regardless of cell type. The additional cristae increase ETC and ATP synthase capacity, not glycolysis." },
+        { "answer": "Skin cells have more cristae because they need more ATP for rapid cell division at the body surface", "explanation": "The question states cardiac cells have more cristae, not skin cells. This reflects the heart's higher ATP demand for continuous muscle contraction." },
+        { "answer": "The additional cristae in cardiac cells are used to store glucose for energy, not to produce ATP", "explanation": "Cristae are membrane folds housing ETC complexes, not glucose storage sites. Glucose is stored as glycogen in the cytoplasm." }
+      ]
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the shuttle systems for cytosolic NADH.",
+      "sentence": "The malate-aspartate shuttle transfers electrons from cytosolic NADH to mitochondrial {{blank:1}}, yielding approximately 2.5 ATP, while the glycerol-3-phosphate shuttle transfers them to {{blank:2}}, yielding only approximately 1.5 ATP.",
+      "blanks": {
+        "1": {
+          "correct": "NAD⁺",
+          "correctExplanation": "The malate-aspartate shuttle regenerates NADH inside the mitochondrial matrix by transferring electrons to NAD⁺. Since mitochondrial NADH enters the ETC at complex I, it drives all three proton pumps.",
+          "distractors": [
+            { "answer": "FAD⁺", "explanation": "FAD⁺ is the acceptor in the glycerol-3-phosphate shuttle, not the malate-aspartate shuttle. The malate-aspartate shuttle produces mitochondrial NADH." },
+            { "answer": "oxygen", "explanation": "Oxygen is the final electron acceptor at the end of the ETC. The malate-aspartate shuttle transfers electrons to NAD⁺ inside the matrix." }
+          ]
+        },
+        "2": {
+          "correct": "FAD⁺",
+          "correctExplanation": "The glycerol-3-phosphate shuttle transfers electrons to FAD⁺, producing FADH₂ which enters the ETC at complex II. This bypasses complex I, resulting in fewer H⁺ ions pumped and less ATP.",
+          "distractors": [
+            { "answer": "NAD⁺", "explanation": "NAD⁺ is the acceptor in the malate-aspartate shuttle. The glycerol-3-phosphate shuttle transfers electrons to FAD⁺, producing FADH₂." },
+            { "answer": "ATP", "explanation": "ATP is not an electron acceptor. The glycerol-3-phosphate shuttle transfers electrons to FAD⁺, which then donates them to the ETC at complex II." }
+          ]
+        }
+      }
+    },
+    {
+      "type": "cloze",
+      "prompt": "Complete the sentence about the amphibolic nature of the Krebs Cycle.",
+      "sentence": "The Krebs Cycle is amphibolic because its intermediates like {{blank:1}} can be withdrawn for biosynthesis of amino acids, while it simultaneously performs {{blank:2}} by oxidising acetyl CoA.",
+      "blanks": {
+        "1": {
+          "correct": "alpha-ketoglutarate",
+          "correctExplanation": "Alpha-ketoglutarate is a Krebs Cycle intermediate that can be converted to the amino acid glutamate through transamination, serving as a link between carbon metabolism and amino acid biosynthesis.",
+          "distractors": [
+            { "answer": "glucose", "explanation": "Glucose is not an intermediate of the Krebs Cycle. Alpha-ketoglutarate and oxaloacetate are Krebs Cycle intermediates used for biosynthesis." },
+            { "answer": "oxygen", "explanation": "Oxygen is not a Krebs Cycle intermediate. It is the final electron acceptor in the ETC. Krebs Cycle intermediates like alpha-ketoglutarate serve biosynthetic roles." }
+          ]
+        },
+        "2": {
+          "correct": "catabolism",
+          "correctExplanation": "The catabolic function of the Krebs Cycle involves breaking down (oxidising) acetyl CoA, releasing CO₂ and producing electron carriers. This degradation of organic molecules is the cycle's catabolic role.",
+          "distractors": [
+            { "answer": "photosynthesis", "explanation": "Photosynthesis occurs in chloroplasts, not mitochondria. The Krebs Cycle performs catabolism (breakdown of acetyl CoA) as its degradative function." },
+            { "answer": "replication", "explanation": "Replication is the copying of DNA, not a metabolic function. The Krebs Cycle's destructive role is catabolism — oxidising acetyl CoA and releasing CO₂." }
+          ]
+        }
+      }
+    }
+  ]
+}
