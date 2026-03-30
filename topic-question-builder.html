@@ -1,0 +1,2360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Topic & Question Builder</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <style>
+/* ============================================
+   CSS VARIABLES & RESET
+   ============================================ */
+:root {
+    --color-primary: #2d9d78;
+    --color-primary-dark: #1e7d5e;
+    --color-primary-pale: #e8f5f0;
+    --color-primary-glow: rgba(45, 157, 120, 0.15);
+
+    --color-bg: #f8faf9;
+    --color-bg-card: #ffffff;
+    --color-bg-warm: #f5f7f6;
+    --color-bg-hover: rgba(45, 157, 120, 0.08);
+    --color-surface: #ffffff;
+    --color-surface-raised: #ffffff;
+
+    --color-text: #1a2e28;
+    --color-text-secondary: #4a5f58;
+    --color-text-muted: #7a8f88;
+    --color-text-faint: #94a3b8;
+    --color-text-inverse: #ffffff;
+
+    --color-border: #d4ddd9;
+    --color-border-light: #e8eeeb;
+
+    --color-success: #22c55e;
+    --color-warning: #f59e0b;
+    --color-error: #ef4444;
+    --color-info: #3b82f6;
+
+    --color-mc: #6366f1;
+    --color-cloze: #8b5cf6;
+    --color-tf: #ec4899;
+
+    --level-2: #f97316;
+    --level-3: #eab308;
+    --level-4: #22c55e;
+    --level-5: #8b5cf6;
+
+    --color-phase-topic: var(--color-primary);
+    --color-phase-question: #8b5cf6;
+    --color-phase-download: #3b82f6;
+
+    --font-display: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    --font-body: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    --font-mono: 'SF Mono', 'Consolas', 'Monaco', monospace;
+
+    --text-xs: 0.75rem;
+    --text-sm: 0.875rem;
+    --text-base: 1rem;
+    --text-lg: 1.125rem;
+    --text-xl: 1.25rem;
+    --text-2xl: 1.5rem;
+
+    --space-1: 0.25rem;
+    --space-2: 0.5rem;
+    --space-3: 0.75rem;
+    --space-4: 1rem;
+    --space-5: 1.5rem;
+    --space-6: 2rem;
+    --space-8: 3rem;
+
+    --radius-sm: 6px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --radius-xl: 16px;
+
+    --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+    --shadow-md: 0 4px 6px rgba(0,0,0,0.07);
+    --shadow-lg: 0 10px 25px rgba(0,0,0,0.1);
+
+    --transition-fast: 0.15s ease;
+    --transition-normal: 0.25s ease;
+
+    --header-height: 64px;
+    --sidebar-width: 340px;
+}
+
+[data-theme="dark"] {
+    --color-bg: #0f1714;
+    --color-bg-card: #1a2420;
+    --color-bg-warm: #1f2d28;
+    --color-bg-hover: rgba(45, 157, 120, 0.15);
+    --color-surface: #1a2420;
+    --color-surface-raised: #1f2d28;
+    --color-text: #e8f0ed;
+    --color-text-secondary: #a8b8b2;
+    --color-text-muted: #6a7a74;
+    --color-text-faint: #4a5a54;
+    --color-border: #2d3d36;
+    --color-border-light: #243029;
+    --color-primary-pale: rgba(45, 157, 120, 0.2);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; -webkit-text-size-adjust: 100%; }
+body {
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    line-height: 1.6;
+    color: var(--color-text);
+    background: var(--color-bg);
+    min-height: 100vh;
+    min-height: 100dvh;
+}
+
+/* ============================================
+   LAYOUT
+   ============================================ */
+.app-container { min-height: 100vh; min-height: 100dvh; display: flex; flex-direction: column; }
+
+.app-header {
+    background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
+    color: var(--color-text-inverse);
+    padding: var(--space-3) var(--space-5);
+    position: sticky; top: 0; z-index: 100;
+}
+.header-content {
+    max-width: 1400px; margin: 0 auto;
+    display: flex; align-items: center; justify-content: space-between; gap: var(--space-3); flex-wrap: wrap;
+}
+.app-title {
+    font-family: var(--font-display); font-size: var(--text-xl); font-weight: 700;
+    display: flex; align-items: center; gap: var(--space-2);
+}
+.app-subtitle { font-size: var(--text-sm); opacity: 0.9; font-weight: 400; }
+.header-actions { display: flex; align-items: center; gap: var(--space-2); }
+.header-btn {
+    background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.2);
+    color: var(--color-text-inverse); padding: var(--space-2) var(--space-3);
+    border-radius: var(--radius-md); cursor: pointer; font-size: var(--text-sm);
+    transition: all var(--transition-fast);
+}
+.header-btn:hover { background: rgba(255,255,255,0.25); }
+
+.topic-info-bar {
+    display: flex; align-items: center; gap: var(--space-3);
+    padding-left: var(--space-4); border-left: 1px solid rgba(255,255,255,0.3);
+    font-size: var(--text-sm); opacity: 0.95;
+}
+.topic-info-bar:empty { display: none; }
+.topic-badge-header {
+    background: rgba(255,255,255,0.2); padding: var(--space-1) var(--space-3);
+    border-radius: 20px; font-weight: 600; font-size: var(--text-xs);
+}
+
+.main-content {
+    flex: 1; max-width: 1100px; width: 100%; margin: 0 auto; padding: var(--space-5);
+}
+.main-content.workspace-mode {
+    max-width: 100%; padding: 0;
+}
+
+/* ============================================
+   WORKFLOW STEPS
+   ============================================ */
+.workflow-steps {
+    display: flex; gap: var(--space-2); margin-bottom: var(--space-5); flex-wrap: wrap;
+    padding: 0 var(--space-5);
+}
+.workspace-mode .workflow-steps { padding: 0 var(--space-5); margin-top: var(--space-4); }
+
+.workflow-step {
+    display: flex; align-items: center; gap: var(--space-2);
+    padding: var(--space-1) var(--space-3);
+    background: var(--color-bg-warm); border: 1px solid var(--color-border);
+    border-radius: 20px; font-size: var(--text-xs); color: var(--color-text-muted);
+    cursor: pointer; transition: all var(--transition-fast); white-space: nowrap;
+}
+.workflow-step:hover { border-color: var(--color-primary); }
+.workflow-step.active {
+    background: var(--color-primary); border-color: var(--color-primary);
+    color: var(--color-text-inverse);
+}
+.workflow-step.active.phase-question {
+    background: var(--color-phase-question); border-color: var(--color-phase-question);
+}
+.workflow-step.active.phase-download {
+    background: var(--color-phase-download); border-color: var(--color-phase-download);
+}
+.workflow-step.completed {
+    background: var(--color-primary-pale); border-color: var(--color-primary);
+    color: var(--color-primary-dark);
+}
+.workflow-step.completed.phase-question {
+    background: rgba(139,92,246,0.12); border-color: var(--color-phase-question);
+    color: #6d28d9;
+}
+.step-number {
+    width: 18px; height: 18px; border-radius: 50%;
+    background: currentColor; color: var(--color-bg-card);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.65rem; font-weight: 700;
+}
+.workflow-step.active .step-number { background: var(--color-text-inverse); color: var(--color-primary); }
+.workflow-step.active.phase-question .step-number { color: var(--color-phase-question); }
+.workflow-step.active.phase-download .step-number { color: var(--color-phase-download); }
+.workflow-step.completed .step-number { background: var(--color-primary); color: var(--color-text-inverse); }
+.workflow-step.completed.phase-question .step-number { background: var(--color-phase-question); }
+
+.step-phase-divider {
+    width: 1px; height: 20px; background: var(--color-border); margin: 0 var(--space-1);
+}
+
+/* ============================================
+   CARDS & SECTIONS
+   ============================================ */
+.card {
+    background: var(--color-bg-card); border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg); padding: var(--space-5); margin-bottom: var(--space-4);
+}
+.card.hidden { display: none; }
+.card-header { margin-bottom: var(--space-4); }
+.card-title {
+    font-family: var(--font-display); font-size: var(--text-lg); font-weight: 700;
+    color: var(--color-text); display: flex; align-items: center; gap: var(--space-2);
+}
+.card-description { font-size: var(--text-sm); color: var(--color-text-muted); margin-top: var(--space-2); }
+.section-divider { height: 1px; background: var(--color-border); margin: var(--space-5) 0; }
+
+/* ============================================
+   FORMS
+   ============================================ */
+.form-row {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--space-4); margin-bottom: var(--space-4);
+}
+.form-group { display: flex; flex-direction: column; gap: var(--space-2); }
+.form-group.full-width { grid-column: 1 / -1; }
+.form-label { font-size: var(--text-sm); font-weight: 600; color: var(--color-text); }
+.form-label-hint { font-weight: 400; color: var(--color-text-muted); }
+
+.form-input, .form-select, .form-textarea {
+    padding: var(--space-3); font-size: var(--text-sm); font-family: var(--font-body);
+    border: 1px solid var(--color-border); border-radius: var(--radius-md);
+    background: var(--color-bg-card); color: var(--color-text);
+    transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+.form-input:focus, .form-select:focus, .form-textarea:focus {
+    outline: none; border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px var(--color-primary-pale);
+}
+.form-select {
+    cursor: pointer; appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%236b7280' d='M2 4l4 4 4-4'/%3E%3C/svg%3E");
+    background-repeat: no-repeat; background-position: right 12px center;
+    padding-right: var(--space-6);
+}
+.form-textarea { resize: vertical; min-height: 150px; line-height: 1.5; }
+.form-textarea.large { min-height: 250px; }
+.form-textarea.code { font-family: var(--font-mono); font-size: var(--text-xs); }
+.char-count { font-size: var(--text-xs); color: var(--color-text-muted); text-align: right; }
+
+/* ============================================
+   BUTTONS
+   ============================================ */
+.btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: var(--space-2);
+    padding: var(--space-3) var(--space-5); font-size: var(--text-sm); font-weight: 600;
+    font-family: var(--font-body); border-radius: var(--radius-md);
+    cursor: pointer; transition: all var(--transition-fast); border: none;
+}
+.btn-primary { background: var(--color-primary); color: var(--color-text-inverse); }
+.btn-primary:hover { background: var(--color-primary-dark); }
+.btn-primary:disabled { opacity: 0.5; cursor: not-allowed; }
+.btn-secondary {
+    background: var(--color-bg-warm); color: var(--color-text); border: 1px solid var(--color-border);
+}
+.btn-secondary:hover { background: var(--color-bg-hover); border-color: var(--color-primary); }
+.btn-secondary:disabled { opacity: 0.5; cursor: not-allowed; }
+.btn-danger { background: var(--color-error); color: var(--color-text-inverse); }
+.btn-danger:hover { opacity: 0.9; }
+.btn-ghost { background: transparent; color: var(--color-text-muted); border: none; }
+.btn-ghost:hover { background: var(--color-bg-hover); color: var(--color-text); }
+.btn-small { padding: var(--space-2) var(--space-3); font-size: var(--text-xs); }
+.btn-large { padding: var(--space-4) var(--space-6); font-size: var(--text-base); }
+.btn-icon { font-size: 1.1em; }
+.btn-icon-only { padding: var(--space-2); min-width: 32px; min-height: 32px; }
+.btn-group { display: flex; gap: var(--space-2); flex-wrap: wrap; }
+
+/* ============================================
+   OUTPUT / PROMPT PREVIEW
+   ============================================ */
+.output-section {
+    background: var(--color-bg-warm); border: 2px dashed var(--color-border);
+    border-radius: var(--radius-lg); padding: var(--space-5);
+}
+.output-section.has-content {
+    border-style: solid; border-color: var(--color-primary); background: var(--color-bg-card);
+}
+.output-header {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: var(--space-3); margin-bottom: var(--space-4); flex-wrap: wrap;
+}
+.output-title {
+    font-size: var(--text-lg); font-weight: 700; color: var(--color-text);
+    display: flex; align-items: center; gap: var(--space-2);
+}
+.output-actions { display: flex; gap: var(--space-2); flex-wrap: wrap; }
+.output-preview {
+    background: var(--color-bg-warm); border: 1px solid var(--color-border);
+    border-radius: var(--radius-md); padding: var(--space-4);
+    font-family: var(--font-mono); font-size: var(--text-xs); line-height: 1.6;
+    white-space: pre-wrap; word-break: break-word;
+    max-height: 400px; overflow-y: auto; color: var(--color-text-secondary);
+}
+
+/* ============================================
+   EDITOR SECTION
+   ============================================ */
+.editor-panel {
+    background: var(--color-bg-warm); border: 1px solid var(--color-border);
+    border-radius: var(--radius-md); margin-bottom: var(--space-3);
+}
+.editor-panel-header {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: var(--space-3) var(--space-4); border-bottom: 1px solid var(--color-border);
+    cursor: pointer; user-select: none;
+}
+.editor-panel-header:hover { background: var(--color-bg-hover); }
+.editor-panel-title {
+    font-weight: 600; font-size: var(--text-sm);
+    display: flex; align-items: center; gap: var(--space-2);
+}
+.editor-panel-meta { font-size: var(--text-xs); color: var(--color-text-muted); }
+.editor-panel-content { padding: var(--space-4); background: var(--color-bg-card); display: none; }
+.editor-panel.expanded .editor-panel-content { display: block; }
+.editor-panel-toggle { transition: transform var(--transition-fast); }
+.editor-panel.expanded .editor-panel-toggle { transform: rotate(180deg); }
+
+.lp-item-editor {
+    background: var(--color-bg-card); border: 1px solid var(--color-border);
+    border-radius: var(--radius-md); padding: var(--space-4); margin-bottom: var(--space-3);
+    position: relative;
+}
+.lp-item-editor:last-child { margin-bottom: 0; }
+.lp-header {
+    display: flex; align-items: flex-start; justify-content: space-between;
+    gap: var(--space-3); margin-bottom: var(--space-3);
+}
+.lp-number {
+    background: var(--color-primary-pale); color: var(--color-primary-dark);
+    padding: var(--space-1) var(--space-2); border-radius: var(--radius-sm);
+    font-size: var(--text-xs); font-weight: 600; white-space: nowrap;
+}
+.lp-title-input { flex: 1; font-weight: 600; }
+.lp-actions { display: flex; gap: var(--space-1); }
+.lp-fields { display: grid; gap: var(--space-3); }
+.lp-field-row { display: grid; grid-template-columns: 80px 1fr; gap: var(--space-2); align-items: start; }
+.lp-field-label { font-size: var(--text-xs); font-weight: 600; color: var(--color-text-muted); padding-top: var(--space-2); }
+.lp-meta {
+    display: flex; gap: var(--space-3); margin-top: var(--space-3);
+    padding-top: var(--space-3); border-top: 1px solid var(--color-border-light);
+    font-size: var(--text-xs); color: var(--color-text-muted);
+}
+.lp-meta-item { display: flex; align-items: center; gap: var(--space-1); }
+
+/* ============================================
+   STATS BAR
+   ============================================ */
+.stats-bar {
+    display: flex; gap: var(--space-4); padding: var(--space-3) var(--space-4);
+    background: var(--color-bg-warm); border-radius: var(--radius-md);
+    margin-bottom: var(--space-4); flex-wrap: wrap;
+}
+.stat-item { display: flex; align-items: center; gap: var(--space-2); font-size: var(--text-sm); }
+.stat-value { font-weight: 700; color: var(--color-primary); }
+.stat-label { color: var(--color-text-muted); }
+
+/* ============================================
+   DOWNLOAD SECTION
+   ============================================ */
+.download-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: var(--space-3); margin-top: var(--space-4);
+}
+.download-item {
+    background: var(--color-bg-warm); border: 1px solid var(--color-border);
+    border-radius: var(--radius-md); padding: var(--space-4);
+    display: flex; flex-direction: column; gap: var(--space-2);
+}
+.download-item-title {
+    font-weight: 600; font-size: var(--text-sm);
+    display: flex; align-items: center; gap: var(--space-2);
+}
+.download-item-path {
+    font-family: var(--font-mono); font-size: var(--text-xs);
+    color: var(--color-text-muted); word-break: break-all;
+}
+
+/* ============================================
+   CLASS CODE SUGGESTIONS
+   ============================================ */
+.class-code-suggestions {
+    display: flex; gap: var(--space-2); flex-wrap: wrap; margin-top: var(--space-1);
+}
+.class-code-chip {
+    background: var(--color-primary-pale); color: var(--color-primary-dark);
+    padding: var(--space-1) var(--space-3); border-radius: 20px;
+    font-size: var(--text-xs); font-weight: 600; cursor: pointer;
+    transition: all var(--transition-fast); border: 1px solid transparent;
+}
+.class-code-chip:hover { border-color: var(--color-primary); background: var(--color-primary); color: white; }
+
+/* ============================================
+   QUESTION MIX SLIDERS
+   ============================================ */
+.mix-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-4); }
+.mix-card {
+    background: var(--color-bg-warm); border-radius: var(--radius-lg);
+    padding: var(--space-4); border: 1px solid var(--color-border-light);
+}
+.mix-card-header {
+    display: flex; align-items: center; justify-content: space-between; margin-bottom: var(--space-3);
+}
+.mix-level-name { font-weight: 700; font-size: 0.95rem; }
+.mix-level-tag { font-size: 0.7rem; padding: var(--space-1) var(--space-2); border-radius: 4px; font-weight: 600; }
+.mix-level-tag.level-2 { background: rgba(249,115,22,0.15); color: var(--level-2); }
+.mix-level-tag.level-3 { background: rgba(234,179,8,0.15); color: #b8860b; }
+.mix-level-tag.level-4 { background: rgba(34,197,94,0.15); color: var(--level-4); }
+.mix-level-tag.level-5 { background: rgba(139,92,246,0.15); color: var(--level-5); }
+.mix-sliders { display: flex; flex-direction: column; gap: var(--space-3); }
+.mix-slider-row { display: flex; align-items: center; gap: var(--space-3); }
+.mix-slider-label { width: 50px; font-size: 0.8rem; font-weight: 600; color: var(--color-text-muted); }
+.mix-slider-label.mc { color: var(--color-mc); }
+.mix-slider-label.cloze { color: var(--color-cloze); }
+.mix-slider-label.tf { color: var(--color-tf); }
+.mix-slider {
+    flex: 1; -webkit-appearance: none; appearance: none; height: 6px;
+    border-radius: 3px; background: var(--color-border); cursor: pointer;
+}
+.mix-slider::-webkit-slider-thumb {
+    -webkit-appearance: none; appearance: none; width: 18px; height: 18px;
+    border-radius: 50%; background: var(--color-primary); cursor: pointer;
+    box-shadow: var(--shadow-sm); transition: transform var(--transition-fast);
+}
+.mix-slider::-webkit-slider-thumb:hover { transform: scale(1.15); }
+.mix-slider.mc::-webkit-slider-thumb { background: var(--color-mc); }
+.mix-slider.cloze::-webkit-slider-thumb { background: var(--color-cloze); }
+.mix-slider.tf::-webkit-slider-thumb { background: var(--color-tf); }
+.mix-slider-value { width: 28px; text-align: center; font-weight: 700; font-size: 0.9rem; font-family: var(--font-mono); }
+.mix-total { text-align: center; margin-top: var(--space-3); padding-top: var(--space-3); border-top: 1px solid var(--color-border-light); font-size: 0.85rem; color: var(--color-text-muted); }
+.mix-total strong { color: var(--color-text); }
+.mix-total.invalid strong { color: var(--color-error); }
+
+/* ============================================
+   WORKSPACE (Step 6)
+   ============================================ */
+.workspace-container { display: none; }
+.workspace-mode .workspace-container { display: grid; grid-template-columns: var(--sidebar-width) 1fr; min-height: calc(100vh - var(--header-height) - 80px); }
+
+.sidebar {
+    background: var(--color-surface); border-right: 1px solid var(--color-border);
+    display: flex; flex-direction: column; overflow: hidden;
+}
+.sidebar-header {
+    padding: var(--space-4); border-bottom: 1px solid var(--color-border);
+    display: flex; align-items: center; justify-content: space-between;
+}
+.sidebar-title { font-family: var(--font-display); font-weight: 700; font-size: 0.95rem; }
+.sidebar-actions { display: flex; gap: var(--space-2); }
+.sidebar-content { flex: 1; overflow-y: auto; padding: var(--space-3); }
+
+.subtopic-group { margin-bottom: var(--space-3); }
+.subtopic-header {
+    display: flex; align-items: center; gap: var(--space-2);
+    padding: var(--space-2) var(--space-3); background: var(--color-bg-warm);
+    border-radius: 8px; cursor: pointer; transition: all var(--transition-fast); user-select: none;
+}
+.subtopic-header:hover { background: var(--color-primary-pale); }
+.subtopic-toggle { color: var(--color-text-muted); transition: transform var(--transition-fast); }
+.subtopic-group.collapsed .subtopic-toggle { transform: rotate(-90deg); }
+.subtopic-icon { font-size: 1.1rem; }
+.subtopic-name { flex: 1; font-weight: 600; font-size: 0.9rem; }
+.subtopic-count {
+    font-size: 0.75rem; color: var(--color-text-muted);
+    background: var(--color-surface); padding: var(--space-1) var(--space-2); border-radius: 10px;
+}
+.subtopic-items { padding: var(--space-2) 0 var(--space-2) var(--space-4); }
+.subtopic-group.collapsed .subtopic-items { display: none; }
+
+.lp-item-sidebar {
+    display: flex; align-items: flex-start; gap: var(--space-2);
+    padding: var(--space-2) var(--space-3); border-radius: 6px;
+    cursor: pointer; transition: all var(--transition-fast); font-size: 0.85rem;
+}
+.lp-item-sidebar:hover { background: var(--color-bg-warm); }
+.lp-item-sidebar.selected {
+    background: var(--color-primary-pale); border-left: 3px solid var(--color-primary); margin-left: -3px;
+}
+.lp-checkbox { margin-top: 2px; accent-color: var(--color-primary); }
+.lp-code {
+    font-family: var(--font-mono); font-size: 0.7rem; color: var(--color-text-faint);
+    background: var(--color-surface); padding: 1px 4px; border-radius: 3px;
+}
+.lp-title-sidebar { flex: 1; line-height: 1.4; }
+
+.ws-content { display: flex; flex-direction: column; overflow: hidden; background: var(--color-bg); }
+.content-header {
+    padding: var(--space-4) var(--space-5); background: var(--color-surface);
+    border-bottom: 1px solid var(--color-border);
+    display: flex; align-items: center; justify-content: space-between;
+}
+.content-title { display: flex; flex-direction: column; gap: var(--space-1); }
+.content-title h2 { font-family: var(--font-display); font-weight: 700; font-size: 1rem; }
+.content-title span { color: var(--color-text-muted); font-size: 0.85rem; }
+
+.level-selector { display: flex; gap: var(--space-2); }
+.level-btn {
+    padding: var(--space-2) var(--space-3); border-radius: 6px;
+    font-size: 0.8rem; font-weight: 600; cursor: pointer;
+    border: 1px solid var(--color-border); background: var(--color-surface);
+    transition: all var(--transition-fast);
+}
+.level-btn:hover { border-color: var(--color-text-muted); }
+.level-btn.active { color: white; border-color: transparent; }
+.level-btn.level-2.active { background: var(--level-2); }
+.level-btn.level-3.active { background: var(--level-3); color: #1e293b; }
+.level-btn.level-4.active { background: var(--level-4); }
+.level-btn.level-5.active { background: var(--level-5); }
+
+.content-body { flex: 1; overflow-y: auto; padding: var(--space-5); }
+.prompt-preview {
+    background: var(--color-surface); border-radius: 12px;
+    border: 1px solid var(--color-border); overflow: hidden;
+}
+.prompt-preview-header {
+    padding: var(--space-3) var(--space-4); background: var(--color-bg-warm);
+    border-bottom: 1px solid var(--color-border);
+    display: flex; align-items: center; justify-content: space-between;
+}
+.prompt-preview-title {
+    display: flex; align-items: center; gap: var(--space-2);
+    font-family: var(--font-mono); font-size: 0.8rem; color: var(--color-text-muted);
+}
+.prompt-preview-actions { display: flex; gap: var(--space-2); }
+.prompt-text {
+    padding: var(--space-4); font-family: var(--font-mono); font-size: 0.8rem;
+    line-height: 1.7; white-space: pre-wrap; word-wrap: break-word;
+    max-height: 60vh; overflow-y: auto; color: var(--color-text);
+}
+
+/* ============================================
+   EXPORT PANEL
+   ============================================ */
+.export-panel-inline {
+    display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;
+    gap: var(--space-3); padding: var(--space-4);
+    background: var(--color-bg-warm); border-radius: var(--radius-md); margin-top: var(--space-4);
+}
+.export-info { font-size: 0.85rem; color: var(--color-text-muted); }
+.export-info strong { color: var(--color-text); }
+.export-buttons { display: flex; gap: var(--space-3); flex-wrap: wrap; }
+
+/* ============================================
+   MANIFEST HELPER
+   ============================================ */
+.manifest-helper {
+    background: var(--color-bg-warm); border: 1px solid var(--color-border);
+    border-radius: var(--radius-md); padding: var(--space-4); margin-top: var(--space-5);
+}
+.manifest-helper-title {
+    font-weight: 600; font-size: var(--text-sm); margin-bottom: var(--space-3);
+    display: flex; align-items: center; gap: var(--space-2);
+}
+.manifest-code {
+    background: var(--color-bg-card); border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm); padding: var(--space-3);
+    font-family: var(--font-mono); font-size: var(--text-xs); line-height: 1.6;
+    white-space: pre-wrap; word-break: break-all;
+}
+
+/* ============================================
+   TOAST NOTIFICATIONS
+   ============================================ */
+.toast-container {
+    position: fixed; bottom: var(--space-5); right: var(--space-5); z-index: 1000;
+    display: flex; flex-direction: column; gap: var(--space-2);
+}
+.toast {
+    background: var(--color-bg-card); border: 1px solid var(--color-border);
+    border-radius: var(--radius-md); padding: var(--space-3) var(--space-4);
+    box-shadow: var(--shadow-lg); display: flex; align-items: center;
+    gap: var(--space-3); animation: slideIn 0.3s ease; max-width: 350px;
+}
+@keyframes slideIn { from { transform: translateX(100%); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
+.toast-success { border-left: 3px solid var(--color-success); }
+.toast-error { border-left: 3px solid var(--color-error); }
+.toast-info { border-left: 3px solid var(--color-primary); }
+.toast-warning { border-left: 3px solid var(--color-warning); }
+.toast-message { font-size: var(--text-sm); color: var(--color-text); flex: 1; }
+.toast-close {
+    background: none; border: none; color: var(--color-text-muted);
+    cursor: pointer; padding: var(--space-1); font-size: var(--text-lg); line-height: 1;
+}
+
+/* ============================================
+   EMPTY STATE
+   ============================================ */
+.empty-state { text-align: center; padding: var(--space-6); color: var(--color-text-muted); }
+.empty-state-icon { font-size: 48px; opacity: 0.5; margin-bottom: var(--space-3); }
+.empty-state-text { font-size: var(--text-sm); margin-bottom: var(--space-4); }
+.empty-state h3 { font-family: var(--font-display); font-weight: 700; color: var(--color-text); margin-bottom: var(--space-2); }
+.empty-state p { font-size: 0.9rem; max-width: 300px; margin: 0 auto; }
+
+/* ============================================
+   SCROLLBAR
+   ============================================ */
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: var(--color-bg); }
+::-webkit-scrollbar-thumb { background: var(--color-border); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--color-text-muted); }
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 1200px) {
+    .mix-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 900px) {
+    .workspace-mode .workspace-container { grid-template-columns: 1fr; }
+    .workspace-mode .workspace-container .sidebar { display: none; }
+    .mix-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 768px) {
+    .main-content { padding: var(--space-3); }
+    .card { padding: var(--space-4); }
+    .form-row { grid-template-columns: 1fr; }
+    .header-content { flex-direction: column; text-align: center; }
+    .workflow-steps { justify-content: center; }
+    .lp-field-row { grid-template-columns: 1fr; }
+    .lp-field-label { padding-top: 0; }
+}
+@media print {
+    .app-header, .header-actions, .toast-container, .btn, .workflow-steps { display: none; }
+    .card { break-inside: avoid; }
+}
+    </style>
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <div class="header-content">
+                <div style="display:flex;align-items:center;gap:var(--space-4);flex-wrap:wrap;">
+                    <div>
+                        <h1 class="app-title">
+                            <span>🛠️</span>
+                            <span>Topic & Question Builder</span>
+                        </h1>
+                        <p class="app-subtitle">Create topics, learning points, and question prompts</p>
+                    </div>
+                    <div class="topic-info-bar" id="topic-info-bar"></div>
+                </div>
+                <div class="header-actions">
+                    <button class="header-btn" id="theme-toggle" title="Toggle dark mode">🌙</button>
+                    <button class="header-btn" id="clear-all-btn" title="Start over">🗑️ Reset</button>
+                </div>
+            </div>
+        </header>
+
+        <main class="main-content" id="main-content">
+
+            <!-- Workflow Steps -->
+            <div class="workflow-steps">
+                <div class="workflow-step active" data-step="1" onclick="goToStep(1)">
+                    <span class="step-number">1</span><span>Topic Details</span>
+                </div>
+                <div class="workflow-step" data-step="2" onclick="goToStep(2)">
+                    <span class="step-number">2</span><span>Generate Prompt</span>
+                </div>
+                <div class="workflow-step" data-step="3" onclick="goToStep(3)">
+                    <span class="step-number">3</span><span>Paste AI Response</span>
+                </div>
+                <div class="workflow-step" data-step="4" onclick="goToStep(4)">
+                    <span class="step-number">4</span><span>Edit & Review</span>
+                </div>
+                <div class="step-phase-divider"></div>
+                <div class="workflow-step phase-question" data-step="5" onclick="goToStep(5)">
+                    <span class="step-number">5</span><span>Question Setup</span>
+                </div>
+                <div class="workflow-step phase-question" data-step="6" onclick="goToStep(6)">
+                    <span class="step-number">6</span><span>Preview Prompts</span>
+                </div>
+                <div class="workflow-step phase-question" data-step="7" onclick="goToStep(7)">
+                    <span class="step-number">7</span><span>Export Prompts</span>
+                </div>
+                <div class="step-phase-divider"></div>
+                <div class="workflow-step phase-download" data-step="8" onclick="goToStep(8)">
+                    <span class="step-number">8</span><span>Download All</span>
+                </div>
+            </div>
+
+            <!-- ==================== STEP 1: Topic Details ==================== -->
+            <div class="card" id="step-1-card">
+                <div class="card-header">
+                    <h2 class="card-title"><span>📝</span><span>Topic Details</span></h2>
+                    <p class="card-description">Basic information about the topic. Fill in what you know; the AI can infer the rest.</p>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label" for="year-level">Year Level</label>
+                        <select class="form-select" id="year-level">
+                            <option value="">-- Select --</option>
+                            <option value="Year 7">Year 7</option>
+                            <option value="Year 8">Year 8</option>
+                            <option value="Year 9">Year 9</option>
+                            <option value="Year 10">Year 10</option>
+                            <option value="Year 11">Year 11</option>
+                            <option value="Year 12">Year 12</option>
+                            <option value="VCE Unit 1">VCE Unit 1</option>
+                            <option value="VCE Unit 2">VCE Unit 2</option>
+                            <option value="VCE Unit 3">VCE Unit 3</option>
+                            <option value="VCE Unit 4">VCE Unit 4</option>
+                            <option value="custom">Custom...</option>
+                        </select>
+                        <input type="text" class="form-input" id="year-level-custom" placeholder="Enter custom year level" style="display:none;">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="subject">Subject</label>
+                        <select class="form-select" id="subject">
+                            <option value="">-- Select --</option>
+                            <option value="Mathematics">Mathematics</option>
+                            <option value="English">English</option>
+                            <option value="Science">Science</option>
+                            <option value="Biology">Biology</option>
+                            <option value="Chemistry">Chemistry</option>
+                            <option value="Physics">Physics</option>
+                            <option value="Psychology">Psychology</option>
+                            <option value="History">History</option>
+                            <option value="Geography">Geography</option>
+                            <option value="Economics">Economics</option>
+                            <option value="Business Management">Business Management</option>
+                            <option value="Legal Studies">Legal Studies</option>
+                            <option value="Health and Human Development">Health and Human Development</option>
+                            <option value="Product Design & Technology">Product Design & Technology</option>
+                            <option value="Digital Technologies">Digital Technologies</option>
+                            <option value="custom">Custom...</option>
+                        </select>
+                        <input type="text" class="form-input" id="subject-custom" placeholder="Enter custom subject" style="display:none;">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label" for="topic-name">Topic Name <span class="form-label-hint">(optional)</span></label>
+                        <input type="text" class="form-input" id="topic-name" placeholder="e.g., Forces and Motion">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="class-code">Class Code <span class="form-label-hint">(optional)</span></label>
+                        <input type="text" class="form-input" id="class-code" placeholder="e.g., 12PhyJIM">
+                        <div class="class-code-suggestions" id="class-code-suggestions"></div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label" for="curriculum-code">Curriculum Code <span class="form-label-hint">(optional)</span></label>
+                        <input type="text" class="form-input" id="curriculum-code" placeholder="e.g., VCSSU091">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="ai-target">AI Target</label>
+                        <select class="form-select" id="ai-target">
+                            <option value="claude" selected>Claude (Anthropic)</option>
+                            <option value="chatgpt">ChatGPT (OpenAI)</option>
+                            <option value="gemini">Gemini (Google)</option>
+                            <option value="generic">Generic / Other</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="section-divider"></div>
+                <div class="card-header">
+                    <h2 class="card-title"><span>📚</span><span>Content Sources</span></h2>
+                </div>
+                <div class="form-group full-width">
+                    <label class="form-label" for="teacher-content">Teaching Content</label>
+                    <textarea class="form-textarea large" id="teacher-content" placeholder="Paste your teaching notes, lesson plans, explanations, examples, assessment criteria, etc.
+
+The more detail you provide, the better the AI can create relevant learning points."></textarea>
+                    <div class="char-count" id="teacher-content-count">0 characters</div>
+                </div>
+                <div class="form-group full-width">
+                    <label class="form-label" for="curriculum-content">Curriculum Specifications <span class="form-label-hint">(optional)</span></label>
+                    <textarea class="form-textarea" id="curriculum-content" placeholder="Paste curriculum content: Area of Study, Key Knowledge, Key Skills, Content Descriptions, etc."></textarea>
+                    <div class="char-count" id="curriculum-content-count">0 characters</div>
+                </div>
+                <div style="text-align:center;margin-top:var(--space-4);">
+                    <button class="btn btn-primary btn-large" onclick="generateTopicPrompt()">
+                        <span class="btn-icon">✨</span><span>Generate Prompt</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- ==================== STEP 2: Generated Prompt ==================== -->
+            <div class="card hidden" id="step-2-card">
+                <div class="output-section has-content">
+                    <div class="output-header">
+                        <h2 class="output-title"><span>📤</span><span>Generated Prompt</span></h2>
+                        <div class="output-actions">
+                            <button class="btn btn-primary" onclick="copyTopicPrompt()">
+                                <span class="btn-icon">📋</span><span>Copy to Clipboard</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="output-preview" id="prompt-output"></div>
+                </div>
+                <div style="text-align:center;margin-top:var(--space-4);">
+                    <button class="btn btn-secondary" onclick="goToStep(1)">← Back to Edit</button>
+                    <button class="btn btn-primary" onclick="goToStep(3)">Continue to Paste Response →</button>
+                </div>
+            </div>
+
+            <!-- ==================== STEP 3: Paste AI Response ==================== -->
+            <div class="card hidden" id="step-3-card">
+                <div class="card-header">
+                    <h2 class="card-title"><span>📥</span><span>Paste AI Response</span></h2>
+                    <p class="card-description">Copy the AI's response and paste it below. The builder will parse the JSON files automatically.</p>
+                </div>
+                <div class="form-group full-width">
+                    <label class="form-label" for="ai-response">AI Response</label>
+                    <textarea class="form-textarea large code" id="ai-response" placeholder="Paste the complete AI response here...
+
+It should contain blocks like:
+--- FILE: topic.json ---
+{...}
+
+--- FILE: subtopics/understanding-forces.json ---
+{...}"></textarea>
+                </div>
+                <div style="text-align:center;margin-top:var(--space-4);">
+                    <button class="btn btn-secondary" onclick="goToStep(2)">← Back</button>
+                    <button class="btn btn-primary btn-large" onclick="parseResponse()">
+                        <span class="btn-icon">🔍</span><span>Parse Response</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- ==================== STEP 4: Edit & Review ==================== -->
+            <div class="card hidden" id="step-4-card">
+                <div class="card-header">
+                    <h2 class="card-title"><span>✏️</span><span>Edit & Review</span></h2>
+                    <p class="card-description">Review and edit the parsed content. UUIDs and version numbers are auto-generated.</p>
+                </div>
+                <div class="stats-bar">
+                    <div class="stat-item"><span class="stat-value" id="stat-subtopics">0</span><span class="stat-label">Subtopics</span></div>
+                    <div class="stat-item"><span class="stat-value" id="stat-lps">0</span><span class="stat-label">Learning Points</span></div>
+                </div>
+                <div class="editor-panel expanded" id="topic-panel">
+                    <div class="editor-panel-header" onclick="togglePanel('topic-panel')">
+                        <div class="editor-panel-title"><span>📋</span><span>Topic Metadata</span></div>
+                        <span class="editor-panel-toggle">▼</span>
+                    </div>
+                    <div class="editor-panel-content">
+                        <div class="form-row">
+                            <div class="form-group"><label class="form-label">Topic ID</label><input type="text" class="form-input" id="edit-topic-id" placeholder="topic-id"></div>
+                            <div class="form-group"><label class="form-label">Topic Name</label><input type="text" class="form-input" id="edit-topic-name" placeholder="Topic Name"></div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group"><label class="form-label">Subject</label><input type="text" class="form-input" id="edit-topic-subject" placeholder="Subject"></div>
+                            <div class="form-group"><label class="form-label">Year Level</label><input type="text" class="form-input" id="edit-topic-year" placeholder="Year Level"></div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group"><label class="form-label">Class</label><input type="text" class="form-input" id="edit-topic-class" placeholder="Class"></div>
+                            <div class="form-group"><label class="form-label">Curriculum Code</label><input type="text" class="form-input" id="edit-topic-curriculum" placeholder="Curriculum Code"></div>
+                        </div>
+                        <div class="form-group full-width">
+                            <label class="form-label">Description</label>
+                            <textarea class="form-textarea" id="edit-topic-description" placeholder="Brief description of the topic" style="min-height:80px;"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div id="subtopics-container"></div>
+                <div style="text-align:center;margin-top:var(--space-4);">
+                    <button class="btn btn-secondary" onclick="addSubtopic()"><span class="btn-icon">➕</span><span>Add Subtopic</span></button>
+                </div>
+                <div style="text-align:center;margin-top:var(--space-5);">
+                    <button class="btn btn-secondary" onclick="goToStep(3)">← Back</button>
+                    <button class="btn btn-primary btn-large" onclick="goToStep(5)">
+                        <span class="btn-icon">📝</span><span>Continue to Question Setup →</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- ==================== STEP 5: Teacher Resources & Question Mix ==================== -->
+            <div class="card hidden" id="step-5-card">
+                <div class="card-header">
+                    <h2 class="card-title"><span>🎯</span><span>Question Generation Setup</span></h2>
+                    <p class="card-description">Add teacher resources and configure the question type mix for each cognitive level.</p>
+                </div>
+
+                <div class="form-group full-width" style="margin-bottom:var(--space-5);">
+                    <label class="form-label">Teacher Resources <span class="form-label-hint">(optional - applies to all prompts)</span></label>
+                    <textarea class="form-textarea large" id="teacher-resources" placeholder="Paste lesson notes, textbook excerpts, curriculum emphasis, common misconceptions, exam style guidance, etc.
+
+This content will be included in all generated prompts to provide additional context for question generation."></textarea>
+                </div>
+
+                <h3 style="font-size:var(--text-base);margin-bottom:var(--space-3);display:flex;align-items:center;gap:var(--space-2);">
+                    Question Type Mix
+                    <button class="btn btn-ghost btn-small" onclick="resetMix()">Reset Defaults</button>
+                </h3>
+                <div class="mix-grid" id="mix-grid"></div>
+
+                <div style="text-align:center;margin-top:var(--space-5);">
+                    <button class="btn btn-secondary" onclick="goToStep(4)">← Back to Edit</button>
+                    <button class="btn btn-primary btn-large" onclick="goToStep(6)">
+                        <span class="btn-icon">👁️</span><span>Preview Prompts →</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- ==================== STEP 6: Workspace (LP selection + prompt preview) ==================== -->
+            <div class="workspace-container" id="step-6-workspace">
+                <aside class="sidebar">
+                    <div class="sidebar-header">
+                        <div class="sidebar-title">Learning Points</div>
+                        <div class="sidebar-actions">
+                            <button class="btn btn-ghost btn-small" onclick="selectAllLps()">Select All</button>
+                            <button class="btn btn-ghost btn-small" onclick="deselectAllLps()">Deselect</button>
+                        </div>
+                    </div>
+                    <div class="sidebar-content" id="lp-list"></div>
+                </aside>
+                <main class="ws-content">
+                    <div class="content-header">
+                        <div class="content-title">
+                            <h2 id="selected-lp-title">Select a Learning Point</h2>
+                            <span id="selected-lp-subtopic"></span>
+                        </div>
+                        <div class="level-selector" id="level-selector">
+                            <button class="level-btn level-2 active" data-level="toLevel2">toLevel2</button>
+                            <button class="level-btn level-3" data-level="toLevel3">toLevel3</button>
+                            <button class="level-btn level-4" data-level="toLevel4">toLevel4</button>
+                            <button class="level-btn level-5" data-level="toLevel5">toLevel5</button>
+                        </div>
+                    </div>
+                    <div class="content-body">
+                        <div class="prompt-preview">
+                            <div class="prompt-preview-header">
+                                <div class="prompt-preview-title">
+                                    <span>📄</span><span id="prompt-filename">prompt-preview.txt</span>
+                                </div>
+                                <div class="prompt-preview-actions">
+                                    <button class="btn btn-secondary btn-small" id="copy-prompt-btn" disabled onclick="copyCurrentPrompt()">📋 Copy Prompt</button>
+                                    <button class="btn btn-secondary btn-small" id="copy-all-levels-btn" disabled onclick="copyAllLevelsForLp()">📋 Copy All 4 Levels</button>
+                                </div>
+                            </div>
+                            <div class="prompt-text" id="prompt-text">
+                                <div class="empty-state">
+                                    <div class="empty-state-icon">📝</div>
+                                    <h3>No prompt generated</h3>
+                                    <p>Select a learning point from the sidebar to preview its prompt</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="padding:var(--space-3) var(--space-5);background:var(--color-surface);border-top:1px solid var(--color-border);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:var(--space-3);">
+                        <button class="btn btn-secondary" onclick="goToStep(5)">← Back to Setup</button>
+                        <button class="btn btn-primary" onclick="goToStep(7)">Continue to Export →</button>
+                    </div>
+                </main>
+            </div>
+
+            <!-- ==================== STEP 7: Export Question Prompts ==================== -->
+            <div class="card hidden" id="step-7-card">
+                <div class="card-header">
+                    <h2 class="card-title"><span>📤</span><span>Export Question Prompts</span></h2>
+                    <p class="card-description">Export the generated prompts in your preferred format to send to an AI for question generation.</p>
+                </div>
+                <div class="export-panel-inline">
+                    <div class="export-info"><span id="export-stats">0 learning points selected - 0 prompts ready</span></div>
+                    <div class="export-buttons">
+                        <button class="btn btn-secondary" id="export-txt-btn" disabled onclick="exportSingleTextFile()">📄 Single Text File</button>
+                        <button class="btn btn-secondary" id="export-separate-btn" disabled onclick="exportSeparateLpFiles()">📁 Separate LP Files</button>
+                        <button class="btn btn-primary" id="export-json-btn" disabled onclick="exportJsonBundle()">📦 JSON Bundle</button>
+                    </div>
+                </div>
+                <div style="text-align:center;margin-top:var(--space-5);">
+                    <button class="btn btn-secondary" onclick="goToStep(6)">← Back to Preview</button>
+                    <button class="btn btn-primary btn-large" onclick="goToStep(8)">
+                        <span class="btn-icon">📥</span><span>Continue to Download All →</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- ==================== STEP 8: Download Everything ==================== -->
+            <div class="card hidden" id="step-8-card">
+                <div class="card-header">
+                    <h2 class="card-title"><span>📦</span><span>Download Everything</span></h2>
+                    <p class="card-description">Download the complete topic structure, exports, and question prompts as a single ZIP archive.</p>
+                </div>
+                <div class="stats-bar">
+                    <div class="stat-item"><span class="stat-value" id="dl-stat-files">0</span><span class="stat-label">Files Ready</span></div>
+                </div>
+                <div style="text-align:center;margin-bottom:var(--space-5);">
+                    <button class="btn btn-primary btn-large" onclick="downloadZip()">
+                        <span class="btn-icon">📥</span><span>Download All (ZIP)</span>
+                    </button>
+                </div>
+                <h3 style="margin-bottom:var(--space-3);font-size:var(--text-base);">Individual Files</h3>
+                <div class="download-grid" id="download-grid"></div>
+
+                <div class="manifest-helper" id="manifest-helper">
+                    <div class="manifest-helper-title"><span>📋</span> Manifest Entry</div>
+                    <p style="font-size:var(--text-sm);color:var(--color-text-muted);margin-bottom:var(--space-3);">
+                        Add this entry to <code>manifest.json</code> under the appropriate yearLevel/subject:
+                    </p>
+                    <div class="manifest-code" id="manifest-code"></div>
+                    <p style="font-size:var(--text-xs);color:var(--color-text-muted);margin-top:var(--space-2);">
+                        Folder path: <code id="manifest-path"></code>
+                    </p>
+                    <button class="btn btn-secondary btn-small" onclick="copyManifestEntry()" style="margin-top:var(--space-3);">📋 Copy Manifest Entry</button>
+                </div>
+
+                <div style="text-align:center;margin-top:var(--space-5);">
+                    <button class="btn btn-secondary" onclick="goToStep(4)">← Back to Edit</button>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <div class="toast-container" id="toast-container"></div>
+
+    <script>
+// ============================================================================
+// STATE
+// ============================================================================
+let currentTheme = 'light';
+let currentStep = 1;
+let generatedTopicPrompt = '';
+
+let topicData = {
+    id: '', name: '', subject: '', yearLevel: '',
+    class: '', curriculumCode: '', description: '',
+    subtopics: []
+};
+
+let qState = {
+    learningPoints: [],
+    selectedLpUuid: null,
+    selectedLevel: 'toLevel2',
+    teacherResources: '',
+    questionMix: {
+        toLevel2: { mc: 5, cloze: 3, tf: 2 },
+        toLevel3: { mc: 6, cloze: 3, tf: 1 },
+        toLevel4: { mc: 7, cloze: 3, tf: 0 },
+        toLevel5: { mc: 8, cloze: 2, tf: 0 }
+    },
+    selectedLps: new Set()
+};
+
+const DEFAULT_MIX = JSON.parse(JSON.stringify(qState.questionMix));
+
+let downloadFiles = {};
+
+// ============================================================================
+// CLASS CODE LOOKUP
+// ============================================================================
+const CLASS_CODE_LOOKUP = {
+    'year8/science': ['08SciDMH'],
+    'year9/science': ['09SciTBD'],
+    'year10/science': ['10SciJIM', '10SciKLA', '10SciDMH'],
+    'vce-unit1/physics': ['11PhyJIM'],
+    'vce-unit1/biology': ['11BioTSH'],
+    'vce-unit1/chemistry': ['11CheNGU', '11CheJMC'],
+    'vce-unit1/psychology': ['11PsyPBU'],
+    'vce-unit1/business-management': ['11BusBCO'],
+    'vce-unit1/health-and-human-development': ['11HHDMOK'],
+    'vce-unit1/economics': ['11EcoKAD'],
+    'vce-unit2/physics': ['11PhyJIM'],
+    'vce-unit2/biology': ['11BioTSH'],
+    'vce-unit2/chemistry': ['11CheNGU', '11CheJMC'],
+    'vce-unit2/psychology': ['11PsyPBU'],
+    'vce-unit3/biology': ['12BioTSH'],
+    'vce-unit3/physics': ['12PhyJIM', '12PhyEVA'],
+    'vce-unit3/chemistry': ['12CheDMH'],
+    'vce-unit3/psychology': ['12PsyPBU'],
+    'vce-unit3/business-management': ['12BusBCO'],
+    'vce-unit3/health-and-human-development': ['12HHDCAH'],
+    'vce-unit3/economics': ['12EcoBCO'],
+    'vce-unit4/biology': ['12BioTSH'],
+    'vce-unit4/physics': ['12PhyJIM', '12PhyEVA'],
+    'vce-unit4/chemistry': ['12CheDMH'],
+    'vce-unit4/psychology': ['12PsyPBU']
+};
+
+// ============================================================================
+// QUALITY SPECIFICATIONS (for question prompts)
+// ============================================================================
+const SPECS = {
+    mc: `MC QUESTION SPEC:
+FORMAT: 4 options (A-D). One unambiguous correct answer.
+STEM: Clear, focused, no ambiguity. Novel scenarios preferred over verbatim recall.
+
+LENGTH PARITY (CRITICAL - common AI failure):
+- Correct answer must NOT be longer than distractors. This is a major test-taking giveaway.
+- Students learn "longest answer = correct" -- do not reinforce this pattern.
+- EITHER keep correct answer pithy and concise (preferred)
+- OR extend ALL distractors to match correct answer's length/detail
+- All options within +/-20% character count. Measure and verify.
+- If correct answer needs qualification, add similar qualifiers to distractors.
+
+OPTIONS: Grammatically parallel with stem. Same semantic category. Shuffleable without grammatical tells.
+DISTRACTORS: Must represent real student misconceptions. Each should attract 5-25% of uninformed test-takers. Plausible in context/scope/magnitude. Match complexity and detail level of correct answer.
+PROHIBITED: "All of the above", "None of the above", joke answers, obviously wrong options, trick wording.
+CORRECT ANSWER: Position varies across questions (don't cluster on one letter).
+EXPLANATIONS: Required for correct answer AND each distractor. Address specific misconception.`,
+
+    cloze: `CLOZE QUESTION SPEC:
+FORMAT: Sentence(s) with {{blank:N}} placeholders. Exactly 3 options per blank (1 correct + 2 distractors).
+BLANK SELECTION - MUST blank: Key terminology, central concepts, cause-effect words, process steps, relationship indicators.
+BLANK SELECTION - NEVER blank: Articles (a/an/the), prepositions (in/on/at), conjunctions (and/but/or), pronouns (it/they), high-frequency verbs (is/are/has).
+TEST: "Can student answer using ONLY grammar/syntax?" -> YES = bad blank. "Does answering require content knowledge?" -> YES = good blank.
+GRAMMATICAL PARALLELISM - ALL options must match: Part of speech. Verb tense/person/number. Article agreement. Singular/plural.
+LENGTH PARITY (CRITICAL): All options must be similar length (within 20%). The correct answer must NOT be longer than distractors.
+DISTRACTORS: Same rules as MC -- real misconceptions, plausible, same semantic category.
+DENSITY: Max 1-2 blanks per sentence. Never blank first or last sentence of passage.
+PROHIBITED: Blanking function words, absurd options, multiple defensible answers, correct answer noticeably longer than distractors.`,
+
+    tf: `TF QUESTION SPEC:
+FORMAT: Statement + "True" or "False" as correct answer. One distractor (the opposite).
+STATEMENT: Unambiguously true or false. No "trick" wording.
+AVOID: Absolutes ("always", "never") unless genuinely absolute. Double negatives. Compound statements.
+DISTRACTORS: Explanation must address why students might believe the wrong answer.
+BEST FOR: Simple factual claims, common misconceptions to directly confront.`
+};
+
+const COGNITIVE_LEVELS = {
+    toLevel2: {
+        name: "Remember",
+        description: `TARGET: Basic recall and recognition.
+TEST: Can student retrieve relevant knowledge from memory?
+QUESTION TYPES: Define terms, identify components, recall facts, match definitions.
+STEMS: "What is...", "Which of the following is...", "The term for... is...", "Identify the..."
+AVOID: Application, inference, or synthesis. Test recognition, not deeper understanding.`
+    },
+    toLevel3: {
+        name: "Understand",
+        description: `TARGET: Demonstrate comprehension of concepts.
+TEST: Can student explain ideas in their own words or recognise examples?
+QUESTION TYPES: Explain concepts, interpret meanings, classify examples, summarise relationships.
+STEMS: "Which statement best explains...", "What does X mean...", "An example of X would be...", "Why does..."
+AVOID: Direct recall of definitions. Require paraphrasing or recognition in new contexts.`
+    },
+    toLevel4: {
+        name: "Apply",
+        description: `TARGET: Use knowledge in new situations.
+TEST: Can student use procedures, concepts, or principles in unfamiliar contexts?
+QUESTION TYPES: Predict outcomes, solve problems, apply procedures, use in scenarios.
+STEMS: "What would happen if...", "In this situation, you would...", "Apply X to solve...", "Predict the result..."
+REQUIRE: Novel scenarios not seen in teaching materials. Test transfer of learning.`
+    },
+    toLevel5: {
+        name: "Analyze & Evaluate",
+        description: `TARGET: Break down relationships, make judgments, assess validity.
+TEST: Can student compare, contrast, infer, critique, or synthesise?
+QUESTION TYPES: Compare/contrast, identify relationships, evaluate claims, infer from data, critique reasoning.
+STEMS: "Which conclusion is supported by...", "Compare X and Y...", "The evidence suggests...", "Evaluate the claim that..."
+REQUIRE: Multi-step reasoning. May include data, scenarios, or competing claims to evaluate.`
+    }
+};
+
+// ============================================================================
+// INITIALIZATION
+// ============================================================================
+function init() {
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        setTheme('dark');
+    }
+    document.getElementById('theme-toggle').addEventListener('click', toggleTheme);
+    document.getElementById('clear-all-btn').addEventListener('click', clearAll);
+    document.getElementById('year-level').addEventListener('change', handleCustomSelect);
+    document.getElementById('subject').addEventListener('change', handleCustomSelect);
+    document.getElementById('year-level').addEventListener('change', updateClassCodeSuggestions);
+    document.getElementById('subject').addEventListener('change', updateClassCodeSuggestions);
+    document.getElementById('teacher-content').addEventListener('input', updateCharCount);
+    document.getElementById('curriculum-content').addEventListener('input', updateCharCount);
+
+    // Teacher resources debounce
+    document.getElementById('teacher-resources').addEventListener('input', (e) => {
+        qState.teacherResources = e.target.value;
+        clearTimeout(window._trTimeout);
+        window._trTimeout = setTimeout(() => {
+            if (qState.selectedLpUuid) renderPromptPreview();
+        }, 500);
+    });
+
+    // Level selector
+    document.getElementById('level-selector').addEventListener('click', (e) => {
+        const btn = e.target.closest('.level-btn');
+        if (!btn) return;
+        document.querySelectorAll('.level-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        qState.selectedLevel = btn.dataset.level;
+        renderPromptPreview();
+    });
+}
+
+// ============================================================================
+// THEME
+// ============================================================================
+function setTheme(theme) {
+    currentTheme = theme;
+    document.documentElement.setAttribute('data-theme', theme);
+    document.getElementById('theme-toggle').textContent = theme === 'dark' ? '☀️' : '🌙';
+}
+function toggleTheme() { setTheme(currentTheme === 'dark' ? 'light' : 'dark'); }
+
+// ============================================================================
+// WORKFLOW STEPS
+// ============================================================================
+function goToStep(step) {
+    const totalSteps = 8;
+    document.querySelectorAll('.workflow-step').forEach(el => {
+        const stepNum = parseInt(el.dataset.step);
+        el.classList.remove('active', 'completed');
+        if (stepNum < step) el.classList.add('completed');
+        else if (stepNum === step) el.classList.add('active');
+    });
+
+    // Show/hide cards
+    for (let i = 1; i <= totalSteps; i++) {
+        if (i === 6) continue; // workspace handled separately
+        const card = document.getElementById(`step-${i}-card`);
+        if (card) card.classList.toggle('hidden', i !== step);
+    }
+
+    // Workspace mode toggle
+    const mainContent = document.getElementById('main-content');
+    if (step === 6) {
+        mainContent.classList.add('workspace-mode');
+        document.getElementById('step-6-workspace').style.display = '';
+    } else {
+        mainContent.classList.remove('workspace-mode');
+        document.getElementById('step-6-workspace').style.display = 'none';
+    }
+
+    currentStep = step;
+
+    // Step-specific actions
+    if (step === 5) {
+        buildLearningPointsFromTopicData();
+        renderMixSliders();
+        // Pre-fill teacher resources from step 1 teaching content if empty
+        const trEl = document.getElementById('teacher-resources');
+        if (!qState.teacherResources && document.getElementById('teacher-content').value.trim()) {
+            qState.teacherResources = document.getElementById('teacher-content').value.trim();
+            trEl.value = qState.teacherResources;
+        }
+        updateTopicInfoBar();
+    }
+    if (step === 6) {
+        buildLearningPointsFromTopicData();
+        renderLpList();
+        renderPromptPreview();
+        updateExportStats();
+    }
+    if (step === 7) {
+        updateExportStats();
+    }
+    if (step === 8) {
+        prepareDownloads();
+    }
+
+    if (step !== 6) {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+}
+
+// ============================================================================
+// UI HELPERS
+// ============================================================================
+function handleCustomSelect(e) {
+    const select = e.target;
+    const customInput = document.getElementById(select.id + '-custom');
+    if (select.value === 'custom') {
+        customInput.style.display = 'block';
+        customInput.focus();
+    } else {
+        customInput.style.display = 'none';
+        customInput.value = '';
+    }
+}
+
+function updateCharCount(e) {
+    const textarea = e.target;
+    const countEl = document.getElementById(textarea.id + '-count');
+    if (countEl) countEl.textContent = `${textarea.value.length.toLocaleString()} characters`;
+}
+
+function showToast(message, type = 'info') {
+    const container = document.getElementById('toast-container');
+    const toast = document.createElement('div');
+    toast.className = `toast toast-${type}`;
+    const icons = { success: '✅', error: '❌', info: 'ℹ️', warning: '⚠️' };
+    toast.innerHTML = `<span>${icons[type] || icons.info}</span><span class="toast-message">${message}</span><button class="toast-close" onclick="this.parentElement.remove()">×</button>`;
+    container.appendChild(toast);
+    setTimeout(() => toast.remove(), 5000);
+}
+
+function togglePanel(panelId) {
+    document.getElementById(panelId).classList.toggle('expanded');
+}
+
+function escapeHtml(text) {
+    const div = document.createElement('div');
+    div.textContent = text;
+    return div.innerHTML;
+}
+
+function getFieldValue(selectId) {
+    const select = document.getElementById(selectId);
+    const customInput = document.getElementById(selectId + '-custom');
+    if (select.value === 'custom' && customInput) return customInput.value.trim();
+    return select.value;
+}
+
+function getDateStamp() { return new Date().toISOString().split('T')[0]; }
+
+// ============================================================================
+// UUID & HASH GENERATION
+// ============================================================================
+function generateUUID() {
+    const hex = () => Math.random().toString(16).substring(2);
+    return `lp-${hex().substring(0,8)}-${hex().substring(0,4)}-${hex().substring(0,4)}-${hex().substring(0,4)}-${hex().substring(0,12)}`;
+}
+
+async function computeContentHash(title, what, why, example) {
+    const content = `${title}|${what}|${why}|${example}`;
+    const data = new TextEncoder().encode(content);
+    const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+    const hashHex = Array.from(new Uint8Array(hashBuffer)).map(b => b.toString(16).padStart(2, '0')).join('');
+    return `hash-${hashHex.substring(0, 8)}`;
+}
+
+function toKebabCase(str) {
+    return str.toLowerCase().replace(/[^a-z0-9\s-]/g, '').replace(/\s+/g, '-').replace(/-+/g, '-').replace(/^-|-$/g, '');
+}
+
+// ============================================================================
+// CLASS CODE SUGGESTIONS
+// ============================================================================
+function yearLevelToId(yearLevel) {
+    return yearLevel.toLowerCase().replace('vce unit ', 'vce-unit').replace('year ', 'year');
+}
+
+function subjectToId(subject) {
+    if (subject === 'Health and Human Development') return 'health-and-human-development';
+    if (subject === 'Product Design & Technology') return 'ptd';
+    return subject.toLowerCase().replace(/\s+/g, '-');
+}
+
+function updateClassCodeSuggestions() {
+    const yl = getFieldValue('year-level');
+    const subj = getFieldValue('subject');
+    const suggestionsEl = document.getElementById('class-code-suggestions');
+    suggestionsEl.innerHTML = '';
+    if (!yl || !subj) return;
+
+    const key = yearLevelToId(yl) + '/' + subjectToId(subj);
+    const codes = CLASS_CODE_LOOKUP[key];
+    if (!codes || codes.length === 0) return;
+
+    if (codes.length === 1) {
+        document.getElementById('class-code').value = codes[0];
+    }
+    codes.forEach(code => {
+        const chip = document.createElement('span');
+        chip.className = 'class-code-chip';
+        chip.textContent = code;
+        chip.onclick = () => { document.getElementById('class-code').value = code; };
+        suggestionsEl.appendChild(chip);
+    });
+}
+
+function updateTopicInfoBar() {
+    const bar = document.getElementById('topic-info-bar');
+    if (topicData.name) {
+        bar.innerHTML = `<span class="topic-badge-header">${escapeHtml(topicData.subject)}</span><span>${escapeHtml(topicData.name)}</span><span style="opacity:0.6">|</span><span>${escapeHtml(topicData.yearLevel)}</span>`;
+    } else {
+        bar.innerHTML = '';
+    }
+}
+
+// ============================================================================
+// GENERATE TOPIC PROMPT (Step 1 -> 2)
+// ============================================================================
+function generateTopicPrompt() {
+    const yearLevel = getFieldValue('year-level');
+    const subject = getFieldValue('subject');
+    const topicName = document.getElementById('topic-name').value.trim();
+    const classCode = document.getElementById('class-code').value.trim();
+    const curriculumCode = document.getElementById('curriculum-code').value.trim();
+    const aiTarget = document.getElementById('ai-target').value;
+    const teacherContent = document.getElementById('teacher-content').value.trim();
+    const curriculumContent = document.getElementById('curriculum-content').value.trim();
+
+    if (!teacherContent && !curriculumContent) {
+        showToast('Please provide teaching content or curriculum specifications', 'error');
+        return;
+    }
+
+    let metadataHints = [];
+    if (yearLevel) metadataHints.push(`Year Level: ${yearLevel}`);
+    if (subject) metadataHints.push(`Subject: ${subject}`);
+    if (topicName) metadataHints.push(`Topic Name: ${topicName}`);
+    if (classCode) metadataHints.push(`Class Code: ${classCode}`);
+    if (curriculumCode) metadataHints.push(`Curriculum Code: ${curriculumCode}`);
+
+    const metadataSection = metadataHints.length > 0
+        ? `The teacher has provided the following metadata:\n${metadataHints.join('\n')}`
+        : `No metadata provided. Infer appropriate values from the content.`;
+
+    let aiInstructions = '';
+    if (aiTarget === 'claude') aiInstructions = `You are an expert curriculum designer helping a teacher create learning materials.`;
+    else if (aiTarget === 'chatgpt') aiInstructions = `You are an expert curriculum designer. Follow instructions carefully and output only the requested format with no additional commentary.`;
+    else if (aiTarget === 'gemini') aiInstructions = `You are an expert curriculum designer. Output only the requested format with no markdown code blocks.`;
+    else aiInstructions = `You are an expert curriculum designer.`;
+
+    const prompt = `${aiInstructions}
+
+Your task is to create learning materials for a student self-assessment app. You will output MULTIPLE JSON files, each clearly marked.
+
+${metadataSection}
+
+---
+
+## TEACHER'S CONTENT
+
+${teacherContent || '(No teacher content provided - rely on curriculum specifications)'}
+
+---
+
+## CURRICULUM SPECIFICATIONS
+
+${curriculumContent || '(No curriculum specifications provided - rely on teacher content)'}
+
+---
+
+## OUTPUT FORMAT
+
+Output multiple JSON files, each preceded by a file marker. Use this EXACT format:
+
+--- FILE: topic.json ---
+{
+  "id": "topic-id-kebab-case",
+  "name": "Topic Name",
+  "subject": "Subject Name",
+  "yearLevel": "Year X",
+  "class": "Class code",
+  "curriculumCode": "Curriculum codes",
+  "description": "Brief 1-2 sentence description",
+  "subtopics": [
+    { "id": "subtopic-id", "name": "Subtopic Name", "icon": "📊", "file": "subtopic-id.json" }
+  ]
+}
+
+--- FILE: subtopics/subtopic-id.json ---
+{
+  "id": "subtopic-id",
+  "name": "Subtopic Name",
+  "icon": "📊",
+  "what": "What this subtopic covers (2-3 sentences)",
+  "why": "Why it matters (2-3 sentences)",
+  "items": [
+    {
+      "id": 1,
+      "title": "I can [specific measurable skill]",
+      "code": "1.1",
+      "what": "Clear explanation (1-2 sentences)",
+      "why": "Why this matters (1-2 sentences)",
+      "example": "A concrete, specific example"
+    }
+  ]
+}
+
+---
+
+## REQUIREMENTS
+
+1. **Structure**: Create 3-6 subtopics with 3-8 learning points each (15-30 total)
+2. **Learning Points**: Each title MUST start with "I can"
+3. **IDs**: Use kebab-case for all IDs
+4. **Icons**: Use relevant emoji for subtopics
+5. **Tone**: Calm and factual. No exclamation marks. Student-friendly language.
+6. **Examples**: Must be concrete and specific (use actual numbers, scenarios)
+7. **File Markers**: Use exactly "--- FILE: filename ---" before each JSON block
+
+## WHAT NOT TO DO
+
+- No text before/after the file markers and JSON
+- No markdown code blocks
+- No exclamation marks
+- No vague learning intentions
+- No skipping what/why/example fields
+
+Now generate the files:`;
+
+    generatedTopicPrompt = prompt;
+    document.getElementById('prompt-output').textContent = prompt;
+    goToStep(2);
+    showToast('Prompt generated', 'success');
+}
+
+async function copyTopicPrompt() {
+    try {
+        await navigator.clipboard.writeText(generatedTopicPrompt);
+        showToast('Copied to clipboard', 'success');
+    } catch (err) {
+        const textarea = document.createElement('textarea');
+        textarea.value = generatedTopicPrompt;
+        textarea.style.position = 'fixed'; textarea.style.opacity = '0';
+        document.body.appendChild(textarea); textarea.select();
+        try { document.execCommand('copy'); showToast('Copied to clipboard', 'success'); }
+        catch (e) { showToast('Failed to copy', 'error'); }
+        document.body.removeChild(textarea);
+    }
+}
+
+// ============================================================================
+// PARSE AI RESPONSE (Step 3 -> 4)
+// ============================================================================
+function parseResponse() {
+    const response = document.getElementById('ai-response').value.trim();
+    if (!response) { showToast('Please paste the AI response', 'error'); return; }
+
+    const filePattern = /---+\s*FILE:\s*([^\n]+?)\s*---+\s*\n([\s\S]*?)(?=---+\s*FILE:|$)/gi;
+    const files = {};
+    let match;
+    let parseErrors = [];
+
+    while ((match = filePattern.exec(response)) !== null) {
+        let filename = match[1].trim().replace(/[-\s]+$/, '');
+        let content = match[2].trim();
+        try {
+            content = content.replace(/^```json?\s*/i, '').replace(/\s*```\s*$/i, '');
+            const lastBrace = content.lastIndexOf('}');
+            if (lastBrace !== -1 && lastBrace < content.length - 1) content = content.substring(0, lastBrace + 1);
+            files[filename] = JSON.parse(content);
+        } catch (e) {
+            parseErrors.push(filename);
+        }
+    }
+
+    if (Object.keys(files).length === 0) { showToast('No valid file blocks found. Check the format.', 'error'); return; }
+    if (parseErrors.length > 0) showToast(`Warning: Could not parse ${parseErrors.length} file(s)`, 'warning');
+
+    const topicJsonKey = Object.keys(files).find(k => k.toLowerCase().includes('topic.json') && !k.includes('subtopic'));
+    if (!topicJsonKey) { showToast('No topic.json found in response', 'error'); return; }
+
+    const topic = files[topicJsonKey];
+    topicData.id = topic.id || toKebabCase(topic.name || 'untitled');
+    topicData.name = topic.name || '';
+    topicData.subject = topic.subject || '';
+    topicData.yearLevel = topic.yearLevel || '';
+    topicData.class = topic.class || '';
+    topicData.curriculumCode = topic.curriculumCode || '';
+    topicData.description = topic.description || '';
+    topicData.subtopics = [];
+
+    if (topic.subtopics && Array.isArray(topic.subtopics)) {
+        for (const st of topic.subtopics) {
+            const possibleKeys = [`subtopics/${st.file}`, `subtopics/${st.id}.json`, st.file, `${st.id}.json`];
+            let subtopicData = null;
+            for (const key of possibleKeys) { if (files[key]) { subtopicData = files[key]; break; } }
+            if (!subtopicData) {
+                const matchingKey = Object.keys(files).find(k => k.includes(st.id) || (st.file && k.includes(st.file.replace('.json', ''))));
+                if (matchingKey) subtopicData = files[matchingKey];
+            }
+            if (subtopicData) {
+                const items = (subtopicData.items || []).map((item, idx) => ({
+                    id: item.id || idx + 1,
+                    uuid: generateUUID(),
+                    version: 1,
+                    title: item.title || '',
+                    code: item.code || `${topicData.subtopics.length + 1}.${idx + 1}`,
+                    what: item.what || '',
+                    why: item.why || '',
+                    example: item.example || ''
+                }));
+                topicData.subtopics.push({
+                    id: subtopicData.id || st.id || toKebabCase(subtopicData.name || `subtopic-${topicData.subtopics.length + 1}`),
+                    name: subtopicData.name || st.name || '',
+                    icon: subtopicData.icon || st.icon || '📚',
+                    what: subtopicData.what || '',
+                    why: subtopicData.why || '',
+                    items: items
+                });
+            } else {
+                topicData.subtopics.push({
+                    id: st.id || toKebabCase(st.name || `subtopic-${topicData.subtopics.length + 1}`),
+                    name: st.name || '', icon: st.icon || '📚', what: '', why: '', items: []
+                });
+            }
+        }
+    }
+
+    renderEditor();
+    goToStep(4);
+    const totalLPs = topicData.subtopics.reduce((sum, st) => sum + st.items.length, 0);
+    showToast(`Parsed ${topicData.subtopics.length} subtopics with ${totalLPs} learning points`, 'success');
+}
+
+// ============================================================================
+// EDITOR (Step 4)
+// ============================================================================
+function renderEditor() {
+    document.getElementById('edit-topic-id').value = topicData.id;
+    document.getElementById('edit-topic-name').value = topicData.name;
+    document.getElementById('edit-topic-subject').value = topicData.subject;
+    document.getElementById('edit-topic-year').value = topicData.yearLevel;
+    document.getElementById('edit-topic-class').value = topicData.class;
+    document.getElementById('edit-topic-curriculum').value = topicData.curriculumCode;
+    document.getElementById('edit-topic-description').value = topicData.description;
+
+    ['id', 'name', 'subject', 'year', 'class', 'curriculum', 'description'].forEach(field => {
+        const el = document.getElementById(`edit-topic-${field}`);
+        el.oninput = () => {
+            const dataField = field === 'year' ? 'yearLevel' : (field === 'curriculum' ? 'curriculumCode' : field);
+            topicData[dataField] = el.value;
+        };
+    });
+
+    renderSubtopics();
+    updateStats();
+}
+
+function renderSubtopics() {
+    const container = document.getElementById('subtopics-container');
+    container.innerHTML = '';
+
+    topicData.subtopics.forEach((subtopic, stIndex) => {
+        const panel = document.createElement('div');
+        panel.className = 'editor-panel';
+        panel.id = `subtopic-panel-${stIndex}`;
+        panel.innerHTML = `
+            <div class="editor-panel-header" onclick="togglePanel('subtopic-panel-${stIndex}')">
+                <div class="editor-panel-title">
+                    <span>${subtopic.icon}</span>
+                    <span>${subtopic.name || 'Untitled Subtopic'}</span>
+                    <span class="editor-panel-meta">${subtopic.items.length} learning points</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:var(--space-2);">
+                    <button class="btn btn-secondary btn-small btn-icon-only" onclick="event.stopPropagation();moveSubtopic(${stIndex},-1)" title="Move up" ${stIndex === 0 ? 'disabled' : ''}>↑</button>
+                    <button class="btn btn-secondary btn-small btn-icon-only" onclick="event.stopPropagation();moveSubtopic(${stIndex},1)" title="Move down" ${stIndex === topicData.subtopics.length - 1 ? 'disabled' : ''}>↓</button>
+                    <button class="btn btn-danger btn-small btn-icon-only" onclick="event.stopPropagation();deleteSubtopic(${stIndex})" title="Delete">🗑️</button>
+                    <span class="editor-panel-toggle">▼</span>
+                </div>
+            </div>
+            <div class="editor-panel-content">
+                <div class="form-row">
+                    <div class="form-group"><label class="form-label">Subtopic ID</label><input type="text" class="form-input" value="${escapeHtml(subtopic.id)}" onchange="updateSubtopic(${stIndex},'id',this.value)"></div>
+                    <div class="form-group"><label class="form-label">Name</label><input type="text" class="form-input" value="${escapeHtml(subtopic.name)}" onchange="updateSubtopic(${stIndex},'name',this.value);renderSubtopics();"></div>
+                    <div class="form-group" style="max-width:100px;"><label class="form-label">Icon</label><input type="text" class="form-input" value="${subtopic.icon}" onchange="updateSubtopic(${stIndex},'icon',this.value);renderSubtopics();" style="text-align:center;font-size:1.2em;"></div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group"><label class="form-label">What</label><textarea class="form-textarea" style="min-height:60px;" onchange="updateSubtopic(${stIndex},'what',this.value)">${escapeHtml(subtopic.what)}</textarea></div>
+                    <div class="form-group"><label class="form-label">Why</label><textarea class="form-textarea" style="min-height:60px;" onchange="updateSubtopic(${stIndex},'why',this.value)">${escapeHtml(subtopic.why)}</textarea></div>
+                </div>
+                <div class="section-divider"></div>
+                <h4 style="margin-bottom:var(--space-3);font-size:var(--text-sm);">Learning Points</h4>
+                <div id="lp-container-${stIndex}">${renderLearningPointsEditor(subtopic.items, stIndex)}</div>
+                <div style="text-align:center;margin-top:var(--space-3);">
+                    <button class="btn btn-secondary btn-small" onclick="addLearningPoint(${stIndex})"><span class="btn-icon">➕</span><span>Add Learning Point</span></button>
+                </div>
+            </div>`;
+        container.appendChild(panel);
+    });
+}
+
+function renderLearningPointsEditor(items, stIndex) {
+    if (items.length === 0) return `<div class="empty-state"><div class="empty-state-icon">📝</div><p class="empty-state-text">No learning points yet</p></div>`;
+    return items.map((lp, lpIndex) => `
+        <div class="lp-item-editor" data-lp-index="${lpIndex}">
+            <div class="lp-header">
+                <span class="lp-number">#${lp.id}</span>
+                <input type="text" class="form-input lp-title-input" value="${escapeHtml(lp.title)}" onchange="updateLP(${stIndex},${lpIndex},'title',this.value)" placeholder="I can...">
+                <div class="lp-actions">
+                    <button class="btn btn-secondary btn-small btn-icon-only" onclick="moveLP(${stIndex},${lpIndex},-1)" title="Move up" ${lpIndex === 0 ? 'disabled' : ''}>↑</button>
+                    <button class="btn btn-secondary btn-small btn-icon-only" onclick="moveLP(${stIndex},${lpIndex},1)" title="Move down" ${lpIndex === items.length - 1 ? 'disabled' : ''}>↓</button>
+                    <button class="btn btn-danger btn-small btn-icon-only" onclick="deleteLP(${stIndex},${lpIndex})" title="Delete">🗑️</button>
+                </div>
+            </div>
+            <div class="lp-fields">
+                <div class="lp-field-row"><span class="lp-field-label">Code</span><input type="text" class="form-input" value="${escapeHtml(lp.code)}" onchange="updateLP(${stIndex},${lpIndex},'code',this.value)" style="max-width:150px;"></div>
+                <div class="lp-field-row"><span class="lp-field-label">What</span><textarea class="form-textarea" style="min-height:50px;" onchange="updateLP(${stIndex},${lpIndex},'what',this.value)">${escapeHtml(lp.what)}</textarea></div>
+                <div class="lp-field-row"><span class="lp-field-label">Why</span><textarea class="form-textarea" style="min-height:50px;" onchange="updateLP(${stIndex},${lpIndex},'why',this.value)">${escapeHtml(lp.why)}</textarea></div>
+                <div class="lp-field-row"><span class="lp-field-label">Example</span><textarea class="form-textarea" style="min-height:50px;" onchange="updateLP(${stIndex},${lpIndex},'example',this.value)">${escapeHtml(lp.example)}</textarea></div>
+            </div>
+            <div class="lp-meta">
+                <div class="lp-meta-item" title="UUID"><span>🔑</span><code style="font-size:0.7em;">${lp.uuid.substring(0, 20)}...</code></div>
+                <div class="lp-meta-item" title="Version"><span>📌</span><span>v${lp.version}</span></div>
+            </div>
+        </div>
+    `).join('');
+}
+
+// CRUD
+function updateSubtopic(stIndex, field, value) { topicData.subtopics[stIndex][field] = value; }
+function updateLP(stIndex, lpIndex, field, value) {
+    topicData.subtopics[stIndex].items[lpIndex][field] = value;
+    if (['title', 'what', 'why', 'example'].includes(field)) topicData.subtopics[stIndex].items[lpIndex].version++;
+}
+function addSubtopic() {
+    const i = topicData.subtopics.length;
+    topicData.subtopics.push({ id: `subtopic-${i+1}`, name: 'New Subtopic', icon: '📚', what: '', why: '', items: [] });
+    renderSubtopics(); updateStats();
+    setTimeout(() => { const p = document.getElementById(`subtopic-panel-${i}`); if (p) p.classList.add('expanded'); }, 0);
+}
+function deleteSubtopic(stIndex) {
+    if (topicData.subtopics[stIndex].items.length > 0 && !confirm(`Delete "${topicData.subtopics[stIndex].name}" and its ${topicData.subtopics[stIndex].items.length} learning points?`)) return;
+    topicData.subtopics.splice(stIndex, 1); renderSubtopics(); updateStats();
+}
+function moveSubtopic(stIndex, direction) {
+    const ni = stIndex + direction;
+    if (ni < 0 || ni >= topicData.subtopics.length) return;
+    [topicData.subtopics[stIndex], topicData.subtopics[ni]] = [topicData.subtopics[ni], topicData.subtopics[stIndex]];
+    renderSubtopics();
+}
+function addLearningPoint(stIndex) {
+    const items = topicData.subtopics[stIndex].items;
+    const newId = items.length > 0 ? Math.max(...items.map(i => i.id)) + 1 : 1;
+    items.push({ id: newId, uuid: generateUUID(), version: 1, title: 'I can ', code: `${stIndex+1}.${newId}`, what: '', why: '', example: '' });
+    renderSubtopics(); updateStats();
+    setTimeout(() => { const p = document.getElementById(`subtopic-panel-${stIndex}`); if (p) p.classList.add('expanded'); }, 0);
+}
+function deleteLP(stIndex, lpIndex) {
+    topicData.subtopics[stIndex].items.splice(lpIndex, 1);
+    topicData.subtopics[stIndex].items.forEach((item, idx) => { item.id = idx + 1; });
+    renderSubtopics(); updateStats();
+    setTimeout(() => { const p = document.getElementById(`subtopic-panel-${stIndex}`); if (p) p.classList.add('expanded'); }, 0);
+}
+function moveLP(stIndex, lpIndex, direction) {
+    const items = topicData.subtopics[stIndex].items;
+    const ni = lpIndex + direction;
+    if (ni < 0 || ni >= items.length) return;
+    [items[lpIndex], items[ni]] = [items[ni], items[lpIndex]];
+    items.forEach((item, idx) => { item.id = idx + 1; });
+    renderSubtopics();
+    setTimeout(() => { const p = document.getElementById(`subtopic-panel-${stIndex}`); if (p) p.classList.add('expanded'); }, 0);
+}
+function updateStats() {
+    const totalLPs = topicData.subtopics.reduce((sum, st) => sum + st.items.length, 0);
+    document.getElementById('stat-subtopics').textContent = topicData.subtopics.length;
+    document.getElementById('stat-lps').textContent = totalLPs;
+}
+
+// ============================================================================
+// BRIDGE: Build Learning Points from topicData (Step 4 -> 5)
+// ============================================================================
+function buildLearningPointsFromTopicData() {
+    qState.learningPoints = [];
+    const prevSelected = new Set(qState.selectedLps);
+    qState.selectedLps = new Set();
+
+    for (const st of topicData.subtopics) {
+        for (const item of st.items) {
+            qState.learningPoints.push({
+                ...item,
+                subtopic: { id: st.id, name: st.name, icon: st.icon, what: st.what, why: st.why }
+            });
+            // Keep previous selection or select all if first time
+            if (prevSelected.size === 0 || prevSelected.has(item.uuid)) {
+                qState.selectedLps.add(item.uuid);
+            }
+        }
+    }
+}
+
+// ============================================================================
+// QUESTION MIX SLIDERS (Step 5)
+// ============================================================================
+function renderMixSliders() {
+    const levels = ['toLevel2', 'toLevel3', 'toLevel4', 'toLevel5'];
+    const levelNames = { toLevel2: 'Remember', toLevel3: 'Understand', toLevel4: 'Apply', toLevel5: 'Analyze' };
+    const grid = document.getElementById('mix-grid');
+
+    grid.innerHTML = levels.map((level, idx) => {
+        const mix = qState.questionMix[level];
+        const total = mix.mc + mix.cloze + mix.tf;
+        return `
+        <div class="mix-card">
+            <div class="mix-card-header">
+                <span class="mix-level-name">${level}</span>
+                <span class="mix-level-tag level-${idx+2}">${levelNames[level]}</span>
+            </div>
+            <div class="mix-sliders">
+                <div class="mix-slider-row"><span class="mix-slider-label mc">MC</span><input type="range" class="mix-slider mc" min="0" max="10" value="${mix.mc}" data-level="${level}" data-type="mc"><span class="mix-slider-value" id="mix-${level}-mc">${mix.mc}</span></div>
+                <div class="mix-slider-row"><span class="mix-slider-label cloze">Cloze</span><input type="range" class="mix-slider cloze" min="0" max="10" value="${mix.cloze}" data-level="${level}" data-type="cloze"><span class="mix-slider-value" id="mix-${level}-cloze">${mix.cloze}</span></div>
+                <div class="mix-slider-row"><span class="mix-slider-label tf">TF</span><input type="range" class="mix-slider tf" min="0" max="10" value="${mix.tf}" data-level="${level}" data-type="tf"><span class="mix-slider-value" id="mix-${level}-tf">${mix.tf}</span></div>
+            </div>
+            <div class="mix-total ${total === 10 ? '' : 'invalid'}">Total: <strong>${total}/10</strong></div>
+        </div>`;
+    }).join('');
+
+    document.querySelectorAll('.mix-slider').forEach(slider => {
+        slider.addEventListener('input', handleSliderChange);
+    });
+}
+
+function handleSliderChange(e) {
+    const level = e.target.dataset.level;
+    const type = e.target.dataset.type;
+    qState.questionMix[level][type] = parseInt(e.target.value);
+    document.getElementById(`mix-${level}-${type}`).textContent = e.target.value;
+    const mix = qState.questionMix[level];
+    const total = mix.mc + mix.cloze + mix.tf;
+    const totalEl = e.target.closest('.mix-card').querySelector('.mix-total');
+    totalEl.innerHTML = `Total: <strong>${total}/10</strong>`;
+    totalEl.classList.toggle('invalid', total !== 10);
+    if (qState.selectedLpUuid && qState.selectedLevel === level) renderPromptPreview();
+}
+
+function resetMix() {
+    qState.questionMix = JSON.parse(JSON.stringify(DEFAULT_MIX));
+    renderMixSliders();
+    renderPromptPreview();
+    showToast('Question mix reset to defaults', 'success');
+}
+
+// ============================================================================
+// LP LIST / SIDEBAR (Step 6)
+// ============================================================================
+function renderLpList() {
+    const lpList = document.getElementById('lp-list');
+    if (topicData.subtopics.length === 0) {
+        lpList.innerHTML = `<div class="empty-state"><div class="empty-state-icon">📋</div><h3>No learning points</h3><p>Go back to create a topic first</p></div>`;
+        return;
+    }
+
+    lpList.innerHTML = topicData.subtopics.map(subtopic => {
+        const items = qState.learningPoints.filter(lp => lp.subtopic.id === subtopic.id);
+        return `
+        <div class="subtopic-group" data-id="${subtopic.id}">
+            <div class="subtopic-header" onclick="toggleSubtopicSidebar('${subtopic.id}')">
+                <span class="subtopic-toggle">▼</span>
+                <span class="subtopic-icon">${subtopic.icon || '📚'}</span>
+                <span class="subtopic-name">${subtopic.name}</span>
+                <span class="subtopic-count">${items.length}</span>
+            </div>
+            <div class="subtopic-items">
+                ${items.map(lp => `
+                <div class="lp-item-sidebar ${qState.selectedLpUuid === lp.uuid ? 'selected' : ''}" data-uuid="${lp.uuid}" onclick="selectLp('${lp.uuid}')">
+                    <input type="checkbox" class="lp-checkbox" ${qState.selectedLps.has(lp.uuid) ? 'checked' : ''} onclick="event.stopPropagation();toggleLpSelection('${lp.uuid}')">
+                    <span class="lp-code">${lp.code}</span>
+                    <span class="lp-title-sidebar">${lp.title}</span>
+                </div>`).join('')}
+            </div>
+        </div>`;
+    }).join('');
+}
+
+function toggleSubtopicSidebar(id) {
+    document.querySelector(`.subtopic-group[data-id="${id}"]`).classList.toggle('collapsed');
+}
+function selectLp(uuid) { qState.selectedLpUuid = uuid; renderLpList(); renderPromptPreview(); }
+function toggleLpSelection(uuid) {
+    if (qState.selectedLps.has(uuid)) qState.selectedLps.delete(uuid);
+    else qState.selectedLps.add(uuid);
+    updateExportStats();
+}
+function selectAllLps() { qState.learningPoints.forEach(lp => qState.selectedLps.add(lp.uuid)); renderLpList(); updateExportStats(); }
+function deselectAllLps() { qState.selectedLps.clear(); renderLpList(); updateExportStats(); }
+
+// ============================================================================
+// QUESTION PROMPT GENERATION
+// ============================================================================
+function generateQuestionPrompt(lp, level) {
+    const mix = qState.questionMix[level];
+    const cogLevel = COGNITIVE_LEVELS[level];
+    const teacherRes = qState.teacherResources.trim();
+
+    const specs = [];
+    if (mix.mc > 0) specs.push(SPECS.mc);
+    if (mix.cloze > 0) specs.push(SPECS.cloze);
+    if (mix.tf > 0) specs.push(SPECS.tf);
+
+    return `═══════════════════════════════════════════════════════════════════════════════
+QUESTION GENERATION PROMPT
+Learning Point: ${lp.title}
+Level: ${level} | Output: q-${lp.uuid}.json
+═══════════════════════════════════════════════════════════════════════════════
+
+TASK: Generate exactly 10 assessment questions for the ${level} progression level.
+
+QUESTION MIX REQUIRED:
+- Multiple Choice: ${mix.mc}
+- Cloze (dropdown): ${mix.cloze}
+- True/False: ${mix.tf}
+
+───────────────────────────────────────────────────────────────────────────────
+LEARNING POINT CONTEXT
+───────────────────────────────────────────────────────────────────────────────
+
+TITLE: ${lp.title}
+CODE: ${lp.code}
+
+WHAT (concept explanation):
+${lp.what}
+
+WHY (importance):
+${lp.why}
+
+EXAMPLE (concrete illustration):
+${lp.example}
+
+SUBTOPIC: ${lp.subtopic.name}
+SUBTOPIC CONTEXT: ${lp.subtopic.what}
+SUBTOPIC RELEVANCE: ${lp.subtopic.why}
+
+TOPIC: ${topicData.name}
+SUBJECT: ${topicData.subject} | YEAR LEVEL: ${topicData.yearLevel}
+TOPIC DESCRIPTION: ${topicData.description}
+
+───────────────────────────────────────────────────────────────────────────────
+TEACHER RESOURCES (additional context)
+───────────────────────────────────────────────────────────────────────────────
+
+${teacherRes || 'No additional resources provided.'}
+
+───────────────────────────────────────────────────────────────────────────────
+COGNITIVE LEVEL: ${level} (${cogLevel.name})
+───────────────────────────────────────────────────────────────────────────────
+
+${cogLevel.description}
+
+───────────────────────────────────────────────────────────────────────────────
+QUALITY SPECIFICATIONS
+───────────────────────────────────────────────────────────────────────────────
+
+${specs.join('\n\n')}
+
+───────────────────────────────────────────────────────────────────────────────
+OUTPUT REQUIREMENTS
+───────────────────────────────────────────────────────────────────────────────
+
+Output ONLY valid JSON. No markdown, no explanation, no preamble.
+Filename: q-${lp.uuid}.json
+
+SCHEMA:
+{
+  "_link": {
+    "uuid": "${lp.uuid}",
+    "version": ${lp.version || 1},
+    "contentHash": "${lp.contentHash || 'hash-unknown'}",
+    "title": "${lp.title}",
+    "generatedAt": "[ISO 8601 timestamp]"
+  },
+  "${level}": [
+    // MC question schema (include ${mix.mc} of these):
+    {
+      "type": "mc",
+      "question": "Question text?",
+      "correct": "Correct answer text",
+      "correctExplanation": "Why this is correct (1-2 sentences)",
+      "distractors": [
+        { "answer": "Wrong option A", "explanation": "Misconception addressed" },
+        { "answer": "Wrong option B", "explanation": "Misconception addressed" },
+        { "answer": "Wrong option C", "explanation": "Misconception addressed" }
+      ]
+    },
+    // TF question schema (include ${mix.tf} of these):
+    {
+      "type": "tf",
+      "question": "Statement to evaluate.",
+      "correct": "True" or "False",
+      "correctExplanation": "Why this is correct",
+      "distractors": [
+        { "answer": "False" or "True", "explanation": "Why students might think this" }
+      ]
+    },
+    // Cloze question schema (include ${mix.cloze} of these):
+    {
+      "type": "cloze",
+      "prompt": "Instruction to student",
+      "sentence": "Sentence with {{blank:1}} and optional {{blank:2}} placeholders.",
+      "blanks": {
+        "1": {
+          "correct": "correct word/phrase",
+          "correctExplanation": "Why correct",
+          "distractors": [
+            { "answer": "wrong option 1", "explanation": "Misconception addressed" },
+            { "answer": "wrong option 2", "explanation": "Misconception addressed" }
+          ]
+        }
+      }
+    }
+  ]
+}
+
+CRITICAL REMINDERS:
+- Exactly 10 questions total matching the specified mix (${mix.mc} MC, ${mix.cloze} Cloze, ${mix.tf} TF)
+- LENGTH PARITY: All MC options must be similar length. Do NOT make correct answer longer than distractors. Keep correct answers pithy OR extend all distractors to match.
+- All distractors must be real misconceptions, never absurd
+- Verify factual accuracy -- do not hallucinate
+- One unambiguous correct answer per question
+- Include the _link block exactly as shown with actual values
+- Output raw JSON only
+
+═══════════════════════════════════════════════════════════════════════════════`;
+}
+
+// ============================================================================
+// PROMPT PREVIEW (Step 6)
+// ============================================================================
+function renderPromptPreview() {
+    const lp = qState.learningPoints.find(l => l.uuid === qState.selectedLpUuid);
+    const titleEl = document.getElementById('selected-lp-title');
+    const subtopicEl = document.getElementById('selected-lp-subtopic');
+    const filenameEl = document.getElementById('prompt-filename');
+    const textEl = document.getElementById('prompt-text');
+    const copyBtn = document.getElementById('copy-prompt-btn');
+    const copyAllBtn = document.getElementById('copy-all-levels-btn');
+
+    if (!lp) {
+        titleEl.textContent = 'Select a Learning Point';
+        subtopicEl.textContent = '';
+        filenameEl.textContent = 'prompt-preview.txt';
+        textEl.innerHTML = `<div class="empty-state"><div class="empty-state-icon">📝</div><h3>No prompt generated</h3><p>Select a learning point from the sidebar to preview its prompt</p></div>`;
+        copyBtn.disabled = true;
+        copyAllBtn.disabled = true;
+        return;
+    }
+
+    titleEl.textContent = lp.title;
+    subtopicEl.textContent = `${lp.subtopic.name} • ${lp.code}`;
+    filenameEl.textContent = `prompt-${lp.uuid}-${qState.selectedLevel}.txt`;
+    textEl.textContent = generateQuestionPrompt(lp, qState.selectedLevel);
+    copyBtn.disabled = false;
+    copyAllBtn.disabled = false;
+}
+
+// ============================================================================
+// COPY & EXPORT FUNCTIONS
+// ============================================================================
+function copyToClipboard(text) {
+    navigator.clipboard.writeText(text).then(() => showToast('Copied to clipboard', 'success')).catch(() => showToast('Failed to copy', 'error'));
+}
+function copyCurrentPrompt() {
+    const lp = qState.learningPoints.find(l => l.uuid === qState.selectedLpUuid);
+    if (!lp) return;
+    copyToClipboard(generateQuestionPrompt(lp, qState.selectedLevel));
+}
+function copyAllLevelsForLp() {
+    const lp = qState.learningPoints.find(l => l.uuid === qState.selectedLpUuid);
+    if (!lp) return;
+    let content = `PROMPTS FOR: ${lp.title}\nUUID: ${lp.uuid}\n\n`;
+    ['toLevel2', 'toLevel3', 'toLevel4', 'toLevel5'].forEach(level => {
+        content += `\n${'═'.repeat(80)}\n${level}\n${'═'.repeat(80)}\n\n`;
+        content += generateQuestionPrompt(lp, level) + '\n';
+    });
+    copyToClipboard(content);
+}
+
+function updateExportStats() {
+    const selectedCount = qState.selectedLps.size;
+    const promptCount = selectedCount * 4;
+    const statsEl = document.getElementById('export-stats');
+    if (statsEl) statsEl.textContent = `${selectedCount} learning points selected - ${promptCount} prompts ready`;
+    const hasPrompts = selectedCount > 0;
+    const txtBtn = document.getElementById('export-txt-btn');
+    const sepBtn = document.getElementById('export-separate-btn');
+    const jsonBtn = document.getElementById('export-json-btn');
+    if (txtBtn) txtBtn.disabled = !hasPrompts;
+    if (sepBtn) sepBtn.disabled = !hasPrompts;
+    if (jsonBtn) jsonBtn.disabled = !hasPrompts;
+}
+
+function getSelectedLps() { return qState.learningPoints.filter(lp => qState.selectedLps.has(lp.uuid)); }
+
+function downloadFile(filename, content, mimeType) {
+    const blob = content instanceof Blob ? content : new Blob([content], { type: mimeType });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a'); a.href = url; a.download = filename;
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+}
+
+function exportSingleTextFile() {
+    const lps = getSelectedLps();
+    const topicId = topicData.id || 'unknown';
+    const date = getDateStamp();
+    let content = `QUESTION GENERATION PROMPTS\nTopic: ${topicData.name || 'Unknown'}\nGenerated: ${new Date().toLocaleString()}\nLearning Points: ${lps.length}\nTotal Prompts: ${lps.length * 4}\n\n`;
+    lps.forEach(lp => {
+        content += `\n${'='.repeat(80)}\nLEARNING POINT: ${lp.title}\nUUID: ${lp.uuid}\n${'='.repeat(80)}\n`;
+        ['toLevel2', 'toLevel3', 'toLevel4', 'toLevel5'].forEach(level => {
+            content += `\n--- ${level} (${COGNITIVE_LEVELS[level].name}) ---\n\n${generateQuestionPrompt(lp, level)}\n`;
+        });
+    });
+    downloadFile(`question-prompts-${topicId}-${date}.txt`, content, 'text/plain');
+    showToast('Exported single text file', 'success');
+}
+
+async function exportSeparateLpFiles() {
+    const lps = getSelectedLps();
+    const topicId = topicData.id || 'unknown';
+    const date = getDateStamp();
+    const zip = new JSZip();
+    lps.forEach(lp => {
+        let content = `PROMPTS FOR: ${lp.title}\nUUID: ${lp.uuid}\nSubtopic: ${lp.subtopic.name}\nGenerated: ${new Date().toLocaleString()}\n\n`;
+        ['toLevel2', 'toLevel3', 'toLevel4', 'toLevel5'].forEach(level => {
+            content += `\n${'─'.repeat(80)}\n${level} (${COGNITIVE_LEVELS[level].name})\n${'─'.repeat(80)}\n\n${generateQuestionPrompt(lp, level)}\n`;
+        });
+        zip.file(`prompt-${lp.uuid}.txt`, content);
+    });
+    const blob = await zip.generateAsync({ type: 'blob' });
+    downloadFile(`question-prompts-${topicId}-${date}.zip`, blob);
+    showToast(`Exported ${lps.length} files as .zip`, 'success');
+}
+
+function exportJsonBundle() {
+    const lps = getSelectedLps();
+    const date = getDateStamp();
+    const bundle = {
+        _meta: {
+            generatedAt: new Date().toISOString(),
+            topicId: topicData.id || null, topicName: topicData.name || 'Unknown',
+            subject: topicData.subject || 'Unknown', yearLevel: topicData.yearLevel || 'Unknown',
+            totalLPs: lps.length, totalPrompts: lps.length * 4,
+            teacherResourcesIncluded: !!qState.teacherResources.trim(),
+            questionMix: qState.questionMix
+        },
+        prompts: lps.map(lp => ({
+            uuid: lp.uuid, version: lp.version || 1, contentHash: lp.contentHash || 'hash-unknown',
+            title: lp.title, code: lp.code, subtopic: lp.subtopic.name,
+            levels: {
+                toLevel2: { prompt: generateQuestionPrompt(lp, 'toLevel2'), questionMix: qState.questionMix.toLevel2 },
+                toLevel3: { prompt: generateQuestionPrompt(lp, 'toLevel3'), questionMix: qState.questionMix.toLevel3 },
+                toLevel4: { prompt: generateQuestionPrompt(lp, 'toLevel4'), questionMix: qState.questionMix.toLevel4 },
+                toLevel5: { prompt: generateQuestionPrompt(lp, 'toLevel5'), questionMix: qState.questionMix.toLevel5 }
+            }
+        }))
+    };
+    downloadFile(`question-prompts-${topicData.id || 'unknown'}-${date}.json`, JSON.stringify(bundle, null, 2), 'application/json');
+    showToast('Exported JSON bundle', 'success');
+}
+
+// ============================================================================
+// DOWNLOAD EVERYTHING (Step 8)
+// ============================================================================
+async function prepareDownloads() {
+    const grid = document.getElementById('download-grid');
+    grid.innerHTML = '';
+    downloadFiles = {};
+    let fileCount = 0;
+
+    // topic.json
+    const topicJson = {
+        id: topicData.id, name: topicData.name, subject: topicData.subject,
+        yearLevel: topicData.yearLevel, class: topicData.class,
+        curriculumCode: topicData.curriculumCode, description: topicData.description,
+        subtopics: topicData.subtopics.map(st => ({ id: st.id, name: st.name, icon: st.icon, file: `${st.id}.json` }))
+    };
+    downloadFiles['topic.json'] = topicJson;
+    addDownloadItem(grid, 'Topic Metadata', 'topic.json'); fileCount++;
+
+    // Subtopic files
+    for (const st of topicData.subtopics) {
+        const subtopicJson = {
+            id: st.id, name: st.name, icon: st.icon, what: st.what, why: st.why,
+            items: await Promise.all(st.items.map(async (item) => ({
+                id: item.id, uuid: item.uuid, version: item.version, title: item.title, code: item.code,
+                what: item.what, why: item.why, example: item.example,
+                contentHash: await computeContentHash(item.title, item.what, item.why, item.example)
+            })))
+        };
+        const filePath = `subtopics/${st.id}.json`;
+        downloadFiles[filePath] = subtopicJson;
+        addDownloadItem(grid, `${st.icon} ${st.name}`, filePath); fileCount++;
+    }
+
+    // Learning points export
+    const exportJson = await generateExportJson();
+    const exportPath = `exports/learning-points-export-${getDateStamp()}.json`;
+    downloadFiles[exportPath] = exportJson;
+    addDownloadItem(grid, 'Learning Points Export', exportPath); fileCount++;
+
+    // Question prompts JSON bundle (if LPs selected)
+    if (qState.selectedLps.size > 0) {
+        const lps = getSelectedLps();
+        const promptBundle = {
+            _meta: { generatedAt: new Date().toISOString(), topicId: topicData.id, topicName: topicData.name, totalLPs: lps.length, totalPrompts: lps.length * 4, questionMix: qState.questionMix },
+            prompts: lps.map(lp => ({
+                uuid: lp.uuid, title: lp.title, code: lp.code, subtopic: lp.subtopic.name,
+                levels: {
+                    toLevel2: { prompt: generateQuestionPrompt(lp, 'toLevel2') },
+                    toLevel3: { prompt: generateQuestionPrompt(lp, 'toLevel3') },
+                    toLevel4: { prompt: generateQuestionPrompt(lp, 'toLevel4') },
+                    toLevel5: { prompt: generateQuestionPrompt(lp, 'toLevel5') }
+                }
+            }))
+        };
+        const promptPath = `prompts/question-prompts-${topicData.id}-${getDateStamp()}.json`;
+        downloadFiles[promptPath] = promptBundle;
+        addDownloadItem(grid, 'Question Prompts Bundle', promptPath); fileCount++;
+    }
+
+    document.getElementById('dl-stat-files').textContent = fileCount;
+
+    // Manifest helper
+    const manifest = getManifestEntry();
+    document.getElementById('manifest-code').textContent = JSON.stringify(manifest.entry, null, 2);
+    document.getElementById('manifest-path').textContent = manifest.path;
+}
+
+function addDownloadItem(grid, title, filePath) {
+    const item = document.createElement('div');
+    item.className = 'download-item';
+    item.innerHTML = `
+        <div class="download-item-title"><span>📄</span><span>${escapeHtml(title)}</span></div>
+        <div class="download-item-path">${escapeHtml(filePath)}</div>
+        <button class="btn btn-secondary btn-small" onclick="downloadSingleFile('${filePath}')"><span class="btn-icon">📥</span><span>Download</span></button>`;
+    grid.appendChild(item);
+}
+
+async function generateExportJson() {
+    const items = [];
+    for (const st of topicData.subtopics) {
+        for (const item of st.items) {
+            items.push({
+                uuid: item.uuid, id: item.id, version: item.version,
+                contentHash: await computeContentHash(item.title, item.what, item.why, item.example),
+                title: item.title, code: item.code, what: item.what, why: item.why, example: item.example,
+                subtopic: { id: st.id, name: st.name, what: st.what, why: st.why },
+                questionsExist: false
+            });
+        }
+    }
+    return { _meta: { exportedAt: new Date().toISOString(), topicId: topicData.id, topicName: topicData.name }, items };
+}
+
+function downloadSingleFile(filePath) {
+    const data = downloadFiles[filePath];
+    if (!data) { showToast(`File not found: ${filePath}`, 'error'); return; }
+    const jsonString = JSON.stringify(data, null, 2);
+    const blob = new Blob([jsonString], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a'); a.href = url; a.download = filePath.split('/').pop();
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+    showToast(`Downloaded ${filePath.split('/').pop()}`, 'success');
+}
+
+async function downloadZip() {
+    const zip = new JSZip();
+
+    // topic.json
+    const topicJson = {
+        id: topicData.id, name: topicData.name, subject: topicData.subject,
+        yearLevel: topicData.yearLevel, class: topicData.class,
+        curriculumCode: topicData.curriculumCode, description: topicData.description,
+        subtopics: topicData.subtopics.map(st => ({ id: st.id, name: st.name, icon: st.icon, file: `${st.id}.json` }))
+    };
+    zip.file('topic.json', JSON.stringify(topicJson, null, 2));
+
+    // Subtopic files
+    const subtopicsFolder = zip.folder('subtopics');
+    for (const st of topicData.subtopics) {
+        const subtopicJson = {
+            id: st.id, name: st.name, icon: st.icon, what: st.what, why: st.why,
+            items: await Promise.all(st.items.map(async (item) => ({
+                id: item.id, uuid: item.uuid, version: item.version, title: item.title, code: item.code,
+                what: item.what, why: item.why, example: item.example,
+                contentHash: await computeContentHash(item.title, item.what, item.why, item.example)
+            })))
+        };
+        subtopicsFolder.file(`${st.id}.json`, JSON.stringify(subtopicJson, null, 2));
+    }
+
+    // Exports
+    const exportsFolder = zip.folder('exports');
+    const exportJson = await generateExportJson();
+    exportsFolder.file(`learning-points-export-${getDateStamp()}.json`, JSON.stringify(exportJson, null, 2));
+
+    // Questions folder (empty placeholder)
+    zip.folder('questions');
+
+    // Prompts folder (if LPs selected)
+    if (qState.selectedLps.size > 0) {
+        const promptsFolder = zip.folder('prompts');
+        const lps = getSelectedLps();
+        lps.forEach(lp => {
+            let content = `PROMPTS FOR: ${lp.title}\nUUID: ${lp.uuid}\nSubtopic: ${lp.subtopic.name}\n\n`;
+            ['toLevel2', 'toLevel3', 'toLevel4', 'toLevel5'].forEach(level => {
+                content += `\n${'─'.repeat(80)}\n${level} (${COGNITIVE_LEVELS[level].name})\n${'─'.repeat(80)}\n\n${generateQuestionPrompt(lp, level)}\n`;
+            });
+            promptsFolder.file(`prompt-${lp.uuid}.txt`, content);
+        });
+    }
+
+    const content = await zip.generateAsync({ type: 'blob' });
+    const url = URL.createObjectURL(content);
+    const a = document.createElement('a'); a.href = url; a.download = `${topicData.id || 'topic'}.zip`;
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+    showToast('ZIP downloaded', 'success');
+}
+
+// ============================================================================
+// MANIFEST ENTRY HELPER
+// ============================================================================
+function getManifestEntry() {
+    const ylId = yearLevelToId(topicData.yearLevel || 'unknown');
+    const subjId = subjectToId(topicData.subject || 'unknown');
+    const path = `topics/${ylId}/${subjId}/${topicData.id}/`;
+    return { entry: { id: topicData.id, name: topicData.name, path: path }, path: path };
+}
+
+function copyManifestEntry() {
+    const manifest = getManifestEntry();
+    copyToClipboard(JSON.stringify(manifest.entry, null, 2));
+}
+
+// ============================================================================
+// CLEAR ALL
+// ============================================================================
+function clearAll() {
+    if (!confirm('Reset everything and start over?')) return;
+
+    document.getElementById('year-level').value = '';
+    document.getElementById('year-level-custom').value = ''; document.getElementById('year-level-custom').style.display = 'none';
+    document.getElementById('subject').value = '';
+    document.getElementById('subject-custom').value = ''; document.getElementById('subject-custom').style.display = 'none';
+    document.getElementById('topic-name').value = '';
+    document.getElementById('class-code').value = '';
+    document.getElementById('class-code-suggestions').innerHTML = '';
+    document.getElementById('curriculum-code').value = '';
+    document.getElementById('teacher-content').value = '';
+    document.getElementById('curriculum-content').value = '';
+    document.getElementById('teacher-content-count').textContent = '0 characters';
+    document.getElementById('curriculum-content-count').textContent = '0 characters';
+    document.getElementById('ai-response').value = '';
+    document.getElementById('teacher-resources').value = '';
+
+    topicData = { id: '', name: '', subject: '', yearLevel: '', class: '', curriculumCode: '', description: '', subtopics: [] };
+    generatedTopicPrompt = '';
+    qState.learningPoints = [];
+    qState.selectedLpUuid = null;
+    qState.selectedLps = new Set();
+    qState.teacherResources = '';
+    qState.questionMix = JSON.parse(JSON.stringify(DEFAULT_MIX));
+
+    document.getElementById('topic-info-bar').innerHTML = '';
+    goToStep(1);
+    showToast('Reset complete', 'info');
+}
+
+// ============================================================================
+// INIT
+// ============================================================================
+document.addEventListener('DOMContentLoaded', init);
+    </script>
+</body>
+</html>
