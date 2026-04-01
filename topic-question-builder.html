@@ -1565,12 +1565,16 @@ function parseResponse() {
     topicData.subtopics = [];
 
     if (topic.subtopics && Array.isArray(topic.subtopics)) {
-        for (const st of topic.subtopics) {
-            const possibleKeys = [`subtopics/${st.file}`, `subtopics/${st.id}.json`, st.file, `${st.id}.json`];
+        for (const rawSt of topic.subtopics) {
+            // Handle both string refs ("my-subtopic") and object refs ({id, name, file})
+            const st = typeof rawSt === 'string' ? { id: rawSt } : rawSt;
+            const stId = st.id || '';
+            const stFile = st.file || '';
+            const possibleKeys = [`subtopics/${stFile}`, `subtopics/${stId}.json`, stFile, `${stId}.json`];
             let subtopicData = null;
             for (const key of possibleKeys) { if (files[key]) { subtopicData = files[key]; break; } }
             if (!subtopicData) {
-                const matchingKey = Object.keys(files).find(k => k.includes(st.id) || (st.file && k.includes(st.file.replace('.json', ''))));
+                const matchingKey = Object.keys(files).find(k => k.includes(stId) || (stFile && k.includes(stFile.replace('.json', ''))));
                 if (matchingKey) subtopicData = files[matchingKey];
             }
             if (subtopicData) {
@@ -1585,8 +1589,8 @@ function parseResponse() {
                     example: item.example || ''
                 }));
                 topicData.subtopics.push({
-                    id: subtopicData.id || st.id || toKebabCase(subtopicData.name || `subtopic-${topicData.subtopics.length + 1}`),
-                    name: subtopicData.name || st.name || '',
+                    id: subtopicData.id || stId || toKebabCase(subtopicData.name || subtopicData.title || `subtopic-${topicData.subtopics.length + 1}`),
+                    name: subtopicData.name || subtopicData.title || st.name || '',
                     icon: subtopicData.icon || st.icon || '📚',
                     what: subtopicData.what || '',
                     why: subtopicData.why || '',
@@ -1594,7 +1598,7 @@ function parseResponse() {
                 });
             } else {
                 topicData.subtopics.push({
-                    id: st.id || toKebabCase(st.name || `subtopic-${topicData.subtopics.length + 1}`),
+                    id: stId || toKebabCase(st.name || `subtopic-${topicData.subtopics.length + 1}`),
                     name: st.name || '', icon: st.icon || '📚', what: '', why: '', items: []
                 });
             }
